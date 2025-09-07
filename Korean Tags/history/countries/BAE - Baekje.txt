@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 735
+historical_friend = JAP
+
+1444.11.11 = {
+	add_core = 735
+	add_core = 737
+	add_core = 1013
+	add_core = 4227
+	add_core = 4228
+	add_core = 4229
+	add_core = 4230
+}

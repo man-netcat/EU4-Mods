@@ -1,0 +1,76 @@
+sultanate_of_rum_reform = {
+	allow_normal_conversion = yes
+	icon = "rum_sultanate"
+	potential = {
+		religion_group = muslim
+		OR = {
+			AND = {
+				tag = ILK
+				primary_culture = turkish
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			AND = {
+				tag = RUM
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = sultanate_of_rum_reform
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+	maintain_dynasty = yes
+	modifiers = {
+		core_creation = -0.1
+		province_warscore_cost = -0.05
+		legitimacy = 0.5
+		max_absolutism = 5
+		governing_capacity = 150
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Domination"
+		}
+		has_pashas = yes
+		has_janissaries = yes
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+			has_eyalets = yes
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+			NOT = {
+				has_dlc = "Domination"
+			}
+		}
+		has_pashas = yes
+		has_janissaries = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+			NOT = {
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+}

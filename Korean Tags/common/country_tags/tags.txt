@@ -1,0 +1,3 @@
+BAE = "countries/Baekje.txt"
+GGY = "countries/Goguryeo.txt"
+GOR = "countries/Goryeo.txt"

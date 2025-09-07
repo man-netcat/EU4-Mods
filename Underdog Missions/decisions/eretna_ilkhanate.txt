@@ -1,0 +1,51 @@
+country_decisions = {
+	eretna_restore_ilkhanate = {
+		major = yes
+		potential = {
+			tag = ERE
+			NOT = {
+				has_country_flag = ere_form_ilkhanate_flag
+			}
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			NOT = {
+				exists = ILK
+			}
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			persia_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = ILK
+			ILK = {
+				add_government_reform = sultanate_of_rum_reform
+				add_accepted_culture = uyghur
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			add_prestige = 25
+			set_country_flag = ere_form_ilkhanate_flag
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

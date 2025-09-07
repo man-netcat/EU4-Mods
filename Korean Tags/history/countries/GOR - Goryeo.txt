@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 735
+historical_friend = JAP
+1444.11.11 = {
+	# Core Korean provinces under Goryeo
+	add_core = 732	# Hamheung
+	add_core = 733	# Hwangju
+	add_core = 734	# Wonju
+	add_core = 735	# Hanseong
+	add_core = 736	# Sangju
+	add_core = 737	# Jeonju
+	add_core = 1013	# Cheongju
+	add_core = 1845	# Pyeongyang
+	add_core = 2694	# Gangneung
+	add_core = 2741	# Jeju
+	add_core = 2742	# Yukjin
+	add_core = 2743	# Gyeongseong
+	add_core = 2744	# Yeongbyeon
+	add_core = 2745	# Gyeongju
+	add_core = 4227	# Jinju
+	add_core = 4228	# Naju
+	add_core = 4229	# Chungju
+	add_core = 4230	# Suwon
+	add_core = 4231	# Haeju
+	add_core = 4232	# Ganggye
+}

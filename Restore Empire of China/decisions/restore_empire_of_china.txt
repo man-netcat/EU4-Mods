@@ -1,0 +1,179 @@
+country_decisions = {
+	empire_of_china = {
+		major = yes
+		potential = {
+			NOT = {
+				tag = MGE
+			}
+			normal_or_historical_nations = yes
+			has_dlc = "Mandate of Heaven"
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			is_emperor_of_china = no
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				religion_group = eastern
+				religion_group = pagan
+			}
+			has_global_flag = empire_of_china_dismantled
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = empire_of_china_not_in_china
+				NOT = {
+					any_province = {
+						superregion = china_superregion
+						owner = {
+							is_emperor_of_china = yes
+						}
+					}
+				}
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			num_of_cities = 30
+			owns_core_province = 1816
+			owns_core_province = 1821
+			owns_core_province = 700
+			owns_core_province = 1836
+		}
+		effect = {
+			set_emperor_of_china = ROOT
+			clr_global_flag = empire_of_china_dismantled
+			dismantle_empire_of_china = no
+			save_global_event_target_as = EmperorOfChina
+			if = {
+				limit = {
+					technology_group = nomad_group
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
+			if = {
+				limit = {
+					has_dlc = "Domination"
+					NOT = {
+						primary_culture = mongol
+					}
+					NOT = {
+						primary_culture = chahar
+					}
+					NOT = {
+						primary_culture = khalkha
+					}
+					NOT = {
+						primary_culture = oirats
+					}
+					has_domination_eoc_missions_available = yes
+				}
+				swap_non_generic_missions = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							government = monarchy
+						}
+						government = tribal
+					}
+				}
+				change_government_to_monarchy = yes
+			}
+			add_government_reform = celestial_empire
+			set_country_flag = enable_emperor_of_china_missions_flag
+			set_mandate = 60
+			set_meritocracy = 60
+			add_country_modifier = {
+				name = new_mandate_holder
+				duration = 9125
+			}
+			1816 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							is_core = root
+						}
+					}
+					add_core = root
+				}
+			}
+			1821 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							is_core = root
+						}
+					}
+					add_core = root
+				}
+			}
+			667 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							is_core = root
+						}
+					}
+					add_core = root
+				}
+			}
+			china_superregion = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				remove_faction = temples
+				remove_faction = enuchs
+				remove_faction = bureaucrats
+			}
+			if = {
+				limit = {
+					has_country_modifier = lost_mandate_of_heaven
+				}
+				remove_country_modifier = lost_mandate_of_heaven
+			}
+			country_event = {
+				#Reforming the Bureaucracy
+				id = china_events.31
+				days = 365
+			}
+			country_event = {
+				id = china_events.32				#Records of the last Empire
+				days = 183
+			}
+			country_event = {
+				id = celestial_empire_events.2
+				days = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

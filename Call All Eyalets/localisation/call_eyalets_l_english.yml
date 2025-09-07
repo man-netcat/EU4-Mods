@@ -1,0 +1,4 @@
+﻿l_english:
+ call_all_eyalets_title:0 "Call Non-Core Eyalets"
+ call_all_eyalets_desc:0 "Call all non-core Eyalets that owe you at least 20 favours into your offensive wars. Eyalets that have a truce with the defending war leader will not join. This will consume 20 favours from each participating eyalet."
+ call_all_eyalets_tt:0 "All non-core Eyalets who owe you 20 favours and have no truce with the defending war leader will join your offensive wars, consuming 20 favours from each."

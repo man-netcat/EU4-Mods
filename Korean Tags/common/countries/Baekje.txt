@@ -1,0 +1,162 @@
+#Country Name: Please see filename.
+graphical_culture = asiangfx
+color = {
+	254
+	225
+	1
+}
+
+revolutionary_colors = {
+	0
+	5
+	13
+}
+
+historical_idea_groups = {
+	naval_ideas
+	offensive_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Onjo #0" = 10
+	"Daru #0" = 10
+	"Giru #0" = 10
+	"Gaeru #0" = 10
+	"Chogo #0" = 10
+	"Gusu #0" = 10
+	"Saban #0" = 10
+	"Goi #0" = 10
+	"Chaekgye #0" = 10
+	"Bunseo #0" = 10
+	"Biryu #0" = 10
+	"Gye #0" = 10
+	"Geunchogo #0" = 10
+	"Geungusu #0" = 10
+	"Chimnyu #0" = 10
+	"Jinsa #0" = 10
+	"Asin #0" = 10
+	"Jeonji #0" = 10
+	"Gu-isin #0" = 10
+	"Biyu #0" = 10
+	"Gaero #0" = 10
+	"Dongseong #0" = 10
+	"Seong #0" = 10
+	"Wideok #0" = 10
+	"Mu #0" = 10
+	"Uija #0" = 10
+}
+
+leader_names = {
+	Yi
+	Wang
+	Kim
+	Pak
+	Shin
+	Song
+	Chae
+	Gang
+	Jeong
+	Jang
+	Yun
+	Han
+	Hong
+	Yu
+	Ki
+	Choi
+	Ga
+	Gye
+	Go
+	Na
+	Noh
+	Woo
+	Do
+	Du
+	Ban
+	Ma
+	Min
+	Mun
+	Seo
+	Son
+	Sim
+	An
+	Yang
+	O
+	Jeon
+	Cho
+	Jin
+	Ha
+	Hong
+	Heo
+	Kwak
+	Lim
+	Won
+	Kwon
+	Hwang
+	Bae
+	Seok
+	Bang
+	Dae
+	Gyeong
+	Nam
+	Sung
+	Baek
+}
+
+ship_names = {
+	Baekdu
+	Baekje
+	Buyeo
+	Chilbosan
+	Duman
+	Daedeok
+	Dongmyeongseong
+	"Eulji Mundeok"
+	Gayasan
+	Geumgang
+	Geumho
+	Goguryeo
+	Gumiho
+	"Gyeon Hwon"
+	Imjingang
+	Inmyeonjo
+	Jangbaek
+	"Jang Bogo"
+	Jirisan
+	Jeongjong
+	Kumgangsan
+	Myohyangsan
+	Nakdong
+	Samjogo
+	Sincheon
+	Silla
+	Sobaek
+	Taebaek
+	Taejo
+	Hanseong
+	Haemosu
+	Habaek
+	Hwaeomsa
+	Worak
+	Yuhwa
+	Yeong
+	"Yeon Gaesomun"
+	"Jeong Do-jeon"
+	"Yi Seong-gye"
+}

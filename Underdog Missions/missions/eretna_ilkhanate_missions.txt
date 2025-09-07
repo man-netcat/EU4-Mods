@@ -1,0 +1,535 @@
+#Conquest + Religious Branches
+eretna_mission_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "King of Kings"
+	}
+	potential = {
+		NOT = {
+			map_setup = map_setup_random
+		}
+		has_dlc = "King of Kings"
+		OR = {
+			tag = ERE
+			AND = {
+				tag = ILK
+				primary_culture = turkish
+			}
+		}
+	}
+	has_country_shield = yes
+	ere_prepare_for_independence = {
+		icon = mission_ottoman_early_army
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				overlord = {
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
+				}
+			}
+			army_size_percentage = 0.5
+		}
+		effect = {
+			add_liberty_desire = 100
+			add_manpower = 10
+			add_mil_power = 200
+			add_adm_power = 200
+			add_dip_power = 200
+			add_prestige = 25
+			add_country_modifier = {
+				name = morale_boost
+				duration = 730
+			}
+			add_country_modifier = {
+				name = enhanced_reputation
+				duration = 730
+			}
+			create_general = {
+				tradition = 75
+			}
+			add_mil_tech = 1
+		}
+	}
+	ere_get_independent = {
+		icon = geo_break_the_crescent
+		position = 2
+		required_missions = {
+			ere_prepare_for_independence
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = anatolia_region
+			}
+			add_mil_tech = 1
+		}
+	}
+	ere_the_seljuk_successors = {
+		icon = per_the_seljuk_successors
+		position = 3
+		required_missions = {
+			ere_get_independent
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2306
+				province_id = 2307
+				area = erzurum_area
+				area = kastamonu_area
+				area = rum_area
+				area = dulkadir_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					province_id = 2306
+					province_id = 2307
+					area = erzurum_area
+					area = kastamonu_area
+					area = rum_area
+					area = dulkadir_area
+				}
+				value = 12
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = northern_greece_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = morea_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = thrace_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = macedonia_area
+			}
+		}
+	}
+	ere_butcher_black_sheep = {
+		icon = per_butcher_black_sheep
+		required_missions = {
+			ere_the_seljuk_successors
+		}
+		position = 4
+		provinces_to_highlight = {
+			owned_by = QAR
+		}
+		trigger = {
+			NOT = {
+				exists = QAR
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = caucasia_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = mashriq_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = persia_region
+			}
+		}
+	}
+	ere_reclaim_persia = {
+		icon = mission_ilkhanate
+		required_missions = {
+			ere_butcher_black_sheep
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			owns_all_provinces = {
+				region = persia_region
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = khorasan_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = central_asia_region
+			}
+		}
+	}
+	ere_beyond_the_oxus = {
+		icon = per_recruit_the_qizilbash
+		required_missions = {
+			ere_reclaim_persia
+		}
+		position = 6
+		provinces_to_highlight = {
+			region = central_asia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = central_asia_region
+				value = 20
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = mongolia_region
+			}
+		}
+	}
+	ere_road_to_karakorum = {
+		icon = mission_tumu_crisis
+		required_missions = {
+			ere_beyond_the_oxus
+		}
+		position = 7
+		provinces_to_highlight = {
+			region = mongolia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = mongolia_region
+				value = 20
+			}
+			owns_core_province = 4678			# Karakorum
+		}
+		effect = {
+			add_prestige = 100
+		}
+	}
+}
+
+eretna_mission_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "King of Kings"
+	}
+	potential = {
+		NOT = {
+			map_setup = map_setup_random
+		}
+		has_dlc = "King of Kings"
+		OR = {
+			tag = ERE
+			AND = {
+				tag = ILK
+				primary_culture = turkish
+			}
+		}
+	}
+	has_country_shield = yes
+	ere_claim_constantinople = {
+		icon = take_constantinople
+		required_missions = {
+			ere_the_seljuk_successors
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = northern_greece_area
+						area = morea_area
+						area = thrace_area
+						area = macedonia_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = root
+					}
+				}
+				AND = {
+					province_id = 151
+					OR = {
+						NOT = {
+							owned_by = root
+						}
+						NOT = {
+							is_core = root
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 151
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = northern_greece_area
+					area = morea_area
+					area = thrace_area
+					area = macedonia_area
+				}
+				value = 15
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = balkan_region
+			}
+			add_power_projection_mission = {
+				amount = 50
+			}
+		}
+	}
+	ere_caucasian_conquest = {
+		icon = mission_the_caucasus_tur
+		required_missions = {
+			ere_butcher_black_sheep
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = caucasia_region
+			NOT = {
+				owned_by = root
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = caucasia_region
+				value = 15
+			}
+		}
+		effect = {
+			# placeholder
+			add_prestige = 50
+		}
+	}
+	ere_secure_khorasan = {
+		icon = per_establish_eastern_defenses
+		required_missions = {
+			ere_reclaim_persia
+		}
+		position = 6
+		provinces_to_highlight = {
+			region = khorasan_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = khorasan_region
+				value = 16
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = hindusthan_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = west_india_region
+			}
+		}
+	}
+	ere_brothers_of_the_east = {
+		icon = mission_turkish_merchants
+		required_missions = {
+			ere_beyond_the_oxus
+		}
+		position = 7
+		provinces_to_highlight = {
+			culture = uyghur
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					culture = uyghur
+					NOT = {
+						country_or_non_sovereign_subject_holds = root
+					}
+				}
+			}
+		}
+		effect = {
+			# placeholder
+			add_prestige = 50
+		}
+	}
+}
+
+eretna_mission_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "King of Kings"
+	}
+	potential = {
+		NOT = {
+			map_setup = map_setup_random
+		}
+		has_dlc = "King of Kings"
+		OR = {
+			tag = ERE
+			AND = {
+				tag = ILK
+				primary_culture = turkish
+			}
+		}
+	}
+	has_country_shield = yes
+	ere_unify_the_turks = {
+		icon = geo_break_the_crescent_2
+		required_missions = {
+			ere_the_seljuk_successors
+		}
+		position = 4
+		provinces_to_highlight = {
+			culture = turkish
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					culture = turkish
+					NOT = {
+						country_or_non_sovereign_subject_holds = root
+					}
+				}
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				tag = QAR
+			}
+		}
+	}
+	ere_unite_mashriq = {
+		icon = mission_cradle_of_civilization
+		required_missions = {
+			ere_butcher_black_sheep
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = mashriq_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = mashriq_region
+				value = 16
+			}
+		}
+		effect = {
+			custom_tooltip = empty_line_tt
+			add_permanent_claim_multi_provinces = {
+				target = egypt_region
+			}
+		}
+	}
+	ere_subjugate_egypt = {
+		icon = mission_egyptian_mamluk_soldier
+		required_missions = {
+			ere_unite_mashriq
+		}
+		position = 6
+		provinces_to_highlight = {
+			region = egypt_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = egypt_region
+				value = 20
+			}
+		}
+		effect = {
+			add_permanent_claim_multi_provinces = {
+				target = arabia_region
+			}
+		}
+	}
+}
+
+eretna_mission_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "King of Kings"
+	}
+	potential = {
+		NOT = {
+			map_setup = map_setup_random
+		}
+		has_dlc = "King of Kings"
+		OR = {
+			tag = ERE
+			AND = {
+				tag = ILK
+				primary_culture = turkish
+			}
+		}
+	}
+	has_country_shield = yes
+}
+
+eretna_mission_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "King of Kings"
+	}
+	potential = {
+		NOT = {
+			map_setup = map_setup_random
+		}
+		has_dlc = "King of Kings"
+		OR = {
+			tag = ERE
+			AND = {
+				tag = ILK
+				primary_culture = turkish
+			}
+		}
+	}
+	has_country_shield = yes
+}

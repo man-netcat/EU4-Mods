@@ -1,0 +1,5 @@
+rise_of_kalat = {
+	land_maintenance_modifier = -0.25
+	cavalry_power = 0.15
+	land_morale = 0.1
+}

@@ -1,0 +1,69 @@
+country_decisions = {
+	call_all_eyalets = {
+		major = yes
+		potential = {
+			has_government_attribute = has_eyalets
+			is_in_war = {
+				attacker_leader = ROOT
+			}
+			any_subject_country = {
+				is_subject_of_type = eyalet
+				NOT = {
+					is_in_war = {
+						attacker_leader = ROOT
+					}
+				}
+				owes_favors = {
+					who = ROOT
+					value = 20
+				}
+			}
+		}
+		allow = {
+			is_in_war = {
+				attacker_leader = ROOT
+			}
+			any_subject_country = {
+				is_subject_of_type = eyalet
+				NOT = {
+					is_in_war = {
+						attacker_leader = ROOT
+					}
+				}
+				owes_favors = {
+					who = ROOT
+					value = 20
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = call_all_eyalets_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = eyalet
+						NOT = {
+							is_in_war = {
+								attacker_leader = ROOT
+							}
+						}
+						owes_favors = {
+							who = ROOT
+							value = 20
+						}
+					}
+					join_all_offensive_wars_of = ROOT
+					ROOT = {
+						add_favors = {
+							who = PREV
+							amount = -20
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

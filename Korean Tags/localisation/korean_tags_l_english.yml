@@ -1,0 +1,84 @@
+﻿l_english:
+ BAE:0 "Baekje"
+ BAE_ADJ:0 "Baekjean"
+ GGY:0 "Goguryeo"
+ GGY_ADJ:0 "Goguryeoan"
+ SLA:0 "Silla"
+ SLA_ADJ:0 "Sillan"
+ GOR:0 "Goryeo"
+ GOR_ADJ: "Goryeoan"
+
+ BAE_ideas:1 "Baekje Ideas"
+ BAE_ideas_start:1 "Baekje Traditions"
+ BAE_ideas_bonus:1 "Baekje Ambition"
+
+ baekje_diplomacy:0 "Baekje Diplomacy"
+ baekje_diplomacy_desc:0 "Baekje was renowned for its skill in diplomacy, maintaining strong relations with neighboring states and overseas kingdoms. This allowed us to secure allies and promote our influence abroad."
+
+ baekje_artisans:0 "Baekje Artisans"
+ baekje_artisans_desc:0 "The artisans of Baekje were highly skilled, producing exquisite crafts and architecture. Their work enhances production efficiency and reduces the cost of developing our lands."
+
+ baekje_sea_trade:0 "Baekje Sea Trade"
+ baekje_sea_trade_desc:0 "With a long coastline and extensive trade routes, Baekje became a maritime power. Our ships dominate trade routes, increasing our naval capacity and influence overseas."
+
+ baekje_walled_cities:0 "Baekje Walled Cities"
+ baekje_walled_cities_desc:0 "The construction of strong, fortified cities across Baekje improves the defensiveness of our provinces, protecting our people from invaders."
+
+ baekje_cultural_export:0 "Baekje Cultural Export"
+ baekje_cultural_export_desc:0 "Baekje has been a center of culture and learning, exporting art, religion, and ideas abroad. This spreads our influence and stabilizes our internal administration."
+
+ baekje_merchant_network:0 "Baekje Merchant Network"
+ baekje_merchant_network_desc:0 "Our merchants maintain an extensive network both at home and abroad. This network increases trade efficiency and strengthens the economy of our realm."
+
+ baekje_maritime_tech:0 "Baekje Maritime Technology"
+ baekje_maritime_tech_desc:0 "Innovation in shipbuilding and navigation allows Baekje to maintain a strong fleet, improving naval forcelimits and the protection of trade routes."
+
+ GGY_ideas:1 "Goguryeo Ideas"
+ GGY_ideas_start:1 "Goguryeo Traditions"
+ GGY_ideas_bonus:1 "Goguryeo Ambition"
+
+ ggy_northern_forts:0 "Goguryeo Northern Forts"
+ ggy_wall_defense_desc:0 "Goguryeo built formidable fortifications to protect its cities and borders. These walls enhance the defensiveness of our provinces and slow invading armies."
+
+ ggy_military_tradition:0 "Goguryeo Military Tradition"
+ ggy_military_tradition_desc:0 "Our long-standing martial culture has forged a proud and disciplined army. This tradition increases the morale of our troops on the battlefield."
+
+ ggy_armored_cavalry:0 "Goguryeo Armored Cavalry"
+ ggy_armored_cavalry_desc:0 "Goguryeo cavalry are heavily armored and well-trained, providing powerful offensive capabilities against our enemies."
+
+ ggy_frontier_management:0 "Goguryeo Frontier Management"
+ ggy_frontier_management_desc:0 "Efficient governance of frontier territories reduces unrest and autonomy, allowing the state to maintain control over distant lands."
+
+ ggy_dongmyeong_traditions:0 "Jumong's Traditions"
+ ggy_dongmyeong_traditions_desc:0 "The legendary founder Jumong established the foundations of Goguryeo's military and governance. His enduring traditions inspire our armies, preserving their skill and resilience through generations."
+
+ ggy_maritime_patrol:0 "Goguryeo Maritime Patrol"
+ ggy_maritime_patrol_desc:0 "Though not a traditional naval power, Goguryeo maintains patrols along its rivers and coasts, improving naval morale and protecting trade."
+
+ ggy_strategic_depth:0 "Goguryeo Strategic Depth"
+ ggy_strategic_depth_desc:0 "Our vast homeland provides strategic depth, allowing manpower to recover quickly and the army to reorganize after campaigns."
+
+ GOR_ideas:1 "Goryeo Ideas"
+ GOR_ideas_start:1 "Goryeo Traditions"
+ GOR_ideas_bonus:1 "Goryeo Ambition"
+
+ goryeo_uijeongbu:0 "Uijeongbu Administration"
+ goryeo_uijeongbu_desc:0 "The Uijeongbu is the highest state council of Goryeo, responsible for governing the kingdom efficiently. Its wise officials reduce advisor costs and ensure stable administration."
+
+ goryeo_civil_service:0 "Civil Service Reforms"
+ goryeo_civil_service_desc:0 "Goryeo has implemented a merit-based civil service system. This reform reduces the cost of ideas and administrative technology, promoting capable governance."
+
+ goryeo_celadon_trade:0 "Celadon Trade"
+ goryeo_celadon_trade_desc:0 "Goryeo is famous for its celadon ceramics, which are exported throughout the region. Trade in these goods increases the efficiency and wealth of our economy."
+
+ goryeo_military_reform:0 "Military Reforms"
+ goryeo_military_reform_desc:0 "Reorganizing the army and updating military doctrines improves discipline and battlefield effectiveness, ensuring our forces remain strong."
+
+ goryeo_geobukseon:0 "Geobukseon Warships"
+ goryeo_geobukseon_desc:0 "The invention of the Geobukseon, or turtle ship, strengthens our navy. These ships increase naval durability and morale, safeguarding our coasts."
+
+ goryeo_hyanggyo:0 "Hyanggyo Confucian Schools"
+ goryeo_hyanggyo_desc:0 "State-run Confucian academies, the Hyanggyo, enhance prestige and promote education. They also reduce technology costs by spreading knowledge throughout the kingdom."
+
+ goryeo_trade_hubs:0 "Trade Hubs"
+ goryeo_trade_hubs_desc:0 "Strategically placed trade centers throughout Goryeo improve production efficiency and strengthen our control of commerce."

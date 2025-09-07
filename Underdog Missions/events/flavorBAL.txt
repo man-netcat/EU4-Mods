@@ -1,0 +1,29 @@
+country_event = {
+	id = flavor_bal.1
+	title = "flavor_bal.1.t"
+	desc = "flavor_bal.1.d"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = BAL
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "flavor_bal.1.a"
+		custom_tooltip = flavor_bal.1.a.tt
+		hidden_effect = {
+			SND = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+			AFG = {
+				every_owned_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}

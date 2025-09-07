@@ -1,0 +1,23 @@
+﻿l_english:
+ bal_conquer_sindh_title:0 "Conquer Sindh"
+ bal_conquer_sindh_desc:0 "To the east of us lies Sindh, fertile and wealthy. Its rivers and fields will provide the foundation for our power. We must rally our forces and bring this land under Baloch control."
+
+ bal_liberate_the_afghans_title:0 "Liberate the Afghans"
+ bal_liberate_the_afghans_desc:0 "The Afghan tribes suffer under foreign rule. They are our kin, bound to us by blood and tradition. It is our duty to free them and lead them to greatness."
+
+ bal_balochi_horses_title:0 "Balochi Horses"
+ bal_balochi_horses_desc:0 "Our warriors whisper of the horsemen of the steppe, swift and deadly. If we are to expand, we must master this art of war and build a cavalry force to rival the nomads of legend."
+
+ bal_khanate_of_kalat_title:0 "Khanate of Kalat"
+ bal_khanate_of_kalat_desc:0 "The time has come. With Sindh secured and Afghanistan subdued, our horsemen now thunder across the plains. The Baloch people shall embrace the way of the steppes, and the Khanate of Kalat shall rise."
+
+ bal_becomes_horde_tooltip:0 "§Y[Root.GetName]§! becomes a Horde."
+ KALAT:0 "Kalat"
+
+ rise_of_kalat:0 "Rise of Kalat"
+ desc_rise_of_kalat:0 "Our warriors ride with unmatched skill, our banners fly proudly across the plains. The Baloch have embraced the ways of the steppe, and none shall withstand the Khanate of Kalat."
+
+ flavor_bal.1.t:0 "The Call of the Steppes"
+ flavor_bal.1.d:0 "The Baloch have long dwelt in rugged hills and borderlands, but our hearts yearn for the boundless plains. Tales of horsemen who carved empires with speed and steel stir our spirits. If we are to rise, we must look to Sindh as our base, and to Afghanistan as our gateway to Central Asia."
+ flavor_bal.1.a:0 "The tribes shall ride once more!"
+ flavor_bal.1.a.tt:0 "Gain permanent claims on Sindh and Afghanistan."

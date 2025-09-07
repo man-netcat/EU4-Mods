@@ -1,0 +1,104 @@
+BAE_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		land_morale = 0.05
+	}
+	bonus = {
+		infantry_power = 0.05
+	}
+	trigger = {
+		tag = BAE
+	}
+	free = yes
+	baekje_diplomacy = {
+		diplomatic_reputation = 1
+	}
+	baekje_artisans = {
+		development_cost = -0.05
+	}
+	baekje_sea_trade = {
+		light_ship_power = 0.1
+	}
+	baekje_walled_cities = {
+		defensiveness = 0.1
+	}
+	baekje_cultural_export = {
+		stability_cost_modifier = -0.05
+	}
+	baekje_merchant_network = {
+		trade_efficiency = 0.05
+	}
+	baekje_maritime_tech = {
+		naval_forcelimit_modifier = 0.05
+	}
+}
+
+GGY_ideas = {
+	start = {
+		land_morale = 0.1
+		defensiveness = 0.05
+	}
+	bonus = {
+		infantry_cost = -0.2
+	}
+	trigger = {
+		tag = GGY
+	}
+	free = yes
+	ggy_northern_forts = {
+		defensiveness = 0.1
+	}
+	ggy_military_tradition = {
+		land_morale = 0.05
+	}
+	ggy_armored_cavalry = {
+		cavalry_power = 0.1
+	}
+	ggy_frontier_management = {
+		global_autonomy = -0.05
+	}
+	ggy_dongmyeong_traditions = {
+		army_tradition_decay = -0.05
+	}
+	ggy_maritime_patrol = {
+		naval_morale = 0.05
+	}
+	ggy_strategic_depth = {
+		manpower_recovery_speed = 0.1
+	}
+}
+
+GOR_ideas = {
+	start = {
+		adm_tech_cost_modifier = -0.05
+		stability_cost_modifier = -0.05
+	}
+	bonus = {
+		infantry_power = 0.05
+	}
+	trigger = {
+		tag = GOR
+	}
+	free = yes
+	goryeo_uijeongbu = {
+		advisor_cost = -0.1
+	}
+	goryeo_civil_service = {
+		idea_cost = -0.1
+	}
+	goryeo_celadon_trade = {
+		trade_efficiency = 0.1
+	}
+	goryeo_military_reform = {
+		discipline = 0.05
+	}
+	goryeo_geobukseon = {
+		ship_durability = 0.1
+	}
+	goryeo_hyanggyo = {
+		prestige = 1
+	}
+	goryeo_trade_hubs = {
+		production_efficiency = 0.05
+	}
+}
