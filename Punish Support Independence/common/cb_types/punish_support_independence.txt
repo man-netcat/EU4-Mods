@@ -1,0 +1,15 @@
+punish_support_independence_cb = {
+	prerequisites_self = {
+		num_of_subjects = 1
+	}
+	prerequisites = {
+		ROOT = {
+			any_subject_country = {
+				FROM = {
+					is_supporting_independence_of = PREV
+				}
+			}
+		}
+	}
+	war_goal = superiority_insult
+}
