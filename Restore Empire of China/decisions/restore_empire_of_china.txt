@@ -24,7 +24,6 @@ country_decisions = {
 				religion_group = eastern
 				religion_group = pagan
 			}
-			has_global_flag = empire_of_china_dismantled
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -48,8 +47,13 @@ country_decisions = {
 		}
 		effect = {
 			set_emperor_of_china = ROOT
-			clr_global_flag = empire_of_china_dismantled
-			dismantle_empire_of_china = no
+			if = {
+				limit = {
+					has_global_flag = empire_of_china_dismantled
+				}
+				clr_global_flag = empire_of_china_dismantled
+				dismantle_empire_of_china = no
+			}
 			save_global_event_target_as = EmperorOfChina
 			if = {
 				limit = {
