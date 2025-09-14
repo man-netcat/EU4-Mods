@@ -2,5 +2,5 @@ version="1"
 tags={
 	"Flavour"
 }
-name="Underdog Missions"
+name="Between Tigris and Oxus"
 supported_version="v1.37.5.0"
