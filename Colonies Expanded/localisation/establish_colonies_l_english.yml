@@ -19,12 +19,14 @@
 
  FIC:0 "French Indochina"
  FIC_ADJ:0 "French Indochinese"
- establish_colonies.EVTNAME_FIC:0 "French Indochina"
- establish_colonies.EVTDESC_FIC:0 "France gradually expanded its influence over Cochinchina, Annam, Tonkin, Cambodia, and Laos during the 19th century. While not organized as a chartered company, these territories were administered as a coherent colonial entity, facilitating trade and consolidating French control over the region. Establishing French Indochina as a commercial enterprise would allow us to manage its resources and trade in a unified manner."
- establish_colonies.1.a:0 "Establish French Indochina as a commercial enterprise"
- establish_colonies.1.a.tt:0 "§Y[Root.GetName]§! establishes §YFrench Indochina§! as a §YCommercial Enterprise§! subject, consolidating trade and administration in the region."
- establish_colonies.1.b:0 "Administer the territories ourselves"
- establish_colonies.1.c:0 "Let us see how French Indochina will develop under our influence..."
+
+ establish_fic_title:0 "Establish French Indochina Company"
+ establish_fic_desc:0 "Instead of directly administering our presence in Indochina, let us establish the French Indochina Company as a commercial enclave to govern trade and act as our gateway into Southeast Asia."
+ FRA_ESTABLISH_FIC_IN_INDOCHINA:0 "We will establish §Y[FIC.GetName]§! in Indochina as our §YCommercial Enterprise§!."
+
+ expand_fic_title:0 "Expand French Indochina Company"
+ expand_fic_desc:0 "We have additional provinces in Indochina that should be granted to the French Indochina Company."
+ FRA_CEDE_PROVINCES_TO_FIC:0 "We will grant all of our §YIndochinese§! provinces to the §Y[FIC.GetName]§!."
 
  GWC:0 "Geoctroyeerde Westindische Compagnie"
  GWC_ADJ:0 "Dutch"
