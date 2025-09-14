@@ -1,0 +1,147 @@
+# The French Indochina Company
+country_event = {
+	id = establish_colonies.1
+	title = establish_colonies.EVTNAME_FIC
+	desc = establish_colonies.EVTDESC_FIC
+	picture = MERCHANTS_ARGUING_eventPicture
+	trigger = {
+		tag = FRA
+		NOT = {
+			has_country_flag = fic_flag
+		}
+		num_of_owned_provinces_with = {
+			value = 20
+			region = indo_china_region
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	#Establish the French Indochina Company
+	option = {
+		name = establish_colonies.1.a
+		custom_tooltip = establish_colonies.1.a.tt
+		hidden_effect = {
+			set_country_flag = fic_flag
+			every_owned_province = {
+				limit = {
+					region = indo_china_region
+				}
+				add_core = FIC
+				if = {
+					limit = {
+						is_core = ROOT
+					}
+					remove_core = ROOT
+				}
+			}
+			release = FIC
+			create_subject = {
+				subject_type = commercial_enterprise
+				who = FIC
+			}
+			FIC = {
+				change_government = republic
+				add_government_reform = trade_company_government
+				change_religion = ROOT
+				change_primary_culture = ROOT
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_treasury = 200
+				set_prestige_to_zero = yes
+				add_republican_tradition = 100
+			}
+		}
+		indo_china_region = {
+			limit = {
+				NOT = {
+					is_core = FIC
+				}
+				NOT = {
+					is_permanent_claim = FIC
+				}
+			}
+			add_permanent_claim = FIC
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#We do not need such enterprise on foreign ground
+	option = {
+		name = establish_colonies.1.b
+		indo_china_region = {
+			limit = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = {
+			set_country_flag = fic_flag
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#Play as the French Indochina Company
+	option = {
+		name = establish_colonies.1.c
+		trigger = {
+			ai = no
+		}
+		custom_tooltip = establish_colonies.1.a.tt
+		hidden_effect = {
+			set_country_flag = fic_flag
+			every_owned_province = {
+				limit = {
+					region = indo_china_region
+				}
+				add_core = FIC
+				if = {
+					limit = {
+						is_core = ROOT
+					}
+					remove_core = ROOT
+				}
+			}
+			release = FIC
+			create_subject = {
+				subject_type = commercial_enterprise
+				who = FIC
+			}
+			FIC = {
+				change_government = republic
+				add_government_reform = trade_company_government
+				change_religion = ROOT
+				change_primary_culture = ROOT
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+				add_treasury = 200
+				set_prestige_to_zero = yes
+				add_republican_tradition = 100
+			}
+			indo_china_region = {
+				limit = {
+					NOT = {
+						is_core = FIC
+					}
+					NOT = {
+						is_permanent_claim = FIC
+					}
+				}
+				add_permanent_claim = FIC
+			}
+		}
+		switch_tag = FIC
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

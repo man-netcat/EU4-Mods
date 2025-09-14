@@ -1,0 +1,91 @@
+#Country Name: Singapore
+graphical_culture = asiangfx
+special_unit_culture = south_east_asian_special
+color = {
+	0
+	102
+	204
+}
+
+revolutionary_colors = {
+	0
+	16
+	0
+}
+
+historical_idea_groups = {
+	trade_ideas
+	maritime_ideas
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	religious_ideas
+	spy_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+leader_names = {
+	Ahmad
+	Rahman
+	Hussein
+	Bin
+	Omar
+	Iskandar
+	Khalid
+	Syed
+	Mohamed
+	Idris
+	Abdul
+	Rahim
+	Hakim
+	Nuruddin
+	Rashid
+	Yusuf
+	Zakaria
+}
+
+monarch_names = {
+	"Parameswara #0" = 10
+	"Iskandar Shah #0" = 10
+	"Raja Abdul #0" = 10
+	"Raja Ali #0" = 10
+	"Raja Hussein #0" = 10
+	"Raja Omar #0" = 10
+	"Raja Muhammad #0" = 10
+	"Raja Syed #0" = 10
+	"Raja Khalid #0" = 10
+	"Raja Yusuf #0" = 10
+	"Nur Aisha #0" = -1
+	"Hafiza #0" = -1
+	"Azura #0" = -1
+	"Zahra #0" = -1
+}
+
+ship_names = {
+	"Victoria Harbour"
+	"Singapore Straits"
+	"Lion of the East"
+	"Temenggung"
+	"Shahbandar"
+	"Pulau Ubin"
+	"Pulau Sentosa"
+	"Pulau Tekong"
+	"Pulau Jurong"
+	"Pulau Bukom"
+	"Pulau St. John"
+	"Pulau Kusu"
+	"Pulau Semakau"
+	"Pulau Hantu"
+	"Pulau Lazarus"
+}

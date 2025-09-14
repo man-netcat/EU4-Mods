@@ -1,0 +1,143 @@
+# Country Name: West-Indische Compagnie
+graphical_culture = westerngfx
+color = {
+	153
+	51
+	51
+}
+
+historical_score = 3000
+revolutionary_colors = {
+	6
+	0
+	14
+}
+
+preferred_religion = reformed
+historical_idea_groups = {
+	administrative_ideas
+	exploration_ideas
+	defensive_ideas
+	naval_ideas
+	trade_ideas
+	economic_ideas
+	quality_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	swedish_gallop
+	austrian_tercio
+	austrian_grenzer
+	french_bluecoat
+	french_dragoon
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Dirck #0" = 20
+	"Isaac #0" = 20
+	"Johannes #0" = 20
+	"Willem #0" = 20
+	"Pieter #0" = 20
+	"Jacob #0" = 20
+	"Adriaen #0" = 20
+	"Michiel #0" = 15
+	"Cornelis #0" = 15
+	"Abraham #0" = 15
+	"Jan #0" = 15
+	"Laurens #0" = 15
+	"Johan #0" = 15
+	"Hendrik #0" = 10
+	"Frederik #0" = 10
+	"Simon #0" = 10
+	"Thomas #0" = 10
+	"David #0" = 10
+	# Surnames for directors and merchants
+	"Van Rensselaer #0" = 0
+	"Stuyvesant #0" = 0
+	"Van Dyck #0" = 0
+	"Van Walbeeck #0" = 0
+	"Van Sommelsdijck #0" = 0
+	"Van Groenewegen #0" = 0
+	"Witte #0" = 0
+}
+
+leader_names = {
+	"Stuyvesant"
+	"Van Rensselaer"
+	"Van Walbeeck"
+	"Van Sommelsdijck"
+	"Van Groenewegen"
+	"Crijnssen"
+	"Heinsius"
+	"De With"
+	"Van Ghent"
+	"Van der Does"
+	"Van Hoorn"
+	"Van Noort"
+	"Van Diemen"
+	"Evertzen"
+}
+
+ship_names = {
+	"Walcheren"
+	"Zeelandia"
+	"Batavier"
+	"Walcheren's Roem"
+	"Vereenigde Provinciën"
+	"Amsterdam"
+	"Middelburg"
+	"Utrecht"
+	"Haarlem"
+	"Leiden"
+	"Rotterdam"
+	"Prins Willem"
+	"Maurits"
+	"Frederik Hendrik"
+	"Admiraal Generaal"
+	"Nieuw Amsterdam"
+	"Curaçao"
+	"Suriname"
+	"Essequibo"
+	"Berbice"
+	"Recife"
+	"St. Eustatius"
+	"Aruba"
+	"Bonaire"
+	"Elmina"
+	"Luanda"
+	"Gouden Leeuw"
+	"Halve Maan"
+	"Eendracht"
+	"Vrede"
+	"Vrijheid"
+}
+
+army_names = {
+	"Compagnie's Leger"
+	"Leger van Nieuw Nederland"
+	"Leger van Suriname"
+	"Leger van Curaçao"
+	"Leger van Elmina"
+	"Leger van $PROVINCE$"
+}
+
+fleet_names = {
+	"West-Indiëvloot"
+	"Atlantische Vloot"
+	"Caribische Vloot"
+	"Guineese Kustvloot"
+	"Braziliaanse Vloot"
+	"Vloot van $PROVINCE$"
+}

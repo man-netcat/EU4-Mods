@@ -1,0 +1,143 @@
+country_decisions = {
+	establish_hkg = {
+		major = yes
+		potential = {
+			tag = GBR
+			has_dlc = "Winds of Change"
+			NOT = {
+				has_country_flag = established_hkg_flag
+			}
+			owns = 667
+		}
+		allow = {
+			owns = 667
+		}
+		effect = {
+			custom_tooltip = GBR_ESTABLISH_HKG_IN_CHINA
+			hidden_effect = {
+				set_country_flag = established_hkg_flag
+				667 = {
+					cede_province = HKG
+					add_core = HKG
+				}
+				create_subject = {
+					subject_type = commercial_enterprise
+					subject = HKG
+				}
+				HKG = {
+					change_government = republic
+					add_government_reform = trade_company_government
+					change_religion = ROOT
+					change_primary_culture = ROOT
+					add_adm_power = 100
+					add_dip_power = 100
+					add_mil_power = 100
+					add_treasury = 200
+					set_prestige_to_zero = yes
+					add_republican_tradition = 100
+					swap_free_idea_group = yes
+					adopt_technology_group_from_target = {
+						target = root
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_sgp = {
+		major = yes
+		potential = {
+			tag = GBR
+			has_dlc = "Winds of Change"
+			NOT = {
+				has_country_flag = established_sgp_flag
+			}
+			owns = 4815
+		}
+		allow = {
+			owns = 4815
+		}
+		effect = {
+			custom_tooltip = GBR_ESTABLISH_SGP_IN_SE_ASIA
+			hidden_effect = {
+				set_country_flag = established_sgp_flag
+				4815 = {
+					cede_province = SGP
+					add_core = SGP
+				}
+				create_subject = {
+					subject_type = commercial_enterprise
+					subject = SGP
+				}
+				SGP = {
+					change_government = republic
+					add_government_reform = trade_company_government
+					change_religion = ROOT
+					change_primary_culture = ROOT
+					add_adm_power = 100
+					add_dip_power = 100
+					add_mil_power = 100
+					add_treasury = 200
+					set_prestige_to_zero = yes
+					add_republican_tradition = 100
+					swap_free_idea_group = yes
+					adopt_technology_group_from_target = {
+						target = root
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_mcu = {
+		major = yes
+		potential = {
+			tag = POR
+			has_dlc = "Winds of Change"
+			NOT = {
+				has_country_flag = established_mcu_flag
+			}
+			owns = 668
+		}
+		allow = {
+			owns = 668
+		}
+		effect = {
+			custom_tooltip = POR_ESTABLISH_MCU_IN_CHINA
+			hidden_effect = {
+				set_country_flag = established_mcu_flag
+				668 = {
+					cede_province = MCU
+					add_core = MCU
+				}
+				create_subject = {
+					subject_type = commercial_enterprise
+					subject = MCU
+				}
+				MCU = {
+					change_government = republic
+					add_government_reform = trade_company_government
+					change_religion = ROOT
+					change_primary_culture = ROOT
+					add_adm_power = 100
+					add_dip_power = 100
+					add_mil_power = 100
+					add_treasury = 200
+					set_prestige_to_zero = yes
+					add_republican_tradition = 100
+					swap_free_idea_group = yes
+					adopt_technology_group_from_target = {
+						target = root
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

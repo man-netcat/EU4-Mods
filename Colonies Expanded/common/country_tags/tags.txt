@@ -1,0 +1,5 @@
+HKG = "countries/Hong Kong.txt"
+MCU = "countries/Macau.txt"
+SGP = "countries/Singapore.txt"
+FIC = "countries/French Indochina.txt"
+GWC = "countries/West India Company.txt"

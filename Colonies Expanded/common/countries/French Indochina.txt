@@ -1,0 +1,103 @@
+# Country Name: Please see filename.
+graphical_culture = westerngfx
+special_unit_culture = south_east_asian_special
+color = {
+	255
+	255
+	51
+}
+
+revolutionary_colors = {
+	5
+	13
+	8
+}
+
+preferred_religion = catholic
+historical_idea_groups = {
+	administrative_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	maritime_ideas
+	exploration_ideas
+	quality_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	french_dragoon
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Louis #0" = 100
+	"Napoleon #0" = 80
+	"Charles #0" = 50
+	"Henri #0" = 50
+	"François #0" = 40
+	"Jean #0" = 30
+	"Pierre #0" = 30
+	"An #0" = 20
+	"Quy Ly #0" = 10
+	"Nguyen Long #0" = 10
+}
+
+leader_names = {
+	Albemarle
+	Amherst
+	Anson
+	Buckland
+	Braddock
+	Byron
+	Tran
+	Ho
+	Lê
+	Ly
+	Ngo
+	Mac
+	Trinh
+	Nguyen
+	Huynh
+	Phan
+	Pham
+	Vu
+	Dang
+	Bui
+	Do
+	Duong
+}
+
+ship_names = {
+	"Royal Indochina"
+	"Indochina Galley"
+	"Tonkin Cruiser"
+	"Saigon Frigate"
+	"Hanoi Ship"
+	"Mekong Sailor"
+	"Cambodia Bark"
+	"Annam Caravel"
+	"Champa Vessel"
+	"Laos Cutter"
+}
+
+army_names = {
+	"Royal Army"
+	"Colonial Army"
+	"Indochina Expeditionary Force"
+}
+
+fleet_names = {
+	"Royal Navy"
+	"Indochina Squadron"
+	"Tonkin Squadron"
+	"Mekong Squadron"
+}

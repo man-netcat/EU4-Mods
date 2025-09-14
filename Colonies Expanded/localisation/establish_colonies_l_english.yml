@@ -1,0 +1,44 @@
+﻿l_english:
+ HKG:0 "Hong Kong"
+ HKG_ADJ:0 "Hong Konger"
+ establish_hkg_title:0 "Establish Hong Kong"
+ establish_hkg_desc:0 "Instead of directly administering our presence in China, let us establish Hong Kong as a commercial enclave to govern trade and act as our gateway into the Pearl River Delta."
+ GBR_ESTABLISH_HKG_IN_CHINA:0 "We will establish §Y[HKG.GetName]§! in China as our §YCommercial Enterprise§!."
+
+ MCU:0 "Macau"
+ MCU_ADJ:0 "Macanese"
+ establish_mcu_title:0 "Establish Macau"
+ establish_mcu_desc:0 "Instead of directly administering our presence in China, let us establish Macau as a commercial enclave to govern trade and act as our gateway into the Pearl River Delta."
+ POR_ESTABLISH_MCU_IN_CHINA:0 "We will establish §Y[MCU.GetName]§! in China as our §YCommercial Enterprise§!."
+
+ SGP:0 "Singapore"
+ SGP_ADJ:0 "Singaporean"
+ establish_sgp_title:0 "Establish Singapore"
+ establish_sgp_desc:0 "Instead of directly administering our presence in Southeast Asia, let us establish Singapore as a commercial enclave to govern trade and act as our gateway into the Strait of Malacca."
+ GBR_ESTABLISH_SGP_IN_SE_ASIA:0 "We will establish §Y[SGP.GetName]§! in Southeast Asia as our §YCommercial Enterprise§!."
+
+ FIC:0 "French Indochina"
+ FIC_ADJ:0 "French Indochinese"
+ establish_colonies.EVTNAME_FIC:0 "French Indochina"
+ establish_colonies.EVTDESC_FIC:0 "France gradually expanded its influence over Cochinchina, Annam, Tonkin, Cambodia, and Laos during the 19th century. While not organized as a chartered company, these territories were administered as a coherent colonial entity, facilitating trade and consolidating French control over the region. Establishing French Indochina as a commercial enterprise would allow us to manage its resources and trade in a unified manner."
+ establish_colonies.1.a:0 "Establish French Indochina as a commercial enterprise"
+ establish_colonies.1.a.tt:0 "§Y[Root.GetName]§! establishes §YFrench Indochina§! as a §YCommercial Enterprise§! subject, consolidating trade and administration in the region."
+ establish_colonies.1.b:0 "Administer the territories ourselves"
+ establish_colonies.1.c:0 "Let us see how French Indochina will develop under our influence..."
+
+ GWC:0 "Geoctroyeerde Westindische Compagnie"
+ GWC_ADJ:0 "Dutch"
+
+ establish_wic_title:0 "Establish the WIC"
+ establish_wic_desc:0 "Instead of directly governing the lands of the Americas and Africa, let us establish the Geoctroyeerde Westindische Compagnie to govern them for us."
+
+ expand_wic_title:0 "Expand the WIC"
+ expand_wic_desc:0 "We have territories in the Americas and Africa that should be granted to the Geoctroyeerde Westindische Compagnie."
+ NED_ESTABLISH_WIC_IN_AMERICAS:0 "We will establish the §Y[GWC.GetName]§! in the Americas as our §YCommercial Enterprise§!."
+ NED_CEDE_PROVINCES_TO_WIC:0 "We will grant all of our §YAmerican§! and §YWest African§! provinces to the §Y[GWC.GetName]§!."
+
+ establish_voc_title:0 "Establish the VOC"
+ establish_voc_desc:0 "Instead of directly governing the lands of India and the East Indies, let us establish the Vereenigde Oostindische Compagnie to govern them for us."
+
+ expand_voc_title:0 "Expand the VOC"
+ expand_voc_desc:0 "We have lands in India and the East Indies that should be granted to the Vereenigde Oostindische Compagnie."

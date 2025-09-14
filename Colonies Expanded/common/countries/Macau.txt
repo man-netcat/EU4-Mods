@@ -1,0 +1,118 @@
+#Country Name: Macau
+graphical_culture = asiangfx
+color = {
+	0
+	156
+	59
+}
+
+revolutionary_colors = {
+	10
+	0
+	10
+}
+
+historical_idea_groups = {
+	trade_ideas
+	economic_ideas
+	maritime_ideas
+	administrative_ideas
+	defensive_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	quality_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+	# male names
+	"Jiahao #0" = 10
+	"Yongli #0" = 10
+	"Chengyuan #0" = 10
+	"Zhiyuan #0" = 10
+	"Qingjie #0" = 10
+	"Lianhua #0" = 10
+	"Yunsheng #0" = 10
+	"Xiaoran #0" = 10
+	"Guangming #0" = 10
+	"Zhengyi #0" = 10
+	# female names
+	"Meiling #0" = 10
+	"Xiaoyuan #0" = 10
+	"Lianmei #0" = 10
+	"Yunmei #0" = 10
+	"Qiaolian #0" = 10
+	"Xiaohua #0" = 10
+	"Zhilan #0" = 10
+}
+
+leader_names = {
+	Sun
+	Tan
+	Leong
+	Liu
+	Fong
+	Cheng
+	Ho
+	Wei
+	Ko
+	Mok
+	Pang
+	Chau
+	Yip
+	Kao
+	Heng
+	Lok
+	Ou
+	Chao
+	Dong
+	Ling
+}
+
+ship_names = {
+	"Pearl of the Delta"
+	"Macau Star"
+	"Lotus Harbour"
+	"Nam Van Breeze"
+	"Coloane Dragon"
+	"Taipa Pearl"
+	"Golden Lotus"
+	"Fragrant Isle"
+	"South China Star"
+	"Victoria Pearl"
+	"Ocean Lotus"
+	"Silver Dragon"
+	"Harbour Jewel"
+	"Emerald Wave"
+	"Dragon Pearl"
+}
+
+army_names = {
+	"Harbour Defense Corps"
+	"Macau Guard"
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Macau Fleet"
+	"South China Fleet"
+	"Pearl Delta Fleet"
+	"East Indies Fleet"
+	"Fleet of $PROVINCE$"
+}

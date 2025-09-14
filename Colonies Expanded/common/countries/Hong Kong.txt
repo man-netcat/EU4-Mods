@@ -1,0 +1,155 @@
+#Country Name: Hong Kong
+graphical_culture = asiangfx
+color = {
+	40
+	60
+	110
+}
+
+revolutionary_colors = {
+	16
+	0
+	16
+}
+
+historical_idea_groups = {
+	trade_ideas
+	economic_ideas
+	maritime_ideas
+	administrative_ideas
+	defensive_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	quality_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+	"Zhanji #0" = 10
+	"Zhanyong #0" = 10
+	"Jianrui #0" = 10
+	"Jianchun #0" = 10
+	"Jianze #0" = 10
+	"Jianzhi #0" = 10
+	"Youji #0" = 10
+	"Youyun #0" = 10
+	"Houzhao #0" = 10
+	"Zairui #0" = 10
+	"Yiling #0" = 10
+	"Changzhi #0" = 10
+	"Changhao #0" = 10
+	"Youyi #0" = 10
+	"Ciran #0" = 10
+	"Ciheng #0" = 10
+	"Shangbing #0" = 10
+	"Gongxi #0" = 10
+	"Jixi #0" = 10
+	"Qiyuan #0" = 10
+	"Linmei #0" = 10
+	"Ying #0" = 10
+	"Quan #0" = 10
+	"Hui #0" = 10
+	"Song #0" = 10
+	"Nan #0" = 10
+	"Yunjian #0" = 10
+	"Wengui #0" = 10
+	"Gaoxu #0" = 10
+	"Yousi #0" = 10
+	"Yourong #0" = 10
+	"Changxu #0" = 10
+	"Cihuan #0" = 10
+	"Yingxiang #0" = 10
+	"Rucai #0" = 10
+	"Zhongming #0" = 10
+	"Yan #0" = 10
+	# female names
+	"Meigui #0" = 10
+	"Meiyuan #0" = 10
+	"Linmei #0" = 10
+	"Chunmei #0" = 10
+	"Xiaoying #0" = 10
+}
+
+leader_names = {
+	Lee
+	Wong
+	Chan
+	Cheung
+	Ho
+	Yau
+	Mak
+	Lam
+	Choi
+	Ng
+	Leung
+	Kwok
+	Lau
+	Ling
+	Yuen
+	Lok
+	Shun
+	Man
+	Chi
+	Fai
+	Ching
+	Wan
+	"Ou'yang"
+	"Huangfu"
+	"Dongfang"
+	"Linghu"
+}
+
+ship_names = {
+	"Pearl of the Orient"
+	"Victoria Harbour"
+	"Kowloon Star"
+	"Lantau Dragon"
+	"Lotus Blossom"
+	"Fragrant Harbour"
+	"Red Junk"
+	"Golden Bauhinia"
+	"Nine Dragons"
+	"Typhoon Rider"
+	"South China Pearl"
+	"Star Ferry"
+	"Jade Dragon"
+	"Ocean Bauhinia"
+	"Silver Phoenix"
+	"Harbour Wind"
+	"Emerald Wave"
+	"Dragon Gate"
+	"Storm of the South"
+	"Pearl River"
+	"Victoria Queen"
+}
+
+army_names = {
+	"Harbour Defense Force"
+	"Victoria Guard"
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Victoria Fleet"
+	"Pearl River Fleet"
+	"South China Sea Fleet"
+	"East Indies Fleet"
+	"West Pacific Fleet"
+	"Fleet of $PROVINCE$"
+}
