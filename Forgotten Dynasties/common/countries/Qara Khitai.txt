@@ -1,0 +1,112 @@
+#Country Name: Qara Khitai (Western Liao)
+graphical_culture = asiangfx
+color = {
+	0
+	102
+	51
+}
+
+revolutionary_colors = {
+	10
+	0
+	10
+}
+
+historical_idea_groups = {
+	administrative_ideas
+	religious_ideas
+	trade_ideas
+	quantity_ideas
+	offensive_ideas
+	expansion_ideas
+	economic_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	Abaoji	#0 = 20
+	Dashi	#0 = 20
+	Abaoqi	#0 = 20
+	Shulü	#0 = 15
+	Xiao	#0 = 15
+	Abaosheng	#0 = 10
+	Abaohuan	#0 = 10
+	Abaoli	#0 = 10
+	Abaolun	#0 = 10
+	Abaoyan	#0 = 10
+	Abaoying	#0 = 10
+	Abaosun	#0 = 10
+	Abaohu	#0 = 10
+}
+
+leader_names = {
+	Abaoji
+	Dashi
+	Abaoqi
+	Shulü
+	Xiao
+	Abaosheng
+	Abaohuan
+	Abaoli
+	Abaolun
+	Abaoyan
+	Abaoying
+	Abaosun
+	Abaohu
+	Abaokun
+	Abaomin
+	Abaotong
+	Abaozhi
+	Abaoyong
+	Abaoshan
+	Abaofu
+	Abaoyuan
+	Abaoling
+	Abaozhen
+}
+
+ship_names = {
+	Balasagun
+	Beshbalik
+	Kashgar
+	Talas
+	Yelüzhou
+	Karakorum
+	Almaliq
+	Tashkent
+	Samarkand
+}
+
+army_names = {
+	Khitan
+	Guard
+	Left
+	Wing
+	Tumen
+	Right
+	Wing
+	Tumen
+	Central
+	Tumen
+	Western
+	Wing
+	Tumen
+	Eastern
+	Wing
+	Tumen
+	"$PROVINCE$ Tumen"
+}

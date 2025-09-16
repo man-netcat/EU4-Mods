@@ -1,0 +1,30 @@
+tibetan_group = {
+    tangut = {
+        primary = TGS
+        dynasty_names = {
+            "Miwo" "Dashi" "Weilu" "Zhiyin" "Chule" "Dangguo" "Sidu" "Baolu" "Zailin" "Chimu" "Qianlu" "Xilu" "Heluo" "Dalu" "Yelu" "Tonglu" "Jialuo"
+        }
+        male_names = {
+            Minglu Chulei Zhiyin Bolu Milu Silu Tonglu Dashi Heluo Qianlu Yelu Chimu Zailin Fulu Jialuo Talu Chalu Shilu Balu Mili Tuilu
+            Dalun Helun Mingchuo Zhilu Bolun Tielu Chiyu Zailun Yeluqi Milun Chimuqi Lalu Jilu Halu Qilu Xiluqi
+        }
+        female_names = {
+            Milu Chulei Zhiyin Bolu Silu Heluo Tonglu Fulu Jialuo Talu Shilu Dalun Mingchuo Chalu Balu Milun Chimuqi Lalu Jilu Halu Qilu Xiluqi
+        }
+    }
+}
+
+altaic = {
+    khitan = {
+        primary = QKH
+        male_names = {
+            Abaoji Yelü Abaoqi Abaoluo Abaowei Abaojian Abaosheng Abaoxun Abaohuan Abaoli Abaolun Abaoxian Abaoyan Abaoying Abaosun Abaohu Qutuqitu Hushu Shigu Huda Taizu Xingzong Daozong Tianzuo Yeluwei Yelushi Yeluting Yelumu Yelurong Abaokun Abaomin Abaotong Abaozhi Abaoyong Abaoshan Abaofu Abaoyuan Abaoling Abaozhen
+        }
+        female_names = {
+            Shulü Xiao Yelüge Yelüjing Yelümin Yelüji Yelüfan Yelüying Yelümu Yelüjin Yelüxian Yelüping Yelüyan Yelübao Yelüyingzi Yelüyi Yelüshen Yelüqin Yelülan Yelümei Yelühua Yelüyun Yelüfang Yelüxin Yelüqi Yelüling Yelüshuang Yelüyinghua Yelülingzi Yelüyue Yelüyanzi Yelüxi Yelüyanling Yelüjinghua Yelümeiwen Yelüshui Yelüjinglan Yelüxinlan Yelüyingqi Yelüxianlan Yelüyanzhi Yelüxianyi Yelümuqing Yelüjingyi Yelüshan Yelüqing
+        }
+        dynasty_names = {
+            Yelü Shulü Xiao Abaoji Abaoqi Abaoluo Abaowei Abaojian Abaosheng Abaoxun Abaohuan Abaoli Abaolun Abaoxian Abaoyan Abaoying Abaosun Abaohu
+        }
+    }
+}

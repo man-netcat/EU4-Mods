@@ -31,7 +31,6 @@ capital = 1845# Pyeongyang
 	add_core = 2110	# Yehe
 	add_core = 2111	# Hetu Ala
 	add_core = 4653	# Maolian
-	add_core = 1053	# Hinggan
 	add_core = 4661	# Edala
 	add_core = 4654	# Fu'erhe
 }

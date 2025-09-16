@@ -2,5 +2,5 @@ version="1"
 tags={
 	"Flavour"
 }
-name="Korean Tags"
+name="Forgotten Dynasties"
 supported_version="v1.37.5.0"

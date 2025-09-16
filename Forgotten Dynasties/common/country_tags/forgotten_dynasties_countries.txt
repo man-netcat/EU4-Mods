@@ -1,0 +1,8 @@
+BAE = "countries/Baekje.txt"
+GGY = "countries/Goguryeo.txt"
+GOR = "countries/Goryeo.txt"
+SLA = "countries/Silla.txt"
+TGS = "countries/Tanguts.txt"
+QKH = "countries/Qara Khitai.txt"
+LIA = "countries/Liao.txt"
+

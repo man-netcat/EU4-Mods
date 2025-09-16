@@ -1,0 +1,94 @@
+#Country Name: Western Xia (Tangut)
+graphical_culture = asiangfx
+color = {
+	255
+	255
+	255
+}
+
+revolutionary_colors = {
+	1
+	0
+	1
+}
+
+historical_idea_groups = {
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Miwo #0" = 20
+	"Dashi #0" = 20
+	"Weilu #0" = 20
+	"Zhiyin #0" = 20
+	"Chule #0" = 20
+	"Dangguo #0" = 20
+	"Sidu #0" = 20
+	"Baolu #0" = 20
+	"Zailin #0" = 20
+	"Chimu #0" = 20
+	"Qianlu #0" = 20
+	"Xilu #0" = 20
+	"Heluo #0" = 20
+	"Dalu #0" = 20
+	"Yelu #0" = 20
+	"Tonglu #0" = 20
+	"Jialuo #0" = 20
+}
+
+leader_names = {
+	Minglu
+	Chulei
+	Zhiyin
+	Bolu
+	Milu
+	Silu
+	Tonglu
+	Dashi
+	Heluo
+	Qianlu
+	Yelu
+	Chimu
+	Zailin
+	Fulu
+	Jialuo
+	Talu
+	Chalu
+	Shilu
+	Balu
+	Mili
+}
+
+ship_names = {
+	Ningxia
+	Ordos
+	Hetao
+	Alxa
+	Liangzhou
+	Zhangye
+	Yumen
+	Taozhou
+	Pingliang
+	Tianshui
+	Lanzhou
+	Xining
+	Anding
+}
