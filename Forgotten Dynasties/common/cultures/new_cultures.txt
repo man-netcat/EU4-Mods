@@ -1,6 +1,6 @@
 tibetan_group = {
     tangut = {
-        primary = TGS
+        primary = XIA
         dynasty_names = {
             "Miwo" "Dashi" "Weilu" "Zhiyin" "Chule" "Dangguo" "Sidu" "Baolu" "Zailin" "Chimu" "Qianlu" "Xilu" "Heluo" "Dalu" "Yelu" "Tonglu" "Jialuo"
         }

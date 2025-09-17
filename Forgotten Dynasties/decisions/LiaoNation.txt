@@ -1,0 +1,87 @@
+country_decisions = {
+	form_liao = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_liao_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = LIA
+			}
+			primary_culture = khitan
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4203				# Linhuang / Ju Ud
+				province_id = 1816				# Xijin / Beijing
+				province_id = 697				# Datong / Western Capital
+				province_id = 4652				# Liaoyang / Haicheng
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 2
+			owns_core_province = 4203			# Linhuang / Ju Ud
+			owns_core_province = 1816			# Xijin / Beijing
+			owns_core_province = 697			# Datong
+			owns_core_province = 4652			# Liaoyang / Haicheng
+			1816 = {
+				is_state = yes
+			}
+		}
+		effect = {
+			1816 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_province_name = Xijin
+				rename_capital = Xijin
+				move_capital_effect = yes
+			}
+			4203 = {
+				# Linhuang / Ju Ud
+				change_province_name = Linhuang
+			}
+			697 = {
+				# Datong
+				change_province_name = Zhongdu
+			}
+			4652 = {
+				# Liaoyang / Haicheng
+				change_province_name = Liaoyang
+			}
+			723 = {
+				# Xilin Gol
+				change_province_name = Xanadu
+			}
+			change_tag = LIA
+			add_prestige = 20
+			set_country_flag = formed_liao_flag
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+}

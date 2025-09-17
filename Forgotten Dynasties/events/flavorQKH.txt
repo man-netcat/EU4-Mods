@@ -1,0 +1,93 @@
+#The Khitan Resurgence
+country_event = {
+	id = flavor_qkh.100
+	title = flavor_qkh.100.t
+	desc = flavor_qkh.100.d
+	picture = BATTLE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = CHG		# Chagatai is the overlord
+		owns = 2126		# Chuy / Balasagun, Qara Khitai historical capital
+		NOT = {
+			tag = QKH
+		}
+		# Qara Khitai does not already exist
+		is_at_war = no
+		num_of_cities = 5
+		is_year = 1444
+	}
+	mean_time_to_happen = {
+		days = 1
+		# months = 36
+	}
+	option = {
+		name = flavor_qkh.100.a		#The Khitan clans rise peacefully.
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_cities = 5
+				}
+			}
+			modifier = {
+				factor = 0
+				2126 = {
+					is_capital = yes
+				}
+			}
+		}
+		add_legitimacy = 15
+		add_yearly_manpower = 1
+		2126 = {
+			cede_province = QKH
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+			change_culture = khitan
+			change_religion = tengri_pagan_reformed
+		}
+		vassalize = QKH
+		QKH = {
+			add_opinion = {
+				who = ROOT
+				modifier = released_vassal
+			}
+			define_ruler = {
+				name = "Yelü Dashi"
+				dynasty = "Yelü"
+				adm = 4
+				dip = 5
+				mil = 4
+			}
+		}
+	}
+	option = {
+		name = flavor_qkh.100.b		#The Khitan refuse Chagatai rule!
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 5
+		2126 = {
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				leader = "Yelü Dashi"
+				friend = QKH
+				size = 1
+			}
+		}
+	}
+}

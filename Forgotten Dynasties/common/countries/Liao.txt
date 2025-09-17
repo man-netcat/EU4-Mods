@@ -1,9 +1,9 @@
 #Country Name: Liao
 graphical_culture = asiangfx
 color = {
-	204
-	255
-	153
+	222
+	181
+	47
 }
 
 revolutionary_colors = {
@@ -38,19 +38,19 @@ historical_units = {
 }
 
 monarch_names = {
-	Abaoji	#0 = 20
-	Dashi	#0 = 20
-	Abaoqi	#0 = 20
-	Shulü	#0 = 15
-	Xiao	#0 = 15
-	Abaosheng	#0 = 10
-	Abaohuan	#0 = 10
-	Abaoli	#0 = 10
-	Abaolun	#0 = 10
-	Abaoyan	#0 = 10
-	Abaoying	#0 = 10
-	Abaosun	#0 = 10
-	Abaohu	#0 = 10
+	"Abaoji #0" = 20
+	"Dashi #0" = 20
+	"Abaoqi #0" = 20
+	"Shulü #0" = 15
+	"Xiao #0" = 15
+	"Abaosheng #0" = 10
+	"Abaohuan #0" = 10
+	"Abaoli #0" = 10
+	"Abaolun #0" = 10
+	"Abaoyan #0" = 10
+	"Abaoying #0" = 10
+	"Abaosun #0" = 10
+	"Abaohu #0" = 10
 }
 
 leader_names = {

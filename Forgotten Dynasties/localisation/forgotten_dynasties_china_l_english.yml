@@ -1,7 +1,18 @@
 ﻿l_english:
- TGS:0 "Tanguts"
- TGS_ADJ:0 "Tangut"
+ XIA:0 "Xia"
+ XIA_ADJ:0 "Xia"
  LIA:0 "Liao"
  LIA_ADJ:0 "Liao"
  QKH:0 "Qara Khitai"
  QKH_ADJ:0 "Khitan"
+
+ tangut:0 "Tangut"
+ khitan:0 "Khitan"
+
+ flavor_qkh.100.t:0 "The Khitan Resurgence"
+ flavor_qkh.100.d:0 "Centuries after fleeing westward from the fall of their dynasty in the east, the Khitan clans have stirred once more. Rumors of a charismatic leader rallying their people have reached your court. Will you allow them to return to prominence, or suppress their ambitions?"
+ flavor_qkh.100.a:0 "We shall acknowledge their claim and allow them to rise as a vassal."
+ flavor_qkh.100.b:0 "Their insolence will not be tolerated, let them be crushed and their rebellion ended!"
+
+ form_liao_title:0 "Restoration of the Liao Dynasty"
+ form_liao_desc:0 "After centuries of dispersal and foreign domination, the Khitan people rise once more. With their traditional heartlands reclaimed, a new Liao dynasty will reclaim its place among the great powers of the steppe and northern China."
