@@ -1,0 +1,26 @@
+﻿l_english:
+
+ #tag rules
+
+ # BAL
+ BAL_KALAT_HORDE: "Horde of Baluchistan"
+ BAL_KALAT_HORDE_ADJ: "Baluchistani"
+ BAL_KALAT_KHANATE: "Khanate of Baluchistan"
+ BAL_KALAT_KHANATE_ADJ: "Baluchistani"
+ BAL_KALAT_KHAGANATE: "Khaganate of Baluchistan"
+ BAL_KALAT_KHAGANATE_ADJ: "Baluchistani"
+ # ILK
+ ILK_DEVLET_I_ILKHANID: "Devlet-i Ilkhân"
+ ILK_DEVLET_I_ILKHANID_ADJ: "Ilkhanid"
+ # KALAT
+ KALAT_KALAT_HORDE: "Horde of Kalat"
+ KALAT_KALAT_HORDE_ADJ: "Kalatli"
+ KALAT_KALAT_KHANATE: "Khanate of Kalat"
+ KALAT_KALAT_KHANATE_ADJ: "Kalatli"
+ KALAT_KALAT_KHAGANATE: "Khaganate of Kalat"
+ KALAT_KALAT_KHAGANATE_ADJ: "Kalatli"
+ #dynasties
+ #global rules
+ #decision
+update_dynamic_names_decision_title: "Update Dynamic Names"
+update_dynamic_names_decision_desc: "Force update dynamic names (e.g. after a government rank change). Happens automatically every 2 in-game years."

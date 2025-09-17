@@ -1,0 +1,73 @@
+### generated events for dynamic names
+
+namespace = dynamic_names_01_underdog_missions
+
+country_event = {
+    id = dynamic_names_01_underdog_missions.0
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = { limit = { tag = BAL } country_event = { id = dynamic_names_01_underdog_missions.1 } }
+        if = { limit = { tag = ILK } country_event = { id = dynamic_names_01_underdog_missions.2 } }
+        if = { limit = { OR = { tag = BAL } has_country_flag = is_KALAT_flag } country_event = { id = dynamic_names_01_underdog_missions.3 } }
+    }
+
+    option = {
+        name = dynamic_names_01_underdog_missions.0.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_underdog_missions.1
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tag = BAL
+    }
+
+    immediate = {
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } NOT = { government_rank = 2 } } override_country_name = BAL_KALAT_HORDE }
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = BAL_KALAT_KHANATE }
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } government_rank = 3 } override_country_name = BAL_KALAT_KHAGANATE }
+    }
+
+    option = {
+        name = dynamic_names_01_underdog_missions.1.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_underdog_missions.2
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tag = ILK
+    }
+
+    immediate = {
+        if = { limit = { has_country_flag = ere_form_ilkhanate_flag NOT = { OR = { has_country_flag = is_revolutionary_turkey_flag has_country_flag = is_turkey_flag } } is_subject = no government = monarchy primary_culture = turkish } override_country_name = ILK_DEVLET_I_ILKHANID }
+    }
+
+    option = {
+        name = dynamic_names_01_underdog_missions.2.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_underdog_missions.3
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } NOT = { government_rank = 2 } } override_country_name = KALAT_KALAT_HORDE }
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_KALAT_KHANATE }
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } government_rank = 3 } override_country_name = KALAT_KALAT_KHAGANATE }
+    }
+
+    option = {
+        name = dynamic_names_01_underdog_missions.3.a
+    }
+}
