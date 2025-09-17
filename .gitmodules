@@ -1,0 +1,3 @@
+[submodule "Dynamic-Names/dynamic-names-generator"]
+	path = Dynamic-Names/dynamic-names-generator
+	url = https://github.com/man-netcat/dynamic-names-generator.git
