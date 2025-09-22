@@ -14,4 +14,7 @@ historical_friend = JAP
 	add_core = 4228
 	add_core = 4229
 	add_core = 4230
+	add_claim = 4194
+	add_claim = 704
+	add_claim = 4652
 }
