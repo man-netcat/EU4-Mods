@@ -1,0 +1,33 @@
+### generated events for dynamic names
+
+namespace = dynamic_names_01_between_tigris_and_oxus_01_between_tigris_and_oxus
+
+country_event = {
+    id = dynamic_names_01_between_tigris_and_oxus_01_between_tigris_and_oxus.0
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = { limit = { OR = { tag = BAL } has_country_flag = is_KALAT_flag } country_event = { id = dynamic_names_01_between_tigris_and_oxus_01_between_tigris_and_oxus.1 } }
+    }
+
+    option = {
+        name = dynamic_names_01_between_tigris_and_oxus_01_between_tigris_and_oxus.0.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_between_tigris_and_oxus_01_between_tigris_and_oxus.1
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } NOT = { government_rank = 2 } } override_country_name = KALAT_KALAT_HORDE }
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_KALAT_KHANATE }
+        if = { limit = { AND = { has_reform = steppe_horde has_country_flag = is_KALAT_flag } government_rank = 3 } override_country_name = KALAT_KALAT_KHAGANATE }
+    }
+
+    option = {
+        name = dynamic_names_01_between_tigris_and_oxus_01_between_tigris_and_oxus.1.a
+    }
+}
