@@ -1,0 +1,177 @@
+#Country Name: Silla
+graphical_culture = asiangfx
+color = {
+	46
+	106
+	208
+}
+
+revolutionary_colors = {
+	14
+	0
+	14
+}
+
+historical_idea_groups = {
+	religious_ideas
+	offensive_ideas
+	defensive_ideas
+	administrative_ideas
+	diplomatic_ideas
+	trade_ideas
+	economic_ideas
+	naval_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Bak Hyeokgeose #0" = 20
+	"Namhae #0" = 15
+	"Yuri #0" = 15
+	"Talhae #0" = 15
+	"Pasa #0" = 10
+	"Jima #0" = 10
+	"Ilseong #0" = 10
+	"Adalla #0" = 10
+	"Beolhyu #0" = 10
+	"Naehae #0" = 10
+	"Jobun #0" = 10
+	"Cheomhae #0" = 10
+	"Michu #0" = 15
+	"Yurye #0" = 10
+	"Girim #0" = 10
+	"Heulhae #0" = 10
+	"Naemul #0" = 15
+	"Silseong #0" = 10
+	"Nulji #0" = 15
+	"Jabi #0" = 10
+	"Soji #0" = 10
+	"Jijeung #0" = 15
+	"Beopheung #0" = 20
+	"Jinheung #0" = 25
+	"Jinji #0" = 10
+	"Jinpyeong #0" = 20
+	"Seondeok #1" = 15
+	"Jindeok #1" = 10
+	"Munmu #0" = 25
+	"Sinmun #0" = 15
+	"Hyoso #0" = 10
+	"Seongdeok #0" = 20
+	"Hyoseong #0" = 15
+	"Gyeongdeok #0" = 20
+	"Hyegong #0" = 10
+	"Seondeok #0" = 15
+	"Wonseong #0" = 15
+	"Sosong #0" = 10
+	"Aejang #0" = 10
+	"Heondeok #0" = 10
+	"Heungdeok #0" = 10
+	"Huigang #0" = 10
+	"Minae #0" = 10
+	"Sinmu #0" = 10
+	"Munseong #0" = 15
+	"Heongang #0" = 10
+	"Jeonggang #0" = 10
+	"Jinseong #1" = 15
+	"Hyogong #0" = 10
+	"Sindeok #0" = 10
+	"Gyeongmyeong #0" = 10
+	"Gyeongae #0" = 10
+	"Gyeongsun #0" = 10
+}
+
+leader_names = {
+	Kim
+	Bak
+	Seok
+	Yi
+	Choi
+	Jeong
+	Kang
+	Cho
+	Yun
+	Jang
+	Lim
+	Han
+	Oh
+	Seo
+	Shin
+	Kwon
+	Hwang
+	An
+	Song
+	Jeon
+	Hong
+	Go
+	Moon
+	Yang
+	Son
+	Bae
+	Sim
+	Won
+	Heo
+	Nam
+	Min
+	Noh
+	Jeong
+	Ha
+	Joo
+	Cha
+	Chae
+	Ma
+	Jin
+	Yoo
+	Tang
+}
+
+ship_names = {
+	Gyeongju
+	Bulguksa
+	Seokguram
+	Cheomseongdae
+	Banwolseong
+	Wolseong
+	Hwangnyongsa
+	Bunhwangsa
+	Gameunsa
+	Sacheonwang
+	Golgulsa
+	Namsan
+	Toham
+	Geumgang
+	Nakdong
+	Hyeongsan
+	Taehwa
+	Gaya
+	Munmu
+	Jinheung
+	Beopheung
+	Wonhyo
+	Uisang
+	Wonhyo
+	Seolchong
+	Choe
+	Gim
+	Wonhyeon
+	Baekje
+	Goguryeo
+	Unified
+	Gyerim
+	Seorabeol
+	Geumseong
+	Silla
+	Jinhan
+	Samhan
+	Byeonhan
+	Mahan
+}

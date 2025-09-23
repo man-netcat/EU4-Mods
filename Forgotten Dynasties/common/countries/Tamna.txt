@@ -1,0 +1,134 @@
+#Country Name: Tamna
+graphical_culture = asiangfx
+color = {
+	136
+	0
+	21
+}
+
+revolutionary_colors = {
+	16
+	8
+	16
+}
+
+historical_idea_groups = {
+	maritime_ideas
+	naval_ideas
+	trade_ideas
+	exploration_ideas
+	defensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Go #0" = 25
+	"Yang #0" = 20
+	"Bu #0" = 15
+	"Seong #0" = 15
+	"Wang #0" = 10
+	"Kim #0" = 10
+	"Choe #0" = 10
+	"Lee #0" = 10
+	"Park #0" = 5
+	"Hyeon #0" = 5
+	"Guk #0" = 5
+	"Donaeko #0" = 10
+	"Silla #0" = 5
+	"Wondeok #0" = 5
+	"Seongju #0" = 5
+	"Myeongnim #0" = 5
+}
+
+leader_names = {
+	Go
+	Yang
+	Bu
+	Seong
+	Wang
+	Kim
+	Choe
+	Lee
+	Park
+	Hyeon
+	Guk
+	Jin
+	Song
+	Kang
+	Jang
+	Yun
+	Han
+	Hong
+	Yu
+	Jeong
+	Cho
+	Woo
+	Do
+	Ma
+	Min
+	Seo
+	Son
+	An
+	O
+	Jeon
+	Ha
+	Heo
+	Kwak
+	Lim
+	Won
+	Kwon
+	Hwang
+	Bae
+}
+
+ship_names = {
+	Jeju
+	Hallasan
+	Seongsan
+	Udo
+	Marado
+	Cheonjiyeon
+	Cheonjeyeon
+	Jusangjeolli
+	Yongduam
+	Manjanggul
+	Geomunoreum
+	Seongpanak
+	Gwaneumsa
+	Tamna
+	Daejeong
+	Jungmun
+	Seogwipo
+	Jocheon
+	Gujwa
+	Aewol
+	Hanrim
+	Hyeopjae
+	Biyangdo
+	Beophwansa
+	Sanbanggulsa
+	Yakcheonsa
+	Seongeup
+	Pyoseon
+	Namwon
+	Andeok
+	Daehan
+	Gosan
+	Donggwi
+	Seogwi
+	Namje
+	Bukje
+}

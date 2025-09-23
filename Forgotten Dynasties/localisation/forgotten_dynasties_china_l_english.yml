@@ -16,3 +16,78 @@
 
  form_liao_title:0 "Restoration of the Liao Dynasty"
  form_liao_desc:0 "After centuries of dispersal and foreign domination, the Khitan people rise once more. With their traditional heartlands reclaimed, a new Liao dynasty will reclaim its place among the great powers of the steppe and northern China."
+
+ XIA_ideas:1 "Western Xia Ideas"
+ XIA_ideas_start:1 "Western Xia Traditions"
+ XIA_ideas_bonus:1 "Western Xia Ambition"
+
+ xia_tangut_script:0 "Tangut Script"
+ xia_tangut_script_desc:0 "The development of the unique Tangut script allowed Western Xia to preserve and advance its culture, promoting literacy and scholarly advancement."
+
+ xia_silk_road_control:0 "Silk Road Control"
+ xia_silk_road_control_desc:0 "Western Xia's strategic position along the Silk Road enabled it to control lucrative trade routes and collect taxes from merchant caravans."
+
+ xia_desert_warfare:0 "Desert Warfare"
+ xia_desert_warfare_desc:0 "The harsh desert environment forged Western Xia's military into expert desert fighters, capable of using the terrain to their advantage."
+
+ xia_buddhist_patronage:0 "Buddhist Patronage"
+ xia_buddhist_patronage_desc:0 "Western Xia rulers were great patrons of Buddhism, building temples and promoting Buddhist scholarship throughout their realm."
+
+ xia_nomadic_cavalry:0 "Nomadic Cavalry"
+ xia_nomadic_cavalry_desc:0 "Western Xia maintained strong cavalry traditions inherited from their nomadic heritage, creating highly mobile and effective mounted forces."
+
+ xia_frontier_fortresses:0 "Frontier Fortresses"
+ xia_frontier_fortresses_desc:0 "A network of fortified cities and watchtowers protected Western Xia's borders from constant threats from neighboring powers."
+
+ xia_cultural_synthesis:0 "Cultural Synthesis"
+ xia_cultural_synthesis_desc:0 "Western Xia successfully blended Tangut, Chinese, Tibetan, and nomadic cultural elements into a unique and sophisticated civilization."
+
+ QKH_ideas:1 "Qara Khitai Ideas"
+ QKH_ideas_start:1 "Qara Khitai Traditions"
+ QKH_ideas_bonus:1 "Qara Khitai Ambition"
+
+ qkh_khitan_legacy:0 "Khitan Legacy"
+ qkh_khitan_legacy_desc:0 "As the inheritors of the great Liao Dynasty, Qara Khitai carries the proud legacy of Khitan civilization and legitimacy."
+
+ qkh_religious_tolerance:0 "Religious Tolerance"
+ qkh_religious_tolerance_desc:0 "Qara Khitai practiced remarkable religious tolerance, allowing various faiths to coexist peacefully under their rule."
+
+ qkh_nomadic_administration:0 "Nomadic Administration"
+ qkh_nomadic_administration_desc:0 "The flexible administrative system of Qara Khitai adapted nomadic governance to settled territories, creating efficient rule over diverse populations."
+
+ qkh_steppe_cavalry:0 "Steppe Cavalry"
+ qkh_steppe_cavalry_desc:0 "The traditional cavalry forces of the steppes remained the backbone of Qara Khitai military power, maintaining nomadic warfare traditions."
+
+ qkh_silk_road_taxation:0 "Silk Road Taxation"
+ qkh_silk_road_taxation_desc:0 "Control over major Silk Road routes provided Qara Khitai with substantial income from trade taxes and tribute."
+
+ qkh_cultural_synthesis:0 "Cultural Synthesis"
+ qkh_cultural_synthesis_desc:0 "Qara Khitai skillfully blended Khitan, Chinese, Islamic, and local traditions to create a diverse and tolerant society."
+
+ qkh_mobile_warfare:0 "Mobile Warfare"
+ qkh_mobile_warfare_desc:0 "The nomadic heritage of Qara Khitai emphasized speed and mobility in warfare, allowing rapid deployment across vast territories."
+
+ LIA_ideas:1 "Liao Ideas"
+ LIA_ideas_start:1 "Liao Traditions"
+ LIA_ideas_bonus:1 "Liao Ambition"
+
+ liao_dual_administration:0 "Dual Administration"
+ liao_dual_administration_desc:0 "The Liao Dynasty developed a unique dual administrative system, governing Chinese subjects through Chinese institutions while maintaining Khitan customs for the nomadic population."
+
+ liao_khitan_cavalry:0 "Khitan Cavalry"
+ liao_khitan_cavalry_desc:0 "The elite Khitan cavalry formed the core of Liao military power, combining nomadic mobility with disciplined organization."
+
+ liao_cultural_tolerance:0 "Cultural Tolerance"
+ liao_cultural_tolerance_desc:0 "The Liao Dynasty practiced remarkable tolerance towards different cultures and religions, integrating diverse populations into their empire."
+
+ liao_iron_production:0 "Iron Production"
+ liao_iron_production_desc:0 "The Liao Dynasty developed advanced iron working techniques, producing high-quality weapons and tools that strengthened their economy and military."
+
+ liao_northern_defenses:0 "Northern Defenses"
+ liao_northern_defenses_desc:0 "A sophisticated network of fortifications and watchtowers protected Liao territory from raids and invasions from the northern steppes."
+
+ liao_trade_networks:0 "Trade Networks"
+ liao_trade_networks_desc:0 "The Liao Dynasty established extensive trade relationships connecting the Chinese economy with the nomadic peoples of the steppes."
+
+ liao_military_reforms:0 "Military Reforms"
+ liao_military_reforms_desc:0 "The integration of Chinese military technology and tactics with traditional nomadic warfare created a powerful and versatile military force."

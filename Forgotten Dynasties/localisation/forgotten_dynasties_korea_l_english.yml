@@ -5,6 +5,8 @@
  GGY_ADJ:0 "Goguryeoan"
  SLA:0 "Silla"
  SLA_ADJ:0 "Sillan"
+ TAM:0 "Tamna"
+ TAM_ADJ:0 "Tamnan"
  GOR:0 "Goryeo"
  GOR_ADJ: "Goryeoan"
 
@@ -38,6 +40,7 @@
  GGY_ideas_bonus:1 "Goguryeo Ambition"
 
  ggy_northern_forts:0 "Goguryeo Northern Forts"
+ ggy_northern_forts_desc:0 "Goguryeo built formidable fortifications to protect its cities and borders. These walls enhance the defensiveness of our provinces and slow invading armies."
  ggy_wall_defense_desc:0 "Goguryeo built formidable fortifications to protect its cities and borders. These walls enhance the defensiveness of our provinces and slow invading armies."
 
  ggy_military_tradition:0 "Goguryeo Military Tradition"
@@ -82,3 +85,53 @@
 
  goryeo_trade_hubs:0 "Trade Hubs"
  goryeo_trade_hubs_desc:0 "Strategically placed trade centers throughout Goryeo improve production efficiency and strengthen our control of commerce."
+
+ SLA_ideas:1 "Silla Ideas"
+ SLA_ideas_start:1 "Silla Traditions"
+ SLA_ideas_bonus:1 "Silla Ambition"
+
+ silla_buddhist_kingdom:0 "Buddhist Kingdom"
+ silla_buddhist_kingdom_desc:0 "Silla was one of the first Korean kingdoms to officially adopt Buddhism, making it the state religion and building magnificent temples throughout the realm."
+
+ silla_bone_rank_system:0 "Bone Rank System"
+ silla_bone_rank_system_desc:0 "Silla's unique social hierarchy system based on 'bone ranks' created a stable administrative structure that provided qualified officials for government service."
+
+ silla_hwarang:0 "Hwarang Warriors"
+ silla_hwarang_desc:0 "The Hwarang were an elite group of male youth from noble families who served as both warriors and scholars, forming the backbone of Silla's military strength."
+
+ silla_unified_administration:0 "Unified Administration"
+ silla_unified_administration_desc:0 "After unifying the Korean peninsula, Silla developed an efficient administrative system to govern the newly expanded territory."
+
+ silla_cheomseongdae:0 "Cheomseongdae Observatory"
+ silla_cheomseongdae_desc:0 "The construction of Cheomseongdae, one of the world's oldest astronomical observatories, demonstrates Silla's commitment to scientific advancement."
+
+ silla_trade_networks:0 "Silk Road Connections"
+ silla_trade_networks_desc:0 "Silla established extensive trade networks reaching as far as the Silk Road, bringing prosperity and cultural exchange to the kingdom."
+
+ silla_cultural_synthesis:0 "Cultural Synthesis"
+ silla_cultural_synthesis_desc:0 "Silla successfully synthesized Korean, Chinese, and Buddhist cultural elements, creating a unique and sophisticated civilization."
+
+ TAM_ideas:1 "Tamna Ideas"
+ TAM_ideas_start:1 "Tamna Traditions"
+ TAM_ideas_bonus:1 "Tamna Ambition"
+
+ tamna_island_fortress:0 "Island Fortress"
+ tamna_island_fortress_desc:0 "Tamna's natural island position provides excellent defensive advantages, making it difficult for enemies to launch successful naval invasions."
+
+ tamna_maritime_culture:0 "Maritime Culture"
+ tamna_maritime_culture_desc:0 "The people of Tamna have developed a sophisticated maritime culture, with exceptional skills in shipbuilding and seamanship."
+
+ tamna_tribute_system:0 "Tribute Diplomacy"
+ tamna_tribute_system_desc:0 "Tamna maintained its independence through careful diplomatic relations and tribute arrangements with larger neighboring powers."
+
+ tamna_horse_breeding:0 "Famous Horse Breeding"
+ tamna_horse_breeding_desc:0 "Tamna was renowned throughout East Asia for breeding exceptional horses, which were highly prized by mainland kingdoms."
+
+ tamna_island_traders:0 "Island Traders"
+ tamna_island_traders_desc:0 "Tamna's strategic location made it an important waystation for maritime trade between Korea, Japan, and China."
+
+ tamna_coastal_defense:0 "Coastal Defense Network"
+ tamna_coastal_defense_desc:0 "A well-organized coastal defense system protects Tamna's harbors and trade routes from pirates and hostile fleets."
+
+ tamna_cultural_autonomy:0 "Cultural Autonomy"
+ tamna_cultural_autonomy_desc:0 "Despite external influences, Tamna maintained its unique cultural identity and religious practices, creating a tolerant and diverse society."

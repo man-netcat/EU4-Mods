@@ -1,0 +1,11 @@
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 2741	# Jeju
+
+1444.11.11 = {
+	# Tamna's island kingdom
+	add_core = 2741	# Jeju
+}
