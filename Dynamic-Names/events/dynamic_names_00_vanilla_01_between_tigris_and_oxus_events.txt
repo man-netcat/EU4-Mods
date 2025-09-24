@@ -167,29 +167,29 @@ country_event = {
         if = { limit = { has_reform = states_general_reform NOT = { OR = { has_reform = parliamentary_reform has_reform = presidential_reform has_reform = constitutional_republic has_reform = presidential_despot_reform } } is_revolutionary_republic_trigger = no government_rank = 3 } override_country_name = KALAT_FEDERAL_EMPIRE }
         if = { limit = { OR = { government = native has_reform = siberian_tribe has_reform = native_basic_reform } } override_country_name = KALAT_TRIBE }
         if = { limit = { has_reform = celestial_empire has_reform = parliamentary_reform } override_country_name = KALAT_PARLIAMENT_OF_HEAVEN }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = republic is_revolutionary_republic_trigger = no NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_REPUBLIC_EMIRATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.2 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = republic is_revolutionary_republic_trigger = no government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_REPUBLIC_VIZIERATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.3 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = republic is_revolutionary_republic_trigger = no government_rank = 3 } override_country_name = KALAT_MUSLIM_REPUBLIC_GRAND_VIZIERATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.4 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { NOT = { has_reform = feudal_theocracy } tag = ARK primary_culture = somali } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_MONARCHY_GENERIC_EMIRATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.5 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { NOT = { has_reform = feudal_theocracy } tag = ARK primary_culture = somali } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_MONARCHY_GENERIC_SULTANATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.6 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { NOT = { has_reform = feudal_theocracy } tag = ARK primary_culture = somali } government_rank = 3 } override_country_name = KALAT_MUSLIM_MONARCHY_GENERIC_EMPIRE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.7 } }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = republic is_revolutionary_republic_trigger = no NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_REPUBLIC_EMIRATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = republic is_revolutionary_republic_trigger = no government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_REPUBLIC_VIZIERATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = republic is_revolutionary_republic_trigger = no government_rank = 3 } override_country_name = KALAT_MUSLIM_REPUBLIC_GRAND_VIZIERATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { NOT = { has_reform = feudal_theocracy } tag = ARK primary_culture = somali } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_MONARCHY_GENERIC_EMIRATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { NOT = { has_reform = feudal_theocracy } tag = ARK primary_culture = somali } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_MONARCHY_GENERIC_SULTANATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { NOT = { has_reform = feudal_theocracy } tag = ARK primary_culture = somali } government_rank = 3 } override_country_name = KALAT_MUSLIM_MONARCHY_GENERIC_EMPIRE }
         if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { culture_group = dravidian culture_group = western_aryan culture_group = hindusthani culture_group = eastern_aryan has_reform = indian_sultanate_reform } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_MONARCHY_INDIAN_NAWABATE }
         if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy OR = { culture_group = dravidian culture_group = western_aryan culture_group = hindusthani culture_group = eastern_aryan has_reform = indian_sultanate_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_MONARCHY_INDIAN_INDIAN_SULTANATE }
         if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = monarchy has_reform = mamluk_government } override_country_name = KALAT_MUSLIM_MONARCHY_MAMLUK_GENERIC }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { has_reform = enlightened_despotism has_reform = letat_cest_moi_reform has_reform = regional_representation_reform } primary_culture = al_misr_arabic NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_KHEDIVATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.8 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { government = tribal NOT = { government_rank = 2 } } AND = { tag = SIS government = monarchy NOT = { government_rank = 2 } } } NOT = { tag = NJR } } override_country_name = KALAT_MUSLIM_MALIKATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.9 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_TRIBAL_GENERIC_SULTANATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.10 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no government_rank = 3 } override_country_name = KALAT_MUSLIM_TRIBAL_GENERIC_GREAT_EMIRATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.11 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no primary_culture = bedouin_arabic NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_TRIBAL_BEDOUIN_SHEIKHDOM country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.12 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no primary_culture = bedouin_arabic government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_TRIBAL_BEDOUIN_EMIRATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.13 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { tag = HED tag = MDA tag = MFL has_reform = sharifate_reform } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_SHARIFATES_SHARIFATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.14 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { tag = HED tag = MDA tag = MFL has_reform = sharifate_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_SHARIFATES_GREAT_SHARIFATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.15 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { tag = HED tag = MDA tag = MFL has_reform = sharifate_reform } government_rank = 3 } override_country_name = KALAT_MUSLIM_SHARIFATES_GRAND_SHARIFATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.16 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = sunni government = theocracy OR = { primary_culture = uyghur has_country_flag = end_of_khojas } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } NOT = { primary_culture = yemeni_culture } } } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_SHEIKHDOM_RELIGIOUS country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.17 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } primary_culture = yemeni_culture } AND = { religion = ibadi OR = { government = theocracy has_reform = feudal_theocracy } } } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_IMAMATES_IMAMATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.18 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } primary_culture = yemeni_culture } AND = { religion = ibadi OR = { government = theocracy has_reform = feudal_theocracy } } } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_IMAMATES_GREAT_IMAMATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.19 } }
-        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } primary_culture = yemeni_culture } AND = { religion = ibadi OR = { government = theocracy has_reform = feudal_theocracy } } } government_rank = 3 } override_country_name = KALAT_MUSLIM_IMAMATES_HIGH_IMAMATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.20 } }
-        if = { limit = { OR = { has_reform = caliphate_theocracy_reform has_reform = caliphate_reform has_country_modifier = hsn_ayyubid_caliphate } } override_country_name = KALAT_CALIPHATE country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.21 } }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { has_reform = enlightened_despotism has_reform = letat_cest_moi_reform has_reform = regional_representation_reform } primary_culture = al_misr_arabic NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_KHEDIVATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { government = tribal NOT = { government_rank = 2 } } AND = { tag = SIS government = monarchy NOT = { government_rank = 2 } } } NOT = { tag = NJR } } override_country_name = KALAT_MUSLIM_MALIKATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_TRIBAL_GENERIC_SULTANATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no government_rank = 3 } override_country_name = KALAT_MUSLIM_TRIBAL_GENERIC_GREAT_EMIRATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no primary_culture = bedouin_arabic NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_TRIBAL_BEDOUIN_SHEIKHDOM }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } government = tribal is_revolutionary_republic_trigger = no primary_culture = bedouin_arabic government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_TRIBAL_BEDOUIN_EMIRATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { tag = HED tag = MDA tag = MFL has_reform = sharifate_reform } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_SHARIFATES_SHARIFATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { tag = HED tag = MDA tag = MFL has_reform = sharifate_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_SHARIFATES_GREAT_SHARIFATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { tag = HED tag = MDA tag = MFL has_reform = sharifate_reform } government_rank = 3 } override_country_name = KALAT_MUSLIM_SHARIFATES_GRAND_SHARIFATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = sunni government = theocracy OR = { primary_culture = uyghur has_country_flag = end_of_khojas } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } NOT = { primary_culture = yemeni_culture } } } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_SHEIKHDOM_RELIGIOUS }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } primary_culture = yemeni_culture } AND = { religion = ibadi OR = { government = theocracy has_reform = feudal_theocracy } } } NOT = { government_rank = 2 } } override_country_name = KALAT_MUSLIM_IMAMATES_IMAMATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } primary_culture = yemeni_culture } AND = { religion = ibadi OR = { government = theocracy has_reform = feudal_theocracy } } } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_MUSLIM_IMAMATES_GREAT_IMAMATE }
+        if = { limit = { OR = { religion_group = muslim AND = { NOT = { religion_group = muslim } has_country_flag = sultan_titles_for_non_muslims } } NOT = { has_reform = steppe_horde } OR = { AND = { religion = sunni OR = { has_reform = feudal_theocracy government = theocracy } } AND = { religion = shiite OR = { government = theocracy has_reform = feudal_theocracy } primary_culture = yemeni_culture } AND = { religion = ibadi OR = { government = theocracy has_reform = feudal_theocracy } } } government_rank = 3 } override_country_name = KALAT_MUSLIM_IMAMATES_HIGH_IMAMATE }
+        if = { limit = { OR = { has_reform = caliphate_theocracy_reform has_reform = caliphate_reform has_country_modifier = hsn_ayyubid_caliphate } } override_country_name = KALAT_CALIPHATE }
         if = { limit = { is_emperor_of_china = yes } override_country_name = KALAT_CHINESE_EMPIRE_GENERIC }
         if = { limit = { is_emperor_of_china = yes culture_group = east_asian } override_country_name = KALAT_CHINESE_EMPIRE_CHINESE }
         if = { limit = { is_emperor_of_china = yes culture_group = korean_g } override_country_name = KALAT_CHINESE_EMPIRE_KOREAN }
@@ -232,285 +232,5 @@ country_event = {
 
     option = {
         name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.1.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.2
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.2.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.3
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.3.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.4
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.4.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.5
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.5.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.6
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.6.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.7
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.7.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.8
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.8.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.9
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.9.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.10
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.10.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.11
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.11.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.12
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.12.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.13
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.13.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.14
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.14.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.15
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.15.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.16
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.16.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.17
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.17.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.18
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.18.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.19
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.19.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.20
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.20.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.21
-    hidden = yes
-    is_triggered_only = yes
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_00_vanilla_01_between_tigris_and_oxus.21.a
     }
 }

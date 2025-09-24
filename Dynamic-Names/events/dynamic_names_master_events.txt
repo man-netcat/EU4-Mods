@@ -13,9 +13,6 @@ country_event = {
         country_event = { id = dynamic_names_00_vanilla_01_forgotten_dynasties.0 }
         country_event = { id = dynamic_names_01_between_tigris_and_oxus_00_vanilla.0 }
         country_event = { id = dynamic_names_01_between_tigris_and_oxus_01_between_tigris_and_oxus.0 }
-        country_event = { id = dynamic_names_01_between_tigris_and_oxus_01_forgotten_dynasties.0 }
-        country_event = { id = dynamic_names_01_forgotten_dynasties_00_vanilla.0 }
-        country_event = { id = dynamic_names_01_forgotten_dynasties_01_between_tigris_and_oxus.0 }
         country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.0 }
     }
 

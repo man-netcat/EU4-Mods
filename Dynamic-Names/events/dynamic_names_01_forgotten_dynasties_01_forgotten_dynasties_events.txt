@@ -10,11 +10,6 @@ country_event = {
     immediate = {
         if = { limit = { tag = XIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.1 } }
         if = { limit = { tag = LIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2 } }
-        if = { limit = { tag = QKH } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3 } }
-        if = { limit = { tag = BAE } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4 } }
-        if = { limit = { tag = GGY } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.5 } }
-        if = { limit = { tag = SLA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.6 } }
-        if = { limit = { tag = GOR } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.7 } }
     }
 
     option = {
@@ -55,95 +50,5 @@ country_event = {
 
     option = {
         name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3
-    hidden = yes
-    is_triggered_only = yes
-
-    trigger = {
-        tag = QKH
-    }
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4
-    hidden = yes
-    is_triggered_only = yes
-
-    trigger = {
-        tag = BAE
-    }
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.5
-    hidden = yes
-    is_triggered_only = yes
-
-    trigger = {
-        tag = GGY
-    }
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.5.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.6
-    hidden = yes
-    is_triggered_only = yes
-
-    trigger = {
-        tag = SLA
-    }
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.6.a
-    }
-}
-
-country_event = {
-    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.7
-    hidden = yes
-    is_triggered_only = yes
-
-    trigger = {
-        tag = GOR
-    }
-
-    immediate = {
-
-    }
-
-    option = {
-        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.7.a
     }
 }

@@ -1,6 +1,6 @@
 ﻿l_english:
 
- #tag rules
+ #tag / substitution rules
 
  # XIA
  XIA_CHINESE_EMPIRE_XIA: "Da Xia"
@@ -8,10 +8,3 @@
  # LIA
  LIA_CHINESE_EMPIRE_LIAO: "Da Liao"
  LIA_CHINESE_EMPIRE_LIAO_ADJ: "Liao"
- # QKH
- # BAE
- # GGY
- # SLA
- # GOR
- #dynasties
- #global rules
