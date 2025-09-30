@@ -24,6 +24,9 @@ country_decisions = {
 				religion_group = eastern
 				religion_group = pagan
 			}
+			any_owned_province = {
+				superregion = china_superregion
+			}
 		}
 		allow = {
 			custom_trigger_tooltip = {
