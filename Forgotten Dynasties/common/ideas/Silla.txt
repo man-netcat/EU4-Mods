@@ -1,0 +1,36 @@
+# Silla Ideas
+SLA_ideas = {
+	start = {
+		religious_unity = 0.25
+		core_creation = -0.1
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+	trigger = {
+		tag = SLA
+	}
+	free = yes
+	silla_buddhist_kingdom = {
+		tolerance_own = 2
+	}
+	silla_bone_rank_system = {
+		advisor_pool = 1
+	}
+	silla_hwarang = {
+		army_tradition = 0.5
+	}
+	silla_unified_administration = {
+		governing_capacity_modifier = 0.1
+	}
+	silla_cheomseongdae = {
+		technology_cost = -0.1
+	}
+	silla_trade_networks = {
+		caravan_power = 0.2
+	}
+	silla_cultural_synthesis = {
+		prestige = 1
+		diplomatic_reputation = 1
+	}
+}

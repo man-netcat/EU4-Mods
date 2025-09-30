@@ -1,6 +1,7 @@
 BAE = "countries/Baekje.txt"
 GGY = "countries/Goguryeo.txt"
 GOR = "countries/Goryeo.txt"
+CHN = "countries/Han.txt"
 SLA = "countries/Silla.txt"
 TAM = "countries/Tamna.txt"
 XIA = "countries/Xia.txt"

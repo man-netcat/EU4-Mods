@@ -1,0 +1,42 @@
+# Han Dynasty Ideas
+CHN_ideas = {
+	start = {
+		administrative_efficiency = 0.05
+		global_unrest = -1
+	}
+	bonus = {
+		prestige_decay = -0.01
+	}
+	trigger = {
+		tag = CHN
+	}
+	free = yes
+	chn_mandate_of_heaven = {
+		legitimacy = 1
+		devotion = 1
+	}
+	chn_silk_road_mastery = {
+		caravan_power = 0.25
+		trade_efficiency = 0.15
+	}
+	chn_imperial_bureaucracy = {
+		advisor_cost = -0.15
+		administrative_efficiency = 0.05
+	}
+	chn_confucian_scholarship = {
+		technology_cost = -0.1
+		idea_cost = -0.1
+	}
+	chn_great_wall_legacy = {
+		defensiveness = 0.2
+		land_attrition = -0.1
+	}
+	chn_liu_clan_heritage = {
+		diplomatic_reputation = 2
+		legitimacy = 0.5
+	}
+	chn_reunification_dream = {
+		core_creation = -0.15
+		unjustified_demands = -0.1
+	}
+}

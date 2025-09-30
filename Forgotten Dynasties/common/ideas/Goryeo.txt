@@ -1,0 +1,35 @@
+# Goryeo Ideas
+GOR_ideas = {
+	start = {
+		technology_cost = -0.05
+		advisor_cost = -0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = GOR
+	}
+	free = yes
+	goryeo_uijeongbu = {
+		advisor_pool = 1
+	}
+	goryeo_civil_service = {
+		stability_cost_modifier = -0.15
+	}
+	goryeo_celadon_trade = {
+		trade_efficiency = 0.1
+	}
+	goryeo_military_reform = {
+		discipline = 0.05
+	}
+	goryeo_geobukseon = {
+		ship_durability = 0.15
+	}
+	goryeo_hyanggyo = {
+		technology_cost = -0.1
+	}
+	goryeo_trade_hubs = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}

@@ -1,0 +1,36 @@
+# Tamna Ideas
+TAM_ideas = {
+	start = {
+		naval_morale = 0.15
+		trade_efficiency = 0.1
+	}
+	bonus = {
+		privateer_efficiency = 0.25
+	}
+	trigger = {
+		tag = TAM
+	}
+	free = yes
+	tamna_island_fortress = {
+		defensiveness = 0.2
+	}
+	tamna_maritime_culture = {
+		light_ship_cost = -0.15
+	}
+	tamna_tribute_system = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
+	}
+	tamna_horse_breeding = {
+		cavalry_power = 0.15
+	}
+	tamna_island_traders = {
+		merchants = 1
+	}
+	tamna_coastal_defense = {
+		galley_power = 0.2
+	}
+	tamna_cultural_autonomy = {
+		tolerance_heretic = 2
+	}
+}

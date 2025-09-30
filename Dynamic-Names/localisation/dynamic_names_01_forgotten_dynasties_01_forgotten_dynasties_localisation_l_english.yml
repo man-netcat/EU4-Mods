@@ -2,6 +2,9 @@
 
  #tag / substitution rules
 
+ # CHN
+ CHN_CHINESE_EMPIRE_HAN: "Da Han"
+ CHN_CHINESE_EMPIRE_HAN_ADJ: "Han"
  # XIA
  XIA_CHINESE_EMPIRE_XIA: "Da Xia"
  XIA_CHINESE_EMPIRE_XIA_ADJ: "Xia"

@@ -8,8 +8,9 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        if = { limit = { tag = XIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.1 } }
-        if = { limit = { tag = LIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2 } }
+        if = { limit = { tag = CHN } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.1 } }
+        if = { limit = { tag = XIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2 } }
+        if = { limit = { tag = LIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3 } }
     }
 
     option = {
@@ -23,11 +24,11 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-        tag = XIA
+        tag = CHN
     }
 
     immediate = {
-        if = { limit = { is_emperor_of_china = yes } override_country_name = XIA_CHINESE_EMPIRE_XIA }
+        if = { limit = { is_emperor_of_china = yes } override_country_name = CHN_CHINESE_EMPIRE_HAN }
     }
 
     option = {
@@ -41,6 +42,24 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
+        tag = XIA
+    }
+
+    immediate = {
+        if = { limit = { is_emperor_of_china = yes } override_country_name = XIA_CHINESE_EMPIRE_XIA }
+    }
+
+    option = {
+        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
         tag = LIA
     }
 
@@ -49,6 +68,6 @@ country_event = {
     }
 
     option = {
-        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2.a
+        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3.a
     }
 }

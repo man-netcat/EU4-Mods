@@ -1,0 +1,144 @@
+#Country Name: Han Dynasty
+
+graphical_culture = asiangfx
+
+color = {
+	255
+	50
+	50
+}
+
+revolutionary_colors = {
+	10
+	1
+	1
+}
+
+historical_idea_groups = {
+	administrative_ideas
+	influence_ideas
+	economic_ideas
+	offensive_ideas
+	defensive_ideas
+	quality_ideas
+	diplomatic_ideas
+	humanist_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+		"Liu Bang #0" = 20
+		"Liu Che #0" = 15
+		"Liu Bei #0" = 15
+		"Liu Xiu #0" = 10
+		"Liu Heng #0" = 10
+		"Liu Qi #0" = 10
+		"Liu Xun #0" = 10
+		"Liu Shi #0" = 10
+		"Liu Zhao #0" = 10
+		"Liu An #0" = 5
+		"Liu Ying #0" = 5
+		"Liu Yu #0" = 5
+		"Liu Xiang #0" = 5
+		"Liu Ju #0" = 5
+		"Liu Xian #0" = 5
+		"Liu Chang #0" = 5
+		"Liu Wu #0" = 5
+		"Liu Hong #0" = 5
+		"Liu Shan #0" = 5
+		"Liu Chan #0" = 5
+		"Liu Biao #0" = 5
+		"Liu Zhang #0" = 5
+		"Liu Yao #0" = 5
+		"Liu Yan #0" = 5
+		"Liu Cong #0" = 5
+		"Liu Xie #0" = 5
+}
+
+leader_names = {
+	"Han Xin"
+	"Zhang Liang"
+	"Xiao He"
+	"Chen Ping"
+	"Zhou Bo"
+	"Cao Can"
+	"Fan Kuai"
+	"Wei Qing"
+	"Huo Qubing"
+	"Li Guang"
+	"Zhao Yun"
+	"Guan Yu"
+	"Zhang Fei"
+	"Huang Zhong"
+	"Ma Chao"
+	"Zhuge Liang"
+	"Pang Tong"
+	"Fa Zheng"
+	"Ma Liang"
+	"Jiang Wei"
+	"Deng Ai"
+	"Zhong Hui"
+	"Sima Yi"
+	"Xiahou Dun"
+	"Xiahou Yuan"
+	"Cao Ren"
+	"Cao Hong"
+	"Zhang He"
+	"Xu Huang"
+	"Yu Jin"
+}
+
+ship_names = {
+	"Tianlong"
+	"Fengluan"
+	"Qinglong"
+	"Baihu"
+	"Zhuque"
+	"Xuanwu"
+	"Tenglong"
+	"Feihu"
+	"Baifeng"
+	"Heijiao"
+	"Chidi"
+	"Qingfeng"
+	"Baiyun"
+	"Honglian"
+	"Zijin"
+}
+
+army_names = {
+	"Beijun"
+	"Nanjun"
+	"Dongjun"
+	"Xijun"
+	"Zhongjun"
+	"Qianfeng"
+	"Houwei"
+	"Zuoyi"
+	"Youyi"
+	"Jingwei"
+}
+
+fleet_names = {
+	"Zhengui Shuishi"
+	"Nanyang Shuishi"
+	"Donghai Shuishi"
+	"Xihai Shuishi"
+	"Changjiang Shuishi"
+}

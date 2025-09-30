@@ -1,0 +1,39 @@
+# Western Xia Ideas
+XIA_ideas = {
+	start = {
+		caravan_power = 0.20
+		cavalry_power = 0.10
+	}
+	
+	bonus = {
+		land_attrition = -0.15
+	}
+	
+	trigger = {
+		tag = XIA
+	}
+	free = yes
+	
+	xia_tangut_script = {
+		technology_cost = -0.10
+	}
+	xia_silk_road_control = {
+		trade_efficiency = 0.10
+		caravan_power = 0.15
+	}
+	xia_desert_warfare = {
+		land_attrition = -0.10
+	}
+	xia_buddhist_patronage = {
+		tolerance_own = 2
+	}
+	xia_nomadic_cavalry = {
+		cavalry_power = 0.15
+	}
+	xia_frontier_fortresses = {
+		defensiveness = 0.15
+	}
+	xia_cultural_synthesis = {
+		diplomatic_reputation = 1
+	}
+}
