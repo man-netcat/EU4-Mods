@@ -199,7 +199,6 @@ country_decisions = {
 				}
 				#Swap Ideas
 			}
-			swap_non_generic_missions = yes
 			on_change_tag_effect = yes
 		}
 		ai_will_do = {
