@@ -55,15 +55,12 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			stability = 2
-			owns_all_provinces = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
+			num_of_owned_provinces_with = {
+				superregion = china_superregion
+				value = 30
 			}
+			owns_core_province = 700
 			700 = {
-				is_state = yes
-			}
-			1836 = {
 				is_state = yes
 			}
 			if = {

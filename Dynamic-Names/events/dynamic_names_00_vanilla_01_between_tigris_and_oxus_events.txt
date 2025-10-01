@@ -81,6 +81,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = KALAT_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = KALAT_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = KALAT_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = KALAT_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = KALAT_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = KALAT_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_THEOCRACY_ARCHBISHOPRIC }
@@ -147,6 +148,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = KALAT_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = KALAT_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = KALAT_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = KALAT_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = KALAT_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = KALAT_ADMIRALTIES_HIGH_ADMIRALTY }

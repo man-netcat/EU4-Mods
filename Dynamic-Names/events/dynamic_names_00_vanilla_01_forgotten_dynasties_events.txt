@@ -92,6 +92,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = CHN_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = CHN_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = CHN_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = CHN_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = CHN_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = CHN_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = CHN_THEOCRACY_ARCHBISHOPRIC }
@@ -158,6 +159,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = CHN_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = CHN_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = CHN_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = CHN_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = CHN_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = CHN_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = CHN_ADMIRALTIES_HIGH_ADMIRALTY }
@@ -262,6 +264,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = XIA_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = XIA_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = XIA_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = XIA_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = XIA_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = XIA_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = XIA_THEOCRACY_ARCHBISHOPRIC }
@@ -328,6 +331,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = XIA_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = XIA_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = XIA_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = XIA_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = XIA_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = XIA_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = XIA_ADMIRALTIES_HIGH_ADMIRALTY }
@@ -432,6 +436,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = LIA_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = LIA_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = LIA_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = LIA_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = LIA_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = LIA_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = LIA_THEOCRACY_ARCHBISHOPRIC }
@@ -498,6 +503,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = LIA_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = LIA_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = LIA_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = LIA_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = LIA_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = LIA_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = LIA_ADMIRALTIES_HIGH_ADMIRALTY }
@@ -602,6 +608,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = QKH_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = QKH_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = QKH_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = QKH_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = QKH_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = QKH_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = QKH_THEOCRACY_ARCHBISHOPRIC }
@@ -668,6 +675,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = QKH_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = QKH_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = QKH_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = QKH_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = QKH_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = QKH_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = QKH_ADMIRALTIES_HIGH_ADMIRALTY }
@@ -772,6 +780,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = BAE_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = BAE_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = BAE_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = BAE_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = BAE_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = BAE_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = BAE_THEOCRACY_ARCHBISHOPRIC }
@@ -838,6 +847,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = BAE_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = BAE_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = BAE_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = BAE_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = BAE_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = BAE_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = BAE_ADMIRALTIES_HIGH_ADMIRALTY }
@@ -942,6 +952,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = GGY_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = GGY_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = GGY_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = GGY_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = GGY_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = GGY_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = GGY_THEOCRACY_ARCHBISHOPRIC }
@@ -1008,6 +1019,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = GGY_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = GGY_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = GGY_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = GGY_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = GGY_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = GGY_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = GGY_ADMIRALTIES_HIGH_ADMIRALTY }
@@ -1112,6 +1124,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = SLA_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = SLA_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = SLA_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = SLA_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = SLA_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = SLA_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = SLA_THEOCRACY_ARCHBISHOPRIC }
@@ -1178,6 +1191,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = SLA_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = SLA_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = SLA_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = SLA_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = SLA_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = SLA_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = SLA_ADMIRALTIES_HIGH_ADMIRALTY }
@@ -1282,6 +1296,7 @@ country_event = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic government_rank = 3 OR = { culture_group = east_asian culture_group = japanese_g culture_group = korean_g culture_group = tibetan_group culture_group = thai_group culture_group = southeastasian_group culture_group = burman culture_group = malay culture_group = hindusthani culture_group = dravidian culture_group = central_indic culture_group = eastern_aryan } } override_country_name = GOR_MONARCHY_EMPIRE_ASIAN }
         if = { limit = { government = republic } override_country_name = GOR_REPUBLIC }
         if = { limit = { government = republic has_reform = peasants_republic } override_country_name = GOR_PEASANT_REPUBLIC }
+        if = { limit = { is_revolutionary_republic_trigger = yes have_had_reform = peasants_republic government_rank = 3 } override_country_name = GOR_PEASANT_JUNTA }
         if = { limit = { government = monarchy has_reform = revolutionary_empire_reform } override_country_name = GOR_REVOLUTIONARY_EMPIRE }
         if = { limit = { government = theocracy NOT = { government_rank = 2 } } override_country_name = GOR_THEOCRACY_BISHOPRIC }
         if = { limit = { government = theocracy government_rank = 2 NOT = { government_rank = 3 } } override_country_name = GOR_THEOCRACY_ARCHBISHOPRIC }
@@ -1348,6 +1363,7 @@ country_event = {
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } NOT = { government_rank = 2 } } override_country_name = GOR_PIRATE_REPUBLICS_PIRATE_REPUBLIC }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = GOR_PIRATE_REPUBLICS_PIRATE_CONFEDERACY }
         if = { limit = { has_government_attribute = is_pirate_republic_reform NOT = { has_reform = pirate_king_reform } government_rank = 3 } override_country_name = GOR_PIRATE_REPUBLICS_GRAND_PIRATE_CONFEDERACY }
+        if = { limit = { OR = { has_reform = military_dictatorship_reform has_reform = military_rulership_reform } } override_country_name = GOR_MILITARY_REPUBLIC }
         if = { limit = { has_ruler_flag = savonarola_flag } override_country_name = GOR_SAVANAROLA_GOVERNMENT }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } NOT = { government_rank = 2 } } override_country_name = GOR_ADMIRALTIES_ADMIRALTY }
         if = { limit = { OR = { has_reform = admiralty_regime_reform has_reform = admiralty_reform } government_rank = 2 NOT = { government_rank = 3 } } override_country_name = GOR_ADMIRALTIES_HIGH_ADMIRALTY }
