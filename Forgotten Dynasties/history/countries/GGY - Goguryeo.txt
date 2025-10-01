@@ -4,33 +4,32 @@ primary_culture = korean
 religion = mahayana
 technology_group = chinese
 capital = 1845# Pyeongyang
-1444.11.11 = {
-	# Korea proper
-	add_core = 732	# Hamheung
-	add_core = 733	# Hwangju
-	add_core = 734	# Wonju
-	add_core = 735	# Hanseong
-	add_core = 736	# Sangju
-	add_core = 1845	# Pyeongyang
-	add_core = 2694	# Gangneung
-	add_core = 2742	# Yukjin
-	add_core = 2743	# Gyeongseong
-	add_core = 2744	# Yeongbyeon
-	add_core = 4231	# Haeju
-	add_core = 4232	# Ganggye
-	# Liaodong Peninsula
-	add_core = 726	# Shenyang
-	add_core = 2112	# Andong
-	add_core = 2113	# Gaizhou
-	add_core = 4652	# Haicheng
-	# Manchurian heartlands
-	add_core = 730	# Jilin
-	add_core = 2107	# Ningguta
-	add_core = 2108	# Huncun
-	add_core = 4201	# Jianzhou
-	add_core = 2110	# Yehe
-	add_core = 2111	# Hetu Ala
-	add_core = 4653	# Maolian
-	add_core = 4661	# Edala
-	add_core = 4654	# Fu'erhe
-}
+
+# Korea proper
+add_core = 732	# Hamheung
+add_core = 733	# Hwangju
+add_core = 734	# Wonju
+add_core = 735	# Hanseong
+add_core = 736	# Sangju
+add_core = 1845	# Pyeongyang
+add_core = 2694	# Gangneung
+add_core = 2742	# Yukjin
+add_core = 2743	# Gyeongseong
+add_core = 2744	# Yeongbyeon
+add_core = 4231	# Haeju
+add_core = 4232	# Ganggye
+# Liaodong Peninsula
+add_core = 726	# Shenyang
+add_core = 2112	# Andong
+add_core = 2113	# Gaizhou
+add_core = 4652	# Haicheng
+# Manchurian heartlands
+add_core = 730	# Jilin
+add_core = 2107	# Ningguta
+add_core = 2108	# Huncun
+add_core = 4201	# Jianzhou
+add_core = 2110	# Yehe
+add_core = 2111	# Hetu Ala
+add_core = 4653	# Maolian
+add_core = 4661	# Edala
+add_core = 4654	# Fu'erhe

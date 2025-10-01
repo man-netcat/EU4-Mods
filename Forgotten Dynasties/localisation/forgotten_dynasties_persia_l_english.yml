@@ -1,0 +1,8 @@
+﻿l_english:
+ JALAYIRIDS:0 "Jalayirids"
+
+ # Ilkhanate Identity Event
+ flavor_ilk.1.t:0 "The Question of Identity"
+ flavor_ilk.1.d:0 "We stand at a crossroads. The dream of restoring the great Ilkhanate, the western realm of the Mongol Empire, has guided us thus far. Yet our forefather Hasan Buzurg founded the Jalayirid dynasty, and it was under that name our ancestors ruled from Baghdad. Do we give up on our dream of restoring the Ilkhanate, and reinforce our ancestor's name instead? Or do we hold fast to the legacy of the Khans?"
+ flavor_ilk.1.a:0 "We cannot keep dreaming this dream. We are Jalayirids!"
+ flavor_ilk.1.b:0 "The Ilkhanate shall rise again!"

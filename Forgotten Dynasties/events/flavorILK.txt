@@ -1,0 +1,40 @@
+namespace = flavor_ilk
+# The Jalayirid Question
+country_event = {
+	id = flavor_ilk.1
+	title = flavor_ilk.1.t
+	desc = flavor_ilk.1.d
+	picture = REFORM_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = ILK
+		NOT = {
+			has_country_flag = restored_ilkhanate_decision_flag
+		}
+		NOT = {
+			has_country_flag = formed_ilkhanate_flag
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	# Embrace the Jalayirid identity
+	option = {
+		name = flavor_ilk.1.a
+		ai_chance = {
+			factor = 60
+		}
+		set_country_flag = jalayirid_identity_chosen
+		change_primary_culture = turco_iranian
+		override_country_name = JALAYIRIDS
+	}
+	# Restore the Ilkhanate legacy
+	option = {
+		name = flavor_ilk.1.b
+		ai_chance = {
+			factor = 40
+		}
+		set_country_flag = ilkhanate_legacy_chosen
+		change_primary_culture = mongol
+	}
+}

@@ -1,0 +1,35 @@
+### generated events for dynamic names
+
+namespace = dynamic_names_01_forgotten_dynasties_00_vanilla
+
+country_event = {
+    id = dynamic_names_01_forgotten_dynasties_00_vanilla.0
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = { limit = { tag = ILK } country_event = { id = dynamic_names_01_forgotten_dynasties_00_vanilla.1 } }
+    }
+
+    option = {
+        name = dynamic_names_01_forgotten_dynasties_00_vanilla.0.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_forgotten_dynasties_00_vanilla.1
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tag = ILK
+    }
+
+    immediate = {
+        if = { limit = { has_country_flag = jalayirid_identity_chosen } override_country_name = ILK_JALAYRIDS }
+    }
+
+    option = {
+        name = dynamic_names_01_forgotten_dynasties_00_vanilla.1.a
+    }
+}

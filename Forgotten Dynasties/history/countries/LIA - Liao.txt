@@ -5,10 +5,8 @@ primary_culture = altaic_new
 religion = tengri_pagan_reformed
 capital = 4652
 
-1444.11.11 = {
-	add_core = 704	# Ningyuan
-	add_core = 726	# Shenyang
-	add_core = 2112	# Andong
-	add_core = 2113	# Gaizhou
-	add_core = 4652	# Haicheng
-}
+add_core = 704	# Ningyuan
+add_core = 726	# Shenyang
+add_core = 2112	# Andong
+add_core = 2113	# Gaizhou
+add_core = 4652	# Haicheng

@@ -5,28 +5,26 @@ religion = mahayana
 technology_group = chinese
 capital = 2745 # Gyeongju
 
-1444.11.11 = {
-	# Original Silla territory - southeastern Korea (pre-unification cores)
-	add_core = 2745	# Gyeongju (capital)
-	add_core = 736	# Sangju
-	add_core = 4227	# Jinju
-	add_core = 2694	# Gangneung
-	# Claims on territories conquered during unification (former Baekje lands)
-	add_claim = 735	# Hanseong
-	add_claim = 737	# Jeonju
-	add_claim = 4228	# Naju
-	add_claim = 4230	# Suwon
-	add_claim = 1013	# Cheongju
-	add_claim = 4229	# Chungju
-	add_claim = 734	# Wonju
-	add_claim = 2741	# Jeju
-	# Claims on former Goguryeo territory conquered by Silla
-	add_claim = 732	# Hamheung
-	add_claim = 733	# Hwangju
-	add_claim = 1845	# Pyeongyang
-	add_claim = 2742	# Yukjin
-	add_claim = 2743	# Gyeongseong
-	add_claim = 2744	# Yeongbyeon
-	add_claim = 4231	# Haeju
-	add_claim = 4232	# Ganggye
-}
+# Original Silla territory - southeastern Korea (pre-unification cores)
+add_core = 2745	# Gyeongju (capital)
+add_core = 736	# Sangju
+add_core = 4227	# Jinju
+add_core = 2694	# Gangneung
+# Claims on territories conquered during unification (former Baekje lands)
+add_claim = 735	# Hanseong
+add_claim = 737	# Jeonju
+add_claim = 4228	# Naju
+add_claim = 4230	# Suwon
+add_claim = 1013	# Cheongju
+add_claim = 4229	# Chungju
+add_claim = 734	# Wonju
+add_claim = 2741	# Jeju
+# Claims on former Goguryeo territory conquered by Silla
+add_claim = 732	# Hamheung
+add_claim = 733	# Hwangju
+add_claim = 1845	# Pyeongyang
+add_claim = 2742	# Yukjin
+add_claim = 2743	# Gyeongseong
+add_claim = 2744	# Yeongbyeon
+add_claim = 4231	# Haeju
+add_claim = 4232	# Ganggye
