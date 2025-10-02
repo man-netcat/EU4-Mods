@@ -252,4 +252,202 @@ jalayirid_economic_missions = {
 			}
 		}
 	}
+	
+	jly_spread_perso_mongolic_culture = {
+		icon = mission_early_modern_university
+		required_missions = { jly_restore_irrigation }
+		position = 3
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { culture = perso_mongolic }
+			OR = {
+				culture = persian
+				culture = khorasani
+				culture = azerbaijani
+			}
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = perso_mongolic
+				NOT = { is_capital = yes }
+			}
+			calc_true_if = {
+				amount = 1
+				all_owned_province = {
+					has_building = courthouse
+				}
+			}
+			university = 1
+		}
+		
+		effect = {
+			add_adm_power = 100
+			add_prestige = 20
+			add_country_modifier = {
+				name = "jly_cultural_synthesis"
+				duration = 9125
+			}
+		}
+	}
+	
+	jly_restore_taxation = {
+		icon = mission_war_chest
+		required_missions = { jly_spread_perso_mongolic_culture }
+		position = 4
+		
+		provinces_to_highlight = {
+			region = persia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { base_tax = 6 }
+			}
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				region = persia_region
+				base_tax = 6
+			}
+		}
+		
+		effect = {
+			add_years_of_income = 1.5
+			add_country_modifier = {
+				name = "jly_ilkhanate_tax_system"
+				duration = -1
+			}
+		}
+	}
+	
+	jly_rebuild_cities = {
+		icon = mission_central_asian_city
+		required_missions = { jly_restore_taxation }
+		position = 5
+		
+		provinces_to_highlight = {
+			province_id = 428
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_building = temple }
+				NOT = { has_building = courthouse }
+				NOT = { development = 20 }
+			}
+		}
+		
+		trigger = {
+			428 = {
+				owned_by = ROOT
+				has_building = temple
+				has_building = courthouse
+				development = 20
+			}
+			owns = 2218
+			2218 = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		
+		effect = {
+			add_prestige = 25
+			428 = {
+				add_province_modifier = {
+					name = "jly_restored_isfahan"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "jly_architectural_legacy"
+				duration = 9125
+			}
+		}
+	}
+}
+
+jalayirid_trade_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = JLY
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	
+	jly_control_silk_road = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2218
+				province_id = 454
+			}
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			owns = 2218
+			owns = 454
+			2218 = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "jly_silk_road_dominance"
+				duration = 9125
+			}
+			454 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 25
+					key = jly_samarkand_control
+				}
+			}
+		}
+	}
+	
+	jly_establish_mint = {
+		icon = mission_have_two_subjects
+		required_missions = { jly_control_silk_road }
+		position = 4
+		
+		trigger = {
+			treasury = 500
+			calc_true_if = {
+				amount = 5
+				all_owned_province = {
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_inflation = -2
+			add_country_modifier = {
+				name = "jly_unified_coinage"
+				duration = -1
+			}
+		}
+	}
 }

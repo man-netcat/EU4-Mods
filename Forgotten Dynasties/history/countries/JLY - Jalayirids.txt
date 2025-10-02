@@ -1,6 +1,6 @@
 government = monarchy
 add_government_reform = iqta
-primary_culture = mongolic_persian 
+primary_culture = perso_mongolic 
 religion = sunni
 technology_group = muslim
 capital = 408  # Basra

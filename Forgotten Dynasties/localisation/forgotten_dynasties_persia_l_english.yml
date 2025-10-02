@@ -1,42 +1,16 @@
 ﻿l_english:
+ # Country Names
  JLY:0 "Jalayirids"
  JLY_ADJ:0 "Jalayirid"
  
- # Culture
- mongolic_persian:0 "Mongolic-Persian"
-
- # Jalayirid Missions
- jly_assert_independence_title:0 "Assert Our Independence"
- jly_assert_independence_desc:0 "The Jalayirid dynasty, once proud rulers of Baghdad and western Persia, has been subjugated by foreign powers. Our ancestors bent the knee to preserve what remained, but the shame of vassalage weighs heavy. The time has come to throw off these chains and reclaim our sovereignty."
- jly_independent:0 "Independent At Last"
- desc_jly_independent:0 "Having thrown off the shackles of foreign domination, our dynasty stands proud and independent once more."
+ # Cultures
+ perso_mongolic:0 "Perso-Mongolic"
  
- jly_reclaim_baghdad_title:0 "Reclaim Baghdad"
- jly_reclaim_baghdad_desc:0 "Baghdad, the jewel of Mesopotamia and seat of the Abbasid Caliphate, was once the heart of our realm. Our forefather Hasan Buzurg ruled from this great city. We must reclaim it and restore our rightful place as masters of Iraq."
- jly_baghdad_restored:0 "Baghdad Restored"
- desc_jly_baghdad_restored:0 "Baghdad has been restored to its former glory under Jalayirid rule."
- 
- jly_destroy_qara_qoyunlu_title:0 "Butcher the Black Sheep"
- jly_destroy_qara_qoyunlu_desc:0 "The Qara Qoyunlu, the 'Black Sheep Turkomans', are our rivals for dominance over the Iranian plateau and Azerbaijan. They stand between us and the restoration of the Ilkhanate's former glory. They must be crushed utterly."
- jly_qar_destroyed_tooltip:0 "The Qara Qoyunlu have already been destroyed"
- jly_qara_qoyunlu_defeated:0 "Qara Qoyunlu Defeated"
- desc_jly_qara_qoyunlu_defeated:0 "The destruction of the Qara Qoyunlu has proven our military might and opened the path to domination of Persia."
- 
- # Jalayirid Events
- flavor_jly.2.t:0 "The Black Sheep Fall"
- flavor_jly.2.d:0 "With the defeat of the Qara Qoyunlu, the path to restoring the Ilkhanate's former glory lies open before us. The lands of Azerbaijan and Tabriz, once the heart of Mongol power in Persia, are within our grasp. The dream of our ancestors may yet be realized."
- flavor_jly.2.a:0 "The Ilkhanate shall rise again!"
- flavor_jly.2.b:0 "No, we must forge our own path!"
- 
- flavor_jly.3.t:0 "The Jalayir Rise Again"
- flavor_jly.3.d:0 "The Jalayirid dynasty, founded by the great Hasan Buzurg, has been restored to independence. Our lineage stretches back to the Mongol khans who once ruled from China to Baghdad. Though we have become Persianized and Islamicized over the generations, we remain proud descendants of the steppes."
- flavor_jly.3.a:0 "The legacy of Hasan Buzurg lives on!"
-
- 
- # Form Ilkhanate Decision
+ # Decisions
  form_ilkhanate_nation_title:0 "Restore the Ilkhanate"
- form_ilkhanate_nation_desc:0 "The Ilkhanate, founded by Hulagu Khan, was once the mightiest power in Persia. Though our Jalayirid dynasty rose from its ashes, we have never forgotten that we are the heirs of the Khans. With Baghdad, Tabriz, Maragheh, and Soltaniyeh in our hands, and dominion over Persia secured, we can restore the Ilkhanate and reclaim the legacy of our Mongol forebears." 
- # Jalayirid Ideas
+ form_ilkhanate_nation_desc:0 "The Ilkhanate, founded by Hulagu Khan, was once the mightiest power in Persia. Though our Jalayirid dynasty rose from its ashes, we have never forgotten that we are the heirs of the Khans. With Baghdad, Tabriz, Maragheh, and Soltaniyeh in our hands, and dominion over Persia secured, we can restore the Ilkhanate and reclaim the legacy of our Mongol forebears."
+ 
+ # National Ideas
  JLY_ideas:0 "Jalayirid Ideas"
  JLY_ideas_start:0 "Jalayirid Traditions"
  JLY_ideas_bonus:0 "Jalayirid Ambition"
@@ -55,10 +29,68 @@
  jly_tribal_confederacy:0 "Tribal Confederacy"
  jly_tribal_confederacy_desc:0 "The Jalayir tribe and our allied Turko-Mongol clans provide a deep well of loyal warriors ready to fight for our cause."
  
- # Irrigation Mission
- jly_restore_irrigation_title:0 "Restore the Irrigation System"
- jly_restore_irrigation_desc:0 "The ancient irrigation canals of Mesopotamia, built over millennia, were devastated by the Mongol conquests. The 'Land Between the Rivers' has declined from its former glory. To restore Iraq's agricultural prosperity, we must invest in building farm estates that represent the reconstruction of vital irrigation infrastructure. We need at least three such estates to demonstrate our commitment to restoring Mesopotamian agriculture."
+ # Events
+ flavor_jly.2.t:0 "The Black Sheep Fall"
+ flavor_jly.2.d:0 "With the defeat of the Qara Qoyunlu, the path to restoring the Ilkhanate's former glory lies open before us. The lands of Azerbaijan and Tabriz, once the heart of Mongol power in Persia, are within our grasp. The dream of our ancestors may yet be realized."
+ flavor_jly.2.a:0 "The Ilkhanate shall rise again!"
+ flavor_jly.2.b:0 "No, we must forge our own path!"
+ 
+ flavor_jly.3.t:0 "The Jalayir Rise Again"
+ flavor_jly.3.d:0 "The Jalayirid dynasty, founded by the great Hasan Buzurg, has been restored to independence. Our lineage stretches back to the Mongol khans who once ruled from China to Baghdad. Though we have become Persianized and Islamicized over the generations, we remain proud descendants of the steppes."
+ flavor_jly.3.a:0 "The legacy of Hasan Buzurg lives on!"
+ 
+ # Missions - Slot 1 (Military)
+ jly_assert_independence_title:0 "Assert Independence"
+ jly_assert_independence_desc:0 "The Jalayirid dynasty once ruled Baghdad and western Persia, but foreign powers have subjugated us. The time has come to throw off these chains and reclaim our sovereignty."
+ jly_independent:0 "Independent At Last"
+ desc_jly_independent:0 "Having thrown off the shackles of foreign domination, our dynasty stands proud and independent once more."
+ 
+ jly_reclaim_baghdad_title:0 "Reclaim Baghdad"
+ jly_reclaim_baghdad_desc:0 "Baghdad was once the heart of our realm under Hasan Buzurg. We must reclaim the jewel of Mesopotamia and restore our rightful place as masters of Iraq."
+ jly_baghdad_restored:0 "Baghdad Restored"
+ desc_jly_baghdad_restored:0 "Baghdad has been restored to its former glory under Jalayirid rule."
+ 
+ jly_destroy_qara_qoyunlu_title:0 "Destroy the Black Sheep"
+ jly_destroy_qara_qoyunlu_desc:0 "The Qara Qoyunlu stand between us and the restoration of the Ilkhanate. These 'Black Sheep Turkomans' must be crushed utterly if we are to dominate Persia."
+ jly_qar_destroyed_tooltip:0 "The Qara Qoyunlu have already been destroyed"
+ jly_qara_qoyunlu_defeated:0 "Qara Qoyunlu Defeated"
+ desc_jly_qara_qoyunlu_defeated:0 "The destruction of the Qara Qoyunlu has proven our military might and opened the path to domination of Persia."
+ 
+ # Missions - Slot 2 (Economic & Cultural)
+ jly_restore_irrigation_title:0 "Restore Irrigation"
+ jly_restore_irrigation_desc:0 "The Mongol conquests devastated Mesopotamia's ancient irrigation canals. To restore Iraq's agricultural prosperity, we must rebuild these vital systems through farm estates across the Land Between the Rivers."
  jly_irrigation_restored:0 "Irrigation Restored"
  desc_jly_irrigation_restored:0 "The ancient canals of Mesopotamia have been restored, bringing renewed prosperity to the fertile lands of Iraq."
  jly_mesopotamian_canals:0 "Mesopotamian Canals"
  desc_jly_mesopotamian_canals:0 "The restored canal system brings water and prosperity back to this province."
+ 
+ jly_spread_perso_mongolic_culture_title:0 "A Cultural Synthesis"
+ jly_spread_perso_mongolic_culture_desc:0 "The Ilkhanate failed because Mongol rulers remained alien to their Persian subjects - converting to Islam yet never bridging the cultural divide. We shall not repeat this mistake. By spreading our Perso-Mongolic culture, we unite steppe heritage with Persian civilization, succeeding where the Ilkhanate failed and forging one people from two traditions."
+ jly_cultural_synthesis:0 "Perso-Mongolic Cultural Synthesis"
+ desc_jly_cultural_synthesis:0 "Our unique fusion of Mongol martial tradition and Persian civilization has begun to take root, creating a unified identity that bridges the steppes and the cities."
+ 
+ jly_restore_taxation_title:0 "Reform Tax Collection"
+ jly_restore_taxation_desc:0 "The Ilkhanate's collapse left Persian tax systems in disarray. We must restore the efficient revenue administration that once made the Mongol khans wealthy, rebuilding the bureaucracy across our domains."
+ jly_ilkhanate_tax_system:0 "Reformed Ilkhanate Tax System"
+ desc_jly_ilkhanate_tax_system:0 "Our reformed tax system, based on the sophisticated Mongol-Persian administrative traditions, ensures efficient revenue collection across our realm."
+ 
+ jly_rebuild_cities_title:0 "Rebuild Great Cities"
+ jly_rebuild_cities_desc:0 "Isfahan and Tabriz were jewels of the Ilkhanate - centers of trade, learning, and culture. By investing in temples, courthouses, and urban development, we demonstrate that we are the true successors to the khans."
+ jly_restored_isfahan:0 "Isfahan Restored"
+ desc_jly_restored_isfahan:0 "Isfahan has been restored to its former glory as a center of Persian culture and commerce."
+ jly_architectural_legacy:0 "Architectural Patronage"
+ desc_jly_architectural_legacy:0 "Our investment in restoring and beautifying the great cities of Persia has enhanced our prestige and improved construction efficiency throughout our realm."
+ 
+ # Missions - Slot 3 (Trade)
+ jly_control_silk_road_title:0 "Control the Silk Road"
+ jly_control_silk_road_desc:0 "The Silk Road passes through our domains, connecting East and West. By controlling Tabriz and Samarkand and investing in trade infrastructure, we ensure that caravans enrich our treasury with silk, spices, and precious goods."
+ jly_silk_road_dominance:0 "Silk Road Dominance"
+ desc_jly_silk_road_dominance:0 "Our control over key Silk Road cities ensures that trade wealth flows into our treasury."
+ jly_samarkand_control:0 "Jalayirid Trade Presence"
+ desc_jly_samarkand_control:0 "Jalayirid merchants dominate trade in this city."
+ 
+ jly_establish_mint_title:0 "Unify the Coinage"
+ jly_establish_mint_desc:0 "The Ilkhanate once issued standardized coins across its vast domains. Our fragmented realm uses a chaotic mix of currencies. By establishing royal mints, we can issue unified Jalayirid coinage, reducing inflation and cementing our authority."
+ jly_unified_coinage:0 "Unified Jalayirid Coinage"
+ desc_jly_unified_coinage:0 "Our standardized coinage system reduces inflation and demonstrates the strength and reach of Jalayirid authority."
+

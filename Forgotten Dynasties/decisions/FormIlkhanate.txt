@@ -64,6 +64,13 @@ country_decisions = {
 				}
 				add_permanent_claim = ILK
 			}
+			change_primary_culture = perso_mongolic
+			add_accepted_culture_or_dip_power = {
+				culture = persian
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = mongol
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300

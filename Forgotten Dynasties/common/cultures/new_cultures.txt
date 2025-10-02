@@ -15,12 +15,10 @@ tibetan_group = {
 }
 
 turko_semitic = {
-	jalayirid = { #Mongolic-Persian-Turcoman Hybrid
+	perso_mongolic = { # Mongolian-Persian Hybrid
 		primary = JLY
 		dynasty_names = {
-			Jalayir "Jalayirid" Barlas Suldus Merkit Qonggirat Arlat Khunggirat
-			"Hasan-oghlu" "Shaykh-oghlu" "Ahmad-oghlu" "Uvais-oghlu"
-			"Qara Qoyunlu" "Qara Husayn" Bayandur Shamlu Tekkelu Afsharid
+			Jalayirid
 		}
 		male_names = {
 			Hasan Ahmad Husayn Uvais Shah Bayazid Pir Shaykh Jahan Qara Yusuf
@@ -46,8 +44,7 @@ korean_g = {
 	baekje = { #Southwestern Korea - Buyeo Dynasty
 		primary = BAE
 		dynasty_names = {
-			Buyeo Hae Jin Yeon Sa Mokra Haebu Jinmu Eungo Chaekgye Biryu
-			Jungdeuk Baekga Sangga Yeonja Jwagun Gochi Gusu Guisin Jinsa
+			Buyeo
 		}
 		male_names = {
 			Onjo Daru Giru Gaeru Chogo Gusu Saban Goi Chaekgye Bunseo Biryu
@@ -66,8 +63,7 @@ korean_g = {
 	silla = { #Southeastern Korea - Gyeongju Kim/Park Dynasties
 		primary = SLA
 		dynasty_names = {
-			Kim Park Seok Gyeongju Geumseong Choe Yun Sul Im Jeong
-			Baekjeong Silla Icheon Jukjuk Jeomhae Naemul Maripgan
+			Kim Park
 		}
 		male_names = {
 			Hyeokgeose Namhae Yuri Talhae Pasa Jima Ilseong Adalla Beolhyu Naehae
@@ -88,8 +84,7 @@ korean_g = {
 	goguryeo = { #Northern Korea & Manchuria - Go (Gao) Dynasty
 		primary = GGY
 		dynasty_names = {
-			Go Gao Yeon Yon Yeomna Haemyeong Daego Gaesomun
-			Yuryu Jesa Chuga Sosu Saek Yeo Sangsang Jungsang
+			Go
 		}
 		male_names = {
 			Jumong Yuri Daemusin Minjung Mobon Taejo Chadae Sindae Gogukcheon
@@ -118,7 +113,7 @@ altaic = {
             Shulü Xiao Yelüge Yelüjing Yelümin Yelüji Yelüfan Yelüying Yelümu Yelüjin Yelüxian Yelüping Yelüyan Yelübao Yelüyingzi Yelüyi Yelüshen Yelüqin Yelülan Yelümei Yelühua Yelüyun Yelüfang Yelüxin Yelüqi Yelüling Yelüshuang Yelüyinghua Yelülingzi Yelüyue Yelüyanzi Yelüxi Yelüyanling Yelüjinghua Yelümeiwen Yelüshui Yelüjinglan Yelüxinlan Yelüyingqi Yelüxianlan Yelüyanzhi Yelüxianyi Yelümuqing Yelüjingyi Yelüshan Yelüqing
         }
         dynasty_names = {
-            Yelü Shulü Xiao Abaoji Abaoqi Abaoluo Abaowei Abaojian Abaosheng Abaoxun Abaohuan Abaoli Abaolun Abaoxian Abaoyan Abaoying Abaosun Abaohu
+            Yelü
         }
     }
 }

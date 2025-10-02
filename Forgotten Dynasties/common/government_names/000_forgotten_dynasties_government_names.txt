@@ -1,0 +1,41 @@
+ilkhanate_reformed = {
+	rank = {
+		1 = ILKHANATE
+		2 = ILKHANATE
+		3 = ILKHANATE
+	}
+	ruler_male = {
+		1 = ILKHAN
+		2 = ILKHAN
+		3 = ILKHAN
+	}
+	ruler_female = {
+		1 = ILKHATUN
+		2 = ILKHATUN
+		3 = ILKHATUN
+	}
+	consort_male = {
+		1 = KHAN
+		2 = KHAN
+		3 = KHAN
+	}
+	consort_female = {
+		1 = KHANUM
+		2 = KHANUM
+		3 = KHANUM
+	}
+	heir_male = {
+		1 = KHANZADEH
+		2 = KHANZADEH
+		3 = KHANZADEH
+	}
+	heir_female = {
+		1 = KHANUM
+		2 = KHANUM
+		3 = KHANUM
+	}
+	trigger = {
+		tag = ILK
+		government = monarchy
+	}
+}
