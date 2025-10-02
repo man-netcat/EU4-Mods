@@ -14,6 +14,100 @@ tibetan_group = {
     }
 }
 
+turko_semitic = {
+	jalayirid = { #Mongolic-Persian-Turcoman Hybrid
+		primary = JLY
+		dynasty_names = {
+			Jalayir "Jalayirid" Barlas Suldus Merkit Qonggirat Arlat Khunggirat
+			"Hasan-oghlu" "Shaykh-oghlu" "Ahmad-oghlu" "Uvais-oghlu"
+			"Qara Qoyunlu" "Qara Husayn" Bayandur Shamlu Tekkelu Afsharid
+		}
+		male_names = {
+			Hasan Ahmad Husayn Uvais Shah Bayazid Pir Shaykh Jahan Qara Yusuf
+			'Abbas 'Abd al-Karim 'Abd al-Rahman Muhammad 'Ali Sulayman Isma'il Ibrahim
+			Mahmud Mehmed Murad Osman Bayezid Selim Suleyman Orhan
+			Timur Togay Togrul Turgut Tekin Altan Batu Bayan Khubilai Arghun Ghazan
+			Abaqa Ariq Hulagu Mongke Kublai Chagatai Berke Orda Shiban
+			Bahram Farhad Khosrau Dariush Ardashir Faramarz Rostam Sohrab
+			Jahanshah Pir Budak Uzun Hasan Yaqub Rustam Khalil
+		}
+		female_names = {
+			Fatima Khadija Zahra Maryam Aisha Halima Jamila Safiya 
+			Dilshad Tandu "Turk Khatun" "Baghdad Khatun" "Sheykh Khatun"
+			Çiçek Ayse Gulbahar Gulfem Hatice Huriye Zehra Zeynep
+			Turandokht Pourandokht Azarmidokht Golbahar Mahdokht Shahrzad Shirin
+			Borte Sorghaghtani Toregene Oghul Qaimish Yesui Yesugen Chabi
+			Parand Payam Delaram Farah Golnaz Leila Parvin Soraya
+		}
+	}
+}
+
+korean_g = {
+	baekje = { #Southwestern Korea - Buyeo Dynasty
+		primary = BAE
+		dynasty_names = {
+			Buyeo Hae Jin Yeon Sa Mokra Haebu Jinmu Eungo Chaekgye Biryu
+			Jungdeuk Baekga Sangga Yeonja Jwagun Gochi Gusu Guisin Jinsa
+		}
+		male_names = {
+			Onjo Daru Giru Gaeru Chogo Gusu Saban Goi Chaekgye Bunseo Biryu
+			Geunchogo Geungusu Chimnyu Jinsa Asin Jeonji Guisin Biyu Gyesu
+			Munju Samgeun Dongseong Muryeong Seong Wideok Hye Beop Mu Uija
+			Bung Daejo Daso Puyo Pung Jeong Yung Deok Won Chin Yeol Sin Jang
+			Imsu Mokra Haebu Yeonja Jungdeok Sangha Yeoksa Wolhwa Gonji Jikji
+		}
+		female_names = {
+			Hwangnyeo Soseono Yewha Buyeo Seora Seokhwa Jinmu Gyo Mongra
+			Eun-bi Eun-chae Eun-ha Eun-ji So-hee So-hyun Ye-eun Ye-ji Ye-won
+			Mi-hee Mi-jung Hye-jin Hye-jung Ji-eun Ji-young Min-ji Min-jung
+			Chae-won Chae-young Bo-young Seo-hyeon Seo-yeon Yeon-hee Yu-ri
+		}
+	}
+	silla = { #Southeastern Korea - Gyeongju Kim/Park Dynasties
+		primary = SLA
+		dynasty_names = {
+			Kim Park Seok Gyeongju Geumseong Choe Yun Sul Im Jeong
+			Baekjeong Silla Icheon Jukjuk Jeomhae Naemul Maripgan
+		}
+		male_names = {
+			Hyeokgeose Namhae Yuri Talhae Pasa Jima Ilseong Adalla Beolhyu Naehae
+			Jobun Cheomhae Michu Yurye Girim Heulhae Naemul Silseong Nulji Jabi
+			Soji Jijeung Beophung Jinheung Jinji Jinpyeong Seondeok Jindeok Muyeol
+			Munmu Sinmun Hyoso Seongdeok Hyoseong Gyeongdeok Hyegong Seondeok
+			Wonseong Soseong Aejang Heondeok Heungdeok Huigang Minae Sinmu Munseong
+			Heongang Jeonggang Jinseong Hyogong Gyeongmyeong Gyeongae Gyeongsun
+			Alcheon Baekjeong Chungdam Galmun Guhae Gujin Haeron Ichan Sajin Seolwon
+		}
+		female_names = {
+			Seondeok Jindeok Jinseong Soseono Mishil Maemyeong Cheonmyeong Yeonhwa
+			Eun-ah Eun-byul Eun-hee Eun-hye Eun-suh Ji-ae Ji-hye Ji-yeon
+			Hye-bin Hye-in Hye-mi Hye-rim Hye-su Ye-jin Ye-rin Ye-seo
+			Yoo-na Yu-ri Mi-kyung Mi-yeon Se-bin Seol-hee So-yi So-young
+		}
+	}
+	goguryeo = { #Northern Korea & Manchuria - Go (Gao) Dynasty
+		primary = GGY
+		dynasty_names = {
+			Go Gao Yeon Yon Yeomna Haemyeong Daego Gaesomun
+			Yuryu Jesa Chuga Sosu Saek Yeo Sangsang Jungsang
+		}
+		male_names = {
+			Jumong Yuri Daemusin Minjung Mobon Taejo Chadae Sindae Gogukcheon
+			Sansang Dongcheon Jungcheon Seocheon Bongsang Micheon Gogukwon Sosurim
+			Gogugyang Gwanggaeto Jangsu Munjamyeong Anjang Anwon Yangwon Pyeongwon
+			Yeongyang Yeongnyu Bojang Gaesomun Namgeon Namsan Yeonjeong Anseung
+			Boju Geonjong Daeyang Geommu Geolbu Yeonsa Seupcju Jiryang Heummu Mokdun
+			Saek Ijae Gwannak Sayu Sujul Daesu Yeonmal Chulji Soksal Yeongyu
+		}
+		female_names = {
+			Yuhwa Soseono Woohwa Nammu Balgi Dongbuyeo Ju Daeso
+			Da-hee Da-hyun Do-hee Ga-in Ga-young Ha-eun Hana Hyun-a
+			In-hye Ja-kyung Jang-mi Jung-ah Kyung-ah Min-hee Min-seo Mina
+			Na-young Nana Nari Soo-ah Sung-mi Yeo-jin Yoon-hee Young-mi
+		}
+	}
+}
+
 altaic = {
     khitan = {
         primary = QKH

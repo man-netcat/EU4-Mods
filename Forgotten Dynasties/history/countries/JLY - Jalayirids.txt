@@ -1,0 +1,96 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = mongolic_persian 
+religion = sunni
+technology_group = muslim
+capital = 408  # Basra
+
+# Basra area - final Jalayirid territory
+add_core = 408  # Basra
+add_core = 2311  # Samawat
+add_core = 2312  # Wasit
+add_core = 4288  # Shatt al-Arab
+
+# Jalayirids were a Mongol-origin dynasty that became thoroughly Persianized
+# Founded by Hasan Buzurg after the collapse of the Ilkhanate in 1335
+# Lost Baghdad to Qara Qoyunlu in 1411
+# Dynasty ended with Shah Muhammad's death in 1432
+
+1335.12.1 = {
+	monarch = {
+		name = "Hasan Buzurg"
+		dynasty = "Jalayir"
+		adm = 4
+		dip = 5
+		mil = 5
+	}
+}
+
+1356.11.30 = {
+	monarch = {
+		name = "Shaykh Uvais"
+		dynasty = "Jalayir"
+		adm = 5
+		dip = 4
+		mil = 6
+	}
+}
+
+1374.11.27 = {
+	monarch = {
+		name = "Husain"
+		dynasty = "Jalayir"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1382.1.1 = {
+	monarch = {
+		name = "Ahmad"
+		dynasty = "Jalayir"
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1410.12.1 = {
+	monarch = {
+		name = "Shah Walad"
+		dynasty = "Jalayir"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1421.1.1 = {
+	monarch = {
+		name = "Shah Muhammad"
+		dynasty = "Jalayir"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+# 1444 bookmark - ensures Jalayir dynasty when released
+1444.11.11 = {
+	monarch = {
+		name = "Hasan"
+		dynasty = "Jalayir"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	heir = {
+		name = "Ahmad"
+		dynasty = "Jalayir"
+		birth_date = 1425.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

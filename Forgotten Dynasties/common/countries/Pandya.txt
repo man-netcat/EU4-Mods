@@ -1,0 +1,121 @@
+graphical_culture = indiangfx
+color = {
+	255
+	229
+	66
+}
+
+revolutionary_colors = {
+	1
+	1
+	0
+}
+
+historical_idea_groups = {
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	maritime_ideas
+	defensive_ideas
+	innovativeness_ideas
+	expansion_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	indian_footsoldier
+	rajput_hill_fighters
+	indian_arquebusier
+	south_indian_musketeer
+	reformed_mughal_musketeer
+	indian_elephant
+	bhonsle_infantry
+	indian_shock_cavalry
+	maharathan_guerilla_warfare
+	sikh_rifle
+	tipu_sultan_rocket
+}
+
+monarch_names = {
+	"Nedunj Cheliyan #0" = 10
+	"Kadungon #0" = 10
+	"Maravarman #0" = 30
+	"Jatavarman #0" = 30
+	"Sundara #0" = 20
+	"Kulasekhara #0" = 20
+	"Parantaka #0" = 15
+	"Vira #0" = 20
+	"Parakrama #0" = 15
+	"Sadayavarman #0" = 10
+	"Arikesari #0" = 10
+	"Srivallabha #0" = 10
+	"Rajasimha #0" = 10
+	"Tribhuvana #0" = 5
+	"Vikrama #0" = 10
+	"Ugra #0" = 5
+	"Sendan #0" = 5
+	"Mangammal #0" = -10
+	"Meenakshi #0" = -10
+}
+
+leader_names = {
+	Nedunj
+	Kadungon
+	Maravarman
+	Jatavarman
+	Sundara
+	Kulasekhara
+	Parantaka
+	Vira
+	Sadayavarman
+	Arikesari
+	Srivallabha
+	Rajasimha
+	Tribhuvana
+	Sendan
+	Cheliyan
+	Ugra
+	Parakrama
+	Vikrama
+	Mudaliar
+	Thondaiman
+	Dalawa
+	Nayak
+}
+
+ship_names = {
+	Pandya
+	Madurai
+	Korkai
+	Karikal
+	Tenkasi
+	Tuticorin
+	Rameswaram
+	"Pearl of the South"
+	"Tiger of Madurai"
+	"Lord of the South"
+	Kaveri
+	Vaigai
+	Tamraparni
+	Porunai
+	"Southern Star"
+	"Sangam"
+	Cheran
+	Chola
+	"Ancient Tamil"
+	"Pearl Coast"
+	"Cape Comorin"
+	Amirtha
+	Amman
+	Arul
+	Chellam
+	Devi
+	Durga
+	Gayatri
+	Lakshmi
+	Meenakshi
+	Parvati
+	Sarasvati
+	Sita
+	Tamarai
+}

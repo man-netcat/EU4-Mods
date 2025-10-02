@@ -1,0 +1,27 @@
+# Jalayirid Modifiers
+jly_independent = {
+	prestige = 0.5
+	legitimacy = 0.5
+	liberty_desire = -10
+}
+
+jly_baghdad_restored = {
+	local_tax_modifier = 0.25
+	local_unrest = -2
+}
+
+jly_qara_qoyunlu_defeated = {
+	army_tradition = 0.5
+	land_morale = 0.10
+	prestige = 1.0
+}
+
+jly_irrigation_restored = {
+	global_trade_goods_size_modifier = 0.15
+	development_cost = -0.10
+}
+
+jly_mesopotamian_canals = {
+	local_production_efficiency = 0.25
+	local_development_cost = -0.15
+}

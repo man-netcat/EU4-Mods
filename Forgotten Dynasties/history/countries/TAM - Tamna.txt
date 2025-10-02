@@ -7,3 +7,10 @@ capital = 2741	# Jeju
 
 # Tamna's island kingdom
 add_core = 2741	# Jeju
+
+add_claim = 4651 # Tsushima
+
+# Claims on all of Korea
+korea_region = {
+	add_permanent_claim = ROOT
+}

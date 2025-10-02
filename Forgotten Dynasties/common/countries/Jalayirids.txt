@@ -1,0 +1,78 @@
+graphical_culture = muslimgfx
+color = {
+	247
+	159
+	39
+}
+
+revolutionary_colors = {
+	8
+	5
+	8
+}
+
+historical_idea_groups = {
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	"Hasan #0" = 30
+	"Ahmad #0" = 20
+	"Husain #0" = 20
+	"Uvais #0" = 15
+	"Muhammad #0" = 15
+	"Shah Walad #0" = 10
+	"Bayezid #0" = 5
+	"Sultan #0" = 5
+	"Jahan Shah #0" = 5
+	"Yusuf #0" = 5
+	"Ali #0" = 5
+}
+
+leader_names = {
+	Buzurg
+	Uvais
+	Ahmad
+	Husain
+	"Shah Walad"
+	Muhammad
+	Bayezid
+	Sultan
+	Jahan
+	Yusuf
+	Ali
+}
+
+ship_names = {
+	Baghdad
+	Basra
+	Tabriz
+	Isfahan
+	Shiraz
+	Mosul
+	Kirkuk
+	Najaf
+	Karbala
+	Hillah
+}

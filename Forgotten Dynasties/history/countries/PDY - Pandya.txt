@@ -1,0 +1,110 @@
+government = monarchy
+add_government_reform = nayankara_reform
+primary_culture = tamil
+religion = hinduism
+technology_group = indian
+capital = 536	# Madurai
+fixed_capital = 536 # Cannot move capital away from this province & no power cost to move to it
+
+# Pandya Dynasty (PDY) - formable nation representing the ancient Tamil Pandya kingdom
+# Formation requires control of Coromandel region + Malabar, Mysore, and Rayalaseema areas
+# Historical base: Last Pandyas who survived the Madurai Sultanate
+
+# Last Pandyas - Unsubdued by the Madurai Sultanate
+
+1431.1.1 = {
+	monarch = {
+		name = "Parakrama"
+		dynasty = "Pandya"
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1431.1.1 = {
+	heir = {
+		name = "Vira"
+		monarch_name = "Vira"
+		dynasty = "Pandya"
+		birth_date = 1410.1.1
+		death_date = 1475.1.1
+		claim = 95
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1437.1.1 = {
+	monarch = {
+		name = "Vira"
+		dynasty = "Pandya"
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1437.1.1 = {
+	heir = {
+		name = "Vira"
+		monarch_name = "Vira II"
+		dynasty = "Pandya"
+		birth_date = 1430.1.1
+		death_date = 1516.1.1
+		claim = 95
+		ADM = 4
+		DIP = 1
+		MIL = 1
+	}
+}
+
+1475.1.1 = {
+	monarch = {
+		name = "Vira II"
+		dynasty = "Pandya"
+		ADM = 4
+		DIP = 1
+		MIL = 1
+	}
+}
+
+1475.1.1 = {
+	heir = {
+		name = "Parakrama"
+		monarch_name = "Parakrama II"
+		dynasty = "Pandya"
+		birth_date = 1450.1.1
+		death_date = 1543.1.1
+		claim = 95
+		ADM = 2
+		DIP = 1
+		MIL = 3
+	}
+}
+
+1516.1.1 = {
+	monarch = {
+		name = "Parakrama II"
+		dynasty = "Pandya"
+		ADM = 2
+		DIP = 1
+		MIL = 3
+	}
+}
+
+1516.1.1 = {
+	heir = {
+		name = "Vikrama"
+		monarch_name = "Vikrama"
+		dynasty = "Pandya"
+		birth_date = 1480.1.1
+		death_date = 1565.1.1
+		claim = 95
+		ADM = 3
+		DIP = 1
+		MIL = 4
+	}
+}
+

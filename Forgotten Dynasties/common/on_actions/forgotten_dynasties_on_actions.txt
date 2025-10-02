@@ -1,0 +1,12 @@
+on_country_released = {
+	if = {
+		limit = {
+			ai = no
+			tag = JLY
+		}
+		set_dynasty = "Jalayir"
+		define_heir = {
+			dynasty = "Jalayir"
+		}
+	}
+}

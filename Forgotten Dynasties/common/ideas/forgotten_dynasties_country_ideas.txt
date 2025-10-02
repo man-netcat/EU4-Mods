@@ -332,3 +332,91 @@ XIA_ideas = {
 		diplomatic_reputation = 1
 	}
 }
+
+# Jalayirid Ideas
+JLY_ideas = {
+	start = {
+		cavalry_power = 0.15
+		core_creation = -0.1
+	}
+	bonus = {
+		cavalry_flanking = 0.5
+	}
+	trigger = {
+		tag = JLY
+	}
+	free = yes
+	jly_legacy_of_hasan_buzurg = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	jly_turko_mongol_administration = {
+		num_accepted_cultures = 1
+	}
+	jly_baghdad_calligraphy_schools = {
+		advisor_cost = -0.1
+	}
+	jly_steppe_mobility = {
+		movement_speed = 0.15
+		cavalry_cost = -0.1
+	}
+	jly_mesopotamian_irrigation = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	jly_sufi_mystics = {
+		tolerance_heretic = 2
+	}
+	jly_tribal_confederacy = {
+		global_manpower_modifier = 0.15
+	}
+}
+
+# Pandya Ideas - Upgraded Dravidian Ideas
+PDY_ideas = {
+	start = {
+		religious_unity = 0.5
+		production_efficiency = 0.15
+	}
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	trigger = {
+		tag = PDY
+	}
+	free = yes
+	pdy_merchants_of_the_south = {
+		trade_range_modifier = 0.33
+		merchants = 1
+	}
+	pdy_pearl_fisheries = {
+		global_trade_goods_size_modifier = 0.1
+		trade_steering = 0.15
+	}
+	pdy_polygar_warriors = {
+		global_manpower_modifier = 0.15
+		land_morale = 0.1
+	}
+	pdy_tamil_mercenaries = {
+		merc_maintenance_modifier = -0.2
+		mercenary_discipline = 0.1
+	}
+	pdy_temple_patronage = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+		stability_cost_modifier = -0.1
+	}
+	pdy_sangam_literature = {
+		prestige = 1
+		prestige_decay = -0.01
+	}
+	pdy_pandyan_trade_empire = {
+		trade_efficiency = 0.1
+		ship_trade_power_modifier = 0.2
+	}
+}

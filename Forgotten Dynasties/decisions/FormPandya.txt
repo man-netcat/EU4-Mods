@@ -1,0 +1,92 @@
+country_decisions = {
+	form_pandya_nation = {
+		major = yes
+		potential = {
+			tag = MAD
+			NOT = {
+				has_country_flag = formed_pandya_flag
+			}
+			NOT = {
+				exists = PDY
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = coromandel_region
+				area = malabar_area
+				area = mysore_area
+				area = rayalaseema_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			# Must own all of Coromandel region
+			coromandel_region = {
+				type = all
+				owned_by = ROOT
+			}
+			# Must own Malabar area
+			malabar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			# Must own Mysore area
+			mysore_area = {
+				type = all
+				owned_by = ROOT
+			}
+			# Must own Rayalaseema area
+			rayalaseema_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = PDY
+			set_country_flag = formed_pandya_flag
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 3
+			# Claims on South India
+			deccan_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = PDY
+			}
+			west_india_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = PDY
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_capital = 539			# Madurai
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

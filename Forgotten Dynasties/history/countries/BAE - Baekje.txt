@@ -1,18 +1,21 @@
 government = monarchy
 add_government_reform = korean_monarchy
-primary_culture = korean
+primary_culture = baekje
 religion = mahayana
 technology_group = chinese
-capital = 735
+capital = 735	# Hanseong
 historical_friend = JAP
 
-add_core = 735
-add_core = 737
-add_core = 1013
-add_core = 4227
-add_core = 4228
-add_core = 4229
-add_core = 4230
-add_claim = 4194
-add_claim = 704
-add_claim = 4652
+# Southwestern Korea - Baekje heartland
+add_core = 735	# Hanseong
+add_core = 737	# Jeonju
+add_core = 1013	# Naju
+add_core = 4227	# Jinju
+add_core = 4228	# Gwangju
+add_core = 4229	# Chungju
+add_core = 4230	# Cheongju
+
+# Claims on all of Korea
+korea_region = {
+	add_permanent_claim = ROOT
+}

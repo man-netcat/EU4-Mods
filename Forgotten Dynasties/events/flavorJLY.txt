@@ -1,0 +1,15 @@
+namespace = flavor_jly
+# Qara Qoyunlu Defeated
+country_event = {
+	id = flavor_jly.2
+	title = flavor_jly.2.t
+	desc = flavor_jly.2.d
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	# The path to restoration is clear
+	option = {
+		name = flavor_jly.2.a
+		add_prestige = 10
+		add_legitimacy = 10
+	}
+}

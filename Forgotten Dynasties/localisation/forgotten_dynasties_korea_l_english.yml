@@ -9,6 +9,12 @@
  TAM_ADJ:0 "Tamnan"
  GOR:0 "Goryeo"
  GOR_ADJ: "Goryeoan"
+ 
+ # Cultures
+ baekje:0 "Baekje"
+ silla:0 "Silla"
+ goguryeo:0 "Goguryeo"
+
 
  BAE_ideas:1 "Baekje Ideas"
  BAE_ideas_start:1 "Baekje Traditions"

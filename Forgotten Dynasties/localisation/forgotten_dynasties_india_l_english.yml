@@ -1,0 +1,34 @@
+﻿l_english:
+ PDY:0 "Pandya"
+ PDY_ADJ:0 "Pandyan"
+ 
+ # Form Pandya Decision
+ form_pandya_nation_title:0 "Restore the Pandya Kingdom"
+ form_pandya_nation_desc:0 "The Pandya dynasty was one of the three ancient Tamil kingdoms that ruled southern India for over two millennia. From our capital at Madurai, the Pandyas controlled the pearl fisheries of the south and engaged in lucrative trade with Rome, Southeast Asia, and beyond. The Sangam literature celebrates our kings as patrons of Tamil culture and language. Now, with control over the entire Tamil homeland and surrounding regions, we can restore the glory of the ancient Pandya realm and reclaim our rightful place as one of the great kingdoms of India."
+ 
+ # Pandya Ideas
+ PDY_ideas:0 "Pandyan Ideas"
+ PDY_ideas_start:0 "Pandyan Traditions"
+ PDY_ideas_bonus:0 "Pandyan Ambition"
+ 
+ pdy_merchants_of_the_south:0 "Pearl Merchants of the South"
+ pdy_merchants_of_the_south_desc:0 "The Pandyas were the premier merchants of southern India, trading pearls, spices, and textiles across the Indian Ocean. Our merchant networks stretched from Rome to Southeast Asia, bringing immense wealth and prestige to our kingdom."
+ 
+ pdy_pearl_fisheries:0 "Pearl Fisheries of the Gulf of Mannar"
+ pdy_pearl_fisheries_desc:0 "The Pandyas controlled the legendary pearl fisheries of the Gulf of Mannar, especially around Tuticorin. These precious pearls were sought after by emperors and kings across the ancient world, making our kingdom fabulously wealthy."
+ 
+ pdy_polygar_warriors:0 "Pandyan Polygar System"
+ pdy_polygar_warriors_desc:0 "The Pandyan military was organized around the polygar system of local chieftains who provided troops and administered territories. This system allowed us to field large armies and maintain control over our extensive domains."
+ 
+ pdy_tamil_mercenaries:0 "Tamil Mercenary Tradition"
+ pdy_tamil_mercenaries_desc:0 "South Indian warriors, particularly from the Pandyan realm, were renowned as mercenaries throughout Asia. From Sri Lanka to Southeast Asia, Tamil soldiers served foreign kings while bringing wealth and military experience home."
+ 
+ pdy_temple_patronage:0 "Royal Patronage of Great Temples"
+ pdy_temple_patronage_desc:0 "The Pandyan kings were legendary patrons of Hindu temples, most famously the Meenakshi Amman Temple at Madurai. These magnificent temples were centers of religion, culture, and political power, legitimizing our divine right to rule."
+ 
+ pdy_sangam_literature:0 "Patrons of Tamil Sangam"
+ pdy_sangam_literature_desc:0 "The Pandyan court hosted the Tamil Sangam, legendary academies of poets and scholars. The Sangam literature produced under our patronage established Tamil as one of the great classical languages and brought eternal glory to the Pandyan name."
+ 
+ pdy_pandyan_trade_empire:0 "Pandyan Maritime Empire"
+ pdy_pandyan_trade_empire_desc:0 "At the height of our power, the Pandyas controlled not just the pearl fisheries but the entire maritime trade of southern India. Our fleets dominated the coasts, and our merchants were the masters of Indian Ocean commerce."
+

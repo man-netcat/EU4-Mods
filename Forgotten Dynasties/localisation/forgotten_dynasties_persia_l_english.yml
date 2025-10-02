@@ -1,8 +1,64 @@
 ﻿l_english:
- JALAYIRIDS:0 "Jalayirids"
+ JLY:0 "Jalayirids"
+ JLY_ADJ:0 "Jalayirid"
+ 
+ # Culture
+ mongolic_persian:0 "Mongolic-Persian"
 
- # Ilkhanate Identity Event
- flavor_ilk.1.t:0 "The Question of Identity"
- flavor_ilk.1.d:0 "We stand at a crossroads. The dream of restoring the great Ilkhanate, the western realm of the Mongol Empire, has guided us thus far. Yet our forefather Hasan Buzurg founded the Jalayirid dynasty, and it was under that name our ancestors ruled from Baghdad. Do we give up on our dream of restoring the Ilkhanate, and reinforce our ancestor's name instead? Or do we hold fast to the legacy of the Khans?"
- flavor_ilk.1.a:0 "We cannot keep dreaming this dream. We are Jalayirids!"
- flavor_ilk.1.b:0 "The Ilkhanate shall rise again!"
+ # Jalayirid Missions
+ jly_assert_independence_title:0 "Assert Our Independence"
+ jly_assert_independence_desc:0 "The Jalayirid dynasty, once proud rulers of Baghdad and western Persia, has been subjugated by foreign powers. Our ancestors bent the knee to preserve what remained, but the shame of vassalage weighs heavy. The time has come to throw off these chains and reclaim our sovereignty."
+ jly_independent:0 "Independent At Last"
+ desc_jly_independent:0 "Having thrown off the shackles of foreign domination, our dynasty stands proud and independent once more."
+ 
+ jly_reclaim_baghdad_title:0 "Reclaim Baghdad"
+ jly_reclaim_baghdad_desc:0 "Baghdad, the jewel of Mesopotamia and seat of the Abbasid Caliphate, was once the heart of our realm. Our forefather Hasan Buzurg ruled from this great city. We must reclaim it and restore our rightful place as masters of Iraq."
+ jly_baghdad_restored:0 "Baghdad Restored"
+ desc_jly_baghdad_restored:0 "Baghdad has been restored to its former glory under Jalayirid rule."
+ 
+ jly_destroy_qara_qoyunlu_title:0 "Butcher the Black Sheep"
+ jly_destroy_qara_qoyunlu_desc:0 "The Qara Qoyunlu, the 'Black Sheep Turkomans', are our rivals for dominance over the Iranian plateau and Azerbaijan. They stand between us and the restoration of the Ilkhanate's former glory. They must be crushed utterly."
+ jly_qar_destroyed_tooltip:0 "The Qara Qoyunlu have already been destroyed"
+ jly_qara_qoyunlu_defeated:0 "Qara Qoyunlu Defeated"
+ desc_jly_qara_qoyunlu_defeated:0 "The destruction of the Qara Qoyunlu has proven our military might and opened the path to domination of Persia."
+ 
+ # Jalayirid Events
+ flavor_jly.2.t:0 "The Black Sheep Fall"
+ flavor_jly.2.d:0 "With the defeat of the Qara Qoyunlu, the path to restoring the Ilkhanate's former glory lies open before us. The lands of Azerbaijan and Tabriz, once the heart of Mongol power in Persia, are within our grasp. The dream of our ancestors may yet be realized."
+ flavor_jly.2.a:0 "The Ilkhanate shall rise again!"
+ flavor_jly.2.b:0 "No, we must forge our own path!"
+ 
+ flavor_jly.3.t:0 "The Jalayir Rise Again"
+ flavor_jly.3.d:0 "The Jalayirid dynasty, founded by the great Hasan Buzurg, has been restored to independence. Our lineage stretches back to the Mongol khans who once ruled from China to Baghdad. Though we have become Persianized and Islamicized over the generations, we remain proud descendants of the steppes."
+ flavor_jly.3.a:0 "The legacy of Hasan Buzurg lives on!"
+
+ 
+ # Form Ilkhanate Decision
+ form_ilkhanate_nation_title:0 "Restore the Ilkhanate"
+ form_ilkhanate_nation_desc:0 "The Ilkhanate, founded by Hulagu Khan, was once the mightiest power in Persia. Though our Jalayirid dynasty rose from its ashes, we have never forgotten that we are the heirs of the Khans. With Baghdad, Tabriz, Maragheh, and Soltaniyeh in our hands, and dominion over Persia secured, we can restore the Ilkhanate and reclaim the legacy of our Mongol forebears." 
+ # Jalayirid Ideas
+ JLY_ideas:0 "Jalayirid Ideas"
+ JLY_ideas_start:0 "Jalayirid Traditions"
+ JLY_ideas_bonus:0 "Jalayirid Ambition"
+ jly_legacy_of_hasan_buzurg:0 "Legacy of Hasan Buzurg"
+ jly_legacy_of_hasan_buzurg_desc:0 "Our founder Hasan Buzurg established a dynasty that bridged the Mongol and Islamic worlds. His legacy of strong, legitimate rule guides us still."
+ jly_turko_mongol_administration:0 "Turko-Mongol Administration"
+ jly_turko_mongol_administration_desc:0 "Drawing from both Persian bureaucratic traditions and Mongol pragmatism, we embrace the diverse cultures under our rule."
+ jly_baghdad_calligraphy_schools:0 "Baghdad Calligraphy Schools"
+ jly_baghdad_calligraphy_schools_desc:0 "The great city of Baghdad remains a center of Islamic learning and culture. We patronize its schools and attract wise advisors from across the Muslim world."
+ jly_steppe_mobility:0 "Steppe Mobility"
+ jly_steppe_mobility_desc:0 "Our Mongol heritage gives us unmatched mobility on the battlefield. Our cavalry moves with the speed of the wind across the plains."
+ jly_mesopotamian_irrigation:0 "Dreams of Irrigation"
+ jly_mesopotamian_irrigation_desc:0 "The ancient land between the rivers once flourished thanks to sophisticated canal networks. Though the Mongol conquests devastated these systems, we dream of restoring Iraq to its former agricultural glory."
+ jly_sufi_mystics:0 "Sufi Mystics"
+ jly_sufi_mystics_desc:0 "We favor the mystical Sufi orders, whose tolerance and spiritual depth help unite our diverse subjects under a common faith."
+ jly_tribal_confederacy:0 "Tribal Confederacy"
+ jly_tribal_confederacy_desc:0 "The Jalayir tribe and our allied Turko-Mongol clans provide a deep well of loyal warriors ready to fight for our cause."
+ 
+ # Irrigation Mission
+ jly_restore_irrigation_title:0 "Restore the Irrigation System"
+ jly_restore_irrigation_desc:0 "The ancient irrigation canals of Mesopotamia, built over millennia, were devastated by the Mongol conquests. The 'Land Between the Rivers' has declined from its former glory. To restore Iraq's agricultural prosperity, we must invest in building farm estates that represent the reconstruction of vital irrigation infrastructure. We need at least three such estates to demonstrate our commitment to restoring Mesopotamian agriculture."
+ jly_irrigation_restored:0 "Irrigation Restored"
+ desc_jly_irrigation_restored:0 "The ancient canals of Mesopotamia have been restored, bringing renewed prosperity to the fertile lands of Iraq."
+ jly_mesopotamian_canals:0 "Mesopotamian Canals"
+ desc_jly_mesopotamian_canals:0 "The restored canal system brings water and prosperity back to this province."

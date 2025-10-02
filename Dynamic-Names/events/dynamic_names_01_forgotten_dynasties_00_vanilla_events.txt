@@ -26,7 +26,7 @@ country_event = {
     }
 
     immediate = {
-        if = { limit = { has_country_flag = jalayirid_identity_chosen } override_country_name = ILK_JALAYRIDS }
+        if = { limit = { has_country_flag = jalayirid_identity_chosen } override_country_name = ILK_JALAYIRIDS }
     }
 
     option = {

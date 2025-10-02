@@ -7,4 +7,7 @@ TAM = "countries/Tamna.txt"
 XIA = "countries/Xia.txt"
 QKH = "countries/Qara Khitai.txt"
 LIA = "countries/Liao.txt"
+JLY = "countries/Jalayirids.txt"
+PDY = "countries/Pandya.txt"
+
 
