@@ -1,0 +1,768 @@
+# New diplomatic action to create semi-independent vassals
+create_semi_independent_vassal = {
+	category = relation
+	require_acceptance = yes
+	is_visible = {
+		FROM = {
+			NOT = {
+				is_subject_of = ROOT
+			}
+			NOT = {
+				overlord_of = ROOT
+			}
+			NOT = {
+				war_with = ROOT
+			}
+		}
+		ROOT = {
+			NOT = {
+				war_with = FROM
+			}
+			NOT = {
+				is_subject_of = FROM
+			}
+			NOT = {
+				overlord_of = FROM
+			}
+		}
+	}
+	is_allowed = {
+		alliance_with = FROM
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 190
+			}
+			is_at_war = no
+			is_subject = no
+			NOT = {
+				num_of_cities = ROOT
+			}
+			NOT = {
+				total_development = ROOT
+			}
+		}
+		ROOT = {
+			is_at_war = no
+			is_subject = no
+		}
+		# Must not be too powerful compared to ROOT
+		FROM = {
+			OR = {
+				AND = {
+					NOT = {
+						total_development = 200
+					}
+					ROOT = {
+						total_development = 200
+					}
+				}
+				AND = {
+					ROOT = {
+						total_development = 300
+					}
+					FROM = {
+						NOT = {
+							total_development = 250
+						}
+					}
+				}
+				ROOT = {
+					total_development = FROM
+				}
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			create_subject = {
+				subject_type = semi_independent_vassal
+				subject = FROM
+			}
+			# Set flag with timestamp for 10-year revocation cooldown
+			set_country_flag = became_semi_independent_vassal
+		}
+		ROOT = {
+			add_prestige = 10
+			add_dip_power = 25
+		}
+		FROM = {
+			# No need to reduce liberty desire - the subject type naturally has low liberty desire
+			# due to the greater autonomy granted
+			add_opinion = {
+				who = ROOT
+				modifier = is_semi_independent_vassal
+			}
+			add_prestige = 5
+		}
+		ROOT = {
+			add_opinion = {
+				who = FROM
+				modifier = is_semi_independent_vassal
+			}
+		}
+	}
+	on_decline = {
+		ROOT = {
+			add_opinion = {
+				who = FROM
+				modifier = declined_semi_vassal
+			}
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = declined_semi_vassal
+			}
+		}
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = BASE_ACCEPTANCE
+			limit = {
+				always = yes
+			}
+			set_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = OPINION_SEMI_VASSAL
+			limit = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		add_entry = {
+			name = ALLIANCE_SEMI_VASSAL
+			limit = {
+				alliance_with = ROOT
+			}
+			set_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = SAME_CULTURE_GROUP
+			limit = {
+				ROOT = {
+					culture_group = FROM
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = 25
+			}
+		}
+		add_entry = {
+			name = SAME_RELIGION
+			limit = {
+				ROOT = {
+					religion = FROM
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = MILITARY_THREAT
+			limit = {
+				OR = {
+					any_rival_country = {
+						NOT = {
+							alliance_with = FROM
+						}
+						army_size = FROM
+					}
+					any_neighbor_country = {
+						NOT = {
+							alliance_with = FROM
+						}
+						is_rival = FROM
+						army_size = FROM
+					}
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = DIPLO_DISTANCE
+			limit = {
+				ROOT = {
+					NOT = {
+						num_of_cities = 5
+					}
+				}
+				NOT = {
+					border_distance = {
+						who = ROOT
+						distance = 100
+					}
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		add_entry = {
+			name = AT_WAR
+			limit = {
+				is_at_war = yes
+			}
+			set_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		add_entry = {
+			name = IS_RIVAL
+			limit = {
+				ROOT = {
+					is_rival = FROM
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		add_entry = {
+			name = TOO_LARGE
+			limit = {
+				ROOT = {
+					NOT = {
+						total_development = FROM
+					}
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = -100
+			}
+		}
+	}
+	ai_will_do = {
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 190
+			}
+			alliance_with = ROOT
+			is_at_war = no
+			NOT = {
+				army_size = ROOT
+			}
+			OR = {
+				any_rival_country = {
+					NOT = {
+						alliance_with = FROM
+					}
+				}
+				any_neighbor_country = {
+					is_rival = FROM
+					NOT = {
+						alliance_with = FROM
+					}
+				}
+			}
+		}
+	}
+}
+
+# Elevate an existing vassal to semi-independent status
+elevate_to_semi_independent_vassal = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = vassal
+		}
+	}
+	is_allowed = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = vassal
+			NOT = {
+				is_at_war = yes
+			}
+		}
+		ROOT = {
+			NOT = {
+				is_at_war = yes
+			}
+		}
+	}
+	on_accept = {
+		ROOT = {
+			create_subject = {
+				subject_type = semi_independent_vassal
+				subject = FROM
+			}
+			add_dip_power = 10
+			add_opinion = {
+				who = FROM
+				modifier = is_semi_independent_vassal
+			}
+		}
+		FROM = {
+			add_liberty_desire = -10
+			add_opinion = {
+				who = ROOT
+				modifier = is_semi_independent_vassal
+			}
+			add_prestige = 10
+			# Set flag with timestamp for 10-year revocation cooldown
+			set_country_flag = became_semi_independent_vassal
+		}
+	}
+	ai_will_do = {
+		FROM = {
+			liberty_desire = 40
+			is_at_war = no
+		}
+	}
+}
+
+# Revoke semi-independence and demote to regular vassal
+revoke_semi_independence = {
+	category = influence
+	require_acceptance = yes
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = semi_independent_vassal
+		}
+	}
+	is_allowed = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = semi_independent_vassal
+			NOT = { is_at_war = yes }
+			# Must have been semi-independent for at least 10 years
+			had_country_flag = {
+				flag = became_semi_independent_vassal
+				days = 3650
+			}
+		}
+		ROOT = {
+			NOT = { is_at_war = yes }
+			# Must have significant power advantage
+			army_size = FROM
+		}
+	}
+	on_accept = {
+		ROOT = {
+			create_subject = {
+				subject_type = vassal
+				subject = FROM
+			}
+			add_dip_power = -50
+			add_prestige = -10
+		}
+		FROM = {
+			add_liberty_desire = 30
+			add_opinion = {
+				who = ROOT
+				modifier = revoked_semi_independence
+			}
+			# Clear the flag so the timer resets if they're elevated again
+			clr_country_flag = became_semi_independent_vassal
+		}
+	}
+	on_decline = {
+		FROM = {
+			add_liberty_desire = 20
+			add_opinion = {
+				who = ROOT
+				modifier = attempted_revoke_independence
+			}
+		}
+		ROOT = {
+			add_opinion = {
+				who = FROM
+				modifier = refused_return_vassal
+			}
+		}
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = BASE_ACCEPTANCE
+			limit = {
+				always = yes
+			}
+			set_variable = {
+				which = ai_value
+				value = -100
+			}
+		}
+		add_entry = {
+			name = OPINION_SEMI_VASSAL
+			limit = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		add_entry = {
+			name = MILITARY_STRENGTH_COMPARED
+			limit = {
+				ROOT = {
+					army_size = FROM
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = 30
+			}
+		}
+		add_entry = {
+			name = OVERLORD_MUCH_STRONGER
+			limit = {
+				ROOT = {
+					army_size = FROM
+					total_development = FROM
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = 40
+			}
+		}
+		add_entry = {
+			name = SAME_CULTURE_GROUP
+			limit = {
+				ROOT = {
+					culture_group = FROM
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = 10
+			}
+		}
+		add_entry = {
+			name = SAME_RELIGION
+			limit = {
+				ROOT = {
+					religion = FROM
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = 10
+			}
+		}
+		add_entry = {
+			name = HIGH_LIBERTY_DESIRE
+			limit = {
+				liberty_desire = 50
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = liberty_desire
+				who = FROM
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -2
+			}
+		}
+		add_entry = {
+			name = RECENTLY_GRANTED_INDEPENDENCE
+			limit = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = is_semi_independent_vassal
+				}
+			}
+			set_variable = {
+				which = ai_value
+				value = -50
+			}
+		}
+		add_entry = {
+			name = AT_WAR
+			limit = {
+				is_at_war = yes
+			}
+			set_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+	}
+	ai_will_do = {
+		# AI overlords should rarely use this - only when they need direct control
+		# and are strong enough to handle the backlash
+		FROM = {
+			# Vassal has moderate liberty desire - concerning but not yet rebellious
+			liberty_desire = 40
+			NOT = {
+				liberty_desire = 60
+			}
+		}
+		ROOT = {
+			# Must be overwhelmingly stronger to handle potential rebellion
+			army_size = FROM
+			total_development = FROM
+			# Must be able to afford the diplomatic power cost
+			NOT = {
+				war_exhaustion = 5
+			}
+		}
+	}
+}
+
+# Request overlord support in defensive war
+request_overlord_support = {
+	category = influence
+	
+	require_acceptance = yes
+	
+	is_visible = {
+		ROOT = {
+			is_subject_of_type = semi_independent_vassal
+			is_subject_of = FROM
+		}
+		FROM = {
+			overlord_of = ROOT
+		}
+	}
+	
+	is_allowed = {
+		ROOT = {
+			is_subject_of_type = semi_independent_vassal
+			is_in_war = {
+				defender_leader = ROOT
+			}
+		}
+		FROM = {
+			is_at_war = no
+		}
+	}
+	
+	on_accept = {
+		FROM = {
+			join_all_defensive_wars_of = ROOT
+		}
+		ROOT = {
+			add_opinion = {
+				who = FROM
+				modifier = overlord_joined_war
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "The Cossacks"
+			}
+			ROOT = {
+				add_trust = {
+					who = FROM
+					value = 10
+					mutual = yes
+				}
+			}
+		}
+	}
+	
+	on_decline = {
+		ROOT = {
+			add_opinion = {
+				who = FROM
+				modifier = overlord_refused_support
+			}
+			add_liberty_desire = 10
+		}
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+			name = BASE_ACCEPTANCE
+			limit = {
+				always = yes
+			}
+			set_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		
+		add_entry = {
+			name = OPINION_SEMI_VASSAL
+			limit = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		
+		add_entry = {
+			name = IS_BANKRUPT
+			limit = {
+				is_bankrupt = yes
+			}
+			set_variable = {
+				which = ai_value
+				value = -100
+			}
+		}
+		
+		add_entry = {
+			name = HIGH_WAR_EXHAUSTION
+			limit = {
+				war_exhaustion = 5
+			}
+			set_variable = {
+				which = ai_value
+				value = -50
+			}
+		}
+		
+		add_entry = {
+			name = VERY_HIGH_WAR_EXHAUSTION
+			limit = {
+				war_exhaustion = 10
+			}
+			set_variable = {
+				which = ai_value
+				value = -100
+			}
+		}
+		
+		add_entry = {
+			name = AT_WAR
+			limit = {
+				is_at_war = yes
+			}
+			set_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+	}
+	
+	ai_will_do = {
+		ROOT = {
+			is_in_war = {
+				defender_leader = ROOT
+			}
+		}
+		FROM = {
+			is_at_war = no
+			NOT = { war_exhaustion = 5 }
+		}
+	}
+}
+
+# Overlord enforces peace for semi-independent vassal
+enforce_peace_for_vassal = {
+	category = influence
+	
+	require_acceptance = no
+	
+	is_visible = {
+		ROOT = {
+			overlord_of = FROM
+		}
+		FROM = {
+			is_subject_of_type = semi_independent_vassal
+			is_subject_of = ROOT
+		}
+	}
+	
+	is_allowed = {
+		ROOT = {
+			is_at_war = no
+			NOT = { war_exhaustion = 10 }
+		}
+		FROM = {
+			is_subject_of_type = semi_independent_vassal
+			is_in_war = {
+				defender_leader = FROM
+			}
+		}
+	}
+	
+	on_accept = {
+		ROOT = {
+			join_all_defensive_wars_of = FROM
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = overlord_joined_war
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "The Cossacks"
+			}
+			FROM = {
+				add_trust = {
+					who = ROOT
+					value = 10
+					mutual = yes
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		FROM = {
+			is_in_war = {
+				defender_leader = FROM
+			}
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+		ROOT = {
+			is_at_war = no
+			NOT = { war_exhaustion = 5 }
+		}
+	}
+}
