@@ -1,7 +1,7 @@
-# Semi-Independent Vassal Subject Type
+# Autonomous Vassal Subject Type
 # A vassal type that maintains significant autonomy and can wage its own wars
 
-semi_independent_vassal = {
+autonomous_vassal = {
 	copy_from = vassal
 	
 	# Graphics:
@@ -26,7 +26,7 @@ semi_independent_vassal = {
 	
 	# Trade and economic properties
 	transfer_trade_if_merchant_republic = yes
-	pays_overlord = 0.5  # Pays less than regular vassals due to semi-independence
+	pays_overlord = 0.5  # Pays less than regular vassals due to autonomy
 	forcelimit_to_overlord = 0.05  # Provides less military support
 	
 	# Power projection
@@ -43,17 +43,17 @@ semi_independent_vassal = {
 	}
 	can_ally = {
 		independent_nations = yes
-		same_overlord = semi_independent_vassal
+		same_overlord = autonomous_vassal
 		other_overlord = all
 	}
 	can_marry = {
 		independent_nations = yes
-		same_overlord = semi_independent_vassal
+		same_overlord = autonomous_vassal
 		other_overlord = all
 	}
 	
 	# Overlord protections
-	overlord_protects_external = no  # Overlord is not automatically called
+	overlord_protects_external = yes  # Overlord IS automatically called when vassal is attacked
 	overlord_enforce_peace_attacking = yes  # Overlord CAN enforce peace when vassal is attacked
 	
 	# Can use their own claims
@@ -65,7 +65,7 @@ semi_independent_vassal = {
 	share_rebel_popup = yes
 	
 	# Liberty desire - LOWER base due to greater autonomy granted
-	# They're content with their independence, so much lower base liberty desire
+	# They're content with their autonomy, so much lower base liberty desire
 	base_liberty_desire = -25.0
 	liberty_desire_development_ratio = 0.15
 	liberty_desire_same_dynasty = -10.0
@@ -92,7 +92,7 @@ semi_independent_vassal = {
 	# They CAN cooperate for independence, but the low base liberty desire means
 	# they're much less likely to actually want to
 	relative_power_class = 1
-	should_quit_wars_on_activation = no  # Don't quit wars when becoming semi-independent
+	should_quit_wars_on_activation = no  # Don't quit wars when becoming autonomous
 	
 	# Subject Interactions:
 	# (continuous)
@@ -141,11 +141,11 @@ semi_independent_vassal = {
 	# Modifiers:
 	modifier_subject = clear
 	modifier_subject = {
-		modifier = semi_independent_vassal_nation
+		modifier = autonomous_vassal_nation
 	}
 	modifier_overlord = clear
 	modifier_overlord = {
-		modifier = semi_independent_vassal_overlord
+		modifier = autonomous_vassal_overlord
 	}
 	
 	overlord_opinion_modifier = null

@@ -1,4 +1,0 @@
-# Diplomatic actions for Semi-Independent Vassals mod
-# This file is kept for reference but the actual diplomatic action
-# is in common/new_diplomatic_actions/ as per EU4 modding guidelines
-

@@ -1,5 +1,5 @@
 # New diplomatic action to create semi-independent vassals
-create_semi_independent_vassal = {
+create_autonomous_vassal = {
 	category = relation
 	require_acceptance = yes
 	is_visible = {
@@ -76,11 +76,11 @@ create_semi_independent_vassal = {
 	on_accept = {
 		FROM = {
 			create_subject = {
-				subject_type = semi_independent_vassal
+				subject_type = autonomous_vassal
 				subject = FROM
 			}
 			# Set flag with timestamp for 10-year revocation cooldown
-			set_country_flag = became_semi_independent_vassal
+			set_country_flag = became_autonomous_vassal
 		}
 		ROOT = {
 			add_prestige = 10
@@ -91,14 +91,14 @@ create_semi_independent_vassal = {
 			# due to the greater autonomy granted
 			add_opinion = {
 				who = ROOT
-				modifier = is_semi_independent_vassal
+				modifier = is_autonomous_vassal
 			}
 			add_prestige = 5
 		}
 		ROOT = {
 			add_opinion = {
 				who = FROM
-				modifier = is_semi_independent_vassal
+				modifier = is_autonomous_vassal
 			}
 		}
 	}
@@ -290,7 +290,7 @@ create_semi_independent_vassal = {
 }
 
 # Elevate an existing vassal to semi-independent status
-elevate_to_semi_independent_vassal = {
+elevate_to_autonomous_vassal = {
 	category = influence
 	require_acceptance = no
 	is_visible = {
@@ -316,24 +316,24 @@ elevate_to_semi_independent_vassal = {
 	on_accept = {
 		ROOT = {
 			create_subject = {
-				subject_type = semi_independent_vassal
+				subject_type = autonomous_vassal
 				subject = FROM
 			}
 			add_dip_power = 10
 			add_opinion = {
 				who = FROM
-				modifier = is_semi_independent_vassal
+				modifier = is_autonomous_vassal
 			}
 		}
 		FROM = {
 			add_liberty_desire = -10
 			add_opinion = {
 				who = ROOT
-				modifier = is_semi_independent_vassal
+				modifier = is_autonomous_vassal
 			}
 			add_prestige = 10
 			# Set flag with timestamp for 10-year revocation cooldown
-			set_country_flag = became_semi_independent_vassal
+			set_country_flag = became_autonomous_vassal
 		}
 	}
 	ai_will_do = {
@@ -351,17 +351,17 @@ revoke_semi_independence = {
 	is_visible = {
 		FROM = {
 			is_subject_of = ROOT
-			is_subject_of_type = semi_independent_vassal
+			is_subject_of_type = autonomous_vassal
 		}
 	}
 	is_allowed = {
 		FROM = {
 			is_subject_of = ROOT
-			is_subject_of_type = semi_independent_vassal
+			is_subject_of_type = autonomous_vassal
 			NOT = { is_at_war = yes }
 			# Must have been semi-independent for at least 10 years
 			had_country_flag = {
-				flag = became_semi_independent_vassal
+				flag = became_autonomous_vassal
 				days = 3650
 			}
 		}
@@ -387,7 +387,7 @@ revoke_semi_independence = {
 				modifier = revoked_semi_independence
 			}
 			# Clear the flag so the timer resets if they're elevated again
-			clr_country_flag = became_semi_independent_vassal
+			clr_country_flag = became_autonomous_vassal
 		}
 	}
 	on_decline = {
@@ -504,7 +504,7 @@ revoke_semi_independence = {
 			limit = {
 				has_opinion_modifier = {
 					who = ROOT
-					modifier = is_semi_independent_vassal
+					modifier = is_autonomous_vassal
 				}
 			}
 			set_variable = {
@@ -553,7 +553,7 @@ request_overlord_support = {
 	
 	is_visible = {
 		ROOT = {
-			is_subject_of_type = semi_independent_vassal
+			is_subject_of_type = autonomous_vassal
 			is_subject_of = FROM
 		}
 		FROM = {
@@ -563,7 +563,7 @@ request_overlord_support = {
 	
 	is_allowed = {
 		ROOT = {
-			is_subject_of_type = semi_independent_vassal
+			is_subject_of_type = autonomous_vassal
 			is_in_war = {
 				defender_leader = ROOT
 			}
@@ -708,7 +708,7 @@ enforce_peace_for_vassal = {
 			overlord_of = FROM
 		}
 		FROM = {
-			is_subject_of_type = semi_independent_vassal
+			is_subject_of_type = autonomous_vassal
 			is_subject_of = ROOT
 		}
 	}
@@ -719,7 +719,7 @@ enforce_peace_for_vassal = {
 			NOT = { war_exhaustion = 10 }
 		}
 		FROM = {
-			is_subject_of_type = semi_independent_vassal
+			is_subject_of_type = autonomous_vassal
 			is_in_war = {
 				defender_leader = FROM
 			}

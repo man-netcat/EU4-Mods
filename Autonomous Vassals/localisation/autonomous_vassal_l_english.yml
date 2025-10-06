@@ -1,0 +1,114 @@
+﻿l_english:
+ # Subject Type
+ autonomous_vassal:0 "Autonomous Vassal"
+ autonomous_vassal_title:0 "Autonomous Vassal"
+ autonomous_vassal_title_plural:0 "Autonomous Vassals"
+ autonomous_vassal_long_desc:0 "An Autonomous Vassal maintains significant autonomy and can wage their own wars, form alliances, and conduct independent foreign policy. They do not automatically join their overlord's wars, but the overlord will protect them when attacked. These vassals pay reduced tribute and cannot be annexed."
+ autonomous_vassal_is_our:0 "$NAME|Y$ is our Autonomous Vassal."
+ 
+ # Static Modifiers
+ autonomous_vassal_nation:0 "Autonomous Vassal"
+ autonomous_vassal_nation_desc:0 "This nation is an autonomous vassal, maintaining its own military and foreign policy while paying reduced tribute to its overlord."
+ autonomous_vassal_overlord:0 "Autonomous Vassals"
+ autonomous_vassal_overlord_desc:0 "This nation has autonomous vassals, receiving some military support and income while allowing them significant autonomy."
+ 
+ # Opinion Modifiers
+ is_autonomous_vassal:0 "Autonomous Vassal"
+ overlord_joined_war:0 "Overlord Joined Our War"
+ overlord_refused_support:0 "Overlord Refused Support"
+ revoked_semi_independence:0 "Revoked Our Autonomy"
+ attempted_revoke_independence:0 "Attempted to Revoke Our Autonomy"
+ refused_return_vassal:0 "Refused to Return to Regular Vassalage"
+ 
+ # Diplomatic Actions
+ create_autonomous_vassal:0 "Offer Autonomous Vassalage"
+ create_autonomous_vassal_title:0 "Offer Autonomous Vassalage"
+ create_autonomous_vassal_desc:0 "Offer this nation the status of an autonomous vassal. They will acknowledge our suzerainty while maintaining the right to wage their own wars and conduct independent foreign policy. They will pay reduced tribute but retain significant autonomy."
+ create_autonomous_vassal_tooltip:0 "Offer Autonomous Vassalage to [From.GetName]"
+ create_autonomous_vassal_alert_tooltip:0 "We can offer Autonomous Vassalage to some nations"
+ create_autonomous_vassal_dialog:0 "[From.GetName] has offered us the status of an autonomous vassal. We would maintain significant autonomy and the ability to wage our own wars, but would acknowledge their suzerainty and pay tribute."
+ 
+ elevate_to_autonomous_vassal:0 "Grant Autonomy"
+ elevate_to_autonomous_vassal_title:0 "Grant Autonomy to Vassal"
+ elevate_to_autonomous_vassal_desc:0 "Elevate this ordinary vassal to autonomous status, granting them the right to conduct their own foreign policy and wage wars independently. This will reduce their liberty desire and improve relations, but they will pay less tribute."
+ elevate_to_autonomous_vassal_tooltip:0 "Grant Autonomy to [From.GetName]"
+ elevate_to_autonomous_vassal_alert_tooltip:0 "We can grant autonomy to some vassals"
+ elevate_to_autonomous_vassal_dialog:0 "[From.GetName] has offered to grant us autonomous status. We would gain the right to conduct our own foreign policy and wage wars as we see fit, while maintaining our vassalage."
+ 
+ revoke_semi_independence:0 "Revoke Autonomy"
+ revoke_semi_independence_title:0 "Revoke Autonomy"
+ revoke_semi_independence_desc:0 "Revoke the autonomous status of this vassal and return them to regular vassalage. They will lose their autonomy and be subject to our direct control again. This will significantly increase their liberty desire and damage relations. Cannot be done within 10 years of granting autonomy."
+ revoke_semi_independence_tooltip:0 "Revoke Autonomy from [From.GetName]"
+ revoke_semi_independence_alert_tooltip:0 "We can revoke autonomy from some vassals"
+ revoke_semi_independence_dialog:0 "[From.GetName] demands that we relinquish our autonomous status and return to regular vassalage. This would mean losing our right to conduct independent foreign policy."
+ CANNOT_REVOKE_SEMI_INDEPENDENCE_TOO_SOON:0 "Has been autonomous for less than 10 years"
+ 
+ request_overlord_support:0 "Request Overlord Support"
+ request_overlord_support_title:0 "Request Military Support"
+ request_overlord_support_desc:0 "Request that our overlord join us in this defensive war. They may accept or decline based on our relations, their war exhaustion, and their current situation."
+ request_overlord_support_tooltip:0 "Request [From.GetName] to join our defensive war"
+ request_overlord_support_alert_tooltip:0 "We can request our overlord's support"
+ request_overlord_support_dialog:0 "Our semi-independent vassal [From.GetName] is under attack and requests our military assistance. While we are not obligated to join their war, refusing could damage our relationship and increase their desire for independence."
+ 
+ enforce_peace_for_vassal:0 "Enforce Peace for Vassal"
+ enforce_peace_for_vassal_title:0 "Enforce Peace for Semi-Independent Vassal"
+ enforce_peace_for_vassal_desc:0 "Intervene on behalf of our semi-independent vassal who is being attacked. This will join us to their defensive war."
+ enforce_peace_for_vassal_tooltip:0 "Join [From.GetName]'s defensive war"
+ enforce_peace_for_vassal_alert_tooltip:0 "We can enforce peace for our semi-independent vassals"
+ enforce_peace_for_vassal_dialog:0 "Not used"
+ 
+ # AI Acceptance Reasons
+ BASE_ACCEPTANCE:0 "More Autonomy"
+ OPINION_SEMI_VASSAL:0 "Opinion of Us"
+ ALLIANCE_SEMI_VASSAL:0 "Allied"
+ SAME_CULTURE_GROUP:0 "Same Culture Group"
+ SAME_RELIGION:0 "Same Religion"
+ MILITARY_THREAT:0 "Military Threats"
+ DIPLO_DISTANCE:0 "Diplomatic Distance"
+ AT_WAR:0 "At War"
+ IS_RIVAL:0 "We are Rivals"
+ TOO_LARGE:0 "They are Smaller than Us"
+ HIGH_LIBERTY_DESIRE:0 "High Liberty Desire"
+ LOW_LIBERTY_DESIRE:0 "Low Liberty Desire"
+ MILITARY_STRENGTH_COMPARED:0 "Military Strength"
+ OVERLORD_MUCH_STRONGER:0 "Overlord is Much Stronger"
+ RECENTLY_GRANTED_INDEPENDENCE:0 "Recently Granted Independence"
+ IS_BANKRUPT:0 "Is Bankrupt"
+ HIGH_WAR_EXHAUSTION:0 "War Exhaustion (5+)"
+ VERY_HIGH_WAR_EXHAUSTION:0 "War Exhaustion (10+)"
+ 
+ # Decline opinion modifier
+ declined_semi_vassal:0 "Declined Semi-Independent Vassalage"
+ 
+ enforce_peace_for_vassal:0 "Enforce Peace for Vassal"
+ enforce_peace_for_vassal_desc:0 "Intervene on behalf of our semi-independent vassal who is being attacked. This will enforce peace with their attacker."
+ ENFORCE_PEACE_FOR_VASSAL_INVALID:0 "§RRequirements:§!\n• Target must be a semi-independent vassal of ours\n• They must be defending in a war\n• We cannot be at war\n• We must have between §Y5§! and §Y10§! war exhaustion"
+ 
+ request_overlord_support:0 "Request Overlord Support"
+ request_overlord_support_desc:0 "Request that our overlord join us in a defensive war. This will either cost favors or require good relations."
+ REQUEST_OVERLORD_SUPPORT_INVALID:0 "§RRequirements:§!\n• We must be a semi-independent vassal\n• We must be defending in a war\n• Overlord cannot be at war\n• Overlord must have §Y100§! opinion of us OR we must owe them §Y10§! favors"
+ 
+ # Events
+ autonomous_vassal.1.t:0 "Vassal Requests Support"
+ autonomous_vassal.1.d:0 "Our semi-independent vassal [From.GetName] has been attacked and is requesting our military assistance. While we are not obligated to join their war, refusing could damage our relationship and increase their desire for independence."
+ autonomous_vassal.1.a:0 "We shall honor our commitment and join the war."
+ autonomous_vassal.1.b:0 "They must handle this conflict on their own."
+ 
+ autonomous_vassal.2.t:0 "Enforce Peace for Vassal"
+ autonomous_vassal.2.d:0 "Our semi-independent vassal [defended_vassal.GetName] is under attack. Should we intervene to protect them?"
+ autonomous_vassal.2.a:0 "Join the war to defend our vassal."
+ 
+ # Decisions
+ request_overlord_support_decision_title:0 "Request Overlord Support"
+ request_overlord_support_decision_desc:0 "Request that our overlord join us in this defensive war."
+ enforce_peace_for_semi_vassal_title:0 "Enforce Peace for Semi-Independent Vassal"
+ enforce_peace_for_semi_vassal_desc:0 "Intervene to protect one of our semi-independent vassals who is being attacked."
+ enforce_peace_for_semi_vassal_tt:0 "We will join the defensive war of one of our semi-independent vassals."
+ 
+ # Subject Interactions
+ SEMI_INDEPENDENT_VASSAL_INTERACTIONS:0 "Semi-Independent Vassal Interactions"
+ 
+ # Tooltips
+ SEMI_INDEPENDENT_VASSAL_CAN_WAR:0 "This vassal can declare wars independently."
+ SEMI_INDEPENDENT_VASSAL_NOT_AUTO_JOIN:0 "This vassal does not automatically join our wars."
+ SEMI_INDEPENDENT_VASSAL_CAN_REQUEST:0 "This vassal can request our support in defensive wars."

@@ -1,0 +1,94 @@
+# Patch Strong Duchies privilege to work with Autonomous Vassals
+
+estate_nobles_strong_duchies = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.1
+	loyalty = 0.05
+	check_valid_when_tag_switching = no
+	is_valid = {
+		any_subject_country = {
+			OR = {
+				is_subject_of_type = vassal
+				is_subject_of_type = client_vassal
+				is_subject_of_type = march
+				is_subject_of_type = client_march
+				is_subject_of_type = personal_union
+				is_subject_of_type = incorporated_vassal
+				is_subject_of_type = integrated_personal_union
+				is_subject_of_type = autonomous_vassal
+			}
+		}
+		NOT = { has_estate_privilege = estate_nobles_french_strong_duchies }
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = estate_nobles_strong_duchies_trigger_tooltip
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					OR = {
+						is_subject_of_type = vassal
+						is_subject_of_type = client_vassal
+						is_subject_of_type = march
+						is_subject_of_type = client_march
+						is_subject_of_type = personal_union
+						is_subject_of_type = incorporated_vassal
+						is_subject_of_type = integrated_personal_union
+						is_subject_of_type = autonomous_vassal
+					}
+				}
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		diplomatic_upkeep = 2
+		reduced_liberty_desire = 10
+	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = buffed_strong_duchies }
+		modifier = {
+			nobles_loyalty_modifier = 0.05
+		}
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = hun_upgrade_strong_duchies }
+		modifier = { 	vassal_forcelimit_bonus = 0.5 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = hab_upgraded_strong_duchies }
+		modifier = { 
+			vassal_forcelimit_bonus = 0.25
+			vassal_income = 0.1
+		}
+	}
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 3
+			calc_true_if = {
+				amount = 1
+				all_subject_country = {
+					OR = {
+						is_subject_of_type = vassal
+						is_subject_of_type = client_vassal
+						is_subject_of_type = march
+						is_subject_of_type = client_march
+						is_subject_of_type = personal_union
+						is_subject_of_type = incorporated_vassal
+						is_subject_of_type = integrated_personal_union
+						is_subject_of_type = autonomous_vassal
+					}
+					liberty_desire = 50
+				}
+			}
+		}
+	}
+}

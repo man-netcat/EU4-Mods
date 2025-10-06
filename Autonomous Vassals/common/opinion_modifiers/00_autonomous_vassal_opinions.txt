@@ -1,7 +1,7 @@
 # Opinion modifiers for semi-independent vassals
 
 # Opinion modifiers between overlord and subject
-is_semi_independent_vassal = {
+is_autonomous_vassal = {
 	opinion = 25
 	yearly_decay = 0
 }
