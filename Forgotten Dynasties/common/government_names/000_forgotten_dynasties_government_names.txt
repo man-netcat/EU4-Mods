@@ -37,5 +37,51 @@ ilkhanate_reformed = {
 	trigger = {
 		tag = ILK
 		government = monarchy
+		government = tribal
+	}
+}
+
+qara_khitai_khanate = {
+	rank = {
+		1 = KHANATE
+		2 = KHANATE
+		3 = KHAGANATE
+	}
+	ruler_male = {
+		1 = GURKHAN
+		2 = GURKHAN
+		3 = KHAGAN
+	}
+	ruler_female = {
+		1 = KHATUN
+		2 = KHATUN
+		3 = KHATUN
+	}
+	consort_male = {
+		1 = KHAN
+		2 = KHAN
+		3 = KHAN
+	}
+	consort_female = {
+		1 = KHATUN
+		2 = KHATUN
+		3 = KHATUN
+	}
+	heir_male = {
+		1 = KHANZADEH
+		2 = KHANZADEH
+		3 = KHANZADEH
+	}
+	heir_female = {
+		1 = KHATUN
+		2 = KHATUN
+		3 = KHATUN
+	}
+	trigger = {
+		tag = QKH
+		OR = {
+			government = monarchy
+			government = tribal
+		}
 	}
 }

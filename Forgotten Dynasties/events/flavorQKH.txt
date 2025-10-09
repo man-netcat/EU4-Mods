@@ -39,7 +39,9 @@ country_event = {
 		}
 		add_legitimacy = 15
 		add_yearly_manpower = 1
-		2126 = {
+		
+		# Cede all QKH core provinces
+		2126 = {  # Balasagun (Chuy) - capital
 			cede_province = QKH
 			if = {
 				limit = {
@@ -52,6 +54,103 @@ country_event = {
 			change_culture = khitan
 			change_religion = tengri_pagan_reformed
 		}
+		459 = {  # Talgar
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		461 = {  # Almaty
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		2125 = {  # Tokmak
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		2368 = {  # Issyk Kul
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		2364 = {  # Talas
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		460 = {  # Uzkend
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		
 		vassalize = QKH
 		QKH = {
 			add_opinion = {

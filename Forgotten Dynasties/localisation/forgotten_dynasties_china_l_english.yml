@@ -1,5 +1,4 @@
 ﻿l_english:
- # Country Names and Cultures
  XIA:0 "Xia"
  XIA_ADJ:0 "Xia"
  LIA:0 "Liao"
@@ -12,7 +11,6 @@
  tangut:0 "Tangut"
  khitan:0 "Khitan"
  
- # Western Xia (XIA)
  XIA_ideas:1 "Western Xia Ideas"
  XIA_ideas_start:1 "Western Xia Traditions"
  XIA_ideas_bonus:1 "Western Xia Ambition"
@@ -32,7 +30,6 @@
  xia_cultural_synthesis:0 "Cultural Synthesis"
  xia_cultural_synthesis_desc:0 "Western Xia successfully blended Tangut, Chinese, Tibetan, and nomadic cultural elements into a unique and sophisticated civilization."
  
- # Qara Khitai (QKH)
  QKH_ideas:1 "Qara Khitai Ideas"
  QKH_ideas_start:1 "Qara Khitai Traditions"
  QKH_ideas_bonus:1 "Qara Khitai Ambition"
@@ -52,13 +49,11 @@
  qkh_mobile_warfare:0 "Mobile Warfare"
  qkh_mobile_warfare_desc:0 "The nomadic heritage of Qara Khitai emphasized speed and mobility in warfare, allowing rapid deployment across vast territories."
  
- # Qara Khitai Events
  flavor_qkh.100.t:0 "The Khitan Resurgence"
  flavor_qkh.100.d:0 "Centuries after fleeing westward from the fall of their dynasty in the east, the Khitan clans have stirred once more. Rumors of a charismatic leader rallying their people have reached your court. Will you allow them to return to prominence, or suppress their ambitions?"
  flavor_qkh.100.a:0 "We shall acknowledge their claim and allow them to rise as a vassal."
  flavor_qkh.100.b:0 "Their insolence will not be tolerated, let them be crushed and their rebellion ended!"
  
- # Liao Dynasty (LIA)
  LIA_ideas:1 "Liao Ideas"
  LIA_ideas_start:1 "Liao Traditions"
  LIA_ideas_bonus:1 "Liao Ambition"
@@ -78,11 +73,9 @@
  liao_military_reforms:0 "Military Reforms"
  liao_military_reforms_desc:0 "The integration of Chinese military technology and tactics with traditional nomadic warfare created a powerful and versatile military force."
  
- # Liao Decisions
  form_liao_title:0 "Restoration of the Liao Dynasty"
  form_liao_desc:0 "After centuries of dispersal and foreign domination, the Khitan people rise once more. With their traditional heartlands reclaimed, a new Liao dynasty will reclaim its place among the great powers of the steppe and northern China."
  
- # Han Dynasty (CHN)
  CHN_ideas:0 "Great Han Ideas"
  CHN_ideas_start:0 "Great Han Traditions"
  CHN_ideas_bonus:0 "Great Han Ambition"
@@ -102,13 +95,98 @@
  chn_reunification_dream:0 "Dream of Reunification"
  chn_reunification_dream_desc:0 "The restoration of a unified China under Han rule remains our eternal dream, inspiring our soldiers with unshakeable morale in battle."
  
- # Han Decisions
  form_great_han_title:0 "Form the Great Han"
  form_great_han_desc:0 "Reviving the lost legacy of Liu Bang and honoring the valiant efforts of Liu Bei, we shall restore the illustrious Han Dynasty. From the ashes of division, the Han will rise once more to unite all under Heaven."
  
- # Han Events
  han_capital_event.1.t:0 "The Imperial Capital"
  han_capital_event.1.d:0 "With the restoration of the Han Dynasty, we must choose our capital city. Chang'an in the west was the seat of the Western Han founded by Liu Bang, representing the classical era of Han power. Luoyang in the east became the capital of the Eastern Han, symbolizing renewal and continuity. Both cities have deep historical significance to our dynasty."
  han_capital_event.1.a:0 "Chang'an shall be our capital, as Liu Bang intended!"
  han_capital_event.1.b:0 "Luoyang will serve as the heart of our renewed empire!"
  han_capital_event.1.c:0 "Chengdu will be our stronghold in the southwest, honoring Liu Bei's legacy!"
+ 
+ qkh_secure_transoxiana_title:0 "Secure Transoxiana"
+ qkh_secure_transoxiana_desc:0 "Transoxiana and Ferghana were the heart of the Qara Khitai domain after our westward flight. We must secure full control over these regions to establish a strong base for further expansion."
+ qkh_transoxiana_secured:0 "Transoxiana Secured"
+ desc_qkh_transoxiana_secured:0 "Our firm control over Transoxiana provides a secure base for westward expansion."
+ 
+ qkh_expand_westward_title:0 "Expand Westward"
+ qkh_expand_westward_desc:0 "Having secured our Central Asian heartland, the rich lands of Khorasan beckon in the west. By expanding our control into these territories, we can secure wealth and resources for our empire."
+ qkh_western_conquests:0 "Western Conquests"
+ desc_qkh_western_conquests:0 "Our westward expansion has brought new territories under Khitan rule."
+ 
+ qkh_dominate_persia_title:0 "Dominate Persia"
+ qkh_dominate_persia_desc:0 "The Persian plateau has been conquered by many steppe peoples throughout history. Now it is our turn to establish Khitan dominance over this ancient land of kings and scholars."
+ qkh_persian_dominance:0 "Persian Dominance"
+ desc_qkh_persian_dominance:0 "Our rule over Persian territories demonstrates the far reach of Khitan power."
+ 
+ qkh_assert_independence_title:0 "Assert Independence"
+ qkh_assert_independence_desc:0 "Though we may have begun as subjects, the Qara Khitai are destined to rule, not to serve. We must break free from any overlord and chart our own path toward restoring the legacy of the Liao Dynasty."
+ qkh_independent_khitai:0 "Independent Khitai"
+ desc_qkh_independent_khitai:0 "Having asserted our independence, the Qara Khitai now controls its own destiny."
+ 
+ qkh_cross_the_steppes_title:0 "Cross the Steppes"
+ qkh_cross_the_steppes_desc:0 "The Tarim Basin and Zungaria form the gateway between Central Asia and Mongolia. By conquering these western steppe regions, we secure our path eastward and open the way to reclaim the Mongolian heartland where our ancestors once ruled."
+ qkh_steppe_conquest:0 "Masters of the Steppe"
+ desc_qkh_steppe_conquest:0 "Our conquest of the western steppes brings us closer to our ancestral lands."
+ 
+ qkh_reclaim_inner_mongolia_title:0 "Conquer Mongolia"
+ qkh_reclaim_inner_mongolia_desc:0 "Mongolia was part of the Liao Dynasty's northern territories. By establishing control over significant portions of this vast region, we demonstrate our ability to rule the steppes and position ourselves to reclaim the Chinese territories to the east."
+ qkh_mongolia_restored:0 "Mongolia Restored"
+ desc_qkh_mongolia_restored:0 "Mongolia has been brought back under Khitan rule, as in the days of the Liao."
+ 
+ qkh_restore_liao_homeland_title:0 "Restore the Liao Homeland"
+ qkh_restore_liao_homeland_desc:0 "To truly restore the Liao Dynasty, we must reclaim the Four Capitals: Linhuang (Supreme Capital), Xijin (Southern Capital), Zhongdu (Western Capital), and Liaoyang (Eastern Capital). Beyond these symbolic centers, we must control significant territory across Manchuria and North China to rebuild the empire our ancestors once ruled."
+ qkh_liao_legacy:0 "Legacy of the Liao"
+ desc_qkh_liao_legacy:0 "Having reclaimed the Four Capitals and restored dominion over Manchuria and North China, the spirit of the Liao Dynasty guides our empire once more."
+ 
+ qkh_khitan_identity_title:0 "Preserve Khitan Identity"
+ qkh_khitan_identity_desc:0 "In exile in Central Asia, far from our homeland, we must preserve Khitan culture and identity. Our language, customs, and Buddhist faith distinguish us from both the Muslim peoples around us and the Chinese we left behind."
+ qkh_khitan_culture_preserved:0 "Khitan Culture Preserved"
+ desc_qkh_khitan_culture_preserved:0 "Our distinct Khitan identity remains strong despite our exile."
+ 
+ qkh_silk_road_dominance_title:0 "Control the Silk Road"
+ qkh_silk_road_dominance_desc:0 "The Silk Road passes through our Central Asian domains. By controlling provinces producing valuable trade goods, we can enrich our treasury and strengthen our position."
+ qkh_silk_road_traders:0 "Silk Road Masters"
+ desc_qkh_silk_road_traders:0 "Our control of Silk Road trade routes fills our coffers with wealth."
+ 
+ qkh_build_cavalry_force_title:0 "Build Cavalry Force"
+ qkh_build_cavalry_force_desc:0 "The Khitan are renowned horsemen, our cavalry the terror of the steppes. We must build a powerful mounted force worthy of the Liao military tradition."
+ qkh_khitan_cavalry:0 "Elite Khitan Cavalry"
+ desc_qkh_khitan_cavalry:0 "Our cavalry forces embody the martial prowess of the Khitan people."
+ 
+ qkh_adopt_chinese_administration_title:0 "Dual Administration"
+ qkh_adopt_chinese_administration_desc:0 "The Liao Dynasty's strength lay in its dual administration - Khitan military rule combined with Chinese bureaucratic governance. As we reconquer Chinese territories, we must revive this system to rule effectively."
+ qkh_sinicized_administration:0 "Dual Administration System"
+ desc_qkh_sinicized_administration:0 "Our revival of the Liao dual administration allows us to govern both nomadic and settled peoples effectively."
+ 
+ flavor_qkh.2.t:0 "Return to the Liao Homeland"
+ flavor_qkh.2.d:0 "After decades of exile in Central Asia, the Khitan people have returned to their ancestral homeland in Manchuria and Inner Mongolia. The great cities of the Liao Dynasty - Shangjing, Zhongjing, and Dongjing - are once again under Khitan rule. Though we fled west as the Qara Khitai, we have completed an epic migration back to our roots. The legacy of the Liao Dynasty lives on."
+ flavor_qkh.2.a:0 "The Liao shall rise again!"
+ flavor_qkh.2.b:0 "We forge a new path."
+ 
+ qkh_return_to_steppes_title:0 "Return to the Steppes"
+ qkh_return_to_steppes_desc:0 "Our people have dwelt too long among the settled cities of Central Asia, adopting foreign customs and abandoning the ways of our ancestors. The time has come to reject this sedentary life and return to the freedom of the steppe, to embrace once more the ancient Tengri faith and the nomadic traditions that made our people great. Let us cast aside the trappings of settled civilization and ride as our forefathers did - free upon the endless grasslands."
+ qkh_return_to_steppes_tooltip:0 "We abandon settled ways and return to nomadic steppe traditions. Our government becomes tribal with the Steppe Horde reform, and we embrace the ancient Tengri faith. Players may then choose a syncretic faith through the Tengri mechanics."
+ qkh_returned_to_steppes:0 "Nomadic Revival"
+ desc_qkh_returned_to_steppes:0 "Having cast aside the ways of settled peoples, our nation has been rejuvenated by a return to our steppe heritage."
+ 
+ qkh_restore_western_liao_title:0 "Restore the Western Liao"
+ qkh_restore_western_liao_desc:0 "Though we fled west as the Qara Khitai - the 'Black Cathay' - we remain the rightful heirs of the great Liao Dynasty. Our dynasty was founded by Yelü Dashi, who led the Khitan remnants westward after the Jurchen conquest. Now, with our dominion firmly established across the steppes and oases of Central Asia, it is time to formally proclaim our legitimacy by adopting the historic name of Western Liao, asserting our status as the western continuation of the Liao imperial legacy."
+ qkh_restored_western_liao:0 "Western Liao Restored"
+ desc_qkh_restored_western_liao:0 "The Western Liao has been fully restored, with all core territories under our dominion once more."
+ qkh_cultural_integration:0 "Khitan Cultural Integration"
+ desc_qkh_cultural_integration:0 "Local administrators promote Khitan culture and customs, easing the conversion of foreign populations."
+ WESTERN_LIAO:0 "Western Liao" qkh_adopt_western_liao_name_title:0 "Adopt the Name of Western Liao"
+ qkh_adopt_western_liao_name_desc:0 "Though we fled west as the Qara Khitai - the 'Black Cathay' - we remain the rightful heirs of the great Liao Dynasty. Our dynasty was founded by Yelü Dashi, who led the Khitan remnants westward after the Jurchen conquest. Now, with our position secure in Central Asia, it is time to formally proclaim our legitimacy by adopting the historic name of Western Liao (Xi Liao), asserting our status as the western continuation of the Liao imperial legacy."
+ qkh_adopt_western_liao_name_tooltip:0 "Our nation shall be known as Western Liao, proclaiming our imperial legitimacy as the continuation of the Liao Dynasty."
+ WESTERN_LIAO:0 "Western Liao"
+ 
+ qkh_restore_western_liao_name_title:0 "Restore the Western Liao"
+ qkh_restore_western_liao_name_desc:0 "We have reclaimed all the core territories of our ancestral homeland in Central Asia. With Balasagun restored as our capital and all our traditional domains under our control once more, the time has come to fully restore the glory of the Western Liao name. Let our enemies tremble before the resurgent power of the Khitan people, masters of both steppe and settlement, as we reclaim our rightful title."
+ qkh_restore_western_liao_name_tooltip:0 "Having reclaimed all our core provinces as an independent nation, we can now proudly bear the name Western Liao once more."
+ qkh_restored_western_liao:0 "Western Liao Restored"
+ desc_qkh_restored_western_liao:0 "The Western Liao has been fully restored, with all core territories under our dominion once more."
+ 
+  
+ # Qara Khitai Government Names
+ GURKHAN:0 "Gurkhan"

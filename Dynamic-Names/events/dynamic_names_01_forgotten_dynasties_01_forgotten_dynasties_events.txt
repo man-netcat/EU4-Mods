@@ -11,6 +11,7 @@ country_event = {
         if = { limit = { tag = CHN } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.1 } }
         if = { limit = { tag = XIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2 } }
         if = { limit = { tag = LIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3 } }
+        if = { limit = { tag = QKH } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4 } }
     }
 
     option = {
@@ -65,9 +66,33 @@ country_event = {
 
     immediate = {
         if = { limit = { is_emperor_of_china = yes } override_country_name = LIA_CHINESE_EMPIRE_LIAO }
+        if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan OR = { is_subject = yes NOT = { total_development = 150 } } } override_country_name = LIA_KHITAN_THE_KHITANS }
+        if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan is_subject = no total_development = 150 } override_country_name = LIA_KHITAN_KHANATE }
+        if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan is_subject = no government_rank = 3 } override_country_name = LIA_KHITAN_KHAGANATE }
     }
 
     option = {
         name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4
+    hidden = yes
+    is_triggered_only = yes
+
+    trigger = {
+        tag = QKH
+    }
+
+    immediate = {
+        if = { limit = { is_emperor_of_china = yes } override_country_name = QKH_CHINESE_EMPIRE_QARA_KHITAI }
+        if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan OR = { is_subject = yes NOT = { total_development = 150 } } } override_country_name = QKH_KHITAN_THE_KHITANS }
+        if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan is_subject = no total_development = 150 } override_country_name = QKH_KHITAN_KHANATE }
+        if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan is_subject = no government_rank = 3 } override_country_name = QKH_KHITAN_KHAGANATE }
+    }
+
+    option = {
+        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4.a
     }
 }

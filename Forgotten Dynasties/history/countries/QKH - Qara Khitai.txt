@@ -4,4 +4,13 @@ technology_group = nomad_group
 religion = tengri_pagan_reformed
 secondary_religion = vajrayana
 primary_culture = khitan
+capital = 2126  # Balasagun
 
+# Jetysuu area - Qara Khitai heartland
+add_core = 2126  # Balasagun (Chuy) - historical capital
+add_core = 459   # Talgar
+add_core = 461   # Almaty
+add_core = 2125  # Tokmak
+add_core = 2368  # Issyk Kul
+add_core = 2364  # Talas
+add_core = 460   # Uzkend

@@ -2,15 +2,41 @@ tibetan_group = {
     tangut = {
         primary = XIA
         dynasty_names = {
-            "Miwo" "Dashi" "Weilu" "Zhiyin" "Chule" "Dangguo" "Sidu" "Baolu" "Zailin" "Chimu" "Qianlu" "Xilu" "Heluo" "Dalu" "Yelu" "Tonglu" "Jialuo"
+            Miwo Dashi Weilu Zhiyin Chule Dangguo Sidu Baolu Zailin Chimu Qianlu Xilu Heluo Dalu Tonglu Jialuo
         }
         male_names = {
-            Minglu Chulei Zhiyin Bolu Milu Silu Tonglu Dashi Heluo Qianlu Yelu Chimu Zailin Fulu Jialuo Talu Chalu Shilu Balu Mili Tuilu
-            Dalun Helun Mingchuo Zhilu Bolun Tielu Chiyu Zailun Yeluqi Milun Chimuqi Lalu Jilu Halu Qilu Xiluqi
-        }
-        female_names = {
-            Milu Chulei Zhiyin Bolu Silu Heluo Tonglu Fulu Jialuo Talu Shilu Dalun Mingchuo Chalu Balu Milun Chimuqi Lalu Jilu Halu Qilu Xiluqi
-        }
+			Abaoji Abo Abugu Aguo Aguzhi Ala Dorjee Kalden Karma Lobsang Mingma Nawang Nima Chodak Changyuan 
+			Chucai Chun Chunyou Chuzhi Ci Cite Ciwang Dali Dao Daoyin Dashi Deguang Deming Dewang Deyuan 
+			Di Diela Dilie Dilu Dorlipun Du Duolubu Duoluo Duomi Fangde Fuguzhi Fuliu Fuyi Gan Gang Gaoligu
+			Gongmao Gongzao Guan Guang Guangbi Gui Guochang Guozhe Hao He Hechen Hongben Hongdao Hongfan 
+			Hongji Hongyong Hongzhen Hougu Huaijie Huaixiu Hudujin Hui Huiyuan Hunhe Jie Jin Jing Jingtang 
+			Jinzhong Jiqian Jiuli Jiushao Jiyuan Jue Jun Junshi Kaigu Kailuo Keda Keling Kenagan Ketuyu 
+			Keyong Kuan Kuge Kui Kuo Liangzuo Lihu Lin Linggong Lishan Liuge Loguo Longqing Longxian Longxu 
+			Longyou Louguo Lu Luju Luzhi Mada Mai Maozhen Min Ming Mingyi Mohui Naihe Nieli Nielieji Noulisi 
+			Nu Paolu Pedie Pusuwan Qi Qianshun Qinde Quchulu Quju Qulie Qulu Renxian Renxiao Ruan Sage Salade 
+			Saladi Sha Shao Sheng Shenmi Shi Shihuo Shilu Shinan Shizhong Shu Shulu Si Sicheng Sidao Side Song 
+			Songrui Suogu Tabuyan Tadun Tai Taishan Taishi Taiyi Temei Tianxiang Tingjian Tong Tuguci Tuyu Waihe 
+			Wangrong Wansi Wanxin Wei Wen Wenshunu Wenzao Wolila Wotela Wuge Wujun Wumo Wuyi Wuyu Wuzheng Xi Xian 
+			Xiangwen Xiaozheng Xiaozhong Xiazhen Xidi Xinie Xiu Xiuge Xunning Yali Yan Yangxi Yanxi Yanzhang 
+			Yaogu Yaoshinu Yi Yilie Yiliu Yixinning Yongning Yougui Youqing Youyu Yu Yuanhao Yunching Yundeshi Yuyu 
+			Zanhua Zao Zeduan Zengbo Zhangyuan Zhaosan Zhen Zhengchang Zhengyan Zhibuwu Zhigu Zhilugu Zhixian Zhiyuan 
+			Zhong Zhonggong Zhongji Zhongxuan Zhongyan Zhongyuan Zhulie Zongjiao Zongzhen Zuli Zunxu Zuqian Xjwa Khej 
+			Xwej Thjij-po Changyun Cheng Chengjun Chixin Chonggui Chongrong
+		}
+
+		female_names = {
+			Ai Ankang Bage Bai Bohai Boshi Cao Chadan Chang Changshou Changshounu Chen Chonghua Chu Chunqin Chuo
+			Cui Cuiba Cuiluan Cuiping Da Daopo Daosheng Deng Deyao Dezhen Dianni Dong Duan Emei Feishan Fengcheng
+			Fu Fujin Gao Ge Guang Guanyinnu Guo Han Hanyue He Hongdu Hongfu Honghong Hou Hu Hua Huang Huarui Huiming
+			Jianchang Jiang Jin Jinfeng Jinluan Jiuge Lanling Li Liang Liao Liu Luanluan Ma Meizhu Meizi Meng Miaoniang
+			Miaoyin Nalan Neiming Noujin Nuoujin Panpan Ping Pucha Puci Puning Pusage Pusuwan Puwei Qian Qiao Qin Qinai
+			Qingnu Qingzhao Qungu Ren Renyi Ruishun Ruizhi Saige She Shen Shengtang Shi Shige Shiguang Shishi Shizhen
+			Shuge Shuiqiu Shuogu Shuzen Shuzheng Siao Song Su Sun Tabuyan Tabuye Taige Taihe Tangqiao Tao Taoge Tian
+			Tong Tudan Wa Wang Wenji Wu Wulinda Wuniang Xia Xiao Xiaoming Xiaoxiao Xingge Xingguo Xinyue Xu Xuanji 
+			Xuanyi Xueying Xunyang Yan Yange Yaniang Yanmu Yanshounu Yanxiu Yaonian Yaoniang Yaoying Ye Yi Yingtian Yingying 
+			Yongqing Yongxing Yu Yuan Yuanzhen Yuniang Yunying Yushan Zhai Zhang Zhaoyun Zheng Zhenjian Zhong 
+			Zhou Zhu Zhuzhu Zihe Ziye
+		}
     }
 }
 
@@ -21,21 +47,43 @@ turko_semitic = {
 			Jalayirid
 		}
 		male_names = {
-			Hasan Ahmad Husayn Uvais Shah Bayazid Pir Shaykh Jahan Qara Yusuf
-			'Abbas 'Abd al-Karim 'Abd al-Rahman Muhammad 'Ali Sulayman Isma'il Ibrahim
-			Mahmud Mehmed Murad Osman Bayezid Selim Suleyman Orhan
-			Timur Togay Togrul Turgut Tekin Altan Batu Bayan Khubilai Arghun Ghazan
-			Abaqa Ariq Hulagu Mongke Kublai Chagatai Berke Orda Shiban
-			Bahram Farhad Khosrau Dariush Ardashir Faramarz Rostam Sohrab
-			Jahanshah Pir Budak Uzun Hasan Yaqub Rustam Khalil
+			# Mongolian Names
+			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligt¸ Dayan 
+			Delbeg Ejei Elbeg Engke G¸y¸k G¸n Gulichi Irinchibal Jorightu Kublai Kˆke Ligdan Markˆrgis Mˆngke 
+			Manduulun ÷ljei ÷r¸g Oyiradai ÷gˆdei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Tem¸r Toghun 
+			Tolui Toq Uskhal Yes¸n Ariq Batu Eljigidei Joichi Darayisung T¸men
+			# Persian Names
+			Abbas Abolhassan Afshar Afshar Ahmad Ahmad Akbar Akbar Allahyar Amin Anushirvan Anushirvan 
+			Aram Ardahan Ardahan Ardavan Ardavan Ardeshir Ardeshir Assad Aurang Ayeshah Babak Babak Bahman 
+			Bahram Bahram Bakhtiar Bakhtiar Behrad Behrouz Bozorg Danush Danush Darab Dariush Darius Davud 
+			David Djamasp Ebrahim Abraham Ehsan Esfandiar Esfandiar Eskander Alexander Esma'il Ismail 
+			Faramarz Faramarz Faraz Faraz Fareed Farid Farhad Farhad Fariborz Fariborz Farroukh Farroukh 
+			Farrukhzad Farrukhzad Farzad Farzad Fath Ferdows Ferdows Fereedun Feridun Ghobad Gholam Godarz 
+			Goshtasb Goshtasb Hafez Hassan Hasan Hazarasp Hazarasp Hedayat Hooshyar Hooshyar Hormazd 
+			Hormazd Hormoz Hossein Hossein Humayun Jahandar Jahandar Jahangir Jahangir Jahanshah Jahanshah 
+			Jamshid Jamshid Javeed Javeed Kambiz Kamran Kavoos Kavoos Keyghobad Keykhosrau Keykhosrau 
+			Kharmandar Kharmandar Khashayar Khashayar Kavadh Khodadad Khodadad Khosrau Khosrau Khudayar 
+			Khudayar Khurshid Khurshid Kurush Cyrus Mahmud Manuchihr Manuchihr Manushihr Manushihr Marzuban 
+			Marzuban Mashad Mashad Maziar Mehrab Mehrzad Mohammed Muhammad Morad Morad Morteza Mozaffar 
+			Nard Naveed Nawid Nezam Parviz Pashang Pashang Peroz Peroz Pujman Reza Rostam Rostam Ruhollah 
+			Sadri Salman Shahab Shahab Shahbaz Shahbaz Shahin Shahin Shahram Shahram Shahrokh Sharokh 
+			Shahruz Shahruz Shahryar Shahryar Shapur Shapur Shayan Shayan Sina Tahmasb Tahmasb Vahhab 
+			Vahhab Vahid Vali Vandad Varshasb Varshasb Vishtasb Vishtasb Yazdegerd Yousef Joseph Zahak 
+			Zakaria Zand Zartosht Zartosht Zia Joneid Haidar Ism‚'Ól Tam‚shp Mohammad Kodab‚nda 'Abb‚s Safi 
+			Hosayn N‚der Sh‚h '¬del Sh‚h Ebr‚him Sh‚h Rukh N‚der Mirza Karim Kh‚n Abu'l Fath 
+			S‚diq Mor‚d Ja'far Loft Ali Aga Muhammad Fath AlÓ Solaym‚n
 		}
 		female_names = {
-			Fatima Khadija Zahra Maryam Aisha Halima Jamila Safiya 
-			Dilshad Tandu "Turk Khatun" "Baghdad Khatun" "Sheykh Khatun"
-			√ái√ßek Ayse Gulbahar Gulfem Hatice Huriye Zehra Zeynep
-			Turandokht Pourandokht Azarmidokht Golbahar Mahdokht Shahrzad Shirin
-			Borte Sorghaghtani Toregene Oghul Qaimish Yesui Yesugen Chabi
-			Parand Payam Delaram Farah Golnaz Leila Parvin Soraya
+			# Mongolian Names
+			Tem¸len Bˆrte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun 
+			Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
+			# Persian Names
+			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram 
+			Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva Furuzan Ghamze Ghazal 
+			Ghoncheh Ghoncheh Golbahar Golbahar Golnaz Golnaz Golpari Golshan Hamdam Hurmat Irandokht 
+			Jamileh Javaneh Leila Mahdokht Mahtab Mariam Mariam Navvaba Nazgol Nazgol Nazilla Noor Parvaneh 
+			Parvaneh Parvin Pertevniyal Pourandokht Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh 
+			Shirin Soraya Touran Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh Atiya
 		}
 	}
 }
@@ -106,14 +154,17 @@ korean_g = {
 altaic = {
     khitan = {
         primary = QKH
-        male_names = {
-            Abaoji Yel√º Abaoqi Abaoluo Abaowei Abaojian Abaosheng Abaoxun Abaohuan Abaoli Abaolun Abaoxian Abaoyan Abaoying Abaosun Abaohu Qutuqitu Hushu Shigu Huda Taizu Xingzong Daozong Tianzuo Yeluwei Yelushi Yeluting Yelumu Yelurong Abaokun Abaomin Abaotong Abaozhi Abaoyong Abaoshan Abaofu Abaoyuan Abaoling Abaozhen
-        }
-        female_names = {
-            Shul√º Xiao Yel√ºge Yel√ºjing Yel√ºmin Yel√ºji Yel√ºfan Yel√ºying Yel√ºmu Yel√ºjin Yel√ºxian Yel√ºping Yel√ºyan Yel√ºbao Yel√ºyingzi Yel√ºyi Yel√ºshen Yel√ºqin Yel√ºlan Yel√ºmei Yel√ºhua Yel√ºyun Yel√ºfang Yel√ºxin Yel√ºqi Yel√ºling Yel√ºshuang Yel√ºyinghua Yel√ºlingzi Yel√ºyue Yel√ºyanzi Yel√ºxi Yel√ºyanling Yel√ºjinghua Yel√ºmeiwen Yel√ºshui Yel√ºjinglan Yel√ºxinlan Yel√ºyingqi Yel√ºxianlan Yel√ºyanzhi Yel√ºxianyi Yel√ºmuqing Yel√ºjingyi Yel√ºshan Yel√ºqing
-        }
+		male_names = {
+			Abaoji Abugu Aguo Alian Anduan Axin Baling Bancai Bei Biegute Bishe Chala Chucai Dashi Deguang Dilie Dilu Dinianzhuli Duba Duolubu Duoluo Fuguzhi Gaoqi Gou'er Gouer Gunai Guozhe Hanshe Hechen Heluwo Hel¸ 
+			Hongji Hougu Hudugu Hudujin Jilujuan Jing Jinshan Jul¸ Juqu Kailuo Keling Ketuyu Kuge Lihu Liuge Loguo Mergan Mohuai Mohuba Mohui Mopei Muyan Nieli Noulisi Nuohebo Nuosi Pidi Pidie Pogu Puhui Qidegui Qinde 
+			Qinu Qizhen Quju Qul¸ Qushu Rian Rilujuan RuanSuogu Saba Salade Saladi Shancai Shaogu Shefuchen Shegui Shifang Shihuo Shilu Shouguonu Shul¸ Sibu Sougu Tanmozhe Tiande Tiebu Tongguyu Tuyu Wenshunu Wogan Wolila 
+			Wuge Wuwuchen Wuyu Xian Xibaxiong Xiduguan Xiuge Xier Xierzhi Xuedu Yali Yaliguo Yanchege Yanxi Yaogu Yaoshinu Yexian Yidougui Yilie Yudu Yudugu Yundeshi Zhengge Zhigu Zhiligu Zhilugu Zhongyuan Zhulie Zongzhen
+		}
+		female_names = {
+			Bage Boshi Changshou Chaogui Cuiba Dianni Jiuge Kedun L¸bugu Noujin Ping Pusuwan Saige Shige Shuge Shuogu Sokhatai Tabuyan Taige Taoge Xiao Xiao-Wen Xingge Yalixin Yange Yanmu Yanyan Yingtian Yueliduo
+		}
         dynasty_names = {
-            Yel√º
-        }
+            Yel¸
+		}
     }
 }
