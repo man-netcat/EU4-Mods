@@ -86,10 +86,10 @@ country_event = {
     }
 
     immediate = {
-        if = { limit = { is_emperor_of_china = yes } override_country_name = QKH_CHINESE_EMPIRE_QARA_KHITAI }
         if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan OR = { is_subject = yes NOT = { total_development = 150 } } } override_country_name = QKH_KHITAN_THE_KHITANS }
         if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan is_subject = no total_development = 150 } override_country_name = QKH_KHITAN_KHANATE }
         if = { limit = { OR = { has_reform = steppe_horde is_emperor_of_china = no } primary_culture = khitan is_subject = no government_rank = 3 } override_country_name = QKH_KHITAN_KHAGANATE }
+        if = { limit = { has_country_flag = is_WESTERN_LIAO_flag } override_country_name = QKH_WESTERN_LIAO }
     }
 
     option = {
