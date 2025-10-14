@@ -6,35 +6,32 @@ country_decisions = {
 				culture_group = altaic
 				culture_group = tartar
 			}
+			capital_scope = {
+				OR = {
+					region = central_asia_region
+					region = mongolia_region
+					region = crimea_region
+				}
+			}
 			NOT = {
 				has_reform = steppe_horde
 			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				has_terrain = steppe
-				has_terrain = grasslands
-				has_terrain = desert
-			}
+			is_emperor_of_china = no
 		}
 		allow = {
 			is_subject = no
-			OR = {
-				num_of_owned_provinces_with = {
-					value = 10
-					OR = {
-						has_terrain = steppe
-						has_terrain = grasslands
-						has_terrain = desert
-					}
-				}
-			}
 			is_at_war = no
+			government_reform_progress = 50
 		}
 		effect = {
+			change_government_reform_progress = -50
 			# Change government to tribal
 			change_government = tribal
+			set_country_flag = populists_in_government
 			add_government_reform = steppe_horde
+			change_unit_type = nomad_group
+			change_technology_group = nomad_group
+			custom_tooltip = STEPPE_HORDE_BENEFITS
 			# Change religion to Tengri
 			change_religion = tengri_pagan_reformed
 		}
