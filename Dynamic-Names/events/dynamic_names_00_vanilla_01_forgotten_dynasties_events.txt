@@ -6,6 +6,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.0
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     immediate = {
         if = { limit = { tag = CHN } country_event = { id = dynamic_names_00_vanilla_01_forgotten_dynasties.1 } }
@@ -82,6 +85,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.1
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = CHN
@@ -254,6 +260,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.2
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = XIA
@@ -426,6 +435,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.3
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = LIA
@@ -598,6 +610,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.4
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = QKH
@@ -770,6 +785,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.5
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = BAE
@@ -942,6 +960,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.6
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = GGY
@@ -1114,6 +1135,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.7
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = SLA
@@ -1286,6 +1310,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.8
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = GOR
@@ -1458,6 +1485,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.9
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = JLY
@@ -1630,6 +1660,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_forgotten_dynasties.10
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = PDY

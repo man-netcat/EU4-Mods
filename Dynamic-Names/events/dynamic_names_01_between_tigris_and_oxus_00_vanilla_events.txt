@@ -6,6 +6,9 @@ country_event = {
     id = dynamic_names_01_between_tigris_and_oxus_00_vanilla.0
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     immediate = {
         if = { limit = { tag = BAL } country_event = { id = dynamic_names_01_between_tigris_and_oxus_00_vanilla.1 } }
@@ -21,6 +24,9 @@ country_event = {
     id = dynamic_names_01_between_tigris_and_oxus_00_vanilla.1
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = BAL
@@ -41,6 +47,9 @@ country_event = {
     id = dynamic_names_01_between_tigris_and_oxus_00_vanilla.2
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = ILK

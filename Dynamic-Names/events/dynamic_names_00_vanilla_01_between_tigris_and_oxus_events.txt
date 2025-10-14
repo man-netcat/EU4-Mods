@@ -6,6 +6,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.0
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     immediate = {
         if = { limit = { OR = { tag = BAL } has_country_flag = is_KALAT_flag } country_event = { id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.1 } }
@@ -73,6 +76,9 @@ country_event = {
     id = dynamic_names_00_vanilla_01_between_tigris_and_oxus.1
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     immediate = {
         if = { limit = { is_emperor = no has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = KALAT_MONARCHY_DUCHY }

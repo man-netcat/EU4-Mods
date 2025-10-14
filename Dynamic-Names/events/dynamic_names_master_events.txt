@@ -6,6 +6,9 @@ country_event = {
     id = dynamic_names.0
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     immediate = {
         country_event = { id = dynamic_names_00_vanilla_00_vanilla.0 }

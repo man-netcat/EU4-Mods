@@ -1,0 +1,6 @@
+﻿l_english:
+ return_to_steppes_title:0 "Return to the Steppes"
+ return_to_steppes_desc:0 "Our people have dwelt too long among the settled cities of Central Asia, adopting foreign customs and abandoning the ways of our ancestors. The time has come to reject this sedentary life and return to the freedom of the steppe, to embrace once more the ancient Tengri faith and the nomadic traditions that made our people great. Let us cast aside the trappings of settled civilization and ride as our forefathers did - free upon the endless grasslands."
+ return_to_steppes_tooltip:0 "We abandon settled ways and return to nomadic steppe traditions. Our government becomes tribal with the Steppe Horde reform, and we embrace the ancient Tengri faith. Players may then choose a syncretic faith through the Tengri mechanics."
+ returned_to_steppes:0 "Nomadic Revival"
+ desc_returned_to_steppes:0 "Having cast aside the ways of settled peoples, our nation has been rejuvenated by a return to our steppe heritage."

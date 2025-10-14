@@ -6,6 +6,9 @@ country_event = {
     id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.0
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     immediate = {
         if = { limit = { tag = CHN } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.1 } }
@@ -23,6 +26,9 @@ country_event = {
     id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.1
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = CHN
@@ -41,6 +47,9 @@ country_event = {
     id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = XIA
@@ -59,6 +68,9 @@ country_event = {
     id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = LIA
@@ -80,6 +92,9 @@ country_event = {
     id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4
     hidden = yes
     is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
         tag = QKH
