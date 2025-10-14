@@ -412,9 +412,6 @@ qara_khitai_missions_3 = {
 			add_prestige = 30
 			add_legitimacy = 25
 			add_adm_power = 100
-			country_event = {
-				id = flavor_qkh.2
-			}
 			add_country_modifier = {
 				name = "qkh_liao_legacy"
 				duration = -1

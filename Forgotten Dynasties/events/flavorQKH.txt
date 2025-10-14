@@ -1,3 +1,5 @@
+namespace = flavor_qkh
+
 #The Khitan Resurgence
 country_event = {
 	id = flavor_qkh.100
