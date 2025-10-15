@@ -15,6 +15,8 @@ country_event = {
         if = { limit = { tag = XIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.2 } }
         if = { limit = { tag = LIA } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.3 } }
         if = { limit = { tag = QKH } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4 } }
+        if = { limit = { tag = MJN } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.5 } }
+        if = { limit = { OR = { tag = MJN } has_country_flag = is_TAEBONG_flag } country_event = { id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.6 } }
     }
 
     option = {
@@ -109,5 +111,45 @@ country_event = {
 
     option = {
         name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.4.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.5
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = MJN
+    }
+
+    immediate = {
+        if = { limit = { has_reform = maitreya_kingdom NOT = { government_rank = 3 } } override_country_name = MJN_MAJIN_DIVINE_KINGDOM }
+        if = { limit = { has_reform = maitreya_kingdom government_rank = 3 } override_country_name = MJN_MAJIN_DIVINE_EMPIRE }
+    }
+
+    option = {
+        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.5.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.6
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    immediate = {
+        if = { limit = { has_reform = maitreya_kingdom NOT = { government_rank = 3 } } override_country_name = TAEBONG_MAJIN_DIVINE_KINGDOM }
+        if = { limit = { has_reform = maitreya_kingdom government_rank = 3 } override_country_name = TAEBONG_MAJIN_DIVINE_EMPIRE }
+    }
+
+    option = {
+        name = dynamic_names_01_forgotten_dynasties_01_forgotten_dynasties.6.a
     }
 }
