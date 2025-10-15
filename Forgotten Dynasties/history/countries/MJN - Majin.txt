@@ -1,0 +1,6 @@
+government = maitreya_government
+add_government_reform = maitreya_kingdom
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 735# Hanseong

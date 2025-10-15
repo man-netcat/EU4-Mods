@@ -85,3 +85,51 @@ qara_khitai_khanate = {
 		}
 	}
 }
+
+maitreya_government_names = {
+	rank = {
+		1 = DIVINE_KINGDOM
+		2 = DIVINE_KINGDOM
+		3 = DIVINE_EMPIRE
+	}
+
+	ruler_male = {
+		1 = MAITREYA
+		2 = MAITREYA
+		3 = MAITREYA
+	}
+
+	ruler_female = {
+		1 = MAITREYA
+		2 = MAITREYA
+		3 = MAITREYA
+	}
+	
+	heir_male = {
+		1 = PRINCE
+		2 = PRINCE
+		3 = PRINCE
+	}
+
+	heir_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+
+	consort_male = {
+		1 = DIVINE_CONSORT
+		2 = DIVINE_CONSORT
+		3 = DIVINE_CONSORT
+	}
+
+	consort_female = {
+		1 = DIVINE_CONSORT
+		2 = DIVINE_CONSORT
+		3 = DIVINE_CONSORT
+	}
+
+	trigger = {
+		has_reform = maitreya_kingdom
+	}
+}

@@ -9,5 +9,4 @@ QKH = "countries/Qara Khitai.txt"
 LIA = "countries/Liao.txt"
 JLY = "countries/Jalayirids.txt"
 PDY = "countries/Pandya.txt"
-
-
+MJN = "countries/Majin.txt"

@@ -1,0 +1,52 @@
+country_decisions = {
+	form_majin_nation = {
+		major = yes
+		potential = {
+			# tag = GOR
+			tag = KOR
+			NOT = {
+				has_country_flag = formed_majin_flag
+			}
+			NOT = {
+				exists = MJN
+			}
+			government = monarchy
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+			# has_idea_group = religious_ideas
+			always = yes
+		}
+		effect = {
+			change_tag = MJN
+			change_religion = mahayana
+			change_government = maitreya_government
+			add_government_reform = maitreya_kingdom
+			set_country_flag = formed_majin_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	taebong_name = {
+		potential = {
+			tag = MJN
+			OR = {
+				primary_culture = korean
+				primary_culture = korean_new
+			}
+			NOT = {
+				has_country_flag = is_TAEBONG_flag
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = is_TAEBONG_flag
+			override_country_name = TAEBONG
+		}
+	}
+}

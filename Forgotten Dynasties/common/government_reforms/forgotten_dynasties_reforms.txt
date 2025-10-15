@@ -1,0 +1,83 @@
+maitreya_theocratic_monarchy_mechanic = {
+	monarchy = yes
+	has_devotion = yes
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	royal_marriage = yes
+	different_religion_acceptance = -20
+	different_religion_group_acceptance = -50
+	heir = yes
+	queen = yes
+	can_customise_heir = no
+	basic_reform = yes	# = invisible/does not take up a slot
+	valid_for_nation_designer = no
+	custom_attributes = {
+		theocratic_monarchy_mechanic = yes
+		enables_divine_idea_group = yes
+		enables_aristocratic_idea_group = yes
+		locked_government_type = yes
+	}
+	modifiers = {
+		brahmins_hindu_influence_modifier = 0.1
+		church_loyalty_modifier = 0.1
+		church_influence_modifier = 0.05
+		nobles_influence_modifier = 0.05
+	}
+	is_eligible_for_hre_emperor = yes
+}
+
+maitreya_kingdom = {
+	icon = "divine_guidance_reform"
+	allow_normal_conversion = no
+	potential = {
+		tag = MJN
+		religion_group = eastern
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = korean
+			primary_culture = korean_new
+		}
+	}
+	potential = {
+		OR = {
+			primary_culture = korean
+			primary_culture = korean_new
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		custom_attributes = {
+			buffed_monastic_temples = yes
+			enable_karma_decision = yes			#Allows decision every 20 years to add or remove 10 Karma
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		states_general_mechanic = {
+			theocrats_statists = {
+				tolerance_own = 2
+				global_missionary_strength = 0.02
+				devotion = 1
+			}
+			monarchists = {
+				global_tax_modifier = 0.2
+				hostile_attrition = 1
+				legitimacy = 1
+			}
+		}
+	}
+	modifiers = {
+		missionaries = 1
+		yearly_harmony = 0.25
+		global_missionary_strength = 0.01
+		same_religion_advisor_cost = -0.15
+		tolerance_own = 1
+	}
+}

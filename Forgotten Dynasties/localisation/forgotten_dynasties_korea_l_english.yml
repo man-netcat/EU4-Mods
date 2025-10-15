@@ -9,8 +9,9 @@
  TAM_ADJ:0 "Tamnan"
  GOR:0 "Goryeo"
  GOR_ADJ: "Goryeoan"
+ MJN:0 "Majin"
+ MJN_ADJ: "Majin"
  
- # Cultures
  baekje:0 "Baekje"
  silla:0 "Silla"
  goguryeo:0 "Goguryeo"
@@ -141,3 +142,17 @@
 
  tamna_cultural_autonomy:0 "Cultural Autonomy"
  tamna_cultural_autonomy_desc:0 "Despite external influences, Tamna maintained its unique cultural identity and religious practices, creating a tolerant and diverse society."
+
+ form_majin_nation_title:0 "Form the Holy State of Majin"
+ form_majin_nation_desc:0 "Re-establish the ancient kingdom of Majin, uniting the Korean peninsula under a theocratic government governed by Buddhist principles."
+ maitreya_kingdom:0 "Holy State of the Maitreya"
+ maitreya_kingdom_desc:0 "The Holy State of Majin, later Taebong, was a Buddhist theocracy that ruled parts of Korea during the Later Three Kingdoms period. Founded by the monk Gung Ye, it emphasized religious governance and sought to unify the Korean peninsula under Buddhist ideals."
+ maitreya_government_name:0 "Maitreya Theocracy"
+ maitreya_theocratic_monarchy_mechanic:0 "Maitreya Theocratic Monarchy"
+ maitreya_theocratic_monarchy_mechanic_desc:0 "A unique government form combining theocratic principles with monarchical rule, emphasizing religious authority while maintaining royal traditions."
+
+ taebong_name_title:0 "Rename the Kingdom to Taebong"
+ taebong_name_desc:0 "In 904, Gung Ye renamed the kingdom of Majin to Taebong, symbolizing a new era of Buddhist governance and the aspiration to unify the Korean peninsula."
+ TAEBONG:0 "Taebong"
+ MAITREYA:0 "Maitreya"
+ DIVINE_CONSORT:0 "Divine Consort"
