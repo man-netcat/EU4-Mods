@@ -1,3 +1,4 @@
+namespace = flavor_bal
 country_event = {
 	id = flavor_bal.1
 	title = "flavor_bal.1.t"

@@ -1,3 +1,5 @@
+namespace = flavor_chn
+
 # The Capital Choice - Xi'an, Luoyang or Chengdu
 country_event = {
 	id = han_capital_event.1

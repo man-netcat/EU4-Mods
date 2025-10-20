@@ -1,0 +1,53 @@
+namespace = flavor_gor
+country_event = {
+	id = flavor_gor.1
+	title = flavor_gor.1.t
+	desc = flavor_gor.1.d
+	picture = EMPEROR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = flavor_gor.1.a
+		random_owned_province = {
+			spawn_rebels = {
+				type = goryeo_rebels
+				size = 3
+			}
+		}
+	}
+	option = {
+		name = flavor_gor.1.b
+		change_tag = GOR
+		remove_government_reform = korean_monarchy
+		set_dynasty = "Wang"
+		define_heir = {
+			dynasty = "Wang"
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gor.2
+	title = flavor_gor.2.t
+	desc = flavor_gor.2.d
+	picture = EMPEROR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = KOR
+		any_country = {
+			is_emperor_of_china = yes
+			total_development = 1000
+			imperial_mandate = 80
+			defensive_war_with = KOR
+		}
+	}
+	option = {
+		name = flavor_gor.2.a
+		random_owned_province = {
+			spawn_rebels = {
+				type = goryeo_rebels
+				size = 3
+			}
+		}
+	}
+}

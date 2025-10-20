@@ -420,3 +420,78 @@ PDY_ideas = {
 		ship_trade_power_modifier = 0.2
 	}
 }
+
+MJN_ideas = {
+	start = {
+		tolerance_heretic = -2
+		tolerance_heathen = -2
+		missionaries = 2
+	}
+	
+	bonus = {
+		manpower_in_true_faith_provinces = 0.33
+	}
+	
+	trigger = {
+		tag = MJN
+	}
+	free = yes
+	
+	mjn_faith_and_morale = {
+		land_morale = 0.1
+		naval_morale = 0.1
+	}
+	mjn_blessings_of_maitreya = {	
+		institution_spread_from_true_faith = 0.5
+	}
+	mjn_diligent_maintenance = {
+		fort_maintenance_modifier = -0.15
+	}
+	mjn_word_of_maitreya = {
+		global_missionary_strength = 0.02
+	}
+	mjn_religious_harmony = {
+		religious_unity = 0.5
+	}
+	mjn_unity_of_maitreya = {
+		tolerance_own = 1
+	}
+	mjn_zealous_mission = {
+		discipline = 0.05
+	}
+}
+
+QOC_ideas = {
+	start = {
+		tolerance_own = 1
+		religious_unity = 0.1
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	trigger = {
+		tag = QOC
+	}
+	free = yes
+	qoc_buddhist_heritage = {
+		tolerance_heathen = 1
+	}
+	qoc_silk_road_hub = {
+		caravan_power = 0.2
+	}
+	qoc_ancient_capital = {
+		development_cost = -0.1
+	}
+	qoc_vajrayana_pilgrims = {
+		religious_unity = 0.1
+	}
+	qoc_uyghur_cavalry = {
+		cavalry_power = 0.1
+	}
+	qoc_tarim_oases = {
+		global_manpower_modifier = 0.1
+	}
+	qoc_kingdom_legacy = {
+		prestige = 1
+	}
+}

@@ -8,8 +8,7 @@ capital = 1845	# Pyeongyang
 # Northern Korea
 add_core = 732	# Hamheung
 add_core = 733	# Hwangju
-add_core = 735	# Hanseong
-add_core = 736	# Sangju
+
 add_core = 1845	# Pyeongyang
 add_core = 2742	# Yukjin
 add_core = 2743	# Gyeongseong

@@ -4,11 +4,3 @@ primary_culture = korean
 religion = mahayana
 technology_group = chinese
 capital = 735	# Hanseong
-
-# Unified Korea - successor state to Three Kingdoms
-# No starting cores, represents the unified kingdom that must be reformed
-
-# Claims on all of Korea
-korea_region = {
-	add_permanent_claim = ROOT
-}

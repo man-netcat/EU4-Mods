@@ -1,0 +1,67 @@
+majin_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MJN
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	mjn_unify_korea_faith = {
+		icon = mission_conquer_50_development
+		required_missions = {
+		}
+		position = 1
+		provinces_to_highlight = {
+			korea_region = {
+				NOT = {
+					religion = mahayana
+				}
+			}
+		}
+		trigger = {
+			korea_region = {
+				religion = mahayana
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_legitimacy = 25
+			add_country_modifier = {
+				name = "mjn_faith_strengthened"
+				duration = 5475
+			}
+		}
+	}
+	mjn_destroy_tengri = {
+		icon = mission_conquer_50_development
+		required_missions = {
+			mjn_unify_korea_faith
+		}
+		position = 2
+		provinces_to_highlight = {
+			korea_region = {
+				any_province = {
+					religion = tengri_pagan_reformed
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					religion = tengri_pagan_reformed
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			add_legitimacy = 50
+			add_country_modifier = {
+				name = "mjn_spread_mahayana"
+				duration = 9125
+			}
+		}
+	}
+}

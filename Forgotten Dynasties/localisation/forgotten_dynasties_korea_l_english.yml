@@ -1,16 +1,18 @@
 ﻿l_english:
  BAE:0 "Baekje"
- BAE_ADJ:0 "Baekjean"
+ BAE_ADJ:0 "Baekje"
  GGY:0 "Goguryeo"
- GGY_ADJ:0 "Goguryeoan"
+ GGY_ADJ:0 "Goguryeo"
  SLA:0 "Silla"
- SLA_ADJ:0 "Sillan"
+ SLA_ADJ:0 "Silla"
  TAM:0 "Tamna"
- TAM_ADJ:0 "Tamnan"
+ TAM_ADJ:0 "Tamna"
  GOR:0 "Goryeo"
- GOR_ADJ: "Goryeoan"
+ GOR_ADJ:0 "Goryeo"
  MJN:0 "Majin"
- MJN_ADJ: "Majin"
+ MJN_ADJ:0 "Majin"
+ KOR:1 "Joseon"
+ KOR_ADJ:1 "Joseon"
  
  baekje:0 "Baekje"
  silla:0 "Silla"
@@ -143,6 +145,20 @@
  tamna_cultural_autonomy:0 "Cultural Autonomy"
  tamna_cultural_autonomy_desc:0 "Despite external influences, Tamna maintained its unique cultural identity and religious practices, creating a tolerant and diverse society."
 
+ flavor_gor.1.t:0 "Fall of the Yi Dynasty"
+ flavor_gor.1.d:0 "After the death of our King and the lack of an heir to the throne, the Yi Dynasty has come to an end. Claimants to the throne of the Goryeo dynasty now vie for power, and the kingdom is thrown into chaos."
+ flavor_gor.1.a:0 "We will restabilise Joseon and crush these rebels!"
+ flavor_gor.1.b:0 "Maybe it is time for us to concede and let these claimants fight it out amongst themselves."
+
+ flavor_gor.2.t:0 "Impossible War"
+ flavor_gor.2.d:0 "After our declaration of war against the Celestial Empire, we may have bitten off more than we can chew. Our armies are stretched thin, and the might of the Empire is overwhelming. Goryeo loyalists see this as an opportunity to strike against our weakened state."
+ flavor_gor.2.a:0 "Let them Come! We will crush both them, and the Chinese!"
+
+ goryeo_rebels_name:0 "Goryeo Loyalists"
+ goryeo_rebels_title:0 "Goryeo Loyalists"
+ goryeo_rebels_desc:0 "These rebels are led by the claimant to the Goryeo throne, seeking to restore the fallen dynasty and reunify the Korean peninsula under their rule."
+ goryeo_rebels_army:0 "Goryeo Loyalists"
+
  form_majin_nation_title:0 "Form the Holy State of Majin"
  form_majin_nation_desc:0 "Re-establish the ancient kingdom of Majin, uniting the Korean peninsula under a theocratic government governed by Buddhist principles."
  maitreya_kingdom:0 "Holy State of the Maitreya"
@@ -154,5 +170,43 @@
  taebong_name_title:0 "Rename the Kingdom to Taebong"
  taebong_name_desc:0 "In 904, Gung Ye renamed the kingdom of Majin to Taebong, symbolizing a new era of Buddhist governance and the aspiration to unify the Korean peninsula."
  TAEBONG:0 "Taebong"
+ TAEBONG_ADJ:0 "Taebong"
  MAITREYA:0 "Maitreya"
  DIVINE_CONSORT:0 "Divine Consort"
+ 
+ mjn_unify_korea_faith_title:0 "Unify Korea Faith"
+ mjn_unify_korea_faith_desc:0 "Ensure all provinces in the Korean peninsula embrace Mahayana Buddhism, uniting the faith under the Maitreya."
+ mjn_destroy_tengri_title:0 "Destroy Tengri"
+ mjn_destroy_tengri_desc:0 "Convert all Tengri provinces to Mahayana Buddhism, eradicating the old nomadic faith and spreading the enlightenment."
+
+ mjn_faith_strengthened:0 "Faith Strengthened"
+ desc_mjn_faith_strengthened:0 "Our commitment to Mahayana Buddhism has reduced missionary costs and unrest."
+ mjn_faith_unified:0 "Faith Unified"
+ desc_mjn_faith_unified:0 "The complete unification of the peninsula under Mahayana Buddhism brings lasting peace and prestige."
+ mjn_spread_mahayana:0 "Mahayana Spread"
+ desc_mjn_spread_mahayana:0 "The eradication of the Tengri faith has allowed Mahayana Buddhism to spread freely, enhancing our missionary efforts."
+
+ MJN_ideas:0 "Majin Ideas"
+ MJN_ideas_start:0 "The Prophecy of Maitreya"
+ MJN_ideas_bonus:0 "Majin Ambition"
+ 
+ mjn_faith_and_morale:0 "Faith and Morale"
+ mjn_faith_and_morale_desc:0 "Our soldiers march not for gold or glory, but for the promise of the Pure Land to  come. Every blade raised in the name of Maitreya is tempered in unshakable faith."
+ 
+ mjn_blessings_of_maitreya:0 "Blessings of Maitreya"
+ mjn_blessings_of_maitreya_desc:0 "The light of the Future Buddha illumines all corners of our realm. From his  compassion flows wisdom, and through wisdom, knowledge spreads like a sacred flame."
+ 
+ mjn_diligent_maintenance:0 "Diligent Maintenance"
+ mjn_diligent_maintenance_desc:0 "To neglect a wall is to invite impurity; to neglect a fortress is to invite  ruin. Our citadels are temples of vigilance, tended with the same devotion as our shrines."
+ 
+ mjn_word_of_maitreya:0 "Word of Maitreya"
+ mjn_word_of_maitreya_desc:0 "The world trembles at the coming of the Future Buddha. His word, carried by our  missionaries, tears through falsehood as thunder shatters the night sky."
+ 
+ mjn_religious_harmony:0 "Religious Harmony"
+ mjn_religious_harmony_desc:0 "Under the gaze of Maitreya, all the faithful breathe as one body, act as one  hand, and speak as one voice. Discord has no place in the age of divine unity."
+ 
+ mjn_unity_of_maitreya:0 "Unity of Maitreya"
+ mjn_unity_of_maitreya_desc:0 "Bound by our shared devotion, we stand unyielding before the storms of doubt.  The faithful shall find peace in the harmony of Maitreya's promise."
+ 
+ mjn_zealous_mission:0 "Zealous Mission"
+ mjn_zealous_mission_desc:0 "Our armies march as living sermons. Every victory is a revelation, every conquest  a step toward the dawn of the future Buddha's kingdom on earth."

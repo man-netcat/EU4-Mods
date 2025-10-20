@@ -1,0 +1,6404 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+common/
+  countries/
+    Baekje.txt
+    Goguryeo.txt
+    Goryeo.txt
+    Han.txt
+    Jalayirids.txt
+    Liao.txt
+    Majin.txt
+    Pandya.txt
+    Qara Khitai.txt
+    Qocho.txt
+    Silla.txt
+    Tamna.txt
+    Uyghuristan.txt
+    Xia.txt
+  country_tags/
+    forgotten_dynasties_countries.txt
+  event_modifiers/
+    forgotten_dynasties_modifiers.txt
+  government_names/
+    000_forgotten_dynasties_government_names.txt
+  government_reforms/
+    forgotten_dynasties_reforms.txt
+  governments/
+    forgotten_dynasties_governments.txt
+  ideas/
+    forgotten_dynasties_country_ideas.txt
+  on_actions/
+    forgotten_dynasties_on_actions.txt
+  rebel_types/
+    goryeo_rebels.txt
+decisions/
+  FormHan.txt
+  FormIlkhanate.txt
+  FormLiao.txt
+  FormMajin.txt
+  FormPandya.txt
+  FormUyghuristan.txt
+  QocDecisions.txt
+events/
+  EventsGor.txt
+  EventsHan.txt
+  EventsJalayirids.txt
+  EventsKhitans.txt
+  QocEvents.txt
+history/
+  countries/
+    BAE - Baekje.txt
+    CHN - Han.txt
+    GGY - Goguryeo.txt
+    GOR - Goryeo.txt
+    JLY - Jalayirids.txt
+    LIA - Liao.txt
+    MJN - Majin.txt
+    PDY - Pandya.txt
+    QKH - Qara Khitai.txt
+    QOC - Qocho.txt
+    SLA - Silla.txt
+    TAM - Tamna.txt
+    UYG - Uyghuristan.txt
+    XIA - Xia.txt
+localisation/
+  forgotten_dynasties_china_l_english.yml
+  forgotten_dynasties_india_l_english.yml
+  forgotten_dynasties_korea_l_english.yml
+  forgotten_dynasties_persia_l_english.yml
+missions/
+  JLY_Missions.txt
+  MJN_Missions.txt
+  QKH_Missions.txt
+  QOC_Missions.txt
+descriptor.mod
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="common/countries/Baekje.txt">
+#Country Name: Please see filename.
+graphical_culture = asiangfx
+color = {
+	254
+	225
+	1
+}
+
+revolutionary_colors = {
+	0
+	5
+	13
+}
+
+historical_idea_groups = {
+	naval_ideas
+	offensive_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Onjo #0" = 10
+	"Daru #0" = 10
+	"Giru #0" = 10
+	"Gaeru #0" = 10
+	"Chogo #0" = 10
+	"Gusu #0" = 10
+	"Saban #0" = 10
+	"Goi #0" = 10
+	"Chaekgye #0" = 10
+	"Bunseo #0" = 10
+	"Biryu #0" = 10
+	"Gye #0" = 10
+	"Geunchogo #0" = 10
+	"Geungusu #0" = 10
+	"Chimnyu #0" = 10
+	"Jinsa #0" = 10
+	"Asin #0" = 10
+	"Jeonji #0" = 10
+	"Gu-isin #0" = 10
+	"Biyu #0" = 10
+	"Gaero #0" = 10
+	"Dongseong #0" = 10
+	"Seong #0" = 10
+	"Wideok #0" = 10
+	"Mu #0" = 10
+	"Uija #0" = 10
+}
+
+leader_names = {
+	Yi
+	Wang
+	Kim
+	Pak
+	Shin
+	Song
+	Chae
+	Gang
+	Jeong
+	Jang
+	Yun
+	Han
+	Hong
+	Yu
+	Ki
+	Choi
+	Ga
+	Gye
+	Go
+	Na
+	Noh
+	Woo
+	Do
+	Du
+	Ban
+	Ma
+	Min
+	Mun
+	Seo
+	Son
+	Sim
+	An
+	Yang
+	O
+	Jeon
+	Cho
+	Jin
+	Ha
+	Hong
+	Heo
+	Kwak
+	Lim
+	Won
+	Kwon
+	Hwang
+	Bae
+	Seok
+	Bang
+	Dae
+	Gyeong
+	Nam
+	Sung
+	Baek
+}
+
+ship_names = {
+	Baekdu
+	Baekje
+	Buyeo
+	Chilbosan
+	Duman
+	Daedeok
+	Dongmyeongseong
+	"Eulji Mundeok"
+	Gayasan
+	Geumgang
+	Geumho
+	Goguryeo
+	Gumiho
+	"Gyeon Hwon"
+	Imjingang
+	Inmyeonjo
+	Jangbaek
+	"Jang Bogo"
+	Jirisan
+	Jeongjong
+	Kumgangsan
+	Myohyangsan
+	Nakdong
+	Samjogo
+	Sincheon
+	Silla
+	Sobaek
+	Taebaek
+	Taejo
+	Hanseong
+	Haemosu
+	Habaek
+	Hwaeomsa
+	Worak
+	Yuhwa
+	Yeong
+	"Yeon Gaesomun"
+	"Jeong Do-jeon"
+	"Yi Seong-gye"
+}
+</file>
+
+<file path="common/countries/Goguryeo.txt">
+#Country Name: Please see filename.
+graphical_culture = asiangfx
+color = {
+	221
+	0
+	0
+}
+
+revolutionary_colors = {
+	0
+	5
+	13
+}
+
+historical_idea_groups = {
+	naval_ideas
+	offensive_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Dongmyeong #0" = 10
+	"Yuri #0" = 10
+	"Daemusin #0" = 10
+	"Minjung #0" = 10
+	"Mobon #0" = 10
+	"Taejo #0" = 10
+	"Chadae #0" = 10
+	"Sindae #0" = 10
+	"Gogukcheon #0" = 10
+	"Sansang #0" = 10
+	"Dongcheon #0" = 10
+	"Jungcheon #0" = 10
+	"Seocheon #0" = 10
+	"Bongsang #0" = 10
+	"Michon #0" = 10
+	"Gogugwon #0" = 10
+	"Sosurim #0" = 10
+	"Gogukyang #0" = 10
+	"Gwanggaeto #0" = 10
+	"Jangsu #0" = 10
+	"Munja #0" = 10
+	"Anjang #0" = 10
+	"Anwon #0" = 10
+	"Yangwon #0" = 10
+	"Pyeongwon #0" = 10
+	"Yeongyang #0" = 10
+	"Yeongnyu #0" = 10
+	"Bojang #0" = 10
+}
+
+leader_names = {
+	Yi
+	Wang
+	Kim
+	Pak
+	Shin
+	Song
+	Chae
+	Gang
+	Jeong
+	Jang
+	Yun
+	Han
+	Hong
+	Yu
+	Ki
+	Choi
+	Ga
+	Gye
+	Go
+	Na
+	Noh
+	Woo
+	Do
+	Du
+	Ban
+	Ma
+	Min
+	Mun
+	Seo
+	Son
+	Sim
+	An
+	Yang
+	O
+	Jeon
+	Cho
+	Jin
+	Ha
+	Hong
+	Heo
+	Kwak
+	Lim
+	Won
+	Kwon
+	Hwang
+	Bae
+	Seok
+	Bang
+	Dae
+	Gyeong
+	Nam
+	Sung
+	Baek
+}
+
+ship_names = {
+	Baekdu
+	Baekje
+	Buyeo
+	Chilbosan
+	Duman
+	Daedeok
+	Dongmyeongseong
+	"Eulji Mundeok"
+	Gayasan
+	Geumgang
+	Geumho
+	Goguryeo
+	Gumiho
+	"Gyeon Hwon"
+	Imjingang
+	Inmyeonjo
+	Jangbaek
+	"Jang Bogo"
+	Jirisan
+	Jeongjong
+	Kumgangsan
+	Myohyangsan
+	Nakdong
+	Samjogo
+	Sincheon
+	Silla
+	Sobaek
+	Taebaek
+	Taejo
+	Hanseong
+	Haemosu
+	Habaek
+	Hwaeomsa
+	Worak
+	Yuhwa
+	Yeong
+	"Yeon Gaesomun"
+	"Jeong Do-jeon"
+	"Yi Seong-gye"
+}
+</file>
+
+<file path="common/countries/Goryeo.txt">
+#Country Name: Please see filename.
+graphical_culture = asiangfx
+color = {
+	254
+	220
+	137
+}
+
+revolutionary_colors = {
+	0
+	5
+	13
+}
+
+historical_idea_groups = {
+	naval_ideas
+	offensive_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Taejo #0" = 10
+	"Hyejong #0" = 10
+	"Jeongjong #0" = 10
+	"Gwangjong #0" = 10
+	"Gyeongjong #0" = 10
+	"Seongjong #0" = 10
+	"Mokjong #0" = 10
+	"Hyeonjong #0" = 10
+	"Deokjong #0" = 10
+	"Munjong #0" = 10
+	"Sunjong #0" = 10
+	"Seonjong #0" = 10
+	"Heonjong #0" = 10
+	"Sukjong #0" = 10
+	"Yejong #0" = 10
+	"Hinjong #0" = 10
+	"Gojong #0" = 10
+	"Wonjong #0" = 10
+	"Yeongjong #0" = 10
+	"Chungnyeol #0" = 10
+	"Chungseon #0" = 10
+	"Chungsuk #0" = 10
+	"Chungnyeong #0" = 10
+	"Chungmok #0" = 10
+	"Chungjeong #0" = 10
+	"Chungjong #0" = 10
+	"Gongyang #0" = 10
+}
+
+leader_names = {
+	Yi
+	Wang
+	Kim
+	Pak
+	Shin
+	Song
+	Chae
+	Gang
+	Jeong
+	Jang
+	Yun
+	Han
+	Hong
+	Yu
+	Ki
+	Choi
+	Ga
+	Gye
+	Go
+	Na
+	Noh
+	Woo
+	Do
+	Du
+	Ban
+	Ma
+	Min
+	Mun
+	Seo
+	Son
+	Sim
+	An
+	Yang
+	O
+	Jeon
+	Cho
+	Jin
+	Ha
+	Hong
+	Heo
+	Kwak
+	Lim
+	Won
+	Kwon
+	Hwang
+	Bae
+	Seok
+	Bang
+	Dae
+	Gyeong
+	Nam
+	Sung
+	Baek
+}
+
+ship_names = {
+	Baekdu
+	Baekje
+	Buyeo
+	Chilbosan
+	Duman
+	Daedeok
+	Dongmyeongseong
+	"Eulji Mundeok"
+	Gayasan
+	Geumgang
+	Geumho
+	Goguryeo
+	Gumiho
+	"Gyeon Hwon"
+	Imjingang
+	Inmyeonjo
+	Jangbaek
+	"Jang Bogo"
+	Jirisan
+	Jeongjong
+	Kumgangsan
+	Myohyangsan
+	Nakdong
+	Samjogo
+	Sincheon
+	Silla
+	Sobaek
+	Taebaek
+	Taejo
+	Hanseong
+	Haemosu
+	Habaek
+	Hwaeomsa
+	Worak
+	Yuhwa
+	Yeong
+	"Yeon Gaesomun"
+	"Jeong Do-jeon"
+	"Yi Seong-gye"
+}
+</file>
+
+<file path="common/countries/Han.txt">
+#Country Name: Han Dynasty
+
+graphical_culture = asiangfx
+
+color = {
+	255
+	50
+	50
+}
+
+revolutionary_colors = {
+	10
+	1
+	1
+}
+
+historical_idea_groups = {
+	administrative_ideas
+	influence_ideas
+	economic_ideas
+	offensive_ideas
+	defensive_ideas
+	quality_ideas
+	diplomatic_ideas
+	humanist_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+		"Liu Bang #0" = 20
+		"Liu Che #0" = 15
+		"Liu Bei #0" = 15
+		"Liu Xiu #0" = 10
+		"Liu Heng #0" = 10
+		"Liu Qi #0" = 10
+		"Liu Xun #0" = 10
+		"Liu Shi #0" = 10
+		"Liu Zhao #0" = 10
+		"Liu An #0" = 5
+		"Liu Ying #0" = 5
+		"Liu Yu #0" = 5
+		"Liu Xiang #0" = 5
+		"Liu Ju #0" = 5
+		"Liu Xian #0" = 5
+		"Liu Chang #0" = 5
+		"Liu Wu #0" = 5
+		"Liu Hong #0" = 5
+		"Liu Shan #0" = 5
+		"Liu Chan #0" = 5
+		"Liu Biao #0" = 5
+		"Liu Zhang #0" = 5
+		"Liu Yao #0" = 5
+		"Liu Yan #0" = 5
+		"Liu Cong #0" = 5
+		"Liu Xie #0" = 5
+}
+
+leader_names = {
+	"Han Xin"
+	"Zhang Liang"
+	"Xiao He"
+	"Chen Ping"
+	"Zhou Bo"
+	"Cao Can"
+	"Fan Kuai"
+	"Wei Qing"
+	"Huo Qubing"
+	"Li Guang"
+	"Zhao Yun"
+	"Guan Yu"
+	"Zhang Fei"
+	"Huang Zhong"
+	"Ma Chao"
+	"Zhuge Liang"
+	"Pang Tong"
+	"Fa Zheng"
+	"Ma Liang"
+	"Jiang Wei"
+	"Deng Ai"
+	"Zhong Hui"
+	"Sima Yi"
+	"Xiahou Dun"
+	"Xiahou Yuan"
+	"Cao Ren"
+	"Cao Hong"
+	"Zhang He"
+	"Xu Huang"
+	"Yu Jin"
+}
+
+ship_names = {
+	"Tianlong"
+	"Fengluan"
+	"Qinglong"
+	"Baihu"
+	"Zhuque"
+	"Xuanwu"
+	"Tenglong"
+	"Feihu"
+	"Baifeng"
+	"Heijiao"
+	"Chidi"
+	"Qingfeng"
+	"Baiyun"
+	"Honglian"
+	"Zijin"
+}
+
+army_names = {
+	"Beijun"
+	"Nanjun"
+	"Dongjun"
+	"Xijun"
+	"Zhongjun"
+	"Qianfeng"
+	"Houwei"
+	"Zuoyi"
+	"Youyi"
+	"Jingwei"
+}
+
+fleet_names = {
+	"Zhengui Shuishi"
+	"Nanyang Shuishi"
+	"Donghai Shuishi"
+	"Xihai Shuishi"
+	"Changjiang Shuishi"
+}
+</file>
+
+<file path="common/countries/Jalayirids.txt">
+graphical_culture = muslimgfx
+color = {
+	247
+	159
+	39
+}
+
+revolutionary_colors = {
+	8
+	5
+	8
+}
+
+historical_idea_groups = {
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	religious_ideas
+	innovativeness_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	"Hasan #0" = 30
+	"Ahmad #0" = 20
+	"Husain #0" = 20
+	"Uvais #0" = 15
+	"Muhammad #0" = 15
+	"Shah Walad #0" = 10
+	"Bayezid #0" = 5
+	"Sultan #0" = 5
+	"Jahan Shah #0" = 5
+	"Yusuf #0" = 5
+	"Ali #0" = 5
+}
+
+leader_names = {
+	Buzurg
+	Uvais
+	Ahmad
+	Husain
+	"Shah Walad"
+	Muhammad
+	Bayezid
+	Sultan
+	Jahan
+	Yusuf
+	Ali
+}
+
+ship_names = {
+	Baghdad
+	Basra
+	Tabriz
+	Isfahan
+	Shiraz
+	Mosul
+	Kirkuk
+	Najaf
+	Karbala
+	Hillah
+}
+</file>
+
+<file path="common/countries/Liao.txt">
+#Country Name: Liao
+graphical_culture = asiangfx
+color = {
+	222
+	181
+	47
+}
+
+revolutionary_colors = {
+	10
+	8
+	10
+}
+
+historical_idea_groups = {
+	administrative_ideas
+	religious_ideas
+	trade_ideas
+	quantity_ideas
+	offensive_ideas
+	expansion_ideas
+	economic_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	"Abaoji #0" = 20
+	"Dashi #0" = 20
+	"Abaoqi #0" = 20
+	"Shulü #0" = 15
+	"Xiao #0" = 15
+	"Abaosheng #0" = 10
+	"Abaohuan #0" = 10
+	"Abaoli #0" = 10
+	"Abaolun #0" = 10
+	"Abaoyan #0" = 10
+	"Abaoying #0" = 10
+	"Abaosun #0" = 10
+	"Abaohu #0" = 10
+}
+
+leader_names = {
+	Abaoji
+	Dashi
+	Abaoqi
+	Shulü
+	Xiao
+	Abaosheng
+	Abaohuan
+	Abaoli
+	Abaolun
+	Abaoyan
+	Abaoying
+	Abaosun
+	Abaohu
+	Abaokun
+	Abaomin
+	Abaotong
+	Abaozhi
+	Abaoyong
+	Abaoshan
+	Abaofu
+	Abaoyuan
+	Abaoling
+	Abaozhen
+}
+
+ship_names = {
+	Balasagun
+	Beshbalik
+	Kashgar
+	Talas
+	Yelüzhou
+	Karakorum
+	Almaliq
+	Tashkent
+	Samarkand
+}
+
+army_names = {
+	Khitan
+	Guard
+	Left
+	Wing
+	Tumen
+	Right
+	Wing
+	Tumen
+	Central
+	Tumen
+	Western
+	Wing
+	Tumen
+	Eastern
+	Wing
+	Tumen
+	"$PROVINCE$ Tumen"
+}
+</file>
+
+<file path="common/countries/Majin.txt">
+#Country Name: Please see filename.
+graphical_culture = asiangfx
+color = {
+	232
+	167
+	19
+}
+
+revolutionary_colors = {
+	8
+	0
+	8
+}
+
+historical_idea_groups = {
+	religious_ideas
+	theocracy_gov_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Taejo #0" = 10
+	"Hyejong #0" = 10
+	"Jeongjong #0" = 10
+	"Gwangjong #0" = 10
+	"Gyeongjong #0" = 10
+	"Seongjong #0" = 10
+	"Mokjong #0" = 10
+	"Hyeonjong #0" = 10
+	"Deokjong #0" = 10
+	"Munjong #0" = 10
+	"Sunjong #0" = 10
+	"Seonjong #0" = 10
+	"Heonjong #0" = 10
+	"Sukjong #0" = 10
+	"Yejong #0" = 10
+	"Hinjong #0" = 10
+	"Gojong #0" = 10
+	"Wonjong #0" = 10
+	"Yeongjong #0" = 10
+	"Chungnyeol #0" = 10
+	"Chungseon #0" = 10
+	"Chungsuk #0" = 10
+	"Chungnyeong #0" = 10
+	"Chungmok #0" = 10
+	"Chungjeong #0" = 10
+	"Chungjong #0" = 10
+	"Gongyang #0" = 10
+}
+
+leader_names = {
+	Yi
+	Wang
+	Kim
+	Pak
+	Shin
+	Song
+	Chae
+	Gang
+	Jeong
+	Jang
+	Yun
+	Han
+	Hong
+	Yu
+	Ki
+	Choi
+	Ga
+	Gye
+	Go
+	Na
+	Noh
+	Woo
+	Do
+	Du
+	Ban
+	Ma
+	Min
+	Mun
+	Seo
+	Son
+	Sim
+	An
+	Yang
+	O
+	Jeon
+	Cho
+	Jin
+	Ha
+	Hong
+	Heo
+	Kwak
+	Lim
+	Won
+	Kwon
+	Hwang
+	Bae
+	Seok
+	Bang
+	Dae
+	Gyeong
+	Nam
+	Sung
+	Baek
+}
+
+ship_names = {
+	Baekdu
+	Baekje
+	Buyeo
+	Chilbosan
+	Duman
+	Daedeok
+	Dongmyeongseong
+	"Eulji Mundeok"
+	Gayasan
+	Geumgang
+	Geumho
+	Goguryeo
+	Gumiho
+	"Gyeon Hwon"
+	Imjingang
+	Inmyeonjo
+	Jangbaek
+	"Jang Bogo"
+	Jirisan
+	Jeongjong
+	Kumgangsan
+	Myohyangsan
+	Nakdong
+	Samjogo
+	Sincheon
+	Silla
+	Sobaek
+	Taebaek
+	Taejo
+	Hanseong
+	Haemosu
+	Habaek
+	Hwaeomsa
+	Worak
+	Yuhwa
+	Yeong
+	"Yeon Gaesomun"
+	"Jeong Do-jeon"
+	"Yi Seong-gye"
+}
+</file>
+
+<file path="common/countries/Pandya.txt">
+graphical_culture = indiangfx
+color = {
+	255
+	229
+	66
+}
+
+revolutionary_colors = {
+	1
+	1
+	0
+}
+
+historical_idea_groups = {
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	maritime_ideas
+	defensive_ideas
+	innovativeness_ideas
+	expansion_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	indian_footsoldier
+	rajput_hill_fighters
+	indian_arquebusier
+	south_indian_musketeer
+	reformed_mughal_musketeer
+	indian_elephant
+	bhonsle_infantry
+	indian_shock_cavalry
+	maharathan_guerilla_warfare
+	sikh_rifle
+	tipu_sultan_rocket
+}
+
+monarch_names = {
+	"Nedunj Cheliyan #0" = 10
+	"Kadungon #0" = 10
+	"Maravarman #0" = 30
+	"Jatavarman #0" = 30
+	"Sundara #0" = 20
+	"Kulasekhara #0" = 20
+	"Parantaka #0" = 15
+	"Vira #0" = 20
+	"Parakrama #0" = 15
+	"Sadayavarman #0" = 10
+	"Arikesari #0" = 10
+	"Srivallabha #0" = 10
+	"Rajasimha #0" = 10
+	"Tribhuvana #0" = 5
+	"Vikrama #0" = 10
+	"Ugra #0" = 5
+	"Sendan #0" = 5
+	"Mangammal #0" = -10
+	"Meenakshi #0" = -10
+}
+
+leader_names = {
+	Nedunj
+	Kadungon
+	Maravarman
+	Jatavarman
+	Sundara
+	Kulasekhara
+	Parantaka
+	Vira
+	Sadayavarman
+	Arikesari
+	Srivallabha
+	Rajasimha
+	Tribhuvana
+	Sendan
+	Cheliyan
+	Ugra
+	Parakrama
+	Vikrama
+	Mudaliar
+	Thondaiman
+	Dalawa
+	Nayak
+}
+
+ship_names = {
+	Pandya
+	Madurai
+	Korkai
+	Karikal
+	Tenkasi
+	Tuticorin
+	Rameswaram
+	"Pearl of the South"
+	"Tiger of Madurai"
+	"Lord of the South"
+	Kaveri
+	Vaigai
+	Tamraparni
+	Porunai
+	"Southern Star"
+	"Sangam"
+	Cheran
+	Chola
+	"Ancient Tamil"
+	"Pearl Coast"
+	"Cape Comorin"
+	Amirtha
+	Amman
+	Arul
+	Chellam
+	Devi
+	Durga
+	Gayatri
+	Lakshmi
+	Meenakshi
+	Parvati
+	Sarasvati
+	Sita
+	Tamarai
+}
+</file>
+
+<file path="common/countries/Qara Khitai.txt">
+#Country Name: Qara Khitai (Western Liao)
+graphical_culture = asiangfx
+color = {
+	0
+	0
+	102
+}
+
+revolutionary_colors = {
+	10
+	0
+	10
+}
+
+historical_idea_groups = {
+	administrative_ideas
+	religious_ideas
+	trade_ideas
+	quantity_ideas
+	offensive_ideas
+	expansion_ideas
+	economic_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	"Abaoji #0" = 20
+	"Dashi #0" = 20
+	"Abaoqi #0" = 20
+	"Shulü #0" = 15
+	"Xiao #0" = 15
+	"Abaosheng #0" = 10
+	"Abaohuan #0" = 10
+	"Abaoli #0" = 10
+	"Abaolun #0" = 10
+	"Abaoyan #0" = 10
+	"Abaoying #0" = 10
+	"Abaosun #0" = 10
+	"Abaohu #0" = 10
+}
+
+leader_names = {
+	Abaoji
+	Dashi
+	Abaoqi
+	Shulü
+	Xiao
+	Abaosheng
+	Abaohuan
+	Abaoli
+	Abaolun
+	Abaoyan
+	Abaoying
+	Abaosun
+	Abaohu
+	Abaokun
+	Abaomin
+	Abaotong
+	Abaozhi
+	Abaoyong
+	Abaoshan
+	Abaofu
+	Abaoyuan
+	Abaoling
+	Abaozhen
+}
+
+ship_names = {
+	Balasagun
+	Beshbalik
+	Kashgar
+	Talas
+	Yelüzhou
+	Karakorum
+	Almaliq
+	Tashkent
+	Samarkand
+}
+
+army_names = {
+	Khitan
+	Guard
+	Left
+	Wing
+	Tumen
+	Right
+	Wing
+	Tumen
+	Central
+	Tumen
+	Western
+	Wing
+	Tumen
+	Eastern
+	Wing
+	Tumen
+	"$PROVINCE$ Tumen"
+}
+</file>
+
+<file path="common/countries/Qocho.txt">
+#Country Name: Qocho
+#TODO Fix
+graphical_culture = muslimgfx
+color = {
+	85
+	158
+	226
+}
+
+revolutionary_colors = {
+	10
+	5
+	0
+}
+
+historical_idea_groups = {
+	influence_ideas
+	trade_ideas
+	economic_ideas
+	offensive_ideas
+	defensive_ideas
+	quality_ideas
+	diplomatic_ideas
+	humanist_ideas
+}
+
+historical_units = {
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Arslan #0" = 20
+	"Temur #0" = 15
+	"Kutlug #0" = 15
+	"Yusuf #0" = 10
+	"Masud #0" = 10
+	"Ahmad #0" = 10
+	"Muhammad #0" = 10
+	"Abdullah #0" = 10
+	"Sultan #0" = 5
+	"Khan #0" = 5
+}
+
+leader_names = {
+	Arslan
+	Temur
+	Kutlug
+	Yusuf
+	Masud
+	Ahmad
+	Muhammad
+	Abdullah
+	Sultan
+	Khan
+	Beg
+	Oghul
+	Tughluq
+	Qutb
+	Nasir
+}
+
+ship_names = {
+	Qocho Glory
+	Uyghur Pride
+	Silk Road Voyager
+	Turpan Defender
+	Kashgar Trader
+}
+</file>
+
+<file path="common/countries/Silla.txt">
+#Country Name: Silla
+graphical_culture = asiangfx
+color = {
+	46
+	106
+	208
+}
+
+revolutionary_colors = {
+	14
+	0
+	14
+}
+
+historical_idea_groups = {
+	religious_ideas
+	offensive_ideas
+	defensive_ideas
+	administrative_ideas
+	diplomatic_ideas
+	trade_ideas
+	economic_ideas
+	naval_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Bak Hyeokgeose #0" = 20
+	"Namhae #0" = 15
+	"Yuri #0" = 15
+	"Talhae #0" = 15
+	"Pasa #0" = 10
+	"Jima #0" = 10
+	"Ilseong #0" = 10
+	"Adalla #0" = 10
+	"Beolhyu #0" = 10
+	"Naehae #0" = 10
+	"Jobun #0" = 10
+	"Cheomhae #0" = 10
+	"Michu #0" = 15
+	"Yurye #0" = 10
+	"Girim #0" = 10
+	"Heulhae #0" = 10
+	"Naemul #0" = 15
+	"Silseong #0" = 10
+	"Nulji #0" = 15
+	"Jabi #0" = 10
+	"Soji #0" = 10
+	"Jijeung #0" = 15
+	"Beopheung #0" = 20
+	"Jinheung #0" = 25
+	"Jinji #0" = 10
+	"Jinpyeong #0" = 20
+	"Seondeok #1" = 15
+	"Jindeok #1" = 10
+	"Munmu #0" = 25
+	"Sinmun #0" = 15
+	"Hyoso #0" = 10
+	"Seongdeok #0" = 20
+	"Hyoseong #0" = 15
+	"Gyeongdeok #0" = 20
+	"Hyegong #0" = 10
+	"Seondeok #0" = 15
+	"Wonseong #0" = 15
+	"Sosong #0" = 10
+	"Aejang #0" = 10
+	"Heondeok #0" = 10
+	"Heungdeok #0" = 10
+	"Huigang #0" = 10
+	"Minae #0" = 10
+	"Sinmu #0" = 10
+	"Munseong #0" = 15
+	"Heongang #0" = 10
+	"Jeonggang #0" = 10
+	"Jinseong #1" = 15
+	"Hyogong #0" = 10
+	"Sindeok #0" = 10
+	"Gyeongmyeong #0" = 10
+	"Gyeongae #0" = 10
+	"Gyeongsun #0" = 10
+}
+
+leader_names = {
+	Kim
+	Bak
+	Seok
+	Yi
+	Choi
+	Jeong
+	Kang
+	Cho
+	Yun
+	Jang
+	Lim
+	Han
+	Oh
+	Seo
+	Shin
+	Kwon
+	Hwang
+	An
+	Song
+	Jeon
+	Hong
+	Go
+	Moon
+	Yang
+	Son
+	Bae
+	Sim
+	Won
+	Heo
+	Nam
+	Min
+	Noh
+	Jeong
+	Ha
+	Joo
+	Cha
+	Chae
+	Ma
+	Jin
+	Yoo
+	Tang
+}
+
+ship_names = {
+	Gyeongju
+	Bulguksa
+	Seokguram
+	Cheomseongdae
+	Banwolseong
+	Wolseong
+	Hwangnyongsa
+	Bunhwangsa
+	Gameunsa
+	Sacheonwang
+	Golgulsa
+	Namsan
+	Toham
+	Geumgang
+	Nakdong
+	Hyeongsan
+	Taehwa
+	Gaya
+	Munmu
+	Jinheung
+	Beopheung
+	Wonhyo
+	Uisang
+	Wonhyo
+	Seolchong
+	Choe
+	Gim
+	Wonhyeon
+	Baekje
+	Goguryeo
+	Unified
+	Gyerim
+	Seorabeol
+	Geumseong
+	Silla
+	Jinhan
+	Samhan
+	Byeonhan
+	Mahan
+}
+</file>
+
+<file path="common/countries/Tamna.txt">
+#Country Name: Tamna
+graphical_culture = asiangfx
+color = {
+	136
+	0
+	21
+}
+
+revolutionary_colors = {
+	16
+	8
+	16
+}
+
+historical_idea_groups = {
+	maritime_ideas
+	naval_ideas
+	trade_ideas
+	exploration_ideas
+	defensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Go #0" = 25
+	"Yang #0" = 20
+	"Bu #0" = 15
+	"Seong #0" = 15
+	"Wang #0" = 10
+	"Kim #0" = 10
+	"Choe #0" = 10
+	"Lee #0" = 10
+	"Park #0" = 5
+	"Hyeon #0" = 5
+	"Guk #0" = 5
+	"Donaeko #0" = 10
+	"Silla #0" = 5
+	"Wondeok #0" = 5
+	"Seongju #0" = 5
+	"Myeongnim #0" = 5
+}
+
+leader_names = {
+	Go
+	Yang
+	Bu
+	Seong
+	Wang
+	Kim
+	Choe
+	Lee
+	Park
+	Hyeon
+	Guk
+	Jin
+	Song
+	Kang
+	Jang
+	Yun
+	Han
+	Hong
+	Yu
+	Jeong
+	Cho
+	Woo
+	Do
+	Ma
+	Min
+	Seo
+	Son
+	An
+	O
+	Jeon
+	Ha
+	Heo
+	Kwak
+	Lim
+	Won
+	Kwon
+	Hwang
+	Bae
+}
+
+ship_names = {
+	Jeju
+	Hallasan
+	Seongsan
+	Udo
+	Marado
+	Cheonjiyeon
+	Cheonjeyeon
+	Jusangjeolli
+	Yongduam
+	Manjanggul
+	Geomunoreum
+	Seongpanak
+	Gwaneumsa
+	Tamna
+	Daejeong
+	Jungmun
+	Seogwipo
+	Jocheon
+	Gujwa
+	Aewol
+	Hanrim
+	Hyeopjae
+	Biyangdo
+	Beophwansa
+	Sanbanggulsa
+	Yakcheonsa
+	Seongeup
+	Pyoseon
+	Namwon
+	Andeok
+	Daehan
+	Gosan
+	Donggwi
+	Seogwi
+	Namje
+	Bukje
+}
+</file>
+
+<file path="common/countries/Uyghuristan.txt">
+#Country Name: Uyghuristan
+graphical_culture = muslimgfx
+color = {
+	85
+	158
+	226
+}
+
+revolutionary_colors = {
+	10
+	5
+	0
+}
+
+historical_idea_groups = {
+	influence_ideas
+	trade_ideas
+	economic_ideas
+	offensive_ideas
+	defensive_ideas
+	quality_ideas
+	diplomatic_ideas
+	humanist_ideas
+}
+
+historical_units = {
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Arslan #0" = 20
+	"Temur #0" = 15
+	"Kutlug #0" = 15
+	"Yusuf #0" = 10
+	"Masud #0" = 10
+	"Ahmad #0" = 10
+	"Muhammad #0" = 10
+	"Abdullah #0" = 10
+	"Sultan #0" = 5
+	"Khan #0" = 5
+}
+
+leader_names = {
+	Arslan
+	Temur
+	Kutlug
+	Yusuf
+	Masud
+	Ahmad
+	Muhammad
+	Abdullah
+	Sultan
+	Khan
+	Beg
+	Oghul
+	Tughluq
+	Qutb
+	Nasir
+}
+
+ship_names = {
+	Uyghur Pride
+	Silk Road Voyager
+	Turpan Defender
+	Kashgar Trader
+}
+</file>
+
+<file path="common/countries/Xia.txt">
+#Country Name: Western Xia (Tangut)
+graphical_culture = asiangfx
+color = {
+	255
+	255
+	255
+}
+
+revolutionary_colors = {
+	1
+	0
+	1
+}
+
+historical_idea_groups = {
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Miwo #0" = 20
+	"Dashi #0" = 20
+	"Weilu #0" = 20
+	"Zhiyin #0" = 20
+	"Chule #0" = 20
+	"Dangguo #0" = 20
+	"Sidu #0" = 20
+	"Baolu #0" = 20
+	"Zailin #0" = 20
+	"Chimu #0" = 20
+	"Qianlu #0" = 20
+	"Xilu #0" = 20
+	"Heluo #0" = 20
+	"Dalu #0" = 20
+	"Yelu #0" = 20
+	"Tonglu #0" = 20
+	"Jialuo #0" = 20
+}
+
+leader_names = {
+	Minglu
+	Chulei
+	Zhiyin
+	Bolu
+	Milu
+	Silu
+	Tonglu
+	Dashi
+	Heluo
+	Qianlu
+	Yelu
+	Chimu
+	Zailin
+	Fulu
+	Jialuo
+	Talu
+	Chalu
+	Shilu
+	Balu
+	Mili
+}
+
+ship_names = {
+	Ningxia
+	Ordos
+	Hetao
+	Alxa
+	Liangzhou
+	Zhangye
+	Yumen
+	Taozhou
+	Pingliang
+	Tianshui
+	Lanzhou
+	Xining
+	Anding
+}
+</file>
+
+<file path="common/country_tags/forgotten_dynasties_countries.txt">
+BAE = "countries/Baekje.txt"
+GGY = "countries/Goguryeo.txt"
+GOR = "countries/Goryeo.txt"
+CHN = "countries/Han.txt"
+SLA = "countries/Silla.txt"
+TAM = "countries/Tamna.txt"
+XIA = "countries/Xia.txt"
+QKH = "countries/Qara Khitai.txt"
+LIA = "countries/Liao.txt"
+JLY = "countries/Jalayirids.txt"
+PDY = "countries/Pandya.txt"
+MJN = "countries/Majin.txt"
+QOC = "countries/Qocho.txt"
+UYG = "countries/Uyghuristan.txt"
+</file>
+
+<file path="common/event_modifiers/forgotten_dynasties_modifiers.txt">
+# Jalayirid Modifiers
+jly_independent = {
+	prestige = 0.5
+	legitimacy = 0.5
+	liberty_desire = -10
+}
+
+jly_baghdad_restored = {
+	local_tax_modifier = 0.25
+	local_unrest = -2
+}
+
+jly_qara_qoyunlu_defeated = {
+	army_tradition = 0.5
+	land_morale = 0.1
+	prestige = 1
+}
+
+jly_irrigation_restored = {
+	global_trade_goods_size_modifier = 0.15
+	development_cost = -0.1
+}
+
+jly_mesopotamian_canals = {
+	local_production_efficiency = 0.25
+	local_development_cost = -0.15
+}
+
+# Economic Missions Modifiers
+jly_cultural_synthesis = {
+	advisor_cost = -0.1
+	idea_cost = -0.05
+	culture_conversion_cost = -0.15
+}
+
+jly_ilkhanate_tax_system = {
+	global_tax_modifier = 0.15
+	administrative_efficiency = 0.05
+}
+
+jly_restored_isfahan = {
+	local_tax_modifier = 0.33
+	local_development_cost = -0.1
+	local_culture_conversion_cost = -0.25
+}
+
+jly_architectural_legacy = {
+	prestige = 1
+	build_cost = -0.1
+	great_project_upgrade_cost = -0.15
+}
+
+# Trade Missions Modifiers
+jly_silk_road_dominance = {
+	trade_efficiency = 0.15
+	global_trade_power = 0.1
+	caravan_power = 0.25
+}
+
+jly_unified_coinage = {
+	global_tax_income = 0.15
+	production_efficiency = 0.1
+	inflation_reduction = 0.05
+}
+
+# Qara Khitai Modifiers
+qkh_independent_khitai = {
+	prestige = 1
+	legitimacy = 1
+	diplomatic_reputation = 1
+}
+
+qkh_transoxiana_secured = {
+	stability_cost_modifier = -0.1
+	global_unrest = -1
+	legitimacy = 0.5
+}
+
+qkh_great_migration = {
+	movement_speed = 0.15
+	army_tradition = 0.5
+	manpower_recovery_speed = 0.1
+}
+
+qkh_steppe_conquest = {
+	cavalry_power = 0.1
+	land_attrition = -0.15
+	movement_speed = 0.1
+}
+
+qkh_mongolia_restored = {
+	legitimacy = 1
+	prestige = 1
+	cavalry_cost = -0.15
+}
+
+qkh_liao_legacy = {
+	prestige = 1
+	legitimacy = 1
+	administrative_efficiency = 0.05
+	diplomatic_reputation = 2
+}
+
+qkh_khitan_culture_preserved = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.1
+	global_unrest = -1
+}
+
+qkh_silk_road_traders = {
+	trade_efficiency = 0.15
+	global_trade_power = 0.1
+	caravan_power = 0.25
+}
+
+qkh_sinicized_administration = {
+	administrative_efficiency = 0.05
+	advisor_cost = -0.1
+	state_maintenance_modifier = -0.15
+}
+
+qkh_dual_script_legacy = {
+	idea_cost = -0.05
+	innovativeness_gain = 0.25
+	institution_spread_from_true_faith = 0.15
+}
+
+qkh_khitan_cavalry = {
+	cavalry_power = 0.15
+	cavalry_flanking = 0.5
+	shock_damage = 0.1
+}
+
+qkh_steppe_dominance = {
+	land_morale = 0.1
+	army_tradition = 1
+	horde_unity = 0.5
+	legitimacy = 0.5
+}
+
+qkh_western_conquests = {
+	land_maintenance_modifier = -0.1
+	core_creation = -0.15
+	governing_capacity_modifier = 0.1
+}
+
+qkh_persian_dominance = {
+	prestige = 1
+	legitimacy = 0.5
+	diplomatic_reputation = 1
+	tolerance_heathen = 2
+}
+
+# Qara Khitai - Return to Steppe Origins
+qkh_returned_to_steppes = {
+	horde_unity = 1
+	cavalry_power = 0.1
+	manpower_recovery_speed = 0.15
+}
+
+# Qara Khitai - Restored Western Liao
+qkh_restored_western_liao = {
+	prestige = 1
+	legitimacy = 1
+	administrative_efficiency = 0.05
+	diplomatic_reputation = 2
+	core_creation = -0.10
+}
+
+# Qara Khitai - Cultural Integration
+qkh_cultural_integration = {
+	local_culture_conversion_cost = -0.25
+	local_unrest = -1
+}
+
+# Majin Modifiers
+mjn_faith_strengthened = {
+	missionary_maintenance_cost = -0.1
+	local_unrest = -1
+}
+
+mjn_faith_unified = {
+	missionary_maintenance_cost = -0.2
+	local_unrest = -2
+	prestige = 0.5
+}
+
+mjn_spread_mahayana = {
+	missionary_maintenance_cost = -0.3
+	local_unrest = -3
+	prestige = 1
+	global_missionary_strength = 0.01
+}
+
+# Qocho Modifiers
+qoc_vajrayana_adopted = {
+	religious_unity = 0.1
+	tolerance_own = 1
+	prestige = 0.5
+	manpower_recovery_speed = 0.1
+}
+
+qoc_tarim_secured = {
+	development_cost = -0.1
+	local_manpower_modifier = 0.1
+}
+
+qoc_cultural_revival = {
+	religious_unity = 0.15
+	prestige = 0.5
+}
+</file>
+
+<file path="common/government_names/000_forgotten_dynasties_government_names.txt">
+ilkhanate_reformed = {
+	rank = {
+		1 = ILKHANATE
+		2 = ILKHANATE
+		3 = ILKHANATE
+	}
+	ruler_male = {
+		1 = ILKHAN
+		2 = ILKHAN
+		3 = ILKHAN
+	}
+	ruler_female = {
+		1 = ILKHATUN
+		2 = ILKHATUN
+		3 = ILKHATUN
+	}
+	consort_male = {
+		1 = KHAN
+		2 = KHAN
+		3 = KHAN
+	}
+	consort_female = {
+		1 = KHANUM
+		2 = KHANUM
+		3 = KHANUM
+	}
+	heir_male = {
+		1 = KHANZADEH
+		2 = KHANZADEH
+		3 = KHANZADEH
+	}
+	heir_female = {
+		1 = KHANUM
+		2 = KHANUM
+		3 = KHANUM
+	}
+	trigger = {
+		tag = ILK
+		government = monarchy
+		government = tribal
+	}
+}
+
+qara_khitai_khanate = {
+	rank = {
+		1 = KHANATE
+		2 = KHANATE
+		3 = KHAGANATE
+	}
+	ruler_male = {
+		1 = GURKHAN
+		2 = GURKHAN
+		3 = KHAGAN
+	}
+	ruler_female = {
+		1 = KHATUN
+		2 = KHATUN
+		3 = KHATUN
+	}
+	consort_male = {
+		1 = KHAN
+		2 = KHAN
+		3 = KHAN
+	}
+	consort_female = {
+		1 = KHATUN
+		2 = KHATUN
+		3 = KHATUN
+	}
+	heir_male = {
+		1 = KHANZADEH
+		2 = KHANZADEH
+		3 = KHANZADEH
+	}
+	heir_female = {
+		1 = KHATUN
+		2 = KHATUN
+		3 = KHATUN
+	}
+	trigger = {
+		tag = QKH
+		OR = {
+			government = monarchy
+			government = tribal
+		}
+	}
+}
+
+maitreya_government_names = {
+	rank = {
+		1 = DIVINE_KINGDOM
+		2 = DIVINE_KINGDOM
+		3 = DIVINE_EMPIRE
+	}
+
+	ruler_male = {
+		1 = MAITREYA
+		2 = MAITREYA
+		3 = MAITREYA
+	}
+
+	ruler_female = {
+		1 = MAITREYA
+		2 = MAITREYA
+		3 = MAITREYA
+	}
+	
+	heir_male = {
+		1 = PRINCE
+		2 = PRINCE
+		3 = PRINCE
+	}
+
+	heir_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+
+	consort_male = {
+		1 = DIVINE_CONSORT
+		2 = DIVINE_CONSORT
+		3 = DIVINE_CONSORT
+	}
+
+	consort_female = {
+		1 = DIVINE_CONSORT
+		2 = DIVINE_CONSORT
+		3 = DIVINE_CONSORT
+	}
+
+	trigger = {
+		has_reform = maitreya_kingdom
+	}
+}
+</file>
+
+<file path="common/government_reforms/forgotten_dynasties_reforms.txt">
+maitreya_theocratic_monarchy_mechanic = {
+	monarchy = yes
+	has_devotion = yes
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	royal_marriage = yes
+	different_religion_acceptance = -20
+	different_religion_group_acceptance = -50
+	heir = yes
+	queen = yes
+	can_customise_heir = no
+	basic_reform = yes	# = invisible/does not take up a slot
+	valid_for_nation_designer = no
+	custom_attributes = {
+		theocratic_monarchy_mechanic = yes
+		enables_divine_idea_group = yes
+		enables_aristocratic_idea_group = yes
+		locked_government_type = yes
+	}
+	modifiers = {
+		brahmins_hindu_influence_modifier = 0.1
+		church_loyalty_modifier = 0.1
+		church_influence_modifier = 0.05
+		nobles_influence_modifier = 0.05
+	}
+	is_eligible_for_hre_emperor = yes
+}
+
+maitreya_kingdom = {
+	icon = "divine_guidance_reform"
+	allow_normal_conversion = no
+	potential = {
+		tag = MJN
+		religion_group = eastern
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = korean
+			primary_culture = korean_new
+		}
+	}
+	potential = {
+		OR = {
+			primary_culture = korean
+			primary_culture = korean_new
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		custom_attributes = {
+			buffed_monastic_temples = yes
+			enable_karma_decision = yes			#Allows decision every 20 years to add or remove 10 Karma
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		states_general_mechanic = {
+			theocrats_statists = {
+				tolerance_own = 2
+				global_missionary_strength = 0.02
+				devotion = 1
+			}
+			monarchists = {
+				global_tax_modifier = 0.2
+				hostile_attrition = 1
+				legitimacy = 1
+			}
+		}
+	}
+	modifiers = {
+		missionaries = 1
+		yearly_harmony = 0.25
+		global_missionary_strength = 0.01
+		same_religion_advisor_cost = -0.15
+		tolerance_own = 1
+	}
+}
+</file>
+
+<file path="common/governments/forgotten_dynasties_governments.txt">
+maitreya_government = {
+	color = {
+		75
+		170
+		75
+	}
+	basic_reform = maitreya_theocratic_monarchy_mechanic
+	legacy_government = {
+		papal_government
+		theocratic_government
+		monastic_order_government
+		holy_state_legacy
+	}
+	reform_levels = {
+		theocratic_leadership = {
+			reforms = {
+				maitreya_kingdom
+			}
+		}
+		internal_vs_external_mission = {
+			reforms = {
+				internal_mission_reform
+				external_mission_reform
+				mission_to_civilize_reform
+				mission_to_kill_pirates_reform
+				balanced_mission_reform
+				commercial_mission_reform
+				mission_to_protect_reform
+				consulate_of_the_sea
+			}
+		}
+		education_of_the_state = {
+			reforms = {
+				kingdom_of_god_reform
+				education_of_the_bishop_reform
+				education_of_the_advisors_reform
+				education_of_the_missionaries_reform
+				education_of_the_people_reform
+			}
+		}
+		religoius_doctrine = {
+			reforms = {
+				i_am_the_church_reform
+				papal_embassy_reform
+				lands_for_the_monasteries_reform
+				focus_of_the_patriarchy_reform
+				#the_avestan_dogma_reform
+				zoroastrian_focus_reform
+				power_to_the_synagogoues_reform
+				head_of_the_reformed_church_reform
+				confucian_governing_reform
+				empower_buddhist_temples_reform
+				public_hindu_practices_reform
+				strengthen_shaman_privileges_reform
+				abolished_caste_system_reform
+				strengthen_the_ulema_reform
+				strengthen_the_dhimmi_reform
+				legacy_of_the_steppes_reform
+				state_and_shrines_intertwined_reform
+				embedded_norse_government_reform
+				strengthen_clergy_reform
+				curtail_clergy_power_reform
+				secure_clergy_power_reform
+				maintain_clergy_balance_of_power_reform
+				#1.35
+				fiqh_laws_reform
+				sufism_decree_reform
+				holy_synod_reform
+				strengthened_the_patriarchy_reform
+				head_of_the_patriarchy_reform
+			}
+		}
+		military_doctrines = {
+			reforms = {
+				organized_military_staff_reform
+				military_engineering_reform
+				defensive_stance_reform
+				sygnakhs_system_reform
+				sustained_discipline_reform
+				cavalry_warfare_reform
+				mercenary_leadership_reform
+				#Visible but locked
+				amphibious_specialization_reform
+				royal_marines_reform
+				maritime_military_reform
+				professional_navy_reform
+				doppelsoldner_reform
+				#Invisible until unlocked
+				expanded_devshirme_system_reform
+				reformed_ottoman_conscription_reform
+				mansure_army_reform
+				janissary_military_reform
+				wei_suo_system_reform
+				eight_banners_reform
+				green_standard_army_reform
+				ashigaru_reform
+				early_bushido_code_reform
+				the_righteous_army_reform
+				mansabdari_reform
+				rajput_military_leadership_reform
+				the_maratha_army_reform
+				subutais_strategies_reform
+				ahmudan_system_reform
+				ghazi_reform
+				the_cawa_regiments_reform
+				tercio_reform
+				fuero_militar_reform
+				ordennancas_reform
+				revive_the_almogavars_reform
+				volunteers_of_the_faith_reform
+				condottieri_contracts_reform
+				compagnie_dordonnance_reform
+				musketeers_reform
+				gendarmes_reform
+				general_war_commissariat_reform
+				swiss_mercenary_reform
+				allotment_system
+				boyars_army_reform
+				streltsy_reform
+				new_order_regiments_reform
+				reform_the_samurai_reform
+				staatse_leger_reform
+				watergeuzen_reform
+				cossacks_registry_reform
+				lessons_of_the_hussite_wars_reform
+				qollar_aghasi_regiments_reform
+				manrent_reform
+				merchant_arsenal_reform
+				tercios_reform
+				expanded_black_army_reform
+				#1.36
+				sparapet_office
+				legacy_of_the_seljuk_reform
+				modernized_furusiyya_reform
+				cawa_auxiliary_forces
+				#1.37
+				ayyubid_high_command
+				#1.37 Hungary
+				cuman_lancers_reform
+				#1.37 Bohemia
+				vozove_hradby_reform
+				russian_mercenary_guard_reform
+			}
+		}
+		secularization = {
+			reforms = {
+				partial_secularisation_reform
+				maintain_religious_head_reform
+				hereditary_religious_leadership_reform
+				crown_leader_reform
+				proclaim_republic_reform
+				battle_pope_reform
+				conciliarism_reform
+				#1.35
+				governing_senate_reform
+				enforced_autocracy_reform
+			}
+		}
+		clergy_in_administration = {
+			reforms = {
+				subservient_administrators_reform
+				religious_administrators_reform
+				permanent_marathas_council_reform
+				governmental_purbias_register_reform
+				loyal_nobility_reform
+				pious_merchants_reform
+				monastic_breweries_reform
+				warrior_monks_reform
+				#1.36
+				superiority_of_the_state_reform
+				divided_aristocracy_reform
+			}
+		}
+		economical_matters = {
+			reforms = {
+				empower_the_burghers_reform
+				curtail_the_burghers_reform
+				mercantilistic_approach_reform
+				free_trade_reform
+				embrace_the_economic_theory_reform
+				war_economy_reform
+				#Visible but locked
+				lockean_proviso_reform
+				new_world_exploitation_reform
+				#Visible when unlocked
+				#1.35
+				vodka_of_the_crown_reform
+				jap_gokaido_reform
+				thalassocracy_reform
+				royal_charters_reform
+				commercial_trade_empire_reform
+				#1.36
+				karimi_stations_reform
+				#1.37
+				merchant_representation_reform
+				modern_economics_reform
+				chinampa_farms_reform
+			}
+		}
+		divine_cause = {
+			reforms = {
+				safeguard_holy_sites_reform
+				combat_heresy_reform
+				expel_heathens_reform
+				guru_advisors_reform
+				pursuit_of_knowledge_reform
+				#1.37
+				seven_provinces_reform
+			}
+		}
+		separation_of_power_theocracy = {
+			reforms = {
+				clerical_commission_reform
+				divine_guidance_reform
+				theocratic_democracy_reform
+				constitional_theocracy_reform
+				regionally_elected_commanders
+				monastic_elections_reform
+				commander_king_reform
+				admiral_king_reform
+			}
+		}
+		nature_of_faith = {
+			reforms = {
+				church_and_state_reform
+				religious_harmony_reform
+				god_and_man_reform
+				organising_our_religion_reform
+				faith_and_power_reform
+				belief_and_unity_reform
+			}
+		}
+		culture_within_the_state = {
+			reforms = {
+				religious_culture_reform
+				harmonization_of_cultures_reform
+				cultural_safe_haven_reform
+				taxation_of_the_foreigners_reform
+			}
+		}
+		faith_and_the_world = {
+			reforms = {
+				religion_in_one_country_reform
+				religious_permanent_revolution_reform
+				many_fingers_of_god_reform
+				priestly_autonomy_reform
+				proclaim_religious_head_reform
+				all_under_tengri_reform
+				state_of_theologians_reform
+				divinity_through_craftsmanship_reform
+				#1.35
+				peters_government_reform
+			}
+		}
+	}
+	exclusive_reforms = {
+		prussian_theocratic_reform
+		militarized_crusader_order_reform
+		monastic_elections_reform
+	}
+	exclusive_reforms = {
+		dutch_theocracy_reform
+		theocratic_democracy_reform
+	}
+	exclusive_reforms = {
+		dutch_theocracy_reform
+		constitional_theocracy_reform
+	}
+	exclusive_reforms = {
+		dutch_theocracy_reform
+		regionally_elected_commanders
+	}
+	exclusive_reforms = {
+		dutch_theocracy_reform
+		monastic_elections_reform
+	}
+	exclusive_reforms = {
+		dutch_theocracy_reform
+		commander_king_reform
+	}
+	exclusive_reforms = {
+		dutch_theocracy_reform
+		admiral_king_reform
+	}
+}
+</file>
+
+<file path="common/ideas/forgotten_dynasties_country_ideas.txt">
+# Baekje Ideas
+BAE_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		diplomatic_reputation = 1
+	}
+	bonus = {
+		light_ship_power = 0.1
+	}
+	trigger = {
+		tag = BAE
+	}
+	free = yes
+	baekje_diplomacy = {
+		diplomatic_upkeep = 1
+	}
+	baekje_artisans = {
+		development_cost = -0.1
+	}
+	baekje_sea_trade = {
+		merchants = 1
+		trade_efficiency = 0.1
+	}
+	baekje_walled_cities = {
+		defensiveness = 0.15
+	}
+	baekje_cultural_export = {
+		prestige = 1
+	}
+	baekje_merchant_network = {
+		trade_efficiency = 0.1
+	}
+	baekje_maritime_tech = {
+		naval_forcelimit_modifier = 0.2
+	}
+}
+
+# Goguryeo Ideas  
+GGY_ideas = {
+	start = {
+		land_morale = 0.15
+		fort_maintenance_modifier = -0.1
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.2
+	}
+	trigger = {
+		tag = GGY
+	}
+	free = yes
+	ggy_northern_forts = {
+		defensiveness = 0.15
+	}
+	ggy_military_tradition = {
+		army_tradition = 0.5
+	}
+	ggy_armored_cavalry = {
+		cavalry_power = 0.15
+	}
+	ggy_frontier_management = {
+		core_creation = -0.15
+	}
+	ggy_dongmyeong_traditions = {
+		army_tradition_decay = -0.01
+	}
+	ggy_maritime_patrol = {
+		galley_power = 0.15
+	}
+	ggy_strategic_depth = {
+		manpower_recovery_speed = 0.2
+	}
+}
+
+# Goryeo Ideas
+GOR_ideas = {
+	start = {
+		technology_cost = -0.05
+		advisor_cost = -0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = GOR
+	}
+	free = yes
+	goryeo_uijeongbu = {
+		advisor_pool = 1
+	}
+	goryeo_civil_service = {
+		stability_cost_modifier = -0.15
+	}
+	goryeo_celadon_trade = {
+		trade_efficiency = 0.1
+	}
+	goryeo_military_reform = {
+		discipline = 0.05
+	}
+	goryeo_geobukseon = {
+		ship_durability = 0.15
+	}
+	goryeo_hyanggyo = {
+		technology_cost = -0.1
+	}
+	goryeo_trade_hubs = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+# Han Dynasty Ideas
+CHN_ideas = {
+	start = {
+		core_creation = -0.25
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+	trigger = {
+		tag = CHN
+	}
+	free = yes
+	chn_reunification_dream = {
+		core_creation = -0.25
+	}
+	chn_mandate_of_heaven = {
+		meritocracy = 1
+		administrative_efficiency = 0.05
+	}
+	chn_silk_road_mastery = {
+		caravan_power = 0.2
+		global_trade_goods_size_modifier = 0.1
+	}
+	chn_imperial_bureaucracy = {
+		state_maintenance_modifier = -0.15
+		global_autonomy = -0.05
+	}
+	chn_confucian_scholarship = {
+		technology_cost = -0.1
+		idea_cost = -0.1
+	}
+	chn_great_wall_legacy = {
+		defensiveness = 0.05
+		garrison_size = 0.25
+	}
+	chn_liu_clan_heritage = {
+		discipline = 0.05
+	}
+}
+
+# Liao Ideas
+LIA_ideas = {
+	start = {
+		cavalry_power = 0.1
+		administrative_efficiency = 0.05
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.15
+	}
+	trigger = {
+		tag = LIA
+	}
+	free = yes
+	liao_dual_administration = {
+		governing_capacity_modifier = 0.1
+		core_creation = -0.1
+	}
+	liao_khitan_cavalry = {
+		cavalry_power = 0.15
+	}
+	liao_cultural_tolerance = {
+		tolerance_heretic = 2
+	}
+	liao_iron_production = {
+		production_efficiency = 0.1
+	}
+	liao_northern_defenses = {
+		defensiveness = 0.15
+	}
+	liao_trade_networks = {
+		merchants = 1
+	}
+	liao_military_reforms = {
+		discipline = 0.05
+	}
+}
+
+# Qara Khitai Ideas
+QKH_ideas = {
+	start = {
+		cavalry_power = 0.15
+		religious_unity = 0.15
+	}
+	bonus = {
+		cavalry_flanking = 0.5
+	}
+	trigger = {
+		tag = QKH
+	}
+	free = yes
+	qkh_khitan_legacy = {
+		prestige = 1
+	}
+	qkh_religious_tolerance = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	qkh_nomadic_administration = {
+		core_creation = -0.15
+	}
+	qkh_steppe_cavalry = {
+		cavalry_power = 0.15
+	}
+	qkh_silk_road_taxation = {
+		caravan_power = 0.15
+	}
+	qkh_cultural_synthesis = {
+		advisor_pool = 1
+	}
+	qkh_mobile_warfare = {
+		movement_speed = 0.1
+	}
+}
+
+# Silla Ideas
+SLA_ideas = {
+	start = {
+		religious_unity = 0.25
+		core_creation = -0.1
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+	trigger = {
+		tag = SLA
+	}
+	free = yes
+	silla_buddhist_kingdom = {
+		tolerance_own = 2
+	}
+	silla_bone_rank_system = {
+		advisor_pool = 1
+	}
+	silla_hwarang = {
+		army_tradition = 0.5
+	}
+	silla_unified_administration = {
+		governing_capacity_modifier = 0.1
+	}
+	silla_cheomseongdae = {
+		technology_cost = -0.1
+	}
+	silla_trade_networks = {
+		caravan_power = 0.2
+	}
+	silla_cultural_synthesis = {
+		prestige = 1
+		diplomatic_reputation = 1
+	}
+}
+
+# Tamna Ideas
+TAM_ideas = {
+	start = {
+		naval_morale = 0.15
+		trade_efficiency = 0.1
+	}
+	bonus = {
+		privateer_efficiency = 0.25
+	}
+	trigger = {
+		tag = TAM
+	}
+	free = yes
+	tamna_island_fortress = {
+		defensiveness = 0.2
+	}
+	tamna_maritime_culture = {
+		light_ship_cost = -0.15
+	}
+	tamna_tribute_system = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
+	}
+	tamna_horse_breeding = {
+		cavalry_power = 0.15
+	}
+	tamna_island_traders = {
+		merchants = 1
+	}
+	tamna_coastal_defense = {
+		galley_power = 0.2
+	}
+	tamna_cultural_autonomy = {
+		tolerance_heretic = 2
+	}
+}
+
+# Western Xia Ideas
+XIA_ideas = {
+	start = {
+		caravan_power = 0.2
+		cavalry_power = 0.1
+	}
+	bonus = {
+		land_attrition = -0.15
+	}
+	trigger = {
+		tag = XIA
+	}
+	free = yes
+	xia_tangut_script = {
+		technology_cost = -0.1
+	}
+	xia_silk_road_control = {
+		trade_efficiency = 0.1
+		caravan_power = 0.15
+	}
+	xia_desert_warfare = {
+		land_attrition = -0.1
+	}
+	xia_buddhist_patronage = {
+		tolerance_own = 2
+	}
+	xia_nomadic_cavalry = {
+		cavalry_power = 0.15
+	}
+	xia_frontier_fortresses = {
+		defensiveness = 0.15
+	}
+	xia_cultural_synthesis = {
+		diplomatic_reputation = 1
+	}
+}
+
+# Jalayirid Ideas
+JLY_ideas = {
+	start = {
+		cavalry_power = 0.15
+		core_creation = -0.1
+	}
+	bonus = {
+		cavalry_flanking = 0.5
+	}
+	trigger = {
+		tag = JLY
+	}
+	free = yes
+	jly_legacy_of_hasan_buzurg = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	jly_turko_mongol_administration = {
+		num_accepted_cultures = 1
+	}
+	jly_baghdad_calligraphy_schools = {
+		advisor_cost = -0.1
+	}
+	jly_steppe_mobility = {
+		movement_speed = 0.15
+		cavalry_cost = -0.1
+	}
+	jly_mesopotamian_irrigation = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	jly_sufi_mystics = {
+		tolerance_heretic = 2
+	}
+	jly_tribal_confederacy = {
+		global_manpower_modifier = 0.15
+	}
+}
+
+# Pandya Ideas - Upgraded Dravidian Ideas
+PDY_ideas = {
+	start = {
+		religious_unity = 0.5
+		production_efficiency = 0.15
+	}
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	trigger = {
+		tag = PDY
+	}
+	free = yes
+	pdy_merchants_of_the_south = {
+		trade_range_modifier = 0.33
+		merchants = 1
+	}
+	pdy_pearl_fisheries = {
+		global_trade_goods_size_modifier = 0.1
+		trade_steering = 0.15
+	}
+	pdy_polygar_warriors = {
+		global_manpower_modifier = 0.15
+		land_morale = 0.1
+	}
+	pdy_tamil_mercenaries = {
+		merc_maintenance_modifier = -0.2
+		mercenary_discipline = 0.1
+	}
+	pdy_temple_patronage = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+		stability_cost_modifier = -0.1
+	}
+	pdy_sangam_literature = {
+		prestige = 1
+		prestige_decay = -0.01
+	}
+	pdy_pandyan_trade_empire = {
+		trade_efficiency = 0.1
+		ship_trade_power_modifier = 0.2
+	}
+}
+
+MJN_ideas = {
+	start = {
+		tolerance_heretic = -2
+		tolerance_heathen = -2
+		missionaries = 2
+	}
+	
+	bonus = {
+		manpower_in_true_faith_provinces = 0.33
+	}
+	
+	trigger = {
+		tag = MJN
+	}
+	free = yes
+	
+	mjn_faith_and_morale = {
+		land_morale = 0.1
+		naval_morale = 0.1
+	}
+	mjn_blessings_of_maitreya = {	
+		institution_spread_from_true_faith = 0.5
+	}
+	mjn_diligent_maintenance = {
+		fort_maintenance_modifier = -0.15
+	}
+	mjn_word_of_maitreya = {
+		global_missionary_strength = 0.02
+	}
+	mjn_religious_harmony = {
+		religious_unity = 0.5
+	}
+	mjn_unity_of_maitreya = {
+		tolerance_own = 1
+	}
+	mjn_zealous_mission = {
+		discipline = 0.05
+	}
+}
+
+# Qocho Ideas
+QOC_ideas = {
+	start = {
+		trade_efficiency = 0.15
+		tolerance_own = 1
+	}
+	bonus = {
+		merchants = 1
+	}
+	trigger = {
+		tag = QOC
+	}
+	free = yes
+	qoc_silk_road_mastery = {
+		caravan_power = 0.2
+	}
+	qoc_uyghur_cavalry = {
+		cavalry_power = 0.1
+	}
+	qoc_turpan_oases = {
+		development_cost = -0.1
+	}
+	qoc_buddhist_pilgrimage = {
+		religious_unity = 0.1
+	}
+	qoc_tarim_culture = {
+		culture_conversion_cost = -0.25
+	}
+	qoc_desert_nomads = {
+		manpower_recovery_speed = 0.2
+	}
+	qoc_ancient_kingdom = {
+		diplomatic_reputation = 1
+	}
+}
+</file>
+
+<file path="common/on_actions/forgotten_dynasties_on_actions.txt">
+on_country_released = {
+	if = {
+		limit = {
+			tag = JLY
+		}
+		set_dynasty = "Jalayirid"
+		define_heir = {
+			dynasty = "Jalayirid"
+		}
+	}
+}
+
+on_monarch_death = {
+	if = {
+		limit = {
+			tag = KOR
+			NOT = {
+				dynasty = "Yi"
+			}
+		}
+		korea_region = {
+			add_core = GOR
+		}
+		set_country_flag = flavor_gor
+		country_event = {
+			id = flavor_gor.1
+		}
+	}
+}
+</file>
+
+<file path="common/rebel_types/goryeo_rebels.txt">
+goryeo_rebels = {
+	color = {
+		25
+		180
+		25
+	}
+	area = nation_rebel_tag	# Stays within provinces of their rebel tag
+	government = any	# No special preference
+	defection = nation_rebel_tag	# If the country seeks independence, defection specifies what type of provinces it wants.
+	independence = nation_rebel_tag	# Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
+	defect_delay = 60	# Can spontaneously declare independence after 60 months (earliest)
+	unit_transfer = yes	# Units switch allegiance after enforcing demands.
+	gfx_type = culture_province
+	will_relocate = yes
+	resilient = yes
+	reinforcing = yes
+	general = yes
+	disband_on_leader_death = no
+	smart = yes
+	artillery = 0.1
+	infantry = 0.6
+	cavalry = 0.3
+	morale = 1
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes
+	handle_action_change_culture = yes
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 0
+	}
+	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+	# Province Scope
+	siege_won_trigger = {
+		culture = REB
+	}
+	siege_won_effect = {
+		if = {
+			limit = {
+				NOT = {
+					is_core = REB
+				}
+			}
+			add_core = REB
+		}
+		add_nationalism = 10		# Add ten extra years of nationalism
+	}
+	# Country scope
+	can_negotiate_trigger = {
+		is_at_war = no
+	}
+	# Country scope
+	can_enforce_trigger = {
+		always = yes     
+	}
+	# Localisation for their demands
+	demands_description = "nationalist_rebels_demand"
+	# Country scope
+	demands_enforced_effect = {
+		KOR = {
+			change_tag = GOR
+			remove_government_reform = korean_monarchy
+			set_dynasty = "Wang"
+			define_heir = {
+				dynasty = "Wang"
+			}
+		}
+	}
+}
+</file>
+
+<file path="decisions/FormHan.txt">
+country_decisions = {
+	form_great_han = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_han_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = CHN
+			}
+			tag = SHU
+			OR = {
+				culture_group = east_asian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = north_china_region
+			region = south_china_region
+			region = xinan_region
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 2
+			num_of_owned_provinces_with = {
+				superregion = china_superregion
+				value = 30
+			}
+			owns_core_province = 700
+			700 = {
+				is_state = yes
+			}
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				is_emperor_of_china = yes
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Common Sense"
+				}
+				government_rank = 3
+			}
+			else = {
+				total_development = 1000
+			}
+		}
+		effect = {
+			700 = {
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				change_province_name = "Chang'an"
+				rename_capital = "Chang'an"
+				move_capital_effect = yes
+			}
+			change_tag = CHN
+			remove_non_electors_emperors_from_empire_effect = yes
+			china_superregion = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = CHN
+			}
+			add_prestige = 20
+			set_country_flag = formed_han_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+}
+</file>
+
+<file path="decisions/FormIlkhanate.txt">
+country_decisions = {
+	form_ilkhanate_nation = {
+		major = yes
+		potential = {
+			OR = {
+				tag = JLY
+				tag = TBR
+			}
+			NOT = {
+				has_country_flag = formed_ilkhanate_flag
+			}
+			NOT = {
+				exists = ILK
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 410				# Baghdad
+				province_id = 416				# Tabriz
+				province_id = 2207				# Maragheh
+				province_id = 4338				# Soltaniyeh
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 410			# Baghdad
+			owns_core_province = 416			# Tabriz
+			owns_core_province = 2207			# Maragheh
+			owns_core_province = 4338			# Soltaniyeh
+			num_of_owned_provinces_with = {
+				value = 20
+				region = persia_region
+			}
+		}
+		effect = {
+			change_tag = ILK
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			persia_superregion = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ILK
+			}
+			change_primary_culture = perso_mongolic
+			add_accepted_culture_or_dip_power = {
+				culture = persian
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = mongol
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_ilkhanate_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
+</file>
+
+<file path="decisions/FormLiao.txt">
+country_decisions = {
+	form_liao = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_liao_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = LIA
+			}
+			primary_culture = khitan
+			OR = {
+				tag = QKH
+				has_country_flag = western_liao_formed_flag
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4203				# Linhuang / Ju Ud
+				province_id = 1816				# Xijin / Beijing
+				province_id = 697				# Datong / Western Capital
+				province_id = 4652				# Liaoyang / Haicheng
+				AND = {
+					OR = {
+						region = manchuria_region
+						region = north_china_region
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 2
+			owns_core_province = 4203			# Linhuang / Ju Ud
+			owns_core_province = 1816			# Xijin / Beijing
+			owns_core_province = 697			# Datong
+			owns_core_province = 4652			# Liaoyang / Haicheng
+			1816 = {
+				is_state = yes
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					region = manchuria_region
+					region = north_china_region
+				}
+			}
+		}
+		effect = {
+			1816 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_province_name = Xijin
+				rename_capital = Xijin
+				move_capital_effect = yes
+			}
+			4203 = {
+				# Linhuang / Ju Ud
+				change_province_name = Linhuang
+			}
+			697 = {
+				# Datong
+				change_province_name = Zhongdu
+			}
+			4652 = {
+				# Liaoyang / Haicheng
+				change_province_name = Liaoyang
+			}
+			723 = {
+				# Xilin Gol
+				change_province_name = Xanadu
+			}
+			change_tag = LIA
+			add_prestige = 20
+			set_country_flag = formed_liao_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
+			}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+}
+</file>
+
+<file path="decisions/FormMajin.txt">
+country_decisions = {
+	form_majin_nation = {
+		major = yes
+		potential = {
+			or = {
+				primary_culture = korean
+				primary_culture = korean_new
+			}
+			NOT = {
+				has_country_flag = formed_majin_flag
+			}
+			NOT = {
+				exists = MJN
+			}
+			government = monarchy
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+			full_idea_group = religious_ideas
+		}
+		effect = {
+			change_tag = MJN
+			change_religion = mahayana
+			change_government = maitreya_government
+			add_government_reform = maitreya_kingdom
+			set_country_flag = formed_majin_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	taebong_name = {
+		potential = {
+			tag = MJN
+			OR = {
+				primary_culture = korean
+				primary_culture = korean_new
+			}
+			NOT = {
+				has_country_flag = is_TAEBONG_flag
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = is_TAEBONG_flag
+			override_country_name = TAEBONG
+		}
+	}
+}
+</file>
+
+<file path="decisions/FormPandya.txt">
+country_decisions = {
+	form_pandya_nation = {
+		major = yes
+		potential = {
+			tag = MAD
+			NOT = {
+				has_country_flag = formed_pandya_flag
+			}
+			NOT = {
+				exists = PDY
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = coromandel_region
+				area = malabar_area
+				area = mysore_area
+				area = rayalaseema_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			# Must own all of Coromandel region
+			coromandel_region = {
+				type = all
+				owned_by = ROOT
+			}
+			# Must own Malabar area
+			malabar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			# Must own Mysore area
+			mysore_area = {
+				type = all
+				owned_by = ROOT
+			}
+			# Must own Rayalaseema area
+			rayalaseema_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = PDY
+			set_country_flag = formed_pandya_flag
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 3
+			# Claims on South India
+			deccan_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = PDY
+			}
+			west_india_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = PDY
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_capital = 539			# Madurai
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
+</file>
+
+<file path="decisions/FormUyghuristan.txt">
+country_decisions = {
+	form_uyghuristan = {
+		major = yes
+		potential = {
+			primary_culture = uyghur
+			NOT = {
+				has_country_flag = formed_uyghuristan_flag
+			}
+			NOT = {
+				exists = QOC
+			}
+			government = monarchy
+		}
+		provinces_to_highlight = {
+			NOT = {
+				owned_by = KAS
+			}
+			culture = uyghur
+		}
+		allow = {
+			owns_all_provinces = {
+				culture = uyghur
+			}
+		}
+		effect = {
+			change_tag = UYG
+			set_country_flag = formed_uyghuristan_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+</file>
+
+<file path="decisions/QocDecisions.txt">
+country_decisions = {
+	form_qocho = {
+		major = yes
+		potential = {
+			primary_culture = uyghur
+			NOT = {
+				has_country_flag = formed_qocho_flag
+			}
+			NOT = {
+				exists = QOC
+			}
+			government = monarchy
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4207
+				province_id = 2122
+				province_id = 4206
+				province_id = 713
+			}
+		}
+		allow = {
+			owns = 4207			# Turpan
+			owns = 713			# Bechbaliq
+			owns = 2122			# Hami
+			owns = 4206			# Balikul
+		}
+		effect = {
+			change_tag = QOC
+			set_country_flag = formed_qocho_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	adopt_vajrayana = {
+		major = yes
+		potential = {
+			tag = QOC
+			NOT = {
+				religion = vajrayana
+			}
+			NOT = {
+				has_country_flag = adopted_vajrayana_flag
+			}
+		}
+		allow = {
+			stability = 2
+			full_idea_group = religious_ideas
+		}
+		effect = {
+			change_religion = vajrayana
+			add_country_modifier = {
+				name = qoc_vajrayana_adopted
+				duration = -1
+			}
+			set_country_flag = adopted_vajrayana_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+</file>
+
+<file path="events/EventsGor.txt">
+namespace = flavor_gor
+country_event = {
+	id = flavor_gor.1
+	title = flavor_gor.1.t
+	desc = flavor_gor.1.d
+	picture = EMPEROR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = flavor_gor.1.a
+		random_owned_province = {
+			spawn_rebels = {
+				type = goryeo_rebels
+				size = 3
+			}
+		}
+	}
+	option = {
+		name = flavor_gor.1.b
+		change_tag = GOR
+		remove_government_reform = korean_monarchy
+		set_dynasty = "Wang"
+		define_heir = {
+			dynasty = "Wang"
+		}
+	}
+}
+
+country_event = {
+	id = flavor_gor.2
+	title = flavor_gor.2.t
+	desc = flavor_gor.2.d
+	picture = EMPEROR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = KOR
+		any_country = {
+			is_emperor_of_china = yes
+			total_development = 1000
+			imperial_mandate = 80
+			defensive_war_with = KOR
+		}
+	}
+	option = {
+		name = flavor_gor.2.a
+		random_owned_province = {
+			spawn_rebels = {
+				type = goryeo_rebels
+				size = 3
+			}
+		}
+	}
+}
+</file>
+
+<file path="events/EventsHan.txt">
+namespace = flavor_chn
+
+# The Capital Choice - Xi'an, Luoyang or Chengdu
+country_event = {
+	id = han_capital_event.1
+	title = han_capital_event.1.t
+	desc = han_capital_event.1.d
+	picture = EMPEROR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = han_capital_event.1.a		# Xi'an
+		set_capital = 700		# Xi'an
+		add_prestige = 10
+	}
+	option = {
+		name = han_capital_event.1.b		# Luoyang
+		set_capital = 1836		# Luoyang
+		add_prestige = 10
+	}
+	option = {
+		name = han_capital_event.1.c		# Chengdu
+		set_capital = 679		# Chengdu
+		add_prestige = 10
+	}
+}
+</file>
+
+<file path="events/EventsJalayirids.txt">
+namespace = flavor_jly
+# Qara Qoyunlu Defeated
+country_event = {
+	id = flavor_jly.2
+	title = flavor_jly.2.t
+	desc = flavor_jly.2.d
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	# The path to restoration is clear
+	option = {
+		name = flavor_jly.2.a
+		add_prestige = 10
+		add_legitimacy = 10
+	}
+}
+</file>
+
+<file path="events/EventsKhitans.txt">
+namespace = flavor_qkh
+
+#The Khitan Resurgence
+country_event = {
+	id = flavor_qkh.100
+	title = flavor_qkh.100.t
+	desc = flavor_qkh.100.d
+	picture = BATTLE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = CHG		# Chagatai is the overlord
+		owns = 2126		# Chuy / Balasagun, Qara Khitai historical capital
+		NOT = {
+			tag = QKH
+		}
+		# Qara Khitai does not already exist
+		is_at_war = no
+		num_of_cities = 5
+		is_year = 1444
+	}
+	mean_time_to_happen = {
+		days = 1
+		# months = 36
+	}
+	option = {
+		name = flavor_qkh.100.a		#The Khitan clans rise peacefully.
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_cities = 5
+				}
+			}
+			modifier = {
+				factor = 0
+				2126 = {
+					is_capital = yes
+				}
+			}
+		}
+		add_legitimacy = 15
+		add_yearly_manpower = 1
+		
+		# Cede all QKH core provinces
+		2126 = {  # Balasagun (Chuy) - capital
+			cede_province = QKH
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+			change_culture = khitan
+			change_religion = tengri_pagan_reformed
+		}
+		459 = {  # Talgar
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		461 = {  # Almaty
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		2125 = {  # Tokmak
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		2368 = {  # Issyk Kul
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		2364 = {  # Talas
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		460 = {  # Uzkend
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = QKH
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+		}
+		
+		vassalize = QKH
+		QKH = {
+			add_opinion = {
+				who = ROOT
+				modifier = released_vassal
+			}
+			define_ruler = {
+				name = "Yelü Dashi"
+				dynasty = "Yelü"
+				adm = 4
+				dip = 5
+				mil = 4
+			}
+		}
+	}
+	option = {
+		name = flavor_qkh.100.b		#The Khitan refuse Chagatai rule!
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 5
+		2126 = {
+			if = {
+				limit = {
+					NOT = {
+						is_core = QKH
+					}
+				}
+				add_core = QKH
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				leader = "Yelü Dashi"
+				friend = QKH
+				size = 1
+			}
+		}
+	}
+}
+</file>
+
+<file path="events/QocEvents.txt">
+namespace = qoc_events
+
+country_event = {
+	id = qoc.1
+	title = "qoc_buddhist_relic"
+	desc = "qoc_buddhist_relic_desc"
+	picture = BUDDHIST_EVENT
+
+	trigger = {
+		tag = QOC
+		religion_group = muslim
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	option = {
+		name = "qoc_relic_buddhist"
+		change_religion = vajrayana
+		add_prestige = 15
+		add_country_modifier = {
+			name = qoc_vajrayana_adopted
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "qoc_relic_islam"
+		add_stability = 1
+		add_legitimacy = 10
+	}
+}
+</file>
+
+<file path="history/countries/BAE - Baekje.txt">
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = baekje
+religion = mahayana
+technology_group = chinese
+capital = 735	# Hanseong
+historical_friend = JAP
+
+# Southwestern Korea - Baekje heartland
+add_core = 735	# Hanseong
+add_core = 737	# Jeonju
+add_core = 1013	# Naju
+add_core = 4227	# Jinju
+add_core = 4228	# Gwangju
+add_core = 4229	# Chungju
+add_core = 4230	# Cheongju
+
+# Claims on all of Korea
+korea_region = {
+	add_permanent_claim = ROOT
+}
+</file>
+
+<file path="history/countries/CHN - Han.txt">
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = chinese
+religion = confucianism
+primary_culture = zhongyuan
+capital = 700
+</file>
+
+<file path="history/countries/GGY - Goguryeo.txt">
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = goguryeo
+religion = mahayana
+technology_group = chinese
+capital = 1845	# Pyeongyang
+
+# Northern Korea
+add_core = 732	# Hamheung
+add_core = 733	# Hwangju
+
+add_core = 1845	# Pyeongyang
+add_core = 2742	# Yukjin
+add_core = 2743	# Gyeongseong
+add_core = 2744	# Yeongbyeon
+add_core = 4231	# Haeju
+add_core = 4232	# Ganggye
+
+# Liaodong Peninsula
+add_core = 726	# Shenyang
+add_core = 2112	# Andong
+add_core = 2113	# Gaizhou
+add_core = 4652	# Haicheng
+
+# Manchurian heartlands
+add_core = 730	# Jilin
+add_core = 2107	# Ningguta
+add_core = 2108	# Huncun
+add_core = 2110	# Yehe
+add_core = 2111	# Hetu Ala
+add_core = 4201	# Jianzhou
+add_core = 4653	# Maolian
+add_core = 4654	# Fu'erhe
+add_core = 4661	# Edala
+
+# Claims on all of Korea
+korea_region = {
+	add_permanent_claim = ROOT
+}
+</file>
+
+<file path="history/countries/GOR - Goryeo.txt">
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 735	# Hanseong
+</file>
+
+<file path="history/countries/JLY - Jalayirids.txt">
+government = monarchy
+add_government_reform = iqta
+primary_culture = perso_mongolic 
+religion = sunni
+technology_group = muslim
+capital = 408  # Basra
+
+# Basra area - final Jalayirid territory
+add_core = 408  # Basra
+add_core = 2311  # Samawat
+add_core = 2312  # Wasit
+add_core = 4288  # Shatt al-Arab
+
+# Jalayirids were a Mongol-origin dynasty that became thoroughly Persianized
+# Founded by Hasan Buzurg after the collapse of the Ilkhanate in 1335
+# Lost Baghdad to Qara Qoyunlu in 1411
+# Dynasty ended with Shah Muhammad's death in 1432
+
+1335.12.1 = {
+	monarch = {
+		name = "Hasan Buzurg"
+		dynasty = "Jalayir"
+		adm = 4
+		dip = 5
+		mil = 5
+	}
+}
+
+1356.11.30 = {
+	monarch = {
+		name = "Shaykh Uvais"
+		dynasty = "Jalayir"
+		adm = 5
+		dip = 4
+		mil = 6
+	}
+}
+
+1374.11.27 = {
+	monarch = {
+		name = "Husain"
+		dynasty = "Jalayir"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1382.1.1 = {
+	monarch = {
+		name = "Ahmad"
+		dynasty = "Jalayir"
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1410.12.1 = {
+	monarch = {
+		name = "Shah Walad"
+		dynasty = "Jalayir"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1421.1.1 = {
+	monarch = {
+		name = "Shah Muhammad"
+		dynasty = "Jalayir"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+# 1444 bookmark - ensures Jalayir dynasty when released
+1444.11.11 = {
+	monarch = {
+		name = "Hasan"
+		dynasty = "Jalayir"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	heir = {
+		name = "Ahmad"
+		dynasty = "Jalayir"
+		birth_date = 1425.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+</file>
+
+<file path="history/countries/LIA - Liao.txt">
+government = tribal
+add_government_reform = steppe_horde
+technology_group = nomad_group
+primary_culture = altaic_new
+religion = tengri_pagan_reformed
+capital = 4652
+
+add_core = 704	# Ningyuan
+add_core = 726	# Shenyang
+add_core = 2112	# Andong
+add_core = 2113	# Gaizhou
+add_core = 4652	# Haicheng
+</file>
+
+<file path="history/countries/MJN - Majin.txt">
+government = maitreya_government
+add_government_reform = maitreya_kingdom
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 735# Hanseong
+</file>
+
+<file path="history/countries/PDY - Pandya.txt">
+government = monarchy
+add_government_reform = nayankara_reform
+primary_culture = tamil
+religion = hinduism
+technology_group = indian
+capital = 536	# Madurai
+fixed_capital = 536 # Cannot move capital away from this province & no power cost to move to it
+
+# Pandya Dynasty (PDY) - formable nation representing the ancient Tamil Pandya kingdom
+# Formation requires control of Coromandel region + Malabar, Mysore, and Rayalaseema areas
+# Historical base: Last Pandyas who survived the Madurai Sultanate
+
+# Last Pandyas - Unsubdued by the Madurai Sultanate
+
+1431.1.1 = {
+	monarch = {
+		name = "Parakrama"
+		dynasty = "Pandya"
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1431.1.1 = {
+	heir = {
+		name = "Vira"
+		monarch_name = "Vira"
+		dynasty = "Pandya"
+		birth_date = 1410.1.1
+		death_date = 1475.1.1
+		claim = 95
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1437.1.1 = {
+	monarch = {
+		name = "Vira"
+		dynasty = "Pandya"
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1437.1.1 = {
+	heir = {
+		name = "Vira"
+		monarch_name = "Vira II"
+		dynasty = "Pandya"
+		birth_date = 1430.1.1
+		death_date = 1516.1.1
+		claim = 95
+		ADM = 4
+		DIP = 1
+		MIL = 1
+	}
+}
+
+1475.1.1 = {
+	monarch = {
+		name = "Vira II"
+		dynasty = "Pandya"
+		ADM = 4
+		DIP = 1
+		MIL = 1
+	}
+}
+
+1475.1.1 = {
+	heir = {
+		name = "Parakrama"
+		monarch_name = "Parakrama II"
+		dynasty = "Pandya"
+		birth_date = 1450.1.1
+		death_date = 1543.1.1
+		claim = 95
+		ADM = 2
+		DIP = 1
+		MIL = 3
+	}
+}
+
+1516.1.1 = {
+	monarch = {
+		name = "Parakrama II"
+		dynasty = "Pandya"
+		ADM = 2
+		DIP = 1
+		MIL = 3
+	}
+}
+
+1516.1.1 = {
+	heir = {
+		name = "Vikrama"
+		monarch_name = "Vikrama"
+		dynasty = "Pandya"
+		birth_date = 1480.1.1
+		death_date = 1565.1.1
+		claim = 95
+		ADM = 3
+		DIP = 1
+		MIL = 4
+	}
+}
+</file>
+
+<file path="history/countries/QKH - Qara Khitai.txt">
+government = tribal
+add_government_reform = steppe_horde
+technology_group = nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = vajrayana
+primary_culture = khitan
+capital = 2126  # Balasagun
+
+# Jetysuu area - Qara Khitai heartland
+add_core = 2126  # Balasagun (Chuy) - historical capital
+add_core = 459   # Talgar
+add_core = 461   # Almaty
+add_core = 2125  # Tokmak
+add_core = 2368  # Issyk Kul
+add_core = 2364  # Talas
+add_core = 460   # Uzkend
+</file>
+
+<file path="history/countries/QOC - Qocho.txt">
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = muslim
+religion = vajrayana
+primary_culture = uyghur
+capital = 4207
+</file>
+
+<file path="history/countries/SLA - Silla.txt">
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = silla
+religion = mahayana
+technology_group = chinese
+capital = 2745	# Gyeongju
+
+# Southeastern Korea - Silla heartland
+add_core = 734	# Wonju
+add_core = 736	# Sangju
+add_core = 2694	# Gangneung
+add_core = 2745	# Gyeongju
+add_core = 4227	# Jinju
+add_core = 4229	# Chungju
+
+# Claims on all of Korea
+korea_region = {
+	add_permanent_claim = ROOT
+}
+</file>
+
+<file path="history/countries/TAM - Tamna.txt">
+government = monarchy
+add_government_reform = korean_monarchy
+primary_culture = korean
+religion = mahayana
+technology_group = chinese
+capital = 2741	# Jeju
+
+# Tamna's island kingdom
+add_core = 2741	# Jeju
+
+add_claim = 4651 # Tsushima
+
+# Claims on all of Korea
+korea_region = {
+	add_permanent_claim = ROOT
+}
+</file>
+
+<file path="history/countries/UYG - Uyghuristan.txt">
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = muslim
+religion = sunni
+primary_culture = uyghur
+capital = 4207
+</file>
+
+<file path="history/countries/XIA - Xia.txt">
+government = monarchy
+add_government_reform = chinese_warlord
+technology_group = chinese
+religion = vajrayana
+primary_culture = tangut
+capital = 698
+
+add_core = 698	# Ningxia
+add_core = 701	# Ordos
+add_core = 4223	# Hetao
+add_core = 709	# Alxa
+add_core = 2182	# Liangzhou
+add_core = 708	# Zhangye
+add_core = 707	# Yumen
+add_core = 2183	# Taozhou
+add_core = 2181	# Pingliang
+add_core = 2180	# Tianshui
+add_core = 699	# Lanzhou
+add_core = 2184	# Xining
+add_core = 4204	# Anding
+</file>
+
+<file path="localisation/forgotten_dynasties_china_l_english.yml">
+l_english:
+ XIA:0 "Xia"
+ XIA_ADJ:0 "Xia"
+ LIA:0 "Liao"
+ LIA_ADJ:0 "Liao"
+ QKH:0 "Qara Khitai"
+ QKH_ADJ:0 "Khitan"
+ CHN:0 "Han"
+ CHN_ADJ:0 "Han"
+ 
+ tangut:0 "Tangut"
+ khitan:0 "Khitan"
+ 
+ XIA_ideas:1 "Western Xia Ideas"
+ XIA_ideas_start:1 "Western Xia Traditions"
+ XIA_ideas_bonus:1 "Western Xia Ambition"
+ 
+ xia_tangut_script:0 "Tangut Script"
+ xia_tangut_script_desc:0 "The development of the unique Tangut script allowed Western Xia to preserve and advance its culture, promoting literacy and scholarly advancement."
+ xia_silk_road_control:0 "Silk Road Control"
+ xia_silk_road_control_desc:0 "Western Xia's strategic position along the Silk Road enabled it to control lucrative trade routes and collect taxes from merchant caravans."
+ xia_desert_warfare:0 "Desert Warfare"
+ xia_desert_warfare_desc:0 "The harsh desert environment forged Western Xia's military into expert desert fighters, capable of using the terrain to their advantage."
+ xia_buddhist_patronage:0 "Buddhist Patronage"
+ xia_buddhist_patronage_desc:0 "Western Xia rulers were great patrons of Buddhism, building temples and promoting Buddhist scholarship throughout their realm."
+ xia_nomadic_cavalry:0 "Nomadic Cavalry"
+ xia_nomadic_cavalry_desc:0 "Western Xia maintained strong cavalry traditions inherited from their nomadic heritage, creating highly mobile and effective mounted forces."
+ xia_frontier_fortresses:0 "Frontier Fortresses"
+ xia_frontier_fortresses_desc:0 "A network of fortified cities and watchtowers protected Western Xia's borders from constant threats from neighboring powers."
+ xia_cultural_synthesis:0 "Cultural Synthesis"
+ xia_cultural_synthesis_desc:0 "Western Xia successfully blended Tangut, Chinese, Tibetan, and nomadic cultural elements into a unique and sophisticated civilization."
+ 
+ QKH_ideas:1 "Qara Khitai Ideas"
+ QKH_ideas_start:1 "Qara Khitai Traditions"
+ QKH_ideas_bonus:1 "Qara Khitai Ambition"
+ 
+ qkh_khitan_legacy:0 "Khitan Legacy"
+ qkh_khitan_legacy_desc:0 "As the inheritors of the great Liao Dynasty, Qara Khitai carries the proud legacy of Khitan civilization and legitimacy."
+ qkh_religious_tolerance:0 "Religious Tolerance"
+ qkh_religious_tolerance_desc:0 "Qara Khitai practiced remarkable religious tolerance, allowing various faiths to coexist peacefully under their rule."
+ qkh_nomadic_administration:0 "Nomadic Administration"
+ qkh_nomadic_administration_desc:0 "The flexible administrative system of Qara Khitai adapted nomadic governance to settled territories, creating efficient rule over diverse populations."
+ qkh_steppe_cavalry:0 "Steppe Cavalry"
+ qkh_steppe_cavalry_desc:0 "The traditional cavalry forces of the steppes remained the backbone of Qara Khitai military power, maintaining nomadic warfare traditions."
+ qkh_silk_road_taxation:0 "Silk Road Taxation"
+ qkh_silk_road_taxation_desc:0 "Control over major Silk Road routes provided Qara Khitai with substantial income from trade taxes and tribute."
+ qkh_cultural_synthesis:0 "Cultural Synthesis"
+ qkh_cultural_synthesis_desc:0 "Qara Khitai skillfully blended Khitan, Chinese, Islamic, and local traditions to create a diverse and tolerant society."
+ qkh_mobile_warfare:0 "Mobile Warfare"
+ qkh_mobile_warfare_desc:0 "The nomadic heritage of Qara Khitai emphasized speed and mobility in warfare, allowing rapid deployment across vast territories."
+ 
+ flavor_qkh.100.t:0 "The Khitan Resurgence"
+ flavor_qkh.100.d:0 "Centuries after fleeing westward from the fall of their dynasty in the east, the Khitan clans have stirred once more. Rumors of a charismatic leader rallying their people have reached your court. Will you allow them to return to prominence, or suppress their ambitions?"
+ flavor_qkh.100.a:0 "We shall acknowledge their claim and allow them to rise as a vassal."
+ flavor_qkh.100.b:0 "Their insolence will not be tolerated, let them be crushed and their rebellion ended!"
+ 
+ LIA_ideas:1 "Liao Ideas"
+ LIA_ideas_start:1 "Liao Traditions"
+ LIA_ideas_bonus:1 "Liao Ambition"
+ 
+ liao_dual_administration:0 "Dual Administration"
+ liao_dual_administration_desc:0 "The Liao Dynasty developed a unique dual administrative system, governing Chinese subjects through Chinese institutions while maintaining Khitan customs for the nomadic population."
+ liao_khitan_cavalry:0 "Khitan Cavalry"
+ liao_khitan_cavalry_desc:0 "The elite Khitan cavalry formed the core of Liao military power, combining nomadic mobility with disciplined organization."
+ liao_cultural_tolerance:0 "Cultural Tolerance"
+ liao_cultural_tolerance_desc:0 "The Liao Dynasty practiced remarkable tolerance towards different cultures and religions, integrating diverse populations into their empire."
+ liao_iron_production:0 "Iron Production"
+ liao_iron_production_desc:0 "The Liao Dynasty developed advanced iron working techniques, producing high-quality weapons and tools that strengthened their economy and military."
+ liao_northern_defenses:0 "Northern Defenses"
+ liao_northern_defenses_desc:0 "A sophisticated network of fortifications and watchtowers protected Liao territory from raids and invasions from the northern steppes."
+ liao_trade_networks:0 "Trade Networks"
+ liao_trade_networks_desc:0 "The Liao Dynasty established extensive trade relationships connecting the Chinese economy with the nomadic peoples of the steppes."
+ liao_military_reforms:0 "Military Reforms"
+ liao_military_reforms_desc:0 "The integration of Chinese military technology and tactics with traditional nomadic warfare created a powerful and versatile military force."
+ 
+ form_liao_title:0 "Restoration of the Liao Dynasty"
+ form_liao_desc:0 "After centuries of dispersal and foreign domination, the Khitan people rise once more. With their traditional heartlands reclaimed, a new Liao dynasty will reclaim its place among the great powers of the steppe and northern China."
+ 
+ CHN_ideas:0 "Great Han Ideas"
+ CHN_ideas_start:0 "Great Han Traditions"
+ CHN_ideas_bonus:0 "Great Han Ambition"
+ 
+ chn_mandate_of_heaven:0 "Mandate of Heaven"
+ chn_mandate_of_heaven_desc:0 "The Han dynasty claims the divine mandate to rule all under Heaven, ensuring the legitimacy of our rule and the loyalty of our subjects."
+ chn_silk_road_mastery:0 "Silk Road Mastery"
+ chn_silk_road_mastery_desc:0 "Our control of the Silk Road brings unprecedented wealth from distant lands, with caravans carrying silk, spices, and exotic goods through our territory."
+ chn_imperial_bureaucracy:0 "Imperial Bureaucracy"
+ chn_imperial_bureaucracy_desc:0 "Our efficient civil service system ensures proper governance across the empire, reducing corruption and maintaining order in even the most distant provinces."
+ chn_confucian_scholarship:0 "Confucian Scholarship"
+ chn_confucian_scholarship_desc:0 "The promotion of learning and moral education through Confucian principles strengthens the state and advances our understanding of governance and technology."
+ chn_great_wall_legacy:0 "Great Wall Legacy"
+ chn_great_wall_legacy_desc:0 "The mighty fortifications built by our predecessors stand as an eternal bulwark against invasion, with massive garrisons defending our northern frontier."
+ chn_liu_clan_heritage:0 "Liu Clan Heritage"
+ chn_liu_clan_heritage_desc:0 "The noble bloodline of Emperor Gaozu Liu Bang has forged a warrior tradition among our people, instilling discipline and martial prowess in our armies."
+ chn_reunification_dream:0 "Dream of Reunification"
+ chn_reunification_dream_desc:0 "The restoration of a unified China under Han rule remains our eternal dream, inspiring our soldiers with unshakeable morale in battle."
+ 
+ form_great_han_title:0 "Form the Great Han"
+ form_great_han_desc:0 "Reviving the lost legacy of Liu Bang and honoring the valiant efforts of Liu Bei, we shall restore the illustrious Han Dynasty. From the ashes of division, the Han will rise once more to unite all under Heaven."
+ 
+ han_capital_event.1.t:0 "The Imperial Capital"
+ han_capital_event.1.d:0 "With the restoration of the Han Dynasty, we must choose our capital city. Chang'an in the west was the seat of the Western Han founded by Liu Bang, representing the classical era of Han power. Luoyang in the east became the capital of the Eastern Han, symbolizing renewal and continuity. Both cities have deep historical significance to our dynasty."
+ han_capital_event.1.a:0 "Chang'an shall be our capital, as Liu Bang intended!"
+ han_capital_event.1.b:0 "Luoyang will serve as the heart of our renewed empire!"
+ han_capital_event.1.c:0 "Chengdu will be our stronghold in the southwest, honoring Liu Bei's legacy!"
+ 
+ qkh_secure_transoxiana_title:0 "Secure Transoxiana"
+ qkh_secure_transoxiana_desc:0 "Transoxiana and Ferghana were the heart of the Qara Khitai domain after our westward flight. We must secure full control over these regions to establish a strong base for further expansion."
+ qkh_transoxiana_secured:0 "Transoxiana Secured"
+ desc_qkh_transoxiana_secured:0 "Our firm control over Transoxiana provides a secure base for westward expansion."
+ 
+ qkh_expand_westward_title:0 "Expand Westward"
+ qkh_expand_westward_desc:0 "Having secured our Central Asian heartland, the rich lands of Khorasan beckon in the west. By expanding our control into these territories, we can secure wealth and resources for our empire."
+ qkh_western_conquests:0 "Western Conquests"
+ desc_qkh_western_conquests:0 "Our westward expansion has brought new territories under Khitan rule."
+ 
+ qkh_dominate_persia_title:0 "Dominate Persia"
+ qkh_dominate_persia_desc:0 "The Persian plateau has been conquered by many steppe peoples throughout history. Now it is our turn to establish Khitan dominance over this ancient land of kings and scholars."
+ qkh_persian_dominance:0 "Persian Dominance"
+ desc_qkh_persian_dominance:0 "Our rule over Persian territories demonstrates the far reach of Khitan power."
+ 
+ qkh_assert_independence_title:0 "Assert Independence"
+ qkh_assert_independence_desc:0 "Though we may have begun as subjects, the Qara Khitai are destined to rule, not to serve. We must break free from any overlord and chart our own path toward restoring the legacy of the Liao Dynasty."
+ qkh_independent_khitai:0 "Independent Khitai"
+ desc_qkh_independent_khitai:0 "Having asserted our independence, the Qara Khitai now controls its own destiny."
+ 
+ qkh_cross_the_steppes_title:0 "Cross the Steppes"
+ qkh_cross_the_steppes_desc:0 "The Tarim Basin and Zungaria form the gateway between Central Asia and Mongolia. By conquering these western steppe regions, we secure our path eastward and open the way to reclaim the Mongolian heartland where our ancestors once ruled."
+ qkh_steppe_conquest:0 "Masters of the Steppe"
+ desc_qkh_steppe_conquest:0 "Our conquest of the western steppes brings us closer to our ancestral lands."
+ 
+ qkh_reclaim_inner_mongolia_title:0 "Conquer Mongolia"
+ qkh_reclaim_inner_mongolia_desc:0 "Mongolia was part of the Liao Dynasty's northern territories. By establishing control over significant portions of this vast region, we demonstrate our ability to rule the steppes and position ourselves to reclaim the Chinese territories to the east."
+ qkh_mongolia_restored:0 "Mongolia Restored"
+ desc_qkh_mongolia_restored:0 "Mongolia has been brought back under Khitan rule, as in the days of the Liao."
+ 
+ qkh_restore_liao_homeland_title:0 "Restore the Liao Homeland"
+ qkh_restore_liao_homeland_desc:0 "To truly restore the Liao Dynasty, we must reclaim the Four Capitals: Linhuang (Supreme Capital), Xijin (Southern Capital), Zhongdu (Western Capital), and Liaoyang (Eastern Capital). Beyond these symbolic centers, we must control significant territory across Manchuria and North China to rebuild the empire our ancestors once ruled."
+ qkh_liao_legacy:0 "Legacy of the Liao"
+ desc_qkh_liao_legacy:0 "Having reclaimed the Four Capitals and restored dominion over Manchuria and North China, the spirit of the Liao Dynasty guides our empire once more."
+ 
+ qkh_khitan_identity_title:0 "Preserve Khitan Identity"
+ qkh_khitan_identity_desc:0 "In exile in Central Asia, far from our homeland, we must preserve Khitan culture and identity. Our language, customs, and Buddhist faith distinguish us from both the Muslim peoples around us and the Chinese we left behind."
+ qkh_khitan_culture_preserved:0 "Khitan Culture Preserved"
+ desc_qkh_khitan_culture_preserved:0 "Our distinct Khitan identity remains strong despite our exile."
+ 
+ qkh_silk_road_dominance_title:0 "Control the Silk Road"
+ qkh_silk_road_dominance_desc:0 "The Silk Road passes through our Central Asian domains. By controlling provinces producing valuable trade goods, we can enrich our treasury and strengthen our position."
+ qkh_silk_road_traders:0 "Silk Road Masters"
+ desc_qkh_silk_road_traders:0 "Our control of Silk Road trade routes fills our coffers with wealth."
+ 
+ qkh_build_cavalry_force_title:0 "Build Cavalry Force"
+ qkh_build_cavalry_force_desc:0 "The Khitan are renowned horsemen, our cavalry the terror of the steppes. We must build a powerful mounted force worthy of the Liao military tradition."
+ qkh_khitan_cavalry:0 "Elite Khitan Cavalry"
+ desc_qkh_khitan_cavalry:0 "Our cavalry forces embody the martial prowess of the Khitan people."
+ 
+ qkh_adopt_chinese_administration_title:0 "Dual Administration"
+ qkh_adopt_chinese_administration_desc:0 "The Liao Dynasty's strength lay in its dual administration - Khitan military rule combined with Chinese bureaucratic governance. As we reconquer Chinese territories, we must revive this system to rule effectively."
+ qkh_sinicized_administration:0 "Dual Administration System"
+ desc_qkh_sinicized_administration:0 "Our revival of the Liao dual administration allows us to govern both nomadic and settled peoples effectively."
+ 
+ flavor_qkh.2.t:0 "Return to the Liao Homeland"
+ flavor_qkh.2.d:0 "After decades of exile in Central Asia, the Khitan people have returned to their ancestral homeland in Manchuria and Inner Mongolia. The great cities of the Liao Dynasty - Shangjing, Zhongjing, and Dongjing - are once again under Khitan rule. Though we fled west as the Qara Khitai, we have completed an epic migration back to our roots. The legacy of the Liao Dynasty lives on."
+ flavor_qkh.2.a:0 "The Liao shall rise again!"
+ flavor_qkh.2.b:0 "We forge a new path."
+ 
+ qkh_restore_western_liao_title:0 "Restore the Western Liao"
+ qkh_restore_western_liao_desc:0 "Though we fled west as the Qara Khitai - the 'Black Cathay' - we remain the rightful heirs of the great Liao Dynasty. Our dynasty was founded by Yelü Dashi, who led the Khitan remnants westward after the Jurchen conquest. Now, with our dominion firmly established across the steppes and oases of Central Asia, it is time to formally proclaim our legitimacy by adopting the historic name of Western Liao, asserting our status as the western continuation of the Liao imperial legacy."
+ qkh_restored_western_liao:0 "Western Liao Restored"
+ desc_qkh_restored_western_liao:0 "The Western Liao has been fully restored, with all core territories under our dominion once more."
+ qkh_cultural_integration:0 "Khitan Cultural Integration"
+ desc_qkh_cultural_integration:0 "Local administrators promote Khitan culture and customs, easing the conversion of foreign populations."
+ WESTERN_LIAO:0 "Western Liao" qkh_adopt_western_liao_name_title:0 "Adopt the Name of Western Liao"
+ qkh_adopt_western_liao_name_desc:0 "Though we fled west as the Qara Khitai - the 'Black Cathay' - we remain the rightful heirs of the great Liao Dynasty. Our dynasty was founded by Yelü Dashi, who led the Khitan remnants westward after the Jurchen conquest. Now, with our position secure in Central Asia, it is time to formally proclaim our legitimacy by adopting the historic name of Western Liao (Xi Liao), asserting our status as the western continuation of the Liao imperial legacy."
+ qkh_adopt_western_liao_name_tooltip:0 "Our nation shall be known as Western Liao, proclaiming our imperial legitimacy as the continuation of the Liao Dynasty."
+ WESTERN_LIAO:0 "Western Liao"
+ 
+ qkh_restore_western_liao_name_title:0 "Restore the Western Liao"
+ qkh_restore_western_liao_name_desc:0 "We have reclaimed all the core territories of our ancestral homeland in Central Asia. With Balasagun restored as our capital and all our traditional domains under our control once more, the time has come to fully restore the glory of the Western Liao name. Let our enemies tremble before the resurgent power of the Khitan people, masters of both steppe and settlement, as we reclaim our rightful title."
+ qkh_restore_western_liao_name_tooltip:0 "Having reclaimed all our core provinces as an independent nation, we can now proudly bear the name Western Liao once more."
+ qkh_restored_western_liao:0 "Western Liao Restored"
+ desc_qkh_restored_western_liao:0 "The Western Liao has been fully restored, with all core territories under our dominion once more."
+ 
+ GURKHAN:0 "Gurkhan"
+
+ QOC:0 "Qocho"
+ QOC_ADJ:0 "Qochoan"
+ 
+ form_qocho_title:0 "Reform the Kingdom of Qocho"
+ form_qocho_desc:0 "The ancient Uyghur Kingdom of Qocho, centered in the Tarim Basin, calls to us. By reclaiming the heartlands of Turpan and Bechbaliq, along with either Hami or Balikul, we can restore this glorious realm and revive Uyghur heritage."
+ 
+ adopt_vajrayana:0 "Adopt Vajrayana Buddhism"
+ adopt_vajrayana_desc:0 "Drawing from our Uyghur heritage and the spiritual traditions of the Tarim Basin, we shall embrace Vajrayana Buddhism, the diamond path, to strengthen our cultural and religious identity."
+ 
+ qoc_vajrayana_adopted:0 "Vajrayana Revival"
+ desc_qoc_vajrayana_adopted:0 "Our adoption of Vajrayana Buddhism has revitalized our spiritual and cultural foundations, boosting religious unity and national pride."
+ 
+ QOC_ideas:0 "Qocho Ideas"
+ QOC_ideas_start:0 "Uyghur Heritage"
+ QOC_ideas_bonus:0 "Silk Road Dominance"
+ 
+ qoc_silk_road_mastery:0 "Silk Road Mastery"
+ qoc_silk_road_mastery_desc:0 "Qocho's strategic position along the ancient Silk Road allows us to dominate caravan routes, enriching our coffers and expanding our influence."
+ qoc_uyghur_cavalry:0 "Uyghur Cavalry"
+ qoc_uyghur_cavalry_desc:0 "Our skilled Uyghur horsemen, masters of the steppe and desert, form the backbone of our military, striking fear into our enemies."
+ qoc_turpan_oases:0 "Turpan Oases"
+ qoc_turpan_oases_desc:0 "The fertile oases of Turpan provide abundant resources, making development cheaper and easier."
+ qoc_buddhist_pilgrimage:0 "Buddhist Pilgrimage"
+ qoc_buddhist_pilgrimage_desc:0 "Qocho attracts pilgrims from across Asia, boosting our religious harmony."
+ qoc_tarim_culture:0 "Tarim Culture"
+ qoc_tarim_culture_desc:0 "Our rich cultural heritage in the Tarim Basin facilitates easier cultural integration."
+ qoc_desert_nomads:0 "Desert Nomads"
+ qoc_desert_nomads_desc:0 "Our nomadic traditions allow us to recover manpower quickly in the harsh desert environment."
+ qoc_ancient_kingdom:0 "Ancient Kingdom"
+ qoc_ancient_kingdom_desc:0 "As the heirs to the ancient Uyghur Kingdom of Qocho, we enjoy enhanced diplomatic standing."
+ 
+ qoc_tarim_secured:0 "Tarim Basin Secured"
+ desc_qoc_tarim_secured:0 "With the Tarim Basin under our control, development is easier and manpower is plentiful."
+ 
+ qoc_cultural_revival:0 "Cultural Revival"
+ desc_qoc_cultural_revival:0 "Our cultural and religious revival has strengthened our unity and prestige."
+ 
+ qoc_buddhist_relic:0 "Visit of the Dalai Lama"
+ qoc_buddhist_relic_desc:0 "The Dalai Lama, spiritual leader of Tibetan Buddhism, has made a historic visit to Qocho. Accompanied by monks from Lhasa, he has overseen the excavation of ancient Buddhist relics in the Tarim Basin, reminding our people of our Uyghur ancestors' devotion to Vajrayana Buddhism. This has sparked a national debate: should we return to our Buddhist roots, or reaffirm our Islamic faith?"
+ qoc_relic_buddhist:0 "Embrace our Buddhist roots and convert to Vajrayana!"
+ qoc_relic_islam:0 "Stick with Islam and strengthen our current faith."
+
+ chahar:1 "Khorchin"
+ KRC:1 "Khorchin"
+ KRC_ADJ:1 "Khorchin"
+
+ form_uyghuristan_title:0 "Form Uyghuristan"
+ form_uyghuristan_desc:0 "The Uyghur people have a rich history in the Tarim Basin and Central Asia. By uniting our Uyghur brethren and reclaiming our ancestral lands, we can establish the nation of Uyghuristan, honoring our heritage and securing our future."
+</file>
+
+<file path="localisation/forgotten_dynasties_india_l_english.yml">
+l_english:
+ PDY:0 "Pandya"
+ PDY_ADJ:0 "Pandyan"
+ 
+ # Form Pandya Decision
+ form_pandya_nation_title:0 "Restore the Pandya Kingdom"
+ form_pandya_nation_desc:0 "The Pandya dynasty was one of the three ancient Tamil kingdoms that ruled southern India for over two millennia. From our capital at Madurai, the Pandyas controlled the pearl fisheries of the south and engaged in lucrative trade with Rome, Southeast Asia, and beyond. The Sangam literature celebrates our kings as patrons of Tamil culture and language. Now, with control over the entire Tamil homeland and surrounding regions, we can restore the glory of the ancient Pandya realm and reclaim our rightful place as one of the great kingdoms of India."
+ 
+ # Pandya Ideas
+ PDY_ideas:0 "Pandyan Ideas"
+ PDY_ideas_start:0 "Pandyan Traditions"
+ PDY_ideas_bonus:0 "Pandyan Ambition"
+ 
+ pdy_merchants_of_the_south:0 "Pearl Merchants of the South"
+ pdy_merchants_of_the_south_desc:0 "The Pandyas were the premier merchants of southern India, trading pearls, spices, and textiles across the Indian Ocean. Our merchant networks stretched from Rome to Southeast Asia, bringing immense wealth and prestige to our kingdom."
+ 
+ pdy_pearl_fisheries:0 "Pearl Fisheries of the Gulf of Mannar"
+ pdy_pearl_fisheries_desc:0 "The Pandyas controlled the legendary pearl fisheries of the Gulf of Mannar, especially around Tuticorin. These precious pearls were sought after by emperors and kings across the ancient world, making our kingdom fabulously wealthy."
+ 
+ pdy_polygar_warriors:0 "Pandyan Polygar System"
+ pdy_polygar_warriors_desc:0 "The Pandyan military was organized around the polygar system of local chieftains who provided troops and administered territories. This system allowed us to field large armies and maintain control over our extensive domains."
+ 
+ pdy_tamil_mercenaries:0 "Tamil Mercenary Tradition"
+ pdy_tamil_mercenaries_desc:0 "South Indian warriors, particularly from the Pandyan realm, were renowned as mercenaries throughout Asia. From Sri Lanka to Southeast Asia, Tamil soldiers served foreign kings while bringing wealth and military experience home."
+ 
+ pdy_temple_patronage:0 "Royal Patronage of Great Temples"
+ pdy_temple_patronage_desc:0 "The Pandyan kings were legendary patrons of Hindu temples, most famously the Meenakshi Amman Temple at Madurai. These magnificent temples were centers of religion, culture, and political power, legitimizing our divine right to rule."
+ 
+ pdy_sangam_literature:0 "Patrons of Tamil Sangam"
+ pdy_sangam_literature_desc:0 "The Pandyan court hosted the Tamil Sangam, legendary academies of poets and scholars. The Sangam literature produced under our patronage established Tamil as one of the great classical languages and brought eternal glory to the Pandyan name."
+ 
+ pdy_pandyan_trade_empire:0 "Pandyan Maritime Empire"
+ pdy_pandyan_trade_empire_desc:0 "At the height of our power, the Pandyas controlled not just the pearl fisheries but the entire maritime trade of southern India. Our fleets dominated the coasts, and our merchants were the masters of Indian Ocean commerce."
+</file>
+
+<file path="localisation/forgotten_dynasties_korea_l_english.yml">
+l_english:
+ BAE:0 "Baekje"
+ BAE_ADJ:0 "Baekje"
+ GGY:0 "Goguryeo"
+ GGY_ADJ:0 "Goguryeo"
+ SLA:0 "Silla"
+ SLA_ADJ:0 "Silla"
+ TAM:0 "Tamna"
+ TAM_ADJ:0 "Tamna"
+ GOR:0 "Goryeo"
+ GOR_ADJ:0 "Goryeo"
+ MJN:0 "Majin"
+ MJN_ADJ:0 "Majin"
+ KOR:1 "Joseon"
+ KOR_ADJ:1 "Joseon"
+ 
+ baekje:0 "Baekje"
+ silla:0 "Silla"
+ goguryeo:0 "Goguryeo"
+
+
+ BAE_ideas:1 "Baekje Ideas"
+ BAE_ideas_start:1 "Baekje Traditions"
+ BAE_ideas_bonus:1 "Baekje Ambition"
+
+ baekje_diplomacy:0 "Baekje Diplomacy"
+ baekje_diplomacy_desc:0 "Baekje was renowned for its skill in diplomacy, maintaining strong relations with neighboring states and overseas kingdoms. This allowed us to secure allies and promote our influence abroad."
+
+ baekje_artisans:0 "Baekje Artisans"
+ baekje_artisans_desc:0 "The artisans of Baekje were highly skilled, producing exquisite crafts and architecture. Their work enhances production efficiency and reduces the cost of developing our lands."
+
+ baekje_sea_trade:0 "Baekje Sea Trade"
+ baekje_sea_trade_desc:0 "With a long coastline and extensive trade routes, Baekje became a maritime power. Our ships dominate trade routes, increasing our naval capacity and influence overseas."
+
+ baekje_walled_cities:0 "Baekje Walled Cities"
+ baekje_walled_cities_desc:0 "The construction of strong, fortified cities across Baekje improves the defensiveness of our provinces, protecting our people from invaders."
+
+ baekje_cultural_export:0 "Baekje Cultural Export"
+ baekje_cultural_export_desc:0 "Baekje has been a center of culture and learning, exporting art, religion, and ideas abroad. This spreads our influence and stabilizes our internal administration."
+
+ baekje_merchant_network:0 "Baekje Merchant Network"
+ baekje_merchant_network_desc:0 "Our merchants maintain an extensive network both at home and abroad. This network increases trade efficiency and strengthens the economy of our realm."
+
+ baekje_maritime_tech:0 "Baekje Maritime Technology"
+ baekje_maritime_tech_desc:0 "Innovation in shipbuilding and navigation allows Baekje to maintain a strong fleet, improving naval forcelimits and the protection of trade routes."
+
+ GGY_ideas:1 "Goguryeo Ideas"
+ GGY_ideas_start:1 "Goguryeo Traditions"
+ GGY_ideas_bonus:1 "Goguryeo Ambition"
+
+ ggy_northern_forts:0 "Goguryeo Northern Forts"
+ ggy_northern_forts_desc:0 "Goguryeo built formidable fortifications to protect its cities and borders. These walls enhance the defensiveness of our provinces and slow invading armies."
+ ggy_wall_defense_desc:0 "Goguryeo built formidable fortifications to protect its cities and borders. These walls enhance the defensiveness of our provinces and slow invading armies."
+
+ ggy_military_tradition:0 "Goguryeo Military Tradition"
+ ggy_military_tradition_desc:0 "Our long-standing martial culture has forged a proud and disciplined army. This tradition increases the morale of our troops on the battlefield."
+
+ ggy_armored_cavalry:0 "Goguryeo Armored Cavalry"
+ ggy_armored_cavalry_desc:0 "Goguryeo cavalry are heavily armored and well-trained, providing powerful offensive capabilities against our enemies."
+
+ ggy_frontier_management:0 "Goguryeo Frontier Management"
+ ggy_frontier_management_desc:0 "Efficient governance of frontier territories reduces unrest and autonomy, allowing the state to maintain control over distant lands."
+
+ ggy_dongmyeong_traditions:0 "Jumong's Traditions"
+ ggy_dongmyeong_traditions_desc:0 "The legendary founder Jumong established the foundations of Goguryeo's military and governance. His enduring traditions inspire our armies, preserving their skill and resilience through generations."
+
+ ggy_maritime_patrol:0 "Goguryeo Maritime Patrol"
+ ggy_maritime_patrol_desc:0 "Though not a traditional naval power, Goguryeo maintains patrols along its rivers and coasts, improving naval morale and protecting trade."
+
+ ggy_strategic_depth:0 "Goguryeo Strategic Depth"
+ ggy_strategic_depth_desc:0 "Our vast homeland provides strategic depth, allowing manpower to recover quickly and the army to reorganize after campaigns."
+
+ GOR_ideas:1 "Goryeo Ideas"
+ GOR_ideas_start:1 "Goryeo Traditions"
+ GOR_ideas_bonus:1 "Goryeo Ambition"
+
+ goryeo_uijeongbu:0 "Uijeongbu Administration"
+ goryeo_uijeongbu_desc:0 "The Uijeongbu is the highest state council of Goryeo, responsible for governing the kingdom efficiently. Its wise officials reduce advisor costs and ensure stable administration."
+
+ goryeo_civil_service:0 "Civil Service Reforms"
+ goryeo_civil_service_desc:0 "Goryeo has implemented a merit-based civil service system. This reform reduces the cost of ideas and administrative technology, promoting capable governance."
+
+ goryeo_celadon_trade:0 "Celadon Trade"
+ goryeo_celadon_trade_desc:0 "Goryeo is famous for its celadon ceramics, which are exported throughout the region. Trade in these goods increases the efficiency and wealth of our economy."
+
+ goryeo_military_reform:0 "Military Reforms"
+ goryeo_military_reform_desc:0 "Reorganizing the army and updating military doctrines improves discipline and battlefield effectiveness, ensuring our forces remain strong."
+
+ goryeo_geobukseon:0 "Geobukseon Warships"
+ goryeo_geobukseon_desc:0 "The invention of the Geobukseon, or turtle ship, strengthens our navy. These ships increase naval durability and morale, safeguarding our coasts."
+
+ goryeo_hyanggyo:0 "Hyanggyo Confucian Schools"
+ goryeo_hyanggyo_desc:0 "State-run Confucian academies, the Hyanggyo, enhance prestige and promote education. They also reduce technology costs by spreading knowledge throughout the kingdom."
+
+ goryeo_trade_hubs:0 "Trade Hubs"
+ goryeo_trade_hubs_desc:0 "Strategically placed trade centers throughout Goryeo improve production efficiency and strengthen our control of commerce."
+
+ SLA_ideas:1 "Silla Ideas"
+ SLA_ideas_start:1 "Silla Traditions"
+ SLA_ideas_bonus:1 "Silla Ambition"
+
+ silla_buddhist_kingdom:0 "Buddhist Kingdom"
+ silla_buddhist_kingdom_desc:0 "Silla was one of the first Korean kingdoms to officially adopt Buddhism, making it the state religion and building magnificent temples throughout the realm."
+
+ silla_bone_rank_system:0 "Bone Rank System"
+ silla_bone_rank_system_desc:0 "Silla's unique social hierarchy system based on 'bone ranks' created a stable administrative structure that provided qualified officials for government service."
+
+ silla_hwarang:0 "Hwarang Warriors"
+ silla_hwarang_desc:0 "The Hwarang were an elite group of male youth from noble families who served as both warriors and scholars, forming the backbone of Silla's military strength."
+
+ silla_unified_administration:0 "Unified Administration"
+ silla_unified_administration_desc:0 "After unifying the Korean peninsula, Silla developed an efficient administrative system to govern the newly expanded territory."
+
+ silla_cheomseongdae:0 "Cheomseongdae Observatory"
+ silla_cheomseongdae_desc:0 "The construction of Cheomseongdae, one of the world's oldest astronomical observatories, demonstrates Silla's commitment to scientific advancement."
+
+ silla_trade_networks:0 "Silk Road Connections"
+ silla_trade_networks_desc:0 "Silla established extensive trade networks reaching as far as the Silk Road, bringing prosperity and cultural exchange to the kingdom."
+
+ silla_cultural_synthesis:0 "Cultural Synthesis"
+ silla_cultural_synthesis_desc:0 "Silla successfully synthesized Korean, Chinese, and Buddhist cultural elements, creating a unique and sophisticated civilization."
+
+ TAM_ideas:1 "Tamna Ideas"
+ TAM_ideas_start:1 "Tamna Traditions"
+ TAM_ideas_bonus:1 "Tamna Ambition"
+
+ tamna_island_fortress:0 "Island Fortress"
+ tamna_island_fortress_desc:0 "Tamna's natural island position provides excellent defensive advantages, making it difficult for enemies to launch successful naval invasions."
+
+ tamna_maritime_culture:0 "Maritime Culture"
+ tamna_maritime_culture_desc:0 "The people of Tamna have developed a sophisticated maritime culture, with exceptional skills in shipbuilding and seamanship."
+
+ tamna_tribute_system:0 "Tribute Diplomacy"
+ tamna_tribute_system_desc:0 "Tamna maintained its independence through careful diplomatic relations and tribute arrangements with larger neighboring powers."
+
+ tamna_horse_breeding:0 "Famous Horse Breeding"
+ tamna_horse_breeding_desc:0 "Tamna was renowned throughout East Asia for breeding exceptional horses, which were highly prized by mainland kingdoms."
+
+ tamna_island_traders:0 "Island Traders"
+ tamna_island_traders_desc:0 "Tamna's strategic location made it an important waystation for maritime trade between Korea, Japan, and China."
+
+ tamna_coastal_defense:0 "Coastal Defense Network"
+ tamna_coastal_defense_desc:0 "A well-organized coastal defense system protects Tamna's harbors and trade routes from pirates and hostile fleets."
+
+ tamna_cultural_autonomy:0 "Cultural Autonomy"
+ tamna_cultural_autonomy_desc:0 "Despite external influences, Tamna maintained its unique cultural identity and religious practices, creating a tolerant and diverse society."
+
+ flavor_gor.1.t:0 "Fall of the Yi Dynasty"
+ flavor_gor.1.d:0 "After the death of our King and the lack of an heir to the throne, the Yi Dynasty has come to an end. Claimants to the throne of the Goryeo dynasty now vie for power, and the kingdom is thrown into chaos."
+ flavor_gor.1.a:0 "We will restabilise Joseon and crush these rebels!"
+ flavor_gor.1.b:0 "Maybe it is time for us to concede and let these claimants fight it out amongst themselves."
+
+ flavor_gor.2.t:0 "Impossible War"
+ flavor_gor.2.d:0 "After our declaration of war against the Celestial Empire, we may have bitten off more than we can chew. Our armies are stretched thin, and the might of the Empire is overwhelming. Goryeo loyalists see this as an opportunity to strike against our weakened state."
+ flavor_gor.2.a:0 "Let them Come! We will crush both them, and the Chinese!"
+
+ goryeo_rebels_name:0 "Goryeo Loyalists"
+ goryeo_rebels_title:0 "Goryeo Loyalists"
+ goryeo_rebels_desc:0 "These rebels are led by the claimant to the Goryeo throne, seeking to restore the fallen dynasty and reunify the Korean peninsula under their rule."
+ goryeo_rebels_army:0 "Goryeo Loyalists"
+
+ form_majin_nation_title:0 "Form the Holy State of Majin"
+ form_majin_nation_desc:0 "Re-establish the ancient kingdom of Majin, uniting the Korean peninsula under a theocratic government governed by Buddhist principles."
+ maitreya_kingdom:0 "Holy State of the Maitreya"
+ maitreya_kingdom_desc:0 "The Holy State of Majin, later Taebong, was a Buddhist theocracy that ruled parts of Korea during the Later Three Kingdoms period. Founded by the monk Gung Ye, it emphasized religious governance and sought to unify the Korean peninsula under Buddhist ideals."
+ maitreya_government_name:0 "Maitreya Theocracy"
+ maitreya_theocratic_monarchy_mechanic:0 "Maitreya Theocratic Monarchy"
+ maitreya_theocratic_monarchy_mechanic_desc:0 "A unique government form combining theocratic principles with monarchical rule, emphasizing religious authority while maintaining royal traditions."
+
+ taebong_name_title:0 "Rename the Kingdom to Taebong"
+ taebong_name_desc:0 "In 904, Gung Ye renamed the kingdom of Majin to Taebong, symbolizing a new era of Buddhist governance and the aspiration to unify the Korean peninsula."
+ TAEBONG:0 "Taebong"
+ TAEBONG_ADJ:0 "Taebong"
+ MAITREYA:0 "Maitreya"
+ DIVINE_CONSORT:0 "Divine Consort"
+ 
+ mjn_unify_korea_faith_title:0 "Unify Korea Faith"
+ mjn_unify_korea_faith_desc:0 "Ensure all provinces in the Korean peninsula embrace Mahayana Buddhism, uniting the faith under the Maitreya."
+ mjn_destroy_tengri_title:0 "Destroy Tengri"
+ mjn_destroy_tengri_desc:0 "Convert all Tengri provinces to Mahayana Buddhism, eradicating the old nomadic faith and spreading the enlightenment."
+
+ mjn_faith_strengthened:0 "Faith Strengthened"
+ desc_mjn_faith_strengthened:0 "Our commitment to Mahayana Buddhism has reduced missionary costs and unrest."
+ mjn_faith_unified:0 "Faith Unified"
+ desc_mjn_faith_unified:0 "The complete unification of the peninsula under Mahayana Buddhism brings lasting peace and prestige."
+ mjn_spread_mahayana:0 "Mahayana Spread"
+ desc_mjn_spread_mahayana:0 "The eradication of the Tengri faith has allowed Mahayana Buddhism to spread freely, enhancing our missionary efforts."
+
+ MJN_ideas:0 "Majin Ideas"
+ MJN_ideas_start:0 "The Prophecy of Maitreya"
+ MJN_ideas_bonus:0 "Majin Ambition"
+ 
+ mjn_faith_and_morale:0 "Faith and Morale"
+ mjn_faith_and_morale_desc:0 "Our soldiers march not for gold or glory, but for the promise of the Pure Land to  come. Every blade raised in the name of Maitreya is tempered in unshakable faith."
+ 
+ mjn_blessings_of_maitreya:0 "Blessings of Maitreya"
+ mjn_blessings_of_maitreya_desc:0 "The light of the Future Buddha illumines all corners of our realm. From his  compassion flows wisdom, and through wisdom, knowledge spreads like a sacred flame."
+ 
+ mjn_diligent_maintenance:0 "Diligent Maintenance"
+ mjn_diligent_maintenance_desc:0 "To neglect a wall is to invite impurity; to neglect a fortress is to invite  ruin. Our citadels are temples of vigilance, tended with the same devotion as our shrines."
+ 
+ mjn_word_of_maitreya:0 "Word of Maitreya"
+ mjn_word_of_maitreya_desc:0 "The world trembles at the coming of the Future Buddha. His word, carried by our  missionaries, tears through falsehood as thunder shatters the night sky."
+ 
+ mjn_religious_harmony:0 "Religious Harmony"
+ mjn_religious_harmony_desc:0 "Under the gaze of Maitreya, all the faithful breathe as one body, act as one  hand, and speak as one voice. Discord has no place in the age of divine unity."
+ 
+ mjn_unity_of_maitreya:0 "Unity of Maitreya"
+ mjn_unity_of_maitreya_desc:0 "Bound by our shared devotion, we stand unyielding before the storms of doubt.  The faithful shall find peace in the harmony of Maitreya's promise."
+ 
+ mjn_zealous_mission:0 "Zealous Mission"
+ mjn_zealous_mission_desc:0 "Our armies march as living sermons. Every victory is a revelation, every conquest  a step toward the dawn of the future Buddha's kingdom on earth."
+</file>
+
+<file path="localisation/forgotten_dynasties_persia_l_english.yml">
+l_english:
+ # Country Names
+ JLY:0 "Jalayirids"
+ JLY_ADJ:0 "Jalayirid"
+ 
+ # Cultures
+ perso_mongolic:0 "Perso-Mongolic"
+ 
+ # Decisions
+ form_ilkhanate_nation_title:0 "Restore the Ilkhanate"
+ form_ilkhanate_nation_desc:0 "The Ilkhanate, founded by Hulagu Khan, was once the mightiest power in Persia. Though our Jalayirid dynasty rose from its ashes, we have never forgotten that we are the heirs of the Khans. With Baghdad, Tabriz, Maragheh, and Soltaniyeh in our hands, and dominion over Persia secured, we can restore the Ilkhanate and reclaim the legacy of our Mongol forebears."
+ 
+ # National Ideas
+ JLY_ideas:0 "Jalayirid Ideas"
+ JLY_ideas_start:0 "Jalayirid Traditions"
+ JLY_ideas_bonus:0 "Jalayirid Ambition"
+ jly_legacy_of_hasan_buzurg:0 "Legacy of Hasan Buzurg"
+ jly_legacy_of_hasan_buzurg_desc:0 "Our founder Hasan Buzurg established a dynasty that bridged the Mongol and Islamic worlds. His legacy of strong, legitimate rule guides us still."
+ jly_turko_mongol_administration:0 "Turko-Mongol Administration"
+ jly_turko_mongol_administration_desc:0 "Drawing from both Persian bureaucratic traditions and Mongol pragmatism, we embrace the diverse cultures under our rule."
+ jly_baghdad_calligraphy_schools:0 "Baghdad Calligraphy Schools"
+ jly_baghdad_calligraphy_schools_desc:0 "The great city of Baghdad remains a center of Islamic learning and culture. We patronize its schools and attract wise advisors from across the Muslim world."
+ jly_steppe_mobility:0 "Steppe Mobility"
+ jly_steppe_mobility_desc:0 "Our Mongol heritage gives us unmatched mobility on the battlefield. Our cavalry moves with the speed of the wind across the plains."
+ jly_mesopotamian_irrigation:0 "Dreams of Irrigation"
+ jly_mesopotamian_irrigation_desc:0 "The ancient land between the rivers once flourished thanks to sophisticated canal networks. Though the Mongol conquests devastated these systems, we dream of restoring Iraq to its former agricultural glory."
+ jly_sufi_mystics:0 "Sufi Mystics"
+ jly_sufi_mystics_desc:0 "We favor the mystical Sufi orders, whose tolerance and spiritual depth help unite our diverse subjects under a common faith."
+ jly_tribal_confederacy:0 "Tribal Confederacy"
+ jly_tribal_confederacy_desc:0 "The Jalayir tribe and our allied Turko-Mongol clans provide a deep well of loyal warriors ready to fight for our cause."
+ 
+ # Events
+ flavor_jly.2.t:0 "The Black Sheep Fall"
+ flavor_jly.2.d:0 "With the defeat of the Qara Qoyunlu, the path to restoring the Ilkhanate's former glory lies open before us. The lands of Azerbaijan and Tabriz, once the heart of Mongol power in Persia, are within our grasp. The dream of our ancestors may yet be realized."
+ flavor_jly.2.a:0 "The Ilkhanate shall rise again!"
+ flavor_jly.2.b:0 "No, we must forge our own path!"
+ 
+ flavor_jly.3.t:0 "The Jalayir Rise Again"
+ flavor_jly.3.d:0 "The Jalayirid dynasty, founded by the great Hasan Buzurg, has been restored to independence. Our lineage stretches back to the Mongol khans who once ruled from China to Baghdad. Though we have become Persianized and Islamicized over the generations, we remain proud descendants of the steppes."
+ flavor_jly.3.a:0 "The legacy of Hasan Buzurg lives on!"
+ 
+ # Missions - Slot 1 (Military)
+ jly_assert_independence_title:0 "Assert Independence"
+ jly_assert_independence_desc:0 "The Jalayirid dynasty once ruled Baghdad and western Persia, but foreign powers have subjugated us. The time has come to throw off these chains and reclaim our sovereignty."
+ jly_independent:0 "Independent At Last"
+ desc_jly_independent:0 "Having thrown off the shackles of foreign domination, our dynasty stands proud and independent once more."
+ 
+ jly_reclaim_baghdad_title:0 "Reclaim Baghdad"
+ jly_reclaim_baghdad_desc:0 "Baghdad was once the heart of our realm under Hasan Buzurg. We must reclaim the jewel of Mesopotamia and restore our rightful place as masters of Iraq."
+ jly_baghdad_restored:0 "Baghdad Restored"
+ desc_jly_baghdad_restored:0 "Baghdad has been restored to its former glory under Jalayirid rule."
+ 
+ jly_destroy_qara_qoyunlu_title:0 "Destroy the Black Sheep"
+ jly_destroy_qara_qoyunlu_desc:0 "The Qara Qoyunlu stand between us and the restoration of the Ilkhanate. These 'Black Sheep Turkomans' must be crushed utterly if we are to dominate Persia."
+ jly_qar_destroyed_tooltip:0 "The Qara Qoyunlu have already been destroyed"
+ jly_qara_qoyunlu_defeated:0 "Qara Qoyunlu Defeated"
+ desc_jly_qara_qoyunlu_defeated:0 "The destruction of the Qara Qoyunlu has proven our military might and opened the path to domination of Persia."
+ 
+ # Missions - Slot 2 (Economic & Cultural)
+ jly_restore_irrigation_title:0 "Restore Irrigation"
+ jly_restore_irrigation_desc:0 "The Mongol conquests devastated Mesopotamia's ancient irrigation canals. To restore Iraq's agricultural prosperity, we must rebuild these vital systems through farm estates across the Land Between the Rivers."
+ jly_irrigation_restored:0 "Irrigation Restored"
+ desc_jly_irrigation_restored:0 "The ancient canals of Mesopotamia have been restored, bringing renewed prosperity to the fertile lands of Iraq."
+ jly_mesopotamian_canals:0 "Mesopotamian Canals"
+ desc_jly_mesopotamian_canals:0 "The restored canal system brings water and prosperity back to this province."
+ 
+ jly_spread_perso_mongolic_culture_title:0 "A Cultural Synthesis"
+ jly_spread_perso_mongolic_culture_desc:0 "The Ilkhanate failed because Mongol rulers remained alien to their Persian subjects - converting to Islam yet never bridging the cultural divide. We shall not repeat this mistake. By spreading our Perso-Mongolic culture, we unite steppe heritage with Persian civilization, succeeding where the Ilkhanate failed and forging one people from two traditions."
+ jly_cultural_synthesis:0 "Perso-Mongolic Cultural Synthesis"
+ desc_jly_cultural_synthesis:0 "Our unique fusion of Mongol martial tradition and Persian civilization has begun to take root, creating a unified identity that bridges the steppes and the cities."
+ 
+ jly_restore_taxation_title:0 "Reform Tax Collection"
+ jly_restore_taxation_desc:0 "The Ilkhanate's collapse left Persian tax systems in disarray. We must restore the efficient revenue administration that once made the Mongol khans wealthy, rebuilding the bureaucracy across our domains."
+ jly_ilkhanate_tax_system:0 "Reformed Ilkhanate Tax System"
+ desc_jly_ilkhanate_tax_system:0 "Our reformed tax system, based on the sophisticated Mongol-Persian administrative traditions, ensures efficient revenue collection across our realm."
+ 
+ jly_rebuild_cities_title:0 "Rebuild Great Cities"
+ jly_rebuild_cities_desc:0 "Isfahan and Tabriz were jewels of the Ilkhanate - centers of trade, learning, and culture. By investing in temples, courthouses, and urban development, we demonstrate that we are the true successors to the khans."
+ jly_restored_isfahan:0 "Isfahan Restored"
+ desc_jly_restored_isfahan:0 "Isfahan has been restored to its former glory as a center of Persian culture and commerce."
+ jly_architectural_legacy:0 "Architectural Patronage"
+ desc_jly_architectural_legacy:0 "Our investment in restoring and beautifying the great cities of Persia has enhanced our prestige and improved construction efficiency throughout our realm."
+ 
+ # Missions - Slot 3 (Trade)
+ jly_control_silk_road_title:0 "Control the Silk Road"
+ jly_control_silk_road_desc:0 "The Silk Road passes through our domains, connecting East and West. By controlling Tabriz and Samarkand and investing in trade infrastructure, we ensure that caravans enrich our treasury with silk, spices, and precious goods."
+ jly_silk_road_dominance:0 "Silk Road Dominance"
+ desc_jly_silk_road_dominance:0 "Our control over key Silk Road cities ensures that trade wealth flows into our treasury."
+ jly_samarkand_control:0 "Jalayirid Trade Presence"
+ desc_jly_samarkand_control:0 "Jalayirid merchants dominate trade in this city."
+ 
+ jly_establish_mint_title:0 "Unify the Coinage"
+ jly_establish_mint_desc:0 "The Ilkhanate once issued standardized coins across its vast domains. Our fragmented realm uses a chaotic mix of currencies. By establishing royal mints, we can issue unified Jalayirid coinage, reducing inflation and cementing our authority."
+ jly_unified_coinage:0 "Unified Jalayirid Coinage"
+ desc_jly_unified_coinage:0 "Our standardized coinage system reduces inflation and demonstrates the strength and reach of Jalayirid authority."
+</file>
+
+<file path="missions/JLY_Missions.txt">
+jalayirid_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = JLY
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	jly_assert_independence = {
+		icon = mission_conquer_50_development
+		required_missions = {
+		}
+		position = 1
+		trigger = {
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			add_prestige = 10
+			add_legitimacy = 10
+			add_country_modifier = {
+				name = "jly_independent"
+				duration = 5475
+			}
+			iraq_arabi_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			basra_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	jly_reclaim_baghdad = {
+		icon = mam_baghdad
+		required_missions = {
+			jly_assert_independence
+		}
+		position = 2
+		provinces_to_highlight = {
+			province_id = 410
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			owns = 410
+		}
+		effect = {
+			410 = {
+				add_province_modifier = {
+					name = "jly_baghdad_restored"
+					duration = 7300
+				}
+			}
+			add_prestige = 15
+			add_legitimacy = 10
+			north_kurdistan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			al_jazira_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			shahrizor_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			azerbaijan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			armenia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			luristan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	jly_destroy_qara_qoyunlu = {
+		icon = per_butcher_black_sheep
+		required_missions = {
+			jly_reclaim_baghdad
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				region = persia_region
+				region = caucasia_region
+			}
+			owned_by = QAR
+		}
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						persia_region = {
+							owned_by = QAR
+						}
+					}
+					NOT = {
+						caucasia_region = {
+							owned_by = QAR
+						}
+					}
+				}
+				QAR = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 20
+			add_mil_power = 100
+			add_country_modifier = {
+				name = jly_qara_qoyunlu_defeated
+				duration = 9125
+			}
+			country_event = {
+				id = flavor_jly.2
+			}
+			persia_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+jalayirid_economic_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = JLY
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	jly_restore_irrigation = {
+		icon = mission_arabian_fort
+		required_missions = {
+		}
+		position = 2
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				has_building = farm_estate
+			}
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = wine
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = farm_estate
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = jly_irrigation_restored
+				duration = -1
+			}
+			basra_area = {
+				add_province_modifier = {
+					name = jly_mesopotamian_canals
+					duration = -1
+				}
+			}
+			iraq_arabi_area = {
+				add_province_modifier = {
+					name = jly_mesopotamian_canals
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	jly_spread_perso_mongolic_culture = {
+		icon = mission_early_modern_university
+		required_missions = { jly_restore_irrigation }
+		position = 3
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { culture = perso_mongolic }
+			OR = {
+				culture = persian
+				culture = khorasani
+				culture = azerbaijani
+			}
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = perso_mongolic
+				NOT = { is_capital = yes }
+			}
+			calc_true_if = {
+				amount = 1
+				all_owned_province = {
+					has_building = courthouse
+				}
+			}
+			university = 1
+		}
+		
+		effect = {
+			add_adm_power = 100
+			add_prestige = 20
+			add_country_modifier = {
+				name = "jly_cultural_synthesis"
+				duration = 9125
+			}
+		}
+	}
+	
+	jly_restore_taxation = {
+		icon = mission_war_chest
+		required_missions = { jly_spread_perso_mongolic_culture }
+		position = 4
+		
+		provinces_to_highlight = {
+			region = persia_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { base_tax = 6 }
+			}
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				region = persia_region
+				base_tax = 6
+			}
+		}
+		
+		effect = {
+			add_years_of_income = 1.5
+			add_country_modifier = {
+				name = "jly_ilkhanate_tax_system"
+				duration = -1
+			}
+		}
+	}
+	
+	jly_rebuild_cities = {
+		icon = mission_central_asian_city
+		required_missions = { jly_restore_taxation }
+		position = 5
+		
+		provinces_to_highlight = {
+			province_id = 428
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_building = temple }
+				NOT = { has_building = courthouse }
+				NOT = { development = 20 }
+			}
+		}
+		
+		trigger = {
+			428 = {
+				owned_by = ROOT
+				has_building = temple
+				has_building = courthouse
+				development = 20
+			}
+			owns = 2218
+			2218 = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		
+		effect = {
+			add_prestige = 25
+			428 = {
+				add_province_modifier = {
+					name = "jly_restored_isfahan"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "jly_architectural_legacy"
+				duration = 9125
+			}
+		}
+	}
+}
+
+jalayirid_trade_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = JLY
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	
+	jly_control_silk_road = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2218
+				province_id = 454
+			}
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			owns = 2218
+			owns = 454
+			2218 = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "jly_silk_road_dominance"
+				duration = 9125
+			}
+			454 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 25
+					key = jly_samarkand_control
+				}
+			}
+		}
+	}
+	
+	jly_establish_mint = {
+		icon = mission_have_two_subjects
+		required_missions = { jly_control_silk_road }
+		position = 4
+		
+		trigger = {
+			treasury = 500
+			calc_true_if = {
+				amount = 5
+				all_owned_province = {
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_inflation = -2
+			add_country_modifier = {
+				name = "jly_unified_coinage"
+				duration = -1
+			}
+		}
+	}
+}
+</file>
+
+<file path="missions/MJN_Missions.txt">
+majin_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MJN
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	mjn_unify_korea_faith = {
+		icon = mission_conquer_50_development
+		required_missions = {
+		}
+		position = 1
+		provinces_to_highlight = {
+			korea_region = {
+				NOT = {
+					religion = mahayana
+				}
+			}
+		}
+		trigger = {
+			korea_region = {
+				religion = mahayana
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_legitimacy = 25
+			add_country_modifier = {
+				name = "mjn_faith_strengthened"
+				duration = 5475
+			}
+		}
+	}
+	mjn_destroy_tengri = {
+		icon = mission_conquer_50_development
+		required_missions = {
+			mjn_unify_korea_faith
+		}
+		position = 2
+		provinces_to_highlight = {
+			korea_region = {
+				any_province = {
+					religion = tengri_pagan_reformed
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					religion = tengri_pagan_reformed
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			add_legitimacy = 50
+			add_country_modifier = {
+				name = "mjn_spread_mahayana"
+				duration = 9125
+			}
+		}
+	}
+}
+</file>
+
+<file path="missions/QKH_Missions.txt">
+qara_khitai_missions_1 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = QKH
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	qkh_secure_transoxiana = {
+		icon = mission_central_asian_city
+		required_missions = {
+			qkh_assert_independence
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = transoxiana_area
+				area = ferghana_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			transoxiana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ferghana_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "qkh_transoxiana_secured"
+				duration = 7300
+			}
+			khorasan_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	qkh_expand_westward = {
+		icon = mission_persian_soldiers
+		required_missions = {
+			qkh_secure_transoxiana
+			qkh_restore_western_liao
+		}
+		position = 3
+		provinces_to_highlight = {
+			region = khorasan_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = khorasan_region
+			}
+		}
+		effect = {
+			add_prestige = 15
+			add_mil_power = 50
+			add_country_modifier = {
+				name = "qkh_western_conquests"
+				duration = 7300
+			}
+			persia_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	qkh_dominate_persia = {
+		icon = mission_persianate_empire
+		required_missions = {
+			qkh_expand_westward
+		}
+		position = 4
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = persia_region
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "qkh_persian_dominance"
+				duration = 9125
+			}
+		}
+	}
+}
+
+qara_khitai_missions_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = QKH
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	qkh_assert_independence = {
+		icon = mission_have_two_subjects
+		required_missions = {
+		}
+		position = 1
+		trigger = {
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			add_prestige = 20
+			add_legitimacy = 25
+			add_country_modifier = {
+				name = "qkh_independent_khitai"
+				duration = 7300
+			}
+			# Unlock eastward expansion - Tarim Basin/Zungaria conquest
+			zungaria_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			shanshan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			turpan_kumul_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	qkh_restore_western_liao = {
+		icon = mission_restore_faith_in_the_throne
+		required_missions = {
+			qkh_assert_independence
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2126				# Balasagun - required capital
+				AND = {
+					OR = {
+						area = jetysuu_area
+						area = zungaria_area
+						area = kashgaria_area
+						area = ferghana_area
+						area = arys_area
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+			}
+		}
+		trigger = {
+			is_subject = no
+			owns_core_province = 2126			# Balasagun - historical Qara Khitai capital
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					area = jetysuu_area
+					area = zungaria_area
+					area = kashgaria_area
+					area = ferghana_area
+					area = arys_area
+				}
+			}
+		}
+		effect = {
+			override_country_name = WESTERN_LIAO
+			set_country_flag = western_liao_formed_flag
+			set_country_flag = is_WESTERN_LIAO_flag
+			add_prestige = 25
+			add_legitimacy = 15
+			add_country_modifier = {
+				name = "qkh_restored_western_liao"
+				duration = 18250				# 50 years
+			}
+		}
+	}
+}
+
+qara_khitai_missions_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = QKH
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	qkh_cross_the_steppes = {
+		icon = mission_conquer_50_development
+		required_missions = {
+			qkh_assert_independence
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = zungaria_area
+				area = turpan_kumul_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			zungaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			shanshan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			turpan_kumul_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 20
+			add_legitimacy = 10
+			add_country_modifier = {
+				name = "qkh_steppe_conquest"
+				duration = 7300
+			}
+			# Grant claims on entire Mongolia region
+			mongolia_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	qkh_reclaim_inner_mongolia = {
+		icon = mission_unite_home_region
+		required_missions = {
+			qkh_cross_the_steppes
+			qkh_restore_western_liao
+		}
+		position = 3
+		provinces_to_highlight = {
+			region = mongolia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = mongolia_region
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_legitimacy = 15
+			add_country_modifier = {
+				name = "qkh_mongolia_restored"
+				duration = 9125
+			}
+			# Grant claims on the four Liao capitals
+			4203 = {
+				# Linhuang / Qaracin (Chahar) - should be owned by now, but ensure claim
+				if = {
+					limit = {
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_claim = ROOT
+				}
+			}
+			1816 = {
+				# Xijin / Beijing
+				add_permanent_claim = ROOT
+			}
+			697 = {
+				# Datong / Zhongdu (Shanxi)
+				add_permanent_claim = ROOT
+			}
+			4652 = {
+				# Liaoyang / Haicheng (Liaoning)
+				add_permanent_claim = ROOT
+			}
+			# Grant claims on surrounding Manchurian and North China areas for further expansion
+			manchuria_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_china_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	qkh_restore_liao_homeland = {
+		icon = mission_unite_home_region
+		required_missions = {
+			qkh_reclaim_inner_mongolia
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4203				# Linhuang / Qaracin (Chahar)
+				province_id = 1816				# Xijin / Beijing
+				province_id = 697				# Datong / Zhongdu (Shanxi)
+				province_id = 4652				# Liaoyang / Haicheng (Liaoning)
+				AND = {
+					OR = {
+						region = manchuria_region
+						region = north_china_region
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 4203			# Linhuang / Qaracin (Chahar)
+			owns_core_province = 1816			# Xijin / Beijing
+			owns_core_province = 697			# Datong / Zhongdu (Shanxi)
+			owns_core_province = 4652			# Liaoyang / Haicheng (Liaoning)
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					region = manchuria_region
+					region = north_china_region
+				}
+			}
+		}
+		effect = {
+			add_prestige = 30
+			add_legitimacy = 25
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "qkh_liao_legacy"
+				duration = -1
+			}
+		}
+	}
+}
+
+qara_khitai_missions_4 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = QKH
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	qkh_khitan_identity = {
+		icon = mission_buddhist_monk_praying
+		required_missions = {
+		}
+		position = 1
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				culture = khitan
+			}
+			stability = 1
+		}
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = "qkh_khitan_culture_preserved"
+				duration = 9125
+			}
+			# Grant culture conversion cost reduction
+			every_owned_province = {
+				limit = {
+					NOT = {
+						culture = khitan
+					}
+				}
+				add_province_modifier = {
+					name = "qkh_cultural_integration"
+					duration = 7300
+				}
+			}
+		}
+	}
+	qkh_silk_road_dominance = {
+		icon = mission_asian_trader
+		required_missions = {
+			qkh_khitan_identity
+		}
+		position = 2
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					trade_goods = silk
+					trade_goods = gems
+					trade_goods = spices
+					trade_goods = chinaware
+				}
+			}
+			trade_efficiency = 0.3
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "qkh_silk_road_traders"
+				duration = 9125
+			}
+		}
+	}
+	qkh_build_cavalry_force = {
+		icon = mission_non-western_cavalry_raid
+		required_missions = {
+			qkh_silk_road_dominance
+		}
+		position = 3
+		trigger = {
+			cavalry_fraction = 0.4
+			num_of_cavalry = 15
+			army_tradition = 40
+		}
+		effect = {
+			add_mil_power = 50
+			add_country_modifier = {
+				name = "qkh_khitan_cavalry"
+				duration = 7300
+			}
+		}
+	}
+	qkh_adopt_chinese_administration = {
+		icon = mission_scholar_officials
+		required_missions = {
+			qkh_build_cavalry_force
+			qkh_reclaim_inner_mongolia
+		}
+		position = 4
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				culture_group = east_asian
+				culture_group = korean_g
+			}
+			NOT = {
+				has_building = courthouse
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					culture_group = east_asian
+					culture_group = korean_g
+				}
+				has_building = courthouse
+			}
+			adm_tech = 10
+		}
+		effect = {
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "qkh_sinicized_administration"
+				duration = -1
+			}
+		}
+	}
+}
+</file>
+
+<file path="missions/QOC_Missions.txt">
+qocho_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = QOC
+	}
+	has_country_shield = yes
+
+	qoc_secure_tarim = {
+		icon = mission_central_asian_city
+		position = 1
+		provinces_to_highlight = {
+			province_id = 4207
+			province_id = 2122
+			province_id = 4206
+			province_id = 712
+		}
+		trigger = {
+			4207 = { owned_by = ROOT }
+			2122 = { owned_by = ROOT }
+			4206 = { owned_by = ROOT }
+		}
+		effect = {
+			add_prestige = 20
+			add_country_modifier = {
+				name = qoc_tarim_secured
+				duration = 3650
+			}
+		}
+	}
+
+	qoc_expand_trade = {
+		icon = mission_merchants
+		required_missions = { qoc_secure_tarim }
+		position = 2
+		trigger = {
+			any_owned_province = {
+				has_trade_goods = silk
+			}
+			num_of_merchants = 3
+		}
+		effect = {
+			add_prestige = 15
+			add_merchants = 1
+		}
+	}
+
+	qoc_cultural_revival = {
+		icon = mission_buddhism
+		required_missions = { qoc_secure_tarim }
+		position = 3
+		trigger = {
+			religion = vajrayana
+			religious_unity = 0.8
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = qoc_cultural_revival
+				duration = -1
+			}
+		}
+	}
+}
+</file>
+
+<file path="descriptor.mod">
+version="1"
+tags={
+	"Flavour"
+}
+name="Forgotten Dynasties"
+supported_version="v1.37.5.0"
+</file>
+
+</files>

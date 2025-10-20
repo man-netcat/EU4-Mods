@@ -3,9 +3,27 @@ on_country_released = {
 		limit = {
 			tag = JLY
 		}
-		set_dynasty = "Jalayir"
+		set_dynasty = "Jalayirid"
 		define_heir = {
-			dynasty = "Jalayir"
+			dynasty = "Jalayirid"
+		}
+	}
+}
+
+on_monarch_death = {
+	if = {
+		limit = {
+			tag = KOR
+			NOT = {
+				dynasty = "Yi"
+			}
+		}
+		korea_region = {
+			add_core = GOR
+		}
+		set_country_flag = flavor_gor
+		country_event = {
+			id = flavor_gor.1
 		}
 	}
 }

@@ -1,0 +1,28 @@
+namespace = flavor_kas
+country_event = {
+	id = flavor_kas.1
+	title = "kas_buddhist_relic"
+	desc = "kas_buddhist_relic_desc"
+	picture = BUDDHISM_LAMA_eventPicture
+	trigger = {
+		primary_culture = uyghur
+		religion_group = muslim
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "kas_relic_buddhist"
+		change_religion = vajrayana
+		add_prestige = 15
+		add_country_modifier = {
+			name = kas_vajrayana_adopted
+			duration = -1
+		}
+	}
+	option = {
+		name = "kas_relic_islam"
+		add_stability = 1
+		add_legitimacy = 10
+	}
+}

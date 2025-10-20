@@ -1,0 +1,107 @@
+country_decisions = {
+	form_uyghuristan = {
+		major = yes
+		potential = {
+			primary_culture = uyghur
+			NOT = {
+				has_country_flag = formed_uyghuristan_flag
+			}
+			NOT = {
+				exists = UYG
+			}
+			religion_group = muslim
+			government = monarchy
+		}
+		provinces_to_highlight = {
+			NOT = {
+				owned_by = ROOT
+			}
+			culture = uyghur
+		}
+		allow = {
+			owns_all_provinces = {
+				culture = uyghur
+			}
+		}
+		effect = {
+			change_tag = UYG
+			set_country_flag = formed_uyghuristan_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_qocho = {
+		major = yes
+		potential = {
+			primary_culture = uyghur
+			NOT = {
+				has_country_flag = formed_qocho_flag
+			}
+			NOT = {
+				exists = QOC
+			}
+			religion = vajrayana
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4207
+				province_id = 2122
+				province_id = 4206
+				province_id = 713
+			}
+		}
+		allow = {
+			owns = 4207			# Turpan
+			owns = 713			# Bechbaliq
+			owns = 2122			# Hami
+			owns = 4206			# Balikul
+		}
+		effect = {
+			change_tag = QOC
+			set_country_flag = formed_qocho_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	adopt_vajrayana = {
+		major = yes
+		potential = {
+			tag = QOC
+			NOT = {
+				religion = vajrayana
+			}
+			NOT = {
+				has_country_flag = adopted_vajrayana_flag
+			}
+		}
+		allow = {
+			stability = 2
+			full_idea_group = religious_ideas
+		}
+		effect = {
+			change_religion = vajrayana
+			add_country_modifier = {
+				name = kas_vajrayana_adopted
+				duration = -1
+			}
+			add_stability = -2
+			set_country_flag = adopted_vajrayana_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

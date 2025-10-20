@@ -2,8 +2,10 @@ country_decisions = {
 	form_majin_nation = {
 		major = yes
 		potential = {
-			# tag = GOR
-			tag = KOR
+			or = {
+				primary_culture = korean
+				primary_culture = korean_new
+			}
 			NOT = {
 				has_country_flag = formed_majin_flag
 			}
@@ -15,8 +17,7 @@ country_decisions = {
 		provinces_to_highlight = {
 		}
 		allow = {
-			# has_idea_group = religious_ideas
-			always = yes
+			full_idea_group = religious_ideas
 		}
 		effect = {
 			change_tag = MJN
@@ -24,6 +25,14 @@ country_decisions = {
 			change_government = maitreya_government
 			add_government_reform = maitreya_kingdom
 			set_country_flag = formed_majin_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

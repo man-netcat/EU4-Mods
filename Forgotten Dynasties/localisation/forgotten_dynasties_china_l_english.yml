@@ -181,6 +181,68 @@
  qkh_restored_western_liao:0 "Western Liao Restored"
  desc_qkh_restored_western_liao:0 "The Western Liao has been fully restored, with all core territories under our dominion once more."
  
-  
- # Qara Khitai Government Names
  GURKHAN:0 "Gurkhan"
+
+ QOC:0 "Qocho"
+ QOC_ADJ:0 "Qochoan"
+ UYG:0 "Uyghuristan"
+ UYG_ADJ:0 "Uyghuristani"
+ 
+ adopt_vajrayana:0 "Adopt Vajrayana Buddhism"
+ adopt_vajrayana_desc:0 "Drawing from our Uyghur heritage and the spiritual traditions of the Tarim Basin, we shall embrace Vajrayana Buddhism, the diamond path, to strengthen our cultural and religious identity."
+ 
+ uyg_vajrayana_adopted:0 "Vajrayana Revival"
+ desc_uyg_vajrayana_adopted:0 "Our adoption of Vajrayana Buddhism has revitalized our spiritual and cultural foundations, boosting religious unity and national pride."
+
+ QOC_ideas:0 "Qocho Ideas"
+ QOC_ideas_start:0 "Buddhist Heritage"
+ QOC_ideas_bonus:0 "Ancient Kingdom"
+ 
+ qoc_buddhist_heritage:0 "Buddhist Heritage"
+ qoc_buddhist_heritage_desc:0 "Qocho's rich Buddhist tradition fosters tolerance towards other faiths."
+ qoc_silk_road_hub:0 "Silk Road Hub"
+ qoc_silk_road_hub_desc:0 "As a key hub on the Silk Road, Qocho excels in caravan trade."
+ qoc_ancient_capital:0 "Ancient Capital"
+ qoc_ancient_capital_desc:0 "The ancient capital of Qocho reduces development costs."
+ qoc_vajrayana_pilgrims:0 "Vajrayana Pilgrims"
+ qoc_vajrayana_pilgrims_desc:0 "Pilgrims to Vajrayana sites boost our religious unity."
+ qoc_uyghur_cavalry:0 "Uyghur Cavalry"
+ qoc_uyghur_cavalry_desc:0 "Our skilled Uyghur cavalry provides a combat advantage."
+ qoc_tarim_oases:0 "Tarim Oases"
+ qoc_tarim_oases_desc:0 "The oases of the Tarim Basin provide additional manpower."
+ qoc_kingdom_legacy:0 "Kingdom Legacy"
+ qoc_kingdom_legacy_desc:0 "The legacy of the ancient Uyghur Kingdom enhances our prestige."
+ uyg_uyghur_cavalry:0 "Uyghur Cavalry"
+ uyg_uyghur_cavalry_desc:0 "Our skilled Uyghur horsemen, masters of the steppe and desert, form the backbone of our military, striking fear into our enemies."
+ uyg_turpan_oases:0 "Turpan Oases"
+ uyg_turpan_oases_desc:0 "The fertile oases of Turpan provide abundant resources, making development cheaper and easier."
+ uyg_buddhist_pilgrimage:0 "Buddhist Pilgrimage"
+ uyg_buddhist_pilgrimage_desc:0 "Uyghuristan attracts pilgrims from across Asia, boosting our religious harmony."
+ uyg_tarim_culture:0 "Tarim Culture"
+ uyg_tarim_culture_desc:0 "Our rich cultural heritage in the Tarim Basin facilitates easier cultural integration."
+ uyg_desert_nomads:0 "Desert Nomads"
+ uyg_desert_nomads_desc:0 "Our nomadic traditions allow us to recover manpower quickly in the harsh desert environment."
+ uyg_ancient_kingdom:0 "Ancient Kingdom"
+ uyg_ancient_kingdom_desc:0 "As the heirs to the ancient Uyghur Kingdom of Qocho, we enjoy enhanced diplomatic standing."
+ 
+ kas_buddhist_relic:0 "Visit of the Dalai Lama"
+ kas_buddhist_relic_desc:0 "The Dalai Lama, spiritual leader of Tibetan Buddhism, has made a historic visit to Uyghuristan. Accompanied by monks from Lhasa, he has overseen the excavation of ancient Buddhist relics in the Tarim Basin, reminding our people of our Uyghur ancestors' devotion to Vajrayana Buddhism. This has sparked a national debate: should we return to our Buddhist roots, or reaffirm our Islamic faith?"
+ kas_relic_buddhist:0 "Embrace our Buddhist roots and convert to Vajrayana!"
+ kas_relic_islam:0 "Stick with Islam and strengthen our current faith."
+
+ chahar:1 "Khorchin"
+ KRC:1 "Khorchin"
+ KRC_ADJ:1 "Khorchin"
+
+ form_uyghuristan_title:0 "Form Uyghuristan"
+ form_uyghuristan_desc:0 "The Uyghur people have a rich history in the Tarim Basin and Central Asia. By uniting our Uyghur brethren and reclaiming our ancestral lands, we can establish the nation of Uyghuristan, honoring our heritage and securing our future."
+
+ form_qocho_title:0 "Reform Qocho"
+  form_qocho_desc:0 "The ancient Uyghur Kingdom of Qocho, centered in the Tarim Basin, calls to us. By reclaiming the heartlands of Turpan and Bechbaliq, along with either Hami or Balikul, we can restore this glorious realm and revive Uyghur heritage."
+ kas_buddhist_relic:0 "Visit of the Dalai Lama"
+ kas_buddhist_relic_desc:0 "The Dalai Lama, spiritual leader of Tibetan Buddhism, has made a historic visit to Yarkand. Accompanied by monks from Lhasa, he has overseen the excavation of ancient Buddhist relics in the Tarim Basin, reminding our people of our Uyghur ancestors' devotion to Vajrayana Buddhism. This has sparked a national debate: should we return to our Buddhist roots, or reaffirm our Islamic faith?"
+ kas_relic_buddhist:0 "Embrace our Buddhist roots and convert to Vajrayana!"
+ kas_relic_islam:0 "Stick with Islam and strengthen our current faith."
+
+ kas_vajrayana_adopted:0 "Vajrayana Revival"
+ desc_kas_vajrayana_adopted:0 "Our adoption of Vajrayana Buddhism has revitalized our spiritual and cultural foundations, boosting religious unity and national pride."

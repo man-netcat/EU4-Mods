@@ -1,5 +1,4 @@
 namespace = flavor_qkh
-
 #The Khitan Resurgence
 country_event = {
 	id = flavor_qkh.100
@@ -19,8 +18,7 @@ country_event = {
 		is_year = 1444
 	}
 	mean_time_to_happen = {
-		days = 1
-		# months = 36
+		months = 12
 	}
 	option = {
 		name = flavor_qkh.100.a		#The Khitan clans rise peacefully.
@@ -41,9 +39,9 @@ country_event = {
 		}
 		add_legitimacy = 15
 		add_yearly_manpower = 1
-		
 		# Cede all QKH core provinces
-		2126 = {  # Balasagun (Chuy) - capital
+		2126 = {
+			# Balasagun (Chuy) - capital
 			cede_province = QKH
 			if = {
 				limit = {
@@ -56,7 +54,8 @@ country_event = {
 			change_culture = khitan
 			change_religion = tengri_pagan_reformed
 		}
-		459 = {  # Talgar
+		459 = {
+			# Talgar
 			if = {
 				limit = {
 					owned_by = ROOT
@@ -72,7 +71,8 @@ country_event = {
 				add_core = QKH
 			}
 		}
-		461 = {  # Almaty
+		461 = {
+			# Almaty
 			if = {
 				limit = {
 					owned_by = ROOT
@@ -88,7 +88,8 @@ country_event = {
 				add_core = QKH
 			}
 		}
-		2125 = {  # Tokmak
+		2125 = {
+			# Tokmak
 			if = {
 				limit = {
 					owned_by = ROOT
@@ -104,7 +105,8 @@ country_event = {
 				add_core = QKH
 			}
 		}
-		2368 = {  # Issyk Kul
+		2368 = {
+			# Issyk Kul
 			if = {
 				limit = {
 					owned_by = ROOT
@@ -120,7 +122,8 @@ country_event = {
 				add_core = QKH
 			}
 		}
-		2364 = {  # Talas
+		2364 = {
+			# Talas
 			if = {
 				limit = {
 					owned_by = ROOT
@@ -136,7 +139,8 @@ country_event = {
 				add_core = QKH
 			}
 		}
-		460 = {  # Uzkend
+		460 = {
+			# Uzkend
 			if = {
 				limit = {
 					owned_by = ROOT
@@ -152,7 +156,6 @@ country_event = {
 				add_core = QKH
 			}
 		}
-		
 		vassalize = QKH
 		QKH = {
 			add_opinion = {
