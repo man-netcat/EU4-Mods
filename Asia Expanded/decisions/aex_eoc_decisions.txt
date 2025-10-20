@@ -1,0 +1,337 @@
+country_decisions = {
+	release_xinjiang = {
+		major = yes
+		potential = {
+			is_emperor_of_china = yes
+			NOT = {
+				tag = YAR
+			}
+			NOT = {
+				tag = UYG
+			}
+			NOT = {
+				tag = XIN
+			}
+			NOT = {
+				tag = QOC
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = zungaria_area
+				area = north_zungaria
+				area = turpan_kumul_area
+				area = kashgaria_area
+				area = tarim_basin_area
+				area = shanshan_area
+			}
+		}
+		allow = {
+			NOT = {
+				exists = XIN
+			}
+			owns_all_provinces = {
+				area = zungaria_area
+			}
+			owns_all_provinces = {
+				area = north_zungaria
+			}
+			owns_all_provinces = {
+				area = turpan_kumul_area
+			}
+			owns_all_provinces = {
+				area = kashgaria_area
+			}
+			owns_all_provinces = {
+				area = tarim_basin_area
+			}
+			owns_all_provinces = {
+				area = shanshan_area
+			}
+		}
+		effect = {
+			zungaria_area = {
+				add_core = XIN
+			}
+			north_zungaria = {
+				add_core = XIN
+			}
+			turpan_kumul_area = {
+				add_core = XIN
+			}
+			kashgaria_area = {
+				add_core = XIN
+			}
+			tarim_basin_area = {
+				add_core = XIN
+			}
+			shanshan_area = {
+				add_core = XIN
+			}
+			release = XIN
+			create_subject = {
+				subject = XIN
+				subject_type = personal_union
+			}
+			XIN = {
+				change_religion = confucianism
+				add_harmonized_religion = sunni
+				change_government = monarchy
+				change_primary_culture = uyghur
+				set_capital = 715
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	release_tibet = {
+		major = yes
+		potential = {
+			is_emperor_of_china = yes
+			NOT = {
+				tag = TIB
+			}
+		}
+		provinces_to_highlight = {
+			region = tibet_region
+		}
+		allow = {
+			NOT = {
+				exists = TIB
+			}
+			owns_all_provinces = {
+				region = tibet_region
+			}
+		}
+		effect = {
+			tibet_region = {
+				add_core = TIB
+			}
+			release = TIB
+			create_subject = {
+				subject = TIB
+				subject_type = personal_union
+			}
+			TIB = {
+				change_religion = confucianism
+				add_harmonized_religion = vajrayana
+				change_government = monarchy
+				change_primary_culture = tibetan_new
+				add_accepted_culture = tibetan
+				set_capital = 677
+			}
+			every_province = {
+				limit = {
+					culture = tibetan
+				}
+				change_culture = tibetan_new
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	release_manchuria = {
+		major = yes
+		potential = {
+			is_emperor_of_china = yes
+			NOT = {
+				tag = MCH
+			}
+			NOT = {
+				tag = QNG
+			}
+		}
+		provinces_to_highlight = {
+			region = manchuria_region
+		}
+		allow = {
+			NOT = {
+				exists = MCH
+			}
+			owns_all_provinces = {
+				region = manchuria_region
+			}
+		}
+		effect = {
+			manchuria_region = {
+				add_core = MCH
+			}
+			release = MCH
+			create_subject = {
+				subject = MCH
+				subject_type = personal_union
+			}
+			MCH = {
+				change_religion = confucianism
+				add_harmonized_religion = tengri_pagan_reformed
+				change_government = monarchy
+				change_primary_culture = manchu_new
+				set_capital = 726
+			}
+			every_province = {
+				limit = {
+					culture = manchu
+				}
+				change_culture = manchu_new
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	release_inner_mongolia = {
+		major = yes
+		potential = {
+			is_emperor_of_china = yes
+			NOT = {
+				tag = CHH
+			}
+			NOT = {
+				tag = YUA
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ordos_area
+				area = inner_mongolia_area
+				area = chahar_area
+				area = cicigar_area
+				area = xilin_gol_area
+				area = eastern_mongolia
+			}
+		}
+		allow = {
+			NOT = {
+				exists = CHH
+			}
+			owns_all_provinces = {
+				area = ordos_area
+			}
+			owns_all_provinces = {
+				area = inner_mongolia_area
+			}
+			owns_all_provinces = {
+				area = chahar_area
+			}
+			owns_all_provinces = {
+				area = cicigar_area
+			}
+			owns_all_provinces = {
+				area = xilin_gol_area
+			}
+			owns_all_provinces = {
+				area = eastern_mongolia
+			}
+		}
+		effect = {
+			ordos_area = {
+				add_core = CHH
+			}
+			inner_mongolia_area = {
+				add_core = CHH
+			}
+			chahar_area = {
+				add_core = CHH
+			}
+			cicigar_area = {
+				add_core = CHH
+			}
+			xilin_gol_area = {
+				add_core = CHH
+			}
+			eastern_mongolia = {
+				add_core = CHH
+			}
+			release = CHH
+			create_subject = {
+				subject = CHH
+				subject_type = personal_union
+			}
+			CHH = {
+				change_religion = confucianism
+				add_harmonized_religion = vajrayana
+				change_government = monarchy
+				change_primary_culture = mongol
+				set_capital = 702
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	release_outer_mongolia = {
+		major = yes
+		potential = {
+			is_emperor_of_china = yes
+			NOT = {
+				tag = KHA
+			}
+			NOT = {
+				tag = YUA
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = outer_mongolia_area
+				area = central_mongolia_area
+				area = uliastai_area
+				area = altai_sayan_area
+				area = tannu_uriankhai_area
+			}
+		}
+		allow = {
+			NOT = {
+				exists = KHA
+			}
+			owns_all_provinces = {
+				area = outer_mongolia_area
+			}
+			owns_all_provinces = {
+				area = central_mongolia_area
+			}
+			owns_all_provinces = {
+				area = uliastai_area
+			}
+			owns_all_provinces = {
+				area = altai_sayan_area
+			}
+			owns_all_provinces = {
+				area = tannu_uriankhai_area
+			}
+		}
+		effect = {
+			outer_mongolia_area = {
+				add_core = KHA
+			}
+			central_mongolia_area = {
+				add_core = KHA
+			}
+			uliastai_area = {
+				add_core = KHA
+			}
+			altai_sayan_area = {
+				add_core = KHA
+			}
+			tannu_uriankhai_area = {
+				add_core = KHA
+			}
+			release = KHA
+			create_subject = {
+				subject = KHA
+				subject_type = personal_union
+			}
+			KHA = {
+				change_religion = confucianism
+				add_harmonized_religion = vajrayana
+				change_government = monarchy
+				change_primary_culture = khalkha
+				set_capital = 2116
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+}

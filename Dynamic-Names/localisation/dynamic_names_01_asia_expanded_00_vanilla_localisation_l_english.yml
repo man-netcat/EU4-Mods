@@ -9,6 +9,18 @@
  BAL_KALAT_KHANATE_ADJ: "Baluchistani"
  BAL_KALAT_KHAGANATE: "Khaganate of Baluchistan"
  BAL_KALAT_KHAGANATE_ADJ: "Baluchistani"
+ # CHH
+ CHH_AUTONOMOUS_REGION: "Chahar Autonomous Region"
+ CHH_AUTONOMOUS_REGION_ADJ: "Chahari"
  # ILK
  ILK_DEVLET_I_ILKHANID: "Devlet-i Ilkhân"
  ILK_DEVLET_I_ILKHANID_ADJ: "Ilkhanid"
+ # KHA
+ KHA_AUTONOMOUS_REGION: "Mongolia Autonomous Region"
+ KHA_AUTONOMOUS_REGION_ADJ: "Mongol"
+ # MCH
+ MCH_AUTONOMOUS_REGION: "Manchuria Autonomous Region"
+ MCH_AUTONOMOUS_REGION_ADJ: "Manchurian"
+ # TIB
+ TIB_AUTONOMOUS_REGION: "Tibet Autonomous Region"
+ TIB_AUTONOMOUS_REGION_ADJ: "Tibetan"

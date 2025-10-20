@@ -12,7 +12,11 @@ country_event = {
 
     immediate = {
         if = { limit = { tag = BAL } country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.1 } }
-        if = { limit = { tag = ILK } country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.2 } }
+        if = { limit = { tag = CHH } country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.2 } }
+        if = { limit = { tag = ILK } country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.3 } }
+        if = { limit = { tag = KHA } country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.4 } }
+        if = { limit = { tag = MCH } country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.5 } }
+        if = { limit = { tag = TIB } country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.6 } }
     }
 
     option = {
@@ -52,6 +56,27 @@ country_event = {
     picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
     trigger = {
+        tag = CHH
+    }
+
+    immediate = {
+        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = CHH_AUTONOMOUS_REGION }
+    }
+
+    option = {
+        name = dynamic_names_01_asia_expanded_00_vanilla.2.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_asia_expanded_00_vanilla.3
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
         tag = ILK
     }
 
@@ -60,6 +85,69 @@ country_event = {
     }
 
     option = {
-        name = dynamic_names_01_asia_expanded_00_vanilla.2.a
+        name = dynamic_names_01_asia_expanded_00_vanilla.3.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_asia_expanded_00_vanilla.4
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = KHA
+    }
+
+    immediate = {
+        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = KHA_AUTONOMOUS_REGION }
+    }
+
+    option = {
+        name = dynamic_names_01_asia_expanded_00_vanilla.4.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_asia_expanded_00_vanilla.5
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = MCH
+    }
+
+    immediate = {
+        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = MCH_AUTONOMOUS_REGION }
+    }
+
+    option = {
+        name = dynamic_names_01_asia_expanded_00_vanilla.5.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_01_asia_expanded_00_vanilla.6
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = TIB
+    }
+
+    immediate = {
+        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = TIB_AUTONOMOUS_REGION }
+    }
+
+    option = {
+        name = dynamic_names_01_asia_expanded_00_vanilla.6.a
     }
 }
