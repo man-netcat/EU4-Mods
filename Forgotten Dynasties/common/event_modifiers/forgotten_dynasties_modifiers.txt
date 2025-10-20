@@ -196,6 +196,5 @@ mjn_spread_mahayana = {
 kas_vajrayana_adopted = {
 	religious_unity = 0.1
 	tolerance_own = 1
-	prestige = 0.5
 	manpower_recovery_speed = 0.1
 }

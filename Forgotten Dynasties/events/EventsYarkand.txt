@@ -12,9 +12,11 @@ country_event = {
 		months = 12
 	}
 	option = {
-		name = "kas_relic_buddhist"
+		name = "kas_relic_vajrayana"
 		change_religion = vajrayana
-		add_prestige = 15
+		hidden_effect = {
+			add_prestige = 50
+		}
 		add_country_modifier = {
 			name = kas_vajrayana_adopted
 			duration = -1

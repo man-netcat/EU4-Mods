@@ -225,11 +225,6 @@
  uyg_ancient_kingdom:0 "Ancient Kingdom"
  uyg_ancient_kingdom_desc:0 "As the heirs to the ancient Uyghur Kingdom of Qocho, we enjoy enhanced diplomatic standing."
  
- kas_buddhist_relic:0 "Visit of the Dalai Lama"
- kas_buddhist_relic_desc:0 "The Dalai Lama, spiritual leader of Tibetan Buddhism, has made a historic visit to Uyghuristan. Accompanied by monks from Lhasa, he has overseen the excavation of ancient Buddhist relics in the Tarim Basin, reminding our people of our Uyghur ancestors' devotion to Vajrayana Buddhism. This has sparked a national debate: should we return to our Buddhist roots, or reaffirm our Islamic faith?"
- kas_relic_buddhist:0 "Embrace our Buddhist roots and convert to Vajrayana!"
- kas_relic_islam:0 "Stick with Islam and strengthen our current faith."
-
  chahar:1 "Khorchin"
  KRC:1 "Khorchin"
  KRC_ADJ:1 "Khorchin"
@@ -241,7 +236,7 @@
   form_qocho_desc:0 "The ancient Uyghur Kingdom of Qocho, centered in the Tarim Basin, calls to us. By reclaiming the heartlands of Turpan and Bechbaliq, along with either Hami or Balikul, we can restore this glorious realm and revive Uyghur heritage."
  kas_buddhist_relic:0 "Visit of the Dalai Lama"
  kas_buddhist_relic_desc:0 "The Dalai Lama, spiritual leader of Tibetan Buddhism, has made a historic visit to Yarkand. Accompanied by monks from Lhasa, he has overseen the excavation of ancient Buddhist relics in the Tarim Basin, reminding our people of our Uyghur ancestors' devotion to Vajrayana Buddhism. This has sparked a national debate: should we return to our Buddhist roots, or reaffirm our Islamic faith?"
- kas_relic_buddhist:0 "Embrace our Buddhist roots and convert to Vajrayana!"
+ kas_relic_vajrayana:0 "Embrace our Buddhist roots and convert to Vajrayana!"
  kas_relic_islam:0 "Stick with Islam and strengthen our current faith."
 
  kas_vajrayana_adopted:0 "Vajrayana Revival"

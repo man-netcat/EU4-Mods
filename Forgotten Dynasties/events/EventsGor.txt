@@ -34,6 +34,9 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = KOR
+		NOT = {
+			stability = 0
+		}
 		any_country = {
 			is_emperor_of_china = yes
 			total_development = 1000
@@ -43,6 +46,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_gor.2.a
+		add_stability = -1
 		random_owned_province = {
 			spawn_rebels = {
 				type = goryeo_rebels
