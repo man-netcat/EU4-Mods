@@ -9,7 +9,13 @@ country_decisions = {
 			NOT = {
 				exists = UYG
 			}
-			religion_group = muslim
+			OR = {
+				religion_group = muslim
+				AND = {
+					religion = confucianism
+					has_harmonized_with = muslim
+				}
+			}
 			government = monarchy
 		}
 		provinces_to_highlight = {
@@ -22,6 +28,7 @@ country_decisions = {
 			owns_all_provinces = {
 				culture = uyghur
 			}
+			is_free_or_tributary_trigger = yes
 		}
 		effect = {
 			change_tag = UYG
@@ -42,7 +49,13 @@ country_decisions = {
 			NOT = {
 				exists = QOC
 			}
-			religion = vajrayana
+			OR = {
+				religion = vajrayana
+				AND = {
+					religion = confucianism
+					has_harmonized_with = vajrayana
+				}
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -57,6 +70,7 @@ country_decisions = {
 			owns = 713			# Bechbaliq
 			owns = 2122			# Hami
 			owns = 4206			# Balikul
+			is_free_or_tributary_trigger = yes
 		}
 		effect = {
 			change_tag = QOC

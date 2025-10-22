@@ -1,0 +1,72 @@
+country_decisions = {
+	form_nanzhong = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_nanzhong_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = NAN
+			}
+			OR = {
+				primary_culture = bai
+				primary_culture = sichuanese
+				primary_culture = yi
+				primary_culture = miao
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+		}
+		provinces_to_highlight = {
+			AND = {
+				region = xinan_region
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 1
+			owns_all_provinces = {
+				region = xinan_region
+			}
+		}
+		effect = {
+			change_tag = NAN
+			add_prestige = 20
+			set_country_flag = formed_nanzhong_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+}

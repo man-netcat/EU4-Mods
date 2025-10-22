@@ -1,0 +1,49 @@
+autonomous_region = {
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = yes
+	# Graphics:
+	sprite = GFX_icon_mongol_brother_realm_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_mongol_brother_realm_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_mongol_brother_realm_subject_type
+	# Properties:
+	joins_overlords_wars = yes
+	has_overlords_ruler = no
+	can_be_integrated = yes
+	disable_inheritance = yes
+	takes_diplo_slot = no
+	overlord_can_attack = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	can_have_subjects_of_other_types = no
+	can_union_break = yes
+	transfer_subjects_when_made = no
+	can_concentrate_development = yes
+	extend_trading_range = yes
+	liberty_desire_negative_prestige = 1
+	military_focus = 0.5
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	restoration_cb = cb_restore_personal_union
+	integration_requires_same_religion_group = no
+	can_fight_independence_war = yes
+	can_send_missionary_to_subject = yes
+	can_transfer_in_peace = yes
+	can_release_in_peace = yes
+	pays_overlord = 1
+	can_ally = {
+	}
+	can_marry = {
+	}
+	can_fight = {
+	}
+	can_rival = {
+	}
+	counts_for_borders = yes
+	# Subject Interactions:
+	placate_rulers = yes
+	enforce_culture = no
+	siphon_income = yes
+	support_loyalists = yes
+	modifier_subject = clear
+	modifier_overlord = clear
+}

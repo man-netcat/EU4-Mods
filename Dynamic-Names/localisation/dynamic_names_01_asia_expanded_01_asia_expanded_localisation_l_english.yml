@@ -34,6 +34,9 @@
  # XIN
  XIN_AUTONOMOUS_REGION: "Xinjiang Autonomous Region"
  XIN_AUTONOMOUS_REGION_ADJ: "Xinjiang"
+ # NAN
+ NAN_AUTONOMOUS_REGION: "Nanzhong Autonomous Region"
+ NAN_AUTONOMOUS_REGION_ADJ: "Nanzhong"
  # TAEBONG
  TAEBONG_MAJIN_DIVINE_KINGDOM: "Divine Kingdom of Taebong"
  TAEBONG_MAJIN_DIVINE_KINGDOM_ADJ: "Majin"

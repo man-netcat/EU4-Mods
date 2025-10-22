@@ -259,3 +259,28 @@
 
  release_outer_mongolia_title:0 "Release Mongolia Autonomous Region"
  release_outer_mongolia_desc:0 "The region of Outer Mongolia, home to the Mongol people, has a rich nomadic tradition. To promote stability and loyalty, we shall grant Outer Mongolia autonomy as a separate nation, allowing them to govern their own affairs while maintaining their loyalty with us."
+
+ autonomous_region_title:0 "Autonomous Region"
+ autonomous_region_title_plural:0 "Autonomous Regions"
+ autonomous_region_long_desc:0 "An autonomous region is a type of subject nation granted a degree of self-governance while remaining under the suzerainty of a greater power. These regions often have distinct cultural, ethnic, or historical identities that set them apart from the dominant nation. By allowing autonomy, the overlord nation can maintain stability and loyalty in these regions while benefiting from their unique contributions."
+ autonomous_region_is_our:0 "$NAME|Y$ is our Autonomous Region."
+
+ aex_nanzhong.1.t:0 "Unrest in the Southwest"
+ aex_nanzhong.1.d:0 "The uncivilised barbarians of the Nanman tribes in the southwest have long resisted our attempts to bring them under control. Recently, reports have reached us of increased raids and uprisings among these tribes, threatening the stability of our southwestern borders. It is imperative that we take decisive action to quell this unrest and assert our authority over the Nanman."
+ aex_nanzhong.1.a:0 "Give them more autonomy to appease them."
+ aex_nanzhong.1.b:0 "Crush those barbarians!"
+
+ nanman_rebels_name:0 "Nanman Rebels"
+ nanman_rebels_title:0 "Nanman Uprising"
+ nanman_rebels_desc:0 "The Nanman tribes in the southwest have risen in rebellion against our rule, seeking to reclaim their independence and resist our attempts to civilize them. These fierce warriors are skilled in guerrilla tactics and know the rugged terrain of the region well, making them a formidable foe. We must mobilize our forces to suppress this uprising and restore order to the region."
+ nanman_rebels_army:0 "Nanman Rebel Army"
+
+ NAN:0 "Nanzhong"
+ NAN_ADJ:0 "Nanzhong"
+
+ form_nanzhong_title:0 "Form Nanzhong"
+ form_nanzhong_desc:0 "We have endured the way of the Han people for too long. It is time to reclaim our identity and establish the nation of Nanzhong in the southwest, uniting the diverse tribes and cultures of this region under our banner."
+
+ aex_nanzhong.2.t:0 "The Rise of Nanzhong"
+ aex_nanzhong.2.d:0 "The Nanman tribes of the southwest have long been fragmented and disorganized, but recent events have sparked a movement to unite these disparate groups into a single nation. Charismatic leaders have emerged, rallying the tribes under the banner of Nanzhong, seeking to establish a sovereign state that reflects their unique cultural identity. This movement has gained momentum, and it is only a matter of time before Nanzhong rises as a new power in the region."
+ aex_nanzhong.2.a:0 "We will unite the tribes under our banner!"

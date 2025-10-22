@@ -15,6 +15,9 @@ country_decisions = {
 			NOT = {
 				tag = QOC
 			}
+			NOT = {
+				has_country_flag = aex_released_xinjiang
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -50,6 +53,12 @@ country_decisions = {
 			}
 		}
 		effect = {
+			every_province = {
+				limit = {
+					is_core = XIN
+				}
+				remove_core = XIN
+			}
 			zungaria_area = {
 				add_core = XIN
 			}
@@ -71,7 +80,7 @@ country_decisions = {
 			release = XIN
 			create_subject = {
 				subject = XIN
-				subject_type = personal_union
+				subject_type = autonomous_region
 			}
 			XIN = {
 				change_religion = confucianism
@@ -80,6 +89,7 @@ country_decisions = {
 				change_primary_culture = uyghur
 				set_capital = 715
 			}
+			set_country_flag = aex_released_xinjiang
 		}
 		ai_will_do = {
 			factor = 400
@@ -91,6 +101,9 @@ country_decisions = {
 			is_emperor_of_china = yes
 			NOT = {
 				tag = TIB
+			}
+			NOT = {
+				has_country_flag = aex_released_tibet
 			}
 		}
 		provinces_to_highlight = {
@@ -105,13 +118,19 @@ country_decisions = {
 			}
 		}
 		effect = {
+			every_province = {
+				limit = {
+					is_core = TIB
+				}
+				remove_core = TIB
+			}
 			tibet_region = {
 				add_core = TIB
 			}
 			release = TIB
 			create_subject = {
 				subject = TIB
-				subject_type = personal_union
+				subject_type = autonomous_region
 			}
 			TIB = {
 				change_religion = confucianism
@@ -127,6 +146,7 @@ country_decisions = {
 				}
 				change_culture = tibetan_new
 			}
+			set_country_flag = aex_released_tibet
 		}
 		ai_will_do = {
 			factor = 400
@@ -142,6 +162,9 @@ country_decisions = {
 			NOT = {
 				tag = QNG
 			}
+			NOT = {
+				has_country_flag = aex_released_manchuria
+			}
 		}
 		provinces_to_highlight = {
 			region = manchuria_region
@@ -155,13 +178,19 @@ country_decisions = {
 			}
 		}
 		effect = {
+			every_province = {
+				limit = {
+					is_core = MCH
+				}
+				remove_core = MCH
+			}
 			manchuria_region = {
 				add_core = MCH
 			}
 			release = MCH
 			create_subject = {
 				subject = MCH
-				subject_type = personal_union
+				subject_type = autonomous_region
 			}
 			MCH = {
 				change_religion = confucianism
@@ -176,6 +205,7 @@ country_decisions = {
 				}
 				change_culture = manchu_new
 			}
+			set_country_flag = aex_released_manchuria
 		}
 		ai_will_do = {
 			factor = 400
@@ -190,6 +220,9 @@ country_decisions = {
 			}
 			NOT = {
 				tag = YUA
+			}
+			NOT = {
+				has_country_flag = aex_released_inner_mongolia
 			}
 		}
 		provinces_to_highlight = {
@@ -226,6 +259,12 @@ country_decisions = {
 			}
 		}
 		effect = {
+			every_province = {
+				limit = {
+					is_core = CHH
+				}
+				remove_core = CHH
+			}
 			ordos_area = {
 				add_core = CHH
 			}
@@ -247,7 +286,7 @@ country_decisions = {
 			release = CHH
 			create_subject = {
 				subject = CHH
-				subject_type = personal_union
+				subject_type = autonomous_region
 			}
 			CHH = {
 				change_religion = confucianism
@@ -256,6 +295,7 @@ country_decisions = {
 				change_primary_culture = mongol
 				set_capital = 702
 			}
+			set_country_flag = aex_released_inner_mongolia
 		}
 		ai_will_do = {
 			factor = 400
@@ -270,6 +310,9 @@ country_decisions = {
 			}
 			NOT = {
 				tag = YUA
+			}
+			NOT = {
+				has_country_flag = aex_released_outer_mongolia
 			}
 		}
 		provinces_to_highlight = {
@@ -302,6 +345,12 @@ country_decisions = {
 			}
 		}
 		effect = {
+			every_province = {
+				limit = {
+					is_core = KHA
+				}
+				remove_core = KHA
+			}
 			outer_mongolia_area = {
 				add_core = KHA
 			}
@@ -320,15 +369,16 @@ country_decisions = {
 			release = KHA
 			create_subject = {
 				subject = KHA
-				subject_type = personal_union
+				subject_type = autonomous_region
 			}
 			KHA = {
 				change_religion = confucianism
-				add_harmonized_religion = vajrayana
+				add_harmonized_religion = tengri_pagan_reformed
 				change_government = monarchy
 				change_primary_culture = khalkha
 				set_capital = 2116
 			}
+			set_country_flag = aex_released_outer_mongolia
 		}
 		ai_will_do = {
 			factor = 400
