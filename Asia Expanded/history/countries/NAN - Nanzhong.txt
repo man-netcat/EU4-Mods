@@ -1,6 +1,6 @@
 government = tribal
 add_government_reform = tribal_kingdom
-primary_culture = nanman
+primary_culture = bai
 religion = animism
 technology_group = chinese
 capital = 661	# Dali

@@ -60,7 +60,7 @@ country_event = {
     }
 
     immediate = {
-        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = CHH_AUTONOMOUS_REGION }
+        if = { limit = { subject_type = autonomous_region overlord = { is_emperor_of_china = yes } } override_country_name = CHH_AUTONOMOUS_REGION }
     }
 
     option = {
@@ -102,7 +102,7 @@ country_event = {
     }
 
     immediate = {
-        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = KHA_AUTONOMOUS_REGION }
+        if = { limit = { subject_type = autonomous_region overlord = { is_emperor_of_china = yes } } override_country_name = KHA_AUTONOMOUS_REGION }
     }
 
     option = {
@@ -123,7 +123,7 @@ country_event = {
     }
 
     immediate = {
-        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = MCH_AUTONOMOUS_REGION }
+        if = { limit = { subject_type = autonomous_region overlord = { is_emperor_of_china = yes } } override_country_name = MCH_AUTONOMOUS_REGION }
     }
 
     option = {
@@ -144,7 +144,7 @@ country_event = {
     }
 
     immediate = {
-        if = { limit = { subject_type = personal_union overlord = { is_emperor_of_china = yes } } override_country_name = TIB_AUTONOMOUS_REGION }
+        if = { limit = { subject_type = autonomous_region overlord = { is_emperor_of_china = yes } } override_country_name = TIB_AUTONOMOUS_REGION }
     }
 
     option = {
