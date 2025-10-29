@@ -427,21 +427,18 @@ MJN_ideas = {
 		tolerance_heathen = -2
 		missionaries = 2
 	}
-	
 	bonus = {
 		manpower_in_true_faith_provinces = 0.33
 	}
-	
 	trigger = {
 		tag = MJN
 	}
 	free = yes
-	
 	mjn_faith_and_morale = {
 		land_morale = 0.1
 		naval_morale = 0.1
 	}
-	mjn_blessings_of_maitreya = {	
+	mjn_blessings_of_maitreya = {
 		institution_spread_from_true_faith = 0.5
 	}
 	mjn_diligent_maintenance = {
@@ -493,5 +490,44 @@ QOC_ideas = {
 	}
 	qoc_kingdom_legacy = {
 		prestige = 1
+	}
+}
+
+EZO_ideas = {
+	start = {
+		expand_infrastructure_cost_modifier = -0.25
+	}
+	bonus = {
+		light_ship_power = 0.5
+	}
+	trigger = {
+		tag = EZO
+	}
+	free = yes
+	ezo_civilising_the_northern_tribes = {
+		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	ezo_syncretic_beliefs = {
+		religious_unity = 0.15
+	}
+	ezo_fortified_villages = {
+		defensiveness = 0.2
+	}
+	ezo_council_republic = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	ezo_mariner_heritage = {
+		ship_trade_power_modifier = 0.25
+	}
+	ezo_fur_trade = {
+		trade_efficiency = 0.1
+	}
+	ezo_merchants_guilds = {
+		merchants = 1
 	}
 }

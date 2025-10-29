@@ -1,0 +1,68 @@
+country_decisions = {
+	form_ezo = {
+		major = yes
+		potential = {
+			primary_culture = ainu
+			NOT = {
+				has_country_flag = formed_ezo_flag
+			}
+			NOT = {
+				exists = EZO
+			}
+		}
+		provinces_to_highlight = {
+			NOT = {
+				owned_by = ROOT
+			}
+			area = hokkaido_area
+		}
+		allow = {
+			owns_all_provinces = {
+				area = hokkaido_area
+			}
+			is_free_or_tributary_trigger = yes
+		}
+		effect = {
+			change_tag = EZO
+			change_religion = shinto
+			change_primary_culture = ezo
+			change_government = republic
+			every_province = {
+				limit = {
+					culture = ainu
+				}
+				change_culture = ezo
+			}
+			set_country_flag = formed_ezo_flag
+			add_prestige = 25
+			# Oshima
+			set_capital = 4193
+			4193 = {
+				change_province_name = "Hakodate"
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			kamchatka_area = {
+				add_claim = ROOT
+			}
+			sakhalin_area = {
+				add_claim = ROOT
+			}
+			japan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

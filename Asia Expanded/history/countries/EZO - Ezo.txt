@@ -1,0 +1,6 @@
+government = republic
+government_rank = 1
+primary_culture = ezo
+religion = shinto
+technology_group = chinese
+capital = 4193	# Oshima
