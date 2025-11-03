@@ -1,0 +1,3 @@
+free_slot_for_al_suryah_arabic = {
+	num_accepted_cultures = 1
+}

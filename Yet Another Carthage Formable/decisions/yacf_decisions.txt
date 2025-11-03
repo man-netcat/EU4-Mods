@@ -1,0 +1,113 @@
+country_decisions = {
+	form_carthage = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_carthage_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = PNC
+			}
+			OR = {
+				primary_culture = al_suryah_arabic
+				culture_group = maghrebi
+			}
+			is_colonial_nation = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 341				# Tunis (will be Carthage capital)
+				province_id = 2455				# Bizerte (Utica)
+				province_id = 2473				# Sousse (Hadrumetum)
+				province_id = 4566				# Kairwan
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 1
+			owns = 341
+			owns = 2455
+			owns = 2473
+			owns = 4566
+			341 = {
+				is_state = yes
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				# region = maghreb_region   # optional: require provinces in the Maghreb region
+			}
+		}
+		effect = {
+			341 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_province_name = Carthago
+				rename_capital = Carthago
+				move_capital_effect = yes
+			}
+			2455 = {
+				change_province_name = Utica
+			}
+			2473 = {
+				change_province_name = Hadrumetum
+			}
+			change_tag = PNC
+			add_prestige = 20
+			set_country_flag = formed_carthage_flag
+			PNC = {
+				change_government = monarchy
+				change_primary_culture = punic
+				add_accepted_culture_or_dip_power_stated = {
+					culture = al_suryah_arabic
+					dip_reward = yes
+				}
+				set_capital = 341
+			}
+			set_government_rank = 3
+			add_permanent_claim_multi_provinces = {
+				target = sicily_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = western_sicily_area
+			}
+			add_permanent_claim_multi_provinces = {
+				target = cyrenaica_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = iberia_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = maghreb_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = corsica_sardinia_area
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 300
+	}
+}

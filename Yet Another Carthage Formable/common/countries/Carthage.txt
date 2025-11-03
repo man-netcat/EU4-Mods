@@ -1,0 +1,81 @@
+#Country Name: Please see filename.
+graphical_culture = muslimgfx
+color = {
+	103
+	45
+	109
+}
+
+revolutionary_colors = {
+	2
+	8
+	2
+}
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	economic_ideas
+}
+
+historical_units = {
+	persian_footsoldier
+	persian_cavalry_charge
+	persian_shamshir
+	qizilbash_cavalry_unit
+	tofongchis_musketeer
+	topchis_artillery
+	afsharid_reformed
+	afsharid_reformed_infantry
+	muslim_mass_infantry
+	muslim_dragoon
+	persian_rifle
+}
+
+monarch_names = {
+	"Hamilcar #1" = 20
+	"Hannibal #1" = 20
+	"Hasdrubal #1" = 20
+	"Mago #1" = 20
+	"Hanno #1" = 15
+	"Hanno-Bar #1" = 10
+	"Hanno-Son #1" = 10
+	"Baal-Melkart #1" = 10
+	"Dido #1" = 5
+	"Elissa #1" = 5
+	"Shofet #0" = 0
+	"Qart-Hadasht #0" = 0
+}
+
+leader_names = {
+	Hamilcar
+	Hannibal
+	Hasdrubal
+	Mago
+	Hanno
+	"Hanno-Bar"
+	"Hanno-Son"
+	Himilco
+	Didoel
+	"Baal-Melkart"
+}
+
+ship_names = {
+	Qart
+	Tanit
+	Baal
+	Melqart
+	Hamilcar
+	Hannibal
+	Hasdrubal
+	Mago
+	Hanno
+	Himilco
+	Elissa
+	Salammbo
+}
