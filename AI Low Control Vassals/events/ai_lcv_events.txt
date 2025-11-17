@@ -1,0 +1,80 @@
+namespace = ai_low_control_vassals
+country_event = {
+	id = ai_low_control_vassals.1
+	trigger = {
+		ai = yes
+		is_free_or_tributary_trigger = yes
+		is_at_war = no
+		any_owned_province = {
+			lcv_valid_release_province = yes
+		}
+		NOT = {
+			any_subject_country = {
+				is_vassal = yes
+				liberty_desire = 10
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					lcv_valid_release_province = yes
+				}
+				random_core_country = {
+					limit = {
+						lcv_valid_releasable_base = yes
+						lcv_scaled_releasable_cores_by_overlord = yes
+					}
+					ROOT = {
+						release = PREV
+						create_subject = {
+							subject_type = vassal
+							subject = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = ai_low_control_vassals.2
+	trigger = {
+		ai = yes
+		is_free_or_tributary_trigger = yes
+		is_at_war = no
+		any_subject_country = {
+			NOT = {
+				liberty_desire = 30
+			}
+			any_owned_province = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					local_autonomy = 50
+				}
+			}
+			lcv_is_vassal_with_less_than_5_provinces = yes
+		}
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 10
+			always = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			lcv_cede_bordering_highest_autonomy = yes
+		}
+	}
+	option = {
+	}
+}

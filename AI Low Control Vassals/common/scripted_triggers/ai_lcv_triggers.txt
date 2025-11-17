@@ -1,0 +1,180 @@
+lcv_is_vassal_with_less_than_5_provinces = {
+	is_vassal = yes
+	is_subject_of = ROOT
+	NOT = {
+		num_of_owned_provinces_with = {
+			value = 5
+			always = yes
+		}
+	}
+}
+
+lcv_valid_release_province = {
+	local_autonomy = 75
+	any_core_country = {
+		lcv_valid_releasable_base = yes
+	}
+}
+
+lcv_valid_cede_province = {
+	owned_by = ROOT
+	local_autonomy = $autonomy$
+	is_capital = no
+	any_neighbor_province = {
+		owner = {
+			lcv_is_vassal_with_less_than_5_provinces = yes
+		}
+	}
+}
+
+lcv_valid_releasable = {
+	exists = no
+	NOT = {
+		OR = {
+			tag = ROOT
+			historical_rival_with = ROOT
+			lcv_can_be_chinese_warlord = yes
+			calc_true_if = {
+				amount = 5
+				all_core_province = {
+					always = yes
+				}
+			}
+		}
+	}
+}
+
+lcv_valid_releasable_base = {
+	exists = no
+	NOT = {
+		OR = {
+			tag = ROOT
+			historical_rival_with = ROOT
+			lcv_can_be_chinese_warlord = yes
+		}
+	}
+}
+
+lcv_scaled_releasable_cores_by_overlord = {
+	if = {
+		limit = {
+			ROOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 80
+					always = yes
+				}
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 21
+				all_core_province = {
+					owned_by = ROOT
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 40
+					always = yes
+				}
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 16
+				all_core_province = {
+					owned_by = ROOT
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 20
+					always = yes
+				}
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 11
+				all_core_province = {
+					owned_by = ROOT
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					always = yes
+				}
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 6
+				all_core_province = {
+					owned_by = ROOT
+				}
+			}
+		}
+	}
+	else = {
+		NOT = {
+			calc_true_if = {
+				amount = 4
+				all_core_province = {
+					owned_by = ROOT
+				}
+			}
+		}
+	}
+}
+
+lcv_can_be_chinese_warlord = {
+	OR = {
+		primary_culture = bai
+		primary_culture = miao
+		primary_culture = yi
+		culture_group = east_asian
+	}
+	OR = {
+		AND = {
+			OR = {
+				primary_culture = miao
+				primary_culture = yi
+			}
+			religion = animism
+		}
+		AND = {
+			primary_culture = bai
+			religion = buddhism
+		}
+		religion = confucianism
+	}
+	technology_group = chinese
+	capital_scope = {
+		OR = {
+			region = north_china_region
+			region = xinan_region
+			region = south_china_region
+		}
+	}
+	if = {
+		limit = {
+			is_subject = yes
+		}
+		overlord = {
+			has_reform = celestial_empire
+		}
+	}
+}

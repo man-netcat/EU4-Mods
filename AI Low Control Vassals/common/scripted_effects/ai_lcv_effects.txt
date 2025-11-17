@@ -1,0 +1,249 @@
+lcv_province_cede_to_best_neighbor = {
+	save_event_target_as = lcv_province
+	random_neighbor_province = {
+		limit = {
+			owner = {
+				lcv_is_vassal_with_less_than_5_provinces = yes
+			}
+			owner = {
+				event_target:lcv_province = {
+					is_core = PREV
+				}
+			}
+		}
+		owner = {
+			save_event_target_as = lcv_recipient
+		}
+		event_target:lcv_province = {
+			cede_province = event_target:lcv_recipient
+			lcv_change_government = yes
+		}
+	}
+}
+
+lcv_change_government = {
+	event_target:lcv_recipient = {
+		if = {
+			limit = {
+				overlord = {
+					government = monarchy
+				}
+			}
+			change_government = monarchy
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					government = republic
+				}
+			}
+			change_government = republic
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					government = theocracy
+				}
+			}
+			change_government = theocracy
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					government = tribal
+				}
+			}
+			change_government = tribal
+		}
+	}
+}
+
+lcv_cede_bordering_highest_autonomy = {
+	if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 100
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 100
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 95
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 95
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 90
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 90
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 85
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 85
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 80
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 80
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 75
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 75
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 70
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 70
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 65
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 65
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 60
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 60
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 55
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 55
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_province = {
+				lcv_valid_cede_province = {
+					autonomy = 50
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				lcv_valid_cede_province = {
+					autonomy = 50
+				}
+			}
+			lcv_province_cede_to_best_neighbor = yes
+		}
+	}
+}
