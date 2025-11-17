@@ -1,0 +1,35 @@
+PNC_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		naval_morale = 0.15
+	}
+	bonus = {
+		global_trade_power = 0.15
+	}
+	trigger = {
+		tag = PNC
+	}
+	free = yes
+	pnc_merchants_of_qarhadasht = {
+		trade_range_modifier = 0.25
+	}
+	pnc_legacy_of_hannibal = {
+		land_morale = 0.15
+		leader_land_manuever = 1
+	}
+	pnc_phoenician_seamanship = {
+		ship_durability = 0.1
+	}
+	pnc_sacred_band = {
+		discipline = 0.05
+	}
+	pnc_mercenary_traditions = {
+		mercenary_cost = -0.15
+	}
+	pnc_council_of_elders = {
+		governing_capacity_modifier = 0.1
+	}
+	pnc_masters_of_the_western_sea = {
+		naval_forcelimit_modifier = 0.25
+	}
+}

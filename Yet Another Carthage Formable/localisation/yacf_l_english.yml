@@ -4,4 +4,28 @@
 
  PNC:0 "Carthage"
  PNC_ADJ:0 "Carthaginian"
- punic:0 "Punic"
+ 
+ PNC_ideas:0 "Punic Ideas"
+ PNC_ideas_start:0 "By Markets and Harbors"
+ PNC_ideas_bonus:0 "Trade Empire"
+ 
+ pnc_merchants_of_qarhadasht:0 "Mediterranean Merchants"
+ pnc_merchants_of_qarhadasht_desc:0 "From Byrsa to the Pillars of Hercules, Carthage’s merchants dominate trade across the Mediterranean, bringing wealth and influence to the city."
+ 
+ pnc_sacred_band:0 "Sons of Byrsa"
+ pnc_sacred_band_desc:0 "Our citizen soldiers are trained from youth in Byrsa itself, forming a disciplined corps ready to defend the city and fight with unwavering loyalty."
+ 
+ pnc_phoenician_seamanship:0 "Ships of Tyre"
+ pnc_phoenician_seamanship_desc:0 "Carthaginian shipbuilders have inherited the secrets of Tyre, crafting vessels that can endure storms and enemy fire while projecting our naval power."
+ 
+ pnc_mercenary_traditions:0 "Legions of Gold"
+ pnc_mercenary_traditions_desc:0 "Carthage hires foreign troops across Numidia, Iberia, and Gaul, ensuring mercenaries serve efficiently and loyally without overburdening the treasury."
+ 
+ pnc_council_of_elders:0 "Senate of Carthage"
+ pnc_council_of_elders_desc:0 "The elders of Carthage guide the state with prudence and experience, managing administration and governance to maximize our capacity and stability."
+ 
+ pnc_legacy_of_hannibal:0 "Hannibal’s Shadow"
+ pnc_legacy_of_hannibal_desc:0 "The daring campaigns of Hannibal Barca inspire our generals and armies alike, allowing them to maneuver skillfully and fight with unmatched courage."
+ 
+ pnc_masters_of_the_western_sea:0 "Masters of the Waves"
+ pnc_masters_of_the_western_sea_desc:0 "Carthage’s navy dominates the western Mediterranean, ensuring that no fleet or merchant can challenge our supremacy upon the waves."
