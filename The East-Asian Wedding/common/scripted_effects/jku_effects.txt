@@ -1,0 +1,52 @@
+# Japanese-Korean Union Formation Effects
+# Common formation effects for JKU
+jku_formation_effect = {
+	change_tag = JKU
+	swap_non_generic_missions = yes
+	on_change_tag_effect = yes
+	remove_non_electors_emperors_from_empire_effect = yes
+	if = {
+		limit = {
+			NOT = {
+				government_rank = 3
+			}
+		}
+		set_government_rank = 3
+	}
+	if = {
+		limit = {
+			has_custom_ideas = no
+		}
+		country_event = {
+			id = ideagroups.1
+		}
+	}
+	add_country_modifier = {
+		name = "centralization_modifier"
+		duration = 7300
+	}
+	set_country_flag = formed_jku_flag
+	add_prestige = 25
+}
+
+# Inherit the other nation (Japan or Korea) for diplomatic formation
+jku_inherit_partner_effect = {
+	if = {
+		limit = {
+			tag = JAP
+			KOR = {
+				ai = yes
+			}
+		}
+		inherit = KOR
+	}
+	if = {
+		limit = {
+			tag = KOR
+			JAP = {
+				ai = yes
+			}
+		}
+		inherit = JAP
+	}
+}

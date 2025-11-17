@@ -1,0 +1,73 @@
+#Country Name: Japanese-Korean Union
+
+graphical_culture = asiangfx
+
+color = { 180 53 120 }
+
+revolutionary_colors = { 0 5 7 }
+
+historical_score = 1000
+
+historical_idea_groups = {
+	economic_ideas
+	naval_ideas
+	quality_ideas
+	expansion_ideas
+	offensive_ideas
+	trade_ideas
+	administrative_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	japanese_archer
+	eastern_bow
+	japanese_footsoldier
+	japanese_samurai
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Takauji #0" = 10
+	"Yoshimitsu #0" = 10
+	"Yoshimasa #0" = 10
+	"Nobunaga #0" = 10
+	"Hideyoshi #0" = 10
+	"Ieyasu #0" = 10
+	"Hidetada #0" = 10
+	"Seonggye #0" = 10
+	"Hongwi #0" = 10
+	"Gwang #0" = 10
+	"Jong #0" = 10
+	"Sun #0" = 10
+	"Yeong #0" = 10
+	"Hwon #0" = 10
+	"Yoshiaki #0" = 0
+	"Tsunayoshi #0" = 0
+	"Yoshimune #0" = 0
+	"Ienari #0" = 0
+	"Yeon #0" = 0
+	"Ho #0" = 0
+	"Hwan #0" = 0
+	"Myeongbok #0" = 0
+}
+
+leader_names = {
+	Ashikaga Oda Tokugawa Toyotomi
+	Hosokawa Date Takeda Uesugi Shimazu
+	Yi Wang Kim Pak Shin Song Chae Gang Jeong Jang
+	Han Hong Choi Yun
+}
+
+ship_names = {
+	Yamato Musashi Nagato Akagi Kaga
+	Hanseong Busan Jeju Incheon
+	Baekdu Geumgang Taejo Jirisan
+	"Rising Sun" "Morning Calm" "Dragon" "Phoenix" "Tiger"
+	"Eulji Mundeok" "Yeon Gaesomun" "Yi Seong-gye"
+}

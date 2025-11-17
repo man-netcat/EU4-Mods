@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = japanese
+add_accepted_culture = togoku
+add_accepted_culture = korean
+religion = confucianism
+technology_group = chinese
+capital = 1020 # Kyoto
+

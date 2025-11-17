@@ -1,0 +1,79 @@
+country_decisions = {
+	# Form Japanese-Korean Union (Military)
+	form_jku_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			can_form_jku_trigger = yes
+			OR = {
+				ai = no
+				AND = {
+					is_playing_custom_nation = no
+					is_free_or_tributary_trigger = yes
+				}
+			}
+		}
+		provinces_to_highlight = {
+			is_jap_or_kor_region_trigger = yes
+			NOT = {
+				is_controlled_by_root_or_subjects_trigger = yes
+			}
+		}
+		allow = {
+			jku_basic_requirements_trigger = yes
+			japan_region = {
+				type = all
+				is_controlled_by_root_or_subjects_trigger = yes
+			}
+			korea_region = {
+				type = all
+				is_controlled_by_root_or_subjects_trigger = yes
+			}
+		}
+		effect = {
+			jku_formation_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	# Form Japanese-Korean Union Diplomatically
+	form_jku_nation_diplomatically = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			can_form_jku_trigger = yes
+			OR = {
+				ai = no
+				AND = {
+					is_playing_custom_nation = no
+					is_free_or_tributary_trigger = yes
+					has_jap_kor_union_trigger = yes
+				}
+			}
+		}
+		allow = {
+			jku_basic_requirements_trigger = yes
+			has_jap_kor_union_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = forming_jku_diplomatically_tooltip
+				OR = {
+					legitimacy = 100
+					devotion = 100
+					republican_tradition = 90
+				}
+			}
+		}
+		effect = {
+			jku_inherit_partner_effect = yes
+			jku_formation_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+		do_not_integrate = JAP
+		do_not_integrate = KOR
+	}
+}

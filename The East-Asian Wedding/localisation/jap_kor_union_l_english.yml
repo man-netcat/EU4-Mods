@@ -1,0 +1,22 @@
+﻿l_english:
+ jap_kor_union.EVTNAME1:0 "The East Asian Wedding"
+ jap_kor_union.EVTDESC1:0 "As our two great nations stand at the crossroads of history, an opportunity presents itself to unite the strength of Japan and Korea through a royal marriage. Such a union would bring together the military prowess and administrative excellence of both realms, creating an unprecedented power in East Asia. The marriage would be one of political necessity and strategic vision, binding our dynasties together and ensuring peace and prosperity for generations to come. Though some may resist this foreign alliance, the benefits of such a union cannot be ignored - together, we would command the seas and stand as an unshakeable force in the region."
+ jap_kor_union.EVTOPTA1:0 "Let us bind their Dynasty to ours"
+ jap_kor_union.EVTOPTB1:0 "No, let us marry a local talent instead"
+ 
+ #Opinion Modifiers
+ jap_kor_wedding:0 "East Asian Wedding"
+ jap_kor_wedding_negative:0 "Rejected our Royal Marriage"
+ jap_kor_declined_wedding:0 "Declined the East Asian Wedding"
+ 
+ #Country Names
+ JKU:0 "Japanese-Korean Union"
+ JKU_ADJ:0 "East Asian"
+ 
+ #Formation Decisions
+ form_jku_nation_title:0 "Form Japanese-Korean Union Militarily"
+ form_jku_nation_desc:0 "Through military conquest and strategic domination, we have brought both the Japanese archipelago and the Korean peninsula under our control. The time has come to unite these two great regions into a single, unified empire. The Japanese-Korean Union will combine the naval prowess and military discipline of Japan with the administrative excellence and cultural richness of Korea, creating an unprecedented power in East Asia that will dominate the seas and command respect from all nations."
+ form_jku_nation_diplomatically_title:0 "Form Japanese-Korean Union Diplomatically"
+ form_jku_nation_diplomatically_desc:0 "Through careful diplomacy and dynastic ties, we have bound Japan and Korea together in a personal union. Now is the time to formalize this arrangement and create a unified nation that combines the strengths of both our peoples. The Japanese-Korean Union will stand as a beacon of East Asian power, controlling the vital sea lanes and trade routes of the region while maintaining the unique cultural heritage of both nations."
+ forming_jku_diplomatically_tooltip:0 "[Root.GetName] is the overlord in a vassalage or union between Japan and Korea."
+ jku_unification_effect.tooltip:0 "§YThe Japanese-Korean Union§! will get a permanent claim on the entire §YJapan§! and §YKorea§! regions."

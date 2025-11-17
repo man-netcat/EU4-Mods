@@ -1,0 +1,64 @@
+# Japanese-Korean Union Formation Triggers
+
+# Check if nation is eligible to form JKU
+can_form_jku_trigger = {
+	OR = {
+		tag = JAP
+		tag = KOR
+	}
+	NOT = {
+		exists = JKU
+	}
+	NOT = {
+		has_country_flag = formed_jku_flag
+	}
+	is_colonial_nation = no
+	OR = {
+		ai = no
+		is_former_colonial_nation = no
+	}
+}
+
+# Check if nation has PU over the other (Japan or Korea)
+has_jap_kor_union_trigger = {
+	OR = {
+		AND = {
+			tag = JAP
+			KOR = {
+				is_subject_of = JAP
+			}
+		}
+		AND = {
+			tag = KOR
+			JAP = {
+				is_subject_of = KOR
+			}
+		}
+	}
+}
+
+# Check basic requirements for any JKU formation
+jku_basic_requirements_trigger = {
+	adm_tech = 10
+	is_free_or_tributary_trigger = yes
+	is_nomad = no
+	is_at_war = no
+}
+
+# Check if province is in Japan or Korea region
+is_jap_or_kor_region_trigger = {
+	OR = {
+		region = japan_region
+		region = korea_region
+	}
+}
+
+# Check if province is controlled by ROOT or their subjects
+is_controlled_by_root_or_subjects_trigger = {
+	OR = {
+		owned_by = ROOT
+		owner = {
+			is_subject_of = ROOT
+		}
+	}
+}

@@ -1,0 +1,2 @@
+# Japanese-Korean Union Tag
+JKU = "countries/Japanese-Korean Union.txt"

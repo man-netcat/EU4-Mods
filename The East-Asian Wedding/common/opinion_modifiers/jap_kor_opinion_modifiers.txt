@@ -1,0 +1,19 @@
+# Japanese-Korean Union Opinion Modifiers
+
+jap_kor_wedding = {
+	opinion = 200
+	years = 10
+	yearly_decay = 5
+}
+
+jap_kor_wedding_negative = {
+	opinion = -50
+	years = 50
+	yearly_decay = 1
+}
+
+jap_kor_declined_wedding = {
+	opinion = -25
+	years = 25
+	yearly_decay = 1
+}

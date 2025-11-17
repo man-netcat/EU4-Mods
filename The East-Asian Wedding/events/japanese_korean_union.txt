@@ -1,0 +1,201 @@
+########################################
+# Japanese-Korean Union Events         #
+########################################
+
+namespace = jap_kor_union
+normal_or_historical_nations = yes
+
+# The East Asian Wedding
+country_event = {
+	id = jap_kor_union.1
+	title = "jap_kor_union.EVTNAME1"
+	desc = "jap_kor_union.EVTDESC1"
+	picture = DIPLOMACY_eventPicture
+
+	major = yes
+	
+	fire_only_once = yes
+	
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = JAP
+				NOT = { war_with = KOR }
+				is_subject = no
+				KOR = {
+					exists = yes
+					ai = yes
+					was_player = no
+					is_subject = no
+					is_neighbor_of = ROOT
+					NOT = { is_in_war = { attacker_leader = KOR } }
+					NOT = { is_in_war = { defender_leader = KOR } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
+					government = monarchy
+				}
+				num_of_cities = 25
+			}
+			AND = {
+				tag = KOR
+				NOT = { war_with = JAP }
+				is_subject = no
+				ai = no
+				JAP = {
+					exists = yes
+					ai = yes
+					was_player = no
+					is_subject = no
+					is_neighbor_of = ROOT
+					NOT = { is_in_war = { attacker_leader = JAP } }
+					NOT = { is_in_war = { defender_leader = JAP } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
+					government = monarchy
+				}
+				num_of_cities = 16
+			}
+		}
+		government = monarchy
+		is_year = 1450
+		NOT = { is_year = 1530 }
+		is_subject = no
+		num_of_cities = 10
+		OR = {
+			AND = {
+				JAP = { is_female = yes }
+				KOR = { is_female = no }
+			}
+			AND = {
+				JAP = { is_female = no }
+				KOR = { is_female = yes }
+			}
+			KOR = {
+				ai = yes
+				has_regency = yes
+			}
+			JAP = {
+				ai = yes
+				has_regency = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					tag = JAP
+					KOR = {
+						has_regency = no 
+					}
+				}
+				AND = {
+					tag = KOR
+					JAP = { 
+						has_regency = no 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {		# Let us bind their Dynasty to ours
+		name = "jap_kor_union.EVTOPTA1"
+		ai_chance = { factor = 90 }
+		if = {
+			limit = { tag = JAP }
+			create_union = KOR
+			add_opinion = {
+				who = KOR
+				modifier = jap_kor_wedding
+			}
+			KOR = {
+				add_opinion = {
+					who = ROOT
+					modifier = jap_kor_wedding
+				}
+				add_liberty_desire = -50
+			}
+			every_known_country = {
+				limit = {
+					marriage_with = KOR
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = jap_kor_wedding_negative
+				}
+			}
+		}
+		if = {
+			limit = { tag = KOR }
+			create_union = JAP
+			add_opinion = {
+				who = JAP
+				modifier = jap_kor_wedding
+			}
+			JAP = {
+				add_opinion = {
+					who = ROOT
+					modifier = jap_kor_wedding
+				}
+				add_liberty_desire = -50
+			}
+			every_known_country = {
+				limit = {
+					marriage_with = JAP
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = jap_kor_wedding_negative
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_capital = no
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+	option = {		# No let us marry a local talent instead
+		name = "jap_kor_union.EVTOPTB1"
+		ai_chance = { factor = 10 }
+		add_stability_or_adm_power = yes
+		if = {
+			limit = { tag = JAP }
+			KOR = {
+				add_opinion = {
+					who = ROOT
+					modifier = jap_kor_declined_wedding
+				}
+			}
+		}
+		if = {
+			limit = { tag = KOR }
+			JAP = {
+				add_opinion = {
+					who = ROOT
+					modifier = jap_kor_declined_wedding
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_regency = no
+				has_consort = no
+				has_government_attribute = queen
+			}
+			define_consort = {
+				ADM = 2
+				MIL = 2
+				DIP = 2
+			}
+		}
+	}
+}
