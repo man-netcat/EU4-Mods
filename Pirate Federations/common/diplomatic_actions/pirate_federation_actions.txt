@@ -1,0 +1,78 @@
+# Diplomatic action to invite nations to join the pirate federation
+
+invite_to_pirate_federation = {
+	condition = {
+		tooltip = PIRATE_FEDERATION_REQUIRES_PIRATE_REPUBLIC
+		potential = {
+		}
+		allow = {
+			ROOT = {
+				has_reform = pirate_republic_reform
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = PIRATE_FEDERATION_TARGET_MUST_BE_ISLAND_NATION
+		potential = {
+		}
+		allow = {
+			FROM = {
+				all_owned_province = {
+					province_is_on_an_island = yes
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = PIRATE_FEDERATION_TARGET_NOT_SUBJECT
+		potential = {
+		}
+		allow = {
+			FROM = {
+				NOT = { has_reform = pirate_republic_reform }
+				NOT = { is_subject_of_type = pirate_federation_member }
+				NOT = { is_subject = yes }
+				is_at_war = no
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = PIRATE_FEDERATION_REQUIRES_HIGH_OPINION
+		potential = {
+			FROM = { ai = yes }
+		}
+		allow = {
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+		}
+	}
+	
+	effect = {
+		# Convert target to pirate republic
+		FROM = {
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government = republic
+			}
+			add_government_reform = pirate_republic_reform
+		}
+		# Create subject relationship
+		create_subject = {
+			subject = FROM
+			subject_type = pirate_federation_member
+		}
+		# Add trust
+		add_trust = {
+			who = FROM
+			value = 20
+			mutual = yes
+		}
+	}
+}

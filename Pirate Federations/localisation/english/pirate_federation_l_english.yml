@@ -1,0 +1,70 @@
+﻿l_english:
+ # Subject Type
+ pirate_federation_member: "Federation Member"
+ pirate_federation_member_title: "Federation Member"
+ pirate_federation_member_title_plural: "Federation Members"
+ pirate_federation_member_long_desc: "Members of a Pirate Federation are independent pirate republics that have banded together for mutual protection and profit. They share naval resources and come to each other's aid in times of war, while maintaining their sovereignty on the high seas."
+ pirate_federation_member_is_our: "$WHO$ is our Federation Member"
+ 
+ # Casus Belli
+ cb_pirate_federation_invite: "Invitation to the Federation"
+ cb_pirate_federation_invite_desc: "As fellow mariners of the seas, we can force this island nation to join our pirate federation. They will benefit from our protection and share in our spoils, while we gain a valuable ally in these dangerous waters."
+ CB_ALLOWED_cb_pirate_federation_invite: "Invitation to Federation"
+ 
+ cb_pirate_federation_liberate: "Liberate Island Havens"
+ cb_pirate_federation_liberate_desc: "We can liberate the islands held by this nation, releasing them as independent pirate republics that will join our federation. Perfect for creating havens in Corsica, Sardinia, Cyprus, Crete, and other strategic islands."
+ CB_ALLOWED_cb_pirate_federation_liberate: "Liberate Islands"
+ 
+ # Wargoals
+ pirate_federation_wargoal: "Invite to Federation"
+ PIRATE_FEDERATION_WAR_NAME: "War of Pirate Diplomacy"
+ 
+ pirate_liberation_wargoal: "Liberate Islands"
+ PIRATE_LIBERATION_WAR_NAME: "War of Island Liberation"
+ 
+ # Peace Treaties
+ po_pirate_federation_join: "Join Pirate Federation"
+ po_pirate_federation_join_desc: "[FROM.GetName] will be converted to a Pirate Republic and become a member of [THIS.GetName]'s Pirate Federation."
+ PEACE_po_pirate_federation_join: "Join $TAKERS$ Pirate Federation"
+ CB_ALLOWED_po_pirate_federation_join: "Join Federation"
+ 
+ po_release_pirate_vassals: "Release as Pirate Republic"
+ po_release_pirate_vassals_desc: "Island provinces with cores of other nations can be released as independent Pirate Republics that will immediately join [THIS.GetName]'s Federation."
+ PEACE_po_release_pirate_vassals: "Release Pirate Republics for $TAKER$"
+ CB_ALLOWED_po_release_pirate_vassals: "Release as Pirate Republic"
+ 
+ # Opinion Modifiers
+ pirate_federation_leader_opinion: "Pirate Federation Leader"
+ pirate_federation_member_opinion: "Fellow Pirate"
+ 
+ # Events
+ pirate_federation.1.t: "A New Pirate Haven"
+ pirate_federation.1.d: "We have been released from our former overlord by [From.GetName], a pirate republic. They have offered us membership in their pirate federation, converting our government to match their own and granting us access to their network of corsairs and privateers. The open seas await!"
+ pirate_federation.1.a: "Hoist the black flag!"
+ 
+ pirate_federation.2.t: "War Concluded"
+ pirate_federation.2.d: "The war has ended."
+ pirate_federation.2.a: "Very well."
+ 
+ pirate_federation.3.t: "Expelled from Pirate Federation"
+ pirate_federation.3.d: "Our government has changed and we are no longer a Pirate Republic. [federation_leader.GetName] has expelled us from their pirate federation. We are now free to chart our own course."
+ pirate_federation.3.a: "So be it."
+ 
+ pirate_federation.4.t: "Member Expelled from Federation"
+ pirate_federation.4.d: "[expelled_member.GetName] has abandoned the ways of the pirate and changed their government. They are no longer a Pirate Republic and have been expelled from our federation."
+ pirate_federation.4.a: "They were never truly one of us."
+ 
+ # Diplomatic Actions
+ invite_to_pirate_federation: "Invite to Pirate Federation"
+ invite_to_pirate_federation_desc: "Invite this island nation to join our Pirate Federation peacefully. They will be converted to a Pirate Republic and become our federation member."
+ PIRATE_FEDERATION_REQUIRES_PIRATE_REPUBLIC: "We must be a Pirate Republic"
+ PIRATE_FEDERATION_TARGET_MUST_BE_ISLAND_NATION: "Target must be entirely on islands"
+ PIRATE_FEDERATION_TARGET_NOT_SUBJECT: "Target must not be a subject or at war"
+ PIRATE_FEDERATION_REQUIRES_HIGH_OPINION: "Target must have at least 150 opinion of us"
+ 
+ # Tooltips
+ IS_INVASION_TARGET_TT: "This nation can be invited to join our Pirate Federation"
+ 
+ # Wargoal descs
+ pirate_federation_wargoal_desc: "Force them to join our Pirate Federation"
+ pirate_liberation_wargoal_desc: "Liberate their island provinces as Pirate Republics"

@@ -1,0 +1,115 @@
+namespace = pirate_federation
+
+# Convert released nations to pirate republics if released by pirate federation
+country_event = {
+	id = pirate_federation.1
+	title = pirate_federation.1.t
+	desc = pirate_federation.1.d
+	picture = PIRATE_REPUBLIC_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		# Released nation has capital on island
+		capital_scope = {
+			province_is_on_an_island = yes
+		}
+		# Released by a pirate republic with the flag
+		overlord = {
+			has_reform = pirate_republic_reform
+			has_country_flag = releasing_pirate_federation_members
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			# Convert to pirate republic
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government = republic
+			}
+			add_government_reform = pirate_republic_reform
+		}
+	}
+	
+	option = {
+		name = pirate_federation.1.a
+		# Join the federation
+		overlord = {
+			create_subject = {
+				subject = ROOT
+				subject_type = pirate_federation_member
+			}
+		}
+	}
+}
+
+# Clear flags after war
+country_event = {
+	id = pirate_federation.2
+	title = pirate_federation.2.t
+	desc = pirate_federation.2.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = releasing_pirate_federation_members
+	}
+	
+	immediate = {
+		clr_country_flag = releasing_pirate_federation_members
+	}
+	
+	option = {
+		name = pirate_federation.2.a
+	}
+}
+
+# Yearly check: expel non-pirate republics from federation
+country_event = {
+	id = pirate_federation.3
+	title = pirate_federation.3.t
+	desc = pirate_federation.3.d
+	picture = PIRATE_REPUBLIC_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_subject_of_type = pirate_federation_member
+		NOT = { has_reform = pirate_republic_reform }
+	}
+	
+	immediate = {
+		save_event_target_as = expelled_member
+		overlord = {
+			save_event_target_as = federation_leader
+			# Free the subject
+			free_vassal = FROM
+		}
+	}
+	
+	option = {
+		name = pirate_federation.3.a
+		# Notify the overlord
+		event_target:federation_leader = {
+			country_event = { id = pirate_federation.4 days = 1 }
+		}
+	}
+}
+
+# Notification to overlord when member is expelled
+country_event = {
+	id = pirate_federation.4
+	title = pirate_federation.4.t
+	desc = pirate_federation.4.d
+	picture = PIRATE_REPUBLIC_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pirate_federation.4.a
+		# Just a notification - expelled_member is already saved
+	}
+}

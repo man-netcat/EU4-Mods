@@ -8,7 +8,7 @@
  
  # Decisions
  form_ilkhanate_nation_title:0 "Restore the Ilkhanate"
- form_ilkhanate_nation_desc:0 "The Ilkhanate, founded by Hulagu Khan, was once the mightiest power in Persia. Though our Jalayirid dynasty rose from its ashes, we have never forgotten that we are the heirs of the Khans. With Baghdad, Tabriz, Maragheh, and Soltaniyeh in our hands, and dominion over Persia secured, we can restore the Ilkhanate and reclaim the legacy of our Mongol forebears."
+ form_ilkhanate_nation_desc:0 "The Ilkhanate, founded by Hulagu Khan, was once the mightiest power in Persia. As heirs to this legacy, we have never forgotten our connection to the Khans. By uniting Persia under our rule, we can restore the Ilkhanate and reclaim the grandeur of our Mongol forebears."
  
  # National Ideas
  JLY_ideas:0 "Jalayirid Ideas"
@@ -64,10 +64,11 @@
  jly_mesopotamian_canals:0 "Mesopotamian Canals"
  desc_jly_mesopotamian_canals:0 "The restored canal system brings water and prosperity back to this province."
  
- jly_spread_perso_mongolic_culture_title:0 "A Cultural Synthesis"
- jly_spread_perso_mongolic_culture_desc:0 "The Ilkhanate failed because Mongol rulers remained alien to their Persian subjects - converting to Islam yet never bridging the cultural divide. We shall not repeat this mistake. By spreading our Perso-Mongolic culture, we unite steppe heritage with Persian civilization, succeeding where the Ilkhanate failed and forging one people from two traditions."
+ jly_mongol_persian_synthesis_title:0 "A Cultural Synthesis"
+ jly_mongol_persian_synthesis_desc:0 "The Ilkhanate failed because Mongol rulers remained alien to their Persian subjects - converting to Islam yet never bridging the cultural divide. We shall not repeat this mistake. By spreading our Perso-Mongolic culture, we unite steppe heritage with Persian civilization, succeeding where the Ilkhanate failed and forging one people from two traditions."
  jly_cultural_synthesis:0 "Perso-Mongolic Cultural Synthesis"
  desc_jly_cultural_synthesis:0 "Our unique fusion of Mongol martial tradition and Persian civilization has begun to take root, creating a unified identity that bridges the steppes and the cities."
+ jly_convert_persian_tooltip:0 "All owned provinces with Iranian culture group will be converted to Perso-Mongolic culture"
  
  jly_restore_taxation_title:0 "Reform Tax Collection"
  jly_restore_taxation_desc:0 "The Ilkhanate's collapse left Persian tax systems in disarray. We must restore the efficient revenue administration that once made the Mongol khans wealthy, rebuilding the bureaucracy across our domains."

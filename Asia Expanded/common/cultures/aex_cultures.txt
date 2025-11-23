@@ -86,6 +86,37 @@ turko_semitic = {
 			Shirin Soraya Touran Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh Atiya
 		}
 	}
+	
+	turco_mongolic = { # Mongolian-Turkish Hybrid
+		primary = ERE
+		dynasty_names = {
+			Eretna Chobanids
+		}
+		male_names = {
+			# Mongolian Names
+			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
+			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
+			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun 
+			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi Darayisung Tümen
+			# Turkish Names
+			Ala Ad-Din Alauddin Alp Arslan Artuk Atsiz Aydin Azam Badr Bahram Barkiyaruq Barkyaruq Bayezid 
+			Berkyaruq Beyazit Bumin Chaghri Chaka Danishmend Davud Duqaq Enver Ertugrul Ghiyath Gumushtigin 
+			Hamza Hizir Ibrahim Inal Ishak Ismail Kadir Kara Kaya Kaykhusraw Kayqubad Kaykaus Kilij Arslan 
+			Kutalmish Kutlug Mahmud Malikshah Masud Mehmed Muhammad Murad Musa Orhan Osman Ridwan Rukn Saltuk 
+			Selim Suleiman Sulayman Sungur Tughril Tutush Uthman Yaghi-Siyan Yakub Yusuf
+			# Combined Names
+			Temur-Khan Bayezid-Khan Osman-Khan Suleiman-Khan Alp-Temur Arslan-Bek Tugrul-Temur Murad-Khan
+		}
+		female_names = {
+			# Mongolian Names
+			Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun 
+			Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
+			# Turkish Names
+			Aisha Ayse Devlet Dilara Dilshad Emine Esin Fatima Gulbahar Hafsa Hatice Hurrem Kosem Mahidevran 
+			Mihrimah Mukrime Neslihan Nilufer Nurbanu Raziye Roxelana Safiye Sabiha Sehzade Selma Sirin Sultan 
+			Turhan Ulviye Zehra Zeynep
+		}
+	}
 }
 
 korean_g = {

@@ -1,7 +1,11 @@
 ﻿l_english:
+ ERE:0 Eretnids
+ ERE_ADJ:0 Eretnid
+ 
+ # Decisions
  eretna_restore_ilkhanate_title:0 "Restore the Ilkhanate"
- eretna_restore_ilkhanate_desc:0 "The legacy of the Ilkhans still lingers in the lands of Persia. By uniting the region under our rule, we can revive their empire and claim our place as rightful heirs to their dominion."
-
+ eretna_restore_ilkhanate_desc:0 "The Ilkhanate, founded by Hulagu Khan, was once the mightiest power in Persia. As heirs to this legacy and descendants of the great Uyghur nobles who served the khans, we must unite Persia and restore the grandeur of the Ilkhanate under Turkish rule."
+ 
  ere_prepare_for_independence_title:0 "Prepare for Independence"
  ere_prepare_for_independence_desc:0 "The time has come to cast off the yoke of the Ottomans. We must strengthen our military and economy to ensure a successful bid for independence."
 
@@ -46,3 +50,14 @@
 
  eretna_ilkhanate_reform:0 "The Turkish Ilkhanate"
  eretna_ilkhanate_reform_desc:0 "The Ilkhanate has been restored under Turkish rule. Taking inspiration from the Seljuks and the Ottomans, the new Ilkhanate has reformed old systems in order to not repeat the mistakes of the fallen empires.""  
+
+ # Cultures
+ turco_mongolic:0 "Turco-Mongolic"
+
+ # Missions - Cultural Synthesis
+ ere_mongol_turkish_synthesis_title:0 "Mongol-Turkish Synthesis"
+ ere_mongol_turkish_synthesis_desc:0 "Our dynasty was founded by Uyghur nobles who served the Mongol khans, yet we have become Turkified over generations. Rather than abandon either heritage, we shall forge a new identity - uniting Turkish martial prowess with Mongol imperial traditions to create a culture that bridges both worlds."
+ ere_cultural_synthesis:0 "Turco-Mongolic Cultural Synthesis"
+ desc_ere_cultural_synthesis:0 "Our unique fusion of Turkish and Mongol traditions has begun to take root, creating a unified identity that honors both our Turkic present and Mongol past."
+ ere_convert_turkish_tooltip:0 "All owned provinces with Turko-Semitic culture group will be converted to Turco-Mongolic culture"
+

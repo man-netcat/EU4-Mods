@@ -1,0 +1,139 @@
+# Peace treaty to force a country to join the pirate federation
+po_pirate_federation_join = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1.0
+	prestige_base = 0.5
+	ae_base = 0.5  # Lower AE than making a vassal
+	warscore_cost = {
+		all_provinces = 0.75
+		no_provinces = 0.0
+		owner_keeps = 0.0
+		conquered = 0.0
+		returned_core = 0.0
+		released_nation = 0.0
+		cancelled_subject = 0.0
+		concede_colonial_region = 0.0
+	}
+	warscore_cap = 60
+	requires_demand_independence = yes
+	is_make_subject = yes
+	requires_is_allowed = yes
+	
+	is_visible = {
+		ROOT = {
+			has_reform = pirate_republic_reform
+		}
+		FROM = {
+			all_owned_province = {
+				province_is_on_an_island = yes
+			}
+			NOT = { has_reform = pirate_republic_reform }
+			NOT = { is_subject_of_type = pirate_federation_member }
+		}
+	}
+	
+	is_allowed = {
+		ROOT = {
+			has_reform = pirate_republic_reform
+		}
+		FROM = {
+			all_owned_province = {
+				province_is_on_an_island = yes
+			}
+		}
+	}
+	
+	effect = {
+		FROM = {
+			# Convert to pirate republic if not already
+			if = {
+				limit = {
+					NOT = { has_reform = pirate_republic_reform }
+				}
+				if = {
+					limit = { NOT = { government = republic } }
+					change_government = republic
+				}
+				add_government_reform = pirate_republic_reform
+			}
+		}
+		# Create the subject relationship
+		create_subject = {
+			subject = FROM
+			subject_type = pirate_federation_member
+		}
+	}
+	
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 75
+		}
+	}
+}
+
+# Peace treaty to release island provinces as pirate republics that join the federation
+po_release_pirate_vassals = {
+	category = 2  # Release vassal category
+	power_projection = vassalized_rival
+	power_cost_base = 0.75
+	prestige_base = 0.5
+	ae_base = 0.3
+	warscore_cost = {
+		all_provinces = 0.0
+		no_provinces = 0.0
+		owner_keeps = 0.0
+		conquered = 0.0
+		returned_core = 0.0
+		released_nation = 1.0  # Based on released nations
+		cancelled_subject = 0.0
+		concede_colonial_region = 0.0
+	}
+	warscore_cap = -1
+	requires_demand_independence = no
+	requires_is_allowed = no
+	
+	is_visible = {
+		ROOT = {
+			has_reform = pirate_republic_reform
+		}
+		FROM = {
+			any_owned_province = {
+				OR = {
+					NOT = { is_core = FROM }
+					any_core_country = {
+						NOT = { tag = FROM }
+						NOT = { exists = yes }
+					}
+				}
+				province_is_on_an_island = yes
+			}
+		}
+	}
+	
+	is_allowed = {
+		ROOT = {
+			has_reform = pirate_republic_reform
+		}
+	}
+	
+	effect = {
+		# This will be handled by the release vassal mechanics
+		# but we add a special flag for post-release processing
+		ROOT = {
+			set_country_flag = releasing_pirate_federation_members
+		}
+		FROM = {
+			# Standard release mechanics will apply
+			# Then we'll need an on_action to convert them
+		}
+	}
+	
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+	}
+}

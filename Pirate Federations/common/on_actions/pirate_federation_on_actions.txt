@@ -1,0 +1,22 @@
+# On Actions for Pirate Federation
+
+# When a nation is released, check if it should be a pirate republic
+on_release_nation = {
+	events = {
+		pirate_federation.1
+	}
+}
+
+# When war ends, clear flags
+on_war_ended = {
+	events = {
+		pirate_federation.2
+	}
+}
+
+# Yearly check: if a federation member is no longer a pirate republic, expel them
+on_yearly_pulse_2 = {
+	events = {
+		pirate_federation.3
+	}
+}

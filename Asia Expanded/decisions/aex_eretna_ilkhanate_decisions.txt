@@ -4,7 +4,7 @@ country_decisions = {
 		potential = {
 			tag = ERE
 			NOT = {
-				has_country_flag = ere_form_ilkhanate_flag
+				has_country_flag = eretna_formed_ilkhanate
 			}
 		}
 		provinces_to_highlight = {
@@ -39,7 +39,7 @@ country_decisions = {
 				}
 			}
 			add_prestige = 25
-			set_country_flag = ere_form_ilkhanate_flag
+			set_country_flag = eretna_formed_ilkhanate
 			swap_non_generic_missions = yes
 			on_change_tag_effect = yes
 		}

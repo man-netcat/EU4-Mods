@@ -1,0 +1,82 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 65 160 65 }
+
+revolutionary_colors = { 0 5 9 }
+
+historical_idea_groups = {
+	diplomatic_ideas
+	defensive_ideas
+	religious_ideas
+	economic_ideas
+	quality_ideas
+	administrative_ideas
+	offensive_ideas
+	trade_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	austrian_tercio
+	austrian_tercio
+	austrian_hussar
+	austrian_white_coat
+	austrian_uhlan
+	austrian_jaeger
+	austrian_jaeger
+	mixed_order_infantry
+	austrian_hussar
+	austrian_uhlan
+	austrian_jaeger
+}
+
+monarch_names = {
+	"Janez #0" = 20
+	"Friderik #3" = 15
+	"Henrik #4" = 15
+	"Ulrik #2" = 15
+	"Herman #2" = 15
+	"Bertold #0" = 10
+	"Ludvik #0" = 10
+	"Otto #2" = 10
+	"Meinhard #2" = 10
+	"Konrad #1" = 5
+	"Leopold #1" = 5
+	"Valentin #0" = 5
+	
+	"Ana #0" = -1
+	"Marija #0" = -1
+	"Barbora #0" = -1
+	"Katarina #0" = -1
+	"Elizabeta #0" = -1
+	"Margareta #0" = -1
+}
+
+leader_names = {
+	Auersperg Celjski Coronini Dietrichstein Eggenberg Erberg Gallenberg
+	Heisterberg Herberstein Lamberg Moscon "Radmannsdorf-Auersperg"
+	Stubenberg Taaffe Thurn Thurner Trauttmansdorff Walsee Windischgrätz
+}
+
+ship_names = {
+	Ljubljana Maribor Celje Kranj Velenje Koper Novo
+	Kamnik Ptuj Trbovlje Jesenice Nova Škofja Krško Sežana
+	Postojna Slovenj Murska Slovenska Domžale Izola Metlika Idrija
+	Črnomelj Ribnica Lenart Tolmin Sevnica Lendava Radovljica Bled
+	Litija Piran Grosuplje Radlje Brežice Trebnje Hrastnik Ajdovščina
+}
+
+army_names = {
+	"Slovenska Armada" "Slovenska Vojska" "Armada Kranjska" "Armada Štajerska"
+	"Armada Koroška" "Armada Goriška" "Postojnska Armada" "Ljubljanska Armada"
+	"Mariborska Armada"
+}
+
+fleet_names = {
+	"Slovenska Mornarica" "Jadranska Flota" "Obalna Flota" "Koprska Flota"
+	"Piranska Flota" "Izolska Flota"
+}

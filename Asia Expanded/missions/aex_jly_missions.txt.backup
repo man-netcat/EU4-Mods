@@ -2,22 +2,11 @@ jalayirid_missions = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "King of Kings"
-	}
 	potential = {
+		tag = JLY
 		NOT = {
 			map_setup = map_setup_random
 		}
-		has_dlc = "King of Kings"
-		OR = {
-			tag = JLY
-			AND = {
-				tag = ILK
-				has_country_flag = jalayirids_formed_ilkhanate
-			}
-		}
-		primary_culture = perso_mongolic
 	}
 	has_country_shield = yes
 	jly_assert_independence = {
@@ -213,22 +202,11 @@ jalayirid_economic_missions = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "King of Kings"
-	}
 	potential = {
+		tag = JLY
 		NOT = {
 			map_setup = map_setup_random
 		}
-		has_dlc = "King of Kings"
-		OR = {
-			tag = JLY
-			AND = {
-				tag = ILK
-				has_country_flag = jalayirids_formed_ilkhanate
-			}
-		}
-		primary_culture = perso_mongolic
 	}
 	has_country_shield = yes
 	jly_restore_irrigation = {
@@ -274,30 +252,27 @@ jalayirid_economic_missions = {
 			}
 		}
 	}
+	
 	jly_spread_perso_mongolic_culture = {
 		icon = mission_early_modern_university
-		required_missions = {
-			jly_restore_irrigation
-		}
+		required_missions = { jly_restore_irrigation }
 		position = 3
+		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = {
-				culture = perso_mongolic
-			}
+			NOT = { culture = perso_mongolic }
 			OR = {
 				culture = persian
 				culture = khorasani
 				culture = azerbaijani
 			}
 		}
+		
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
 				culture = perso_mongolic
-				NOT = {
-					is_capital = yes
-				}
+				NOT = { is_capital = yes }
 			}
 			calc_true_if = {
 				amount = 1
@@ -307,6 +282,7 @@ jalayirid_economic_missions = {
 			}
 			university = 1
 		}
+		
 		effect = {
 			add_adm_power = 100
 			add_prestige = 20
@@ -316,23 +292,20 @@ jalayirid_economic_missions = {
 			}
 		}
 	}
+	
 	jly_restore_taxation = {
 		icon = mission_war_chest
-		required_missions = {
-			jly_spread_perso_mongolic_culture
-		}
+		required_missions = { jly_spread_perso_mongolic_culture }
 		position = 4
+		
 		provinces_to_highlight = {
 			region = persia_region
 			OR = {
-				NOT = {
-					owned_by = ROOT
-				}
-				NOT = {
-					base_tax = 6
-				}
+				NOT = { owned_by = ROOT }
+				NOT = { base_tax = 6 }
 			}
 		}
+		
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
@@ -340,6 +313,7 @@ jalayirid_economic_missions = {
 				base_tax = 6
 			}
 		}
+		
 		effect = {
 			add_years_of_income = 1.5
 			add_country_modifier = {
@@ -348,29 +322,22 @@ jalayirid_economic_missions = {
 			}
 		}
 	}
+	
 	jly_rebuild_cities = {
 		icon = mission_central_asian_city
-		required_missions = {
-			jly_restore_taxation
-		}
+		required_missions = { jly_restore_taxation }
 		position = 5
+		
 		provinces_to_highlight = {
 			province_id = 428
 			OR = {
-				NOT = {
-					owned_by = ROOT
-				}
-				NOT = {
-					has_building = temple
-				}
-				NOT = {
-					has_building = courthouse
-				}
-				NOT = {
-					development = 20
-				}
+				NOT = { owned_by = ROOT }
+				NOT = { has_building = temple }
+				NOT = { has_building = courthouse }
+				NOT = { development = 20 }
 			}
 		}
+		
 		trigger = {
 			428 = {
 				owned_by = ROOT
@@ -386,6 +353,7 @@ jalayirid_economic_missions = {
 				}
 			}
 		}
+		
 		effect = {
 			add_prestige = 25
 			428 = {
@@ -406,38 +374,27 @@ jalayirid_trade_missions = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "King of Kings"
-	}
 	potential = {
+		tag = JLY
 		NOT = {
 			map_setup = map_setup_random
 		}
-		has_dlc = "King of Kings"
-		OR = {
-			tag = JLY
-			AND = {
-				tag = ILK
-				has_country_flag = jalayirids_formed_ilkhanate
-			}
-		}
-		primary_culture = perso_mongolic
 	}
 	has_country_shield = yes
+	
 	jly_control_silk_road = {
 		icon = mission_dominate_persian_gulf
-		required_missions = {
-		}
+		required_missions = { }
 		position = 3
+		
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2218
 				province_id = 454
 			}
-			NOT = {
-				owned_by = ROOT
-			}
+			NOT = { owned_by = ROOT }
 		}
+		
 		trigger = {
 			owns = 2218
 			owns = 454
@@ -449,6 +406,7 @@ jalayirid_trade_missions = {
 				}
 			}
 		}
+		
 		effect = {
 			add_mercantilism = 3
 			add_country_modifier = {
@@ -465,12 +423,12 @@ jalayirid_trade_missions = {
 			}
 		}
 	}
+	
 	jly_establish_mint = {
 		icon = mission_have_two_subjects
-		required_missions = {
-			jly_control_silk_road
-		}
+		required_missions = { jly_control_silk_road }
 		position = 4
+		
 		trigger = {
 			treasury = 500
 			calc_true_if = {
@@ -483,132 +441,12 @@ jalayirid_trade_missions = {
 				}
 			}
 		}
+		
 		effect = {
 			add_inflation = -2
 			add_country_modifier = {
 				name = "jly_unified_coinage"
 				duration = -1
-			}
-		}
-	}
-}
-
-ilkhanid_cultural_missions = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "King of Kings"
-	}
-	potential = {
-		NOT = {
-			map_setup = map_setup_random
-		}
-		has_dlc = "King of Kings"
-		OR = {
-			tag = JLY
-			tag = ERE
-			AND = {
-				tag = ILK
-				OR = {
-					has_country_flag = jalayirids_formed_ilkhanate
-					has_country_flag = eretna_formed_ilkhanate
-				}
-			}
-		}
-	}
-	has_country_shield = yes
-	
-	ilkhanid_cultural_synthesis = {
-		icon = mission_entrepot_of_india
-		required_missions = {
-		}
-		position = 3
-		
-		trigger = {
-			adm_power = 50
-			stability = 1
-			OR = {
-				AND = {
-					tag = JLY
-					num_of_owned_provinces_with = {
-						value = 10
-						culture_group = iranian
-					}
-				}
-				AND = {
-					tag = ERE
-					num_of_owned_provinces_with = {
-						value = 15
-						culture_group = turko_semitic
-					}
-					has_idea_group = humanist_ideas
-				}
-				AND = {
-					tag = ILK
-					OR = {
-						num_of_owned_provinces_with = {
-							value = 10
-							culture_group = iranian
-						}
-						num_of_owned_provinces_with = {
-							value = 15
-							culture_group = turko_semitic
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-			add_adm_power = -50
-			if = {
-				limit = {
-					OR = {
-						tag = JLY
-						AND = {
-							tag = ILK
-							has_country_flag = jalayirids_formed_ilkhanate
-						}
-					}
-				}
-				add_country_modifier = {
-					name = "jly_cultural_synthesis"
-					duration = -1
-				}
-				custom_tooltip = jly_convert_persian_tooltip
-				hidden_effect = {
-					every_owned_province = {
-						limit = {
-							culture_group = iranian
-						}
-						change_culture = perso_mongolic
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					OR = {
-						tag = ERE
-						AND = {
-							tag = ILK
-							has_country_flag = eretna_formed_ilkhanate
-						}
-					}
-				}
-				add_country_modifier = {
-					name = "ere_cultural_synthesis"
-					duration = -1
-				}
-				custom_tooltip = ere_convert_turkish_tooltip
-				hidden_effect = {
-					every_owned_province = {
-						limit = {
-							culture_group = turko_semitic
-						}
-						change_culture = turco_mongolic
-					}
-				}
 			}
 		}
 	}

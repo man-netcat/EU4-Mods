@@ -5,9 +5,13 @@ country_decisions = {
 			OR = {
 				tag = JLY
 				tag = TBR
+				tag = ERE
 			}
 			NOT = {
-				has_country_flag = formed_ilkhanate_flag
+				OR = {
+					has_country_flag = jalayirids_formed_ilkhanate
+					has_country_flag = eretna_formed_ilkhanate
+				}
 			}
 			NOT = {
 				exists = ILK
@@ -64,19 +68,51 @@ country_decisions = {
 				}
 				add_permanent_claim = ILK
 			}
-			change_primary_culture = perso_mongolic
-			add_accepted_culture_or_dip_power = {
-				culture = persian
+			# Eretnid gets special Turkish-focused reforms and culture
+			if = {
+				limit = {
+					tag = ERE
+				}
+				change_primary_culture = turco_mongolic
+				add_government_reform = sultanate_of_rum_reform
+				add_accepted_culture = uyghur
 			}
-			add_accepted_culture_or_dip_power = {
-				culture = mongol
+			# Jalayirids and others get Persian-Mongol culture
+			if = {
+				limit = {
+					NOT = {
+						tag = ERE
+					}
+				}
+				change_primary_culture = perso_mongolic
+				add_accepted_culture_or_dip_power = {
+					culture = persian
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = mongol
+				}
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
 			add_prestige = 25
-			set_country_flag = formed_ilkhanate_flag
+			# Set appropriate flag for mission compatibility
+			if = {
+				limit = {
+					tag = ERE
+				}
+				set_country_flag = eretna_formed_ilkhanate
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = JLY
+						tag = TBR
+					}
+				}
+				set_country_flag = jalayirids_formed_ilkhanate
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -86,6 +122,8 @@ country_decisions = {
 				}
 				#Swap Ideas
 			}
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
 		}
 		ai_will_do = {
 			factor = 1

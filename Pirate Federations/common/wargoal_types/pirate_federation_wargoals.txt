@@ -1,0 +1,59 @@
+# Pirate Federation Wargoals
+
+# Liberation wargoal - for releasing island provinces
+pirate_liberation_wargoal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.3  # Very low AE for liberation
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+		
+		peace_options = {
+			po_gold
+			po_concede_defeat
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_demand_provinces
+			po_concede_defeat
+		}
+	}
+	
+	war_name = PIRATE_LIBERATION_WAR_NAME
+}
+
+# Invitation wargoal - for forcing nations to join
+pirate_federation_wargoal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.5  # Lower AE for pirate diplomacy
+		prestige_factor = 1.0
+		peace_cost_factor = 0.75
+		
+		peace_options = {
+			po_gold
+			po_concede_defeat
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_demand_provinces
+			po_concede_defeat
+		}
+	}
+	
+	war_name = PIRATE_FEDERATION_WAR_NAME
+}
