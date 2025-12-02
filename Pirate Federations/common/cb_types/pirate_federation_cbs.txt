@@ -1,45 +1,38 @@
 # Pirate Federation CBs
-
 # CB to liberate island provinces and create pirate havens
 cb_pirate_federation_liberate = {
 	valid_for_subject = no
-	
 	prerequisites_self = {
 		has_reform = pirate_republic_reform
 		is_revolutionary = no
 	}
-	
 	prerequisites = {
-		# Target must own island provinces
+		has_reform = pirate_republic_reform
 		FROM = {
-			any_owned_province = {
-				province_is_on_an_island = yes
-			}
-			# Must be neighbor or nearby
 			OR = {
-				is_neighbor_of = ROOT
-				any_owned_province = {
-					any_neighbor_province = {
-						owned_by = ROOT
+				# Has island vassals
+				any_subject_country = {
+					capital_scope = {
+						province_is_on_an_island = yes
 					}
 				}
-				# Or within reasonable naval range
-				ROOT = {
-					any_owned_province = {
-						has_port = yes
-						any_neighbor_province = {
-							owned_by = FROM
-							has_port = yes
+				# Has cores of island nations
+				any_owned_province = {
+					province_is_on_an_island = yes
+					any_core_country = {
+						NOT = {
+							tag = FROM
+						}
+						NOT = {
+							tag = ROOT
 						}
 					}
 				}
 			}
 		}
 	}
-	
 	war_goal = pirate_liberation_wargoal
-	
-	# Only allow releasing island provinces as pirate republics
+	# Only allow releasing nations and transferring subjects
 	attacker_disabled_po = {
 		po_demand_provinces
 		po_revoke_cores
@@ -48,21 +41,19 @@ cb_pirate_federation_liberate = {
 		po_become_tributary_state
 		po_subjugate_tributary_state
 		po_form_personal_union
-		po_transfer_vassals
+		po_return_cores
+		po_gold
 	}
-	
 	ai_peace_desire = 10
 }
 
 # CB to invite island nations to join the pirate federation
 cb_pirate_federation_invite = {
 	valid_for_subject = no
-	
 	prerequisites_self = {
 		has_reform = pirate_republic_reform
 		is_revolutionary = no
 	}
-	
 	prerequisites = {
 		# Target must be entirely on islands
 		FROM = {
@@ -71,10 +62,16 @@ cb_pirate_federation_invite = {
 				province_is_on_an_island = yes
 			}
 			# Not already a pirate republic
-			NOT = { has_reform = pirate_republic_reform }
+			NOT = {
+				has_reform = pirate_republic_reform
+			}
 			# Not already in the federation
-			NOT = { is_subject_of_type = pirate_federation_member }
-			NOT = { overlord_of = ROOT }
+			NOT = {
+				is_subject_of_type = pirate_federation_member
+			}
+			NOT = {
+				overlord_of = ROOT
+			}
 			# Must be neighbor or nearby
 			OR = {
 				is_neighbor_of = ROOT
@@ -96,9 +93,7 @@ cb_pirate_federation_invite = {
 			}
 		}
 	}
-	
 	war_goal = pirate_federation_wargoal
-	
 	# Only allow making them join the federation or taking some money
 	attacker_disabled_po = {
 		po_demand_provinces
@@ -113,9 +108,7 @@ cb_pirate_federation_invite = {
 		po_form_personal_union
 		po_transfer_vassals
 	}
-	
 	# Peace options allowed
 	# Custom peace treaty will be defined separately
-	
 	ai_peace_desire = 10
 }

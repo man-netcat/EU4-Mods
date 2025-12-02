@@ -2,24 +2,23 @@
 po_pirate_federation_join = {
 	category = 6
 	power_projection = vassalized_rival
-	power_cost_base = 1.0
+	power_cost_base = 1
 	prestige_base = 0.5
-	ae_base = 0.5  # Lower AE than making a vassal
+	ae_base = 0.5	# Lower AE than making a vassal
 	warscore_cost = {
 		all_provinces = 0.75
-		no_provinces = 0.0
-		owner_keeps = 0.0
-		conquered = 0.0
-		returned_core = 0.0
-		released_nation = 0.0
-		cancelled_subject = 0.0
-		concede_colonial_region = 0.0
+		no_provinces = 0
+		owner_keeps = 0
+		conquered = 0
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
 	}
 	warscore_cap = 60
 	requires_demand_independence = yes
 	is_make_subject = yes
 	requires_is_allowed = yes
-	
 	is_visible = {
 		ROOT = {
 			has_reform = pirate_republic_reform
@@ -28,11 +27,14 @@ po_pirate_federation_join = {
 			all_owned_province = {
 				province_is_on_an_island = yes
 			}
-			NOT = { has_reform = pirate_republic_reform }
-			NOT = { is_subject_of_type = pirate_federation_member }
+			NOT = {
+				has_reform = pirate_republic_reform
+			}
+			NOT = {
+				is_subject_of_type = pirate_federation_member
+			}
 		}
 	}
-	
 	is_allowed = {
 		ROOT = {
 			has_reform = pirate_republic_reform
@@ -43,16 +45,21 @@ po_pirate_federation_join = {
 			}
 		}
 	}
-	
 	effect = {
 		FROM = {
 			# Convert to pirate republic if not already
 			if = {
 				limit = {
-					NOT = { has_reform = pirate_republic_reform }
+					NOT = {
+						has_reform = pirate_republic_reform
+					}
 				}
 				if = {
-					limit = { NOT = { government = republic } }
+					limit = {
+						NOT = {
+							government = republic
+						}
+					}
 					change_government = republic
 				}
 				add_government_reform = pirate_republic_reform
@@ -64,7 +71,6 @@ po_pirate_federation_join = {
 			subject_type = pirate_federation_member
 		}
 	}
-	
 	ai_weight = {
 		export_to_variable = {
 			variable_name = ai_value
@@ -73,63 +79,54 @@ po_pirate_federation_join = {
 	}
 }
 
-# Peace treaty to release island provinces as pirate republics that join the federation
+# Liberate island provinces as pirate republics that join the federation
 po_release_pirate_vassals = {
-	category = 2  # Release vassal category
+	category = 6
 	power_projection = vassalized_rival
-	power_cost_base = 0.75
+	power_cost_base = 0.5
 	prestige_base = 0.5
-	ae_base = 0.3
+	ae_base = 0.4
 	warscore_cost = {
-		all_provinces = 0.0
-		no_provinces = 0.0
-		owner_keeps = 0.0
-		conquered = 0.0
-		returned_core = 0.0
-		released_nation = 1.0  # Based on released nations
-		cancelled_subject = 0.0
-		concede_colonial_region = 0.0
+		all_provinces = 0.75
+		no_provinces = 0
+		owner_keeps = 0
+		conquered = 0
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
 	}
-	warscore_cap = -1
-	requires_demand_independence = no
-	requires_is_allowed = no
-	
+	warscore_cap = 60
+	requires_demand_independence = yes
+	is_make_subject = yes
+	requires_is_allowed = yes
 	is_visible = {
-		ROOT = {
-			has_reform = pirate_republic_reform
-		}
-		FROM = {
-			any_owned_province = {
-				OR = {
-					NOT = { is_core = FROM }
-					any_core_country = {
-						NOT = { tag = FROM }
-						NOT = { exists = yes }
-					}
-				}
-				province_is_on_an_island = yes
+		always = yes
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = PIRATE_LIBERATION_ALLOWED_TT
+			ROOT = {
+				has_reform = pirate_republic_reform
 			}
 		}
 	}
-	
-	is_allowed = {
-		ROOT = {
-			has_reform = pirate_republic_reform
-		}
-	}
-	
 	effect = {
-		# This will be handled by the release vassal mechanics
-		# but we add a special flag for post-release processing
+		FROM = {
+			set_country_flag = pirate_liberation_peace_defender
+		}
 		ROOT = {
-			set_country_flag = releasing_pirate_federation_members
+			set_country_flag = pirate_liberation_peace_attacker
+			save_event_target_as = pirate_liberator
 		}
 		FROM = {
-			# Standard release mechanics will apply
-			# Then we'll need an on_action to convert them
+			save_event_target_as = liberated_from
+			country_event = {
+				id = pirate_federation.10
+				days = 1
+			}
 		}
 	}
-	
 	ai_weight = {
 		export_to_variable = {
 			variable_name = ai_value

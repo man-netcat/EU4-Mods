@@ -1,17 +1,13 @@
 # Opinion modifiers for pirate federation members
 
 pirate_federation_leader_opinion = {
-	opinion = {
-		modifier = 25
-	}
+	opinion = 25
 	yearly_decay = 1
 	max = 50
 }
 
 pirate_federation_member_opinion = {
-	opinion = {
-		modifier = 25
-	}
+	opinion = 25
 	yearly_decay = 1
 	max = 50
 }

@@ -1,86 +1,17 @@
 namespace = pirate_federation
-
-# Convert released nations to pirate republics if released by pirate federation
-country_event = {
-	id = pirate_federation.1
-	title = pirate_federation.1.t
-	desc = pirate_federation.1.d
-	picture = PIRATE_REPUBLIC_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		# Released nation has capital on island
-		capital_scope = {
-			province_is_on_an_island = yes
-		}
-		# Released by a pirate republic with the flag
-		overlord = {
-			has_reform = pirate_republic_reform
-			has_country_flag = releasing_pirate_federation_members
-		}
-	}
-	
-	immediate = {
-		hidden_effect = {
-			# Convert to pirate republic
-			if = {
-				limit = { NOT = { government = republic } }
-				change_government = republic
-			}
-			add_government_reform = pirate_republic_reform
-		}
-	}
-	
-	option = {
-		name = pirate_federation.1.a
-		# Join the federation
-		overlord = {
-			create_subject = {
-				subject = ROOT
-				subject_type = pirate_federation_member
-			}
-		}
-	}
-}
-
-# Clear flags after war
-country_event = {
-	id = pirate_federation.2
-	title = pirate_federation.2.t
-	desc = pirate_federation.2.d
-	picture = DIPLOMACY_eventPicture
-	
-	is_triggered_only = yes
-	hidden = yes
-	
-	trigger = {
-		has_country_flag = releasing_pirate_federation_members
-	}
-	
-	immediate = {
-		clr_country_flag = releasing_pirate_federation_members
-	}
-	
-	option = {
-		name = pirate_federation.2.a
-	}
-}
-
 # Yearly check: expel non-pirate republics from federation
 country_event = {
-	id = pirate_federation.3
+	id = pirate_federation.1
 	title = pirate_federation.3.t
 	desc = pirate_federation.3.d
 	picture = PIRATE_REPUBLIC_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		is_subject_of_type = pirate_federation_member
-		NOT = { has_reform = pirate_republic_reform }
+		NOT = {
+			has_reform = pirate_republic_reform
+		}
 	}
-	
 	immediate = {
 		save_event_target_as = expelled_member
 		overlord = {
@@ -89,27 +20,172 @@ country_event = {
 			free_vassal = FROM
 		}
 	}
-	
 	option = {
 		name = pirate_federation.3.a
 		# Notify the overlord
 		event_target:federation_leader = {
-			country_event = { id = pirate_federation.4 days = 1 }
+			country_event = {
+				id = pirate_federation.2
+				days = 1
+			}
 		}
 	}
 }
 
 # Notification to overlord when member is expelled
 country_event = {
-	id = pirate_federation.4
+	id = pirate_federation.2
 	title = pirate_federation.4.t
 	desc = pirate_federation.4.d
 	picture = PIRATE_REPUBLIC_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = pirate_federation.4.a
 		# Just a notification - expelled_member is already saved
+	}
+}
+
+# Check for high liberty desire - members can leave at 90%
+country_event = {
+	id = pirate_federation.3
+	title = pirate_federation.5.t
+	desc = pirate_federation.5.d
+	picture = PIRATE_REPUBLIC_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		is_subject_of_type = pirate_federation_member
+		liberty_desire = 90
+	}
+	immediate = {
+		save_event_target_as = leaving_member
+		overlord = {
+			save_event_target_as = federation_leader
+		}
+	}
+	option = {
+		name = pirate_federation.5.a
+		# Leave the federation
+		event_target:federation_leader = {
+			free_vassal = event_target:leaving_member
+		}
+		# Notify the overlord
+		event_target:federation_leader = {
+			country_event = {
+				id = pirate_federation.4
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = pirate_federation.5.b
+		# Stay in the federation for now
+		add_liberty_desire = -5
+	}
+}
+
+# Notification to overlord when member leaves due to high liberty desire
+country_event = {
+	id = pirate_federation.4
+	title = pirate_federation.6.t
+	desc = pirate_federation.6.d
+	picture = PIRATE_REPUBLIC_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = pirate_federation.6.a
+		# Just a notification
+	}
+}
+
+# Peace treaty effect - release and convert island nations
+country_event = {
+	id = pirate_federation.10
+	title = pirate_federation.10.t
+	desc = pirate_federation.10.d
+	picture = PIRATE_REPUBLIC_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			# Release nations on islands with cores
+			every_owned_province = {
+				limit = {
+					province_is_on_an_island = yes
+					any_core_country = {
+						NOT = { tag = ROOT }
+						NOT = { tag = event_target:pirate_liberator }
+						NOT = { exists = yes }
+					}
+				}
+				random_core_country = {
+					limit = {
+						NOT = { tag = ROOT }
+						NOT = { tag = event_target:pirate_liberator }
+						NOT = { exists = yes }
+					}
+					save_event_target_as = nation_to_release
+				}
+			}
+			
+			# Now release all the saved nations
+			every_owned_province = {
+				limit = {
+					province_is_on_an_island = yes
+					any_core_country = {
+						NOT = { tag = ROOT }
+						NOT = { tag = event_target:pirate_liberator }
+						NOT = { exists = yes }
+					}
+				}
+				random_core_country = {
+					limit = {
+						NOT = { tag = ROOT }
+						NOT = { tag = event_target:pirate_liberator }
+						NOT = { exists = yes }
+					}
+					event_target:pirate_liberator = {
+						release = PREV
+					}
+					if = {
+						limit = { NOT = { government = republic } }
+						change_government = republic
+					}
+					add_government_reform = pirate_republic_reform
+					event_target:pirate_liberator = {
+						create_subject = {
+							subject = PREV
+							subject_type = pirate_federation_member
+						}
+					}
+				}
+			}
+			
+			# Transfer island vassals
+			every_subject_country = {
+				limit = {
+					capital_scope = { province_is_on_an_island = yes }
+				}
+				if = {
+					limit = { NOT = { government = republic } }
+					change_government = republic
+				}
+				add_government_reform = pirate_republic_reform
+				ROOT = { free_vassal = PREV }
+				event_target:pirate_liberator = {
+					create_subject = {
+						subject = PREV
+						subject_type = pirate_federation_member
+					}
+				}
+			}
+			
+			clr_country_flag = pirate_liberation_peace_defender
+		}
+	}
+	
+	option = {
+		name = pirate_federation.10.a
+		event_target:pirate_liberator = {
+			clr_country_flag = pirate_liberation_peace_attacker
+		}
 	}
 }

@@ -42,12 +42,16 @@ pirate_federation_member = {
 	cities_required_for_bonuses = 1
 	trust_on_start = 50
 	
-	# Liberty desire is low - these are voluntary alliances of pirates
+	# Liberty desire is moderate - they're forced members but can leave easily
 	base_liberty_desire = 0.0
 	liberty_desire_negative_prestige = 0.0
-	liberty_desire_development_ratio = 0.25  # Much lower than normal vassals
+	liberty_desire_development_ratio = 0.5  # Normal development ratio
 	liberty_desire_same_dynasty = 0.0
-	liberty_desire_revolution = 20.0
+	liberty_desire_revolution = 15.0
+	can_send_missionary_to_subject = no
+	can_union_break = yes
+	overlord_opinion_modifier = pirate_federation_leader_opinion
+	subject_opinion_modifier = pirate_federation_member_opinion
 	
 	# No payments between members
 	pays_overlord = 0.0
@@ -60,7 +64,7 @@ pirate_federation_member = {
 	
 	military_focus = 1.2  # Pirates focus on military
 	
-	relative_power_class = 3  # Custom class for pirate federations
+	relative_power_class = 1  # Each member calculates liberty desire independently
 	should_quit_wars_on_activation = no
 	diplomacy_view_class = 3
 	

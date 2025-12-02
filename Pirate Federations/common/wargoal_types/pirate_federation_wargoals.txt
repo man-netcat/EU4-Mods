@@ -10,7 +10,7 @@ pirate_liberation_wargoal = {
 		peace_cost_factor = 0.5
 		
 		peace_options = {
-			po_gold
+			po_release_pirate_vassals
 			po_concede_defeat
 		}
 	}

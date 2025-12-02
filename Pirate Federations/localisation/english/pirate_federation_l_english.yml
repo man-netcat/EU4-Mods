@@ -11,8 +11,8 @@
  cb_pirate_federation_invite_desc: "As fellow mariners of the seas, we can force this island nation to join our pirate federation. They will benefit from our protection and share in our spoils, while we gain a valuable ally in these dangerous waters."
  CB_ALLOWED_cb_pirate_federation_invite: "Invitation to Federation"
  
- cb_pirate_federation_liberate: "Liberate Island Havens"
- cb_pirate_federation_liberate_desc: "We can liberate the islands held by this nation, releasing them as independent pirate republics that will join our federation. Perfect for creating havens in Corsica, Sardinia, Cyprus, Crete, and other strategic islands."
+ cb_pirate_federation_liberate: "Liberate Islands"
+ cb_pirate_federation_liberate_desc: "We can liberate island nations and transfer island vassals from this nation into our pirate federation. This applies to any nation with island cores (like Aragon's Sardinia, Genoa's Corsica) or island vassals they currently control."
  CB_ALLOWED_cb_pirate_federation_liberate: "Liberate Islands"
  
  # Wargoals
@@ -28,31 +28,36 @@
  PEACE_po_pirate_federation_join: "Join $TAKERS$ Pirate Federation"
  CB_ALLOWED_po_pirate_federation_join: "Join Federation"
  
- po_release_pirate_vassals: "Release as Pirate Republic"
- po_release_pirate_vassals_desc: "Island provinces with cores of other nations can be released as independent Pirate Republics that will immediately join [THIS.GetName]'s Federation."
- PEACE_po_release_pirate_vassals: "Release Pirate Republics for $TAKER$"
- CB_ALLOWED_po_release_pirate_vassals: "Release as Pirate Republic"
+ po_release_pirate_vassals: "Liberate Islands"
+ po_release_pirate_vassals_desc: "All island nations with cores on [FROM.GetName]'s territory will be released as Pirate Republics and join [THIS.GetName]'s Federation. Island vassals will also be converted and transferred."
+ PEACE_po_release_pirate_vassals: "Liberate Islands for $TAKER$"
+ CB_ALLOWED_po_release_pirate_vassals: "Liberate Islands"
  
  # Opinion Modifiers
  pirate_federation_leader_opinion: "Pirate Federation Leader"
  pirate_federation_member_opinion: "Fellow Pirate"
  
  # Events
- pirate_federation.1.t: "A New Pirate Haven"
- pirate_federation.1.d: "We have been released from our former overlord by [From.GetName], a pirate republic. They have offered us membership in their pirate federation, converting our government to match their own and granting us access to their network of corsairs and privateers. The open seas await!"
- pirate_federation.1.a: "Hoist the black flag!"
+ pirate_federation.1.t: "Expelled from Pirate Federation"
+ pirate_federation.1.d: "Our government has changed and we are no longer a Pirate Republic. [federation_leader.GetName] has expelled us from their pirate federation. We are now free to chart our own course."
+ pirate_federation.1.a: "So be it."
  
- pirate_federation.2.t: "War Concluded"
- pirate_federation.2.d: "The war has ended."
- pirate_federation.2.a: "Very well."
+ pirate_federation.2.t: "Member Expelled from Federation"
+ pirate_federation.2.d: "[expelled_member.GetName] has abandoned the ways of the pirate and changed their government. They are no longer a Pirate Republic and have been expelled from our federation."
+ pirate_federation.2.a: "They were never truly one of us."
  
- pirate_federation.3.t: "Expelled from Pirate Federation"
- pirate_federation.3.d: "Our government has changed and we are no longer a Pirate Republic. [federation_leader.GetName] has expelled us from their pirate federation. We are now free to chart our own course."
- pirate_federation.3.a: "So be it."
+ pirate_federation.3.t: "High Liberty Desire in Federation"
+ pirate_federation.3.d: "Our membership in [federation_leader.GetName]'s pirate federation has become burdensome. With our liberty desire exceeding 90%, we have the option to leave the federation and chart our own course on the high seas."
+ pirate_federation.3.a: "Leave the federation!"
+ pirate_federation.3.b: "Stay for now."
  
- pirate_federation.4.t: "Member Expelled from Federation"
- pirate_federation.4.d: "[expelled_member.GetName] has abandoned the ways of the pirate and changed their government. They are no longer a Pirate Republic and have been expelled from our federation."
- pirate_federation.4.a: "They were never truly one of us."
+ pirate_federation.4.t: "Member Left Federation"
+ pirate_federation.4.d: "[leaving_member.GetName] has left our pirate federation due to their high liberty desire. They now sail under their own flag."
+ pirate_federation.4.a: "Fair winds to them."
+ 
+ pirate_federation.10.t: "Islands Liberated"
+ pirate_federation.10.d: "The peace treaty with [pirate_liberator.GetName] has resulted in the liberation of our island territories. These nations will now join their pirate federation."
+ pirate_federation.10.a: "The seas claim what's theirs."
  
  # Diplomatic Actions
  invite_to_pirate_federation: "Invite to Pirate Federation"
@@ -64,6 +69,7 @@
  
  # Tooltips
  IS_INVASION_TARGET_TT: "This nation can be invited to join our Pirate Federation"
+ PIRATE_LIBERATION_ALLOWED_TT: "We are a pirate republic and can liberate their islands"
  
  # Wargoal descs
  pirate_federation_wargoal_desc: "Force them to join our Pirate Federation"
