@@ -1,0 +1,452 @@
+# Effects supporting the Christian Schools of Thought mechanic
+clear_christian_scholar_modifiers_effect = {
+	remove_country_modifier = thomist_scholar_modifier
+	remove_country_modifier = scotist_scholar_modifier
+	remove_country_modifier = nominalist_scholar_modifier
+	remove_country_modifier = augustinian_scholar_modifier
+	remove_country_modifier = molinist_scholar_modifier
+	remove_country_modifier = jansenist_scholar_modifier
+	remove_country_modifier = wittenberg_scholar_modifier
+	remove_country_modifier = magdeburg_scholar_modifier
+	remove_country_modifier = philippist_scholar_modifier
+	remove_country_modifier = gnesiolutheran_scholar_modifier
+	remove_country_modifier = genevan_scholar_modifier
+	remove_country_modifier = covenanter_scholar_modifier
+	remove_country_modifier = remonstrant_scholar_modifier
+	remove_country_modifier = collegiant_scholar_modifier
+	remove_country_modifier = palamite_scholar_modifier
+	remove_country_modifier = hesychast_scholar_modifier
+	remove_country_modifier = kyivan_scholar_modifier
+	remove_country_modifier = stoglav_scholar_modifier
+	remove_country_modifier = alexandrian_scholar_modifier
+	remove_country_modifier = debre_libanos_scholar_modifier
+	remove_country_modifier = lalibela_scholar_modifier
+	remove_country_modifier = nubian_scholar_modifier
+}
+
+assign_default_catholic_school_effect = {
+	# Assign a starting school based on culture groups highlighted in 00_cultures.txt.
+	if = {
+		limit = {
+			OR = {
+				culture_group = french
+				culture_group = iberian
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = thomist_school
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				primary_culture = scottish
+				culture_group = gaelic
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = scotist_school
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				culture_group = british
+				NOT = {
+					primary_culture = scottish
+				}
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = nominalist_school
+		}
+	}
+	else_if = {
+		limit = {
+			culture_group = latin
+		}
+		set_religious_school = {
+			group = christian
+			school = augustinian_school
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		random_list = {
+			1 = {
+				set_religious_school = {
+					group = christian
+					school = molinist_school
+				}
+			}
+			1 = {
+				set_religious_school = {
+					group = christian
+					school = jansenist_school
+				}
+			}
+		}
+	}
+	else = {
+		set_religious_school = {
+			group = christian
+			school = thomist_school
+		}
+	}
+}
+
+assign_default_protestant_school_effect = {
+	if = {
+		limit = {
+			culture_group = germanic
+			NOT = {
+				primary_culture = saxon
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = wittenberg_school
+		}
+	}
+	else_if = {
+		limit = {
+			culture_group = scandinavian
+		}
+		set_religious_school = {
+			group = christian
+			school = magdeburg_school
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				culture_group = british
+				NOT = {
+					primary_culture = scottish
+				}
+			}
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = philippist_school
+		}
+	}
+	else_if = {
+		limit = {
+			primary_culture = saxon
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = gnesiolutheran_school
+		}
+	}
+	else = {
+		set_religious_school = {
+			group = christian
+			school = wittenberg_school
+		}
+	}
+}
+
+assign_default_reformed_school_effect = {
+	if = {
+		limit = {
+			OR = {
+				primary_culture = swiss
+				culture_group = french
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = genevan_school
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				primary_culture = scottish
+				culture_group = gaelic
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = covenanter_school
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = collegiant_school
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = remonstrant_school
+		}
+	}
+	else = {
+		set_religious_school = {
+			group = christian
+			school = genevan_school
+		}
+	}
+}
+
+assign_default_orthodox_school_effect = {
+	if = {
+		limit = {
+			OR = {
+				primary_culture = greek
+				culture_group = byzantine
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = palamite_school
+		}
+	}
+	else_if = {
+		limit = {
+			culture_group = caucasian
+		}
+		set_religious_school = {
+			group = christian
+			school = hesychast_school
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				culture_group = east_slavic
+				NOT = {
+					primary_culture = russian
+				}
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = kyivan_school
+		}
+	}
+	else_if = {
+		limit = {
+			primary_culture = russian
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = stoglav_school
+		}
+	}
+	else = {
+		set_religious_school = {
+			group = christian
+			school = palamite_school
+		}
+	}
+}
+
+assign_default_coptic_school_effect = {
+	if = {
+		limit = {
+			OR = {
+				primary_culture = armenian
+				culture_group = turko_semitic
+			}
+		}
+		set_religious_school = {
+			group = christian
+			school = alexandrian_school
+		}
+	}
+	else_if = {
+		limit = {
+			primary_culture = amhara
+		}
+		set_religious_school = {
+			group = christian
+			school = debre_libanos_school
+		}
+	}
+	else_if = {
+		limit = {
+			primary_culture = tigray
+		}
+		set_religious_school = {
+			group = christian
+			school = lalibela_school
+		}
+	}
+	else_if = {
+		limit = {
+			primary_culture = sidamo
+		}
+		set_religious_school = {
+			group = christian
+			school = debre_libanos_school
+		}
+	}
+	else_if = {
+		limit = {
+			primary_culture = nubian
+		}
+		set_religious_school = {
+			group = christian
+			school = nubian_school
+		}
+	}
+	else = {
+		set_religious_school = {
+			group = christian
+			school = alexandrian_school
+		}
+	}
+}
+
+initialize_christian_schools_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = christian_schools_initialized
+			}
+		}
+		set_global_flag = christian_schools_initialized
+	}
+	every_country = {
+		limit = {
+			religion = catholic
+			has_dlc = "Cradle of Civilization"
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_catholic_school_effect = yes
+	}
+	every_country = {
+		limit = {
+			religion = protestant
+			has_dlc = "Cradle of Civilization"
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_protestant_school_effect = yes
+	}
+	every_country = {
+		limit = {
+			religion = reformed
+			has_dlc = "Cradle of Civilization"
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_reformed_school_effect = yes
+	}
+	every_country = {
+		limit = {
+			religion = orthodox
+			has_dlc = "Cradle of Civilization"
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_orthodox_school_effect = yes
+	}
+	every_country = {
+		limit = {
+			religion = coptic
+			has_dlc = "Cradle of Civilization"
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_coptic_school_effect = yes
+	}
+}
+
+fallback_assign_christian_school_effect = {
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			religion = catholic
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_catholic_school_effect = yes
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			religion = protestant
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_protestant_school_effect = yes
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			religion = reformed
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_reformed_school_effect = yes
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			religion = orthodox
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_orthodox_school_effect = yes
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			religion = coptic
+			NOT = {
+				has_religious_school = yes
+			}
+		}
+		assign_default_coptic_school_effect = yes
+	}
+}

@@ -1,0 +1,10 @@
+# Christian Schools of Thought partial override
+religious_school = thomist_school
+
+1430.1.1 = {
+	religious_school = kyivan_school
+}
+
+1432.1.1 = {
+	religious_school = thomist_school
+}

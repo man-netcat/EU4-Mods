@@ -1,0 +1,6 @@
+# Christian Schools of Thought partial override
+religious_school = thomist_school
+
+1551.5.18 = {
+	religious_school = gnesiolutheran_school
+}

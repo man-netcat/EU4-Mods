@@ -1,0 +1,6 @@
+# Christian Schools of Thought partial override
+religious_school = scotist_school
+
+1560.8.1 = {
+	religious_school = covenanter_school
+}

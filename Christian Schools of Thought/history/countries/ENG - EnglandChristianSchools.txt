@@ -1,0 +1,30 @@
+# Christian Schools of Thought partial override
+religious_school = nominalist_school
+
+1534.1.1 = {
+	religious_school = philippist_school
+}
+
+1553.7.19 = {
+	religious_school = nominalist_school
+}
+
+1558.11.17 = {
+	religious_school = philippist_school
+}
+
+1646.5.5 = {
+	religious_school = remonstrant_school
+}
+
+1659.5.25 = {
+	religious_school = philippist_school
+}
+
+1685.2.6 = {
+	religious_school = nominalist_school
+}
+
+1688.12.11 = {
+	religious_school = philippist_school
+}

@@ -1,0 +1,157 @@
+########################################
+# Christian Schools of Thought
+########################################
+thomist_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	global_institution_spread = 0.05
+}
+
+scotist_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	war_exhaustion = -0.05
+}
+
+nominalist_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	reform_progress_growth = 0.2
+}
+
+augustinian_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	global_missionary_strength = 0.01
+}
+
+molinist_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	diplomatic_reputation = 1
+}
+
+jansenist_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	global_unrest = -1
+}
+
+wittenberg_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	church_power_modifier = 0.15
+}
+
+magdeburg_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	global_tax_modifier = 0.1
+}
+
+philippist_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	idea_cost = -0.05
+}
+
+gnesiolutheran_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	discipline = 0.025
+}
+
+genevan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	global_trade_power = 0.1
+}
+
+covenanter_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	land_forcelimit_modifier = 0.1
+}
+
+remonstrant_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	tolerance_heretic = 2
+}
+
+collegiant_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	global_ship_trade_power = 0.1
+}
+
+palamite_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	yearly_patriarch_authority = 0.01
+}
+
+hesychast_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	religious_unity = 0.05
+}
+
+kyivan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	manpower_in_true_faith_provinces = 0.1
+}
+
+stoglav_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	stability_cost_modifier = -0.1
+}
+
+alexandrian_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	missionary_maintenance_cost = -0.25
+}
+
+debre_libanos_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	global_manpower_modifier = 0.1
+}
+
+lalibela_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	defensiveness = 0.15
+}
+
+nubian_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	tolerance_heathen = 1
+	tolerance_heretic = 1
+}

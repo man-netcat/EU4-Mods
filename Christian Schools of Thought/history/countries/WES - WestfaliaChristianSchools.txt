@@ -1,0 +1,6 @@
+# Christian Schools of Thought partial override
+religious_school = wittenberg_school
+
+1807.7.9 = {
+	religious_school = thomist_school
+}

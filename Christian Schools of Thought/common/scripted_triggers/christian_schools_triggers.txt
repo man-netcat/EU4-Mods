@@ -1,0 +1,116 @@
+########################################
+# Christian School Helper Triggers
+########################################
+
+is_catholic_school_country = {
+	OR = {
+		religious_school = {
+			group = christian
+			school = thomist_school
+		}
+		religious_school = {
+			group = christian
+			school = scotist_school
+		}
+		religious_school = {
+			group = christian
+			school = nominalist_school
+		}
+		religious_school = {
+			group = christian
+			school = augustinian_school
+		}
+		religious_school = {
+			group = christian
+			school = molinist_school
+		}
+		religious_school = {
+			group = christian
+			school = jansenist_school
+		}
+	}
+}
+
+is_lutheran_school_country = {
+	OR = {
+		religious_school = {
+			group = christian
+			school = wittenberg_school
+		}
+		religious_school = {
+			group = christian
+			school = magdeburg_school
+		}
+		religious_school = {
+			group = christian
+			school = philippist_school
+		}
+		religious_school = {
+			group = christian
+			school = gnesiolutheran_school
+		}
+	}
+}
+
+is_reformed_school_country = {
+	OR = {
+		religious_school = {
+			group = christian
+			school = genevan_school
+		}
+		religious_school = {
+			group = christian
+			school = covenanter_school
+		}
+		religious_school = {
+			group = christian
+			school = remonstrant_school
+		}
+		religious_school = {
+			group = christian
+			school = collegiant_school
+		}
+	}
+}
+
+is_orthodox_school_country = {
+	OR = {
+		religious_school = {
+			group = christian
+			school = palamite_school
+		}
+		religious_school = {
+			group = christian
+			school = hesychast_school
+		}
+		religious_school = {
+			group = christian
+			school = kyivan_school
+		}
+		religious_school = {
+			group = christian
+			school = stoglav_school
+		}
+	}
+}
+
+is_coptic_school_country = {
+	OR = {
+		religious_school = {
+			group = christian
+			school = alexandrian_school
+		}
+		religious_school = {
+			group = christian
+			school = debre_libanos_school
+		}
+		religious_school = {
+			group = christian
+			school = lalibela_school
+		}
+		religious_school = {
+			group = christian
+			school = nubian_school
+		}
+	}
+}

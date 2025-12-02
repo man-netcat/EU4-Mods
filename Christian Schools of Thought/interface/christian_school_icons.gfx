@@ -1,0 +1,90 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_icon_christian_school_thomist"
+		texturefile = "gfx/interface/christian_school_icons/icon_thomist_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_scotist"
+		texturefile = "gfx/interface/christian_school_icons/icon_scotist_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_nominalist"
+		texturefile = "gfx/interface/christian_school_icons/icon_nominalist_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_augustinian"
+		texturefile = "gfx/interface/christian_school_icons/icon_augustinian_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_molinist"
+		texturefile = "gfx/interface/christian_school_icons/icon_molinist_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_jansenist"
+		texturefile = "gfx/interface/christian_school_icons/icon_jansenist_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_wittenberg"
+		texturefile = "gfx/interface/christian_school_icons/icon_wittenberg_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_magdeburg"
+		texturefile = "gfx/interface/christian_school_icons/icon_magdeburg_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_philippist"
+		texturefile = "gfx/interface/christian_school_icons/icon_philippist_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_gnesiolutheran"
+		texturefile = "gfx/interface/christian_school_icons/icon_gnesiolutheran_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_genevan"
+		texturefile = "gfx/interface/christian_school_icons/icon_genevan_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_covenanter"
+		texturefile = "gfx/interface/christian_school_icons/icon_covenanter_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_remonstrant"
+		texturefile = "gfx/interface/christian_school_icons/icon_remonstrant_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_collegiant"
+		texturefile = "gfx/interface/christian_school_icons/icon_collegiant_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_palamite"
+		texturefile = "gfx/interface/christian_school_icons/icon_palamite_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_hesychast"
+		texturefile = "gfx/interface/christian_school_icons/icon_hesychast_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_kyivan"
+		texturefile = "gfx/interface/christian_school_icons/icon_kyivan_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_stoglav"
+		texturefile = "gfx/interface/christian_school_icons/icon_stoglav_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_alexandrian"
+		texturefile = "gfx/interface/christian_school_icons/icon_alexandrian_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_debre_libanos"
+		texturefile = "gfx/interface/christian_school_icons/icon_debre_libanos_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_lalibela"
+		texturefile = "gfx/interface/christian_school_icons/icon_lalibela_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_nubian"
+		texturefile = "gfx/interface/christian_school_icons/icon_nubian_school.dds"
+	}
+}

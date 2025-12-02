@@ -1,0 +1,40 @@
+# Ensure Christian nations without a school are prompted to pick one, mirroring the vanilla muslim_school_events hooks.
+on_startup = {
+	events = {
+		christian_school_events.1
+		christian_school_events.2
+		christian_school_events.3
+		christian_school_events.4
+		christian_school_events.5
+	}
+}
+
+on_religion_change = {
+	events = {
+		christian_school_events.1
+		christian_school_events.2
+		christian_school_events.3
+		christian_school_events.4
+		christian_school_events.5
+	}
+}
+
+on_new_monarch = {
+	events = {
+		christian_school_events.1
+		christian_school_events.2
+		christian_school_events.3
+		christian_school_events.4
+		christian_school_events.5
+	}
+}
+
+on_bi_yearly_pulse_3 = {
+	events = {
+		christian_school_events.1
+		christian_school_events.2
+		christian_school_events.3
+		christian_school_events.4
+		christian_school_events.5
+	}
+}

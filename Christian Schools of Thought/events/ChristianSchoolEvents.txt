@@ -1,0 +1,348 @@
+####################################################### Intentionally empty: Christian school events removed in favor of base-game history initialization.
+# Christian School selection events                  #
+######################################################
+namespace = christian_school_events
+# Catholics choose a school when they lack one
+country_event = {
+	id = christian_school_events.1
+	title = christian_school_events.1.t
+	desc = christian_school_events.1.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion = catholic
+		NOT = {
+			has_religious_school = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = christian_school_events.auto
+		trigger = {
+			ai = yes
+		}
+		assign_default_catholic_school_effect = yes
+	}
+	option = {
+		name = christian_school_events.catholic.thomist
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = thomist_school
+		}
+	}
+	option = {
+		name = christian_school_events.catholic.scotist
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = scotist_school
+		}
+	}
+	option = {
+		name = christian_school_events.catholic.nominalist
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = nominalist_school
+		}
+	}
+	option = {
+		name = christian_school_events.catholic.augustinian
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = augustinian_school
+		}
+	}
+	option = {
+		name = christian_school_events.catholic.molinist
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = molinist_school
+		}
+	}
+	option = {
+		name = christian_school_events.catholic.jansenist
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = jansenist_school
+		}
+	}
+}
+
+# Protestants choose a school
+country_event = {
+	id = christian_school_events.2
+	title = christian_school_events.2.t
+	desc = christian_school_events.2.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion = protestant
+		NOT = {
+			has_religious_school = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = christian_school_events.auto
+		trigger = {
+			ai = yes
+		}
+		assign_default_protestant_school_effect = yes
+	}
+	option = {
+		name = christian_school_events.protestant.wittenberg
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = wittenberg_school
+		}
+	}
+	option = {
+		name = christian_school_events.protestant.magdeburg
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = magdeburg_school
+		}
+	}
+	option = {
+		name = christian_school_events.protestant.philippist
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = philippist_school
+		}
+	}
+	option = {
+		name = christian_school_events.protestant.gnesiolutheran
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = gnesiolutheran_school
+		}
+	}
+}
+
+# Reformed nations choose a school
+country_event = {
+	id = christian_school_events.3
+	title = christian_school_events.3.t
+	desc = christian_school_events.3.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion = reformed
+		NOT = {
+			has_religious_school = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = christian_school_events.auto
+		trigger = {
+			ai = yes
+		}
+		assign_default_reformed_school_effect = yes
+	}
+	option = {
+		name = christian_school_events.reformed.genevan
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = genevan_school
+		}
+	}
+	option = {
+		name = christian_school_events.reformed.covenanter
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = covenanter_school
+		}
+	}
+	option = {
+		name = christian_school_events.reformed.remonstrant
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = remonstrant_school
+		}
+	}
+	option = {
+		name = christian_school_events.reformed.collegiant
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = collegiant_school
+		}
+	}
+}
+
+# Orthodox nations choose a school
+country_event = {
+	id = christian_school_events.4
+	title = christian_school_events.4.t
+	desc = christian_school_events.4.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion = orthodox
+		NOT = {
+			has_religious_school = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = christian_school_events.auto
+		trigger = {
+			ai = yes
+		}
+		assign_default_orthodox_school_effect = yes
+	}
+	option = {
+		name = christian_school_events.orthodox.palamite
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = palamite_school
+		}
+	}
+	option = {
+		name = christian_school_events.orthodox.hesychast
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = hesychast_school
+		}
+	}
+	option = {
+		name = christian_school_events.orthodox.kyivan
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = kyivan_school
+		}
+	}
+	option = {
+		name = christian_school_events.orthodox.stoglav
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = stoglav_school
+		}
+	}
+}
+
+# Coptic nations choose a school
+country_event = {
+	id = christian_school_events.5
+	title = christian_school_events.5.t
+	desc = christian_school_events.5.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion = coptic
+		NOT = {
+			has_religious_school = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = christian_school_events.auto
+		trigger = {
+			ai = yes
+		}
+		assign_default_coptic_school_effect = yes
+	}
+	option = {
+		name = christian_school_events.coptic.alexandrian
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = alexandrian_school
+		}
+	}
+	option = {
+		name = christian_school_events.coptic.debre_libanos
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = debre_libanos_school
+		}
+	}
+	option = {
+		name = christian_school_events.coptic.lalibela
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = lalibela_school
+		}
+	}
+	option = {
+		name = christian_school_events.coptic.nubian
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = nubian_school
+		}
+	}
+}
