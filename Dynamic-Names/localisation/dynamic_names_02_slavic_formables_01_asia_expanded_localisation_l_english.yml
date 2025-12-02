@@ -1,0 +1,94 @@
+﻿l_english:
+
+ #tag / substitution rules
+
+ # CHN
+ CHN_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Han"
+ CHN_YUG_PEASANTS_SFRY_ADJ: "Han"
+ CHN_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Han"
+ CHN_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Han"
+ # XIA
+ XIA_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Xia"
+ XIA_YUG_PEASANTS_SFRY_ADJ: "Xia"
+ XIA_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Xia"
+ XIA_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Xia"
+ # LIA
+ LIA_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Liao"
+ LIA_YUG_PEASANTS_SFRY_ADJ: "Liao"
+ LIA_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Liao"
+ LIA_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Liao"
+ # QKH
+ QKH_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Qara Khitai"
+ QKH_YUG_PEASANTS_SFRY_ADJ: "Khitan"
+ QKH_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Qara Khitai"
+ QKH_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Khitan"
+ # BAE
+ BAE_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Baekje"
+ BAE_YUG_PEASANTS_SFRY_ADJ: "Baekjean"
+ BAE_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Baekje"
+ BAE_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Baekjean"
+ # GGY
+ GGY_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Goguryeo"
+ GGY_YUG_PEASANTS_SFRY_ADJ: "Goguryeoan"
+ GGY_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Goguryeo"
+ GGY_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Goguryeoan"
+ # SLA
+ SLA_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Silla"
+ SLA_YUG_PEASANTS_SFRY_ADJ: "Sillan"
+ SLA_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Silla"
+ SLA_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Sillan"
+ # GOR
+ GOR_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Goryeo"
+ GOR_YUG_PEASANTS_SFRY_ADJ: "Goryeoan"
+ GOR_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Goryeo"
+ GOR_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Goryeoan"
+ # JLY
+ JLY_YUG_PEASANTS_SFRY: "Socialist Federal Republic of The Jalayirids"
+ JLY_YUG_PEASANTS_SFRY_ADJ: "Jalayirid"
+ JLY_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of The Jalayirids"
+ JLY_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Jalayirid"
+ # PDY
+ PDY_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Pandya"
+ PDY_YUG_PEASANTS_SFRY_ADJ: "Pandyan"
+ PDY_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Pandya"
+ PDY_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Pandyan"
+ # MJN
+ MJN_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Majin"
+ MJN_YUG_PEASANTS_SFRY_ADJ: "Majin"
+ MJN_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Majin"
+ MJN_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Majin"
+ # TAM
+ TAM_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Tamna"
+ TAM_YUG_PEASANTS_SFRY_ADJ: "Tamnan"
+ TAM_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Tamna"
+ TAM_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Tamnan"
+ # QOC
+ QOC_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Qocho"
+ QOC_YUG_PEASANTS_SFRY_ADJ: "Qochoan"
+ QOC_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Qocho"
+ QOC_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Qochoan"
+ # UYG
+ UYG_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Uyghuristan"
+ UYG_YUG_PEASANTS_SFRY_ADJ: "Uyghuristani"
+ UYG_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Uyghuristan"
+ UYG_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Uyghuristani"
+ # XIN
+ XIN_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Xinjiang"
+ XIN_YUG_PEASANTS_SFRY_ADJ: "Xinjiang"
+ XIN_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Xinjiang"
+ XIN_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Xinjiang"
+ # NAN
+ NAN_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Nanzhong"
+ NAN_YUG_PEASANTS_SFRY_ADJ: "Nanzhong"
+ NAN_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Nanzhong"
+ NAN_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Nanzhong"
+ # TAEBONG
+ TAEBONG_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Taebong"
+ TAEBONG_YUG_PEASANTS_SFRY_ADJ: "Taebong"
+ TAEBONG_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Taebong"
+ TAEBONG_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Taebong"
+ # KALAT
+ KALAT_YUG_PEASANTS_SFRY: "Socialist Federal Republic of Kalat"
+ KALAT_YUG_PEASANTS_SFRY_ADJ: "Kalatli"
+ KALAT_BLR_GRAND_DUCHY_GRAND_DUCHY: "Grand Duchy of Kalat"
+ KALAT_BLR_GRAND_DUCHY_GRAND_DUCHY_ADJ: "Kalatli"

@@ -1,0 +1,10 @@
+﻿l_english:
+
+ #tag / substitution rules
+
+ # YUG
+ YUG_YUG_PEASANTS: "Socialist Federal Republic of Yugoslavia"
+ YUG_YUG_PEASANTS_ADJ: "Yugoslav"
+ # BLR
+ BLR_BLR_GRAND_DUCHY: "Grand Duchy of Belarus"
+ BLR_BLR_GRAND_DUCHY_ADJ: "Belarusian"

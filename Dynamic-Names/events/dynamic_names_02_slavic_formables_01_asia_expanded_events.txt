@@ -1,0 +1,425 @@
+### generated events for dynamic names
+
+namespace = dynamic_names_02_slavic_formables_01_asia_expanded
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.0
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    immediate = {
+        if = { limit = { tag = CHN } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.1 } }
+        if = { limit = { tag = XIA } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.2 } }
+        if = { limit = { tag = LIA } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.3 } }
+        if = { limit = { tag = QKH } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.4 } }
+        if = { limit = { tag = BAE } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.5 } }
+        if = { limit = { tag = GGY } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.6 } }
+        if = { limit = { tag = SLA } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.7 } }
+        if = { limit = { tag = GOR } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.8 } }
+        if = { limit = { tag = JLY } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.9 } }
+        if = { limit = { tag = PDY } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.10 } }
+        if = { limit = { tag = MJN } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.11 } }
+        if = { limit = { tag = TAM } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.12 } }
+        if = { limit = { tag = QOC } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.13 } }
+        if = { limit = { tag = UYG } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.14 } }
+        if = { limit = { tag = XIN } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.15 } }
+        if = { limit = { tag = NAN } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.16 } }
+        if = { limit = { OR = { tag = MJN } has_country_flag = is_TAEBONG_flag } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.17 } }
+        if = { limit = { OR = { tag = BAL } has_country_flag = is_KALAT_flag } country_event = { id = dynamic_names_02_slavic_formables_01_asia_expanded.18 } }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.0.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.1
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = CHN
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = CHN_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = CHN_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.1.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.2
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = XIA
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = XIA_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = XIA_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.2.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.3
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = LIA
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = LIA_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = LIA_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.3.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.4
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = QKH
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = QKH_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = QKH_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.4.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.5
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = BAE
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = BAE_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = BAE_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.5.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.6
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = GGY
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = GGY_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = GGY_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.6.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.7
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = SLA
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = SLA_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = SLA_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.7.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.8
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = GOR
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = GOR_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = GOR_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.8.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.9
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = JLY
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = JLY_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = JLY_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.9.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.10
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = PDY
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = PDY_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = PDY_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.10.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.11
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = MJN
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = MJN_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = MJN_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.11.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.12
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = TAM
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = TAM_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = TAM_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.12.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.13
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = QOC
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = QOC_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = QOC_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.13.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.14
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = UYG
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = UYG_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = UYG_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.14.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.15
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = XIN
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = XIN_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = XIN_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.15.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.16
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = NAN
+    }
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = NAN_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = NAN_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.16.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.17
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = TAEBONG_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = TAEBONG_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.17.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_01_asia_expanded.18
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    immediate = {
+        if = { limit = { tag = YUG has_reform = peasants_republic } override_country_name = KALAT_YUG_PEASANTS_SFRY }
+        if = { limit = { tag = BLR has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = KALAT_BLR_GRAND_DUCHY_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_01_asia_expanded.18.a
+    }
+}

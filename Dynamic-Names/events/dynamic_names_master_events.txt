@@ -13,8 +13,10 @@ country_event = {
     immediate = {
         country_event = { id = dynamic_names_00_vanilla_00_vanilla.0 }
         country_event = { id = dynamic_names_00_vanilla_01_asia_expanded.0 }
+        country_event = { id = dynamic_names_00_vanilla_02_slavic_formables.0 }
         country_event = { id = dynamic_names_01_asia_expanded_00_vanilla.0 }
         country_event = { id = dynamic_names_01_asia_expanded_01_asia_expanded.0 }
+        country_event = { id = dynamic_names_02_slavic_formables_02_slavic_formables.0 }
     }
 
     option = {

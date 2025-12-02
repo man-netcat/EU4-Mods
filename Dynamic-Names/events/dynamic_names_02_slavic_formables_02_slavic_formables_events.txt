@@ -1,0 +1,63 @@
+### generated events for dynamic names
+
+namespace = dynamic_names_02_slavic_formables_02_slavic_formables
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_02_slavic_formables.0
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    immediate = {
+        if = { limit = { tag = YUG } country_event = { id = dynamic_names_02_slavic_formables_02_slavic_formables.1 } }
+        if = { limit = { tag = BLR } country_event = { id = dynamic_names_02_slavic_formables_02_slavic_formables.2 } }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_02_slavic_formables.0.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_02_slavic_formables.1
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = YUG
+    }
+
+    immediate = {
+        if = { limit = { has_reform = peasants_republic } override_country_name = YUG_YUG_PEASANTS }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_02_slavic_formables.1.a
+    }
+}
+
+country_event = {
+    id = dynamic_names_02_slavic_formables_02_slavic_formables.2
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        tag = BLR
+    }
+
+    immediate = {
+        if = { limit = { has_reform = monarchy_mechanic NOT = { government_rank = 2 } } override_country_name = BLR_BLR_GRAND_DUCHY }
+    }
+
+    option = {
+        name = dynamic_names_02_slavic_formables_02_slavic_formables.2.a
+    }
+}
