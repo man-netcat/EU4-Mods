@@ -1,0 +1,87 @@
+#Country Name: Czechoslovakia
+
+graphical_culture = westerngfx
+
+color = { 11 85 160 }  # Blue from Czechoslovak flag
+
+revolutionary_colors = { 5 0 13 }
+
+historical_idea_groups = {
+	innovativeness_ideas
+	diplomatic_ideas
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	quality_ideas
+	administrative_ideas
+	trade_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	austrian_tercio
+	austrian_hussar
+	austrian_arquebusier
+	austrian_dragoon
+	austrian_grenadier
+	austrian_uhlan
+	austrian_squadron
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Václav #4" = 80
+	"Jiří #2" = 40
+	"Karel #4" = 40
+	"Přemysl #3" = 30
+	"Matej #1" = 20
+	"Ladislav #5" = 20
+	"Otakar #3" = 15
+	"Vladislav #3" = 15
+	"Břetislav #2" = 10
+	"Soběslav #2" = 10
+	"Jan #3" = 10
+	"Stefan #1" = 10
+	"Juraj #1" = 10
+	"Ferdinand #5" = 5
+	"Zikmund #2" = 5
+	"Maxmilian #2" = 5
+	"Rudolf #3" = 5
+	"Tomáš #0" = 0
+	"Prokop #0" = 0
+	"Bohuslav #0" = 0
+	"Milan #0" = 0
+	"Igor #0" = 0
+	"Vladimír #0" = 0
+	
+	"Anna #1" = -15
+	"Eliška #2" = -10
+	"Ludmila #1" = -10
+	"Božena #0" = -1
+	"Dagmar #0" = -1
+}
+
+leader_names = {
+	Zajíc Jiskra Železný Čapek
+	Rožmberk Valdštejn
+	Kollonitz Harrach
+	Kinský Lobkowicz
+	Piccolomini Pappenheim
+	Gallas Aldringen
+	Holk Schlick
+	Stibor Bel Kollar
+	Podmanický Hatnanský
+}
+
+ship_names = {
+	"Svatý Václav" "Jan Hus" "Jan Žižka" "Prokop Holý"
+	Vltava Labe Morava
+	Bodrog Bebrava Hornád Ipel
+	Praha Bratislava Brno
+	"Karlštejn" "Spiš"
+}

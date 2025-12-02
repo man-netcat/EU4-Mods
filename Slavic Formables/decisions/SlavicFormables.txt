@@ -1,0 +1,1060 @@
+country_decisions = {
+	slovenian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_slovenia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = SLV
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			primary_culture = slovene
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 129				# Krain (Ljubljana)
+				province_id = 1769				# Görz
+				province_id = 4751				# Cilli
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				exists = SLV
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			adm_tech = 10
+			owns_core_province = 129			# Krain (Ljubljana)
+			owns_core_province = 1769			# Görz
+			owns_core_province = 4751			# Cilli
+		}
+		effect = {
+			129 = {
+				move_capital_effect = yes
+				change_province_name = "Ljubljana"
+			}
+			change_tag = SLV
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			carinthia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = SLV
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_slovenia_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	slovakian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_slovakia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = SVK
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			OR = {
+				primary_culture = slovak
+				primary_culture = slovak_new
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1772				# Pozsony (Bratislava)
+				province_id = 154				# Hont
+				province_id = 162				# Zemplén
+				province_id = 4236				# Trencin
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				exists = SVK
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			adm_tech = 10
+			owns_core_province = 1772			# Pozsony (Bratislava)
+			owns_core_province = 154			# Hont
+			owns_core_province = 162			# Zemplén
+			owns_core_province = 4236			# Trencin
+		}
+		effect = {
+			1772 = {
+				move_capital_effect = yes
+				change_province_name = "Bratislava"
+			}
+			change_tag = SVK
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			slovakia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = SVK
+			}
+			transdanubia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = SVK
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_slovakia_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	czech_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_czechia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = CZE
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = BOH
+			}
+			OR = {
+				primary_culture = czech
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 266				# Prague
+				province_id = 267				# Plzen
+				province_id = 2968				# Budejovice
+				province_id = 4237				# Olomouc
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				exists = CZE
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			adm_tech = 10
+			owns_core_province = 266			# Prague
+			owns_core_province = 267			# Plzen
+			owns_core_province = 2968			# Budejovice
+			owns_core_province = 4237			# Olomouc
+		}
+		effect = {
+			266 = {
+				move_capital_effect = yes
+			}
+			change_tag = CZE
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			bohemia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZE
+			}
+			erzgebirge_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZE
+			}
+			moravia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZE
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_czechia_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	yugoslav_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_yugoslavia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = YUG
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = TUR
+			}
+			OR = {
+				primary_culture = serbian
+				primary_culture = croatian
+				primary_culture = bosnian
+				primary_culture = slovene
+				primary_culture = bulgarian
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4239				# Belgrade
+				province_id = 3002				# Sarajevo
+				province_id = 3001				# Skopje
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			adm_tech = 20
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 4239			# Belgrade
+			owns_core_province = 3002			# Sarajevo
+			owns_core_province = 3001			# Skopje
+			calc_true_if = {
+				amount = 30
+				all_owned_province = {
+					OR = {
+						culture = serbian
+						culture = croatian
+						culture = bosnian
+						culture = slovene
+						culture = bulgarian
+						culture = dalmatian
+					}
+				}
+			}
+		}
+		effect = {
+			4239 = {
+				move_capital_effect = yes
+			}
+			change_tag = YUG
+			change_government = republic
+			add_government_reform = peasants_republic
+			set_government_rank = 3
+			add_prestige = 50
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			rascia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			serbia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			croatia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			east_adriatic_coast_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			bosnia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			bulgaria_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			macedonia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_yugoslavia_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	belarusian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_belarus_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = BLR
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = RUS
+			}
+			primary_culture = byelorussian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 275				# Polotsk
+				province_id = 276				# Minsk
+				province_id = 277				# Brest
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 275			# Polotsk
+			owns_core_province = 276			# Minsk
+			owns_core_province = 277			# Brest
+		}
+		effect = {
+			276 = {
+				move_capital_effect = yes
+			}
+			change_tag = BLR
+			set_government_rank = 2
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			white_ruthenia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = BLR
+			}
+			pripyat_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = BLR
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_belarus_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	illyrian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_illyria_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = ILY
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = YUG
+			}
+			OR = {
+				primary_culture = slovene
+				primary_culture = croatian
+				primary_culture = dalmatian
+				primary_culture = bosnian
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 129				# Krain (Ljubljana)
+				province_id = 131				# Zagreb
+				province_id = 136				# Split
+				province_id = 140				# Bosnia
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 129			# Krain (Ljubljana)
+			owns_core_province = 131			# Zagreb
+			owns_core_province = 136			# Split
+			owns_core_province = 140			# Bosnia
+		}
+		effect = {
+			131 = {
+				move_capital_effect = yes
+			}
+			change_tag = ILY
+			set_government_rank = 2
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			carinthia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ILY
+			}
+			croatia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ILY
+			}
+			east_adriatic_coast_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ILY
+			}
+			bosnia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ILY
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_illyria_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	czechoslovak_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_czechoslovakia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = CZS
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			OR = {
+				primary_culture = czech
+				primary_culture = slovak
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 266				# Prague
+				province_id = 1772				# Pozsony (Bratislava)
+				province_id = 265				# Brno
+				province_id = 154				# Hont
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			adm_tech = 15
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 266			# Prague
+			owns_core_province = 1772			# Pozsony (Bratislava)
+			owns_core_province = 265			# Brno
+			owns_core_province = 154			# Hont
+		}
+		effect = {
+			266 = {
+				move_capital_effect = yes
+			}
+			change_tag = CZS
+			set_government_rank = 2
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			bohemia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZS
+			}
+			erzgebirge_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZS
+			}
+			moravia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZS
+			}
+			slovakia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZS
+			}
+			transdanubia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = CZS
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_czechoslovakia_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	bosnia_herzegovina_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_bosnia_herzegovina_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				exists = BHZ
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			primary_culture = bosnian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 140				# Bosnia
+				province_id = 1831				# Herzegovina
+				province_id = 139				# Hum
+				province_id = 3002				# Visoki
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				exists = BHZ
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 140			# Bosnia
+			owns_core_province = 1831			# Herzegovina
+			owns_core_province = 139			# Hum
+			owns_core_province = 3002			# Visoki
+		}
+		effect = {
+			3002 = {
+				move_capital_effect = yes
+				change_province_name = "Sarajevo"
+			}
+			change_tag = BHZ
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			bosnia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = BHZ
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_bosnia_herzegovina_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	rename_ruthenia_to_ukraine = {
+		major = yes
+		potential = {
+			tag = UKR
+			NOT = {
+				has_country_flag = is_ukraine_flag
+			}
+		}
+		allow = {
+			is_at_war = no
+			adm_tech = 10
+		}
+		effect = {
+			override_country_name = UKRAINE_STRING
+			set_country_flag = is_ukraine_flag
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 100
+	}
+}

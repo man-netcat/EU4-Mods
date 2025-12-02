@@ -1,0 +1,13 @@
+# Slavic Formables - New country tags
+# SLV = Slovenia (new tag, not in base game)
+# SVK = Slovakia (new tag, distinct from SLO which is Nitra)
+# CZE = Czechia (new tag, reformed Bohemia)
+# BOS and SOR already exist in base game but lack formation decisions
+SLV = "countries/Slovenia.txt"
+SVK = "countries/Slovakia.txt"
+CZE = "countries/Czechia.txt"
+YUG = "countries/Yugoslavia.txt"
+BLR = "countries/Belarus.txt"
+ILY = "countries/Illyria.txt"
+CZS = "countries/Czechoslovakia.txt"
+BHZ = "countries/BosniaHerzegovina.txt"

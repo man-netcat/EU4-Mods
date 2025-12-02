@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = peasants_republic
+government_rank = 3
+primary_culture = serbian
+religion = orthodox
+technology_group = eastern
+capital = 4239	# Belgrade

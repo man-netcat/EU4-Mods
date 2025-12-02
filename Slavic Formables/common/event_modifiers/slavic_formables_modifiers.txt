@@ -1,0 +1,8 @@
+# Slavic Formables Country Modifiers
+
+ukrainian_identity = {
+	legitimacy = 1
+	devotion = 1
+	republican_tradition = 0.3
+	global_unrest = -1
+}
