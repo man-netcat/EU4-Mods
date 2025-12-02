@@ -1,0 +1,37 @@
+CCP_ideas = {
+	start = {
+		global_manpower_modifier = 0.05
+		land_morale = 0.05
+	}
+	bonus = {
+		global_manpower_modifier = 0.05
+	}
+	trigger = {
+		tag = CCP
+	}
+	free = yes
+	ccp_peasant_councils = {
+		global_manpower_modifier = 0.05
+	}
+	ccp_land_reform = {
+		production_efficiency = 0.05
+	}
+	ccp_guerrilla_warfare = {
+		land_morale = 0.05
+	}
+	ccp_workers_committees = {
+		stability_cost_modifier = -0.05
+	}
+	ccp_revolutionary_practice = {
+		army_tradition = 1
+	}
+	ccp_international_solidarity = {
+		diplomatic_reputation = 1
+	}
+	ccp_red_army = {
+		infantry_power = 0.05
+	}
+	ccp_new_society = {
+		reform_progress_growth = 0.1
+	}
+}

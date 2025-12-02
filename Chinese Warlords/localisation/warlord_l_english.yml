@@ -1,0 +1,158 @@
+﻿l_english:
+ # Country
+ TPG: "Taiping Heavenly Kingdom"
+ TPG_ADJ: "Taiping"
+ 
+ # Ideas
+ TPG_ideas: "Taiping Ideas"
+ TPG_ideas_start: "Taiping Traditions"
+ TPG_ideas_bonus: "Taiping Ambition"
+ taiping_heavenly_kingdom: "The Heavenly Kingdom"
+ taiping_heavenly_kingdom_desc: "We are God's chosen people, destined to create a paradise on Earth under divine guidance."
+ taiping_gods_chinese_son: "God's Chinese Son"
+ taiping_gods_chinese_son_desc: "Hong Xiuquan is the younger brother of Jesus Christ, sent to redeem China from corruption and idolatry."
+ taiping_land_redistribution: "Equal Land Distribution"
+ taiping_land_redistribution_desc: "All land shall be divided equally among the people, with none going hungry and none lacking."
+ taiping_heavenly_army: "The Heavenly Army"
+ taiping_heavenly_army_desc: "Our soldiers fight not for earthly gain but for the Kingdom of Heaven, making them fearless in battle."
+ taiping_equality_movement: "Radical Equality"
+ taiping_equality_movement_desc: "Men and women are equal before God, and our society shall reflect this divine truth."
+ taiping_missionary_zeal: "Missionary Zeal"
+ taiping_missionary_zeal_desc: "We must spread the true faith throughout China and purge the land of false idols."
+ taiping_revolutionary_ideals: "Revolutionary Ideals"
+ taiping_revolutionary_ideals_desc: "Our revolution inspires the oppressed peoples everywhere to rise against their corrupt rulers."
+ taiping_new_society: "Building the New Society"
+ taiping_new_society_desc: "We shall create a new social order based on Christian principles and Chinese values."
+ 
+ # Decision
+ taiping_heavenly_kingdom_decision_title: "Proclaim the Taiping Heavenly Kingdom"
+ taiping_heavenly_kingdom_decision_desc: "The Heavenly Father has spoken through his chosen prophet, Hong Xiuquan, commanding us to establish a Heavenly Kingdom on Earth. We shall overthrow the corrupt Manchu dynasty and create a paradise where all are equal before God, the land is shared fairly, and Christian truth enlightens the Chinese people. The time has come to proclaim our divine mission and establish Tianjing as the capital of God's Kingdom."
+ 
+ # Modifiers
+ taiping_revolution: "Taiping Revolution"
+ taiping_revolution_desc: "The revolutionary fervor of the Taiping movement has energized our armies and population."
+ taiping_land_reform: "Taiping Land Reform"
+ taiping_land_reform_desc: "Our radical land redistribution program has transformed society and improved productivity."
+ taiping_purge: "Internal Purge"
+ taiping_purge_desc: "The recent purges have destabilized our government but removed potential threats."
+ taiping_heavenly_mandate: "Heavenly Mandate"
+ taiping_heavenly_mandate_desc: "We rule with the blessing of the Heavenly Father himself."
+ taiping_missionary_fervor: "Missionary Fervor"
+ taiping_missionary_fervor_desc: "Our missionaries work tirelessly to convert the Chinese people to the true faith."
+ taiping_military_reforms: "Taiping Military Reforms"
+ taiping_military_reforms_desc: "Our military has been reorganized and strengthened for the great campaigns ahead."
+ taiping_rebellion_started: "Taiping Rebellion"
+ taiping_rebellion_started_desc: "The Taiping rebels have risen against our rule, destabilizing the southern provinces."
+ 
+# Events
+warlord_events.1.t: "The Taiping Heavenly Kingdom is Proclaimed!"
+warlord_events.1.d: "With great ceremony in Tianjing (Nanjing), we have proclaimed the establishment of the Taiping Heavenly Kingdom. Hong Xiuquan, the Heavenly King, declares himself the younger brother of Jesus Christ and God's chosen instrument to redeem China. Our revolutionary government promises equal land distribution, gender equality, and the establishment of a Christian Chinese state. The old order trembles before our divine mission!"
+warlord_events.1.a: "The Kingdom of Heaven has come to Earth!"
+
+warlord_events.2.t: "The Taiping Rebellion Erupts"
+warlord_events.2.d: "In the southern provinces of Guangxi and Guangdong, a massive uprising has begun under the leadership of Hong Xiuquan, a failed civil service candidate who claims to be the younger brother of Jesus Christ. The Taiping rebels have seized control of vast territories while our armies were occupied elsewhere. They preach a radical form of Christianity mixed with Chinese traditions, promising land reform, equality, and the overthrow of our dynasty. The rebels have proclaimed the 'Taiping Heavenly Kingdom' and now effectively control the south. We have lost control!"
+warlord_events.2.a: "Accept their de facto independence for now."
+warlord_events.2.b: "Force them to declare war immediately!"
+warlord_events.2.c: "Switch to play as the Taiping Heavenly Kingdom."
+
+CCP: "Chinese Communist Party"
+CCP_ADJ: "Communist"
+
+ROC: "Republic of China"
+ROC_ADJ: "Nationalist"
+
+warlord_events.3.t: "The Red Uprisings"
+warlord_events.3.d: "Widespread peasant uprisings have torn through Shaanxi and Jiangxi. Radical workers' and peasants' organisations have seized control in the countryside and proclaimed a revolutionary government. Our rural forces threaten to split the state in two."
+warlord_events.3.a: "Let them go — we cannot hold the provinces."
+warlord_events.3.b: "Strike back immediately."
+warlord_events.3.c: "Switch to play as the CCP."
+
+warlord_events.4.t: "The Nationalist Breakaway"
+warlord_events.4.d: "Elements of the Nationalist movement have rallied in Jiangsu and Zhejiang. They claim to represent a modern, democratic China and demand autonomy from our rule."
+warlord_events.4.a: "Accept their de facto independence for now."
+warlord_events.4.b: "Crush them by force."
+warlord_events.4.c: "Switch to play as the ROC."
+
+warlord_events.5.t: "The CCP Flees to Taiwan"
+warlord_events.5.d: "The Communist forces have been pushed from the mainland. With the Qing still holding Taiwan, our comrades relocate to the island to regroup and continue the struggle."
+warlord_events.5.a: "May they live to fight another day."
+
+warlord_events.6.t: "The ROC Retreats to Taiwan"
+warlord_events.6.d: "The Nationalists have lost their last foothold on the mainland. With Taiwan still under Qing control, they evacuate to the island and set up a government-in-exile."
+warlord_events.6.a: "We will support their evacuation."
+
+# Formation/localisation for CCP and ROC events
+warlord_events.7.t: "Formation of the CCP"
+warlord_events.7.d: "A red revolution has coalesced into an organised party-state ready to take the mantle of the countryside."
+warlord_events.7.a: "Let them form their own state."
+
+warlord_events.8.t: "Formation of the ROC"
+warlord_events.8.d: "Nationalist elements have consolidated control in the eastern provinces and now present themselves as an independent republican government."
+warlord_events.8.a: "Recognise the new Republic."
+
+ccp_peasant_republic: "Peasant Republic"
+ccp_peasant_republic_desc: "A government built on peasant councils and revolutionary committees."
+
+roc_democratic_republic: "Democratic Republic"
+roc_democratic_republic_desc: "A republic claiming democratic legitimacy, though born in war."
+
+exiled_to_taiwan: "Exiled to Taiwan"
+exiled_to_taiwan_desc: "Our government has relocated to the island of Taiwan to continue the struggle in exile."
+
+# CCP ideas
+ccp_ideas: "CCP Ideas"
+ccp_ideas_start: "Peasant Traditions"
+ccp_peasant_councils: "Peasant Councils"
+ccp_peasant_councils_desc: "Local councils organise land and labour for the revolution."
+ccp_land_reform: "Land Reform"
+ccp_land_reform_desc: "Redistribution of land to peasant holdings."
+ccp_guerrilla_warfare: "Guerrilla Warfare"
+ccp_guerrilla_warfare_desc: "Small-unit tactics and mobilised peasantry."
+ccp_workers_committees: "Workers' Committees"
+ccp_workers_committees_desc: "Revolutionary committees guide labour organisation."
+ccp_revolutionary_practice: "Revolutionary Practice"
+ccp_revolutionary_practice_desc: "Experience in revolutionary warfare."
+ccp_international_solidarity: "International Solidarity"
+ccp_international_solidarity_desc: "Support from foreign revolutionaries and sympathisers."
+ccp_red_army: "Red Army"
+ccp_red_army_desc: "A reorganised people's army trained in ideological warfare."
+ccp_new_society: "Building the New Society"
+ccp_new_society_desc: "Reforms to state and society to reflect revolutionary ideals."
+
+# ROC ideas
+roc_ideas: "ROC Ideas"
+roc_ideas_start: "Republican Traditions"
+roc_national_unity: "National Unity"
+roc_national_unity_desc: "Policies meant to stabilise the republic in wartime."
+roc_modern_army: "Modern Army"
+roc_modern_army_desc: "Efforts to modernise the officer corps and armaments."
+roc_republican_institutions: "Republican Institutions"
+roc_republican_institutions_desc: "Administrative reforms to support a modern state."
+roc_international_support: "International Support"
+roc_international_support_desc: "Aid and recognition from foreign powers."
+roc_civil_reforms: "Civil Reforms"
+roc_civil_reforms_desc: "Economic reforms to encourage industry and trade."
+roc_coastal_fleet: "Coastal Fleet"
+roc_coastal_fleet_desc: "A fleet to protect trade and evacuate civilians if necessary."
+roc_resilient_state: "Resilient State"
+roc_resilient_state_desc: "Endurance in the face of military setbacks."
+roc_republican_spirit: "Republican Spirit"
+roc_republican_spirit_desc: "Patriotic fervour bolstering morale and prestige."
+
+# Government reform names
+roc_republic_level_1: "ROC Early Reform"
+roc_republic_level_1_desc: "An early republican reform adopted by the Republic of China as it consolidates power."
+
+ccp_peasant_republic: "Peasant Republic"
+ccp_peasant_republic_desc: "A government built on peasant councils and revolutionary committees, emphasising mass mobilisation."
+
+# Event modifiers used by government reforms
+ccp_peasant_republic_modifier: "Peasant Republic (temporary)"
+ccp_peasant_republic_modifier_desc: "The revolutionary structures of the peasant republic provide short-term manpower recovery and organisation."
+
+# 'desc_' keys expected by some validators: provide short descriptions matching modifier keys
+desc_taiping_revolution: "The Taiping Heavenly Kingdom enforces a radical theocratic order."
+desc_ccp_peasant_republic: "A revolutionary peasant-led republic."
+desc_roc_democratic_republic: "A republican government based on early democratic reforms."
+desc_exiled_to_taiwan: "Temporary exile across the strait; the government retains legitimacy while displaced."
+

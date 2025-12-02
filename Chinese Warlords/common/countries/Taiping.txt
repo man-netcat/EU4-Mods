@@ -1,0 +1,74 @@
+graphical_culture = asiangfx
+
+color = { 40 95 180 }
+
+historical_score = 45
+
+historical_idea_groups = {
+	religious_ideas
+	economic_ideas
+	defensive_ideas
+	expansion_ideas
+	humanist_ideas
+	quantity_ideas
+	influence_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+	"Hong #0" = 50
+	"Yang #0" = 20
+	"Wei #0" = 15
+	"Shi #0" = 15
+	"Xiao #0" = 10
+	"Tiangui #0" = 5
+}
+
+leader_names = {
+	"Hong Xiuquan"
+	"Yang Xiuqing"
+	"Wei Changhui"
+	"Shi Dakai"
+	"Li Xiucheng"
+	"Chen Yucheng"
+	"Xiao Chaogui"
+	"Qin Rigang"
+	"Li Kaifang"
+	"Lin Fengxiang"
+	"Lai Hanying"
+	"Hu Yiguang"
+}
+
+ship_names = {
+	"Tianwang" "Tiandi" "Tianjing" "Taiping" "Zhenli" "Gongyi" "Heping" "Pingjun"
+	"Shenzhou" "Shangguo" "Tianguo" "Fengtian" "Xingyun" "Tianfu" "Tianyun"
+}
+
+army_names = {
+	"Tianjing Army"
+	"Northern Expedition Force"
+	"Western Expedition Force" 
+	"Loyalty Army"
+	"Elite Wing Army"
+	"Heroic Army"
+	"Central Army"
+	"Heaven's Army"
+	"Sacred Army"
+}

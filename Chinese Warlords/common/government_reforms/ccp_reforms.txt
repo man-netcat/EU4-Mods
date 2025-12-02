@@ -1,0 +1,23 @@
+# CCP-specific peasant republic reform added by Chinese Warlords mod
+# Lightweight peasant republic reform aimed at CCP when released
+ccp_peasant_republic = {
+    icon = "peasant_republic"
+    allow_normal_conversion = yes
+    potential = {
+        tag = CCP
+    }
+    valid_for_nation_designer = yes
+    nation_designer_cost = 10
+    legacy_equivalent = peasants_republic_legacy
+    duration = 4
+    # Minimal modifiers for safety — can be expanded later
+    modifiers = {
+        manpower_recovery_speed = 0.05
+    }
+    effect = {
+        add_country_modifier = {
+            name = "ccp_peasant_republic_modifier"
+            duration = 3650
+        }
+    }
+}

@@ -1,0 +1,61 @@
+graphical_culture = asiangfx
+color = {
+	40
+	95
+	180
+}
+
+historical_score = 45
+historical_idea_groups = {
+	diplomatic_ideas
+	economic_ideas
+	defensive_ideas
+	expansion_ideas
+	humanist_ideas
+	quantity_ideas
+	influence_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+	"Sun #0" = 40
+	"Chiang #0" = 30
+	"Wang #0" = 20
+	"Li #0" = 10
+}
+
+leader_names = {
+	"Sun Yat-sen"
+	"Chiang Kai-shek"
+	"Wang Jingwei"
+	"Soong #0"
+}
+
+ship_names = {
+	"National Ship"
+	"Blue Fleet"
+	"Republican Cruiser"
+}
+
+army_names = {
+	"National Army"
+	"Guomindang Army"
+	"Government Forces"
+}

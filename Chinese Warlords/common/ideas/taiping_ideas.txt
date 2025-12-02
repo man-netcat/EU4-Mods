@@ -1,0 +1,37 @@
+TPG_ideas = {
+	start = {
+		tolerance_own = 2
+		land_morale = 0.1
+	}
+	bonus = {
+		global_missionary_strength = 0.05
+	}
+	trigger = {
+		tag = TPG
+	}
+	free = yes
+	taiping_heavenly_kingdom = {
+		devotion = 1
+	}
+	taiping_gods_chinese_son = {
+		tolerance_own = 1
+	}
+	taiping_land_redistribution = {
+		production_efficiency = 0.1
+	}
+	taiping_heavenly_army = {
+		land_morale = 0.1
+	}
+	taiping_equality_movement = {
+		global_unrest = -1
+	}
+	taiping_missionary_zeal = {
+		global_missionary_strength = 0.03
+	}
+	taiping_revolutionary_ideals = {
+		global_manpower_modifier = 0.1
+	}
+	taiping_new_society = {
+		advisor_cost = -0.1
+	}
+}

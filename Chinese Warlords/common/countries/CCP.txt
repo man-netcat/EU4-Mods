@@ -1,0 +1,57 @@
+graphical_culture = asiangfx
+color = {
+	238
+	28
+	37
+}
+
+historical_score = 50
+historical_idea_groups = {
+	quantity_ideas
+	economic_ideas
+	defensive_ideas
+	expansion_ideas
+	humanist_ideas
+	quantity_ideas
+	influence_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	asian_arquebusier
+	asian_mass_infantry
+	manchu_banner
+	asian_musketeer
+	reformed_asian_musketeer
+}
+
+monarch_names = {
+	"Mao #0" = 40
+	"Zhou #0" = 30
+	"Zhu #0" = 20
+	"Lin #0" = 10
+}
+
+leader_names = {
+	"Mao Zedong"
+	"Zhou Enlai"
+	"Zhu De"
+	"Liu Shaoqi"
+	"Zhu Rui"
+	"Peng Dehuai"
+}
+
+ship_names = {
+	"Red Ship"
+	"People's Fleet"
+	"Revolutionary Vessel"
+}
+
+army_names = {
+	"Red Army"
+	"Workers' and Peasants' Army"
+	"Guerrilla Force"
+}

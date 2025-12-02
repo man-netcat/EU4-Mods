@@ -1,0 +1,37 @@
+ROC_ideas = {
+	start = {
+		global_manpower_modifier = 0.04
+		discipline = 0.025
+	}
+	bonus = {
+		global_trade_power = 0.05
+	}
+	trigger = {
+		tag = ROC
+	}
+	free = yes
+	roc_national_unity = {
+		stability_cost_modifier = -0.03
+	}
+	roc_modern_army = {
+		infantry_power = 0.05
+	}
+	roc_republican_institutions = {
+		reform_progress_growth = 0.1
+	}
+	roc_international_support = {
+		global_trade_power = 0.05
+	}
+	roc_civil_reforms = {
+		production_efficiency = 0.05
+	}
+	roc_coastal_fleet = {
+		naval_morale = 0.05
+	}
+	roc_resilient_state = {
+		global_unrest = -1
+	}
+	roc_republican_spirit = {
+		prestige_from_land = 0.03
+	}
+}

@@ -1,0 +1,14 @@
+# ROC-specific government reforms added by Chinese Warlords mod
+# A small, level-1 reform intended as an early republican reform for ROC.
+roc_republic_level_1 = {
+    icon = "parliament"
+    allow_normal_conversion = yes
+    potential = {
+        tag = ROC
+    }
+    valid_for_nation_designer = yes
+    nation_designer_cost = 5
+    legacy_equivalent = roc_republic_level_1_legacy
+    duration = 4
+    # No gameplay modifiers beyond being a selectable early reform — can be expanded later
+}

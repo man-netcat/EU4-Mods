@@ -1,0 +1,40 @@
+#################################################################
+# Event modifiers for CCP / ROC
+#################################################################
+
+ccp_peasant_republic = {
+    global_manpower_modifier = 0.1
+    land_morale = 0.05
+    stability_cost_modifier = -0.05
+}
+
+roc_democratic_republic = {
+    diplomatic_reputation = 1
+    global_tax_modifier = 0.05
+    stability_cost_modifier = -0.02
+}
+
+exiled_to_taiwan = {
+    global_unrest = 1
+    land_morale = -0.05
+}
+
+# Additional modifiers referenced by events/reforms
+ccp_peasant_republic_modifier = {
+    manpower_recovery_speed = 0.1
+    global_manpower_modifier = 0.05
+    global_unrest = -1
+}
+
+taiping_revolution = {
+    global_missionary_strength = 0.05
+    tolerance_own = 1
+    land_morale = 0.1
+    global_manpower_modifier = 0.05
+}
+
+taiping_heavenly_mandate = {
+    global_missionary_strength = 0.02
+    land_morale = 0.05
+    global_tax_modifier = 0.02
+}

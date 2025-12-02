@@ -1,0 +1,547 @@
+namespace = warlord_events
+# Formation event - triggered from decision
+country_event = {
+	id = warlord_events.1
+	title = warlord_events.1.t
+	desc = warlord_events.1.d
+	picture = REFORM_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = warlord_events.1.a
+		add_country_modifier = {
+			name = "taiping_heavenly_mandate"
+			duration = 7300
+		}
+	}
+}
+
+# Formation event for CCP (can be triggered by decision or event chains)
+country_event = {
+	id = warlord_events.7
+	title = warlord_events.7.t
+	desc = warlord_events.7.d
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		NOT = {
+			exists = CCP
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = CCP
+					}
+				}
+				# Add cores in jiangxi_area and shaanxi_area provinces and clear rebels
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = jiangxi_area
+							area = shaanxi_area
+						}
+						NOT = {
+							is_core = CCP
+						}
+					}
+					add_core = CCP
+					clear_rebels = yes
+				}
+				release = CCP
+				CCP = {
+					set_capital = 683
+					change_government = republic
+					add_country_modifier = {
+						name = "ccp_peasant_republic"
+						duration = 3650
+					}
+					# Grant the CCP-specific peasant republic reform on release/formation
+					add_government_reform = ccp_peasant_republic
+					adopt_reform_progress = ROOT
+					add_legitimacy = 50
+					add_prestige = 5
+					define_ruler = {
+						name = "Mao Zedong"
+						dynasty = "Mao"
+						adm = 2
+						dip = 3
+						mil = 4
+						age = 40
+						claim = 70
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = warlord_events.7.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Formation event for ROC (can be triggered by decision or event chains)
+country_event = {
+	id = warlord_events.8
+	title = warlord_events.8.t
+	desc = warlord_events.8.d
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		NOT = {
+			exists = ROC
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = ROC
+					}
+				}
+				# Add cores in jiangsu_area and zhejiang_area provinces and clear rebels
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = jiangsu_area
+							area = zhejiang_area
+						}
+						NOT = {
+							is_core = ROC
+						}
+					}
+					add_core = ROC
+					clear_rebels = yes
+				}
+				release = ROC
+				ROC = {
+					set_capital = 684
+					change_government = republic
+					add_country_modifier = {
+						name = "roc_democratic_republic"
+						duration = 3650
+					}
+					# Grant a small ROC-level reform on release/formation
+					add_government_reform = roc_republic_level_1
+					adopt_reform_progress = ROOT
+					add_legitimacy = 60
+					add_prestige = 5
+					define_ruler = {
+						name = "Sun Yat-sen"
+						dynasty = "Sun"
+						adm = 3
+						dip = 3
+						mil = 3
+						age = 50
+						claim = 80
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = warlord_events.8.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Release CCP (patterned after WUU/YUE release in base game)
+country_event = {
+	id = warlord_events.3
+	title = warlord_events.3.t
+	desc = warlord_events.3.d
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		tag = QNG
+		NOT = {
+			exists = CCP
+		}
+		num_of_owned_provinces_with = {
+			value = 8
+			region = south_china_region
+			controlled_by = REB
+		}
+		any_owned_province = {
+			OR = {
+				area = shaanxi_area
+				area = jiangxi_area
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = CCP
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							controlled_by = REB
+							controlled_by = ROOT
+						}
+						OR = {
+							area = shaanxi_area
+							area = jiangxi_area
+						}
+						NOT = {
+							is_core = CCP
+						}
+					}
+					add_core = CCP
+					clear_rebels = yes
+				}
+				release = CCP
+				CCP = {
+					set_capital = 683
+					change_government = republic
+					add_country_modifier = {
+						name = "ccp_peasant_republic"
+						duration = 3650
+					}
+					adopt_reform_progress = ROOT
+					add_legitimacy = 50
+					add_prestige = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = warlord_events.3.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = warlord_events.3.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = warlord_events.3.c
+		trigger = {
+			ai = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Release ROC (patterned after WUU/YUE release in base game)
+country_event = {
+	id = warlord_events.4
+	title = warlord_events.4.t
+	desc = warlord_events.4.d
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		tag = QNG
+		NOT = {
+			exists = ROC
+		}
+		num_of_owned_provinces_with = {
+			value = 8
+			region = south_china_region
+			controlled_by = REB
+		}
+		any_owned_province = {
+			OR = {
+				area = jiangsu_area
+				area = zhejiang_area
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = ROC
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							controlled_by = REB
+							controlled_by = ROOT
+						}
+						OR = {
+							area = jiangsu_area
+							area = zhejiang_area
+						}
+						NOT = {
+							is_core = ROC
+						}
+					}
+					add_core = ROC
+					clear_rebels = yes
+				}
+				release = ROC
+				ROC = {
+					set_capital = 684
+					change_government = republic
+					add_country_modifier = {
+						name = "roc_democratic_republic"
+						duration = 3650
+					}
+					adopt_reform_progress = ROOT
+					add_legitimacy = 60
+					add_prestige = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = warlord_events.4.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = warlord_events.4.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = warlord_events.4.c
+		trigger = {
+			ai = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Exile CCP to Taiwan if CCP loses mainland provinces while QNG still owns Taiwan
+country_event = {
+	id = warlord_events.5
+	title = warlord_events.5.t
+	desc = warlord_events.5.d
+	picture = MIGRATION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		exists = CCP
+		NOT = {
+			any_owned_province = {
+				NOT = {
+					area = taiwan_area
+				}
+			}
+		}
+		any_country = { tag = QNG any_owned_province = { area = taiwan_area } }
+	}
+	immediate = {
+		hidden_effect = {
+			# Transfer of Taiwan provinces omitted here to avoid unsupported province-scope operations in this mod file.
+			# Ownership transfer can be handled via a more explicit province list or a separate script if desired.
+			CCP = {
+				set_capital = 2154
+				add_country_modifier = {
+					name = "exiled_to_taiwan"
+					duration = 3650
+				}
+				add_prestige = 10
+			}
+		}
+	}
+	option = {
+		name = warlord_events.5.a
+	}
+}
+
+# Exile ROC to Taiwan if ROC loses mainland provinces while QNG still owns Taiwan
+country_event = {
+	id = warlord_events.6
+	title = warlord_events.6.t
+	desc = warlord_events.6.d
+	picture = MIGRATION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		exists = ROC
+		NOT = {
+			any_owned_province = {
+				NOT = {
+					area = taiwan_area
+				}
+			}
+		}
+		any_country = { tag = QNG any_owned_province = { area = taiwan_area } }
+	}
+	immediate = {
+		hidden_effect = {
+			# Transfer of Taiwan provinces omitted here to avoid unsupported province-scope operations in this mod file.
+			# Ownership transfer can be handled via a more explicit province list or a separate script if desired.
+			ROC = {
+				set_capital = 2154
+				add_country_modifier = {
+					name = "exiled_to_taiwan"
+					duration = 3650
+				}
+				add_prestige = 10
+			}
+		}
+	}
+	option = {
+		name = warlord_events.6.a
+	}
+}
+
+# Taiping Rebellion Breakaway Event (like Wu/Yue from Ming Crisis)
+country_event = {
+	id = warlord_events.2
+	title = warlord_events.2.t
+	desc = warlord_events.2.d
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		tag = QNG
+		NOT = {
+			exists = TPG
+		}
+		num_of_owned_provinces_with = {
+			value = 8
+			region = south_china_region
+			controlled_by = REB
+		}
+		any_owned_province = {
+			OR = {
+				area = guangdong_area
+				area = guangxi_area
+				area = west_guangdong_area
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = TPG
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							controlled_by = REB
+							controlled_by = ROOT
+						}
+						OR = {
+							area = guangdong_area
+							area = guangxi_area
+							area = west_guangdong_area
+						}
+						NOT = {
+							is_core = TPG
+						}
+					}
+					add_core = TPG
+					clear_rebels = yes
+				}
+				release = TPG
+				TPG = {
+					set_capital = 2158
+					change_government = monarchy
+					add_government_reform = chinese_warlord
+					adopt_reform_progress = ROOT
+					define_ruler = {
+						name = "Hong Xiuquan"
+						dynasty = "Hong"
+						adm = 4
+						dip = 3
+						mil = 5
+						age = 35
+						claim = 95
+					}
+					add_legitimacy = 100
+					add_prestige = 10
+					add_country_modifier = {
+						name = "taiping_revolution"
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = warlord_events.2.a
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+			limit = {
+				exists = TPG
+				overlord_of = TPG
+			}
+			TPG = {
+				add_liberty_desire = 100
+			}
+		}
+	}
+	option = {
+		name = warlord_events.2.b
+		ai_chance = {
+			factor = 0
+		}
+		if = {
+			limit = {
+				exists = TPG
+				TPG = {
+					is_subject_of = ROOT
+				}
+			}
+			TPG = {
+				declare_war_with_cb = {
+					who = ROOT
+					casus_belli = cb_independence_war
+				}
+			}
+		}
+	}
+	option = {
+		name = warlord_events.2.c
+		trigger = {
+			ai = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+		if = {
+			limit = {
+				exists = TPG
+				TPG = {
+					is_subject_of = ROOT
+				}
+			}
+			switch_tag = TPG
+			TPG = {
+				declare_war_with_cb = {
+					who = ROOT
+					casus_belli = cb_independence_war
+				}
+			}
+		}
+	}
+}
