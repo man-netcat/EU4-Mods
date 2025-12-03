@@ -22,6 +22,8 @@ clear_christian_scholar_modifiers_effect = {
 	remove_country_modifier = debre_libanos_scholar_modifier
 	remove_country_modifier = lalibela_scholar_modifier
 	remove_country_modifier = nubian_scholar_modifier
+	remove_country_modifier = utraquist_scholar_modifier
+	remove_country_modifier = taborite_scholar_modifier
 }
 
 assign_default_catholic_school_effect = {
@@ -247,10 +249,14 @@ assign_default_orthodox_school_effect = {
 	}
 	else_if = {
 		limit = {
-			AND = {
-				culture_group = east_slavic
-				NOT = {
-					primary_culture = russian
+			OR = {
+				primary_culture = karelian
+				primary_culture = uralic
+				AND = {
+					culture_group = east_slavic
+					NOT = {
+						primary_culture = russian
+					}
 				}
 			}
 		}
@@ -295,7 +301,10 @@ assign_default_coptic_school_effect = {
 	}
 	else_if = {
 		limit = {
-			primary_culture = amhara
+			OR = {
+				primary_culture = sidamo
+				primary_culture = amhara
+			}
 		}
 		set_religious_school = {
 			group = christian
@@ -309,15 +318,6 @@ assign_default_coptic_school_effect = {
 		set_religious_school = {
 			group = christian
 			school = lalibela_school
-		}
-	}
-	else_if = {
-		limit = {
-			primary_culture = sidamo
-		}
-		set_religious_school = {
-			group = christian
-			school = debre_libanos_school
 		}
 	}
 	else_if = {
@@ -337,6 +337,24 @@ assign_default_coptic_school_effect = {
 	}
 }
 
+assign_default_hussite_school_effect = {
+	if = {
+		limit = {
+			primary_culture = silesian
+		}
+		set_religious_school = {
+			group = christian
+			school = taborite_school
+		}
+	}
+	else = {
+		set_religious_school = {
+			group = christian
+			school = utraquist_school
+		}
+	}
+}
+
 initialize_christian_schools_effect = {
 	if = {
 		limit = {
@@ -350,8 +368,13 @@ initialize_christian_schools_effect = {
 		limit = {
 			religion = catholic
 			has_dlc = "Cradle of Civilization"
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_catholic_school_country = yes
+				}
 			}
 		}
 		assign_default_catholic_school_effect = yes
@@ -360,8 +383,13 @@ initialize_christian_schools_effect = {
 		limit = {
 			religion = protestant
 			has_dlc = "Cradle of Civilization"
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_lutheran_school_country = yes
+				}
 			}
 		}
 		assign_default_protestant_school_effect = yes
@@ -370,8 +398,13 @@ initialize_christian_schools_effect = {
 		limit = {
 			religion = reformed
 			has_dlc = "Cradle of Civilization"
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_reformed_school_country = yes
+				}
 			}
 		}
 		assign_default_reformed_school_effect = yes
@@ -380,8 +413,13 @@ initialize_christian_schools_effect = {
 		limit = {
 			religion = orthodox
 			has_dlc = "Cradle of Civilization"
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_orthodox_school_country = yes
+				}
 			}
 		}
 		assign_default_orthodox_school_effect = yes
@@ -390,11 +428,31 @@ initialize_christian_schools_effect = {
 		limit = {
 			religion = coptic
 			has_dlc = "Cradle of Civilization"
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_coptic_school_country = yes
+				}
 			}
 		}
 		assign_default_coptic_school_effect = yes
+	}
+	every_country = {
+		limit = {
+			religion = hussite
+			has_dlc = "Cradle of Civilization"
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_hussite_school_country = yes
+				}
+			}
+		}
+		assign_default_hussite_school_effect = yes
 	}
 }
 
@@ -403,8 +461,13 @@ fallback_assign_christian_school_effect = {
 		limit = {
 			has_dlc = "Cradle of Civilization"
 			religion = catholic
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_catholic_school_country = yes
+				}
 			}
 		}
 		assign_default_catholic_school_effect = yes
@@ -413,8 +476,13 @@ fallback_assign_christian_school_effect = {
 		limit = {
 			has_dlc = "Cradle of Civilization"
 			religion = protestant
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_lutheran_school_country = yes
+				}
 			}
 		}
 		assign_default_protestant_school_effect = yes
@@ -423,8 +491,13 @@ fallback_assign_christian_school_effect = {
 		limit = {
 			has_dlc = "Cradle of Civilization"
 			religion = reformed
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_reformed_school_country = yes
+				}
 			}
 		}
 		assign_default_reformed_school_effect = yes
@@ -433,8 +506,13 @@ fallback_assign_christian_school_effect = {
 		limit = {
 			has_dlc = "Cradle of Civilization"
 			religion = orthodox
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_orthodox_school_country = yes
+				}
 			}
 		}
 		assign_default_orthodox_school_effect = yes
@@ -443,10 +521,30 @@ fallback_assign_christian_school_effect = {
 		limit = {
 			has_dlc = "Cradle of Civilization"
 			religion = coptic
-			NOT = {
-				has_religious_school = yes
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_coptic_school_country = yes
+				}
 			}
 		}
 		assign_default_coptic_school_effect = yes
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			religion = hussite
+			OR = {
+				NOT = {
+					has_religious_school = yes
+				}
+				NOT = {
+					is_hussite_school_country = yes
+				}
+			}
+		}
+		assign_default_hussite_school_effect = yes
 	}
 }

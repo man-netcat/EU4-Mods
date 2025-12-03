@@ -11,8 +11,13 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion = catholic
-		NOT = {
-			has_religious_school = yes
+		OR = {
+			NOT = {
+				has_religious_school = yes
+			}
+			NOT = {
+				is_catholic_school_country = yes
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -96,8 +101,13 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion = protestant
-		NOT = {
-			has_religious_school = yes
+		OR = {
+			NOT = {
+				has_religious_school = yes
+			}
+			NOT = {
+				is_lutheran_school_country = yes
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -161,8 +171,13 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion = reformed
-		NOT = {
-			has_religious_school = yes
+		OR = {
+			NOT = {
+				has_religious_school = yes
+			}
+			NOT = {
+				is_reformed_school_country = yes
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -226,8 +241,13 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion = orthodox
-		NOT = {
-			has_religious_school = yes
+		OR = {
+			NOT = {
+				has_religious_school = yes
+			}
+			NOT = {
+				is_orthodox_school_country = yes
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -291,8 +311,13 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion = coptic
-		NOT = {
-			has_religious_school = yes
+		OR = {
+			NOT = {
+				has_religious_school = yes
+			}
+			NOT = {
+				is_coptic_school_country = yes
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -343,6 +368,56 @@ country_event = {
 		set_religious_school = {
 			group = christian
 			school = nubian_school
+		}
+	}
+}
+
+# Hussite nations choose a school
+country_event = {
+	id = christian_school_events.6
+	title = christian_school_events.6.t
+	desc = christian_school_events.6.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion = hussite
+		OR = {
+			NOT = {
+				has_religious_school = yes
+			}
+			NOT = {
+				is_hussite_school_country = yes
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = christian_school_events.auto
+		trigger = {
+			ai = yes
+		}
+		assign_default_hussite_school_effect = yes
+	}
+	option = {
+		name = christian_school_events.hussite.utraquist
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = utraquist_school
+		}
+	}
+	option = {
+		name = christian_school_events.hussite.taborite
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = christian
+			school = taborite_school
 		}
 	}
 }

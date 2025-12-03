@@ -16,16 +16,10 @@ christian = {
 		thomist_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = hussite
-				}
+				catholic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -90,16 +84,10 @@ christian = {
 		scotist_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = hussite
-				}
+				catholic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -159,21 +147,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = scotist_scholar_modifier
 			picture = "GFX_icon_christian_school_scotist"
-			war_exhaustion = -0.05
+			church_power_modifier = 0.1
 		}
 		nominalist_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = hussite
-				}
+				catholic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -233,21 +215,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = nominalist_scholar_modifier
 			picture = "GFX_icon_christian_school_nominalist"
-			reform_progress_growth = 0.2
+			reform_progress_growth = 0.15
 		}
 		augustinian_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = hussite
-				}
+				catholic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -312,16 +288,10 @@ christian = {
 		molinist_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = hussite
-				}
+				catholic_can_invite_scholar_trigger = yes
 				OR = {
 					current_age = age_of_reformation
 					current_age = age_of_absolutism
@@ -386,21 +356,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = molinist_scholar_modifier
 			picture = "GFX_icon_christian_school_molinist"
-			diplomatic_reputation = 1
+			diplomatic_reputation = 0.5
 		}
 		jansenist_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = hussite
-				}
+				catholic_can_invite_scholar_trigger = yes
 				OR = {
 					current_age = age_of_reformation
 					current_age = age_of_absolutism
@@ -470,16 +434,10 @@ christian = {
 		wittenberg_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = coptic
-				}
+				protestant_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -539,21 +497,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = wittenberg_scholar_modifier
 			picture = "GFX_icon_christian_school_wittenberg"
-			church_power_modifier = 0.15
+			tolerance_heretic = 1
 		}
 		magdeburg_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = coptic
-				}
+				protestant_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -613,21 +565,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = magdeburg_scholar_modifier
 			picture = "GFX_icon_christian_school_magdeburg"
-			global_tax_modifier = 0.1
+			global_tax_modifier = 0.075
 		}
 		philippist_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = coptic
-				}
+				protestant_can_invite_scholar_trigger = yes
 				OR = {
 					current_age = age_of_reformation
 					current_age = age_of_absolutism
@@ -697,16 +643,10 @@ christian = {
 		gnesiolutheran_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = coptic
-				}
+				protestant_can_invite_scholar_trigger = yes
 				OR = {
 					current_age = age_of_reformation
 					current_age = age_of_absolutism
@@ -775,11 +715,11 @@ christian = {
 		genevan_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-			}
-			can_invite_scholar = {
 				has_dlc = "Cradle of Civilization"
 				religion_group = christian
-				religion = reformed
+			}
+			can_invite_scholar = {
+				reformed_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -839,16 +779,16 @@ christian = {
 			}
 			invite_scholar_modifier_display = genevan_scholar_modifier
 			picture = "GFX_icon_christian_school_genevan"
-			global_trade_power = 0.1
+			global_trade_power = 0.075
 		}
 		covenanter_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-			}
-			can_invite_scholar = {
 				has_dlc = "Cradle of Civilization"
 				religion_group = christian
-				religion = reformed
+			}
+			can_invite_scholar = {
+				reformed_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -908,16 +848,16 @@ christian = {
 			}
 			invite_scholar_modifier_display = covenanter_scholar_modifier
 			picture = "GFX_icon_christian_school_covenanter"
-			land_forcelimit_modifier = 0.1
+			land_forcelimit_modifier = 0.075
 		}
 		remonstrant_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-			}
-			can_invite_scholar = {
 				has_dlc = "Cradle of Civilization"
 				religion_group = christian
-				religion = reformed
+			}
+			can_invite_scholar = {
+				reformed_can_invite_scholar_trigger = yes
 				OR = {
 					current_age = age_of_absolutism
 					current_age = age_of_revolutions
@@ -981,16 +921,16 @@ christian = {
 			}
 			invite_scholar_modifier_display = remonstrant_scholar_modifier
 			picture = "GFX_icon_christian_school_remonstrant"
-			tolerance_heretic = 2
+			production_efficiency = 0.075
 		}
 		collegiant_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-			}
-			can_invite_scholar = {
 				has_dlc = "Cradle of Civilization"
 				religion_group = christian
-				religion = reformed
+			}
+			can_invite_scholar = {
+				reformed_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1050,18 +990,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = collegiant_scholar_modifier
 			picture = "GFX_icon_christian_school_collegiant"
-			global_ship_trade_power = 0.1
+			global_ship_trade_power = 0.075
 		}
 		palamite_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
+				orthodox_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1126,13 +1063,10 @@ christian = {
 		hesychast_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
+				orthodox_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1197,13 +1131,10 @@ christian = {
 		kyivan_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
+				orthodox_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1263,18 +1194,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = kyivan_scholar_modifier
 			picture = "GFX_icon_christian_school_kyivan"
-			manpower_in_true_faith_provinces = 0.1
+			manpower_in_true_faith_provinces = 0.075
 		}
 		stoglav_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
+				orthodox_can_invite_scholar_trigger = yes
 				OR = {
 					current_age = age_of_absolutism
 					current_age = age_of_revolutions
@@ -1343,16 +1271,10 @@ christian = {
 		alexandrian_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = protestant
-				}
+				coptic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1412,21 +1334,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = alexandrian_scholar_modifier
 			picture = "GFX_icon_christian_school_alexandrian"
-			missionary_maintenance_cost = -0.25
+			missionary_maintenance_cost = -0.2
 		}
 		debre_libanos_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = protestant
-				}
+				coptic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1486,21 +1402,15 @@ christian = {
 			}
 			invite_scholar_modifier_display = debre_libanos_scholar_modifier
 			picture = "GFX_icon_christian_school_debre_libanos"
-			global_manpower_modifier = 0.1
+			global_manpower_modifier = 0.075
 		}
 		lalibela_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
 			}
 			can_invite_scholar = {
-				has_dlc = "Cradle of Civilization"
-				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = protestant
-				}
+				coptic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1560,21 +1470,16 @@ christian = {
 			}
 			invite_scholar_modifier_display = lalibela_scholar_modifier
 			picture = "GFX_icon_christian_school_lalibela"
-			defensiveness = 0.15
+			defensiveness = 0.1
 		}
 		nubian_school = {
 			potential_invite_scholar = {
 				knows_of_scholar_country_capital_trigger = yes
-			}
-			can_invite_scholar = {
 				has_dlc = "Cradle of Civilization"
 				religion_group = christian
-				NOT = {
-					religion = reformed
-				}
-				NOT = {
-					religion = protestant
-				}
+			}
+			can_invite_scholar = {
+				coptic_can_invite_scholar_trigger = yes
 				if = {
 					limit = {
 						NOT = {
@@ -1634,7 +1539,145 @@ christian = {
 			}
 			invite_scholar_modifier_display = nubian_scholar_modifier
 			picture = "GFX_icon_christian_school_nubian"
-			tolerance_heathen = 1
+			tolerance_heathen = 2
+		}
+		utraquist_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
+				religion_group = christian
+			}
+			can_invite_scholar = {
+				hussite_can_invite_scholar_trigger = yes
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = no_scholar_adm_cost
+						}
+					}
+					adm_power_cost = 50
+				}
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = {
+						has_country_modifier = has_invited_scholar_recently
+					}
+				}
+				NOT = {
+					has_country_modifier = utraquist_scholar_modifier
+				}
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = no_scholar_adm_cost
+						}
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				clear_christian_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = utraquist_scholar_modifier
+					duration = 7300
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = {
+						name = has_invited_scholar_recently
+						duration = 7300
+						hidden = yes
+					}
+				}
+			}
+			invite_scholar_modifier_display = utraquist_scholar_modifier
+			picture = "GFX_icon_christian_school_utraquist"
+			tolerance_heretic = 1
+		}
+		taborite_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+				has_dlc = "Cradle of Civilization"
+				religion_group = christian
+			}
+			can_invite_scholar = {
+				hussite_can_invite_scholar_trigger = yes
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = no_scholar_adm_cost
+						}
+					}
+					adm_power_cost = 50
+				}
+				reverse_has_opinion = {
+					who = FROM
+					value = 150
+				}
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = {
+						has_country_modifier = has_invited_scholar_recently
+					}
+				}
+				NOT = {
+					has_country_modifier = taborite_scholar_modifier
+				}
+			}
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = no_scholar_adm_cost
+						}
+					}
+					adm_power_cost = 50
+				}
+				clear_religious_scholar_modifiers_effect = yes
+				clear_christian_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = {
+					name = taborite_scholar_modifier
+					duration = 7300
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = {
+						name = has_invited_scholar_recently
+						duration = 7300
+						hidden = yes
+					}
+				}
+			}
+			invite_scholar_modifier_display = taborite_scholar_modifier
+			picture = "GFX_icon_christian_school_taborite"
+			infantry_power = 0.04
 		}
 	}
 	catholic = {

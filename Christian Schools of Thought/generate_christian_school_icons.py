@@ -34,8 +34,8 @@ SCHOOL_STYLES: Mapping[str, SchoolStyle] = {
         "catholic.dds", brightness=103, tint_amount=24, saturation=65, country_tag="ENG"
     ),  # William of Ockham's England
     "augustinian_school": SchoolStyle(
-        "catholic.dds", brightness=102, tint_amount=22, saturation=65, country_tag="AUG"
-    ),  # Augustinian reforms centered on the German city of Augsburg
+        "catholic.dds", brightness=102, tint_amount=22, saturation=65, country_tag="TUS"
+    ),  # Grand Union rooted in Tuscan hermit congregations
     "molinist_school": SchoolStyle(
         "catholic.dds", brightness=103, tint_amount=22, saturation=65, country_tag="CAS"
     ),  # Jesuit debates in Castile/Spain
@@ -113,6 +113,13 @@ SCHOOL_STYLES: Mapping[str, SchoolStyle] = {
     ),  # Zagwe/Lasta pilgrimage center distinct from Debre Libanos
     "nubian_school": SchoolStyle(
         "coptic.dds", brightness=104, tint_amount=27, saturation=70, country_tag="MAK"
+    ),
+    # Hussite movements
+    "utraquist_school": SchoolStyle(
+        "hussite.dds", brightness=103, tint_amount=26, saturation=65, country_tag="BOH"
+    ),
+    "taborite_school": SchoolStyle(
+        "hussite.dds", brightness=104, tint_amount=25, saturation=65, country_tag="SIL"
     ),
 }
 

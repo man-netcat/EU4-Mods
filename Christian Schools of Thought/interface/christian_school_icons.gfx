@@ -87,4 +87,12 @@ spriteTypes = {
 		name = "GFX_icon_christian_school_nubian"
 		texturefile = "gfx/interface/christian_school_icons/icon_nubian_school.dds"
 	}
+	spriteType = {
+		name = "GFX_icon_christian_school_utraquist"
+		texturefile = "gfx/interface/christian_school_icons/icon_utraquist_school.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_christian_school_taborite"
+		texturefile = "gfx/interface/christian_school_icons/icon_taborite_school.dds"
+	}
 }

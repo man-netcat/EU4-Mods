@@ -1,7 +1,6 @@
 ########################################
 # Christian School Helper Triggers
 ########################################
-
 is_catholic_school_country = {
 	OR = {
 		religious_school = {
@@ -112,5 +111,101 @@ is_coptic_school_country = {
 			group = christian
 			school = nubian_school
 		}
+	}
+}
+
+is_hussite_school_country = {
+	OR = {
+		religious_school = {
+			group = christian
+			school = utraquist_school
+		}
+		religious_school = {
+			group = christian
+			school = taborite_school
+		}
+	}
+}
+
+catholic_can_invite_scholar_trigger = {
+	OR = {
+		religion = catholic
+		AND = {
+			religion = orthodox
+			BYZ = {
+				has_estate_privilege = estate_church_union_of_the_churches
+			}
+		}
+		AND = {
+			OR = {
+				religion = protestant
+				religion = reformed
+				religion = hussite
+				religion = anglican
+			}
+			hre_religion_treaty = yes
+			is_part_of_hre = yes
+		}
+	}
+}
+
+protestant_can_invite_scholar_trigger = {
+	OR = {
+		religion = protestant
+		religion = reformed
+		religion = hussite
+		AND = {
+			religion = catholic
+			hre_religion_treaty = yes
+			is_part_of_hre = yes
+		}
+	}
+}
+
+reformed_can_invite_scholar_trigger = {
+	OR = {
+		religion = reformed
+		religion = protestant
+		AND = {
+			religion = catholic
+			hre_religion_treaty = yes
+			is_part_of_hre = yes
+		}
+	}
+}
+
+hussite_can_invite_scholar_trigger = {
+	OR = {
+		religion = coptic
+		religion = orthodox
+		religion = protestant
+		religion = hussite
+		AND = {
+			religion = catholic
+			hre_religion_treaty = yes
+			is_part_of_hre = yes
+		}
+	}
+}
+
+orthodox_can_invite_scholar_trigger = {
+	OR = {
+		religion = orthodox
+		religion = coptic
+		AND = {
+			religion = catholic
+			BYZ = {
+				has_estate_privilege = estate_church_union_of_the_churches
+			}
+		}
+	}
+}
+
+coptic_can_invite_scholar_trigger = {
+	OR = {
+		religion = coptic
+		religion = orthodox
+		religion = protestant
+		religion = hussite
 	}
 }

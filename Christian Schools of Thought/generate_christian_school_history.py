@@ -159,6 +159,7 @@ RELIGIONS = {
     "reformed",
     "orthodox",
     "coptic",
+    "hussite",
 }
 
 
@@ -210,7 +211,7 @@ def choose_reformed_school(culture: str, culture_group: Optional[str]) -> str:
         return "covenanter_school"
     if culture in {"dutch", "flemish"}:
         return "collegiant_school"
-    return "remonstrant_school"
+    return "genevan_school"
 
 
 def choose_orthodox_school(culture: str, culture_group: Optional[str]) -> str:
@@ -220,7 +221,9 @@ def choose_orthodox_school(culture: str, culture_group: Optional[str]) -> str:
         return "hesychast_school"
     if culture == "russian":
         return "stoglav_school"
-    return "kyivan_school"
+    if culture in {"karelian", "uralic"} or culture_group == "east_slavic":
+        return "kyivan_school"
+    return "palamite_school"
 
 
 def choose_coptic_school(culture: str, culture_group: Optional[str]) -> str:
@@ -235,12 +238,19 @@ def choose_coptic_school(culture: str, culture_group: Optional[str]) -> str:
     return "alexandrian_school"
 
 
+def choose_hussite_school(culture: str, culture_group: Optional[str]) -> str:
+    if culture == "silesian":
+        return "taborite_school"
+    return "utraquist_school"
+
+
 RELIGIOUS_SCHOOL_CHOOSERS = {
     "catholic": choose_catholic_school,
     "protestant": choose_protestant_school,
     "reformed": choose_reformed_school,
     "orthodox": choose_orthodox_school,
     "coptic": choose_coptic_school,
+    "hussite": choose_hussite_school,
 }
 
 

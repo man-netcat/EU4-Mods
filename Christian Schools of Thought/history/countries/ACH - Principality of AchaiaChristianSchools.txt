@@ -2,5 +2,5 @@
 religious_school = augustinian_school
 
 1432.1.1 = {
-	religious_school = kyivan_school
+	religious_school = palamite_school
 }

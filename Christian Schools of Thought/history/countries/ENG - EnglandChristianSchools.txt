@@ -14,7 +14,7 @@ religious_school = nominalist_school
 }
 
 1646.5.5 = {
-	religious_school = remonstrant_school
+	religious_school = genevan_school
 }
 
 1659.5.25 = {
