@@ -1,0 +1,46 @@
+FUG_ideas = {
+	start = {
+		land_morale = 0.1
+		production_efficiency = 0.05
+	}
+	bonus = {
+		years_of_nationalism = -5
+	}
+	trigger = {
+		tag = FUG
+	}
+	free = yes	#will be added at load.
+	fug_kalevala_forge = {
+		# Kalevala-inspired manpower, similar to but slightly better than regional peers
+		global_manpower_modifier = 0.15
+		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	fug_forest_engineers = {
+		# Forest fortification and cheap building
+		build_cost = -0.1
+		fort_maintenance_modifier = -0.1
+	}
+	fug_white_sea_trade = {
+		# White Sea / Baltic trade presence
+		global_trade_power = 0.15
+		caravan_power = 0.2
+	}
+	fug_sisu_legions = {
+		# Elite Finnish-style troops with frontier element
+		discipline = 0.05
+	}
+	fug_border_wardens = {
+		# Border army in line with Russia/Muscovy
+		land_forcelimit_modifier = 0.15
+	}
+	fug_syncretic_councils = {
+		# Syncretic councils, modest but useful tolerance
+		tolerance_own = 1
+		tolerance_heathen = 1
+	}
+	fug_great_lakes_fleet = {
+		# Regional navy, comparable to Scandinavian naval ideas
+		naval_forcelimit_modifier = 0.2
+	}
+}

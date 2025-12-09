@@ -1,0 +1,173 @@
+country_decisions = {
+	form_finno_ugria = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_finno_ugria
+			}
+			NOT = {
+				tag = FUG
+			}
+			NOT = {
+				exists = FUG
+			}
+			is_colonial_nation = no
+			OR = {
+				primary_culture = finnish
+				primary_culture = estonian
+				primary_culture = karelian
+				primary_culture = sapmi
+				primary_culture = livonian
+				primary_culture = hungarian
+				culture_group = finno_ugric
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 18
+				province_id = 27
+				province_id = 30
+				province_id = 36
+				province_id = 4124
+				province_id = 305
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 1
+			owns = 27			# Åbo
+			owns = 30			# Viborg
+			owns = 36			# Reval
+			owns = 4124			# Karelia
+			owns = 305			# Perm
+		}
+		effect = {
+			change_tag = FUG
+			set_country_flag = formed_finno_ugria
+			add_prestige = 25
+			add_legitimacy = 15
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			set_government_rank = 3
+			add_permanent_claim_multi_provinces = {
+				target = scandinavia_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = russia_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = ural_region
+			}
+			add_permanent_claim_multi_provinces = {
+				target = baltic_region
+			}
+			add_historical_friend = HUN
+			add_opinion = {
+				who = HUN
+				modifier = finno_ugric_cousins
+			}
+			reverse_add_opinion = {
+				who = HUN
+				modifier = finno_ugric_cousins
+			}
+			custom_tooltip = finno_ugria_culture_tt
+			# Use vanilla scripted effects to update all relevant cultures into the new Finno-Ugric group
+			update_entire_culture_foreign = {
+				culture = finnish
+			}
+			update_entire_culture_foreign = {
+				culture = estonian
+			}
+			update_entire_culture_foreign = {
+				culture = sapmi
+			}
+			update_entire_culture_foreign = {
+				culture = livonian
+			}
+			update_entire_culture_foreign = {
+				culture = karelian
+			}
+			update_entire_culture_foreign = {
+				culture = hungarian
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			country_event = {
+				id = fug.1
+			}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_finland_estonia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				tag = EFI
+			}
+			NOT = {
+				exists = EFI
+			}
+			is_colonial_nation = no
+			OR = {
+				primary_culture = finnish
+				primary_culture = estonian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				area = estonia_ingria_area
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 1
+			owns_all_provinces = {
+				area = finland_area
+			}
+			owns_all_provinces = {
+				area = estonia_ingria_area
+			}
+		}
+		effect = {
+			change_tag = EFI
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					primary_culture = estonian
+				}
+				override_country_name = ESTONIA_FINLAND
+				set_country_flag = is_ESTONIA_FINLAND_flag
+			}
+			else_if = {
+				limit = {
+					primary_culture = finnish
+				}
+				override_country_name = FINLAND_ESTONIA
+				set_country_flag = is_FINLAND_ESTONIA_flag
+			}
+			add_accepted_culture = finnish
+			add_accepted_culture = estonian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

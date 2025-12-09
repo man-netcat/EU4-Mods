@@ -1,0 +1,64 @@
+﻿l_english:
+ form_finno_ugria_title:0 "Form Finno-Ugria"
+ form_finno_ugria_desc:0 "Unite the scattered Finno-Ugric peoples from Åbo to the White Sea and forge a realm worthy of the Kalevala."
+
+ FUG:0 "Finno-Ugria"
+ FUG_ADJ:0 "Finno-Ugric"
+
+ FUG_ideas:0 "Finno-Ugric Ideas"
+ FUG_ideas_start:0 "Peoples of the Kalevala"
+ FUG_ideas_bonus:0 "Guardians of the North"
+
+ fug.1.t:0 "Name of the Finno-Ugric Realm"
+ fug.1.d:0 "With the peoples of the northern forests united under one banner at last, debate stirs within the court. Some whisper that the ancient and storied name 'Ugria' would give our realm the weight of forgotten ages, while others claim that only the broader title 'Finno-Ugria' honors every branch of our kin. Danna-sama, how shall your realm be known?"
+ fug.1.a:0 "'Finno-Ugria' trips over the tongue. Ugria it shall be!"
+ fug.1.b:0 "Every clan must be respected. We will remain Finno-Ugria."
+
+ UGRIA:0 "Ugria"
+ UGRIA_ADJ:0 "Ugric"
+
+ fug_kalevala_forge:0 "Kalevala Forge"
+ fug_kalevala_forge_desc:0 "We draw on myths recorded across the Finno-Ugric world, binding distant kin together through shared songs and musters."
+
+ fug_forest_engineers:0 "Forest Engineers"
+ fug_forest_engineers_desc:0 "Endless forests teach us how to raise timber palisades and robust forts quickly, defending every frontier river."
+
+ fug_white_sea_trade:0 "White Sea Trade"
+ fug_white_sea_trade_desc:0 "Ports on the Gulf of Bothnia and the White Sea let us move furs, tar and timber between Novgorod, Lübeck and the Arctic."
+
+ fug_sisu_legions:0 "Sisu Legions"
+ fug_sisu_legions_desc:0 "Determination bordering on stubbornness keeps our heavy infantry in line, pressing forward when others would break."
+
+ fug_border_wardens:0 "Border Wardens"
+ fug_border_wardens_desc:0 "Guardians stationed in Karelia and Ingria drill relentlessly so reinforcements flow to the front the moment war is declared."
+
+ fug_syncretic_councils:0 "Syncretic Councils"
+ fug_syncretic_councils_desc:0 "We welcome shamans, priests and bishops alike, letting diverse rites flourish so long as loyalty to the grand council remains."
+
+ fug_great_lakes_fleet:0 "Great Lakes Fleet"
+ fug_great_lakes_fleet_desc:0 "Shipwrights in Åbo, Viborg and Neva bond over frozen waters, launching oared flotillas that can transition to the Baltic with ease."
+
+ finno_ugria_culture_tt:0 "Finnish, Estonian, Hungarian, Livonian, Karelian and Sámi culture will be reformed into the Finno-Ugric culture group."
+
+ finnish_new:0 "Finnish"
+ estonian_new:0 "Estonian"
+ karelian_new:0 "Karelian"
+ sapmi_new:0 "Sámi"
+ livonian_new:0 "Livonian"
+ hungarian_new:0 "Hungarian"
+
+ finno_ugric_cousins:0 "Finno-Ugric Cousins"
+ finno_ugric_cousins_desc:0 "Our shared heritage as Finno-Ugric peoples fosters a deep bond of kinship and mutual respect between our nations."
+
+ form_finland_estonia_title:0 "Unite Finland and Estonia"
+ form_finland_estonia_desc:0 "Unite the historic cores of Finland and Estonia under a single crown."
+
+ EFI:0 "Uncommonwealth"
+ EFI_ADJ:0 "Uncommonwealth"
+ ESTONIA_FINLAND:0 "Estonia-Finland"
+ ESTONIA_FINLAND_ADJ:0 "Estonian-Finnish"
+ FINLAND_ESTONIA:0 "Finland-Estonia"
+ FINLAND_ESTONIA_ADJ:0 "Finnish-Estonian"
+
+ forming_finland_estonia_tt:0 "Country changes to Finland-Estonia."
+ forming_estonia_finland_tt:0 "Country changes to Estonia-Finland."

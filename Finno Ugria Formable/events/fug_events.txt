@@ -1,0 +1,22 @@
+namespace = fug
+country_event = {
+	id = fug.1
+	title = fug.1.t
+	desc = fug.1.d
+	picture = GOVERNMENT_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = FUG
+	}
+	immediate = {
+	}
+	option = {
+		name = fug.1.a
+		override_country_name = UGRIA
+		set_country_flag = is_UGRIA_flag
+	}
+	option = {
+		name = fug.1.b
+		# Keep current "Finno-Ugria" name
+	}
+}
