@@ -7,4 +7,4 @@ tags={
 }
 name="Chinese Warlords"
 supported_version="1.37.*.*"
-path="mod/Chinese Warlords"
+path="/home/rick/.local/share/Paradox Interactive/Europa Universalis IV/mod/Chinese Warlords"
