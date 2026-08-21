@@ -7,7 +7,7 @@ religion = catholic
 capital = "Chur"
 trade_goods = livestock
 hre = yes
-base_tax = 3 
+base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
@@ -28,9 +28,9 @@ discovered_by = ottoman
 1656.1.1 = { unrest = 7 } # Protestants are expelled from Schwyz which lead to the First War of Villmergen
 1657.1.1 = { unrest = 2 } # An agreement is concluded at Villmergren but tensions remain
 1799.4.21 = {
-	owner = SWI
-	controller = SWI
-	add_core = SWI
-	remove_core = TTL
+ owner = SWI
+ controller = SWI
+ add_core = SWI
+ remove_core = TTL
 } # Incorporation of the Three Leagues into the Helvetic Republic
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

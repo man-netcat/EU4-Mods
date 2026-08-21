@@ -1,7 +1,7 @@
 # 1866 - Namur
 
 latent_trade_goods = {
-	coal
+ coal
 }
 
 owner = BUR
@@ -12,7 +12,7 @@ is_city = yes
 culture = wallonian
 religion = catholic
 hre = yes
-base_tax = 7 
+base_tax = 7
 base_production = 7
 trade_goods = iron
 base_manpower = 3
@@ -41,7 +41,7 @@ discovered_by = ottoman
 1579.1.6 = { unrest = 0 } # Union of Arras established
 1583.1.1 = { fort_15th = no fort_16th = yes }
 1635.5.1 = { controller = FRA } # French troops capture parts of the Southern Lowlands
-1648.1.1 = { fort_16th = no fort_17th = yes } 
+1648.1.1 = { fort_16th = no fort_17th = yes }
 1648.1.30 = { controller = SPA } # Peace of Münster/Westphalia
 1665.9.17 = { add_claim = FRA } # Louis XIV's father-in-law, Philip IV of Spain, dies
 1667.9.25 = { controller = FRA } # Maréchal captures alot of cities in the region for Louis XIV
@@ -58,14 +58,14 @@ discovered_by = ottoman
 1748.10.18 = { controller = HAB } # Peace of Aachen
 1792.11.6 = { controller = FRA } # Conquered by the French troops under Dumouriez
 1793.3.18 = { controller = HAB } # Reconquered by Prince Josias of Coburg
-1797.10.17 = {	owner = FRA
-	controller = FRA
-	add_core = FRA
-	remove_core = HAB
-} # The Treaty of Campo Formio, the Austrian Netherlands are ceded to France 
+1797.10.17 = { owner = FRA
+ controller = FRA
+ add_core = FRA
+ remove_core = HAB
+} # The Treaty of Campo Formio, the Austrian Netherlands are ceded to France
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
-1815.3.16 = {	owner = NED
-	controller = NED
-	add_core = NED
-	remove_core = FRA
+1815.3.16 = { owner = NED
+ controller = NED
+ add_core = NED
+ remove_core = FRA
 } # The United Kingdom of the Netherlands

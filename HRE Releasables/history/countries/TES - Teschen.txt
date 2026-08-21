@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = schlesian
 religion = catholic
 technology_group = western
-capital = 263	# Ratibor
+capital = 263 # Ratibor
 fixed_capital = 263
 
 #releasable

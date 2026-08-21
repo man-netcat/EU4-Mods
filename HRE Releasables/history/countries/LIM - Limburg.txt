@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = flemish
 religion = catholic
 technology_group = western
-capital = 1742	# Limburg
+capital = 1742 # Limburg
 fixed_capital = 1742
 
 #releasable

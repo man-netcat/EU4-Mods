@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = swiss
 religion = catholic
 technology_group = western
-capital = 1873	# Chur
+capital = 1873 # Chur
 fixed_capital = 1873
 
 #releasable

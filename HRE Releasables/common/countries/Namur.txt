@@ -2,60 +2,60 @@
 
 graphical_culture = westerngfx
 
-color = { 50  50  55 }
+color = { 50 50 55 }
 
 revolutionary_colors = { 10 0 10 }
 
 historical_idea_groups = {
-	trade_ideas
-	defensive_ideas
-	economic_ideas
-	diplomatic_ideas
-	offensive_ideas
-	quality_ideas
-	innovativeness_ideas
-	administrative_ideas
+ trade_ideas
+ defensive_ideas
+ economic_ideas
+ diplomatic_ideas
+ offensive_ideas
+ quality_ideas
+ innovativeness_ideas
+ administrative_ideas
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	austrian_tercio
-	austrian_grenzer
-	austrian_hussar
-	austrian_white_coat
-	prussian_uhlan
-	austrian_jaeger
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+ western_medieval_infantry
+ western_medieval_knights
+ western_men_at_arms
+ swiss_landsknechten
+ dutch_maurician
+ austrian_tercio
+ austrian_grenzer
+ austrian_hussar
+ austrian_white_coat
+ prussian_uhlan
+ austrian_jaeger
+ mixed_order_infantry
+ open_order_cavalry
+ napoleonic_square
+ napoleonic_lancers
 }
 
 monarch_names = {
-	"Guy #0" = 20
-	"Jean #0" = 20
-	"Philippe #0" = 20
-	"Guillaume #0" = 20
-	"Henri #0" = 20
-	"Baudouin #0" = 20
+ "Guy #0" = 20
+ "Jean #0" = 20
+ "Philippe #0" = 20
+ "Guillaume #0" = 20
+ "Henri #0" = 20
+ "Baudouin #0" = 20
 
-	"Guillaume #0" = 0
-	"Henri #0" = 0
-	"Baudouin #0" = 0
+ "Guillaume #0" = 0
+ "Henri #0" = 0
+ "Baudouin #0" = 0
 }
 
 leader_names = {
-	Dubois Martin Bernard Durand Moreau Laurent Simon Michel Lambert Lefevre
+ Dubois Martin Bernard Durand Moreau Laurent Simon Michel Lambert Lefevre
 }
 
 ship_names = {
-	"Sankt Namur" "Namurer Adler" "Reichsfreiheit"
+ "Sankt Namur" "Namurer Adler" "Reichsfreiheit"
 }
 
 army_names = {
-	"Armee von $PROVINCE$"
+ "Armee von $PROVINCE$"
 }

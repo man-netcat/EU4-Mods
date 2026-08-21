@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = hannoverian
 religion = catholic
 technology_group = western
-capital = 4775	# Ravensberg
+capital = 4775 # Ravensberg
 fixed_capital = 4775
 
 #releasable

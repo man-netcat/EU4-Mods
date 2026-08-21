@@ -2,64 +2,64 @@
 
 graphical_culture = westerngfx
 
-color = { 208  57  49 }
+color = { 208 57 49 }
 
 revolutionary_colors = { 10 0 10 }
 
 historical_idea_groups = {
-	trade_ideas
-	defensive_ideas
-	economic_ideas
-	diplomatic_ideas
-	offensive_ideas
-	quality_ideas
-	innovativeness_ideas
-	administrative_ideas
+ trade_ideas
+ defensive_ideas
+ economic_ideas
+ diplomatic_ideas
+ offensive_ideas
+ quality_ideas
+ innovativeness_ideas
+ administrative_ideas
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	austrian_tercio
-	austrian_grenzer
-	austrian_hussar
-	austrian_white_coat
-	prussian_uhlan
-	austrian_jaeger
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+ western_medieval_infantry
+ western_medieval_knights
+ western_men_at_arms
+ swiss_landsknechten
+ dutch_maurician
+ austrian_tercio
+ austrian_grenzer
+ austrian_hussar
+ austrian_white_coat
+ prussian_uhlan
+ austrian_jaeger
+ mixed_order_infantry
+ open_order_cavalry
+ napoleonic_square
+ napoleonic_lancers
 }
 
 monarch_names = {
-	"Walram #0" = 20
-	"Hendrik #0" = 20
-	"Reinoud #0" = 20
-	"Jan #0" = 20
-	"Adolf #0" = 20
-	"Willem #0" = 20
-	"Otto #0" = 20
-	"Gerard #0" = 20
+ "Walram #0" = 20
+ "Hendrik #0" = 20
+ "Reinoud #0" = 20
+ "Jan #0" = 20
+ "Adolf #0" = 20
+ "Willem #0" = 20
+ "Otto #0" = 20
+ "Gerard #0" = 20
 
-	"Johanna #0" = 0
-	"Maria #0" = 0
-	"Elisabeth #0" = 0
-	"Adelheid #0" = 0
+ "Johanna #0" = 0
+ "Maria #0" = 0
+ "Elisabeth #0" = 0
+ "Adelheid #0" = 0
 }
 
 leader_names = {
-	van Limburg Roermond Geldern Mook Venlo Loon Wassenberg Berg Monschau
+ van Limburg Roermond Geldern Mook Venlo Loon Wassenberg Berg Monschau
 
 }
 
 ship_names = {
-	"Roermond" "Worringen" "Geldern"
+ "Roermond" "Worringen" "Geldern"
 }
 
 army_names = {
-	"Leger van $PROVINCE$"
+ "Leger van $PROVINCE$"
 }

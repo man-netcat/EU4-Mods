@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = burgundian
 religion = catholic
 technology_group = western
-capital = 4766	# Verdun
+capital = 4766 # Verdun
 fixed_capital = 4766
 
 #releasable

@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = hessian
 religion = catholic
 technology_group = western
-capital = 81	# Oberhessen
+capital = 81 # Oberhessen
 fixed_capital = 81
 
 #releasable

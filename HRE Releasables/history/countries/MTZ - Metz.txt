@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = burgundian
 religion = catholic
 technology_group = western
-capital = 188	# Metz
+capital = 188 # Metz
 fixed_capital = 188
 
 #releasable

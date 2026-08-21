@@ -1,17 +1,17 @@
 # 188 Metz - Principal cities: Metz, Thionville
 
 latent_trade_goods = {
-	coal
+ coal
 }
 
 owner = LOR
-controller = LOR 
+controller = LOR
 capital = "Metz"
 is_city = yes
 culture = burgundian
 religion = catholic
 hre = yes
-base_tax = 6 
+base_tax = 6
 base_production = 6
 trade_goods = glass
 base_manpower = 5
