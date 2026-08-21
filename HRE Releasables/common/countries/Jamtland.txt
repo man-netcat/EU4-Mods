@@ -1,0 +1,56 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 70  95  75 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	maritime_ideas
+	offensive_ideas
+	quality_ideas
+	diplomatic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	scandinavian_galloglaigh
+	hakkapeliitta
+	swedish_garrison
+	scandinavian_caroleans
+	swedish_platoon_fire
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Hakon #0" = 20
+	"Eirik #0" = 20
+	"Sigurd #0" = 20
+	"Olav #0" = 20
+	"Magnus #0" = 20
+	"Sverre #0" = 10
+	"Knut #0" = 5
+	"Harald #0" = 5
+}
+
+leader_names = {
+	Hansen Olsen Berg Lindstrom Dahl Moen Eide Strand Vik Haugen
+}
+
+ship_names = {
+	"Sankt Olav" "Jemteland" "Nordstjernen"
+}
+
+army_names = {
+	"Armeen i $PROVINCE$"
+}
