@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = schlesian
+religion = catholic
+technology_group = western
+capital = 4238	# Liegnitz
+fixed_capital = 4238
+
+#releasable

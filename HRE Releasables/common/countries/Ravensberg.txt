@@ -1,0 +1,61 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 200  70  70 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	offensive_ideas
+	quality_ideas
+	innovativeness_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Otto #0" = 20
+	"Heinrich #0" = 20
+	"Gerhard #0" = 20
+	"Walram #0" = 20
+	"Bernhard #0" = 20
+	"Hermann #0" = 20
+
+	"Walram #0" = 0
+	"Bernhard #0" = 0
+	"Hermann #0" = 0
+}
+
+leader_names = {
+	Schmidt Wagner Becker Hoffmann Schulz Koch Bauer Richter Klein Wolf
+}
+
+ship_names = {
+	"Sankt Ravensberg" "Ravensberger Adler" "Reichsfreiheit"
+}
+
+army_names = {
+	"Armee von $PROVINCE$"
+}
