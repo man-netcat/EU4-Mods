@@ -1,0 +1,59 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 165  42  42 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	naval_ideas
+	economic_ideas
+	diplomatic_ideas
+	offensive_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Willem #0" = 30
+	"Jan #0" = 20
+	"Pieter #0" = 15
+	"Karel #0" = 10
+	"Filips #0" = 10
+	"Adriaan #0" = 10
+	"Jacob #0" = 10
+	"Cornelis #0" = 10
+}
+
+leader_names = {
+	Borselen Renesse Voorne Haamstede Slingeland Wassenaar Duvenvoorde Amstel Culemborg Arkel
+}
+
+ship_names = {
+	"Middelburg" "Vlissingen" "Zierikzee"
+}
+
+army_names = {
+	"Leger van $PROVINCE$"
+}

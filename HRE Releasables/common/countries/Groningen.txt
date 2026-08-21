@@ -1,0 +1,59 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 62  147  62 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	naval_ideas
+	economic_ideas
+	diplomatic_ideas
+	offensive_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Eppo #0" = 30
+	"Okko #0" = 20
+	"Hessel #0" = 15
+	"Folkert #0" = 10
+	"Sibrand #0" = 10
+	"Jelmer #0" = 10
+	"Gale #0" = 10
+	"Wiard #0" = 10
+}
+
+leader_names = {
+	Ripperda Lewe Rengers Onsta Ewsum Clant Tamminga Coevorden Aylva Cammingha
+}
+
+ship_names = {
+	"Eems" "Hunze" "Delfzijl" "Appingedam" "Reitdiep" "Winschoten"
+}
+
+army_names = {
+	"Leger van $PROVINCE$"
+}
