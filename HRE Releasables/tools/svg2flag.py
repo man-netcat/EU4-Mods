@@ -139,6 +139,12 @@ def main():
     p.add_argument("--full-bleed", action="store_true",
                    help="stretch the whole shield to fill the square; charges that reach "
                         "the shield edge then span the full flag (like WappenWiki mod flags)")
+    p.add_argument("--assembly", action="store_true",
+                   help="mod standard mode: crop the full artwork bbox, scale to 0.9*size "
+                        "height, paste x-centred at --y-offset (see tools/FLAG_NOTES.md)")
+    p.add_argument("--y-offset", type=int, default=None,
+                   help="vertical paste offset for --assembly (default: 8 px below centre, "
+                        "the approved in-game position)")
     p.add_argument("--viewbox", default=None,
                    help="override viewBox as W,H if the SVG lacks one")
     args = p.parse_args()
@@ -160,7 +166,25 @@ def main():
         bg = tuple(int(c) for c in args.bg.split(","))
     print(f"field colour: {bg}")
 
-    # 2) charge only
+    # 2) whole-artwork assembly (mod standard, see FLAG_NOTES.md)
+    if args.assembly:
+        art = render(svg, W, H)
+        bbox = art.getchannel("A").getbbox()
+        if bbox is None:
+            sys.exit("render is empty")
+        art = art.crop(bbox)
+        target_h = round(args.size * 0.9)
+        w, h = art.size
+        art = art.resize((max(1, round(w * target_h / h)), target_h), Image.LANCZOS)
+        y = args.y_offset if args.y_offset is not None else (args.size - target_h) // 2 + 8
+        flag = Image.new("RGB", (args.size, args.size), bg)
+        flag.paste(art, ((args.size - art.width) // 2, y), art)
+        flag.save(args.out)
+        print(f"saved {args.out} ({art.width}x{target_h} at y={y}, "
+              f"top gap {y}, bottom gap {args.size - y - target_h})")
+        return
+
+    # 3) charge only
     if args.full_bleed:
         shield = render(svg, W, H)
         bbox = shield.getchannel("A").getbbox()
