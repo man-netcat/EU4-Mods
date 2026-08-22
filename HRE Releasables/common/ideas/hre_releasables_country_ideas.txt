@@ -1,0 +1,1042 @@
+# National idea groups for HRE Releasables
+# Design and balance bands per the eu4-country-ideas skill.
+# Idea keys are prefixed with the lowercase tag and unique game-wide.
+
+ZEA_ideas = {
+	start = {
+		global_ship_cost = -0.1
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		global_own_trade_power = 0.2
+	}
+
+	trigger = {
+		tag = ZEA
+	}
+	free = yes
+
+	zea_the_watergeuzen = {
+		naval_morale = 0.1
+	}
+	zea_staple_of_middelburg = {
+		trade_efficiency = 0.1
+	}
+	zea_kamer_zeeland = {
+		merchants = 1
+	}
+	zea_dijk_en_polder = {
+		production_efficiency = 0.1
+	}
+	zea_cautionary_towns = {
+		diplomatic_reputation = 1
+	}
+	zea_oyster_and_herring_fleets = {
+		global_sailors_modifier = 0.2
+	}
+	zea_admiralty_of_zeeland = {
+		navy_tradition = 1
+	}
+}
+
+# --- Dobruja: Black Sea frontier between the Danube delta and the steppe ---
+
+DOB_ideas = {
+	start = {
+		hostile_attrition = 1
+		galley_power = 0.2
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = DOB
+	}
+	free = yes
+
+	dob_fleet_of_kaliakra = {
+		naval_forcelimit_modifier = 0.25
+	}
+	dob_genuese_factories = {
+		trade_efficiency = 0.1
+	}
+	dob_salt_of_the_lagoons = {
+		production_efficiency = 0.1
+	}
+	dob_cave_monasteries = {
+		global_missionary_strength = 0.02
+	}
+	dob_walls_of_silistra = {
+		fort_maintenance_modifier = -0.15
+	}
+	dob_horses_of_the_steppe = {
+		cavalry_power = 0.15
+	}
+	dob_grain_down_the_danube = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+# --- Fulda: Benedictine abbey-state around the tomb of St Boniface ---
+
+FDA_ideas = {
+	start = {
+		papal_influence = 1
+		stability_cost_modifier = -0.1
+	}
+
+	bonus = {
+		idea_cost = -0.1
+	}
+
+	trigger = {
+		tag = FDA
+	}
+	free = yes
+
+	fda_tomb_of_boniface = {
+		prestige = 1
+	}
+	fda_scriptorium_of_fulda = {
+		technology_cost = -0.05
+	}
+	fda_abbatial_guard = {
+		land_morale = 0.1
+	}
+	fda_lands_of_the_abbot = {
+		global_tax_modifier = 0.1
+	}
+	fda_princes_of_the_empire = {
+		legitimacy = 1
+		devotion = 1
+	}
+	fda_pilgrim_roads = {
+		improve_relation_modifier = 0.25
+	}
+	fda_schools_of_rabanus = {
+		advisor_cost = -0.1
+	}
+}
+
+# --- Freising: oldest bishopric of Bavaria on its hill above the Isar ---
+
+FRE_ideas = {
+	start = {
+		devotion = 1
+		development_cost = -0.1
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.1
+	}
+
+	trigger = {
+		tag = FRE
+	}
+	free = yes
+
+	fre_evangelist_of_bavaria = {
+		global_missionary_strength = 0.02
+	}
+	fre_weihenstephan_brewery = {
+		production_efficiency = 0.1
+	}
+	fre_cathedral_hill = {
+		fort_maintenance_modifier = -0.1
+	}
+	fre_lands_between_isar_and_amper = {
+		global_tax_modifier = 0.1
+	}
+	fre_the_freising_gospels = {
+		global_institution_spread = 0.1
+	}
+	fre_prince_bishops = {
+		legitimacy = 1
+	}
+	fre_isar_tolls = {
+		trade_efficiency = 0.1
+	}
+}
+
+# --- Görz: Meinhardiner counts holding the passes between Empire and Venice ---
+
+GOR_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		prestige = 1
+	}
+
+	trigger = {
+		tag = GOR
+	}
+	free = yes
+
+	gor_counts_of_gorz = {
+		diplomats = 1
+	}
+	gor_collio_vineyards = {
+		production_efficiency = 0.1
+	}
+	gor_advocates_of_aquileia = {
+		papal_influence = 1
+	}
+	gor_castles_of_the_frontier = {
+		fort_maintenance_modifier = -0.1
+	}
+	gor_between_emperor_and_doge = {
+		ae_impact = -0.1
+	}
+	gor_slovene_valleys = {
+		num_accepted_cultures = 1
+	}
+	gor_inheritance_claims = {
+		core_creation = -0.15
+	}
+}
+
+# --- Groningen: stubborn merchant city over city and Ommelanden ---
+
+GRN_ideas = {
+	start = {
+		global_own_trade_power = 0.15
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		trade_efficiency = 0.15
+	}
+
+	trigger = {
+		tag = GRN
+	}
+	free = yes
+
+	grn_stad_en_lande = {
+		global_unrest = -1
+	}
+	grn_grain_and_peat = {
+		production_efficiency = 0.1
+	}
+	grn_martini_tower = {
+		prestige = 1
+	}
+	grn_gate_to_the_ems = {
+		merchants = 1
+	}
+	grn_frisian_freedom = {
+		land_morale = 0.1
+	}
+	grn_redoubt_of_the_north = {
+		fort_maintenance_modifier = -0.1
+	}
+	grn_high_school_of_groningen = {
+		technology_cost = -0.05
+	}
+}
+
+# --- Göttingen: guild town of linen and learned liberty on the Leine ---
+
+GTN_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		global_unrest = -1
+	}
+
+	bonus = {
+		prestige = 1
+	}
+
+	trigger = {
+		tag = GTN
+	}
+	free = yes
+
+	gtn_linen_weavers = {
+		production_efficiency = 0.1
+	}
+	gtn_trading_privileges = {
+		global_trade_power = 0.1
+	}
+	gtn_city_liberties = {
+		stability_cost_modifier = -0.1
+	}
+	gtn_walls_against_the_dukes = {
+		defensiveness = 0.15
+	}
+	gtn_university_of_gottingen = {
+		technology_cost = -0.05
+	}
+	gtn_guild_muskets = {
+		land_morale = 0.1
+	}
+	gtn_leine_valley_fields = {
+		development_cost = -0.1
+	}
+}
+
+# --- Hoya: small Weser county living on tolls, grain and good marriages ---
+
+HOY_ideas = {
+	start = {
+		trade_steering = 0.2
+		global_manpower_modifier = 0.15
+	}
+
+	bonus = {
+		production_efficiency = 0.1
+	}
+
+	trigger = {
+		tag = HOY
+	}
+	free = yes
+
+	hoy_weser_tolls = {
+		trade_efficiency = 0.1
+	}
+	hoy_grain_and_cattle = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	hoy_counts_upper_and_lower = {
+		legitimacy = 1
+	}
+	hoy_marriage_into_brunswick = {
+		diplomatic_reputation = 1
+	}
+	hoy_hired_spears = {
+		merc_maintenance_modifier = -0.15
+	}
+	hoy_nienburg_bastion = {
+		fort_maintenance_modifier = -0.1
+	}
+	hoy_barges_downriver = {
+		global_own_trade_power = 0.15
+	}
+}
+
+# --- Jämtland: free mountain commonwealth of hunters under the Norwegian crown ---
+
+JMT_ideas = {
+	start = {
+		global_manpower_modifier = 0.15
+		hostile_attrition = 1
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = JMT
+	}
+	free = yes
+
+	jmt_jamtamot_assembly = {
+		global_unrest = -1
+	}
+	jmt_furs_of_the_fells = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	jmt_passes_to_trondelag = {
+		movement_speed = 0.15
+	}
+	jmt_trapper_settlements = {
+		production_efficiency = 0.1
+	}
+	jmt_guardian_of_storsjon = {
+		prestige = 1
+	}
+	jmt_partnership_with_sami = {
+		num_accepted_cultures = 1
+	}
+	jmt_cross_of_st_olav = {
+		missionaries = 1
+	}
+}
+
+# --- Jülich: duchy of brown coal, wool cloth and a Pasqualini citadel ---
+
+JUL_ideas = {
+	start = {
+		defensiveness = 0.2
+		production_efficiency = 0.1
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+
+	trigger = {
+		tag = JUL
+	}
+	free = yes
+
+	jul_black_gold = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	jul_wool_weavers = {
+		trade_efficiency = 0.1
+	}
+	jul_pasqualini_citadel = {
+		fort_maintenance_modifier = -0.1
+	}
+	jul_succession_claims = {
+		core_creation = -0.15
+	}
+	jul_lower_rhine_leagues = {
+		diplomatic_upkeep = 1
+	}
+	jul_rhenish_horse = {
+		cavalry_power = 0.15
+	}
+	jul_imperial_vicars = {
+		prestige = 1
+	}
+}
+
+# --- Chur: first bishopric of the Alps taxing the Rhaetian pass roads ---
+
+KHR_ideas = {
+	start = {
+		defensiveness = 0.2
+		trade_steering = 0.2
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = KHR
+	}
+	free = yes
+
+	khr_septimer_and_spluegen = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	khr_first_swiss_see = {
+		prestige = 1
+	}
+	khr_walser_settlements = {
+		global_manpower_modifier = 0.15
+	}
+	khr_mule_trains = {
+		trade_efficiency = 0.1
+	}
+	khr_leagues_of_the_grisons = {
+		diplomatic_upkeep = 1
+	}
+	khr_cathedral_of_chur = {
+		papal_influence = 1
+	}
+	khr_raetian_militia = {
+		infantry_power = 0.1
+	}
+}
+
+# --- Katzenelnbogen: Rhine wine county that planted the first Riesling ---
+
+KZN_ideas = {
+	start = {
+		production_efficiency = 0.1
+		global_tax_modifier = 0.1
+	}
+
+	bonus = {
+		global_own_trade_power = 0.2
+	}
+
+	trigger = {
+		tag = KZN
+	}
+	free = yes
+
+	kzn_first_riesling_vines = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	kzn_rhine_castle_tolls = {
+		trade_efficiency = 0.1
+	}
+	kzn_countly_cellars = {
+		prestige = 1
+	}
+	kzn_new_cuttings = {
+		development_cost = -0.1
+	}
+	kzn_countless_inheritances = {
+		core_creation = -0.15
+	}
+	kzn_tolling_castles = {
+		defensiveness = 0.15
+	}
+	kzn_wine_merchants = {
+		merchants = 1
+	}
+}
+
+# --- Liegnitz: last Piast duchy of Silesia, heir to the field of Legnica ---
+
+LGN_ideas = {
+	start = {
+		global_manpower_modifier = 0.15
+		prestige = 1
+	}
+
+	bonus = {
+		yearly_absolutism = 1
+	}
+
+	trigger = {
+		tag = LGN
+	}
+	free = yes
+
+	lgn_stand_against_the_mongols = {
+		shock_damage_received = -0.1
+	}
+	lgn_piast_legacy = {
+		diplomatic_reputation = 1
+	}
+	lgn_gold_of_zlotoryja = {
+		production_efficiency = 0.1
+	}
+	lgn_homage_to_prague = {
+		ae_impact = -0.1
+	}
+	lgn_legnica_linen = {
+		trade_efficiency = 0.1
+	}
+	lgn_last_of_the_piasts = {
+		legitimacy = 1
+	}
+	lgn_silesian_keeps = {
+		fort_maintenance_modifier = -0.1
+	}
+}
+
+# --- Limburg: Meuse duchy of cloth whose name launched a dozen wars ---
+
+LIM_ideas = {
+	start = {
+		production_efficiency = 0.1
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		prestige = 1
+	}
+
+	trigger = {
+		tag = LIM
+	}
+	free = yes
+
+	lim_limbourg_cloth = {
+		trade_efficiency = 0.1
+	}
+	lim_meuse_barges = {
+		global_own_trade_power = 0.15
+	}
+	lim_contested_succession = {
+		ae_impact = -0.1
+	}
+	lim_ducal_banners = {
+		land_forcelimit_modifier = 0.2
+	}
+	lim_coal_under_the_soil = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	lim_brabantine_ties = {
+		improve_relation_modifier = 0.25
+	}
+	lim_meuse_castles = {
+		hostile_attrition = 1
+	}
+}
+
+# --- Mark: Westphalian county of forges, wire-drawers and hammermills ---
+
+MKR_ideas = {
+	start = {
+		production_efficiency = 0.15
+		infantry_power = 0.1
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+
+	trigger = {
+		tag = MKR
+	}
+	free = yes
+
+	mkr_wire_of_altena = {
+		trade_efficiency = 0.1
+	}
+	mkr_markish_ironware = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	mkr_castle_altena = {
+		fort_maintenance_modifier = -0.1
+	}
+	mkr_forges_of_the_volme = {
+		build_cost = -0.1
+	}
+	mkr_feud_with_cologne = {
+		cavalry_power = 0.15
+	}
+	mkr_cleves_union = {
+		diplomatic_reputation = 1
+	}
+	mkr_ruhr_farmland = {
+		global_manpower_modifier = 0.15
+	}
+}
+
+# --- Metz: cathedral city of the Moselle between France and the Empire ---
+
+MTZ_ideas = {
+	start = {
+		papal_influence = 1
+		global_tax_modifier = 0.1
+	}
+
+	bonus = {
+		tolerance_heretic = 2
+	}
+
+	trigger = {
+		tag = MTZ
+	}
+	free = yes
+
+	mtz_lantern_of_god = {
+		prestige = 1
+	}
+	mtz_graoully_tamed = {
+		global_unrest = -1
+	}
+	mtz_moselle_vineyards = {
+		production_efficiency = 0.1
+	}
+	mtz_between_two_crowns = {
+		improve_relation_modifier = 0.25
+	}
+	mtz_cathedral_guard = {
+		land_morale = 0.1
+	}
+	mtz_roman_divodurum = {
+		development_cost = -0.1
+	}
+	mtz_bishop_of_the_city = {
+		devotion = 1
+	}
+}
+
+# --- Namur: margraviate at the Sambre-Meuse confluence, guarded by its citadel ---
+
+NAM_ideas = {
+	start = {
+		defensiveness = 0.25
+		trade_efficiency = 0.1
+	}
+
+	bonus = {
+		land_forcelimit_modifier = 0.2
+	}
+
+	trigger = {
+		tag = NAM
+	}
+	free = yes
+
+	nam_the_citadel = {
+		fort_maintenance_modifier = -0.15
+	}
+	nam_confluence_tolls = {
+		global_own_trade_power = 0.15
+	}
+	nam_dampierre_margraves = {
+		diplomatic_reputation = 1
+	}
+	nam_burgundian_pensioners = {
+		improve_relation_modifier = 0.25
+	}
+	nam_meuse_metalworkers = {
+		production_efficiency = 0.1
+	}
+	nam_conscripted_bourgeois = {
+		infantry_power = 0.1
+	}
+	nam_title_of_marquis = {
+		prestige = 1
+	}
+}
+
+# --- Oberpfalz: Upper Palatine land of iron, forests and the Golden Road ---
+
+NMB_ideas = {
+	start = {
+		production_efficiency = 0.15
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		artillery_power = 0.1
+	}
+
+	trigger = {
+		tag = NMB
+	}
+	free = yes
+
+	nmb_amberger_ironware = {
+		trade_efficiency = 0.1
+	}
+	nmb_hammermills_of_the_naab = {
+		build_cost = -0.1
+	}
+	nmb_iron_in_every_hand = {
+		infantry_power = 0.1
+	}
+	nmb_wittelsbach_appanage = {
+		legitimacy = 1
+	}
+	nmb_golden_road_to_prague = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	nmb_deep_imperial_forests = {
+		development_cost = -0.1
+	}
+	nmb_jurists_of_amberg = {
+		advisor_pool = 1
+	}
+}
+
+# --- Ravensberg: Westphalian county of linen weavers and market towns ---
+
+RAV_ideas = {
+	start = {
+		production_efficiency = 0.1
+		global_unrest = -1
+	}
+
+	bonus = {
+		global_own_trade_power = 0.2
+	}
+
+	trigger = {
+		tag = RAV
+	}
+	free = yes
+
+	rav_sparrenberg_castle = {
+		fort_maintenance_modifier = -0.1
+	}
+	rav_ravensberger_linens = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	rav_flax_fields = {
+		development_cost = -0.1
+	}
+	rav_bielefeld_market_rights = {
+		trade_efficiency = 0.1
+	}
+	rav_heiresses_of_ravensberg = {
+		diplomatic_reputation = 1
+	}
+	rav_teutoburg_militia = {
+		land_morale = 0.1
+	}
+	rav_charters_and_privileges = {
+		stability_cost_modifier = -0.1
+	}
+}
+
+# --- St. Gallen: abbey and town of library, looms and embroidered linen ---
+
+STG_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		production_efficiency = 0.1
+	}
+
+	bonus = {
+		trade_efficiency = 0.15
+	}
+
+	trigger = {
+		tag = STG
+	}
+	free = yes
+
+	stg_library_of_st_gall = {
+		technology_cost = -0.05
+	}
+	stg_plan_of_st_gall = {
+		build_cost = -0.1
+	}
+	stg_embroidered_linens = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	stg_abbot_and_burghers = {
+		global_unrest = -1
+	}
+	stg_appenzell_clients = {
+		global_manpower_modifier = 0.15
+	}
+	stg_confederate_friends = {
+		diplomatic_upkeep = 1
+	}
+	stg_schools_of_notker = {
+		advisor_pool = 1
+	}
+}
+
+# --- Straubing: Bavarian duchy on the Danube with claims across the sea ---
+
+STR_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		production_efficiency = 0.15
+	}
+
+	trigger = {
+		tag = STR
+	}
+	free = yes
+
+	str_memory_of_agnes = {
+		global_unrest = -1
+	}
+	str_danube_barges = {
+		global_own_trade_power = 0.15
+	}
+	str_claim_on_holland = {
+		diplomatic_upkeep = 1
+	}
+	str_stadturm_of_straubing = {
+		prestige = 1
+	}
+	str_gaubingen_marksmen = {
+		land_morale = 0.1
+	}
+	str_seligenthal_abbey = {
+		papal_influence = 1
+	}
+	str_hop_gardens = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+# --- Teschen: Piast duchy of the Silesian-Carpathian borderland ---
+
+TES_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		ae_impact = -0.1
+	}
+
+	trigger = {
+		tag = TES
+	}
+	free = yes
+
+	tes_piast_dukes = {
+		legitimacy = 1
+	}
+	tes_congress_of_teschen = {
+		improve_relation_modifier = 0.33
+	}
+	tes_olza_crossings = {
+		global_own_trade_power = 0.15
+	}
+	tes_coal_under_the_duchy = {
+		production_efficiency = 0.1
+	}
+	tes_service_to_bohemia = {
+		diplomatic_upkeep = 1
+	}
+	tes_beskid_pastures = {
+		development_cost = -0.1
+	}
+	tes_ducal_retainers = {
+		land_morale = 0.1
+	}
+}
+
+# --- Trieste: Habsburg free port facing Venice across the Adriatic ---
+
+TSR_ideas = {
+	start = {
+		global_ship_cost = -0.1
+		global_own_trade_power = 0.15
+	}
+
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+
+	trigger = {
+		tag = TSR
+	}
+	free = yes
+
+	tsr_charter_of_free_port = {
+		merchants = 1
+	}
+	tsr_adriatic_rivalry = {
+		naval_morale = 0.1
+	}
+	tsr_karst_shipwrights = {
+		light_ship_cost = -0.15
+	}
+	tsr_illyrian_sailors = {
+		num_accepted_cultures = 1
+	}
+	tsr_favor_of_charles_vi = {
+		improve_relation_modifier = 0.25
+	}
+	tsr_tergeste_heritage = {
+		prestige = 1
+	}
+	tsr_levant_windfall = {
+		trade_steering = 0.2
+	}
+}
+
+# --- Urach: Württemberg residence under the Swabian Jura ---
+
+URW_ideas = {
+	start = {
+		legitimacy = 1
+		global_tax_modifier = 0.1
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = URW
+	}
+	free = yes
+
+	urw_partition_of_1442 = {
+		stability_cost_modifier = -0.1
+	}
+	urw_palace_at_urach = {
+		prestige = 1
+	}
+	urw_tubingen_compromise = {
+		improve_relation_modifier = 0.25
+	}
+	urw_jura_wool = {
+		production_efficiency = 0.1
+	}
+	urw_waterfalls_and_quarries = {
+		build_cost = -0.1
+	}
+	urw_counts_of_wurttemberg = {
+		diplomatic_reputation = 1
+	}
+	urw_reunified_duchy = {
+		core_creation = -0.15
+	}
+}
+
+# --- Verdun: ancient bishopric of the Meuse caught between two realms ---
+
+VDN_ideas = {
+	start = {
+		papal_influence = 1
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = VDN
+	}
+	free = yes
+
+	vdn_seat_of_a_bishop = {
+		devotion = 1
+	}
+	vdn_rebuilt_from_attilas_ashes = {
+		prestige = 1
+	}
+	vdn_meuse_fairs = {
+		trade_efficiency = 0.1
+	}
+	vdn_between_two_realms = {
+		improve_relation_modifier = 0.25
+	}
+	vdn_romanesque_cathedral = {
+		build_cost = -0.1
+	}
+	vdn_marches_of_bar = {
+		fort_maintenance_modifier = -0.1
+	}
+	vdn_orchards_of_the_valley = {
+		production_efficiency = 0.1
+	}
+}
+
+# --- Vidin: last Bulgarian tsardom on the Danube frontier ---
+
+VID_ideas = {
+	start = {
+		defensiveness = 0.2
+		global_manpower_modifier = 0.15
+	}
+
+	bonus = {
+		hostile_attrition = 1
+	}
+
+	trigger = {
+		tag = VID
+	}
+	free = yes
+
+	vid_baba_vida_fortress = {
+		fort_maintenance_modifier = -0.15
+	}
+	vid_sratsimirs_crown = {
+		legitimacy = 1
+	}
+	vid_danube_crossings = {
+		trade_efficiency = 0.1
+	}
+	vid_chiprovtsi_silver = {
+		production_efficiency = 0.1
+	}
+	vid_faith_of_the_ancestors = {
+		tolerance_own = 1
+	}
+	vid_boyar_horsemen = {
+		cavalry_power = 0.15
+	}
+	vid_hungarian_understanding = {
+		diplomatic_reputation = 1
+	}
+}
