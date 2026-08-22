@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = bulgarian
+religion = orthodox
+technology_group = eastern
+capital = 2746	# Vidin
+fixed_capital = 2746
+
+#releasable

@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = bulgarian
+religion = orthodox
+technology_group = eastern
+capital = 159	# Silistria (Dobruja)
+fixed_capital = 159
+
+#releasable

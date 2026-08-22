@@ -1,0 +1,59 @@
+#Country Name: Please see filename.
+
+graphical_culture = easterngfx
+
+color = { 204  119  34 }
+
+revolutionary_colors = { 10 5 0 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	naval_ideas
+	offensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	"Dobrotitsa #0" = 30
+	"Ivanko #0" = 20
+	"Teodor #1" = 15
+	"Georgi #1" = 10
+	"Balik #0" = 10
+	"Kaliakra #0" = 0
+	"Boris #2" = 5
+	"Konstantin #1" = 5
+}
+
+leader_names = {
+	Dobrotitsa Ivanko Karvuna Kaliakra Varna Balchik Kavarna Silistra
+}
+
+ship_names = {
+	"Kaliakra" "Karvuna" "Dobrotitsa" "Pontos" "St Nikola"
+}
+
+army_names = {
+	"$PROVINCE$ Garrison"
+}
