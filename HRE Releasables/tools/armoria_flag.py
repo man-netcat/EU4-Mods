@@ -74,6 +74,7 @@ def main():
             tag = tag.replace("<path ", f'<path fill="{hexcolor}" ', 1)
         return tag
 
+    svg = re.sub(r'(<svg[^>]*?)\bfill="[^"]*"', rf'\1fill="{p}"', svg, count=1)
     svg = re.sub(r'<path\b[^>]*\bclass="secondary"[^>]*>',
                  lambda m: fill_class(m, sec or p), svg)
     svg = re.sub(r'<path\b[^>]*\bclass="tertiary"[^>]*>',
