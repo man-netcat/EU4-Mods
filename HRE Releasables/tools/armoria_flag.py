@@ -80,9 +80,10 @@ def main():
                  lambda m: fill_class(m, ter or sec or p), svg)
 
     S = args.size
+    SS = 4  # supersample: rasterize the vector big, then downsample once
     png = Path("/tmp/opencode/_armoria_tmp.png")
     cairosvg.svg2png(bytestring=svg.encode(), write_to=str(png),
-                     output_width=S, output_height=S, unsafe=True,
+                     output_width=S * SS, output_height=S * SS, unsafe=True,
                      background_color="rgba(0,0,0,0)")
     charge = Image.open(png).convert("RGBA")
 
