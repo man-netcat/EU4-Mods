@@ -1,0 +1,58 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 139  69  19 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+	offensive_ideas
+	diplomatic_ideas
+	administrative_ideas
+	innovative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Egino #0" = 30
+	"Heinrich #0" = 20
+	"Konrad #0" = 15
+	"Friedrich #0" = 10
+	"Berthold #0" = 10
+	"Rudolf #0" = 10
+	"Albrecht #0" = 10
+	"Otto #0" = 10
+}
+
+leader_names = {
+	Uesenberg Falkenstein Triberg ImThurn Schnewlin Rotberg Blumeneck Geben Wittenweiler Strasbourg
+}
+
+ship_names = {
+	"Dreisam" "Martinstor" "Schwabentor" "Breisach" "Munster" "Zahringer"
+}
+
+army_names = {
+	"Armee von $PROVINCE$"
+}
