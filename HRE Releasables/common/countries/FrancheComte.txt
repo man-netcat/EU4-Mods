@@ -1,0 +1,58 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 52 86 165 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+	offensive_ideas
+	diplomatic_ideas
+	administrative_ideas
+	innovative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Jean #0" = 30
+	"Philippe #0" = 25
+	"Otton #0" = 15
+	"Renaud #0" = 15
+	"Hugues #0" = 10
+	"Guillaume #0" = 10
+	"Charles #0" = 10
+	"Marguerite #0" = 5
+}
+
+leader_names = {
+	Chalon Neufchatel Vergy Montfaucon Rye Granvelle Perrenot Cusance Arlay Pontarlier
+}
+
+ship_names = {
+	"Dole" "Salins" "Baume" "Arlay" "Chalon" "Pontarlier"
+}
+
+army_names = {
+	"Armée de $PROVINCE$"
+}
