@@ -13,7 +13,6 @@ base_manpower = 1
 is_city = yes
 fort_15th = yes
 add_core = TTL
-add_core = KHR
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
