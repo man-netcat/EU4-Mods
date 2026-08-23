@@ -1,0 +1,58 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 130 160 210 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+	offensive_ideas
+	diplomatic_ideas
+	administrative_ideas
+	innovative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Stefan #0" = 30
+	"Ludwig #0" = 25
+	"Wolfgang #0" = 20
+	"Friedrich #0" = 15
+	"Georg #0" = 10
+	"Otto #0" = 10
+	"Ruprecht #0" = 10
+	"Karl #0" = 10
+}
+
+leader_names = {
+	Sponheim Leiningen Veldenz Falkenstein Fleckenstein Landskron Blieskastel Hornbach Zweibrucken
+}
+
+ship_names = {
+	"Zweibrucken" "Veldenz" "Bergzabern" "Hornbach" "Blieskastel" "Annweiler"
+}
+
+army_names = {
+	"Armee von $PROVINCE$"
+}
