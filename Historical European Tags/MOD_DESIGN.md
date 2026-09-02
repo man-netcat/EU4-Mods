@@ -1,4 +1,4 @@
-# HRE Releasables - Design Constraints
+# Historical European Tags - Design Constraints
 
 This document records the design rules for the mod. Follow these rules
 when you add, change, or remove a country.
@@ -49,15 +49,15 @@ with the files that exist, so remove them for a clean removal.
 
 ## Tags in this mod
 
-38 countries. All tags are unique to the base game and to this mod.
+39 countries. All tags are unique to the base game and to this mod.
 
 Country list: DOB DOR FDA FRB FRC FRE GOR GRN GTN HOY JMT JUL KRB KZN LGN
-LIM MRB MST MTZ NAM NMB OSL PSG PST RAV STG STR SYE TCK TES TSR URW VDN VID WRM
-ZEA ZUR ZWE
+LIM MRB MST MTZ NAM NMB OSL PSG PST RAV REV STG STR SYE TCK TES TSR URW VDN VID
+WRM ZEA ZUR ZWE
 
 ## Tags that exist in the 1444 start
 
-Nine prince-bishoprics exist on 1444.11.11 as vassals of the state that
+Ten prince-bishoprics exist on 1444.11.11 as vassals of the state that
 owns their capital province. Each bishopric owns its capital province
 from `1444.1.1` (the ATH pattern: the province history gives the vassal
 `owner` and `controller` in a dated block before the start date). The
@@ -65,7 +65,7 @@ overlord keeps its core on the capital, so it can re-integrate the
 bishopric or be forced to release it through the normal core-release
 flow.
 
-The vassal relation lives in `history/diplomacy/hre_releasables_vassals.txt`.
+The vassal relation lives in `history/diplomacy/historical_european_tags_vassals.txt`.
 Each block declares `first = <overlord>` and `second = <bishopric>` with
 `start_date = 1444.1.1` and `end_date = 1821.1.1`, matching the basegame
 format for indefinite vassalage (all basegame vassal blocks carry an
@@ -76,6 +76,7 @@ end_date, e.g. `second = MAZ` in `Baltic_alliances.txt`).
 | DOR   | Dorpat             | LIV (Livonian Order) | 1834    |
 | OSL   | Osel-Wiek          | LIV (Livonian Order) | 35      |
 | KRB   | Courland           | LIV (Livonian Order) | 39      |
+| REV   | Reval              | LIV (Livonian Order) | 36      |
 | MRB   | Merseburg          | MAG (Magdeburg)      | 4741    |
 | FDA   | Fulda              | WBG (Wurzburg)       | 4774    |
 | VDN   | Verdun             | BAR (Bar)            | 4766    |
@@ -85,7 +86,7 @@ end_date, e.g. `second = MAZ` in `Baltic_alliances.txt`).
 
 Each of these tags has a ruler in its `history/countries/` file dated
 before 1444.11.11, matching the historical bishop in office at the start
-date. All nine use `government = theocracy` and
+date. All ten use `government = theocracy` and
 `add_government_reform = leading_clergy_reform`.
 
 The tags are still releasable: a player who defeats the overlord can

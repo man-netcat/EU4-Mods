@@ -1,4 +1,4 @@
-# National idea groups for HRE Releasables
+# National idea groups for Historical European Tags
 # Design and balance bands per the eu4-country-ideas skill.
 # Idea keys are prefixed with the lowercase tag and unique game-wide.
 
@@ -1352,5 +1352,45 @@ KRB_ideas = {
 	}
 	krb_livonian_vassals = {
 		manpower_recovery_speed = 0.15
+	}
+}
+
+# --- Reval: Danish-founded Hanseatic see on the bay the great trade passes through ---
+
+REV_ideas = {
+	start = {
+		trade_efficiency = 0.10
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		global_own_trade_power = 0.15
+	}
+
+	trigger = {
+		tag = REV
+	}
+	free = yes
+
+	rev_hansa_of_reval = {
+		merchants = 1
+	}
+	rev_st_marys_cathedral = {
+		devotion = 1
+	}
+	rev_toompea_fortress = {
+		fort_maintenance_modifier = -0.10
+	}
+	rev_danish_royal_patronage = {
+		papal_influence = 1
+	}
+	rev_the_great_guild = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	rev_gate_to_novgorod = {
+		trade_steering = 0.20
+	}
+	rev_mission_field_of_estland = {
+		global_missionary_strength = 0.02
 	}
 }

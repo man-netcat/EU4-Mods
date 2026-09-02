@@ -1,4 +1,4 @@
-# HRE Releasables - prince-bishoprics existing at the 1444 start as vassals of their secular holders
+# Historical European Tags - prince-bishoprics existing at the 1444 start as vassals of their secular holders
 # The overlords keep the provinces; the bishops rule them in the overlord's name until released.
 
 # Dorpat under Livonian Order
@@ -21,6 +21,14 @@ vassal = {
 vassal = {
 	first = LIV
 	second = KRB
+	start_date = 1444.1.1
+	end_date = 1821.1.1
+}
+
+# Reval under Livonian Order
+vassal = {
+	first = LIV
+	second = REV
 	start_date = 1444.1.1
 	end_date = 1821.1.1
 }

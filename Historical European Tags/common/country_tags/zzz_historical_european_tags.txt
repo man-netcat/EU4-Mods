@@ -1,4 +1,4 @@
-#HRE Releasables - new releasable nations inside the Holy Roman Empire
+#Historical European Tags - new releasable nations inside the Holy Roman Empire
 JUL = "countries/Julich.txt"
 RAV = "countries/Ravensberg.txt"
 HOY = "countries/Hoya.txt"
@@ -37,3 +37,4 @@ PSG = "countries/PomeraniaStargard.txt"
 DOR = "countries/Dorpat.txt"
 OSL = "countries/OselWiek.txt"
 KRB = "countries/Courland.txt"
+REV = "countries/Reval.txt"
