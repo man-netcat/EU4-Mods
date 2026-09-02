@@ -80,3 +80,11 @@ vassal = {
 	start_date = 1444.1.1
 	end_date = 1821.1.1
 }
+
+# Gazaria under Genoa
+vassal = {
+	first = GEN
+	second = GZR
+	start_date = 1444.1.1
+	end_date = 1821.1.1
+}

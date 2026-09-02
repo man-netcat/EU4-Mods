@@ -1,0 +1,74 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 218  215  56 }
+
+revolutionary_colors = { 0 5 0 }
+
+historical_idea_groups = {
+	trade_ideas
+	plutocracy_ideas
+	administrative_ideas
+	maritime_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Andrea #0" = 20
+	"Giovanni #0" = 20
+	"Francesco #0" = 20
+	"Luigi #0" = 15
+	"Antonio #0" = 10
+	"Carlo #0" = 10
+	"Federico #0" = 10
+	"Filippo #0" = 10
+	"Giorgio #0" = 15
+	"Pietro #0" = 10
+	"Prospero #0" = 10
+	"Simone #0" = 10
+
+	"Andrea #0" = 0
+	"Giorgio #0" = 0
+	"Giovanni #0" = 0
+	"Luigi #0" = 0
+	"Matteo #0" = 0
+	"Pietro #0" = 0
+	"Prospero #0" = 0
+}
+
+leader_names = {
+	Adorno Balbi Brignole Cattaneo Centurione Chiavari Clavarezza Cybo
+	Doria Durazzo Ferrari Gentile Giustiniani Grimaldi Imperiale
+	Lercari Lomellini Negrone Pallavicini Promontorio Spinola Vivaldi
+}
+
+ship_names = {
+	"Caffa" "Sudak" "Soldaia" "Tmutarakan" "Cembalo" "Chembalo"
+	"San Giorgio" "San Pietro" "San Paolo" "Nostra Signora"
+	"Gazaria" "Marea Nostra" "Libertas" "Victoria"
+}
+
+army_names = {
+	"Armata di $PROVINCE$"
+}
