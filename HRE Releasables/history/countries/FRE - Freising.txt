@@ -1,5 +1,5 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = theocracy
+add_government_reform = leading_clergy_reform
 government_rank = 1
 primary_culture = bavarian
 religion = catholic
@@ -8,3 +8,13 @@ capital = 4708	# Freising
 fixed_capital = 4708
 
 #releasable
+
+1443.1.1 = {
+	monarch = {
+		name = "Heinrich II von Schlick"
+		birth_date = 1390.1.1
+		dip = 3
+		adm = 2
+		mil = 1
+	}
+}

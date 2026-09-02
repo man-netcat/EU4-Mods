@@ -154,7 +154,7 @@ FRE_ideas = {
 		global_institution_spread = 0.1
 	}
 	fre_prince_bishops = {
-		legitimacy = 1
+		devotion = 1
 	}
 	fre_isar_tolls = {
 		trade_efficiency = 0.1
@@ -1075,46 +1075,6 @@ MST_ideas = {
 		land_morale = 0.10
 	}
 }
-# --- Erfurt: woad, scholars and gardens in Thuringia ---
-
-ERF_ideas = {
-	start = {
-		production_efficiency = 0.10
-		global_institution_spread = 0.10
-	}
-
-	bonus = {
-		global_tax_modifier = 0.15
-	}
-
-	trigger = {
-		tag = ERF
-	}
-	free = yes
-
-	erf_waidhandel = {
-		trade_efficiency = 0.10
-	}
-	erf_universitas_erfordensis = {
-		idea_cost = -0.10
-	}
-	erf_gaertnerstadt = {
-		development_cost = -0.10
-	}
-	erf_petersberg = {
-		defensiveness = 0.15
-	}
-	erf_zwischen_den_herren = {
-		improve_relation_modifier = 0.25
-	}
-	erf_ratsverfassung = {
-		stability_cost_modifier = -0.10
-	}
-	erf_gelehrtenwege = {
-		same_culture_advisor_cost = -0.25
-	}
-}
-
 # --- Merseburg: prince-bishopric on the Saale border with the Slavs ---
 
 MRB_ideas = {

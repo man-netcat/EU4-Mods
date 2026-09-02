@@ -8,3 +8,13 @@ capital = 1834 # Dorpat
 fixed_capital = 1834
 
 #releasable
+
+1441.1.1 = {
+	monarch = {
+		name = "Bartholomaeus Savijerwe"
+		birth_date = 1395.1.1
+		dip = 3
+		adm = 2
+		mil = 1
+	}
+}

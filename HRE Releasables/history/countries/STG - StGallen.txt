@@ -8,3 +8,13 @@ capital = 1870 # St Gallen
 fixed_capital = 1870
 
 #releasable
+
+1442.1.1 = {
+	monarch = {
+		name = "Kaspar von Breitenlandenberg"
+		birth_date = 1395.1.1
+		dip = 2
+		adm = 3
+		mil = 1
+	}
+}

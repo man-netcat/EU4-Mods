@@ -8,3 +8,13 @@ capital = 4741 # Halle
 fixed_capital = 4741
 
 #releasable
+
+1431.1.1 = {
+	monarch = {
+		name = "Johann II Bose"
+		birth_date = 1385.1.1
+		dip = 2
+		adm = 3
+		mil = 1
+	}
+}

@@ -8,3 +8,13 @@ capital = 39 # Kurland
 fixed_capital = 39
 
 #releasable
+
+1425.1.1 = {
+	monarch = {
+		name = "Johann III Tiergart"
+		birth_date = 1380.1.1
+		dip = 2
+		adm = 1
+		mil = 3
+	}
+}

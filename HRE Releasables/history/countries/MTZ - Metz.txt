@@ -8,3 +8,13 @@ capital = 188 # Metz
 fixed_capital = 188
 
 #releasable
+
+1415.1.1 = {
+	monarch = {
+		name = "Conrad II Bayer de Boppard"
+		birth_date = 1380.1.1
+		dip = 2
+		adm = 3
+		mil = 2
+	}
+}

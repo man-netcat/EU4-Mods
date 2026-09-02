@@ -8,3 +8,13 @@ capital = 35 # Osel
 fixed_capital = 35
 
 #releasable
+
+1439.1.1 = {
+	monarch = {
+		name = "Ludolf Grove"
+		birth_date = 1390.1.1
+		dip = 2
+		adm = 2
+		mil = 2
+	}
+}
