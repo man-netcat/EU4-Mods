@@ -1,0 +1,26 @@
+# ROOT = New vassal, FROM = Overlord
+# When LIV is vassalized, EU4 cuts its bishopric vassals (DOR/OSL/KRB/REV).
+# Reattach freed bishoprics under the new overlord.
+on_create_vassal = {
+	if = {
+		limit = {
+			tag = LIV
+		}
+		DOR = {
+			limit = { is_subject = no }
+			FROM = { vassalize = PREV }
+		}
+		OSL = {
+			limit = { is_subject = no }
+			FROM = { vassalize = PREV }
+		}
+		KRB = {
+			limit = { is_subject = no }
+			FROM = { vassalize = PREV }
+		}
+		REV = {
+			limit = { is_subject = no }
+			FROM = { vassalize = PREV }
+		}
+	}
+}
