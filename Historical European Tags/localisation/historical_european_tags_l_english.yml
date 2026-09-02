@@ -81,5 +81,3 @@
   KRB_ADJ:0 "Couronian"
   REV:0 "Reval"
   REV_ADJ:0 "Revaler"
-  estate_nobles_livonian_strong_duchies:0 "Livonian Strong Duchies"
-  estate_nobles_livonian_strong_duchies_desc:0 "The Livonian Confederation is a loose union in which the prince-bishops of Dorpat, Osel-Wiek, Courland and Reval govern their sees with wide independence from the [Root.Monarch.GetTitle]. This system keeps the sees loyal but makes the full authority of the Order hard to enforce."
