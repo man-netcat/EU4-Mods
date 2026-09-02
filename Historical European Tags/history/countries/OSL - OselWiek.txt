@@ -6,6 +6,7 @@ religion = catholic
 technology_group = western
 capital = 35 # Osel
 fixed_capital = 35
+historical_friend = LIV
 
 #releasable
 

@@ -6,6 +6,7 @@ religion = catholic
 technology_group = western
 capital = 39 # Kurland
 fixed_capital = 39
+historical_friend = LIV
 
 #releasable
 

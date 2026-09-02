@@ -6,6 +6,7 @@ religion = catholic
 technology_group = western
 capital = 36 # Reval
 fixed_capital = 36
+historical_friend = LIV
 
 #releasable
 
