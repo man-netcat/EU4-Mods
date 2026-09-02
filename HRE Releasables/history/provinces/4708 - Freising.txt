@@ -11,6 +11,7 @@ base_manpower = 2
 trade_goods = grain #Weihenstephaner beer
 add_core = LBV
 add_core = FRE
+1444.1.1 = { owner = FRE controller = FRE }
 
 discovered_by = eastern
 discovered_by = western

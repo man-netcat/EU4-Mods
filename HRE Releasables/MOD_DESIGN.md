@@ -58,13 +58,18 @@ ZEA ZUR ZWE
 ## Tags that exist in the 1444 start
 
 Nine prince-bishoprics exist on 1444.11.11 as vassals of the state that
-owns their capital province. The bishopric owns no province at start.
-It holds only a core on its capital, so a player can release it as a
-vassal or nation through the normal core-release flow.
+owns their capital province. Each bishopric owns its capital province
+from `1444.1.1` (the ATH pattern: the province history gives the vassal
+`owner` and `controller` in a dated block before the start date). The
+overlord keeps its core on the capital, so it can re-integrate the
+bishopric or be forced to release it through the normal core-release
+flow.
 
 The vassal relation lives in `history/diplomacy/hre_releasables_vassals.txt`.
 Each block declares `first = <overlord>` and `second = <bishopric>` with
-`start_date = 1444.1.1` and no end date.
+`start_date = 1444.1.1` and `end_date = 1821.1.1`, matching the basegame
+format for indefinite vassalage (all basegame vassal blocks carry an
+end_date, e.g. `second = MAZ` in `Baltic_alliances.txt`).
 
 | Tag   | Bishopric          | Overlord             | Capital |
 |-------|--------------------|----------------------|---------|

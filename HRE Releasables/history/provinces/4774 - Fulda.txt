@@ -3,6 +3,7 @@ owner = WBG
 controller = WBG
 add_core = WBG
 add_core = FDA
+1444.1.1 = { owner = FDA controller = FDA }
 culture = hessian
 religion = catholic
 base_tax = 2

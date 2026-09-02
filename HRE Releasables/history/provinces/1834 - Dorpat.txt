@@ -4,6 +4,7 @@ owner = LIV
 controller = LIV
 add_core = LIV
 add_core = DOR
+1444.1.1 = { owner = DOR controller = DOR }
 add_core = LTG
 add_core = EST
 culture = estonian
