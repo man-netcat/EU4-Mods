@@ -1,4 +1,4 @@
-﻿#263 - Upper Silesia
+#263 - Upper Silesia
 
 latent_trade_goods = {
  coal

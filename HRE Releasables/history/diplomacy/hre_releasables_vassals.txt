@@ -6,6 +6,7 @@ vassal = {
 	first = LIV
 	second = DOR
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # Osel-Wiek under Livonian Order
@@ -13,6 +14,7 @@ vassal = {
 	first = LIV
 	second = OSL
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # Courland under Livonian Order
@@ -20,6 +22,7 @@ vassal = {
 	first = LIV
 	second = KRB
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # Merseburg under Magdeburg
@@ -27,6 +30,7 @@ vassal = {
 	first = MAG
 	second = MRB
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # Fulda under Wurzburg
@@ -34,6 +38,7 @@ vassal = {
 	first = WBG
 	second = FDA
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # Verdun under Bar
@@ -41,6 +46,7 @@ vassal = {
 	first = BAR
 	second = VDN
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # Metz under Lorraine
@@ -48,6 +54,7 @@ vassal = {
 	first = LOR
 	second = MTZ
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # St Gallen under Switzerland
@@ -55,6 +62,7 @@ vassal = {
 	first = SWI
 	second = STG
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }
 
 # Freising under Bavaria-Landshut
@@ -62,4 +70,5 @@ vassal = {
 	first = LBV
 	second = FRE
 	start_date = 1444.1.1
+	end_date = 1821.1.1
 }

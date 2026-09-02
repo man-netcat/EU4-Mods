@@ -1,4 +1,4 @@
-﻿#64 - Straubing
+#64 - Straubing
 
 owner = UBV
 controller = UBV

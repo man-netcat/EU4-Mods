@@ -1,4 +1,4 @@
-﻿#81 - Hessen
+#81 - Hessen
 
 owner = HES
 controller = HES

@@ -1,4 +1,4 @@
-﻿#2971 - Hoya
+#2971 - Hoya
 
 owner = BRU
 controller = BRU

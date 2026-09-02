@@ -1,4 +1,4 @@
-﻿#4774 - Fulda
+#4774 - Fulda
 owner = WBG
 controller = WBG
 add_core = WBG
