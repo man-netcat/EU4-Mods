@@ -4,7 +4,6 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 2
 primary_culture = armenian
-add_accepted_culture = turkish
 religion = coptic
 technology_group = eastern
 capital = 327	# Adana
