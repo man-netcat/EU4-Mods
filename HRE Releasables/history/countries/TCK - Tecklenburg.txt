@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = hannoverian
 religion = catholic
 technology_group = western
-capital = 2973 # Meppen
-fixed_capital = 2973
+capital = 56 # Osnabruck
+fixed_capital = 56
 
 #releasable

@@ -1,0 +1,51 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 164 38 46 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	aristocratic_ideas
+	administrative_ideas
+	quality_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Ulrich #0" = 30
+	"Johann #0" = 25
+	"Heinrich #0" = 15
+	"Albrecht #0" = 10
+}
+
+leader_names = { Dewitz Maltzan Hahn Pressentin Pentz Woldeck Stargard Neubrandenburg Friedland }
+
+ship_names = {
+	"Stargard" "Neubrandenburg" "Friedland" "Wesenberg" "Strelitz" "Lychen"
+}
+
+army_names = {
+	"Armee von $PROVINCE$"
+}

@@ -2,9 +2,9 @@
 
 graphical_culture = westerngfx
 
-color = { 8 8 8 }
+color = { 20 55 110 }
 
-revolutionary_colors = { 40 0 10 }
+revolutionary_colors = { 5 10 25 }
 
 historical_idea_groups = {
 	religious_ideas
@@ -36,15 +36,15 @@ historical_units = {
 }
 
 monarch_names = {
-	"Konrad #0" = 20
+	"Reinhard #0" = 20
 	"Johann #0" = 20
+	"Philipp #0" = 20
 	"Heinrich #0" = 20
 	"Dietrich #0" = 20
-	"Philipp #0" = 20
-	"Reinhard #0" = 20
+	"Georg #0" = 20
 
-	"Philipp #0" = 0
 	"Reinhard #0" = 0
+	"Johann #0" = 0
 }
 
 leader_names = {

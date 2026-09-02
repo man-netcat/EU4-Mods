@@ -3,7 +3,6 @@
 owner = HES
 controller = HES
 add_core = HES
-add_core = KZN
 capital = "Marburg"
 trade_goods = wool
 culture = hessian

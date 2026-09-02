@@ -3,7 +3,7 @@
 owner = MAG
 controller = MAG
 add_core = MAG
-add_core = HBS
+add_core = MRB
 culture = saxon
 religion = catholic
 hre = yes

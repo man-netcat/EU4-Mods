@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = hessian
 religion = catholic
 technology_group = western
-capital = 1760 # Koblenz
-fixed_capital = 1760
+capital = 1761 # Pfalz
+fixed_capital = 1761
 
 #releasable

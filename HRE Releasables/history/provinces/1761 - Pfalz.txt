@@ -11,6 +11,7 @@ base_manpower = 2
 is_city = yes
 controller = PAL
 add_core = PAL
+add_core = SYE
 add_core = WRM
 hre = yes
 discovered_by = eastern

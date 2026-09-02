@@ -3,7 +3,6 @@
 owner = SAX
 controller = SAX
 add_core = SAX
-add_core = MRB
 culture = saxon
 religion = catholic
 hre = yes

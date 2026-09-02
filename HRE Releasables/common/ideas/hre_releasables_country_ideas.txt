@@ -520,47 +520,6 @@ LIM_ideas = {
 		hostile_attrition = 1
 	}
 }
-
-# --- Mark: Westphalian county of forges, wire-drawers and hammermills ---
-
-MKR_ideas = {
-	start = {
-		production_efficiency = 0.15
-		infantry_power = 0.1
-	}
-
-	bonus = {
-		discipline = 0.05
-	}
-
-	trigger = {
-		tag = MKR
-	}
-	free = yes
-
-	mkr_wire_of_altena = {
-		trade_efficiency = 0.1
-	}
-	mkr_markish_ironware = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	mkr_castle_altena = {
-		fort_maintenance_modifier = -0.1
-	}
-	mkr_forges_of_the_volme = {
-		build_cost = -0.1
-	}
-	mkr_feud_with_cologne = {
-		cavalry_power = 0.15
-	}
-	mkr_cleves_union = {
-		diplomatic_reputation = 1
-	}
-	mkr_ruhr_farmland = {
-		global_manpower_modifier = 0.15
-	}
-}
-
 # --- Metz: cathedral city of the Moselle between France and the Empire ---
 
 MTZ_ideas = {
@@ -638,46 +597,6 @@ NAM_ideas = {
 	}
 	nam_title_of_marquis = {
 		prestige = 1
-	}
-}
-
-# --- Oberpfalz: Upper Palatine land of iron, forests and the Golden Road ---
-
-NMB_ideas = {
-	start = {
-		production_efficiency = 0.15
-		defensiveness = 0.15
-	}
-
-	bonus = {
-		artillery_power = 0.1
-	}
-
-	trigger = {
-		tag = NMB
-	}
-	free = yes
-
-	nmb_amberger_ironware = {
-		trade_efficiency = 0.1
-	}
-	nmb_hammermills_of_the_naab = {
-		build_cost = -0.1
-	}
-	nmb_iron_in_every_hand = {
-		infantry_power = 0.1
-	}
-	nmb_wittelsbach_appanage = {
-		legitimacy = 1
-	}
-	nmb_golden_road_to_prague = {
-		global_prov_trade_power_modifier = 0.1
-	}
-	nmb_deep_imperial_forests = {
-		development_cost = -0.1
-	}
-	nmb_jurists_of_amberg = {
-		advisor_pool = 1
 	}
 }
 
@@ -1000,47 +919,6 @@ VID_ideas = {
 		diplomatic_reputation = 1
 	}
 }
-
-# --- Saxe-Weimar: the Musenhof, a small Ernestine court that became Germany's cultural heart ---
-
-WEI_ideas = {
-	start = {
-		prestige = 1
-		advisor_cost = -0.10
-	}
-
-	bonus = {
-		administrative_efficiency = 0.05
-	}
-
-	trigger = {
-		tag = WEI
-	}
-	free = yes
-
-	wei_teilung_von_erfurt = {
-		global_institution_spread = 0.10
-	}
-	wei_universitat_jena = {
-		technology_cost = -0.05
-	}
-	wei_herzog_bernhards_feldzuge = {
-		land_morale = 0.05
-	}
-	wei_hofkapelle = {
-		same_culture_advisor_cost = -0.25
-	}
-	wei_der_musenhof = {
-		diplomatic_reputation = 1
-	}
-	wei_weimarer_klassik = {
-		idea_cost = -0.10
-	}
-	wei_carl_augusts_reformen = {
-		development_cost = -0.10
-	}
-}
-
 # --- Franche-Comte: salt, law and the Jura between two crowns ---
 
 FRC_ideas = {
@@ -1237,86 +1115,6 @@ ERF_ideas = {
 	}
 }
 
-# --- Worms: prince-bishopric on the Rhine, host to imperial diets ---
-
-WRM_ideas = {
-	start = {
-		trade_efficiency = 0.10
-		diplomatic_reputation = 1
-	}
-
-	bonus = {
-		stability_cost_modifier = -0.10
-	}
-
-	trigger = {
-		tag = WRM
-	}
-	free = yes
-
-	wrm_concordat_of_worms = {
-		papal_influence = 1
-	}
-	wrm_imperial_diet_city = {
-		improve_relation_modifier = 0.25
-	}
-	wrm_cathedral_of_worms = {
-		global_missionary_strength = 0.02
-	}
-	wrm_rhein_maut = {
-		global_trade_power = 0.10
-	}
-	wrm_rhine_vineyards = {
-		production_efficiency = 0.10
-	}
-	wrm_roman_walls = {
-		defensiveness = 0.15
-	}
-	wrm_city_chamber = {
-		global_tax_modifier = 0.10
-	}
-}
-
-# --- Halberstadt: prince-bishopric beneath the Harz ---
-
-HBS_ideas = {
-	start = {
-		defensiveness = 0.15
-		papal_influence = 1
-	}
-
-	bonus = {
-		global_tax_modifier = 0.15
-	}
-
-	trigger = {
-		tag = HBS
-	}
-	free = yes
-
-	hbs_harz_forests = {
-		land_attrition = -0.10
-	}
-	hbs_cathedral_treasure = {
-		prestige = 1
-	}
-	hbs_bishopric_of_the_harz = {
-		global_missionary_strength = 0.02
-	}
-	hbs_forts_of_the_border = {
-		fort_maintenance_modifier = -0.10
-	}
-	hbs_halberstadt_canons = {
-		global_manpower_modifier = 0.10
-	}
-	hbs_wool_and_linen = {
-		production_efficiency = 0.10
-	}
-	hbs_princes_of_saxony = {
-		legitimacy = 1
-	}
-}
-
 # --- Merseburg: prince-bishopric on the Saale border with the Slavs ---
 
 MRB_ideas = {
@@ -1397,166 +1195,6 @@ TCK_ideas = {
 	}
 }
 
-# --- Nienburg: county holding the Weser crossing ---
-
-NIE_ideas = {
-	start = {
-		defensiveness = 0.15
-		trade_efficiency = 0.10
-	}
-
-	bonus = {
-		production_efficiency = 0.15
-	}
-
-	trigger = {
-		tag = NIE
-	}
-	free = yes
-
-	nie_weser_bridge = {
-		global_trade_power = 0.10
-	}
-	nie_between_weser_and_middle = {
-		improve_relation_modifier = 0.25
-	}
-	nie_counts_of_nienburg = {
-		legitimacy = 1
-	}
-	nie_river_fort = {
-		fort_maintenance_modifier = -0.10
-	}
-	nie_weser_grain = {
-		global_tax_modifier = 0.10
-	}
-	nie_herring_and_livestock = {
-		production_efficiency = 0.10
-	}
-	nie_marsh_reclamation = {
-		development_cost = -0.10
-	}
-}
-
-# --- Grubenhagen: Brunswick principality in the Harz hills ---
-
-GBH_ideas = {
-	start = {
-		global_manpower_modifier = 0.15
-		hostile_attrition = 1
-	}
-
-	bonus = {
-		land_morale = 0.10
-	}
-
-	trigger = {
-		tag = GBH
-	}
-	free = yes
-
-	gbh_harz_silver = {
-		production_efficiency = 0.10
-	}
-	gbh_einbecker_beer = {
-		trade_efficiency = 0.10
-	}
-	gbh_hill_forts = {
-		defensiveness = 0.15
-	}
-	gbh_forest_of_the_solling = {
-		land_attrition = -0.10
-	}
-	gbh_princes_of_brunswick = {
-		legitimacy = 1
-	}
-	gbh_swabian_guard = {
-		army_tradition = 0.5
-	}
-	gbh_courts_of_the_harz = {
-		development_cost = -0.10
-	}
-}
-
-# --- Ratzeburg: prince-bishopric between the lakes and the Baltic ---
-
-RZB_ideas = {
-	start = {
-		global_missionary_strength = 0.02
-		development_cost = -0.10
-	}
-
-	bonus = {
-		trade_efficiency = 0.10
-	}
-
-	trigger = {
-		tag = RZB
-	}
-	free = yes
-
-	rzb_lake_lordship = {
-		global_tax_modifier = 0.10
-	}
-	rzb_bishopric_of_the_slavs = {
-		papal_influence = 1
-	}
-	rzb_wendish_mission = {
-		tolerance_heretic = 1
-	}
-	rzb_river_to_the_baltic = {
-		global_trade_power = 0.10
-	}
-	rzb_lakeland_defense = {
-		defensiveness = 0.10
-	}
-	rzb_monasteries_of_the_island = {
-		global_unrest = -1
-	}
-	rzb_church_lands = {
-		production_efficiency = 0.10
-	}
-}
-
-# --- Diepholz: county in the moorland between the Hunte and the Weser ---
-
-DPH_ideas = {
-	start = {
-		defensiveness = 0.15
-		hostile_attrition = 1
-	}
-
-	bonus = {
-		development_cost = -0.10
-	}
-
-	trigger = {
-		tag = DPH
-	}
-	free = yes
-
-	dph_moorland_fort = {
-		fort_maintenance_modifier = -0.10
-	}
-	dph_counts_of_diepholz = {
-		legitimacy = 1
-	}
-	dph_peat_and_pasture = {
-		production_efficiency = 0.10
-	}
-	dph_lords_of_the_bogs = {
-		global_manpower_modifier = 0.10
-	}
-	dph_hunte_toll = {
-		trade_efficiency = 0.10
-	}
-	dph_consolidate_the_lowlands = {
-		core_creation = -0.10
-	}
-	dph_imperial_loyalty = {
-		prestige = 1
-	}
-}
-
 # --- Speyer: prince-bishopric on the Rhine, seat of the Reichskammer ---
 
 SYE_ideas = {
@@ -1594,5 +1232,165 @@ SYE_ideas = {
 	}
 	sye_river_defense = {
 		defensiveness = 0.15
+	}
+}
+
+WRM_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		trade_efficiency = 0.10
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+
+	trigger = {
+		tag = WRM
+	}
+	free = yes
+
+	wrm_concordat_of_worms = {
+		improve_relation_modifier = 0.25
+	}
+	wrm_key_of_saint_peter = {
+		papal_influence = 1
+	}
+	wrm_city_of_the_diet = {
+		legitimacy = 1
+	}
+	wrm_rhine_tolls = {
+		global_trade_power = 0.10
+	}
+	wrm_wine_of_the_rhine = {
+		production_efficiency = 0.10
+	}
+	wrm_edict_of_worms = {
+		global_unrest = -1
+	}
+	wrm_imperial_cathedral = {
+		prestige = 1
+	}
+}
+
+
+# --- Dorpat: easternmost crusader bishopric on the Peipus frontier ---
+
+DOR_ideas = {
+	start = {
+		global_missionary_strength = 0.02
+		defensiveness = 0.20
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+
+	trigger = {
+		tag = DOR
+	}
+	free = yes
+
+	dor_battle_on_the_ice = {
+		hostile_attrition = 1
+	}
+	dor_monastic_scholars = {
+		technology_cost = -0.05
+	}
+	dor_hanseatic_dorpat = {
+		trade_efficiency = 0.10
+	}
+	dor_sword_brothers_legacy = {
+		manpower_recovery_speed = 0.15
+	}
+	dor_vassals_of_the_see = {
+		global_own_trade_power = 0.10
+	}
+	dor_church_of_the_eastern_march = {
+		global_unrest = -1
+	}
+	dor_see_of_the_east = {
+		papal_influence = 1
+	}
+}
+
+# --- Ösel-Wiek: island bishopric with the privateer fleet of the Oeselians ---
+
+OSL_ideas = {
+	start = {
+		may_perform_slave_raid_on_same_religion = yes
+		privateer_efficiency = 0.15
+	}
+
+	bonus = {
+		global_ship_trade_power = 0.20
+	}
+
+	trigger = {
+		tag = OSL
+	}
+	free = yes
+
+	osl_reconquista_of_the_baltic = {
+		galley_power = 0.20
+		capture_ship_chance = 0.10
+	}
+	osl_see_of_hapsal = {
+		papal_influence = 1
+	}
+	osl_fortress_of_kuressaare = {
+		defensiveness = 0.20
+	}
+	osl_irbe_strait_tolls = {
+		global_own_trade_power = 0.15
+	}
+	osl_island_militia = {
+		manpower_recovery_speed = 0.15
+	}
+	osl_light_ships_of_the_wick = {
+		light_ship_power = 0.15
+	}
+	osl_sonnenburg_abbey = {
+		global_unrest = -1
+	}
+}
+
+# --- Courland: small forest bishopric of the Curonians, pressed by the Order ---
+
+KRB_ideas = {
+	start = {
+		development_cost = -0.10
+		global_unrest = -1
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+
+	trigger = {
+		tag = KRB
+	}
+	free = yes
+
+	krb_curonian_levies = {
+		infantry_power = 0.10
+	}
+	krb_see_of_pilten = {
+		papal_influence = 1
+	}
+	krb_amber_coast = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	krb_forest_of_curland = {
+		production_efficiency = 0.10
+	}
+	krb_neighbor_of_the_order = {
+		diplomatic_reputation = 1
+	}
+	krb_marsh_defenses = {
+		hostile_attrition = 1
+	}
+	krb_livonian_vassals = {
+		manpower_recovery_speed = 0.15
 	}
 }

@@ -3,7 +3,6 @@ culture = hannoverian
 owner = RVA
 controller = RVA
 add_core = RVA
-add_core = MKR
 capital = "Dortmund"
 religion = catholic
 trade_goods = cloth
