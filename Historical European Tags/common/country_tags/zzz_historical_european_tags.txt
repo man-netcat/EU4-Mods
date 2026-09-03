@@ -1,4 +1,6 @@
 #Historical European Tags - new releasable nations inside the Holy Roman Empire
+# Formable-only tags
+LUD = "countries/Ludowingia.txt"
 JUL = "countries/Julich.txt"
 RAV = "countries/Ravensberg.txt"
 HOY = "countries/Hoya.txt"

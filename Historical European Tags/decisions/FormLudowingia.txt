@@ -1,0 +1,101 @@
+# Form the Kingdom of Ludowingia. The House of Ludowingia, the venerable
+# Landgraves of Thuringia, once stretched from the Saale to the Rhine. By
+# uniting Hesse and Thuringia under the lion banner, the Wartburg shall once
+# more be the seat of a great prince.
+
+country_decisions = {
+
+	ludowingian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_ludowingia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = LUD }
+			OR = {
+				tag = HES
+				tag = THU
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 63	# Erfurt
+				province_id = 2965	# Vogtland
+				province_id = 4743	# Weimar
+				province_id = 81	# Oberhessen
+				province_id = 1762	# Kassel
+				province_id = 1876	# Frankfurt
+				province_id = 4774	# Fulda
+				province_id = 78	# Mainz
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = LUD }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 63		# Erfurt
+			owns_core_province = 2965	# Vogtland
+			owns_core_province = 4743	# Weimar
+			owns_core_province = 81		# Oberhessen
+			owns_core_province = 1762	# Kassel
+			owns_core_province = 1876	# Frankfurt
+			owns_core_province = 4774	# Fulda
+			owns_core_province = 78		# Mainz
+		}
+		effect = {
+			change_tag = LUD
+			63 = {
+				move_capital_effect = yes
+			}
+			restore_country_name_effect = yes
+			hesse_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thuringia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_ludowingia_flag
+			swap_non_generic_missions = yes
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
