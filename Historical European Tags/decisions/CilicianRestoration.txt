@@ -121,7 +121,7 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			tag = CYP
 			NOT = {
-				has_country_flag = melusine_legend_restored
+				has_country_flag = melusine_legend_reinforced
 			}
 			NOT = { government = republic }
 			owns_core_province = 94
@@ -137,7 +137,7 @@ country_decisions = {
 		effect = {
 			release = LUX
 			create_union = LUX
-			set_country_flag = melusine_legend_restored
+			set_country_flag = melusine_legend_reinforced
 		}
 		ai_will_do = {
 			factor = 0
