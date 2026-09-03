@@ -1394,3 +1394,43 @@ REV_ideas = {
 		global_missionary_strength = 0.02
 	}
 }
+
+# --- Cilicia: the restored Armenian kingdom of the Taurus and the plain ---
+
+CIL_ideas = {
+	start = {
+		culture_conversion_cost = -0.15
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		global_unrest = -1
+	}
+
+	trigger = {
+		tag = CIL
+	}
+	free = yes
+
+	cil_court_of_sis = {
+		global_missionary_strength = 0.02
+	}
+	cil_reunion_of_the_churches = {
+		diplomatic_reputation = 1
+	}
+	cil_rubenid_restoration = {
+		legitimacy = 1
+	}
+	cil_cukurova_plain = {
+		development_cost = -0.1
+	}
+	cil_taurus_levies = {
+		manpower_recovery_speed = 0.1
+	}
+	cil_armenian_diaspora = {
+		num_accepted_cultures = 1
+	}
+	cil_gregorian_faith = {
+		religious_unity = 0.1
+	}
+}
