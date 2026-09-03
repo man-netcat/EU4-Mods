@@ -1,8 +1,8 @@
 # Restoring the Kingdom of Cilicia
 # When Lusignan Cyprus holds the Cilician plain (Adana and Icel), the Armenian
 # population of the conquered lands looks to the court at Nicosia.
-# Cyprus may found the Kingdom of Cilicia as a Coptic-Armenian vassal, or
-# refuse and hold the plain directly.
+# Cyprus may seat its own house upon the Cilician throne as a junior partner,
+# or refuse and hold the plain directly.
 
 namespace = cil_cilicia
 
@@ -36,6 +36,8 @@ country_event = {
 			factor = 75
 		}
 		hidden_effect = {
+			327 = { add_core = ROOT }
+			2302 = { add_core = ROOT }
 			release = CIL
 			CIL = {
 				change_primary_culture = armenian
@@ -50,16 +52,16 @@ country_event = {
 					religion = coptic
 				}
 			}
-			2202 = { add_core = CIL }
-			2205 = { add_core = CIL }
-			2305 = { add_core = CIL }
-			2306 = { add_core = CIL }
-			2307 = { add_core = CIL }
-			331 = { add_core = CIL }
-			419 = { add_core = CIL }
-			4302 = { add_core = CIL }
+			create_union = CIL
+			2202 = { add_permanent_claim = CIL }
+			2205 = { add_permanent_claim = CIL }
+			2305 = { add_permanent_claim = CIL }
+			2306 = { add_permanent_claim = CIL }
+			2307 = { add_permanent_claim = CIL }
+			331 = { add_permanent_claim = CIL }
+			419 = { add_permanent_claim = CIL }
+			4302 = { add_permanent_claim = CIL }
 		}
-		add_prestige = 15
 		add_trust = {
 			who = CIL
 			value = 25
