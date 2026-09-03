@@ -37,14 +37,15 @@ country_decisions = {
 				change_religion = coptic
 			}
 			create_union = CIL
-			2202 = { add_permanent_claim = CIL }
-			2205 = { add_permanent_claim = CIL }
-			2305 = { add_permanent_claim = CIL }
-			2306 = { add_permanent_claim = CIL }
-			2307 = { add_permanent_claim = CIL }
-			331 = { add_permanent_claim = CIL }
-			419 = { add_permanent_claim = CIL }
-			4302 = { add_permanent_claim = CIL }
+			armenia_area = {
+				add_permanent_claim = CIL
+			}
+			erzurum_area = {
+				add_permanent_claim = CIL
+			}
+			north_kurdistan_area = {
+				add_permanent_claim = CIL
+			}
 			set_country_flag = cil_cilicia_restored
 		}
 		ai_will_do = {
