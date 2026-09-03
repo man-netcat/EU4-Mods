@@ -1,7 +1,7 @@
-# Restoring the crusader and Armenian kingdoms under the Lusignan crown
-# Cyprus holds the titles of Jerusalem and Cilicia historically claimed by
-# its dynasty. These decisions seat a junior partner on each vacant throne,
-# keeping the Cypriot crown as the senior line.
+# Restoring the crusader and Armenian kingdoms under the Lusignan crown,
+# and reinforcing the ancient bond with Luxembourg through the Melusine
+# legend. These decisions seat a junior partner on each vacant throne,
+# sharing the same ruler across the personal union.
 
 country_decisions = {
 
@@ -109,6 +109,38 @@ country_decisions = {
 			1855 = { add_permanent_claim = KOJ }
 			4268 = { add_permanent_claim = KOJ }
 			set_country_flag = formed_jerusalem
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	reinforce_legend_of_melusine = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CYP
+			NOT = {
+				has_country_flag = melusine_legend_restored
+			}
+			NOT = {
+				exists = LUX
+			}
+			NOT = { government = republic }
+			owns_core_province = 94
+		}
+		provinces_to_highlight = {
+			province_id = 94
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 94
+		}
+		effect = {
+			release = LUX
+			create_union = LUX
+			set_country_flag = melusine_legend_restored
 		}
 		ai_will_do = {
 			factor = 0
