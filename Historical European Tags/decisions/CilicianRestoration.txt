@@ -31,8 +31,6 @@ country_decisions = {
 			owns = 2302
 		}
 		effect = {
-			327 = { add_core = ROOT }
-			2302 = { add_core = ROOT }
 			release = CIL
 			CIL = {
 				change_primary_culture = armenian
@@ -85,9 +83,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-			364 = { add_core = ROOT }
-			379 = { add_core = ROOT }
-			1854 = { add_core = ROOT }
 			364 = { add_core = KOJ }
 			379 = { add_core = KOJ }
 			1854 = { add_core = KOJ }
