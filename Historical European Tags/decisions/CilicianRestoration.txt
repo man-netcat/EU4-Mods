@@ -46,6 +46,12 @@ country_decisions = {
 			north_kurdistan_area = {
 				add_permanent_claim = CIL
 			}
+			cukurova_area = {
+				add_permanent_claim = CIL
+			}
+			dulkadir_area = {
+				add_claim = CIL
+			}
 			set_country_flag = cil_cilicia_restored
 		}
 		ai_will_do = {
