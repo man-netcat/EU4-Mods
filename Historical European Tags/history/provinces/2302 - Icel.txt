@@ -2,7 +2,7 @@
 
 owner = KAR
 controller = KAR
-culture = armenian
+culture = turkish
 religion = sunni
 capital = "Ermenek"
 trade_goods = naval_supplies

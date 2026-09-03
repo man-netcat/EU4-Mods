@@ -2,7 +2,7 @@
 
 owner = RAM
 controller = RAM
-culture = armenian
+culture = turkish
 religion = sunni
 capital = "Adana"
 trade_goods = cotton
