@@ -1,0 +1,115 @@
+# Restoring the crusader and Armenian kingdoms under the Lusignan crown
+# Cyprus holds the titles of Jerusalem and Cilicia historically claimed by
+# its dynasty. These decisions seat a junior partner on each vacant throne,
+# keeping the Cypriot crown as the senior line.
+
+country_decisions = {
+
+	restore_kingdom_of_cilicia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CYP
+			NOT = {
+				has_country_flag = cil_cilicia_restored
+			}
+			NOT = {
+				exists = CIL
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 327
+				province_id = 2302
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns = 327
+			owns = 2302
+		}
+		effect = {
+			327 = { add_core = ROOT }
+			2302 = { add_core = ROOT }
+			release = CIL
+			CIL = {
+				change_primary_culture = armenian
+				change_religion = coptic
+			}
+			create_union = CIL
+			2202 = { add_permanent_claim = CIL }
+			2205 = { add_permanent_claim = CIL }
+			2305 = { add_permanent_claim = CIL }
+			2306 = { add_permanent_claim = CIL }
+			2307 = { add_permanent_claim = CIL }
+			331 = { add_permanent_claim = CIL }
+			419 = { add_permanent_claim = CIL }
+			4302 = { add_permanent_claim = CIL }
+			set_country_flag = cil_cilicia_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	restore_kingdom_of_jerusalem = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CYP
+			NOT = {
+				has_country_flag = formed_jerusalem
+			}
+			NOT = {
+				exists = KOJ
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 364
+				province_id = 379
+				province_id = 1854
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 364
+			owns_core_province = 379
+			owns_core_province = 1854
+			379 = {
+				is_state = yes
+			}
+		}
+		effect = {
+			364 = { add_core = ROOT }
+			379 = { add_core = ROOT }
+			1854 = { add_core = ROOT }
+			364 = { add_core = KOJ }
+			379 = { add_core = KOJ }
+			1854 = { add_core = KOJ }
+			release = KOJ
+			KOJ = {
+				change_primary_culture = ROOT
+				change_religion = catholic
+			}
+			create_union = KOJ
+			trans_jordan_area = {
+				add_permanent_claim = KOJ
+			}
+			palestine_area = {
+				add_permanent_claim = KOJ
+			}
+			378 = { add_permanent_claim = KOJ }
+			1855 = { add_permanent_claim = KOJ }
+			4268 = { add_permanent_claim = KOJ }
+			set_country_flag = formed_jerusalem
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
