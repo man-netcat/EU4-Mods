@@ -1,0 +1,42 @@
+# Restore the Duchy of Limburg as a junior partner under the House of
+# Luxembourg. When Luxembourg holds Loon, the seat of the Duchy, it may
+# seat a junior partner on the ducal throne of the Meuse.
+
+country_decisions = {
+
+	restore_duchy_of_limburg = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = LUX
+			NOT = {
+				has_country_flag = duchy_of_limburg_restored
+			}
+			NOT = {
+				exists = LIM
+			}
+			NOT = { government = republic }
+			owns_core_province = 2974
+		}
+		provinces_to_highlight = {
+			province_id = 2974
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 2974
+		}
+		effect = {
+			2974 = { add_core = LIM }
+			release = LIM
+			create_union = LIM
+			brabant_area = {
+				add_permanent_claim = LIM
+			}
+			set_country_flag = duchy_of_limburg_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

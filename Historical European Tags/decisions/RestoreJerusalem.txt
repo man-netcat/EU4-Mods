@@ -1,0 +1,62 @@
+# Restore the Kingdom of Jerusalem as a junior partner under the Lusignan
+# crown. Cyprus may set its crown upon the Holy Land as a younger branch of
+# the house while remaining sovereign. Coexists with the vanilla decision.
+
+country_decisions = {
+
+	restore_kingdom_of_jerusalem = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CYP
+			NOT = {
+				has_country_flag = formed_jerusalem
+			}
+			NOT = {
+				exists = KOJ
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 364
+				province_id = 379
+				province_id = 1854
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 364
+			owns_core_province = 379
+			owns_core_province = 1854
+			379 = {
+				is_state = yes
+			}
+		}
+		effect = {
+			364 = { add_core = KOJ }
+			379 = { add_core = KOJ }
+			1854 = { add_core = KOJ }
+			release = KOJ
+			KOJ = {
+				change_primary_culture = ROOT
+				change_religion = catholic
+			}
+			create_union = KOJ
+			trans_jordan_area = {
+				add_permanent_claim = KOJ
+			}
+			palestine_area = {
+				add_permanent_claim = KOJ
+			}
+			378 = { add_permanent_claim = KOJ }
+			1855 = { add_permanent_claim = KOJ }
+			4268 = { add_permanent_claim = KOJ }
+			set_country_flag = formed_jerusalem
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

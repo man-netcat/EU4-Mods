@@ -1,0 +1,35 @@
+# Reinforce the Legend of Melusine. The old tales bind the Lusignan house of
+# Cyprus to Luxembourg, which bears the same name and blood. When Cyprus
+# holds the duchy of Luxembourg, it may seat a junior partner there.
+
+country_decisions = {
+
+	reinforce_legend_of_melusine = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CYP
+			NOT = {
+				has_country_flag = melusine_legend_reinforced
+			}
+			NOT = { government = republic }
+			owns_core_province = 94
+		}
+		provinces_to_highlight = {
+			province_id = 94
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 94
+		}
+		effect = {
+			release = LUX
+			create_union = LUX
+			set_country_flag = melusine_legend_reinforced
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

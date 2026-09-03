@@ -1,0 +1,60 @@
+# Restore the Kingdom of Cilicia as a junior partner under the Lusignan
+# crown. Cyprus grants its seat on the Cilician plain to the restored
+# kingdom, drawing the Armenians of the east to its cause.
+
+country_decisions = {
+
+	restore_kingdom_of_cilicia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CYP
+			NOT = {
+				has_country_flag = cil_cilicia_restored
+			}
+			NOT = {
+				exists = CIL
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 327
+				province_id = 2302
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 327
+			owns_core_province = 2302
+		}
+		effect = {
+			release = CIL
+			CIL = {
+				change_primary_culture = armenian
+				change_religion = coptic
+			}
+			create_union = CIL
+			armenia_area = {
+				add_permanent_claim = CIL
+			}
+			erzurum_area = {
+				add_permanent_claim = CIL
+			}
+			north_kurdistan_area = {
+				add_permanent_claim = CIL
+			}
+			cukurova_area = {
+				add_permanent_claim = CIL
+			}
+			dulkadir_area = {
+				add_claim = CIL
+			}
+			set_country_flag = cil_cilicia_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
