@@ -123,9 +123,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = melusine_legend_restored
 			}
-			NOT = {
-				exists = LUX
-			}
 			NOT = { government = republic }
 			owns_core_province = 94
 		}
@@ -135,6 +132,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			owns_core_province = 94
 		}
 		effect = {
 			release = LUX
