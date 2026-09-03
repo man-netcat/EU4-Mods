@@ -27,8 +27,8 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns = 327
-			owns = 2302
+			owns_core_province = 327
+			owns_core_province = 2302
 		}
 		effect = {
 			release = CIL
