@@ -1,0 +1,113 @@
+# Brunswick-Lüneburg
+
+graphical_culture = westerngfx
+
+color = { 51  102  51 }
+
+revolutionary_colors = { 0  14  0 }
+
+historical_score = 350
+
+historical_idea_groups = {
+	administrative_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	economic_ideas
+	trade_ideas
+	innovativeness_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	q_14_bs
+	q_15_bs
+	q_16_bs
+	q_17_bs
+	q_18_bs
+}
+
+monarch_names = {
+	"Georg" = 150
+	"Ernst" = 120
+	"Friedrich" = 100
+	"Wilhelm" = 100
+	"Heinrich" = 80
+	"Bernhard" = 60
+	"Otto" = 50
+	"Albrecht" = 40
+	"Johann" = 40
+	"Karl" = 30
+	"Ludwig" = 30
+	"Christian" = 30
+}
+
+leader_names = {
+	Georg
+	Ernst
+	Friedrich
+	Wilhelm
+	Heinrich
+	Bernhard
+	Otto
+	Albrecht
+	Johann
+	Karl
+	Ludwig
+	Christian
+}
+
+ruler_names = {
+	"Georg" = 150
+	"Ernst" = 120
+	"Friedrich" = 100
+	"Wilhelm" = 100
+	"Heinrich" = 80
+	"Bernhard" = 60
+	"Otto" = 50
+	"Albrecht" = 40
+	"Johann" = 40
+	"Karl" = 30
+	"Ludwig" = 30
+	"Christian" = 30
+}
+
+queen_names = {
+	"Maria" = 100
+	"Anna" = 80
+	"Elisabeth" = 80
+	"Katharina" = 60
+	"Margarethe" = 50
+	"Sophie" = 40
+	"Dorothea" = 30
+	"Helene" = 30
+}
+
+heir_names = {
+	"Georg" = 150
+	"Ernst" = 120
+	"Friedrich" = 100
+	"Wilhelm" = 100
+	"Heinrich" = 80
+	"Bernhard" = 60
+	"Otto" = 50
+	"Albrecht" = 40
+	"Johann" = 40
+	"Karl" = 30
+	"Ludwig" = 30
+	"Christian" = 30
+}
+
+female_names = {
+	"Maria"
+	"Anna"
+	"Elisabeth"
+	"Katharina"
+	"Margarethe"
+	"Sophie"
+	"Dorothea"
+	"Helene"
+	"Christine"
+	"Amalie"
+}
+

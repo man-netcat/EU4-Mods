@@ -1,0 +1,410 @@
+# Livonian bishoprics as vassals. In this mod the prince-bishoprics of Dorpat,
+# Osel-Wiek, Courland and Reval are vassals of the Livonian Order (LIV), not church
+# privileges, so dissolving or purchasing one means integrating the see-holding vassal.
+# Each decision fires one of these picker events to choose which remaining bishopric.
+
+namespace = het_liv
+
+# LIV dissolves one of its bishopric vassals
+country_event = {
+	id = het_liv.1
+	title = flavor_liv.2.t
+	desc = flavor_liv.2.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	is_triggered_only = yes
+
+	option = {	# Dissolve Dorpat's Bishopric
+		name = flavor_liv.2.a
+		goto = 1834
+		trigger = {
+			DOR = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = DOR
+		add_absolutism = 15
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		1834 = {
+			spawn_province_religious_rebels = {
+				size = 3
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Dissolve Osel-Wiek's Bishopric
+		name = flavor_liv.2.b
+		goto = 35
+		trigger = {
+			OSL = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = OSL
+		add_absolutism = 15
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		35 = {
+			spawn_province_religious_rebels = {
+				size = 3
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Dissolve Courland's Bishopric
+		name = flavor_liv.2.c
+		goto = 39
+		trigger = {
+			KRB = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = KRB
+		add_absolutism = 10
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -5
+		}
+		39 = {
+			spawn_province_religious_rebels = {
+				size = 2
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Dissolve Reval's Bishopric
+		name = flavor_liv.2.d
+		goto = 36
+		trigger = {
+			REV = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = REV
+		add_absolutism = 5
+		36 = {
+			spawn_province_religious_rebels = {
+				size = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Riga commands the Livonian Order to dissolve one of its bishopric vassals
+country_event = {
+	id = het_liv.2
+	title = flavor_liv.2.t
+	desc = flavor_liv.2.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	is_triggered_only = yes
+
+	option = {	# Dissolve Dorpat's Bishopric
+		name = flavor_liv.2.a
+		goto = 1834
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			DOR = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = DOR
+		}
+		add_absolutism = 15
+		add_prestige = 10
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		1834 = {
+			spawn_province_religious_rebels = {
+				size = 3
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Dissolve Osel-Wiek's Bishopric
+		name = flavor_liv.2.b
+		goto = 35
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			OSL = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = OSL
+		}
+		add_absolutism = 15
+		add_prestige = 10
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		35 = {
+			spawn_province_religious_rebels = {
+				size = 3
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Dissolve Courland's Bishopric
+		name = flavor_liv.2.c
+		goto = 39
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			KRB = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = KRB
+		}
+		add_absolutism = 10
+		add_prestige = 10
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -5
+		}
+		39 = {
+			spawn_province_religious_rebels = {
+				size = 2
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Dissolve Reval's Bishopric
+		name = flavor_liv.2.d
+		goto = 36
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			REV = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = REV
+		}
+		add_absolutism = 5
+		add_prestige = 10
+		36 = {
+			spawn_province_religious_rebels = {
+				size = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# LIV purchases one of its bishopric vassals
+country_event = {
+	id = het_liv.3
+	title = flavor_liv.3.t
+	desc = flavor_liv.3.desc
+	picture = CORRUPTION_eventPicture
+	is_triggered_only = yes
+
+	option = {	# Purchase Dorpat's Bishopric
+		name = flavor_liv.3.a
+		goto = 1834
+		trigger = {
+			DOR = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = DOR
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Purchase Osel-Wiek's Bishopric
+		name = flavor_liv.3.b
+		goto = 35
+		trigger = {
+			OSL = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = OSL
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Purchase Courland's Bishopric
+		name = flavor_liv.3.c
+		goto = 39
+		trigger = {
+			KRB = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = KRB
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Purchase Reval's Bishopric
+		name = flavor_liv.3.d
+		goto = 36
+		trigger = {
+			REV = {
+				is_subject_of = ROOT
+			}
+		}
+		inherit = REV
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -1
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Riga commands the Livonian Order to purchase a bishopric
+country_event = {
+	id = het_liv.4
+	title = flavor_liv.3.t
+	desc = flavor_liv.3.desc
+	picture = CORRUPTION_eventPicture
+	is_triggered_only = yes
+
+	option = {	# Purchase Dorpat's Bishopric
+		name = flavor_liv.3.a
+		goto = 1834
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			DOR = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = DOR
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -4
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Purchase Osel-Wiek's Bishopric
+		name = flavor_liv.3.b
+		goto = 35
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			OSL = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = OSL
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -4
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Purchase Courland's Bishopric
+		name = flavor_liv.3.c
+		goto = 39
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			KRB = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = KRB
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -4
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {	# Purchase Reval's Bishopric
+		name = flavor_liv.3.d
+		goto = 36
+		trigger = {
+			LIV = {
+				is_subject_of = ROOT
+			}
+			REV = {
+				is_subject_of = LIV
+			}
+		}
+		LIV = {
+			inherit = REV
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_years_of_income = -4
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

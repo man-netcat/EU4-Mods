@@ -1,0 +1,71 @@
+# Dissolve the prince-bishoprics of Livonia. In this mod each bishopric is a vassal of
+# the Livonian Order, so this decision integrates the see-holding vassal rather than
+# revoking a church privilege. The base-game decision of the same role is hidden: the
+# bishopric privileges it gated on are removed by the LIV history override.
+
+country_decisions = {
+
+	het_dissolve_bishopric = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = LIV
+			NOT = { government = republic }
+			OR = {
+				DOR = { is_subject_of = ROOT }
+				OSL = { is_subject_of = ROOT }
+				KRB = { is_subject_of = ROOT }
+				REV = { is_subject_of = ROOT }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					DOR = { is_subject_of = ROOT }
+					province_id = 1834
+				}
+				AND = {
+					OSL = { is_subject_of = ROOT }
+					province_id = 35
+				}
+				AND = {
+					KRB = { is_subject_of = ROOT }
+					province_id = 39
+				}
+				AND = {
+					REV = { is_subject_of = ROOT }
+					province_id = 36
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				DOR = { is_subject_of = ROOT }
+				OSL = { is_subject_of = ROOT }
+				KRB = { is_subject_of = ROOT }
+				REV = { is_subject_of = ROOT }
+			}
+			custom_trigger_tooltip = {
+				tooltip = liv_tried_to_get_rid_of_bishopric_tt
+				OR = {
+					NOT = { has_country_flag = liv_tried_to_get_rid_of_bishopric }
+					had_country_flag = {
+						flag = liv_tried_to_get_rid_of_bishopric
+						days = 730
+					}
+				}
+			}
+		}
+		effect = {
+			clr_country_flag = liv_tried_to_get_rid_of_bishopric
+			set_country_flag = liv_tried_to_get_rid_of_bishopric
+			country_event = {
+				id = het_liv.1
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+}

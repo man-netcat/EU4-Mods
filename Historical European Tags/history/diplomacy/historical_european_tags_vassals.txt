@@ -73,18 +73,22 @@ vassal = {
 	end_date = 1821.1.1
 }
 
-# Freising under Bavaria-Landshut
-vassal = {
-	first = LBV
-	second = FRE
-	start_date = 1444.1.1
-	end_date = 1821.1.1
-}
+# Freising is independent with imperial immediacy
 
 # Gazaria under Genoa
 vassal = {
 	first = GEN
 	second = GZR
+	start_date = 1444.1.1
+	end_date = 1821.1.1
+}
+
+# Mecklenburg-Stargard (the junior branch) under Mecklenburg-Schwerin (the
+# senior line). The two lines of the House of Mecklenburg rule as one, the
+# Stargard branch as a junior partner under the Schwerin crown.
+union = {
+	first = MKL
+	second = MST
 	start_date = 1444.1.1
 	end_date = 1821.1.1
 }

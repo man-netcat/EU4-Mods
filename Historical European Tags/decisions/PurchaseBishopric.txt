@@ -1,0 +1,60 @@
+# Purchase the prince-bishoprics of Livonia. In this mod each bishopric is a vassal of
+# the Livonian Order, so this decision integrates the see-holding vassal by gold rather
+# than force.
+
+country_decisions = {
+
+	het_purchase_bishopric = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = LIV
+			NOT = { government = republic }
+			OR = {
+				DOR = { is_subject_of = ROOT }
+				OSL = { is_subject_of = ROOT }
+				KRB = { is_subject_of = ROOT }
+				REV = { is_subject_of = ROOT }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					DOR = { is_subject_of = ROOT }
+					province_id = 1834
+				}
+				AND = {
+					OSL = { is_subject_of = ROOT }
+					province_id = 35
+				}
+				AND = {
+					KRB = { is_subject_of = ROOT }
+					province_id = 39
+				}
+				AND = {
+					REV = { is_subject_of = ROOT }
+					province_id = 36
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			treasury = 50
+			OR = {
+				DOR = { is_subject_of = ROOT }
+				OSL = { is_subject_of = ROOT }
+				KRB = { is_subject_of = ROOT }
+				REV = { is_subject_of = ROOT }
+			}
+		}
+		effect = {
+			add_treasury = -50
+			country_event = {
+				id = het_liv.3
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}

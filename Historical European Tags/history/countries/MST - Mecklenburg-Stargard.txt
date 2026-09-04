@@ -8,3 +8,18 @@ capital = 4749	# Neubrandenburg
 fixed_capital = 4749
 
 #releasable
+
+# Dummy ruler of the Stargard line so MST knows von Mecklenburg as its native
+# dynasty and can exist as Mecklenburg's junior partner at the 1444 start.
+# Mirrors the base Bayreuth (BYT) dummy: a von Hohenzollern monarch that lets
+# Ansbach hold Bayreuth in a personal union.
+1441.1.1 = {
+	monarch = {
+		name = "Ulrich"
+		dynasty = "von Mecklenburg"
+		birth_date = 1426.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

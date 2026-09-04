@@ -1,0 +1,81 @@
+# Riga orders the Livonian Order to dissolve one of its prince-bishoprics. The Order is
+# a subject of Riga, so Riga commands it to integrate the see-holding vassal.
+
+country_decisions = {
+
+	het_rig_dissolve_bishopric = {
+		major = yes
+		potential = {
+			has_country_flag = rig_can_end_confederacy_flag
+			LIV = {
+				is_subject_of = ROOT
+				OR = {
+					exists = DOR
+					exists = OSL
+					exists = KRB
+					exists = REV
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					LIV = { exists = DOR }
+					province_id = 1834
+				}
+				AND = {
+					LIV = { exists = OSL }
+					province_id = 35
+				}
+				AND = {
+					LIV = { exists = KRB }
+					province_id = 39
+				}
+				AND = {
+					LIV = { exists = REV }
+					province_id = 36
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			LIV = {
+				is_subject_of = ROOT
+			}
+			OR = {
+				DOR = { is_subject_of = LIV }
+				OSL = { is_subject_of = LIV }
+				KRB = { is_subject_of = LIV }
+				REV = { is_subject_of = LIV }
+			}
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			LIV = {
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+			}
+			stability = 1
+			custom_trigger_tooltip = {
+				tooltip = liv_tried_to_get_rid_of_bishopric_tt
+				OR = {
+					NOT = { has_country_flag = liv_tried_to_get_rid_of_bishopric }
+					had_country_flag = {
+						flag = liv_tried_to_get_rid_of_bishopric
+						days = 730
+					}
+				}
+			}
+		}
+		effect = {
+			clr_country_flag = liv_tried_to_get_rid_of_bishopric
+			set_country_flag = liv_tried_to_get_rid_of_bishopric
+			add_stability = -1
+			country_event = {
+				id = het_liv.2
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+}

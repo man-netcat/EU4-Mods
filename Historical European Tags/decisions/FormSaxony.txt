@@ -1,0 +1,182 @@
+# Form the Kingdom of Saxony. SXN mirrors the base saxony_nation formable
+# (6 provinces in the three Saxon areas) but adds an admin tech 10 and
+# Protestant gate. Any Saxon or Lower Saxon state may claim the title.
+
+country_decisions = {
+
+	sxn_saxon_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_sxn_saxony_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = SXN }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = saxon
+				primary_culture = lower_saxon
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 59
+				AND = {
+					NOT = { ROOT = { owns_core_province = 61 } }
+					province_id = 62
+				}
+				AND = {
+					NOT = { ROOT = { owns_core_province = 62 } }
+					province_id = 61
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 6
+								OR = {
+									area = south_saxony_area
+									area = thuringia_area
+									area = northern_saxony_area
+								}
+								is_core = root
+							}
+						}
+						owns_core_province = 59
+						OR = {
+							owns_core_province = 61
+							owns_core_province = 62
+						}
+					}
+					OR = {
+						area = south_saxony_area
+						area = thuringia_area
+						area = northern_saxony_area
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+			OR = { #Wittenberg was the seat of the electoral dignity
+				tag = SAX
+				NOT = { exists = SAX }
+			}
+			owns_core_province = 59			#Wittenberg
+			OR = {
+				owns_core_province = 61			#Dresden
+				owns_core_province = 62			#Leipzig
+			}
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = south_saxony_area
+					area = thuringia_area
+					area = northern_saxony_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = SXN
+			restore_country_name_effect = yes
+			south_saxony_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			northern_saxony_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			thuringia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			braunschweig_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			weser_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			holstein_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_sxn_saxony_flag
+
+			if = {
+				limit = {
+					total_development = 100
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

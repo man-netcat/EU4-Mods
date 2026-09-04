@@ -1,0 +1,63 @@
+# Riga orders the Livonian Order to purchase a prince-bishopric. The Order is a subject
+# of Riga, so Riga pays to integrate the see-holding vassal.
+
+country_decisions = {
+
+	het_rig_purchase_bishopric = {
+		major = yes
+		potential = {
+			has_country_flag = rig_can_end_confederacy_flag
+			LIV = {
+				is_subject_of = ROOT
+				OR = {
+					exists = DOR
+					exists = OSL
+					exists = KRB
+					exists = REV
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					LIV = { exists = DOR }
+					province_id = 1834
+				}
+				AND = {
+					LIV = { exists = OSL }
+					province_id = 35
+				}
+				AND = {
+					LIV = { exists = KRB }
+					province_id = 39
+				}
+				AND = {
+					LIV = { exists = REV }
+					province_id = 36
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			treasury = 100
+			LIV = {
+				is_subject_of = ROOT
+			}
+			OR = {
+				DOR = { is_subject_of = LIV }
+				OSL = { is_subject_of = LIV }
+				KRB = { is_subject_of = LIV }
+				REV = { is_subject_of = LIV }
+			}
+		}
+		effect = {
+			add_treasury = -100
+			country_event = {
+				id = het_liv.4
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}

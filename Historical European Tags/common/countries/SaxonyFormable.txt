@@ -1,0 +1,97 @@
+#Country Name: Please see filename.
+# Formable Kingdom of Saxony. Distinct from the Saxe-Wittenberg (SAX) 1444
+# tag; formed by any Saxon-culture state that reunites the Saxon lands.
+
+graphical_culture = westerngfx
+
+color = { 155  147  180 }
+revolutionary_colors = { 15 0 5 }
+
+historical_score = 300
+
+preferred_religion = protestant
+
+historical_idea_groups = {
+	diplomatic_ideas
+	defensive_ideas
+	innovativeness_ideas
+	offensive_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Friedrich #0" = 80
+	"Johann Georg #0" = 80
+	"Friedrich August #0" = 60
+	"Albrecht #3" = 40
+	"Christian #0" = 40
+	"Heinrich #4" = 20
+	"Rudolf #2" = 20
+	"August #0" = 20
+	"Ernst #0" = 20
+	"Friedrich Christian #0" = 20
+	"Georg #0" = 20
+	"Moritz #0" = 20
+	"Alexander #0" = 15
+	"Anton #0" = 15
+	"Hektor #0" = 15
+	"Johann #0" = 15
+	"Karl #0" = 15
+	"Wilhelm #0" = 15
+	"Magnus #0" = 10
+	"Maximilian #0" = 10
+	"Severinus #0" = 10
+	"Wolfgang #0" = 10
+	"Konrad #0" = 10
+	"Otto #0" = 10
+	"Balthasar #0" = 10
+	"Hermann #0" = 10
+	"Günther #0" = 0
+	"Wolfram #0" = 0
+
+	"Amalia #0" = -1
+	"Bianka #0" = -1
+	"Eleonora #0" = -1
+}
+
+leader_names = {
+	"Friedrich von Wettin" "Albrecht der Beherzte" "Moritz von Sachsen"
+	"Johann Georg von Sachsen" "Ernst von Sachsen" "Georg der Bärtige"
+	"Heinrich der Fromme" "August von Sachsen" "Christian von Sachsen"
+	"Konrad der Große" "Otto von Sachsen" "Balthasar von Thüringen"
+	"Hermann von Sachsen" "Karl von Wettin" "Rudolf von Sachsen"
+}
+
+ship_names = {
+	"Rautenkranz von Sachsen" "Sächsischer Löwe" "Wittenberg"
+	"Dresden" "Leipzig" "Meißen" "Torgau" "Weimar" "Pirna"
+}
+
+army_names = {
+	"Kurfürstliche Garde" "Armee von $PROVINCE$"
+}
+
+fleet_names = {
+	"Sächsische Flotte"
+}
