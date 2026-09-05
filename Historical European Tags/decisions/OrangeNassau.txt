@@ -1,0 +1,81 @@
+# Claim the Principality of Orange for the House of Nassau. The old title
+# of the Princes of Orange passed to the Nassau house through the marriage
+# of Claudia of Chalon to Henry of Nassau-Breda, and fell to William the
+# Silent on the death of his cousin Rene de Chalon in 1544. Nassau holding
+# the town of Orange makes the old claim ours by right and by arms, and may
+# seat a junior partner of our house upon the princely throne.
+
+country_decisions = {
+
+	claim_principality_of_orange = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = NSA
+			NOT = {
+				has_country_flag = ora_orange_claimed
+			}
+			NOT = {
+				exists = ORA
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			province_id = 202
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_province = 202
+		}
+		effect = {
+			release = ORA
+			create_union = ORA
+			set_country_flag = ora_orange_claimed
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# The mirror: Orange (ORA) reclaiming the Nassau homeland. The same
+	# Chalon-Nassau marriage that carried Orange to Nassau runs the other
+	# way: Rene de Chalon was born a Nassau, son of Claudia of Chalon and
+	# Henry of Nassau-Breda. An Orange prince of the Chalon line may claim
+	# the old county of his forebears and seat a junior partner of the
+	# house upon the Nassau throne, joining the bugles of Orange to the
+	# lion of Nassau.
+
+	claim_county_of_nassau = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = ORA
+			NOT = {
+				has_country_flag = ora_nassau_claimed
+			}
+			NOT = {
+				exists = NSA
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			province_id = 83
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_province = 83
+		}
+		effect = {
+			release = NSA
+			create_union = NSA
+			set_country_flag = ora_nassau_claimed
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

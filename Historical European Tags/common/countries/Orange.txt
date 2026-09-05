@@ -1,0 +1,54 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 242 128 32 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	trade_ideas
+	economic_ideas
+	innovativeness_ideas
+	religious_ideas
+	offensive_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Louis #0" = 35
+	"Guillaume #0" = 20
+	"Jean #0" = 15
+	"Philibert #0" = 15
+	"Rene #0" = 10
+	"Charles #0" = 5
+}
+
+leader_names = {
+	Chalon Arlay LeBaux Baux Jonquieres Montfaucon Sassenage
+}
+
+ship_names = {
+	"Orange" "Le Baux" "Chalon" "Avignon" "Rhone"
+}
+
+army_names = {
+	"Armee de $PROVINCE$"
+}

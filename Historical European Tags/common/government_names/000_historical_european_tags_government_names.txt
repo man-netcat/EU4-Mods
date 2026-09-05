@@ -1,0 +1,426 @@
+# Historical European Tags - custom government names
+# The 000_ prefix makes this file load before vanilla 00_/01_/zz_default
+# government_names blocks. The base game picks the first valid block it
+# finds, so our tag-scoped blocks win over default_monarchy etc.
+
+# The Principality of Orange. A sovereign state within the Holy Roman
+# Empire, ruled by the princes of the House of Orange. Not in the HRE
+# de facto, so vanilla default_monarchy would give it "Duchy"; we give
+# it its historical title.
+
+orange_principality = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = PRINCE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = ORA
+		government = monarchy
+	}
+}
+
+# The Landgraviate of Thuringia, the seat of the Ludowingian dynasty.
+# A landgraviate is a county-level title of the Holy Roman Empire, but
+# vanilla gives it "Duchy"; we give it its historical style.
+
+ludowingia_landgraviate = {
+	rank = {
+		1 = LANDGRAVIATE
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LANDGRAVE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = LANDGRAVINE
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = LUD
+		government = monarchy
+	}
+}
+
+# The Principality of Gottingen, a partition of the Duchy of
+# Brunswick-Luneburg under the Welf dynasty. Vanilla would give it
+# "Duchy"; we give it its historical title.
+
+gottingen_principality = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = PRINCE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = GTN
+		government = monarchy
+	}
+}
+
+# The Despotate of Dobruja, a Bulgarian successor state on the Black Sea
+# coast. Vanilla would give it "Duchy"; we give it its historical title.
+
+dobruja_despotate = {
+	rank = {
+		1 = DESPOTATE
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DESPOT
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = DESPOTISSA
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = DOB
+		government = monarchy
+	}
+}
+
+# The Tsardom of Vidin, a Bulgarian successor state under the Sratsimir
+# dynasty. Vanilla would give it "Duchy"; we give it its historical
+# title, matching the Tsardom of Bulgaria it claimed to be.
+
+vidin_tsardom = {
+	rank = {
+		1 = TSARDOM
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = TSAR
+		2 = EMPEROR
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = TSARITSA
+		2 = EMPRESS
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = TSAR
+		2 = EMPEROR_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = TSARITSA
+		2 = EMPRESS_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = TSAREVICH
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = TSAREVNA
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = VID
+		government = monarchy
+	}
+}
+
+# The County Palatine of the Rhine (Upper Palatinate) and the County
+# Palatine of Zweibrucken. Vanilla has a palatine_monarchy block for the
+# Palatinate tag; we reproduce it for our palatine tags.
+
+county_palatine = {
+	rank = {
+		1 = COUNTY_PALATINE
+		2 = KINGDOM_PALATINE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = COUNT_PALATINE
+		2 = KING_PALATINE
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS_PALATINE
+		2 = QUEEN_PALATINE
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		OR = {
+			tag = NMB
+			tag = ZWE
+		}
+		government = monarchy
+	}
+}
+
+# The Prince-Abbey of St. Gallen and the Abbey of Fulda. Both are
+# imperial abbeys, not bishoprics; vanilla would give them "Bishopric".
+
+st_gallen_abbey = {
+	rank = {
+		1 = ABBEY
+		2 = ARCHBISHOPRIC
+		3 = PATRIARCHATE
+	}
+
+	ruler_male = {
+		1 = ABBOT
+		2 = ARCHBISHOP
+		3 = PATRIARCH
+	}
+
+	ruler_female = {
+		1 = ABBESS
+		2 = ARCHBISHOP_fem
+		3 = MATRIARCH
+	}
+
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = STG
+		government = theocracy
+	}
+}
+
+fulda_abbey = {
+	rank = {
+		1 = ABBEY
+		2 = ARCHBISHOPRIC
+		3 = PATRIARCHATE
+	}
+
+	ruler_male = {
+		1 = ABBOT
+		2 = ARCHBISHOP
+		3 = PATRIARCH
+	}
+
+	ruler_female = {
+		1 = ABBESS
+		2 = ARCHBISHOP_fem
+		3 = MATRIARCH
+	}
+
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = FDA
+		government = theocracy
+	}
+}

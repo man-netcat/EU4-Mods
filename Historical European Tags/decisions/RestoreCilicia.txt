@@ -32,6 +32,7 @@ country_decisions = {
 		effect = {
 			release = CIL
 			CIL = {
+				set_government_rank = 2
 				change_primary_culture = armenian
 				change_religion = coptic
 			}

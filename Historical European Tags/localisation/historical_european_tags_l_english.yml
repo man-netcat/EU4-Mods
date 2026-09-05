@@ -1,4 +1,9 @@
 ﻿l_english:
+  LANDGRAVIATE:0 "Landgraviate"
+  LANDGRAVE:0 "Landgrave"
+  LANDGRAVINE:0 "Landgravine"
+  ABBEY:0 "Abbey"
+  ABBOT:0 "Abbot"
   restore_kingdom_of_cilicia_title:0 "Restore the Kingdom of Cilicia"
   restore_kingdom_of_cilicia_desc:0 "The plain of Cilicia lies under our rule, and the Armenians of the fallen kingdom look to our court at Nicosia. Their church remembers the kings of Sis, and their nobles still speak of the Rubenids who raised Cilicia to a throne. We may seat one of our own house upon the throne of Sis, ruling the old kingdom as a junior partner under our crown and drawing the Armenians of the east to our cause."
   restore_kingdom_of_jerusalem_title:0 "Restore the Kingdom of Jerusalem"
@@ -21,3 +26,7 @@
   het_rig_purchase_bishopric_desc:0 "The Livonian Order holds the prince-bishoprics as vassals, and the Order is under our command. We may pay the gold to buy out a bishopric, incorporating its estates into the Order's lands until they pass under our own crown."
   brl_brunswick_luneburg_title:0 "Form Brunswick-Lüneburg"
   brl_brunswick_luneburg_desc:0 "The Duchy of Brunswick-Lüneburg was a historical state of the Holy Roman Empire. Formed from the union of Brunswick and Lüneburg under the Welf dynasty, it became one of the most important states in northern Germany."
+  claim_principality_of_orange_title:0 "Claim the Principality of Orange"
+  claim_principality_of_orange_desc:0 "The town of Orange lies under our rule, and with it the old seat of the Princes of Orange. That ancient title passed through the marriage of Claudia of Chalon to Henry of Nassau-Breda, and fell to our house when her son, Rene de Chalon, died at the siege of Saint-Dizier without an heir. We may seat a junior partner of our line upon the princely throne of Orange, joining the lion of Nassau to the bugles of Orange and drawing the lords of the Rhone to our cause."
+  claim_county_of_nassau_title:0 "Claim the County of Nassau"
+  claim_county_of_nassau_desc:0 "The old county of Nassau lies under our rule, the seat of the house from which our Chalon line descends. When Claudia of Chalon wed Henry of Nassau-Breda, the two houses became one blood, and her son Rene carried both names to the grave at Saint-Dizier. We may seat a junior partner of our line upon the Hessian throne of Nassau, joining the bugles of Orange to the lion of Nassau and restoring the bond between our lands."
