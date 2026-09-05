@@ -1,0 +1,50 @@
+# Restore the Principality of Antioch as a junior partner under the Lusignan
+# crown. The kings of Cyprus are the heirs male of the house of Poitiers-
+# Antioch, so the principality passes to the Cypriot crown as a younger
+# branch while remaining sovereign.
+
+country_decisions = {
+
+	restore_principality_of_antioch = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CYP
+			NOT = {
+				has_country_flag = atn_antioch_restored
+			}
+			NOT = {
+				exists = ATN
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2313
+				province_id = 377
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 2313
+			owns_core_province = 377
+		}
+		effect = {
+			release = ATN
+			ATN = {
+				set_government_rank = 1
+				change_primary_culture = ROOT
+				change_religion = catholic
+			}
+			create_union = ATN
+			aleppo_area = {
+				add_permanent_claim = ATN
+			}
+			set_country_flag = atn_antioch_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

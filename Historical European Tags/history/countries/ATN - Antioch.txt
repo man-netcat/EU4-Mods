@@ -1,0 +1,58 @@
+#Country Name: Antioch
+
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = cosmopolitan_french
+religion = catholic
+technology_group = western
+capital = 2313	# Antioch (Antakya)
+fixed_capital = 2313 # Cannot move capital away from this province & no power cost to move to it
+historical_friend = CYP
+historical_friend = FRA
+
+#releasable
+
+1360.1.1 = {
+	monarch = {
+		name = "Bohemond"
+		dynasty = "de Poitiers"
+		birth_date = 1330.1.1
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1370.1.1 = {
+	monarch = {
+		name = "Raymond"
+		dynasty = "de Poitiers"
+		birth_date = 1352.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1390.1.1 = {
+	monarch = {
+		name = "John"
+		dynasty = "de Poitiers"
+		birth_date = 1370.1.1
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1420.1.1 = {
+	monarch = {
+		name = "Bohemond"
+		dynasty = "de Poitiers"
+		birth_date = 1402.1.1
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}

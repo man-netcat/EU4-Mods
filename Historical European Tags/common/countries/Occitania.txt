@@ -1,0 +1,78 @@
+#Country Name: Please see filename.
+# Formable Occitania. Formed by any Occitan, Gascon or Aquitanian state that
+# reunites the Toulousan, Gascon and Provencal lands. The map colour is the
+# mean of Gascony (32,144,204), Toulouse (127,170,146) and Provence
+# (93,160,163): { 84 158 171 }.
+
+graphical_culture = westerngfx
+
+color = { 84  158  171 }
+
+revolutionary_colors = { 15 5 0 }
+
+historical_score = 300
+
+historical_idea_groups = {
+	administrative_ideas
+	diplomatic_ideas
+	trade_ideas
+	offensive_ideas
+	defensive_ideas
+	economic_ideas
+	religious_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	western_knights
+	western_infantry
+	western_cavalry
+	western_musketeers
+	western_rifles
+}
+
+monarch_names = {
+	"Raymond #0" = 100
+	"Bernard #0" = 80
+	"Guillaume #0" = 80
+	"Bertrand #0" = 60
+	"Alphonse #0" = 60
+	"Pons #0" = 50
+	"Gaston #0" = 50
+	"Roger #0" = 40
+	"Pierre #0" = 40
+	"Jean #0" = 40
+	"Henri #0" = 40
+	"Arnaud #0" = 30
+	"Geraud #0" = 30
+	"Raimon #0" = 20
+	"Jourdain #0" = 20
+	"Guilhem #0" = 20
+	"Aymeric #0" = 10
+
+	"Constance #0" = -1
+	"Alice #0" = -1
+	"Philippa #0" = -1
+	"Jeanne #0" = -1
+	"Marguerite #0" = -1
+}
+
+leader_names = {
+	"Raymond de Saint-Gilles" "Gaston de Foix" "Bernard d'Armagnac"
+	"Jean de Comminges" "Roger de Beziers" "Guillaume de Toulouse"
+	"Bertrand de Toulouse" "Alphonse de Poitiers" "Henri de Provence"
+	"Pierre de Bearn" "Arnaud de Narbonne" "Geraud d'Auvergne"
+}
+
+ship_names = {
+	"Croix Occitane" "Toulouse" "Narbonne" "Montpellier" "Marseille"
+	"Avignon" "Carcassonne" "Foix" "Albi"
+}
+
+army_names = {
+	"Armee de $PROVINCE$"
+}
+
+fleet_names = {
+	"Flotte Occitane"
+}

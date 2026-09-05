@@ -1434,3 +1434,43 @@ CIL_ideas = {
 		religious_unity = 0.1
 	}
 }
+
+# --- Occitania: the troubadour lands between the Pyrenees, the Rhone and the sea ---
+
+OCC_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		production_efficiency = 0.15
+	}
+
+	trigger = {
+		tag = OCC
+	}
+	free = yes
+
+	occ_troubadour_courts = {
+		prestige = 1
+	}
+	occ_canal_du_midi = {
+		trade_steering = 0.2
+	}
+	occ_pastel_of_lauragais = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	occ_capitouls_of_toulouse = {
+		global_unrest = -1
+	}
+	occ_parlement_of_toulouse = {
+		stability_cost_modifier = -0.1
+	}
+	occ_university_of_toulouse = {
+		idea_cost = -0.1
+	}
+	occ_militias_of_the_bonnes_villes = {
+		land_morale = 0.1
+	}
+}

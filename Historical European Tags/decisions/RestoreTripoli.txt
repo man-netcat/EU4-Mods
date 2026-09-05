@@ -1,0 +1,53 @@
+# Restore the County of Tripoli as a junior partner. The county was founded
+# by Raymond IV of Toulouse, so Toulouse may reclaim it as its own. It later
+# passed to the house of Poitiers-Antioch, so the kings of Cyprus (heirs of
+# that house) may claim it as well.
+
+country_decisions = {
+
+	restore_county_of_tripoli = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				tag = CYP
+				tag = TOU
+			}
+			NOT = {
+				has_country_flag = tpl_tripoli_restored
+			}
+			NOT = {
+				exists = TPL
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 378
+				province_id = 4297
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 378
+			owns_core_province = 4297
+		}
+		effect = {
+			release = TPL
+			TPL = {
+				set_government_rank = 1
+				change_primary_culture = ROOT
+				change_religion = catholic
+			}
+			create_union = TPL
+			syria_area = {
+				add_permanent_claim = TPL
+			}
+			set_country_flag = tpl_tripoli_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

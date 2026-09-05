@@ -71,3 +71,18 @@ Example: STR (Bavaria-Straubing) with Bavarian cantons.
 3. Resize it to half the canvas: 128x128.
 4. Paste at (0,0) and (128,128). Exact quadrant grid keeps the design
    aligned and centred.
+
+## TPL (Tripoli) — gold cross on gules
+
+- Source: wappenwiki-finellach `Tripoli.svg` (the cross layer, `--charge-id g5`).
+- Blazon: gules, a cross or.
+- Built with charge_flag.py: field `188,46,46`, charge auto-cropped to its
+  alpha bbox, height 230 px, pasted at y=21.
+
+## ATN (Antioch) — quarterly gules and France ancient
+
+- Blazon: quarterly, 1st gules, 2nd and 3rd France ancient, 4th gules.
+- UL quadrant: solid gules (188,46,46). UR: FRA.tga resized to 128x128.
+  BL: FRA.tga resized to 128x128. BR: solid gules.
+- FRA.tga source: "WappenWiki Flags for EUIV - Custom" mod gfx/flags/FRA.tga
+  (the semy of fleurs-de-lis on azure).

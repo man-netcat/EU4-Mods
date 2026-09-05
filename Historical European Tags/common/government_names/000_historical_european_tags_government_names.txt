@@ -424,3 +424,109 @@ fulda_abbey = {
 		government = theocracy
 	}
 }
+
+# The Principality of Antioch. A French crusader state on the Levantine
+# coast, ruled by the house of Poitiers-Antioch. Vanilla default_monarchy
+# would call a rank-1 monarchy a duchy; this gives it its historical title.
+
+antioch_principality = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = PRINCE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = ATN
+		government = monarchy
+	}
+}
+
+# The County of Tripoli. A French crusader county on the Levantine coast,
+# founded by the house of Toulouse. Gives it the historical county title
+# instead of the default monarchy duchy.
+
+tripoli_county = {
+	rank = {
+		1 = COUNTY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = COUNT
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = COUNT_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		tag = TPL
+		government = monarchy
+	}
+}

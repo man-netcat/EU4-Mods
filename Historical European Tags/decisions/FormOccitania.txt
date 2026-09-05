@@ -1,0 +1,161 @@
+# Form the nation of Occitania. The Occitan tongue was once spoken from the
+# Atlantic to the Alps and from the Massif Central to the Mediterranean. The
+# Counts of Toulouse, the Dukes of Gascony and the Counts of Provence once
+# ruled these lands; by uniting their seats under one crown, the whole
+# language shall rise again.
+
+country_decisions = {
+
+	occitan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_occitania_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = OCC }
+			OR = {
+				primary_culture = occitain
+				primary_culture = gascon
+				primary_culture = aquitaine
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			OR = {
+				province_id = 173	# Labourd
+				province_id = 174	# Gascogne
+				province_id = 175	# Armagnac
+				province_id = 176	# Bearn
+				province_id = 194	# Bergerac
+				province_id = 195	# Limousin
+				province_id = 196	# Toulouse
+				province_id = 198	# Rouergue
+				province_id = 200	# Languedoc
+				province_id = 201	# Provence
+				province_id = 202	# Avignon
+				province_id = 204	# Dauphine
+				province_id = 2753	# Narbonne
+				province_id = 2991	# Draguignan
+				province_id = 4112	# Cahors
+				province_id = 4391	# Vivarais
+				province_id = 4694	# Foix
+				province_id = 4695	# Carcassonne
+				province_id = 4696	# Toulon
+				province_id = 4697	# La Marche
+			}
+		}
+		allow = {
+			NOT = { exists = OCC }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 173		# Labourd
+			owns_core_province = 174		# Gascogne
+			owns_core_province = 175		# Armagnac
+			owns_core_province = 176		# Bearn
+			owns_core_province = 194		# Bergerac
+			owns_core_province = 195		# Limousin
+			owns_core_province = 196		# Toulouse
+			owns_core_province = 198		# Rouergue
+			owns_core_province = 200		# Languedoc
+			owns_core_province = 201		# Provence
+			owns_core_province = 202		# Avignon
+			owns_core_province = 204		# Dauphine
+			owns_core_province = 2753		# Narbonne
+			owns_core_province = 2991		# Draguignan
+			owns_core_province = 4112		# Cahors
+			owns_core_province = 4391		# Vivarais
+			owns_core_province = 4694		# Foix
+			owns_core_province = 4695		# Carcassonne
+			owns_core_province = 4696		# Toulon
+			owns_core_province = 4697		# La Marche
+		}
+		effect = {
+			change_tag = OCC
+			196 = {
+				move_capital_effect = yes
+			}
+			restore_country_name_effect = yes
+			guyenne_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			languedoc_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			massif_central_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_occitania_flag
+
+			if = {
+				limit = {
+					total_development = 100
+				}
+				set_government_rank = 2
+			}
+
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
