@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = yemeni_culture
+religion = sunni
+technology_group = muslim
+capital = 387
+monarch_names = {
+  "Tihama Al Yemen"
+}

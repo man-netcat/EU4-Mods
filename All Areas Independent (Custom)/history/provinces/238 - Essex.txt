@@ -1,0 +1,23 @@
+#238 - Essex
+#+part of Cambridgeshire
+
+owner = EAT
+controller = EAT
+culture = english
+religion = catholic
+hre = no
+base_tax = 6
+base_production = 6
+trade_goods = cloth
+base_manpower = 2
+capital = "Chelmsford"
+is_city = yes
+add_core = EAT
+
+
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+

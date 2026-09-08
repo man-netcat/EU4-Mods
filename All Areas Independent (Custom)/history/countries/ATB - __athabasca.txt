@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = chipewyan
+religion = totemism
+technology_group = north_american
+capital = 2599
+monarch_names = {
+  "Athabasca"
+}

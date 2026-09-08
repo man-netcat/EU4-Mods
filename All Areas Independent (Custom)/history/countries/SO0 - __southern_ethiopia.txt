@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = sidamo
+religion = coptic
+technology_group = east_african
+capital = 2757
+monarch_names = {
+  "Southern Ethiopia"
+}

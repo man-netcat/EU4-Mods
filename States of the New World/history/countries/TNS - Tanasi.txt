@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = yuchi
+religion = totemism
+capital = 918
+
+1444.11.11 = {
+	monarch = {
+		name = "Tsali"
+		dynasty = "of the Smoky Range"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Dragging Canoe"
+		dynasty = "of the Smoky Range"
+		birth_date = 1426
+		death_date = 1493
+		claim = 86
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

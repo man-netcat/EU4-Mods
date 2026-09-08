@@ -1,0 +1,12 @@
+# 2850 - Montevideo
+
+owner = URY
+controller = URY
+culture = charruan
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = URY
+trade_goods = grain

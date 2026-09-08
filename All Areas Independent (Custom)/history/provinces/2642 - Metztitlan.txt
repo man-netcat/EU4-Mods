@@ -1,0 +1,23 @@
+# No previous file for Metztitlan
+
+owner = GRC
+controller = GRC
+add_core = GRC
+is_city = yes
+culture = otomi
+religion = nahuatl
+capital = "Metztitlan"
+trade_goods = grain
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_local_autonomy = 25
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = mesoamerican
+

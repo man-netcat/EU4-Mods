@@ -1,0 +1,17 @@
+#857 - Guachichil
+
+owner = GRC
+controller = GRC
+add_core = GRC
+culture = chichimecan 
+religion = animism
+capital = "Guachichil" 
+trade_goods = gold 
+hre = no 
+base_tax = 1
+base_production = 1
+base_manpower = 1 
+
+
+
+discovered_by = mesoamerican

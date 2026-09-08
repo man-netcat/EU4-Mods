@@ -1,0 +1,22 @@
+#Estland, incl. Reval, Hapsal, Weissenstein, Wesenberg and Pernau.
+
+owner = ESO
+controller = ESO
+add_core = ESO
+add_core = ESO
+culture = estonian
+religion = catholic
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = grain
+base_manpower = 2
+capital = "Reval"
+is_city = yes
+fort_15th = yes #Fortifications of Reval, Wesenberg, Toompea Castle
+
+
+
+discovered_by = western
+discovered_by = eastern
+

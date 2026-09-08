@@ -1,0 +1,23 @@
+#339 - Bejaia
+
+owner = KAB
+controller = KAB
+culture = berber
+religion = sunni
+capital = "Bejaia"
+trade_goods = iron
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = KAB
+add_core = KAB
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+

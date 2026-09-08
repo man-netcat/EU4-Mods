@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = flemish
+religion = catholic
+technology_group = western
+capital = 90
+monarch_names = {
+  "Flanders"
+}

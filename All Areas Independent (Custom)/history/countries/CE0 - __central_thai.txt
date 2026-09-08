@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = central_thai
+religion = buddhism
+technology_group = chinese
+capital = 600
+monarch_names = {
+  "Central Thai"
+}

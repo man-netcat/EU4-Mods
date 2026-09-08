@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = moroccan
+religion = sunni
+technology_group = muslim
+capital = 347
+monarch_names = {
+  "Southern Morocco"
+}

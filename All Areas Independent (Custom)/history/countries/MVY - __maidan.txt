@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = kannada
+religion = shiite
+technology_group = indian
+capital = 569
+monarch_names = {
+  "Maidan"
+}

@@ -1,0 +1,12 @@
+# 2859 - Itapua
+
+owner = PRG
+controller = PRG
+culture = guarani
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = PRG
+trade_goods = grain

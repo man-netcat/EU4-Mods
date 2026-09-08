@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = mongol
+religion = tengri_pagan_reformed
+technology_group = nomad_group
+capital = 4219
+monarch_names = {
+  "Xilin Gol"
+}

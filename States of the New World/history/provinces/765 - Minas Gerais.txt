@@ -1,0 +1,12 @@
+# 765 - Minas Gerais
+
+owner = MGX
+controller = MGX
+culture = ge
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = MGX
+trade_goods = gold

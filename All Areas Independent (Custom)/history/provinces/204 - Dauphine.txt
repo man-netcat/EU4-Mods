@@ -1,0 +1,21 @@
+# 204 Dauphiné - Principal cities: Grenoble
+
+owner = SAO
+controller = SAO
+capital = "Grenoble"
+is_city = yes
+culture = occitain
+religion = catholic
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = wool
+base_manpower = 3
+add_core = SAO
+add_core = SAO
+add_core = SAO
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+#fort_15th = yes

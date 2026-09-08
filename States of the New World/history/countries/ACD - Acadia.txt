@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = mikmaq
+religion = totemism
+capital = 982
+
+1444.11.11 = {
+	monarch = {
+		name = "Henri"
+		dynasty = "de Montfort"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Jeanne"
+		dynasty = "de Montfort"
+		birth_date = 1425
+		death_date = 1487
+		claim = 85
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

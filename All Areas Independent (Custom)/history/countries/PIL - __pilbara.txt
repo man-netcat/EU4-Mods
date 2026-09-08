@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = nyoongah
+religion = dreamtime
+technology_group = aboriginal_tech
+capital = 2726
+monarch_names = {
+  "Pilbara"
+}

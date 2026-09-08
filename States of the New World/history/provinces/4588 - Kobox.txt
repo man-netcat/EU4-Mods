@@ -1,0 +1,12 @@
+# 4588 - Kobox
+
+owner = MAY
+controller = MAY
+culture = yucatec
+religion = mesoamerican_religion
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = MAY
+trade_goods = grain

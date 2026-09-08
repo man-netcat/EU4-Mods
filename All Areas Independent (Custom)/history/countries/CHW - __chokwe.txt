@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = chokwe
+religion = shamanism
+technology_group = central_african
+capital = 4094
+monarch_names = {
+  "Chokwe"
+}

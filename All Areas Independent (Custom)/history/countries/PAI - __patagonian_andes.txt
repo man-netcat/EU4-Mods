@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = het
+religion = animism
+technology_group = north_american
+capital = 2863
+monarch_names = {
+  "Patagonian Andes"
+}

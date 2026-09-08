@@ -1,0 +1,17 @@
+#2405 - Khara Narin Ula
+
+owner = INR
+controller = INR
+add_core = INR
+culture = mongol
+religion = vajrayana
+capital = "Khara Narin Ula"
+trade_goods = livestock
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+discovered_by = chinese
+discovered_by = nomad_group
+

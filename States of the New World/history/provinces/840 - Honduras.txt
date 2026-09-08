@@ -1,0 +1,12 @@
+# 840 - Honduras
+
+owner = HND
+controller = HND
+culture = miskito
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = HND
+trade_goods = grain

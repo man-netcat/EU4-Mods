@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = inca
+religion = inti
+capital = 809
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Chimor"
+		dynasty = "of the Valley"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Lima"
+		dynasty = "of the Valley"
+		birth_date = 1422
+		death_date = 1494
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

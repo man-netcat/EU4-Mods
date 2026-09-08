@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = miami
+religion = totemism
+technology_group = north_american
+capital = 942
+monarch_names = {
+  "Miami River"
+}

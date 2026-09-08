@@ -1,0 +1,22 @@
+#2686 - Bintan
+
+owner = JOR
+controller = JOR
+culture = malayan
+religion = sunni
+capital = "Tanjungpinaung"
+trade_goods = naval_supplies
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+is_city = yes
+add_core = JOR
+add_core = JOR
+
+
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = bornean
+religion = hinduism
+technology_group = north_american
+capital = 639
+monarch_names = {
+  "Banjar"
+}

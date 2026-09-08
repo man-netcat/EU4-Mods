@@ -1,0 +1,18 @@
+#1225 - Butana
+
+owner = SEA
+controller = SEA
+add_core = SEA
+culture = nubian 
+religion = sunni
+capital = "Al-Qadarif"
+base_manpower = 1
+base_tax = 1 
+base_production = 1
+is_city = yes
+trade_goods = ivory
+hre = no
+add_local_autonomy = 50
+discovered_by = east_african
+discovered_by = muslim
+discovered_by = ottoman

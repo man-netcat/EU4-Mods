@@ -1,0 +1,19 @@
+# No previous file for Haayre
+
+owner = JEN
+controller = JEN
+add_core = JEN
+is_city = yes
+culture = bozo 
+religion = shamanism #Fetishism
+capital = "Douentza"
+trade_goods = ivory
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+
+
+discovered_by = sub_saharan
+

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = garjati
+religion = hinduism
+technology_group = indian
+capital = 553
+monarch_names = {
+  "Upper Mahanadi"
+}

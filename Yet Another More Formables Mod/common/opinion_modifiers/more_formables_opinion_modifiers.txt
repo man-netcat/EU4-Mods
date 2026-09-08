@@ -1,0 +1,3 @@
+finno_ugric_cousins = {
+	opinion = 100
+}

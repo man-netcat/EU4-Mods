@@ -1,0 +1,12 @@
+# 2820 - Esmeraldas
+
+owner = QTO
+controller = QTO
+culture = cara
+religion = inti
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = QTO
+trade_goods = grain

@@ -1,0 +1,17 @@
+#4519 - Damxung
+
+owner = TSA
+controller = TSA
+add_core = TSA
+culture = tibetan
+religion = vajrayana
+capital = "Damxung"
+trade_goods = wool
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+discovered_by = chinese
+discovered_by = indian
+discovered_by = nomad_group

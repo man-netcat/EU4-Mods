@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = mescalero
+religion = totemism
+technology_group = north_american
+capital = 882
+monarch_names = {
+  "Llano Estacado"
+}

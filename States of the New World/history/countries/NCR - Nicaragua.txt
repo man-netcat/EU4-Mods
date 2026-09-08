@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = miskito
+religion = animism
+capital = 837
+
+1444.11.11 = {
+	monarch = {
+		name = "Nicarao"
+		dynasty = "of the Lakes"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Chiltepe"
+		dynasty = "of the Lakes"
+		birth_date = 1427
+		death_date = 1489
+		claim = 84
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

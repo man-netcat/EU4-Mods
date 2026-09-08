@@ -1,0 +1,12 @@
+# 488 - Les Cayes
+
+owner = QSQ
+controller = QSQ
+culture = arawak
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = QSQ
+trade_goods = sugar

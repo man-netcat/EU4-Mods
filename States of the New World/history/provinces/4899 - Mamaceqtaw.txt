@@ -1,0 +1,12 @@
+# 4899 - Mamaceqtaw
+
+owner = WIS
+controller = WIS
+culture = chiwere
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = WIS
+trade_goods = fur

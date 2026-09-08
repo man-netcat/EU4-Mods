@@ -1,0 +1,165 @@
+country_decisions = {
+	form_nanyue = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_nanyue
+			}
+			NOT = {
+				tag = NYU
+			}
+			NOT = {
+				exists = NYU
+			}
+			is_colonial_nation = no
+			OR = {
+				primary_culture = vietnamese
+				primary_culture = vietnamese_new
+				primary_culture = zhuang
+				primary_culture = cantonese
+				primary_culture = chimin
+				primary_culture = hakka
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = guangxi_area
+				area = guangdong_area
+				area = west_guangdong_area
+				area = vietnam_area
+				area = red_river_delta_area
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 1
+			
+			owns_all_provinces = {
+				area = guangxi_area
+			}
+			owns_all_provinces = {
+				area = guangdong_area
+			}
+			owns_all_provinces = {
+				area = west_guangdong_area
+			}
+			owns_all_provinces = {
+				area = vietnam_area
+			}
+			owns_all_provinces = {
+				area = red_river_delta_area
+			}
+		}
+		effect = {
+			change_tag = NYU
+			set_country_flag = formed_nanyue
+			add_prestige = 25
+			add_legitimacy = 15
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			set_government_rank = 2
+			
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			country_event = {
+				id = nyu.1
+			}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_dai_nam = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_dai_nam
+			}
+			NOT = {
+				tag = DNA
+			}
+			NOT = {
+				exists = DNA
+			}
+			is_colonial_nation = no
+			primary_culture = vietnamese
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = red_river_delta_area
+				area = vietnam_area
+				area = champa_area
+				area = tay_nguyen_area
+				area = angkor_area
+				area = mekong_area
+				area = cambodia_area
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			stability = 1
+			
+			owns_all_provinces = {
+				area = red_river_delta_area
+			}
+			owns_all_provinces = {
+				area = vietnam_area
+			}
+			owns_all_provinces = {
+				area = champa_area
+			}
+			owns_all_provinces = {
+				area = tay_nguyen_area
+			}
+			owns_all_provinces = {
+				area = angkor_area
+			}
+			owns_all_provinces = {
+				area = mekong_area
+			}
+			owns_all_provinces = {
+				area = cambodia_area
+			}
+		}
+		effect = {
+			change_tag = DNA
+			set_country_flag = formed_dai_nam
+			add_prestige = 25
+			add_legitimacy = 15
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			set_government_rank = 2
+			
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			country_event = {
+				id = dna.1
+			}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

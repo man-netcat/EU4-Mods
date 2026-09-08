@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = arawak
+religion = animism
+technology_group = north_american
+capital = 487
+monarch_names = {
+  "Greater Antilles"
+}

@@ -1,0 +1,12 @@
+# 868 - Chumash
+
+owner = CAL
+controller = CAL
+culture = piman
+religion = totemism
+is_city = yes
+base_tax = 5
+base_production = 5
+base_manpower = 5
+add_core = CAL
+trade_goods = grain

@@ -1,0 +1,12 @@
+# 978 - Alaska
+
+owner = ALA
+controller = ALA
+culture = aleutian
+religion = totemism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = ALA
+trade_goods = fur

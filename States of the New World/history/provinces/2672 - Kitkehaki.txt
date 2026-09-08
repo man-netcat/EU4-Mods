@@ -1,0 +1,12 @@
+# 2672 - Kitkehaki
+
+owner = KNS
+controller = KNS
+culture = pawnee
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = KNS
+trade_goods = grain

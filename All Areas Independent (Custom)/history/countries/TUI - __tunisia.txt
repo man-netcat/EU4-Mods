@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = tunisian
+religion = sunni
+technology_group = muslim
+capital = 341
+monarch_names = {
+  "Tunisia"
+}

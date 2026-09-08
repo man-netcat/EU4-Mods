@@ -1,0 +1,9 @@
+government = republic
+government_rank = 1
+primary_culture = swiss
+religion = catholic
+technology_group = western
+capital = 165
+monarch_names = {
+  "Romandie"
+}

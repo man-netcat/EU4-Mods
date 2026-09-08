@@ -1,0 +1,16 @@
+# EU5 Interactions - Fiefdom Modifiers
+# These mirror EU5's institution spread differences between vassals and fiefdoms
+
+# Fiefdom subject gets 50% institution spread (vs 20% for vassals)
+eu5_fiefdom_institution_spread = {
+	tooltip = eu5_fiefdom_institution_spread_tt
+	institution_spread = 0.5
+}
+
+# Fiefdom overlord gets 50% institution spread from subject (vs 20% for vassals)
+eu5_fiefdom_overlord_institution_spread = {
+	tooltip = eu5_fiefdom_overlord_institution_spread_tt
+	# This modifier is applied to the overlord
+	# In EU4, institution spread modifiers work differently than EU5
+	# We'll use a custom tooltip to explain the effect
+}

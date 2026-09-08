@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = panjabi
+religion = hinduism
+technology_group = indian
+capital = 507
+monarch_names = {
+  "Lahore"
+}

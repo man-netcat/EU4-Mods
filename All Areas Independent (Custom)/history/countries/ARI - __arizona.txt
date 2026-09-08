@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = piman
+religion = totemism
+technology_group = north_american
+capital = 877
+monarch_names = {
+  "Arizona"
+}

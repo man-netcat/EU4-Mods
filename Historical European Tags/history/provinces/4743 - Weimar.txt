@@ -22,6 +22,7 @@ discovered_by = ottoman
 
 
 1531.1.1 = { religion = protestant }
+1572.11.6 = { add_core = WEI } # Erfurt division creates the Duchy of Saxe-Weimar
 1790.8.1 = { unrest = 5 } # Peasant revolt
 1791.1.1 = { unrest = 0 }
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

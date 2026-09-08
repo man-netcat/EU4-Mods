@@ -1,0 +1,12 @@
+# 942 - Wea
+
+owner = WAB
+controller = WAB
+culture = miami
+religion = totemism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = WAB
+trade_goods = grain

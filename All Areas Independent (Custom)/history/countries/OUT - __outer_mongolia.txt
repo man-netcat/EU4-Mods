@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = mongol
+religion = tengri_pagan_reformed
+technology_group = nomad_group
+capital = 717
+monarch_names = {
+  "Outer Mongolia"
+}

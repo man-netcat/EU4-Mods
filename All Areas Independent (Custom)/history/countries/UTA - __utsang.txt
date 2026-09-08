@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = tibetan
+religion = vajrayana
+technology_group = chinese
+capital = 676
+monarch_names = {
+  "Utsang"
+}

@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = irish
+religion = catholic
+technology_group = western
+capital = 4118
+monarch_names = {
+  "Munster"
+}

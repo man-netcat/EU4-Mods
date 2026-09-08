@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = anishinabe
+religion = totemism
+capital = 989
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Mackenzie"
+		dynasty = "of the Great Lakes"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Laura"
+		dynasty = "of the Great Lakes"
+		birth_date = 1422
+		death_date = 1495
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

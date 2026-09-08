@@ -1,0 +1,16 @@
+#4230 - Suwon
+
+owner = WEK
+controller = WEK
+culture = korean
+religion = confucianism
+capital = "Suwon"
+trade_goods = chinaware
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+is_city = yes
+add_core = WEK
+discovered_by = chinese
+discovered_by = nomad_group

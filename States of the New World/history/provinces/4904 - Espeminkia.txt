@@ -1,0 +1,12 @@
+# 4904 - Espeminkia
+
+owner = ILI
+controller = ILI
+culture = illini
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = ILI
+trade_goods = grain

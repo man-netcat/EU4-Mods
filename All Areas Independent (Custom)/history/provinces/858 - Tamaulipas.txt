@@ -1,0 +1,22 @@
+#858 - Tamaulipas
+
+
+culture = wastek
+owner = RIR
+controller = RIR
+add_core = RIR
+is_city = yes
+religion = mesoamerican_religion
+capital = "Tamaulipas"
+trade_goods = sugar
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = mesoamerican

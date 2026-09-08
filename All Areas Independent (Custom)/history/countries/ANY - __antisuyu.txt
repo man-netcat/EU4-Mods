@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = aimara
+religion = inti
+technology_group = andean
+capital = 802
+monarch_names = {
+  "Antisuyu"
+}

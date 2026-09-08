@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = crimean
+religion = sunni
+technology_group = nomad_group
+capital = 291
+monarch_names = {
+  "Sloboda Ukraine"
+}

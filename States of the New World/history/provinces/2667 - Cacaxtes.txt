@@ -1,0 +1,12 @@
+# 2667 - Cacaxtes
+
+owner = COH
+controller = COH
+culture = chichimecan
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = COH
+trade_goods = copper

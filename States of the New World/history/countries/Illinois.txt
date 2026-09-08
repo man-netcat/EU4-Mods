@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = illini
+religion = totemism
+capital = 915
+
+1444.11.11 = {
+	monarch = {
+		name = "Cahokia"
+		dynasty = "of the Mississippians"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Kaskaskia"
+		dynasty = "of the Mississippians"
+		birth_date = 1425
+		death_date = 1487
+		claim = 84
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

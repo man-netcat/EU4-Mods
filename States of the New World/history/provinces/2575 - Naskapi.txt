@@ -1,0 +1,12 @@
+# 2575 - Naskapi
+
+owner = TNV
+controller = TNV
+culture = innu
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = TNV
+trade_goods = fish

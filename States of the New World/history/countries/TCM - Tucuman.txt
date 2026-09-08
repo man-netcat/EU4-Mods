@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = diaguita
+religion = animism
+capital = 791
+
+1444.11.11 = {
+	monarch = {
+		name = "Cacique"
+		dynasty = "del Norte"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

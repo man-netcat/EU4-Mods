@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = berber
+religion = animism
+technology_group = north_american
+capital = 366
+monarch_names = {
+  "Macaronesia"
+}

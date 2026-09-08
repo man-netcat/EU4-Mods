@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = hessian
+religion = catholic
+technology_group = western
+capital = 77
+monarch_names = {
+  "Palatinate"
+}

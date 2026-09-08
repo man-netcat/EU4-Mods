@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = english
+religion = catholic
+technology_group = western
+capital = 233
+monarch_names = {
+  "Wessex"
+}

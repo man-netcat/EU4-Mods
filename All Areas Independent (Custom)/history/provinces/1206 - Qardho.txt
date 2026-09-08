@@ -1,0 +1,19 @@
+#1206 - Qardho
+
+owner = MFE
+controller = MFE
+add_core = MFE
+add_core = MFE
+culture = somali
+religion = sunni
+capital = "Qardho"
+trade_goods = incense
+is_city = yes
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+discovered_by = east_african
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman

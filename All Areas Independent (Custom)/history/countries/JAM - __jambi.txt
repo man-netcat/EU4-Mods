@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = sumatran
+religion = sunni
+technology_group = chinese
+capital = 2677
+monarch_names = {
+  "Jambi"
+}

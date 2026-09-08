@@ -1,0 +1,18 @@
+#697 - Datong
+
+owner = SHX
+controller = SHX
+add_core = SHX
+culture = jin
+religion = confucianism
+capital = "Datong"
+trade_goods = iron
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 3
+is_city = yes
+add_core = SHX
+fort_15th = yes #the Nine Garrisons
+discovered_by = chinese
+discovered_by = nomad_group

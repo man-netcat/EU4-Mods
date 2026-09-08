@@ -1,0 +1,12 @@
+# 820 - Quito
+
+owner = QTO
+controller = QTO
+culture = cara
+religion = inti
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = QTO
+trade_goods = grain

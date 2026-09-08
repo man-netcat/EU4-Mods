@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = swahili
+religion = sunni
+technology_group = east_african
+capital = 788
+monarch_names = {
+  "Mozambique"
+}

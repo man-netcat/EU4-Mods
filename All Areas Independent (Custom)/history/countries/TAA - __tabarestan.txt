@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = mazandarani
+religion = shiite #Zaidiyyah
+technology_group = muslim
+capital = 417
+monarch_names = {
+  "Tabarestan"
+}

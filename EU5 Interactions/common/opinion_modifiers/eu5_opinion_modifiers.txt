@@ -1,0 +1,29 @@
+# EU5 Interactions - Opinion Modifiers
+
+eu5_promoted_to_vassal = {
+    min = -20
+    max = 20
+    yearly_decay = 0.5
+    # Positive modifier - being promoted from tributary to vassal
+}
+
+eu5_refused_promotion = {
+    min = -20
+    max = 20
+    yearly_decay = 1.0
+    # Negative modifier - refusing promotion
+}
+
+eu5_gained_province_from_subject = {
+    min = -20
+    max = 20
+    yearly_decay = 0.5
+    # Positive modifier - received a province from a fellow subject
+}
+
+eu5_lost_province_to_subject = {
+    min = -20
+    max = 20
+    yearly_decay = 0.5
+    # Negative modifier - lost a province to another subject
+}

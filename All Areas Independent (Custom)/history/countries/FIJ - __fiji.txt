@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = melanesian
+religion = animism
+technology_group = polynesian_tech
+capital = 1242
+monarch_names = {
+  "Fiji"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = saurashtri
+religion = hinduism
+technology_group = indian
+capital = 515
+monarch_names = {
+  "Saurashtra"
+}

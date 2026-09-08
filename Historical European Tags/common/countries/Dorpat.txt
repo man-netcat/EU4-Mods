@@ -1,8 +1,8 @@
-#Country Name: Please see filename.
+﻿#Country Name: Please see filename.
 
 graphical_culture = westerngfx
 
-color = { 190 60 50 }
+color = { 139 138 160 }
 
 revolutionary_colors = { 40 0 10 }
 

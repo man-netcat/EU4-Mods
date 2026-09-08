@@ -1,0 +1,23 @@
+# 86 - Munster
+
+owner = NOW
+controller = NOW
+culture = hannoverian
+religion = catholic
+trade_goods = cloth
+capital = "Münster"
+base_tax = 4
+base_production = 4
+base_manpower = 4
+fort_15th = yes
+is_city = yes
+hre = yes
+add_core = NOW
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+

@@ -1,0 +1,12 @@
+# 918 - Tennessee
+
+owner = TNS
+controller = TNS
+culture = yuchi
+religion = totemism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = TNS
+trade_goods = grain

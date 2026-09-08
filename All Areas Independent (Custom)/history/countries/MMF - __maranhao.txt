@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = ge
+religion = animism
+technology_group = north_american
+capital = 749
+monarch_names = {
+  "Maranhao"
+}

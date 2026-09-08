@@ -1,0 +1,12 @@
+# 2638 - Xoconochco
+
+owner = CXA
+controller = CXA
+culture = lacandon
+religion = mesoamerican_religion
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = CXA
+trade_goods = grain

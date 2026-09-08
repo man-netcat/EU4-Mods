@@ -1,0 +1,12 @@
+# 782 - Tierra del Fuego
+
+owner = PTN
+controller = PTN
+culture = patagonian
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = PTN
+trade_goods = fish

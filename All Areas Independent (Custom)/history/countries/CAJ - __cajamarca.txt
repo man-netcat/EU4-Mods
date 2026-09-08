@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = inca
+religion = inti
+technology_group = andean
+capital = 813
+monarch_names = {
+  "Cajamarca"
+}

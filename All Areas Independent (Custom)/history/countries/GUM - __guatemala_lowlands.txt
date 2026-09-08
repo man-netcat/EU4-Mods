@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = putun
+religion = mesoamerican_religion
+technology_group = mesoamerican
+capital = 842
+monarch_names = {
+  "Guatemala Lowlands"
+}

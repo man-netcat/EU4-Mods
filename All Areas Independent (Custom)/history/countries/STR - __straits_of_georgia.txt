@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = aleutian
+religion = totemism
+technology_group = north_american
+capital = 972
+monarch_names = {
+  "Straits Of Georgia"
+}

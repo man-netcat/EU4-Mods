@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = palawa
+religion = dreamtime
+technology_group = aboriginal_tech
+capital = 1085
+monarch_names = {
+  "Tasmania"
+}

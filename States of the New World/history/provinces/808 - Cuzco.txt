@@ -1,0 +1,12 @@
+# 808 - Cuzco
+
+owner = CSU
+controller = CSU
+culture = inca
+religion = inti
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = CSU
+trade_goods = grain

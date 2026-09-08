@@ -1,0 +1,12 @@
+# 2552 - Manahoac
+
+owner = VIR
+controller = VIR
+culture = powhatan
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = VIR
+trade_goods = grain

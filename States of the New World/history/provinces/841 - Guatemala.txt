@@ -1,0 +1,12 @@
+# 841 - Guatemala
+
+owner = GTM
+controller = GTM
+culture = highland_mayan
+religion = mesoamerican_religion
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = GTM
+trade_goods = grain

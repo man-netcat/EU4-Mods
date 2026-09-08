@@ -1,8 +1,8 @@
-#4238 - Liegnitz (Liegnitz+Schweidnitz+Jauer+Glatz+Neisse+Münsterberg)
+#4238 - Liegnitz (Liegnitz+Schweidnitz+Jauer+Glatz+Neisse+Mï¿½nsterberg)
 
 #Coal
-owner = GLG
-controller = GLG
+owner = LGN
+controller = LGN
 culture = schlesian
 religion = catholic
 capital = "Liegnitz"
@@ -12,7 +12,6 @@ base_tax = 4
 base_production = 4
 is_city = yes
 base_manpower = 2
-add_core = GLG
 add_core = LGN
 discovered_by = KAZ
 discovered_by = CRI

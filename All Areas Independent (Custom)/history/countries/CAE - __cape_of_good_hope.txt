@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = nguni
+religion = shamanism 
+technology_group = north_american
+capital = 833
+monarch_names = {
+  "Cape Of Good Hope"
+}

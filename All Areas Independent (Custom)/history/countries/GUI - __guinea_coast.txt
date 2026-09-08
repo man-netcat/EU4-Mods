@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = dyola
+religion = shamanism 
+technology_group = north_american
+capital = 1118
+monarch_names = {
+  "Guinea Coast"
+}

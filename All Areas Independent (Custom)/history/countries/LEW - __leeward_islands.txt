@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = arawak
+religion = animism
+technology_group = north_american
+capital = 493
+monarch_names = {
+  "Leeward Islands"
+}

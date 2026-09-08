@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = blackfoot
+religion = totemism
+technology_group = north_american
+capital = 2005
+monarch_names = {
+  "Assiniboia"
+}

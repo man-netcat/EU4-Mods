@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = kannada
+religion = hinduism
+technology_group = indian
+capital = 538
+monarch_names = {
+  "Kongu"
+}

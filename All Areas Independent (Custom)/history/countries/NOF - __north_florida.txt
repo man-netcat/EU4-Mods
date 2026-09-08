@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = yamasee
+religion = totemism
+technology_group = north_american
+capital = 927
+monarch_names = {
+  "North Florida"
+}

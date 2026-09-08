@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = polynesian
+religion = animism
+technology_group = north_american
+capital = 1241
+monarch_names = {
+  "Micronesia"
+}

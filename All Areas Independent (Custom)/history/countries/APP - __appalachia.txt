@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = shawnee
+religion = totemism
+technology_group = north_american
+capital = 951
+monarch_names = {
+  "Appalachia"
+}

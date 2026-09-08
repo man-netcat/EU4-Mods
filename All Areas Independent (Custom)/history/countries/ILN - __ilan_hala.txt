@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = nivkh
+religion = tengri_pagan_reformed
+technology_group = chinese
+capital = 1048
+monarch_names = {
+  "Ilan Hala"
+}

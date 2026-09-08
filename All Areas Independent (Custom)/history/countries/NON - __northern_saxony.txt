@@ -1,0 +1,9 @@
+government = theocracy
+government_rank = 1
+primary_culture = saxon
+religion = catholic
+technology_group = western
+capital = 52
+monarch_names = {
+  "Northern Saxony"
+}

@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = gunwinyguan
+religion = dreamtime
+technology_group = aboriginal_tech
+capital = 2728
+monarch_names = {
+  "Top End"
+}

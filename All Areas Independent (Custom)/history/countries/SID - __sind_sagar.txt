@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = panjabi
+religion = sunni
+technology_group = indian
+capital = 2077
+monarch_names = {
+  "Sind Sagar"
+}

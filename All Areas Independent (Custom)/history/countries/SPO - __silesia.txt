@@ -1,0 +1,10 @@
+government = monarchy
+government_rank = 1
+primary_culture = schlesian
+religion = catholic
+technology_group = western
+capital = 263
+monarch_names = {
+  "Silesia"
+}
+elector = yes

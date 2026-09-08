@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = azerbaijani
+religion = shiite
+technology_group = muslim
+capital = 420
+monarch_names = {
+  "Armenia"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = inuit
+religion = animism
+technology_group = north_american
+capital = 1104
+monarch_names = {
+  "Greenland"
+}

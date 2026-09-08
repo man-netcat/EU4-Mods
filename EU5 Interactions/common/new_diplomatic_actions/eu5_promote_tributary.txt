@@ -1,0 +1,153 @@
+# EU5 Interactions - Promote Tributary to Vassal
+# Ports EU5's "Change subject type" diplomatic interaction to EU4
+
+eu5_promote_tributary_to_vassal = {
+	category = influence
+	
+	require_acceptance = yes
+	
+	# Only visible when dealing with your own tributary
+	# ROOT = overlord (us), FROM = target (tributary)
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = tributary_state
+		}
+	}
+	
+	# Requirements to use this action
+	is_allowed = {
+		# Must be at peace
+		NOT = { is_in_war = any }
+		FROM = { NOT = { is_in_war = any } }
+		
+		# Opinion requirement (EU5 requires 150 opinion for vassalage)
+		FROM = {
+			opinion_of = {
+				who = ROOT
+				value = 150
+			}
+		}
+		
+		# FROM must be a tributary of ROOT
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = tributary_state
+		}
+	}
+	
+	# Effects when the action is accepted
+	on_accept = {
+		# Change subject type from tributary to vassal
+		# FROM is the subject being changed
+		create_subject = {
+			subject = FROM
+			subject_type = vassal
+		}
+		
+		# Add opinion modifier for the promotion
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = eu5_promoted_to_vassal
+			}
+		}
+		
+		# Add prestige to the overlord
+		add_prestige = 5
+	}
+	
+	# Effects when the action is declined
+	on_decline = {
+		# Small opinion penalty for refusing
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = eu5_refused_promotion
+			}
+		}
+	}
+	
+	# AI acceptance factors
+	ai_acceptance = {
+		add_entry = {
+			name = AI_ACCEPT_RELATIONS
+			
+			# AI will accept more readily with high relations
+			export_to_variable = {
+				variable_name = ai_value
+				value = 0
+			}
+			
+			if = {
+				limit = {
+					FROM = {
+						opinion_of = { who = ROOT value = 180 }
+					}
+				}
+				export_to_variable = {
+					variable_name = ai_value
+					value = 50
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						opinion_of = { who = ROOT value = 150 }
+					}
+				}
+				export_to_variable = {
+					variable_name = ai_value
+					value = 25
+				}
+			}
+		}
+		
+		add_entry = {
+			name = AI_ACCEPT_POWER
+			
+			# AI less likely to accept if they're stronger than overlord
+			export_to_variable = {
+				variable_name = ai_value
+				value = 0
+			}
+			
+			if = {
+				limit = {
+					FROM = {
+						relative_power = {
+							who = ROOT
+							value = 1.0
+						}
+					}
+				}
+				export_to_variable = {
+					variable_name = ai_value
+					value = -50
+				}
+			}
+		}
+	}
+	
+	# AI will do this action
+	ai_will_do = {
+		factor = 1
+		
+		modifier = {
+			factor = 0
+			# Don't promote if they're disloyal
+			FROM = { is_disloyal = yes }
+		}
+		
+		modifier = {
+			factor = 0
+			# Don't promote if they're too large
+			FROM = {
+				relative_power = {
+					who = ROOT
+					value = 0.5
+				}
+			}
+		}
+	}
+}

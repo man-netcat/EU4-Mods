@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = piman
+religion = totemism
+capital = 862
+
+1444.11.11 = {
+	monarch = {
+		name = "Alonso"
+		dynasty = "de Guzman"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Ines"
+		dynasty = "de Guzman"
+		birth_date = 1426
+		death_date = 1488
+		claim = 84
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

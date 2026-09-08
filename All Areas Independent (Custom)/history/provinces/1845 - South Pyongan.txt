@@ -1,0 +1,18 @@
+#1845 - Pyeongyang
+
+owner = PYO
+controller = PYO
+culture = korean
+religion = confucianism
+capital = "Pyeongyang"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = PYO
+discovered_by = chinese
+discovered_by = nomad_group
+add_local_autonomy = 35
+

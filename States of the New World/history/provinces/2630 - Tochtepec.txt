@@ -1,0 +1,12 @@
+# 2630 - Tochtepec
+
+owner = VRC
+controller = VRC
+culture = totonac
+religion = mesoamerican_religion
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = VRC
+trade_goods = grain

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = tunjur
+religion = sunni
+technology_group = sub_saharan
+capital = 774
+monarch_names = {
+  "Darfur Central Sahara"
+}

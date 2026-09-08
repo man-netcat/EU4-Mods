@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = iroquois
+religion = totemism
+capital = 965
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Hiawatha"
+		dynasty = "of the Long House"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Henry"
+		dynasty = "of the Long House"
+		birth_date = 1421
+		death_date = 1494
+		claim = 91
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

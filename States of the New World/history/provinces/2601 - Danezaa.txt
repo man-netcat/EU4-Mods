@@ -1,0 +1,12 @@
+# 2601 - Danezaa
+
+owner = ALR
+controller = ALR
+culture = chipewyan
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = ALR
+trade_goods = fur

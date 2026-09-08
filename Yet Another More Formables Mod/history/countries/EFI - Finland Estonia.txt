@@ -1,0 +1,4 @@
+government = monarchy
+primary_culture = finnish
+religion = catholic
+capital = 27 # Åbo, placeholder

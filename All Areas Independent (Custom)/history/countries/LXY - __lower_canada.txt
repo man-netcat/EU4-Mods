@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = laurentian
+religion = totemism
+technology_group = north_american
+capital = 993
+monarch_names = {
+  "Lower Canada"
+}

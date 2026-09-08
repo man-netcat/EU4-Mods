@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = croatian
+religion = catholic
+technology_group = eastern
+capital = 131
+monarch_names = {
+  "Croatia"
+}

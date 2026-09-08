@@ -1,0 +1,21 @@
+# No previous file for Natchez
+
+owner = MRX
+controller = MRX
+add_core = MRX
+is_city = yes
+culture = natchez
+religion = totemism
+capital = "Natchez"
+trade_goods = cotton
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = north_american

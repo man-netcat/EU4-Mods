@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = yorumba
+religion = shamanism #Fetishism
+technology_group = sub_saharan
+capital = 1144
+monarch_names = {
+  "Lower Niger"
+}

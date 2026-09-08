@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = highland_mayan
+religion = mesoamerican_religion
+technology_group = mesoamerican
+capital = 839
+monarch_names = {
+  "Guatemala"
+}

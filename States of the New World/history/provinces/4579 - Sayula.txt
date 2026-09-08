@@ -1,0 +1,12 @@
+# 4579 - Sayula
+
+owner = MHC
+controller = MHC
+culture = purepecha
+religion = nahuatl
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = MHC
+trade_goods = copper

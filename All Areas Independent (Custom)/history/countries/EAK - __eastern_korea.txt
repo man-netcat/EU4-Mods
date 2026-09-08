@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = korean
+religion = confucianism
+technology_group = chinese
+capital = 734
+monarch_names = {
+  "Eastern Korea"
+}

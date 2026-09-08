@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = austrian
+religion = catholic
+technology_group = western
+capital = 72
+monarch_names = {
+  "Upper Rhineland"
+}

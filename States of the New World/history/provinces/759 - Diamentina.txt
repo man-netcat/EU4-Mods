@@ -1,0 +1,12 @@
+# 759 - Diamentina
+
+owner = BYA
+controller = BYA
+culture = ge
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = BYA
+trade_goods = sugar

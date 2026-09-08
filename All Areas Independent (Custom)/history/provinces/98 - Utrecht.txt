@@ -1,0 +1,20 @@
+# 98 Utrecht - Principal cities: Utrecht
+
+owner = HOA
+controller = HOA
+capital = "Utrecht"
+is_city = yes
+culture = dutch
+religion = catholic
+hre = yes
+base_tax = 5
+base_production = 5
+trade_goods = cloth
+base_manpower = 2
+add_core = HOA
+fort_15th = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = yakut
+religion = tengri_pagan_reformed
+technology_group = north_american
+capital = 1042
+monarch_names = {
+  "Sakha"
+}

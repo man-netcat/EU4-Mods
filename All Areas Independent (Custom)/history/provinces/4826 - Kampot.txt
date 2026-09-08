@@ -1,0 +1,19 @@
+#1823 - Stung Treng
+
+owner = CGD
+controller = CGD
+culture = khmer
+religion = buddhism
+capital = "Kampot"
+trade_goods = grain
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 2
+is_city = yes
+add_core = CGD
+
+
+
+discovered_by = chinese
+discovered_by = indian

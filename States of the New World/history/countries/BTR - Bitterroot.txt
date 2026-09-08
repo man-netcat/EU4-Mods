@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = blackfoot
+religion = totemism
+capital = 2006
+
+1444.11.11 = {
+	monarch = {
+		name = "Kolby"
+		dynasty = "of the Divide"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

@@ -1,0 +1,471 @@
+ARZ = {
+	graphical_culture = westerngfx
+	color = { 216 197 150 }
+	monarch_names = { "James" "Noel" "Marcus" "Peter" "Hugh" "Simon" "Walt" "Owen" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+CIB = {
+	graphical_culture = westerngfx
+	color = { 181 94 58 }
+	monarch_names = { "Edward" "Peter" "Lucas" "Martin" "Wesley" "Corbin" "Allen" "Grant" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+DSR = {
+	graphical_culture = westerngfx
+	color = { 212 164 40 }
+	monarch_names = { "Brigham" "Hyrum" "Ephraim" "Lehi" "Moses" "Aaron" "Nehemiah" "Josiah" }
+	historical_idea_groups = { defensive_ideas economic_ideas trade_ideas }
+	random_nation_chance = 0
+}
+
+CLD = {
+	graphical_culture = westerngfx
+	color = { 91 139 190 }
+	monarch_names = { "Sterling" "Canon" "Pueblo" "Durango" "Aspen" "Gunnison" "Rifle" "Salida" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+BTR = {
+	graphical_culture = westerngfx
+	color = { 120 156 110 }
+	monarch_names = { "Kolby" "Ronan" "Dillon" "Havre" "Eureka" "Bozeman" "Kalispell" "Anaconda" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+DKT = {
+	graphical_culture = westerngfx
+	color = { 155 177 200 }
+	monarch_names = { "Everett" "Selby" "Edmund" "Bismarck" "Huron" "Faulk" "Potter" "Cavalier" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+NST = {
+	graphical_culture = westerngfx
+	color = { 138 166 196 }
+	monarch_names = { "Vaughan" "Loran" "Anoka" "Cass" "Itasca" "Mille" "Otter" "Pipestone" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+WIS = {
+	graphical_culture = westerngfx
+	color = { 124 143 168 }
+	monarch_names = { "Gordon" "Menominee" "Oconto" "Racine" "Sauk" "Waukesha" "Winnebago" "Sheboygan" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+IOW = {
+	graphical_culture = westerngfx
+	color = { 185 194 104 }
+	monarch_names = { "Cyrus" "Dubuque" "Davenport" "Keokuk" "Osceola" "Plymouth" "Sioux" "Tama" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+KNS = {
+	graphical_culture = westerngfx
+	color = { 214 197 138 }
+	monarch_names = { "Abilene" "Osage" "Sedgwick" "Wichita" "Salina" "Cottonwood" "Neosho" "Solomon" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+OKH = {
+	graphical_culture = westerngfx
+	color = { 201 142 90 }
+	monarch_names = { "Cherokee" "Choctaw" "Comanche" "Kiowa" "Osage" "Seminole" "Caddo" "Tonkawa" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+OZK = {
+	graphical_culture = westerngfx
+	color = { 122 150 96 }
+	monarch_names = { "Osage" "White River" "Springfield" "Joplin" "Eureka" "Buffalo" "Taney" "Table Rock" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+MGA = {
+	graphical_culture = westerngfx
+	color = { 90 138 160 }
+	monarch_names = { "Mackinac" "Huron" "Saginaw" "Ottawa" "Leelanau" "Charlevoix" "Emmet" "Alpena" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+OHI = {
+	graphical_culture = westerngfx
+	color = { 176 72 112 }
+	monarch_names = { "Tecumseh" "Wyandot" "Shawnee" "Miami" "Scioto" "Cuyahoga" "Muskingum" "Hocking" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+WAB = {
+	graphical_culture = westerngfx
+	color = { 107 155 212 }
+	monarch_names = { "Kekionga" "Wabash" "Tippecanoe" "Vermillion" "Piankeshaw" "Wea" "Ouiatenon" "Potawatomi" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+CMB = {
+	graphical_culture = westerngfx
+	color = { 139 102 94 }
+	monarch_names = { "Harrods" "Boone" "Logan" "Maysville" "Owensboro" "Paducah" "Richmond" "Somerset" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+TNS = {
+	graphical_culture = westerngfx
+	color = { 176 117 85 }
+	monarch_names = { "Tsali" "Junaluska" "Sequoyah" "Oconostota" "Attakullakulla" "Nicot" "Yonaguska" "Standing Deer" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+MSP = {
+	graphical_culture = westerngfx
+	color = { 104 140 140 }
+	monarch_names = { "Natchez" "Yazoo" "Chickasaw" "Choctaw" "Biloxi" "Tunica" "Houma" "Chakchiuma" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+ALM = {
+	graphical_culture = westerngfx
+	color = { 110 155 196 }
+	monarch_names = { "Tuskaloosa" "Coosa" "Tallapoosa" "Autauga" "Escambia" "Muskogee" "Tensaw" "Ocmulgee" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+GEA = {
+	graphical_culture = westerngfx
+	color = { 185 107 46 }
+	monarch_names = { "Okefenokee" "Mocama" "Yamasee" "Hitchiti" "Muskogee" "Seminola" "Apalachee" "Ogeechee" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+CRL = {
+	graphical_culture = westerngfx
+	color = { 127 163 200 }
+	monarch_names = { "Robert" "Margaret" "Cape Fear" "Neuse" "Pamlico" "Santee" "Waccamaw" "Catawba" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+VIR = {
+	graphical_culture = westerngfx
+	color = { 160 176 112 }
+	monarch_names = { "Raleigh" "Powhatan" "Monacan" "Shenandoah" "Accomac" "Roanoke" "Kanawha" "Rappahannock" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+MYL = {
+	graphical_culture = westerngfx
+	color = { 192 176 96 }
+	monarch_names = { "Calvert" "Cecil" "Leonard" "St. Marys" "Severn" "Patapsco" "Potomac" "Susquehannock" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+PNS = {
+	graphical_culture = westerngfx
+	color = { 176 160 128 }
+	monarch_names = { "William" "Juniata" "Susquehanna" "Lehigh" "Allegheny" "Monongahela" "Schuylkill" "Lancaster" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+HDN = {
+	graphical_culture = westerngfx
+	color = { 94 143 176 }
+	monarch_names = { "Hiawatha" "Deganawida" "Mohawk" "Oneida" "Onondaga" "Cayuga" "Seneca" "Manhattan" }
+	historical_idea_groups = { defensive_ideas offensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+NEA = {
+	graphical_culture = westerngfx
+	color = { 106 127 176 }
+	monarch_names = { "Priscilla Alden" "John Winthrop" "Miles Standish" "William Bradford" "John Carver" "Edward Winslow" "Roger Williams" "Anne Hutchinson" }
+	historical_idea_groups = { trade_ideas naval_ideas economic_ideas defensive_ideas }
+	random_nation_chance = 0
+}
+
+ACD = {
+	graphical_culture = westerngfx
+	color = { 122 154 106 }
+	monarch_names = { "Henri" "Jean" "Pierre" "Antoine" "Philippe" "Louis" "Charles" "Francois" }
+	historical_idea_groups = { defensive_ideas trade_ideas naval_ideas }
+	random_nation_chance = 0
+}
+
+ONT = {
+	graphical_culture = westerngfx
+	color = { 138 176 128 }
+	monarch_names = { "Mackenzie" "Tecumseh" "Ottawa" "Huron" "Nipissing" "Algonquin" "Niagara" "Simcoe" }
+	historical_idea_groups = { defensive_ideas offensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+ASB = {
+	graphical_culture = westerngfx
+	color = { 160 168 96 }
+	monarch_names = { "Cuthbert" "Pierre" "Louis" "Toussaint" "Jean-Baptiste" "Alexandre" "Angelique" "Marcel" }
+	historical_idea_groups = { defensive_ideas offensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+ALR = {
+	graphical_culture = westerngfx
+	color = { 192 160 96 }
+	monarch_names = { "Banff" "Calgary" "Edmonton" "Jasper" "Peace" "Red Deer" "Lethbridge" "Medicine Hat" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+KWT = {
+	graphical_culture = westerngfx
+	color = { 144 168 176 }
+	monarch_names = { "Nelson" "Severn" "Churchill" "Albany" "Moose" "Attawapiskat" "Winisk" "Fort Hope" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+TNV = {
+	graphical_culture = westerngfx
+	color = { 176 160 136 }
+	monarch_names = { "Gilbert" "Havre" "Bonavista" "Trinity" "Conception" "Placentia" "Fortune" "Burin" }
+	historical_idea_groups = { defensive_ideas trade_ideas naval_ideas }
+	random_nation_chance = 0
+}
+
+COH = {
+	graphical_culture = westerngfx
+	color = { 192 155 107 }
+	monarch_names = { "Rodrigo" "Garcia" "Sancho" "Ramiro" "Alfonso" "Fernando" "Diego" "Juan" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+XLC = {
+	graphical_culture = westerngfx
+	color = { 208 146 90 }
+	monarch_names = { "Tlatoani" "Cihuatl" "Xochitl" "Mazatl" "Cuauhtli" "Ocelotl" "Quetzal" "Itzli" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+MHC = {
+	graphical_culture = westerngfx
+	color = { 176 112 144 }
+	monarch_names = { "Tzintzin" "Irecha" "Curatame" "Hiquingare" "Tangaxoan" "Zichapuri" "Caltzontzin" "Pauacume" }
+	historical_idea_groups = { defensive_ideas offensive_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+VRC = {
+	graphical_culture = westerngfx
+	color = { 106 143 176 }
+	monarch_names = { "Tochtepec" "Tuxtla" "Cempoala" "Tlacotalpan" "Papaloapan" "Huastec" "Totonac" "Coyolapan" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+CXA = {
+	graphical_culture = westerngfx
+	color = { 138 159 111 }
+	monarch_names = { "Votan" "Lakamha" "Tzotzil" "Zoque" "Tojolabal" "Chiapa" "Tzeltal" "Mame" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+GTM = {
+	graphical_culture = westerngfx
+	color = { 125 160 138 }
+	monarch_names = { "Iximche" "Tecun" "Utatlan" "Zakuleu" "Tz'utujil" "K'iche" "Peten" "Mam" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+HND = {
+	graphical_culture = westerngfx
+	color = { 160 128 90 }
+	monarch_names = { "Lenca" "Tolupan" "Pech" "Chorti" "Miskito" "Tawahka" "Garifuna" "Xicaque" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+NCR = {
+	graphical_culture = westerngfx
+	color = { 107 159 142 }
+	monarch_names = { "Nicarao" "Chiltepe" "Nagrandano" "Diria" "Masaya" "Xalteva" "Ticuantepe" "Orosi" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+DRN = {
+	graphical_culture = westerngfx
+	color = { 94 158 122 }
+	monarch_names = { "Urraca" "Chiriqui" "Cueva" "Cocle" "Guna" "Embera" "Bribri" "Cofan" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+QSQ = {
+	graphical_culture = westerngfx
+	color = { 111 160 192 }
+	monarch_names = { "Enriquillo" "Anacaona" "Guacanagaric" "Caonabo" "Bohechio" "Cotubanama" "Maguana" "Higuey" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+XYM = {
+	graphical_culture = westerngfx
+	color = { 127 191 127 }
+	monarch_names = { "Huareo" "Quao" "Aguacatec" "Maima" "Onabe" "Caguaya" "Meten" "Bucan" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+BQI = {
+	graphical_culture = westerngfx
+	color = { 160 111 159 }
+	monarch_names = { "Agueybana" "Guaybana" "Mayaguez" "Caguax" "Arasibo" "Orocobix" "Jayuya" "Coamex" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+ANI = {
+	graphical_culture = westerngfx
+	color = { 134 185 217 }
+	monarch_names = { "Kalinago" "Arawak" "Krotoa" "Carbet" "Tiburon" "Gonave" "Samana" "Vieques" }
+	historical_idea_groups = { defensive_ideas trade_ideas naval_ideas }
+	random_nation_chance = 0
+}
+
+GYA = {
+	graphical_culture = westerngfx
+	color = { 89 133 95 }
+	monarch_names = { "Essequibo" "Berbice" "Demerara" "Courantyne" "Maroni" "Oyapock" "Rupununi" "Cuyuni" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+BOL = {
+	graphical_culture = southamericagfx
+	color = { 176 111 90 }
+	monarch_names = { "Colla" "Tiahuanaco" "Potosi" "Chuquisaca" "Oruro" "Cochabamba" "Santa Cruz" "Beni" }
+	historical_idea_groups = { defensive_ideas offensive_ideas economic_ideas trade_ideas }
+	random_nation_chance = 0
+}
+
+TCM = {
+	graphical_culture = southamericagfx
+	color = { 168 155 90 }
+	monarch_names = { "Cacique" "Sumalao" "Amaicha" "Quilmes" "Purmamarca" "Tilcara" "Cachi" "Molinos" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+URY = {
+	graphical_culture = westerngfx
+	color = { 111 176 192 }
+	monarch_names = { "Artigas" "Tacuarembo" "Salto" "Paysandu" "Durazno" "Cerro Largo" "Treinta y Tres" "Rocha" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+PTN = {
+	graphical_culture = southamericagfx
+	color = { 154 168 160 }
+	monarch_names = { "Tehuelche" "Selknam" "Yaghan" "Chono" "Puelche" "Mapuche" "Huiliche" "Kawesqar" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+AMZ = {
+	graphical_culture = southamericagfx
+	color = { 78 143 78 }
+	monarch_names = { "Cunhambebe" "Tibirica" "Jagoanharo" "Paraguacu" "Aimbire" "Moacir" "Iperu" "Caramuru" }
+	historical_idea_groups = { defensive_ideas offensive_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+MRN = {
+	graphical_culture = westerngfx
+	color = { 176 130 90 }
+	monarch_names = { "Nuno" "Goncalo" "Rodrigo" "Duarte" "Joao" "Manuel" "Vasco" "Melchior" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+PNB = {
+	graphical_culture = westerngfx
+	color = { 200 107 90 }
+	monarch_names = { "Duarte" "Afonso" "Gaspar" "Lopo" "Ruy" "Tristao" "Fernao" "Sancho" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+BYA = {
+	graphical_culture = westerngfx
+	color = { 208 122 58 }
+	monarch_names = { "Tome" "Garcia" "Mem" "Pero" "Lourenco" "Brito" "Caminha" "Anchieta" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+MGX = {
+	graphical_culture = westerngfx
+	color = { 155 127 90 }
+	monarch_names = { "Borba" "Bartholomeu" "Sao Paulo" "Antonio" "Simao" "Jeronymo" "Alvarenga" "Guimaraes" }
+	historical_idea_groups = { defensive_ideas economic_ideas trade_ideas }
+	random_nation_chance = 0
+}
+
+RDJ = {
+	graphical_culture = westerngfx
+	color = { 90 160 176 }
+	monarch_names = { "Estacio de Sa" "Mem de Sa" "Salvador Correia" "Jeronimo de Albuquerque" "Martim Afonso" "Duarte da Costa" "Francisco de Souza" "Diogo Botelho" }
+	historical_idea_groups = { trade_ideas naval_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+SPO = {
+	graphical_culture = westerngfx
+	color = { 79 123 160 }
+	monarch_names = { "Martim" "Manoel" "Sao Vicente" "Bertioga" "Piratininga" "Santo Andre" "Mogi" "Sorocaba" }
+	historical_idea_groups = { defensive_ideas offensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+RGR = {
+	graphical_culture = westerngfx
+	color = { 160 176 90 }
+	monarch_names = { "Laguna" "Santos" "Porto Alegre" "Pelotas" "Rio Pardo" "Viamao" "Caxias" "Bage" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}
+
+MTG = {
+	graphical_culture = westerngfx
+	color = { 127 160 106 }
+	monarch_names = { "Cuiaba" "Bororo" "Xingu" "Aripuana" "Juruena" "Pantanal" "Parecis" "Guapore" }
+	historical_idea_groups = { defensive_ideas trade_ideas economic_ideas }
+	random_nation_chance = 0
+}

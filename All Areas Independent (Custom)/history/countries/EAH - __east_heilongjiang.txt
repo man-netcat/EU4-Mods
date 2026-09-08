@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = evenk
+religion = tengri_pagan_reformed
+technology_group = chinese
+capital = 1049
+monarch_names = {
+  "East Heilongjiang"
+}

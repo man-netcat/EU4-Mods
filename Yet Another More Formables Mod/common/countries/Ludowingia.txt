@@ -1,0 +1,66 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 90 149 171 }
+
+revolutionary_colors = { 15 0 5 }
+
+historical_idea_groups = {
+	administrative_ideas
+	diplomatic_ideas
+	offensive_ideas
+	economic_ideas
+	religious_ideas
+	defensive_ideas
+	trade_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_knights
+	western_infantry
+	western_cavalry
+	western_musketeers
+	western_rifles
+}
+
+monarch_names = {
+	"Ludwig #0" = 100
+	"Friedrich #0" = 80
+	"Wilhelm #0" = 60
+	"Heinrich #0" = 60
+	"Albrecht #0" = 50
+	"Konrad #0" = 40
+	"Otto #0" = 40
+	"Balthasar #0" = 40
+	"Hermann #0" = 40
+	"Johann #0" = 30
+	"Georg #0" = 30
+	"Karl #0" = 30
+	"Philipp #0" = 30
+	"Moritz #0" = 20
+	"Ernst #0" = 20
+	"Rudolf #0" = 20
+	"Günther #0" = 20
+	"Sigismund #0" = 10
+
+	"Elisabeth #0" = -1
+	"Anna #0" = -1
+	"Katharina #0" = -1
+	"Margarete #0" = -1
+	"Sophie #0" = -1
+}
+
+leader_names = {
+	"Ludwig von Thüringen" "Friedrich von Hessen" "Konrad von Wettin"
+	"Heinrich Raspe" "Albrecht der Entartete" "Balthasar von Wettin"
+	"Wilhelm der Weise" "Hermann von Thüringen" "Otto von Hessen"
+	"Philipp von Thüringen" "Johann der Beständige" "Moritz von Sachsen"
+	"Georg von Hessen" "Friedrich der Weise" "Ernst von Wettin"
+}
+
+ship_names = {
+	"Löwe von Thüringen" "Hessischer Adler" "Wartburg"
+	"Marburg" "Erfurt" "Weimar" "Eisenach" "Kassel" "Melsungen"
+}

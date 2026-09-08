@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = gamilaraay
+religion = dreamtime
+technology_group = aboriginal_tech
+capital = 1094
+monarch_names = {
+  "North Queensland"
+}

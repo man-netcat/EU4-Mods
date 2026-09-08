@@ -1,0 +1,22 @@
+#662 - Yunnan
+
+owner = YUN
+controller = YUN
+add_core = YUN
+culture = bai
+religion = buddhism
+capital = "Kunming"
+trade_goods = copper
+hre = no
+base_tax = 6 
+base_production = 5
+base_manpower = 3
+is_city = yes
+add_core = YUN
+fort_15th = yes #More than 1 Weisuo
+
+
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = nomad_group

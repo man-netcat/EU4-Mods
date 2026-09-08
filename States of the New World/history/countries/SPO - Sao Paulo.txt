@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = ge
+religion = animism
+capital = 766
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Martim"
+		dynasty = "Afonso de Souza"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Manoel"
+		dynasty = "Afonso de Souza"
+		birth_date = 1420
+		death_date = 1493
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

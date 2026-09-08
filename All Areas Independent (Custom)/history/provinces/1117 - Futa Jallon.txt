@@ -1,0 +1,20 @@
+#1117 - Futa Jallon
+
+owner = FUT
+controller = FUT
+culture = fulani
+is_city = yes
+base_manpower = 3
+religion = shamanism #Fetishism
+capital = "Timbo"
+trade_goods = ivory
+hre = no
+base_tax = 3 
+base_production = 3
+add_core = FUT
+add_core = FUT
+
+
+
+discovered_by = sub_saharan
+

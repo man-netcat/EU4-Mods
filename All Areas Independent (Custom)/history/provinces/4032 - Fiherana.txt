@@ -1,0 +1,16 @@
+#4032 - Fiherana
+
+owner = SEH
+controller = SEH
+add_core = SEH
+culture = madagasque
+religion = shamanism #Fetishism
+capital = "Fiherana"
+trade_goods = fish
+hre = no
+base_tax = 2 
+base_production = 1
+base_manpower = 2
+is_city = yes
+add_local_autonomy = 40
+discovered_by = east_african

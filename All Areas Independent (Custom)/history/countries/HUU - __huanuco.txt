@@ -1,0 +1,9 @@
+government = theocracy
+government_rank = 1
+primary_culture = aimara
+religion = inti
+technology_group = andean
+capital = 809
+monarch_names = {
+  "Huanuco"
+}

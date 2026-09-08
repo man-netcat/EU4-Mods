@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = bozo
+religion = sunni
+technology_group = sub_saharan
+capital = 1134
+monarch_names = {
+  "Jenne"
+}

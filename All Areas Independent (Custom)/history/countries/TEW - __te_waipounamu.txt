@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = maori
+religion = animism
+technology_group = north_american
+capital = 1109
+monarch_names = {
+  "Te Waipounamu"
+}

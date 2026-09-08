@@ -1,0 +1,19 @@
+#1761 - Pfalz
+
+capital = "Worms"
+culture = hessian
+religion = catholic
+trade_goods = wine
+owner = PAA
+base_tax = 4
+base_production = 4
+base_manpower = 2
+is_city = yes
+controller = PAA
+add_core = PAA
+hre = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+

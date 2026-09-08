@@ -1,0 +1,12 @@
+# 2822 - Tucume
+
+owner = PEU
+controller = PEU
+culture = inca
+religion = inti
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = PEU
+trade_goods = silver

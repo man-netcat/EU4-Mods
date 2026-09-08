@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = anishinabe
+religion = totemism
+capital = 944
+
+1444.11.11 = {
+	monarch = {
+		name = "Mackinac"
+		dynasty = "of the Straits"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

@@ -1,0 +1,15 @@
+# No previous file for Karabara
+
+owner = NIG
+controller = NIG
+add_core = NIG
+is_city = yes
+culture = songhai 
+religion = sunni
+capital = "Karabara"
+trade_goods = fish
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+discovered_by = sub_saharan

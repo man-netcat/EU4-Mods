@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = dalmatian
+religion = catholic
+technology_group = eastern
+capital = 136
+monarch_names = {
+  "East Adriatic Coast"
+}

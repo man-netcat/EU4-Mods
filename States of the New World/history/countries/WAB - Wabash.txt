@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = miami
+religion = totemism
+capital = 942
+
+1444.11.11 = {
+	monarch = {
+		name = "Kekionga"
+		dynasty = "of the Portage"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

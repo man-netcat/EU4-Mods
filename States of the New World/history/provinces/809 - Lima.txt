@@ -1,0 +1,12 @@
+# 809 - Lima
+
+owner = PEU
+controller = PEU
+culture = inca
+religion = inti
+is_city = yes
+base_tax = 5
+base_production = 5
+base_manpower = 5
+add_core = PEU
+trade_goods = silver

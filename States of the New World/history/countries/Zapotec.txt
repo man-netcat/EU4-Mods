@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = mixtec
+religion = nahuatl
+capital = 844
+
+1444.11.11 = {
+	monarch = {
+		name = "Cocijo"
+		dynasty = "of the Clouds"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Xipe"
+		dynasty = "of the Clouds"
+		birth_date = 1424
+		death_date = 1488
+		claim = 85
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

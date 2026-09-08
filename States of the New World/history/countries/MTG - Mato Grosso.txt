@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = maipurean
+religion = animism
+capital = 2888
+
+1444.11.11 = {
+	monarch = {
+		name = "Cuiaba"
+		dynasty = "dos Bandeirantes"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Bororo"
+		dynasty = "dos Bandeirantes"
+		birth_date = 1425
+		death_date = 1491
+		claim = 85
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

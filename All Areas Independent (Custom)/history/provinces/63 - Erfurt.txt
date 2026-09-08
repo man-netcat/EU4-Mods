@@ -1,0 +1,21 @@
+#63 - Erfurt
+
+owner = THR
+controller = THR
+culture = saxon
+religion = catholic
+capital = "Erfurt"
+trade_goods = dyes #Woad, also a center for glassmaking
+hre = yes
+base_tax = 5
+base_production = 4
+base_manpower = 3
+is_city = yes
+add_core = THR
+add_core = THR
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+fort_15th = yes
+center_of_trade = 1

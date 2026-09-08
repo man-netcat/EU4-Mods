@@ -1,0 +1,12 @@
+# 4900 - Otoe
+
+owner = IOW
+controller = IOW
+culture = illini
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = IOW
+trade_goods = grain

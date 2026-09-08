@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = delaware
+religion = totemism
+capital = 953
+
+1444.11.11 = {
+	monarch = {
+		name = "Calvert"
+		dynasty = "of the Chesapeake"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

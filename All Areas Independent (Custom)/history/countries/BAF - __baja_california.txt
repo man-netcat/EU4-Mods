@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = piman
+religion = animism 
+technology_group = north_american
+capital = 865
+monarch_names = {
+  "Baja California"
+}

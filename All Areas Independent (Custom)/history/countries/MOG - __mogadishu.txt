@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = somali
+religion = sunni
+technology_group = east_african
+capital = 1205
+monarch_names = {
+  "Mogadishu"
+}

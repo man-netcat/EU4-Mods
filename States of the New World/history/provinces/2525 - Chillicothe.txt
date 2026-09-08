@@ -1,0 +1,12 @@
+# 2525 - Chillicothe
+
+owner = OHI
+controller = OHI
+culture = shawnee
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = OHI
+trade_goods = grain

@@ -1,0 +1,39 @@
+# Alsace National Ideas
+
+ALS_ideas = {
+	start = {
+		defensiveness = 0.15
+		development_cost = -0.1
+	}
+
+	bonus = {
+		global_unrest = -1
+	}
+
+	trigger = {
+		tag = ALS
+	}
+	free = yes
+
+	als_decapolis = {
+		trade_efficiency = 0.1
+	}
+	als_vineyards = {
+		production_efficiency = 0.1
+	}
+	als_frontier_fortresses = {
+		fort_maintenance_modifier = -0.15
+	}
+	als_rhine_crossroads = {
+		diplomatic_reputation = 1
+	}
+	als_gutenberg_legacy = {
+		technology_cost = -0.05
+	}
+	als_imperial_diplomacy = {
+		improve_relations = 0.2
+	}
+	als_religious_tolerance = {
+		tolerance_heretic = 2
+	}
+}

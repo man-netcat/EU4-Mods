@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = sinhala
+religion = buddhism
+technology_group = indian
+capital = 572
+monarch_names = {
+  "South Lanka"
+}

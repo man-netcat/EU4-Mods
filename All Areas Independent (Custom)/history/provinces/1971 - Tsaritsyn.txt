@@ -1,0 +1,19 @@
+#1971 - Tsaritsyn
+
+owner = LO0
+controller = LO0
+culture = mishary
+religion = sunni
+hre = no
+base_tax = 3 
+base_production = 3
+trade_goods = livestock 
+base_manpower = 2
+capital = "Sary-Su"
+is_city = yes
+add_core = LO0
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+discovered_by = ottoman
+discovered_by = muslim

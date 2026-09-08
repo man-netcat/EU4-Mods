@@ -1,0 +1,12 @@
+# 754 - Itamaraca
+
+owner = PNB
+controller = PNB
+culture = tupinamba
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = PNB
+trade_goods = sugar

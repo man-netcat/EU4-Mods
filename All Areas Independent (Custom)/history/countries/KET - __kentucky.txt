@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = yuchi
+religion = totemism
+technology_group = north_american
+capital = 941
+monarch_names = {
+  "Kentucky"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = abenaki
+religion = totemism
+technology_group = north_american
+capital = 2013
+monarch_names = {
+  "Maine"
+}

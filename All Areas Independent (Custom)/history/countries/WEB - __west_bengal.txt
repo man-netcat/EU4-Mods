@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = bengali
+religion = sunni
+technology_group = indian
+capital = 561
+monarch_names = {
+  "West Bengal"
+}

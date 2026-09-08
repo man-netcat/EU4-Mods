@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = chahar
+religion = tengri_pagan_reformed
+technology_group = nomad_group
+capital = 703
+monarch_names = {
+  "Hebei"
+}

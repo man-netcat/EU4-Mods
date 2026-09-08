@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = shan
+religion = buddhism
+technology_group = chinese
+capital = 660
+monarch_names = {
+  "Yun Gui Borderland"
+}

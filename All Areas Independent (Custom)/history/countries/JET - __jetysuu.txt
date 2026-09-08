@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = kirgiz
+religion = sunni
+technology_group = nomad_group
+capital = 459
+monarch_names = {
+  "Jetysuu"
+}

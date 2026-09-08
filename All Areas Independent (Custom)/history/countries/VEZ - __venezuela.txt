@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = carib
+religion = animism
+technology_group = north_american
+capital = 741
+monarch_names = {
+  "Venezuela"
+}

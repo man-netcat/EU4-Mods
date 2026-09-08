@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = ge
+religion = animism
+technology_group = north_american
+capital = 2909
+monarch_names = {
+  "Pontal"
+}

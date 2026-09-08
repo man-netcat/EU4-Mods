@@ -1,0 +1,12 @@
+# 2905 - Rio Das Mortes
+
+owner = MTG
+controller = MTG
+culture = maipurean
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = MTG
+trade_goods = gold

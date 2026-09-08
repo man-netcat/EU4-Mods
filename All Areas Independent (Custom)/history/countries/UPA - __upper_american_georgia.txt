@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = creek
+religion = totemism
+technology_group = north_american
+capital = 930
+monarch_names = {
+  "Upper American Georgia"
+}

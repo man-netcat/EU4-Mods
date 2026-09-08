@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = pontic_greek
+religion = orthodox
+technology_group = eastern
+capital = 330
+monarch_names = {
+  "Erzurum"
+}

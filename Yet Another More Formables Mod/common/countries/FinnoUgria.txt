@@ -1,0 +1,280 @@
+# Finno-Ugria tag definition
+graphical_culture = westerngfx
+color = {
+	58
+	140
+	165
+}
+
+revolutionary_colors = {
+	5
+	14
+	10
+}
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	aristocracy_ideas
+	spy_ideas
+	religious_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	swedish_gallop
+	swedish_gustavian
+	swedish_caroline
+	swedish_arme_blanche
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+leader_names = {
+	"von Essen"
+	Adlercreutz
+	Ahlqvist
+	Aminoff
+	Armfelt
+	Berg
+	Bielke
+	Björn
+	Blom
+	Bonde
+	Burmatov
+	Carpelan
+	Cheskidov
+	Cronstedt
+	Dozmorov
+	Dufva
+	Ehrensvärd
+	Fleming
+	Furuhjelm
+	Glad
+	Haataja
+	Helander
+	Helin
+	Hiltunen
+	Horn
+	Ichetkin
+	Ilkka
+	Isotalo
+	Järnberg
+	Järvelä
+	Kachesov
+	Kanev
+	Kesäläinen
+	Klingspor
+	Kochev
+	Koinov
+	Kolegov
+	Kortelainen
+	Krouvari
+	Kudymov
+	Kychanov
+	Kykin
+	Kynev
+	Kynkurogov
+	Kyrnyshev
+	Kyrö
+	Kyrov
+	Kysov
+	Länkinen
+	Liljencrantz
+	Lyurov
+	Mannerheim
+	Michkin
+	Moshev
+	Oshev
+	Oshkokov
+	Paijkull
+	Pentti
+	Pietilä
+	Porsin
+	Purtov
+	Rakin
+	Rehbinder
+	Rehnskiöld
+	Renner
+	Rochev
+	Rokka
+	Ruchev
+	Rutanen
+	Sakari
+	Schulman
+	Sjögren
+	Soop
+	Stålhandske
+	Stoor
+	Syuzev
+	Tapani
+	Termonen
+	Tott
+	Turunen
+	Vilesov
+	Volegov
+	Wilander
+	Wrede
+	Yusev
+	Zerov
+	Zyrianov
+}
+
+ship_names = {
+	"Birger Jarl"
+	"Per Brahe"
+	"St. Henrik"
+	Åbo
+	Agricola
+	Arensburg
+	Aura
+	Baseg
+	Borgå
+	Cherdyn
+	Hakkapeliitta
+	Hapsal
+	Helsingfors
+	Ilmarinen
+	Iskor
+	Kama
+	Karelen
+	Koleg
+	Kolva
+	Kudym-Osha
+	Kullervo
+	Kymi
+	Lapland
+	Lemminkäinen
+	Maria
+	Narva
+	Nyland
+	Ösel
+	Österbotten
+	Oulu
+	Pelym
+	Pernau
+	Pokcha
+	Rateg
+	Reval
+	Sampo
+	Savolax
+	Shudeg
+	Sysola
+	Tavastehus
+	Tavastland
+	Toompea
+	Uros
+	Uzheg
+	Väinämöinen
+	Vanda
+	Vasa
+	Viborg
+	Vilgort
+	Vishera
+	Voleg
+	Vuoksi
+	Vychegda
+	Weissenstein
+	Wesenberg
+	Yazva
+	Yus
+}
+
+monarch_names = {
+	"Aabraham #0" = 10
+	"Aapeli #0" = 0
+	"Aato #0" = 10
+	"Aina #0" = -1
+	"Aleksanteri #0" = 5
+	"Alpertti #0" = 0
+	"Antero #0" = 0
+	"Arvo #0" = 0
+	"Boris #0" = 0
+	"Danil #0" = 0
+	"Dmitry #0" = 0
+	"Edvard #0" = 5
+	"Eerikki #0" = 20
+	"Eino #0" = 0
+	"Erno #0" = 0
+	"Fredrik #0" = 10
+	"Gavril #0" = 10
+	"Gerasim #0" = 10
+	"Heikki #0" = 0
+	"Illya #0" = 0
+	"Ilmar #0" = 20
+	"Iona #0" = 10
+	"Isaak #0" = 10
+	"Ivan #0" = 10
+	"Jaak #0" = 20
+	"Jaakko #0" = 5
+	"Jaana #0" = -1
+	"Jani #0" = 10
+	"Jooseppi #0" = 0
+	"Juha #0" = 5
+	"Jürgen #0" = 5
+	"Juta #0" = -1
+	"Jyri #0" = 0
+	"Kaarel #0" = 0
+	"Kaarle #0" = 0
+	"Kätlin #0" = -1
+	"Katyö #0" = -15
+	"Kauri #0" = 10
+	"Kos'ta #0" = 10
+	"Kristian #0" = 0
+	"Lauri #0" = 0
+	"Mainio #0" = 0
+	"Marten #0" = 5
+	"Matvey #0" = 20
+	"Meeme #0" = 0
+	"Mikael #0" = 0
+	"Mikhail #0" = 20
+	"Mikulay #0" = 10
+	"Nasta #0" = -15
+	"Niklas #0" = 20
+	"Ölga #0" = -15
+	"Ölyöksey #0" = 0
+	"Öndrey #0" = 10
+	"Onni #0" = 0
+	"Otso #0" = 0
+	"Otto #0" = 5
+	"Paavo #0" = 0
+	"Pedör #0" = 10
+	"Pedot #0" = 0
+	"Petteri #0" = 0
+	"Petyr #0" = 10
+	"Pitirim #0" = 10
+	"Priidu #0" = 10
+	"Ransu #0" = 0
+	"Reino #0" = 0
+	"Riivo #0" = 0
+	"Samuli #0" = 0
+	"Segö #0" = 0
+	"Semö #0" = 10
+	"Silja #0" = -1
+	"Stepan #0" = 10
+	"Taavi #0" = 0
+	"Tarja #0" = -1
+	"Tauno #0" = 0
+	"Tuomas #0" = 0
+	"Väinämöinen #0" = 20
+	"Valto #0" = 0
+	"Vasiley #0" = 20
+	"Veli #0" = 0
+	"Vieno #0" = 0
+	"Vilhelmi #0" = 0
+	"Voitto #0" = 0
+	"Volod #0" = 10
+	"Yegor #0" = 10
+	"Yermolay #0" = 20
+}

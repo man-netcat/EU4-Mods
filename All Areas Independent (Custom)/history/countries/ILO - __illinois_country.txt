@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = illini
+religion = totemism
+technology_group = north_american
+capital = 915
+monarch_names = {
+  "Illinois Country"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = guarani
+religion = animism
+technology_group = north_american
+capital = 2857
+monarch_names = {
+  "Rio Grande Do Sol"
+}

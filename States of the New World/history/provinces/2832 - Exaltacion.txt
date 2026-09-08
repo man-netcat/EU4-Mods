@@ -1,0 +1,12 @@
+# 2832 - Exaltacion
+
+owner = BOL
+controller = BOL
+culture = aimara
+religion = inti
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = BOL
+trade_goods = silver

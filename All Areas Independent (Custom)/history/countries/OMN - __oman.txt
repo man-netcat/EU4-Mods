@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = omani_culture
+religion = ibadi
+technology_group = muslim
+capital = 403
+monarch_names = {
+  "Oman"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = tuareg
+religion = sunni
+technology_group = north_american
+capital = 1127
+monarch_names = {
+  "Western Sahara"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = cham
+religion = animism
+technology_group = chinese
+capital = 2375
+monarch_names = {
+  "Tay Nguyen"
+}

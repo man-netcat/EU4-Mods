@@ -1,0 +1,198 @@
+#Finland
+graphical_culture = westerngfx
+color = {
+	215
+	130
+	113
+}
+
+revolutionary_colors = {
+	0
+	1
+	15
+}
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	aristocracy_ideas
+	spy_ideas
+	religious_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	swedish_gallop
+	swedish_gustavian
+	swedish_caroline
+	swedish_arme_blanche
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+leader_names = {
+	"von Essen"
+	Adlercreutz
+	Ahlqvist
+	Aminoff
+	Armfelt
+	Berg
+	Bielke
+	Björn
+	Blom
+	Bonde
+	Carpelan
+	Cronstedt
+	Dufva
+	Ehrensvärd
+	Fleming
+	Furuhjelm
+	Glad
+	Haataja
+	Helander
+	Helin
+	Hiltunen
+	Horn
+	Ilkka
+	Isotalo
+	Järnberg
+	Järvelä
+	Kesäläinen
+	Klingspor
+	Kortelainen
+	Krouvari
+	Kyrö
+	Länkinen
+	Liljencrantz
+	Mannerheim
+	Paijkull
+	Pentti
+	Pietilä
+	Rehbinder
+	Rehnskiöld
+	Renner
+	Rokka
+	Rutanen
+	Sakari
+	Schulman
+	Sjögren
+	Soop
+	Stålhandske
+	Stoor
+	Tapani
+	Termonen
+	Tott
+	Turunen
+	Wilander
+	Wrede
+}
+
+ship_names = {
+	"Birger Jarl"
+	"Per Brahe"
+	"St. Henrik"
+	Åbo
+	Agricola
+	Arensburg
+	Aura
+	Borgå
+	Hakkapeliitta
+	Hapsal
+	Helsingfors
+	Ilmarinen
+	Karelen
+	Kullervo
+	Kymi
+	Lapland
+	Lemminkäinen
+	Maria
+	Narva
+	Nyland
+	Ösel
+	Österbotten
+	Oulu
+	Pernau
+	Reval
+	Sampo
+	Savolax
+	Tavastehus
+	Tavastland
+	Toompea
+	Väinämöinen
+	Vanda
+	Vasa
+	Viborg
+	Vuoksi
+	Weissenstein
+	Wesenberg
+}
+
+monarch_names = {
+	"Aabraham #0" = 10
+	"Aapeli #0" = 0
+	"Aato #0" = 10
+	"Aina #0" = -1
+	"Aleksanteri #0" = 5
+	"Alpertti #0" = 0
+	"Antero #0" = 0
+	"Arvo #0" = 0
+	"Edvard #0" = 5
+	"Eerikki #0" = 20
+	"Eino #0" = 0
+	"Erno #0" = 0
+	"Fredrik #0" = 10
+	"Heikki #0" = 0
+	"Ilmar #0" = 20
+	"Jaak #0" = 20
+	"Jaakko #0" = 5
+	"Jaana #0" = -1
+	"Jani #0" = 10
+	"Jooseppi #0" = 0
+	"Juha #0" = 5
+	"Jürgen #0" = 5
+	"Juta #0" = -1
+	"Jyri #0" = 0
+	"Kaarel #0" = 0
+	"Kaarle #0" = 0
+	"Kätlin #0" = -1
+	"Kauri #0" = 10
+	"Kristian #0" = 0
+	"Lauri #0" = 0
+	"Mainio #0" = 0
+	"Marten #0" = 5
+	"Meeme #0" = 0
+	"Mikael #0" = 0
+	"Niklas #0" = 20
+	"Onni #0" = 0
+	"Otso #0" = 0
+	"Otto #0" = 5
+	"Paavo #0" = 0
+	"Petteri #0" = 0
+	"Priidu #0" = 10
+	"Ransu #0" = 0
+	"Reino #0" = 0
+	"Riivo #0" = 0
+	"Samuli #0" = 0
+	"Silja #0" = -1
+	"Taavi #0" = 0
+	"Tarja #0" = -1
+	"Tauno #0" = 0
+	"Tuomas #0" = 0
+	"Väinämöinen #0" = 20
+	"Valto #0" = 0
+	"Veli #0" = 0
+	"Vieno #0" = 0
+	"Vilhelmi #0" = 0
+	"Voitto #0" = 0
+}

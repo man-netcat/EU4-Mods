@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = khmer
+religion = buddhism
+technology_group = chinese
+capital = 604
+monarch_names = {
+  "Cambodia"
+}

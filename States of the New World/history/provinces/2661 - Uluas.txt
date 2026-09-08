@@ -1,0 +1,12 @@
+# 2661 - Uluas
+
+owner = NCR
+controller = NCR
+culture = miskito
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = NCR
+trade_goods = grain

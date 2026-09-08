@@ -1,0 +1,92 @@
+# EU5 Interactions - Transfer Subject Province to Another Subject
+# Ports EU5's "Give Subject Location to Other Subject" interaction.
+#
+# Right-click any of your subjects that has provinces bordering another subject.
+# The action transfers ONE bordering non-capital province to the neighboring subject.
+# Use repeatedly to transfer multiple provinces.
+#
+# The province is ceded instantly — the subject has no say in the matter.
+
+eu5_transfer_subject_province = {
+	category = influence
+	
+	require_acceptance = no
+	
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			NOT = { is_subject_of_type = tributary_state }
+			num_of_cities = 2
+		}
+	}
+	
+	is_allowed = {
+		NOT = { is_in_war = any }
+		FROM = { NOT = { is_in_war = any } }
+		
+		FROM = {
+			num_of_cities = 2
+			is_subject_of = ROOT
+			NOT = { is_subject_of_type = tributary_state }
+			
+			any_owned_province = {
+				is_capital = no
+				any_neighbor_province = {
+					owner = { is_subject_of = ROOT }
+					owner = { NOT = { this = FROM } }
+				}
+			}
+		}
+	}
+	
+	on_accept = {
+		FROM = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					any_neighbor_province = {
+						owner = { is_subject_of = ROOT }
+						owner = { NOT = { this = FROM } }
+					}
+				}
+				save_event_target_as = transfer_province
+				
+				random_neighbor_province = {
+					limit = {
+						owner = { is_subject_of = ROOT }
+						owner = { NOT = { this = FROM } }
+					}
+					owner = { save_event_target_as = transfer_recipient }
+				}
+			}
+		}
+		
+		event_target:transfer_province = {
+			cede_province = event_target:transfer_recipient
+			add_core = event_target:transfer_recipient
+		}
+		
+		event_target:transfer_province = {
+			remove_core = FROM
+		}
+		
+		event_target:transfer_recipient = {
+			add_opinion = {
+				who = FROM
+				modifier = eu5_gained_province_from_subject
+			}
+		}
+		FROM = {
+			add_opinion = {
+				who = event_target:transfer_recipient
+				modifier = eu5_lost_province_to_subject
+			}
+		}
+		
+		add_prestige = -5
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

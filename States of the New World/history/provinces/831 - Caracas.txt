@@ -1,0 +1,12 @@
+# 831 - Caracas
+
+owner = VNZ
+controller = VNZ
+culture = guajiro
+religion = animism
+is_city = yes
+base_tax = 5
+base_production = 5
+base_manpower = 5
+add_core = VNZ
+trade_goods = grain

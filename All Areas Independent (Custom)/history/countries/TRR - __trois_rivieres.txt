@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = laurentian
+religion = totemism
+technology_group = north_american
+capital = 990
+monarch_names = {
+  "Trois Rivieres"
+}

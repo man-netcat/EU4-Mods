@@ -1,0 +1,13 @@
+owner = CHW
+controller = CHW
+add_core = CHW
+culture = chokwe
+religion = shamanism #Fetishism
+capital = "Chokwe"
+trade_goods = ivory
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 2
+is_city = yes
+discovered_by = central_african

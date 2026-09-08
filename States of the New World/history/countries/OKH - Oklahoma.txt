@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = wichita
+religion = totemism
+capital = 891
+
+1444.11.11 = {
+	monarch = {
+		name = "Cherokee"
+		dynasty = "of the Red Earth"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

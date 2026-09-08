@@ -1,0 +1,9 @@
+government = theocracy
+government_rank = 1
+primary_culture = bavarian
+religion = catholic
+technology_group = western
+capital = 76
+monarch_names = {
+  "East Bavaria"
+}

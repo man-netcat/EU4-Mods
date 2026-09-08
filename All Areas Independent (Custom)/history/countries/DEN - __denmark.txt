@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = danish
+religion = catholic
+technology_group = western
+capital = 12
+monarch_names = {
+  "Denmark"
+}

@@ -1,0 +1,12 @@
+# 4578 - Tzapotzingo
+
+owner = XLC
+controller = XLC
+culture = tepic
+religion = nahuatl
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = XLC
+trade_goods = silver

@@ -1,0 +1,12 @@
+# 956 - Lenape
+
+owner = MYL
+controller = MYL
+culture = delaware
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = MYL
+trade_goods = grain

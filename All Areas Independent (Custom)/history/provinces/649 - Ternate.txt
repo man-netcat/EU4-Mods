@@ -1,0 +1,15 @@
+#649 - Ternate
+
+owner = SPC
+controller = SPC
+culture = moluccan
+religion = animism
+capital = "Ternate"
+trade_goods = cloves
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 3
+is_city = yes
+add_core = SPC
+discovered_by = chinese

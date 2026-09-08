@@ -1,0 +1,23 @@
+#Narva
+
+owner = ESO
+controller = ESO
+add_core = ESO
+add_core = ESO
+culture = estonian
+religion = catholic
+hre = no
+base_tax = 2 
+base_production = 2
+trade_goods = grain
+base_manpower = 1
+capital = "Narva"
+is_city = yes
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+

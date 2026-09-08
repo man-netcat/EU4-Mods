@@ -1,0 +1,12 @@
+# 2527 - Chickamauga
+
+owner = TNS
+controller = TNS
+culture = yuchi
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = TNS
+trade_goods = grain

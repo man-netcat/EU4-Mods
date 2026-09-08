@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = tigray
+religion = coptic
+technology_group = east_african
+capital = 1230
+monarch_names = {
+  "Red Sea Coast"
+}

@@ -1,0 +1,20 @@
+#4395 - Yamethin
+
+owner = CEL
+controller = CEL
+culture = burmese
+religion = buddhism
+capital = "Yamethin"
+trade_goods = ivory
+hre = no
+base_tax = 2 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = CEL
+
+
+
+discovered_by = chinese
+discovered_by = indian
+

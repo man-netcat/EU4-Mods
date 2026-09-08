@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = maori
+religion = animism
+technology_group = polynesian_tech
+capital = 1106
+monarch_names = {
+  "Te Ika A Maui Hauauru"
+}

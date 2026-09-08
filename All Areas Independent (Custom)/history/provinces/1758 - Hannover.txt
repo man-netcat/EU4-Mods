@@ -1,0 +1,23 @@
+#1758 - Hannover
+
+owner = BRC
+controller = BRC
+culture = lower_saxon
+religion = catholic
+capital = "Hannover"
+trade_goods = cloth
+hre = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+is_city = yes
+add_core = BRC
+add_core = BRC
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+

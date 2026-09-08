@@ -1,0 +1,22 @@
+#862 - Yaqui
+
+owner = SPU
+controller = SPU
+add_core = SPU
+is_city = yes
+culture = piman
+religion = totemism
+capital = "Yaqui" 
+trade_goods = unknown 
+hre = no 
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+native_size = 5 
+native_ferocity = 1 
+native_hostileness = 5 
+
+
+
+discovered_by = north_american
+discovered_by = mesoamerican

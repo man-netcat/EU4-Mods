@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = chontales
+religion = mesoamerican_religion
+technology_group = mesoamerican
+capital = 2630
+monarch_names = {
+  "Eastern Mexico"
+}

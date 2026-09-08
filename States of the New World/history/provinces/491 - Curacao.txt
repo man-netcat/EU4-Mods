@@ -1,0 +1,12 @@
+# 491 - Curacao
+
+owner = ANI
+controller = ANI
+culture = carib
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = ANI
+trade_goods = sugar

@@ -1,0 +1,20 @@
+#727 - Aigun
+
+owner = CEH
+controller = CEH
+add_core = CEH
+culture = manchu
+religion = tengri_pagan_reformed
+capital = "Aigun"
+trade_goods = fur
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+is_city = yes
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+

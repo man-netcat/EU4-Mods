@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = delaware
+religion = totemism
+technology_group = north_american
+capital = 965
+monarch_names = {
+  "New York"
+}

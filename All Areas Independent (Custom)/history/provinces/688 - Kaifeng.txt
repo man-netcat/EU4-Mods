@@ -1,0 +1,20 @@
+#688 - Kaifeng (can't change file name)
+
+owner = NNC
+controller = NNC
+add_core = NNC
+culture = zhongyuan
+religion = confucianism
+capital = "Kaifeng"
+trade_goods = chinaware
+hre = no
+base_tax = 8 
+base_production = 8
+base_manpower = 4
+is_city = yes
+add_core = NNC
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group

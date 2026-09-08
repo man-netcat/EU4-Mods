@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = turkish
+religion = sunni
+technology_group = muslim
+capital = 418
+monarch_names = {
+  "North Kurdistan"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = yoron
+religion = totemism
+technology_group = north_american
+capital = 899
+monarch_names = {
+  "Ozarks"
+}

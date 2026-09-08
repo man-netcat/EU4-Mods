@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = rwandan
+religion = shamanism #Fetishism
+technology_group = central_african
+capital = 4067
+monarch_names = {
+  "Rwanda"
+}

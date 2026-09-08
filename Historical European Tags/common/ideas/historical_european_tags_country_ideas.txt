@@ -441,46 +441,6 @@ KZN_ideas = {
 	}
 }
 
-# --- Liegnitz: last Piast duchy of Silesia, heir to the field of Legnica ---
-
-LGN_ideas = {
-	start = {
-		global_manpower_modifier = 0.15
-		prestige = 1
-	}
-
-	bonus = {
-		yearly_absolutism = 1
-	}
-
-	trigger = {
-		tag = LGN
-	}
-	free = yes
-
-	lgn_stand_against_the_mongols = {
-		shock_damage_received = -0.1
-	}
-	lgn_piast_legacy = {
-		diplomatic_reputation = 1
-	}
-	lgn_gold_of_zlotoryja = {
-		production_efficiency = 0.1
-	}
-	lgn_homage_to_prague = {
-		ae_impact = -0.1
-	}
-	lgn_legnica_linen = {
-		trade_efficiency = 0.1
-	}
-	lgn_last_of_the_piasts = {
-		legitimacy = 1
-	}
-	lgn_silesian_keeps = {
-		fort_maintenance_modifier = -0.1
-	}
-}
-
 # --- Limburg: Meuse duchy of cloth whose name launched a dozen wars ---
 
 LIM_ideas = {
@@ -717,46 +677,6 @@ STR_ideas = {
 	}
 	str_hop_gardens = {
 		global_trade_goods_size_modifier = 0.1
-	}
-}
-
-# --- Teschen: Piast duchy of the Silesian-Carpathian borderland ---
-
-TES_ideas = {
-	start = {
-		diplomatic_reputation = 1
-		defensiveness = 0.15
-	}
-
-	bonus = {
-		ae_impact = -0.1
-	}
-
-	trigger = {
-		tag = TES
-	}
-	free = yes
-
-	tes_piast_dukes = {
-		legitimacy = 1
-	}
-	tes_congress_of_teschen = {
-		improve_relation_modifier = 0.33
-	}
-	tes_olza_crossings = {
-		global_own_trade_power = 0.15
-	}
-	tes_coal_under_the_duchy = {
-		production_efficiency = 0.1
-	}
-	tes_service_to_bohemia = {
-		diplomatic_upkeep = 1
-	}
-	tes_beskid_pastures = {
-		development_cost = -0.1
-	}
-	tes_ducal_retainers = {
-		land_morale = 0.1
 	}
 }
 
@@ -1472,5 +1392,52 @@ OCC_ideas = {
 	}
 	occ_militias_of_the_bonnes_villes = {
 		land_morale = 0.1
+	}
+}
+
+# Silesian ideas for mod-added Silesian tags (LGN, RCB, WRC).
+# Copy of vanilla SIL_ideas (00_country_ideas.txt, AOW) with a new group name:
+# the vanilla group already carries the UI content, and a second group under
+# the same name would cram duplicate entries into the interface (wiki warning).
+# Trigger follows the vanilla BAV_ideas pattern (zz_group_ideas.txt):
+# a shared culture instead of a tag list, so every Schlesian tag qualifies.
+# SIL, GLG and OPL still match vanilla SIL_ideas first (00_ file evaluates
+# before this file), so they keep the vanilla group.
+SILESIAN_ideas = {
+	start = {
+		prestige = 1
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		global_tax_modifier = 0.10
+	}
+
+	trigger = {
+		primary_culture = schlesian
+	}
+	free = yes
+
+	under_the_infuence = {
+		improve_relation_modifier = 0.15
+	}
+	silesian_duchies = {
+		stability_cost_modifier = -0.10
+	}
+	german_settlers = {
+		build_cost = -0.1
+		development_cost = -0.1
+	}
+	raubritter = {
+		trade_steering = 0.10
+	}
+	via_regia = {
+		trade_efficiency = 0.1
+	}
+	hanseatic_ties = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	black_gold = {
+		production_efficiency = 0.1
 	}
 }

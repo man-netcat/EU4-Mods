@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = maipurean
+religion = animism
+technology_group = north_american
+capital = 2881
+monarch_names = {
+  "Ofaie"
+}

@@ -1,0 +1,18 @@
+#273 - Livland
+
+owner = LIO
+controller = LIO
+culture = latvian
+religion = catholic
+capital = "Fellin"
+trade_goods = livestock
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = LIO
+add_core = LIO
+discovered_by = western
+discovered_by = eastern
+

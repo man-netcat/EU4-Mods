@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = tlapanec
+religion = nahuatl
+technology_group = mesoamerican
+capital = 851
+monarch_names = {
+  "Tierra Caliente"
+}

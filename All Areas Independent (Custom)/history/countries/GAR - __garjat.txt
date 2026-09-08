@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = gondi
+religion = hinduism
+technology_group = indian
+capital = 547
+monarch_names = {
+  "Garjat"
+}

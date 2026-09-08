@@ -1,0 +1,9 @@
+government = native government_rank
+government_rank = 1
+primary_culture = yuchi
+religion = totemism
+technology_group = north_american
+capital = 935
+monarch_names = {
+  "South Appalachia"
+}

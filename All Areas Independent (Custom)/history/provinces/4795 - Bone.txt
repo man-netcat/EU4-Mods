@@ -1,0 +1,16 @@
+owner = MBJ
+controller = MBJ
+culture = sulawesi
+religion = animism
+capital = "Bone"
+trade_goods = spices
+hre = no
+base_tax = 3
+base_production = 4
+base_manpower = 2
+is_city = yes
+add_core = MBJ
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman

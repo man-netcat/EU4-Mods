@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = mahri_culture
+religion = sunni
+technology_group = muslim
+capital = 402
+monarch_names = {
+  "Mahra"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = carib
+religion = animism
+technology_group = north_american
+capital = 2889
+monarch_names = {
+  "Amazon"
+}

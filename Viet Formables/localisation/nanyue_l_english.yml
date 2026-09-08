@@ -1,0 +1,53 @@
+﻿l_english:
+ form_nanyue_title:0 "Form Nanyue"
+ form_nanyue_desc:0 "Once, a great kingdom stretched from Guangxi to the shores of Tonkin, a realm of merchants, scholars, and warriors. By uniting the peoples of southern China and northern Vietnam under one banner, we can restore Nanyue to its former glory."
+
+ NYU:0 "Nanyue"
+ NYU_ADJ:0 "Nanyue"
+
+ NAM_VIET:0 "Nam Viet"
+ NAM_VIET_ADJ:0 "Nam Viet"
+
+ NYU_ideas:0 "Nanyue Ideas"
+ NYU_ideas_start:0 "Legacy of the Southern Realm"
+ NYU_ideas_bonus:0 "Masters of the South"
+
+ nyu.1.t:0 "The True Name of Our Realm"
+ nyu.1.d:0 "With the scattered peoples of Guangdong, Guangxi, and the Red River Delta now united under a single crown, we must decide how history shall remember us. Do we take the ancient name 'Nam Viet' as did our Vietnamese ancestors, or shall we reclaim the grander title 'Nanyue' as did the unified southern kingdom of old?"
+ nyu.1.a:0 "We are Nam Viet, the victorious south!"
+ nyu.1.b:0 "We are Nanyue, inheritors of empire."
+
+ nanyue_merchant_fleets:0 "Merchant Fleets"
+ nanyue_merchant_fleets_desc:0 "The wealth of Asia flows through our ports. With command of the sea routes between Canton, Hanoi, and beyond, we grow rich."
+
+ nanyue_silk_roads:0 "Silk Roads of the South"
+ nanyue_silk_roads_desc:0 "Trade caravans wind through our mountains and river valleys, connecting the Middle Kingdom to the Indian Ocean."
+
+ nanyue_rice_granaries:0 "Rice Granaries"
+ nanyue_rice_granaries_desc:0 "The fertile valleys of Guangdong and Tonkin yield abundant harvests. Our storehouses overflow with grain."
+
+ nanyue_treasure_fleet:0 "Treasure Fleet"
+ nanyue_treasure_fleet_desc:0 "Our squadrons rule the waters, commanding respect from trading partners and tribute-bearing nations alike."
+
+ nanyue_mountain_fortresses:0 "Mountain Fortresses"
+ nanyue_mountain_fortresses_desc:0 "Stone and determination hold the passes. Our borders are fortified strongholds, gates through which invaders cannot pass."
+
+ nanyue_riverine_mastery:0 "Riverine Mastery"
+ nanyue_riverine_mastery_desc:0 "The great rivers—Guangxi, Song Hong, Mekong—are our highways. We command the waterways as no other power can."
+
+  nanyue_cultural_synthesis:0 "Cultural Synthesis"
+  nanyue_cultural_synthesis_desc:0 "Vietnamese and Chinese, Zhuang and Cantonese—all find harmony under one throne. A pluralistic realm becomes our strength."
+
+  form_dai_nam_title:0 "Form Dai Nam"
+  form_dai_nam_desc:0 "The lands of Annam, Champa, and the Mekong have long been divided. Now, under a strong and determined ruler, they can be united into a single, powerful kingdom stretching from the Red River to the Gulf of Thailand."
+
+  DNA:0 "Dai Nam"
+  DNA_ADJ:0 "Dai Nam"
+
+  VIET_NAM:0 "Viet Nam"
+  VIET_NAM_ADJ:0 "Viet Nam"
+
+  dna.1.t:0 "The Name of the Unified Realm"
+  dna.1.d:0 "From the Red River to the Mekong Delta, our realm now encompasses the ancient lands of Annam, Champa, and Cambodia. The court debates what name shall herald this new era. Some advocate for the grand title 'Dai Nam,' evoking a great southern empire. Others argue for 'Viet Nam,' the timeless name of our people and land."
+  dna.1.a:0 "We are Dai Nam, the Great South!"
+  dna.1.b:0 "We are Viet Nam, eternal and united."

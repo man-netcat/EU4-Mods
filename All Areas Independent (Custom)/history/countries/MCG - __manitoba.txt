@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = bungi
+religion = totemism
+technology_group = north_american
+capital = 1008
+monarch_names = {
+  "Manitoba"
+}

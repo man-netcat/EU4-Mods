@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = tionontate
+religion = totemism
+technology_group = north_american
+capital = 954
+monarch_names = {
+  "Westsylvania"
+}

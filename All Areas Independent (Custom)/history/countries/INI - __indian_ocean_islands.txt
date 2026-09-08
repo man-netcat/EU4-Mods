@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = filipino 
+religion = animism
+technology_group = north_american
+capital = 574
+monarch_names = {
+  "Indian Ocean Islands"
+}

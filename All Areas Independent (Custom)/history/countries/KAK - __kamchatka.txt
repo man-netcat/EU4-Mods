@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = kamchatkan
+religion = tengri_pagan_reformed
+technology_group = chinese
+capital = 1034
+monarch_names = {
+  "Kamchatka"
+}

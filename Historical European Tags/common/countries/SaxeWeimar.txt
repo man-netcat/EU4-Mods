@@ -1,0 +1,59 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 220 94 40 }
+
+revolutionary_colors = { 15 0 5 }
+
+historical_idea_groups = {
+	administrative_ideas
+	diplomatic_ideas
+	offensive_ideas
+	economic_ideas
+	religious_ideas
+	defensive_ideas
+	trade_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_knights
+	western_infantry
+	western_cavalry
+	western_musketeers
+	western_rifles
+}
+
+monarch_names = {
+	"Johann #0" = 100
+	"Friedrich #0" = 90
+	"Wilhelm #0" = 80
+	"Ernst #0" = 80
+	"Johann Ernst #0" = 60
+	"Johann Wilhelm #0" = 50
+	"Friedrich Wilhelm #0" = 50
+	"Johann Friedrich #0" = 40
+	"Karl August #0" = 40
+	"Bernhard #0" = 30
+	"Georg #0" = 30
+	"Albrecht #0" = 20
+	"Moritz #0" = 20
+	"Ernst August #0" = 20
+
+	"Anna Amalia #0" = -1
+	"Sophie #0" = -1
+	"Maria #0" = -1
+	"Charlotte #0" = -1
+}
+
+leader_names = {
+	"Johann Ernst von Sachsen-Weimar" "Friedrich Wilhelm von Sachsen-Weimar"
+	"Bernhard von Sachsen-Weimar" "Wilhelm von Sachsen-Weimar"
+	"Karl August von Sachsen-Weimar" "Georg von Sachsen-Weimar"
+	"Albrecht von Wettin" "Moritz von Sachsen"
+}
+
+ship_names = {
+	"Weimar" "Saale" "Ilm" "Wartburg" "Jena" "Eisenach" "Erfurt" "Belvedere"
+}

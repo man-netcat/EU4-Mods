@@ -1,0 +1,22 @@
+# - Titteri
+
+owner = HAE
+controller = HAE
+culture = algerian
+religion = sunni
+capital = "Medea"
+trade_goods = grain
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = HAE
+add_core = HAE
+
+
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+

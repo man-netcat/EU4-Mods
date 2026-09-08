@@ -1,0 +1,12 @@
+# 764 - Santo Amaro
+
+owner = RDJ
+controller = RDJ
+culture = tupinamba
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = RDJ
+trade_goods = grain

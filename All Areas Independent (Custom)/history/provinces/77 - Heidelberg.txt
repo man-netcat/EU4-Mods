@@ -1,0 +1,22 @@
+#77 - Heidelberg
+
+capital = "Heidelberg"
+culture = hessian
+religion = catholic
+trade_goods = wine
+owner = PAA
+base_tax = 5
+base_production = 4
+base_manpower = 4
+fort_15th = yes
+is_city = yes
+controller = PAA
+add_core = PAA
+hre = yes
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+

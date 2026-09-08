@@ -1,0 +1,9 @@
+government = theocracy
+government_rank = 1
+primary_culture = umbrian
+religion = catholic
+technology_group = western
+capital = 118
+monarch_names = {
+  "Lazio"
+}

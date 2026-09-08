@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = uralic
+religion = orthodox
+technology_group = eastern
+capital = 1077
+monarch_names = {
+  "Perm"
+}

@@ -1,0 +1,20 @@
+# No previous file for Puruaran
+
+culture = purepecha
+owner = TIE
+controller = TIE
+add_core = TIE
+is_city = yes
+religion = nahuatl
+capital = "Puruaran"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+discovered_by = mesoamerican
+

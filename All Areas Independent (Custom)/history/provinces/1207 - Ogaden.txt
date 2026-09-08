@@ -1,0 +1,18 @@
+#1207 - Ogaden
+owner = OGA
+controller = OGA
+add_core = OGA
+culture = somali
+religion = sunni
+capital = "Bale"
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9 
+trade_goods = incense
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = east_african
+

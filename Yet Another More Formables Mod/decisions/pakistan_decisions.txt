@@ -1,0 +1,148 @@
+country_decisions = {
+	pakistani_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_pakistan_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = PAK }
+			NOT = { tag = MUG }
+			NOT = { tag = DEH }
+			OR = {
+			primary_culture = panjabi
+			primary_culture = sindhi
+			primary_culture = baluchi
+			primary_culture = kashmiri
+			primary_culture = rajput
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 507	# Lahore
+				province_id = 506	# Multan
+				province_id = 576	# Kalat
+				province_id = 504	# Thatta
+				province_id = 508	# Kashmir
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = PAK }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			adm_tech = 20
+			owns_core_province = 507	# Lahore
+			owns_core_province = 506	# Multan
+			owns_core_province = 576	# Kalat
+			owns_core_province = 504	# Thatta
+			owns_core_province = 508	# Kashmir
+			# Must own at least 75% (20 of 25) of provinces in required areas
+			calc_true_if = {
+				amount = 20
+				all_owned_province = {
+					OR = {
+						area = lahore_area
+						area = multan_area
+						area = kalat_area
+						area = sindh_area
+						area = northern_sindh_area
+						area = kashmir_area
+					}
+				}
+			}
+		}
+		effect = {
+			507 = {
+				move_capital_effect = yes
+			}
+			change_tag = PAK
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 2
+			add_prestige = 25
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			lahore_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = PAK
+			}
+			multan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = PAK
+			}
+			sindh_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = PAK
+			}
+			northern_sindh_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = PAK
+			}
+			kalat_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = PAK
+			}
+			kashmir_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = PAK
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+			set_country_flag = formed_pakistan_flag
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

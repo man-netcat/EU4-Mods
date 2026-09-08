@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = fulani
+religion = shamanism 
+technology_group = north_american
+capital = 1115
+monarch_names = {
+  "Tekrur"
+}

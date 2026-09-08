@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = nogaybak
+religion = sunni
+technology_group = nomad_group
+capital = 469
+monarch_names = {
+  "Lower Yik"
+}

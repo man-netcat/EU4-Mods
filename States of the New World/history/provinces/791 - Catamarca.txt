@@ -1,0 +1,12 @@
+# 791 - Catamarca
+
+owner = TCM
+controller = TCM
+culture = diaguita
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = TCM
+trade_goods = grain

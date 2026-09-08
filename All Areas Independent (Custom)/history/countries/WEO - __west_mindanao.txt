@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = filipino
+religion = animism
+technology_group = chinese
+capital = 652
+monarch_names = {
+  "West Mindanao"
+}

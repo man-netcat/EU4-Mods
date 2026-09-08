@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = guajiro
+religion = animism
+technology_group = north_american
+capital = 824
+monarch_names = {
+  "Cordillera Occidental"
+}

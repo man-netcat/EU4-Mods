@@ -1,0 +1,12 @@
+# 2534 - Yustaga
+
+owner = FLO
+controller = FLO
+culture = yamasee
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = FLO
+trade_goods = fish

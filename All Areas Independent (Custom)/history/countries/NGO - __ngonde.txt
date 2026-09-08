@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = bena
+religion = shamanism 
+technology_group = north_american
+capital = 4041
+monarch_names = {
+  "Ngonde"
+}

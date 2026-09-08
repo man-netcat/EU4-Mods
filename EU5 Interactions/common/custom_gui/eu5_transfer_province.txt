@@ -1,0 +1,41 @@
+# EU5 Interactions - Transfer Subject Province
+# Custom button that appears in the province right-click view when:
+# - The province is owned by one of your subjects
+# - The province borders another subject of yours
+# - Clicking it transfers the province to that neighboring subject
+#
+# ROOT = the clicked province (province_window scope)
+# FROM = the player country
+
+custom_button = {
+	name = eu5_transfer_subject_province_button
+	
+	potential = {
+		ROOT = {
+			is_capital = no
+			owner = {
+				is_subject_of = FROM
+				NOT = { is_subject_of_type = tributary_state }
+				num_of_cities = 2
+			}
+			any_neighbor_province = {
+				owner = {
+					is_subject_of = FROM
+					NOT = { this = ROOT.owner }
+				}
+			}
+		}
+		NOT = { is_in_war = FROM }
+	}
+	
+	trigger = {
+		FROM = { NOT = { is_in_war = any } }
+		ROOT.owner = { NOT = { is_in_war = any } }
+	}
+	
+	effect = {
+		eu5_transfer_subject_province_effect = yes
+	}
+	
+	tooltip = eu5_transfer_subject_province_tt
+}

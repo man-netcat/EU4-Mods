@@ -1,0 +1,12 @@
+# 2611 - Kodiak
+
+owner = ALA
+controller = ALA
+culture = aleutian
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = ALA
+trade_goods = fur

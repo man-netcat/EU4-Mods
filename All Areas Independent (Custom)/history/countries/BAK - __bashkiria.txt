@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = kazani
+religion = sunni
+technology_group = nomad_group
+capital = 475
+monarch_names = {
+  "Bashkiria"
+}

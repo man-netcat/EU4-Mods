@@ -1,0 +1,12 @@
+# 2659 - Magua
+
+owner = QSQ
+controller = QSQ
+culture = arawak
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = QSQ
+trade_goods = sugar

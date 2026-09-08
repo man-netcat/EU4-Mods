@@ -1,0 +1,45 @@
+namespace = nyu
+
+country_event = {
+	id = dna.1
+	title = dna.1.t
+	desc = dna.1.d
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = DNA
+	}
+	immediate = {
+	}
+	option = {
+		name = dna.1.a
+		# Keep "Dai Nam" as name (default)
+	}
+	option = {
+		name = dna.1.b
+		override_country_name = VIET_NAM
+		set_country_flag = is_viet_nam_flag
+	}
+}
+
+country_event = {
+	id = nyu.1
+	title = nyu.1.t
+	desc = nyu.1.d
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = NYU
+	}
+	immediate = {
+	}
+	option = {
+		name = nyu.1.a
+		override_country_name = NAM_VIET
+		set_country_flag = is_nam_viet_flag
+	}
+	option = {
+		name = nyu.1.b
+		# Keep current "Nanyue" name
+	}
+}

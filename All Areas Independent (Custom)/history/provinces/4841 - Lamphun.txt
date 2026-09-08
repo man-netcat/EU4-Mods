@@ -1,0 +1,16 @@
+#1817 - Nan
+
+owner = NWJ
+controller = NWJ
+culture = northern_thai
+religion = buddhism
+capital = "Lamphun"
+trade_goods = grain
+hre = no
+base_tax = 4 
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = NWJ
+discovered_by = chinese
+discovered_by = indian

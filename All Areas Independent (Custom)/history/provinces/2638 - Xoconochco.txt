@@ -1,0 +1,24 @@
+# No previous file for Xoconochco
+
+culture = zapotek
+owner = CBO
+controller = CBO
+add_core = CBO
+is_city = yes
+religion = nahuatl
+capital = "Xoconochco"
+trade_goods = cocoa
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+ #Precolumbian international trade hub
+add_local_autonomy = 50
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = mesoamerican
+

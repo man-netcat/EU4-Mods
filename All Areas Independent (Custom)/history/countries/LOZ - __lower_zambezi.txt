@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = shona
+religion = shamanism
+technology_group = central_african
+capital = 1187
+monarch_names = {
+  "Lower Zambezi"
+}

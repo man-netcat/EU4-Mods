@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = mescalero
+religion = totemism
+technology_group = north_american
+capital = 2498
+monarch_names = {
+  "Pecos"
+}

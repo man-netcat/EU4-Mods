@@ -1,0 +1,9 @@
+government = republic
+government_rank = 1
+primary_culture = ligurian
+religion = catholic
+technology_group = western
+capital = 286
+monarch_names = {
+  "Azov"
+}

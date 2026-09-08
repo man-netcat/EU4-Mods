@@ -1,0 +1,12 @@
+# 761 - Espirito Santo
+
+owner = RDJ
+controller = RDJ
+culture = tupinamba
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = RDJ
+trade_goods = grain

@@ -1,0 +1,9 @@
+government = republic
+government_rank = 1
+primary_culture = venetian
+religion = catholic
+technology_group = western
+capital = 142
+monarch_names = {
+  "Northern Greece"
+}

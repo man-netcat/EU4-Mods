@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = mishary
+religion = sunni
+technology_group = nomad_group
+capital = 303
+monarch_names = {
+  "Saratov"
+}

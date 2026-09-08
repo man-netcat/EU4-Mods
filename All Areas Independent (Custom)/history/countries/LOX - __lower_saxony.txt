@@ -1,0 +1,9 @@
+government = republic
+government_rank = 1
+primary_culture = lower_saxon
+religion = catholic
+technology_group = western
+capital = 44
+monarch_names = {
+  "Lower Saxony"
+}

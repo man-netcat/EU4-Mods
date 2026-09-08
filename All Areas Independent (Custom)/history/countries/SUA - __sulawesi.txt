@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = sulawesi
+religion = animism
+technology_group = north_american
+capital = 643
+monarch_names = {
+  "Sulawesi"
+}

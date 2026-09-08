@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = cree
+religion = totemism
+technology_group = north_american
+capital = 1005
+monarch_names = {
+  "Hudson Bay"
+}

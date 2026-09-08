@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = oirats
+religion = tengri_pagan_reformed
+technology_group = nomad_group
+capital = 718
+monarch_names = {
+  "Altai Sayan"
+}

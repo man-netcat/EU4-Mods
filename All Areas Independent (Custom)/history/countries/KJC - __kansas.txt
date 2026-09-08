@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = pawnee 
+religion = totemism
+technology_group = north_american
+capital = 890
+monarch_names = {
+  "Kansas"
+}

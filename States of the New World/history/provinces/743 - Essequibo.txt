@@ -1,0 +1,12 @@
+# 743 - Essequibo
+
+owner = GYA
+controller = GYA
+culture = guajiro
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = GYA
+trade_goods = fish

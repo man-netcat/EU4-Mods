@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = burgundian
+religion = catholic
+technology_group = western
+capital = 91
+monarch_names = {
+  "Wallonia"
+}

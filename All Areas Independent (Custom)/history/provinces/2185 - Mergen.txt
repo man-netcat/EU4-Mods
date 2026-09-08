@@ -1,0 +1,20 @@
+# 2185 - Mergen
+
+owner = CEH
+controller = CEH
+add_core = CEH
+culture = manchu
+religion = tengri_pagan_reformed
+capital = "Mergen"
+trade_goods = naval_supplies
+hre = no
+base_tax = 4 
+base_production = 4
+base_manpower = 2
+is_city = yes
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+

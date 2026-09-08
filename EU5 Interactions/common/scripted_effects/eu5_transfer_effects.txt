@@ -1,0 +1,44 @@
+# EU5 Interactions - Transfer Subject Province Effects
+# Called from the custom_button in provinceview.gui
+# Scoped to: ROOT = clicked province, FROM = player (overlord)
+
+eu5_transfer_subject_province_effect = {
+	ROOT = {
+		save_event_target_as = eu5_transfer_province
+		
+		random_neighbor_province = {
+			limit = {
+				owner = {
+					is_subject_of = FROM
+					NOT = { this = ROOT.owner }
+				}
+			}
+			owner = { save_event_target_as = eu5_transfer_recipient }
+		}
+	}
+	
+	event_target:eu5_transfer_province = {
+		cede_province = event_target:eu5_transfer_recipient
+		add_core = event_target:eu5_transfer_recipient
+	}
+	
+	event_target:eu5_transfer_province = {
+		remove_core = ROOT.owner
+	}
+	
+	event_target:eu5_transfer_recipient = {
+		add_opinion = {
+			who = ROOT.owner
+			modifier = eu5_gained_province_from_subject
+		}
+	}
+	
+	ROOT.owner = {
+		add_opinion = {
+			who = event_target:eu5_transfer_recipient
+			modifier = eu5_lost_province_to_subject
+		}
+	}
+	
+	add_prestige = -5
+}

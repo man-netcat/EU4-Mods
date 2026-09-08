@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = mapuche
+religion = animism
+technology_group = south_american
+capital = 784
+monarch_names = {
+  "Central Chile"
+}

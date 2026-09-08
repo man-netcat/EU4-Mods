@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = azerbaijani
+religion = shiite
+technology_group = muslim
+capital = 421
+monarch_names = {
+  "Shirvan"
+}

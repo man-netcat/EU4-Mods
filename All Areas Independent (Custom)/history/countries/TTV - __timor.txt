@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = nusa_tenggara
+religion = animism
+technology_group = north_american
+capital = 633
+monarch_names = {
+  "Timor"
+}

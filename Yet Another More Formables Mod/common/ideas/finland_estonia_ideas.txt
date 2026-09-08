@@ -1,0 +1,43 @@
+EFI_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		land_morale = 0.1
+	}
+	bonus = {
+		merchants = 1
+	}
+	trigger = {
+		tag = EFI
+	}
+	free = yes
+
+	efi_baltic_brothers = {
+		diplomatic_annexation_cost = -0.15
+		num_accepted_cultures = 1
+	}
+	efi_gulf_of_finland = {
+		global_trade_power = 0.15
+		heavy_ship_power = 0.1
+	}
+	efi_cross_baltic_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.15
+	}
+	efi_forest_brotherhood = {
+		infantry_power = 0.1
+		discipline = 0.025
+	}
+	efi_university_of_turku = {
+		technology_cost = -0.05
+		institution_growth = 0.25
+	}
+	efi_rally_the_lands = {
+		manpower_recovery_speed = 0.15
+		land_forcelimit_modifier = 0.15
+	}
+	efi_commonwealth_of_the_north = {
+		tolerance_own = 1
+		tolerance_heathen = 1
+		development_cost = -0.05
+	}
+}

@@ -1,0 +1,132 @@
+country_decisions = {
+	form_lombardy = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_lombardy_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			primary_culture = lombard
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 104	# Milan
+				province_id = 112	# Venezia
+				province_id = 103	# Turin
+				province_id = 101	# Genoa
+				province_id = 105	# Parma
+				province_id = 109	# Mantua
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			lombardy_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			po_valley_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			emilia_romagna_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			venetia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			piedmont_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			liguria_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			override_country_name = LOM
+			add_prestige = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			emilia_romagna_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			venetia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			piedmont_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			liguria_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			naples_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_lombardy_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

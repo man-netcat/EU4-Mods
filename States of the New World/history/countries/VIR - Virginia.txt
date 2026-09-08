@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = powhatan
+religion = totemism
+capital = 950
+
+1444.11.11 = {
+	monarch = {
+		name = "Pocahontas"
+		dynasty = "of the Tidewater"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Raleigh"
+		dynasty = "of the Tidewater"
+		birth_date = 1422
+		death_date = 1490
+		claim = 89
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

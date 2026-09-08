@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = diaguita
+religion = inti
+technology_group = andean
+capital = 794
+monarch_names = {
+  "Jujuy"
+}

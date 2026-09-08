@@ -1,0 +1,17 @@
+government = republic
+add_government_reform = merchant_republic_reform
+technology_group = western
+unit_type = western
+primary_culture = abenaki
+religion = totemism
+capital = 966
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Priscilla Alden"
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+}

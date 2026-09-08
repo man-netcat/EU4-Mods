@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = afghani
+religion = sunni
+technology_group = muslim
+capital = 448
+monarch_names = {
+  "Kabulistan"
+}

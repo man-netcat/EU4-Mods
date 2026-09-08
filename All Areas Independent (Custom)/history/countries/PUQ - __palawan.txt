@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = filipino
+religion = sunni
+technology_group = north_american
+capital = 651
+monarch_names = {
+  "Palawan"
+}

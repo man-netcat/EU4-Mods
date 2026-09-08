@@ -1,0 +1,12 @@
+# 772 - Paysandu
+
+owner = URY
+controller = URY
+culture = charruan
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = URY
+trade_goods = grain

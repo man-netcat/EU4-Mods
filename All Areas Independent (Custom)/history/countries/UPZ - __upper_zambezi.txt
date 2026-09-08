@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = bemba
+religion = shamanism 
+technology_group = north_american
+capital = 4046
+monarch_names = {
+  "Upper Zambezi"
+}

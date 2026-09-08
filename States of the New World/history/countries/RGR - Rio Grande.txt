@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = guarani
+religion = animism
+capital = 2857
+
+1444.11.11 = {
+	monarch = {
+		name = "Laguna"
+		dynasty = "de los Pampas"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

@@ -1,0 +1,9 @@
+government = theocracy
+government_rank = 1
+primary_culture = prussian
+religion = catholic
+technology_group = western
+capital = 2997
+monarch_names = {
+  "West Prussia"
+}

@@ -1,8 +1,8 @@
-#Country Name: Cilicia
+﻿#Country Name: Cilicia
 
 graphical_culture = easterngfx
 
-color = { 175 60 40 }
+color = { 141 28 73 }
 
 revolutionary_colors = { 230 200 40 }
 

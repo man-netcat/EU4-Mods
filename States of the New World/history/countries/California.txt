@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = piman
+religion = totemism
+capital = 868
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Ramiro"
+		dynasty = "de Baja"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Violante"
+		dynasty = "de Baja"
+		birth_date = 1425
+		death_date = 1492
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

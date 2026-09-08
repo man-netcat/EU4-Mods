@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = catawba
+religion = totemism
+capital = 937
+
+1444.11.11 = {
+	monarch = {
+		name = "Robert"
+		dynasty = "of the Two Rivers"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Margaret"
+		dynasty = "of the Two Rivers"
+		birth_date = 1424
+		death_date = 1486
+		claim = 86
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

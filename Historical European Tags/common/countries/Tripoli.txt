@@ -1,8 +1,8 @@
-#Country Name: Tripoli
+﻿#Country Name: Tripoli
 
 graphical_culture = westerngfx
 
-color = { 13 103 147 }
+color = { 129 204 96 }
 
 revolutionary_colors = { 188 46 46 }
 

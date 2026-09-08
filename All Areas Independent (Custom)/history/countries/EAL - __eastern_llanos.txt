@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = carib
+religion = animism
+technology_group = south_american
+capital = 2805
+monarch_names = {
+  "Eastern Llanos"
+}

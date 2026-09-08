@@ -1,0 +1,23 @@
+# 4745 - Rügen
+
+owner = VOR
+controller = VOR
+add_core = VOR
+add_core = VOR
+culture = pommeranian
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+capital = "Bergen auf Rügen"
+is_city = yes
+
+unrest = 8 #pirate independence of thought
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman

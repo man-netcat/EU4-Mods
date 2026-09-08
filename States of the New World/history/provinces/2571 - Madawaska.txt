@@ -1,0 +1,12 @@
+# 2571 - Madawaska
+
+owner = ACD
+controller = ACD
+culture = mikmaq
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = ACD
+trade_goods = fish

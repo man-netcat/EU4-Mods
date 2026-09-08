@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = diaguita
+religion = animism
+technology_group = north_american
+capital = 791
+monarch_names = {
+  "Tucuman"
+}

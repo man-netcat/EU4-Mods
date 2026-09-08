@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = portugese
+religion = catholic
+technology_group = western
+capital = 227
+monarch_names = {
+  "Alentejo"
+}

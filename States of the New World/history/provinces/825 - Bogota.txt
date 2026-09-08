@@ -1,0 +1,12 @@
+# 825 - Bogota
+
+owner = COL
+controller = COL
+culture = guajiro
+religion = animism
+is_city = yes
+base_tax = 5
+base_production = 5
+base_manpower = 5
+add_core = COL
+trade_goods = grain

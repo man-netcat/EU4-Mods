@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = romanian
+religion = orthodox
+technology_group = eastern
+capital = 268
+monarch_names = {
+  "Moldavia"
+}

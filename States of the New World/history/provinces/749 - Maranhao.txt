@@ -1,0 +1,12 @@
+# 749 - Maranhao
+
+owner = MRN
+controller = MRN
+culture = ge
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = MRN
+trade_goods = sugar

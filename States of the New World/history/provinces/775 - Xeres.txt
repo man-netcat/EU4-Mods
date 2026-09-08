@@ -1,0 +1,12 @@
+# 775 - Xeres
+
+owner = PRG
+controller = PRG
+culture = guarani
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = PRG
+trade_goods = grain

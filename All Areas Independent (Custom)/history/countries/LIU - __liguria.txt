@@ -1,0 +1,10 @@
+government = republic
+government_rank = 1
+primary_culture = ligurian
+religion = catholic
+technology_group = western
+capital = 101
+monarch_names = {
+  "Liguria"
+}
+elector = yes

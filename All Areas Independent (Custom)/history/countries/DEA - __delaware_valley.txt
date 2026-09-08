@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = delaware
+religion = totemism
+technology_group = north_american
+capital = 956
+monarch_names = {
+  "Delaware Valley"
+}

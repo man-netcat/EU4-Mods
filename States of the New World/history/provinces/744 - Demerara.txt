@@ -1,0 +1,12 @@
+# 744 - Demerara
+
+owner = GYA
+controller = GYA
+culture = guajiro
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = GYA
+trade_goods = fish

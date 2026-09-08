@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = bornean
+religion = sunni
+technology_group = chinese
+capital = 636
+monarch_names = {
+  "Brunei"
+}

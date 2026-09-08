@@ -1,0 +1,30 @@
+government = native
+add_government_reform = native_clan_council_reform
+technology_group = south_american
+unit_type = south_american
+primary_culture = tupinamba
+religion = animism
+capital = 2889
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Cunhambebe"
+		dynasty = "Tupinamba"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Tibirica"
+		dynasty = "Tupinamba"
+		birth_date = 1424
+		death_date = 1490
+		claim = 87
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}

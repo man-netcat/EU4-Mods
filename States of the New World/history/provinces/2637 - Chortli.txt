@@ -1,0 +1,12 @@
+# 2637 - Chortli
+
+owner = HND
+controller = HND
+culture = miskito
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = HND
+trade_goods = grain

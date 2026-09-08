@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = berber
+religion = sunni
+technology_group = muslim
+capital = 336
+monarch_names = {
+  "Algiers"
+}

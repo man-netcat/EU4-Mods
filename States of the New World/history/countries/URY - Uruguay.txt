@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = charruan
+religion = animism
+capital = 772
+
+1444.11.11 = {
+	monarch = {
+		name = "Artigas"
+		dynasty = "of the Banda"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

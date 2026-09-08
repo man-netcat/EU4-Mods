@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = pawnee
+religion = totemism
+technology_group = north_american
+capital = 901
+monarch_names = {
+  "Central Plains"
+}

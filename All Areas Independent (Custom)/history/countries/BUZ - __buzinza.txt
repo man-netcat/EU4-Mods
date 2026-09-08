@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = masaba
+religion = shamanism 
+technology_group = north_american
+capital = 4059
+monarch_names = {
+  "Buzinza"
+}

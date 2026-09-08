@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = 
+religion = 
+technology_group = north_american
+capital = 1100
+monarch_names = {
+  "Mascarenes"
+}

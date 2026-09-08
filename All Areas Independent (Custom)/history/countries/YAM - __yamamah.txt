@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = bedouin_arabic
+religion = sunni
+technology_group = muslim
+capital = 2335
+monarch_names = {
+  "Yamamah"
+}

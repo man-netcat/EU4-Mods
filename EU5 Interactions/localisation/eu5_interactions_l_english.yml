@@ -1,0 +1,52 @@
+l_english:
+ # Diplomatic action - Promote Tributary
+ eu5_promote_tributary_to_vassal:0 "Promote to Vassal"
+ eu5_promote_tributary_to_vassal_title:0 "Promote Tributary to Vassal"
+ eu5_promote_tributary_to_vassal_desc:0 "Promote this tributary state to a regular vassal. This mirrors EU5's subject type conversion mechanic. Requires 150+ opinion, peace, and at least 5 years as a tributary."
+ eu5_promote_tributary_to_vassal_tooltip:0 "Convert this tributary to a vassal. They will join all your wars and you can eventually annex them."
+ eu5_promote_tributary_to_vassal_alert_tooltip:0 "A tributary can be promoted to vassal."
+ 
+ # Opinion modifiers
+ eu5_promoted_to_vassal:0 "Promoted from Tributary to Vassal"
+ eu5_refused_promotion:0 "Refused Promotion to Vassal"
+ 
+ # Event
+ eu5_interactions_events.1_title:0 "Tributary Promoted to Vassal"
+ eu5_interactions_events.1_desc:0 "Our tributary [Root.GetName] has been promoted to a vassal state. They will now join all our wars and we can eventually integrate them."
+ 
+ # Fiefdom subject type
+ eu5_fiefdom:0 "Fiefdom"
+ eu5_fiefdom_long_desc:0 "A fiefdom is a subject that shares its overlord's ruler and religion. Like a personal union except the subject has much less power. Fiefdoms receive 50% institution spread from their overlord and cannot declare independence."
+ eu5_fiefdom_is_our:0 "$EU5_FIEFDOM|Y$ is a fiefdom of us"
+ eu5_fiefdom_title:0 "Fiefdom (x is a Fiefdom of y)"
+ eu5_fiefdom_title_plural:0 "Fiefdoms"
+ is_eu5_fiefdom:0 "Is a Fiefdom"
+ 
+ # Fiefdom modifiers
+ eu5_fiefdom_institution_spread_tt:0 "+50% Institution Spread (EU5 Fiefdom bonus)"
+ eu5_fiefdom_overlord_institution_spread_tt:0 "+50% Institution Spread from Fiefdom (EU5 Fiefdom bonus)"
+ 
+ # Diplomatic action - Convert to Fiefdom
+ eu5_release_as_fiefdom:0 "Convert to Fiefdom"
+ eu5_release_as_fiefdom_title:0 "Convert Subject to Fiefdom"
+ eu5_release_as_fiefdom_desc:0 "Convert this vassal or personal union into a fiefdom. Fiefdoms share your ruler and religion, receive better institution spread, and cannot declare independence. Requires both to be monarchies of the same religion."
+ eu5_release_as_fiefdom_tooltip:0 "Convert to a fiefdom: shares ruler, +50% institution spread, cannot declare independence"
+ eu5_release_as_fiefdom_alert_tooltip:0 "A subject can be converted to a fiefdom."
+ 
+ # Opinion modifier
+ eu5_converted_to_fiefdom:0 "Converted to Fiefdom"
+
+ # Diplomatic action - Transfer Subject Province
+ eu5_transfer_subject_province:0 "Transfer Province to Subject"
+ eu5_transfer_subject_province_title:0 "Transfer Subject Province to Another Subject"
+ eu5_transfer_subject_province_desc:0 "Transfer one of this subject's provinces to a neighboring subject. The province will be ceded to the bordering subject that receives it. Cannot transfer the capital. Based on EU5's Give Subject Location to Other Subject interaction."
+ eu5_transfer_subject_province_tooltip:0 "Transfer one border province to a neighboring subject. Use repeatedly to transfer more."
+ eu5_transfer_subject_province_alert_tooltip:0 "A province can be transferred between subjects."
+
+  # Opinion modifiers for province transfer
+  eu5_gained_province_from_subject:0 "Received Province from Subject"
+  eu5_lost_province_to_subject:0 "Lost Province to Another Subject"
+
+  # Custom GUI button - Transfer Province to Another Subject
+  EU5_TRANSFER_SUBJECT_PROVINCE_BUTTON:0 "Transfer to Subject"
+  eu5_transfer_subject_province_tt:0 "Transfer this province to a neighboring subject.\n§YThe province will be ceded to the bordering subject.§!"

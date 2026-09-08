@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = ge
+religion = animism
+capital = 756
+
+1444.11.11 = {
+	monarch = {
+		name = "Tomé"
+		dynasty = "de Sousa"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Garcia"
+		dynasty = "de Sousa"
+		birth_date = 1423
+		death_date = 1491
+		claim = 85
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

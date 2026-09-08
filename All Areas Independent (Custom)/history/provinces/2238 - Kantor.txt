@@ -1,0 +1,17 @@
+# No previous file for Kantor
+
+owner = FUT
+controller = FUT
+add_core = FUT
+add_core = FUT
+is_city = yes
+culture = senegambian 
+religion = shamanism #Fetishism
+capital = "Sutuco"
+trade_goods = ivory
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+discovered_by = sub_saharan
+add_local_autonomy = 50

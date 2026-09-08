@@ -1,0 +1,12 @@
+# 2908 - Arrial dos Couros
+
+owner = MGX
+controller = MGX
+culture = ge
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = MGX
+trade_goods = gold

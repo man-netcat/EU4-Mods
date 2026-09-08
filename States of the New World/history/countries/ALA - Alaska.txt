@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = aleutian
+religion = totemism
+capital = 978
+
+1444.11.11 = {
+	monarch = {
+		name = "Tlingit"
+		dynasty = "Kwaan"
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Kichxáan"
+		dynasty = "Kwaan"
+		birth_date = 1428
+		death_date = 1490
+		claim = 80
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

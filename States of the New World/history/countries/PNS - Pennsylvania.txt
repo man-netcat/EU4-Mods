@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = susquehannock
+religion = totemism
+capital = 955
+
+1444.11.11 = {
+	monarch = {
+		name = "William"
+		dynasty = "of the Keystone"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

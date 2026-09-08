@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = chachapoyan
+religion = inti
+technology_group = andean
+capital = 2823
+monarch_names = {
+  "Ucayali"
+}

@@ -1,0 +1,20 @@
+#719 - Sayin Noyan
+
+owner = ULI
+controller = ULI
+add_core = ULI
+culture = khalkha
+religion = tengri_pagan_reformed
+capital = "Uliastai"
+trade_goods = wool
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+is_city = yes
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+

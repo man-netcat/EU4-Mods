@@ -1,0 +1,24 @@
+#610 - Thanh Hoa
+
+owner = VIN
+controller = VIN
+culture = vietnamese
+religion = mahayana
+capital = "Thanh Hoa"
+trade_goods = grain
+hre = no
+base_tax = 7
+base_production = 4
+base_manpower = 4
+fort_15th = yes #Than Hoa Citadel
+is_city = yes
+add_core = VIN
+add_core = VIN
+
+
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+

@@ -1,0 +1,115 @@
+# Pakistan tag definition
+graphical_culture = indiangfx
+
+color = {
+	1
+	61
+	35
+}
+
+revolutionary_colors = {
+	1
+	42
+	25
+}
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	administrative_ideas
+	trade_ideas
+	quality_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	indian_elephant
+	indian_cavalry
+	indian_bowmen
+	indian_musketeers
+	mughal_musketeer
+	mughal_mansabdar
+	indian_archer_gunpowder
+	indian_musket_cavalry
+	mughal_elephant
+	indian_mughal_infantry
+	mughal_siege_elephant
+	indian_ancient_cavalry
+	indian_combined_arms
+	indian_late_elephant
+	indian_late_cavalry
+}
+
+monarch_names = {
+	"Muhammad #0" = 30
+	"Ahmad #0" = 20
+	"Husayn #0" = 20
+	"Ibrahim #0" = 15
+	"Ismail #0" = 15
+	"Yusuf #0" = 15
+	"Ali #0" = 15
+	"Hasan #0" = 10
+	"Umar #0" = 10
+	"Uthman #0" = 10
+	"Suleiman #0" = 10
+	"Salah #0" = 10
+	"Nur #0" = 10
+	"Shah #0" = 10
+	"Khalil #0" = 5
+	"Farid #0" = 5
+	"Hamza #0" = 5
+	"Rashid #0" = 5
+	"Zafar #0" = 5
+	"Jahangir #0" = 5
+	"Aurangzeb #0" = 5
+	"Babur #0" = 5
+	"Akbar #0" = 5
+	"Humayun #0" = 5
+	"Sher #0" = 5
+	"Iltutmish #0" = 5
+	"Balban #0" = 5
+	"Qutb #0" = 5
+	"Raziya #0" = -1
+	"Noor #0" = -1
+	"Mumtaz #0" = -1
+	"Jahan #0" = -1
+	"Zeb #0" = -1
+	"Pari #0" = -1
+	"Chand #0" = 5
+	"Dil #0" = 5
+	"Gul #0" = 5
+	"Malik #0" = 5
+	"Khan #0" = 5
+	"Beg #0" = 5
+	"Rai #0" = 5
+	"Singh #0" = 5
+}
+
+leader_names = {
+	Babur Sher Shah Akbar Humayun Jahangir Shahjahan Aurangzeb
+	Firuz Tughlaq Iltutmish Balban Qutbuddin Aibak Razia
+	Khilji Tughluq Sayyid Lodi
+	Alaeddin Muhammad bin Tughluq Nasiruddin Mahmud
+	Amir Timur Babur's Generals
+	Khalji Tughlaq Ghuri Ghaznavi
+	Ansari Barani Feroze
+	Khattak Kheshgi Afridi Yousafzai
+	Durrani Abdali Hotak Ghilzai
+	MuqimAbdali PaindaZai ShahWali
+	Shuja Dost Mohammad Sher Ali
+	Ayub Khan Mohammadzai Barakzai
+	Dost Mohammad Wazir Akbar Khan
+	Yaqub Khan Habibullah Amanullah
+	Nadir Tarziullah Mohammad Hashim
+}
+
+ship_names = {
+	"Sindh" "Punjab" "Baluchistan" "Kashmir"
+	"Indus" "Jhelum" "Chenab" "Ravi" "Sutlej"
+	"Lahore" "Multan" "Thatta" "Kalat"
+	"Gwadar" "Quetta" "Gilgit" "Skardu"
+	"Islamabad" "Karachi" "Peshawar" "Quaid"
+	"Minar" "Badshahi" "Shalimar"
+}

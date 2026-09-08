@@ -1,0 +1,12 @@
+# 4598 - Cuauhtochco
+
+owner = VRC
+controller = VRC
+culture = totonac
+religion = mesoamerican_religion
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = VRC
+trade_goods = grain

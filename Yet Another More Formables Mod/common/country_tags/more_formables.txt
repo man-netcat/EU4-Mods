@@ -1,0 +1,28 @@
+# More Formables - New country tags
+# Merged from: Slavic Formables, Viet Formables, Finno Ugria Formable
+# Plus new formables
+
+# Slavic Formables
+SLV = "countries/Slovenia.txt"
+SVK = "countries/Slovakia.txt"
+CZE = "countries/Czechia.txt"
+YUG = "countries/Yugoslavia.txt"
+BLR = "countries/Belarus.txt"
+ILY = "countries/Illyria.txt"
+CZS = "countries/Czechoslovakia.txt"
+BHZ = "countries/BosniaHerzegovina.txt"
+
+# Viet Formables
+NYU = "countries/Nanyue.txt"
+DNA = "countries/DaiNam.txt"
+
+# Finno Ugria Formable
+FUG = "countries/FinnoUgria.txt"
+EFI = "countries/FinlandEstonia.txt"
+
+# New Formables
+PAK = "countries/Pakistan.txt"
+
+# Ludowingian Formable
+LUD = "countries/Ludowingia.txt"
+

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = chin
+religion = hinduism
+technology_group = indian
+capital = 570
+monarch_names = {
+  "Naga Hills"
+}

@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 1030
+monarch_names = {
+  "Chubu"
+}

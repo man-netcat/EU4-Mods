@@ -1,0 +1,12 @@
+# 781 - Patagonia Oriental
+
+owner = PTN
+controller = PTN
+culture = patagonian
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = PTN
+trade_goods = fish

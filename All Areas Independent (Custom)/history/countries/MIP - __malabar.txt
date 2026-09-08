@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = malayalam
+religion = hinduism
+technology_group = indian
+capital = 534
+monarch_names = {
+  "Malabar"
+}

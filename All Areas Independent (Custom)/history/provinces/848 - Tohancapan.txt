@@ -1,0 +1,19 @@
+#848 - Tohancapan
+
+owner = HUT
+controller = HUT
+culture = totonac
+religion = nahuatl
+capital = "Tohancapan"
+trade_goods = spices
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+is_city = yes
+add_core = HUT
+
+
+
+discovered_by = mesoamerican
+

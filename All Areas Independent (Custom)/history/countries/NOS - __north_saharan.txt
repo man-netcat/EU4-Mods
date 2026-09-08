@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = tunisian
+religion = sunni
+technology_group = muslim
+capital = 352
+monarch_names = {
+  "North Saharan"
+}

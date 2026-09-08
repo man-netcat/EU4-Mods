@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = carib
+religion = animism
+capital = 493
+
+1444.11.11 = {
+	monarch = {
+		name = "Kalinago"
+		dynasty = "of the Reefs"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Arawak"
+		dynasty = "of the Reefs"
+		birth_date = 1426
+		death_date = 1489
+		claim = 83
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

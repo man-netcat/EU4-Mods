@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = pueblo
+religion = totemism
+capital = 880
+
+1444.11.11 = {
+	monarch = {
+		name = "Edward"
+		dynasty = "of the Seven Cities"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Peter"
+		dynasty = "of the Seven Cities"
+		birth_date = 1426
+		death_date = 1488
+		claim = 85
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

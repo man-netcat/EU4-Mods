@@ -1,0 +1,9 @@
+government = republic
+government_rank = 1
+primary_culture = novgorodian
+religion = orthodox
+technology_group = eastern
+capital = 274
+monarch_names = {
+  "Pskov"
+}

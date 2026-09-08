@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = lithuanian
+religion = catholic
+technology_group = eastern
+capital = 272
+monarch_names = {
+  "Lithuania"
+}

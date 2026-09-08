@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = muisca
+religion = animism
+capital = 835
+
+1444.11.11 = {
+	monarch = {
+		name = "Urraca"
+		dynasty = "of the Isthmus"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

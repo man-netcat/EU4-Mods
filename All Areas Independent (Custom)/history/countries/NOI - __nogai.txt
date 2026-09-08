@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = nogaybak
+religion = sunni
+technology_group = nomad_group
+capital = 465
+monarch_names = {
+  "Nogai"
+}

@@ -1,0 +1,15 @@
+
+owner = NWJ
+controller = NWJ
+culture = northern_thai
+religion = buddhism
+capital = "Lakhon"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = NWJ
+discovered_by = chinese
+discovered_by = indian

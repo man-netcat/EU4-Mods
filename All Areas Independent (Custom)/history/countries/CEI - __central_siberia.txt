@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = ostyaki
+religion = tengri_pagan_reformed
+technology_group = north_american
+capital = 1064
+monarch_names = {
+  "Central Siberia"
+}

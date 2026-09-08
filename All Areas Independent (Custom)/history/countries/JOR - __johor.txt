@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = malayan
+religion = sunni
+technology_group = chinese
+capital = 597
+monarch_names = {
+  "Johor"
+}

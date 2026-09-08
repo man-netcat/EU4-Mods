@@ -1,0 +1,20 @@
+#708 - Gansu
+
+owner = WEU
+controller = WEU
+add_core = WEU
+culture = xibei
+religion = confucianism
+capital = "Zhangye"
+trade_goods = livestock
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+is_city = yes
+add_core = WEU
+add_core = WEU
+fort_15th = yes #the Nine Garrisons
+discovered_by = chinese
+discovered_by = nomad_group
+

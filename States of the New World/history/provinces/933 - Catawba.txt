@@ -1,0 +1,12 @@
+# 933 - Catawba
+
+owner = CRL
+controller = CRL
+culture = catawba
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = CRL
+trade_goods = grain

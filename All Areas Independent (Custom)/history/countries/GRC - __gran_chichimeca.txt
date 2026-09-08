@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = chichimecan
+religion = animism
+technology_group = mesoamerican
+capital = 857
+monarch_names = {
+  "Gran Chichimeca"
+}

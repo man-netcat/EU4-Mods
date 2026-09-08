@@ -1,0 +1,12 @@
+# 2006 - Apsaalooke
+
+owner = BTR
+controller = BTR
+culture = blackfoot
+religion = totemism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = BTR
+trade_goods = fur

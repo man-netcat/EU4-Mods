@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = lombard
+religion = catholic
+technology_group = western
+capital = 104
+monarch_names = {
+  "Lombardy"
+}

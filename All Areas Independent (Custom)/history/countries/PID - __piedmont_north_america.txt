@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = catawba
+religion = totemism
+technology_group = north_american
+capital = 2544
+monarch_names = {
+  "Piedmont North America"
+}

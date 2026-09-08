@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = shawnee
+religion = totemism
+capital = 941
+
+1444.11.11 = {
+	monarch = {
+		name = "Harrods"
+		dynasty = "of the Caves"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

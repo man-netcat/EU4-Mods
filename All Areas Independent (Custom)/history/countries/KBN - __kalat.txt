@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = baluchi
+religion = sunni
+technology_group = muslim
+capital = 576
+monarch_names = {
+  "Kalat"
+}

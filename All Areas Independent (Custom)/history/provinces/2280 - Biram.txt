@@ -1,0 +1,18 @@
+# No previous file for Biram
+
+owner = HAS
+controller = HAS
+add_core = HAS
+culture = hausa 
+religion = sunni
+capital = "Biram"
+trade_goods = dyes
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+is_city = yes
+
+
+discovered_by = sub_saharan
+

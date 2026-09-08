@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = charruan
+religion = animism
+technology_group = north_american
+capital = 772
+monarch_names = {
+  "Banda Oriental"
+}

@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = kochi
+religion = hinduism
+technology_group = indian
+capital = 562
+monarch_names = {
+  "North Bengal"
+}

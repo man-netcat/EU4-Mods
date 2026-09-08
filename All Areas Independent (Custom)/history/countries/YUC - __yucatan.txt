@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = yucatec
+religion = mesoamerican_religion
+technology_group = mesoamerican
+capital = 846
+monarch_names = {
+  "Yucatan"
+}

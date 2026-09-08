@@ -1,0 +1,15 @@
+#4349 - Laguna
+
+owner = SOZ
+controller = SOZ
+add_core = SOZ
+culture = filipino
+religion = animism
+capital = "Laguna"
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+is_city = yes
+discovered_by = chinese

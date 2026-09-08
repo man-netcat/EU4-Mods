@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = nubian 
+religion = shamanism 
+technology_group = north_american
+capital = 1216
+monarch_names = {
+  "Kurdufan"
+}

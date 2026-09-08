@@ -1,0 +1,9 @@
+government = republic
+government_rank = 1
+primary_culture = tuscan
+religion = catholic
+technology_group = western
+capital = 115
+monarch_names = {
+  "Tuscany"
+}

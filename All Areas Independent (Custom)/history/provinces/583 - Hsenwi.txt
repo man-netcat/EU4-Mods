@@ -1,0 +1,20 @@
+#583 - Hsenwi
+
+owner = SH0
+controller = SH0
+culture = shan
+religion = buddhism
+capital = "Hsenwi"
+trade_goods = tropical_wood
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = SH0
+
+
+
+discovered_by = chinese
+discovered_by = indian
+

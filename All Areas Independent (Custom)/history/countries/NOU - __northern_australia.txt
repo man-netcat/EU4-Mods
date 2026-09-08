@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = paman
+religion = dreamtime
+technology_group = aboriginal_tech
+capital = 2730
+monarch_names = {
+  "Northern Australia"
+}

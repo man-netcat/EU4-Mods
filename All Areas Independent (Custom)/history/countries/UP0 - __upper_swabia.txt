@@ -1,0 +1,9 @@
+government = republic
+government_rank = 1
+primary_culture = swabian
+religion = catholic
+technology_group = western
+capital = 68
+monarch_names = {
+  "Upper Swabia"
+}

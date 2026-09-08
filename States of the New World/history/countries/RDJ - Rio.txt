@@ -1,0 +1,16 @@
+government = republic
+add_government_reform = merchant_republic_reform
+technology_group = western
+unit_type = western
+primary_culture = tupinamba
+religion = animism
+capital = 761
+
+1444.11.11 = {
+	monarch = {
+		name = "Estacio de Sa"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}

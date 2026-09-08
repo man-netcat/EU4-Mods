@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = burmese
+religion = buddhism
+technology_group = chinese
+capital = 4394
+monarch_names = {
+  "Central Burma"
+}

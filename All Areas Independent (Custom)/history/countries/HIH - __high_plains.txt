@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = wichita
+religion = totemism
+technology_group = north_american
+capital = 889
+monarch_names = {
+  "High Plains"
+}

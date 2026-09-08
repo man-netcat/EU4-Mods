@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = jharkhandi
+religion = hinduism
+technology_group = indian
+capital = 560
+monarch_names = {
+  "Jharkhand"
+}

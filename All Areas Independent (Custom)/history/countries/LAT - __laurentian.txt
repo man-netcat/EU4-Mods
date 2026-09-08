@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = algonquin
+religion = totemism
+technology_group = north_american
+capital = 992
+monarch_names = {
+  "Laurentian"
+}

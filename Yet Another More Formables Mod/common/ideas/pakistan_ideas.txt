@@ -1,0 +1,39 @@
+PAK_ideas = {
+	start = {
+		manpower_recovery_speed = 0.15
+		tolerance_own = 2
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	trigger = {
+		tag = PAK
+	}
+	free = yes
+
+	pak_land_of_five_rivers = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	pak_indus_civilization = {
+		development_cost = -0.1
+	}
+	pak_defenders_of_faith = {
+		tolerance_own = 2
+		tolerance_heathen = 1
+	}
+	pak_martial_tradition = {
+		infantry_power = 0.1
+	}
+	pak_strategic_crossroads = {
+		trade_efficiency = 0.1
+		trade_steering = 0.1
+	}
+	pak_united_peoples = {
+		num_accepted_cultures = 2
+		diplomatic_annexation_cost = -0.15
+	}
+	pak_national_resilience = {
+		stability_cost_modifier = -0.2
+		global_unrest = -1
+	}
+}

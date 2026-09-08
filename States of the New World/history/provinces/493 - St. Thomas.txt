@@ -1,0 +1,12 @@
+# 493 - St. Thomas
+
+owner = ANI
+controller = ANI
+culture = carib
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = ANI
+trade_goods = sugar

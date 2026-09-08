@@ -1,10 +1,10 @@
-#Country Name: Please see filename.
+﻿#Country Name: Please see filename.
 # Formable Kingdom of Saxony. Distinct from the Saxe-Wittenberg (SAX) 1444
 # tag; formed by any Saxon-culture state that reunites the Saxon lands.
 
 graphical_culture = westerngfx
 
-color = { 155  147  180 }
+color = { 126 87 84 }
 revolutionary_colors = { 15 0 5 }
 
 historical_score = 300

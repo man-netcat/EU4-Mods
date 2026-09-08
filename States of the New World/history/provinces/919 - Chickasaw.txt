@@ -1,0 +1,12 @@
+# 919 - Chickasaw
+
+owner = MSP
+controller = MSP
+culture = natchez
+religion = totemism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = MSP
+trade_goods = grain

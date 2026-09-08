@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = scottish
+religion = catholic
+technology_group = western
+capital = 250
+monarch_names = {
+  "Highlands"
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = mikmaq
+religion = totemism
+technology_group = north_american
+capital = 983
+monarch_names = {
+  "Upper Acadia"
+}

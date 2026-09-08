@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = maliseet
+religion = totemism
+technology_group = north_american
+capital = 2570
+monarch_names = {
+  "St John Valley"
+}

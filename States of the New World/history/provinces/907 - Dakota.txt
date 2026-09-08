@@ -1,0 +1,12 @@
+# 907 - Dakota
+
+owner = DKT
+controller = DKT
+culture = pawnee
+religion = totemism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = DKT
+trade_goods = grain

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = sawabantu
+religion = shamanism 
+technology_group = north_american
+capital = 1151
+monarch_names = {
+  "Gulf Of Guinea"
+}

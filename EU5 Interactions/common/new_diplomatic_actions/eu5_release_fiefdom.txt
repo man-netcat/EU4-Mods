@@ -1,0 +1,109 @@
+# EU5 Interactions - Release as Fiefdom
+# Allows releasing a vassal/PU as a fiefdom instead
+
+eu5_release_as_fiefdom = {
+	category = influence
+	
+	require_acceptance = no
+	
+	# Only visible when dealing with a vassal or PU that could become a fiefdom
+	is_visible = {
+		# Must be our subject (vassal or personal union)
+		FROM = {
+			is_subject_of = ROOT
+			OR = {
+				is_subject_of_type = vassal
+				is_subject_of_type = personal_union
+			}
+		}
+	}
+	
+	# Requirements to use this action
+	is_allowed = {
+		# Must be at peace
+		NOT = { is_in_war = any }
+		FROM = { NOT = { is_in_war = any } }
+		
+		# Both must be monarchies
+		government = monarchy
+		FROM = { government = monarchy }
+		
+		# Must be same religion group
+		religion_group = FROM
+		
+		# FROM must be our subject
+		FROM = {
+			is_subject_of = ROOT
+			OR = {
+				is_subject_of_type = vassal
+				is_subject_of_type = personal_union
+			}
+		}
+	}
+	
+	# Effects when the action is accepted
+	on_accept = {
+		# Change subject type from vassal/PU to fiefdom
+		create_subject = {
+			subject = FROM
+			subject_type = eu5_fiefdom
+		}
+		
+		# Add opinion modifier
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = eu5_converted_to_fiefdom
+			}
+		}
+		
+		# Add prestige
+		add_prestige = 5
+	}
+	
+	# AI acceptance factors
+	ai_acceptance = {
+		add_entry = {
+			name = AI_ACCEPT_RELATIONS
+			
+			export_to_variable = {
+				variable_name = ai_value
+				value = 0
+			}
+			
+			if = {
+				limit = {
+					FROM = {
+						opinion_of = { who = ROOT value = 180 }
+					}
+				}
+				export_to_variable = {
+					variable_name = ai_value
+					value = 50
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						opinion_of = { who = ROOT value = 150 }
+					}
+				}
+				export_to_variable = {
+					variable_name = ai_value
+					value = 25
+				}
+			}
+		}
+	}
+	
+	# AI will do this action
+	ai_will_do = {
+		factor = 1
+		
+		modifier = {
+			factor = 0
+			# Don't convert if they're disloyal
+			FROM = { is_disloyal = yes }
+		}
+	}
+}

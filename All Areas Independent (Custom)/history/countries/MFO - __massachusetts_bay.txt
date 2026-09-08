@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = massachusset
+religion = totemism
+technology_group = north_american
+capital = 966
+monarch_names = {
+  "Massachusetts Bay"
+}

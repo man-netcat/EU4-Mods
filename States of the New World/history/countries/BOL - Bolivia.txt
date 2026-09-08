@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = aimara
+religion = inti
+capital = 2835
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Colla"
+		dynasty = "of the Altiplano"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Tiahuanaco"
+		dynasty = "of the Altiplano"
+		birth_date = 1423
+		death_date = 1495
+		claim = 89
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

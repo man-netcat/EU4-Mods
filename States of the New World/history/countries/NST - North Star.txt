@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = dakota
+religion = totemism
+capital = 904
+
+1444.11.11 = {
+	monarch = {
+		name = "Vaughan"
+		dynasty = "of the Lakes"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Loran"
+		dynasty = "of the Lakes"
+		birth_date = 1428
+		death_date = 1491
+		claim = 85
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

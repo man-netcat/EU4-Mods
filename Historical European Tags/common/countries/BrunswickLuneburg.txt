@@ -1,8 +1,8 @@
-# Brunswick-Lüneburg
+﻿# Brunswick-Lüneburg
 
 graphical_culture = westerngfx
 
-color = { 126  101  93 }
+color = { 135 109 147 }
 
 revolutionary_colors = { 0  14  0 }
 

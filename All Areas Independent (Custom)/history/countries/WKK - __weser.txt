@@ -1,0 +1,9 @@
+government = theocracy
+government_rank = 1
+primary_culture = lower_saxon
+religion = catholic
+technology_group = western
+capital = 54
+monarch_names = {
+  "Weser"
+}

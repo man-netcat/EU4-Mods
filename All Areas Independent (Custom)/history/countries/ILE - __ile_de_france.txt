@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+primary_culture = cosmopolitan_french
+religion = catholic
+technology_group = western
+capital = 182
+monarch_names = {
+  "Ile De France"
+}

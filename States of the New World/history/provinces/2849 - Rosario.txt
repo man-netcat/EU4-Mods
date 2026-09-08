@@ -1,0 +1,12 @@
+# 2849 - Rosario
+
+owner = LAP
+controller = LAP
+culture = het
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 4
+add_core = LAP
+trade_goods = grain

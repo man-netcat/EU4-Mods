@@ -1,0 +1,22 @@
+# - Chachapoyas
+
+owner = CAJ
+controller = CAJ
+culture = chachapoyan
+religion = inti
+capital = "Kuelap"
+trade_goods = grain
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = CAJ
+
+
+
+discovered_by = south_american
+discovered_by = andean
+discovered_by = CHM
+
+fort_15th = yes

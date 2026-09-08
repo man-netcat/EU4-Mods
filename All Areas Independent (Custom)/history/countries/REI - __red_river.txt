@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = nakota
+religion = totemism
+technology_group = north_american
+capital = 2016
+monarch_names = {
+  "Red River"
+}

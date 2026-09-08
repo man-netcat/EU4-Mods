@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = caddo
+religion = totemism
+capital = 894
+
+1444.11.11 = {
+	monarch = {
+		name = "Jean-Baptiste"
+		dynasty = "de Bienville"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Marie-Josephe"
+		dynasty = "de Bienville"
+		birth_date = 1424
+		death_date = 1488
+		claim = 85
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

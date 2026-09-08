@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = gondi
+religion = hinduism
+technology_group = indian
+capital = 550
+monarch_names = {
+  "Gondwana"
+}

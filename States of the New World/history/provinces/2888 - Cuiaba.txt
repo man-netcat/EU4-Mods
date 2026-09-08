@@ -1,0 +1,12 @@
+# 2888 - Cuiaba
+
+owner = MTG
+controller = MTG
+culture = maipurean
+religion = animism
+is_city = yes
+base_tax = 4
+base_production = 4
+base_manpower = 5
+add_core = MTG
+trade_goods = gold

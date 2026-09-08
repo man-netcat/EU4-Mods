@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = chipewyan
+religion = totemism
+capital = 1008
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Cuthbert"
+		dynasty = "of the Prairies"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Marguerite"
+		dynasty = "of the Prairies"
+		birth_date = 1421
+		death_date = 1492
+		claim = 89
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = circassian
+religion = orthodox
+technology_group = eastern
+capital = 463
+monarch_names = {
+  "Circassia"
+}

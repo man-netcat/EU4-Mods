@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = schlesian
+religion = catholic
+technology_group = western
+capital = 264 # Breslau
+fixed_capital = 264
+
+#Duchy of Breslau under the Bohemian crown

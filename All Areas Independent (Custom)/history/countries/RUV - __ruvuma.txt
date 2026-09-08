@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = makua
+religion = shamanism 
+technology_group = north_american
+capital = 4036
+monarch_names = {
+  "Ruvuma"
+}

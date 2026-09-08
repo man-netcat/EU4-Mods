@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = ge
+religion = animism
+capital = 765
+
+1444.11.11 = {
+	monarch = {
+		name = "Borba"
+		dynasty = "Gato de Cascais"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Fernao"
+		dynasty = "Gato de Cascais"
+		birth_date = 1424
+		death_date = 1490
+		claim = 83
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

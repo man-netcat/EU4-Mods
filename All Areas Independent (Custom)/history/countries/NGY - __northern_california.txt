@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = chinook
+religion = totemism
+technology_group = north_american
+capital = 871
+monarch_names = {
+  "Northern California"
+}

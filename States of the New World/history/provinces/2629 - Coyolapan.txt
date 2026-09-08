@@ -1,0 +1,12 @@
+# 2629 - Coyolapan
+
+owner = ZAP
+controller = ZAP
+culture = mixtec
+religion = nahuatl
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 4
+add_core = ZAP
+trade_goods = copper

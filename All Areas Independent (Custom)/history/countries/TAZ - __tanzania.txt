@@ -1,0 +1,9 @@
+government = tribal
+government_rank = 1
+primary_culture = swahili
+religion = shamanism 
+technology_group = north_american
+capital = 4055
+monarch_names = {
+  "Tanzania"
+}

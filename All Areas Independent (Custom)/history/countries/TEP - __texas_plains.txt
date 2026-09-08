@@ -1,0 +1,9 @@
+government = native
+government_rank = 1
+primary_culture = wichita
+religion = totemism
+technology_group = north_american
+capital = 886
+monarch_names = {
+  "Texas Plains"
+}

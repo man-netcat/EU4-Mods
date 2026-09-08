@@ -1,0 +1,19 @@
+#240 - Marches
+#Shropshire, Herefordshire, Worcestershire
+
+owner = WE0
+controller = WE0
+culture = english
+religion = catholic
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = wool
+base_manpower = 2
+capital = "Shrewsbury"
+is_city = yes
+add_core = WE0
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern

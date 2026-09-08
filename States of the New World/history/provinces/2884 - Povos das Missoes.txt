@@ -1,0 +1,12 @@
+# 2884 - Povos das Missoes
+
+owner = RGR
+controller = RGR
+culture = guarani
+religion = animism
+is_city = yes
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = RGR
+trade_goods = grain
