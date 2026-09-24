@@ -1,0 +1,70 @@
+# Halsingland (Hälsingland). The Bothnian coast province of the realm from
+# Gävle to the forests of Medelpad, with the old royal town of Hudiksvall
+# and the great timber farmhouses of the interior. Under Swedish crown
+# throughout the EU4 period; its men marched under the Gustav Vasa banner
+# and its timber built the fleets of the realm. The arms of the province
+# carry a golden buck on a field of black.
+
+graphical_culture = westerngfx
+
+color = { 240 184 80 }
+revolutionary_colors = { 10 0 10 }
+
+historical_score = 200
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	religious_ideas
+	offensive_ideas
+	diplomatic_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_medieval_arquebus
+	swedish_gallop
+	swedish_gustavian
+	swedish_carolean
+	swedish_arbiters
+	swiss_landsknechten
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Charles #0" = 30
+	"Gustav #0" = 30
+	"Erik #0" = 25
+	"Johan #0" = 20
+	"Karl #0" = 20
+	"Olof #0" = 15
+	"Knut #0" = 15
+
+	"Margaret #0" = -1
+	"Catherine #0" = -1
+	"Birgitta #0" = -1
+}
+
+leader_names = {
+	"af Gävle" "af Hudiksvall" "af Söderala"
+	"af Delsbo" "af Bollnäs" "af Ljusdal"
+	"af Nordanstig" "af Hälsingkusten"
+}
+
+ship_names = {
+	"Hudiksvall" "Gävle" "Söderhamn" "Iggesund"
+	"Delsbo" "Bollnäs" "Ljusdal" "Sundsvall"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Bothnian Fleet"
+}

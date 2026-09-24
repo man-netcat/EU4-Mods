@@ -1,0 +1,75 @@
+# Country Name: Please see filename.
+# Carniola. The Duchy of Krain, centred on Laibach between the Alps and
+# the Adriatic coast, guarded the passes of the Julian Alps and the
+# markets of the Upper Sava. The county of Cilli rose out of the
+# Carniolan marches before the Habsburgs absorbed the duchy.
+
+graphical_culture = westerngfx
+
+color = { 210 30 50 }
+
+revolutionary_colors = { 20 40 80 }
+
+historical_score = 200
+
+historical_idea_groups = {
+	trade_ideas
+	diplomatic_ideas
+	defensive_ideas
+	economic_ideas
+	innovative_ideas
+	quality_ideas
+	administrative_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Herman #0" = 30
+	"Ulrich #0" = 25
+	"Friedrich #0" = 20
+	"Johann #0" = 15
+	"Albrecht #0" = 15
+	"Georg #0" = 10
+	"Leonhard #0" = 10
+	"Konrad #0" = 10
+
+	"Barbara #0" = -1
+	"Veronika #0" = -1
+	"Katharina #0" = -1
+}
+
+leader_names = {
+	"von Cilli" "von Auersperg" "von Thurn" "von Blagay"
+	"von Lamberg" "von Gallenberg" "von Steinberg"
+}
+
+ship_names = {
+	"Laibach" "Cilli" "Rudolfswerth" "Neustadt"
+	"Adelsberg" "Postojna" "Oberburg" "Neuhaus" "Gottschee"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Sava Fleet"
+}

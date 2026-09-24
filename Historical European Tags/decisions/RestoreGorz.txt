@@ -1,0 +1,49 @@
+# Restore the County of Görz as a junior partner under the House of
+# Tirol. The counts of Görz were the elder line of the house that ruled
+# Tirol and Görz for two centuries, the Meinhardiner, until the Tirol
+# line ended in 1363. The last counts of Görz held the town on the
+# Isonzo until 1500. When Tirol holds Görz, the seat of the ancestral
+# county may be given to a junior partner of the house, and the two
+# seats of the Meinhardiner are joined again.
+
+country_decisions = {
+
+	restore_county_of_gorz = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = TIR
+			NOT = {
+				has_country_flag = county_of_gorz_restored
+			}
+			NOT = {
+				exists = GOR
+			}
+			NOT = { government = republic }
+			owns_core_province = 1769
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1769	# Görz
+				province_id = 1768	# Lienz
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1769
+		}
+		effect = {
+			1769 = { add_core = GOR }
+			release = GOR
+			create_union = GOR
+			carinthia_area = {
+				add_permanent_claim = GOR
+			}
+			set_country_flag = county_of_gorz_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

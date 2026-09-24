@@ -1,0 +1,87 @@
+#Country Name: Please see filename.
+# Luxembourg-Moravia. The two seats of the House of Luxembourg: the duchy
+# on the Alzette and the margraviate of Moravia beyond the Bohemian
+# marches. John of Bohemia held both crowns from 1310; his son the Emperor
+# Charles IV ruled the Empire from Prague. The union of the two seats is
+# here renewed under one crown. The arms are quarterly: Luxembourg, barry
+# of argent and azure with a lion rampant queue fourchee gules crowned or;
+# and Moravia, an eagle displayed checky argent and gules crowned or on
+# azure.
+
+graphical_culture = westerngfx
+
+color = { 10 35 180 }
+
+revolutionary_colors = { 13 103 147 }
+
+historical_score = 300
+
+historical_idea_groups = {
+	diplomatic_ideas
+	administrative_ideas
+	defensive_ideas
+	economic_ideas
+	offensive_ideas
+	religious_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	westfalian_infantry
+	westfalian_cavalry
+	dutch_maurician
+	french_line
+	french_dragoon
+	french_bluecoat
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Johann #0" = 100
+	"Wenzel #0" = 80
+	"Jobst #0" = 80
+	"Sigmund #0" = 80
+	"Karl #0" = 70
+	"Heinrich #0" = 60
+	"Konrad #0" = 40
+	"Wilhelm #0" = 30
+	"Anton #0" = 20
+	"Lothair #0" = 20
+	"Friedrich #0" = 20
+	"Rudolf #0" = 20
+	"Peter #0" = 20
+	"Philipp #0" = 10
+	"Albrecht #0" = 10
+	"Maximilian #0" = 10
+
+	"Elisabeth #0" = -1
+	"Margarethe #0" = -1
+	"Anna #0" = -1
+	"Irma #0" = -1
+}
+
+leader_names = {
+	"von Bettborn" "von Bourscheid" "von Capellen" "von Diekirch"
+	"von Grevenmach" "von Grosbous" "von Pontpierre" "von Redange"
+	"von Schuttrange" "von Sommerfeld" "von Vianden" "von Wiltz"
+	"z Kravar" "z Kunstat" "z Pernstejna" "z Sternberka" "z Zerotina"
+	"von Fallenstein" "von Mersch" "von Prettin"
+}
+
+ship_names = {
+	"Luxembourg" "Brno" "Olomouc" "Echternach" "Vianden"
+	"Clervaux" "Wiltz" "Wisla" "Diekirch" "Mersch"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Alzette Fleet"
+}

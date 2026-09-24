@@ -1,0 +1,81 @@
+#Country Name: Please see filename.
+# Scania (Skåne). The fertile southernmost province of the Scandinavian
+# peninsula, ceded to Sweden only at the Peace of Roskilde in 1658.
+# Danish for the whole of the EU4 period, it was the wealthiest of the
+# Danish-Swedish borderlands: the great herring market of Skanør, the
+# archbishopric of Lund and the Scanian plains. The arms derive from
+# Malmö's griffin head, or a griffin's head erased gules crowned azure.
+
+graphical_culture = westerngfx
+
+color = { 211 230 111 }
+
+revolutionary_colors = { 188 46 46 }
+
+historical_score = 200
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+	maritime_ideas
+	diplomatic_ideas
+	quality_ideas
+	administrative_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Valdemar #0" = 100
+	"Erik #0" = 90
+	"Christoffer #0" = 80
+	"Magnus #0" = 70
+	"Knut #0" = 60
+	"Sven #0" = 50
+	"Niels #0" = 40
+	"Christian #0" = 40
+	"Hemming #0" = 30
+	"Toke #0" = 20
+
+	"Margrete #0" = -1
+	"Karen #0" = -1
+	"Birgitte #0" = -1
+	"Inger #0" = -1
+	"Cecilie #0" = -1
+}
+
+leader_names = {
+	"Niels" "Esbern" "Absalon" "Jens" "Anders"
+	"Peder" "Torkil" "Mogens" "Hasse" "Sune"
+}
+
+ship_names = {
+	"Skanor" "Falsterbo" "Ystad" "Malmo" "Lund"
+	"Kristianstad" "Helsingborg" "Landskrona" "Trelleborg" "Ronneby"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Scanian Fleet"
+}

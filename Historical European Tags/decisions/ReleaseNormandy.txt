@@ -1,0 +1,64 @@
+# Restore the Duchy of Normandy as a junior partner under the Navarrese
+# crown. The House of Évreux held the county of Évreux in Normandy before
+# inheriting Navarre. Charles II of Navarre held the Cotentin and other
+# Norman lands by right of his mother Joan, daughter of Louis X of France.
+
+country_decisions = {
+
+	release_duchy_of_normandy = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = NAV
+			NOT = {
+				has_country_flag = nav_normandy_released
+			}
+			NOT = {
+				exists = NRM
+			}
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 167
+				province_id = 168
+				province_id = 4385
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 167
+			owns_core_province = 168
+			owns_core_province = 4385
+		}
+		effect = {
+			167 = { add_core = NRM }
+			168 = { add_core = NRM }
+			4385 = { add_core = NRM }
+			release = NRM
+			NRM = {
+				set_government_rank = 1
+				change_primary_culture = normand
+				change_religion = catholic
+			}
+			create_union = NRM
+			picardy_area = {
+				add_permanent_claim = NRM
+			}
+			maine_area = {
+				add_permanent_claim = NRM
+			}
+			eastern_maine_area = {
+				add_permanent_claim = NRM
+			}
+			ile_de_france_area = {
+				add_claim = NRM
+			}
+			set_country_flag = nav_normandy_released
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

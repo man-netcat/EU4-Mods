@@ -1,0 +1,73 @@
+# Viborg
+
+graphical_culture = westerngfx
+
+color = { 208 172 100 }
+
+revolutionary_colors = { 25 15 15 }
+
+historical_score = 200
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	offensive_ideas
+	religious_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_medieval_arquebus
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	swedish_gallop
+	swedish_gustavian
+	swedish_carolean
+	swedish_arbiters
+	swiss_landsknechten
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Charles #0" = 30
+	"Erik #0" = 25
+	"Gustav #0" = 25
+	"Johan #0" = 25
+	"Olof #0" = 20
+	"Karl #0" = 20
+	"Magnus #0" = 15
+	"Knut #0" = 15
+	"Birger #0" = 10
+	"Valdemar #0" = 10
+
+	"Catherine #0" = -1
+	"Margaret #0" = -1
+}
+
+leader_names = {
+	"af Viborg" "af Karelen" "af Nyslott"
+	"af Kexholm" "af Savolax" "af Kakisalmi"
+	"af Ladoga" "af Vuoksi"
+}
+
+ship_names = {
+	"Viborg" "Karelen" "Nyslott" "Kexholm"
+	"Savolax" "Kakisalmi" "Ladoga" "Vuoksi"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Gulf of Finland Fleet"
+}

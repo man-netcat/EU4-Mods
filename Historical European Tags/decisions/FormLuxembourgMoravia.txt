@@ -1,0 +1,103 @@
+# Form Luxembourg-Moravia. The House of Luxembourg held two seats: the
+# duchy on the Alzette and the margraviate of Moravia beyond the Bohemian
+# marches. John of Bohemia won both crowns in 1310, and his son Charles IV
+# ruled the Empire from Prague, the most splendid court in Europe. The
+# union of the two seats was never sealed: the margraviate returned to the
+# Bohemian crown in 1411 and the dynasty died with Sigismund in 1437. A
+# prince of Luxembourg who holds Brno, Olomouc and Ostrava, and who has
+# bound the margraviate to his house as a junior partner, may now set the
+# two seats under one crown and claim the age-old inheritance of his house.
+
+country_decisions = {
+
+	luxembourg_moravia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_luxembourg_moravia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = LXM }
+			tag = LUX
+			has_country_flag = margraviate_of_moravia_restored
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 94	# Luxembourg
+				province_id = 265	# Brno
+				province_id = 4237	# Olomouc
+				province_id = 4726	# Ostrava
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = MVA }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 94		# Luxembourg
+			owns_core_province = 265	# Brno
+			owns_core_province = 4237	# Olomouc
+			owns_core_province = 4726	# Ostrava
+		}
+		effect = {
+			change_tag = LXM
+			94 = {
+				move_capital_effect = yes
+			}
+			restore_country_name_effect = yes
+			moravia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			bohemia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_luxembourg_moravia_flag
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = LXM_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

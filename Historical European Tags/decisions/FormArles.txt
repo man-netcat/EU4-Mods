@@ -1,0 +1,140 @@
+# Form the Kingdom of Arles. The medieval Arelat united Upper and Lower
+# Burgundy under one crown. It held Franche-Comté, Savoy, Dauphiné,
+# Provence, the Romandie, and the city of Arles itself. The arms that
+# medieval heraldists attributed to the kingdom are Or, two pallets
+# gules. The crown passed to the Holy Roman Emperors when Conrad II
+# claimed it in 1032. A successor of the old Burgundian houses may
+# revive the crown and press the claims of the kingdom on the Italian
+# lands it once held.
+
+country_decisions = {
+
+	arles_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_arles_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ARS }
+			OR = {
+				tag = FRC
+				tag = DAU
+				tag = PRO
+				tag = SAV
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bourgogne_area
+				area = romandie_area
+				area = savoy_dauphine_area
+				area = provence_area
+			}
+			OR = {
+				NOT = { owned_by = root }
+				NOT = { is_core = root }
+			}
+		}
+		allow = {
+			NOT = { exists = ARS }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			bourgogne_area = {
+				type = all
+				owned_by_root = yes
+				is_core = root
+			}
+			romandie_area = {
+				type = all
+				owned_by_root = yes
+				is_core = root
+			}
+			savoy_dauphine_area = {
+				type = all
+				owned_by_root = yes
+				is_core = root
+			}
+			provence_area = {
+				type = all
+				owned_by_root = yes
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = ARS
+			202 = {
+				move_capital_effect = yes
+			}
+			restore_country_name_effect = yes
+			piedmont_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_arles_flag
+			add_historical_rival = BUR
+			BUR = {
+				add_historical_rival = ROOT
+			}
+
+			if = {
+				limit = {
+					total_development = 100
+				}
+				set_government_rank = 2
+			}
+
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ARS_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

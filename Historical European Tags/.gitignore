@@ -1,1 +1,4 @@
 __pycache__/
+.omo/
+tools/hre_releasables.sqlite3
+tools/pdx-flag-builder

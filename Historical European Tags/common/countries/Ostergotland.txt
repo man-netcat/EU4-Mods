@@ -1,0 +1,71 @@
+# Ostergotland (Östergötland). The rich plains between Lake Vättern and the
+# Baltic coast, seat of the provincial law and the cathedral of Linköping.
+# Under Swedish crown throughout the EU4 period, its grain, its cavalry and
+# the deep-water harbour of Norrköping made it one of the richest of the
+# Swedish provinces. The arms carry the golden griffin with four silver
+# roses on a red field.
+
+graphical_culture = westerngfx
+
+color = { 188 46 46 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_score = 200
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	religious_ideas
+	offensive_ideas
+	diplomatic_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_medieval_arquebus
+	swedish_gallop
+	swedish_gustavian
+	swedish_carolean
+	swedish_arbiters
+	swiss_landsknechten
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Charles #0" = 30
+	"Gustav #0" = 30
+	"Erik #0" = 25
+	"Johan #0" = 20
+	"Karl #0" = 20
+	"Olof #0" = 15
+	"Knut #0" = 15
+
+	"Margaret #0" = -1
+	"Catherine #0" = -1
+	"Birgitta #0" = -1
+}
+
+leader_names = {
+	"af Linköping" "af Norrköping" "af Ekenäs"
+	"af Vadstena" "af Söderköping" "af Bjälbo"
+	"af Sturefors" "af Skänninge"
+}
+
+ship_names = {
+	"Linköping" "Norrköping" "Bråviken" "Vadstena"
+	"Söderköping" "Motala" "Vreta" "Roxen"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"East Coast Fleet"
+}

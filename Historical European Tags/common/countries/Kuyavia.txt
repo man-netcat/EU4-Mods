@@ -1,0 +1,79 @@
+#Country Name: Please see filename.
+# Kuyavia. The lowland duchy of the Piasts on the middle Vistula, the
+# cradle of the dynasty that reunited Poland. Casimir I founded the duchy
+# in 1233, parting it at his death between Inowrocław and Brześć Kujawski,
+# where Władysław the Elbow-high, born of Kuyavia, was raised to the throne
+# of a reunited Poland in 1320. The arms are per pale gules and or, an
+# eagle displayed sable, the eagle of the Kuyavian Piasts.
+
+graphical_culture = westerngfx
+
+color = { 160 60 130 }
+
+revolutionary_colors = { 188 46 46 }
+
+historical_score = 300
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+	administrative_ideas
+	diplomatic_ideas
+	quality_ideas
+	innovative_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Wladyslaw #0" = 100
+	"Kazimierz #0" = 90
+	"Ziemomysl #0" = 70
+	"Leszek #0" = 60
+	"Przemysl #0" = 50
+	"Konrad #0" = 40
+	"Boleslaw #0" = 40
+	"Siemowit #0" = 30
+	"Casimir #0" = 20
+
+	"Eufrozyna #0" = -1
+	"Konstancja #0" = -1
+	"Salomea #0" = -1
+	"Zofia #0" = -1
+}
+
+leader_names = {
+	"Nałęcz" "Ogończyk" "Grabina" "Krzywosąd" "Pomian"
+	"Leliwa" "Szreniawa" "Jastrzębiec" "Dołęga" "Ciołek"
+}
+
+ship_names = {
+	"Wloclawek" "Bydgoszcz" "Kruszwica" "Inowroclaw" "Torun"
+	"Plock" "Nieszawa" "Wsola" "Brda" "Prosna"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Vistula Flotilla"
+}

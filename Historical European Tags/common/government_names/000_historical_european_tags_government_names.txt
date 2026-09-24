@@ -268,6 +268,66 @@ vidin_tsardom = {
 	}
 }
 
+# Elector Palatine titles. Mirrors vanilla palatine_electorate (which is
+# scoped to PAL) so that NMB, ZWE and FRC get the electoral style when
+# the Emperor grants them an electorate instead of the plain county
+# palatine title. Must be declared before county_palatine below: the
+# game picks the first valid block it finds.
+
+palatine_electorate_mod = {
+	rank = {
+		1 = ELECTORAL_PALATINATE
+		2 = ELECTORAL_PALATINATE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = ELECTOR_PALATINE
+		2 = ELECTOR_PALATINE
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = ELECTRESS_PALATINE
+		2 = ELECTRESS_PALATINE
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = ELECTOR
+		2 = ELECTOR
+		3 = ELECTOR
+	}
+
+	consort_female = {
+		1 = ELECTRESS
+		2 = ELECTRESS
+		3 = ELECTRESS
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		OR = {
+			tag = NMB
+			tag = ZWE
+			tag = FRC
+		}
+		government = monarchy
+		is_elector = yes
+	}
+}
+
 # The County Palatine of the Rhine (Upper Palatinate) and the County
 # Palatine of Zweibrucken. Vanilla has a palatine_monarchy block for the
 # Palatinate tag; we reproduce it for our palatine tags.
@@ -319,6 +379,7 @@ county_palatine = {
 		OR = {
 			tag = NMB
 			tag = ZWE
+			tag = FRC
 		}
 		government = monarchy
 	}
@@ -528,5 +589,332 @@ tripoli_county = {
 	trigger = {
 		tag = TPL
 		government = monarchy
+	}
+}
+
+carniola_duchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUKE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male  = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		tag = KRN
+	}
+}
+
+gorz_county = {
+	rank = {
+		1 = COUNTY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = COUNT
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male  = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = COUNTESS
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		tag = GOR
+	}
+}
+
+carinthia_duchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUKE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male  = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		tag = KTN
+	}
+}
+# The Earldom of Orkney, the ancient Norse lordship of the Northern
+# Isles and Shetland, held by the Earls of Orkney. Vanilla
+# default_monarchy would call it "Duchy"; we give it its Norse title.
+
+orkney_earldom = {
+	rank = {
+		1 = EARLDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = EARL
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		tag = ORK
+		NOT = {
+			OR = {
+				religion = norse_pagan_reformed
+				culture = norse
+			}
+		}
+	}
+}
+
+# The Earldom of the Faroes. Part of the Norse lordship of the Earldom
+# of Orkney in the sagas, ruled as an earldom under the Norwegian crown.
+
+faroe_earldom = {
+	rank = {
+		1 = EARLDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = EARL
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		tag = FAE
+		NOT = {
+			OR = {
+				religion = norse_pagan_reformed
+				culture = norse
+			}
+		}
+	}
+}
+
+# The Norse lordship of Greenland, ruled by the descendants of Eirik the
+# Red under the Norwegian crown, with the seat of the cathedral at Gardar.
+
+greenland_earldom = {
+	rank = {
+		1 = EARLDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = EARL
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = KING_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		tag = GRL
+		NOT = {
+			OR = {
+				religion = norse_pagan_reformed
+				culture = norse
+			}
+		}
 	}
 }

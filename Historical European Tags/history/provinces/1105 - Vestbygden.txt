@@ -1,0 +1,14 @@
+#Vestbygden (incl. Sandnes).
+
+owner = NOR
+controller = NOR
+add_core = NOR
+add_core = GRL
+discovered_by = western
+culture = icelandic
+religion = catholic
+capital = "Sandnes"
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = unknown

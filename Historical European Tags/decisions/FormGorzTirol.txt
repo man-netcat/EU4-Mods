@@ -1,0 +1,102 @@
+# Form Görz–Tirol. The Meinhardiner held two seats: the county of Görz
+# on the Isonzo and the princely county of Tirol behind the Brenner. One
+# house ruled from the Adriatic to the Inn, taking tolls from the
+# merchants of the passes and silver from the mines of the mountains.
+# The Tirol line ended with Margaret Maultasch in 1363, and the Görz
+# line died in 1500. A count of Tirol who has bound the County of Görz
+# to his house as a junior partner may now claim both seats of the
+# ancient house and raise its banner over the mountain land.
+
+country_decisions = {
+
+	gorz_tirol_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_gorz_tirol_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = GTY }
+			tag = TIR
+			has_country_flag = county_of_gorz_restored
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 73	# Tirol
+				province_id = 1769	# Görz
+				province_id = 1768	# Lienz
+				province_id = 4758	# Etsch-Meran
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = GOR }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 73		# Tirol
+			owns_core_province = 1769	# Görz
+			owns_core_province = 1768	# Lienz
+			owns_core_province = 4758	# Etsch-Meran
+		}
+		effect = {
+			change_tag = GTY
+			73 = {
+				move_capital_effect = yes
+			}
+			restore_country_name_effect = yes
+			tirol_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_gorz_tirol_flag
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = GTY_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

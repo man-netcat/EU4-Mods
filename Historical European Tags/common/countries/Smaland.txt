@@ -1,0 +1,71 @@
+# Smaland (Småland). The forested highlands south of Östergötland,
+# divided into the three lag-sagas of Värend, Finnveden and Njudung
+# ("Tiohärad"), with the great fortress-town of Kalmar on the Baltic.
+# Under Swedish crown throughout the EU4 period; the Kalmar Union was
+# proclaimed in the town in 1397. The arms carry a red lion holding a
+# red crossbow on a golden field.
+
+graphical_culture = westerngfx
+
+color = { 200 210 30 }
+
+revolutionary_colors = { 10 0 10 }
+
+historical_score = 200
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	religious_ideas
+	offensive_ideas
+	diplomatic_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_medieval_arquebus
+	swedish_gallop
+	swedish_gustavian
+	swedish_carolean
+	swedish_arbiters
+	swiss_landsknechten
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Charles #0" = 30
+	"Gustav #0" = 30
+	"Erik #0" = 25
+	"Johan #0" = 20
+	"Karl #0" = 20
+	"Olof #0" = 15
+	"Knut #0" = 15
+
+	"Margaret #0" = -1
+	"Catherine #0" = -1
+	"Birgitta #0" = -1
+}
+
+leader_names = {
+	"af Kalmar" "af Kronoberg" "af Värend"
+	"af Finnveden" "af Njudung" "af Eksjö"
+	"af Jönköping" "af Kungslena"
+}
+
+ship_names = {
+	"Kalmar" "Växjö" "Jönköping" "Västervik"
+	"Oskarshamn" "Kronoberg" "Gräsnäs" "Tiohärad"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Kalmar Fleet"
+}

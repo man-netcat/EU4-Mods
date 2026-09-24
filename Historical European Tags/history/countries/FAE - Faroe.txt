@@ -1,0 +1,11 @@
+government = monarchy
+government_rank = 1
+primary_culture = icelandic
+religion = catholic
+technology_group = western
+capital = 1979 # Faroes
+fixed_capital = 1979
+historical_friend = NOR
+
+#releasable
+

@@ -1,0 +1,51 @@
+# Restore the Margraviate of Moravia as a junior partner under the House
+# of Luxembourg. The house of the old margraves ruled Moravia for three
+# generations, from John Henry, brother of the Emperor Charles IV, to
+# Jobst, Margrave of Moravia and King of the Romans. When Luxembourg holds
+# Brno, the seat of the margraviate, it may seat a junior partner of the
+# house on the margravial throne of the Czech crown lands.
+
+country_decisions = {
+
+	restore_margraviate_of_moravia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = LUX
+			NOT = {
+				has_country_flag = margraviate_of_moravia_restored
+			}
+			NOT = {
+				exists = MVA
+			}
+			NOT = { government = republic }
+			owns_core_province = 265
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 265	# Brno
+				province_id = 4237	# Olomouc
+				province_id = 4726	# Ostrava
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 265
+		}
+		effect = {
+			265 = { add_core = MVA }
+			4237 = { add_core = MVA }
+			4726 = { add_core = MVA }
+			release = MVA
+			create_union = MVA
+			moravia_area = {
+				add_permanent_claim = MVA
+			}
+			set_country_flag = margraviate_of_moravia_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,80 @@
+#Country Name: Please see filename.
+# Navarre-Normandy. The union of the Basque kingdom of Navarre and the
+# Norman duchy across the Pyrenees and the sea. The old duchy was raised
+# by Rollo the Dane and passed through the Plantagenets and the Valois.
+# The kings of Navarre held the Norman lands through the house of Évreux.
+# The arms are quarterly: Navarre, gules a chain cross saltirewise or on
+# a field vert; and Normandy, gules two leopards passant guardant or.
+
+graphical_culture = westerngfx
+
+color = { 188 163 46 }
+
+revolutionary_colors = { 13 103 147 }
+
+historical_score = 300
+
+historical_idea_groups = {
+	diplomatic_ideas
+	administrative_ideas
+	defensive_ideas
+	economic_ideas
+	offensive_ideas
+	religious_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	westfalian_infantry
+	westfalian_cavalry
+	dutch_maurician
+	french_line
+	french_dragoon
+	french_bluecoat
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Carlos #0" = 100
+	"Juan #0" = 80
+	"Enrique #0" = 80
+	"Leonor #0" = 70
+	"Blanca #0" = 60
+	"Pedro #0" = 50
+	"Guillermo #0" = 40
+	"Roberto #0" = 30
+	"Ricardo #0" = 20
+	"Felipe #0" = 20
+	"Luis #0" = 20
+	"Jaime #0" = 10
+	"Francisco #0" = 10
+
+	"Catalina #0" = -1
+	"Juana #0" = -1
+	"Isabel #0" = -1
+	"Margarita #0" = -1
+}
+
+leader_names = {
+	"d'Albret" "de Foix" "de Trastamara" "de Evreux"
+	"de Beaumont" "de Harcourt" "de Brionne" "de Montgomery"
+	"de Gournay" "de Tancarville" "de Aubigny" "de Labriffe"
+}
+
+ship_names = {
+	"Pamplona" "Caen" "Rouen" "Bayonne" "Cherbourg"
+	"Avranches" "Argentan" "Alencon" "Lisieux" "Evreux"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Bay of Biscay Fleet"
+}

@@ -1,0 +1,20 @@
+government = monarchy
+government_rank = 1
+primary_culture = norwegian
+religion = catholic
+technology_group = western
+capital = 369 # Orkney
+fixed_capital = 369
+historical_friend = NOR
+
+#releasable
+
+1444.1.1 = {
+	monarch = {
+		name = "William Sinclair"
+		birth_date = 1410.1.1
+		dip = 10
+		adm = 10
+		mil = 5
+	}
+}

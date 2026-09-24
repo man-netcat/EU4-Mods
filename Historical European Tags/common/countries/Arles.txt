@@ -1,0 +1,73 @@
+#Country Name: Please see filename.
+# Kingdom of Arles (Arelat). The kingdom formed in 933 by the union of
+# Upper and Lower Burgundy, centred on the city of Arles. The arms
+# attributed by 15th-century heraldists are Or, two pallets gules.
+
+graphical_culture = westerngfx
+
+color = { 227 136 216 }
+
+revolutionary_colors = { 188 46 46 }
+
+historical_score = 300
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+	offensive_ideas
+	diplomatic_ideas
+	administrative_ideas
+	innovative_ideas
+}
+
+historical_units = {
+	western_knights
+	western_infantry
+	western_cavalry
+	western_musketeers
+	western_rifles
+}
+
+monarch_names = {
+	"Rudolf #0" = 100
+	"Conrad #0" = 80
+	"Arnaud #0" = 60
+	"Raymond #0" = 60
+	"Guillaume #0" = 50
+	"Guigues #0" = 40
+	"Berthold #0" = 40
+	"Amedeo #0" = 30
+	"Louis #0" = 30
+	"Jean #0" = 30
+	"Charles #0" = 20
+	"Humbert #0" = 20
+	"Pierre #0" = 20
+	"Guy #0" = 10
+
+	"Constance #0" = -1
+	"Alix #0" = -1
+	"Jeanne #0" = -1
+	"Marguerite #0" = -1
+}
+
+leader_names = {
+	"Rudolf de Zähringen" "Guillaume de Provence" "Arnaud de Comminges"
+	"Raymond de Forcalquier" "Guigues de Vienne" "Humbert de Savoie"
+	"Berthold de Neuchâtel" "Pierre de Chalon" "Jean de Vergy"
+	"Charles de Bourgogne" "Amedeo di Savoia" "Guy de Lusignan"
+}
+
+ship_names = {
+	"Arles" "Avignon" "Aix" "Chambéry" "Grenoble"
+	"Besançon" "Geneva" "Valence" "Tarascon" "Salins"
+}
+
+army_names = {
+	"Armée de $PROVINCE$"
+}
+
+fleet_names = {
+	"Flotte Arlésienne"
+}

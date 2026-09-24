@@ -1,0 +1,48 @@
+# Restore the County of Urach as a junior partner under the House of
+# Württemberg. In 1441 the county of Württemberg was divided between the
+# lines of Urach and Stuttgart, seated at Hohenurach and the old capital
+# on the Neckar. The Treaty of Münsingen of 1482 bound the two halves
+# together again under one count. When Württemberg holds Urach, the seat
+# of the elder line, it may seat a junior partner of the house there and
+# restore the county in its old form.
+
+country_decisions = {
+
+	restore_county_of_urach = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = WUR
+			NOT = {
+				has_country_flag = county_of_urach_restored
+			}
+			NOT = {
+				exists = URW
+			}
+			NOT = { government = republic }
+			owns_core_province = 4713
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4713	# Urach
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 4713
+		}
+		effect = {
+			4713 = { add_core = URW }
+			release = URW
+			create_union = URW
+			lower_swabia_area = {
+				add_permanent_claim = URW
+			}
+			set_country_flag = county_of_urach_restored
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

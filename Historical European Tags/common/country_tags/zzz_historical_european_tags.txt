@@ -22,6 +22,10 @@ LIM = "countries/Limburg.txt"
 NMB = "countries/Oberpfalz.txt"
 TSR = "countries/Trieste.txt"
 JMT = "countries/Jamtland.txt"
+# Halsingland: the Bothnian coast province from Gävle to the Medelpad
+# forests, land of the great timber farmhouses; core on province 9
+# (Halsingland)
+HLS = "countries/Halsingland.txt"
 URW = "countries/Urach.txt"
 FRE = "countries/Freising.txt"
 ZEA = "countries/Zeeland.txt"
@@ -51,3 +55,41 @@ BRL = "countries/BrunswickLuneburg.txt"
 ATN = "countries/Antioch.txt"
 TPL = "countries/Tripoli.txt"
 WEI = "countries/SaxeWeimar.txt"
+ARS = "countries/Arles.txt"
+# Luxembourg-Moravia: formable union of the two seats of the House of Luxembourg
+LXM = "countries/LuxembourgMoravia.txt"
+# Görz-Tirol: formable union of the two seats of the House of Meinhardin
+GTY = "countries/GorzTirol.txt"
+# Carniola: Duchy of Krain, Inner Austria
+KRN = "countries/Carniola.txt"
+# Carinthia: the Slovene duchy of the Klagenfurt basin
+KTN = "countries/Carinthia.txt"
+# Navarre-Normandy: formable union of the two seats of the House of Évreux
+NVO = "countries/NavarreNormandy.txt"
+ZEM = "countries/Samogitia.txt"
+VBO = "countries/Viborg.txt"
+# Kuyavia: the Piast duchy of the middle Vistula, cradle of the reunited
+# Polish kingdom; core on the whole kuyavia_area (4523, 4524, 4528, 1859)
+KUY = "countries/Kuyavia.txt"
+# Scania: the Danish province across the Sound from Zealand, sold to Sweden
+# in 1658; core on the whole skaneland_area (6, 26, 1982, 4165)
+SKN = "countries/Skane.txt"
+# Ostergotland: the Swedish plains between Lake Vättern and the Baltic,
+# home of the golden griffin arms; core on province 2 (Ostergotland)
+OST = "countries/Ostergotland.txt"
+# Smaland: the Swedish forested highlands of Tiohärad and the fortress of
+# Kalmar; cores on province 3 (Kalmar) and 4166 (Tioharad)
+SML = "countries/Smaland.txt"
+# Vasterbotten: the northern Bothnian frontier province of the realm, the
+# land of the reindeer and the fur-road; core on province 11 (Vasterbotten)
+VBT = "countries/Vasterbotten.txt"
+# Vastergotland: the old heartland of the Goths with the first Swedish see
+# at Skara; cores on province 7 (Skaraborg) and 4163 (Elfsborg)
+VGL = "countries/Vastergotland.txt"
+
+ORK = "countries/Orkney.txt"
+FAE = "countries/Faroe.txt"
+GRL = "countries/Greenland.txt"
+ORK = "countries/Orkney.txt"
+FAE = "countries/Faroe.txt"
+GRL = "countries/Greenland.txt"

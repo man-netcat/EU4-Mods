@@ -1,0 +1,11 @@
+government = monarchy
+government_rank = 1
+primary_culture = icelandic
+religion = catholic
+technology_group = western
+capital = 1104 # Eiriksfjord
+fixed_capital = 1104
+historical_friend = NOR
+
+#releasable
+

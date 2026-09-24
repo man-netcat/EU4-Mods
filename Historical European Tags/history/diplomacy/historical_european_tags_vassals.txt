@@ -33,6 +33,14 @@ vassal = {
 	end_date = 1821.1.1
 }
 
+# Orkney under Norway
+vassal = {
+	first = NOR
+	second = ORK
+	start_date = 1444.1.1
+	end_date = 1821.1.1
+}
+
 # Merseburg under Magdeburg
 vassal = {
 	first = MAG

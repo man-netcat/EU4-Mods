@@ -1,0 +1,79 @@
+# Country Name: Please see filename.
+# Carinthia. The old march of Carantania, centred on the
+# Klagenfurt basin between the Alps and the Drava plain. The
+# Slovene-speaking duchy guarded the Tauern roads, mined the iron of
+# Hüttenberg, and inaugurated its rulers on the meadow of the Zollfeld
+# in a rite the free peasants performed in their own tongue.
+
+graphical_culture = westerngfx
+
+color = { 210 170 30 }
+
+revolutionary_colors = { 25 25 25 }
+
+historical_score = 300
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+	diplomatic_ideas
+	administrative_ideas
+	quality_ideas
+	innovative_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Bernhard #0" = 30
+	"Ulrich #0" = 25
+	"Heinrich #0" = 25
+	"Hermann #0" = 20
+	"Otto #0" = 15
+	"Meinhard #0" = 15
+	"Konrad #0" = 10
+	"Friedrich #0" = 10
+	"Ludwig #0" = 10
+	"Ernst #0" = 10
+
+	"Elisabeth #0" = -1
+	"Margarethe #0" = -1
+	"Katharina #0" = -1
+}
+
+leader_names = {
+	"von Spanheim" "von Ortenburg" "von Heunburg"
+	"von Kraig" "von Stubenberg" "von Aufenstein"
+	"von Wallsee" "von Liechtenstein"
+}
+
+ship_names = {
+	"Klagenfurt" "Villach" "St. Veit" "Friesach"
+	"Wolfsberg" "Spittal" "Völkermarkt" "Hermagor"
+}
+
+army_names = {
+	"Army of $PROVINCE$"
+}
+
+fleet_names = {
+	"Drava Fleet"
+}

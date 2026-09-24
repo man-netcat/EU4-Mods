@@ -1,0 +1,17 @@
+#Orkney (mainland).
+
+owner = NOR
+controller = NOR
+add_core = ORK
+1444.1.1 = { owner = ORK controller = ORK }
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+culture = norwegian
+religion = catholic
+capital = "Kirkwall"
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fish

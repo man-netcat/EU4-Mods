@@ -6,5 +6,6 @@ religion = catholic
 technology_group = western
 capital = 193	# Franche-Comte
 fixed_capital = 193
+add_historical_rival = BUR
 
 #releasable
