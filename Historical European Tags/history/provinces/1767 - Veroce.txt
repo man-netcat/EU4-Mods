@@ -2,7 +2,6 @@
 
 owner = HUN
 controller = HUN
-add_core = CRO
 add_core = SLA
 1444.1.1 = { owner = SLA controller = SLA }
 culture = croatian

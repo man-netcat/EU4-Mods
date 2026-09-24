@@ -104,8 +104,10 @@ Croatia (CRO). The union lives in
 - The union runs `1444.1.1` to `1526.8.30`, ending at the Battle of
   Mohács like the base-game HUN-CRO union. It does NOT use the mod's
   default indefinite end date of `1821.1.1`.
-- SLA's four provinces (152, 4756, 1767, 4173; the in-game slavonia_area)
-  keep their vanilla cores and add `add_core = SLA`. The province history
+- SLA's three provinces (152, 4756, 1767, excluding Syrmia 4173 which
+  stays with HUN) keep their vanilla cores apart from `add_core = SLA`.
+  Croatia's vanilla cores on these provinces are removed, so CRO does not
+  reclaim them. The province history
   files are copies of the vanilla files, so every vanilla dated event
   block (1456 HAB, 1521 TUR, 1526 HAB/TUR) is preserved.
 - Ownership uses the ORK landed-subject pattern: the top-level `owner`
