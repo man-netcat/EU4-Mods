@@ -92,3 +92,31 @@ date. All ten use `government = theocracy` and
 The tags are still releasable: a player who defeats the overlord can
 release the bishopric from its capital core. Releasing it restores the
 tag to the game as an independent state with its national ideas.
+
+## Slavonia: union junior partner of Hungary
+
+Slavonia (SLA) exists on 1444.11.11 as the junior partner of a personal
+union with Hungary (HUN), mirroring the base-game union of Hungary with
+Croatia (CRO). The union lives in
+`history/diplomacy/historical_european_tags_vassals.txt` as
+`union = { first = HUN second = SLA ... }`.
+
+- The union runs `1444.1.1` to `1526.8.30`, ending at the Battle of
+  Mohács like the base-game HUN-CRO union. It does NOT use the mod's
+  default indefinite end date of `1821.1.1`.
+- SLA's four provinces (152, 4756, 1767, 4173; the in-game slavonia_area)
+  keep their vanilla cores and add `add_core = SLA`. The province history
+  files are copies of the vanilla files, so every vanilla dated event
+  block (1456 HAB, 1521 TUR, 1526 HAB/TUR) is preserved.
+- Ownership uses the ORK landed-subject pattern: the top-level `owner`
+  key stays `HUN` (the overlord) and a dated `1444.1.1` block hands
+  `owner`/`controller` to SLA. The verifier reads only the top-level
+  `owner`, so SLA correctly reports "owns no provinces at start" while
+  the 1444 hand-back makes it exist as a union junior.
+- `history/countries/SLA - Slavonia.txt` sets `fixed_capital = 1767`,
+  culture `croatian` (accepted `serbian`), religion `catholic`, and a
+  dummy Habsburg ruler (Ladislaus Postumus) dated `1444.1.1`, mirroring
+  the MST/BYT union-junior stubs.
+- The national colour is the EU5 map colour for Slavonia (`{ 174 227 95 }`
+  in EU5's named_colors, the `map_croatian` entry) - note EU4 vanilla CRO
+  is `{ 104 94 247 }`, EU5's comment "same as in EU4" is inaccurate.

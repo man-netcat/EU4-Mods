@@ -1,0 +1,27 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = croatian
+add_accepted_culture = serbian
+religion = catholic
+technology_group = eastern
+capital = 1767	# Veroce (Slavonia)
+fixed_capital = 1767
+
+#releasable
+
+# Dummy ruler of the Slavonian crown so SLA knows von Habsburg as its native
+# dynasty and can exist as Hungary's junior partner at the 1444 start. Mirrors
+# the base Bayreuth (BYT) and Mecklenburg-Stargard (MST) dummies: the crown of
+# Slavonia was held by the king of Hungary, carried from 1445 by the regency
+# for Ladislaus Postumus of the House of Habsburg.
+1444.1.1 = {
+	monarch = {
+		name = "Ladislaus Postumus"
+		dynasty = "von Habsburg"
+		birth_date = 1440.2.22
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}

@@ -1,0 +1,71 @@
+#Country Name: Please see filename.
+
+graphical_culture = easterngfx
+
+color = { 174 227 95 }
+
+revolutionary_colors = { 5 0 13 }
+
+historical_idea_groups = {
+	administrative_ideas
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	innovativeness_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	"Ladislav #5" = 80
+	"Matko #2" = 40
+	"Bartol #1" = 30
+	"Petar #3" = 25
+	"Ivan #5" = 20
+	"Stjepan #4" = 20
+	"Mirko #2" = 15
+	"Franjo #1" = 10
+	"Juraj #2" = 10
+	"Marko #1" = 10
+	"Osvald #1" = 5
+	"Zrinski #0" = 0
+}
+
+leader_names = {
+	"Ban Talovac"
+	"Frankapan"
+	"Gorjanski"
+	"Iločki"
+	"Karlović"
+	"Keglević"
+	"Kurjaković"
+	"Lacković"
+	"Nikola Iločki"
+	"Petar Berislavić"
+	"Zrinski"
+}
+
+ship_names = {
+	"Drava"
+	"Sava"
+	"Kupa"
+}

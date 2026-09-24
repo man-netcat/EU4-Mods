@@ -120,3 +120,13 @@ union = {
 	start_date = 1444.1.1
 	end_date = 1821.1.1
 }
+
+# Slavonia under Hungary. The king of Hungary held the crown of Slavonia as a
+# separate kingdom, mirroring the base-game Croatia-Hungary union. The union
+# breaks with the fall of Hungary at Mohacs.
+union = {
+	first = HUN
+	second = SLA
+	start_date = 1444.1.1
+	end_date = 1526.8.30
+}

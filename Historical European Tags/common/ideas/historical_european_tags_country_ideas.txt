@@ -149,3 +149,41 @@ REV_ideas = {
     development_cost = -0.10
   }
 }
+
+SLA_ideas = {
+  start = {
+    global_tax_modifier = 0.10
+    defensiveness = 0.10
+  }
+
+  bonus = {
+    production_efficiency = 0.10
+  }
+
+  trigger = {
+    tag = SLA
+  }
+  free = yes
+
+  sla_crown_of_slavonia = {
+    legitimacy = 1
+  }
+  sla_sava_and_drava = {
+    trade_goods_size_modifier = 0.10
+  }
+  sla_granary_of_the_crown = {
+    global_tax_modifier = 0.10
+  }
+  sla_slavonian_palatinates = {
+    autonomy = -0.05
+  }
+  sla_marten_of_the_kuna = {
+    trade_power = 0.10
+  }
+  sla_defenders_of_the_frontier = {
+    army_tradition = 0.15
+  }
+  sla_osijek_bridgehead = {
+    defensiveness = 0.15
+  }
+}

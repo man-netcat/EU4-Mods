@@ -90,6 +90,5 @@ VGL = "countries/Vastergotland.txt"
 ORK = "countries/Orkney.txt"
 FAE = "countries/Faroe.txt"
 GRL = "countries/Greenland.txt"
-ORK = "countries/Orkney.txt"
-FAE = "countries/Faroe.txt"
-GRL = "countries/Greenland.txt"
+
+SLA = "countries/Slavonia.txt"
