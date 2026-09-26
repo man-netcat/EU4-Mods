@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = georgian
+religion = orthodox
+government_rank = 1
+capital = 2203 # Kahketi (Telavi)
+fixed_capital = 2203
+technology_group = eastern
+
+#releasable

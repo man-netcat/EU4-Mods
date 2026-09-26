@@ -92,3 +92,4 @@ FAE = "countries/Faroe.txt"
 GRL = "countries/Greenland.txt"
 
 SLA = "countries/Slavonia.txt"
+KAK = "countries/Kakheti.txt"

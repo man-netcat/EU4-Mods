@@ -61,6 +61,8 @@ GRL:0 "Greenland"
 GRL_ADJ:0 "Greenlandic"
 SLA:0 "Slavonia"
 SLA_ADJ:0 "Slavonian"
+  KAK:0 "Kakheti"
+  KAK_ADJ:0 "Kakhetian"
 
 ORK_ideas:0 "Orkney Ideas"
 ORK_ideas_start:0 "Traditions"

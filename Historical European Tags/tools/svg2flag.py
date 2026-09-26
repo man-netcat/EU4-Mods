@@ -145,6 +145,13 @@ def main():
     p.add_argument("--y-offset", type=int, default=None,
                    help="vertical paste offset for --assembly (default: 8 px below centre, "
                         "the approved in-game position)")
+    p.add_argument("--match", default=None,
+                   help="path to a reference flag TGA to copy the charge proportions from: "
+                        "the artwork is scaled to the reference charge height, then placed at "
+                        "the reference charge centre (same fraction of the canvas)")
+    p.add_argument("--field", default=None,
+                   help="field colour for --match (default: 'auto', detected from the "
+                        "reference flag's most common colour)")
     p.add_argument("--viewbox", default=None,
                    help="override viewBox as W,H if the SVG lacks one")
     args = p.parse_args()
@@ -191,6 +198,70 @@ def main():
         shield.crop(bbox).resize((args.size, args.size), Image.LANCZOS).save(args.out)
         print(f"saved {args.out} ({args.size}x{args.size}, full bleed)")
         return
+
+    # 4) charge proportions copied from a reference flag
+    if args.match:
+        def charge_bbox(ref_path, tol=28):
+            ref = Image.open(ref_path).convert("RGBA")
+            rw, rh = ref.size
+            px = ref.load()
+            # dominant opaque colour = assumed field
+            from collections import Counter
+            hist = Counter()
+            for y in range(rh):
+                for x in range(rw):
+                    r, g, b, a = px[x, y]
+                    if a > 0:
+                        hist[(r // 8, g // 8, b // 8)] += 1
+            field = tuple(c * 8 + 4 for c in hist.most_common(1)[0][0])
+            xs = []
+            ys = []
+            for y in range(rh):
+                for x in range(rw):
+                    r, g, b, a = px[x, y]
+                    if a > 0 and (
+                        abs(r - field[0]) > tol
+                        or abs(g - field[1]) > tol
+                        or abs(b - field[2]) > tol
+                    ):
+                        xs.append(x)
+                        ys.append(y)
+            if not xs:
+                sys.exit(f"no charge distinguishable from field {field} in {ref_path}")
+            return rw, rh, (min(xs), min(ys), max(xs), max(ys)), field
+
+        rw, rh, rbox, rfield = charge_bbox(args.match)
+        # reference charge centre and height, as fractions of the reference canvas
+        rcx = (rbox[0] + rbox[2]) / 2 / rw
+        rcy = (rbox[1] + rbox[3]) / 2 / rh
+        rhf = (rbox[3] - rbox[1] + 1) / rh
+
+        if args.field == "auto" or args.field is None:
+            bg = rfield
+        else:
+            bg = tuple(int(c) for c in args.field.split(","))
+
+        art = render(svg, W, H)
+        bbox = art.getchannel("A").getbbox()
+        if bbox is None:
+            sys.exit("render is empty")
+        art = art.crop(bbox)
+        # scale artwork so its height fraction matches the reference charge height
+        target_h = round(rhf * args.size)
+        w, h = art.size
+        art = art.resize((max(1, round(w * target_h / h)), target_h), Image.LANCZOS)
+        x = round(rcx * args.size - art.width / 2)
+        y = round(rcy * args.size - target_h / 2)
+        print(f"reference field {rfield}, charge height fraction {rhf:.3f}, "
+              f"centre ({rcx:.3f},{rcy:.3f})")
+        flag = Image.new("RGB", (args.size, args.size), bg)
+        flag.paste(art, (x, y), art)
+        flag.save(args.out)
+        print(f"saved {args.out} ({art.width}x{target_h} at ({x},{y}), "
+              f"left gap {x}, top gap {y}, right gap {args.size - x - art.width}, "
+              f"bottom gap {args.size - y - target_h})")
+        return
+
     charge_svg = drop_ids(svg, args.drop_id)
     charge_svg = drop_indexes(charge_svg, args.drop_index)
     charge = render(charge_svg, W, H)

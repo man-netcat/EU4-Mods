@@ -108,6 +108,15 @@ FORMABLE_TAGS: set[str] = {
     "ARS", "BRL", "GTY", "LUD", "LXM", "NVO", "OCC", "SXN",
 }
 EFFECT_RE = re.compile(r"^\s*[A-Za-z_][A-Za-z0-9_]*\s*=\s*-?[0-9.]+\s*$")
+# modifier name followed by a value, tolerating a trailing `#` comment on the line.
+# Group 1 = name, group 2 = value. The value must be a real decimal: a looser
+# `-?[0-9.]+` also matches vanilla's `date = 1534.11.3` and `historical_start_date`
+# keys, which are not modifiers. Compiled with MULTILINE up front because
+# Pattern.finditer/findall take `pos` as their second argument, not flags.
+MODIFIER_NAME_RE = re.compile(
+    r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(-?[0-9]+(?:\.[0-9]+)?)\s*(?:#.*)?$",
+    re.MULTILINE,
+)
 LOC_RE = re.compile(r'^\s*([A-Za-z0-9_.]+):\d+\s*"(.*)"\s*$')
 DATE_RE = re.compile(r"^\d{3,4}\.\d+\.\d+")
 _TRIPLET_RE = re.compile(r"^\s*([0-9]{1,3})\s+([0-9]{1,3})\s+([0-9]{1,3})\s*$")
@@ -274,6 +283,120 @@ def vanilla_idea_keys(game: Path) -> set[str]:
         if m.group(1) not in {"start", "bonus", "trigger", "free"}:
             keys.add(m.group(1))
     return keys
+
+
+# Folders in which every `name = value` is a modifier on the country itself, so
+# their names are exactly the names a national idea may use.
+COUNTRY_MODIFIER_FOLDERS = (
+    "ideas", "policies", "government_reforms", "religions", "ages",
+    "static_modifiers", "event_modifiers", "triggered_modifiers",
+    "institutions", "church_aspects", "ruler_personalities",
+    "imperial_reforms", "state_edicts",
+)
+# Folders that reuse modifier-shaped names for a different purpose. `base_production`
+# in a building, `monthly_income` in a hegemon demand and `trade_power` in a ship
+# are all real keys, just not country modifiers. Harvesting these would make a dead
+# idea look legal; harvesting nothing makes `trade_goods_size_modifier` (156 genuine
+# country-scope uses) look broken. Both mistakes have already been made here once.
+NON_COUNTRY_MODIFIER_FOLDERS = (
+    "units", "tradegoods", "technologies", "buildings", "hegemons",
+    "estate_agendas", "parliament_issues", "missions",
+    "province_triggered_modifiers", "estates", "estate_privileges",
+    "opinion_modifiers",
+)
+# Below this many vanilla samples, a modifier's value style is guesswork, so the
+# value checks stay quiet rather than guess.
+MIN_SAMPLES_FOR_VALUE_STYLE = 8
+
+
+def _modifier_values_in(game: Path, folder: str) -> dict[str, list[float]]:
+    out: dict[str, list[float]] = {}
+    directory = game / "common" / folder
+    if not directory.is_dir():
+        return out
+    for src in sorted(directory.rglob("*.txt")):
+        for m in MODIFIER_NAME_RE.finditer(read_text(src)):
+            out.setdefault(m.group(1), []).append(float(m.group(2)))
+    return out
+
+
+def country_modifier_profile(game: Path) -> tuple[dict[str, dict], dict[str, list[str]]]:
+    """Profile every country modifier the base game actually uses.
+
+    Returns (profile, non_country) where profile maps a legal modifier name to
+    its observed value style (`flat` / `fraction` / `mixed`), sample count and
+    value range, and non_country maps a rejected name to the folders it was seen
+    in, so errors can say *why* a name is wrong instead of shrugging.
+    """
+    per_scope = {f: _modifier_values_in(game, f) for f in COUNTRY_MODIFIER_FOLDERS}
+    other = {f: _modifier_values_in(game, f) for f in NON_COUNTRY_MODIFIER_FOLDERS}
+
+    profile: dict[str, dict] = {}
+    for scope, data in per_scope.items():
+        for name, vals in data.items():
+            entry = profile.setdefault(name, {"vals": [], "scopes": set()})
+            entry["vals"].extend(vals)
+            entry["scopes"].add(scope)
+
+    for name, entry in profile.items():
+        vals = entry.pop("vals")
+        nonzero = [v for v in vals if v != 0]
+        all_int = all(v.is_integer() for v in vals)
+        all_frac = all(abs(v) < 1.0 for v in nonzero) if nonzero else True
+        entry["style"] = "flat" if all_int else ("fraction" if all_frac else "mixed")
+        entry["n"] = len(vals)
+        entry["min"] = min(vals)
+        entry["max"] = max(vals)
+        entry["max_abs"] = max(abs(v) for v in vals)
+        entry["scopes"] = sorted(entry["scopes"])
+
+    non_country = {name: sorted(f for f, d in other.items() if name in d)
+                   for name in {n for d in other.values() for n in d}}
+    return profile, non_country
+
+
+def check_idea_modifiers(rep, tag: str, subs: dict, idea_names: list[str],
+                         profile: dict, non_country: dict) -> None:
+    """Names must exist, and the value must be the kind vanilla uses for them.
+
+    A name check alone passes `unrest = -0.10`: `unrest` is a real modifier, but
+    vanilla only ever gives it whole numbers of unrest (and never a fraction
+    anywhere), so that line is silently rounded away. The value style and range
+    checks exist to catch exactly that class of no-op idea.
+    """
+    if not profile:
+        return
+    bad_names: list[str] = []
+    bad_values: list[str] = []
+    for owner, sub in (("start", subs.get("start", "")),
+                       ("bonus", subs.get("bonus", "")),
+                       *[(k, subs[k]) for k in idea_names]):
+        for m in MODIFIER_NAME_RE.finditer(sub):
+            name, value = m.group(1), float(m.group(2))
+            entry = profile.get(name)
+            if entry is None:
+                hint = ""
+                if f"global_{name}" in profile:
+                    hint = f" (did you mean global_{name}?)"
+                elif name in non_country:
+                    hint = f" (only a {'/'.join(non_country[name])} key, not a country modifier)"
+                bad_names.append(f"{owner}: {name}{hint}")
+                continue
+            if entry["n"] >= MIN_SAMPLES_FOR_VALUE_STYLE:
+                if entry["style"] == "flat" and not value.is_integer():
+                    bad_values.append(
+                        f"{owner}: {name} = {value:g} (vanilla only uses whole numbers here, "
+                        f"e.g. {entry['min']:g}..{entry['max']:g})")
+                    continue
+                if entry["style"] == "fraction" and abs(value) >= 1.0:
+                    bad_values.append(
+                        f"{owner}: {name} = {value:g} (vanilla always uses fractions below 1)")
+                    continue
+            if entry["max_abs"] and abs(value) > entry["max_abs"] * 1.5:
+                bad_values.append(
+                    f"{owner}: {name} = {value:g} (vanilla range {entry['min']:g}..{entry['max']:g})")
+    rep.check(not bad_names, "idea modifiers valid", ", ".join(sorted(set(bad_names))))
+    rep.check(not bad_values, "idea modifier values sane", ", ".join(sorted(set(bad_values))))
 
 
 def parse_brace_color(text: str, key: str) -> tuple[int, int, int] | None:
@@ -1084,6 +1207,11 @@ def verify_tag(tag: str, rep: Report, ctx: dict) -> dict:
         rep.check(n_start == 2, "traditions count", str(n_start))
         rep.check(n_bonus == 1, "ambition count", str(n_bonus))
         rep.check(len(idea_names) == 7, "idea count", f"{len(idea_names)}: {', '.join(idea_names)}")
+        # every modifier the block applies must be one the game recognises and
+        # must carry a value of the kind vanilla uses, or the game drops it
+        check_idea_modifiers(rep, tag, subs, idea_names,
+                             ctx.get("country_modifier_profile") or {},
+                             ctx.get("non_country_modifier_scopes") or {})
         trig = subs.get("trigger", "")
         trig_ok = bool(re.search(rf"tag\s*=\s*{tag}\b", trig))
         free_ok = bool(re.search(r"^\s*free\s*=\s*yes\s*$", body, re.MULTILINE))
@@ -1147,6 +1275,9 @@ def verify_main(args: argparse.Namespace) -> int:
     init_db(conn)
 
     seen_idea_keys: set[str] = set()
+    _mod_profile, _non_country = country_modifier_profile(game)
+    print(f"Country modifier profile: {len(_mod_profile)} legal names mined from "
+          f"{len(COUNTRY_MODIFIER_FOLDERS)} vanilla folders")
     ctx = {
         "mod": mod,
         "game": game,
@@ -1154,6 +1285,8 @@ def verify_main(args: argparse.Namespace) -> int:
         "loc": load_loc(mod),
         "game_loc": load_game_loc(game),
         "vanilla_keys": vanilla_idea_keys(game),
+        "country_modifier_profile": _mod_profile,
+        "non_country_modifier_scopes": _non_country,
         "seen_idea_keys": seen_idea_keys,
         "conn": conn,
     }
@@ -1195,6 +1328,30 @@ def verify_main(args: argparse.Namespace) -> int:
         rep.fail("tag collides with base game", ", ".join(collisions))
     else:
         rep.ok("no base-game tag collisions")
+
+    # duplicate localisation keys: identical text is harmless clutter, differing
+    # text means one definition silently wins and an idea shows the wrong text
+    loc_dupes: list[str] = []
+    loc_conflicts: list[str] = []
+    for yml in sorted((mod / "localisation").glob("*.yml")):
+        seen: dict[str, tuple[int, str]] = {}
+        for ln, raw in enumerate(read_text(yml).splitlines(), 1):
+            m = LOC_RE.match(raw.rstrip())
+            if not m:
+                continue
+            key, val = m.group(1), m.group(2)
+            if key in seen:
+                first_ln, first_val = seen[key]
+                where = f"{key} ({yml.name}:{first_ln} and :{ln})"
+                (loc_conflicts if val != first_val else loc_dupes).append(where)
+            else:
+                seen[key] = (ln, val)
+    if loc_conflicts:
+        rep.fail("duplicate loc keys with conflicting text", ", ".join(loc_conflicts))
+    if loc_dupes:
+        rep.warn("duplicate loc keys (identical text)", ", ".join(loc_dupes))
+    if not loc_conflicts and not loc_dupes:
+        rep.ok("no duplicate localisation keys")
 
     print("\n== Colors ==")
     colrows = audit_colors(mod, game, tags)

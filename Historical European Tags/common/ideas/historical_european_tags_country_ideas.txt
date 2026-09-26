@@ -26,10 +26,10 @@ ORK_ideas = {
       prestige = 1
     }
     ork_orkney_ships = {
-      trade_range = 0.10
+      global_ship_trade_power = 0.10
     }
     ork_strengthen_the_earldom = {
-      unrest = -0.10
+      global_unrest = -1
     }
     ork_islands_under_the_crown = {
       global_autonomy = -0.05
@@ -55,13 +55,13 @@ FAE_ideas = {
       production_efficiency = 0.10
     }
     fae_old_faroese_laws = {
-      autonomy = -0.05
+      global_autonomy = -0.05
     }
     fae_legacy_of_the_norsemen = {
       prestige = 1
     }
     fae_the_islenska_kvefth = {
-      trade_power = 0.10
+      global_trade_power = 0.10
     }
     fae_faroese_longboats = {
       galley_power = 0.20
@@ -70,14 +70,14 @@ FAE_ideas = {
       global_ship_trade_power = 0.10
     }
     fae_loyal_to_the_crown = {
-      national_manpower_modifier = 0.10
+      global_manpower_modifier = 0.10
     }
 }
 
 GRL_ideas = {
   start = {
     global_colonial_growth = 5
-    trade_range = 0.10
+    production_efficiency = 0.10
   }
   
   bonus = {
@@ -90,7 +90,7 @@ GRL_ideas = {
   free = yes
   
     grl_eiriksfjord_settlement = {
-      base_production = 1
+      development_cost = -0.10
     }
     grl_walrus_hunting = {
       trade_goods_size_modifier = 0.10
@@ -102,10 +102,10 @@ GRL_ideas = {
       defensiveness = 0.10
     }
     grl_last_of_the_norse = {
-      unrest = -0.10
+      global_unrest = -1
     }
     grl_knarr_sailors = {
-      ship_trade_power = 0.10
+      global_ship_trade_power = 0.10
     }
     grl_far_outposts = {
       colonist_placement_chance = 0.10
@@ -115,7 +115,7 @@ GRL_ideas = {
 REV_ideas = {
   start = {
     infantry_power = 0.10
-    monthly_income = 0.10
+    global_tax_modifier = 0.10
   }
 
   bonus = {
@@ -128,7 +128,7 @@ REV_ideas = {
   free = yes
 
   rev_hansa_of_reval = {
-    trade_power = 0.10
+    global_trade_power = 0.10
   }
   rev_st_marys_cathedral = {
     prestige = 1
@@ -175,15 +175,53 @@ SLA_ideas = {
     global_tax_modifier = 0.10
   }
   sla_slavonian_palatinates = {
-    autonomy = -0.05
+    global_autonomy = -0.05
   }
   sla_marten_of_the_kuna = {
-    trade_power = 0.10
+    global_trade_power = 0.10
   }
   sla_defenders_of_the_frontier = {
     army_tradition = 0.15
   }
   sla_osijek_bridgehead = {
     defensiveness = 0.15
+  }
+}
+
+KAK_ideas = {
+  start = {
+    production_efficiency = 0.10
+    defensiveness = 0.10
+  }
+
+  bonus = {
+    diplomatic_reputation = 1
+  }
+
+  trigger = {
+    tag = KAK
+  }
+  free = yes
+
+  kakheti_cradle_of_wine = {
+    global_trade_goods_size_modifier = 0.10
+  }
+  kakheti_light_horse = {
+    cavalry_power = 0.10
+  }
+  kakheti_silken_road = {
+    global_trade_power = 0.10
+  }
+  kakheti_david_gareja = {
+    tolerance_own = 1
+  }
+  kakheti_bagrationi_legacy = {
+    legitimacy = 1
+  }
+  kakheti_court_of_telavi = {
+    development_cost = -0.10
+  }
+  kakheti_mountain_redoubts = {
+    manpower_recovery_speed = 0.15
   }
 }
