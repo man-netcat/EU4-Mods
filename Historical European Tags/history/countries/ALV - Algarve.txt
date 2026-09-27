@@ -1,0 +1,80 @@
+#Country Name: Algarve
+
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+primary_culture = portugese
+religion = catholic
+technology_group = western
+capital = 230	# Algarve (Faro)
+fixed_capital = 230 # Cannot move capital away from this province & no power cost to move to it
+historical_friend = POR
+
+# The Kingdom of Algarve was a separate crown from 1383, when Joao I inherited
+# it alongside Portugal, and stayed a distinct kingdom in personal union with
+# the Portuguese crown through the whole Aviz line. Only Maria I united the two
+# titles for good in 1779, taking "King of Portugal and the Algarves".
+#
+# Modelled as a real personal union from 1444: the kingdom holds its own
+# province, 230 Algarve, and sits in union with Portugal as the junior crown
+# to the Portuguese one, with Afonso V on both thrones. The union is declared
+# in history/diplomacy, not by a decision - the kingdom is never "restored",
+# because it never goes away. Portugal deliberately keeps no core here: the two
+# crowns are tied by the union alone, and a Portuguese core would let Lisbon
+# simply annex the kingdom at leisure.
+#
+# Note the Algarve is a single province in EU4 (230, capital Faro). Vanilla's
+# history/provinces/2933 - Faro.txt is misnamed - its contents are Barcelos, a
+# colonial holding in the Caribbean - so it must not be given a core or an
+# owner here.
+
+1433.1.1 = {
+	monarch = {
+		name = "Afonso"
+		monarch_name = "Afonso V"
+		dynasty = "de Avis"
+		birth_date = 1432.1.15
+		death_date = 1481.8.28
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1438.9.10 = {
+	leader = {
+		name = "Infante Pedro"
+		type = general
+		fire = 4
+		shock = 2
+		manuever = 2
+		siege = 0
+		death_date = 1449.1.1
+	}
+}
+
+1455.3.3 = {
+	monarch = {
+		name = "Afonso"
+		monarch_name = "Afonso V"
+		dynasty = "de Avis"
+		birth_date = 1432.1.15
+		death_date = 1481.8.28
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1481.8.28 = {
+	monarch = {
+		name = "Joao"
+		monarch_name = "Joao II"
+		dynasty = "de Avis"
+		birth_date = 1455.5.29
+		death_date = 1495.10.20
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

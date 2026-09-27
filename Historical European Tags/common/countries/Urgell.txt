@@ -1,0 +1,61 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 197 217 52 }
+
+revolutionary_colors = { 8 8 7 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	religious_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Ramon #0" = 25
+	"Jaume #0" = 20
+	"Pere #0" = 15
+	"Joan #0" = 15
+	"Berenguer #0" = 12
+	"Guillem #0" = 10
+	"Alfons #0" = 8
+	"Ermengol #0" = 6
+	"Jordi #0" = 5
+	"Arnau #0" = 4
+}
+
+leader_names = {
+	"Urgell"
+	"Cardona"
+	"Cervera"
+	"Montcada"
+	"Agout"
+	"Bellpuig"
+	"Linyola"
+	"Mollerussa"
+	"Agramunt"
+	"Tarrega"
+}
+
+army_names = {
+	"Exercit d'Urgell"
+}

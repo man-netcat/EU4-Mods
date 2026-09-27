@@ -143,7 +143,7 @@ REV_ideas = {
     production_efficiency = 0.10
   }
   rev_gate_to_novgorod = {
-    global_trade_power = 0.10
+    global_trade_goods_size_modifier = 0.10
   }
   rev_mission_field_of_estland = {
     development_cost = -0.10
@@ -172,7 +172,7 @@ SLA_ideas = {
     trade_goods_size_modifier = 0.10
   }
   sla_granary_of_the_crown = {
-    global_tax_modifier = 0.10
+    development_cost = -0.10
   }
   sla_slavonian_palatinates = {
     global_autonomy = -0.05
@@ -184,7 +184,7 @@ SLA_ideas = {
     army_tradition = 0.15
   }
   sla_osijek_bridgehead = {
-    defensiveness = 0.15
+    garrison_size = 0.10
   }
 }
 
@@ -225,6 +225,44 @@ KAK_ideas = {
     manpower_recovery_speed = 0.15
   }
 }
+URG_ideas = {
+  start = {
+    production_efficiency = 0.10
+    defensiveness = 0.10
+  }
+
+  bonus = {
+    diplomatic_reputation = 1
+  }
+
+  trigger = {
+    tag = URG
+  }
+  free = yes
+
+  urgell_cervian_fields = {
+    global_trade_goods_size_modifier = 0.10
+  }
+  urgell_frontier_militia = {
+    land_morale = 0.10
+  }
+  urgell_corts_of_urgell = {
+    global_unrest = -1
+  }
+  urgell_wool_road = {
+    global_trade_power = 0.10
+  }
+  urgell_house_of_barcelona = {
+    legitimacy = 1
+  }
+  urgell_barracks_of_agramunt = {
+    manpower_recovery_speed = 0.15
+  }
+  urgell_caminos_reales = {
+    development_cost = -0.10
+  }
+}
+
 # Catholic Granada: a junior crown ruling the Reconquista's aftermath. The
 # Alhambra is taken but its people are not, so the crown buys their loyalty with
 # tolerance and cheap assimilation, and leans on the Nasrid court's trade while

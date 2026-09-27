@@ -1,0 +1,58 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 22 101 52 }
+
+revolutionary_colors = { 8 16 7 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	religious_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Afonso #0" = 20
+	"Joao #0" = 20
+	"Duarte #0" = 15
+	"Manuel #0" = 12
+	"Sebastiao #0" = 8
+	"Bruno #0" = 6
+	"Pedro #0" = 4
+	"Sancho #0" = 3
+	"Miguel #0" = 2
+}
+
+leader_names = {
+	"Faro"
+	"Lagos"
+	"Tavira"
+	"Silves"
+	"Alcoutim"
+	"Castro Marim"
+	"Albufeira"
+	"Loule"
+	"Almodovar"
+}

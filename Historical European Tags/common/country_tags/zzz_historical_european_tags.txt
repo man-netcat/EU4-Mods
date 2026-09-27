@@ -93,6 +93,15 @@ GRL = "countries/Greenland.txt"
 
 SLA = "countries/Slavonia.txt"
 KAK = "countries/Kakheti.txt"
+URG = "countries/Urgell.txt"
+
+# Algarve: the southern kingdom of the Portuguese shore, held as a separate
+# crown in personal union with Portugal from 1383 until Maria I united the
+# two titles in 1779. Present at 1444 with its own provinces 230 (Algarve)
+# only province 230 (Algarve, capital Faro); the union with POR is declared
+# in history/diplomacy
+ALV = "countries/Algarve.txt"
+
 # Catholic Granada: the Alhambra kingdom reborn as a junior crown, released by
 # whichever of Portugal, Aragon, Castile or Spain holds all four of the old
 # Nasrid provinces with cores. Not independent in 1444;

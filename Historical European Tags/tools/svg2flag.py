@@ -195,8 +195,10 @@ def main():
     if args.full_bleed:
         shield = render(svg, W, H)
         bbox = shield.getchannel("A").getbbox()
-        shield.crop(bbox).resize((args.size, args.size), Image.LANCZOS).save(args.out)
-        print(f"saved {args.out} ({args.size}x{args.size}, full bleed)")
+        # flatten to RGB: EU4 flags are 24-bit TGA, saving the RGBA render
+        # directly would emit a 32-bit file (every other path builds RGB)
+        shield.crop(bbox).resize((args.size, args.size), Image.LANCZOS).convert("RGB").save(args.out)
+        print(f"saved {args.out} ({args.size}x{args.size}, full bleed, 24-bit)")
         return
 
     # 4) charge proportions copied from a reference flag

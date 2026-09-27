@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  ZEA_ideas:0 "Zeelander Ideas"
  ZEA_ideas_start:0 "Zeelander Traditions"
  ZEA_ideas_bonus:0 "Zeelander Ambition"
@@ -1020,3 +1020,42 @@ sla_osijek_bridgehead_desc:0 "Osijek guards the bridge over the Drava on the roa
   kakheti_court_of_telavi_desc:0 "Telavi, set upon its hill above the Alazani valley, is the seat of the Kakhetian princes and the heart of the eastern Georgian lands. Its court draws the learned, the merchants and the craftsmen of the region, and from its walls the whole of the valley is governed."
   kakheti_mountain_redoubts:0 "Redoubts of the High Valleys"
   kakheti_mountain_redoubts_desc:0 "Kakheti is a land of steep valleys and high passes, where every village can become a fortress and every shepherd a soldier. When the Qizilbash or the Ottomans press into our mountains, our people melt into the redoubts and strike back from the heights."
+  URG_ideas:0 "Urgell Ideas"
+  URG_ideas_start:0 "Urgellan Traditions"
+  URG_ideas_bonus:0 "Urgellan Ambition"
+  urgell_cervian_fields:0 "The Cervian Fields"
+  urgell_cervian_fields_desc:0 "The wide plain of the Segre has been turned by four centuries of Catalan hands into the granary of the county. Winter wheat and the flocks of the Cervera uplands feed the market towns of the Crown, and the rents of the fields fill our coffers even in a bad year."
+  urgell_frontier_militia:0 "The Frontier Militia"
+  urgell_frontier_militia_desc:0 "For six hundred years the counts of Urgell have held the frontier against the Moors, and the peasant levy of the county has stood behind the walls of the castle when the horn sounded from the Almenara. No invaders past the Ebro have found this land undefended."
+  urgell_corts_of_urgell:0 "The Corts of Urgell"
+  urgell_corts_of_urgell_desc:0 "The custom holds that the counts summon their Corts in the city of Urgell, and that no levy of new taxes may be exacted without the counsel of the estates. Peasant and knight alike abide the word given, and the county rests in quiet order."
+  urgell_wool_road:0 "The Wool Road"
+  urgell_wool_road_desc:0 "The flocks of the Urgell uplands carry their fleece over the Camino to the markets of Barcelona and Valencia, and the tolls of the road are counted among the oldest rights of the county. Where others grow grain for the belly, we grow it also for the loom."
+  urgell_house_of_barcelona:0 "The House of Barcelona"
+  urgell_house_of_barcelona_desc:0 "The counts of Urgell are the elder line of Catalonia; through them the county came to the crown of Barcelona, and our blood still sits upon the thrones of Aragon. The alliances and the rights of that inheritance are remembered in law and in the deference paid to our name."
+  urgell_barracks_of_agramunt:0 "The Barracks of Agramunt"
+  urgell_barracks_of_agramunt_desc:0 "Agramunt has mustered the county's men since the days of Charlemagne. The muster roll of the Urgell plain is counted and drilled each spring, and the swords of the county are reforged as often as the ploughshares are."
+  urgell_caminos_reales:0 "The Royal Roads"
+  urgell_caminos_reales_desc:0 "By the good offices of the counts, the royal roads were carried through the county, linking the Segre valley to the Aragonese plain. What the plough cannot reach, the cart will, and the roads pay for themselves in trade."
+
+# Catholic Granada: the aftermath of the Reconquista. The Alhambra is taken but
+# its people are not, so the crown buys their loyalty rather than driving them
+# into the sea. Tolerance and cheap assimilation are the inherited traditions;
+# the ideas build on them.
+  CGR_ideas:0 "Granadan Ideas"
+  CGR_ideas_start:0 "Granadan Traditions"
+  CGR_ideas_bonus:0 "Granadan Ambition"
+  cgr_capitulations_of_granada:0 "The Capitulations of Granada"
+  cgr_capitulations_of_granada_desc:0 "The terms the Moors signed away the Alhambra on promise that no man of the Vega should be made to choose between his bread and his Friday. We keep the word. There are nine judges in the Alhambra who will hear a complaint from a mujazigo as readily as from a converso, and a town that keeps its fasts keeps its taxes, and a valley that is quiet grows grain."
+  cgr_cheap_religious_conversion:0 "Baptism by the Sword, Gently Applied"
+  cgr_cheap_religious_conversion_desc:0 "The old capitulations promised that the children of the slain would be raised in the faith. It costs us little to keep that word and much to break it: a people baptised at the fountain rather than at the stake will farm, will pay, and will not be waiting for the Moors in the mountains."
+  cgr_cisneros_exchange:0 "The Cisneros Exchange"
+  cgr_cisneros_exchange_desc:0 "The archbishop of Toledo taught that a mujazigo who learns Castilian is a Spaniard saved, not a people sold. We pay the notary a crown and the schoolmaster a crown, and every household that takes up the tongue of the court joins the pool of accepted men from whom the crown draws its levies."
+  cgr_conversos_of_granada:0 "The Conversos of Granada"
+  cgr_conversos_of_granada_desc:0 "They gave us the silk, the sugar and the tarof of the Vega, and the blood of Nasrid princes still runs in the veins of our best servants. We hang no converso for a hidden fast, and in exchange the new Christian nobility builds a stone devota in every town where their fathers were sold."
+  cgr_royal_audiencia:0 "The Royal Audiencia of Granada"
+  cgr_royal_audiencia_desc:0 "Nine judges, a chancery of escribanos, and the codes of the Siete Partidas set down in the town of the Alhambra. The Audiencia settles a land where every village has a grievance against its lord, and makes our law the only law that a Berber of the Alpujarras can be made to answer for."
+  cgr_repopulation_of_the_alpujarras:0 "The Repopulation of the Alpujarras"
+  cgr_repopulation_of_the_alpujarras_desc:0 "The Alpujarras were emptied by the war and emptied again by the plague, and what few Moors remain hold the passes we cannot garrison. We settle them on new land at a reduced rate, and they cut the timber, terrace the slopes and man the frontier walls that keep us from being Moors ourselves."
+  cgr_court_of_the_alhambra:0 "The Court of the Alhambra"
+  cgr_court_of_the_alhambra_desc:0 "We did not pull down the court of the Alhambra but furnished it, keeping its craftsmen, its tiled courts and its waterworks at the crown's expense. The Nasrid artisans who stayed will teach ours to glaze, to knot, and to wring a profit from the sugar and the silk of a coast that carries half the trade of the Mediterranean."

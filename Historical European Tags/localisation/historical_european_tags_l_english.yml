@@ -96,6 +96,20 @@ grl_keep_of_the_norsemen:0 "Keep of the Norsemen"
 grl_knarr_sailors:0 "Knarr Sailors"
 grl_last_of_the_west:0 "Last of the West"
 grl_icy_waters:0 "Icy Waters"
+  URG:0 "Urgell"
+  URG_ADJ:0 "Urgellese"
+  ALV:0 "Algarve"
+  ALV_ADJ:0 "Algarvian"
+
+# County government titles. Vanilla defines COUNTY/COUNT/COUNTESS (in
+# emperor_content) and CONSORT, but never COUNT_CONSORT, so county-tier
+# government_names blocks rendered a raw COUNT_CONSORT key for the consort.
+# Declaring the set here keeps every county title self-contained.
+  COUNTY:0 "County"
+  COUNT:0 "Count"
+  COUNTESS:0 "Countess"
+  COUNT_CONSORT:0 "Count-Consort"
+
 # Catholic Granada: the Alhambra kingdom as a junior Castilian crown
   CGR:0 "Granada"
   CGR_ADJ:0 "Granadan"

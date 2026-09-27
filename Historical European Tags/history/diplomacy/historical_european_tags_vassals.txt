@@ -130,3 +130,18 @@ union = {
 	start_date = 1444.1.1
 	end_date = 1526.8.30
 }
+
+# The Kingdom of the Algarves and Portugal were two distinct crowns under one
+# king from 1383, when Joao I inherited the Algarve alongside Portugal, and
+# stayed a personal union through the whole Aviz line. Maria I finally merged
+# the two titles in 1779 and styled herself "King of Portugal and the Algarves",
+# at which point the junior crown ceases to be a kingdom of its own. The day is
+# not recorded precisely, so the start of the year is used, as with the
+# Mecklenburg union above. Portugal is the senior crown and deliberately holds
+# no core on the Algarve shore: the union is the only thing binding them.
+union = {
+	first = POR
+	second = ALV
+	start_date = 1444.1.1
+	end_date = 1779.1.1
+}

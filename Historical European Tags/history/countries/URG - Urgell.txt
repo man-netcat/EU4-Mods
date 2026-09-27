@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = catalan
+religion = catholic
+technology_group = western
+capital = 2987	# Urgell (Tarrega)
+fixed_capital = 2987	# Cannot move capital away from this province & no power cost to move to it
+historical_friend = CAT
+historical_friend = ARA
+
+# Urgell is a start-date tag: it holds its own province in 1444, so it has no
+# "#releasable" marker (Gazaria is the same pattern). The county was one of
+# the Catalan counties held as an appanage of the Central Counties, and in
+# 1444 that appanage was in the hands of John II of Aragon - whose rule over
+# it is what the Catalan revolt of 1442 broke out against. Aragon's core on
+# the province is removed accordingly; Catalonia's is kept, since the county
+# was Catalan and was absorbed into the Principality of Catalonia in turn.
+
+1444.1.1 = {
+	monarch = {
+		name = "Joan II"
+		dynasty = "de Trastamara"
+		birth_date = 1398.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
