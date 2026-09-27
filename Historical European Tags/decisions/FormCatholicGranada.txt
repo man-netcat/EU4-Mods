@@ -1,0 +1,79 @@
+# A Catholic junior crown of Granada, formed by whichever Iberian power holds all
+# four Nasrid provinces with cores: 222 Almeria, 223 Granada, 226 Gibraltar,
+# 4546 Malaga. Any tag whose capital province is in vanilla's iberia_region may
+# form it; Spain is excluded (see potential). Not one-shot - CGR can be refounded
+# after being lost. `release` cannot hand over an existing tag, hence the gate.
+
+country_decisions = {
+
+	form_catholic_granada = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			# capital PROVINCE in the region, so any Iberian capital qualifies
+			capital_scope = {
+				region = iberia_region
+			}
+			NOT = {
+				exists = CGR
+			}
+			# Spain excluded: CGR is Castile's client, and Spain is a great
+			# power that has no business releasing a 4-province junior crown
+			NOT = { tag = SPA }
+			NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 222
+				province_id = 223
+				province_id = 226
+				province_id = 4546
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 222
+			owns_core_province = 223
+			owns_core_province = 226
+			owns_core_province = 4546
+		}
+		effect = {
+			222 = { add_core = CGR }
+			223 = { add_core = CGR }
+			226 = { add_core = CGR }
+			4546 = { add_core = CGR }
+			# strip Nasrid cores so GRA can never return for the Vale
+			222 = { remove_core = GRA }
+			223 = { remove_core = GRA }
+			226 = { remove_core = GRA }
+			4546 = { remove_core = GRA }
+			release = CGR
+			CGR = {
+				set_government_rank = 2
+				change_religion = catholic
+				# = ROOT copies the senior's culture (vanilla eyalet idiom),
+				# so POR gives portuguese, ARA catalan, CAS castillian, etc
+				change_primary_culture = ROOT
+				# wear the senior's colours, eyalet-style. One-shot: it does
+				# not re-sync if the senior later changes
+				change_country_color = { country = ROOT }
+				set_country_flag = has_overriden_color_flag
+				add_accepted_culture = andalucian
+			}
+			create_union = CGR
+			# expansion targets on both halves of al-Andalus
+			upper_andalucia_area = {
+				add_permanent_claim = CGR
+			}
+			lower_andalucia_area = {
+				add_permanent_claim = CGR
+			}
+			# marker only, nothing reads it
+			set_country_flag = cgr_catholic_granada_formed
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

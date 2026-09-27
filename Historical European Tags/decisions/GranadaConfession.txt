@@ -1,0 +1,76 @@
+# Both Granada identities are tagged in the base game: CGR is the Castilian crown
+# founded by FormCatholicGranada, GRA the Nasrid tag. If a player converts one to
+# the other's faith, these fix the crown's TAG to match (change_tag, vanilla's own
+# pattern with on_change_tag_effect). change_tag cannot retag onto an existing
+# tag, hence the NOT exists gates.
+
+country_decisions = {
+
+	roots_of_the_alhambra = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = CGR
+		}
+		allow = {
+			is_at_war = no
+			# a Muslim Castilian crown: wrong tag for the faith it holds
+			religion_group = muslim
+			NOT = { exists = GRA }
+		}
+		effect = {
+			change_tag = GRA
+			hidden_effect = {
+				on_change_tag_effect = yes
+				# keep the Alhambra expansion targets
+				upper_andalucia_area = {
+					add_permanent_claim = GRA
+				}
+				lower_andalucia_area = {
+					add_permanent_claim = GRA
+				}
+			}
+			# religion_group gate means at worst Ibadi/Shiite; back to Sunni
+			change_religion = sunni
+			change_primary_culture = andalucian
+			add_accepted_culture = castillian
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	embrace_iberian_identity = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = GRA
+		}
+		allow = {
+			is_at_war = no
+			# a Christian Nasrid tag: wrong tag for the faith it holds
+			religion_group = christian
+			NOT = { exists = CGR }
+		}
+		effect = {
+			change_tag = CGR
+			hidden_effect = {
+				on_change_tag_effect = yes
+				upper_andalucia_area = {
+					add_permanent_claim = CGR
+				}
+				lower_andalucia_area = {
+					add_permanent_claim = CGR
+				}
+			}
+			# religion_group gate means at worst Protestant/Reformed; to Catholic
+			change_religion = catholic
+			# no change_primary_culture: the crown keeps the culture it was born
+			# to. Forcing castillian would overwrite a player's real choice.
+			add_accepted_culture = andalucian
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -12,6 +12,12 @@ Checks every releasable tag for strictly correct wiring:
   * localisation                             (name + adjective)
   * national ideas                           (structure: 2 traditions, 7 ideas, ambition,
                                               trigger lock, free = yes) + idea localisation
+  * idea shape against the base game         (tools/idea_inventory.py measures all 446
+                                              vanilla country idea sets; a count vanilla
+                                              itself uses is a WARN, one it never uses is
+                                              a FAIL) + no effect repeated inside a group,
+                                              no idea that grants nothing, no idea heavier
+                                              than the vanilla norm
   * idea-key uniqueness vs vanilla and within the mod
   * orphan detection                         (stubs/cores without a tag, vice versa)
   * HRE coverage                             (non-capital provinces with no releasable
@@ -44,10 +50,20 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+# The base-game idea inventory lives next to this script and supplies the
+# norms every idea group is measured against. Running this file directly
+# already puts its own directory on sys.path; the fallback covers being
+# imported from elsewhere.
+try:
+    import idea_inventory
+except ImportError:  # pragma: no cover
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import idea_inventory
+
 DEFAULT_GAME = Path("/home/rick/Paradox/Games/Europa Universalis IV")
 DEFAULT_MOD = Path(
     "/home/rick/.local/share/Paradox Interactive/"
-    "Europa Universalis IV/mod/HRE Releasables"
+    "Europa Universalis IV/mod/Historical European Tags"
 )
 
 TAG_LINE_RE = re.compile(r'^\s*([A-Z0-9]{3})\s*=\s*"([^"]+)"')
@@ -99,6 +115,21 @@ KNOWN_EXCEPTIONS: dict[str, dict[str, str]] = {
         "landed_vassal": "Silesian duchy of Wroclaw: present in 1444, holding its seat directly as a vassal of the Crown of Bohemia",
     },
     "PBH": {"ideas": "inherits vanilla POM_ideas via primary_culture = pommeranian"},
+    "URG": {
+        "landed_vassal": "Catalan county of Urgell: present in 1444, holding its seat directly under the Central Counties appanage of John II of Aragon, whose rule over it the Catalan revolt of 1442 was aimed at",
+    },
+    "ALV": {
+        "landed_vassal": "ALV holds its own provinces at 1444 rather than being released from a liege, so the landed_vassal rules do not apply. It is a separate crown in personal union with POR, declared in history/diplomacy",
+        "ideas": "no national ideas yet - the Algarve is a duplicate Portuguese crown in personal union, the same gap CIL and ATN carry",
+    },
+    "CGR": {
+        "province_file": "dormant by design: the crown holds no land in 1444 and overrides no province, so 222, 223, 226 and 4546 stay pure vanilla until decisions/FormCatholicGranada.txt grants the cores and releases them",
+        "add_core": "dormant by design: the crown carries no core in 1444 so it only ever enters the game through decisions/FormCatholicGranada.txt, which grants the cores on 222, 223, 226 and 4546 just before releasing them",
+        "culture": "the stub's castillian is only a placeholder: capital province 223 is andalucian in vanilla, and decisions/FormCatholicGranada.txt overwrites the crown's culture with the senior's own via change_primary_culture = ROOT (portuguese / catalan / castillian, depending on which of the four releases it), while accepting andalucian so the moriscos are assimilated rather than exiled, the same arrangement as CIL over Turkified provinces",
+        "religion": "the crown is catholic by design and is not gated on the provinces converting: whichever Iberian power releases it supplies the Catholic faith for the junior crown, the same arrangement as KOJ and ATN (a Catholic crown over still-Muslim land)",
+        "color": "deliberately identical to vanilla Granada's sage: CGR is dormant and holds no land in 1444, so this value is not on the map at all until decisions/FormCatholicGranada.txt releases it, and that decision recolours the new crown to its senior's colour in the same effect (change_country_color = { country = ROOT }, the eyalet mechanism vanilla uses for released eyalets). The shared value is a fallback for a country that does not yet exist, and is never seen in play",
+        "not_releasable": "GRA holds 223 as its 1444 capital and the Nasrid kingdom keeps all three provinces, so CGR cannot exist at the start date; decisions/FormCatholicGranada.txt releases it as soon as Portugal, Aragon, Castile or Spain holds 222, 223, 226 and 4546 with cores",
+    },
 }
 
 # Tags defined purely as formable titles (Form*.txt decisions grant their cores).
@@ -120,6 +151,8 @@ MODIFIER_NAME_RE = re.compile(
 LOC_RE = re.compile(r'^\s*([A-Za-z0-9_.]+):\d+\s*"(.*)"\s*$')
 DATE_RE = re.compile(r"^\d{3,4}\.\d+\.\d+")
 _TRIPLET_RE = re.compile(r"^\s*([0-9]{1,3})\s+([0-9]{1,3})\s+([0-9]{1,3})\s*$")
+_FLAG_COLOR_RE = re.compile(
+    r"^[ \t]*flag_color\s*=\s*\{\s*(\d{1,3})\s+(\d{1,3})\s+(\d{1,3})\s*\}", re.M)
 
 
 def read_text(path: Path) -> str:
@@ -355,6 +388,256 @@ def country_modifier_profile(game: Path) -> tuple[dict[str, dict], dict[str, lis
     return profile, non_country
 
 
+def _graded_count(rep, label: str, got: int, modal: int, seen: dict, noun: str) -> None:
+    """A count checked against the base game rather than against a constant.
+
+    A value vanilla itself ships is a warning, not a failure: the mod should
+    not silently drift from the norm, but the norm is not a law. Anything
+    vanilla never uses is a failure, because there is no precedent for it.
+    """
+    if got == modal:
+        rep.ok(label, f"{got} (vanilla norm)")
+    elif got in seen:
+        rep.warn(label, f"{got}, vanilla norm is {modal} but {seen[got]} of {noun} use {got}")
+    else:
+        rep.fail(label, f"{got}, vanilla norm is {modal} and no vanilla {noun} use {got}")
+
+
+def check_idea_shape(rep, tag: str, subs: dict, idea_names: list[str],
+                     norms: dict) -> None:
+    """Shape and internal balance of an idea group, measured against vanilla.
+
+    The "2 traditions, 1 ambition, 7 ideas" rule is not a guess. idea_inventory
+    measures every base-game country idea set: 416 of 446 use 2 traditions,
+    432 use 1 ambition and 385 use 7 ideas. A count that vanilla also uses is
+    therefore reported as a warning with the precedent, not a failure.
+
+    On top of the counts this catches the failures that a count cannot:
+
+      * an effect repeated across the traditions, the ambition or two ideas.
+        The values add silently, so the player gets more than the file reads
+        and the file no longer describes the country. Only 13 of 555 vanilla
+        groups repeat an effect at all, and those are government and advisor
+        sets, not national ones.
+      * an idea the player can see that grants nothing.
+      * an idea so heavy it stops being an idea. 78% of vanilla ideas carry a
+        single modifier and 95% carry at most two.
+    """
+    n_start = len([l for l in subs.get("start", "").splitlines() if EFFECT_RE.match(l.strip())])
+    n_bonus = len([l for l in subs.get("bonus", "").splitlines() if EFFECT_RE.match(l.strip())])
+    n_ideas = len(idea_names)
+
+    modal_start = norms.get("modal_start", 2)
+    modal_bonus = norms.get("modal_bonus", 1)
+    modal_ideas = norms.get("modal_idea_count", 7)
+    _graded_count(rep, "traditions count", n_start, modal_start,
+                  {int(k): c for k, c in (norms.get("start") or {}).items()}, "country idea sets")
+    _graded_count(rep, "ambition count", n_bonus, modal_bonus,
+                  {int(k): c for k, c in (norms.get("bonus") or {}).items()}, "country idea sets")
+    _graded_count(rep, "idea count", n_ideas, modal_ideas,
+                  {int(k): c for k, c in (norms.get("idea_count") or {}).items()}, "country idea sets")
+
+    if not idea_names:
+        return
+
+    # an effect that appears more than once inside the same group
+    where: dict[str, list[str]] = {}
+    for owner, body in (("start", subs.get("start", "")),
+                        ("bonus", subs.get("bonus", "")),
+                        *[(k, subs[k]) for k in idea_names]):
+        for m in MODIFIER_NAME_RE.finditer(body or ""):
+            where.setdefault(m.group(1), []).append(owner)
+    repeated = {k: v for k, v in where.items() if len(v) > 1}
+    if repeated:
+        rep.fail(
+            "effect repeated in group",
+            "; ".join(f"{k} in {', '.join(v)}" for k, v in sorted(repeated.items()))
+            + " - the values add silently",
+        )
+
+    # an idea that grants nothing at all
+    empty = [k for k in idea_names if not idea_inventory._content_lines(subs.get(k, ""))]
+    if empty:
+        rep.fail("idea grants no effect", ", ".join(empty))
+
+    # an idea carrying more modifiers than the base game ever does
+    cap = norms.get("idea_weight_cap", 2)
+    heavy = {k: len(MODIFIER_NAME_RE.findall(subs[k])) for k in idea_names
+             if len(MODIFIER_NAME_RE.findall(subs[k])) > cap}
+    if heavy:
+        rep.warn(
+            "idea heavier than the vanilla norm",
+            f"{', '.join(f'{k} ({n})' for k, n in sorted(heavy.items()))} - "
+            f"95% of vanilla ideas carry at most {cap}",
+        )
+
+
+def vanilla_culture_names(game: Path) -> set[str]:
+    """Every culture the base game defines.
+
+    A culture is one tab deep inside a group block, so group-level keys
+    (`graphical_culture`, `country`, `province`) are excluded. Names are
+    matched exactly: `andalucian` is a real culture and `andalusian` is not,
+    and the difference is invisible in game because the bad name is simply
+    dropped on load.
+    """
+    names: set[str] = set()
+    for f in sorted((game / "common" / "cultures").glob("*.txt")):
+        text = f.read_bytes().decode("utf-8", errors="replace")
+        for gm in re.finditer(r"^\t([a-z_0-9]+) = \{", text, re.MULTILINE):
+            names.add(gm.group(1))
+    return names
+
+
+def vanilla_culture_keys(game: Path) -> set[str]:
+    """Keys the engine reads inside a culture definition.
+
+    Only these are meaningful there. `accepted_cultures` is NOT one of them:
+    it is a country modifier that exists elsewhere in the base game, so
+    putting it inside a culture block parses without complaint and does
+    nothing at all.
+    """
+    keys: set[str] = set()
+    for f in sorted((game / "common" / "cultures").glob("*.txt")):
+        text = f.read_bytes().decode("utf-8", errors="replace")
+        for gm in re.finditer(r"^\t([a-z_0-9]+) = \{", text, re.MULTILINE):
+            i = gm.end()
+            depth = 1
+            for j in range(i, len(text)):
+                if text[j] == "{":
+                    depth += 1
+                elif text[j] == "}":
+                    depth -= 1
+                    if depth == 0:
+                        break
+            keys.update(re.findall(r"^\t\t([a-z_0-9]+) =", text[i:j], re.MULTILINE))
+    return keys
+
+
+def mod_culture_problems(mod: Path, game: Path) -> list[tuple[str, str]]:
+    """(culture, detail) rows for mod culture files that misuse the format."""
+    legal = vanilla_culture_keys(game)
+    rows: list[tuple[str, str]] = []
+    for f in sorted((mod / "common" / "cultures").glob("*.txt")):
+        text = f.read_bytes().decode("utf-8", errors="replace")
+        for gm in re.finditer(r"^\t([a-z_0-9]+) = \{", text, re.MULTILINE):
+            name = gm.group(1)
+            i = gm.end()
+            depth = 1
+            for j in range(i, len(text)):
+                if text[j] == "{":
+                    depth += 1
+                elif text[j] == "}":
+                    depth -= 1
+                    if depth == 0:
+                        break
+            used = re.findall(r"^\t\t([a-z_0-9]+) =", text[i:j], re.MULTILINE)
+            bad = sorted({k for k in used if k not in legal})
+            if bad:
+                rows.append((
+                    name,
+                    f"{f.name}: {', '.join(bad)} - not a key the engine reads inside a "
+                    f"culture (vanilla uses: {', '.join(sorted(legal))})",
+                ))
+    return rows
+
+
+def check_culture_references(rep, mod: Path, game: Path, tags: dict, records: list[dict]) -> None:
+    """Every culture the mod names must be a culture the game actually has.
+
+    This is the check that was missing: an invented or misspelled culture name
+    is not an error the game reports, it is a country that loads with no
+    culture at all. `andalucian` is real, `andalusian` is not, and only
+    checking against the real set tells the two apart.
+    """
+    known = vanilla_culture_names(game)
+    # a mod may legitimately add cultures of its own
+    for f in sorted((mod / "common" / "cultures").glob("*.txt")):
+        text = f.read_bytes().decode("utf-8", errors="replace")
+        known.update(re.findall(r"^\t([a-z_0-9]+) = \{", text, re.MULTILINE))
+
+    bad_stub: list[str] = []
+    for rec in records:
+        pc = (rec.get("primary_culture") or "").strip()
+        if pc and pc not in known:
+            bad_stub.append(f"{rec['tag']}={pc}")
+    rep.check(not bad_stub, "stub cultures exist", ", ".join(bad_stub) or
+              f"all {len([r for r in records if (r.get('primary_culture') or '').strip()])} "
+              f"stubs name a real culture ({len(known)} known)")
+
+    # cultures named by decisions: change_primary_culture / add_accepted_culture
+    #
+    # The value is not always a literal culture name. `= ROOT` asks the engine
+    # to COPY the calling country's culture in, which vanilla does for released
+    # eyalets (01_scripted_effects_for_diplomacy.txt) and pirate republics
+    # (events/FlavorPirates.txt). A scope is not a misspelling, so it has to be
+    # recognised rather than skipped: the pattern here used to be lowercase-only,
+    # which meant `change_primary_culture = ROOT` was never inspected at all and
+    # this check passed on it by accident rather than by judgement. Every culture
+    # and religion tag in vanilla is lowercase, so casing separates the two cases.
+    # The `\{?` is load-bearing: the engine's canonical form is `= { KEY }` (braced),
+    # and the pattern used to require the key to sit immediately after `=`, so every
+    # braced usage - including the `andalusian`/`andalucian` typo this check exists to
+    # catch - was silently skipped. Both `= KEY` and `= { KEY }` are matched now.
+    bad_dec: list[str] = []
+    scoped: list[str] = []
+    for f in sorted((mod / "decisions").glob("*.txt")):
+        text = read_text(f)
+        for m in re.finditer(r"\b(change_primary_culture|add_accepted_culture)\s*=\s*\{?\s*([A-Za-z_0-9]+)", text):
+            val = m.group(2)
+            if not re.fullmatch(r"[a-z_0-9]+", val):
+                if val in ("ROOT", "FROM", "ROOT.senior_partner"):
+                    scoped.append(f"{f.name}:{m.group(1)}={val}")
+                else:
+                    ln = text[: m.start()].count("\n") + 1
+                    bad_dec.append(f"{f.name}:{ln} {val} is neither a culture nor a scope")
+            elif val not in known:
+                ln = text[: m.start()].count("\n") + 1
+                bad_dec.append(f"{f.name}:{ln} {val}")
+    rep.check(not bad_dec, "decision cultures exist", ", ".join(bad_dec) or
+              (f"all literal targets name a real culture; {len(scoped)} scoped copy: "
+               + ", ".join(scoped) if scoped else "all literal targets name a real culture"))
+
+    rows = mod_culture_problems(mod, game)
+    rep.check(not rows, "culture files use only real keys",
+              "; ".join(f"{n}: {d}" for n, d in rows))
+
+
+def check_area_references(rep, mod: Path, game: Path) -> None:
+    """Every area a decision acts on must be an area the base game defines.
+
+    `<area> = { add_permanent_claim = TAG }` is a silent no-op if the area name
+    is wrong: EU4 does not error on an unknown area, it just grants nothing, so
+    a typo quietly strips the claim out of the decision and leaves the mod
+    looking finished. This is the same failure mode as the `andalusian` culture
+    typo, so it gets the same treatment.
+
+    Province lists are irrelevant here; only the area NAME has to resolve.
+    `add_permanent_claim` is also legal on a bare province scope - the mod's
+    own RestoreJerusalem does `378 = { add_permanent_claim = KOJ }` - so only
+    NAMED scopes are checked, identified by vanilla's `_area` suffix. A province
+    id is numeric and is left alone. The cost of that rule is that an area
+    misspelled badly enough to lose its `_area` suffix would slip through.
+    """
+    area_file = game / "map" / "area.txt"
+    if not area_file.exists():
+        rep.warn("vanilla areas readable", f"{area_file} not found")
+        return
+    known = set(re.findall(r"^([a-z_0-9]+)\s*=\s*\{", read_text(area_file), re.M))
+    bad: list[str] = []
+    seen: list[str] = []
+    for f in sorted((mod / "decisions").glob("*.txt")):
+        text = read_text(f)
+        for m in re.finditer(
+                r"^[ \t]*([a-z_0-9]+_area)\s*=\s*\{(?=[^}]*?add_permanent_claim)",
+                text, re.M | re.S):
+            name = m.group(1)
+            ln = text[: m.start()].count("\n") + 1
+            (seen if name in known else bad).append(f"{f.name}:{ln} {name}")
+    rep.check(not bad, "decision areas exist", ", ".join(bad) or
+              f"all {len(seen)} named area scopes are real vanilla areas ({len(known)} known)")
+
+
 def check_idea_modifiers(rep, tag: str, subs: dict, idea_names: list[str],
                          profile: dict, non_country: dict) -> None:
     """Names must exist, and the value must be the kind vanilla uses for them.
@@ -424,58 +707,108 @@ def country_colors(root: Path) -> dict[str, tuple[tuple[int, int, int] | None, t
     return out
 
 
+def flag_palette(game: Path) -> list[tuple[int, int, int]]:
+    """The vanilla `flag_color` list, in file order.
+
+    A country file's `revolutionary_colors = { 15 0 16 }` does not hold three
+    RGB channels: each number is a 0-based index into this list, i.e. one of
+    the 17 heraldic inks defined in
+    common/custom_country_colors/00_custom_country_colors.txt (Argent, Sable,
+    Murrey, Azure, Gules, ...). So the palette, not the triplet, is the
+    authoritative set of legal values.
+    """
+    path = game / "common" / "custom_country_colors" / "00_custom_country_colors.txt"
+    if not path.exists():
+        return []
+    return [(int(a), int(b), int(c))
+            for a, b, c in _FLAG_COLOR_RE.findall(read_text(path))]
+
+
+def check_revolutionary_colors(rep, mod: Path, game: Path) -> None:
+    """Every `revolutionary_colors` triple must be three palette indices.
+
+    An index past the end of the vanilla `flag_color` list resolves to nothing,
+    so the country silently falls back to a random revolutionary flag. That is
+    the same silent no-op as a misspelled culture or a wrong area name, and it
+    is easy to hit: the key reads like an RGB triple, so the natural thing to
+    type is `{ 40 40 120 }`, which is not three inks but three out-of-range
+    indices. Vanilla keeps all 798 of its own triples inside the palette, so
+    any mod value above the last index is a bug rather than a style choice.
+    """
+    palette = flag_palette(game)
+    if not palette:
+        rep.warn("vanilla flag palette readable",
+                 "00_custom_country_colors.txt not found or empty")
+        return
+    top = len(palette) - 1
+    bad: list[str] = []
+    seen = 0
+    for f in sorted((mod / "common" / "countries").glob("*.txt")):
+        if f.name.startswith("zzz_"):
+            continue
+        text = read_text(f)
+        r = (parse_brace_color(text, "revolutionary_colors")
+             or parse_brace_color(text, "revolutionary_color"))
+        if r is None:
+            continue
+        seen += 1
+        if any(v > top for v in r):
+            bad.append(f"{f.stem}: {{{r[0]} {r[1]} {r[2]}}} (max {top})")
+    rep.check(not bad, "revolutionary colours are palette indices",
+              ", ".join(bad) or
+              f"all {seen} triples index the {len(palette)}-ink flag_color palette (0..{top})")
+
+
 def audit_colors(mod: Path, game: Path, tags: dict[str, str]) -> list[tuple[str, str, str]]:
-    """Return (level, label, detail) rows for color-sharing conflicts.
+    """Return (level, label, detail) rows for primary-colour conflicts.
+
+    Only the primary `color` is audited here, because that is the only value
+    that is an actual RGB triplet. `revolutionary_colors` is a triple of
+    palette INDICES (see `check_revolutionary_colors`), so comparing it against
+    an RGB `color` compares two unrelated domains, and holding it to the
+    mod-wide uniqueness rule below is wrong on its face: the base game reuses
+    index triples across many tags. Those values are validated as indices by
+    their own check and deliberately take no part in these comparisons.
 
     Rules (see MOD_DESIGN.md / verifier colors section):
-      * A mod tag's primary `color` must not equal any other mod tag's
-        primary or revolutionary color (all 2N values unique across the mod).
+      * A mod tag's primary `color` must not equal any other mod tag's `color`
+        (all N primaries unique across the mod).
       * A mod tag's `color` must not equal any base-game tag's `color`.
-      * A mod tag's `color` must not equal any base-game tag's
-        `revolutionary_colors` (revolutionary colors are visible on the map
-        while that base country is revolutionary).
-      * A mod tag's `revolutionary_colors` must not equal any base-game
-        tag's `color`. Base revolutionary colors are excluded from this
-        comparison: the base game itself shares them across many tags.
     """
     mod_map = country_colors(mod)
     game_map = country_colors(game)
     base_prim: dict[tuple[int, int, int], list[str]] = {}
-    base_rev: dict[tuple[int, int, int], list[str]] = {}
-    for stem, (c, r) in game_map.items():
+    for stem, (c, _r) in game_map.items():
         if c:
             base_prim.setdefault(c, []).append(stem)
-        if r:
-            base_rev.setdefault(r, []).append(stem)
 
-    mod_entries: list[tuple[tuple[int, int, int], str, str]] = []
+    mod_prim: list[tuple[tuple[int, int, int], str]] = []
     for tag in tags:
-        c, r = mod_map.get(Path(tags[tag]).name, (None, None))
+        # .stem, not .name: country_colors() keys its results by file stem
+        # ("CatholicGranada"), while the tag registry stores a path
+        # ("countries/CatholicGranada.txt"). Using .name here looked up
+        # "CatholicGranada.txt", matched nothing on any of the 74 tags, and
+        # left the primary list permanently empty - so this whole function had
+        # been reporting "no color shared" without ever comparing a colour.
+        c, _r = mod_map.get(Path(tags[tag]).stem, (None, None))
         if c:
-            mod_entries.append((c, tag, "color"))
-        if r:
-            mod_entries.append((r, tag, "revolutionary color"))
+            mod_prim.append((c, tag))
 
     rows: list[tuple[str, str, str]] = []
-    by_value: dict[tuple[int, int, int], list[tuple[str, str]]] = {}
-    for v, t, k in mod_entries:
-        by_value.setdefault(v, []).append((t, k))
+    by_value: dict[tuple[int, int, int], list[str]] = {}
+    for v, t in mod_prim:
+        by_value.setdefault(v, []).append(t)
     for v, lst in by_value.items():
         if len(lst) > 1:
             rows.append((
                 "FAIL", "color shared between mod tags",
-                f"{v} -> " + ", ".join(f"{t} {k}" for t, k in lst),
+                f"{v} -> " + ", ".join(lst),
             ))
-    for v, t, k in mod_entries:
+    for v, t in mod_prim:
         if v in base_prim:
             rows.append((
                 "FAIL", "color collides with a base-game tag",
-                f"{t} {k} = {v} == base {base_prim[v][0]}",
-            ))
-        elif k == "color" and v in base_rev:
-            rows.append((
-                "FAIL", "color matches a base revolutionary color",
-                f"{t} = {v} == base {base_rev[v][0]} (rev)",
+                f"{t} = {v} == base {base_prim[v][0]}",
             ))
     return rows
 
@@ -1074,7 +1407,11 @@ def verify_tag(tag: str, rep: Report, ctx: dict) -> dict:
         set(prov_dir.glob(f"{cap_id} - *.txt")) | set(prov_dir.glob(f"{cap_id}-*.txt"))
     )
     if len(prov_files) != 1:
-        rep.fail("province file in mod", f"{cap_id}: found {len(prov_files)}")
+        rep.exempt_or_fail(
+            "province file in mod",
+            KNOWN_EXCEPTIONS.get(tag, {}).get("province_file"),
+            f"{cap_id}: found {len(prov_files)}",
+        )
         return rec
     prov = province_header(prov_files[0])
     rec["province_file"] = prov_files[0].name
@@ -1204,9 +1541,7 @@ def verify_tag(tag: str, rep: Report, ctx: dict) -> dict:
         rec["ambition"] = n_bonus
         rec["idea_count"] = len(idea_names)
         rec["idea_names"] = json.dumps(idea_names)
-        rep.check(n_start == 2, "traditions count", str(n_start))
-        rep.check(n_bonus == 1, "ambition count", str(n_bonus))
-        rep.check(len(idea_names) == 7, "idea count", f"{len(idea_names)}: {', '.join(idea_names)}")
+        check_idea_shape(rep, tag, subs, idea_names, ctx.get("idea_norms") or {})
         # every modifier the block applies must be one the game recognises and
         # must carry a value of the kind vanilla uses, or the game drops it
         check_idea_modifiers(rep, tag, subs, idea_names,
@@ -1278,6 +1613,10 @@ def verify_main(args: argparse.Namespace) -> int:
     _mod_profile, _non_country = country_modifier_profile(game)
     print(f"Country modifier profile: {len(_mod_profile)} legal names mined from "
           f"{len(COUNTRY_MODIFIER_FOLDERS)} vanilla folders")
+    _norms = idea_inventory.summarise(idea_inventory.parse_groups(game))
+    print(f"Vanilla idea inventory: {_norms['country_count']} country idea sets -> "
+          f"norm {_norms['modal_start']} traditions, {_norms['modal_bonus']} ambition, "
+          f"{_norms['modal_idea_count']} ideas, 1-{_norms['idea_weight_cap']} modifiers per idea")
     ctx = {
         "mod": mod,
         "game": game,
@@ -1287,6 +1626,7 @@ def verify_main(args: argparse.Namespace) -> int:
         "vanilla_keys": vanilla_idea_keys(game),
         "country_modifier_profile": _mod_profile,
         "non_country_modifier_scopes": _non_country,
+        "idea_norms": _norms,
         "seen_idea_keys": seen_idea_keys,
         "conn": conn,
     }
@@ -1353,11 +1693,31 @@ def verify_main(args: argparse.Namespace) -> int:
     if not loc_conflicts and not loc_dupes:
         rep.ok("no duplicate localisation keys")
 
+    print("\n== Cultures ==")
+    check_culture_references(rep, mod, game, tags, records)
+
+    print("\n== Areas ==")
+    check_area_references(rep, mod, game)
+
     print("\n== Colors ==")
+    check_revolutionary_colors(rep, mod, game)
     colrows = audit_colors(mod, game, tags)
     if colrows:
         for level, label, detail in colrows:
-            (rep.fail if level == "FAIL" else rep.warn)(label, detail)
+            # A deliberate collision is exemptable per tag via
+            # KNOWN_EXCEPTIONS[tag]["color"]. This section used to fail
+            # unconditionally, which meant the only way to share a colour with
+            # the base game was to not need one. Tags are pulled out of the
+            # detail rather than assumed to be the first word, because a
+            # mod-to-mod row starts with the colour value and a mod-to-base
+            # row starts with the tag.
+            mentioned = [t for t in tags if re.search(rf"\b{t}\b", detail)]
+            exc = next((KNOWN_EXCEPTIONS[t]["color"] for t in mentioned
+                        if KNOWN_EXCEPTIONS.get(t, {}).get("color")), None)
+            if exc:
+                rep.log("INFO", label, f"{', '.join(mentioned)} exempt ({exc})")
+            else:
+                (rep.fail if level == "FAIL" else rep.warn)(label, detail)
     else:
         rep.ok("no color shared between mod tags or with base-game tags")
 

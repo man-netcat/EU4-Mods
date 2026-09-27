@@ -1,0 +1,33 @@
+#Country Name: Catholic Granada
+
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+primary_culture = castillian	# the ruling caste; the andalucian (moriscos) population is
+							# accepted by the decision, not by a culture of our own
+religion = catholic
+technology_group = western
+capital = 223	# Granada
+fixed_capital = 223	# The Alhambra remains the seat of the crown
+historical_friend = CAS
+historical_friend = SPA
+
+#releasable
+
+# A junior crown of Granada, released by whichever Iberian power holds the whole
+# of the old Nasrid kingdom: 222 (Almeria), 223 (Granada), 226 (Gibraltar) and
+# 4546 (Malaga). Portugal, Aragon, Castile or Spain may all release it, and the
+# crown carries the Catholic faith for its senior partner, so a Catholic
+# Andalusia can be played out of any of them. The crown is not independent in
+# 1444 and holds no core: decisions/FormCatholicGranada.txt grants the cores,
+# releases it and declares the personal union.
+
+1444.1.1 = {
+	monarch = {
+		name = "Enrique III"
+		dynasty = "de Trastámara"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}

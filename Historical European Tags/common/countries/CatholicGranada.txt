@@ -1,0 +1,70 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+# Deliberately the same sage as vanilla Granada, which the verifier's colour
+# audit flags as a base-game collision and this file exempts on purpose.
+#
+# It is never actually seen, and the exemption is safe because of when the
+# colour is used. CGR is dormant in 1444: the tag holds no land, so the colour
+# below is not on the map at all until decisions/FormCatholicGranada.txt
+# releases it - and that decision recolours the new crown in the same effect,
+# copying the senior's colour the way an eyalet does. So the base value is a
+# fallback for a country that does not yet exist, and the moment CGR does
+# exist it is wearing its overlord's colours.
+color = { 210 220 175 }
+
+revolutionary_colors = { 0 8 3 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	diplomatic_ideas
+	administrative_ideas
+	religious_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Fernando #0" = 20
+	"Alfonso #0" = 18
+	"Juan #0" = 15
+	"Enrique #0" = 12
+	"Diego #0" = 10
+	"Alfonso #0" = 8
+	"Pedro #0" = 6
+	"Rodrigo #0" = 4
+	"Manuel #0" = 3
+	"Fernando #0" = 2
+}
+
+leader_names = {
+	"Granada"
+	"Malaga"
+	"Almeria"
+	"Alhambra"
+	"Loja"
+	"Antequera"
+	"Archidona"
+	"Velez de la Gomera"
+	"Guadix"
+	"Baza"
+}

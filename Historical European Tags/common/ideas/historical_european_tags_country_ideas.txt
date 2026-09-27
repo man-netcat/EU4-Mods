@@ -225,3 +225,90 @@ KAK_ideas = {
     manpower_recovery_speed = 0.15
   }
 }
+# Catholic Granada: a junior crown ruling the Reconquista's aftermath. The
+# Alhambra is taken but its people are not, so the crown buys their loyalty with
+# tolerance and cheap assimilation, and leans on the Nasrid court's trade while
+# the Alpujarras are resettled and the Berber frontier garrisoned.
+# The two traditions (start) are what EVERY Granadan ruler inherits: tolerance
+# of the crown's own faith (tolerance_own) and cheap assimilation
+# (culture_conversion_cost). Those stay in `start` and are deliberately NOT
+# repeated as ideas.
+# The seven ideas are then seven distinct pieces of the aftermath, one number
+# per concept, none of them restating a tradition:
+#   1 capitulations      - the 1492 terms: the Moors' faith guaranteed
+#   2 baptism            - the see's active conversion of the survivors
+#   3 cisneros exchange  - accept the Andalusian culture, draw its levies
+#   4 conversos          - the Moriscos' silk, sugar, service and devota
+#   5 royal audiencia    - Castilian law and the tax it yields
+#   6 alpujarras         - settle, develop and garrison the frontier
+#   7 court of alhambra  - the Nasrid artisans and the trade they sustain
+CGR_ideas = {
+  start = {
+    tolerance_own = 2
+    culture_conversion_cost = -0.25
+  }
+
+  bonus = {
+    global_trade_power = 0.10
+  }
+
+  trigger = {
+    tag = CGR
+  }
+  free = yes
+
+  cgr_capitulations_of_granada = {
+    # The 1492 surrender terms, kept: the Moors give up the Alhambra and are
+    # guaranteed their faith and customs in return. This is the Moors'
+    # guaranteed practice, NOT the crown's tolerance of its own faith - that
+    # stays the tradition (tolerance_own in `start`) and is deliberately not
+    # an idea. Kept distinct from the evangelisation idea below: this is the
+    # passive legal guarantee, that one is the see actively converting.
+    tolerance_heathen = 1
+    global_unrest = -1
+  }
+  cgr_cheap_religious_conversion = {
+    # Cheap baptism, not cheap apostasy. enforce_religion_cost is the wrong
+    # lever for this crown: it discounts the cost of changing CGR's OWN
+    # religion, so on a state whose whole identity is being the Catholic
+    # conqueror it pays the player to walk away from Catholicism - the
+    # exact opposite of the loc. global_missionary_strength is what the
+    # text describes: it offsets the native -100% missionary penalty
+    # Catholics carry, so the mujazigo is catechised at the parish fountain
+    # rather than at the stake. Vanilla uses it 301 times over a
+    # -0.1..0.9 range, and 0.50 (halving the penalty) is a normal amount.
+    global_missionary_strength = 0.50
+  }
+  cgr_cisneros_exchange = {
+    num_accepted_cultures = 1
+    manpower_in_accepted_culture_provinces = 0.10
+  }
+  cgr_conversos_of_granada = {
+    # The Moriscos' gift is silk, sugar and service - not culture-group
+    # mechanics. promote_culture_cost (discounting the promotion of a
+    # culture GROUP) had nothing to do with the conversos and read as an
+    # idea lifted from a melting-pot country; these are the three things
+    # the text actually promises. manpower_in_true_faith_provinces is the
+    # "blood of Nasrid princes in our best servants", trade_goods_size_
+    # modifier is the silk and sugar of the Vega, and prestige_per_
+    # development_from_conversion is the stone devota raised in each newly
+    # Christian town (0.10 is vanilla's floor for that modifier; the old
+    # 0.05 was below every value vanilla ever uses).
+    manpower_in_true_faith_provinces = 0.10
+    trade_goods_size_modifier = 0.10
+    prestige_per_development_from_conversion = 0.10
+  }
+  cgr_royal_audiencia = {
+    stability_cost_modifier = -0.15
+    global_tax_modifier = 0.10
+  }
+  cgr_repopulation_of_the_alpujarras = {
+    development_cost = -0.10
+    production_efficiency = 0.10
+    garrison_size = 0.10
+  }
+  cgr_court_of_the_alhambra = {
+    global_trade_goods_size_modifier = 0.10
+    prestige = 1
+  }
+}

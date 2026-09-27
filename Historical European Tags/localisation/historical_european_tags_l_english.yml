@@ -96,3 +96,13 @@ grl_keep_of_the_norsemen:0 "Keep of the Norsemen"
 grl_knarr_sailors:0 "Knarr Sailors"
 grl_last_of_the_west:0 "Last of the West"
 grl_icy_waters:0 "Icy Waters"
+# Catholic Granada: the Alhambra kingdom as a junior Castilian crown
+  CGR:0 "Granada"
+  CGR_ADJ:0 "Granadan"
+
+  form_catholic_granada_title:0 "Found the Kingdom of Granada"
+  form_catholic_granada_desc:0 "The Kingdom of Granada passed out of history when its last king died a prisoner in the Alhambra, and the Nasrid dynasty has no country left to sit upon. We hold the old kingdom entire: Almeria, Granada, Gibraltar and Malaga, every province the Nasrids ever ruled in Iberia. We may set a junior crown of our own line upon the Alhambra, ruling the old kingdom under our sceptre and drawing its Moors, old and young, to our cause. The crown we found shall be Catholic, as the senior that grants it."
+  roots_of_the_alhambra_title:0 "The Roots of the Alhambra"
+  roots_of_the_alhambra_desc:0 "Every stone of the Alhambra was cut by Muslim hands, and the city they raised here sits upon the bones of the kingdom they ruled. What was settled in a court of Castile cannot bind a king in his own capital, and the faith of this people was never lawfully altered, only borrowed over. Let the Nasrid house sit once more upon the throne of Boabdil, take the crown back into the hands of the faithful, and receive the Castilian settlers among our own people rather than drive them into the sea."
+  embrace_iberian_identity_title:0 "Embrace the Iberian Identity"
+  embrace_iberian_identity_desc:0 "A Granada that has taken the faith of Christ while still calling itself Nasrid is a Granada in name only, and the sooner that is mended the better for all of them. Let the old crown put aside the Nasrid pretensions and receive the Andalusi into the body of the kingdom as they were before, so that the Moors of the Vega are taken in and converted rather than driven out. Granada was the first of the Muslim lands to surrender, and the first to be worth keeping."
