@@ -103,8 +103,7 @@ URG = "countries/Urgell.txt"
 ALV = "countries/Algarve.txt"
 
 # Catholic Granada: the Alhambra kingdom reborn as a junior crown, released by
-# whichever of Portugal, Aragon, Castile or Spain holds all four of the old
-# Nasrid provinces with cores. Not independent in 1444;
-# decisions/FormCatholicGranada.txt grants the cores, releases it and declares
-# the personal union.
+# whoever holds all four of the old Nasrid provinces with cores. Not
+# independent in 1444; decisions/FormCatholicGranada.txt grants the cores,
+# releases it and declares the personal union. Spain cannot form it.
 CGR = "countries/CatholicGranada.txt"

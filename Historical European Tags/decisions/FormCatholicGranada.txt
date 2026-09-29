@@ -17,8 +17,7 @@ country_decisions = {
 			NOT = {
 				exists = CGR
 			}
-			# Spain excluded: CGR is Castile's client, and Spain is a great
-			# power that has no business releasing a 4-province junior crown
+			# Spain excluded: CGR is Castile's client, not a Spanish release
 			NOT = { tag = SPA }
 			NOT = { government = republic }
 		}
