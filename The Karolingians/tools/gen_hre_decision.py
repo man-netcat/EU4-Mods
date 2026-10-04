@@ -11,8 +11,12 @@ Follows the same shape as vanilla's own nation-forming decisions
 change_tag is a real tag switch, exactly how vanilla forms GER or ROM, so this
 genuinely becomes the HLR rather than just renaming the country.
 """
-import json, os, re
+import json, os, re, sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gen_provinces import build as build_allocation
+from modtags import EMPIRE_KINGDOMS
 
 HERE = Path(__file__).resolve().parent
 CACHE = HERE / "cache"
@@ -20,7 +24,13 @@ CACHE = HERE / "cache"
 MOD = str(HERE.parent)
 GAME = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
 d = json.load(open(str(CACHE / "provdata.json")))
-alloc = json.load(open(str(CACHE / "alloc.json")))
+# From gen_provinces, not cache/alloc.json. The cached copy was written by the
+# deleted partition.py and nothing refreshed it, so the decision was being built
+# from a snapshot taken before 192 Bourgogne moved to FRA: it asked a player to
+# supply Dijon as Lotharingian land, which no player can ever hold. The cache was
+# also gitignored, so a fresh clone had no alloc.json at all and this script
+# could not run. One allocation, computed once, used by everything.
+alloc = build_allocation()
 area_of = d["area_of"]
 
 # The Karolingian sphere is exactly the land the five kingdoms start with.
@@ -31,7 +41,7 @@ area_of = d["area_of"]
 # so that an outsider holding a province inside a covered area does not drag
 # that province into the requirement - thuringia_area, for instance, holds
 # Lusatia's Vogtland alongside East Francia's Thuringian core.
-FIVE = ["FRA", "LOT", "GER", "BAV", "ITA"]
+FIVE = list(EMPIRE_KINGDOMS)
 provs = sorted({int(p) for t in FIVE for p in alloc[t]})
 areas = sorted({area_of[str(p)] for p in provs})
 

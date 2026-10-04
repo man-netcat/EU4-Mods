@@ -578,7 +578,8 @@ EGY_ALL = [p for p in _owned("MAM") if p not in ARABIA_MAMLUK]
 #      17 Castilian provinces, cored CAS in every case, and disjoint from the
 #      three tags above, so this block adds rather than overlaps.
 #
-# Together that is 50 provinces: 13 + 4 + 16 + 17. Note that this drags in
+# Together that is 50 provinces: 13 + 4 + 16 + 17, minus six that belong to
+# other tags, which leaves Andalusia 45. Note that this drags in
 # Cordoba 225, which is
 # ADU's vanilla declared capital, so unlike EGY (which needed no capital change
 # because Cairo 361 was already inside EGY_ALL) Andalusia keeps vanilla's
@@ -641,15 +642,28 @@ ADU_ALL = sorted(
         + _area("extremadura_area", "toledo_area", "lower_andalucia_area",
                 "castille_area")
         + [2989]
-        # Segovia 4789 is subtracted from ADU. It is one of the four provinces
-        # of castille_area, so the area shorthand puts it in Andalusia, but it is
-        # asked for by Asturias instead - see ASU_ALL. Written as an explicit
-        # subtraction rather than by trimming the area list, because
-        # "castille_area minus Segovia" is the actual rule, and hiding the
-        # exception inside the area name would make the next reader believe the
-        # whole area is Andalusian. sorted(set(...)) because set arithmetic needs
-        # a set, not a list.
-        ) - {4789})
+        # Five provinces are subtracted because they belong to somebody else, and
+        # one because of Segovia:
+        #
+        #   197 Roussillon, 212 Girona, 213 Barcelona, 2987 Urgell -> FRA
+        #   211 Huesca (Pirineo)                                  -> NAV
+        #
+        # All five are Catalan or Aragonese, so the area shorthands above sweep
+        # them into Andalusia, but PROVINCE_OWNERS gives them to West Francia and
+        # Navarre instead. They are subtracted here rather than left to the
+        # transfer's "never take land another tag already holds" rule, because that
+        # rule made the outcome depend on statement order: ADU_ALL read as 50
+        # while the mod has always given Andalusia 45, and nothing recorded that.
+        # Naming them makes ADU_ALL itself 45.
+        #
+        #   4789 Segovia -> ASU. One of the four provinces of castille_area, so the
+        # area shorthand puts it in Andalusia, but Asturias asks for it - see
+        # ASU_ALL. Written as an explicit subtraction rather than by trimming the
+        # area list, because "castille_area minus Segovia" is the actual rule, and
+        # hiding the exception inside the area name would make the next reader
+        # believe the whole area is Andalusian. sorted(set(...)) because set
+        # arithmetic needs a set, not a list.
+        ) - {197, 211, 212, 213, 2987, 4789})
 
 # The Mamluks ARE Egypt here, so every surviving reference to the MAM tag in a
 # copied province file becomes a reference to EGY. This has to rewrite the copied
@@ -709,14 +723,16 @@ BUL_HUNGARY_BASIN = [153, 155, 156, 157, 158, 1951, 1952, 1953, 1954, 4125, 4126
 BALATON_RESERVED = [135, 1864, 4240]
 # HUN is renamed "Mogyers" (localisation/replace/countries_l_english.yml) and
 # given the pre-migration Magyar homeland of the Levedia tradition: the Podolia /
-# Dnieper LeEDIA land and the Crimean-steppe Kuban area. See the notes in
-# partition.py for why those six and not the Carpathian Basin.
+# Dnieper LEEDIA land and the Crimean-steppe Kuban area. It does NOT get the
+# Carpathian Basin, because this mod's premise is a Carolingian 867 - before the
+# Magyar migration - so the Basin is still theirs to lose, and its 1444 holdings
+# are redistributed on CK3 evidence instead (see the next comment).
 #   4540 Winnica, 1944 Cherkasy, 1943 Bratslav - ruthenian, vanilla LIT
 #   282 Yedisan, 2406 Ingil, 283 Zaporozhia    - crimean,  vanilla CRI
 # Hungary's old 1444 provinces are deliberately NOT taken here. They are
 # redistributed instead: the Basin to Bulgaria (BUL_HUNGARY_BASIN), the five
-# slovakia_area ones to Great Moravia (partition.py), and Sopron/Somogy/Fejer
-# parked unowned for Balaton (BALATON_RESERVED).
+# slovakia_area ones to Great Moravia (PROVINCE_OWNERS, 154/162/1318/1772/4236),
+# and Sopron/Somogy/Fejer parked unowned for Balaton (BALATON_RESERVED).
 MOGYERS_LEVIDIA = [282, 283, 2406, 1943, 1944, 4540]
 # Capital of the Magyar homeland tag is 283 Zaporozhia, on CK3's evidence rather
 # than taste: CK3 names its Pontic Steppe title cn_etelkoz in Hungarian - Etel/Edil
