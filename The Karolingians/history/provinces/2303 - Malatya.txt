@@ -2,7 +2,7 @@
 
 owner = ARB
 controller = ARB
-culture = turkish
+culture = greek
 religion = shiite
 capital = "Malatiya"
 trade_goods = cloth

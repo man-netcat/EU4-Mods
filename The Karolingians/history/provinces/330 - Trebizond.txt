@@ -2,7 +2,7 @@
 
 owner = BYZ
 controller = BYZ
-culture = pontic_greek
+culture = greek
 religion = orthodox
 capital = "Trapezous"
 trade_goods = naval_supplies

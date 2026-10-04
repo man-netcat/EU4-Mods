@@ -2,8 +2,8 @@
 
 owner = BYZ
 controller = BYZ
-culture = turkish
-religion = sunni
+culture = greek
+religion = orthodox
 capital = "Sinop"
 trade_goods = naval_supplies
 hre = no

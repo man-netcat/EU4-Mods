@@ -2,8 +2,8 @@
 
 owner = BYZ
 controller = BYZ
-culture = turkish
-religion = sunni
+culture = greek
+religion = orthodox
 capital = "Kastamonu"
 trade_goods = copper
 hre = no

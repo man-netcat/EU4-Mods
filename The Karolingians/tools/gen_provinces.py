@@ -693,6 +693,92 @@ def apply_renames(text):
     for old, new in TAG_RENAMES.items():
         text = re.sub(rf"\b{re.escape(old)}\b", new, text)
     return text
+
+
+# CULTURE_GONE_867 - vanilla cultures that do not exist yet at this start date,
+# mapped to what the province should be instead. Applied to every province the mod
+# writes, keyed on the vanilla culture rather than on a hardcoded province list, so
+# a province added to the map later cannot be left behind holding a culture that
+# postdates the scenario.
+#
+# turkish -> greek, 32 provinces. The Anatolian beyliks - Karaman, Germiyan,
+# Aydin, Dulkadir, Ramadan and the rest - are a late-13th-century idiom. In 867
+# this land is Byzantine and Greek-speaking, and the Oghuz Turks have not crossed
+# into Anatolia at all. Vanilla hands it to a beylik because vanilla starts in
+# 1444, where they are correct.
+#
+# pontic_greek -> greek, 4 provinces: Kaffa, Trebizond, Canik, Mantrega. This is
+# not a near miss. The culture is named for the Empire of Trebizond, founded in
+# 1204 by Alexios III and David Komnenos and destroyed by Mehmed II in 1461 - 337
+# years after this scenario. The Greek population of the Pontic coast was real in
+# 867, since Sinope, Trapezus and Kerasous were Milesian colonies, but a
+# Trapezuntine in 867 was simply a Byzantine Greek. So greek is right and "Pontic
+# Greek" is not, rather than the two being neighbours.
+#
+# There is no `pontic` culture in this game at all. The Pontic *steppe* is a
+# separate and larger question and is deliberately not touched here: its cultures
+# are crimean, astrakhani and mishary, none of them Turkish, and the power there in
+# 867 was the Khazar Khaganate. That is its own piece of work.
+CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
+
+# CONQUERED_BY_THE_ARABS - the five of those 32 that the Abbasids hold, and which
+# therefore keep Muslim religion. Adana 327, Marash 332, Malatya 2303, Ayntab 4298
+# and Divrigi 4310. Ayntab and Divrigi really had fallen to the Arabs by 867
+# (851 and 855); the other three were still Byzantine and fall in 895-979, so they
+# are this mod's deliberate early conquest rather than a 867 record. Named
+# explicitly so the rule reads as "Byzantine land, minus what the Arabs took"
+# instead of "whatever tag happens to be holding it today".
+CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310}
+
+
+# Two Muslim denominations turn up among the 33 Turkish-culture provinces, not
+# one: 26 are sunni, and Malatya 2303, Sivas 329 and Divrigi 4310 are shiite. A
+# rewrite that only matched `sunni` left Sivas as greek + shiite on Byzantine land,
+# so both are matched here. Malatya and Divrigi are Arab-held and so keep theirs
+# either way; Sivas is the one that silently went wrong.
+MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
+
+# CULTURE_COMMENT_NOTES - provinces where vanilla's own trailing comment on the
+# culture line contradicts the culture this mod assigns, so the comment is
+# qualified instead of left to read as an error. Only one province needs it.
+#
+# 318 Sugla, i.e. Smyrna: vanilla says "Should not be Greek or Orthodox in 1444.
+# Its status as a majority Greek city dates to at least after the 17th Century".
+# That is correct for 1444 - the Aydinids took Smyrna around 1330 and made it
+# Turkish and Muslim - and irrelevant here. This scenario is 867, when Smyrna was
+# Byzantine and Greek. The Saracen fleet that raided it did so in 869, two years
+# after the start date, so even that is not yet true at 1444.11.11.
+CULTURE_COMMENT_NOTES = {
+    318: "# The \"not Greek\" warning below is a 1444 note, not an 867 one. Vanilla\n"
+         "# is right about its own date: the Aydinids took Smyrna c. 1330. This\n"
+         "# scenario is 867, when it was Byzantine Greek - the Saracen raid on the\n"
+         "# city is 869, two years after the start date.",
+}
+
+
+def apply_867_culture(text, pid):
+    """Rewrite culture (and religion) for provinces whose vanilla culture is later
+    than 867. Culture is rewritten once, at the top-level province block; religion
+    is rewritten everywhere it appears, because a dated block that re-sets
+    religion would otherwise leave the province Muslim after 1444."""
+    m = re.search(r"^(\s*)culture\s*=\s*(\w+)", text, re.M)
+    if not m:
+        return text
+    culture = CULTURE_GONE_867.get(m.group(2))
+    if not culture:
+        return text
+    text = (text[:m.start()]
+            + f"{m.group(1)}culture = {culture}"
+            + text[m.end():])
+    if pid not in CONQUERED_BY_THE_ARABS:
+        text = re.sub(rf"^(\s*religion\s*=\s*)({'|'.join(MUSLIM_RELIGIONS_867)})\b",
+                      r"\1orthodox", text, flags=re.M)
+    note = CULTURE_COMMENT_NOTES.get(pid)
+    if note:
+        text = text.replace(f"culture = {culture}",
+                            f"{note}\n{m.group(1)}culture = {culture}", 1)
+    return text
+
 # The rest of the Ottomans, i.e. neither cored nor Anatolian. Ten, all Balkan:
 # Tarnovo, Silistria, Nis, Vidin, Plovdiv, Skopje, Kostendil, Tirnovo, Tolcu,
 # Ohrid. Vlore used to be here and moved to Byzantium with the rest of Albania.
@@ -991,8 +1077,9 @@ def main(argv):
         if not src:
             print(f"!! no vanilla file for province {pid}")
             continue
-        text = apply_renames(open(src, encoding="utf-8",
-                                  errors="surrogateescape").read())
+        text = apply_867_culture(
+            apply_renames(open(src, encoding="utf-8",
+                                errors="surrogateescape").read()), pid)
         tag = owner_of.get(pid)
         if pid in BALATON_RESERVED:
             new = unown(text)

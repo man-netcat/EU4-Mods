@@ -2,8 +2,8 @@
 
 owner = BYZ
 controller = BYZ
-culture = turkish
-religion = sunni
+culture = greek
+religion = orthodox
 capital = "Kirshehir"
 trade_goods = wool
 hre = no

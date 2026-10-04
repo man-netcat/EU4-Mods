@@ -26,7 +26,8 @@ TAGS = sorted(_RULERS)
 # and then HUN escape the ownership and empire-frontier checks.
 sys.path.insert(0, str(HERE))
 from gen_provinces import (BALATON_RESERVED, TAG_RENAMES,  # noqa: E402
-                          ALL_TAGS, build)
+                          ALL_TAGS, build, CULTURE_GONE_867,
+                          CONQUERED_BY_THE_ARABS, MUSLIM_RELIGIONS_867)
 from check_start import effective  # noqa: E402
 CAPS = {"FRA": 183, "LOT": 1878, "GER": 1876, "BAV": 65, "ITA": 4728, "SOR": 60}
 # The five Carolingian kingdoms are peers; Lusatia is a minor principality.
@@ -536,6 +537,41 @@ for fn in sorted(os.listdir(CDIR)):
         note(False, f"{fn} is suspiciously small "
                     f"({os.path.getsize(os.path.join(CDIR, fn))} bytes) "
                     f"- generator probably crashed mid-write")
+
+# No province the mod writes may keep a culture that postdates 867. Checked
+# against the generator's own table rather than a list of 37 province ids, so a
+# province added to the map later is caught instead of quietly staying Turkish.
+# Culture alone is not enough: Sivas 329 is vanilla shiite, not sunni, so a
+# sunni-only rewrite left it greek + Muslim on Byzantine land without failing
+# anything. Hence the religion assertion too.
+gone = set(CULTURE_GONE_867)
+stale_culture, stale_religion = [], []
+for fn in sorted(os.listdir(PDIR)):
+    if not fn.endswith(".txt"):
+        continue
+    # Vanilla is not consistent about the separator: most files are "318 - Sugla"
+    # but at least one is "1853- Kastoria", so take the leading digits rather than
+    # splitting on " - " and trusting it.
+    m = re.match(r"^(\d+)", fn)
+    if not m:
+        continue
+    pid = int(m.group(1))
+    text = open(os.path.join(PDIR, fn), encoding="utf-8",
+                errors="surrogateescape").read()
+    m = re.search(r"^\s*culture\s*=\s*(\w+)", text, re.M)
+    culture = m.group(1) if m else None
+    if culture in gone:
+        stale_culture.append(f"{pid} {fn} ({culture})")
+    if culture == "greek" and pid not in CONQUERED_BY_THE_ARABS:
+        for rel in re.findall(r"^\s*religion\s*=\s*(\w+)", text, re.M):
+            if rel in MUSLIM_RELIGIONS_867:
+                stale_religion.append(f"{pid} {fn} ({rel})")
+note(not stale_culture,
+     "no mod-written province keeps a culture that postdates 867"
+     + ("" if not stale_culture else f": {', '.join(stale_culture)}"))
+note(not stale_religion,
+     "every Greek province outside the Arab conquest is orthodox"
+     + ("" if not stale_religion else f": {', '.join(stale_religion)}"))
 
 print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 sys.exit(1 if fail else 0)

@@ -2,8 +2,12 @@
 
 owner = BYZ
 controller = BYZ
-culture = turkish #Should not be Greek or Orthodox in 1444. Its status as a majority Greek city dates to at least after the 17th Century
-religion = sunni
+# The "not Greek" warning below is a 1444 note, not an 867 one. Vanilla
+# is right about its own date: the Aydinids took Smyrna c. 1330. This
+# scenario is 867, when it was Byzantine Greek - the Saracen raid on the
+# city is 869, two years after the start date.
+culture = greek #Should not be Greek or Orthodox in 1444. Its status as a majority Greek city dates to at least after the 17th Century
+religion = orthodox
 capital = "Izmirni"
 trade_goods = cotton #Major producer and exporter of Cotton
 hre = no

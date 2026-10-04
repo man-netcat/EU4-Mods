@@ -6,6 +6,10 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 CACHE = HERE / "cache"
+# The whole cache directory is gitignored, so on a fresh clone it does not exist
+# and writing provdata.json into it raised FileNotFoundError. Created here rather
+# than by build.py so probe.py also works when run on its own.
+os.makedirs(CACHE, exist_ok=True)
 
 GAME = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
 PROV_DIR = os.path.join(GAME, "history", "provinces")

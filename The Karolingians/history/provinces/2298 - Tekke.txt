@@ -2,8 +2,8 @@
 
 owner = BYZ
 controller = BYZ
-culture = turkish
-religion = sunni
+culture = greek
+religion = orthodox
 capital = "Adalia"
 trade_goods = cotton
 hre = no

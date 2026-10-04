@@ -2,8 +2,8 @@
 
 owner = BYZ
 controller = BYZ
-culture = turkish
-religion = shiite
+culture = greek
+religion = orthodox
 capital = "Sivas"
 trade_goods = livestock
 hre = no
