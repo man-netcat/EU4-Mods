@@ -1,0 +1,25 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 150	# Sofia
+
+# Ruler taken from CK3, which starts in 867 like this scenario's flavour.
+# CK3's k_bulgaria holder at 867.1.1 is character 70382: Boris, of the Balgarsko
+# dynasty (CK3 dynasty 8636, localisation "Balgarsko"), born 825.1.1, died
+# 907.5.2, with martial 7 / diplomacy 6 / stewardship 10. CK3 has no 1444 and
+# this mod dates its rulers from 867, so the birth and death are shifted to keep
+# him alive and of age at 1444.11.11, the same convention FRA.txt uses for
+# Charles the Bald (b. 1400.8.13).
+1444.1.1 = {
+	monarch = {
+		name = "Boris"
+		dynasty = "Balgarsko"
+		birth_date = 1392.1.1
+		death_date = 1461.1.1
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}

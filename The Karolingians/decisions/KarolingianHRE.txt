@@ -1,0 +1,816 @@
+# The Karolingians - "Unite the Karlings"
+#
+# The 867 partition is split across five kingdoms and the imperial title has no
+# land at all. Once a ruler holds the old Carolingian heartlands in one hand
+# the empire can be made whole again. This mirrors vanilla's own "form Germany"
+# / "Restore Roman Empire" decisions and uses change_tag, so the country really
+# becomes HLR - displayed as the Karolingian Empire - rather than merely
+# renaming itself.
+
+country_decisions = {
+
+	kar_form_hre = {
+		major = yes
+
+		potential = {
+			NOT = { map_setup = map_setup_random }
+			NOT = { tag = HLR }
+			NOT = { has_country_flag = kar_formed_hre }
+			NOT = { exists = ROM }
+			NOT = { exists = ARH }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 40
+				}
+			}
+			# Eligibility only: any of the five Carolingian tags may try. Lusatia
+			# and every other realm fail this test, so they never see the decision.
+			OR = {
+				tag = FRA
+				tag = LOT
+				tag = GER
+				tag = BAV
+				tag = ITA
+			}
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				area = alsace_area
+				area = austria_proper_area
+				area = bourgogne_area
+				area = brabant_area
+				area = braunschweig_area
+				area = carinthia_area
+				area = catalonia_area
+				area = central_italy_area
+				area = champagne_area
+				area = corsica_sardinia_area
+				area = east_bavaria_area
+				area = emilia_romagna_area
+				area = flanders_area
+				area = franconia_area
+				area = frisia_area
+				area = guyenne_area
+				area = hesse_area
+				area = holland_area
+				area = ile_de_france_area
+				area = inner_austria_area
+				area = languedoc_area
+				area = lazio_area
+				area = liguria_area
+				area = loire_area
+				area = lombardy_area
+				area = lorraine_area
+				area = lower_bavaria_area
+				area = lower_rhineland_area
+				area = lower_saxony_area
+				area = lower_swabia_area
+				area = massif_central_area
+				area = normandy_area
+				area = north_brabant_area
+				area = north_rhine_area
+				area = north_westphalia_area
+				area = northern_saxony_area
+				area = orleans_area
+				area = palatinate_area
+				area = picardy_area
+				area = piedmont_area
+				area = po_valley_area
+				area = poitou_area
+				area = provence_area
+				area = pyrenees_area
+				area = romandie_area
+				area = savoy_dauphine_area
+				area = south_saxony_area
+				area = switzerland_area
+				area = thuringia_area
+				area = tirol_area
+				area = tuscany_area
+				area = upper_bavaria_area
+				area = upper_franconia_area
+				area = upper_rhineland_area
+				area = upper_swabia_area
+				area = venetia_area
+				area = wallonia_area
+				area = weser_area
+				area = west_burgundy_area
+				area = westphalia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			# The empire can only be made whole by the last of the five standing,
+			# once it also holds every province the five started with. Lusatia's
+			# land is deliberately absent from that list.
+			OR = {
+				AND = {
+					tag = FRA
+					NOT = { exists = LOT }
+					NOT = { exists = GER }
+					NOT = { exists = BAV }
+					NOT = { exists = ITA }
+				}
+				AND = {
+					tag = LOT
+					NOT = { exists = FRA }
+					NOT = { exists = GER }
+					NOT = { exists = BAV }
+					NOT = { exists = ITA }
+				}
+				AND = {
+					tag = GER
+					NOT = { exists = FRA }
+					NOT = { exists = LOT }
+					NOT = { exists = BAV }
+					NOT = { exists = ITA }
+				}
+				AND = {
+					tag = BAV
+					NOT = { exists = FRA }
+					NOT = { exists = LOT }
+					NOT = { exists = GER }
+					NOT = { exists = ITA }
+				}
+				AND = {
+					tag = ITA
+					NOT = { exists = FRA }
+					NOT = { exists = LOT }
+					NOT = { exists = GER }
+					NOT = { exists = BAV }
+				}
+			}
+				NOT = { 44 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 52 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 53 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 54 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 55 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 56 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 57 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 58 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 62 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 63 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 64 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 65 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 66 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 67 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 68 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 69 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 70 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 71 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 72 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 73 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 74 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 75 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 76 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 77 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 78 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 79 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 80 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 81 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 82 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 83 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 84 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 85 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 86 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 87 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 88 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 89 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 90 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 91 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 92 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 93 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 94 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 95 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 96 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 97 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 98 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 99 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 100 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 101 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 102 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 103 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 104 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 105 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 106 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 107 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 108 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 109 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 110 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 111 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 113 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 114 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 115 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 116 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 117 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 119 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 128 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 129 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 130 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 132 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 133 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 134 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 165 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 166 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 167 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 168 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 173 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 174 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 175 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 176 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 177 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 178 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 179 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 180 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 181 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 182 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 183 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 184 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 185 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 186 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 187 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 188 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 189 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 190 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 191 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 192 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 193 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 194 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 195 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 196 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 197 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 198 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 199 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 200 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 201 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 202 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 203 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 204 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 205 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 212 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 213 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1247 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1742 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1743 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1744 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1757 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1758 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1760 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1761 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1762 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1768 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1769 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1770 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1774 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1857 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1862 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1863 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1865 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1866 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1867 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1868 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1869 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1870 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1871 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1872 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1873 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1874 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1875 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1876 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1877 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1878 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1879 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1880 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1931 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2753 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2955 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2956 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2957 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2964 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2971 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2972 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2973 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2974 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2975 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2976 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2977 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2978 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2979 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2980 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2981 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2987 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2991 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 2992 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4111 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4112 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4381 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4382 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4383 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4385 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4386 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4387 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4388 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4389 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4390 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4391 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4392 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4694 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4695 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4696 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4697 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4707 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4708 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4709 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4710 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4711 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4712 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4713 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4714 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4715 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4716 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4717 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4718 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4719 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4720 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4721 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4722 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4727 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4728 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4729 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4730 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4731 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4732 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4738 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4739 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4740 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4741 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4742 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4743 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4751 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4758 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4759 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4760 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4761 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4762 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4764 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4765 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4766 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4767 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4768 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4769 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4770 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4771 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4772 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4773 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4774 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4775 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4776 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4777 = { country_or_non_sovereign_subject_holds = ROOT } }
+		}
+
+		effect = {
+			change_tag = HLR
+			on_change_tag_effect = yes
+			change_government_to_monarchy = yes
+			set_country_flag = kar_formed_hre
+			hidden_effect = {
+				set_government_rank = 3
+			}
+			if = {
+				limit = { has_dlc = "Domination" }
+				add_government_reform = holy_imperial_monarchy_reform
+			}
+			add_prestige = 25
+			add_legitimacy = 10
+
+			# claim the rest of the former empire for good
+			alsace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			austria_proper_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bourgogne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			braunschweig_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			catalonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_italy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			champagne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_bavaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			emilia_romagna_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			flanders_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			franconia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			frisia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guyenne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ile_de_france_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			inner_austria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			languedoc_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lazio_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			liguria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			loire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lorraine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_bavaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_rhineland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_swabia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			massif_central_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			normandy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_rhine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_westphalia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			orleans_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			palatinate_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			picardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			piedmont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			poitou_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			romandie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			switzerland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thuringia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tirol_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_bavaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_franconia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_rhineland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_swabia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			venetia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wallonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			weser_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_burgundy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			westphalia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

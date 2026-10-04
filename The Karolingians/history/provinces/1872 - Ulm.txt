@@ -1,0 +1,33 @@
+# 1872 - Ulm
+owner = GER
+controller = GER
+add_core = ULM
+add_core = GER
+culture = swabian
+religion = catholic
+base_tax = 5 
+base_production = 6
+trade_goods = cloth	#fustians
+base_manpower = 4
+capital = "Ulm"
+is_city = yes
+hre = no
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+extra_cost = 8
+center_of_trade = 1
+
+1803.1.1 = {
+	add_core = WUR
+	owner = WUR
+	controller = WUR
+}
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
+
+1444.11.11 = {	owner = GER
+	controller = GER
+	add_core = GER
+	hre = no
+} # The Karolingians: hold the 867 partition at the 1444 start

@@ -1,0 +1,40 @@
+# Egypt. Vanilla EGY is a formable nation: it owns nothing at 1444, has no dated
+# blocks and therefore no ruler, because the Mamluks (the vanilla tag MAM) hold
+# Egypt's 26 provinces. This scenario folds the Mamluks into Egypt - every
+# province vanilla MAM owns at 1444.11.11 is transferred to EGY by EGY_ALL in
+# gen_provinces.py, and gen_provinces.TAG_RENAMES rewrites the remaining MAM
+# references in the province files - so EGY becomes a real country and needs a
+# history file of its own. MAM is left with no land and no name.
+#
+# Vanilla's seven lines are kept unchanged; government_rank is deliberately left
+# at the default of 1, because 28 provinces is a kingdom and the mod only
+# promotes a realm to a higher tier when asked (ARB is the one exception, and it
+# is rank 3).
+government = monarchy
+add_government_reform = iqta
+primary_culture = al_misr_arabic
+religion = sunni
+technology_group = muslim
+capital = 361 # Cairo
+
+# Ruler taken from CK3, which starts in 867 like this scenario's flavour. CK3's
+# k_egypt holder at 867.1.1 is character 163115: Ahmad, of the Tulunid dynasty
+# (CK3 dynasty 820, localisation "Tulunid"), egyptian and shafii, son of
+# extra_tulunids_5, born 835.9.20 and dead 884.3.1, with diplomacy 6, martial 7,
+# stewardship 8, intrigue 5 and learning 4. This is the same relationship the mod
+# already set up by the Tulunid dynasty below: Egypt under a Tulunid sultan Ahmad.
+# CK3 scripts his birth and death rather than dating them, so as with Boris,
+# Amphilochios and al-Mu'tazz the dates here are shifted to sit around the
+# 1444.11.11 start, keeping his 9.20 birthday. adm/dip/mil follow CK3's
+# stewardship 8, diplomacy 6 and martial 7.
+1444.1.1 = {
+	monarch = {
+		name = "Ahmad"
+		dynasty = "Tulunid"
+		birth_date = 1392.9.20
+		death_date = 1461.1.1
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}

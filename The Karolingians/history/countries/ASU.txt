@@ -1,0 +1,76 @@
+# ASU - Asturias.
+#
+# Whole-file override. Vanilla ASU is six lines with no dated history at all, so
+# it has no ruler to inherit and nothing to correct. This mod hands it the three
+# north-western areas (Galicia, Asturias, Leon), so it needs a 867 court.
+#
+# The six vanilla lines are kept verbatim: feudalism, castillian, catholic,
+# western, and `capital = 207` Asturias. 207 is inside asturias_area and therefore
+# arrives with the transfer, so the declared capital is genuinely owned at the
+# start date and no capital override is needed.
+#
+# The name and stats are CK3 character 70019, who at 867.1.1 holds k_asturias,
+# c_asturias_de_oviedo and c_leon - Asturias and Leon together, which is exactly
+# what these three areas are. CK3 writes his name "Alfonsu" (Alfonso III
+# Ordóñez "el Magno", King of Asturias 866-910, Duke of Galicia, mart 7 / dip 7 /
+# int 5 / ste 6), and that Asturian-Leonese spelling is kept rather than
+# anglicised to Alfonso, for the same reason BYZ keeps Basileios.
+#
+# The dynasty string is "Cantabria", taken from his `dynasty_house =
+# house_cantabria`. He carries no `dynasty` line of his own, so this is read off
+# the house field on his person rather than invented, and that house's
+# localisation key dynn_Cantabria is literally "Cantabria".
+#
+# Two other strings were available and were deliberately not used. The house
+# points at `dynasty = erwigiana` (dynn_Erwigiana = "Erwigiana"), the deeper
+# Asturian line of Ervigio, but the field that names Alfonsu's own membership is
+# the house, and "Cantabria" is the name that house carries. His CK3 culture,
+# "asturleonese", is also a real string but it is a culture and not a dynasty.
+#
+# CK3's own sons carry no dynasty or house line at all, so Garci's string is
+# inherited from his father rather than read from his own entry.
+#
+# The heir is Garci, CK3 character 70020, eldest son of Alfonsu. Only the name is
+# used from CK3, since the sons are placeholder entries with no stats.
+1444.1.1 = {
+	monarch = {
+		name = "Alfonsu"
+		monarch_name = "Alfonsu II"
+		dynasty = "Cantabria"
+		birth_date = 1392.1.1
+		death_date = 1458.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Garci"
+		monarch_name = "Garci"
+		dynasty = "Cantabria"
+		birth_date = 1412.1.1
+		death_date = 1471.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+# A general is given because the three areas arrive with no court at all, and a
+# realm of 12 provinces still needs a field army against Castile's rump to the
+# south and Aragon to the east.
+1444.11.10 = {
+	leader = {
+		name = "Pelayo"
+		dynasty = "Cantabria"
+		type = general
+		fire = 3
+		shock = 2
+		manuever = 2
+		siege = 1
+		death_date = 1466.1.1
+	}
+}

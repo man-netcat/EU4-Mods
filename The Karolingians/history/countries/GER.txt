@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = hessian
+religion = catholic
+capital = 1876
+
+# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# k_east_francia at 867.1.1 is character 90107, "Ludwig", of dynasty 25061
+# "Karling". CK3 gives him no epithet, so the earlier hand-written "Louis the
+# German" is gone; that is what verbatim means here. Do not hand-edit name or
+# dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+1444.1.1 = {
+	monarch = {
+		name = "Ludwig"
+		dynasty = "Karling"
+		birth_date = 1394.8.27
+		death_date = 1453.9.5
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	heir = {
+		name = "Charles"
+		monarch_name = "Charles the Fat"
+		dynasty = "Karling"
+		birth_date = 1416.1.1
+		death_date = 1465.12.13
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}

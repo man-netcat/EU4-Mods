@@ -1,0 +1,13 @@
+# Derived data, not source.
+#
+# tools/cache/ holds datasets scraped out of the local vanilla install by
+# probe.py (provdata.json is a 1.6 MB dump of every vanilla province). They are
+# reproducible from the game with `python3 tools/probe.py`, they are tied to
+# whichever Steam library the machine happens to have, and committing them buys
+# nothing but merge conflicts. The allocation itself is deliberately NOT cached
+# any more - see tools/allocation.py - it is computed from these inputs on demand.
+tools/cache/
+
+# Python bytecode from the tool scripts.
+__pycache__/
+*.pyc

@@ -1,0 +1,53 @@
+﻿l_english:
+ # Overrides of VANILLA keys, so they live in localisation/replace/ - the folder
+ # the engine reserves for replacing existing localisation. Overriding a vanilla
+ # key from the ordinary localisation/ folder is unreliable, and that is what made
+ # FRA read "France" for so long while GER, from the same file, renamed fine.
+ # Filenames mirror the vanilla file being replaced, per the wiki.
+ #
+ # Version 1 on every key: vanilla defines all of these at version 0, and a higher
+ # version wins outright rather than depending on load order.
+ #
+ # <TAG> is the only name key the base game uses. There is no long-name key:
+ # "_DETH" and "_long" appear zero times across all 979 vanilla country
+ # definitions and every localisation file, while "_ADJ" appears thousands of
+ # times. Earlier revisions carried <TAG>_DETH lines ("the Kingdom of Italy" and
+ # friends); they were silently inert and have been dropped rather than left
+ # behind implying a long form the game never displays.
+ FRA:1 "West Francia"
+ # Byzantium keeps its tag but takes its empire back: the cores in
+ # gen_provinces.BYZ_CORES plus Anatolia make "Byzantium" too modest a
+ # name for what it now holds.
+ FRA_ADJ:1 "West Frankish"
+ BYZ:1 "Byzantine Empire"
+ GER:1 "East Francia"
+ GER_ADJ:1 "East Frankish"
+ BAV:1 "Bavaria"
+ BAV_ADJ:1 "Bavarian"
+# HUN keeps its base-game tag but is no longer "Hungary": it is renamed for the
+ # Magyars' pre-migration Levedia homeland (gen_provinces.MOGYERS_LEVIDIA), and
+ # its Carpathian Basin provinces are reserved for the Balaton tag. Name and
+ # adjective differ: the country is "Magyars", the demonym "Magyar". No umlaut -
+ # Hungarian does not inflect the word.
+ HUN:1 "Magyars"
+ HUN_ADJ:1 "Magyar"
+ # The Mamluks are Egypt in this scenario: every province vanilla MAM holds at
+ # 1444 is transferred to EGY (gen_provinces.EGY_ALL), MAM ends up with no land,
+ # and gen_provinces.TAG_RENAMES rewrites the rest of the MAM references away. So
+ # there is deliberately NO MAM / MAM_ADJ override here any more - naming a tag
+ # with no land would be naming nothing, and Egypt is already what EGY is called.
+ # Vanilla's own EGY:0 "Egypt" / EGY_ADJ:0 "Egyptian" are correct as they stand.
+ # The Tulunid name has not been lost, it has moved to where it belongs: it is
+ # EGY's ruling dynasty, `dynasty = "Tulunid"`, in history/countries/EGY.txt.
+ # ARB, which holds the Hejaz and Syria, becomes the Abbasids, who did hold the
+ # holy cities. Vanilla declares only <TAG> and <TAG>_ADJ for it, at version 0.
+ ARB:1 "Abbasids"
+ ARB_ADJ:1 "Abbasid"
+ ITA:1 "Italy"
+ ITA_ADJ:1 "Italian"
+ # Lusatia reuses the base game's own tag (SOR:0 "Lusatia" / SOR_ADJ:0
+ # "Lusatian" are already in vanilla), so it needs no name here and is
+ # deliberately absent rather than forgotten. It is not a Carolingian realm: it
+ # lies outside the empire, can neither restore it nor has its land counted
+ # toward restoring it. Nothing must ever key off a tag named LUS - the game has
+ # never heard of one, and provinces owned by it render as uncolonised land.

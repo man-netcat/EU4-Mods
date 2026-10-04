@@ -1,0 +1,40 @@
+# The Abbasid Caliphate. Vanilla ARB is a formable tag with no land and no rank,
+# so this file exists only to promote it: government_rank = 3 makes it an Empire.
+# Rank 3 is the top tier, the one vanilla gives Byzantium, the HRE, Ethiopia,
+# Russia, Ming, Qing and Austria-Hungary. Rank 2 is the usual empire tier (Spain,
+# Japan, and Great Moravia and Lotharingia in this mod); 3 is the caliphate tier,
+# which is the point of a caliphate.
+#
+# Kept byte-for-byte identical to vanilla "ARB - Arabia.txt" apart from the rank
+# line, and deliberately no BOM, matching the other country files in this mod.
+government = monarchy
+add_government_reform = iqta
+government_rank = 3
+primary_culture = bedouin_arabic
+religion = sunni
+technology_group = muslim
+capital = 385 # Mecca
+
+# Ruler taken from CK3. CK3's e_arabia and d_baghdad holder at 867.1.1 is
+# character 34014: al-Mu'tazz, Abbasid caliph of the Abbasid dynasty (CK3
+# dynasty_house house_abbasid), hanafi and levantine, a sayyid and a poet,
+# capital Samarra, flagged as holding it through the recent nation-fracturing
+# faction war there. CK3 scripts his birth and death rather than dating them;
+# he was historically born c. 838 and killed on 5 December 870, and strictly
+# the 867 caliph was al-Muntasir - but CK3 models al-Mu'tazz as the Abbasid of
+# this date and this mod follows CK3. He is also the right Abbasid for the map:
+# CK3 gives him a pressed claim on k_egypt against the Tulunids, which is
+# exactly the Abbasid/Tulunid relationship this scenario inherits from the
+# Tulunid Mamluks ruling Egypt. adm/dip/mil follow CK3's education_diplomacy_1
+# and lifestyle_poet.
+1444.1.1 = {
+	monarch = {
+		name = "al-Mu'tazz"
+		dynasty = "Abbasid"
+		birth_date = 1380.1.1
+		death_date = 1466.1.1
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+}

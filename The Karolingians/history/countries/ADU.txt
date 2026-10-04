@@ -1,0 +1,180 @@
+# ADU - Andalusia.
+#
+# Whole-file override, same shape as the other hand-written country files in
+# this mod. Vanilla's ADU is only 5 lines because it exists solely as a
+# formable nation that the Granada mission set creates with `change_tag = ADU`.
+# This mod gives ADU 50 provinces at the start instead, so it needs a real
+# country file: a ruler, a fix for the government reforms, and the ADU core
+# granted by gen_provinces.py.
+#
+# Vanilla's five lines are kept verbatim first, so the base government, primary
+# culture, religion, technology group and capital are all inherited unchanged.
+government = monarchy
+add_government_reform = iqta
+primary_culture = andalucian
+religion = sunni
+technology_group = muslim
+capital = 225	# Cordoba
+
+# Vanilla gives ADU no government rank and no religious school. Rank 1 is what
+# the empty formable tag inherits by default, which is too small a state for a
+# realm of 50 provinces holding southern and eastern Iberia at once, so it is
+# raised to 2 (duchy). government_rank = 2 is the same rank the vanilla
+# andalusian_nation decision forces on whoever forms the tag, so playing from
+# the decision and playing from this start state end up identical.
+#
+# Vanilla has no religious_school for ADU at all, which leaves a Muslim
+# government on Shia defaults for anyone who forms it outside a Granada game.
+# maliki_school is what vanilla's Granada uses and is the correct school for an
+# Andalusian emirate, so it is set explicitly here.
+government_rank = 2
+religious_school = maliki_school
+
+# al_andalusia_government is the al-Andalus specific government reform the
+# vanilla decision adds to whoever forms ADU. Its own potential block allows
+# `tag = ADU`, so it is unlocked for this tag, but it still has to be granted.
+# Without it ADU plays as a generic iqta despotism and never gets the reforms
+# that distinguish Andalusia from every other Muslim realm on the map.
+add_government_reform = al_andalusia_government
+
+# The al-Andalus government reform assumes the Nasrid estate structure that
+# vanilla's Granada uses, and Granada's holdings are part of what ADU now owns,
+# so those shares are copied from vanilla's GRA file rather than invented. The
+# church is the outlier: Nasrid Granada suppressed the church, and an Andalusian
+# realm of 50 provinces has not, so the church share is restored to a positive
+# value rather than left at -15, which would be a further 15 points off the
+# nobility and bishops both.
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 8
+}
+change_estate_land_share = {
+	estate = estate_church
+	share = -15
+}
+change_estate_land_share = {
+	estate = estate_burghers
+	share = 7
+}
+change_estate_land_share = {
+	estate = estate_nomads
+	share = 0
+}
+
+# Accepted cultures, taken from the tags being absorbed. Vanilla Granada accepts
+# berber; Portugal has no accepted-culture line of its own.
+#
+# Portuguese and Aragonese are deliberately not accepted: the realms being
+# absorbed did not accept their own subjects' neighbours either, and blanket
+# acceptance would let a 50-province realm assimilate Iberia at the stroke of a
+# start date. berber is kept because it is the one concession vanilla Granada
+# already made and the one Al-Andalus historically made to the Berber tribes.
+add_accepted_culture = berber
+
+# 867 ruler. The tags being absorbed are Portugal, Granada and the Iberian part
+# of Aragon, so the ruler has to be the one whose 867 seat is the capital of
+# what is actually being handed over. CK3's k_andalusia is held by the Emirate
+# of Cordoba, but its 867 holder (character 73683, Muhammad I ibn Abd
+# al-Rahman, Umayyad dynasty 597) is the emir of the western capital, not the
+# Nasrids. The Nasrid line that ruled Granada in EU4 in 1444 descends from his
+# rival Sa'd ibn Uthman; at 867 the seat of Granada is d_granada, held by
+# character 73943, Nayih ibn Suleyman (848-880), Banu Nayih dynasty 12302.
+#
+# Nayih is used rather than Muhammad because the capital and the dynasty that
+# held Granada in this scenario are Granada's, and a mod that hands Granada,
+# Cordoba, Toledo and Valencia to a single emirate should not paper over that
+# with the Umayyad emir of a different city. His stats below are a 867 reading
+# of him: Nayih is a sheik with education_stewardship_2, so stewardship-led
+# with modest martial standing.
+1444.1.1 = {
+	monarch = {
+		name = "Nayih"
+		dynasty = "Nayihid"
+		birth_date = 1392.4.18
+		death_date = 1471.1.1
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+# The transfer is 50 provinces of mostly Iberian land under one Muslim ruler, so
+# the court needs a standing heir and a broad task force rather than an empty
+# starting slate. Siblings and cousins are used so no claim is fabricated out of
+# nothing, and the numbers stay inside what vanilla Granada's 1444 court
+# actually shows (Muhammad XI at adm 1 / dip 1 / mil 0 as ruler, Yusuf V at
+# adm 1 / dip 0 / mil 0 as heir) while giving the realm the admin weight a
+# 50-province state needs.
+1444.1.1 = {
+	heir = {
+		name = "Suleyman"
+		monarch_name = "Suleyman"
+		dynasty = "Nayihid"
+		birth_date = 1408.1.1
+		death_date = 1459.1.1
+		claim = 80
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Musa"
+		monarch_name = "Musa"
+		dynasty = "Nayihid"
+		birth_date = 1416.1.1
+		death_date = 1472.1.1
+		claim = 60
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+# Courtiers. ad_visaratt is unused in ADU and left alone; the court is small
+# because a sheik's household in 867 was small, and a 50-province realm in 1444
+# can hire what it needs.
+1444.1.1 = {
+	general = {
+		name = "Yusuf"
+		dynasty = "Nayihid"
+		birth_date = 1391.1.1
+		death_date = 1467.1.1
+		fire = 2
+		shock = 2
+		manuever = 2
+		siege = 1
+	}
+}
+
+1444.1.1 = {
+	advisor = {
+		name = "Umar"
+		dynasty = "Nayihid"
+		birth_date = 1387.1.1
+		death_date = 1452.1.1
+		fire = 2
+		shock = 2
+		manuever = 2
+		siege = 1
+	}
+}
+
+# Portugal, Aragon and Castile all bring living claimants with this start state,
+# and a 50-province realm is the sort of thing neighbours covet immediately.
+# The mobilisation entries below give ADU a field army rather than leaving the
+# realm to fight a Castilian coalition with a sheik's household guard.
+1444.11.10 = {
+	leader = {
+		name = "Hamid"
+		dynasty = "Nayihid"
+		type = general
+		fire = 3
+		shock = 2
+		manuever = 2
+		siege = 1
+		death_date = 1474.1.1
+	}
+}
