@@ -639,6 +639,14 @@ TAGS: list[Tag] = [
         },
         rank_note="Duklja under Miroslav, a coastal Serbian principality."),
 
+    Tag(tag="PRU", rank=1, capital=1841, ck3_title="d_prussia", in_alloc=True,
+        rank_note="Prussia from CK3's d_prussia: the Pruthenians, whom EU4 can "
+                  "only seat in a Catholic duchy.",
+        # Vanilla PRU holds no provinces at all at 1444 - the Order does. Both
+        # Prussian areas therefore pass across whole: east_prussia_area and
+        # west_prussia_area are entirely the Order's, with nothing to pull back.
+        areas=("east_prussia_area", "west_prussia_area")),
+
     # CRI is the one realm where the question is not "which CK3 character" but
     # "does this polity exist in 867". The tag is vanilla Crimea, whose ruler in
     # 867 was a Golden Horde appointee - the Crimean Khanate is not founded until
@@ -704,6 +712,27 @@ TAGS: list[Tag] = [
     # its title, but it is deliberately NOT a realm this mod maintains. It keeps
     # vanilla's Rome and vanilla's ruler, so there is nothing to sync a ruler into
     # and no tier to decide.
+    # The Teutonic Order is dissolved and its remaining three provinces handed
+    # back out. Neither of these is a mod realm: Brandenburg and Poland keep
+    # vanilla's rulers and vanilla's files, so a Tag here does one thing only -
+    # claim the provinces the Order was holding. No capital, because the mod
+    # does not move their seats. neumark_area splits (Sternberg is already
+    # Brandenburg's), so it is picked province by province, not taken whole.
+    Tag(tag="BRA", rank=None, country="none", ck3_title=None, in_alloc=True,
+        no_ck3="vanilla Brandenburg, given the Order's Neumark provinces; the "
+               "mod runs no court of its own here",
+        provinces={
+            49,    # Neumark               (neumark_area; vanilla TEU)
+            4747,  # Dramburg              (neumark_area; vanilla TEU)
+        }),
+
+    Tag(tag="POL", rank=None, country="none", ck3_title=None, in_alloc=True,
+        no_ck3="vanilla Poland, given Torun back; the mod runs no court of its "
+               "own here",
+        provinces={
+            1859,  # Torun                 (kuyavia_area; vanilla TEU)
+        }),
+
     Tag(tag="PAP", rank=None, capital=118, ck3_title="k_papal_state",
         country="none"),
 ]

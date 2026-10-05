@@ -1,8 +1,9 @@
 # 4747 - Dramburg
 
-owner = TEU
-controller = TEU
+owner = BRA
+controller = BRA
 add_core = TEU
+add_core = BRA
 culture = pommeranian
 religion = catholic
 hre = no
@@ -28,3 +29,9 @@ discovered_by = ottoman
 	remove_core = BRA
 }
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
+
+1444.11.11 = {	owner = BRA
+	controller = BRA
+	add_core = BRA
+	hre = no
+} # The Karolingians: hold the 867 partition at the 1444 start

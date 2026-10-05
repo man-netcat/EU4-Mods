@@ -945,7 +945,10 @@ def effective(text):
 def step_start():
     alloc = build()
     expected = {}
-    for t in TAGS:
+    # TITLES, not TAGS: alloc is keyed by tag string, so iterating TAGS (a list of
+    # Tag objects) looked up every province under a key that cannot exist, built
+    # an empty `expected`, and printed "0 provinces checked" as a PASS.
+    for t in TITLES:
         for p in alloc.get(t, []):
             expected[int(p)] = t
 
@@ -1552,6 +1555,10 @@ VANILLA = {
     # Montenegro: Zeta (138) and Kotor (4754) are the Dioclean core, and Zeta is
     # already vanilla's MON capital.
     "MON": {"ruler": "CK3"},
+    # Prussia: vanilla PRU holds no land at 1444 and names no capital, so the seat
+    # is set to Marienburg (1841) - the Order's own capital, inside west_prussia_area,
+    # which passes over whole. The ruler is CK3's d_prussia at 867.
+    "PRU": {"capital": 1841, "ruler": "CK3"},
     # West Francia: every line of vanilla's French history survives - the 987
     # accession, the 1308 papal removal, all of it - and only the 1444 ruler and
     # the rank are overridden. It used to be patched by its own bespoke function
