@@ -509,20 +509,11 @@ def apply_867_culture(text, pid):
 # ------------------------------------------------------------------ combine --
 
 # Layer 3, in order. A later entry wins any overlap with an earlier one (which is
-# why Albania sits after Anatolia and why BYZ_GREECE is last of all).
-TRANSFERS = (
-    ("BYZ", BYZ_ALL),
-    ("BUL", BUL_ALL),
-    ("CRT", CRETE),
-    ("HUN", MOGYERS_LEVIDIA),
-    ("CRI", CRI_AZOV),
-    ("MON", MON_ADRIATIC),
-    ("DAL", DAL_CORE),
-    ("ARB", ARABIA_ALL),
-    ("EGY", EGY_ALL),
-    ("ADU", ADU_ALL),
-    ("ASU", ASU_ALL),
-)
+# why Albania sits after Anatolia and why BYZ_GREECE is last of all). The order
+# and the province lists both come from the database now - see Tag.grants and
+# Tag.grant_order in tagdb.py, which is where a realm declares what blocks it
+# takes and in what precedence.
+from tagdb import TRANSFERS  # noqa: E402,F401
 
 LAYER2_MOVES: list = []
 

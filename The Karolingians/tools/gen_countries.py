@@ -42,133 +42,23 @@ def shifted(y, m=1, d=1):
     return f"{y + SHIFT}.{m}.{d}"
 
 
-# tag -> (vanilla file, name, capital, primary culture, ruler block, extra)
-# Culture ids are validated against common/cultures/00_cultures.txt: EU4 1.37
-# has no "german" and no "italian" at all, so those would silently fall back.
-# Lotharingia is Burgundian (it holds Burgundy, Provence, Savoy and the
-# Lotharingian Low Countries); Italy is Lombard, as Louis II's kingdom was.
-HEADER = {
-    "LOT": (1878, "burgundian"),
-    "GER": (1876,  "hessian"),
-    "BAV": (65,   "bavarian"),
-    "ITA": (4728, "lombard"),
-    "SOR": (60,   "sorbian"),
-}
+# Capitals and cultures for the realms whose country file is written from scratch.
+# Which realms those are is the Tag's `country` field, not a list here: see
+# tagdb.HEADER and tagdb.FRESH_REALMS.
+from tagdb import HEADER, FRESH_REALMS  # noqa: E402,F401
 
-# government_rank for every realm in ALL_TAGS, in EU4's tiers: 1 is a duchy or
-# principality, 2 a kingdom, 3 an empire.
+# The rank of every realm, its capital, its CK3 title, and the realms that are kept
+# but not yet authored - all of it is one Tag object per realm in tagdb.py, which
+# is also where every rank's justification lives. These four names are the same
+# data seen from this script's side of the fence.
 #
-# Each rank is argued from that realm's own 867 standing - what it was called and
-# what it commanded - and never from which group a tag was filed under. The old
-# rule here was "the five are peers at 2, Lusatia sits below them", which made the
-# ranks a statement about the partition rather than about the realms: it would
-# have kept five tags at 2 and demoted a sixth even if Lusatia were the largest
-# realm on the map. Lusatia is now 1 because a Sorbian duchy was smaller than a
-# Frankish kingdom, which is a fact about Lusatia, and that is the only kind of
-# reason allowed here.
-#
-# Four realms are genuinely contested and are flagged below rather than quietly
-# decided. See the note on each.
-RANK = {
-    # --- Frankish partition ------------------------------------------------------
-    "FRA": 3,  # West Francia, the largest of the partitions, whose ruler claimed
-                # to rule the Franks as a whole.
-    "LOT": 2,  # Lotharingia: a kingdom, though a hollow and contested one.
-    "GER": 2,  # East Francia: a kingdom ruled in its own right.
-    "ITA": 2,  # Italy: Louis II was king of Italy as well as emperor, so Italy is
-                # a kingdom held under an imperial claim, not the empire itself.
-    "BAV": 1,  # Bavaria is a DUCHY in 867, not a kingdom, and that is true whether
-                # or not it is independent. Carloman governs it from c. 863 but is
-                # not crowned king until 876, so a rank-2 Bavaria would assert a
-                # crown nine years early. The realms are independent by design -
-                # no vassalage anywhere in this mod - so the tier is the only place
-                # any hierarchy is still expressed, and it has to be right here.
-    "SOR": 1,  # Lusatia: a Sorbian duchy, small in 867 on any measure.
-    # --- Iberia and the west ----------------------------------------------------
-    "NAV": 2,  # The Kingdom of Pamplona under Garcia I, a kingdom in 867 and a
-                # peer of the Asturians.
-    "ASU": 2,  # Asturias: Alfonso III inherited the kingship in 866, one year
-                # before the start date, so it is a kingdom and not a county.
-    "ADU": 2,  # The Nayihid emirate of Granada, a principality that by 867 ruled
-                # the whole of al-Andalus.
-    "CRT": 1,  # Crete: an Emirate of Crete is a single-island emirate under
-                # Abu Hafs Umar; a duchy is the closest tier EU4 offers.
-    # --- The Islamic east -------------------------------------------------------
-    "ARB": 3,  # The Abbasid Caliphate, which in 867 is the empire of the
-                # Islamic world and no realm in this table rivals it.
-    "EGY": 2,  # CONTESTED. The Tulunids held Egypt and Syria as a de facto
-                # independent beylikh, but a beylikh is a principality, and EU4's
-                # only tiers are duchy and kingdom. Kept at 2 so the Tulunids are
-                # not ranked level with Silesia on the strength of a naming gap;
-                # drop to 1 if the literal principality reading is preferred.
-    "BOH": 1,  # Bohemia: a duchy of the Empire under Borivoj I. Rank 1 is the
-                # literal 867 answer and is NOT demotion for standing outside the
-                # partition: Bohemia is a small march here for the ordinary
-                # reason, that in 867 it was a small duchy.
-    # -- kept realms whose land this mod never reassigns --------------------------
-    # These three are not in ALL_TAGS because the mod does not hand out their
-    # land: they keep vanilla's provinces untouched. They are still realms this
-    # mod maintains a court and a size for, so they still get a deliberate rank.
-    "SAR": 1,  # Sardinia, from vanilla, holding Sassari (127), Arborea (4735) and
-                # Cagliari (2986). All three are in NOT_IMPERIAL_867, so Sardinia was
-                # never part of the imperial core and releasing it changes nothing
-                # about the 226 the empire decision requires. A duchy is the right
-                # size: in 867 Sardinia is a Byzantine province governed by the
-                # giudicati of Torres and Cagliari, not a kingdom of its own.
-    # --- Italy, the Balkans and the Aegean ---------------------------------------
-    "SIL": 1,  # Silesia: a Piast duchy, small but not a titular one.
-    "GMA": 2,  # Great Moravia under Rastislav, a kingdom in its own right.
-    "DAL": 1,  # Dalmatia: a coastal duchy of city-states, nominally one realm.
-    "BYZ": 3,  # The Empire itself. 867 is Basil I's first full year.
-    "BUL": 2,  # The First Bulgarian Empire under Boris, a kingdom by 867 and a
-                # peer of Byzantium's neighbours rather than a vassal duchy.
-    # --- The steppe and the Danube ----------------------------------------------
-    "HUN": 1,  # CONTESTED. The Principality of Hungary under the Arpad was a
-                # principality, not a kingdom, until 1000 - so 1 is the literal
-                # answer, yet the realm is a major power in 867 and EU4 has no
-                # tier between a duchy and a kingdom to say so. Kept at 1 on the
-                # name; raise to 2 if a stronger starting Hungary is wanted.
-    "MON": 1,  # Duklja under Miroslav, a coastal Serbian principality.
-    "CRI": 1,  # CONTESTED, and see the note in NOT_CK3: there is no Crimean
-                # polity in 867 at all. Rank 1 is provisionally in place so the
-                # tag is playable while its identity is settled.
-}
-# Every realm the mod maintains a country file for must appear here, so a new
-# realm cannot be added without deciding how big it is. Checked in validate.py.
-#
-# This is NOT the same set as ALL_TAGS. ALL_TAGS is the allocation - the tags
-# whose land this mod actually hands out - and Bohemia is not in it, because
-# Bohemia's land is left exactly as vanilla has it. Bohemia is still a realm this
-# mod keeps: it gets an 867 ruler and a rank here, and a tag that holds land
-# without a rank decision is how the Tulunids ended up ranked level with Silesia.
-# The six electorates that are dissolved to unmake the Empire (BRA, KOL, MAI,
-# PAL, SAX, TRI) are deliberately absent: they hold a vote and nothing else.
-KEPT_REALMS = set(ALL_TAGS) | {"BOH", "SAR"}
-assert set(RANK) == KEPT_REALMS, (
-    "RANK is out of step with the kept realms: "
-    f"only in RANK {sorted(set(RANK) - KEPT_REALMS)}, "
-    f"unranked {sorted(KEPT_REALMS - set(RANK))}")
-
-# Realms that are kept - they hold land and they have a name and a rank - but for
-# which no country file is written yet. Each entry must say why, because "we have
-# not got to it" is how a realm ends up quietly unplayable.
-#
-# This is a deferral, not a pass. It is reported on every build and in every
-# validate run, and the coverage gate in validate.py fails for any realm that is
-# not listed here, so a NEW undeclared gap still stops the build. What it stops
-# being is a build that is red for one known reason, which trains people to ignore
-# a red build.
-DEFERRED_REALMS = {
-    "CRI": "Vanilla Crimea, holding Azow (286) only. There is no Crimean polity in "
-           "867 to write: the Crimean Khanate is a Golden Horde appanage founded in "
-           "1441, and vanilla's file arrives with a 1444 khan. CK3 has no 867 "
-           "holder for d_crimea, k_pontic_steppe or e_mongol_empire; its nearest "
-           "real 867 powers are d_khazaria and k_caspian_steppe, both held by "
-           "Manasseh of the Bulanid house. Authoring this needs a decision about "
-           "what a Crimean realm IS in 867, which is the same Pontic steppe "
-           "question as the provinces Hungary currently holds. Deliberately "
-           "deferred, not overlooked.",
-}
+# A rank is argued from a realm's own 867 standing and never from which group a
+# tag was filed under. The old rule here was "the five are peers at 2, Lusatia
+# sits below them", which made the ranks a statement about the partition rather
+# than about the realms.
+from tagdb import (  # noqa: E402,F401
+    RANK, KEPT_REALMS, DEFERRED_REALMS, ALL_TAGS, BY_TAG,
+)
 
 # Vanilla tags this mod touches. They keep their own vanilla history - none of
 # them is a realm of ours, they all sit outside the Karolingian sphere and are
