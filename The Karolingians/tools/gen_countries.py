@@ -105,6 +105,16 @@ RANK = {
                 # literal 867 answer and is NOT demotion for standing outside the
                 # partition: Bohemia is a small march here for the ordinary
                 # reason, that in 867 it was a small duchy.
+    # -- kept realms whose land this mod never reassigns --------------------------
+    # These three are not in ALL_TAGS because the mod does not hand out their
+    # land: they keep vanilla's provinces untouched. They are still realms this
+    # mod maintains a court and a size for, so they still get a deliberate rank.
+    "SAR": 1,  # Sardinia, from vanilla, holding Sassari (127), Arborea (4735) and
+                # Cagliari (2986). All three are in NOT_IMPERIAL_867, so Sardinia was
+                # never part of the imperial core and releasing it changes nothing
+                # about the 226 the empire decision requires. A duchy is the right
+                # size: in 867 Sardinia is a Byzantine province governed by the
+                # giudicati of Torres and Cagliari, not a kingdom of its own.
     # --- Italy, the Balkans and the Aegean ---------------------------------------
     "SIL": 1,  # Silesia: a Piast duchy, small but not a titular one.
     "GMA": 2,  # Great Moravia under Rastislav, a kingdom in its own right.
@@ -133,7 +143,7 @@ RANK = {
 # without a rank decision is how the Tulunids ended up ranked level with Silesia.
 # The six electorates that are dissolved to unmake the Empire (BRA, KOL, MAI,
 # PAL, SAX, TRI) are deliberately absent: they hold a vote and nothing else.
-KEPT_REALMS = set(ALL_TAGS) | {"BOH"}
+KEPT_REALMS = set(ALL_TAGS) | {"BOH", "SAR"}
 assert set(RANK) == KEPT_REALMS, (
     "RANK is out of step with the kept realms: "
     f"only in RANK {sorted(set(RANK) - KEPT_REALMS)}, "
@@ -180,6 +190,11 @@ VANILLA = {
     # Montenegro: Zeta (138) and Kotor (4754) are the Dioclean core, and Zeta is
     # already vanilla's MON capital.
     "MON": {"ruler": "CK3"},
+    # Sardinia: no province changes hands and no capital changes - vanilla already
+    # seats SAR at 127, which is one of its own three. All this entry is here for
+    # is the rank, because without it SAR takes EU4's default of 1 by accident
+    # rather than by argument. No ruler is written: see NOT_CK3 in ck3ruler.py.
+    "SAR": {},
 }
 
 # 867 rulers for the vanilla tags above. Dates are CK3's own, taken from

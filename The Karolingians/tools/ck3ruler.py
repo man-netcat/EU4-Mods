@@ -165,6 +165,15 @@ NOT_CK3 = {
     # no character to compare a name or dynasty against. Abu Hafs Umar is a
     # historical invention documented in CRT.txt.
     "CRT": "no CK3 model: CK3 has no Crete, so there is no character to compare",
+    # SAR: CK3 does have Sardinian titles, but neither of them has a holder to
+    # lift in 867 - d_sardinia sits vacant from 843.1.1 and k_sardinia has no 867
+    # holder at all - which is CK3 agreeing with the history rather than failing
+    # to record it. Sardinia in 867 is a Byzantine province administered by the
+    # giudicati, and there is no attested Sardinian ruler of that date to name.
+    # So no ruler is written and none is invented: SAR gets its size and its
+    # court, and the throne is left to the game.
+    "SAR": "no CK3 model: d_sardinia is vacant in 867 and k_sardinia unheld, and "
+           "no Sardinian ruler of that date is attested to name instead",
     # CRI: genuinely undecided, and it is the one realm in the mod where the
     # question is not "which CK3 character" but "does this polity exist in 867".
     # The tag is vanilla Crimea, whose ruler in 867 was a Golden Horde appointee -
