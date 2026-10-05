@@ -2,6 +2,7 @@
 
 owner = EGY
 controller = EGY
+add_core = MAM
 add_core = EGY
 culture = al_misr_arabic
 religion = sunni
@@ -24,7 +25,7 @@ discovered_by = east_african
 	owner = TUR
 	controller = TUR
 	add_core = TUR
-	remove_core = EGY
+	remove_core = MAM
 } # Invaded by the Ottomans
 
 1444.11.11 = {	owner = EGY

@@ -368,10 +368,11 @@ NAME = {tag: BY_TAG[tag].name for tag in AREA_OWNERS}
 # rewrite a file's text rather than naming land, so they stay here with the
 # writer that calls them.
 
-def apply_renames(text):
-    for old, new in TAG_RENAMES.items():
-        text = re.sub(rf"\b{re.escape(old)}\b", new, text)
-    return text
+# There is deliberately no tag-rename pass here. A tag that takes land it did not
+# hold in 867 gets its own core added by patch() the same way every other realm
+# does; the province keeps the core it already had. Rewriting those tags out of
+# the file - MAM into EGY, say - would mean the mod's one realm with a special
+# rule was also the one realm quietly losing history.
 
 
 # CULTURE_GONE_867 - vanilla cultures that do not exist yet at this start date,
@@ -761,8 +762,7 @@ def step_provinces(argv):
             print(f"!! no vanilla file for province {pid}")
             continue
         text = apply_867_culture(
-            apply_renames(open(src, encoding="utf-8",
-                                errors="surrogateescape").read()), pid)
+            open(src, encoding="utf-8", errors="surrogateescape").read(), pid)
         tag = owner_of.get(pid)
         if pid in BALATON_RESERVED:
             new = unown(text)

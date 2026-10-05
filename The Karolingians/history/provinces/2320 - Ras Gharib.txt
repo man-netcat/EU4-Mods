@@ -11,6 +11,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
+add_core = MAM
 add_core = EGY
 
 discovered_by = western
@@ -26,7 +27,7 @@ discovered_by = east_african
 	owner = TUR
 	controller = TUR
 	add_core = TUR
-	remove_core = EGY
+	remove_core = MAM
 } # Invaded by the Ottomans
 1520.11.10 = { revolt = { type = nationalist_rebels size = 0 } controller = REB } # Mameluk Uprising under Canbirdi Ghazeli
 1521.1.1 = { revolt = {} controller = TUR }

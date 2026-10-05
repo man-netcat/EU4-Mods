@@ -2,8 +2,9 @@
 
 owner = EGY
 controller = EGY
-add_core = EGY
+add_core = MAM
 add_core = BEJ
+add_core = EGY
 culture = beja
 religion = sunni
 capital = "Suakin"
@@ -27,7 +28,7 @@ discovered_by = east_african
 	owner = NUB
 	controller = NUB
 	add_core = NUB
-	remove_core = EGY
+	remove_core = MAM
 } # Funj replace Mamluks in control of Suakin
 1524.1.1 = {
 	owner = TUR

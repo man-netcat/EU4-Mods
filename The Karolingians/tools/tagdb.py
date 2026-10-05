@@ -100,11 +100,15 @@ class Tag:
     areas: tuple = ()
 
     #: Individual provinces this realm takes, applied after every area claim and
-    #: before the transfers. Layer 2. Most realms need a handful because EU4 areas
-    #: straddle 867 borders: an area is a modern administrative unit, not a
-    #: Carolingian one, so the province inside it that belongs elsewhere has to be
-    #: pulled back out by hand. Each entry below carries the evidence.
-    provinces: tuple = ()
+    #: before the transfers. Layer 2. A frozenset, not a list: once the layers are
+    #: applied the order carries no meaning, and a province appearing twice was
+    #: only ever a sign that two blocks had overlapped - 12 did, and 12 are now
+    #: gone rather than deduplicated away. Most realms still need a handful
+    #: because EU4 areas straddle 867 borders: an area is a modern administrative
+    #: unit, not a Carolingian one, so the province inside it that belongs
+    #: elsewhere has to be pulled back out by hand. Each entry below carries the
+    #: evidence.
+    provinces: frozenset = field(default_factory=frozenset)
     #: What gen_countries.py does with this realm's country file:
     #:   "fresh"   - written from scratch (capital, culture, rank, own ruler)
     #:   "vanilla" - vanilla's file copied, patching capital/rank/ruler as asked
@@ -132,6 +136,9 @@ class Tag:
         return self.deferred is None and self.rank is not None
 
     def __post_init__(self):
+        # Callers may write either a tuple or a set literal; the field is a set
+        # either way, so nothing downstream has to care which was typed.
+        object.__setattr__(self, "provinces", frozenset(self.provinces))
         # A realm with no CK3 title must say why, or the audit cannot tell "we
         # looked and there is nothing there" from "nobody has looked".
         if self.ck3_title is None and self.no_ck3 is None and self.deferred is None:
@@ -442,12 +449,16 @@ TAGS: list[Tag] = [
         )),
 
     Tag(tag="ASU", rank=2, capital=207, ck3_title="k_asturias", in_alloc=True,
-        provinces=(206, 207, 208, 215, 216, 1745, 1746, 4552, 4553, 4554, 4555, 4558, 4789),
+        areas=("asturias_area", "galicia_area", "leon_area"),  # taken whole, so an area claim, not a province list
+        # what is left after taking those areas whole.
+        provinces={4789},
         rank_note="Asturias: Alfonso III inherited the kingship in 866, one year "
                   "before the start date, so it is a kingdom and not a county."),
 
-    Tag(tag="ADU", rank=2, capital=204, ck3_title="c_granada", in_alloc=True,
-        provinces=(214, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 333, 367, 368, 1747, 1748, 1749, 1750, 1751, 1851, 2751, 2754, 2755, 2988, 2989, 2990, 4150, 4546, 4547, 4548, 4549, 4550, 4551, 4556, 4557, 4559, 4560, 4787, 4788),
+    Tag(tag="ADU", rank=2, capital=225, ck3_title="c_granada", in_alloc=True,
+        areas=("alentejo_area", "baleares_area", "beieras_area", "extremadura_area", "lower_andalucia_area", "toledo_area", "upper_andalucia_area", "valencia_area"),  # taken whole, so an area claim, not a province list
+        # what is left after taking those areas whole.
+        provinces={214, 217, 367, 368, 1751, 2755, 2988, 2989, 2990, 4551, 4557},
         rank_note="The Nayihid emirate of Granada, a principality that by 867 "
                   "ruled the whole of al-Andalus."),
 
@@ -460,12 +471,16 @@ TAGS: list[Tag] = [
 
     # -- the Islamic east --------------------------------------------------------
     Tag(tag="ARB", rank=3, capital=385, ck3_title="e_arabia", in_alloc=True,
-        provinces=(364, 379, 380, 381, 383, 1854, 2327, 4268, 4269, 377, 378, 382, 1849, 1855, 2313, 4297, 327, 332, 2303, 4298, 4310, 406, 409, 410, 411, 415, 416, 419, 420, 2205, 2206, 2207, 2209, 2309, 2310, 2311, 2312, 2314, 4291, 4293, 4294, 4304, 331, 407, 418, 2305, 2306, 2308, 4292, 408, 412, 4288, 4289, 4290, 394, 395, 396, 2340, 2347, 405, 4270, 4271, 2328, 4272, 384, 2329, 2330, 385),
+        areas=("al_jazira_area", "aleppo_area", "bahrain_area", "basra_area", "dulkadir_area", "iraq_arabi_area", "medina_area", "palestine_area", "syria_area", "syrian_desert_area", "tabuk_area", "trans_jordan_area"),  # taken whole, so an area claim, not a province list
+        # what is left after taking those areas whole.
+        provinces={327, 331, 385, 412, 415, 416, 418, 419, 420, 2205, 2206, 2207, 2209, 2305, 2306, 4272, 4289, 4290, 4293, 4294, 4304},
         rank_note="The Abbasid Caliphate, which in 867 is the empire of the "
                   "Islamic world and no realm in this table rivals it."),
 
     Tag(tag="EGY", rank=2, capital=361, ck3_title="k_egypt", in_alloc=True,
-        provinces=(356, 357, 358, 359, 360, 361, 362, 363, 365, 1231, 1232, 1233, 2315, 2316, 2317, 2318, 2319, 2320, 2321, 2324, 2325, 2326, 4316, 4317, 4318, 4319, 4320, 4323),
+        areas=("al_wahat_area", "bahari_area", "cyrenaica_area", "delta_area", "gulf_of_arabia_area", "said_area", "vostani_area"),  # taken whole, so an area claim, not a province list
+        # what is left after taking those areas whole.
+        provinces={1232, 2324},
         rank_note="CONTESTED. The Tulunids held Egypt and Syria as a de facto "
                   "independent beylikh, but a beylikh is a principality, and EU4's "
                   "only tiers are duchy and kingdom. Kept at 2 so the Tulunids are "
@@ -488,38 +503,33 @@ TAGS: list[Tag] = [
 
     Tag(tag="GMA", rank=2, capital=4237, ck3_title="k_moravia", in_alloc=True,
         rank_note="Great Moravia under Rastislav, a kingdom in its own right.",
-        provinces=(
-            4723,   # Opole                (silesia_area; vanilla OPL)
-            263,   # Ratibor  (Racibor)   (silesia_area; vanilla OPL)
-            # Great Moravia takes the whole of moravia_area - Brno, Olomouc and
-            # Ostrava - giving it a real Moravian heartland instead of existing only as
-            # a formable nation. GMA is vanilla, so again no country file is needed.
-            265,   # Brno                 (moravia_area; vanilla BOH)
-            4237,   # Olomouc              (moravia_area; vanilla BOH)
-            4726,   # Ostrava              (moravia_area; vanilla BOH)
-            # ...and the whole of slovakia_area, so Great Moravia starts as a real
-            # landholder rather than a formable name. There is no nitra_area in EU4
-            # 1.37 and no province called Nitra; slovakia_area is the region meant, and
-            # it holds five: Hont, Zemplen, Spis, Pozsony and Trencin. Spis and Zemplen
-            # are Ruthenian rather than Slovak, but they are the eastern half of the
-            # same Slovak march lands, so they go over as a block.
-            154,   # Hont                 (slovakia_area; vanilla HUN)
-            162,   # Zemplen              (slovakia_area; vanilla HUN)
-            1318,   # Spis                 (slovakia_area; vanilla HUN)
-            1772,   # Pozsony              (slovakia_area; vanilla HUN)
-            4236,   # Trencin              (slovakia_area; vanilla HUN)
-        )),
+        # Great Moravia takes the whole of moravia_area - Brno, Olomouc and
+        # Ostrava - giving it a real Moravian heartland instead of existing only
+        # as a formable nation. GMA is vanilla, so again no country file is needed.
+        # ...and the whole of slovakia_area, so Great Moravia starts as a real
+        # landholder rather than a formable name. There is no nitra_area in EU4
+        # 1.37 and no province called Nitra; slovakia_area is the region meant, and
+        # it holds five: Hont, Zemplen, Spis, Pozsony and Trencin. Spis and Zemplen
+        # are Ruthenian rather than Slovak, but they are the eastern half of the
+        # same Slovak march lands, so they go over as a block.
+        areas=("moravia_area", "slovakia_area"),
+        # Opole and Ratibor are all that is left of silesia_area here.
+        provinces={263, 4723}),
 
     Tag(tag="DAL", rank=1, capital=136, ck3_title="d_dalmatia", in_alloc=True,
         provinces=(136, 4753),
         rank_note="Dalmatia: a coastal duchy of city-states, nominally one realm."),
 
     Tag(tag="BYZ", rank=3, capital=4698, ck3_title="e_byzantium", in_alloc=True,
-        provinces=(144, 146, 147, 148, 149, 1853, 4699, 4702, 4705, 4779, 316, 317, 318, 319, 322, 326, 329, 1846, 1848, 2296, 2297, 2298, 2299, 2300, 2304, 4308, 4309, 4311, 4312, 4313, 4314, 4315, 143, 4174, 4175, 4750, 285, 2447, 2757, 325, 328, 330, 2410, 122, 2982, 323, 324, 2301, 2302, 4307, 142, 145, 151, 164, 1773, 2348, 3003, 320, 321, 4698, 4700, 4701),
+        areas=("aegean_archipelago_area", "albania_area", "ankara_area", "aydin_area", "germiyan_area", "hudavendigar_area", "karaman_area", "kastamonu_area", "northern_greece_area", "rum_area"),  # taken whole, so an area claim, not a province list
+        # what is left after taking those areas whole.
+        provinces={122, 145, 146, 148, 149, 151, 285, 321, 330, 1773, 1853, 2302, 2410, 2447, 2757, 2982, 4701, 4702, 4705, 4779},
         rank_note="The Empire itself. 867 is Basil I's first full year."),
 
     Tag(tag="BUL", rank=2, capital=1764, ck3_title="k_bulgaria", in_alloc=True,
-        provinces=(150, 159, 1765, 2746, 2750, 3001, 4703, 4704, 4706, 4780, 1764, 1756, 160, 161, 2998, 4531, 4532, 141, 1766, 1827, 3000, 4173, 4176, 4239, 4757, 153, 155, 156, 157, 158, 1951, 1952, 1953, 1954, 4125, 4126, 4127, 4128),
+        areas=("alfold_area", "bulgaria_area", "serbia_area", "silistria_area", "southern_transylvania_area", "transylvania_area", "wallachia_area"),  # taken whole, so an area claim, not a province list
+        # what is left after taking those areas whole.
+        provinces={153, 1756, 1764, 1766, 1827, 3001, 4126, 4173, 4780},
         rank_note="The First Bulgarian Empire under Boris, a kingdom by 867 and a "
                   "peer of Byzantium's neighbours rather than a vassal duchy."),
 
@@ -715,10 +725,6 @@ def selfcheck() -> None:
 
 selfcheck()
 
-
-#: Vanilla tags this mod renames in the province files it rewrites. MAM becomes
-#: EGY, so the Mamluks and the Egyptians are one realm in 867.
-TAG_RENAMES: dict = {"MAM": "EGY"}
 
 #: Balaton, Krain and the Danube bend: Hungary keeps the basin, and these
 #: three are carved out of it rather than added to it.

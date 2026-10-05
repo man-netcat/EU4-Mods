@@ -28,9 +28,9 @@ add_province_triggered_modifier = christian_mecca
 1488.1.1 = { discovered_by = POR }
 1750.1.1 = { fort_15th = yes } # Qishla of Mecca and minor walls.
 1770.1.1 = {
-	owner = EGY
-	controller = EGY
-	add_core = EGY
+	owner = MAM
+	controller = MAM
+	add_core = MAM
 	remove_core = TUR
 } # Ali Bey gained control of the Hijaz, reconstituting the Mamluk state
 1772.1.1 = { owner = HED controller = HED }

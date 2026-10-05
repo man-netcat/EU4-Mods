@@ -12,6 +12,7 @@ base_production = 9
 base_manpower = 6
 is_city = yes
 fort_15th = yes 
+add_core = MAM
 add_core = EGY
 discovered_by = western
 discovered_by = muslim

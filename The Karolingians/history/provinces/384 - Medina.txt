@@ -28,9 +28,9 @@ discovered_by = east_african
 }
 1515.1.1 = { discovered_by = POR }
 1770.1.1 = {
-	owner = EGY
-	controller = EGY
-	add_core = EGY
+	owner = MAM
+	controller = MAM
+	add_core = MAM
 	remove_core = TUR
 } # Ali Bey gained control of the Hijaz, reconstituting the Mamluk state
 1772.1.1 = { owner = HED controller = HED }

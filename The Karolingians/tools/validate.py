@@ -25,7 +25,7 @@ TAGS = sorted(_RULERS)
 # re-listed: a private copy of this list silently went stale twice, letting CRT
 # and then HUN escape the ownership and empire-frontier checks.
 sys.path.insert(0, str(HERE))
-from build import (BALATON_RESERVED, TAG_RENAMES,  # noqa: E402
+from build import (BALATON_RESERVED,  # noqa: E402
                    ALL_TAGS, CAPITAL, empire_core,
                    CULTURE_GONE_867, CONQUERED_BY_THE_ARABS,
                    MUSLIM_RELIGIONS_867)
@@ -243,17 +243,16 @@ def run() -> int:
         note(not missing, f"{t}: core on all {len(owned)} owned ({len(missing)} missing)")
 
     print("\n== vanilla cores preserved ==")
-    # Vanilla cores are compared through TAG_RENAMES, because the generated files
-    # deliberately rewrite them: MAM's cores become EGY's when the Mamluks are folded
-    # into Egypt. Comparing the raw strings instead reports all 37 of those as lost
-    # regressions and hides any REAL core loss in the noise. A renamed core still
-    # counts as retained - the province kept its core, only under a new tag.
+    # Vanilla cores are compared as the plain strings they are. No realm is a
+    # rename of another, so a province the mod hands to a new owner keeps the core
+    # it already had and simply gains one more; anything else would be a rename
+    # pass, and those tend to hide real core loss behind a mapping.
     lost = []
     for pid, path in files.items():
         v = vfile(pid)
         if not v:
             continue
-        vc = {TAG_RENAMES.get(c, c) for c in parse(v)[1]}
+        vc = set(parse(v)[1])
         mc = set(parse(path)[1])
         if not vc <= mc:
             lost.append(f"{pid} lost {sorted(vc - mc)}")

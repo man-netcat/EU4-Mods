@@ -26,7 +26,7 @@ add_local_autonomy = 20
 	owner = QAR
 	controller = QAR
 	add_core = QAR
-	add_claim = EGY
+	add_claim = MAM
 } # The Qara Koyunlu
 1469.2.4 = {
 	owner = AKK
