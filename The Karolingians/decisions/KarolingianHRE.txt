@@ -1,11 +1,15 @@
 # The Karolingians - "Unite the Karlings"
 #
-# The 867 partition is split across five kingdoms and the imperial title has no
-# land at all. Once a ruler holds the old Carolingian heartlands in one hand
-# the empire can be made whole again. This mirrors vanilla's own "form Germany"
-# / "Restore Roman Empire" decisions and uses change_tag, so the country really
-# becomes HLR - displayed as the Karolingian Empire - rather than merely
-# renaming itself.
+# The imperial title has no land at all in 867, because the empire is split
+# among its heirs. Once one ruler holds the old imperial heartlands in a single
+# hand the empire can be made whole again. This mirrors vanilla's own "form
+# Germany" / "Restore Roman Empire" decisions and uses change_tag, so the
+# country really becomes HLR rather than merely renaming itself.
+#
+# Any ruler who comes to hold that land may do this. The decision names no
+# realm as eligible or ineligible, because the empire is a place, not a set of
+# dynasties: whether the five Frankish kingdoms, Lusatia, or anyone else
+# reunites it is the game's business, not this file's.
 
 country_decisions = {
 
@@ -27,15 +31,9 @@ country_decisions = {
 					num_of_cities = 40
 				}
 			}
-			# Eligibility only: any of the five Carolingian tags may try. Lusatia
-			# and every other realm fail this test, so they never see the decision.
-			OR = {
-				tag = FRA
-				tag = LOT
-				tag = GER
-				tag = BAV
-				tag = ITA
-			}
+			# No tag test at all. Whichever ruler ends up holding the old imperial
+			# land may try, so no realm is excluded for being the realm it is.
+			# The land requirement in allow is the entire test.
 		}
 
 		provinces_to_highlight = {
@@ -107,46 +105,10 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
-			# The empire can only be made whole by the last of the five standing,
-			# once it also holds every province the five started with. Lusatia's
-			# land is deliberately absent from that list.
-			OR = {
-				AND = {
-					tag = FRA
-					NOT = { exists = LOT }
-					NOT = { exists = GER }
-					NOT = { exists = BAV }
-					NOT = { exists = ITA }
-				}
-				AND = {
-					tag = LOT
-					NOT = { exists = FRA }
-					NOT = { exists = GER }
-					NOT = { exists = BAV }
-					NOT = { exists = ITA }
-				}
-				AND = {
-					tag = GER
-					NOT = { exists = FRA }
-					NOT = { exists = LOT }
-					NOT = { exists = BAV }
-					NOT = { exists = ITA }
-				}
-				AND = {
-					tag = BAV
-					NOT = { exists = FRA }
-					NOT = { exists = LOT }
-					NOT = { exists = GER }
-					NOT = { exists = ITA }
-				}
-				AND = {
-					tag = ITA
-					NOT = { exists = FRA }
-					NOT = { exists = LOT }
-					NOT = { exists = GER }
-					NOT = { exists = BAV }
-				}
-			}
+			# One ruler holding every imperial province. There is deliberately no
+			# "and not one province more" clause, and no requirement that any
+			# particular realm have died out: both described the five-kingdom
+			# partition, and neither is a fact about the empire itself.
 				NOT = { 44 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 52 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 53 = { country_or_non_sovereign_subject_holds = ROOT } }

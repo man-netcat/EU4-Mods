@@ -6,10 +6,13 @@
 # references in the province files - so EGY becomes a real country and needs a
 # history file of its own. MAM is left with no land and no name.
 #
-# Vanilla's seven lines are kept unchanged; government_rank is deliberately left
-# at the default of 1, because 28 provinces is a kingdom and the mod only
-# promotes a realm to a higher tier when asked (ARB is the one exception, and it
-# is rank 3).
+# Vanilla's seven lines are kept unchanged. government_rank is set to 2 from
+# gen_countries.RANK: the Tulunids held Egypt and Syria as a de facto
+# independent beylikh, and EU4's only tiers are duchy and kingdom, so a
+# beylikh has to land on one of them. The old note here said the mod 'only
+# promotes a realm to a higher tier when asked' and named ARB as the single
+# exception, which made rank a matter of who had remembered to ask.
+government_rank = 2
 government = monarchy
 add_government_reform = iqta
 primary_culture = al_misr_arabic

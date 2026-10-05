@@ -32,6 +32,17 @@
 #
 # The heir is Garci, CK3 character 70020, eldest son of Alfonsu. Only the name is
 # used from CK3, since the sons are placeholder entries with no stats.
+# The vanilla country header, which this file was missing entirely: without
+# these six lines ASU had no government, culture, religion, technology
+# group or capital at all, and fell back to defaults that no check read.
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = castillian
+religion = catholic
+technology_group = western
+capital = 207 #Asturias
+government_rank = 2
+
 1444.1.1 = {
 	monarch = {
 		name = "Alfonsu"

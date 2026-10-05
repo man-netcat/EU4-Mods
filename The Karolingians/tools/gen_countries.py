@@ -17,6 +17,8 @@ by the same amount so nobody dies during the first three centuries.
 import os, re, shutil
 from pathlib import Path
 
+from modtags import ALL_TAGS
+
 HERE = Path(__file__).resolve().parent
 CACHE = HERE / "cache"
 
@@ -53,9 +55,109 @@ HEADER = {
     "SOR": (60,   "sorbian"),
 }
 
-# The five Carolingian kingdoms are peers at rank 2. Lusatia is a free
-# minor principality, so it sits a step below them.
-RANK = {"LOT": 2, "GER": 2, "BAV": 2, "ITA": 2, "SOR": 1}
+# government_rank for every realm in ALL_TAGS, in EU4's tiers: 1 is a duchy or
+# principality, 2 a kingdom, 3 an empire.
+#
+# Each rank is argued from that realm's own 867 standing - what it was called and
+# what it commanded - and never from which group a tag was filed under. The old
+# rule here was "the five are peers at 2, Lusatia sits below them", which made the
+# ranks a statement about the partition rather than about the realms: it would
+# have kept five tags at 2 and demoted a sixth even if Lusatia were the largest
+# realm on the map. Lusatia is now 1 because a Sorbian duchy was smaller than a
+# Frankish kingdom, which is a fact about Lusatia, and that is the only kind of
+# reason allowed here.
+#
+# Four realms are genuinely contested and are flagged below rather than quietly
+# decided. See the note on each.
+RANK = {
+    # --- Frankish partition ------------------------------------------------------
+    "FRA": 3,  # West Francia, the largest of the partitions, whose ruler claimed
+                # to rule the Franks as a whole.
+    "LOT": 2,  # Lotharingia: a kingdom, though a hollow and contested one.
+    "GER": 2,  # East Francia: a kingdom ruled in its own right.
+    "ITA": 2,  # Italy: Louis II was king of Italy as well as emperor, so Italy is
+                # a kingdom held under an imperial claim, not the empire itself.
+    "BAV": 2,  # CONTESTED. Carloman was given Bavaria in 873 and only became king
+                # of it in 876, so in 867 Bavaria is a duchy inside East Francia
+                # and 1 is the strictly correct answer. Kept at 2 so Bavaria reads
+                # as the kingdom it is about to become and is not demoted on a
+                # technicality of two years.
+    "SOR": 1,  # Lusatia: a Sorbian duchy, small in 867 on any measure.
+    # --- Iberia and the west ----------------------------------------------------
+    "NAV": 2,  # The Kingdom of Pamplona under Garcia I, a kingdom in 867 and a
+                # peer of the Asturians.
+    "ASU": 2,  # Asturias: Alfonso III inherited the kingship in 866, one year
+                # before the start date, so it is a kingdom and not a county.
+    "ADU": 2,  # The Nayihid emirate of Granada, a principality that by 867 ruled
+                # the whole of al-Andalus.
+    "CRT": 1,  # Crete: an Emirate of Crete is a single-island emirate under
+                # Abu Hafs Umar; a duchy is the closest tier EU4 offers.
+    # --- The Islamic east -------------------------------------------------------
+    "ARB": 3,  # The Abbasid Caliphate, which in 867 is the empire of the
+                # Islamic world and no realm in this table rivals it.
+    "EGY": 2,  # CONTESTED. The Tulunids held Egypt and Syria as a de facto
+                # independent beylikh, but a beylikh is a principality, and EU4's
+                # only tiers are duchy and kingdom. Kept at 2 so the Tulunids are
+                # not ranked level with Silesia on the strength of a naming gap;
+                # drop to 1 if the literal principality reading is preferred.
+    "BOH": 1,  # Bohemia: a duchy of the Empire under Borivoj I. Rank 1 is the
+                # literal 867 answer and is NOT demotion for standing outside the
+                # partition: Bohemia is a small march here for the ordinary
+                # reason, that in 867 it was a small duchy.
+    # --- Italy, the Balkans and the Aegean ---------------------------------------
+    "SIL": 1,  # Silesia: a Piast duchy, small but not a titular one.
+    "GMA": 2,  # Great Moravia under Rastislav, a kingdom in its own right.
+    "DAL": 1,  # Dalmatia: a coastal duchy of city-states, nominally one realm.
+    "BYZ": 3,  # The Empire itself. 867 is Basil I's first full year.
+    "BUL": 2,  # The First Bulgarian Empire under Boris, a kingdom by 867 and a
+                # peer of Byzantium's neighbours rather than a vassal duchy.
+    # --- The steppe and the Danube ----------------------------------------------
+    "HUN": 1,  # CONTESTED. The Principality of Hungary under the Arpad was a
+                # principality, not a kingdom, until 1000 - so 1 is the literal
+                # answer, yet the realm is a major power in 867 and EU4 has no
+                # tier between a duchy and a kingdom to say so. Kept at 1 on the
+                # name; raise to 2 if a stronger starting Hungary is wanted.
+    "MON": 1,  # Duklja under Miroslav, a coastal Serbian principality.
+    "CRI": 1,  # CONTESTED, and see the note in NOT_CK3: there is no Crimean
+                # polity in 867 at all. Rank 1 is provisionally in place so the
+                # tag is playable while its identity is settled.
+}
+# Every realm the mod maintains a country file for must appear here, so a new
+# realm cannot be added without deciding how big it is. Checked in validate.py.
+#
+# This is NOT the same set as ALL_TAGS. ALL_TAGS is the allocation - the tags
+# whose land this mod actually hands out - and Bohemia is not in it, because
+# Bohemia's land is left exactly as vanilla has it. Bohemia is still a realm this
+# mod keeps: it gets an 867 ruler and a rank here, and a tag that holds land
+# without a rank decision is how the Tulunids ended up ranked level with Silesia.
+# The six electorates that are dissolved to unmake the Empire (BRA, KOL, MAI,
+# PAL, SAX, TRI) are deliberately absent: they hold a vote and nothing else.
+KEPT_REALMS = set(ALL_TAGS) | {"BOH"}
+assert set(RANK) == KEPT_REALMS, (
+    "RANK is out of step with the kept realms: "
+    f"only in RANK {sorted(set(RANK) - KEPT_REALMS)}, "
+    f"unranked {sorted(KEPT_REALMS - set(RANK))}")
+
+# Realms that are kept - they hold land and they have a name and a rank - but for
+# which no country file is written yet. Each entry must say why, because "we have
+# not got to it" is how a realm ends up quietly unplayable.
+#
+# This is a deferral, not a pass. It is reported on every build and in every
+# validate run, and the coverage gate in validate.py fails for any realm that is
+# not listed here, so a NEW undeclared gap still stops the build. What it stops
+# being is a build that is red for one known reason, which trains people to ignore
+# a red build.
+DEFERRED_REALMS = {
+    "CRI": "Vanilla Crimea, holding Azow (286) only. There is no Crimean polity in "
+           "867 to write: the Crimean Khanate is a Golden Horde appanage founded in "
+           "1441, and vanilla's file arrives with a 1444 khan. CK3 has no 867 "
+           "holder for d_crimea, k_pontic_steppe or e_mongol_empire; its nearest "
+           "real 867 powers are d_khazaria and k_caspian_steppe, both held by "
+           "Manasseh of the Bulanid house. Authoring this needs a decision about "
+           "what a Crimean realm IS in 867, which is the same Pontic steppe "
+           "question as the provinces Hungary currently holds. Deliberately "
+           "deferred, not overlooked.",
+}
 
 # Vanilla tags this mod touches. They keep their own vanilla history - none of
 # them is a realm of ours, they all sit outside the Karolingian sphere and are
@@ -71,6 +173,12 @@ VANILLA = {
     "BOH": {"ruler": "BOH"},
     # Great Moravia: an 867 ruler, no capital change (Olomouc 4237 is its own).
     "GMA": {"ruler": "GMA"},
+    # Navarre: the mod takes Vizcaya and Pirineo from France, and Pamplona (210)
+    # is already vanilla's own NAV capital, so the capital is left alone.
+    "NAV": {"ruler": "CK3"},
+    # Montenegro: Zeta (138) and Kotor (4754) are the Dioclean core, and Zeta is
+    # already vanilla's MON capital.
+    "MON": {"ruler": "CK3"},
 }
 
 # 867 rulers for the vanilla tags above. Dates are CK3's own, taken from
@@ -458,6 +566,111 @@ def ck3_sync(tag, text):
 
 
 
+# --------------------------------------------------------------------------------------
+# Rulers derived from CK3
+# --------------------------------------------------------------------------------------
+# SIL, GMA and BOH above have hand-written ruler blocks, because each one needed a
+# judgement CK3 cannot make for us: which son was the heir, and why a regency is an
+# artefact of the age shift rather than a fact about 867. NAV and MON need no such
+# judgement, so their blocks are derived from CK3 instead of transcribed. A
+# transcription is a snapshot of CK3 that silently rots; this is CK3's own entry,
+# read at build time, which is the authority the hand-written blocks cite anyway.
+#
+# One conversion is applied, and it is applied to every ruler: CK3 rates skills
+# roughly 1-20, EU4 rates monarch stats 0-6, so EU4 = CK3 / 3, clamped to 1-6. CK3
+# records no skills at all for some characters (Miroslav of Duklja is one), and for
+# those the mod uses a neutral 2/2/2 rather than inventing a reputation.
+def _eu4_skill(ck3_value):
+    if ck3_value is None:
+        return 2, None
+    return max(1, min(6, round(int(ck3_value) / 3))), int(ck3_value)
+
+
+def _ck3_dates_and_skills(cid, chars):
+    """(birth, death, adm, dip, mil) for a CK3 character id, or None if not found."""
+    body = chars.get(cid)
+    if body is None:
+        return None
+    birth = death = None
+    # CK3 stores a life event as a dated block whose key IS the date and whose
+    # body is `birth = yes` / `death = yes`, e.g. `844.1.1 = { birth = "844.1.1" }`.
+    for date, block in re.findall(r"(\d+\.\d+\.\d+)\s*=\s*\{(.*?)\n\t\}", body, re.S):
+        if re.search(r"^\s*birth\s*=", block, re.M):
+            birth = date
+        if re.search(r"^\s*death\s*=", block, re.M):
+            death = date
+    def skill(key):
+        m = re.search(r"^\s*" + key + r"\s*=\s*(\d+)", body, re.M)
+        return m.group(1) if m else None
+    adm, _ = _eu4_skill(skill("stewardship"))
+    dip, _ = _eu4_skill(skill("diplomacy"))
+    mil, _ = _eu4_skill(skill("martial"))
+    return birth, death, adm, dip, mil
+
+
+def _ck3_name(cid, chars, loc):
+    m = re.search(r'^\s*name\s*=\s*(?:"([^"]*)"|([^\s#"]+))', chars[cid], re.M)
+    if not m:
+        return None
+    return loc(m.group(1) or m.group(2)) or (m.group(1) or m.group(2))
+
+
+def ck3_block(tag):
+    """A 867 monarch (and heir where CK3 records one) derived from CK3."""
+    import ck3ruler as c
+
+    titles, chars = c.load_titles(), c.load_chars()
+    dyns, houses = c.load_dynasties(), c.load_houses()
+    got = c.resolve(tag, titles, chars, dyns, houses)
+    if "error" in got:
+        raise SystemExit(f"{tag}: {got['error']}")
+    cid = got["char"]
+    facts = _ck3_dates_and_skills(cid, chars)
+    if facts is None:
+        raise SystemExit(f"{tag}: CK3 character {cid} has no readable entry")
+    birth, death, adm, dip, mil = facts
+    if not birth or not death:
+        raise SystemExit(f"{tag}: CK3 character {cid} has no birth or death date")
+    name = _ck3_name(cid, chars, c.loc)
+    dynasty = got["dynasty"]
+
+    def person(cid_, claim=None):
+        nonlocal chars
+        nm = _ck3_name(cid_, chars, c.loc)
+        b, d, a, dp, ml = _ck3_dates_and_skills(cid_, chars)
+        dy = c.resolve_dynasty(chars[cid_], dyns, houses)
+        out = [f'\t\tname = "{nm}"']
+        if claim is not None:
+            out.append(f'\t\tmonarch_name = "{nm}"')
+        if dy:
+            out.append(f'\t\tdynasty = "{dy}"')
+        for label, d_ in (("birth_date", b), ("death_date", d)):
+            if not d_:
+                raise SystemExit(f"{tag}: CK3 character {cid_} has no {label}")
+            y, m, dd = (int(x) for x in d_.split("."))
+            out.append(f"\t\t{label} = {shifted(y, m, dd)}")
+        if claim is not None:
+            out.append(f"\t\tclaim = {claim}")
+        out += [f"\t\tadm = {a}", f"\t\tdip = {dp}", f"\t\tmil = {ml}"]
+        return "\n".join(out)
+
+    lines = [f"{START} = {{", "\tmonarch = {", person(cid), "\t}"]
+    # The heir is the eldest son CK3 records. CK3 has no gender key on these
+    # characters, so a child is used only where the name is not a daughter's; where
+    # CK3 records no children at all (Miroslav) no heir is written, and the game
+    # generates one, which is honest about the gap instead of inventing a son.
+    kids = [k for k, b in chars.items()
+            if re.search(rf"^\s*father\s*=\s*{cid}\b", b, re.M)]
+    kids.sort(key=lambda k: _ck3_dates_and_skills(k, chars)[0] or "9999.9.9")
+    if kids:
+        lines += ["\their = {", person(kids[0], claim=90), "\t}"]
+    lines += ["}", ""]
+    if not dynasty:
+        lines.insert(0, f"# {name} has no dynasty in CK3, so none is written here.")
+        lines.insert(0, "# Inventing a house to fill the gap would be a fabrication.")
+    return "\n".join(lines)
+
+
 def find_vanilla(tag):
     for fn in os.listdir(SRC):
         if fn.split(" ")[0] == tag and fn.endswith(".txt"):
@@ -528,9 +741,9 @@ def patch_fra():
 IMPERIAL_ELECTORS = ["BOH", "BRA", "KOL", "MAI", "PAL", "SAX", "TRI"]
 
 
-def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False):
-    """Copy a vanilla history file, changing only a capital, the 1444 ruler and
-    whether the country is an imperial elector.
+def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None):
+    """Copy a vanilla history file, changing only a capital, the government rank,
+    the 1444 ruler and whether the country is an imperial elector.
 
     Everything else in the vanilla file is preserved verbatim, so a vanilla tag
     keeps its whole later history - Zizka and the defenestration of Prague for
@@ -552,6 +765,19 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False):
         text, n = re.subn(r"^(\s*capital\s*=\s*)\d+.*$", rf"\g<1>{capital}", text,
                           count=1, flags=re.M)
         assert n == 1, f"{tag}: no capital line to patch in {fn}"
+    if rank is not None:
+        # Eight of the twenty realms have no government_rank in vanilla at all,
+        # so they silently fall to EU4's default of 1. That is how the Tulunids
+        # ended up ranked level with Silesia: not a decision, an omission. Set
+        # every one of them from RANK so the tier is always deliberate.
+        text, n = re.subn(r"^(\s*government_rank\s*=\s*)\d+.*$", rf"\g<1>{rank}", text,
+                          count=1, flags=re.M)
+        if n == 0:
+            # No line to patch: add one beside the other government keys, so the
+            # header stays readable rather than gaining a stray line at the end.
+            anchor = re.search(r"^\s*government\s*=\s*\w+.*$", text, re.M)
+            assert anchor, f"{tag}: no government line to anchor a rank to in {fn}"
+            text = text[:anchor.end()] + f"\ngovernment_rank = {rank}" + text[anchor.end():]
     if ruler is not None:
         lines = text.splitlines()
         # insert before the first dated block at or after the start date, so
@@ -579,19 +805,24 @@ def main():
          encoding="utf-8", errors="surrogateescape").write(with_provenance("FRA", ck3_sync("FRA", patch_fra())))
     print("wrote FRA.txt (vanilla history preserved)")
     for tag, spec in VANILLA.items():
-        ruler = VANILLA_RULERS.get(spec.get("ruler"))
+        want = spec.get("ruler")
+        ruler = ck3_block(tag) if want == "CK3" else VANILLA_RULERS.get(want)
         was_elector = tag in IMPERIAL_ELECTORS
         open(os.path.join(OUT, f"{tag}.txt"), "w", encoding="utf-8",
              errors="surrogateescape").write(
             with_provenance(tag, ck3_sync(tag, patch_vanilla(
-                tag, spec.get("capital"), ruler, was_elector))))
+                tag, spec.get("capital"), ruler, was_elector, RANK.get(tag)))))
         what = []
         if spec.get("capital"):
             what.append(f"capital -> {spec['capital']}")
         if ruler:
-            what.append(f"867 ruler {VANILLA_RULERS[spec['ruler']].split(chr(10))[3].split(chr(34))[1]}")
+            nm = re.search(r'name = "([^"]+)"', ruler)
+            what.append(f"867 ruler {nm.group(1) if nm else want}"
+                        + (" (from CK3)" if want == "CK3" else ""))
         if was_elector:
             what.append("electorate removed")
+        if tag in RANK:
+            what.append(f"rank {RANK[tag]}")
         print(f"wrote {tag}.txt (vanilla history preserved"
               + (", " + ", ".join(what) if what else "") + ")")
     # The remaining electors, so the empire is left with nobody to elect as

@@ -124,6 +124,13 @@ TITLES = {
     "ADU": "c_granada",        # Nayih,     Nayihid
     "ASU": "k_asturias",       # Alfonsu,   House of Cantabria
     "NAV": "k_navarra",        # Gartzia,   Iniga
+    # MON is vanilla MONTENEGRO, not the Mongol Empire - the tag has been in the
+    # mod's land allocation since the partition, and the two provinces it holds are
+    # Zeta and Kotor, which is the Dioclean heartland and nowhere near Mongolia.
+    # In 867 that is the principality of Duklja, and CK3 models it as c_duklja,
+    # held from 865 by Miroslav. CK3 records no dynasty for him, so his name lifts
+    # and no dynasty is invented to fill the gap.
+    "MON": "c_duklja",         # Miroslav,  (no dynasty in CK3)
     # The Papal State keeps Rome: 118 Roma is deliberately not taken (see
     # PROVINCE_OWNERS in gen_provinces.py), so PAP still holds one province at
     # the start date on the mod's own account. Its 867 holder is Pope Nicholas I
@@ -158,17 +165,24 @@ NOT_CK3 = {
     # no character to compare a name or dynasty against. Abu Hafs Umar is a
     # historical invention documented in CRT.txt.
     "CRT": "no CK3 model: CK3 has no Crete, so there is no character to compare",
+    # CRI: genuinely undecided, and it is the one realm in the mod where the
+    # question is not "which CK3 character" but "does this polity exist in 867".
+    # The tag is vanilla Crimea, whose ruler in 867 was a Golden Horde appointee -
+    # the Crimean Khanate is not founded until 1441. Its one mod province is Azow,
+    # which in 867 is Khazar/Bulgar steppe, and CK3's nearest real 867 powers are
+    # d_khazaria and k_caspian_steppe, both held by Manasseh of the Bulanid house.
+    # Authoring CRI needs a decision about what a Crimean realm IS in 867, so it is
+    # left unmapped rather than given a plausible-looking anachronism.
+    "CRI": "undecided: no 867 Crimean polity exists to map - see the note above",
     # -- vanilla tags the mod gives land to but never writes a ruler for -------
     # These keep vanilla's own country file and vanilla's 1444 ruler, so the mod
     # has nothing to derive. Listed so the audit is exhaustive, not because any
     # of them is being checked.
     "BRA": "vanilla: keeps vanilla's Brandenburg file and 1440 Hohenzollern ruler",
-    "CRI": "vanilla: keeps vanilla's Azov ruler",
     "DTT": "vanilla: keeps vanilla's Leitha ruler",
     "HSA": "vanilla: keeps vanilla's ruler",
     "HUN": "vanilla: keeps vanilla's 1444.11.10 Hunyadi block",
     "MKL": "vanilla: keeps vanilla's Montferrat ruler",
-    "MON": "vanilla: keeps vanilla's Adriatic ruler",
     "SHL": "vanilla: keeps vanilla's Schauenburg ruler",
     "STE": "vanilla: keeps vanilla's Stettin ruler",
     "TEU": "vanilla: keeps vanilla's Teutonic ruler",
@@ -570,14 +584,31 @@ def main(argv):
         text, body = monarch_block(path)
         cn, cd = current(body)
         if got.get("no_dynasty"):
-            bad.append(f"{tag}: CK3 character {got['char']} ({got['name']}) has "
-                       f"neither dynasty nor dynasty_house, so the dynasty in "
-                       f"{path.name} has nothing to be checked against. Map the "
-                       f"tag to a CK3 title whose 867 holder has a dynasty "
-                       f"rather than inventing one here.")
-            print(f"  FAIL {tag} {got['title']} / char {got['char']}")
-            print(f"        file: name={cn!r} dynasty={cd!r}")
-            print(f"        CK3 : name={got['name']!r} and NO dynasty")
+            # Two different situations, and this used to fail both:
+            #
+            #   * the file DOES carry a dynasty -> the mod invented a house for a
+            #     character CK3 gives none. That is a fabrication and stays fatal.
+            #   * the file carries NO dynasty -> the mod declined to invent one and
+            #     the file agrees with CK3. That is the correct outcome, and it is
+            #     what MON (Miroslav of Duklja) and PAP (Nicholas I) both do.
+            #
+            # Only the first is a failure. The second is the policy working.
+            if cd is not None:
+                bad.append(f"{tag}: CK3 character {got['char']} ({got['name']}) has "
+                           f"neither dynasty nor dynasty_house, but {path.name} "
+                           f"declares dynasty={cd!r}. That dynasty is invented - "
+                           f"drop it, or map the tag to a CK3 title whose 867 "
+                           f"holder has a real one.")
+                print(f"  FAIL {tag} {got['title']} / char {got['char']}")
+                print(f"        file: name={cn!r} dynasty={cd!r}  <- INVENTED")
+                print(f"        CK3 : name={got['name']!r} and NO dynasty")
+            else:
+                print(f"  OK   {tag} {got['title']} / char {got['char']}")
+                print(f"        file: name={cn!r} dynasty={cd!r}")
+                print(f"        CK3 : name={got['name']!r} and NO dynasty - the file "
+                      f"declares none either, which is the correct handling: CK3 "
+                      f"records neither dynasty nor dynasty_house, so nothing is "
+                      f"invented to cover the gap.")
             continue
         hd = heir_dynasty(text)
         heir_bad = (hd is not None and hd != got["dynasty"]

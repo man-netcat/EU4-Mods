@@ -1,4 +1,6 @@
 government = monarchy
+# Rank from gen_countries.RANK, argued from Egypt's own 867 standing.
+government_rank = 1
 add_government_reform = apostolic_kingdom
 primary_culture = hungarian
 add_accepted_culture = slovak

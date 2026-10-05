@@ -936,6 +936,77 @@ def owner_map(alloc=None):
     return {p: t for t, ps in alloc.items() for p in ps}
 
 
+# EMPIRE_CORE_AREAS - the land of the 867 Carolingian Empire, defined as geography
+# rather than as "whatever five tags happen to hold".
+#
+# It used to be EMPIRE_KINGDOMS, a list of five tags, which made the empire's extent a
+# function of the allocation: move a province between realms and the empire silently
+# changed shape. Worse, it made five tags privileged over the other fifteen, and
+# Lusatia privileged-in-reverse as the one realm defined by what it was not. This mod
+# treats every tag on the same terms, so the empire is described by where it was
+# instead of by who holds it.
+#
+# These 60 areas are the whole Frankish heartland - the 843 Verdun partition and
+# everything under it. They contain 237 provinces, of which 11 were never imperial and
+# are excluded by name below, leaving the same 226 the tag list used to produce. The
+# areas are the unit because a whole area is usually wholly imperial, and the
+# exceptions are the interesting part, which is why they are listed rather than
+# absorbed.
+EMPIRE_CORE_AREAS = (
+    "alsace_area", "austria_proper_area", "bourgogne_area", "brabant_area",
+    "braunschweig_area", "carinthia_area", "catalonia_area", "central_italy_area",
+    "champagne_area", "corsica_sardinia_area", "east_bavaria_area",
+    "emilia_romagna_area", "flanders_area", "franconia_area", "frisia_area",
+    "guyenne_area", "hesse_area", "holland_area", "ile_de_france_area",
+    "inner_austria_area", "languedoc_area", "lazio_area", "liguria_area",
+    "loire_area", "lombardy_area", "lorraine_area", "lower_bavaria_area",
+    "lower_rhineland_area", "lower_saxony_area", "lower_swabia_area",
+    "massif_central_area", "normandy_area", "north_brabant_area",
+    "north_rhine_area", "north_westphalia_area", "northern_saxony_area",
+    "orleans_area", "palatinate_area", "picardy_area", "piedmont_area",
+    "po_valley_area", "poitou_area", "provence_area", "pyrenees_area",
+    "romandie_area", "savoy_dauphine_area", "south_saxony_area",
+    "switzerland_area", "thuringia_area", "tirol_area", "tuscany_area",
+    "upper_bavaria_area", "upper_franconia_area", "upper_rhineland_area",
+    "upper_swabia_area", "venetia_area", "wallonia_area", "weser_area",
+    "west_burgundy_area", "westphalia_area",
+)
+
+# NOT_IMPERIAL_867 - the 11 provinces inside those areas that the 867 empire did not
+# hold. Every one is excluded on its own 867 history, never because of who holds it
+# now, which is the test that keeps this list from quietly re-encoding the tag
+# privileges it replaced. None of them is excluded for being Lusatian, Breton, Venetian
+# or anything else; if a province is listed here it is because it was not imperial.
+#
+#   59 Wittenberg, 61 Dresden, 4744 Zwickau - Saxon and Meissen land, east of the
+#       imperial frontier. Thuringia just west of them (Erfurt, Weimar) is inside the
+#       empire, so the line runs through the area rather than around it.
+#   112 Venezia      - an independent maritime republic by 867, never imperial.
+#   118 Roma         - the papal states. The papacy sits outside the empire's own
+#   120 Abbruzzi        succession and holds no imperial land.
+#   127 Sassari, 2986 Cagliari, 4735 Arborea - Sardinia, independent. Corsica, in the
+#       same area, was imperial, which is why 1247 is absent from this list.
+#   2965 Vogtland    - Sorbian-held hinterland of Thuringia, not imperial territory.
+#       This is a judgement about Vogtland in 867, not about Lusatia: Lusatia holds
+#       seven provinces and not one of them is excluded here for that reason.
+#   2988 Tarragona   - Catalonia. The empire held it 801-859 and lost it again before
+#       this date, so 867 has it outside the empire.
+NOT_IMPERIAL_867 = {
+    59, 61, 112, 118, 120, 127, 2965, 2986, 2988, 4735, 4744,
+}
+
+
+def empire_core():
+    """The provinces the 867 empire held, from EMPIRE_CORE_AREAS minus
+    NOT_IMPERIAL_867. Sorted, and the same 226 the old five-tag list produced."""
+    core = set()
+    for area in EMPIRE_CORE_AREAS:
+        for pid in AREAS.get(area, ()):
+            if pid not in NOT_IMPERIAL_867 and provs.get(str(pid), {}).get("owner"):
+                core.add(pid)
+    return sorted(core)
+
+
 def dev(pid):
     """base_tax + base_production, for the report's balance column."""
     for fn in os.listdir(VANILLA_PDIR):

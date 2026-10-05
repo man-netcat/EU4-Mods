@@ -13,7 +13,7 @@ MOD = str(HERE.parent)
 VDIR = os.path.join(GAME, "history", "provinces")
 PDIR = os.path.join(MOD, "history", "provinces")
 CDIR = os.path.join(MOD, "history", "countries")
-from modtags import ALL_TAGS, EMPIRE_KINGDOMS  # noqa: E402
+from modtags import ALL_TAGS  # noqa: E402
 # The realms this mod writes a country file for. Derived from
 # gen_countries' own per-tag ruler data rather than kept as a second
 # list here: the capital/rank/core checks below only mean anything for a
@@ -26,12 +26,21 @@ TAGS = sorted(_RULERS)
 # and then HUN escape the ownership and empire-frontier checks.
 sys.path.insert(0, str(HERE))
 from gen_provinces import (BALATON_RESERVED, TAG_RENAMES,  # noqa: E402
-                          ALL_TAGS, build, CULTURE_GONE_867,
-                          CONQUERED_BY_THE_ARABS, MUSLIM_RELIGIONS_867)
+                          ALL_TAGS, CAPITAL, build, empire_core,
+                          CULTURE_GONE_867, CONQUERED_BY_THE_ARABS,
+                          MUSLIM_RELIGIONS_867)
 from check_start import effective  # noqa: E402
-CAPS = {"FRA": 183, "LOT": 1878, "GER": 1876, "BAV": 65, "ITA": 4728, "SOR": 60}
+# Was a second hand-copied copy of gen_provinces.CAPITAL, which is the same class of
+# bug as the deleted cache/alloc.json: two files holding one fact, with nothing
+# checking they agreed. Now imported from the generator that writes the files.
+CAPS = CAPITAL
 # The five Carolingian kingdoms are peers; Lusatia is a minor principality.
-RANKS = {"FRA": 2, "LOT": 2, "GER": 2, "BAV": 2, "ITA": 2, "SOR": 1}
+# Was a hand-copied rank table, and it had already drifted from the files it was
+# meant to describe: it claimed FRA was rank 2 while FRA is vanilla's rank 3, and
+# it covered only the six generated realms, so the eight realms that have no rank
+# at all passed unnoticed. gen_countries.RANK is now the one table, each entry
+# argued from its own 867 standing.
+from gen_countries import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
 fail = []
 
 
@@ -113,10 +122,35 @@ print("\n== country files ==")
 for t in TAGS:
     txt = open(os.path.join(CDIR, f"{t}.txt"), encoding="utf-8",
                errors="surrogateescape").read()
-    note(f"government_rank = {RANKS[t]}" in txt,
-         f"{t} government_rank = {RANKS[t]}")
     note(f"capital = {CAPS[t]}" in txt, f"{t} capital = {CAPS[t]}")
     note("monarch = {" in txt, f"{t} has a 1444 monarch")
+
+# Every kept realm, not just the generated ones. A realm with land and no
+# government_rank of its own silently inherits EU4's default of 1, which is how
+# realms as large as the Tulunids came to sit level with Silesia - an omission
+# that reads exactly like a decision in the finished game.
+print("\n== every kept realm has a deliberate rank ==")
+unwritten = []
+for t in sorted(KEPT_REALMS):
+    path = os.path.join(CDIR, f"{t}.txt")
+    if not os.path.exists(path):
+        unwritten.append(t)
+        continue
+    txt = open(path, encoding="utf-8", errors="surrogateescape").read()
+    want = RANK[t]
+    note(f"government_rank = {want}" in txt, f"{t} government_rank = {want}")
+# A realm with land, a name and a rank but no country file is unplayable. The
+# gate fails for any such realm that is not an explicitly declared deferral, so a
+# NEW gap still stops the build; a declared one is reported every time instead of
+# turning the build permanently red for a reason people learn to ignore.
+undeclared = [t for t in unwritten if t not in DEFERRED_REALMS]
+note(not undeclared,
+     f"every kept realm has a country file, or a declared reason it has none "
+     f"({len(KEPT_REALMS)} realms, {len(DEFERRED_REALMS)} deferred)")
+for t in undeclared:
+    print(f"        {t}: holds land, has a rank, but no country file")
+for t in sorted(set(unwritten) & set(DEFERRED_REALMS)):
+    print(f"        DEFERRED {t}: {DEFERRED_REALMS[t]}")
 
 print("\n== province ownership ==")
 files = {}
@@ -249,26 +283,24 @@ for t in ["BOH", "HUN", "POL", "PAP", "NAP", "SIC", "SARD", "DAN", "SWE", "NOR",
 # The prose in the decision description quotes a province count by hand, and it
 # has already been wrong twice (210, then 221, then 225). Tie all three together:
 # the allocation, the generated decision, and the number written for the player.
-print("\n== hre decision matches the partition ==")
-FIVE = EMPIRE_KINGDOMS
-# build(), not cache/alloc.json: the eastern transfers to Byzantium and
-# Bulgaria are declared in gen_provinces, so reading the cached partition alone
-# checks none of them - and the "no gifted province is required for the empire"
-# assertion below silently passes on an empty set.
-alloc = build()
-expected = {int(p) for t in FIVE for p in alloc[t]}
+print("\n== hre decision matches the empire's land ==")
+# empire_core(), the same call the decision generator makes. This used to compare the
+# decision against the holdings of five privileged tags, which meant it could not
+# detect the decision disagreeing with the empire's actual extent - it defined the
+# extent as whatever those five held.
+expected = set(empire_core())
 dec = open(os.path.join(MOD, "decisions", "KarolingianHRE.txt"),
            encoding="utf-8", errors="replace").read()
 required = {int(x) for x in re.findall(
     r"NOT = \{\s*(\d+)\s*=\s*\{\s*country_or_non_sovereign_subject_holds\s*=\s*ROOT",
     dec)}
 note(required == expected,
-     f"decision requires exactly the {len(expected)} five-kingdom provinces")
+     f"decision requires exactly the {len(expected)} imperial provinces")
 if required != expected:
     print(f"        only in decision : {sorted(required - expected)}")
-    print(f"        only in partition: {sorted(expected - required)}")
+    print(f"        only in the core : {sorted(expected - required)}")
 note(not (required - expected),
-     "no Lusatian or gifted province is required for the empire")
+     "no province outside the 867 empire is required to restore it")
 hreloc = open(os.path.join(MOD, "localisation", "karolingian_hre_l_english.yml"),
               encoding="utf-8", errors="replace").read()
 said = re.search(r"hold all (\d+) provinces", hreloc)

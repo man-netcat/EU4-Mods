@@ -15,8 +15,7 @@ import json, os, re, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from gen_provinces import build as build_allocation
-from modtags import EMPIRE_KINGDOMS
+from gen_provinces import empire_core
 
 HERE = Path(__file__).resolve().parent
 CACHE = HERE / "cache"
@@ -24,25 +23,18 @@ CACHE = HERE / "cache"
 MOD = str(HERE.parent)
 GAME = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
 d = json.load(open(str(CACHE / "provdata.json")))
-# From gen_provinces, not cache/alloc.json. The cached copy was written by the
-# deleted partition.py and nothing refreshed it, so the decision was being built
-# from a snapshot taken before 192 Bourgogne moved to FRA: it asked a player to
-# supply Dijon as Lotharingian land, which no player can ever hold. The cache was
-# also gitignored, so a fresh clone had no alloc.json at all and this script
-# could not run. One allocation, computed once, used by everything.
-alloc = build_allocation()
 area_of = d["area_of"]
 
-# The Karolingian sphere is exactly the land the five kingdoms start with.
-# Every other realm - Lusatia, Brittany, or anything added later - sits outside
-# it: neither required to restore the empire, nor able to restore it. Areas are
-# therefore derived from the five alone, which drops lusatia_area and
-# south_saxony_area. The allow block is built per province rather than per area
-# so that an outsider holding a province inside a covered area does not drag
-# that province into the requirement - thuringia_area, for instance, holds
-# Lusatia's Vogtland alongside East Francia's Thuringian core.
-FIVE = list(EMPIRE_KINGDOMS)
-provs = sorted({int(p) for t in FIVE for p in alloc[t]})
+# The empire is defined by where it was in 867, not by who holds it. There is no
+# list of eligible tags here and no realm that is privileged: the requirement is
+# land, and any tag that comes to hold all of it may form the empire. That
+# includes Lusatia, Brittany, and anything added later - none of which is named
+# as an outsider anywhere in this file, because none of them is one.
+#
+# empire_core() comes from gen_provinces, where the 60 areas and the 11
+# documented non-imperial provinces live, so the decision cannot disagree with
+# the rest of the mod about where the empire was.
+provs = empire_core()
 areas = sorted({area_of[str(p)] for p in provs})
 
 all_areas = set(re.findall(r"^\t*([a-z_]+) = \{",
@@ -60,35 +52,25 @@ claims = "\n".join(
     f"{T*4}}}\n"
     f"{T*4}add_permanent_claim = ROOT\n"
     f"{T*3}}}" for a in areas)
-# potential: mere eligibility. Being one of the five Carolingian tags is the
-# whole test - Lusatia, Brittany or any other realm is excluded here and can
-# never see the decision, however much land it holds. An earlier version also
-# demanded the other four be extinct, but a tag always exists while you are
-# playing it, so that condition belongs in allow, not here.
-is_carolingian = "\n".join(f"{T*4}tag = {t}" for t in FIVE)
-# allow, part one: you must be the last of the five standing. One branch per
-# tag, because "the other four" depends on which one you are.
-per_tag = "\n".join(
-    f"{T*4}AND = {{\n"
-    + f"{T*5}tag = {me}\n"
-    + "\n".join(f"{T*5}NOT = {{ exists = {o} }}" for o in FIVE if o != me)
-    + f"\n{T*4}}}"
-    for me in FIVE)
-# allow, part two: exact land. You must hold every province the five kingdoms
-# start with, and not one province more. "NOT = { <id> = { ... } }" is true when
-# that province is not held by you or your non-sovereign subjects.
+# allow: land, and nothing else. "NOT = { <id> = { ... } }" is true when that
+# province is not held by you or your non-sovereign subjects, so requiring every
+# one of them to be false means holding all of them.
 held = "\n".join(
     f"{T*4}NOT = {{ {p} = {{ country_or_non_sovereign_subject_holds = ROOT }} }}"
     for p in provs)
 
 txt = f"""# The Karolingians - "Unite the Karlings"
 #
-# The 867 partition is split across five kingdoms and the imperial title has no
-# land at all. Once a ruler holds the old Carolingian heartlands in one hand
-# the empire can be made whole again. This mirrors vanilla's own "form Germany"
-# / "Restore Roman Empire" decisions and uses change_tag, so the country really
-# becomes HLR - displayed as the Karolingian Empire - rather than merely
-# renaming itself.
+# The imperial title has no land at all in 867, because the empire is split
+# among its heirs. Once one ruler holds the old imperial heartlands in a single
+# hand the empire can be made whole again. This mirrors vanilla's own "form
+# Germany" / "Restore Roman Empire" decisions and uses change_tag, so the
+# country really becomes HLR rather than merely renaming itself.
+#
+# Any ruler who comes to hold that land may do this. The decision names no
+# realm as eligible or ineligible, because the empire is a place, not a set of
+# dynasties: whether the five Frankish kingdoms, Lusatia, or anyone else
+# reunites it is the game's business, not this file's.
 
 country_decisions = {{
 
@@ -110,11 +92,9 @@ country_decisions = {{
 \t\t\t\t\tnum_of_cities = 40
 \t\t\t\t}}
 \t\t\t}}
-\t\t\t# Eligibility only: any of the five Carolingian tags may try. Lusatia
-\t\t\t# and every other realm fail this test, so they never see the decision.
-\t\t\tOR = {{
-{is_carolingian}
-\t\t\t}}
+\t\t\t# No tag test at all. Whichever ruler ends up holding the old imperial
+\t\t\t# land may try, so no realm is excluded for being the realm it is.
+\t\t\t# The land requirement in allow is the entire test.
 \t\t}}
 
 \t\tprovinces_to_highlight = {{
@@ -127,12 +107,10 @@ country_decisions = {{
 \t\tallow = {{
 \t\t\tis_at_war = no
 \t\t\tis_free_or_tributary_trigger = yes
-\t\t\t# The empire can only be made whole by the last of the five standing,
-\t\t\t# once it also holds every province the five started with. Lusatia's
-\t\t\t# land is deliberately absent from that list.
-\t\t\tOR = {{
-{per_tag}
-\t\t\t}}
+\t\t\t# One ruler holding every imperial province. There is deliberately no
+\t\t\t# "and not one province more" clause, and no requirement that any
+\t\t\t# particular realm have died out: both described the five-kingdom
+\t\t\t# partition, and neither is a fact about the empire itself.
 {held}
 \t\t}}
 
@@ -162,7 +140,6 @@ os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
 p = os.path.join(MOD, "decisions", "KarolingianHRE.txt")
 open(p, "w", encoding="utf-8").write(txt)
 print(f"wrote {p}")
-print(f"  karolingian provinces : {len(provs)}")
+print(f"  imperial provinces    : {len(provs)}")
 print(f"  areas covered         : {len(areas)}")
-print(f"  allow requires         : all {len(provs)} provinces of the five kingdoms (exact)")
-print(f"  outside the sphere     : Lusatia and any other tag, both land and title")
+print(f"  eligible tags         : any - the requirement is land, not a tag list")

@@ -1,4 +1,5 @@
 government = monarchy
+government_rank = 1
 add_government_reform = bohemian_elective_kingdom_reform
 primary_culture = czech
 religion = catholic
