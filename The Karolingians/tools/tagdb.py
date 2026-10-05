@@ -309,6 +309,51 @@ TAGS: list[Tag] = [
             62,   # Leipzig (Leipzig)  (south_saxony_area; vanilla THU)
         )),
 
+    Tag(tag="BAV", country="fresh", name="Bavaria", rank=1, capital=65, culture="bavarian",
+        ck3_title="d_bavaria", in_alloc=True,
+        rank_note="Bavaria is a DUCHY in 867, not a kingdom, and that is true "
+                  "whether or not it is independent. Carloman governs it from "
+                  "c. 863 but is not crowned king until 876, so a rank-2 Bavaria "
+                  "would assert a crown nine years early. The realms are "
+                  "independent by design - no vassalage anywhere in this mod - so "
+                  "the tier is the only place any hierarchy is still expressed, "
+                  "and it has to be right here.",
+        areas=(
+            # Bavaria - Carloman, granted his own appanage in 855
+            # Bavaria proper, the Nordgau/Regensburg, the Austrian march, Tyrol,
+            # Carinthia and the Carantanian march. NOT Swabia or Franconia: those
+            # were East Frankish. Bayreuth (Nordgau) is Bavarian but shares EU4's
+            # upper_franconia_area with clearly East Franconian provinces.
+            "upper_bavaria_area", "lower_bavaria_area",
+            "east_bavaria_area", "tirol_area", "austria_proper_area",
+            "inner_austria_area",
+        ),
+        provinces=(
+            # Bayreuth sat in the Nordgau around Regensburg, which was Bavarian. Its
+            # area-mates (Bamberg, Nuremberg, Coburg) are East Franconian, hence the
+            # split.
+            4717,   # Bayreuth
+            # East Swabia is NOT one realm in 867. CK3 splits it, and so does this mod:
+            #   k_east_francia.txt :: ##d_swabia   -> c_ulm, c_grunningen, c_wurttemberg,
+            #                                          c_baden, c_zollern, c_hohenberg
+            #   k_bavaria.txt      :: ##d_augsburg -> c_augsburg, c_kempten (barony
+            #                                          Memmingen), c_ravensburg,
+            #                                          c_burgau, c_alpsee
+            # So the Augsburg group is Bavarian and stays GER only where CK3 says East
+            # Francia. Upper Swabia therefore splits, and Bregenz (barony of
+            # c_ravensburg, d_augsburg) is Bavarian too - it is already BAV via
+            # tirol_area, which agrees with d_tyrol also sitting under k_bavaria.
+            1868,   # Augsburg   (CK3 c_augsburg  -> d_augsburg -> k_bavaria)
+            68,   # Memmingen  (CK3 barony Memmingen -> c_kempten -> d_augsburg)
+            # carinthia_area is EU4's Slovenian area, not Carinthia: it holds Carniola
+            # proper (Krain, Cilli) plus the Aquileian coast (Istria, Gorz, Trieste).
+            # The area goes to Italy, but Carniola is carved back out and stays
+            # Bavarian, since the Heptarchy was Frankish and Lotharingian, never
+            # Italian, in 867.
+            129,   # Krain      (carinthia_area; vanilla HAB)
+            4751,   # Cilli      (carinthia_area; vanilla CLI)
+        )),
+
     Tag(tag="ITA", country="fresh", name="Italy", rank=2, capital=4728, culture="lombard",
         ck3_title="k_italy", in_alloc=True,
         rank_note="Italy: Louis II was king of Italy as well as emperor, so Italy "
@@ -362,51 +407,6 @@ TAGS: list[Tag] = [
             # before Pisa and Genoa started wrangling over it, so it follows Italy
             # rather than staying with Genoa (1247 Corsica, vanilla GEN).
             1247,   # Corsica    (corsica_sardinia_area; vanilla GEN)
-        )),
-
-    Tag(tag="BAV", country="fresh", name="Bavaria", rank=1, capital=65, culture="bavarian",
-        ck3_title="d_bavaria", in_alloc=True,
-        rank_note="Bavaria is a DUCHY in 867, not a kingdom, and that is true "
-                  "whether or not it is independent. Carloman governs it from "
-                  "c. 863 but is not crowned king until 876, so a rank-2 Bavaria "
-                  "would assert a crown nine years early. The realms are "
-                  "independent by design - no vassalage anywhere in this mod - so "
-                  "the tier is the only place any hierarchy is still expressed, "
-                  "and it has to be right here.",
-        areas=(
-            # Bavaria - Carloman, granted his own appanage in 855
-            # Bavaria proper, the Nordgau/Regensburg, the Austrian march, Tyrol,
-            # Carinthia and the Carantanian march. NOT Swabia or Franconia: those
-            # were East Frankish. Bayreuth (Nordgau) is Bavarian but shares EU4's
-            # upper_franconia_area with clearly East Franconian provinces.
-            "upper_bavaria_area", "lower_bavaria_area",
-            "east_bavaria_area", "tirol_area", "austria_proper_area",
-            "inner_austria_area",
-        ),
-        provinces=(
-            # Bayreuth sat in the Nordgau around Regensburg, which was Bavarian. Its
-            # area-mates (Bamberg, Nuremberg, Coburg) are East Franconian, hence the
-            # split.
-            4717,   # Bayreuth
-            # East Swabia is NOT one realm in 867. CK3 splits it, and so does this mod:
-            #   k_east_francia.txt :: ##d_swabia   -> c_ulm, c_grunningen, c_wurttemberg,
-            #                                          c_baden, c_zollern, c_hohenberg
-            #   k_bavaria.txt      :: ##d_augsburg -> c_augsburg, c_kempten (barony
-            #                                          Memmingen), c_ravensburg,
-            #                                          c_burgau, c_alpsee
-            # So the Augsburg group is Bavarian and stays GER only where CK3 says East
-            # Francia. Upper Swabia therefore splits, and Bregenz (barony of
-            # c_ravensburg, d_augsburg) is Bavarian too - it is already BAV via
-            # tirol_area, which agrees with d_tyrol also sitting under k_bavaria.
-            1868,   # Augsburg   (CK3 c_augsburg  -> d_augsburg -> k_bavaria)
-            68,   # Memmingen  (CK3 barony Memmingen -> c_kempten -> d_augsburg)
-            # carinthia_area is EU4's Slovenian area, not Carinthia: it holds Carniola
-            # proper (Krain, Cilli) plus the Aquileian coast (Istria, Gorz, Trieste).
-            # The area goes to Italy, but Carniola is carved back out and stays
-            # Bavarian, since the Heptarchy was Frankish and Lotharingian, never
-            # Italian, in 867.
-            129,   # Krain      (carinthia_area; vanilla HAB)
-            4751,   # Cilli      (carinthia_area; vanilla CLI)
         )),
 
     Tag(tag="SOR", country="fresh", name="Lusatia", rank=1, capital=60, culture="sorbian",
@@ -760,6 +760,19 @@ HEADER: dict = {t.tag: (t.capital, t.culture) for t in TAGS
 #: Realms whose country file is written from scratch, in write order.
 FRESH_REALMS: list = [t.tag for t in TAGS if t.country == "fresh"]
 
+#: The five kingdoms of the empire, in the order the mod presents them: West
+#: Francia, Lotharingia, East Francia, Bavaria, Italy. Lusatia is deliberately not
+#: here - it is a principality outside the empire, not a sixth kingdom.
+#:
+#: Stated rather than derived, because no single field picks these five out. Rank
+#: gives four of them and misses Bavaria, which is a duchy; country gives them plus
+#: Lusatia. Any rule that produced the set would be a rule that could also produce a
+#: different one, which is what a named list avoids.
+#:
+#: This was a private literal in validate.py, where nothing connected it to the
+#: order the realms are declared in. selfcheck below pins the two together.
+EMPIRE_KINGDOMS: list = ["FRA", "LOT", "GER", "BAV", "ITA"]
+
 #: Layer 1 of the allocation: which areas each realm takes whole. build.py
 #: walks this to seed ownership, then layer 2 carves provinces back out.
 AREA_OWNERS: dict = {t.tag: t.areas for t in TAGS if t.areas}
@@ -783,6 +796,14 @@ TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.province
 def selfcheck() -> None:
     """Fail loudly on a database that contradicts itself."""
     seen = set()
+    managed = [t.tag for t in TAGS if t.managed]
+    if managed[:len(EMPIRE_KINGDOMS)] != EMPIRE_KINGDOMS:
+        raise ValueError(
+            f"EMPIRE_KINGDOMS {EMPIRE_KINGDOMS} is not the first "
+            f"{len(EMPIRE_KINGDOMS)} managed realms in declaration order "
+            f"({managed[:len(EMPIRE_KINGDOMS) + 1]}) - the five kingdoms and the "
+            f"order the mod presents them are meant to be the same list")
+
     for t in TAGS:
         if t.tag in seen:
             raise ValueError(f"{t.tag}: declared twice in TAGS")

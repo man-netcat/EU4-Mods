@@ -44,6 +44,10 @@ from build import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
 # The Tag objects themselves, for the checks that must compare a declaration in
 # the database against the file that actually ships.
 from build import BY_TAG  # noqa: E402
+# The five kingdoms, named once in the database. This check used to keep its own
+# copy, which is how a shared-dynasty rule and the order the mod presents the realms
+# in could drift apart without either noticing.
+from build import EMPIRE_KINGDOMS  # noqa: E402
 fail = []
 
 
@@ -550,9 +554,8 @@ def run() -> int:
     # and "of Italy" - quietly breaks reunification by marriage the first time that
     # realm changes ruler.
     print("\n== shared Carolingian dynasty ==")
-    KAROLINGIAN = ["FRA", "LOT", "GER", "BAV", "ITA"]
     seen_dyn = set()
-    for t in KAROLINGIAN:
+    for t in EMPIRE_KINGDOMS:
         p = os.path.join(COUNTRY_OUT, f"{t}.txt")
         body = open(p, encoding="utf-8", errors="replace").read()
         blk = re.search(r"^1444\.1\.1 = \{.*?^\}", body, re.M | re.S)
@@ -563,7 +566,7 @@ def run() -> int:
             print(f"        {t}: {d}")
         seen_dyn |= set(ds)
     note(len(seen_dyn) == 1,
-         f"all five realms use the same dynasty string ({', '.join(sorted(seen_dyn))})")
+         f"all {len(EMPIRE_KINGDOMS)} kingdoms use the same dynasty string ({', '.join(sorted(seen_dyn))})")
 
     # No localisation file may be missing its BOM, and no realm may keep a
     # hand-written dynasty that silently diverges from the house.
