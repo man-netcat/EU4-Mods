@@ -945,9 +945,8 @@ def effective(text):
 def step_start():
     alloc = build()
     expected = {}
-    # TITLES, not TAGS: alloc is keyed by tag string, so iterating TAGS (a list of
-    # Tag objects) looked up every province under a key that cannot exist, built
-    # an empty `expected`, and printed "0 provinces checked" as a PASS.
+    # TITLES, not TAGS: alloc is keyed by tag string, so Tag objects always
+    # missed and the check passed on an empty set.
     for t in TITLES:
         for p in alloc.get(t, []):
             expected[int(p)] = t
@@ -1258,9 +1257,16 @@ def resolve(tag, titles, chars, dyns, houses):
     cannot come to disagree with itself.
     """
     title = TITLES[tag]
-    cid, carried = holder_at_exact(title, titles)
+    # CK3 can leave the realm's own title vacant in 867; RULER_TITLES says
+    # where to read the ruler from instead.
+    ruler_title = RULER_TITLES.get(tag, title)
+    cid, carried = holder_at_exact(ruler_title, titles)
     if cid is None:
-        return {"error": f"CK3 has no 867 holder for {tag}'s title {title}"}
+        where = (f"CK3 has no 867 holder for {tag}'s title {title}"
+                 if ruler_title == title else
+                 f"CK3 has no 867 holder for {tag}'s ruler title {ruler_title} "
+                 f"(bound to {title})")
+        return {"error": where}
     body = chars.get(cid)
     if body is None:
         return {"error": f"CK3 has no character {cid} for {tag}"}
@@ -1284,7 +1290,8 @@ def resolve(tag, titles, chars, dyns, houses):
     name = loc(raw) or raw
     dy = resolve_dynasty(body, dyns, houses)
     return {"char": cid, "name": name, "dynasty": dy, "title": title,
-            "carried": carried, "no_dynasty": not dy}
+            "ruler_title": ruler_title, "carried": carried,
+            "no_dynasty": not dy}
 
 
 # -------------------------------------------------------------- country files -
@@ -1443,6 +1450,8 @@ def step_ck3(argv):
         ok = (cn == got["name"] and cd == got["dynasty"] and not heir_bad)
         mark = "OK " if ok else "DRIFT"
         src = (f"<- {got['title']}"
+               + (f" (ruler from {got['ruler_title']})"
+                  if got.get("ruler_title", got["title"]) != got["title"] else "")
                + (f" (holder carried from {got['carried']})"
                   if got.get("carried") else ""))
         print(f"  {mark} {tag} {src} / char {got['char']}")
@@ -1555,9 +1564,7 @@ VANILLA = {
     # Montenegro: Zeta (138) and Kotor (4754) are the Dioclean core, and Zeta is
     # already vanilla's MON capital.
     "MON": {"ruler": "CK3"},
-    # Prussia: vanilla PRU holds no land at 1444 and names no capital, so the seat
-    # is set to Marienburg (1841) - the Order's own capital, inside west_prussia_area,
-    # which passes over whole. The ruler is CK3's d_prussia at 867.
+    # Prussia: vanilla names no capital, so the seat is set to Marienburg (1841).
     "PRU": {"capital": 1841, "ruler": "CK3"},
     # West Francia: every line of vanilla's French history survives - the 987
     # accession, the 1308 papal removal, all of it - and only the 1444 ruler and

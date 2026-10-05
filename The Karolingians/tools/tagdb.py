@@ -85,6 +85,9 @@ class Tag:
     culture: Optional[str] = None
     #: CK3 title supplying the 867 ruler's name and dynasty.
     ck3_title: Optional[str] = None
+    #: CK3 title to read the 867 ruler from when the realm's own title is vacant
+    #: then. SAR: d_sardinia is empty 843-1164, so c_arborea rules it.
+    ruler_title: Optional[str] = None
     #: Why CK3 is not the authority, when ck3_title is None. Required if ck3_title
     #: is None and the realm is not deferred - an unexplained gap is a silent one.
     no_ck3: Optional[str] = None
@@ -93,8 +96,9 @@ class Tag:
     areas: tuple = ()
     #: Why no country file is written yet. A deferral, not an exemption.
     deferred: Optional[str] = None
-    #: True for realms the mod gives land to (the allocation's tag list).
-    in_alloc: bool = False
+    #: True for realms the allocation may hand land to. BOH and PAP turn it off;
+    #: selfcheck refuses a tag that declares land with it off.
+    in_alloc: bool = True
 
     #: Areas this realm takes whole, by EU4 area name. Layer 1 of the allocation.
     areas: tuple = ()
@@ -642,9 +646,8 @@ TAGS: list[Tag] = [
     Tag(tag="PRU", rank=1, capital=1841, ck3_title="d_prussia", in_alloc=True,
         rank_note="Prussia from CK3's d_prussia: the Pruthenians, whom EU4 can "
                   "only seat in a Catholic duchy.",
-        # Vanilla PRU holds no provinces at all at 1444 - the Order does. Both
-        # Prussian areas therefore pass across whole: east_prussia_area and
-        # west_prussia_area are entirely the Order's, with nothing to pull back.
+        # Vanilla PRU holds nothing at 1444. Both Prussian areas are entirely the
+        # Order's, so they pass across whole.
         areas=("east_prussia_area", "west_prussia_area")),
 
     # CRI is the one realm where the question is not "which CK3 character" but
@@ -682,7 +685,7 @@ TAGS: list[Tag] = [
     # Not in ALL_TAGS because the mod does not hand out their land: they keep
     # vanilla's provinces untouched. They are still realms this mod maintains a
     # court and a size for, so they still get a deliberate rank.
-    Tag(tag="BOH", rank=1, capital=266, ck3_title=None,
+    Tag(tag="BOH", rank=1, capital=266, ck3_title=None, in_alloc=False,
         no_ck3="mod-invented: Borivoj is the mod's own Bohemian ruler; CK3 "
                "records no 867 holder for k_bohemia to verify against",
         rank_note="Bohemia: a duchy of the Empire under Borivoj I. Rank 1 is the "
@@ -690,14 +693,22 @@ TAGS: list[Tag] = [
                   "partition: Bohemia is a small march here for the ordinary "
                   "reason, that in 867 it was a small duchy."),
 
-    Tag(tag="SAR", rank=1, capital=127, ck3_title="c_arborea",
-        rank_note="Sardinia, from vanilla, holding Sassari (127), Arborea (4735) "
-                  "and Cagliari (2986). All three are in NOT_IMPERIAL_867, so "
-                  "Sardinia was never part of the imperial core and releasing it "
-                  "changes nothing about the 226 the empire decision requires. A "
-                  "duchy is the right size: in 867 Sardinia is a Byzantine "
-                  "province governed by the giudicati of Torres and Cagliari, not "
-                  "a kingdom of its own."),
+    Tag(tag="SAR", rank=1, capital=127, ck3_title="d_sardinia",
+        ruler_title="c_arborea",
+        rank_note="Sardinia, holding Sassari (127), Arborea (4735) and Cagliari "
+                  "(2986). All three are in NOT_IMPERIAL_867, so Sardinia was "
+                  "never part of the imperial core and releasing it changes "
+                  "nothing about the 226 the empire decision requires. A duchy is "
+                  "the right size: in 867 Sardinia is a Byzantine province "
+                  "governed by the giudicati of Torres and Cagliari, not a "
+                  "kingdom of its own. CK3's d_sardinia is vacant in 867, so the "
+                  "ruler comes from c_arborea.",
+        # Vanilla takes the island in 1420, so all three are ARA's until claimed.
+        provinces={
+            127,   # Sassari               (corsica_sardinia_area; vanilla ARA)
+            2986,  # Cagliari              (corsica_sardinia_area; vanilla ARA)
+            4735,  # Arborea               (corsica_sardinia_area; vanilla ARA)
+        }),
 
     # -- the Papal State ---------------------------------------------------------
     # PAP holds Rome: 118 Roma is deliberately not taken, so it still holds one
@@ -712,12 +723,8 @@ TAGS: list[Tag] = [
     # its title, but it is deliberately NOT a realm this mod maintains. It keeps
     # vanilla's Rome and vanilla's ruler, so there is nothing to sync a ruler into
     # and no tier to decide.
-    # The Teutonic Order is dissolved and its remaining three provinces handed
-    # back out. Neither of these is a mod realm: Brandenburg and Poland keep
-    # vanilla's rulers and vanilla's files, so a Tag here does one thing only -
-    # claim the provinces the Order was holding. No capital, because the mod
-    # does not move their seats. neumark_area splits (Sternberg is already
-    # Brandenburg's), so it is picked province by province, not taken whole.
+    # The Order's last three provinces, handed back out. Not realms of the mod's
+    # own: no rank, no capital, no CK3 title, just the land.
     Tag(tag="BRA", rank=None, country="none", ck3_title=None, in_alloc=True,
         no_ck3="vanilla Brandenburg, given the Order's Neumark provinces; the "
                "mod runs no court of its own here",
@@ -734,7 +741,7 @@ TAGS: list[Tag] = [
         }),
 
     Tag(tag="PAP", rank=None, capital=118, ck3_title="k_papal_state",
-        country="none"),
+        country="none", in_alloc=False),
 ]
 
 BY_TAG: dict[str, Tag] = {t.tag: t for t in TAGS}
@@ -765,6 +772,8 @@ RANK: dict = {t.tag: t.rank for t in TAGS if t.rank is not None}
 
 #: CK3 title per realm. A realm here has its ruler's name and dynasty lifted.
 TITLES: dict = {t.tag: t.ck3_title for t in TAGS if t.ck3_title}
+#: The few realms whose ruler is read from a CK3 title other than their own.
+RULER_TITLES: dict = {t.tag: t.ruler_title for t in TAGS if t.ruler_title}
 
 #: Vanilla tags the allocation hands land to, which keep vanilla's own file and
 #: vanilla's own ruler. Not Tags: the mod maintains no realm for them, it only
@@ -846,6 +855,15 @@ def selfcheck() -> None:
             raise ValueError(
                 f"{t.tag}: both ck3_title and no_ck3 are set - CK3 is the "
                 f"authority or it is not")
+        if (t.areas or t.provinces) and not t.in_alloc:
+            raise ValueError(
+                f"{t.tag}: declares {len(t.areas)} areas and "
+                f"{len(t.provinces)} provinces but has in_alloc off - the "
+                f"allocation would silently hand it nothing")
+        if t.ruler_title and not t.ck3_title:
+            raise ValueError(
+                f"{t.tag}: ruler_title is set but ck3_title is not - a ruler "
+                f"title only means something next to the realm title it overrides")
     missing = KEPT_REALMS - set(RANK) - set(DEFERRED_REALMS)
     if missing:
         raise ValueError(f"managed realms with neither a rank nor a deferral: "
