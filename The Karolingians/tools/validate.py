@@ -440,19 +440,37 @@ def run() -> int:
         _holders = _b.land_holders()
         _vanilla = {fn.split(" ")[0]
                     for fn in os.listdir(_b.VANILLA_CDIR) if fn.endswith(".txt")}
-        _kept = sorted(t for t in _holders
-                       if t not in _b.TITLES and t not in _b.NOT_CK3 and t in _vanilla)
-        _unclassified = sorted(t for t in _holders
-                               if t not in _b.TITLES
-                               and t not in _b.NOT_CK3 and t not in _vanilla)
+        # Intersected with the actual holders. The registry sizes and the number of
+        # land-holders are different counts - two CK3-mapped realms hold no land at
+        # the start date - and adding the registries together claimed to explain
+        # 29 holders with 31 tags, which is how a partition check stops being one.
+        _ck3 = {t for t in _holders if t in _b.TITLES}
+        _not = {t for t in _holders if t in _b.NOT_CK3}
+        _rest = {t for t in _holders if t not in _b.TITLES and t not in _b.NOT_CK3}
+        _unclassified = sorted(t for t in _rest if t not in _vanilla)
+        # The rest are excused as vanilla and untouched. That is only true of a realm
+        # this mod leaves alone: one it gives a rank to is not untouched just because
+        # its provinces stayed vanilla, and BOH and SAR both hold land this build
+        # never allocated. So anything managed has to be classified on purpose.
+        _sneaky = sorted(t for t in _rest
+                         if (s := BY_TAG.get(t)) is not None and s.managed)
         for t in _unclassified:
             note(False, f"{t} owns {_holders[t]} provinces at the start date but is "
                         f"in neither _b.TITLES nor _b.NOT_CK3, and has no vanilla "
                         f"country file")
-        note(not _unclassified,
-             f"all {len(_holders)} start-date land-holders are accounted for: "
-             f"{len(_b.TITLES)} CK3-derived + {len(_b.NOT_CK3)} deliberately not "
-             f"+ {len(_kept)} vanilla and untouched")
+        for t in _sneaky:
+            note(False, f"{t} owns {_holders[t]} provinces and this mod ranks it, "
+                        f"but it is in neither _b.TITLES nor _b.NOT_CK3; "
+                        f"classify it rather than letting 'vanilla and untouched' "
+                        f"cover for it")
+        note(not (set(_b.TITLES) & set(_b.NOT_CK3)),
+             f"no realm is both CK3-derived and deliberately not: "
+             f"{len(set(_b.TITLES) & set(_b.NOT_CK3))} overlap")
+        # Reported, not asserted: the union is a tautology because _rest is defined
+        # as the complement. What the numbers are for is showing that the two
+        # registries are bigger than the holders - two mapped realms hold no land.
+        print(f"        {len(_ck3)} CK3-derived + {len(_not)} deliberately not "
+              f"+ {len(_rest)} vanilla and untouched = {len(_holders)} holders")
 
         for t in sorted(_b.TITLES):
             want = _b.resolve(t, _titles, _chars, _dyn, _houses)
