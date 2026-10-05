@@ -678,9 +678,7 @@ TAGS: list[Tag] = [
                   "partition: Bohemia is a small march here for the ordinary "
                   "reason, that in 867 it was a small duchy."),
 
-    Tag(tag="SAR", rank=1, capital=127, ck3_title=None,
-        no_ck3="no CK3 model: d_sardinia is vacant in 867 and k_sardinia unheld, "
-               "and no Sardinian ruler of that date is attested to name instead",
+    Tag(tag="SAR", rank=1, capital=127, ck3_title="c_arborea",
         rank_note="Sardinia, from vanilla, holding Sassari (127), Arborea (4735) "
                   "and Cagliari (2986). All three are in NOT_IMPERIAL_867, so "
                   "Sardinia was never part of the imperial core and releasing it "

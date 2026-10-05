@@ -1671,10 +1671,16 @@ VANILLA = {
     # other realm in this mod.
     "FRA": {"ruler": "FRA"},
     # Sardinia: no province changes hands and no capital changes - vanilla already
-    # seats SAR at 127, which is one of its own three. All this entry is here for
-    # is the rank, because without it SAR takes EU4's default of 1 by accident
-    # rather than by argument. No ruler is written: see NOT_CK3 in ck3ruler.py.
-    "SAR": {},
+    # seats SAR at 127, which is one of its own three. The rank is set so that it
+    # comes from the same argument as every other realm here rather than from EU4's
+    # default of 1 by accident.
+    #
+    # The ruler comes from c_arborea rather than d_sardinia. CK3 leaves the Sardinian
+    # duchies vacant at 867 - both d_sardinia and k_sardinia resolve to holder 0 or
+    # nothing at all - so the only Sardinian of that date in the game is Gublenu,
+    # who holds c_arborea and c_cagliari. Sardinia is a duchy in EU4 and a county is
+    # where its 867 man happens to sit; that is the mod's business, not CK3's.
+    "SAR": {"ruler": "CK3"},
 }
 
 # 867 rulers for the vanilla tags above. Dates are CK3's own, taken from
