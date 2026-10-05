@@ -138,7 +138,18 @@ for t in sorted(KEPT_REALMS):
         continue
     txt = open(path, encoding="utf-8", errors="surrogateescape").read()
     want = RANK[t]
-    note(f"government_rank = {want}" in txt, f"{t} government_rank = {want}")
+    # Match the TOP-LEVEL key only, and read the number rather than searching for
+    # its text. A substring test passes on two things that are not a rank at all:
+    # a commented-out line, and the same key indented inside a dated block.
+    # Both were live here - Bulgaria had `government_rank = 2` swallowed by the
+    # end of a comment on line 4, and France's only occurrence was inside its
+    # 1792 revolution block - so West Francia was a duchy and the First
+    # Bulgarian Empire was one too, and the build called both correct.
+    top = re.search(r"^government_rank\s*=\s*(\d+)", txt, re.M)
+    got = int(top.group(1)) if top else None
+    note(got == want, f"{t} government_rank = {want}"
+                      + ("" if got is None else f" (top-level, found {got})")
+                      + (" - ABSENT, so EU4 defaults it to a duchy" if top is None else ""))
 # A realm with land, a name and a rank but no country file is unplayable. The
 # gate fails for any such realm that is not an explicitly declared deferral, so a
 # NEW gap still stops the build; a declared one is reported every time instead of

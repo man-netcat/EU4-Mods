@@ -1,7 +1,9 @@
 government = monarchy
-# Rank from gen_countries.RANK: the First Bulgarian Empire under Boris is a
-# kingdom by 867, a peer of Byzantium's neighbours rather than a vassal duchy.
-# See RANK["BUL"] for the full argument.government_rank = 2
+government_rank = 2
+# Rank: the First Bulgarian Empire under Boris is a kingdom by 867, a peer of
+# Byzantium's neighbours rather than a vassal duchy. The full argument lives on
+# the Tag for BUL in tools/tagdb.py.
+
 add_government_reform = feudalism_reform
 technology_group = eastern
 primary_culture = bulgarian

@@ -1,10 +1,12 @@
 government = monarchy
-# Rank from gen_countries.RANK. See RANK["HUN"] for the full argument, which is
-# CONTESTED and unsettled: in 867 Hungary is a Magyar tribal confederation on
-# the steppe, not a kingdom in the Carpathian Basin.
+government_rank = 1
+# Rank: CONTESTED and unsettled. In 867 Hungary is a Magyar tribal
+# confederation on the steppe, not a kingdom in the Carpathian Basin. The full
+# argument lives on the Tag for HUN in tools/tagdb.py.
 # The religion, culture and government below are still vanilla's 1444 Hungary
 # and do NOT describe an 867 steppe confederation. That is a known, unwritten
-# gap - see the note in tools/gen_countries.py DEFERRED_REALMS.government_rank = 1
+# gap - see the note in tools/gen_countries.py DEFERRED_REALMS.
+
 add_government_reform = apostolic_kingdom
 primary_culture = hungarian
 add_accepted_culture = slovak

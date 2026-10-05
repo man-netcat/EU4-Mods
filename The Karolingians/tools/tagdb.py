@@ -158,10 +158,17 @@ class Tag:
 TAGS: list[Tag] = [
 
     # -- the 867 Carolingian partition ------------------------------------------
-    Tag(tag="FRA", name="West Francia", rank=3, capital=183, culture="frankish",
+    Tag(tag="FRA", name="West Francia", rank=2, capital=183, culture="frankish",
         ck3_title="k_france", in_alloc=True,
-        rank_note="West Francia, the largest of the partitions, whose ruler "
-                  "claimed to rule the Franks as a whole.",
+        rank_note="West Francia: the largest of the partitions, and a kingdom. "
+                  "Charles the Bald was King of the Franks from 843 and held "
+                  "nothing higher in 867 - the imperial crown came in February "
+                  "875, when Pope John VIII crowned him in Rome, eight years "
+                  "after this start date. Ranking him 3 here would assert a "
+                  "title he did not hold yet, which is the same anachronism that "
+                  "made Bavaria a duchy rather than the kingdom Carloman was "
+                  "crowned in 876. His successor Arnulf is crowned in 887 and is "
+                  "still an anachronism for a 867 file, so rank 3 stays out.",
         areas=(
             # West Francia - Charles the Bald, King of the Franks
             # Septimania (Toulouse, Languedoc, Carcassonne) and Aquitaine. NOT

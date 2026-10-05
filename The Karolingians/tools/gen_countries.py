@@ -80,6 +80,18 @@ VANILLA = {
     # Montenegro: Zeta (138) and Kotor (4754) are the Dioclean core, and Zeta is
     # already vanilla's MON capital.
     "MON": {"ruler": "CK3"},
+    # West Francia: every line of vanilla's French history survives - the 987
+    # accession, the 1308 papal removal, all of it - and only the 1444 ruler and
+    # the rank are overridden. It used to be patched by its own bespoke function
+    # that skipped the rank step entirely, which left FRA with no government_rank
+    # at all and the largest realm in the mod playing as a duchy.
+    #
+    # The ruler is the hand-written block, not ck3_block(): CK3 dates Charles
+    # 823.1.14 - 877.6.10, which is a placeholder next to the 13 August 823 and
+    # 6 October 877 every chronicle gives. ck3_sync still lifts his name and
+    # dynasty from CK3; only the dates stay written here, as they do for every
+    # other realm in this mod.
+    "FRA": {"ruler": "FRA"},
     # Sardinia: no province changes hands and no capital changes - vanilla already
     # seats SAR at 127, which is one of its own three. All this entry is here for
     # is the rank, because without it SAR takes EU4's default of 1 by accident
@@ -596,24 +608,6 @@ capital = {cap}
 {RULERS[tag]}"""
 
 
-def patch_fra():
-    """Keep every vanilla French history event; only override the 1444 ruler."""
-    path, fn = find_vanilla("FRA")
-    text = open(path, encoding="utf-8", errors="surrogateescape").read()
-    lines = text.splitlines()
-    # first dated block at or after the start date, so chronological order holds
-    ins = len(lines)
-    for i, ln in enumerate(lines):
-        m = re.match(r"^(\d+)\.(\d+)\.(\d+)\s*=", ln.strip())
-        if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) >= (1444, 1, 1):
-            ins = i
-            break
-    block = ["1444.1.1 = {"] + \
-            RULERS["FRA"].strip("\n").splitlines()[1:-1] + ["}", ""]
-    out = lines[:ins] + block + lines[ins:]
-    return "\n".join(out) + "\n"
-
-
 # --------------------------------------------------------------------------------------
 # Disbanding the Holy Roman Empire
 # --------------------------------------------------------------------------------------
@@ -668,15 +662,21 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
                           text, count=1, flags=re.M)
         assert n == 1, f"{tag}: no top-level 'elector = yes' to dissolve in {fn}"
     if capital is not None:
-        text, n = re.subn(r"^(\s*capital\s*=\s*)\d+.*$", rf"\g<1>{capital}", text,
+        # Top-level only, for the same reason as the elector line below: the same
+        # key indented inside a dated block is a later state of that key, and
+        # count=1 would rewrite whichever came first in the file. Vanilla France
+        # has `government_rank` inside its 1792 revolution block, so a pattern
+        # that allowed leading whitespace silently rewrote the Revolution's rank
+        # instead of setting the kingdom's.
+        text, n = re.subn(r"^(capital\s*=\s*)\d+.*$", rf"\g<1>{capital}", text,
                           count=1, flags=re.M)
-        assert n == 1, f"{tag}: no capital line to patch in {fn}"
+        assert n == 1, f"{tag}: no top-level capital line to patch in {fn}"
     if rank is not None:
         # Eight of the twenty realms have no government_rank in vanilla at all,
         # so they silently fall to EU4's default of 1. That is how the Tulunids
         # ended up ranked level with Silesia: not a decision, an omission. Set
         # every one of them from RANK so the tier is always deliberate.
-        text, n = re.subn(r"^(\s*government_rank\s*=\s*)\d+.*$", rf"\g<1>{rank}", text,
+        text, n = re.subn(r"^(government_rank\s*=\s*)\d+.*$", rf"\g<1>{rank}", text,
                           count=1, flags=re.M)
         if n == 0:
             # No line to patch: add one beside the other government keys, so the
@@ -707,12 +707,10 @@ def main():
         open(os.path.join(OUT, f"{tag}.txt"), "w", encoding="utf-8").write(
             with_provenance(tag, ck3_sync(tag, fresh(tag))))
         print(f"wrote {tag}.txt")
-    open(os.path.join(OUT, "FRA.txt"), "w",
-         encoding="utf-8", errors="surrogateescape").write(with_provenance("FRA", ck3_sync("FRA", patch_fra())))
-    print("wrote FRA.txt (vanilla history preserved)")
     for tag, spec in VANILLA.items():
         want = spec.get("ruler")
-        ruler = ck3_block(tag) if want == "CK3" else VANILLA_RULERS.get(want)
+        ruler = (ck3_block(tag) if want == "CK3"
+                 else {**RULERS, **VANILLA_RULERS}.get(want))
         was_elector = tag in IMPERIAL_ELECTORS
         open(os.path.join(OUT, f"{tag}.txt"), "w", encoding="utf-8",
              errors="surrogateescape").write(
