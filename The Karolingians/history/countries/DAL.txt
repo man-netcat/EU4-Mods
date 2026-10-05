@@ -1,6 +1,6 @@
 government = monarchy
-# Rank from gen_countries.RANK, argued from Egypt's own 867 standing.
-government_rank = 1
+# Rank from gen_countries.RANK: a coastal duchy of city-states, nominally one
+# realm. See RANK["DAL"] for the full argument.government_rank = 1
 add_government_reform = feudalism_reform
 mercantilism = 25
 primary_culture = dalmatian

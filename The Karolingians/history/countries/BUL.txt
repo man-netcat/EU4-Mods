@@ -1,6 +1,7 @@
 government = monarchy
-# Rank from gen_countries.RANK, argued from Egypt's own 867 standing.
-government_rank = 2
+# Rank from gen_countries.RANK: the First Bulgarian Empire under Boris is a
+# kingdom by 867, a peer of Byzantium's neighbours rather than a vassal duchy.
+# See RANK["BUL"] for the full argument.government_rank = 2
 add_government_reform = feudalism_reform
 technology_group = eastern
 primary_culture = bulgarian
