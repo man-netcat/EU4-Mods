@@ -44,17 +44,13 @@ Field notes
     culture   Primary culture for a from-scratch country file.
     ck3_title The CK3 title whose 867 holder supplies the ruler's name and
               dynasty. None means CK3 is not the authority - see no_ck3.
-    grants    Named land blocks from landblocks.py that this tag takes.
     deferred  Why no country file is written yet, or None.
 
 What is not here yet
 --------------------
-The per-province overrides and the area lists still live in gen_provinces.py,
-where their justifications are written province by province. They move onto
-Tag.overrides and Tag.areas in the next pass, and gen_provinces will derive both
-tables from this file once they do. Until then gen_provinces remains
-authoritative for land, and AREA_OWNERS/PROVINCE_OWNERS below are mirrors rather
-than the source - do not edit either side alone.
+Nothing about land lives outside this file. AREA_OWNERS and PROVINCE_OWNERS below
+are derived from Tag.areas and Tag.provinces, and build.py derives its
+allocation from the same two lists - there is no second copy to drift.
 """
 from __future__ import annotations
 
@@ -92,16 +88,9 @@ class Tag:
     #: Why CK3 is not the authority, when ck3_title is None. Required if ck3_title
     #: is None and the realm is not deferred - an unexplained gap is a silent one.
     no_ck3: Optional[str] = None
-    #: Named land blocks this tag takes, from landblocks.py.
-    grants: tuple = ()
-    #: Position of this tag's grant in layer 3. Load-bearing, not cosmetic: the
-    #: allocation lets a later transfer win an overlap, so reordering these
-    #: silently moves provinces. None means the tag takes no block.
-    grant_order: Optional[int] = None
-    #: EU4 areas this tag claims. Migrated from gen_provinces in the next pass.
+    #: EU4 areas this tag claims. With `provinces` below, this is the whole
+    #: declaration of a realm's land: there is no third list and no block table.
     areas: tuple = ()
-    #: Provinces taken against their area. Migrated from gen_provinces next pass.
-    overrides: tuple = ()
     #: Why no country file is written yet. A deferral, not an exemption.
     deferred: Optional[str] = None
     #: True for realms the mod gives land to (the allocation's tag list).
@@ -439,7 +428,7 @@ TAGS: list[Tag] = [
 
     # -- Iberia and the west -----------------------------------------------------
     Tag(tag="NAV", rank=2, capital=210, ck3_title="k_navarra", in_alloc=True,
-        grants=(), rank_note="The Kingdom of Pamplona under Garcia I, a kingdom "
+        rank_note="The Kingdom of Pamplona under Garcia I, a kingdom "
                              "in 867 and a peer of the Asturians.",
         provinces=(
             # Vizcaya and Huesca (Osca) to Navarra. Biscay was a Basque county under
@@ -453,20 +442,17 @@ TAGS: list[Tag] = [
         )),
 
     Tag(tag="ASU", rank=2, capital=207, ck3_title="k_asturias", in_alloc=True,
-        grant_order=10,
-        grants=("ASU_ALL",),
+        provinces=(206, 207, 208, 215, 216, 1745, 1746, 4552, 4553, 4554, 4555, 4558, 4789),
         rank_note="Asturias: Alfonso III inherited the kingship in 866, one year "
                   "before the start date, so it is a kingdom and not a county."),
 
     Tag(tag="ADU", rank=2, capital=204, ck3_title="c_granada", in_alloc=True,
-        grant_order=9,
-        grants=("ADU_ALL",),
+        provinces=(214, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 333, 367, 368, 1747, 1748, 1749, 1750, 1751, 1851, 2751, 2754, 2755, 2988, 2989, 2990, 4150, 4546, 4547, 4548, 4549, 4550, 4551, 4556, 4557, 4559, 4560, 4787, 4788),
         rank_note="The Nayihid emirate of Granada, a principality that by 867 "
                   "ruled the whole of al-Andalus."),
 
     Tag(tag="CRT", rank=1, capital=1450, ck3_title=None, in_alloc=True,
-        grant_order=2,
-        grants=("CRETE",),
+        provinces=(163,),
         no_ck3="no CK3 model: CK3 has no Crete, so there is no character to "
                "compare",
         rank_note="Crete: an Emirate of Crete is a single-island emirate under "
@@ -474,14 +460,12 @@ TAGS: list[Tag] = [
 
     # -- the Islamic east --------------------------------------------------------
     Tag(tag="ARB", rank=3, capital=385, ck3_title="e_arabia", in_alloc=True,
-        grant_order=7,
-        grants=("ARABIA_ALL",),
+        provinces=(364, 379, 380, 381, 383, 1854, 2327, 4268, 4269, 377, 378, 382, 1849, 1855, 2313, 4297, 327, 332, 2303, 4298, 4310, 406, 409, 410, 411, 415, 416, 419, 420, 2205, 2206, 2207, 2209, 2309, 2310, 2311, 2312, 2314, 4291, 4293, 4294, 4304, 331, 407, 418, 2305, 2306, 2308, 4292, 408, 412, 4288, 4289, 4290, 394, 395, 396, 2340, 2347, 405, 4270, 4271, 2328, 4272, 384, 2329, 2330, 385),
         rank_note="The Abbasid Caliphate, which in 867 is the empire of the "
                   "Islamic world and no realm in this table rivals it."),
 
     Tag(tag="EGY", rank=2, capital=361, ck3_title="k_egypt", in_alloc=True,
-        grant_order=8,
-        grants=("EGY_ALL",),
+        provinces=(356, 357, 358, 359, 360, 361, 362, 363, 365, 1231, 1232, 1233, 2315, 2316, 2317, 2318, 2319, 2320, 2321, 2324, 2325, 2326, 4316, 4317, 4318, 4319, 4320, 4323),
         rank_note="CONTESTED. The Tulunids held Egypt and Syria as a de facto "
                   "independent beylikh, but a beylikh is a principality, and EU4's "
                   "only tiers are duchy and kingdom. Kept at 2 so the Tulunids are "
@@ -527,25 +511,21 @@ TAGS: list[Tag] = [
         )),
 
     Tag(tag="DAL", rank=1, capital=136, ck3_title="d_dalmatia", in_alloc=True,
-        grant_order=6,
-        grants=("DAL_CORE",),
+        provinces=(136, 4753),
         rank_note="Dalmatia: a coastal duchy of city-states, nominally one realm."),
 
     Tag(tag="BYZ", rank=3, capital=4698, ck3_title="e_byzantium", in_alloc=True,
-        grant_order=0,
-        grants=("BYZ_ALL",),
+        provinces=(144, 146, 147, 148, 149, 1853, 4699, 4702, 4705, 4779, 316, 317, 318, 319, 322, 326, 329, 1846, 1848, 2296, 2297, 2298, 2299, 2300, 2304, 4308, 4309, 4311, 4312, 4313, 4314, 4315, 143, 4174, 4175, 4750, 285, 2447, 2757, 325, 328, 330, 2410, 122, 2982, 323, 324, 2301, 2302, 4307, 142, 145, 151, 164, 1773, 2348, 3003, 320, 321, 4698, 4700, 4701),
         rank_note="The Empire itself. 867 is Basil I's first full year."),
 
     Tag(tag="BUL", rank=2, capital=1764, ck3_title="k_bulgaria", in_alloc=True,
-        grant_order=1,
-        grants=("BUL_ALL",),
+        provinces=(150, 159, 1765, 2746, 2750, 3001, 4703, 4704, 4706, 4780, 1764, 1756, 160, 161, 2998, 4531, 4532, 141, 1766, 1827, 3000, 4173, 4176, 4239, 4757, 153, 155, 156, 157, 158, 1951, 1952, 1953, 1954, 4125, 4126, 4127, 4128),
         rank_note="The First Bulgarian Empire under Boris, a kingdom by 867 and a "
                   "peer of Byzantium's neighbours rather than a vassal duchy."),
 
     # -- the steppe and the Danube ----------------------------------------------
     Tag(tag="HUN", rank=1, capital=283, ck3_title=None, in_alloc=True,
-        grant_order=3,
-        grants=("MOGYERS_LEVIDIA",),
+        provinces=(282, 283, 2406, 1943, 1944, 4540),
         no_ck3="vanilla: keeps vanilla's 1444.11.10 Hunyadi block",
         rank_note="CONTESTED. The Principality of Hungary under the Arpad was a "
                   "principality, not a kingdom, until 1000 - so 1 is the literal "
@@ -554,8 +534,7 @@ TAGS: list[Tag] = [
                   "name; raise to 2 if a stronger starting Hungary is wanted."),
 
     Tag(tag="MON", rank=1, capital=138, ck3_title="c_duklja", in_alloc=True,
-        grant_order=5,
-        grants=("MON_ADRIATIC",),
+        provinces=(138, 4754),
         rank_note="Duklja under Miroslav, a coastal Serbian principality."),
 
     # CRI is the one realm where the question is not "which CK3 character" but
@@ -570,8 +549,7 @@ TAGS: list[Tag] = [
     # Rank 1 is provisionally in place so the tag stays playable while its
     # identity is settled.
     Tag(tag="CRI", rank=1, capital=286, ck3_title=None, in_alloc=True,
-        grant_order=4,
-        grants=("CRI_AZOV",),
+        provinces=(286,),
         no_ck3="undecided: no 867 Crimean polity exists to map - see the "
                "note above",
         deferred="Vanilla Crimea, holding Azow (286) only. There is no Crimean "
@@ -706,33 +684,11 @@ AREA_OWNERS: dict = {t.tag: t.areas for t in TAGS if t.areas}
 #: where the allocator reads them, in gen_provinces.UNTRACKED_OWNERS.
 PROVINCE_OWNERS: dict = {pid: t.tag for t in TAGS for pid in t.provinces}
 
-#: Layer 3 of the allocation, by block NAME. Order is load-bearing, not cosmetic:
-#: the allocation lets a later transfer win an overlap, so reordering these moves
-#: provinces silently. grant_order is what preserves that order independently of
-#: the order Tags happen to be declared in.
-GRANTS: tuple = tuple(
-    (t.tag, t.grants)
-    for t in sorted((x for x in TAGS if x.grants),
-                    key=lambda x: (x.grant_order is None, x.grant_order)))
-
-
-def _resolve(names):
-    """Flatten a tag's block names into one province list.
-
-    Concatenating rather than wrapping matters: the allocation treats each entry
-    as a flat list of province ids, so returning [BLOCK] instead of BLOCK would
-    nest a list inside a list and silently drop every province in it.
-    """
-    import landblocks
-    out = []
-    for n in names:
-        out.extend(getattr(landblocks, n))
-    return out
-
-
-#: Layer 3 as gen_provinces consumes it: (tag, [province ids]). Same order as
-#: GRANTS, because the names are the declaration and this is the resolution.
-TRANSFERS: tuple = tuple((tag, _resolve(names)) for tag, names in GRANTS)
+#: Layer 3 as gen_provinces consumes it: (tag, province ids), in declaration
+#: order. These were once named blocks resolved by name at build time. The ids
+#: are declared here, on the tag, so no block table can drift away from the
+#: realm it describes.
+TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.provinces)
 
 
 def selfcheck() -> None:
@@ -758,3 +714,12 @@ def selfcheck() -> None:
 
 
 selfcheck()
+
+
+#: Vanilla tags this mod renames in the province files it rewrites. MAM becomes
+#: EGY, so the Mamluks and the Egyptians are one realm in 867.
+TAG_RENAMES: dict = {"MAM": "EGY"}
+
+#: Balaton, Krain and the Danube bend: Hungary keeps the basin, and these
+#: three are carved out of it rather than added to it.
+BALATON_RESERVED: tuple = (135, 1864, 4240)
