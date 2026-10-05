@@ -326,15 +326,7 @@ def _area(*areas):
 #
 # The aliases below are kept because half the file refers to them by these names.
 
-# Layers 1 and 2 of the allocation now live on the Tag for each realm, because
-# the reasoning is per-realm: "Trieste is Italy's but Krain is Bavaria's" is not
-# a statement about a province, it is a statement about Italy and about Bavaria.
-# tagdb.py holds the areas a realm takes whole and the individual provinces it
-# carves back out of them; this file walks them.
-#
-# One province is deliberately still declared here. Venice is not a Tag - the mod
-# maintains no realm for it and takes no land away from it beyond leaving it be -
-# so its namesake province is the one land-holder this mod tracks without owning.
+# Why: docs/DESIGN.md - How land is allocated
 UNTRACKED_OWNERS = {
     112: "VEN",
 }
@@ -375,30 +367,7 @@ NAME = {tag: BY_TAG[tag].name for tag in AREA_OWNERS}
 # rule was also the one realm quietly losing history.
 
 
-# CULTURE_GONE_867 - vanilla cultures that do not exist yet at this start date,
-# mapped to what the province should be instead. Applied to every province the mod
-# writes, keyed on the vanilla culture rather than on a hardcoded province list, so
-# a province added to the map later cannot be left behind holding a culture that
-# postdates the scenario.
-#
-# turkish -> greek, 32 provinces. The Anatolian beyliks - Karaman, Germiyan,
-# Aydin, Dulkadir, Ramadan and the rest - are a late-13th-century idiom. In 867
-# this land is Byzantine and Greek-speaking, and the Oghuz Turks have not crossed
-# into Anatolia at all. Vanilla hands it to a beylik because vanilla starts in
-# 1444, where they are correct.
-#
-# pontic_greek -> greek, 4 provinces: Kaffa, Trebizond, Canik, Mantrega. This is
-# not a near miss. The culture is named for the Empire of Trebizond, founded in
-# 1204 by Alexios III and David Komnenos and destroyed by Mehmed II in 1461 - 337
-# years after this scenario. The Greek population of the Pontic coast was real in
-# 867, since Sinope, Trapezus and Kerasous were Milesian colonies, but a
-# Trapezuntine in 867 was simply a Byzantine Greek. So greek is right and "Pontic
-# Greek" is not, rather than the two being neighbours.
-#
-# There is no `pontic` culture in this game at all. The Pontic *steppe* is a
-# separate and larger question and is deliberately not touched here: its cultures
-# are crimean, astrakhani and mishary, none of them Turkish, and the power there in
-# 867 was the Khazar Khaganate. That is its own piece of work.
+# Why: docs/DESIGN.md - Cultures that do not exist in 867 (CULTURE_GONE_867)
 
 CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
 
@@ -419,16 +388,7 @@ CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310}
 # either way; Sivas is the one that silently went wrong.
 MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
 
-# CULTURE_COMMENT_NOTES - provinces where vanilla's own trailing comment on the
-# culture line contradicts the culture this mod assigns, so the comment is
-# qualified instead of left to read as an error. Only one province needs it.
-#
-# 318 Sugla, i.e. Smyrna: vanilla says "Should not be Greek or Orthodox in 1444.
-# Its status as a majority Greek city dates to at least after the 17th Century".
-# That is correct for 1444 - the Aydinids took Smyrna around 1330 and made it
-# Turkish and Muslim - and irrelevant here. This scenario is 867, when Smyrna was
-# Byzantine and Greek. The Saracen fleet that raided it did so in 869, two years
-# after the start date, so even that is not yet true at 1444.11.11.
+# Why: docs/DESIGN.md - One province whose own comment disagrees (CULTURE_COMMENT_NOTES)
 CULTURE_COMMENT_NOTES = {
     318: "# The \"not Greek\" warning below is a 1444 note, not an 867 one. Vanilla\n"
          "# is right about its own date: the Aydinids took Smyrna c. 1330. This\n"
@@ -549,22 +509,7 @@ def owner_map(alloc=None):
     return {p: t for t, ps in alloc.items() for p in ps}
 
 
-# EMPIRE_CORE_AREAS - the land of the 867 Carolingian Empire, defined as geography
-# rather than as "whatever five tags happen to hold".
-#
-# It used to be EMPIRE_KINGDOMS, a list of five tags, which made the empire's extent a
-# function of the allocation: move a province between realms and the empire silently
-# changed shape. Worse, it made five tags privileged over the other fifteen, and
-# Lusatia privileged-in-reverse as the one realm defined by what it was not. This mod
-# treats every tag on the same terms, so the empire is described by where it was
-# instead of by who holds it.
-#
-# These 60 areas are the whole Frankish heartland - the 843 Verdun partition and
-# everything under it. They contain 237 provinces, of which 11 were never imperial and
-# are excluded by name below, leaving the same 226 the tag list used to produce. The
-# areas are the unit because a whole area is usually wholly imperial, and the
-# exceptions are the interesting part, which is why they are listed rather than
-# absorbed.
+# Why: docs/DESIGN.md - Where the 867 empire was (EMPIRE_CORE_AREAS)
 EMPIRE_CORE_AREAS = (
     "alsace_area", "austria_proper_area", "bourgogne_area", "brabant_area",
     "braunschweig_area", "carinthia_area", "catalonia_area", "central_italy_area",
@@ -585,25 +530,7 @@ EMPIRE_CORE_AREAS = (
     "west_burgundy_area", "westphalia_area",
 )
 
-# NOT_IMPERIAL_867 - the 11 provinces inside those areas that the 867 empire did not
-# hold. Every one is excluded on its own 867 history, never because of who holds it
-# now, which is the test that keeps this list from quietly re-encoding the tag
-# privileges it replaced. None of them is excluded for being Lusatian, Breton, Venetian
-# or anything else; if a province is listed here it is because it was not imperial.
-#
-#   59 Wittenberg, 61 Dresden, 4744 Zwickau - Saxon and Meissen land, east of the
-#       imperial frontier. Thuringia just west of them (Erfurt, Weimar) is inside the
-#       empire, so the line runs through the area rather than around it.
-#   112 Venezia      - an independent maritime republic by 867, never imperial.
-#   118 Roma         - the papal states. The papacy sits outside the empire's own
-#   120 Abbruzzi        succession and holds no imperial land.
-#   127 Sassari, 2986 Cagliari, 4735 Arborea - Sardinia, independent. Corsica, in the
-#       same area, was imperial, which is why 1247 is absent from this list.
-#   2965 Vogtland    - Sorbian-held hinterland of Thuringia, not imperial territory.
-#       This is a judgement about Vogtland in 867, not about Lusatia: Lusatia holds
-#       seven provinces and not one of them is excluded here for that reason.
-#   2988 Tarragona   - Catalonia. The empire held it 801-859 and lost it again before
-#       this date, so 867 has it outside the empire.
+# Why: docs/DESIGN.md - The eleven non-imperial provinces inside those areas (NOT_IMPERIAL_867)
 NOT_IMPERIAL_867 = {
     59, 61, 112, 118, 120, 127, 2965, 2986, 2988, 4735, 4744,
 }
@@ -1070,46 +997,11 @@ GAME_CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
 # string because it is also spliced into regexes when scanning dated blocks.
 DATE = "867.1.1"
 
-# Mod tag -> CK3 character id. This is the only thing that has to be written by
-# hand; name and dynasty are both derived from the character.
+# CK3 supplies each realm's 867 name and dynasty. Which title, and which realms
+# are not CK3's to supply, are stated once on the Tag in tagdb.py, as ck3_title
+# and no_ck3; this file only reads them. Adding a realm is one line there.
 #
-# A character id is used rather than a title lookup because it is exact: titles
-# get reassigned, split and vacated between bookmarks, and d_granada in
-# particular has NO holder at all on 867.1.1 (only Umar ibn Hafsun from 880), so
-# a title-keyed registry silently resolves to nothing. Character ids are stable
-# file facts.
-#
-# Where a tag has a matching CK3 title, TITLES below cross-checks that the
-# character really is the 867 holder of it. That check is advisory, not
-# authoritative: ADU is intentionally mapped to a character rather than to
-# d_granada, because CK3 models Granada in 867 as a county c_granada under
-# k_andalusia with no duchy at all.
-#
-# CRT is here, and was not for a long time. CK3 does model Crete - d_krete, spelled
-# the Greek way, held in 867 by Shuayb - but an earlier search for "crete" found
-# nothing and concluded the island was absent. The hand-written CRT.txt it produced
-# named Abu Hafs Umar, born 838, who was not Emir of Crete until 869; the 867 emir
-# is his father Shuayb. d_krete is read now, so CRT is checked against CK3 like any
-# other realm rather than exempted from the audit.
-#
-# The tags below are the only ones actually derived from CK3. That is a deliberate
-# subset by design, not an oversight: NOT_CK3 further down carries a written reason for
-# every other land-holding tag, and `land_holders()` enforces that the two lists
-# together account for all of them. BOH, GMA and SIL are absent because they are
-# not CK3-sourced at all - local Slavic rulers with dynasty strings invented for
-# the mod.
-# THE MAP: EU4 tag -> CK3 title. This is the only registry in the file; the CK3
-# character is not stored, because it is not independent data - it is simply
-# whoever holds this title on CK3's 867.1.1, read at run time. Keeping the two
-# apart was a bug waiting to happen: a tag could name one character and be
-# cross-checked against the holder of a different title, and nothing would notice.
-#
-# So adding a realm is one line here. Nothing else needs to change.
-# Which CK3 title supplies each realm's 867 name and dynasty, and which realms are
-# not CK3's to supply at all - both with the reason. The mapping itself, every
-# title comment and every justification now live in one place: tagdb.py, on the
-# Tag object for that realm. A realm that appears in neither is reported as
-# unclassified and fails the build.
+# Why: docs/DESIGN.md - How a realm's 867 ruler is found.
 
 
 # An heir belongs to the ruler's dynasty unless a succession deliberately changed

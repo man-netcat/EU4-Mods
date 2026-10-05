@@ -430,16 +430,7 @@ def run() -> int:
         print(f"  SKIP CK3 name/dynasty cross-check ({type(exc).__name__}: {exc})")
         print("        build.py needs a CK3 install to read CK3's rulers.")
 
-    # Both checks below read build.py's registries rather than keeping a second copy
-    # of the tag list here, because a list in two places is a list that will drift.
-    #
-    #   * coverage: every tag owning land at the start date must be classified as
-    #     either CK3-derived (TITLES) or deliberately not (NOT_CK3). build.py
-    #     derives the set from the generated province files, so a realm added to the
-    #     mod later shows up here unclassified instead of escaping the audit.
-    #   * drift: for each CK3-derived tag, name and dynasty must still equal what
-    #     CK3 says. Dynasty resolution goes through build.py's own function because
-    #     the house-vs-nested-dynasty preference is subtle enough to get wrong twice.
+# Why: docs/DESIGN.md - What the land-holder audit enforces
     if _b is not None:
         _holders = _b.land_holders()
         _vanilla = {fn.split(" ")[0]
