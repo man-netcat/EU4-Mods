@@ -41,6 +41,9 @@ CAPS = CAPITAL
 # at all passed unnoticed. gen_countries.RANK is now the one table, each entry
 # argued from its own 867 standing.
 from build import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
+# The Tag objects themselves, for the checks that must compare a declaration in
+# the database against the file that actually ships.
+from build import BY_TAG  # noqa: E402
 fail = []
 
 
@@ -334,19 +337,10 @@ def run() -> int:
     # files, so they have to be listed here too or the age/regency check skips them.
     RULER_TAGS = ["BOH", "GMA", "SIL", "BUL", "CRT", "DAL", "ARB", "EGY", "ADU", "ASU",
                   "BYZ"]
-    # Tags whose ruler name and dynasty must match CK3's 867 bookmark. Kept as its
-    # own list rather than deriving it from ck3ruler.TITLES at import time,
-    # because validate.py must keep working if CK3 is not installed on the machine
-    # running it, whereas ck3ruler.py legitimately requires CK3 to exist.
-    #
-    # This is a cross-tool check, not a duplicate: ck3ruler.py is what writes these
-    # strings, and this is what stops a later hand-edit from drifting away from CK3
-    # without anyone noticing. Run ck3ruler.py --fix to resync after changing either.
-    #
-    # CRT is not here: CK3 has no Crete at all. BOH, GMA and SIL are not here either:
-    # they are mod-invented Slavic rulers, not CK3-sourced. See ck3ruler.py.
-    CK3_RULER_TAGS = ["ARB", "ADU", "ASU", "BYZ", "BUL", "DAL", "EGY"]
-
+    # No hand-written list of CK3 tags belongs here. The ruler-drift check further
+    # down iterates build.TITLES, the one registry, so a realm added there is
+    # checked with no second list to update. An earlier copy of that list sat here
+    # unused and still claimed CK3 models no Crete; it does, as d_krete.
 
     # Vanilla tags this mod only patched the capital of.
     CAPITAL_FIXES = {"SIL": 264, "HUN": 283}
@@ -389,6 +383,28 @@ def run() -> int:
         src = ("mod" if (t in CAPS or t in CAPITAL_FIXES) else "vanilla")
         note(cap in held, f"{t} holds its {src} capital {cap} "
                           f"({len(held)} province{'s' if len(held) != 1 else ''})")
+
+    # Tag.capital is read by the build only for the realms it generates. For a
+    # hand-written country file it is never consulted, so a wrong number there is
+    # inert rather than wrong - and CRT sat on Diego Suarez Bay in the western
+    # Indian Ocean while its file correctly said 163, with nothing to say so. The
+    # check above could not see it either: it resolves each realm's seat from the
+    # mod's capital map or else from vanilla, never from Tag. So compare the one
+    # declaration against the file that ships, and let a mismatch fail.
+    print("\n== Tag.capital agrees with the country file ==")
+    for t in ALL_TAGS:
+        spec = BY_TAG.get(t)
+        if spec is None or spec.capital is None:
+            continue
+        cp = os.path.join(COUNTRY_OUT, f"{t}.txt")
+        if not os.path.exists(cp):
+            continue
+        got = re.search(r"^\s*capital\s*=\s*(\d+)",
+                        open(cp, encoding="utf-8", errors="replace").read(), re.M)
+        note(got is not None and int(got.group(1)) == spec.capital,
+             f"{t} Tag.capital {spec.capital} matches its file"
+             + (f" ({got.group(1)})" if got and int(got.group(1)) != spec.capital
+                else ""))
 
     # Rulers are age-checked, because the +577 shift that keeps a king's 867 age
     # also turns a genuinely young 867 ruler into a child in 1444. A minor monarch

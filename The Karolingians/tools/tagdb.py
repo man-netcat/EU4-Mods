@@ -568,7 +568,7 @@ TAGS: list[Tag] = [
         },
         rank_note="Dalmatia: a coastal duchy of city-states, nominally one realm."),
 
-    Tag(tag="BYZ", rank=3, capital=4698, ck3_title="e_byzantium", in_alloc=True,
+    Tag(tag="BYZ", rank=3, capital=151, ck3_title="e_byzantium", in_alloc=True,
         areas=("aegean_archipelago_area", "albania_area", "ankara_area", "aydin_area", "germiyan_area", "hudavendigar_area", "karaman_area", "kastamonu_area", "northern_greece_area", "rum_area"),
         # what the areas above do not already give:
         provinces={
@@ -595,7 +595,7 @@ TAGS: list[Tag] = [
         },
         rank_note="The Empire itself. 867 is Basil I's first full year."),
 
-    Tag(tag="BUL", rank=2, capital=1764, ck3_title="k_bulgaria", in_alloc=True,
+    Tag(tag="BUL", rank=2, capital=150, ck3_title="k_bulgaria", in_alloc=True,
         areas=("alfold_area", "bulgaria_area", "serbia_area", "silistria_area", "southern_transylvania_area", "transylvania_area", "wallachia_area"),
         # what the areas above do not already give:
         provinces={
