@@ -476,14 +476,15 @@ TAGS: list[Tag] = [
         rank_note="The Nayihid emirate of Granada, a principality that by 867 "
                   "ruled the whole of al-Andalus."),
 
-    Tag(tag="CRT", rank=1, capital=1450, ck3_title=None, in_alloc=True,
+    Tag(tag="CRT", rank=1, capital=163, ck3_title="d_krete", in_alloc=True,
         provinces={
             163,   # Crete                  (morea_area; vanilla VEN)
         },
-        no_ck3="no CK3 model: CK3 has no Crete, so there is no character to "
-               "compare",
         rank_note="Crete: an Emirate of Crete is a single-island emirate under "
-                  "Abu Hafs Umar; a duchy is the closest tier EU4 offers."),
+                  "Abu Hafs Umar; a duchy is the closest tier EU4 offers. CK3's "
+                  "d_krete is already held in 867, by Shuayb - Abu Hafs' father, "
+                  "who lost the island to his own son in 870, ten years before the "
+                  "start date. k_krete is unheld, so the duchy is the only seat."),
 
     # -- the Islamic east --------------------------------------------------------
     Tag(tag="ARB", rank=3, capital=385, ck3_title="e_arabia", in_alloc=True,

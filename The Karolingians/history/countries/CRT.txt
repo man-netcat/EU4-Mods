@@ -7,23 +7,26 @@ add_accepted_culture = lombard
 religion = orthodox
 capital = 163	# Heraklion
 fixed_capital = 163 # Cannot move capital away from this province & no power cost to move to it
-
-# CK3 models no Crete whatsoever - there is no k_crete, d_crete or c_candia title,
-# only an Italian name list that happens to contain "Candia". So this ruler is the
-# historical one instead: Abu Hafs Umar al-Iqritishi, Emir of Crete from 824 until
-# his assassination in 875, and therefore the Emir of Crete in 867.
-# Note the deliberate clash: CRT is religion = orthodox, primary_culture = greek in
-# vanilla, and an Andalusi emir does not sit naturally on top of that. It is here
-# because the scenario is deliberately 867-flavored. Say the word and he can be
-# swapped for a Greek ruler, or CRT's religion changed to sunni.
 1444.1.1 = {
 	monarch = {
-		name = "Abu Hafs Umar"
-		dynasty = "al-Iqritishi"
-		birth_date = 1386.1.1
-		death_date = 1452.1.1
+		name = "Shu'ayb"
+		dynasty = "Hafsid"
+		birth_date = 1382.1.1
+		death_date = 1457.1.1
 		adm = 2
-		dip = 3
-		mil = 4
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Umar"
+		monarch_name = "Umar"
+		dynasty = "Hafsid"
+		birth_date = 1407.1.1
+		death_date = 1472.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
 	}
 }
+

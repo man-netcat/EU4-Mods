@@ -1085,10 +1085,12 @@ DATE = "867.1.1"
 # d_granada, because CK3 models Granada in 867 as a county c_granada under
 # k_andalusia with no duchy at all.
 #
-# CRT is absent on purpose. CK3 models no Crete whatsoever: no k_crete, d_crete
-# or c_candia exists. Abu Hafs Umar is a historical invention documented in
-# CRT.txt, so there is nothing to verify it against and listing it would produce
-# a false "no such character" failure.
+# CRT is here, and was not for a long time. CK3 does model Crete - d_krete, spelled
+# the Greek way, held in 867 by Shuayb - but an earlier search for "crete" found
+# nothing and concluded the island was absent. The hand-written CRT.txt it produced
+# named Abu Hafs Umar, born 838, who was not Emir of Crete until 869; the 867 emir
+# is his father Shuayb. d_krete is read now, so CRT is checked against CK3 like any
+# other realm rather than exempted from the audit.
 #
 # The tags below are the only ones actually derived from CK3. That is a deliberate
 # subset by design, not an oversight: NOT_CK3 further down carries a written reason for
@@ -1681,6 +1683,20 @@ VANILLA = {
     # who holds c_arborea and c_cagliari. Sardinia is a duchy in EU4 and a county is
     # where its 867 man happens to sit; that is the mod's business, not CK3's.
     "SAR": {"ruler": "CK3"},
+
+    # Crete: an emir, and CK3 already has one. d_krete is held in 867 by Shuayb, Abu
+    # Hafs' father, who lost the island to his own son in 870 - ten years before
+    # this scenario's date, so the mod's own 867 is the year the old emir is still
+    # on it. k_krete is unheld, so the duchy seat is the only one to read.
+    #
+    # This entry used to be a hand-written CRT.txt with no ruler from anywhere, on
+    # the stated ground that CK3 models no Crete at all. That was wrong: the title
+    # is d_krete, spelled the Greek way, and an earlier search for "crete" missed
+    # it. The hand-written file had Abu Hafs Umar, who was born in 838 and
+    # conquered Crete in 869 - not its emir in 867. Vanilla's CRT - Crete.txt has
+    # no dated blocks at all and a header this mod was copying verbatim, so letting
+    # the build own the file costs nothing and removes the invention.
+    "CRT": {"ruler": "CK3"},
 }
 
 # 867 rulers for the vanilla tags above. Dates are CK3's own, taken from
