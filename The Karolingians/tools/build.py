@@ -1457,16 +1457,26 @@ def step_ck3(argv):
     # Coverage first, so an unclassified realm is reported even if every mapped
     # tag happens to agree. Deriving the set from the province files is what makes
     # this a real gate: a tag added to the mod later shows up here unclassified.
+    #
+    # A vanilla tag that owns land is not unclassified. Nothing here touched it, so
+    # it keeps its vanilla ruler, and listing the whole vanilla roster would only
+    # re-type the game data. The gate is for tags the mod has an opinion about: a
+    # realm with no CK3 title has to say why in Tag.no_ck3.
     holders = land_holders()
+    vanilla = {fn.split(" ")[0] for fn in os.listdir(VANILLA_CDIR)
+               if fn.endswith(".txt")}
+    kept_vanilla = sorted(t for t in holders
+                          if t not in TITLES and t not in NOT_CK3 and t in vanilla)
     unclassified = sorted(t for t in holders
-                          if t not in TITLES and t not in NOT_CK3)
+                          if t not in TITLES and t not in NOT_CK3 and t not in vanilla)
     print(f"== {len(holders)} tags own land at the mod start date ==")
     print(f"   CK3-derived (name/dynasty checked): {len(TITLES)}")
     print(f"   classified as not CK3-derived      : {len(NOT_CK3)}")
+    print(f"   vanilla, untouched, ruler kept    : {len(kept_vanilla)}")
     for t in unclassified:
         bad.append(f"{t} owns {holders[t]} provinces at the start date but is in "
-                   f"neither TITLES nor NOT_CK3; add it to one of them with a "
-                   f"reason so it is accounted for")
+                   f"neither TITLES nor NOT_CK3, and has no vanilla country file; "
+                   f"give it a Tag.no_ck3 reason so it is accounted for")
     if unclassified:
         print(f"   UNCLASSIFIED: {', '.join(unclassified)}")
     stale = [t for t in NOT_CK3 if t not in holders]

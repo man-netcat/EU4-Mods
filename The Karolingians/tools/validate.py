@@ -422,16 +422,21 @@ def run() -> int:
     #     the house-vs-nested-dynasty preference is subtle enough to get wrong twice.
     if _b is not None:
         _holders = _b.land_holders()
+        _vanilla = {fn.split(" ")[0]
+                    for fn in os.listdir(_b.VANILLA_CDIR) if fn.endswith(".txt")}
+        _kept = sorted(t for t in _holders
+                       if t not in _b.TITLES and t not in _b.NOT_CK3 and t in _vanilla)
         _unclassified = sorted(t for t in _holders
                                if t not in _b.TITLES
-                               and t not in _b.NOT_CK3)
+                               and t not in _b.NOT_CK3 and t not in _vanilla)
         for t in _unclassified:
             note(False, f"{t} owns {_holders[t]} provinces at the start date but is "
-                        f"in neither _b.TITLES nor _b.NOT_CK3")
+                        f"in neither _b.TITLES nor _b.NOT_CK3, and has no vanilla "
+                        f"country file")
         note(not _unclassified,
-             f"all {len(_holders)} start-date land-holders are classified as "
-             f"CK3-derived or deliberately not ({len(_b.TITLES)} + "
-             f"{len(_b.NOT_CK3)})")
+             f"all {len(_holders)} start-date land-holders are accounted for: "
+             f"{len(_b.TITLES)} CK3-derived + {len(_b.NOT_CK3)} deliberately not "
+             f"+ {len(_kept)} vanilla and untouched")
 
         for t in sorted(_b.TITLES):
             want = _b.resolve(t, _titles, _chars, _dyn, _houses)

@@ -449,21 +449,37 @@ TAGS: list[Tag] = [
         )),
 
     Tag(tag="ASU", rank=2, capital=207, ck3_title="k_asturias", in_alloc=True,
-        areas=("asturias_area", "galicia_area", "leon_area"),  # taken whole, so an area claim, not a province list
-        # what is left after taking those areas whole.
-        provinces={4789},
+        areas=("asturias_area", "galicia_area", "leon_area"),
+        # what the areas above do not already give:
+        provinces={
+            4789,   # Segovia                (castille_area; vanilla CAS)
+        },
         rank_note="Asturias: Alfonso III inherited the kingship in 866, one year "
                   "before the start date, so it is a kingdom and not a county."),
 
     Tag(tag="ADU", rank=2, capital=225, ck3_title="c_granada", in_alloc=True,
-        areas=("alentejo_area", "baleares_area", "beieras_area", "extremadura_area", "lower_andalucia_area", "toledo_area", "upper_andalucia_area", "valencia_area"),  # taken whole, so an area claim, not a province list
-        # what is left after taking those areas whole.
-        provinces={214, 217, 367, 368, 1751, 2755, 2988, 2989, 2990, 4551, 4557},
+        areas=("alentejo_area", "baleares_area", "beieras_area", "extremadura_area", "lower_andalucia_area", "toledo_area", "upper_andalucia_area", "valencia_area"),
+        # what the areas above do not already give:
+        provinces={
+            214,   # Aragon                 (aragon_area; vanilla ARA)
+            217,   # Madrid                 (castille_area; vanilla CAS)
+            367,   # The Azores             (macaronesia_area; vanilla -)
+            368,   # Madeira                (macaronesia_area; vanilla -)
+            1751,   # Ceuta                  (northern_morocco_area; vanilla MOR)
+            2755,   # Soria                  (castille_area; vanilla CAS)
+            2988,   # Tarragona              (catalonia_area; vanilla ARA)
+            2989,   # Rioja                  (basque_country; vanilla CAS)
+            2990,   # Teruel                 (aragon_area; vanilla ARA)
+            4551,   # Avila                  (castille_area; vanilla CAS)
+            4557,   # Lleida                 (aragon_area; vanilla ARA)
+        },
         rank_note="The Nayihid emirate of Granada, a principality that by 867 "
                   "ruled the whole of al-Andalus."),
 
     Tag(tag="CRT", rank=1, capital=1450, ck3_title=None, in_alloc=True,
-        provinces=(163,),
+        provinces={
+            163,   # Crete                  (morea_area; vanilla VEN)
+        },
         no_ck3="no CK3 model: CK3 has no Crete, so there is no character to "
                "compare",
         rank_note="Crete: an Emirate of Crete is a single-island emirate under "
@@ -471,16 +487,41 @@ TAGS: list[Tag] = [
 
     # -- the Islamic east --------------------------------------------------------
     Tag(tag="ARB", rank=3, capital=385, ck3_title="e_arabia", in_alloc=True,
-        areas=("al_jazira_area", "aleppo_area", "bahrain_area", "basra_area", "dulkadir_area", "iraq_arabi_area", "medina_area", "palestine_area", "syria_area", "syrian_desert_area", "tabuk_area", "trans_jordan_area"),  # taken whole, so an area claim, not a province list
-        # what is left after taking those areas whole.
-        provinces={327, 331, 385, 412, 415, 416, 418, 419, 420, 2205, 2206, 2207, 2209, 2305, 2306, 4272, 4289, 4290, 4293, 4294, 4304},
+        areas=("al_jazira_area", "aleppo_area", "bahrain_area", "basra_area", "dulkadir_area", "iraq_arabi_area", "medina_area", "palestine_area", "syria_area", "syrian_desert_area", "tabuk_area", "trans_jordan_area"),
+        # what the areas above do not already give:
+        provinces={
+            327,   # Adana                  (cukurova_area; vanilla RAM)
+            331,   # Erzurum                (erzurum_area; vanilla AKK)
+            385,   # Mecca                  (mecca_area; vanilla HED)
+            412,   # Khuzestan              (khuzestan_area; vanilla MSY)
+            415,   # Shahrizor              (shahrizor_area; vanilla TIM)
+            416,   # Tabriz                 (tabriz_area; vanilla QAR)
+            418,   # Diyarbakir             (north_kurdistan_area; vanilla AKK)
+            419,   # Yerevan                (armenia_area; vanilla TIM)
+            420,   # Ganja                  (armenia_area; vanilla QAR)
+            2205,   # Nakhchivan             (armenia_area; vanilla TIM)
+            2206,   # Urmia                  (tabriz_area; vanilla QAR)
+            2207,   # Maragheh               (tabriz_area; vanilla QAR)
+            2209,   # Ilam                   (luristan_area; vanilla TIM)
+            2305,   # Erzincan               (erzurum_area; vanilla TIM)
+            2306,   # Mush                   (north_kurdistan_area; vanilla AKK)
+            4272,   # Jawf                   (nafud_area; vanilla ANZ)
+            4289,   # Shushtar               (khuzestan_area; vanilla MSY)
+            4290,   # Hoveyzeh               (khuzestan_area; vanilla MSY)
+            4293,   # Arbil                  (shahrizor_area; vanilla QAR)
+            4294,   # Sulimaniyeh            (shahrizor_area; vanilla TIM)
+            4304,   # Khoy                   (tabriz_area; vanilla QAR)
+        },
         rank_note="The Abbasid Caliphate, which in 867 is the empire of the "
                   "Islamic world and no realm in this table rivals it."),
 
     Tag(tag="EGY", rank=2, capital=361, ck3_title="k_egypt", in_alloc=True,
-        areas=("al_wahat_area", "bahari_area", "cyrenaica_area", "delta_area", "gulf_of_arabia_area", "said_area", "vostani_area"),  # taken whole, so an area claim, not a province list
-        # what is left after taking those areas whole.
-        provinces={1232, 2324},
+        areas=("al_wahat_area", "bahari_area", "cyrenaica_area", "delta_area", "gulf_of_arabia_area", "said_area", "vostani_area"),
+        # what the areas above do not already give:
+        provinces={
+            1232,   # Suakin                 (red_sea_coast_area; vanilla MAM)
+            2324,   # Halaib                 (red_sea_coast_area; vanilla MAM)
+        },
         rank_note="CONTESTED. The Tulunids held Egypt and Syria as a de facto "
                   "independent beylikh, but a beylikh is a principality, and EU4's "
                   "only tiers are duchy and kingdom. Kept at 2 so the Tulunids are "
@@ -514,28 +555,72 @@ TAGS: list[Tag] = [
         # same Slovak march lands, so they go over as a block.
         areas=("moravia_area", "slovakia_area"),
         # Opole and Ratibor are all that is left of silesia_area here.
-        provinces={263, 4723}),
+        provinces={
+            263,   # Ratibor                (silesia_area; vanilla OPL)
+            4723,   # Opole                  (silesia_area; vanilla OPL)
+        }),
 
     Tag(tag="DAL", rank=1, capital=136, ck3_title="d_dalmatia", in_alloc=True,
-        provinces=(136, 4753),
+        provinces={
+            136,   # Dalmatia               (east_adriatic_coast_area; vanilla DAL)
+            4753,   # Zadar                  (east_adriatic_coast_area; vanilla DAL)
+        },
         rank_note="Dalmatia: a coastal duchy of city-states, nominally one realm."),
 
     Tag(tag="BYZ", rank=3, capital=4698, ck3_title="e_byzantium", in_alloc=True,
-        areas=("aegean_archipelago_area", "albania_area", "ankara_area", "aydin_area", "germiyan_area", "hudavendigar_area", "karaman_area", "kastamonu_area", "northern_greece_area", "rum_area"),  # taken whole, so an area claim, not a province list
-        # what is left after taking those areas whole.
-        provinces={122, 145, 146, 148, 149, 151, 285, 321, 330, 1773, 1853, 2302, 2410, 2447, 2757, 2982, 4701, 4702, 4705, 4779},
+        areas=("aegean_archipelago_area", "albania_area", "ankara_area", "aydin_area", "germiyan_area", "hudavendigar_area", "karaman_area", "kastamonu_area", "northern_greece_area", "rum_area"),
+        # what the areas above do not already give:
+        provinces={
+            122,   # Apulia                 (apulia_area; vanilla NAP)
+            145,   # Morea                  (morea_area; vanilla BYZ)
+            146,   # Athens                 (morea_area; vanilla VEN)
+            148,   # Thessaloniki           (macedonia_area; vanilla TUR)
+            149,   # Edirne                 (thrace_area; vanilla TUR)
+            151,   # Constantinople         (thrace_area; vanilla BYZ)
+            285,   # Kaffa                  (crimea_area; vanilla GEN)
+            321,   # Cyprus                 (cukurova_area; vanilla CYP)
+            330,   # Trebizond              (erzurum_area; vanilla TRE)
+            1773,   # Achaea                 (morea_area; vanilla ACH)
+            1853,   # Kastoria               (macedonia_area; vanilla TUR)
+            2302,   # Icel                   (cukurova_area; vanilla KAR)
+            2410,   # Theodoro               (crimea_area; vanilla TRE)
+            2447,   # Mantrega               (crimea_area; vanilla GEN)
+            2757,   # Kaffa                  (southern_ethiopia_area; vanilla KAF)
+            2982,   # Syracuse               (sicily_area; vanilla SIC)
+            4701,   # Corinth                (morea_area; vanilla ACH)
+            4702,   # Siroz                  (macedonia_area; vanilla TUR)
+            4705,   # Gumulcine              (thrace_area; vanilla TUR)
+            4779,   # Gallipoli              (thrace_area; vanilla TUR)
+        },
         rank_note="The Empire itself. 867 is Basil I's first full year."),
 
     Tag(tag="BUL", rank=2, capital=1764, ck3_title="k_bulgaria", in_alloc=True,
-        areas=("alfold_area", "bulgaria_area", "serbia_area", "silistria_area", "southern_transylvania_area", "transylvania_area", "wallachia_area"),  # taken whole, so an area claim, not a province list
-        # what is left after taking those areas whole.
-        provinces={153, 1756, 1764, 1766, 1827, 3001, 4126, 4173, 4780},
+        areas=("alfold_area", "bulgaria_area", "serbia_area", "silistria_area", "southern_transylvania_area", "transylvania_area", "wallachia_area"),
+        # what the areas above do not already give:
+        provinces={
+            153,   # Pest                   (transdanubia_area; vanilla HUN)
+            1756,   # Budjak                 (moldavia_area; vanilla MOL)
+            1764,   # Burgas                 (thrace_area; vanilla TUR)
+            1766,   # Kosovo                 (rascia_area; vanilla SER)
+            1827,   # Raska                  (rascia_area; vanilla SER)
+            3001,   # Skopje                 (macedonia_area; vanilla TUR)
+            4126,   # Bacs                   (transdanubia_area; vanilla HUN)
+            4173,   # Syrmia                 (slavonia_area; vanilla HUN)
+            4780,   # Ohrid                  (macedonia_area; vanilla TUR)
+        },
         rank_note="The First Bulgarian Empire under Boris, a kingdom by 867 and a "
                   "peer of Byzantium's neighbours rather than a vassal duchy."),
 
     # -- the steppe and the Danube ----------------------------------------------
     Tag(tag="HUN", rank=1, capital=283, ck3_title=None, in_alloc=True,
-        provinces=(282, 283, 2406, 1943, 1944, 4540),
+        provinces={
+            282,   # Yedisan                (yedisan_area; vanilla CRI)
+            283,   # Zaporozhia             (zaporizhia_area; vanilla CRI)
+            1943,   # Bratslav               (podolia_volhynia_area; vanilla LIT)
+            1944,   # Cherkasy               (west_dniepr_area; vanilla LIT)
+            2406,   # Ingil                  (yedisan_area; vanilla CRI)
+            4540,   # Winnica                (podolia_volhynia_area; vanilla LIT)
+        },
         no_ck3="vanilla: keeps vanilla's 1444.11.10 Hunyadi block",
         rank_note="CONTESTED. The Principality of Hungary under the Arpad was a "
                   "principality, not a kingdom, until 1000 - so 1 is the literal "
@@ -544,7 +629,10 @@ TAGS: list[Tag] = [
                   "name; raise to 2 if a stronger starting Hungary is wanted."),
 
     Tag(tag="MON", rank=1, capital=138, ck3_title="c_duklja", in_alloc=True,
-        provinces=(138, 4754),
+        provinces={
+            138,   # Zeta                   (rascia_area; vanilla MON)
+            4754,   # Kotor                  (rascia_area; vanilla VEN)
+        },
         rank_note="Duklja under Miroslav, a coastal Serbian principality."),
 
     # CRI is the one realm where the question is not "which CK3 character" but
@@ -559,7 +647,9 @@ TAGS: list[Tag] = [
     # Rank 1 is provisionally in place so the tag stays playable while its
     # identity is settled.
     Tag(tag="CRI", rank=1, capital=286, ck3_title=None, in_alloc=True,
-        provinces=(286,),
+        provinces={
+            286,   # Azow                   (azov_area; vanilla GEN)
+        },
         no_ck3="undecided: no 867 Crimean polity exists to map - see the "
                "note above",
         deferred="Vanilla Crimea, holding Azow (286) only. There is no Crimean "
@@ -654,23 +744,13 @@ TITLES: dict = {t.tag: t.ck3_title for t in TAGS if t.ck3_title}
 #: Deliberately absent: tags the mod never touches at all. Brittany and Venice are
 #: left as vanilla free agents, and the electors other than BOH hold a vote and
 #: nothing else. None of them is this mod's business, so none is tracked here.
-VANILLA_HOLDERS: dict = {
-    "BRA": "vanilla: keeps vanilla's Brandenburg file and 1440 Hohenzollern ruler",
-    "DTT": "vanilla: keeps vanilla's Leitha ruler",
-    "HSA": "vanilla: keeps vanilla's ruler",
-    "MKL": "vanilla: keeps vanilla's Montferrat ruler",
-    "SHL": "vanilla: keeps vanilla's Schauenburg ruler",
-    "STE": "vanilla: keeps vanilla's Stettin ruler",
-    "TEU": "vanilla: keeps vanilla's Teutonic ruler",
-    "WOL": "vanilla: keeps vanilla's Wolgast ruler",
-}
-
 #: Realms that own land but whose ruler is not CK3's to supply, with the reason.
-#: Merged rather than chosen: a managed realm with no CK3 title, plus every vanilla
-#: land-holder above. ck3ruler reads this.
-NOT_CK3: dict = {**{t.tag: t.no_ck3 for t in TAGS
-                    if t.no_ck3 and t.tag not in TITLES},
-                 **VANILLA_HOLDERS}
+#: Only for a realm this mod decides something about. A vanilla tag that owns land
+#: is not in here and does not need to be: nothing in the mod touched it, so it
+#: keeps its vanilla ruler. Listing those by hand would just be the vanilla game
+#: data retyped, and would go stale the moment a province moved.
+NOT_CK3: dict = {t.tag: t.no_ck3 for t in TAGS
+                 if t.no_ck3 and t.tag not in TITLES}
 
 #: Capitals for the from-scratch country files, with their culture. FRA is absent
 #: on purpose: it keeps vanilla's French history and only overrides the ruler, so
