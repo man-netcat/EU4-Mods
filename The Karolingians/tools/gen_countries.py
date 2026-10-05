@@ -77,11 +77,12 @@ RANK = {
     "GER": 2,  # East Francia: a kingdom ruled in its own right.
     "ITA": 2,  # Italy: Louis II was king of Italy as well as emperor, so Italy is
                 # a kingdom held under an imperial claim, not the empire itself.
-    "BAV": 2,  # CONTESTED. Carloman was given Bavaria in 873 and only became king
-                # of it in 876, so in 867 Bavaria is a duchy inside East Francia
-                # and 1 is the strictly correct answer. Kept at 2 so Bavaria reads
-                # as the kingdom it is about to become and is not demoted on a
-                # technicality of two years.
+    "BAV": 1,  # Bavaria is a DUCHY in 867, not a kingdom, and that is true whether
+                # or not it is independent. Carloman governs it from c. 863 but is
+                # not crowned king until 876, so a rank-2 Bavaria would assert a
+                # crown nine years early. The realms are independent by design -
+                # no vassalage anywhere in this mod - so the tier is the only place
+                # any hierarchy is still expressed, and it has to be right here.
     "SOR": 1,  # Lusatia: a Sorbian duchy, small in 867 on any measure.
     # --- Iberia and the west ----------------------------------------------------
     "NAV": 2,  # The Kingdom of Pamplona under Garcia I, a kingdom in 867 and a
