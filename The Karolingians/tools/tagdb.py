@@ -109,7 +109,7 @@ class Tag:
     #: elsewhere has to be pulled back out by hand. Each entry below carries the
     #: evidence.
     provinces: frozenset = field(default_factory=frozenset)
-    #: What gen_countries.py does with this realm's country file:
+    #: What build.py does with this realm's country file:
     #:   "fresh"   - written from scratch (capital, culture, rank, own ruler)
     #:   "vanilla" - vanilla's file copied, patching capital/rank/ruler as asked
     #:   "elector" - vanilla's file copied with only its 867 vote dissolved
@@ -128,7 +128,7 @@ class Tag:
 
     @property
     def writes_country_file(self) -> bool:
-        """True if gen_countries.py emits a file for this realm.
+        """True if build.py emits a file for this realm.
 
         False for a deferred realm, and false for a realm the mod only strips an
         electorate from - those keep vanilla's file untouched.
@@ -694,7 +694,7 @@ TAGS: list[Tag] = [
     # (CK3 7853, "Niccolo"), the one mapped character with NO dynasty and no
     # dynasty_house at all - which is historically ordinary, since the papacy is
     # not a hereditary house in CK3's model. So the name lifts and the dynasty
-    # does not exist to lift; ck3ruler treats a missing dynasty as a reason to
+    # does not exist to lift; build.py treats a missing dynasty as a reason to
     # write none rather than to invent one.
     #
     # country="none" and no rank: PAP is tracked here so the CK3 audit can resolve
@@ -736,7 +736,7 @@ TITLES: dict = {t.tag: t.ck3_title for t in TAGS if t.ck3_title}
 
 #: Vanilla tags the allocation hands land to, which keep vanilla's own file and
 #: vanilla's own ruler. Not Tags: the mod maintains no realm for them, it only
-#: takes some of their land. They are listed so ck3ruler's audit has no blind
+#: takes some of their land. They are listed so the audit has no blind
 #: spot - a land-holder appearing in neither TITLES nor NOT_CK3 is reported and
 #: fails the build. Without this, adding a land-holder silently escapes the check.
 #:
@@ -760,7 +760,7 @@ HEADER: dict = {t.tag: (t.capital, t.culture) for t in TAGS
 #: Realms whose country file is written from scratch, in write order.
 FRESH_REALMS: list = [t.tag for t in TAGS if t.country == "fresh"]
 
-#: Layer 1 of the allocation: which areas each realm takes whole. gen_provinces
+#: Layer 1 of the allocation: which areas each realm takes whole. build.py
 #: walks this to seed ownership, then layer 2 carves provinces back out.
 AREA_OWNERS: dict = {t.tag: t.areas for t in TAGS if t.areas}
 
@@ -770,10 +770,10 @@ AREA_OWNERS: dict = {t.tag: t.areas for t in TAGS if t.areas}
 #:
 #: Venice's own province is NOT here. VEN is deliberately not a Tag (it is not a
 #: realm this mod maintains) and provinces held by untracked tags stay declared
-#: where the allocator reads them, in gen_provinces.UNTRACKED_OWNERS.
+#: where the allocator reads them, in build.UNTRACKED_OWNERS.
 PROVINCE_OWNERS: dict = {pid: t.tag for t in TAGS for pid in t.provinces}
 
-#: Layer 3 as gen_provinces consumes it: (tag, province ids), in declaration
+#: Layer 3 as build.py consumes it: (tag, province ids), in declaration
 #: order. These were once named blocks resolved by name at build time. The ids
 #: are declared here, on the tag, so no block table can drift away from the
 #: realm it describes.

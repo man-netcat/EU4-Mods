@@ -38,7 +38,7 @@ CAPS = CAPITAL
 # Was a hand-copied rank table, and it had already drifted from the files it was
 # meant to describe: it claimed FRA was rank 2 while FRA is vanilla's rank 3, and
 # it covered only the six generated realms, so the eight realms that have no rank
-# at all passed unnoticed. gen_countries.RANK is now the one table, each entry
+# at all passed unnoticed. build.RANK is now the one table, each entry
 # argued from its own 867 standing.
 from build import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
 # The Tag objects themselves, for the checks that must compare a declaration in
@@ -202,7 +202,7 @@ def run() -> int:
                     badown.append(f"{pid} has no owner at the start date")
                     continue
         own[o] += 1
-        # A deliberately unowned province (see gen_provinces.unown - the Balaton
+        # A deliberately unowned province (see build.unown - the Balaton
         # parking lot) has neither owner nor controller, which is consistent. Only a
         # half-set pair is a defect.
         if o is None and ctrl is None:
@@ -426,15 +426,15 @@ def run() -> int:
         print(f"  SKIP CK3 name/dynasty cross-check ({type(exc).__name__}: {exc})")
         print("        build.py needs a CK3 install to read CK3's rulers.")
 
-    # Both checks below read ck3ruler's registries rather than keeping a second copy
+    # Both checks below read build.py's registries rather than keeping a second copy
     # of the tag list here, because a list in two places is a list that will drift.
     #
     #   * coverage: every tag owning land at the start date must be classified as
-    #     either CK3-derived (TITLES) or deliberately not (NOT_CK3). ck3ruler
+    #     either CK3-derived (TITLES) or deliberately not (NOT_CK3). build.py
     #     derives the set from the generated province files, so a realm added to the
     #     mod later shows up here unclassified instead of escaping the audit.
     #   * drift: for each CK3-derived tag, name and dynasty must still equal what
-    #     CK3 says. Dynasty resolution goes through ck3ruler's own function because
+    #     CK3 says. Dynasty resolution goes through build.py's own function because
     #     the house-vs-nested-dynasty preference is subtle enough to get wrong twice.
     if _b is not None:
         _holders = _b.land_holders()
@@ -479,8 +479,8 @@ def run() -> int:
                 continue
             cp = os.path.join(COUNTRY_OUT, f"{t}.txt")
             if not os.path.exists(cp):
-                # Mapped in ck3ruler.TITLES but no mod country file: the mod keeps the
-                # vanilla one, so there is no name/dynasty of ours to compare. ck3ruler
+                # Mapped in build.TITLES but no mod country file: the mod keeps the
+                # vanilla one, so there is no name/dynasty of ours to compare. build.py
                 # reports the CK3 values as a NOTE. The coverage check above is what
                 # guarantees a realm cannot slip through unclassified, so this is a
                 # skip rather than a failure - NAV is the current example.
@@ -497,7 +497,7 @@ def run() -> int:
             note(got_n == want["name"] and got_d == want["dynasty"],
                  f"{t} ruler name/dynasty matches CK3 867 "
                  f"({want['name']} / {want['dynasty']})")
-        print("        run tools/_b.py --fix to resync")
+        print("        run `python3 tools/build.py --fix` to resync")
 
     START_DT = (1444, 11, 11)
     for t in TAGS + RULER_TAGS:

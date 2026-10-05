@@ -96,11 +96,11 @@ capital = 264
 
 # Dukes of Liegnitz/Legnica
 
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # d_lower_silesia at 867.1.1 is character 82293, "Gardomir", of the dynasty
 # CK3 spells "Slezan" with diacritics. The hand-written "Gardomir Slezan"/"Slezan"
 # was already a guess at exactly this, so only the spelling is new. Do not
-# hand-edit name or dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 1444.1.1 = {
 	monarch = {
 		name = "Gardomir"

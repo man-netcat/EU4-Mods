@@ -8,11 +8,11 @@ capital = 1878
 
 # Lothair II died childless in 869, which is why Lotharingia came apart. He is
 # deliberately left without an heir so the scripted fragmentation still works.
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # k_lotharingia at 867.1.1 is character 144998, "Lothaire", of dynasty 25061
 # "Karling". Note CK3 writes that name unquoted, with no epithet; the earlier
 # hand-written "Lothair II" is gone. Do not hand-edit name or dynasty - run
-# `python3 tools/ck3ruler.py --fix` instead.
+# `python3 tools/build.py --fix` instead.
 1444.1.1 = {
 	monarch = {
 		name = "Lothaire"

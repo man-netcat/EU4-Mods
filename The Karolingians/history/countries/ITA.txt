@@ -6,10 +6,10 @@ primary_culture = lombard
 religion = catholic
 capital = 4728
 
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of k_italy
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_italy
 # at 867.1.1 is character 30228, "Louis", of dynasty 25061 "Karling". CK3 gives
 # him no regnal number, so the earlier hand-written "Louis II" is gone. Do not
-# hand-edit name or dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 1444.1.1 = {
 	monarch = {
 		name = "Louis"

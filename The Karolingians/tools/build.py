@@ -248,13 +248,13 @@ else:
 
 
 # --------------------------------------------------------------------
-# modtags
+# vanilla province and area data
 # --------------------------------------------------------------------
 
 
 
 # --------------------------------------------------------------------
-# gen_provinces
+# allocation and province files
 # --------------------------------------------------------------------
 
 
@@ -319,8 +319,8 @@ def _area(*areas):
 # Red Sea / Beja land which the Mamluks ruled as Sudan, and Egypt kept those two
 # when the Mamluks were folded into the EGY tag (see EGY_ALL).
 
-# Tag lists live in modtags.py, which every other tool imports too. They used to
-# be copied into four scripts and the copies drifted - gen_countries.py still
+# Tag lists live in tagdb.py, which every other tool imports too. They used to
+# be copied into four scripts and the copies drifted - gen_countries still
 # treated Lusatia as a partition kingdom while the mod's own localisation had
 # always described a five-kingdom empire with Lusatia outside it.
 #
@@ -359,7 +359,7 @@ NAME = {tag: BY_TAG[tag].name for tag in AREA_OWNERS}
 
 
 # The named land blocks - BYZ_ALL, ARABIA_ALL, BUL_ALL, MOGYERS_LEVIDIA and the
-# rest - live in landblocks.py, so a tag's land is not defined in two files at
+# rest - live in tagdb.py, so a tag's land is not defined in two files at
 # once. They are computed from the same provdata cache, by the same _owned() and
 # _area() helpers, as they were when they sat below in this file.
 
@@ -510,7 +510,7 @@ def build(verbose=False):
         alloc[tag] = sorted(set(ids))
     if overlaps:
         raise SystemExit(
-            "gen_provinces: provinces claimed by two areas, fix AREA_OWNERS: "
+            "build.py: provinces claimed by two areas, fix AREA_OWNERS: "
             + ", ".join(f"{p} ({a} and {b})" for p, a, b in overlaps))
 
     # Layer 2: loose provinces, applied after every area so one always beats its
@@ -832,7 +832,7 @@ area_of = d["area_of"]
 # includes Lusatia, Brittany, and anything added later - none of which is named
 # as an outsider anywhere in this file, because none of them is one.
 #
-# empire_core() comes from gen_provinces, where the 60 areas and the 11
+# empire_core() comes from build.py, where the 60 areas and the 11
 # documented non-imperial provinces live, so the decision cannot disagree with
 # the rest of the mod about where the empire was.
 empire_provs = empire_core()
@@ -955,7 +955,7 @@ def step_hre() -> None:
 
 
 START_DT = (1444, 11, 11)
-# The allocation is not re-derived here. It comes from gen_provinces, which is
+# The allocation is not re-derived here. It comes from build.build(), which is
 # the single specification of who owns what; this file's only job is to replay
 # the written province files up to the start date and check the result. An
 # earlier version read cache/alloc.json directly, which checked none of the
@@ -1056,7 +1056,7 @@ def step_start():
 
 
 # --------------------------------------------------------------------
-# ck3ruler
+# CK3 title map and ruler lookup
 # --------------------------------------------------------------------
 
 
@@ -1604,7 +1604,7 @@ def step_ck3(argv):
 
 
 # --------------------------------------------------------------------
-# gen_countries
+# country files and the empire decision
 # --------------------------------------------------------------------
 
 
@@ -1951,49 +1951,49 @@ RULERS = {
 
 PROVENANCE = {
     "FRA": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of k_france
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_france
 # at 867.1.1 is character 90104, "Charles", of dynasty 25061 "Karling". CK3 gives
 # him no epithet, so the earlier hand-written "Charles the Bald" is gone; that is
 # what verbatim means here. Do not hand-edit name or dynasty - run
-# `python3 tools/ck3ruler.py --fix` instead, and validate.py will fail if the file
+# `python3 tools/build.py --fix` instead, and validate.py will fail if the file
 # and CK3 disagree.
 """,
     "LOT": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # k_lotharingia at 867.1.1 is character 144998, "Lothaire", of dynasty 25061
 # "Karling". Note CK3 writes that name unquoted, with no epithet; the earlier
 # hand-written "Lothair II" is gone. Do not hand-edit name or dynasty - run
-# `python3 tools/ck3ruler.py --fix` instead.
+# `python3 tools/build.py --fix` instead.
 """,
     "GER": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # k_east_francia at 867.1.1 is character 90107, "Ludwig", of dynasty 25061
 # "Karling". CK3 gives him no epithet, so the earlier hand-written "Louis the
 # German" is gone; that is what verbatim means here. Do not hand-edit name or
-# dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# dynasty - run `python3 tools/build.py --fix` instead.
 """,
     "BAV": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # d_bavaria at 867.1.1 is character 42018, "Karlmann", of dynasty 25061
 # "Karling".
 #
-# The duchy is deliberate, and the reason is in tools/ck3ruler.py: CK3 has no
+# The duchy is deliberate, and the reason is in build.py: CK3 has no
 # independent Bavaria in 867. Its k_bavaria is held by Ludwig (90107) - the same
 # man as k_east_francia - continuously from 826.1.1 until 876.1.1, and Carloman
 # only takes it in 876. Since this mod does split Bavaria off as its own realm,
 # d_bavaria is the title whose 867 holder is him. Mapping to k_bavaria would have
 # made this a second "Ludwig"/"Karling" and erased the realm.
 #
-# Do not hand-edit name or dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 """,
     "ITA": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of k_italy
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_italy
 # at 867.1.1 is character 30228, "Louis", of dynasty 25061 "Karling". CK3 gives
 # him no regnal number, so the earlier hand-written "Louis II" is gone. Do not
-# hand-edit name or dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 """,
     "SOR": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # d_lausitz at 867.1.1 is character 184007, "Radomil", of the Milczanow dynasty.
 #
 # CK3 models no Sorbian title at all - k_sorbs and d_sorbs both have no holder -
@@ -2002,24 +2002,24 @@ PROVENANCE = {
 # Lusatian ruler of the period and survives as the heir below; CK3's choice is
 # followed because it is what the rest of this mod's western Slavic realms do.
 #
-# Do not hand-edit name or dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 """,
     "GMA": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of k_moravia
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_moravia
 # at 867.1.1 is character 187002, "Rostislav", of the Mojmird dynasty.
 #
 # This realm holds the two Moravian provinces (Brno 265, Olomouc 4237) as well as
 # Galicia, and its ruler was already Rostislav, so k_moravia is the title whose 867
 # holder the mod was reaching for. The hand-written dynasty "of Rostislav" was
 # invented; CK3 calls the house Mojmird. Do not hand-edit name or dynasty - run
-# `python3 tools/ck3ruler.py --fix` instead.
+# `python3 tools/build.py --fix` instead.
 """,
     "SIL": """\
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # d_lower_silesia at 867.1.1 is character 82293, "Gardomir", of the dynasty
 # CK3 spells "Slezan" with diacritics. The hand-written "Gardomir Slezan"/"Slezan"
 # was already a guess at exactly this, so only the spelling is new. Do not
-# hand-edit name or dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 """,
 }
 
@@ -2039,7 +2039,7 @@ def with_provenance(tag, text):
 # pre-lift strings ("Charles the Bald", "of Rostislav", Mstivoj/"of Lusatia").
 #
 # So this script no longer decides those two fields. It writes the ruler's stats,
-# dates and heir exactly as before, then asks ck3ruler what CK3's 867 holder's
+# dates and heir exactly as before, then asks build.resolve what CK3's 867 holder's
 # name and dynasty are. One source of truth, and regenerating is idempotent
 # instead of destructive.
 #

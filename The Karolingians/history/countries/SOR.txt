@@ -6,7 +6,7 @@ primary_culture = sorbian
 religion = catholic
 capital = 60
 
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
 # d_lausitz at 867.1.1 is character 184007, "Radomil", of the Milczanow dynasty.
 #
 # CK3 models no Sorbian title at all - k_sorbs and d_sorbs both have no holder -
@@ -15,7 +15,7 @@ capital = 60
 # Lusatian ruler of the period and survives as the heir below; CK3's choice is
 # followed because it is what the rest of this mod's western Slavic realms do.
 #
-# Do not hand-edit name or dynasty - run `python3 tools/ck3ruler.py --fix` instead.
+# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 1444.1.1 = {
 	monarch = {
 		name = "Radomil"

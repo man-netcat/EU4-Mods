@@ -5,14 +5,14 @@ religion = catholic
 government_rank = 2
 capital = 4237 # Olomouc
 technology_group = western
-# Ruler lifted verbatim from CK3 by tools/ck3ruler.py: CK3's holder of k_moravia
+# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_moravia
 # at 867.1.1 is character 187002, "Rostislav", of the Mojmird dynasty.
 #
 # This realm holds the two Moravian provinces (Brno 265, Olomouc 4237) as well as
 # Galicia, and its ruler was already Rostislav, so k_moravia is the title whose 867
 # holder the mod was reaching for. The hand-written dynasty "of Rostislav" was
 # invented; CK3 calls the house Mojmird. Do not hand-edit name or dynasty - run
-# `python3 tools/ck3ruler.py --fix` instead.
+# `python3 tools/build.py --fix` instead.
 1444.1.1 = {
 	monarch = {
 		name = "Rostislav"
