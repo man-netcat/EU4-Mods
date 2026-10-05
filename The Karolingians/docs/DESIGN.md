@@ -50,11 +50,13 @@ character ids, on the argument that ids are exact file facts while titles get
 reassigned and vacated between bookmarks. That argument was right and the design
 was still wrong: storing a character id is a second, hand-entered fact that can
 disagree with the title it is cross-checked against, and nothing notices. Reading
-the holder of a title at run time leaves only one fact in the file. `d_granada`
-is the standing example - it has no holder at all on 867.1.1, only Umar ibn Hafsun
-from 880 - so a title-keyed lookup must handle a vacant title, and `ADU` is
-mapped to a character precisely because CK3 models Granada in 867 as the county
-`c_granada` under `k_andalusia` with no duchy.
+the holder of a title at run time leaves only one fact in the file, which is the
+only fact in it.
+
+`ADU` is the case that settled it. It read `c_granada`, a county, and took its
+ruler from the county's holder - so a realm holding all of al-Andalus, seated at
+Cordoba, was ruled by the sheikh of a town inside it and named for that town. The
+title it wanted all along was `k_andalusia`, which is what it reads now.
 
 **Cross-checking is advisory.** Where a tag names a title, the build confirms the
 holder really is that title's 867 holder. Where the two deliberately disagree -

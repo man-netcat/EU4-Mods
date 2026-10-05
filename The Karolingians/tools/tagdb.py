@@ -457,7 +457,7 @@ TAGS: list[Tag] = [
         rank_note="Asturias: Alfonso III inherited the kingship in 866, one year "
                   "before the start date, so it is a kingdom and not a county."),
 
-    Tag(tag="ADU", rank=2, capital=225, ck3_title="c_granada", in_alloc=True,
+    Tag(tag="ADU", rank=2, capital=225, ck3_title="k_andalusia", in_alloc=True,
         areas=("alentejo_area", "baleares_area", "beieras_area", "extremadura_area", "lower_andalucia_area", "toledo_area", "upper_andalucia_area", "valencia_area"),
         # what the areas above do not already give:
         provinces={
@@ -473,8 +473,11 @@ TAGS: list[Tag] = [
             4551,   # Avila                  (castille_area; vanilla CAS)
             4557,   # Lleida                 (aragon_area; vanilla ARA)
         },
-        rank_note="The Nayihid emirate of Granada, a principality that by 867 "
-                  "ruled the whole of al-Andalus."),
+        rank_note="Al Andalus: the Umayyad emirate, seated at Cordoba (225) and "
+                  "supplied its 867 ruler by CK3's k_andalusia. Rank 2 is a "
+                  "kingdom, not a duchy: it holds all of al-Andalus plus Aragon, "
+                  "Madrid, the Canaries, Madeira and Ceuta, and a smaller tier "
+                  "would misstate it."),
 
     Tag(tag="CRT", rank=1, capital=163, ck3_title="d_krete", in_alloc=True,
         provinces={

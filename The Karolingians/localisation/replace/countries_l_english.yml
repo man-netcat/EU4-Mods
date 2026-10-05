@@ -43,6 +43,10 @@
  # holy cities. Vanilla declares only <TAG> and <TAG>_ADJ for it, at version 0.
  ARB:1 "Abbasids"
  ARB_ADJ:1 "Abbasid"
+ # Vanilla names this tag "Andalusia" / "Andalusian" (ADU:0, ADU_ADJ:0). Overridden
+ # at version 1 to "Al Andalus" / "Andalusi", matching the mod's other realm names.
+ ADU:1 "Al Andalus"
+ ADU_ADJ:1 "Andalusi"
  ITA:1 "Italy"
  ITA_ADJ:1 "Italian"
  # Lusatia reuses the base game's own tag (SOR:0 "Lusatia" / SOR_ADJ:0

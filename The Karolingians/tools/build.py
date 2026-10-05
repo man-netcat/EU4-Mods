@@ -1266,7 +1266,7 @@ def resolve(tag, titles, chars, dyns, houses):
     #     name = "Nayih"     quoted
     #     name = Lothaire    bare, unquoted - 698 such lines in CK3's characters,
     #                        including Lothair II, who holds k_lotharingia
-    #     name = "Nayih" # Nayih ibn Suleyman, Sheik of Granada (848-880)
+    #     name = "Muhammad" # Muhammad (I) ibn Abd al-Rahman, Sultan of Andalusia
     #                        quoted with a trailing comment, which is the most
     #                        common form of all
     # Anchoring to end-of-line would drop the commented form, which is why this
