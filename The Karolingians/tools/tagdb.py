@@ -121,10 +121,18 @@ class Tag:
     #:   "written" - owned by the repo, never generated; build must not touch it
     #:   "none"    - no file; the realm is deferred or deliberately untouched
     country: str = "vanilla"
-    #: Hand-written monarch block for the 1444 start, keyed into build.RULERS or
-    #: build.VANILLA_RULERS. Set instead of leaving the ruler to ck3_title when
-    #: the mod's own ruler is the one wanted. Excludes ck3_title from the search.
+    #: True when this realm is an elector of the HRE, so its 1444 vote goes.
+    elector: bool = False
+    #: True for the five Carolingian kingdoms the mod presents as the empire.
+    imperial_kingdom: bool = False
+    #: The mod's own 1444 ruler, written by hand instead of read from CK3.
     ruler_block: Optional[str] = None
+    #: Prose spliced above this realm's 1444.1.1 block in its shipped country
+    #: file, saying where the 867 reading came from. Never generated.
+    provenance: Optional[str] = None
+    #: True when this realm's heir starts a new house, so --fix must not
+    #: overwrite the heir's dynasty from CK3. No realm sets it yet.
+    no_heir_sync: bool = False
 
     # -- the axes a reader is most likely to get wrong --------------------------
     @property
@@ -163,10 +171,55 @@ class Tag:
                 f'unclear status')
 
 
+CTRY_DATE = "1444.1.1"
+# All five Carolingian realms share one dynasty deliberately. A shared dynasty
+# is what unlocks Claim Cushion in EU4 - claiming a neighbour's throne without
+# a war - so keeping it unbroken is the point of a divided empire: the five can
+# put it back together by marriage instead of conquest. It has to cover the
+# heirs as well as the monarchs, or the dynasty breaks the first time one of
+# these realms succeeds, which is exactly what Arnulf and Berengar used to do.
+DYNASTY = "de Carolingie"
+SHIFT = 577
+
+
+def shifted(y, m=1, d=1):
+    return f"{y + SHIFT}.{m}.{d}"
+
 TAGS: list[Tag] = [
 
     # -- the 867 Carolingian partition ------------------------------------------
-    Tag(tag="FRA", ruler_block="FRA", name="West Francia", rank=2, capital=183, culture="frankish",
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_france
+# at 867.1.1 is character 90104, "Charles", of dynasty 25061 "Karling". CK3 gives
+# him no epithet, so the earlier hand-written "Charles the Bald" is gone; that is
+# what verbatim means here. Do not hand-edit name or dynasty - run
+# `python3 tools/build.py --fix` instead, and validate.py will fail if the file
+# and CK3 disagree.
+""",
+    ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Charles the Bald"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(823, 8, 13)}
+		death_date = {shifted(877, 10, 6)}
+		adm = 3
+		dip = 3
+		mil = 3
+	}}
+	heir = {{
+		name = "Louis"
+		monarch_name = "Louis the Stammerer"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(837, 9, 27)}
+		death_date = {shifted(879, 8, 10)}
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 3
+	}}
+}}
+""",
+    tag="FRA", imperial_kingdom=True, name="West Francia", rank=2, capital=183, culture="frankish",
         ck3_title="k_france", in_alloc=True,
         rank_note="West Francia: the largest of the partitions, and a kingdom. "
                   "Charles the Bald was King of the Franks from 843 and held "
@@ -228,7 +281,28 @@ TAGS: list[Tag] = [
             2987,   # Urgell                 (catalonia_area; vanilla ARA)
         )),
 
-    Tag(tag="LOT", country="fresh", name="Lotharingia", rank=2, capital=1878, culture="burgundian",
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
+# k_lotharingia at 867.1.1 is character 144998, "Lothaire", of dynasty 25061
+# "Karling". Note CK3 writes that name unquoted, with no epithet; the earlier
+# hand-written "Lothair II" is gone. Do not hand-edit name or dynasty - run
+# `python3 tools/build.py --fix` instead.
+""",
+    ruler_block=f"""
+# Lothair II died childless in 869, which is why Lotharingia came apart. He is
+# deliberately left without an heir so the scripted fragmentation still works.
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Lothair II"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(835)}
+		death_date = {shifted(869)}
+		adm = 2
+		dip = 2
+		mil = 2
+	}}
+}}
+""",
+    tag="LOT", imperial_kingdom=True, country="fresh", name="Lotharingia", rank=2, capital=1878, culture="burgundian",
         ck3_title="k_lotharingia", in_alloc=True,
         rank_note="Lotharingia: a kingdom, though a hollow and contested one.",
         areas=(
@@ -269,7 +343,37 @@ TAGS: list[Tag] = [
             1743,   # Cambray
         )),
 
-    Tag(tag="GER", country="fresh", name="East Francia", rank=2, capital=1876, culture="hessian",
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
+# k_east_francia at 867.1.1 is character 90107, "Ludwig", of dynasty 25061
+# "Karling". CK3 gives him no epithet, so the earlier hand-written "Louis the
+# German" is gone; that is what verbatim means here. Do not hand-edit name or
+# dynasty - run `python3 tools/build.py --fix` instead.
+""",
+    ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Louis the German"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(817, 8, 27)}
+		death_date = {shifted(876, 9, 5)}
+		adm = 4
+		dip = 3
+		mil = 4
+	}}
+	heir = {{
+		name = "Charles"
+		monarch_name = "Charles the Fat"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(839)}
+		death_date = {shifted(888, 12, 13)}
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 4
+	}}
+}}
+""",
+    tag="GER", imperial_kingdom=True, country="fresh", name="East Francia", rank=2, capital=1876, culture="hessian",
         ck3_title="k_east_francia", in_alloc=True,
         rank_note="East Francia: a kingdom ruled in its own right.",
         areas=(
@@ -321,7 +425,44 @@ TAGS: list[Tag] = [
             62,   # Leipzig (Leipzig)  (south_saxony_area; vanilla THU)
         )),
 
-    Tag(tag="BAV", country="fresh", name="Bavaria", rank=1, capital=65, culture="bavarian",
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
+# d_bavaria at 867.1.1 is character 42018, "Karlmann", of dynasty 25061
+# "Karling".
+#
+# The duchy is deliberate, and the reason is in build.py: CK3 has no
+# independent Bavaria in 867. Its k_bavaria is held by Ludwig (90107) - the same
+# man as k_east_francia - continuously from 826.1.1 until 876.1.1, and Carloman
+# only takes it in 876. Since this mod does split Bavaria off as its own realm,
+# d_bavaria is the title whose 867 holder is him. Mapping to k_bavaria would have
+# made this a second "Ludwig"/"Karling" and erased the realm.
+#
+# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
+""",
+    ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Carloman"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(817)}
+		death_date = {shifted(880)}
+		adm = 3
+		dip = 3
+		mil = 2
+	}}
+	heir = {{
+		name = "Arnulf"
+		monarch_name = "Arnulf"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(850)}
+		death_date = {shifted(907, 12, 14)}
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}}
+}}
+""",
+    tag="BAV", imperial_kingdom=True, country="fresh", name="Bavaria", rank=1, capital=65, culture="bavarian",
         ck3_title="d_bavaria", in_alloc=True,
         rank_note="Bavaria is a DUCHY in 867, not a kingdom, and that is true "
                   "whether or not it is independent. Carloman governs it from "
@@ -366,7 +507,36 @@ TAGS: list[Tag] = [
             4751,   # Cilli      (carinthia_area; vanilla CLI)
         )),
 
-    Tag(tag="ITA", country="fresh", name="Italy", rank=2, capital=4728, culture="lombard",
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_italy
+# at 867.1.1 is character 30228, "Louis", of dynasty 25061 "Karling". CK3 gives
+# him no regnal number, so the earlier hand-written "Louis II" is gone. Do not
+# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
+""",
+    ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Louis II"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(826)}
+		death_date = {shifted(875, 8, 13)}
+		adm = 3
+		dip = 3
+		mil = 3
+	}}
+	heir = {{
+		name = "Berengar"
+		monarch_name = "Berengar"
+		dynasty = "{DYNASTY}"
+		birth_date = {shifted(845)}
+		death_date = {shifted(924, 10, 17)}
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}}
+}}
+""",
+    tag="ITA", imperial_kingdom=True, country="fresh", name="Italy", rank=2, capital=4728, culture="lombard",
         ck3_title="k_italy", in_alloc=True,
         rank_note="Italy: Louis II was king of Italy as well as emperor, so Italy "
                   "is a kingdom held under an imperial claim, not the empire "
@@ -421,7 +591,42 @@ TAGS: list[Tag] = [
             1247,   # Corsica    (corsica_sardinia_area; vanilla GEN)
         )),
 
-    Tag(tag="SOR", country="fresh", name="Lusatia", rank=1, capital=60, culture="sorbian",
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
+# d_lausitz at 867.1.1 is character 184007, "Radomil", of the Milczanow dynasty.
+#
+# CK3 models no Sorbian title at all - k_sorbs and d_sorbs both have no holder -
+# so d_lausitz is the nearest title with an actual 867 ruler. That replaces the
+# hand-written "Mstivoj"/"of Lusatia". Mstivoj is historically the better-known
+# Lusatian ruler of the period and survives as the heir below; CK3's choice is
+# followed because it is what the rest of this mod's western Slavic realms do.
+#
+# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
+""",
+    ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Mstivoj"
+		dynasty = "of Lusatia"
+		birth_date = 1395.3.2
+		death_date = 1449.11.8
+		adm = 2
+		dip = 1
+		mil = 2
+	}}
+	heir = {{
+		name = "Mstivoj"
+		monarch_name = "Mstivoj"
+		dynasty = "of Lusatia"
+		birth_date = 1425.6.14
+		death_date = 1470.1.1
+		claim = 80
+		adm = 2
+		dip = 2
+		mil = 2
+	}}
+}}
+""",
+    tag="SOR", country="fresh", name="Lusatia", rank=1, capital=60, culture="sorbian",
         ck3_title="d_lausitz", in_alloc=True,
         rank_note="Lusatia: a Sorbian duchy, small in 867 on any measure.",
         areas=(
@@ -545,7 +750,37 @@ TAGS: list[Tag] = [
                   "drop to 1 if the literal principality reading is preferred."),
 
     # -- Italy, the Balkans and the Aegean ---------------------------------------
-    Tag(tag="SIL", ruler_block="SIL", rank=1, capital=264, ck3_title="d_lower_silesia", in_alloc=True,
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
+# d_lower_silesia at 867.1.1 is character 82293, "Gardomir", of the dynasty
+# CK3 spells "Slezan" with diacritics. The hand-written "Gardomir Slezan"/"Slezan"
+# was already a guess at exactly this, so only the spelling is new. Do not
+# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
+""",
+    ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Gardomir Slezan"
+		dynasty = "Slezan"
+		birth_date = {shifted(844, 1, 1)}
+		death_date = {shifted(912, 1, 1)}
+		adm = 2
+		dip = 2
+		mil = 3
+	}}
+	heir = {{
+		name = "Uniedrog"
+		monarch_name = "Uniedrog"
+		dynasty = "Slezan"
+		birth_date = {shifted(863, 1, 1)}
+		death_date = {shifted(942, 1, 1)}
+		claim = 80
+		adm = 2
+		dip = 2
+		mil = 3
+	}}
+}}
+""",
+    tag="SIL", rank=1, capital=264, ck3_title="d_lower_silesia", in_alloc=True,
         rank_note="Silesia: a Piast duchy, small but not a titular one.",
         provinces=(
             # silesia_area changes hands entirely but splits down the middle: the
@@ -558,7 +793,40 @@ TAGS: list[Tag] = [
             2966,   # Glogau   (Glogow)    (silesia_area; vanilla GLG)
         )),
 
-    Tag(tag="GMA", ruler_block="GMA", rank=2, capital=4237, ck3_title="k_moravia", in_alloc=True,
+    Tag(provenance="""# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_moravia
+# at 867.1.1 is character 187002, "Rostislav", of the Mojmird dynasty.
+#
+# This realm holds the two Moravian provinces (Brno 265, Olomouc 4237) as well as
+# Galicia, and its ruler was already Rostislav, so k_moravia is the title whose 867
+# holder the mod was reaching for. The hand-written dynasty "of Rostislav" was
+# invented; CK3 calls the house Mojmird. Do not hand-edit name or dynasty - run
+# `python3 tools/build.py --fix` instead.
+""",
+    ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Rostislav"
+		dynasty = "of Rostislav"
+		birth_date = {shifted(815, 1, 1)}
+		death_date = {shifted(869, 1, 1)}
+		adm = 3
+		dip = 4
+		mil = 3
+	}}
+	heir = {{
+		name = "Svatopluk"
+		monarch_name = "Svatopluk"
+		dynasty = "of Rostislav"
+		birth_date = {shifted(840, 1, 1)}
+		death_date = {shifted(894, 1, 1)}
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 4
+	}}
+}}
+""",
+    tag="GMA", rank=2, capital=4237, ck3_title="k_moravia", in_alloc=True,
         rank_note="Great Moravia under Rastislav, a kingdom in its own right.",
         # Great Moravia takes the whole of moravia_area - Brno, Olomouc and
         # Ostrava - giving it a real Moravian heartland instead of existing only
@@ -694,7 +962,32 @@ TAGS: list[Tag] = [
     # Not in ALL_TAGS because the mod does not hand out their land: they keep
     # vanilla's provinces untouched. They are still realms this mod maintains a
     # court and a size for, so they still get a deliberate rank.
-    Tag(tag="BOH", ruler_block="BOH", rank=1, capital=266, ck3_title=None, in_alloc=False,
+    Tag(ruler_block=f"""
+{CTRY_DATE} = {{
+	monarch = {{
+		name = "Borivoj"
+		dynasty = "of Premyslid"
+		regent = yes
+		birth_date = {shifted(852, 1, 1)}
+		death_date = {shifted(889, 1, 1)}
+		adm = 1
+		dip = 2
+		mil = 1
+	}}
+	heir = {{
+		name = "Spytihnev"
+		monarch_name = "Spytihnev"
+		dynasty = "of Premyslid"
+		birth_date = {shifted(875, 1, 1)}
+		death_date = {shifted(915, 1, 1)}
+		claim = 85
+		adm = 2
+		dip = 1
+		mil = 2
+	}}
+}}
+""",
+    tag="BOH", elector=True, rank=1, capital=266, ck3_title=None, in_alloc=False,
         no_ck3="mod-invented: Borivoj is the mod's own Bohemian ruler; CK3 "
                "records no 867 holder for k_bohemia to verify against",
         rank_note="Bohemia: a duchy of the Empire under Borivoj I. Rank 1 is the "
@@ -734,7 +1027,7 @@ TAGS: list[Tag] = [
     # and no tier to decide.
     # The Order's last three provinces, handed back out. Not realms of the mod's
     # own: no rank, no capital, no CK3 title, just the land.
-    Tag(tag="BRA", rank=None, country="elector", ck3_title=None,
+    Tag(tag="BRA", elector=True, rank=None, country="elector", ck3_title=None,
         no_ck3="vanilla Brandenburg, given the Order's Neumark provinces; the "
                "mod runs no court of its own here",
         provinces={
@@ -749,15 +1042,15 @@ TAGS: list[Tag] = [
             1859,  # Torun                 (kuyavia_area; vanilla TEU)
         }),
 
-    Tag(tag="KOL", rank=None, country="elector", ck3_title=None, in_alloc=False,
+    Tag(tag="KOL", elector=True, rank=None, country="elector", ck3_title=None, in_alloc=False,
         no_ck3="vanilla elector; the mod only dissolves its vote"),
-    Tag(tag="MAI", rank=None, country="elector", ck3_title=None, in_alloc=False,
+    Tag(tag="MAI", elector=True, rank=None, country="elector", ck3_title=None, in_alloc=False,
         no_ck3="vanilla elector; the mod only dissolves its vote"),
-    Tag(tag="PAL", rank=None, country="elector", ck3_title=None, in_alloc=False,
+    Tag(tag="PAL", elector=True, rank=None, country="elector", ck3_title=None, in_alloc=False,
         no_ck3="vanilla elector; the mod only dissolves its vote"),
-    Tag(tag="SAX", rank=None, country="elector", ck3_title=None, in_alloc=False,
+    Tag(tag="SAX", elector=True, rank=None, country="elector", ck3_title=None, in_alloc=False,
         no_ck3="vanilla elector; the mod only dissolves its vote"),
-    Tag(tag="TRI", rank=None, country="elector", ck3_title=None, in_alloc=False,
+    Tag(tag="TRI", elector=True, rank=None, country="elector", ck3_title=None, in_alloc=False,
         no_ck3="vanilla elector; the mod only dissolves its vote"),
     Tag(tag="PAP", rank=None, capital=118, ck3_title="k_papal_state",
         country="none", in_alloc=False),
@@ -780,9 +1073,7 @@ ALL_TAGS: list[str] = [t.tag for t in TAGS if t.in_alloc]
 
 #: The seven electors of the HRE. Every realm here is stripped of its 1444 vote,
 #: which is the whole of the mod's diplomacy with a dissolved empire.
-IMPERIAL_ELECTORS = ["BOH", "BRA", "KOL", "MAI", "PAL", "SAX", "TRI"]
-
-TAG_BY: dict = {t.tag: t for t in TAGS}
+IMPERIAL_ELECTORS: list = [t.tag for t in TAGS if t.elector]
 
 #: Every realm the mod maintains a country file for, which must therefore have a
 #: deliberate rank. This is what stops a realm being added without deciding how
@@ -819,7 +1110,7 @@ NOT_CK3: dict = {t.tag: t.no_ck3 for t in TAGS
 #:
 #: This was a private literal in validate.py, where nothing connected it to the
 #: order the realms are declared in. selfcheck below pins the two together.
-EMPIRE_KINGDOMS: list = ["FRA", "LOT", "GER", "BAV", "ITA"]
+EMPIRE_KINGDOMS: list = [t.tag for t in TAGS if t.imperial_kingdom]
 
 #: Layer 1 of the allocation: which areas each realm takes whole. build.py
 #: walks this to seed ownership, then layer 2 carves provinces back out.
@@ -873,9 +1164,13 @@ def selfcheck() -> None:
             raise ValueError(
                 f"{t.tag}: country none but rank {t.rank} - a realm with a "
                 f"size writes a file")
-        if t.country == "elector" and t.tag not in IMPERIAL_ELECTORS:
+        if t.country == "elector" and not t.elector:
             raise ValueError(
-                f"{t.tag}: country elector, but it is not in IMPERIAL_ELECTORS")
+                f"{t.tag}: country elector, but the Tag is not flagged elector")
+        if t.elector and t.country not in ("elector", "vanilla"):
+            raise ValueError(
+                f"{t.tag}: flagged elector but country {t.country} would leave "
+                f"its 1444 vote in place")
         if (t.areas or t.provinces) and not t.in_alloc:
             raise ValueError(
                 f"{t.tag}: declares {len(t.areas)} areas and "

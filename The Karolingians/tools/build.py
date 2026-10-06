@@ -346,7 +346,7 @@ PROVINCE_OWNERS = {**UNTRACKED_OWNERS, **PROVINCE_OWNERS}
 #: proper. The single-province carve-outs (Silesia, Great Moravia, Navarra) are
 #: tagged with a capital too, but they hold a province or two rather than a
 #: region, and no capital is declared on their behalf.
-CAPITAL = {tag: BY_TAG[tag].capital for tag in AREA_OWNERS}
+CAPITAL = {t.tag: t.capital for t in BY_TAG.values() if t.in_alloc and t.capital}
 NAME = {tag: BY_TAG[tag].name for tag in AREA_OWNERS}
 
 
@@ -1006,11 +1006,6 @@ DATE = "867.1.1"
 # Why: docs/DESIGN.md - How a realm's 867 ruler is found.
 
 
-# An heir belongs to the ruler's dynasty unless a succession deliberately changed
-# it. Listing a tag here opts its heir out of the sync in step_ck3(); there are no
-# such cases at the moment, but a realm whose heir starts a new house should say
-# so here rather than have --fix quietly overwrite it.
-HEIR_DYNASTY_OVERRIDE = {}
 
 
 # CK3 bug to work around, not a mod choice.
@@ -1446,7 +1441,7 @@ def step_ck3(argv):
             continue
         hd = heir_dynasty(text)
         heir_bad = (hd is not None and hd != got["dynasty"]
-                    and tag not in HEIR_DYNASTY_OVERRIDE)
+                    and not BY_TAG[tag].no_heir_sync)
         ok = (cn == got["name"] and cd == got["dynasty"] and not heir_bad)
         mark = "OK " if ok else "DRIFT"
         src = (f"<- {got['title']}"
@@ -1515,19 +1510,6 @@ def step_ck3(argv):
 
 
 
-CTRY_DATE = "1444.1.1"
-# All five Carolingian realms share one dynasty deliberately. A shared dynasty
-# is what unlocks Claim Cushion in EU4 - claiming a neighbour's throne without
-# a war - so keeping it unbroken is the point of a divided empire: the five can
-# put it back together by marriage instead of conquest. It has to cover the
-# heirs as well as the monarchs, or the dynasty breaks the first time one of
-# these realms succeeds, which is exactly what Arnulf and Berengar used to do.
-DYNASTY = "de Carolingie"
-SHIFT = 577
-
-
-def shifted(y, m=1, d=1):
-    return f"{y + SHIFT}.{m}.{d}"
 
 
 # Which realms get a country file written from scratch is the Tag's `country`
@@ -1535,247 +1517,7 @@ def shifted(y, m=1, d=1):
 
 # Every realm is one Tag in tagdb.py: rank, capital, CK3 title, country mode.
 
-# 867 rulers for the vanilla tags above. Dates are CK3's own, taken from
-# game/history/characters/, and are shifted by SHIFT like every ruler here.
-#
-# GMA  Rostislav (Rastislav), CK3 slovien.txt id 187002: birth 815.1.1, death
-#      869.1.1. He is the Moravian ruler in 867. Svatopluk was only Prince of
-#      Nitra until 870 and then succeeds him, which is why Svatopluk - not a
-#      son - is the heir.
-# BOH  Borivoj I, the first historically documented Premyslid, the year 867 being
-#      the dynasty's own founding date. Sources put his birth at c. 852/53
-#      (MedLands) or c. 870 (Wikipedia); 852 is used, which makes him 15 in 1444.
-#      Both his sons were born after 867 - Spytihnev 875, Vratislav 888 - so the
-#      heir is an infant either way and he carries regent = yes. That regency is
-#      an artefact of the age shift, not a fact about 867.
-# SIL  Gardomir, CK3 polish.txt id 82293: birth 844.1.1, death 912.1.1 - so 23 in
-#      867, which is the age the user asked for. He is one of the semi-legendary
-#      Silesian dukes of the Legenda memorabilis, the 13th-century Polish
-#      hagiography CK3 also draws Sliezan (id 82291, b 805.1.1, d 864.1.1) and
-#      his wife Gniewosadka (82292) from. Sliezan died in 864, so by 867 Gardomir
-#      is the line's incumbent - a real succession, but a legendary one, which is
-#      why it is sourced to CK3 rather than to the chronicles. Eldest son
-#      Uniedrog (82297, b 863.1.1, d 942.1.1) is heir; his brother Swietopelk
-#      (82298) is the best-attested of the three, but not the eldest.
-#      EU4 1.37 has no nickname field in a monarch block - nickname is absent
-#      from all 8416 vanilla name keys' blocks - so "Slezan" is part of the name.
-VANILLA_RULERS = {
-    "GMA": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Rostislav"
-		dynasty = "of Rostislav"
-		birth_date = {shifted(815, 1, 1)}
-		death_date = {shifted(869, 1, 1)}
-		adm = 3
-		dip = 4
-		mil = 3
-	}}
-	heir = {{
-		name = "Svatopluk"
-		monarch_name = "Svatopluk"
-		dynasty = "of Rostislav"
-		birth_date = {shifted(840, 1, 1)}
-		death_date = {shifted(894, 1, 1)}
-		claim = 90
-		adm = 4
-		dip = 4
-		mil = 4
-	}}
-}}
-""",
-    "BOH": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Borivoj"
-		dynasty = "of Premyslid"
-		regent = yes
-		birth_date = {shifted(852, 1, 1)}
-		death_date = {shifted(889, 1, 1)}
-		adm = 1
-		dip = 2
-		mil = 1
-	}}
-	heir = {{
-		name = "Spytihnev"
-		monarch_name = "Spytihnev"
-		dynasty = "of Premyslid"
-		birth_date = {shifted(875, 1, 1)}
-		death_date = {shifted(915, 1, 1)}
-		claim = 85
-		adm = 2
-		dip = 1
-		mil = 2
-	}}
-}}
-""",
-    "SIL": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Gardomir Slezan"
-		dynasty = "Slezan"
-		birth_date = {shifted(844, 1, 1)}
-		death_date = {shifted(912, 1, 1)}
-		adm = 2
-		dip = 2
-		mil = 3
-	}}
-	heir = {{
-		name = "Uniedrog"
-		monarch_name = "Uniedrog"
-		dynasty = "Slezan"
-		birth_date = {shifted(863, 1, 1)}
-		death_date = {shifted(942, 1, 1)}
-		claim = 80
-		adm = 2
-		dip = 2
-		mil = 3
-	}}
-}}
-""",
-}
 
-RULERS = {
-    "FRA": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Charles the Bald"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(823, 8, 13)}
-		death_date = {shifted(877, 10, 6)}
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-	heir = {{
-		name = "Louis"
-		monarch_name = "Louis the Stammerer"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(837, 9, 27)}
-		death_date = {shifted(879, 8, 10)}
-		claim = 95
-		adm = 3
-		dip = 2
-		mil = 3
-	}}
-}}
-""",
-    "LOT": f"""
-# Lothair II died childless in 869, which is why Lotharingia came apart. He is
-# deliberately left without an heir so the scripted fragmentation still works.
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Lothair II"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(835)}
-		death_date = {shifted(869)}
-		adm = 2
-		dip = 2
-		mil = 2
-	}}
-}}
-""",
-    "GER": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Louis the German"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(817, 8, 27)}
-		death_date = {shifted(876, 9, 5)}
-		adm = 4
-		dip = 3
-		mil = 4
-	}}
-	heir = {{
-		name = "Charles"
-		monarch_name = "Charles the Fat"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(839)}
-		death_date = {shifted(888, 12, 13)}
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 4
-	}}
-}}
-""",
-    "BAV": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Carloman"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(817)}
-		death_date = {shifted(880)}
-		adm = 3
-		dip = 3
-		mil = 2
-	}}
-	heir = {{
-		name = "Arnulf"
-		monarch_name = "Arnulf"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(850)}
-		death_date = {shifted(907, 12, 14)}
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-}}
-""",
-    "ITA": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Louis II"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(826)}
-		death_date = {shifted(875, 8, 13)}
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-	heir = {{
-		name = "Berengar"
-		monarch_name = "Berengar"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(845)}
-		death_date = {shifted(924, 10, 17)}
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-}}
-""",
-    # Lusatia is a free Sorbian principality with no 867 Carolingian monarch,
-    # so it gets its own dynasty and native 1444 dates instead of a shifted 867
-    # one. Mstivoj is an attested West Slavic name form (cf. Mstivoj of
-    # Kladsko), which suits the Sorbian heartland around Zwickau and Leipzig.
-    "SOR": f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Mstivoj"
-		dynasty = "of Lusatia"
-		birth_date = 1395.3.2
-		death_date = 1449.11.8
-		adm = 2
-		dip = 1
-		mil = 2
-	}}
-	heir = {{
-		name = "Mstivoj"
-		monarch_name = "Mstivoj"
-		dynasty = "of Lusatia"
-		birth_date = 1425.6.14
-		death_date = 1470.1.1
-		claim = 80
-		adm = 2
-		dip = 2
-		mil = 2
-	}}
-}}
-""",
-}
 
 
 # Provenance comments, one per CK3-sourced realm, emitted into the generated
@@ -1785,85 +1527,12 @@ RULERS = {
 #
 # They live here because that is where everything else about the ruler lives.
 
-PROVENANCE = {
-    "FRA": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_france
-# at 867.1.1 is character 90104, "Charles", of dynasty 25061 "Karling". CK3 gives
-# him no epithet, so the earlier hand-written "Charles the Bald" is gone; that is
-# what verbatim means here. Do not hand-edit name or dynasty - run
-# `python3 tools/build.py --fix` instead, and validate.py will fail if the file
-# and CK3 disagree.
-""",
-    "LOT": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
-# k_lotharingia at 867.1.1 is character 144998, "Lothaire", of dynasty 25061
-# "Karling". Note CK3 writes that name unquoted, with no epithet; the earlier
-# hand-written "Lothair II" is gone. Do not hand-edit name or dynasty - run
-# `python3 tools/build.py --fix` instead.
-""",
-    "GER": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
-# k_east_francia at 867.1.1 is character 90107, "Ludwig", of dynasty 25061
-# "Karling". CK3 gives him no epithet, so the earlier hand-written "Louis the
-# German" is gone; that is what verbatim means here. Do not hand-edit name or
-# dynasty - run `python3 tools/build.py --fix` instead.
-""",
-    "BAV": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
-# d_bavaria at 867.1.1 is character 42018, "Karlmann", of dynasty 25061
-# "Karling".
-#
-# The duchy is deliberate, and the reason is in build.py: CK3 has no
-# independent Bavaria in 867. Its k_bavaria is held by Ludwig (90107) - the same
-# man as k_east_francia - continuously from 826.1.1 until 876.1.1, and Carloman
-# only takes it in 876. Since this mod does split Bavaria off as its own realm,
-# d_bavaria is the title whose 867 holder is him. Mapping to k_bavaria would have
-# made this a second "Ludwig"/"Karling" and erased the realm.
-#
-# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
-""",
-    "ITA": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_italy
-# at 867.1.1 is character 30228, "Louis", of dynasty 25061 "Karling". CK3 gives
-# him no regnal number, so the earlier hand-written "Louis II" is gone. Do not
-# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
-""",
-    "SOR": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
-# d_lausitz at 867.1.1 is character 184007, "Radomil", of the Milczanow dynasty.
-#
-# CK3 models no Sorbian title at all - k_sorbs and d_sorbs both have no holder -
-# so d_lausitz is the nearest title with an actual 867 ruler. That replaces the
-# hand-written "Mstivoj"/"of Lusatia". Mstivoj is historically the better-known
-# Lusatian ruler of the period and survives as the heir below; CK3's choice is
-# followed because it is what the rest of this mod's western Slavic realms do.
-#
-# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
-""",
-    "GMA": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_moravia
-# at 867.1.1 is character 187002, "Rostislav", of the Mojmird dynasty.
-#
-# This realm holds the two Moravian provinces (Brno 265, Olomouc 4237) as well as
-# Galicia, and its ruler was already Rostislav, so k_moravia is the title whose 867
-# holder the mod was reaching for. The hand-written dynasty "of Rostislav" was
-# invented; CK3 calls the house Mojmird. Do not hand-edit name or dynasty - run
-# `python3 tools/build.py --fix` instead.
-""",
-    "SIL": """\
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
-# d_lower_silesia at 867.1.1 is character 82293, "Gardomir", of the dynasty
-# CK3 spells "Slezan" with diacritics. The hand-written "Gardomir Slezan"/"Slezan"
-# was already a guess at exactly this, so only the spelling is new. Do not
-# hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
-""",
-}
 
 # ---------------------------------------------------------------- CK3 rulers --
 
 def with_provenance(tag, text):
     """Insert this tag's provenance comment above its 1444.1.1 block."""
-    note = PROVENANCE.get(tag)
+    note = BY_TAG[tag].provenance
     if not note or "1444.1.1 = {" not in text or note.strip() in text:
         return text
     return text.replace("1444.1.1 = {", note + "1444.1.1 = {", 1)
@@ -2033,7 +1702,7 @@ def find_vanilla(tag):
 
 
 def fresh(tag):
-    t = TAG_BY[tag]
+    t = BY_TAG[tag]
     cap, culture = t.capital, t.culture
     return f"""government = monarchy
 add_government_reform = feudalism_reform
@@ -2042,7 +1711,7 @@ technology_group = western
 primary_culture = {culture}
 religion = catholic
 capital = {cap}
-{RULERS[tag]}"""
+{t.ruler_block}"""
 
 
 # --------------------------------------------------------------------------------------
@@ -2144,13 +1813,12 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
 def ruler_for(t):
     """The 1444 ruler build writes for a realm, or None to leave vanilla's.
 
-    A hand-written block wins over CK3: SIL, GMA, BOH and FRA are the mod's own
-    rulers for those four, and everything else with a CK3 title reads 867 from
-    it - honouring ruler_title inside resolve() when the realm's own title is
-    vacant in 867.
+    A hand-written block on the Tag wins over CK3. Anything else with a CK3
+    title reads 867 from it - honouring ruler_title inside resolve() when the
+    realm's own title is vacant in 867.
     """
     if t.ruler_block:
-        return {**RULERS, **VANILLA_RULERS}[t.ruler_block]
+        return t.ruler_block
     if t.ck3_title:
         return ck3_block(t.tag)
     return None
