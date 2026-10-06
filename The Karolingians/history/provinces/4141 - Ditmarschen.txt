@@ -1,8 +1,9 @@
 #4141 - Ditmarschen
 
-owner = DTT
-controller = DTT
+owner = GER
+controller = GER
 add_core = DTT
+add_core = GER
 culture = lower_saxon
 religion = catholic
 hre = no
@@ -33,3 +34,9 @@ discovered_by = ottoman
 	controller = DAN
 	remove_core = FRA
 } # Napoleon abdicates unconditionally
+
+1444.11.11 = {	owner = GER
+	controller = GER
+	add_core = GER
+	hre = no
+}

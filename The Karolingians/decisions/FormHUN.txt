@@ -1,0 +1,103 @@
+country_decisions = {
+	hungarian_nation = {
+		potential = {
+			always = no
+		}
+		allow = {
+		}
+		effect = {
+		}
+	}
+
+	kar_form_hungary = {
+		major = yes
+
+		potential = {
+			NOT = { map_setup = map_setup_random }
+			NOT = { tag = HUN }
+			NOT = { has_country_flag = kar_form_hungary }
+			NOT = { exists = HUN }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			tag = MGY
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 40
+				}
+			}
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				area = transdanubia_area
+				area = alfold_area
+				area = transylvania_area
+				area = southern_transylvania_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+				NOT = { 135 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 153 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 155 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 156 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 157 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 158 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1864 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1951 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1952 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1953 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 1954 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4125 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4126 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4127 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4128 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4240 = { country_or_non_sovereign_subject_holds = ROOT } }
+		}
+
+		effect = {
+			change_tag = HUN
+			on_change_tag_effect = yes
+			change_government_to_monarchy = yes
+			set_country_flag = kar_form_hungary
+			hidden_effect = {
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			add_legitimacy = 10
+			transdanubia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			alfold_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			transylvania_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_transylvania_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

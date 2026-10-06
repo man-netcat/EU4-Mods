@@ -4,16 +4,23 @@ import json, os, re, shutil
 from collections import defaultdict
 from pathlib import Path
 
-from ck3 import ck3_block, ck3_sync
+from ck3 import ck3_sync
+from histgen import (
+    basin_provinces,
+    country_definition,
+    country_history,
+    formation_decision,
+    ruler_block_for,
+)
 from tagdb import (
     ALL_TAGS,
     AREA_OWNERS,
     BALATON_RESERVED,
     BY_TAG,
+    CustomTag,
     IMPERIAL_ELECTORS,
     EMPIRE_KINGDOMS,
     PROVINCE_OWNERS,
-    RANK,
     TAGS,
     TITLES,
     TRANSFERS,
@@ -99,14 +106,6 @@ def _owned(tag, region=None, exclude_regions=()):
 def _region(pid):
     data = _pd()
     return data["region_of_area"].get(data["area_of"].get(str(pid)))
-
-
-def _area(*areas):
-    data = _pd()
-    out = set()
-    for area in areas:
-        out |= {int(pid) for pid in data["areas"].get(area, ())}
-    return sorted(out)
 
 
 def build(verbose=False):
@@ -463,24 +462,61 @@ def step_hre() -> None:
     )
 
 
+def step_custom() -> None:
+    customs = [t for t in TAGS if isinstance(t, CustomTag)]
+    if not customs:
+        return
+
+    os.makedirs(os.path.join(MOD, "common", "country_tags"), exist_ok=True)
+    os.makedirs(os.path.join(MOD, "common", "countries"), exist_ok=True)
+    os.makedirs(os.path.join(MOD, "gfx", "flags"), exist_ok=True)
+
+    reg = os.path.join(MOD, "common", "country_tags", "00_karolingian_custom.txt")
+    reg_lines = []
+
+    for t in customs:
+        cname = t.country_file or f"{t.name}.txt"
+        reg_lines.append(f'{t.tag} = "countries/{cname}"')
+
+        cfile = os.path.join(MOD, "common", "countries", cname)
+        open(cfile, "w", encoding="utf-8").write(country_definition(t))
+        print(f"wrote {cfile}")
+
+        flag = t.flag_source or os.path.join(GAME, "gfx", "flags", f"{t.flag_from}.tga")
+        assert os.path.exists(flag), f"no flag for {t.tag} at {flag}"
+        dest = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
+        if os.path.exists(dest):
+            print(f"kept gfx/flags/{t.tag}.tga (custom, not overwritten)")
+        else:
+            shutil.copy2(flag, dest)
+            print(f"copied gfx/flags/{t.tag}.tga")
+
+        if not t.forms:
+            print(f"  {t.tag} has no formable tag")
+            continue
+
+        basin = basin_provinces(t)
+        txt = formation_decision(t)
+        os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
+        p = os.path.join(MOD, "decisions", f"Form{t.forms}.txt")
+        open(p, "w", encoding="utf-8").write(txt)
+        print(f"wrote {p}")
+        print(
+            f"  formed tag            : {t.tag} -> {t.forms}, rank {t.form_rank or 2}"
+        )
+        print(f"  basin provinces       : {len(basin)}")
+        print(f"  areas covered         : {', '.join(t.form_areas)}")
+        print(f"  suppressed decisions  : {', '.join(t.suppress)}")
+
+    open(reg, "w", encoding="utf-8").write("\n".join(reg_lines) + "\n")
+    print(f"wrote {reg}")
+
+
 def find_vanilla(tag):
     for fn in os.listdir(VANILLA_CDIR):
         if fn.split(" ")[0] == tag and fn.endswith(".txt"):
             return os.path.join(VANILLA_CDIR, fn), fn
     raise SystemExit(f"no vanilla history file for {tag}")
-
-
-def fresh(tag):
-    t = BY_TAG[tag]
-    cap, culture = t.capital, t.culture
-    return f"""government = monarchy
-add_government_reform = feudalism_reform
-government_rank = {RANK[tag]}
-technology_group = western
-primary_culture = {culture}
-religion = catholic
-capital = {cap}
-{t.ruler_block}"""
 
 
 def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None):
@@ -546,14 +582,6 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
     return text
 
 
-def ruler_for(t):
-    if t.ruler_block:
-        return t.ruler_block
-    if t.ck3_title:
-        return ck3_block(t.tag)
-    return None
-
-
 def step_countries():
     os.makedirs(COUNTRY_OUT, exist_ok=True)
     for t in TAGS:
@@ -562,13 +590,13 @@ def step_countries():
         if t.country == "none":
             continue
         if t.country == "fresh":
-            text = ck3_sync(t.tag, fresh(t.tag))
+            text = ck3_sync(t.tag, country_history(t))
             print(
                 f"wrote {t.tag}.txt (from scratch, rank {t.rank}, "
                 f"capital {t.capital})"
             )
         elif t.country == "vanilla":
-            ruler = ruler_for(t)
+            ruler = ruler_block_for(t)
             was_elector = t.tag in IMPERIAL_ELECTORS
             text = ck3_sync(
                 t.tag, patch_vanilla(t.tag, t.capital, ruler, was_elector, t.rank)

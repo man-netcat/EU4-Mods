@@ -24,13 +24,6 @@
  GER_ADJ:1 "East Frankish"
  BAV:1 "Bavaria"
  BAV_ADJ:1 "Bavarian"
-# HUN keeps its base-game tag but is no longer "Hungary": it is renamed for the
- # Magyars' pre-migration Levedia homeland (gen_provinces.MOGYERS_LEVIDIA), and
- # its Carpathian Basin provinces are reserved for the Balaton tag. Name and
- # adjective differ: the country is "Magyars", the demonym "Magyar". No umlaut -
- # Hungarian does not inflect the word.
- HUN:1 "Magyars"
- HUN_ADJ:1 "Magyar"
  # The Mamluks are Egypt in this scenario: every province vanilla MAM holds at
  # 1444 is transferred to EGY (gen_provinces.EGY_ALL), MAM ends up with no land,
  # and gen_provinces.TAG_RENAMES rewrites the rest of the MAM references away. So
@@ -49,6 +42,15 @@
  ADU_ADJ:1 "Andalusi"
  ITA:1 "Italy"
  ITA_ADJ:1 "Italian"
+ # Courland becomes "Curonia" to match the mod's other realm names; vanilla
+ # declares KUR:0 "Courland" / KUR_ADJ:0 "Courlander", hence version 1.
+ KUR:1 "Curonia"
+ KUR_ADJ:1 "Curonian"
+ # Samogitia reuses the ZEM tag defined by the Historical European Tags mod
+ # (its localisation is ZEM:0 "Samogitia"); version 1 so ours wins regardless
+ # of mod load order, though the strings agree.
+ ZEM:1 "Samogitia"
+ ZEM_ADJ:1 "Samogitian"
  # Lusatia reuses the base game's own tag (SOR:0 "Lusatia" / SOR_ADJ:0
  # "Lusatian" are already in vanilla), so it needs no name here and is
  # deliberately absent rather than forgotten. It is not a Carolingian realm: it

@@ -47,6 +47,7 @@ country_decisions = {
 				area = guyenne_area
 				area = hesse_area
 				area = holland_area
+				area = holstein_area
 				area = ile_de_france_area
 				area = inner_austria_area
 				area = languedoc_area
@@ -259,6 +260,7 @@ country_decisions = {
 				NOT = { 2992 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 4111 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 4112 = { country_or_non_sovereign_subject_holds = ROOT } }
+				NOT = { 4141 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 4381 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 4382 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 4383 = { country_or_non_sovereign_subject_holds = ROOT } }
@@ -458,6 +460,13 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			holland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = hungarian
+religion = catholic
+capital = 283
+1444.1.1 = {
+	monarch = {
+		name = "Álmos"
+		dynasty = "Árpád"
+		birth_date = 1397.1.1
+		death_date = 1472.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	heir = {
+		name = "Árpád"
+		monarch_name = "Árpád"
+		dynasty = "Árpád"
+		birth_date = 1422.1.1
+		death_date = 1484.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+

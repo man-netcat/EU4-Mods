@@ -17,7 +17,11 @@ from build import ALL_TAGS  # noqa: E402
 
 from build import TAGS as _REALMS  # noqa: E402
 
-TAGS = sorted(t.tag for t in _REALMS if t.ruler_block and t.in_alloc)
+from build import CustomTag  # noqa: E402
+
+TAGS = sorted(
+    t.tag for t in _REALMS if t.in_alloc and (t.ruler_block or isinstance(t, CustomTag))
+)
 
 sys.path.insert(0, str(HERE))
 from build import (
@@ -88,6 +92,19 @@ def run() -> int:
                     f"braces balanced in common/countries/{fn}",
                 )
                 mine.add(fn.split(" ")[0])
+    CT = os.path.join(MOD, "common", "country_tags")
+    if os.path.isdir(CT):
+        for fn in os.listdir(CT):
+            if not fn.endswith(".txt"):
+                continue
+            text = open(os.path.join(CT, fn), encoding="utf-8", errors="replace").read()
+            for m in re.finditer(r'^([A-Z]{3})\s*=\s*"countries/([^"]+)"', text, re.M):
+                tag, cfile = m.group(1), m.group(2)
+                note(
+                    os.path.exists(os.path.join(MC, cfile)),
+                    f"{tag} registry entry {fn} -> countries/{cfile} resolves",
+                )
+                mine.add(tag)
     for t in TAGS:
         where = (
             "base game"
@@ -280,7 +297,6 @@ def run() -> int:
     reassigned = {pid for pid, p in files.items() if parse(p)[0].get("owner") in TAGS}
     for t in [
         "BOH",
-        "HUN",
         "POL",
         "PAP",
         "NAP",
@@ -337,6 +353,60 @@ def run() -> int:
             int(said.group(1)) == len(expected),
             f"description says {said.group(1)}, partition has {len(expected)}",
         )
+
+    print("\n== custom tags registered ==")
+
+    cdata = json.load(open(str(CACHE / "provdata.json")))
+    for t in _REALMS:
+        if not isinstance(t, CustomTag):
+            continue
+        flag = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
+        note(os.path.exists(flag), f"{t.tag} has a flag")
+        if not t.forms:
+            continue
+        basin = {int(pid) for a in t.form_areas for pid in cdata["areas"].get(a, ())}
+        dec = open(
+            os.path.join(MOD, "decisions", f"Form{t.forms}.txt"),
+            encoding="utf-8",
+            errors="replace",
+        ).read()
+        required = {
+            int(x)
+            for x in re.findall(
+                r"NOT = \{\s*(\d+)\s*=\s*\{\s*country_or_non_sovereign_subject_holds\s*=\s*ROOT",
+                dec,
+            )
+        }
+        note(
+            required == basin,
+            f"{t.decision} requires exactly the {len(basin)} Carpathian Basin "
+            f"provinces",
+        )
+        if required != basin:
+            print(f"        only in decision : {sorted(required - basin)}")
+            print(f"        only in the land : {sorted(basin - required)}")
+        note(
+            f"change_tag = {t.forms}" in dec,
+            f"{t.decision} changes the tag to {t.forms}",
+        )
+        for key in t.suppress:
+            pat = re.escape(key) + r"\s*=\s*\{\s*potential\s*=\s*\{\s*always\s*=\s*no"
+            note(
+                bool(re.search(pat, dec)),
+                f"vanilla {key} decision suppressed with always = no",
+            )
+        loc = open(
+            os.path.join(MOD, "localisation", "magyars_l_english.yml"),
+            encoding="utf-8",
+            errors="replace",
+        ).read()
+        said = re.search(r"hold all (\d+) provinces", loc)
+        note(bool(said), f"{t.decision} description quotes a province count")
+        if said:
+            note(
+                int(said.group(1)) == len(basin),
+                f"description says {said.group(1)}, basin has {len(basin)}",
+            )
 
     print("\n== every realm holds its own capital ==")
 

@@ -1,8 +1,9 @@
 #1775 - Holstein
 
-owner = SHL
-controller = SHL
+owner = HSA
+controller = HSA
 add_core = SHL
+add_core = HSA
 culture = lower_saxon
 religion = catholic
 hre = no
@@ -38,3 +39,9 @@ base_production = 5 }
 	controller = DAN
 	remove_core = FRA
 } # Napoleon abdicates unconditionally
+
+1444.11.11 = {	owner = HSA
+	controller = HSA
+	add_core = HSA
+	hre = no
+}

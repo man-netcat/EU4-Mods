@@ -1,7 +1,7 @@
 #Bratslav/East Podolia
 
-owner = HUN
-controller = HUN
+owner = MGY
+controller = MGY
 culture = ruthenian
 religion = orthodox
 hre = no
@@ -15,7 +15,7 @@ is_city = yes
 add_local_autonomy = 25
 add_core = KIE
 add_core = LIT
-add_core = HUN
+add_core = MGY
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -43,8 +43,8 @@ discovered_by = nomad_group
 1769.1.1 = { unrest = 0 } # Suppressed by Polish and Russian troops
 1793.1.23 = { owner = RUS controller = RUS add_core = RUS } # Second partition of Poland
 
-1444.11.11 = {	owner = HUN
-	controller = HUN
-	add_core = HUN
+1444.11.11 = {	owner = MGY
+	controller = MGY
+	add_core = MGY
 	hre = no
 }

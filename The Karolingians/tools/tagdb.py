@@ -2,8 +2,14 @@
 
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass, field
 from typing import Optional
+
+HISTORICAL_TAGS_MOD = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+    "Historical European Tags",
+)
 
 
 @dataclass(frozen=True)
@@ -15,6 +21,7 @@ class Tag:
     rank: Optional[int] = None
     capital: Optional[int] = None
     culture: Optional[str] = None
+    religion: Optional[str] = None
     ck3_title: Optional[str] = None
     ruler_title: Optional[str] = None
     no_ck3: Optional[str] = None
@@ -53,6 +60,51 @@ class Tag:
                 f"{self.tag}: a Tag must have a rank, be deferred, or declare "
                 f'country "none" or "elector" - otherwise it is a realm of '
                 f"unclear status"
+            )
+
+
+@dataclass(frozen=True)
+class CustomTag(Tag):
+    color: tuple = ()
+    country_file: Optional[str] = None
+    forms: Optional[str] = None
+    form_areas: tuple = ()
+    form_rank: Optional[int] = None
+    flag_from: Optional[str] = None
+    flag_source: Optional[str] = None
+    technology_group: Optional[str] = None
+    decision: Optional[str] = None
+    suppress: tuple = ()
+    adjective: Optional[str] = None
+    historical_score: int = 250
+    revolutionary_colors: tuple = (5, 0, 10)
+    historical_units: tuple = ()
+    monarch_names: tuple = ()
+    leader_names: tuple = ()
+    ship_names: tuple = ()
+
+    def __post_init__(self):
+        super().__post_init__()
+        if self.country != "fresh":
+            raise ValueError(
+                f"{self.tag}: a CustomTag has no vanilla history file to inherit - "
+                f"only country fresh writes it from scratch"
+            )
+        if len(self.color) != 3:
+            raise ValueError(f"{self.tag}: a CustomTag needs an RGB color")
+        if not (self.name and self.adjective):
+            raise ValueError(
+                f"{self.tag}: CustomTag needs name and adjective for localisation"
+            )
+        if self.forms and not (self.form_areas and self.decision):
+            raise ValueError(
+                f"{self.tag}: a formable CustomTag must set forms AND form_areas "
+                f"AND decision together"
+            )
+        if not (self.flag_from or self.country_file or self.flag_source):
+            raise ValueError(
+                f"{self.tag}: CustomTag needs flag_from (or a country_file, "
+                f"or a flag_source path) so it has a banner to borrow"
             )
 
 
@@ -221,6 +273,7 @@ TAGS: list[Tag] = [
             80,  # Trier
             1760,  # Koblenz
             62,  # Leipzig (Leipzig)  (south_saxony_area; vanilla THU)
+            4141,  # Ditmarschen          (holstein_area; vanilla SHL)
         ),
     ),
     Tag(
@@ -653,13 +706,48 @@ TAGS: list[Tag] = [
             4780,  # Ohrid                  (macedonia_area; vanilla TUR)
         },
     ),
-    Tag(
-        tag="HUN",
-        country="written",
+    CustomTag(
+        tag="MGY",
+        country="fresh",
         rank=1,
         capital=283,
-        ck3_title=None,
+        culture="hungarian",
+        technology_group="eastern",
+        ck3_title="k_magyar",
         in_alloc=True,
+        name="Magyars",
+        adjective="Magyar",
+        color=(152, 85, 92),
+        revolutionary_colors=(5, 0, 10),
+        historical_units=("hungarian_hussar", "eastern_knights"),
+        monarch_names=(
+            ("Arpad #0", 0),
+            ("Zoltan #0", 0),
+            ("Taksony #0", 0),
+            ("Geza #0", 0),
+            ("Istvan #5", 40),
+            ("Laszlo #1", 20),
+            ("Kalman #1", 20),
+            ("Bela #4", 5),
+            ("Endre #3", 15),
+            ("Karoly #2", 15),
+        ),
+        leader_names=(
+            "Hunyadi Kinizsi Zrinyi",
+            "Esterhazy Rakoczi Thokoly",
+            "Bocskai Bethlen Bathory",
+        ),
+        ship_names=("Arpad Magyar", '"Szent Istvan kiraly"'),
+        forms="HUN",
+        form_areas=(
+            "transdanubia_area",
+            "alfold_area",
+            "transylvania_area",
+            "southern_transylvania_area",
+        ),
+        flag_from="HUN",
+        decision="kar_form_hungary",
+        suppress=("hungarian_nation",),
         provinces={
             282,  # Yedisan                (yedisan_area; vanilla CRI)
             283,  # Zaporozhia             (zaporizhia_area; vanilla CRI)
@@ -668,7 +756,45 @@ TAGS: list[Tag] = [
             2406,  # Ingil                  (yedisan_area; vanilla CRI)
             4540,  # Winnica                (podolia_volhynia_area; vanilla LIT)
         },
-        no_ck3="vanilla: keeps vanilla's 1444.11.10 Hunyadi block",
+    ),
+    CustomTag(
+        tag="ZEM",
+        country="fresh",
+        rank=1,
+        capital=271,
+        culture="lithuanian",
+        religion="catholic",
+        technology_group="western",
+        ck3_title="d_samogitia",
+        in_alloc=True,
+        name="Samogitia",
+        adjective="Samogitian",
+        color=(210, 170, 30),
+        revolutionary_colors=(16, 1, 16),
+        historical_units=(
+            "western_medieval_infantry",
+            "western_medieval_knights",
+            "western_men_at_arms",
+        ),
+        monarch_names=(
+            ("Velnias #0", 30),
+            ("Palemon #0", 25),
+            ("Vykintas #0", 20),
+            ("Algimantas #0", 20),
+            ("Kukovaitis #0", 5),
+        ),
+        leader_names=('"of Samogitia" "of Medininkai" "of Kretinga" "of Telsiai"',),
+        ship_names=('"Zemaitija" "Medininkai" "Telsiai"',),
+        areas=("samogitia_area",),
+        flag_source=os.path.join(HISTORICAL_TAGS_MOD, "gfx", "flags", "ZEM.tga"),
+    ),
+    Tag(
+        tag="LIT",
+        rank=1,
+        capital=272,
+        ck3_title="d_lithuanians",
+        in_alloc=True,
+        areas=("lithuania_area",),
     ),
     Tag(
         tag="MON",
@@ -688,6 +814,48 @@ TAGS: list[Tag] = [
         ck3_title="d_prussia",
         in_alloc=True,
         areas=("east_prussia_area", "west_prussia_area"),
+    ),
+    Tag(
+        tag="KUR",
+        rank=1,
+        capital=1935,
+        ck3_title="d_courland",
+        in_alloc=True,
+        provinces={
+            39,  # Kurland                (curonia_area; vanilla LIV)
+            1935,  # Semigallia             (curonia_area; vanilla LIV)
+        },
+    ),
+    Tag(
+        tag="HSA",
+        rank=1,
+        capital=45,
+        ck3_title="c_lubeck",
+        in_alloc=True,
+        provinces={
+            45,  # Lubeck                (mecklenburg_area; vanilla HSA)
+            2996,  # Wismar                (mecklenburg_area; vanilla MKL)
+            1775,  # Holstein              (holstein_area; vanilla SHL)
+        },
+    ),
+    Tag(
+        tag="LVA",
+        rank=1,
+        capital=38,
+        ck3_title="d_livonia",
+        in_alloc=True,
+        areas=("livonia_area",),
+        provinces={
+            35,  # Osel                   (curonia_area; vanilla LIV)
+        },
+    ),
+    Tag(
+        tag="EST",
+        rank=1,
+        capital=36,
+        ck3_title="d_esthonia",
+        in_alloc=True,
+        areas=("estonia_ingria_area",),
     ),
     Tag(
         tag="CRI",

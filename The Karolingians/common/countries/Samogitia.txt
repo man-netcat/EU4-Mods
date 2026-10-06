@@ -1,0 +1,29 @@
+graphical_culture = westerngfx
+
+color = { 210  170  30 }
+
+revolutionary_colors = { 16  1  16 }
+
+historical_score = 250
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+}
+
+monarch_names = {
+	"Velnias #0" = 30
+	"Palemon #0" = 25
+	"Vykintas #0" = 20
+	"Algimantas #0" = 20
+	"Kukovaitis #0" = 5
+}
+
+leader_names = {
+	"of Samogitia" "of Medininkai" "of Kretinga" "of Telsiai"
+}
+
+ship_names = {
+	"Zemaitija" "Medininkai" "Telsiai"
+}

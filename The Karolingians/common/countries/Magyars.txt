@@ -1,0 +1,36 @@
+graphical_culture = easterngfx
+
+color = { 152  85  92 }
+
+revolutionary_colors = { 5  0  10 }
+
+historical_score = 250
+
+historical_units = {
+	hungarian_hussar
+	eastern_knights
+}
+
+monarch_names = {
+	"Arpad #0" = 0
+	"Zoltan #0" = 0
+	"Taksony #0" = 0
+	"Geza #0" = 0
+	"Istvan #5" = 40
+	"Laszlo #1" = 20
+	"Kalman #1" = 20
+	"Bela #4" = 5
+	"Endre #3" = 15
+	"Karoly #2" = 15
+}
+
+leader_names = {
+	Hunyadi Kinizsi Zrinyi
+	Esterhazy Rakoczi Thokoly
+	Bocskai Bethlen Bathory
+}
+
+ship_names = {
+	Arpad Magyar
+	"Szent Istvan kiraly"
+}
