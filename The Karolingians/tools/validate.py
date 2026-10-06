@@ -61,7 +61,6 @@ def vfile(pid):
 
 
 def run() -> int:
-
     fail.clear()
     print("== mod skeleton ==")
     for p in [

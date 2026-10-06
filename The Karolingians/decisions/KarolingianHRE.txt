@@ -12,6 +12,13 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			OR = {
+				tag = FRA
+				tag = LOT
+				tag = GER
+				tag = BAV
+				tag = ITA
+			}
+			OR = {
 				ai = no
 				AND = {
 					ai = yes

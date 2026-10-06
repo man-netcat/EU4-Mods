@@ -12,49 +12,31 @@ class Tag:
     tag: str
 
     name: Optional[str] = None
-
     rank: Optional[int] = None
-
     capital: Optional[int] = None
-
     culture: Optional[str] = None
-
     ck3_title: Optional[str] = None
-
     ruler_title: Optional[str] = None
-
     no_ck3: Optional[str] = None
-
     areas: tuple = ()
-
     deferred: Optional[str] = None
-
     in_alloc: bool = True
-
     provinces: frozenset = field(default_factory=frozenset)
-
     country: str = "vanilla"
-
     elector: bool = False
-
     imperial_kingdom: bool = False
-
     ruler_block: Optional[str] = None
-
     no_heir_sync: bool = False
 
     @property
     def managed(self) -> bool:
-
         return self.rank is not None
 
     @property
     def writes_country_file(self) -> bool:
-
         return self.deferred is None and self.rank is not None
 
     def __post_init__(self):
-
         object.__setattr__(self, "provinces", frozenset(self.provinces))
 
         if self.ck3_title is None and self.no_ck3 is None and self.deferred is None:
@@ -881,7 +863,6 @@ TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.province
 
 
 def selfcheck() -> None:
-
     seen = set()
     managed = [t.tag for t in TAGS if t.managed]
     if managed[: len(EMPIRE_KINGDOMS)] != EMPIRE_KINGDOMS:
