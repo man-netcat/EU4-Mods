@@ -71,6 +71,40 @@ reign that could not have begun before he was born. CK3's `d_krete` is held in
 867 by **Shuayb**, Abu Hafs' father, who held the island until his own son took
 it in 870. `CRT` is now checked against CK3 like any other realm.
 
+## How a realm's country file gets written
+
+`Tag.country` is the whole instruction. build.py holds no list of realms, so a
+new realm is one entry in `tagdb.py` and no edit at all in `build.py`. Five
+modes:
+
+| mode | build does | realms |
+| --- | --- | --- |
+| `fresh` | writes the file from scratch: capital, culture, rank, ruler | LOT, GER, BAV, ITA, SOR |
+| `vanilla` | copies vanilla's, then patches capital, rank, the 1444 ruler, and the vote if it has one | FRA, NAV, CRT, SIL, GMA, MON, PRU, BOH, SAR |
+| `elector` | copies vanilla's, changes one line - the 1444 vote | BRA, KOL, MAI, PAL, SAX, TRI |
+| `written` | nothing; the repo owns the file and build must not touch it | ASU, ADU, ARB, EGY, DAL, BYZ, BUL, HUN |
+| `none` | nothing; there is no file | CRI (deferred), POL, PAP |
+
+A realm in `vanilla` mode keeps its whole later history and replaces only the
+start this scenario asks for. The seven electors all get their vote dissolved,
+which is why `BOH` is in two modes at once: a realm the mod patches *and* an
+elector stripped of its vote.
+
+The seats and rulers, where the choice was a decision rather than a copy:
+
+- **SIL is seated at 264 Breslau**, the seat of the Silesian duchy - Ratibor was
+  an appanage seat - and a province inside what SIL holds.
+- **PRU is seated at 1841 Marienburg**, inside `east_prussia_area`. The
+  Pruthenians of 867 held this coast without towns, so the seat is a choice of
+  province rather than a settlement of the date.
+- **NAV is seated at Pamplona and MON at Zeta**, the seats those two realms
+  actually used; the land the mod gives them lies around those seats, not under
+  a new one.
+- **FRA's ruler block is hand-written rather than read from CK3's dates.** CK3
+  dates Charles the Bald 823.1.14 - 877.6.10, a placeholder next to the
+  13 August 823 and 6 October 877 every chronicle gives. `ck3_sync` still lifts
+  his name and dynasty from CK3; only the dates are the mod's.
+
 ## How land is allocated
 
 Layers 1 and 2 of the allocation now live on the Tag for each realm, because

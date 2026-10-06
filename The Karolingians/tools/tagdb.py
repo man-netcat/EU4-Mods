@@ -113,12 +113,18 @@ class Tag:
     #: elsewhere has to be pulled back out by hand. Each entry below carries the
     #: evidence.
     provinces: frozenset = field(default_factory=frozenset)
-    #: What build.py does with this realm's country file:
+    #: What build.py does with this realm's country file. This is the whole
+    #: instruction: build reads no other list.
     #:   "fresh"   - written from scratch (capital, culture, rank, own ruler)
     #:   "vanilla" - vanilla's file copied, patching capital/rank/ruler as asked
-    #:   "elector" - vanilla's file copied with only its 867 vote dissolved
+    #:   "elector" - vanilla's file copied with only its 1444 vote dissolved
+    #:   "written" - owned by the repo, never generated; build must not touch it
     #:   "none"    - no file; the realm is deferred or deliberately untouched
     country: str = "vanilla"
+    #: Hand-written monarch block for the 1444 start, keyed into build.RULERS or
+    #: build.VANILLA_RULERS. Set instead of leaving the ruler to ck3_title when
+    #: the mod's own ruler is the one wanted. Excludes ck3_title from the search.
+    ruler_block: Optional[str] = None
 
     # -- the axes a reader is most likely to get wrong --------------------------
     @property
@@ -149,16 +155,18 @@ class Tag:
             raise ValueError(
                 f"{self.tag}: ck3_title is None but neither no_ck3 nor deferred "
                 f"explains it - give one or the other, so the gap is deliberate")
-        if self.rank is None and not self.deferred and self.country != "none":
+        if (self.rank is None and not self.deferred
+                and self.country not in ("none", "elector")):
             raise ValueError(
                 f"{self.tag}: a Tag must have a rank, be deferred, or declare "
-                f'country="none" - otherwise it is a realm of unclear status')
+                f'country "none" or "elector" - otherwise it is a realm of '
+                f'unclear status')
 
 
 TAGS: list[Tag] = [
 
     # -- the 867 Carolingian partition ------------------------------------------
-    Tag(tag="FRA", name="West Francia", rank=2, capital=183, culture="frankish",
+    Tag(tag="FRA", ruler_block="FRA", name="West Francia", rank=2, capital=183, culture="frankish",
         ck3_title="k_france", in_alloc=True,
         rank_note="West Francia: the largest of the partitions, and a kingdom. "
                   "Charles the Bald was King of the Franks from 843 and held "
@@ -452,7 +460,7 @@ TAGS: list[Tag] = [
             211,   # Huesca  (Osca)      (aragon_area;     vanilla ARA)
         )),
 
-    Tag(tag="ASU", rank=2, capital=207, ck3_title="k_asturias", in_alloc=True,
+    Tag(tag="ASU", country="written", rank=2, capital=207, ck3_title="k_asturias", in_alloc=True,
         areas=("asturias_area", "galicia_area", "leon_area"),
         # what the areas above do not already give:
         provinces={
@@ -461,7 +469,7 @@ TAGS: list[Tag] = [
         rank_note="Asturias: Alfonso III inherited the kingship in 866, one year "
                   "before the start date, so it is a kingdom and not a county."),
 
-    Tag(tag="ADU", rank=2, capital=225, ck3_title="k_andalusia", in_alloc=True,
+    Tag(tag="ADU", country="written", rank=2, capital=225, ck3_title="k_andalusia", in_alloc=True,
         areas=("alentejo_area", "baleares_area", "beieras_area", "extremadura_area", "lower_andalucia_area", "toledo_area", "upper_andalucia_area", "valencia_area"),
         # what the areas above do not already give:
         provinces={
@@ -494,7 +502,7 @@ TAGS: list[Tag] = [
                   "start date. k_krete is unheld, so the duchy is the only seat."),
 
     # -- the Islamic east --------------------------------------------------------
-    Tag(tag="ARB", rank=3, capital=385, ck3_title="e_arabia", in_alloc=True,
+    Tag(tag="ARB", country="written", rank=3, capital=385, ck3_title="e_arabia", in_alloc=True,
         areas=("al_jazira_area", "aleppo_area", "bahrain_area", "basra_area", "dulkadir_area", "iraq_arabi_area", "medina_area", "palestine_area", "syria_area", "syrian_desert_area", "tabuk_area", "trans_jordan_area"),
         # what the areas above do not already give:
         provinces={
@@ -523,7 +531,7 @@ TAGS: list[Tag] = [
         rank_note="The Abbasid Caliphate, which in 867 is the empire of the "
                   "Islamic world and no realm in this table rivals it."),
 
-    Tag(tag="EGY", rank=2, capital=361, ck3_title="k_egypt", in_alloc=True,
+    Tag(tag="EGY", country="written", rank=2, capital=361, ck3_title="k_egypt", in_alloc=True,
         areas=("al_wahat_area", "bahari_area", "cyrenaica_area", "delta_area", "gulf_of_arabia_area", "said_area", "vostani_area"),
         # what the areas above do not already give:
         provinces={
@@ -537,7 +545,7 @@ TAGS: list[Tag] = [
                   "drop to 1 if the literal principality reading is preferred."),
 
     # -- Italy, the Balkans and the Aegean ---------------------------------------
-    Tag(tag="SIL", rank=1, capital=264, ck3_title="d_lower_silesia", in_alloc=True,
+    Tag(tag="SIL", ruler_block="SIL", rank=1, capital=264, ck3_title="d_lower_silesia", in_alloc=True,
         rank_note="Silesia: a Piast duchy, small but not a titular one.",
         provinces=(
             # silesia_area changes hands entirely but splits down the middle: the
@@ -550,7 +558,7 @@ TAGS: list[Tag] = [
             2966,   # Glogau   (Glogow)    (silesia_area; vanilla GLG)
         )),
 
-    Tag(tag="GMA", rank=2, capital=4237, ck3_title="k_moravia", in_alloc=True,
+    Tag(tag="GMA", ruler_block="GMA", rank=2, capital=4237, ck3_title="k_moravia", in_alloc=True,
         rank_note="Great Moravia under Rastislav, a kingdom in its own right.",
         # Great Moravia takes the whole of moravia_area - Brno, Olomouc and
         # Ostrava - giving it a real Moravian heartland instead of existing only
@@ -568,14 +576,14 @@ TAGS: list[Tag] = [
             4723,   # Opole                  (silesia_area; vanilla OPL)
         }),
 
-    Tag(tag="DAL", rank=1, capital=136, ck3_title="d_dalmatia", in_alloc=True,
+    Tag(tag="DAL", country="written", rank=1, capital=136, ck3_title="d_dalmatia", in_alloc=True,
         provinces={
             136,   # Dalmatia               (east_adriatic_coast_area; vanilla DAL)
             4753,   # Zadar                  (east_adriatic_coast_area; vanilla DAL)
         },
         rank_note="Dalmatia: a coastal duchy of city-states, nominally one realm."),
 
-    Tag(tag="BYZ", rank=3, capital=151, ck3_title="e_byzantium", in_alloc=True,
+    Tag(tag="BYZ", country="written", rank=3, capital=151, ck3_title="e_byzantium", in_alloc=True,
         areas=("aegean_archipelago_area", "albania_area", "ankara_area", "aydin_area", "germiyan_area", "hudavendigar_area", "karaman_area", "kastamonu_area", "northern_greece_area", "rum_area"),
         # what the areas above do not already give:
         provinces={
@@ -602,7 +610,7 @@ TAGS: list[Tag] = [
         },
         rank_note="The Empire itself. 867 is Basil I's first full year."),
 
-    Tag(tag="BUL", rank=2, capital=150, ck3_title="k_bulgaria", in_alloc=True,
+    Tag(tag="BUL", country="written", rank=2, capital=150, ck3_title="k_bulgaria", in_alloc=True,
         areas=("alfold_area", "bulgaria_area", "serbia_area", "silistria_area", "southern_transylvania_area", "transylvania_area", "wallachia_area"),
         # what the areas above do not already give:
         provinces={
@@ -620,7 +628,7 @@ TAGS: list[Tag] = [
                   "peer of Byzantium's neighbours rather than a vassal duchy."),
 
     # -- the steppe and the Danube ----------------------------------------------
-    Tag(tag="HUN", rank=1, capital=283, ck3_title=None, in_alloc=True,
+    Tag(tag="HUN", country="written", rank=1, capital=283, ck3_title=None, in_alloc=True,
         provinces={
             282,   # Yedisan                (yedisan_area; vanilla CRI)
             283,   # Zaporozhia             (zaporizhia_area; vanilla CRI)
@@ -661,7 +669,8 @@ TAGS: list[Tag] = [
     #
     # Rank 1 is provisionally in place so the tag stays playable while its
     # identity is settled.
-    Tag(tag="CRI", rank=1, capital=286, ck3_title=None, in_alloc=True,
+    Tag(tag="CRI", rank=1, capital=286, ck3_title=None,
+        country="none", in_alloc=True,
         provinces={
             286,   # Azow                   (azov_area; vanilla GEN)
         },
@@ -685,7 +694,7 @@ TAGS: list[Tag] = [
     # Not in ALL_TAGS because the mod does not hand out their land: they keep
     # vanilla's provinces untouched. They are still realms this mod maintains a
     # court and a size for, so they still get a deliberate rank.
-    Tag(tag="BOH", rank=1, capital=266, ck3_title=None, in_alloc=False,
+    Tag(tag="BOH", ruler_block="BOH", rank=1, capital=266, ck3_title=None, in_alloc=False,
         no_ck3="mod-invented: Borivoj is the mod's own Bohemian ruler; CK3 "
                "records no 867 holder for k_bohemia to verify against",
         rank_note="Bohemia: a duchy of the Empire under Borivoj I. Rank 1 is the "
@@ -725,7 +734,7 @@ TAGS: list[Tag] = [
     # and no tier to decide.
     # The Order's last three provinces, handed back out. Not realms of the mod's
     # own: no rank, no capital, no CK3 title, just the land.
-    Tag(tag="BRA", rank=None, country="none", ck3_title=None, in_alloc=True,
+    Tag(tag="BRA", rank=None, country="elector", ck3_title=None,
         no_ck3="vanilla Brandenburg, given the Order's Neumark provinces; the "
                "mod runs no court of its own here",
         provinces={
@@ -740,6 +749,16 @@ TAGS: list[Tag] = [
             1859,  # Torun                 (kuyavia_area; vanilla TEU)
         }),
 
+    Tag(tag="KOL", rank=None, country="elector", ck3_title=None, in_alloc=False,
+        no_ck3="vanilla elector; the mod only dissolves its vote"),
+    Tag(tag="MAI", rank=None, country="elector", ck3_title=None, in_alloc=False,
+        no_ck3="vanilla elector; the mod only dissolves its vote"),
+    Tag(tag="PAL", rank=None, country="elector", ck3_title=None, in_alloc=False,
+        no_ck3="vanilla elector; the mod only dissolves its vote"),
+    Tag(tag="SAX", rank=None, country="elector", ck3_title=None, in_alloc=False,
+        no_ck3="vanilla elector; the mod only dissolves its vote"),
+    Tag(tag="TRI", rank=None, country="elector", ck3_title=None, in_alloc=False,
+        no_ck3="vanilla elector; the mod only dissolves its vote"),
     Tag(tag="PAP", rank=None, capital=118, ck3_title="k_papal_state",
         country="none", in_alloc=False),
 ]
@@ -759,6 +778,12 @@ def _r(t: Tag):
 #: realms: BOH and SAR are maintained but their land is never reassigned.
 ALL_TAGS: list[str] = [t.tag for t in TAGS if t.in_alloc]
 
+#: The seven electors of the HRE. Every realm here is stripped of its 1444 vote,
+#: which is the whole of the mod's diplomacy with a dissolved empire.
+IMPERIAL_ELECTORS = ["BOH", "BRA", "KOL", "MAI", "PAL", "SAX", "TRI"]
+
+TAG_BY: dict = {t.tag: t for t in TAGS}
+
 #: Every realm the mod maintains a country file for, which must therefore have a
 #: deliberate rank. This is what stops a realm being added without deciding how
 #: big it is.
@@ -775,15 +800,6 @@ TITLES: dict = {t.tag: t.ck3_title for t in TAGS if t.ck3_title}
 #: The few realms whose ruler is read from a CK3 title other than their own.
 RULER_TITLES: dict = {t.tag: t.ruler_title for t in TAGS if t.ruler_title}
 
-#: Vanilla tags the allocation hands land to, which keep vanilla's own file and
-#: vanilla's own ruler. Not Tags: the mod maintains no realm for them, it only
-#: takes some of their land. They are listed so the audit has no blind
-#: spot - a land-holder appearing in neither TITLES nor NOT_CK3 is reported and
-#: fails the build. Without this, adding a land-holder silently escapes the check.
-#:
-#: Deliberately absent: tags the mod never touches at all. Brittany and Venice are
-#: left as vanilla free agents, and the electors other than BOH hold a vote and
-#: nothing else. None of them is this mod's business, so none is tracked here.
 #: Realms that own land but whose ruler is not CK3's to supply, with the reason.
 #: Only for a realm this mod decides something about. A vanilla tag that owns land
 #: is not in here and does not need to be: nothing in the mod touched it, so it
@@ -791,15 +807,6 @@ RULER_TITLES: dict = {t.tag: t.ruler_title for t in TAGS if t.ruler_title}
 #: data retyped, and would go stale the moment a province moved.
 NOT_CK3: dict = {t.tag: t.no_ck3 for t in TAGS
                  if t.no_ck3 and t.tag not in TITLES}
-
-#: Capitals for the from-scratch country files, with their culture. FRA is absent
-#: on purpose: it keeps vanilla's French history and only overrides the ruler, so
-#: it has no header of its own to write.
-HEADER: dict = {t.tag: (t.capital, t.culture) for t in TAGS
-                if t.country == "fresh" and t.capital and t.culture}
-
-#: Realms whose country file is written from scratch, in write order.
-FRESH_REALMS: list = [t.tag for t in TAGS if t.country == "fresh"]
 
 #: The five kingdoms of the empire, in the order the mod presents them: West
 #: Francia, Lotharingia, East Francia, Bavaria, Italy. Lusatia is deliberately not
@@ -855,6 +862,20 @@ def selfcheck() -> None:
             raise ValueError(
                 f"{t.tag}: both ck3_title and no_ck3 are set - CK3 is the "
                 f"authority or it is not")
+        if t.country not in ("fresh", "vanilla", "elector", "written", "none"):
+            raise ValueError(f"{t.tag}: country={t.country!r} is not one of "
+                             f"fresh/vanilla/elector/written/none")
+        if t.country == "fresh" and not (t.capital and t.culture):
+            raise ValueError(
+                f"{t.tag}: a fresh realm needs capital and culture - build "
+                f"cannot make them up")
+        if t.country == "none" and t.rank is not None and not t.deferred:
+            raise ValueError(
+                f"{t.tag}: country none but rank {t.rank} - a realm with a "
+                f"size writes a file")
+        if t.country == "elector" and t.tag not in IMPERIAL_ELECTORS:
+            raise ValueError(
+                f"{t.tag}: country elector, but it is not in IMPERIAL_ELECTORS")
         if (t.areas or t.provinces) and not t.in_alloc:
             raise ValueError(
                 f"{t.tag}: declares {len(t.areas)} areas and "

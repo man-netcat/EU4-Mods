@@ -1530,80 +1530,10 @@ def shifted(y, m=1, d=1):
     return f"{y + SHIFT}.{m}.{d}"
 
 
-# Capitals and cultures for the realms whose country file is written from scratch.
-# Which realms those are is the Tag's `country` field, not a list here: see
-# tagdb.HEADER and tagdb.FRESH_REALMS.
+# Which realms get a country file written from scratch is the Tag's `country`
+# field, not a list here.
 
-# The rank of every realm, its capital, its CK3 title, and the realms that are kept
-# but not yet authored - all of it is one Tag object per realm in tagdb.py, which
-# is also where every rank's justification lives. These four names are the same
-# data seen from this script's side of the fence.
-#
-# A rank is argued from a realm's own 867 standing and never from which group a
-# tag was filed under. The old rule here was "the five are peers at 2, Lusatia
-# sits below them", which made the ranks a statement about the partition rather
-# than about the realms.
-
-# Vanilla tags this mod touches. They keep their own vanilla history - none of
-# them is a realm of ours, they all sit outside the Karolingian sphere and are
-# absent from the HRE decision - so this only ever corrects a capital and/or
-# installs an 867 ruler. Nothing else in the vanilla file is touched.
-VANILLA = {
-    # Silesia: its vanilla seat is Ratibor (263), which now belongs to Great
-    # Moravia, so SIL would own land but not its own seat. Breslau (264) is the
-    # historical capital of the duchy - Ratibor was an appanage seat - and lies
-    # inside the set SIL actually holds. It also gets its own 867 ruler.
-    "SIL": {"capital": 264, "ruler": "SIL"},
-    # Bohemia: an 867 ruler, no capital change (Praha 266 is still its own).
-    "BOH": {"ruler": "BOH"},
-    # Great Moravia: an 867 ruler, no capital change (Olomouc 4237 is its own).
-    "GMA": {"ruler": "GMA"},
-    # Navarre: the mod takes Vizcaya and Pirineo from France, and Pamplona (210)
-    # is already vanilla's own NAV capital, so the capital is left alone.
-    "NAV": {"ruler": "CK3"},
-    # Montenegro: Zeta (138) and Kotor (4754) are the Dioclean core, and Zeta is
-    # already vanilla's MON capital.
-    "MON": {"ruler": "CK3"},
-    # Prussia: vanilla names no capital, so the seat is set to Marienburg (1841).
-    "PRU": {"capital": 1841, "ruler": "CK3"},
-    # West Francia: every line of vanilla's French history survives - the 987
-    # accession, the 1308 papal removal, all of it - and only the 1444 ruler and
-    # the rank are overridden. It used to be patched by its own bespoke function
-    # that skipped the rank step entirely, which left FRA with no government_rank
-    # at all and the largest realm in the mod playing as a duchy.
-    #
-    # The ruler is the hand-written block, not ck3_block(): CK3 dates Charles
-    # 823.1.14 - 877.6.10, which is a placeholder next to the 13 August 823 and
-    # 6 October 877 every chronicle gives. ck3_sync still lifts his name and
-    # dynasty from CK3; only the dates stay written here, as they do for every
-    # other realm in this mod.
-    "FRA": {"ruler": "FRA"},
-    # Sardinia: no province changes hands and no capital changes - vanilla already
-    # seats SAR at 127, which is one of its own three. The rank is set so that it
-    # comes from the same argument as every other realm here rather than from EU4's
-    # default of 1 by accident.
-    #
-    # The ruler comes from c_arborea rather than d_sardinia. CK3 leaves the Sardinian
-    # duchies vacant at 867 - both d_sardinia and k_sardinia resolve to holder 0 or
-    # nothing at all - so the only Sardinian of that date in the game is Gublenu,
-    # who holds c_arborea and c_cagliari. Sardinia is a duchy in EU4 and a county is
-    # where its 867 man happens to sit; that is the mod's business, not CK3's.
-    "SAR": {"ruler": "CK3"},
-
-    # Crete: an emir, and CK3 already has one. d_krete is held in 867 by Shuayb, Abu
-    # Hafs' father, who lost the island to his own son in 870 - ten years before
-    # this scenario's date, so the mod's own 867 is the year the old emir is still
-    # on it. k_krete is unheld, so the duchy seat is the only one to read.
-    #
-    # This entry used to be a hand-written CRT.txt with no ruler from anywhere, on
-    # the stated ground that CK3 models no Crete at all. That was wrong: the title
-    # is d_krete, spelled the Greek way, and an earlier search for "crete" missed
-    # it. The hand-written file had Abu Hafs Umar, who was born in 838 and
-    # conquered Crete in 869 - not its emir in 867. Vanilla's CRT - Crete.txt has
-    # no dated blocks at all and a header this mod was copying verbatim, so letting
-    # the build own the file costs nothing and removes the invention.
-    "CRT": {"ruler": "CK3"},
-}
+# Every realm is one Tag in tagdb.py: rank, capital, CK3 title, country mode.
 
 # 867 rulers for the vanilla tags above. Dates are CK3's own, taken from
 # game/history/characters/, and are shifted by SHIFT like every ruler here.
@@ -2103,7 +2033,8 @@ def find_vanilla(tag):
 
 
 def fresh(tag):
-    cap, culture = HEADER[tag]
+    t = TAG_BY[tag]
+    cap, culture = t.capital, t.culture
     return f"""government = monarchy
 add_government_reform = feudalism_reform
 government_rank = {RANK[tag]}
@@ -2141,12 +2072,6 @@ capital = {cap}
 # override and their 1803-1806 history is left untouched.
 #
 # Bohemia matters twice over: it is one of the seven, and it is also the one this
-# mod keeps land and an 867 ruler for, so its copy is patched below along with its
-# capital and ruler. The other six are copied verbatim with only that one line
-# changed.
-IMPERIAL_ELECTORS = ["BOH", "BRA", "KOL", "MAI", "PAL", "SAX", "TRI"]
-
-
 def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None):
     """Copy a vanilla history file, changing only a capital, the government rank,
     the 1444 ruler and whether the country is an imperial elector.
@@ -2174,17 +2099,26 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
         # has `government_rank` inside its 1792 revolution block, so a pattern
         # that allowed leading whitespace silently rewrote the Revolution's rank
         # instead of setting the kingdom's.
-        text, n = re.subn(r"^(capital\s*=\s*)\d+.*$", rf"\g<1>{capital}", text,
-                          count=1, flags=re.M)
-        assert n == 1, f"{tag}: no top-level capital line to patch in {fn}"
+        m = re.search(r"^capital\s*=\s*(\d+)", text, flags=re.M)
+        assert m, f"{tag}: no top-level capital line in {fn}"
+        if int(m.group(1)) != capital:
+            # The vanilla comment on this line names the old seat, so it goes
+            # with the old number: a patched line is a plain line.
+            text, n = re.subn(r"^capital\s*=\s*\d+.*$", f"capital = {capital}",
+                              text, count=1, flags=re.M)
+            assert n == 1, f"{tag}: failed to patch capital in {fn}"
     if rank is not None:
         # Eight of the twenty realms have no government_rank in vanilla at all,
         # so they silently fall to EU4's default of 1. That is how the Tulunids
         # ended up ranked level with Silesia: not a decision, an omission. Set
         # every one of them from RANK so the tier is always deliberate.
-        text, n = re.subn(r"^(government_rank\s*=\s*)\d+.*$", rf"\g<1>{rank}", text,
-                          count=1, flags=re.M)
-        if n == 0:
+        m = re.search(r"^government_rank\s*=\s*(\d+)", text, flags=re.M)
+        if m and int(m.group(1)) != rank:
+            text, n = re.subn(r"^government_rank\s*=\s*\d+.*$",
+                              f"government_rank = {rank}", text, count=1,
+                              flags=re.M)
+            assert n == 1, f"{tag}: failed to patch government_rank in {fn}"
+        elif m is None:
             # No line to patch: add one beside the other government keys, so the
             # header stays readable rather than gaining a stray line at the end.
             anchor = re.search(r"^\s*government\s*=\s*\w+.*$", text, re.M)
@@ -2207,50 +2141,65 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
     return text
 
 
-def step_countries():
-    os.makedirs(COUNTRY_OUT, exist_ok=True)
-    for tag in ["LOT", "GER", "BAV", "ITA", "SOR"]:
-        open(os.path.join(COUNTRY_OUT, f"{tag}.txt"), "w", encoding="utf-8").write(
-            with_provenance(tag, ck3_sync(tag, fresh(tag))))
-        print(f"wrote {tag}.txt")
-    for tag, spec in VANILLA.items():
-        want = spec.get("ruler")
-        ruler = (ck3_block(tag) if want == "CK3"
-                 else {**RULERS, **VANILLA_RULERS}.get(want))
-        was_elector = tag in IMPERIAL_ELECTORS
-        open(os.path.join(COUNTRY_OUT, f"{tag}.txt"), "w", encoding="utf-8",
-             errors="surrogateescape").write(
-            with_provenance(tag, ck3_sync(tag, patch_vanilla(
-                tag, spec.get("capital"), ruler, was_elector, RANK.get(tag)))))
-        what = []
-        if spec.get("capital"):
-            what.append(f"capital -> {spec['capital']}")
-        if ruler:
-            nm = re.search(r'name = "([^"]+)"', ruler)
-            what.append(f"867 ruler {nm.group(1) if nm else want}"
-                        + (" (from CK3)" if want == "CK3" else ""))
-        if was_elector:
-            what.append("electorate removed")
-        if tag in RANK:
-            what.append(f"rank {RANK[tag]}")
-        print(f"wrote {tag}.txt (vanilla history preserved"
-              + (", " + ", ".join(what) if what else "") + ")")
-    # The remaining electors, so the empire is left with nobody to elect as
-    # emperor. Verbatim vanilla apart from the single dissolved vote.
-    for tag in IMPERIAL_ELECTORS:
-        if tag in VANILLA:
-            continue
-        # Build first, write second. `open(..., "w")` truncates before its
-        # argument is evaluated, so writing patch_vanilla(...) inline left a
-        # 0-byte country file behind whenever the assert fired - and an empty
-        # file looks clean to every grep-based check.
-        text = patch_vanilla(tag, strip_elector=True)
-        with open(os.path.join(COUNTRY_OUT, f"{tag}.txt"), "w", encoding="utf-8",
-                  errors="surrogateescape") as fh:
-            fh.write(text)
-        print(f"wrote {tag}.txt (vanilla history preserved, "
-              f"electorate dissolved)")
+def ruler_for(t):
+    """The 1444 ruler build writes for a realm, or None to leave vanilla's.
 
+    A hand-written block wins over CK3: SIL, GMA, BOH and FRA are the mod's own
+    rulers for those four, and everything else with a CK3 title reads 867 from
+    it - honouring ruler_title inside resolve() when the realm's own title is
+    vacant in 867.
+    """
+    if t.ruler_block:
+        return {**RULERS, **VANILLA_RULERS}[t.ruler_block]
+    if t.ck3_title:
+        return ck3_block(t.tag)
+    return None
+
+
+def step_countries():
+    """Write every country file this mod generates.
+
+    Tag.country is the whole instruction. Nothing here names a tag: a realm's
+    mode, its capital, its rank and its ruler are all fields on its own Tag, so
+    a new realm is one entry in tagdb and no edit at all in this file.
+    """
+    os.makedirs(COUNTRY_OUT, exist_ok=True)
+    for t in TAGS:
+        if t.country == "written":
+            continue          # the repo owns this file; do not generate over it
+        if t.country == "none":
+            continue          # deferred or deliberately fileless
+        if t.country == "fresh":
+            text = ck3_sync(t.tag, fresh(t.tag))
+            print(f"wrote {t.tag}.txt (from scratch, rank {t.rank}, "
+                  f"capital {t.capital})")
+        elif t.country == "vanilla":
+            ruler = ruler_for(t)
+            was_elector = t.tag in IMPERIAL_ELECTORS
+            text = ck3_sync(t.tag, patch_vanilla(t.tag, t.capital, ruler,
+                                                 was_elector, t.rank))
+            what = []
+            if t.capital:
+                what.append(f"capital -> {t.capital}")
+            if ruler:
+                nm = re.search(r'name = "([^"]+)"', ruler)
+                what.append(f"867 ruler {nm.group(1) if nm else '?'}"
+                            + (" (from CK3)" if not t.ruler_block else ""))
+            if was_elector:
+                what.append("electorate removed")
+            what.append(f"rank {t.rank}")
+            print(f"wrote {t.tag}.txt (vanilla history preserved, "
+                  + ", ".join(what) + ")")
+        else:  # "elector": vanilla apart from the one dissolved vote
+            text = patch_vanilla(t.tag, strip_elector=True)
+            print(f"wrote {t.tag}.txt (vanilla history preserved, "
+                  f"electorate dissolved)")
+        # Build first, write second: open("w") truncates before its argument is
+        # evaluated, so writing patch_vanilla(...) inline left a 0-byte file
+        # whenever an assert fired, and 0 bytes look clean to every grep check.
+        with open(os.path.join(COUNTRY_OUT, f"{t.tag}.txt"), "w",
+                  encoding="utf-8", errors="surrogateescape") as fh:
+            fh.write(with_provenance(t.tag, text))
 
 
 def main() -> int:
