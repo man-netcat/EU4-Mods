@@ -38,4 +38,4 @@ base_production = 10} # Stock Exchange established in Frankfurt
 	controller = GER
 	add_core = GER
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

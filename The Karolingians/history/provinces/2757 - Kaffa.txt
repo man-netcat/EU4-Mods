@@ -23,4 +23,4 @@ discovered_by = muslim
 	controller = BYZ
 	add_core = BYZ
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

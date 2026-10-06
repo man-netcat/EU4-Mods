@@ -42,4 +42,4 @@ base_production = 6 }
 	controller = BAV
 	add_core = BAV
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

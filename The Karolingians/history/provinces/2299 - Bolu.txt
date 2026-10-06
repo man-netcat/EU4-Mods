@@ -42,4 +42,4 @@ base_production = 4 } # Lale Devri (the tulip age), not appreciated by everyone
 	controller = BYZ
 	add_core = BYZ
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

@@ -1,16 +1,3 @@
-# The Karolingians - "Unite the Karlings"
-#
-# The imperial title has no land at all in 867, because the empire is split
-# among its heirs. Once one ruler holds the old imperial heartlands in a single
-# hand the empire can be made whole again. This mirrors vanilla's own "form
-# Germany" / "Restore Roman Empire" decisions and uses change_tag, so the
-# country really becomes HLR rather than merely renaming itself.
-#
-# Any ruler who comes to hold that land may do this. The decision names no
-# realm as eligible or ineligible, because the empire is a place, not a set of
-# dynasties: whether the five Frankish kingdoms, Lusatia, or anyone else
-# reunites it is the game's business, not this file's.
-
 country_decisions = {
 
 	kar_form_hre = {
@@ -31,9 +18,6 @@ country_decisions = {
 					num_of_cities = 40
 				}
 			}
-			# No tag test at all. Whichever ruler ends up holding the old imperial
-			# land may try, so no realm is excluded for being the realm it is.
-			# The land requirement in allow is the entire test.
 		}
 
 		provinces_to_highlight = {
@@ -105,10 +89,6 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
-			# One ruler holding every imperial province. There is deliberately no
-			# "and not one province more" clause, and no requirement that any
-			# particular realm have died out: both described the five-kingdom
-			# partition, and neither is a fact about the empire itself.
 				NOT = { 44 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 52 = { country_or_non_sovereign_subject_holds = ROOT } }
 				NOT = { 53 = { country_or_non_sovereign_subject_holds = ROOT } }
@@ -351,8 +331,6 @@ country_decisions = {
 			}
 			add_prestige = 25
 			add_legitimacy = 10
-
-			# claim the rest of the former empire for good
 			alsace_area = {
 				limit = {
 					NOT = { is_core = ROOT }

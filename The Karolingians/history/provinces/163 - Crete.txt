@@ -43,4 +43,4 @@ base_production = 3 } #The Decentralizing Effect of the Provincial System
 	controller = CRT
 	add_core = CRT
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

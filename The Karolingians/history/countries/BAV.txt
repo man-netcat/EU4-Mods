@@ -6,18 +6,6 @@ primary_culture = bavarian
 religion = catholic
 capital = 65
 
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of
-# d_bavaria at 867.1.1 is character 42018, "Karlmann", of dynasty 25061
-# "Karling".
-#
-# The duchy is deliberate, and the reason is in build.py: CK3 has no
-# independent Bavaria in 867. Its k_bavaria is held by Ludwig (90107) - the same
-# man as k_east_francia - continuously from 826.1.1 until 876.1.1, and Carloman
-# only takes it in 876. Since this mod does split Bavaria off as its own realm,
-# d_bavaria is the title whose 867 holder is him. Mapping to k_bavaria would have
-# made this a second "Ludwig"/"Karling" and erased the realm.
-#
-# Do not hand-edit name or dynasty - run `python3 tools/build.py --fix` instead.
 1444.1.1 = {
 	monarch = {
 		name = "Karlmann"

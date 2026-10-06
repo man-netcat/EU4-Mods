@@ -73,4 +73,4 @@ latent_trade_goods = {
 	controller = LOT
 	add_core = LOT
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

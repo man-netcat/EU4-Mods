@@ -34,4 +34,4 @@ base_production = 8 } #The Decentralizing Effect of the Provincial System
 	controller = BYZ
 	add_core = BYZ
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

@@ -49,4 +49,4 @@ hre = no
 	controller = GER
 	add_core = GER
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

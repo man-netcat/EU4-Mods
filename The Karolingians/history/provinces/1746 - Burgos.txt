@@ -43,4 +43,4 @@ center_of_trade = 1
 	controller = ASU
 	add_core = ASU
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

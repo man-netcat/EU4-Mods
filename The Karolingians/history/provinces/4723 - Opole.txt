@@ -45,4 +45,4 @@ base_production = 5 base_manpower = 3}
 	controller = GMA
 	add_core = GMA
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

@@ -49,4 +49,4 @@ base_production = 8 base_manpower = 13 }
 	controller = SIL
 	add_core = SIL
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

@@ -52,8 +52,6 @@ fixed_capital = 138 # Cannot move capital away from this province & no power cos
 	}
 }
 
-# Inventing a house to fill the gap would be a fabrication.
-# Miroslav has no dynasty in CK3, so none is written here.
 1444.1.1 = {
 	monarch = {
 		name = "Miroslav"

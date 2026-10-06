@@ -48,4 +48,4 @@ base_production = 7 } # Protestants expelled from France
 	controller = LOT
 	add_core = LOT
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

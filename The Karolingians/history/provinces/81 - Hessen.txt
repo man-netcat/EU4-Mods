@@ -39,4 +39,4 @@ base_production = 14 } # Full minting rights granted by the Emperor
 	controller = GER
 	add_core = GER
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

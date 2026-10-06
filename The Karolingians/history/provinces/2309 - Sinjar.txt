@@ -49,4 +49,4 @@ add_local_autonomy = 20
 	controller = ARB
 	add_core = ARB
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

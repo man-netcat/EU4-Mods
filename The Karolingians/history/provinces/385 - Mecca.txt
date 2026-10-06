@@ -51,4 +51,4 @@ add_province_triggered_modifier = christian_mecca
 	controller = ARB
 	add_core = ARB
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

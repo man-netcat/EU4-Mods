@@ -34,4 +34,4 @@ fort_15th = yes #Castiello de Lobarre
 	controller = NAV
 	add_core = NAV
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

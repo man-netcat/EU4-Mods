@@ -47,4 +47,4 @@ discovered_by = east_african
 	controller = EGY
 	add_core = EGY
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

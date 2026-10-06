@@ -50,4 +50,4 @@ base_production = 5 } # At the walls of Paris - French War of Religion
 	controller = FRA
 	add_core = FRA
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

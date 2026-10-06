@@ -71,4 +71,4 @@ latent_trade_goods =  { coal }
 	controller = SOR
 	add_core = SOR
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

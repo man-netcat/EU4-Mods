@@ -37,4 +37,4 @@ discovered_by = nomad_group
 	controller = BUL
 	add_core = BUL
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

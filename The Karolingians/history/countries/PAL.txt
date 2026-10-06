@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = hessian
 add_accepted_culture = bavarian
 religion = catholic
-elector = no # mod: the HRE is dissolved, see the 1806.7.12 entry in vanilla's own files
+elector = no
 technology_group = western
 capital = 77	# Pfalz
 

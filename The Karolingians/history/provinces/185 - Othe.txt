@@ -39,4 +39,4 @@ base_production = 8 } # Turgot and the Economic Reforms
 	controller = FRA
 	add_core = FRA
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

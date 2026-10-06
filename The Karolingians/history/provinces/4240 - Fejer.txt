@@ -49,4 +49,3 @@ discovered_by = ottoman
 	add_core = HAB
 	remove_core = TUR
 } # Ceded to Austria
-# The Karolingians: unowned, held for the Balaton tag

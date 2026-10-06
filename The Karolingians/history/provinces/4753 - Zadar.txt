@@ -51,4 +51,4 @@ discovered_by = ottoman
 	controller = DAL
 	add_core = DAL
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

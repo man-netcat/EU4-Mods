@@ -2,10 +2,6 @@
 
 owner = BYZ
 controller = BYZ
-# The "not Greek" warning below is a 1444 note, not an 867 one. Vanilla
-# is right about its own date: the Aydinids took Smyrna c. 1330. This
-# scenario is 867, when it was Byzantine Greek - the Saracen raid on the
-# city is 869, two years after the start date.
 culture = greek #Should not be Greek or Orthodox in 1444. Its status as a majority Greek city dates to at least after the 17th Century
 religion = orthodox
 capital = "Izmirni"
@@ -45,4 +41,4 @@ base_production = 2 } # The Decentralizing Effect of the Provincial System
 	controller = BYZ
 	add_core = BYZ
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

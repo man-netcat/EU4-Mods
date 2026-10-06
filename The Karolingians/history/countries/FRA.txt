@@ -142,12 +142,6 @@ change_estate_land_share = {
 	}
 }
 
-# Ruler lifted verbatim from CK3 by build.py: CK3's holder of k_france
-# at 867.1.1 is character 90104, "Charles", of dynasty 25061 "Karling". CK3 gives
-# him no epithet, so the earlier hand-written "Charles the Bald" is gone; that is
-# what verbatim means here. Do not hand-edit name or dynasty - run
-# `python3 tools/build.py --fix` instead, and validate.py will fail if the file
-# and CK3 disagree.
 1444.1.1 = {
 	monarch = {
 		name = "Charles"

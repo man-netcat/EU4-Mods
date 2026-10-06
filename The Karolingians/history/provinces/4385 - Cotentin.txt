@@ -38,4 +38,4 @@ center_of_trade = 1
 	controller = FRA
 	add_core = FRA
 	hre = no
-} # The Karolingians: hold the 867 partition at the 1444 start
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate The Karolingians against vanilla."""
+
 import json, os, re, sys
 from collections import Counter
 from build import parse
@@ -14,52 +14,33 @@ VDIR = os.path.join(GAME, "history", "provinces")
 PDIR = os.path.join(MOD, "history", "provinces")
 COUNTRY_OUT = os.path.join(MOD, "history", "countries")
 from build import ALL_TAGS  # noqa: E402
-# The realms this mod authors: a country file with our own ruler in it, and
-# land the allocation hands them. Derived from the Tags rather than kept as a
-# second list here - the capital/monarch/core checks below only mean anything
-# for a realm that has both, and a hand-kept copy of that set is a duplicate
-# waiting to drift.
+
 from build import TAGS as _REALMS  # noqa: E402
 TAGS = sorted(t.tag for t in _REALMS if t.ruler_block and t.in_alloc)
-# Vanilla tags handed provinces but never generated here. Imported rather than
-# re-listed: a private copy of this list silently went stale twice, letting CRT
-# and then HUN escape the ownership and empire-frontier checks.
+
 sys.path.insert(0, str(HERE))
 from build import (BALATON_RESERVED,  # noqa: E402
                    ALL_TAGS, CAPITAL, empire_core,
                    CULTURE_GONE_867, CONQUERED_BY_THE_ARABS,
                    MUSLIM_RELIGIONS_867)
 from build import effective  # noqa: E402
-# Was a second hand-copied copy of gen_provinces.CAPITAL, which is the same class of
-# bug as the deleted cache/alloc.json: two files holding one fact, with nothing
-# checking they agreed. Now imported from the generator that writes the files.
+
 CAPS = CAPITAL
-# The five Carolingian kingdoms are peers; Lusatia is a minor principality.
-# Was a hand-copied rank table, and it had already drifted from the files it was
-# meant to describe: it claimed FRA was rank 2 while FRA is vanilla's rank 3, and
-# it covered only the six generated realms, so the eight realms that have no rank
-# at all passed unnoticed. build.RANK is now the one table, each entry
-# argued from its own 867 standing.
+
 from build import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
-# The Tag objects themselves, for the checks that must compare a declaration in
-# the database against the file that actually ships.
+
 from build import BY_TAG  # noqa: E402
-# The five kingdoms, named once in the database. This check used to keep its own
-# copy, which is how a shared-dynasty rule and the order the mod presents the realms
-# in could drift apart without either noticing.
+
 from build import EMPIRE_KINGDOMS  # noqa: E402
 fail = []
 
-
 def _s(m):
     return m.encode("ascii","replace").decode("ascii")
-
 
 def note(ok, msg):
     print(("  OK   " if ok else "  FAIL ") + _s(msg))
     if not ok:
         fail.append(msg)
-
 
 def vfile(pid):
     for f in os.listdir(VDIR):
@@ -68,10 +49,8 @@ def vfile(pid):
             return os.path.join(VDIR, f)
     return None
 
-
-
 def run() -> int:
-    """Run every check. Returns 0 only when the mod is consistent."""
+
     fail.clear()
     print("== mod skeleton ==")
     for p in ["/home/rick/.local/share/Paradox Interactive/Europa Universalis IV/mod/The Karolingians.mod",
@@ -81,13 +60,6 @@ def run() -> int:
               f"{MOD}/localisation/replace/areas_regions_l_english.yml"]:
         note(os.path.exists(p), f"exists {os.path.relpath(p, MOD)}")
 
-    # The engine only ever creates a tag it can resolve. A tag it cannot resolve
-    # never exists, so every province naming it as owner resolves to no owner and
-    # renders as uncolonised land - which is what a made-up "LUS" tag did here. The
-    # base game already ships a Lusatia, under the tag SOR, so the mod reuses it.
-    # This block fails loudly if a tag is ever invented again. Vanilla tags are
-    # identified by the "TAG - Name.txt" filenames in history/countries;
-    # common/countries files carry no tag key at all.
     print("\n== country definitions ==")
     GH = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV/history/countries"
     base = {fn.split(" ")[0] for fn in os.listdir(GH) if fn.endswith(".txt")}
@@ -136,10 +108,6 @@ def run() -> int:
         note(f"capital = {CAPS[t]}" in txt, f"{t} capital = {CAPS[t]}")
         note("monarch = {" in txt, f"{t} has a 1444 monarch")
 
-    # Every kept realm, not just the generated ones. A realm with land and no
-    # government_rank of its own silently inherits EU4's default of 1, which is how
-    # realms as large as the Tulunids came to sit level with Silesia - an omission
-    # that reads exactly like a decision in the finished game.
     print("\n== every kept realm has a deliberate rank ==")
     unwritten = []
     for t in sorted(KEPT_REALMS):
@@ -149,22 +117,13 @@ def run() -> int:
             continue
         txt = open(path, encoding="utf-8", errors="surrogateescape").read()
         want = RANK[t]
-        # Match the TOP-LEVEL key only, and read the number rather than searching for
-        # its text. A substring test passes on two things that are not a rank at all:
-        # a commented-out line, and the same key indented inside a dated block.
-        # Both were live here - Bulgaria had `government_rank = 2` swallowed by the
-        # end of a comment on line 4, and France's only occurrence was inside its
-        # 1792 revolution block - so West Francia was a duchy and the First
-        # Bulgarian Empire was one too, and the build called both correct.
+
         top = re.search(r"^government_rank\s*=\s*(\d+)", txt, re.M)
         got = int(top.group(1)) if top else None
         note(got == want, f"{t} government_rank = {want}"
                           + ("" if got is None else f" (top-level, found {got})")
                           + (" - ABSENT, so EU4 defaults it to a duchy" if top is None else ""))
-    # A realm with land, a name and a rank but no country file is unplayable. The
-    # gate fails for any such realm that is not an explicitly declared deferral, so a
-    # NEW gap still stops the build; a declared one is reported every time instead of
-    # turning the build permanently red for a reason people learn to ignore.
+
     undeclared = [t for t in unwritten if t not in DEFERRED_REALMS]
     note(not undeclared,
          f"every kept realm has a country file, or a declared reason it has none "
@@ -187,15 +146,7 @@ def run() -> int:
         o = s.get("owner")
         ctrl = s.get("controller")
         if o is None and ctrl is None:
-            # The undated header declares no owner at all. That is only acceptable
-            # for the deliberately unowned Balaton parking provinces; everywhere
-            # else it means the province is populated by a dated block, so fall back
-            # to replaying the file to the start date rather than calling it
-            # ownerless. Vanilla's 367 Azores and 368 Madeira are exactly this:
-            # uninhabited in the header, settled by a 1427.11.29 block that gives
-            # them to POR, and they are only in scope now because the ADU transfer
-            # takes Portugal's islands. check_start.effective() is the same replay
-            # check_start.py uses, so the two tools cannot disagree about a start.
+
             if int(pid) in BALATON_RESERVED:
                 pass
             else:
@@ -206,9 +157,7 @@ def run() -> int:
                     badown.append(f"{pid} has no owner at the start date")
                     continue
         own[o] += 1
-        # A deliberately unowned province (see build.unown - the Balaton
-        # parking lot) has neither owner nor controller, which is consistent. Only a
-        # half-set pair is a defect.
+
         if o is None and ctrl is None:
             pass
         elif ctrl != o:
@@ -218,9 +167,7 @@ def run() -> int:
         for c in c0:
             cores_new.setdefault(c, []).append(pid)
         hit = [t for t in TAGS if t in c0]
-        # A vanilla core often survives a historical handover (e.g. 203 Lyonnais and
-        # 204 Dauphine are FRA-cored in vanilla but Lotharingian in 867). That is
-        # legitimate, so only flag double-coring that is not backed by ownership.
+
         if len(hit) > 1 and o not in TAGS:
             multicore.append(f"{pid}: {hit} (owner {o})")
 
@@ -250,10 +197,7 @@ def run() -> int:
         note(not missing, f"{t}: core on all {len(owned)} owned ({len(missing)} missing)")
 
     print("\n== vanilla cores preserved ==")
-    # Vanilla cores are compared as the plain strings they are. No realm is a
-    # rename of another, so a province the mod hands to a new owner keeps the core
-    # it already had and simply gains one more; anything else would be a rename
-    # pass, and those tend to hide real core loss behind a mapping.
+
     lost = []
     for pid, path in files.items():
         v = vfile(pid)
@@ -268,9 +212,7 @@ def run() -> int:
         print("        " + l)
 
     print("\n== absorbed tags ==")
-    # A tag survives if it still holds a vanilla INITIAL core outside the 5 realms.
-    # Tags whose entire land sits inside a kingdom cannot be released; that is an
-    # accepted consequence of reassigning European provinces, not a defect.
+
     vcore = {}
     for pid in os.listdir(VDIR):
         m = re.match(r"^(\d+)", pid)
@@ -292,8 +234,7 @@ def run() -> int:
     print(f"        {', '.join(absorbed)}")
 
     print("\n== untouched neighbours intact ==")
-    # Only the reassigned provinces matter here. The other overridden files exist
-    # solely to strip hre=yes and legitimately keep their vanilla owner.
+
     reassigned = {pid for pid, p in files.items()
                   if parse(p)[0].get("owner") in TAGS}
     for t in ["BOH", "HUN", "POL", "PAP", "NAP", "SIC", "SARD", "DAN", "SWE", "NOR",
@@ -301,14 +242,8 @@ def run() -> int:
         owned = [pid for pid in reassigned if parse(files[pid])[0].get("owner") == t]
         note(not owned, f"{t} owns none of the {len(reassigned)} reassigned provinces")
 
-    # The prose in the decision description quotes a province count by hand, and it
-    # has already been wrong twice (210, then 221, then 225). Tie all three together:
-    # the allocation, the generated decision, and the number written for the player.
     print("\n== hre decision matches the empire's land ==")
-    # empire_core(), the same call the decision generator makes. This used to compare the
-    # decision against the holdings of five privileged tags, which meant it could not
-    # detect the decision disagreeing with the empire's actual extent - it defined the
-    # extent as whatever those five held.
+
     expected = set(empire_core())
     dec = open(os.path.join(MOD, "decisions", "KarolingianHRE.txt"),
                encoding="utf-8", errors="replace").read()
@@ -330,36 +265,18 @@ def run() -> int:
         note(int(said.group(1)) == len(expected),
              f"description says {said.group(1)}, partition has {len(expected)}")
 
-    # A tag that owns land but not its own capital is legal in EU4, yet it is
-    # always a sign that a capital was overlooked - Silesia lost Ratibor to Great
-    # Moravia and was left holding three provinces with no seat until its history
-    # was patched. Resolve every realm's seat, including vanilla recipients, and
-    # require that they actually hold it.
     print("\n== every realm holds its own capital ==")
-    # Realms the mod gives an 867 ruler to that are not in TAGS above - written
-    # files and vanilla copies - so the age/regency check reaches them once.
-    # Deriving it from the Tags keeps TAGS and RULER_TAGS disjoint by
-    # construction; as a hand-kept list it overlapped (GMA and SIL were checked
-    # twice) and drifted.
+
     RULER_TAGS = sorted(t.tag for t in _REALMS
                         if (t.ruler_block or t.ck3_title)
                         and t.country in ("vanilla", "written")
                         and t.tag not in TAGS)
-    # No hand-written list of CK3 tags belongs here. The ruler-drift check further
-    # down iterates build.TITLES, the one registry, so a realm added there is
-    # checked with no second list to update. An earlier copy of that list sat here
-    # unused and still claimed CK3 models no Crete; it does, as d_krete.
 
     prov_owner = {}
     for pid, path in files.items():
         prov_owner[pid] = parse(path)[0].get("owner")
-    # Vanilla owners AT THE 1444.11.11 START_DT, so a tag we merely gifted a province to
-    # still counts the land it kept. A vanilla province drops out of the count the
-    # moment we write it with somebody else as owner. This must be owner_1444 and not
-    # the top-level `owner`: the top level predates every dated block, and 158
-    # provinces change hands inside (867, 1444].
-    _bp = json.load(open(str(CACHE / "provdata.json")))["provs"]
 
+    _bp = json.load(open(str(CACHE / "provdata.json")))["provs"]
 
     def holds(tag):
         held = {pid for pid, o in prov_owner.items() if o == tag}
@@ -369,7 +286,6 @@ def run() -> int:
                 held.add(pid)
         return held
 
-
     def vanilla_capital(tag):
         for fn in os.listdir(GH):
             if fn.startswith(tag + " - ") and fn.endswith(".txt"):
@@ -378,7 +294,6 @@ def run() -> int:
                                    errors="replace").read(), re.M)
                 return int(m.group(1)) if m else None
         return None
-
 
     for t in dict.fromkeys(ALL_TAGS + RULER_TAGS):
         cap = CAPS.get(t) or vanilla_capital(t)
@@ -390,13 +305,6 @@ def run() -> int:
         note(cap in held, f"{t} holds its {src} capital {cap} "
                           f"({len(held)} province{'s' if len(held) != 1 else ''})")
 
-    # Tag.capital is read by the build only for the realms it generates. For a
-    # hand-written country file it is never consulted, so a wrong number there is
-    # inert rather than wrong - and CRT sat on Diego Suarez Bay in the western
-    # Indian Ocean while its file correctly said 163, with nothing to say so. The
-    # check above could not see it either: it resolves each realm's seat from the
-    # mod's capital map or else from vanilla, never from Tag. So compare the one
-    # declaration against the file that ships, and let a mismatch fail.
     print("\n== Tag.capital agrees with the country file ==")
     for t in ALL_TAGS:
         spec = BY_TAG.get(t)
@@ -412,14 +320,8 @@ def run() -> int:
              + (f" ({got.group(1)})" if got and int(got.group(1)) != spec.capital
                 else ""))
 
-    # Rulers are age-checked, because the +577 shift that keeps a king's 867 age
-    # also turns a genuinely young 867 ruler into a child in 1444. A minor monarch
-    # must therefore be flagged regent = yes, or the realm is silently ruled by
-    # someone the game thinks cannot rule.
     print("\n== 867 rulers ==")
-    # CK3 is only needed for the name/dynasty cross-check below. Everything else in
-    # validate.py runs without it, so a missing install skips exactly these checks
-    # with an explicit message instead of taking the whole validator down.
+
     sys.path.insert(0, str(HERE))
     try:
         import build as _b
@@ -432,23 +334,16 @@ def run() -> int:
         print(f"  SKIP CK3 name/dynasty cross-check ({type(exc).__name__}: {exc})")
         print("        build.py needs a CK3 install to read CK3's rulers.")
 
-# Why: docs/DESIGN.md - What the land-holder audit enforces
     if _b is not None:
         _holders = _b.land_holders()
         _vanilla = {fn.split(" ")[0]
                     for fn in os.listdir(_b.VANILLA_CDIR) if fn.endswith(".txt")}
-        # Intersected with the actual holders. The registry sizes and the number of
-        # land-holders are different counts - two CK3-mapped realms hold no land at
-        # the start date - and adding the registries together claimed to explain
-        # 29 holders with 31 tags, which is how a partition check stops being one.
+
         _ck3 = {t for t in _holders if t in _b.TITLES}
         _not = {t for t in _holders if t in _b.NOT_CK3}
         _rest = {t for t in _holders if t not in _b.TITLES and t not in _b.NOT_CK3}
         _unclassified = sorted(t for t in _rest if t not in _vanilla)
-        # The rest are excused as vanilla and untouched. That is only true of a realm
-        # this mod leaves alone: one it gives a rank to is not untouched just because
-        # its provinces stayed vanilla, and BOH and SAR both hold land this build
-        # never allocated. So anything managed has to be classified on purpose.
+
         _sneaky = sorted(t for t in _rest
                          if (s := BY_TAG.get(t)) is not None and s.managed)
         for t in _unclassified:
@@ -463,9 +358,7 @@ def run() -> int:
         note(not (set(_b.TITLES) & set(_b.NOT_CK3)),
              f"no realm is both CK3-derived and deliberately not: "
              f"{len(set(_b.TITLES) & set(_b.NOT_CK3))} overlap")
-        # Reported, not asserted: the union is a tautology because _rest is defined
-        # as the complement. What the numbers are for is showing that the two
-        # registries are bigger than the holders - two mapped realms hold no land.
+
         print(f"        {len(_ck3)} CK3-derived + {len(_not)} deliberately not "
               f"+ {len(_rest)} vanilla and untouched = {len(_holders)} holders")
 
@@ -476,11 +369,7 @@ def run() -> int:
                 continue
             cp = os.path.join(COUNTRY_OUT, f"{t}.txt")
             if not os.path.exists(cp):
-                # Mapped in build.TITLES but no mod country file: the mod keeps the
-                # vanilla one, so there is no name/dynasty of ours to compare. build.py
-                # reports the CK3 values as a NOTE. The coverage check above is what
-                # guarantees a realm cannot slip through unclassified, so this is a
-                # skip rather than a failure - NAV is the current example.
+
                 print(f"  SKIP {t} has no mod country file; keeps vanilla's ruler "
                       f"(CK3 {t} would be {want['name']} / {want['dynasty']})")
                 continue
@@ -515,7 +404,7 @@ def run() -> int:
             note(False, f"{t} monarch has a name and birth_date")
             continue
         y, mo, d = (int(x) for x in bd.groups())
-        # days from birth to the start date, ignoring leap years
+
         age = START_DT[0] - y - ((START_DT[1], START_DT[2]) < (mo, d))
         regent = "regent = yes" in m
         note(age >= 15 or regent,
@@ -524,13 +413,6 @@ def run() -> int:
         print(f"        {t} {nm.group(1):14} born {y} "
               f"{'-> age %d at the start date' % age}{', flagged regent' if regent else ''}")
 
-    # Every localisation file must start with a UTF-8 BOM. All 143 vanilla
-    # *_l_english.yml files do, and the engine silently discards any that do not -
-    # no error, no log line, the file just never loads. That is exactly how the
-    # realm names stayed "France" and "Germany" while this file looked correct.
-    # Walked recursively: localisation/replace/ is where overrides of vanilla keys
-    # must live, and a flat scan skipped it entirely - the one folder whose files
-    # matter most here would have gone unchecked.
     LOC = os.path.join(MOD, "localisation")
     print("\n== localisation files load ==")
     for root, _dirs, files in os.walk(LOC):
@@ -541,11 +423,6 @@ def run() -> int:
             rel = os.path.relpath(os.path.join(root, fn), MOD)
             note(raw == b"\xef\xbb\xbf", f"{rel} starts with a UTF-8 BOM")
 
-    # The five Carolingian realms must all be one dynasty, heirs included. A shared
-    # dynasty is what unlocks Claim Cushion, so a hand-written dynasty on a single
-    # heir - which is exactly how Arnulf and Berengar used to end up "of Carinthia"
-    # and "of Italy" - quietly breaks reunification by marriage the first time that
-    # realm changes ruler.
     print("\n== shared Carolingian dynasty ==")
     seen_dyn = set()
     for t in EMPIRE_KINGDOMS:
@@ -561,46 +438,31 @@ def run() -> int:
     note(len(seen_dyn) == 1,
          f"all {len(EMPIRE_KINGDOMS)} kingdoms use the same dynasty string ({', '.join(sorted(seen_dyn))})")
 
-    # No localisation file may be missing its BOM, and no realm may keep a
-    # hand-written dynasty that silently diverges from the house.
-    # The HRE must not exist at the start date. There is no empire switch in 1.37:
-    # a country holds a vote purely because its history says `elector = yes` at that
-    # date, and vanilla dissolves the empire the same way - seven files carry
-    # `1806.7.12 = { elector = no }`, REG's commented "# the HRE is dissolved". That
-    # dated block is why a 1821 start has no HRE; a 1444 start never reaches it.
     print("\n== HRE is dissolved ==")
 
-
     def electors_as_of(directory):
-        """Tags holding a vote at START_DT, not tags that ever mention `elector`.
 
-        A column-0 `elector = yes` is the baseline state. The same key inside a dated
-        block is a later state and counts only once that date has arrived. Grepping
-        for the key at all conflates the two - it demands an override for Regensburg,
-        which only gains a vote in 1803 and holds none in 1444.
-        """
         live = set()
         for fn in sorted(os.listdir(directory)):
             if not fn.endswith(".txt"):
                 continue
             text = open(os.path.join(directory, fn), encoding="utf-8",
                         errors="replace").read()
-            base = re.search(r"^elector\s*=\s*(\w+)", text, re.M)  # column 0 only
+            base = re.search(r"^elector\s*=\s*(\w+)", text, re.M)
             state = bool(base and base.group(1) == "yes")
             for m in re.finditer(r"^(\d{1,4}(?:\.\d{1,2}){0,2})\s*=\s*\{", text, re.M):
                 parts = [int(x) for x in m.group(1).split(".")]
                 if tuple((parts + [1, 1, 1])[:3]) > START_DT:
-                    break  # later dates are history this start date never reaches
+                    break
                 end = text.find("\n}", m.end())
                 body = text[m.end():len(text) if end == -1 else end]
                 vals = re.findall(r"^\s*elector\s*=\s*(\w+)", body, re.M)
                 if vals:
                     state = vals[-1] == "yes"
             if state:
-                # vanilla names files "BOH - Bohemia.txt", the mod writes "BOH.txt"
+
                 live.add(fn.split(" - ")[0].removesuffix(".txt"))
         return live
-
 
     van_electors = electors_as_of(GH)
     mod_electors = electors_as_of(COUNTRY_OUT)
@@ -611,28 +473,18 @@ def run() -> int:
         note(os.path.exists(os.path.join(COUNTRY_OUT, f"{t}.txt")),
              f"{t} votes in vanilla, so the mod overrides it to dissolve its vote")
 
-    # An empty country file reads as "no elector = yes" to every grep, so a crashed
-    # generator can look clean. Size catches it.
     for fn in sorted(os.listdir(COUNTRY_OUT)):
         if fn.endswith(".txt") and os.path.getsize(os.path.join(COUNTRY_OUT, fn)) < 200:
             note(False, f"{fn} is suspiciously small "
                         f"({os.path.getsize(os.path.join(COUNTRY_OUT, fn))} bytes) "
                         f"- generator probably crashed mid-write")
 
-    # No province the mod writes may keep a culture that postdates 867. Checked
-    # against the generator's own table rather than a list of 37 province ids, so a
-    # province added to the map later is caught instead of quietly staying Turkish.
-    # Culture alone is not enough: Sivas 329 is vanilla shiite, not sunni, so a
-    # sunni-only rewrite left it greek + Muslim on Byzantine land without failing
-    # anything. Hence the religion assertion too.
     gone = set(CULTURE_GONE_867)
     stale_culture, stale_religion = [], []
     for fn in sorted(os.listdir(PDIR)):
         if not fn.endswith(".txt"):
             continue
-        # Vanilla is not consistent about the separator: most files are "318 - Sugla"
-        # but at least one is "1853- Kastoria", so take the leading digits rather than
-        # splitting on " - " and trusting it.
+
         m = re.match(r"^(\d+)", fn)
         if not m:
             continue
@@ -657,7 +509,6 @@ def run() -> int:
     print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 
     return 1 if fail else 0
-
 
 if __name__ == "__main__":
     sys.exit(run())
