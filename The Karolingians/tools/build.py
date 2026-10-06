@@ -20,15 +20,19 @@ COUNTRY_OUT = MOD / "history" / "countries"
 
 from tagdb import *  # noqa: F401,F403
 
+
 def vanilla_is_newer() -> bool:
 
     if not PROVDATA.exists():
         return True
     try:
-        return max(p.stat().st_mtime for p in VANILLA_HISTORY.rglob("*.txt")) > \
-            PROVDATA.stat().st_mtime
+        return (
+            max(p.stat().st_mtime for p in VANILLA_HISTORY.rglob("*.txt"))
+            > PROVDATA.stat().st_mtime
+        )
     except OSError:
         return False
+
 
 def parse(path):
 
@@ -71,6 +75,7 @@ def parse(path):
             depth = 0
     return scalars, cores0, cores_all, hre_any
 
+
 import re  # noqa: E402
 
 os.makedirs(CACHE, exist_ok=True)
@@ -78,6 +83,7 @@ os.makedirs(CACHE, exist_ok=True)
 PROV_DIR = os.path.join(GAME, "history", "provinces")
 AREA = os.path.join(GAME, "map", "area.txt")
 REGION = os.path.join(GAME, "map", "region.txt")
+
 
 def parse_block_file(path):
 
@@ -105,6 +111,7 @@ def parse_block_file(path):
                 cur_key, cur = None, []
     return blocks
 
+
 def load_areas():
     areas = {}
     for key, lines in parse_block_file(AREA):
@@ -118,6 +125,7 @@ def load_areas():
         areas[key] = sorted(set(ids))
     return areas
 
+
 def load_region_areas():
 
     regions = {}
@@ -129,6 +137,7 @@ def load_region_areas():
                 areas.append(m.group(1))
         regions[key] = areas
     return regions
+
 
 def load_provinces():
 
@@ -142,9 +151,19 @@ def load_provinces():
             continue
         pid, pname = int(m.group(1)), m.group(2)
         text = open(path, encoding="utf-8", errors="replace").read()
-        d = {"id": pid, "name": pname, "file": fn, "cores": [],
-             "owner": None, "controller": None, "culture": None,
-             "religion": None, "hre": False, "capital": False, "sea": False}
+        d = {
+            "id": pid,
+            "name": pname,
+            "file": fn,
+            "cores": [],
+            "owner": None,
+            "controller": None,
+            "culture": None,
+            "religion": None,
+            "hre": False,
+            "capital": False,
+            "sea": False,
+        }
 
         for ln in text.splitlines():
             s = ln.strip()
@@ -171,6 +190,7 @@ def load_provinces():
         provs[pid] = d
     return provs
 
+
 def step_probe():
     areas = load_areas()
     regions = load_region_areas()
@@ -184,8 +204,12 @@ def step_probe():
         for a in als:
             region_of_area[a] = r
 
-    data = {"provs": provs, "areas": areas, "area_of": area_of,
-            "region_of_area": region_of_area}
+    data = {
+        "provs": provs,
+        "areas": areas,
+        "area_of": area_of,
+        "region_of_area": region_of_area,
+    }
     with open(str(CACHE / "provdata.json"), "w") as f:
         json.dump(data, f)
 
@@ -200,6 +224,7 @@ def step_probe():
     for t, ids in sorted(hre_owners.items(), key=lambda x: -len(x[1]))[:40]:
         print(f"  {t:5} {len(ids):3}")
 
+
 if vanilla_is_newer():
     print("\n\033[1m==> probe vanilla province history\033[0m", flush=True)
     step_probe()
@@ -213,6 +238,7 @@ AREAS = _PROVDATA["areas"]
 
 _AREA_OF = _PROVDATA["area_of"]
 _REGION_OF_AREA = _PROVDATA["region_of_area"]
+
 
 def _owned(tag, region=None, exclude_regions=()):
 
@@ -230,9 +256,11 @@ def _owned(tag, region=None, exclude_regions=()):
         out.append(int(pid))
     return sorted(out)
 
+
 def _region(pid):
 
     return _REGION_OF_AREA.get(_AREA_OF.get(str(pid)))
+
 
 def _area(*areas):
 
@@ -240,6 +268,7 @@ def _area(*areas):
     for area in areas:
         out |= {int(pid) for pid in _PROVDATA["areas"].get(area, ())}
     return sorted(out)
+
 
 UNTRACKED_OWNERS = {
     112: "VEN",
@@ -256,6 +285,7 @@ CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310}
 
 MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
 
+
 def apply_867_culture(text, pid):
 
     m = re.search(r"^(\s*)culture\s*=\s*(\w+)", text, re.M)
@@ -264,15 +294,19 @@ def apply_867_culture(text, pid):
     culture = CULTURE_GONE_867.get(m.group(2))
     if not culture:
         return text
-    text = (text[:m.start()]
-            + f"{m.group(1)}culture = {culture}"
-            + text[m.end():])
+    text = text[: m.start()] + f"{m.group(1)}culture = {culture}" + text[m.end() :]
     if pid not in CONQUERED_BY_THE_ARABS:
-        text = re.sub(rf"^(\s*religion\s*=\s*)({'|'.join(MUSLIM_RELIGIONS_867)})\b",
-                      r"\1orthodox", text, flags=re.M)
+        text = re.sub(
+            rf"^(\s*religion\s*=\s*)({'|'.join(MUSLIM_RELIGIONS_867)})\b",
+            r"\1orthodox",
+            text,
+            flags=re.M,
+        )
     return text
 
+
 LAYER2_MOVES: list = []
+
 
 def build(verbose=False):
 
@@ -297,7 +331,8 @@ def build(verbose=False):
     if overlaps:
         raise SystemExit(
             "build.py: provinces claimed by two areas, fix AREA_OWNERS: "
-            + ", ".join(f"{p} ({a} and {b})" for p, a, b in overlaps))
+            + ", ".join(f"{p} ({a} and {b})" for p, a, b in overlaps)
+        )
 
     for pid, tag in PROVINCE_OWNERS.items():
         prev = owner_of.get(pid)
@@ -314,42 +349,99 @@ def build(verbose=False):
         for other in alloc:
             if other != tag:
                 claimed |= set(alloc[other])
-        alloc[tag] = sorted(set(alloc.get(tag, [])) |
-                            {p for p in extra if p not in claimed})
+        alloc[tag] = sorted(
+            set(alloc.get(tag, [])) | {p for p in extra if p not in claimed}
+        )
 
     if verbose:
         for pid, name, prev, tag in LAYER2_MOVES:
             print(f"  override: province {pid} {name} {prev} -> {tag}")
     return {t: sorted(alloc[t]) for t in ALL_TAGS if t in alloc and alloc[t]}
 
+
 def owner_map(alloc=None):
 
     alloc = build() if alloc is None else alloc
     return {p: t for t, ps in alloc.items() for p in ps}
 
+
 EMPIRE_CORE_AREAS = (
-    "alsace_area", "austria_proper_area", "bourgogne_area", "brabant_area",
-    "braunschweig_area", "carinthia_area", "catalonia_area", "central_italy_area",
-    "champagne_area", "corsica_sardinia_area", "east_bavaria_area",
-    "emilia_romagna_area", "flanders_area", "franconia_area", "frisia_area",
-    "guyenne_area", "hesse_area", "holland_area", "ile_de_france_area",
-    "inner_austria_area", "languedoc_area", "lazio_area", "liguria_area",
-    "loire_area", "lombardy_area", "lorraine_area", "lower_bavaria_area",
-    "lower_rhineland_area", "lower_saxony_area", "lower_swabia_area",
-    "massif_central_area", "normandy_area", "north_brabant_area",
-    "north_rhine_area", "north_westphalia_area", "northern_saxony_area",
-    "orleans_area", "palatinate_area", "picardy_area", "piedmont_area",
-    "po_valley_area", "poitou_area", "provence_area", "pyrenees_area",
-    "romandie_area", "savoy_dauphine_area", "south_saxony_area",
-    "switzerland_area", "thuringia_area", "tirol_area", "tuscany_area",
-    "upper_bavaria_area", "upper_franconia_area", "upper_rhineland_area",
-    "upper_swabia_area", "venetia_area", "wallonia_area", "weser_area",
-    "west_burgundy_area", "westphalia_area",
+    "alsace_area",
+    "austria_proper_area",
+    "bourgogne_area",
+    "brabant_area",
+    "braunschweig_area",
+    "carinthia_area",
+    "catalonia_area",
+    "central_italy_area",
+    "champagne_area",
+    "corsica_sardinia_area",
+    "east_bavaria_area",
+    "emilia_romagna_area",
+    "flanders_area",
+    "franconia_area",
+    "frisia_area",
+    "guyenne_area",
+    "hesse_area",
+    "holland_area",
+    "ile_de_france_area",
+    "inner_austria_area",
+    "languedoc_area",
+    "lazio_area",
+    "liguria_area",
+    "loire_area",
+    "lombardy_area",
+    "lorraine_area",
+    "lower_bavaria_area",
+    "lower_rhineland_area",
+    "lower_saxony_area",
+    "lower_swabia_area",
+    "massif_central_area",
+    "normandy_area",
+    "north_brabant_area",
+    "north_rhine_area",
+    "north_westphalia_area",
+    "northern_saxony_area",
+    "orleans_area",
+    "palatinate_area",
+    "picardy_area",
+    "piedmont_area",
+    "po_valley_area",
+    "poitou_area",
+    "provence_area",
+    "pyrenees_area",
+    "romandie_area",
+    "savoy_dauphine_area",
+    "south_saxony_area",
+    "switzerland_area",
+    "thuringia_area",
+    "tirol_area",
+    "tuscany_area",
+    "upper_bavaria_area",
+    "upper_franconia_area",
+    "upper_rhineland_area",
+    "upper_swabia_area",
+    "venetia_area",
+    "wallonia_area",
+    "weser_area",
+    "west_burgundy_area",
+    "westphalia_area",
 )
 
 NOT_IMPERIAL_867 = {
-    59, 61, 112, 118, 120, 127, 2965, 2986, 2988, 4735, 4744,
+    59,
+    61,
+    112,
+    118,
+    120,
+    127,
+    2965,
+    2986,
+    2988,
+    4735,
+    4744,
 }
+
 
 def empire_core():
 
@@ -360,19 +452,24 @@ def empire_core():
                 core.add(pid)
     return sorted(core)
 
+
 def dev(pid):
 
     for fn in os.listdir(VANILLA_PDIR):
         if re.match(rf"^{pid}\s*-", fn):
-            txt = open(os.path.join(VANILLA_PDIR, fn), encoding="utf-8",
-                       errors="replace").read()
+            txt = open(
+                os.path.join(VANILLA_PDIR, fn), encoding="utf-8", errors="replace"
+            ).read()
             ta = re.search(r"base_tax\s*=\s*([\d.]+)", txt)
             pr = re.search(r"base_production\s*=\s*([\d.]+)", txt)
-            return ((float(ta.group(1)) if ta else 0.0)
-                    + (float(pr.group(1)) if pr else 0.0))
+            return (float(ta.group(1)) if ta else 0.0) + (
+                float(pr.group(1)) if pr else 0.0
+            )
     return 0.0
 
+
 PROV_DATE = "1444.11.11"
+
 
 def force_block(new_owner):
 
@@ -384,6 +481,7 @@ def force_block(new_owner):
         f"}}\n"
     )
 
+
 def unown(text):
 
     lines = text.splitlines()
@@ -392,9 +490,13 @@ def unown(text):
         if re.match(r"^\d+\.\d+\.\d+\s*=", ln.strip()):
             dated_start = idx
             break
-    out = [ln for idx, ln in enumerate(lines)
-           if idx >= dated_start or not re.match(r"^(owner|controller)\s*=", ln.strip())]
+    out = [
+        ln
+        for idx, ln in enumerate(lines)
+        if idx >= dated_start or not re.match(r"^(owner|controller)\s*=", ln.strip())
+    ]
     return "\n".join(out) + "\n"
+
 
 def patch(text, new_owner):
 
@@ -420,14 +522,16 @@ def patch(text, new_owner):
 
         m = re.match(r"^(owner|controller)\s*=\s*", s)
         if m:
-            indent = ln[:len(ln) - len(ln.lstrip())]
+            indent = ln[: len(ln) - len(ln.lstrip())]
             out.append(f"{indent}{m.group(1)} = {new_owner}")
             continue
 
         out.append(ln)
 
-    have_core = any(re.match(rf"^\s*add_core\s*=\s*{re.escape(new_owner)}\s*$", lines[idx])
-                    for idx in range(dated_start))
+    have_core = any(
+        re.match(rf"^\s*add_core\s*=\s*{re.escape(new_owner)}\s*$", lines[idx])
+        for idx in range(dated_start)
+    )
     core_line = f"add_core = {new_owner}"
     if have_core:
         return "\n".join(out) + "\n" + force_block(new_owner)
@@ -444,6 +548,7 @@ def patch(text, new_owner):
         out.insert(dated_start, core_line)
 
     return "\n".join(out) + "\n" + force_block(new_owner)
+
 
 def step_provinces(argv):
     alloc = build(verbose="--report" in argv)
@@ -469,7 +574,8 @@ def step_provinces(argv):
             print(f"!! no vanilla file for province {pid}")
             continue
         text = apply_867_culture(
-            open(src, encoding="utf-8", errors="surrogateescape").read(), pid)
+            open(src, encoding="utf-8", errors="surrogateescape").read(), pid
+        )
         tag = owner_of.get(pid)
         if pid in BALATON_RESERVED:
             new = unown(text)
@@ -477,8 +583,12 @@ def step_provinces(argv):
             new = patch(text, tag) if tag else text
 
         new = re.sub(r"(\bhre\s*=\s*)yes\b", r"\1no", new)
-        open(os.path.join(PROV_OUT, os.path.basename(src)), "w",
-             encoding="utf-8", errors="surrogateescape").write(new)
+        open(
+            os.path.join(PROV_OUT, os.path.basename(src)),
+            "w",
+            encoding="utf-8",
+            errors="surrogateescape",
+        ).write(new)
         written += 1
 
     print(f"wrote {written} province files")
@@ -486,6 +596,7 @@ def step_provinces(argv):
         print(f"  {tag:4} {len(ps):3}")
     print(f"  hre=yes stripped : {len(hre_yes)}")
     print(f"  total            : {len(todo)}")
+
 
 def report(alloc):
 
@@ -495,9 +606,13 @@ def report(alloc):
         if not fn.endswith(".txt"):
             continue
         tag = fn.split(" ")[0].split("-")[0].strip()
-        m = re.search(r"^\s*capital\s*=\s*(\d+)", open(
-            os.path.join(VANILLA_CDIR, fn), encoding="utf-8",
-            errors="replace").read(), re.M)
+        m = re.search(
+            r"^\s*capital\s*=\s*(\d+)",
+            open(
+                os.path.join(VANILLA_CDIR, fn), encoding="utf-8", errors="replace"
+            ).read(),
+            re.M,
+        )
         if m:
             caps[tag] = int(m.group(1))
     total = 0
@@ -510,14 +625,19 @@ def report(alloc):
         for pid in ids:
             olds[provs[str(pid)]["owner"]] += 1
         hre = sum(1 for pid in ids if provs[str(pid)]["hre"])
-        print(f"{tag} {NAME.get(tag, tag):13} n={len(ids):3} dev={sum(dev(p) for p in ids):6.0f}"
-              + (f" cap={cap}({provs[str(cap)]['name']})" if cap else "")
-              + f" hre={hre}")
-        print("     from: " + " ".join(f"{k}:{v}" for k, v in
-                                       sorted(olds.items(), key=lambda x: -x[1])))
+        print(
+            f"{tag} {NAME.get(tag, tag):13} n={len(ids):3} dev={sum(dev(p) for p in ids):6.0f}"
+            + (f" cap={cap}({provs[str(cap)]['name']})" if cap else "")
+            + f" hre={hre}"
+        )
+        print(
+            "     from: "
+            + " ".join(f"{k}:{v}" for k, v in sorted(olds.items(), key=lambda x: -x[1]))
+        )
         total += len(ids)
     print("=" * 78)
     print(f"{len(owner_of)} provinces reassigned")
+
 
 d = json.load(open(str(CACHE / "provdata.json")))
 area_of = d["area_of"]
@@ -525,8 +645,13 @@ area_of = d["area_of"]
 empire_provs = empire_core()
 areas = sorted({area_of[str(p)] for p in empire_provs})
 
-all_areas = set(re.findall(r"^\t*([a-z_]+) = \{",
-    open(f"{GAME}/map/area.txt", encoding="utf-8", errors="replace").read(), re.M))
+all_areas = set(
+    re.findall(
+        r"^\t*([a-z_]+) = \{",
+        open(f"{GAME}/map/area.txt", encoding="utf-8", errors="replace").read(),
+        re.M,
+    )
+)
 missing = [a for a in areas if a not in all_areas]
 assert not missing, f"unknown areas: {missing}"
 
@@ -539,11 +664,14 @@ claims = "\n".join(
     f"{T*5}NOT = {{ is_permanent_claim = ROOT }}\n"
     f"{T*4}}}\n"
     f"{T*4}add_permanent_claim = ROOT\n"
-    f"{T*3}}}" for a in areas)
+    f"{T*3}}}"
+    for a in areas
+)
 
 held = "\n".join(
     f"{T*4}NOT = {{ {p} = {{ country_or_non_sovereign_subject_holds = ROOT }} }}"
-    for p in empire_provs)
+    for p in empire_provs
+)
 
 txt = f"""country_decisions = {{
 
@@ -600,6 +728,7 @@ txt = f"""country_decisions = {{
 }}
 """
 
+
 def step_hre() -> None:
 
     os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
@@ -610,11 +739,13 @@ def step_hre() -> None:
     print(f"  areas covered         : {len(areas)}")
     print(f"  eligible tags         : any - the requirement is land, not a tag list")
 
+
 START_DT = (1444, 11, 11)
 
 DATE_RE = re.compile(r"^(\d+)\.(\d+)\.(\d+)\s*=\s*\{")
 KV_RE = re.compile(r"\b(owner|controller|add_core|remove_core)\s*=\s*([A-Za-z0-9_]+)")
 HRE_RE = re.compile(r"\bhre\s*=\s*(\w+)")
+
 
 def split_header_and_blocks(lines):
 
@@ -640,6 +771,7 @@ def split_header_and_blocks(lines):
             i += 1
         yield date, "\n".join(body)
 
+
 def effective(text):
 
     owner = controller = None
@@ -662,6 +794,7 @@ def effective(text):
             hre = h.group(1)
     return owner, controller, cores, hre
 
+
 def step_start():
     alloc = build()
     expected = {}
@@ -673,8 +806,9 @@ def step_start():
     bad_owner, bad_ctrl, bad_hre, contested = [], [], [], []
     for fn in sorted(os.listdir(PDIR)):
         pid = int(re.match(r"^(\d+)", fn).group(1))
-        text = open(os.path.join(PDIR, fn), encoding="utf-8",
-                    errors="surrogateescape").read()
+        text = open(
+            os.path.join(PDIR, fn), encoding="utf-8", errors="surrogateescape"
+        ).read()
         owner, controller, cores, hre = effective(text)
         want = expected.get(pid)
         if want is None:
@@ -688,7 +822,9 @@ def step_start():
         if want in cores:
             contested.append((pid, fn))
 
-    print(f"provinces checked against the {START_DT[0]}.{START_DT[1]}.{START_DT[2]} start: {len(expected)}")
+    print(
+        f"provinces checked against the {START_DT[0]}.{START_DT[1]}.{START_DT[2]} start: {len(expected)}"
+    )
     print(f"  owner    != intended : {len(bad_owner)}")
     print(f"  controller!= intended: {len(bad_ctrl)}")
     print(f"  hre = yes at start   : {len(bad_hre)}")
@@ -702,6 +838,7 @@ def step_start():
     print("\nOK: every intended province is held at the start date")
     return 0
 
+
 import os
 import re
 import sys
@@ -714,13 +851,16 @@ HOUSE_NAME_OVERRIDE = {
     "house_abbasid": "dynn_Abbasid",
 }
 
+
 def _date_key(s: str) -> tuple:
     p = [int(x) for x in s.split(".")]
     return tuple(p + [0] * (3 - len(p)))
 
+
 def _norm(text: str) -> str:
 
     return text.replace("\r\n", "\n").replace("\r", "\n")
+
 
 def _blocks(text: str):
 
@@ -735,7 +875,8 @@ def _blocks(text: str):
                 if d == 0:
                     break
             i += 1
-        yield m.group(1), text[m.end():i]
+        yield m.group(1), text[m.end() : i]
+
 
 def _inner_blocks(body: str):
 
@@ -750,7 +891,8 @@ def _inner_blocks(body: str):
                 if d == 0:
                     break
             i += 1
-        yield m.group(1), body[m.end():i]
+        yield m.group(1), body[m.end() : i]
+
 
 def load_titles():
 
@@ -761,9 +903,11 @@ def load_titles():
             out.setdefault(tid, []).extend(_inner_blocks(body))
     return out
 
+
 def holder_at(title, titles):
 
     return holder_at_exact(title, titles)[0]
+
 
 def holder_at_exact(title, titles):
 
@@ -789,6 +933,7 @@ def holder_at_exact(title, titles):
         return at_date, None
     return best if best else (None, None)
 
+
 def load_chars():
 
     out = {}
@@ -797,6 +942,7 @@ def load_chars():
         for cid, body in _blocks(text):
             out.setdefault(cid, body)
     return out
+
 
 def load_dynasties():
 
@@ -808,6 +954,7 @@ def load_dynasties():
                 out[key] = n.group(1)
     return out
 
+
 def load_houses():
 
     out = {}
@@ -816,13 +963,17 @@ def load_houses():
             n = re.search(r'name\s*=\s*"?\s*(dynn_\w+)\s*"?', body)
             d = re.search(r"^\s*dynasty\s*=\s*(\w+)", body, re.M)
             name_key = n.group(1) if n else None
-            out[key] = (HOUSE_NAME_OVERRIDE.get(key, name_key),
-                        d.group(1) if d else None)
+            out[key] = (
+                HOUSE_NAME_OVERRIDE.get(key, name_key),
+                d.group(1) if d else None,
+            )
     return out
+
 
 _LOC_FILES = None
 
 _LOC_RE = re.compile(r'^[ \t]*([\w.\-]+)\s*:\d*\s*"(.*?)"[ \t\r\n]*$', re.M)
+
 
 def loc(key):
 
@@ -843,6 +994,7 @@ def loc(key):
                     _LOC_FILES.setdefault(k, v)
     return _LOC_FILES.get(key)
 
+
 def resolve_dynasty(body, dyns, houses):
 
     m = re.search(r"^\s*dynasty\s*=\s*(\w+)", body, re.M)
@@ -859,6 +1011,7 @@ def resolve_dynasty(body, dyns, houses):
             return loc(dyns.get(nested, "")) or nested
     return None
 
+
 def resolve(tag, titles, chars, dyns, houses):
 
     title = TITLES[tag]
@@ -866,10 +1019,12 @@ def resolve(tag, titles, chars, dyns, houses):
     ruler_title = RULER_TITLES.get(tag, title)
     cid, carried = holder_at_exact(ruler_title, titles)
     if cid is None:
-        where = (f"CK3 has no 867 holder for {tag}'s title {title}"
-                 if ruler_title == title else
-                 f"CK3 has no 867 holder for {tag}'s ruler title {ruler_title} "
-                 f"(bound to {title})")
+        where = (
+            f"CK3 has no 867 holder for {tag}'s title {title}"
+            if ruler_title == title
+            else f"CK3 has no 867 holder for {tag}'s ruler title {ruler_title} "
+            f"(bound to {title})"
+        )
         return {"error": where}
     body = chars.get(cid)
     if body is None:
@@ -882,13 +1037,21 @@ def resolve(tag, titles, chars, dyns, houses):
 
     name = loc(raw) or raw
     dy = resolve_dynasty(body, dyns, houses)
-    return {"char": cid, "name": name, "dynasty": dy, "title": title,
-            "ruler_title": ruler_title, "carried": carried,
-            "no_dynasty": not dy}
+    return {
+        "char": cid,
+        "name": name,
+        "dynasty": dy,
+        "title": title,
+        "ruler_title": ruler_title,
+        "carried": carried,
+        "no_dynasty": not dy,
+    }
+
 
 def land_holders():
 
     from build import effective
+
     out = {}
     for f in sorted((MOD / "history" / "provinces").glob("*.txt")):
         pid = int(f.name.split("-")[0].strip())
@@ -898,12 +1061,13 @@ def land_holders():
             out[owner] = out.get(owner, 0) + 1
     return out
 
+
 def monarch_block(path):
 
     text = path.read_text(encoding="utf-8", errors="surrogateescape")
-    m = re.search(r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", text,
-                  re.M | re.S)
+    m = re.search(r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", text, re.M | re.S)
     return text, (m.group(1) if m else None)
+
 
 def current(body):
 
@@ -913,16 +1077,18 @@ def current(body):
     d = re.search(r'dynasty = "([^"]+)"', body)
     return (n.group(1) if n else None, d.group(1) if d else None)
 
+
 def heir_dynasty(text):
 
     blk = re.search(r"^1444\.1\.1 = \{\n(.*?)^\}", text, re.M | re.S)
     if not blk:
         return None
-    heir = re.search(r'heir = \{(.*?)\n\t\}', blk.group(1), re.S)
+    heir = re.search(r"heir = \{(.*?)\n\t\}", blk.group(1), re.S)
     if not heir:
         return None
     d = re.search(r'dynasty = "([^"]+)"', heir.group(1))
     return d.group(1) if d else None
+
 
 def step_ck3(argv):
     fix = "--fix" in argv
@@ -933,26 +1099,33 @@ def step_ck3(argv):
     unwritten = []
 
     holders = land_holders()
-    vanilla = {fn.split(" ")[0] for fn in os.listdir(VANILLA_CDIR)
-               if fn.endswith(".txt")}
-    kept_vanilla = sorted(t for t in holders
-                          if t not in TITLES and t not in NOT_CK3 and t in vanilla)
-    unclassified = sorted(t for t in holders
-                          if t not in TITLES and t not in NOT_CK3 and t not in vanilla)
+    vanilla = {
+        fn.split(" ")[0] for fn in os.listdir(VANILLA_CDIR) if fn.endswith(".txt")
+    }
+    kept_vanilla = sorted(
+        t for t in holders if t not in TITLES and t not in NOT_CK3 and t in vanilla
+    )
+    unclassified = sorted(
+        t for t in holders if t not in TITLES and t not in NOT_CK3 and t not in vanilla
+    )
     print(f"== {len(holders)} tags own land at the mod start date ==")
     print(f"   CK3-derived (name/dynasty checked): {len(TITLES)}")
     print(f"   classified as not CK3-derived      : {len(NOT_CK3)}")
     print(f"   vanilla, untouched, ruler kept    : {len(kept_vanilla)}")
     for t in unclassified:
-        bad.append(f"{t} owns {holders[t]} provinces at the start date but is in "
-                   f"neither TITLES nor NOT_CK3, and has no vanilla country file; "
-                   f"give it a Tag.no_ck3 reason so it is accounted for")
+        bad.append(
+            f"{t} owns {holders[t]} provinces at the start date but is in "
+            f"neither TITLES nor NOT_CK3, and has no vanilla country file; "
+            f"give it a Tag.no_ck3 reason so it is accounted for"
+        )
     if unclassified:
         print(f"   UNCLASSIFIED: {', '.join(unclassified)}")
     stale = [t for t in NOT_CK3 if t not in holders]
     if stale:
 
-        print(f"   note: NOT_CK3 lists tags with no land now: {', '.join(sorted(stale))}")
+        print(
+            f"   note: NOT_CK3 lists tags with no land now: {', '.join(sorted(stale))}"
+        )
 
     for tag in sorted(TITLES):
         got = resolve(tag, titles, chars, dyns, houses)
@@ -965,14 +1138,18 @@ def step_ck3(argv):
             print(f"  NOTE {tag} {got['title']} / char {got['char']}")
             print(f"        no {path.name}: keeps the vanilla file, nothing to sync")
             if got.get("no_dynasty"):
-                print(f"        CK3 867: name={got['name']!r} and NO dynasty - "
-                      f"CK3 records neither dynasty nor dynasty_house for this "
-                      f"character. Nothing is invented for it: if this tag ever "
-                      f"gets a country file, map it to a title whose 867 holder "
-                      f"has a dynasty.")
+                print(
+                    f"        CK3 867: name={got['name']!r} and NO dynasty - "
+                    f"CK3 records neither dynasty nor dynasty_house for this "
+                    f"character. Nothing is invented for it: if this tag ever "
+                    f"gets a country file, map it to a title whose 867 holder "
+                    f"has a dynasty."
+                )
             else:
-                print(f"        CK3 867: name={got['name']!r} "
-                      f"dynasty={got['dynasty']!r}")
+                print(
+                    f"        CK3 867: name={got['name']!r} "
+                    f"dynasty={got['dynasty']!r}"
+                )
             unwritten.append(tag)
             continue
         text, body = monarch_block(path)
@@ -980,66 +1157,88 @@ def step_ck3(argv):
         if got.get("no_dynasty"):
 
             if cd is not None:
-                bad.append(f"{tag}: CK3 character {got['char']} ({got['name']}) has "
-                           f"neither dynasty nor dynasty_house, but {path.name} "
-                           f"declares dynasty={cd!r}. That dynasty is invented - "
-                           f"drop it, or map the tag to a CK3 title whose 867 "
-                           f"holder has a real one.")
+                bad.append(
+                    f"{tag}: CK3 character {got['char']} ({got['name']}) has "
+                    f"neither dynasty nor dynasty_house, but {path.name} "
+                    f"declares dynasty={cd!r}. That dynasty is invented - "
+                    f"drop it, or map the tag to a CK3 title whose 867 "
+                    f"holder has a real one."
+                )
                 print(f"  FAIL {tag} {got['title']} / char {got['char']}")
                 print(f"        file: name={cn!r} dynasty={cd!r}  <- INVENTED")
                 print(f"        CK3 : name={got['name']!r} and NO dynasty")
             else:
                 print(f"  OK   {tag} {got['title']} / char {got['char']}")
                 print(f"        file: name={cn!r} dynasty={cd!r}")
-                print(f"        CK3 : name={got['name']!r} and NO dynasty - the file "
-                      f"declares none either, which is the correct handling: CK3 "
-                      f"records neither dynasty nor dynasty_house, so nothing is "
-                      f"invented to cover the gap.")
+                print(
+                    f"        CK3 : name={got['name']!r} and NO dynasty - the file "
+                    f"declares none either, which is the correct handling: CK3 "
+                    f"records neither dynasty nor dynasty_house, so nothing is "
+                    f"invented to cover the gap."
+                )
             continue
         hd = heir_dynasty(text)
-        heir_bad = (hd is not None and hd != got["dynasty"]
-                    and not BY_TAG[tag].no_heir_sync)
-        ok = (cn == got["name"] and cd == got["dynasty"] and not heir_bad)
+        heir_bad = (
+            hd is not None and hd != got["dynasty"] and not BY_TAG[tag].no_heir_sync
+        )
+        ok = cn == got["name"] and cd == got["dynasty"] and not heir_bad
         mark = "OK " if ok else "DRIFT"
-        src = (f"<- {got['title']}"
-               + (f" (ruler from {got['ruler_title']})"
-                  if got.get("ruler_title", got["title"]) != got["title"] else "")
-               + (f" (holder carried from {got['carried']})"
-                  if got.get("carried") else ""))
+        src = (
+            f"<- {got['title']}"
+            + (
+                f" (ruler from {got['ruler_title']})"
+                if got.get("ruler_title", got["title"]) != got["title"]
+                else ""
+            )
+            + (f" (holder carried from {got['carried']})" if got.get("carried") else "")
+        )
         print(f"  {mark} {tag} {src} / char {got['char']}")
         print(f"        file: name={cn!r} dynasty={cd!r}")
         print(f"        CK3 : name={got['name']!r} dynasty={got['dynasty']!r}")
         if hd is not None:
-            print(f"        heir dynasty={hd!r}"
-                  + ("  <- should match the ruler's" if heir_bad else ""))
+            print(
+                f"        heir dynasty={hd!r}"
+                + ("  <- should match the ruler's" if heir_bad else "")
+            )
         if not ok:
             if fix:
 
                 blk = re.search(r"^1444\.1\.1 = \{\n(.*?)^\}", text, re.M | re.S)
                 new = blk.group(1)
                 if cn is not None:
-                    new = re.sub(r'name = "[^"]+"', f'name = "{got["name"]}"',
-                                 new, count=1)
+                    new = re.sub(
+                        r'name = "[^"]+"', f'name = "{got["name"]}"', new, count=1
+                    )
                 if cd is not None:
-                    new = re.sub(r'dynasty = "[^"]+"',
-                                 f'dynasty = "{got["dynasty"]}"', new, count=1)
+                    new = re.sub(
+                        r'dynasty = "[^"]+"',
+                        f'dynasty = "{got["dynasty"]}"',
+                        new,
+                        count=1,
+                    )
                 if heir_bad:
-                    heir = re.search(r'heir = \{.*?\n\t\}', new, re.S)
-                    nb = re.sub(r'dynasty = "[^"]+"',
-                                f'dynasty = "{got["dynasty"]}"',
-                                heir.group(0), count=1)
-                    new = new[:heir.start()] + nb + new[heir.end():]
-                text = text[:blk.start(1)] + new + text[blk.end(1):]
-                path.write_text(text, encoding="utf-8",
-                                errors="surrogateescape")
+                    heir = re.search(r"heir = \{.*?\n\t\}", new, re.S)
+                    nb = re.sub(
+                        r'dynasty = "[^"]+"',
+                        f'dynasty = "{got["dynasty"]}"',
+                        heir.group(0),
+                        count=1,
+                    )
+                    new = new[: heir.start()] + nb + new[heir.end() :]
+                text = text[: blk.start(1)] + new + text[blk.end(1) :]
+                path.write_text(text, encoding="utf-8", errors="surrogateescape")
                 print(f"        fixed -> {got['name']} / {got['dynasty']}")
             else:
                 if cn != got["name"] or cd != got["dynasty"]:
-                    bad.append(f"{tag}: file has {cn!r}/{cd!r}, CK3 has "
-                               f"{got['name']!r}/{got['dynasty']!r}")
+                    bad.append(
+                        f"{tag}: file has {cn!r}/{cd!r}, CK3 has "
+                        f"{got['name']!r}/{got['dynasty']!r}"
+                    )
                 if heir_bad:
-                    bad.append(f"{tag}: heir dynasty is {hd!r} but the ruler's is "
-                               f"{got['dynasty']!r}")
+                    bad.append(
+                        f"{tag}: heir dynasty is {hd!r} but the ruler's is "
+                        f"{got['dynasty']!r}"
+                    )
 
     if bad:
         print("\nFAIL:")
@@ -1047,14 +1246,22 @@ def step_ck3(argv):
             print("  " + b)
         return 1
     checked = len(TITLES) - len(unwritten)
-    print(f"\nOK: all {len(holders)} start-date land-holders are accounted for; "
-          f"{checked} of {len(TITLES)} CK3-mapped rulers match CK3's 867 bookmark"
-          + (f", {len(unwritten)} unwritten ({', '.join(sorted(unwritten))}) "
-             f"keep vanilla's file" if unwritten else "")
-          + (" (rewritten)" if fix else ""))
+    print(
+        f"\nOK: all {len(holders)} start-date land-holders are accounted for; "
+        f"{checked} of {len(TITLES)} CK3-mapped rulers match CK3's 867 bookmark"
+        + (
+            f", {len(unwritten)} unwritten ({', '.join(sorted(unwritten))}) "
+            f"keep vanilla's file"
+            if unwritten
+            else ""
+        )
+        + (" (rewritten)" if fix else "")
+    )
     return 0
 
+
 _CK3_CACHE: dict = {}
+
 
 def ck3_ruler(tag):
 
@@ -1067,11 +1274,17 @@ def ck3_ruler(tag):
         if tag not in _c.TITLES:
             _CK3_CACHE[tag] = None
             return None
-        got = _c.resolve(tag, _c.load_titles(), _c.load_chars(),
-                         _c.load_dynasties(), _c.load_houses())
+        got = _c.resolve(
+            tag,
+            _c.load_titles(),
+            _c.load_chars(),
+            _c.load_dynasties(),
+            _c.load_houses(),
+        )
 
         _CK3_CACHE[tag] = None if got.get("error") or not got.get("dynasty") else got
     return _CK3_CACHE[tag]
+
 
 def ck3_sync(tag, text):
 
@@ -1081,15 +1294,16 @@ def ck3_sync(tag, text):
     blk = re.search(r"^1444\.1\.1 = \{\n(.*?)^\}", text, re.M | re.S)
     if not blk:
         return text
-    new = re.sub(r'name = "[^"]+"', f'name = "{got["name"]}"',
-                 blk.group(1), count=1)
+    new = re.sub(r'name = "[^"]+"', f'name = "{got["name"]}"', blk.group(1), count=1)
     new = re.sub(r'dynasty = "[^"]+"', f'dynasty = "{got["dynasty"]}"', new)
-    return text[:blk.start(1)] + new + text[blk.end(1):]
+    return text[: blk.start(1)] + new + text[blk.end(1) :]
+
 
 def _eu4_skill(ck3_value):
     if ck3_value is None:
         return 2, None
     return max(1, min(6, round(int(ck3_value) / 3))), int(ck3_value)
+
 
 def _ck3_dates_and_skills(cid, chars):
 
@@ -1103,19 +1317,23 @@ def _ck3_dates_and_skills(cid, chars):
             birth = date
         if re.search(r"^\s*death\s*=", block, re.M):
             death = date
+
     def skill(key):
         m = re.search(r"^\s*" + key + r"\s*=\s*(\d+)", body, re.M)
         return m.group(1) if m else None
+
     adm, _ = _eu4_skill(skill("stewardship"))
     dip, _ = _eu4_skill(skill("diplomacy"))
     mil, _ = _eu4_skill(skill("martial"))
     return birth, death, adm, dip, mil
+
 
 def _ck3_name(cid, chars, loc):
     m = re.search(r'^\s*name\s*=\s*(?:"([^"]*)"|([^\s#"]+))', chars[cid], re.M)
     if not m:
         return None
     return loc(m.group(1) or m.group(2)) or (m.group(1) or m.group(2))
+
 
 def ck3_block(tag):
 
@@ -1158,19 +1376,22 @@ def ck3_block(tag):
 
     lines = [f"{CTRY_DATE} = {{", "\tmonarch = {", person(cid), "\t}"]
 
-    kids = [k for k, b in chars.items()
-            if re.search(rf"^\s*father\s*=\s*{cid}\b", b, re.M)]
+    kids = [
+        k for k, b in chars.items() if re.search(rf"^\s*father\s*=\s*{cid}\b", b, re.M)
+    ]
     kids.sort(key=lambda k: _ck3_dates_and_skills(k, chars)[0] or "9999.9.9")
     if kids:
         lines += ["\their = {", person(kids[0], claim=90), "\t}"]
     lines += ["}", ""]
     return "\n".join(lines)
 
+
 def find_vanilla(tag):
     for fn in os.listdir(VANILLA_CDIR):
         if fn.split(" ")[0] == tag and fn.endswith(".txt"):
             return os.path.join(VANILLA_CDIR, fn), fn
     raise SystemExit(f"no vanilla history file for {tag}")
+
 
 def fresh(tag):
     t = BY_TAG[tag]
@@ -1184,15 +1405,16 @@ religion = catholic
 capital = {cap}
 {t.ruler_block}"""
 
+
 def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None):
 
     path, fn = find_vanilla(tag)
     text = open(path, encoding="utf-8", errors="surrogateescape").read()
     if strip_elector:
 
-        text, n = re.subn(r"^elector\s*=\s*yes[^\n]*$",
-                          "elector = no",
-                          text, count=1, flags=re.M)
+        text, n = re.subn(
+            r"^elector\s*=\s*yes[^\n]*$", "elector = no", text, count=1, flags=re.M
+        )
         assert n == 1, f"{tag}: no top-level 'elector = yes' to dissolve in {fn}"
     if capital is not None:
 
@@ -1200,36 +1422,53 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
         assert m, f"{tag}: no top-level capital line in {fn}"
         if int(m.group(1)) != capital:
 
-            text, n = re.subn(r"^capital\s*=\s*\d+.*$", f"capital = {capital}",
-                              text, count=1, flags=re.M)
+            text, n = re.subn(
+                r"^capital\s*=\s*\d+.*$",
+                f"capital = {capital}",
+                text,
+                count=1,
+                flags=re.M,
+            )
             assert n == 1, f"{tag}: failed to patch capital in {fn}"
     if rank is not None:
 
         m = re.search(r"^government_rank\s*=\s*(\d+)", text, flags=re.M)
         if m and int(m.group(1)) != rank:
-            text, n = re.subn(r"^government_rank\s*=\s*\d+.*$",
-                              f"government_rank = {rank}", text, count=1,
-                              flags=re.M)
+            text, n = re.subn(
+                r"^government_rank\s*=\s*\d+.*$",
+                f"government_rank = {rank}",
+                text,
+                count=1,
+                flags=re.M,
+            )
             assert n == 1, f"{tag}: failed to patch government_rank in {fn}"
         elif m is None:
 
             anchor = re.search(r"^\s*government\s*=\s*\w+.*$", text, re.M)
             assert anchor, f"{tag}: no government line to anchor a rank to in {fn}"
-            text = text[:anchor.end()] + f"\ngovernment_rank = {rank}" + text[anchor.end():]
+            text = (
+                text[: anchor.end()]
+                + f"\ngovernment_rank = {rank}"
+                + text[anchor.end() :]
+            )
     if ruler is not None:
         lines = text.splitlines()
 
         ins = len(lines)
         for i, ln in enumerate(lines):
             m = re.match(r"^(\d+)\.(\d+)\.(\d+)\s*=", ln.strip())
-            if m and (int(m.group(1)), int(m.group(2)),
-                      int(m.group(3))) >= (1444, 1, 1):
+            if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) >= (
+                1444,
+                1,
+                1,
+            ):
                 ins = i
                 break
         block = ruler.strip("\n").splitlines()
         lines = lines[:ins] + block + [""] + lines[ins:]
         text = "\n".join(lines) + "\n"
     return text
+
 
 def ruler_for(t):
 
@@ -1238,6 +1477,7 @@ def ruler_for(t):
     if t.ck3_title:
         return ck3_block(t.tag)
     return None
+
 
 def step_countries():
 
@@ -1249,33 +1489,48 @@ def step_countries():
             continue
         if t.country == "fresh":
             text = ck3_sync(t.tag, fresh(t.tag))
-            print(f"wrote {t.tag}.txt (from scratch, rank {t.rank}, "
-                  f"capital {t.capital})")
+            print(
+                f"wrote {t.tag}.txt (from scratch, rank {t.rank}, "
+                f"capital {t.capital})"
+            )
         elif t.country == "vanilla":
             ruler = ruler_for(t)
             was_elector = t.tag in IMPERIAL_ELECTORS
-            text = ck3_sync(t.tag, patch_vanilla(t.tag, t.capital, ruler,
-                                                 was_elector, t.rank))
+            text = ck3_sync(
+                t.tag, patch_vanilla(t.tag, t.capital, ruler, was_elector, t.rank)
+            )
             what = []
             if t.capital:
                 what.append(f"capital -> {t.capital}")
             if ruler:
                 nm = re.search(r'name = "([^"]+)"', ruler)
-                what.append(f"867 ruler {nm.group(1) if nm else '?'}"
-                            + (" (from CK3)" if not t.ruler_block else ""))
+                what.append(
+                    f"867 ruler {nm.group(1) if nm else '?'}"
+                    + (" (from CK3)" if not t.ruler_block else "")
+                )
             if was_elector:
                 what.append("electorate removed")
             what.append(f"rank {t.rank}")
-            print(f"wrote {t.tag}.txt (vanilla history preserved, "
-                  + ", ".join(what) + ")")
+            print(
+                f"wrote {t.tag}.txt (vanilla history preserved, "
+                + ", ".join(what)
+                + ")"
+            )
         else:
             text = patch_vanilla(t.tag, strip_elector=True)
-            print(f"wrote {t.tag}.txt (vanilla history preserved, "
-                  f"electorate dissolved)")
+            print(
+                f"wrote {t.tag}.txt (vanilla history preserved, "
+                f"electorate dissolved)"
+            )
 
-        with open(os.path.join(COUNTRY_OUT, f"{t.tag}.txt"), "w",
-                  encoding="utf-8", errors="surrogateescape") as fh:
+        with open(
+            os.path.join(COUNTRY_OUT, f"{t.tag}.txt"),
+            "w",
+            encoding="utf-8",
+            errors="surrogateescape",
+        ) as fh:
             fh.write(text)
+
 
 def main() -> int:
 
@@ -1304,6 +1559,7 @@ def main() -> int:
             rc = step(label, fn, *rest)
         except Exception:
             import traceback
+
             traceback.print_exc()
             print(f"\n\033[31mBUILD FAILED\033[0m with an exception in {label}")
             return 1
@@ -1313,6 +1569,7 @@ def main() -> int:
 
     print(f"\n{'=' * 60}\n\033[32mBUILD OK\033[0m in {time.time() - started:.1f}s")
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
