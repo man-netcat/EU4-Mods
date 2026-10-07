@@ -434,6 +434,14 @@ TAGS: list[Tag] = [
         ),
     ),
     Tag(
+        tag="BRI",
+        rank=2,
+        capital=172,
+        ck3_title="k_brittany",
+        in_alloc=True,
+        provinces=(),
+    ),
+    Tag(
         tag="ASU",
         country="written",
         rank=2,
