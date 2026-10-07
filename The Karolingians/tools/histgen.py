@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 from ck3 import ck3_block
+from enc import encname
 
 HERE = Path(__file__).resolve().parent
 PROVDATA = HERE / "cache" / "provdata.json"
@@ -68,7 +69,9 @@ def country_definition(t) -> str:
         )
     if t.monarch_names:
         parts += [""] + ["monarch_names = {"]
-        parts += [f'{T}"{name}" = {weight}' for name, weight in t.monarch_names]
+        parts += [
+            f'{T}"{encname(name)}" = {weight}' for name, weight in t.monarch_names
+        ]
         parts += ["}"]
     if t.leader_names:
         parts += (

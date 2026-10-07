@@ -19,6 +19,8 @@ from build import TAGS as _REALMS  # noqa: E402
 
 from build import CustomTag  # noqa: E402
 
+from enc import decode, load_loc  # noqa: E402
+
 TAGS = sorted(
     t.tag for t in _REALMS if t.in_alloc and (t.ruler_block or isinstance(t, CustomTag))
 )
@@ -500,6 +502,7 @@ def run() -> int:
         print("        build.py needs a CK3 install to read CK3's rulers.")
 
     if _b is not None:
+        load_loc(os.path.join(MOD, "localisation", "karolingian_names_l_english.yml"))
         _holders = _b.land_holders()
         _vanilla = {
             fn.split(" ")[0]
@@ -554,7 +557,7 @@ def run() -> int:
                     f"(CK3 {t} would be {want['name']} / {want['dynasty']})"
                 )
                 continue
-            body = open(cp, encoding="utf-8", errors="replace").read()
+            body = open(cp, encoding="cp1252", errors="surrogateescape").read()
             blk = re.search(
                 r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", body, re.M | re.S
             )
@@ -563,7 +566,7 @@ def run() -> int:
                 continue
             got_n, got_d = _b.current(blk.group(1))
             note(
-                got_n == want["name"] and got_d == want["dynasty"],
+                decode(got_n) == want["name"] and decode(got_d) == want["dynasty"],
                 f"{t} ruler name/dynasty matches CK3 867 "
                 f"({want['name']} / {want['dynasty']})",
             )
@@ -575,7 +578,7 @@ def run() -> int:
         if not os.path.exists(p):
             note(False, f"{t} has a history file")
             continue
-        body = open(p, encoding="utf-8", errors="replace").read()
+        body = open(p, encoding="cp1252", errors="surrogateescape").read()
         blk = re.search(
             r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", body, re.M | re.S
         )
@@ -616,7 +619,7 @@ def run() -> int:
     seen_dyn = set()
     for t in EMPIRE_KINGDOMS:
         p = os.path.join(COUNTRY_OUT, f"{t}.txt")
-        body = open(p, encoding="utf-8", errors="replace").read()
+        body = open(p, encoding="cp1252", errors="surrogateescape").read()
         blk = re.search(r"^1444\.1\.1 = \{.*?^\}", body, re.M | re.S)
         ds = re.findall(r'dynasty = "([^"]+)"', blk.group(0)) if blk else []
         note(

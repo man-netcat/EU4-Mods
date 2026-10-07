@@ -19,6 +19,7 @@ def main() -> int:
         ("generate country files", step_countries),
         ("generate the empire decision", step_hre),
         ("generate the Magyars", step_custom),
+        ("write name localisation", step_names),
         ("check CK3 rulers", step_ck3, []),
         ("check start-date ownership", step_start),
     ]

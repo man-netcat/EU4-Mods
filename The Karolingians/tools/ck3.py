@@ -3,6 +3,7 @@
 import os, re
 from pathlib import Path
 
+from enc import decode, encname
 from tagdb import BY_TAG, CTRY_DATE, NOT_CK3, RULER_TITLES, TITLES, shifted
 
 GAME_CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
@@ -212,7 +213,7 @@ def land_holders():
 
 
 def monarch_block(path):
-    text = path.read_text(encoding="utf-8", errors="surrogateescape")
+    text = path.read_text(encoding="cp1252", errors="surrogateescape")
     m = re.search(r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", text, re.M | re.S)
     return text, (m.group(1) if m else None)
 
@@ -327,9 +328,11 @@ def step_ck3(argv):
             continue
         hd = heir_dynasty(text)
         heir_bad = (
-            hd is not None and hd != got["dynasty"] and not BY_TAG[tag].no_heir_sync
+            hd is not None
+            and decode(hd) != got["dynasty"]
+            and not BY_TAG[tag].no_heir_sync
         )
-        ok = cn == got["name"] and cd == got["dynasty"] and not heir_bad
+        ok = decode(cn) == got["name"] and decode(cd) == got["dynasty"] and not heir_bad
         mark = "OK " if ok else "DRIFT"
         src = (
             f"<- {got['title']}"
@@ -341,7 +344,7 @@ def step_ck3(argv):
             + (f" (holder carried from {got['carried']})" if got.get("carried") else "")
         )
         print(f"  {mark} {tag} {src} / char {got['char']}")
-        print(f"        file: name={cn!r} dynasty={cd!r}")
+        print(f"        file: name={decode(cn)!r} dynasty={decode(cd)!r}")
         print(f"        CK3 : name={got['name']!r} dynasty={got['dynasty']!r}")
         if hd is not None:
             print(
@@ -355,12 +358,15 @@ def step_ck3(argv):
                 new = blk.group(1)
                 if cn is not None:
                     new = re.sub(
-                        r'name = "[^"]+"', f'name = "{got["name"]}"', new, count=1
+                        r'name = "[^"]+"',
+                        f'name = "{encname(got["name"])}"',
+                        new,
+                        count=1,
                     )
                 if cd is not None:
                     new = re.sub(
                         r'dynasty = "[^"]+"',
-                        f'dynasty = "{got["dynasty"]}"',
+                        f'dynasty = "{encname(got["dynasty"])}"',
                         new,
                         count=1,
                     )
@@ -368,14 +374,17 @@ def step_ck3(argv):
                     heir = re.search(r"heir = \{.*?\n\t\}", new, re.S)
                     nb = re.sub(
                         r'dynasty = "[^"]+"',
-                        f'dynasty = "{got["dynasty"]}"',
+                        f'dynasty = "{encname(got["dynasty"])}"',
                         heir.group(0),
                         count=1,
                     )
                     new = new[: heir.start()] + nb + new[heir.end() :]
                 text = text[: blk.start(1)] + new + text[blk.end(1) :]
-                path.write_text(text, encoding="utf-8", errors="surrogateescape")
-                print(f"        fixed -> {got['name']} / {got['dynasty']}")
+                path.write_text(text, encoding="cp1252", errors="pdx")
+                print(
+                    f"        fixed -> {encname(got['name'])} / "
+                    f"{encname(got['dynasty'])}"
+                )
             else:
                 if cn != got["name"] or cd != got["dynasty"]:
                     bad.append(
@@ -435,8 +444,10 @@ def ck3_sync(tag, text):
     blk = re.search(r"^1444\.1\.1 = \{\n(.*?)^\}", text, re.M | re.S)
     if not blk:
         return text
-    new = re.sub(r'name = "[^"]+"', f'name = "{got["name"]}"', blk.group(1), count=1)
-    new = re.sub(r'dynasty = "[^"]+"', f'dynasty = "{got["dynasty"]}"', new)
+    new = re.sub(
+        r'name = "[^"]+"', f'name = "{encname(got["name"])}"', blk.group(1), count=1
+    )
+    new = re.sub(r'dynasty = "[^"]+"', f'dynasty = "{encname(got["dynasty"])}"', new)
     return text[: blk.start(1)] + new + text[blk.end(1) :]
 
 
@@ -495,11 +506,11 @@ def ck3_block(tag):
         nm = _ck3_name(cid_, chars, loc)
         b, d, a, dp, ml = _ck3_dates_and_skills(cid_, chars)
         dy = resolve_dynasty(chars[cid_], dyns, houses)
-        out = [f'\t\tname = "{nm}"']
+        out = [f'\t\tname = "{encname(nm)}"']
         if claim is not None:
-            out.append(f'\t\tmonarch_name = "{nm}"')
+            out.append(f'\t\tmonarch_name = "{encname(nm)}"')
         if dy:
-            out.append(f'\t\tdynasty = "{dy}"')
+            out.append(f'\t\tdynasty = "{encname(dy)}"')
         for label, d_ in (("birth_date", b), ("death_date", d)):
             if not d_:
                 raise SystemExit(f"{tag}: CK3 character {cid_} has no {label}")

@@ -301,8 +301,8 @@ def step_provinces(argv):
         open(
             os.path.join(PROV_OUT, os.path.basename(src)),
             "w",
-            encoding="utf-8",
-            errors="surrogateescape",
+            encoding="cp1252",
+            errors="pdx",
         ).write(new)
         written += 1
 
@@ -453,7 +453,7 @@ def step_hre() -> None:
 
     os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
     p = os.path.join(MOD, "decisions", "KarolingianHRE.txt")
-    open(p, "w", encoding="utf-8").write(txt)
+    open(p, "w", encoding="cp1252", errors="pdx").write(txt)
     print(f"wrote {p}")
     print(f"  imperial provinces    : {len(empire_provs)}")
     print(f"  areas covered         : {len(areas)}")
@@ -479,7 +479,7 @@ def step_custom() -> None:
         reg_lines.append(f'{t.tag} = "countries/{cname}"')
 
         cfile = os.path.join(MOD, "common", "countries", cname)
-        open(cfile, "w", encoding="utf-8").write(country_definition(t))
+        open(cfile, "w", encoding="cp1252", errors="pdx").write(country_definition(t))
         print(f"wrote {cfile}")
 
         flag = t.flag_source or os.path.join(GAME, "gfx", "flags", f"{t.flag_from}.tga")
@@ -499,7 +499,7 @@ def step_custom() -> None:
         txt = formation_decision(t)
         os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
         p = os.path.join(MOD, "decisions", f"Form{t.forms}.txt")
-        open(p, "w", encoding="utf-8").write(txt)
+        open(p, "w", encoding="cp1252", errors="pdx").write(txt)
         print(f"wrote {p}")
         print(
             f"  formed tag            : {t.tag} -> {t.forms}, rank {t.form_rank or 2}"
@@ -508,8 +508,23 @@ def step_custom() -> None:
         print(f"  areas covered         : {', '.join(t.form_areas)}")
         print(f"  suppressed decisions  : {', '.join(t.suppress)}")
 
-    open(reg, "w", encoding="utf-8").write("\n".join(reg_lines) + "\n")
+    open(reg, "w", encoding="cp1252", errors="pdx").write("\n".join(reg_lines) + "\n")
     print(f"wrote {reg}")
+
+
+def step_names() -> None:
+    from enc import NAMES, names_loc_body
+
+    loc = os.path.join(MOD, "localisation", "karolingian_names_l_english.yml")
+    if not NAMES:
+        if os.path.exists(loc):
+            os.unlink(loc)
+            print(f"removed {loc} (no keyed names)")
+        return
+    os.makedirs(os.path.join(MOD, "localisation"), exist_ok=True)
+    with open(loc, "w", encoding="utf-8") as fh:
+        fh.write("\ufeffl_english:\n" + names_loc_body() + "\n")
+    print(f"wrote {loc} ({len(NAMES)} names)")
 
 
 def find_vanilla(tag):
@@ -628,8 +643,8 @@ def step_countries():
         with open(
             os.path.join(COUNTRY_OUT, f"{t.tag}.txt"),
             "w",
-            encoding="utf-8",
-            errors="surrogateescape",
+            encoding="cp1252",
+            errors="pdx",
         ) as fh:
             fh.write(text)
 
