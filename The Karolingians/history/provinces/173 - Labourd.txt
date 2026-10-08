@@ -56,7 +56,7 @@ discovered_by = ottoman
 1689.1.1 = { unrest = 0 } # War of the Grand Alliance erupts: Louis XIV can't persue his religious policy anymore
 1715.1.1 = { fort_17th = no fort_18th = yes }
 
-1444.11.11 = {	owner = FRA
+867.1.1 = {	owner = FRA
 	controller = FRA
 	add_core = FRA
 	hre = no

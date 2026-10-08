@@ -42,7 +42,7 @@ is_city = yes
 	remove_core = FRN
 } # Congress of Vienna
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

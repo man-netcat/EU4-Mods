@@ -36,7 +36,7 @@ discovered_by = ottoman
 1812.10.1 = { revolt = { type = pretender_rebels size = 2 } controller = REB }
 1813.12.11 = { revolt = {} controller = SPA }
 
-1444.11.11 = {	owner = ASU
+867.1.1 = {	owner = ASU
 	controller = ASU
 	add_core = ASU
 	hre = no

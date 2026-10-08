@@ -43,7 +43,7 @@ base_production = 4 } # At the walls of Paris - French War of Religion
 1689.1.1 = { unrest = 0 } # War of the Grand Alliance erupts: Louis XIV can't persue his religious policy anymore
 1749.1.1 = { base_tax = 5 base_production = 5 } # Machault and the 5% tax
 
-1444.11.11 = {	owner = FRA
+867.1.1 = {	owner = FRA
 	controller = FRA
 	add_core = FRA
 	hre = no

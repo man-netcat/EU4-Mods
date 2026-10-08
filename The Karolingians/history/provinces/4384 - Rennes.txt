@@ -27,7 +27,7 @@ discovered_by = ottoman
 1639.1.1 = { unrest = 3 } 
 1641.1.1 = { unrest = 0 }
 
-1444.11.11 = {	owner = BRI
+867.1.1 = {	owner = BRI
 	controller = BRI
 	add_core = BRI
 	hre = no

@@ -118,14 +118,9 @@ class Diplomacy:
     relation: str = "vassal"
 
 
-CTRY_DATE = "1444.1.1"
+CTRY_DATE = "867.1.1"
 
 DYNASTY = "de Carolingie"
-SHIFT = 577
-
-
-def shifted(y, m=1, d=1):
-    return f"{y + SHIFT}.{m}.{d}"
 
 
 TAGS: list[Tag] = [

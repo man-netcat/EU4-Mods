@@ -42,7 +42,7 @@ discovered_by = ottoman
 }
 1734.6.2 = { owner = NAP controller = NAP remove_core = HAB }
 
-1444.11.11 = {	owner = BYZ
+867.1.1 = {	owner = BYZ
 	controller = BYZ
 	add_core = BYZ
 	hre = no

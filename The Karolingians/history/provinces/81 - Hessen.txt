@@ -35,7 +35,7 @@ base_production = 14 } # Full minting rights granted by the Emperor
 	remove_core = WES
 } # Westfalia is dissolved after the Battle of Leipzig
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

@@ -19,12 +19,12 @@ add_army_professionalism = 0.05
 # "Radenos"), a Greek byzantiote rite, born 836.1.1, died 896.1.1, noted in CK3
 # as ruling both Dalmatia and Zadar. CK3 has no 1444, so as with Boris and
 # al-Mu'tazz the dates are shifted to sit around the 1444.11.11 start.
-1444.1.1 = {
+867.1.1 = {
 	monarch = {
 		name = "Amphilochios"
 		dynasty = "Radenos"
-		birth_date = 1394.1.1
-		death_date = 1458.1.1
+		birth_date = 817.1.1
+		death_date = 881.1.1
 		adm = 2
 		dip = 2
 		mil = 2

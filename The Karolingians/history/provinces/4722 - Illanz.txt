@@ -32,7 +32,7 @@ discovered_by = ottoman
 } # Incorporation of the Three Leagues into the Helvetic Republic
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

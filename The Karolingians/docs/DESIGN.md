@@ -82,14 +82,17 @@ These readers all live in `eu4.py`:
 - `load_region_areas` reads `region -> [areas]`; `load_provinces` reads
   `pid -> dict(owner, controller, cores[], culture, religion, hre, capital,
   name)`.
-- `_owned(tag, ...)` is province ids owned by `tag` **at the 1444.11.11
-  start**, filtered by region. It reads `owner_1444`, not the top-level
+- `_owned(tag, ...)` is province ids owned by `tag` **in vanilla's own 1444
+  state**, filtered by region. It reads `owner_1444`, not the top-level
   `owner`: the top level of a vanilla province file is the state before any
   dated block fires, and 158 provinces have an owner or core change dated
   inside `(867, 1444]`. Erzincan is the case in point: top level says TIM with
   `add_core = TIM`, but a `1402.1.1` block gives it to the Aq Qoyunlu and
-  removes the Timurid core. This mod ships no `defines.lua`, so it runs on
-  vanilla's 1444.11.11 start and the resolved value is the true one.
+  removes the Timurid core. The mod's own start is 867.1.1: it ships
+  `common/defines.lua` with that `START_DATE`, a default bookmark at that date
+  in `common/bookmarks/`, and the localisation for it. The allocation is still
+  built on vanilla's 1444 ownership, so `owner_1444` stays the name of the
+  fact this reads.
 - `_region` is the region of a province id, via its area (None if unknown).
   `_area` is the province ids belonging to any of the named areas, sorted and
   de-duped, used where a transfer was specified as "these areas" rather than as
@@ -286,14 +289,14 @@ modes:
 | mode | eu4 does | realms |
 | --- | --- | --- |
 | `fresh` | writes the file from scratch: capital, culture, rank, ruler | LOT, GER, BAV, ITA, SOR |
-| `vanilla` | copies vanilla's, then patches capital, rank, the 1444 ruler, and the vote if it has one | FRA, NAV, CRT, SIL, GMA, MON, PRU, BOH, SAR |
-| `elector` | copies vanilla's, changes one line - the 1444 vote | BRA, KOL, MAI, PAL, SAX, TRI |
+| `vanilla` | copies vanilla's, then patches capital, rank, the start ruler, and the vote if it has one | FRA, NAV, CRT, SIL, GMA, MON, PRU, BOH, SAR |
+| `elector` | copies vanilla's, changes one line - the baseline vote | BRA, KOL, MAI, PAL, SAX, TRI |
 | `written` | nothing; the repo owns the file and build must not touch it | ASU, ADU, ARB, EGY, DAL, BYZ, BUL, HUN |
 | `none` | nothing; there is no file | CRI (deferred), POL, PAP |
 
 A realm in `vanilla` mode keeps its whole later history and replaces only the
 start this scenario asks for - `patch_vanilla` changes only a capital, the
-government rank, the 1444 ruler and whether the country is an imperial elector,
+government rank, the start ruler and whether the country is an imperial elector,
 and preserves everything else verbatim, so a vanilla tag keeps Zizka and the
 defenestration of Prague for Bohemia and the Piast line for Silesia, and only
 its 867 start is replaced. The seven electors all get their vote dissolved,
@@ -352,26 +355,26 @@ files carry `1806.7.12 = { elector = no }` - the Reichsdeputationshauptschluss,
 the real abolition of the HRE - and REG's reads `1806.7.12 = { elector = no } #
 the HRE is dissolved`. That dated block is why a 1821 start date has no Holy
 Roman Empire: the history is read up to 1821, every elector has been set to
-`no`, and there is nobody left to elect an emperor. A 1444 start simply never
-reaches those dates.
+`no`, and there is nobody left to elect an emperor. An 867 start does not
+reach them either.
 
-So to get that same end state at 1444 we write the dissolution ourselves, one
+So to get that same end state at the start we write the dissolution ourselves, one
 state at a time instead of one dated block per country: the top-level
-`elector = yes` of each 1444 electorate member becomes `elector = no`, which is
+`elector = yes` of each electorate member becomes `elector = no`, which is
 vanilla's own syntax for the empire's end. No on_action, no defines override.
 
 Only **seven** files get this, because only seven have a TOP-LEVEL
 `elector = yes`. That qualifier matters: Regensburg and Hessen also have
 `elector = yes`, but only inside dated blocks from 1803, when the
-Reichsdeputationshauptschluss gave them electoral dignity. At 1444 they hold no
-vote at all, so they need no override and their 1803-1806 history is left
+Reichsdeputationshauptschluss gave them electoral dignity. At the start they
+hold no vote at all, so they need no override and their 1803-1806 history is left
 untouched. The regex is anchored `^` with no leading-whitespace class on
-purpose: only a top-level `elector = yes` is a vote in 1444, and matching
+purpose: only a top-level `elector = yes` is a baseline vote, and matching
 `\s*` would silently rewrite 1803-1806 history. validate.py's `electors_as_of`
 applies the same rule in reverse - a column-0 `elector = yes` is the baseline
 state, the same key inside a dated block is a later state that counts only once
 that date has arrived, and grepping for the key at all would demand an override
-for Regensburg, which only gains a vote in 1803 and holds none in 1444.
+for Regensburg, which only gains a vote in 1803 and holds none at the start.
 
 Bohemia matters twice over: it is one of the seven electorates, and it is also
 the one this mod patches for its own ends, so its vote goes with the patch.
@@ -388,8 +391,8 @@ asks `resolve()` what CK3's 867 holder's name and dynasty are. One source of
 truth, and regenerating is idempotent instead of destructive.
 
 Only name and dynasty are taken from CK3. Stats and dates stay hand-written
-because they are judgement calls: CK3's 1-25 skill scale is not EU4's 1-6, and
-CK3 has no 1444 to be alive in. Where a ruler is CK3-derived, one conversion is
+because they are judgement calls: CK3's 1-25 skill scale is not EU4's 1-6.
+Where a ruler is CK3-derived, one conversion is
 applied, uniformly: `EU4 = CK3 / 3`, clamped to 1-6. CK3 records no skills at
 all for some characters (Miroslav of Duklja is one), and those get a neutral
 2/2/2 rather than an invented reputation.
@@ -399,13 +402,12 @@ CK3; anything else with a CK3 title reads 867 from it, honouring `ruler_title`
 inside `resolve()` when the realm's own title is vacant in 867.
 
 SIL, GMA and BOH have hand-written ruler blocks, because each needed a
-judgement CK3 cannot make for us: which son was the heir, and why a regency is
-an artefact of the age shift rather than a fact about 867. NAV and MON need no
+judgement CK3 cannot make for us: which son was the heir. NAV and MON need no
 such judgement, so their blocks are derived from CK3 instead of transcribed - a
 transcription is a snapshot of CK3 that silently rots; this is CK3's own entry
 read at build time, the authority the hand-written blocks cite anyway.
 
-**The heir.** The rewrite happens inside the whole 1444.1.1 block, not the
+**The heir.** The rewrite happens inside the whole 867.1.1 block, not the
 monarch sub-block, so the heir's dynasty is brought along with the ruler's.
 Only the ruler's NAME is taken from CK3: the heir is a different man whom CK3
 does not model here, so his name, stats and dates are left exactly as the mod
@@ -749,8 +751,8 @@ are crimean, astrakhani and mishary, none of them Turkish, and the power there i
 
 **Where the rewrite applies.** Culture is rewritten once, at the top-level
 province block; religion is rewritten everywhere it appears, because a dated
-block that re-sets religion would otherwise leave the province Muslim after
-1444.
+block that re-sets religion would otherwise leave the province Muslim once
+that block fires.
 
 **The religion carve-outs.** CONQUERED_BY_THE_ARABS - the five of those 32
 Turkish-culture provinces that the Abbasids hold, and which therefore keep
@@ -780,26 +782,27 @@ Orthodox in 1444. Its status as a majority Greek city dates to at least after
 the 17th Century". That is correct for 1444 - the Aydinids took Smyrna around
 1330 and made it Turkish and Muslim - and irrelevant here. This scenario is
 867, when Smyrna was Byzantine and Greek, and the Saracen fleet that raided it
-did so in 869, two years after the start date, so even that is not yet true at
-1444.11.11. The province gets the 867 assignment; this note is where the
+did so in 869, two years after the start date, so even that is not yet true at the
+start. The province gets the 867 assignment; this note is where the
 argument lives.
 
 ## Writing the province files
 
 **The dated-state problem.** EU4 fires every dated history entry up to and
 including the start date, in file order, AFTER the undated baseline. Vanilla
-therefore overrides the undated owner/controller for any province it hands over
-before 1444.11.11 - Verona to Venice in 1405, Aquitaine to England in 1306,
-Avignon to the Pope in 1274, East Frisia to EFR, and so on. Patching only the
-undated header is not enough, so every allocated province gets a final dated
-block (`force_block`) that re-asserts our ownership at the start date and wins.
+hands provinces over in dated blocks - Verona to Venice in 1405, Aquitaine to
+England in 1306, Avignon to the Pope in 1274, East Frisia to EFR - and at the
+867 start nearly all of them lie in the future and never fire, while anything
+dated before 867.1.1 still overrides the header. Patching only the undated
+header is therefore not enough, so every allocated province gets a final dated
+block (`force_block`) at the start date that re-asserts our ownership and wins.
 Appending it last also means we override vanilla, not the other way round, and
-`add_core`/`hre` are re-stated there because the same pre-1444 events can drop a
-core or re-enable the empire flag.
+`add_core`/`hre` are re-stated there because the same pre-start events can drop
+a core or re-enable the empire flag.
 
 **The global HRE strip** runs at ANY depth, because the initial flag is not the
 only one: dated events such as `1464.1.1` East Frisia and `1548.6.26` Flanders
-would otherwise re-join the empire long after 1444.
+would otherwise re-join the empire centuries after the start.
 
 **Cores.** The mod's core is injected just before the first dated block (the
 end of the header) - but only when vanilla does not already grant it: Morea and
@@ -921,10 +924,10 @@ Ocean while its file correctly said 163, with nothing to say so. The check
 compares the one declaration against the file that ships and lets a mismatch
 fail.
 
-**Age is checked, because the +577 shift** that keeps a king's 867 age also
-turns a genuinely young 867 ruler into a child in 1444. A minor monarch must
-therefore be flagged `regent = yes`, or the realm is silently ruled by someone
-the game thinks cannot rule.
+**Age is checked, because the ruler dates ship as CK3 gives them.** A
+genuinely young 867 ruler is a child in 867, and a minor monarch must therefore
+be flagged `regent = yes`, or the realm is silently ruled by someone the game
+thinks cannot rule.
 
 **CK3 is only needed for the name/dynasty cross-check.** Everything else in
 validate.py runs without it, so a missing CK3 install skips exactly those
@@ -1049,12 +1052,12 @@ Per-realm data notes on the fields:
   field is a set either way.
 - `country` - what eu4.py does with this realm's country file, and the whole
   instruction (see the modes table above).
-- `elector` - True when this realm is an elector of the HRE, so its 1444 vote
-  goes. ALL_TAGS additionally states the derived set: the tags the allocation
+- `elector` - True when this realm is an elector of the HRE, so its baseline
+  vote goes. ALL_TAGS additionally states the derived set: the tags the allocation
   may hand a province to, which is not the same set as the managed realms.
 - `holder_heir_dynasty` - True when this realm's heir starts a new house, so
   `--fix` must not overwrite the heir's dynasty from CK3. No realm sets it yet,
-  but the field is why the sync rewrites the whole 1444.1.1 block.
+  but the field is why the sync rewrites the whole 867.1.1 block.
 - `rank_note` - used to argue every rank in place. The argument now lives in
   this document (below).
 
@@ -1132,7 +1135,7 @@ Every one of these is a projection of `TAGS`, never a second copy:
   reassigned.
 - `BY_TAG` - the one lookup map, by tag string.
 - `ELECTORS` - the seven electors of the HRE. Every realm here is stripped of
-  its 1444 vote, which is the whole of the mod's diplomacy with a dissolved
+  its baseline vote, which is the whole of the mod's diplomacy with a dissolved
   empire.
 - `RANK` - `government_rank` per realm; `KEPT_REALMS`, `DEFERRED_REALMS` - kept
   but not yet authored, each with the reason, reported on every build.

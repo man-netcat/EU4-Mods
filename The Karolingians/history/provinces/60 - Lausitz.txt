@@ -64,7 +64,7 @@ discovered_by = ottoman
 	remove_core = SAX
 } # Congress of Vienna
 
-1444.11.11 = {	owner = SOR
+867.1.1 = {	owner = SOR
 	controller = SOR
 	add_core = SOR
 	hre = no

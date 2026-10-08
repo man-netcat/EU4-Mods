@@ -42,7 +42,7 @@ discovered_by = ottoman
 	add_core = RUS
 } # Third partition of Poland
 
-1444.11.11 = {	owner = KUR
+867.1.1 = {	owner = KUR
 	controller = KUR
 	add_core = KUR
 	hre = no

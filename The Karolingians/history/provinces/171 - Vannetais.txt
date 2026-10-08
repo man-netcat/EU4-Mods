@@ -24,7 +24,7 @@ discovered_by = ottoman
 1594.1.1 = { unrest = 0 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
 1650.1.1 = { capital = "Lorient" }
 
-1444.11.11 = {	owner = BRI
+867.1.1 = {	owner = BRI
 	controller = BRI
 	add_core = BRI
 	hre = no

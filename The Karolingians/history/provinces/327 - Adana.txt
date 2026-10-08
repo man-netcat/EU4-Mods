@@ -30,7 +30,7 @@ center_of_trade = 1
 1700.1.1 = { revolt = {} controller = TUR }
 1740.1.1 = { base_tax = 1 base_production = 1 } # The decentralizing effect of the provincial system
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

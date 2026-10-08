@@ -55,7 +55,7 @@ discovered_by = ottoman
 	add_core = PRU
 } # Actually returned to Prussia after the Congress of Vienna
 
-1444.11.11 = {	owner = POL
+867.1.1 = {	owner = POL
 	controller = POL
 	add_core = POL
 	hre = no

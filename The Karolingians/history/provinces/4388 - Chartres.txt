@@ -49,7 +49,7 @@ discovered_by = ottoman
 	controller = FRA
 } # The establishment of the First Republic
 
-1444.11.11 = {	owner = FRA
+867.1.1 = {	owner = FRA
 	controller = FRA
 	add_core = FRA
 	hre = no

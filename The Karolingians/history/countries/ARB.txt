@@ -27,12 +27,12 @@ capital = 385 # Mecca
 # exactly the Abbasid/Tulunid relationship this scenario inherits from the
 # Tulunid Mamluks ruling Egypt. adm/dip/mil follow CK3's education_diplomacy_1
 # and lifestyle_poet.
-1444.1.1 = {
+867.1.1 = {
 	monarch = {
 		name = "al-Mu'tazz"
 		dynasty = "Abbasid"
-		birth_date = 1380.1.1
-		death_date = 1466.1.1
+		birth_date = 803.1.1
+		death_date = 889.1.1
 		adm = 2
 		dip = 4
 		mil = 1

@@ -5,7 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from enc import encname
-from tagdb import BY_TAG, CTRY_DATE, NOT_CK3, RULER_TITLES, TITLES, shifted
+from tagdb import BY_TAG, CTRY_DATE, NOT_CK3, RULER_TITLES, TITLES
 
 GAME_CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
 
@@ -270,7 +270,11 @@ def land_holders():
 
 def monarch_block(path):
     text = path.read_text(encoding="cp1252", errors="surrogateescape")
-    m = re.search(r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", text, re.M | re.S)
+    m = re.search(
+        rf"^{re.escape(CTRY_DATE)} = \{{\s*\n\tmonarch = \{{(.*?)^\t\}}",
+        text,
+        re.M | re.S,
+    )
     return text, (m.group(1) if m else None)
 
 
@@ -283,7 +287,7 @@ def current(body):
 
 
 def heir_dynasty(text):
-    blk = re.search(r"^1444\.1\.1 = \{\n(.*?)^\}", text, re.M | re.S)
+    blk = re.search(rf"^{re.escape(CTRY_DATE)} = \{{\n(.*?)^\}}", text, re.M | re.S)
     if not blk:
         return None
     heir = re.search(r"heir = \{(.*?)\n\t\}", blk.group(1), re.S)
@@ -414,7 +418,9 @@ def step_ck3(argv):
         if not ok:
             if fix:
 
-                blk = re.search(r"^1444\.1\.1 = \{\n(.*?)^\}", text, re.M | re.S)
+                blk = re.search(
+                    rf"^{re.escape(CTRY_DATE)} = \{{\n(.*?)^\}}", text, re.M | re.S
+                )
                 new = blk.group(1)
                 if cn is not None:
                     new = re.sub(
@@ -501,7 +507,7 @@ def ck3_sync(tag, text):
     got = ck3_ruler(tag)
     if got is None:
         return text
-    blk = re.search(r"^1444\.1\.1 = \{\n(.*?)^\}", text, re.M | re.S)
+    blk = re.search(rf"^{re.escape(CTRY_DATE)} = \{{\n(.*?)^\}}", text, re.M | re.S)
     if not blk:
         return text
     new = re.sub(
@@ -575,7 +581,7 @@ def ck3_block(tag):
             if not d_:
                 raise SystemExit(f"{tag}: CK3 character {cid_} has no {label}")
             y, m, dd = (int(x) for x in d_.split("."))
-            out.append(f"\t\t{label} = {shifted(y, m, dd)}")
+            out.append(f"\t\t{label} = {y}.{m}.{dd}")
         if claim is not None:
             out.append(f"\t\tclaim = {claim}")
         out += [f"\t\tadm = {a}", f"\t\tdip = {dp}", f"\t\tmil = {ml}"]

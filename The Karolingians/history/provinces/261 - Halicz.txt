@@ -49,7 +49,7 @@ discovered_by = ottoman
 	remove_core = PLC
 } # First partition of Poland
 
-1444.11.11 = {	owner = POL
+867.1.1 = {	owner = POL
 	controller = POL
 	add_core = POL
 	hre = no

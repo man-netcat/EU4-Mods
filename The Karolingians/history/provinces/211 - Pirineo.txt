@@ -30,7 +30,7 @@ fort_15th = yes #Castiello de Lobarre
 1813.8.31 = { revolt = { type = pretender_rebels size = 1 } controller = REB }
 1813.12.11 = { revolt = {} controller = SPA }
 
-1444.11.11 = {	owner = NAV
+867.1.1 = {	owner = NAV
 	controller = NAV
 	add_core = NAV
 	hre = no

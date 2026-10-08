@@ -74,7 +74,7 @@ discovered_by = ottoman
 1784.1.1 = { revolt = { type = anti_tax_rebels size = 2 } controller = REB } # Peasant rebellion against the nobles
 1785.1.1 = { revolt = {} controller = HAB } # The leaders are arrested and executed
 
-1444.11.11 = {	owner = BUL
+867.1.1 = {	owner = BUL
 	controller = BUL
 	add_core = BUL
 	hre = no

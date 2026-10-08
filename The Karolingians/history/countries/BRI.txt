@@ -7,6 +7,29 @@ technology_group = western
 capital = 172
 
 
+867.1.1 = {
+	monarch = {
+		name = "Salomon"
+		dynasty = "Poher"
+		birth_date = 810.1.1
+		death_date = 874.6.26
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Riwallon"
+		monarch_name = "Riwallon"
+		dynasty = "Poher"
+		birth_date = 830.1.1
+		death_date = 877.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
 1345.9.16 = {
 	monarch = {
 		name = "Jean V"
@@ -149,29 +172,6 @@ capital = 172
 		mil = 2
 	}
 }
-1444.1.1 = {
-	monarch = {
-		name = "Salomon"
-		dynasty = "Poher"
-		birth_date = 1387.1.1
-		death_date = 1451.6.26
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-	heir = {
-		name = "Riwallon"
-		monarch_name = "Riwallon"
-		dynasty = "Poher"
-		birth_date = 1407.1.1
-		death_date = 1454.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
 1450.7.19 = {
 	monarch = {
 		name = "Pierre II"

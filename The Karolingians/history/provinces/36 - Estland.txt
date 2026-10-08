@@ -37,7 +37,7 @@ discovered_by = eastern
 } # The Peace of Nystad
 
 
-1444.11.11 = {	owner = EST
+867.1.1 = {	owner = EST
 	controller = EST
 	add_core = EST
 	hre = no

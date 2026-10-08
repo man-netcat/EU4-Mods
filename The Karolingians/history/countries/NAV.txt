@@ -7,6 +7,29 @@ technology_group = western
 capital = 210	# Pamplona
 
 
+867.1.1 = {
+	monarch = {
+		name = "Gartzia"
+		dynasty = "Íñiga"
+		birth_date = 810.1.1
+		death_date = 882.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Orti"
+		monarch_name = "Orti"
+		dynasty = "Íñiga"
+		birth_date = 827.1.1
+		death_date = 922.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
 1387.1.1 = {
 	monarch = {
 		name = "Carlos III"
@@ -28,29 +51,6 @@ capital = 210	# Pamplona
 		mil = 0
 	}
 	set_ruler_flag = joan_trastamara_flag
-}
-
-1444.1.1 = {
-	monarch = {
-		name = "Gartzia"
-		dynasty = "Íñiga"
-		birth_date = 1387.1.1
-		death_date = 1459.1.1
-		adm = 2
-		dip = 3
-		mil = 2
-	}
-	heir = {
-		name = "Orti"
-		monarch_name = "Orti"
-		dynasty = "Íñiga"
-		birth_date = 1404.1.1
-		death_date = 1499.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 
 1479.1.20 = {

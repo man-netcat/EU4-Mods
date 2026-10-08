@@ -41,7 +41,7 @@ base_production = 6 } # Lale Devri (the tulip age), not appreciated by everyone
 1750.1.1 = { add_core = GRE } # Great fire (1745), earthquake in 1751, city declined
 1795.1.1 = { unrest = 6 } # Reforms by Sultan Selim III, tried to replace th Janissary corps
 
-1444.11.11 = {	owner = BYZ
+867.1.1 = {	owner = BYZ
 	controller = BYZ
 	add_core = BYZ
 	hre = no

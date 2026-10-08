@@ -27,7 +27,7 @@ discovered_by = eastern
 1807.11.30 = { controller = FRA } # Occupied by troops led by Manuel Godoy
 1808.6.18 = { controller = POR } # Revolt in Olhão
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no

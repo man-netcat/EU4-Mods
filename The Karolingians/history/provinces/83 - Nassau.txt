@@ -34,7 +34,7 @@ base_production = 3 }
 	remove_core = NSA
 } # Westfalia is dissolved after the Battle of Leipsig
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

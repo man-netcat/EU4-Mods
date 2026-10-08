@@ -15,25 +15,25 @@ set_estate_privilege = estate_burghers_exkousseiai_for_latins
 
 867.1.1 = {
 	monarch = {
-		name = "Michael III"
-		monarch_name = "Michael the Drunkard"
-		dynasty = "Amorion"
-		birth_date = 840.1.1
-		death_date = 867.11.23
-		adm = 2
-		dip = 3
-		mil = 2
-	}
-	heir = {
 		name = "Basileios"
 		monarch_name = "Basileios the Macedonian"
 		dynasty = "Makedon"
 		birth_date = 836.5.25
-		death_date = 886.12.15
-		claim = 95
+		death_date = 886.8.29
 		adm = 4
 		dip = 3
 		mil = 4
+	}
+	heir = {
+		name = "Leon"
+		monarch_name = "Leon the Wise"
+		dynasty = "Makedon"
+		birth_date = 866.9.29
+		death_date = 912.5.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
 	}
 }
 1391.2.16 = {

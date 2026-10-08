@@ -44,7 +44,7 @@ center_of_trade = 1
 1806.10.27 = { controller = FRA }
 1807.7.9 = { controller = PRU } # The Second treaty of Tilsit
 
-1444.11.11 = {	owner = BRA
+867.1.1 = {	owner = BRA
 	controller = BRA
 	add_core = BRA
 	hre = no

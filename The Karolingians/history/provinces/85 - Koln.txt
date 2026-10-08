@@ -39,7 +39,7 @@ base_production = 12 } # Farnia begins exporting "Eau de Cologne"
 	remove_core = FRA
 }# Congress of Vienna
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

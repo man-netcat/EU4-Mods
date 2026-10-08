@@ -32,7 +32,7 @@ add_province_triggered_modifier = promised_land_modifier
 } # Part of the Ottoman empire
 1750.1.1 = { add_core = SYR }
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

@@ -42,7 +42,7 @@ base_production = 8 } # Stockholm commanded the Baltic Sea trade
 	remove_core = FRA
 } # Napoleon abdicates undconditionally
 
-1444.11.11 = {	owner = HSA
+867.1.1 = {	owner = HSA
 	controller = HSA
 	add_core = HSA
 	hre = no

@@ -47,7 +47,7 @@ hre = no
 	add_core = PRU
 } # Battle of Leipzig
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

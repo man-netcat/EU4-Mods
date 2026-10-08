@@ -35,7 +35,7 @@ discovered_by = ottoman
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 1814.4.11 = { owner = BAV controller = BAV remove_core = FRA }
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

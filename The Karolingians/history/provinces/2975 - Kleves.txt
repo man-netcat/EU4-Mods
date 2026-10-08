@@ -45,7 +45,7 @@ hre = no
 	remove_core = BRG
 } # Battle of Leipzig
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

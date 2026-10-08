@@ -42,7 +42,7 @@ discovered_by = ottoman
 1796.1.1 = { controller = FRA } # French invasion
 1796.4.16 = { controller = SPI } # Peace between Sardinia and France
 
-1444.11.11 = {	owner = SAR
+867.1.1 = {	owner = SAR
 	controller = SAR
 	add_core = SAR
 	hre = no

@@ -42,7 +42,7 @@ from build import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
 
 from build import BY_TAG  # noqa: E402
 
-from tagdb import DIPLOMACY  # noqa: E402
+from tagdb import CTRY_DATE, DIPLOMACY  # noqa: E402
 
 fail = []
 
@@ -183,7 +183,7 @@ def run() -> int:
             errors="surrogateescape",
         ).read()
         note(f"capital = {CAPS[t]}" in txt, f"{t} capital = {CAPS[t]}")
-        note("monarch = {" in txt, f"{t} has a 1444 monarch")
+        note("monarch = {" in txt, f"{t} has an 867 monarch")
 
     print("\n== every kept realm has a deliberate rank ==")
     unwritten = []
@@ -621,10 +621,12 @@ def run() -> int:
                 continue
             body = open(cp, encoding="cp1252", errors="surrogateescape").read()
             blk = re.search(
-                r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", body, re.M | re.S
+                rf"^{re.escape(CTRY_DATE)} = \{{\s*\n\tmonarch = \{{(.*?)^\t\}}",
+                body,
+                re.M | re.S,
             )
             if not blk:
-                note(False, f"{t} has a 1444 monarch")
+                note(False, f"{t} has an 867 monarch")
                 continue
             got_n, got_d = _b.current(blk.group(1))
             note(
@@ -634,7 +636,7 @@ def run() -> int:
             )
         print("        run `python3 tools/build.py --fix` to resync")
 
-    START_DT = (1444, 11, 11)
+    START_DT = (867, 1, 1)
     for t in TAGS + RULER_TAGS:
         p = os.path.join(COUNTRY_OUT, f"{t}.txt")
         if not os.path.exists(p):
@@ -642,10 +644,12 @@ def run() -> int:
             continue
         body = open(p, encoding="cp1252", errors="surrogateescape").read()
         blk = re.search(
-            r"^1444\.1\.1 = \{\s*\n\tmonarch = \{(.*?)^\t\}", body, re.M | re.S
+            rf"^{re.escape(CTRY_DATE)} = \{{\s*\n\tmonarch = \{{(.*?)^\t\}}",
+            body,
+            re.M | re.S,
         )
         if not blk:
-            note(False, f"{t} has a 1444 monarch")
+            note(False, f"{t} has an 867 monarch")
             continue
         m = blk.group(1)
         nm = re.search(r'name = "([^"]+)"', m)
@@ -659,7 +663,7 @@ def run() -> int:
         regent = "regent = yes" in m
         note(
             age >= 15 or regent,
-            f"{t} ruled by {nm.group(1)}, {age} in 1444"
+            f"{t} ruled by {nm.group(1)}, {age} in 867"
             + (" (regent)" if regent else ""),
         )
         print(
@@ -682,11 +686,11 @@ def run() -> int:
     for t in ktags:
         p = os.path.join(COUNTRY_OUT, f"{t}.txt")
         body = open(p, encoding="cp1252", errors="surrogateescape").read()
-        blk = re.search(r"^1444\.1\.1 = \{.*?^\}", body, re.M | re.S)
+        blk = re.search(rf"^{re.escape(CTRY_DATE)} = \{{.*?^\}}", body, re.M | re.S)
         ds = re.findall(r'dynasty = "([^"]+)"', blk.group(0)) if blk else []
         note(
             bool(ds) and set(ds) == {dynasty},
-            f"{t} 1444 ruler and heir carry the {dynasty} dynasty",
+            f"{t} 867 ruler and heir carry the {dynasty} dynasty",
         )
     dec = open(
         os.path.join(MOD, "decisions", "KarolingianHRE.txt"),

@@ -46,7 +46,7 @@ discovered_by = ottoman
 } # Tilly beats the Winterking. Deus Vult!
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = GMA
+867.1.1 = {	owner = GMA
 	controller = GMA
 	add_core = GMA
 	hre = no

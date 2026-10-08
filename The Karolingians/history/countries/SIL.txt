@@ -8,6 +8,29 @@ capital = 264
 
 # Dukes of Olawa/Lubin
 
+867.1.1 = {
+	monarch = {
+		name = "Gardomir"
+		dynasty = "Slezan"
+		birth_date = 844.1.1
+		death_date = 912.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Uniedrog"
+		monarch_name = "Uniedrog"
+		dynasty = "Slezan"
+		birth_date = 863.1.1
+		death_date = 942.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
 1399.7.12 = {
 	monarch = {
 		name = "Henryk IX"
@@ -95,29 +118,6 @@ capital = 264
 }
 
 # Dukes of Liegnitz/Legnica
-
-1444.1.1 = {
-	monarch = {
-		name = "Gardomir"
-		dynasty = "Slezan"
-		birth_date = 1421.1.1
-		death_date = 1489.1.1
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-	heir = {
-		name = "Uniedrog"
-		monarch_name = "Uniedrog"
-		dynasty = "Slezan"
-		birth_date = 1440.1.1
-		death_date = 1519.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
 
 1446.5.3 = {
 	heir = {

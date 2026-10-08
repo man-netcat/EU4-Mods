@@ -9,6 +9,29 @@ technology_group = eastern
 historical_friend = POL
 capital = 272 # Vilnius
 
+867.1.1 = {
+	monarch = {
+		name = "Palemon"
+		dynasty = "Palemonaitis"
+		birth_date = 825.1.1
+		death_date = 890.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kunos"
+		monarch_name = "Kunos"
+		dynasty = "Palemonaitis"
+		birth_date = 851.1.1
+		death_date = 935.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
 1392.1.1 = {
 	monarch = {
 		name = "Vytautas"
@@ -57,29 +80,6 @@ capital = 272 # Vilnius
 	clear_scripted_personalities = yes
 	add_ruler_personality = scholar_personality
 	add_ruler_personality = incorruptible_personality
-}
-
-1444.1.1 = {
-	monarch = {
-		name = "Palemon"
-		dynasty = "Palemonaitis"
-		birth_date = 1402.1.1
-		death_date = 1467.1.1
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-	heir = {
-		name = "Kunos"
-		monarch_name = "Kunos"
-		dynasty = "Palemonaitis"
-		birth_date = 1428.1.1
-		death_date = 1512.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 
 1461.8.5 = {

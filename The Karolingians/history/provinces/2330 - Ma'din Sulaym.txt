@@ -49,7 +49,7 @@ discovered_by = east_african
 	remove_core = NAJ
 } # Mecca is returned to the Ottomans
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

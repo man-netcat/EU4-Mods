@@ -62,7 +62,7 @@ discovered_by = ottoman
 } # Ceded to France, since the Republic of Genoa is unable to restore control
 1769.6.13 = { revolt = {} controller = FRA } # France managed to overcome the resistance & Paoli flees
 
-1444.11.11 = {	owner = ITA
+867.1.1 = {	owner = ITA
 	controller = ITA
 	add_core = ITA
 	hre = no

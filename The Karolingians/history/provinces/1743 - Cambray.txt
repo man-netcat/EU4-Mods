@@ -31,7 +31,7 @@ discovered_by = ottoman
 1789.5.5 = { base_tax = 6 base_production = 6 } # The General Estates
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

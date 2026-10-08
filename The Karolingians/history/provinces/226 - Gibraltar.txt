@@ -41,7 +41,7 @@ discovered_by = eastern
 1720.1.1 = { fort_18th = yes }
 
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no

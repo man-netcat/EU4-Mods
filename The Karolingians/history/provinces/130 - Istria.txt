@@ -46,7 +46,7 @@ add_core = ITA
 	remove_core = FRA
 } # Napoleon abdicates
 
-1444.11.11 = {	owner = ITA
+867.1.1 = {	owner = ITA
 	controller = ITA
 	add_core = ITA
 	hre = no

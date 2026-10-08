@@ -46,7 +46,7 @@ discovered_by = ottoman
 1715.1.1 = { fort_17th = no fort_18th = yes }
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

@@ -48,7 +48,7 @@ discovered_by = ottoman
 	remove_core = WES
 } # The kingdom is dissolved
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

@@ -47,7 +47,7 @@ discovered_by = ottoman
 } # Napoleon abdicates
 
 
-1444.11.11 = {	owner = DAL
+867.1.1 = {	owner = DAL
 	controller = DAL
 	add_core = DAL
 	hre = no

@@ -23,7 +23,7 @@ discovered_by = east_african
 
 1517.1.1 = { owner = TUR controller = TUR add_core = TUR } # Conquered by the Ottomans
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

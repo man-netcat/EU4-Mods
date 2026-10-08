@@ -32,7 +32,7 @@ discovered_by = ottoman
 1709.1.1 = { unrest = 5 } # Montenegro's Muslim converts were massacred at Vladika Danilo's order
 1712.1.1 = { unrest = 2 } # Cetinje sacked again as a response
 
-1444.11.11 = {	owner = MON
+867.1.1 = {	owner = MON
 	controller = MON
 	add_core = MON
 	hre = no

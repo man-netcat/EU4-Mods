@@ -25,7 +25,7 @@ discovered_by = nomad_group
  controller = RUS remove_core = CRI add_core = RUS remove_core = TUR } # Treaty of Kuchuk-Kainarji
 1777.1.1 = { religion = orthodox culture = russian } # Kouban Cossacks, Stavropol founded
 
-1444.11.11 = {	owner = CRI
+867.1.1 = {	owner = CRI
 	controller = CRI
 	add_core = CRI
 	hre = no

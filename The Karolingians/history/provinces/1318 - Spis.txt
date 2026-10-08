@@ -57,7 +57,7 @@ discovered_by = QAS
 1710.1.1  = { revolt = {} } # Plague
 1711.1.1  = { controller = HAB } # The House of Habsburg recognized as the new ruler
 
-1444.11.11 = {	owner = GMA
+867.1.1 = {	owner = GMA
 	controller = GMA
 	add_core = GMA
 	hre = no

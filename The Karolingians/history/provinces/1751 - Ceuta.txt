@@ -35,7 +35,7 @@ discovered_by = eastern
 } # Ceuta decides to become Spanish and not Portuguese
 
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no

@@ -27,7 +27,7 @@ discovered_by = ottoman
 } # Friedrich III becomes king of Prussia
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = BRA
+867.1.1 = {	owner = BRA
 	controller = BRA
 	add_core = BRA
 	hre = no

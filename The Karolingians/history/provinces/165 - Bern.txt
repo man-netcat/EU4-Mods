@@ -41,7 +41,7 @@ discovered_by = ottoman
 1802.6.1 = { revolt = { type = revolutionary_rebels size = 1 } controller = REB } # Swiss rebellion
 1802.9.18 = { revolt = {} controller = SWI }
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

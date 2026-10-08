@@ -55,7 +55,7 @@ base_production = 8 } # Maximilian's economic reforms
 	remove_core = BAV
 } # Treaty of Paris, ceded to the Habsburgs
 
-1444.11.11 = {	owner = BAV
+867.1.1 = {	owner = BAV
 	controller = BAV
 	add_core = BAV
 	hre = no

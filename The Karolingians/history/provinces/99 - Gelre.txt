@@ -67,7 +67,7 @@ base_production = 9 } # Protestants expelled from France
 	remove_core = FRA
 } # William returns to the Netherlands
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

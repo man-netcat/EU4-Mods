@@ -39,7 +39,7 @@ base_production = 3 } #The Decentralizing Effect of the Provincial System
 1770.3.9 = { revolt = { type = nationalist_rebels size = 1 } controller = REB } # Revolutionary government
 1770.6.1 = { revolt = {} controller = TUR }
 
-1444.11.11 = {	owner = CRT
+867.1.1 = {	owner = CRT
 	controller = CRT
 	add_core = CRT
 	hre = no

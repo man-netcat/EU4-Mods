@@ -42,7 +42,7 @@ discovered_by = ottoman
 	remove_core = FRA
 } # Treaty of Fontainebleau, Napoleon abdicates unconditionally
 
-1444.11.11 = {	owner = ITA
+867.1.1 = {	owner = ITA
 	controller = ITA
 	add_core = ITA
 	hre = no

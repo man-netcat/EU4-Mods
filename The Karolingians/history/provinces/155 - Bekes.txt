@@ -58,7 +58,7 @@ discovered_by = ottoman
 1705.1.1 = { revolt = {} }
 1711.1.1 = { controller = HAB } # The treaty of Szatmar
 
-1444.11.11 = {	owner = BUL
+867.1.1 = {	owner = BUL
 	controller = BUL
 	add_core = BUL
 	hre = no

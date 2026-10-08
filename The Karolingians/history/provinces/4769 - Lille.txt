@@ -36,7 +36,7 @@ fort_15th = yes
 } # Vauban's Citadel of Lille begins to be used while still under construction.
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = FRA
+867.1.1 = {	owner = FRA
 	controller = FRA
 	add_core = FRA
 	hre = no

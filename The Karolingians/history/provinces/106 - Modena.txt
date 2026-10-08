@@ -32,7 +32,7 @@ discovered_by = ottoman
 } # Transpadane and Cispadane Merge
 1814.4.11 = { owner = MOD controller = MOD remove_core = ITA }
 
-1444.11.11 = {	owner = ITA
+867.1.1 = {	owner = ITA
 	controller = ITA
 	add_core = ITA
 	hre = no

@@ -43,7 +43,7 @@ discovered_by = ottoman
 1735.1.1 = { revolt = {} controller = PLC }
 1772.8.5 = { owner = HAB controller = HAB add_core = HAB } #First Partition
 
-1444.11.11 = {	owner = POL
+867.1.1 = {	owner = POL
 	controller = POL
 	add_core = POL
 	hre = no

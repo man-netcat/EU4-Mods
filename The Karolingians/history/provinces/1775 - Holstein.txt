@@ -40,7 +40,7 @@ base_production = 5 }
 	remove_core = FRA
 } # Napoleon abdicates unconditionally
 
-1444.11.11 = {	owner = HSA
+867.1.1 = {	owner = HSA
 	controller = HSA
 	add_core = HSA
 	hre = no

@@ -69,7 +69,7 @@ latent_trade_goods = {
 	remove_core = FRA
 } # The United Kingdom of the Netherlands
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

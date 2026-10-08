@@ -28,7 +28,7 @@ discovered_by = east_african
 	remove_core = MAM
 } # Invaded by the Ottomans
 
-1444.11.11 = {	owner = EGY
+867.1.1 = {	owner = EGY
 	controller = EGY
 	add_core = EGY
 	hre = no

@@ -45,7 +45,7 @@ discovered_by = east_african
 	add_core = OMA
 } # Ruled by the Sultanate of Oman
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

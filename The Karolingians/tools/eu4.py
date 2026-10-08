@@ -232,7 +232,7 @@ def dev(pid):
     return 0.0
 
 
-PROV_DATE = "1444.11.11"
+PROV_DATE = "867.1.1"
 
 
 def force_block(new_owner):
@@ -705,7 +705,7 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
         for i, ln in enumerate(lines):
             m = re.match(r"^(\d+)\.(\d+)\.(\d+)\s*=", ln.strip())
             if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) >= (
-                1444,
+                867,
                 1,
                 1,
             ):
@@ -966,7 +966,7 @@ if vanilla_is_newer():
 else:
     print("\n\033[1m==> probe\033[0m\n    cache is current, skipping")
 
-START_DT = (1444, 11, 11)
+START_DT = (867, 1, 1)
 
 DATE_RE = re.compile(r"^(\d+)\.(\d+)\.(\d+)\s*=\s*\{")
 KV_RE = re.compile(r"\b(owner|controller|add_core|remove_core)\s*=\s*([A-Za-z0-9_]+)")
@@ -1057,7 +1057,7 @@ def step_start():
     for pid, fn in bad_hre[:10]:
         print(f"     {pid:5} {fn[:30]:30} hre = yes")
     if bad_owner or bad_ctrl or bad_hre:
-        print("\nFAIL: pre-1444 vanilla events still win at the start date")
+        print("\nFAIL: vanilla events still win at the start date")
         return 1
     print("\nOK: every intended province is held at the start date")
     return 0

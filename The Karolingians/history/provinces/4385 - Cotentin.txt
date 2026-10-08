@@ -34,7 +34,7 @@ center_of_trade = 1
 1641.1.1 = { unrest = 0 }
 1786.1.1 = { base_tax = 5 base_production = 5 } # The Eden Agreement
 
-1444.11.11 = {	owner = FRA
+867.1.1 = {	owner = FRA
 	controller = FRA
 	add_core = FRA
 	hre = no

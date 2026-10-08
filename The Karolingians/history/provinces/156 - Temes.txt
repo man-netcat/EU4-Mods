@@ -71,7 +71,7 @@ discovered_by = ottoman
 1770.1.1 = { revolt = {} controller = HAB }
 
 
-1444.11.11 = {	owner = BUL
+867.1.1 = {	owner = BUL
 	controller = BUL
 	add_core = BUL
 	hre = no

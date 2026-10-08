@@ -50,7 +50,7 @@ discovered_by = ottoman
 	owner = SER
 }
 
-1444.11.11 = {	owner = BUL
+867.1.1 = {	owner = BUL
 	controller = BUL
 	add_core = BUL
 	hre = no

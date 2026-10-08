@@ -74,7 +74,7 @@ discovered_by = ottoman
 1703.1.1 = { unrest = 6 } # Kuruc rebellion, lead by Francisc Rakoczy
 1711.1.1 = { unrest = 0 } # The treaty of Szatmar
 
-1444.11.11 = {	owner = BUL
+867.1.1 = {	owner = BUL
 	controller = BUL
 	add_core = BUL
 	hre = no

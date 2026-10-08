@@ -43,26 +43,26 @@ technology_group = western
 capital = 207 #Asturias
 government_rank = 2
 
-1444.1.1 = {
+867.1.1 = {
 	monarch = {
 		name = "Alfonsu"
 		monarch_name = "Alfonsu II"
 		dynasty = "Cantabria"
-		birth_date = 1392.1.1
-		death_date = 1458.1.1
+		birth_date = 815.1.1
+		death_date = 881.1.1
 		adm = 3
 		dip = 3
 		mil = 3
 	}
 }
 
-1444.1.1 = {
+867.1.1 = {
 	heir = {
 		name = "Garci"
 		monarch_name = "Garci"
 		dynasty = "Cantabria"
-		birth_date = 1412.1.1
-		death_date = 1471.1.1
+		birth_date = 835.1.1
+		death_date = 894.1.1
 		claim = 90
 		adm = 2
 		dip = 2
@@ -73,7 +73,7 @@ government_rank = 2
 # A general is given because the three areas arrive with no court at all, and a
 # realm of 12 provinces still needs a field army against Castile's rump to the
 # south and Aragon to the east.
-1444.11.10 = {
+867.11.10 = {
 	leader = {
 		name = "Pelayo"
 		dynasty = "Cantabria"
@@ -82,6 +82,6 @@ government_rank = 2
 		shock = 2
 		manuever = 2
 		siege = 1
-		death_date = 1466.1.1
+		death_date = 889.1.1
 	}
 }

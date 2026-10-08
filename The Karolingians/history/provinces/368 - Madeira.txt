@@ -34,7 +34,7 @@ add_core = ADU
 }
 1497.1.1 = { capital = "Funchal" }
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no

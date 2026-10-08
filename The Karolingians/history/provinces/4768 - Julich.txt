@@ -37,7 +37,7 @@ discovered_by = ottoman
 	remove_core = FRA
 } # Napoleon abdicates
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

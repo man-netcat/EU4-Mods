@@ -45,7 +45,7 @@ discovered_by = nomad_group
 1658.1.1 = { revolt = { type = revolutionary_rebels size = 0.5 } controller = REB } # Revolt of Abaza Hasan Pasha
 1659.1.1 = { revolt = {} controller = TUR }
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

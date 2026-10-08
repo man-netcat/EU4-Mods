@@ -47,7 +47,7 @@ add_province_triggered_modifier = religious_center
 1624.1.1 = { controller = PER }
 1638.12.24 = { controller = TUR }
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

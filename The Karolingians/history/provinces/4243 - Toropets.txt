@@ -30,7 +30,7 @@ discovered_by = nomad_group
 1812.8.17 = { controller = FRA } # Battle of Smolensk
 1812.11.9 = { controller = RUS }
 
-1444.11.11 = {	owner = LIT
+867.1.1 = {	owner = LIT
 	controller = LIT
 	add_core = LIT
 	hre = no

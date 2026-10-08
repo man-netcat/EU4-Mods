@@ -41,7 +41,7 @@ discovered_by = ottoman
 1812.6.28 = { controller = FRA } # Occupied by French troops
 1812.12.10 = { controller = RUS }
 
-1444.11.11 = {	owner = ZEM
+867.1.1 = {	owner = ZEM
 	controller = ZEM
 	add_core = ZEM
 	hre = no

@@ -28,7 +28,7 @@ discovered_by = eastern
 1810.9.15 = { controller = FRA } # Occupied by French troops
 1811.4.5 = { controller = POR }
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no

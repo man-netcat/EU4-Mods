@@ -65,7 +65,7 @@ discovered_by = ottoman
 	remove_core = PRU
 } # Ceded to Denmark in exchange for Vorpommern
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

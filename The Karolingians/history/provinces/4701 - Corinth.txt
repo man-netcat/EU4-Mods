@@ -46,7 +46,7 @@ discovered_by = nomad_group
 1718.1.1 = { owner = TUR controller = TUR remove_core = VEN }
 1750.1.1 = { add_core = GRE }
 
-1444.11.11 = {	owner = BYZ
+867.1.1 = {	owner = BYZ
 	controller = BYZ
 	add_core = BYZ
 	hre = no

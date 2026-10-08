@@ -48,7 +48,7 @@ discovered_by = ottoman
 1806.1.1 = { controller = RUS } # Occupied by Russian troops
 1812.5.28 = { controller = WAL } # Treaty of Bucharest
 
-1444.11.11 = {	owner = BUL
+867.1.1 = {	owner = BUL
 	controller = BUL
 	add_core = BUL
 	hre = no

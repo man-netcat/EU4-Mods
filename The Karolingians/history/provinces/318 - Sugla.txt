@@ -37,7 +37,7 @@ base_production = 2 } # The Decentralizing Effect of the Provincial System
 	culture = greek #Majority greek
 }
 
-1444.11.11 = {	owner = BYZ
+867.1.1 = {	owner = BYZ
 	controller = BYZ
 	add_core = BYZ
 	hre = no

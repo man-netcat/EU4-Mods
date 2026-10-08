@@ -55,7 +55,7 @@ base_production = 8 }
 1758.1.22 = { controller = RUS } # Occupied by Russia
 1762.5.5 = { controller = PRU } # Russians withdraw
 
-1444.11.11 = {	owner = PRU
+867.1.1 = {	owner = PRU
 	controller = PRU
 	add_core = PRU
 	hre = no

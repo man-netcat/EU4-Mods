@@ -56,7 +56,7 @@ discovered_by = ottoman
 	capital = "Limburg"
 } # Vienna Congress, most of Upper Guelders now incorporated into the Netherlands and joined with the province of Limburg.
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

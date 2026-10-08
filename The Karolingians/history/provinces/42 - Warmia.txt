@@ -41,7 +41,7 @@ discovered_by = ottoman
 1660.1.1 = { controller = PLC }
 1772.9.22 = { owner = PRU controller = PRU religion = protestant } # First partition of Poland
 
-1444.11.11 = {	owner = PRU
+867.1.1 = {	owner = PRU
 	controller = PRU
 	add_core = PRU
 	hre = no

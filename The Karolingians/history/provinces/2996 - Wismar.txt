@@ -27,7 +27,7 @@ discovered_by = ottoman
 1803.1.1 = { owner = MKL controller = MKL add_core = MKL } #Pledged to Mecklenburg-Schwerin
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = HSA
+867.1.1 = {	owner = HSA
 	controller = HSA
 	add_core = HSA
 	hre = no

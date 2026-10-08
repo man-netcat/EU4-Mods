@@ -65,7 +65,7 @@ center_of_trade = 2
 } # Treaty of Fontainebleau, Napoleon abdicates unconditionally
 1814.4.20 = { revolt = { type = nationalist_rebels size = 2 } controller = REB } # The Milan insurrection
 
-1444.11.11 = {	owner = ITA
+867.1.1 = {	owner = ITA
 	controller = ITA
 	add_core = ITA
 	hre = no

@@ -18,7 +18,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 
-1444.11.11 = {	owner = BUL
+867.1.1 = {	owner = BUL
 	controller = BUL
 	add_core = BUL
 	hre = no

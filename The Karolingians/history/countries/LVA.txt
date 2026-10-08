@@ -6,12 +6,12 @@ religion = catholic
 primary_culture = baltic_german
 capital = 38
 
-1444.1.1 = {
+867.1.1 = {
 	monarch = {
 		name = "Meelis"
 		dynasty = "L‰‰nemaa"
-		birth_date = 1417.1.1
-		death_date = 1467.1.1
+		birth_date = 840.1.1
+		death_date = 890.1.1
 		adm = 2
 		dip = 2
 		mil = 2

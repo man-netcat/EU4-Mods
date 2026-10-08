@@ -32,7 +32,7 @@ discovered_by = ottoman
 1657.1.1 = { unrest = 2 } # An agreement is concluded at Villmergren but tensions remain
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
 
-1444.11.11 = {	owner = LOT
+867.1.1 = {	owner = LOT
 	controller = LOT
 	add_core = LOT
 	hre = no

@@ -32,7 +32,7 @@ discovered_by = ottoman
 1713.1.1 = { owner = GBR controller = GBR add_core = GBR }
 1782.1.1 = { owner = SPA controller = SPA }
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no

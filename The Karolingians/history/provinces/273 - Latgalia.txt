@@ -41,7 +41,7 @@ discovered_by = eastern
 	add_core = RUS
 } # First partition of Poland
 
-1444.11.11 = {	owner = LVA
+867.1.1 = {	owner = LVA
 	controller = LVA
 	add_core = LVA
 	hre = no

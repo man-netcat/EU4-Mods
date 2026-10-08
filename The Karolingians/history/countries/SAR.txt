@@ -7,6 +7,29 @@ primary_culture = sardinian
 capital = 127	# Cagliari
 fixed_capital = 127 # Cannot move capital away from this province & no power cost to move to it
 
+867.1.1 = {
+	monarch = {
+		name = "Gublenu"
+		dynasty = "Torchitoriu"
+		birth_date = 821.1.1
+		death_date = 870.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Felictu"
+		monarch_name = "Felictu"
+		dynasty = "Torchitoriu"
+		birth_date = 848.1.1
+		death_date = 900.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
 1387.1.1 = {
 	monarch = { 
 		name = "Mariano V"
@@ -40,26 +63,3 @@ fixed_capital = 127 # Cannot move capital away from this province & no power cos
 		adm = 1
 	}
 }
-1444.1.1 = {
-	monarch = {
-		name = "Gublenu"
-		dynasty = "Torchitoriu"
-		birth_date = 1398.1.1
-		death_date = 1447.1.1
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-	heir = {
-		name = "Felictu"
-		monarch_name = "Felictu"
-		dynasty = "Torchitoriu"
-		birth_date = 1425.1.1
-		death_date = 1477.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-

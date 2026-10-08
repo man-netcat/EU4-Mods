@@ -31,7 +31,7 @@ discovered_by = indian
 1748.1.1 = { unrest = 4 } # The empire began to decline
 1779.1.1 = { unrest = 0 } # With the Qajar dynasty the situation stabilized
 
-1444.11.11 = {	owner = ARB
+867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
 	hre = no

@@ -32,7 +32,7 @@ discovered_by = ottoman
 1656.1.1 = { unrest = 7 } # Protestants are expelled from Schwyz which lead to the First War of Villmergen
 1657.1.1 = { unrest = 2 } # An agreement is concluded at Villmergren but tensions remain
 
-1444.11.11 = {	owner = GER
+867.1.1 = {	owner = GER
 	controller = GER
 	add_core = GER
 	hre = no

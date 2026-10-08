@@ -34,12 +34,12 @@ change_estate_land_share = {
 
 add_accepted_culture = berber
 
-1444.1.1 = {
+867.1.1 = {
 	monarch = {
 		name = "Muhammad"
 		dynasty = "Umayyad"
-		birth_date = 1400.1.1
-		death_date = 1463.8.4
+		birth_date = 823.1.1
+		death_date = 886.8.4
 		adm = 1
 		dip = 1
 		mil = 2
@@ -48,8 +48,8 @@ add_accepted_culture = berber
 		name = "al-Mundir"
 		monarch_name = "al-Mundir"
 		dynasty = "Umayyad"
-		birth_date = 1421.1.11
-		death_date = 1465.6.24
+		birth_date = 844.1.11
+		death_date = 888.6.24
 		claim = 90
 		adm = 1
 		dip = 1
@@ -57,12 +57,12 @@ add_accepted_culture = berber
 	}
 }
 
-1444.1.1 = {
+867.1.1 = {
 	general = {
 		name = "Yusuf"
 		dynasty = "Umayyad"
-		birth_date = 1391.1.1
-		death_date = 1467.1.1
+		birth_date = 814.1.1
+		death_date = 890.1.1
 		fire = 2
 		shock = 2
 		manuever = 2
@@ -70,12 +70,12 @@ add_accepted_culture = berber
 	}
 }
 
-1444.1.1 = {
+867.1.1 = {
 	advisor = {
 		name = "Umar"
 		dynasty = "Umayyad"
-		birth_date = 1387.1.1
-		death_date = 1452.1.1
+		birth_date = 810.1.1
+		death_date = 875.1.1
 		fire = 2
 		shock = 2
 		manuever = 2
@@ -83,7 +83,7 @@ add_accepted_culture = berber
 	}
 }
 
-1444.11.10 = {
+867.11.10 = {
 	leader = {
 		name = "Hamid"
 		dynasty = "Umayyad"
@@ -92,6 +92,6 @@ add_accepted_culture = berber
 		shock = 2
 		manuever = 2
 		siege = 1
-		death_date = 1474.1.1
+		death_date = 897.1.1
 	}
 }

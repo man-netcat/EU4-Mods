@@ -26,7 +26,7 @@ center_of_trade = 2
 1774.7.21 = { owner = RUS controller = RUS add_core = RUS remove_core = TUR } # Treaty of Kuchuk-Kainarji
 1804.1.1 = { capital = "Feodosiya" } # The city is renamed
 
-1444.11.11 = {	owner = BYZ
+867.1.1 = {	owner = BYZ
 	controller = BYZ
 	add_core = BYZ
 	hre = no

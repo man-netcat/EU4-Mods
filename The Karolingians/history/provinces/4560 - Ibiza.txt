@@ -34,7 +34,7 @@ discovered_by = ottoman
 1713.7.13 = { revolt = {} remove_core = ARA }
 1714.9.14 = { controller = SPA } # Mallorca and Eïvissa surrender shortly after the fall of Barcelona
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no

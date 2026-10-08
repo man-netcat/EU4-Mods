@@ -35,7 +35,7 @@ discovered_by = eastern
 1810.7.25 = { controller = FRA } # Invaded after the battle of Côa
 1811.1.1 = { controller = POR } # The Napoleonic army retreats from Portugal
 
-1444.11.11 = {	owner = ADU
+867.1.1 = {	owner = ADU
 	controller = ADU
 	add_core = ADU
 	hre = no
