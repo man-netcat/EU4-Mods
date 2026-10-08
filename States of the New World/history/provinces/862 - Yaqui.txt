@@ -1,12 +1,13 @@
 # 862 - Yaqui
 
-owner = SNA
-controller = SNA
+owner = YAQ
+controller = YAQ
 culture = piman
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 5
-add_core = SNA
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = YAQ
 trade_goods = copper

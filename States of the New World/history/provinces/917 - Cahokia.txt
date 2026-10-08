@@ -1,12 +1,13 @@
 # 917 - Cahokia
 
-owner = ILI
-controller = ILI
+owner = CAO
+controller = CAO
 culture = illini
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = ILI
+base_manpower = 3
+add_core = CAO
 trade_goods = grain

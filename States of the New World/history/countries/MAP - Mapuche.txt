@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = mapuche
+religion = animism
+capital = 785
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Lautaro"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Pelantaro"
+		birth_date = 1426
+		death_date = 1490
+		claim = 86
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

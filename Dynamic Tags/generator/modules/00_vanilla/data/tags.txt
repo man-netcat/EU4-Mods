@@ -1,0 +1,69 @@
+# Base tags that get variant tags (one tag per line).
+# Major European tags - add or remove as desired.
+# Tags missing from the configured sources are reported and skipped.
+
+# Scandinavia
+DAN
+SWE
+NOR
+
+# British Isles
+ENG
+GBR
+IRE
+SCO
+WAL
+
+# Iberia
+CAS
+SPA
+ARA
+POR
+NAV
+CAT
+
+# France and Low Countries
+FRA
+BUR
+PRO
+LOR
+BRE
+NED
+HOL
+LUX
+
+# Italy
+VEN
+NAP
+MLO
+FLO
+PAP
+GEN
+TUS
+SIC
+AQU
+
+# Central Europe
+HAB
+HUN
+BOH
+SAX
+BAV
+PRU
+GER
+SWI
+POL
+LIT
+
+# Balkans
+SER
+BOS
+CRO
+ALB
+RAG
+
+# Eastern Europe / East
+TUR
+MOS
+RUS
+NOV

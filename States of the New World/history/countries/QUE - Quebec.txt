@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = innu
+religion = totemism
+capital = 4895
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Louis"
+		dynasty = "de Valois"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Charles"
+		dynasty = "de Valois"
+		birth_date = 1420
+		death_date = 1493
+		claim = 92
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}

@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 134 146 58 }
+
+monarch_names = { "Wepam" "Kojak" "Hankali" "Tosik" "Yumano" "Pule" }
+
+historical_idea_groups = {
+	mdu_ideas
+}
+
+random_nation_chance = 0

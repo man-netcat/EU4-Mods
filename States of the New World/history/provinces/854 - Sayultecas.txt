@@ -1,12 +1,13 @@
 # 854 - Sayultecas
 
-owner = XLC
-controller = XLC
+owner = XAL
+controller = XAL
 culture = tepic
 religion = nahuatl
 is_city = yes
+discovered_by = high_american
 base_tax = 4
 base_production = 4
 base_manpower = 5
-add_core = XLC
-trade_goods = silver
+add_core = XAL
+trade_goods = gold

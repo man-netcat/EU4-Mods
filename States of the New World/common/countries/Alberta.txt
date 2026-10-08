@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 192 160 96 }
+
+monarch_names = { "Banff" "Calgary" "Edmonton" "Jasper" "Peace" "Red Deer" "Lethbridge" "Medicine Hat" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

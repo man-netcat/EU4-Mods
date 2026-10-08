@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 60 90 150 }
+
+monarch_names = { "Kakohana" "Palkan" "Yaaxa" }
+
+historical_idea_groups = {
+	ktx_ideas
+}
+
+random_nation_chance = 0

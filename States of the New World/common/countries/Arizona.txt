@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 216 197 150 }
+
+monarch_names = { "James" "Noel" "Marcus" "Peter" "Hugh" "Simon" "Walt" "Owen" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

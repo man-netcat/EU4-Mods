@@ -1,0 +1,21 @@
+# No previous file for Tzotzil
+
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = lacandon
+religion = mesoamerican_religion
+technology_group = high_american
+capital = 4585
+
+
+
+government_rank = 1
+1435.1.1 = {
+	monarch = {
+		name = "Vahxak"
+		dynasty = "Tzotzil"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}

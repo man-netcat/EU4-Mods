@@ -1,0 +1,19 @@
+# Dynamic Tags rules
+#
+# Each rule creates, for every base tag in data/tags.txt, a variant tag
+# that carries a copy of the base tag's country definition plus a modern
+# flag. Hidden events switch to the variant tag while the rule's
+# conditions hold, and switch back when they stop holding.
+#
+# Rule syntax:
+#   RULE_ID = {
+#       conditions = { ... }     # EU4 trigger block, required
+#       tags = { tag = DAN ... } # optional: restrict the rule to these
+#                                # base tags (default: data/tags.txt)
+#   }
+
+REPUBLIC = {
+	conditions = {
+		government = republic
+	}
+}

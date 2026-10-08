@@ -1,12 +1,13 @@
 # 4923 - Pacaha
 
-owner = LOU
-controller = LOU
-culture = caddo
+owner = PCH
+controller = PCH
+culture = yoron
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = LOU
+base_manpower = 3
+add_core = PCH
 trade_goods = sugar

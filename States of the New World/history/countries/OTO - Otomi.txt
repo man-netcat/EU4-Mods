@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = otomi
+religion = nahuatl
+technology_group = high_american
+capital = 4641
+
+
+
+government_rank = 1
+1444.11.11 = {
+	monarch = {
+		name = "Hedia"
+		dynasty = "Otomi"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}

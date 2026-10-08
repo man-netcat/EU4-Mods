@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = huron
+religion = totemism
+capital = 988
+government_rank = 2
+

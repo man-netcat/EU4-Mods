@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 160 66 44 }
+
+monarch_names = { "Wisaks" "Gwaas" "Laxgyibuu" "Nislagi" "Ts'ibasa" "Daaxan" }
+
+historical_idea_groups = {
+	tsm_ideas
+}
+
+random_nation_chance = 0

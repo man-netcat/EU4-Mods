@@ -5,6 +5,7 @@ controller = AMZ
 culture = tupinamba
 religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 2
 base_production = 2
 base_manpower = 2

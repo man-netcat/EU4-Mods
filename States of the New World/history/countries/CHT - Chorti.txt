@@ -1,0 +1,21 @@
+# No previous file for Chorti
+
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = highland_mayan
+religion = mesoamerican_religion
+technology_group = high_american
+capital = 2637
+
+
+
+government_rank = 1
+1435.1.1 = {
+	monarch = {
+		name = "K'iq'ab'"
+		dynasty = "Chorti"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}

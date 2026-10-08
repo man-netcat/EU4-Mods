@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 74 96 44 }
+
+monarch_names = { "Ivitachuco" "Lacata" "Balbali" "Calahuchi" "Autauga" "Anaicape" }
+
+historical_idea_groups = {
+	apc_ideas
+}
+
+random_nation_chance = 0

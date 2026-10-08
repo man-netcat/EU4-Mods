@@ -1,0 +1,13 @@
+graphical_culture = southamericagfx
+
+color = { 168 155 90 }
+
+monarch_names = { "Cacique" "Sumalao" "Amaicha" "Quilmes" "Purmamarca" "Tilcara" "Cachi" "Molinos" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

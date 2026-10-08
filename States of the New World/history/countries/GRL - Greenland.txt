@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = icelandic
+religion = catholic
+capital = 1104
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Eirik"
+		dynasty = "Thorvaldsson"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

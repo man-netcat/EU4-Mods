@@ -1,12 +1,36 @@
-# 4573 - Acambaro
+# No previous file for Acambaro
 
-owner = MHC
-controller = MHC
-culture = purepecha
+culture = otomi
 religion = nahuatl
-is_city = yes
-base_tax = 3
-base_production = 3
-base_manpower = 4
-add_core = MHC
-trade_goods = copper
+owner = OTO
+controller = OTO
+add_core = OTO
+capital = "Acambaro"
+trade_goods = wool
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+add_province_triggered_modifier = MAY_obsidian_source
+
+discovered_by = mesoamerican
+
+discovered_by = high_american
+
+1470.1.1 = { 
+	owner = TAR
+	controller = TAR
+	add_core = TAR
+	} #Estimated: Tarascan operations toward the Aztec frontier 
+1530.1.1 = { 
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	is_city = yes
+}
+1810.9.16 = { owner = MEX add_core = MEX controller = MEX } # Mexican War of Independence

@@ -1,12 +1,13 @@
 # 2524 - Wabash
 
-owner = WAB
-controller = WAB
-culture = miami
+owner = OSA
+controller = OSA
+culture = osage
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = WAB
+add_core = OSA
 trade_goods = grain

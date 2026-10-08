@@ -1,0 +1,14 @@
+graphical_culture = westerngfx
+
+color = { 160 168 96 }
+
+monarch_names = { "Cuthbert" "Pierre" "Louis" "Toussaint" "Jean-Baptiste" "Alexandre" "Angelique" "Marcel" }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

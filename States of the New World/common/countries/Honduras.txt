@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 160 128 90 }
+
+monarch_names = { "Lenca" "Tolupan" "Pech" "Chorti" "Miskito" "Tawahka" "Garifuna" "Xicaque" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

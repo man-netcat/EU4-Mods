@@ -1,12 +1,13 @@
 # 4879 - Kituwah
 
-owner = TNS
-controller = TNS
-culture = yuchi
+owner = CHE
+controller = CHE
+culture = cherokee
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = TNS
-trade_goods = grain
+base_manpower = 3
+add_core = CHE
+trade_goods = tobacco

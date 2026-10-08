@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 90 138 160 }
+
+monarch_names = { "Mackinac" "Huron" "Saginaw" "Ottawa" "Leelanau" "Charlevoix" "Emmet" "Alpena" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

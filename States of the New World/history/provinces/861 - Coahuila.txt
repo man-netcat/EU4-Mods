@@ -3,8 +3,9 @@
 owner = COH
 controller = COH
 culture = chichimecan
-religion = totemism
+religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 4
 base_production = 4
 base_manpower = 4

@@ -1,0 +1,14 @@
+graphical_culture = westerngfx
+
+color = { 0 165 205 }
+
+monarch_names = { "Guarionex" "Caonabo" "Hatuey" "Enriquillo" "Agueybana" "Urayoan" "Mabodomaca" "Orocobix" "Caguax" "Guacanagarix" "Anacaona" "Mayobanex" "Cotubanama" "Guama" "Humacao" "Daguayo" }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

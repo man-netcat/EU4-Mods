@@ -1,12 +1,13 @@
 # 2503 - Ashshipite
 
-owner = BTR
-controller = BTR
-culture = blackfoot
+owner = KIO
+controller = KIO
+culture = kiowa
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = BTR
+add_core = KIO
 trade_goods = fur

@@ -1,12 +1,13 @@
 # 2010 - Connecticut
 
-owner = NEA
-controller = NEA
-culture = abenaki
+owner = PEQ
+controller = PEQ
+culture = pequot
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = NEA
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = PEQ
 trade_goods = fish

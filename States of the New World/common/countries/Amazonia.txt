@@ -1,0 +1,13 @@
+graphical_culture = southamericagfx
+
+color = { 78 143 78 }
+
+monarch_names = { "Cunhambebe" "Tibirica" "Jagoanharo" "Paraguacu" "Aimbire" "Moacir" "Iperu" "Caramuru" }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

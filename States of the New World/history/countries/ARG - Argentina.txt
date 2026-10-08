@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = presidential_despot_reform
+technology_group = western
+unit_type = western
+primary_culture = platinean
+religion = catholic
+capital = 778
+

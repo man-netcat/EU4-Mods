@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 91 139 190 }
+
+monarch_names = { "Sterling" "Canon" "Pueblo" "Durango" "Aspen" "Gunnison" "Rifle" "Salida" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

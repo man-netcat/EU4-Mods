@@ -1,12 +1,13 @@
 # 4636 - Choinumni
 
-owner = CAL
-controller = CAL
-culture = piman
+owner = YKT
+controller = YKT
+culture = yokuts
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = CAL
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = YKT
 trade_goods = grain

@@ -1,10 +1,10 @@
 government = monarchy
 add_government_reform = feudalism_reform
-technology_group = western
+technology_group = high_american
 unit_type = western
-primary_culture = anishinabe
+primary_culture = algonquin
 religion = totemism
-capital = 989
+capital = 991
 government_rank = 2
 
 1444.11.11 = {

@@ -1,0 +1,14 @@
+graphical_culture = westerngfx
+
+color = { 106 127 176 }
+
+monarch_names = { "Priscilla Alden" "John Winthrop" "Miles Standish" "William Bradford" "John Carver" "Edward Winslow" "Roger Williams" "Anne Hutchinson" }
+
+historical_idea_groups = {
+	trade_ideas
+	naval_ideas
+	economic_ideas
+	defensive_ideas
+}
+
+random_nation_chance = 0

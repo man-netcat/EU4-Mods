@@ -1,12 +1,13 @@
 # 994 - Stadacona
 
-owner = QUE
-controller = QUE
-culture = innu
+owner = STA
+controller = STA
+culture = laurentian
 religion = totemism
 is_city = yes
-base_tax = 5
-base_production = 5
-base_manpower = 5
-add_core = QUE
-trade_goods = fur
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = STA
+trade_goods = fish

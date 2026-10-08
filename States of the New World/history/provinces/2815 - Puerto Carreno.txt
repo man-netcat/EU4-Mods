@@ -1,12 +1,13 @@
 # 2815 - Puerto Carreno
 
-owner = COL
-controller = COL
+owner = VNZ
+controller = VNZ
 culture = guajiro
 religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 4
 base_production = 4
 base_manpower = 4
-add_core = COL
+add_core = VNZ
 trade_goods = grain

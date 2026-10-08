@@ -1,12 +1,13 @@
 # 966 - Nipmuc
 
-owner = NEA
-controller = NEA
-culture = abenaki
+owner = WAM
+controller = WAM
+culture = massachusset
 religion = totemism
 is_city = yes
-base_tax = 5
-base_production = 5
-base_manpower = 5
-add_core = NEA
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = WAM
 trade_goods = fish

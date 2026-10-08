@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = guarani
+religion = animism
+capital = 775
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Yvoty"
+		dynasty = "de la Asuncion"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Guarani"
+		dynasty = "de la Asuncion"
+		birth_date = 1424
+		death_date = 1488
+		claim = 85
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 160 176 112 }
+
+monarch_names = { "Raleigh" "Powhatan" "Monacan" "Shenandoah" "Accomac" "Roanoke" "Kanawha" "Rappahannock" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

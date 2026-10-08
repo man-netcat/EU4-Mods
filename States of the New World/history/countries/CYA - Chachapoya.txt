@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = chachapoyan
+religion = inti
+technology_group = high_american
+unit_type = south_american
+capital = 2943
+
+
+government_rank = 1
+1444.1.1 = {
+	monarch = {
+		name = "Huachuri"
+		dynasty = "Chachapoya"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+#1472 Annexed by Incas

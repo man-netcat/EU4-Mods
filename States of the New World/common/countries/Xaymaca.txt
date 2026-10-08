@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 127 191 127 }
+
+monarch_names = { "Huareo" "Quao" "Aguacatec" "Maima" "Onabe" "Caguaya" "Meten" "Bucan" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

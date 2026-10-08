@@ -1,12 +1,13 @@
 # 2587 - Odawa
 
-owner = ONT
-controller = ONT
+owner = OTT
+controller = OTT
 culture = anishinabe
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = ONT
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = OTT
 trade_goods = fur

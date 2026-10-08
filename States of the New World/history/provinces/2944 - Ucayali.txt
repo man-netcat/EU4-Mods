@@ -1,12 +1,13 @@
 # 2944 - Ucayali
 
-owner = PEU
-controller = PEU
+owner = CSU
+controller = CSU
 culture = inca
 religion = inti
 is_city = yes
-base_tax = 4
-base_production = 4
+discovered_by = high_american
+base_tax = 3
+base_production = 3
 base_manpower = 4
-add_core = PEU
-trade_goods = silver
+add_core = CSU
+trade_goods = grain

@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = yamasee
+religion = totemism
+capital = 2535
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Tonela"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Ucita"
+		birth_date = 1433
+		death_date = 1496
+		claim = 70
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

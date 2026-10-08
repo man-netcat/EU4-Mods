@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = guajiro
+religion = animism
+capital = 831
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Romulo"
+		dynasty = "de los Llanos"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Bolivar"
+		dynasty = "de los Llanos"
+		birth_date = 1420
+		death_date = 1494
+		claim = 91
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}

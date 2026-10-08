@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = shoshone
+religion = totemism
+capital = 1809
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Ishacoly"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

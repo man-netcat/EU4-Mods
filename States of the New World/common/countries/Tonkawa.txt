@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 88 66 44 }
+
+monarch_names = { "Yojuane" "Mayeye" "Ervipiame" "Cava" "Sana" "Toho" }
+
+historical_idea_groups = {
+	tka_ideas
+}
+
+random_nation_chance = 0

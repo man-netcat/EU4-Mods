@@ -1,0 +1,14 @@
+graphical_culture = westerngfx
+
+color = { 79 123 160 }
+
+monarch_names = { "Martim" "Manoel" "Sao Vicente" "Bertioga" "Piratininga" "Santo Andre" "Mogi" "Sorocaba" }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

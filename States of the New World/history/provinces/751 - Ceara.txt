@@ -1,12 +1,13 @@
 # 751 - Ceara
 
-owner = PNB
-controller = PNB
+owner = PTG
+controller = PTG
 culture = tupinamba
 religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = PNB
+base_manpower = 3
+add_core = PTG
 trade_goods = sugar

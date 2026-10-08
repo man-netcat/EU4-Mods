@@ -1,12 +1,36 @@
-# 832 - Chiancon
+#832 - Tunja
 
-owner = COL
-controller = COL
-culture = guajiro
-religion = animism
+owner = MCA
+controller = MCA
+culture = muisca
+religion = inti
+capital = "Tunja"
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = COL
-trade_goods = grain
+trade_goods = salt
+hre = no
+base_tax = 5 
+base_production = 5
+base_manpower = 2
+add_core = MCA
+discovered_by = south_american
+discovered_by = andean
+discovered_by = MCA
+
+
+discovered_by = high_american
+
+1539.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	trade_goods = gems
+}
+1810.7.20 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+} # Colombia declares independence
+1819.8.7 = { remove_core = SPA } # Colombia's independence is recongnized

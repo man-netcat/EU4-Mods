@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 36 120 156 }
+
+monarch_names = { "Tonela" "Ucita" "Carlos" "Felipe" "Cholok" "Mocoso" }
+
+historical_idea_groups = {
+	cls_ideas
+}
+
+random_nation_chance = 0

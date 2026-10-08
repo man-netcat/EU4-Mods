@@ -1,12 +1,13 @@
 # 805 - Arequipa
 
-owner = PEU
-controller = PEU
-culture = inca
-religion = inti
+owner = CHL
+controller = CHL
+culture = huarpe
+religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 4
 base_production = 4
 base_manpower = 4
-add_core = PEU
-trade_goods = silver
+add_core = CHL
+trade_goods = grain

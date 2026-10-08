@@ -1,0 +1,189 @@
+KLG_ideas = {
+	start = {
+		land_morale = 0.1
+		privateer_efficiency = 0.15
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+
+	trigger = {
+		tag = KLG
+	}
+	free = yes
+
+	klg_canoe_raiders = {
+		movement_speed = 0.15
+	}
+	klg_island_watch = {
+		hostile_attrition = 1
+	}
+	klg_war_chiefs = {
+		land_forcelimit_modifier = 0.2
+	}
+	klg_raid_plunder = {
+		loot_amount = 0.25
+	}
+	klg_palisaded_villages = {
+		defensiveness = 0.15
+	}
+	klg_raiding_levies = {
+		manpower_recovery_speed = 0.15
+	}
+	klg_island_federation = {
+		diplomatic_reputation = 1
+	}
+}
+
+LCN_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		stability_cost_modifier = -0.1
+	}
+
+	bonus = {
+		global_tax_modifier = 0.15
+	}
+
+	trigger = {
+		tag = LCN
+	}
+	free = yes
+
+	lcn_cassava_fields = {
+		production_efficiency = 0.1
+	}
+	lcn_canoe_traders = {
+		global_own_trade_power = 0.15
+	}
+	lcn_island_markets = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	lcn_open_villages = {
+		global_unrest = -1
+	}
+	lcn_hurricane_shelters = {
+		build_cost = -0.1
+	}
+	lcn_chiefly_palaces = {
+		legitimacy = 1
+	}
+	lcn_pearl_diving = {
+		global_trade_power = 0.1
+	}
+}
+
+MAP_ideas = {
+	start = {
+		land_morale = 0.1
+		hostile_attrition = 1
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+
+	trigger = {
+		tag = MAP
+	}
+	free = yes
+
+	map_war_councils = {
+		land_forcelimit_modifier = 0.2
+	}
+	map_hidden_valleys = {
+		defensiveness = 0.15
+	}
+	map_toqui_chiefs = {
+		leader_land_shock = 1
+	}
+	map_fortified_hills = {
+		fort_maintenance_modifier = -0.1
+	}
+	map_cattle_capture = {
+		loot_amount = 0.25
+	}
+	map_medicine_women = {
+		global_unrest = -1
+	}
+	map_loose_confederation = {
+		diplomatic_reputation = 1
+	}
+}
+
+GRN_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		manpower_recovery_speed = 0.15
+	}
+
+	bonus = {
+		core_creation = -0.2
+	}
+
+	trigger = {
+		tag = GRN
+	}
+	free = yes
+
+	grn_maize_and_cassava = {
+		production_efficiency = 0.1
+	}
+	grn_cacique_expansion = {
+		ae_impact = -0.1
+	}
+	grn_river_canoes = {
+		movement_speed = 0.15
+	}
+	grn_war_councils = {
+		land_forcelimit_modifier = 0.2
+	}
+	grn_plant_cities = {
+		development_cost = -0.1
+	}
+	grn_tekoa_farms = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	grn_tupi_influence = {
+		num_accepted_cultures = 1
+	}
+}
+
+KTX_ideas = {
+	start = {
+		global_manpower_modifier = 0.15
+		global_unrest = -1
+	}
+
+	bonus = {
+		global_manpower_modifier = 0.2
+	}
+
+	trigger = {
+		tag = KTX
+	}
+	free = yes
+
+	ktx_salmon_jumps = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	ktx_mountain_passes = {
+		hostile_attrition = 1
+	}
+	ktx_buffalo_hunts = {
+		loot_amount = 0.25
+	}
+	ktx_trade_moots = {
+		diplomatic_reputation = 1
+	}
+	ktx_camas_fields = {
+		production_efficiency = 0.1
+	}
+	ktx_stone_camps = {
+		defensiveness = 0.15
+	}
+	ktx_winter_shelters = {
+		development_cost = -0.1
+	}
+}

@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = arawak
+religion = animism
+capital = 482
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Comogre"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Guarocuya"
+		birth_date = 1427
+		death_date = 1491
+		claim = 84
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}

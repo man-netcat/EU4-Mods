@@ -1,0 +1,11 @@
+graphical_culture = westerngfx
+
+color = { 198 150 40 }
+
+monarch_names = { "Comogre" "Guaora" "Maramor" "Anacaona" }
+
+historical_idea_groups = {
+	lcn_ideas
+}
+
+random_nation_chance = 0

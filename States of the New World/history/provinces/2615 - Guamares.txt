@@ -1,12 +1,13 @@
 # 2615 - Guamares
 
-owner = MEX
-controller = MEX
-culture = aztek
-religion = nahuatl
+owner = GAM
+controller = GAM
+culture = guamares
+religion = animism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = MEX
-trade_goods = silver
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = GAM
+trade_goods = gold

@@ -1,12 +1,13 @@
 # 838 - Mosquito
 
-owner = NCR
-controller = NCR
+owner = MIS
+controller = MIS
 culture = miskito
 religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = NCR
-trade_goods = grain
+base_manpower = 3
+add_core = MIS
+trade_goods = coffee

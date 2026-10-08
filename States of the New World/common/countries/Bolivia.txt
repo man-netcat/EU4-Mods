@@ -1,0 +1,14 @@
+graphical_culture = southamericagfx
+
+color = { 176 111 90 }
+
+monarch_names = { "Colla" "Tiahuanaco" "Potosi" "Chuquisaca" "Oruro" "Cochabamba" "Santa Cruz" "Beni" }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	trade_ideas
+}
+
+random_nation_chance = 0

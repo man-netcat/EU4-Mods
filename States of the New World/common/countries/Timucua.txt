@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 128 56 66 }
+
+monarch_names = { "Saturiwa" "Outina" "Tacatucuru" "Utina" "Paracusi" "Anoya" }
+
+historical_idea_groups = {
+	tmu_ideas
+}
+
+random_nation_chance = 0

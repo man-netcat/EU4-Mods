@@ -1,12 +1,13 @@
 # 801 - Caranga
 
-owner = BOL
-controller = BOL
-culture = aimara
-religion = inti
+owner = PRG
+controller = PRG
+culture = guarani
+religion = animism
 is_city = yes
-base_tax = 4
-base_production = 4
+discovered_by = high_american
+base_tax = 3
+base_production = 3
 base_manpower = 4
-add_core = BOL
-trade_goods = silver
+add_core = PRG
+trade_goods = grain

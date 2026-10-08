@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 125 160 138 }
+
+monarch_names = { "Iximche" "Tecun" "Utatlan" "Zakuleu" "Tz'utujil" "K'iche" "Peten" "Mam" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

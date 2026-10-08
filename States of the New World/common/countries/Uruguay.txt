@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 111 176 192 }
+
+monarch_names = { "Artigas" "Tacuarembo" "Salto" "Paysandu" "Durazno" "Cerro Largo" "Treinta y Tres" "Rocha" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 214 197 138 }
+
+monarch_names = { "Abilene" "Osage" "Sedgwick" "Wichita" "Salina" "Cottonwood" "Neosho" "Solomon" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

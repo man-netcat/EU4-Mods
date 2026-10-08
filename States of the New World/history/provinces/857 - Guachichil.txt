@@ -1,12 +1,13 @@
 # 857 - Guachichil
 
-owner = MEX
-controller = MEX
-culture = aztek
-religion = nahuatl
+owner = CCM
+controller = CCM
+culture = chichimecan
+religion = animism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = MEX
-trade_goods = silver
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = CCM
+trade_goods = gold

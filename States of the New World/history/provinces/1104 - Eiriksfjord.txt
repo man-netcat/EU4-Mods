@@ -1,0 +1,13 @@
+# 1104 - Eiriksfjord
+
+owner = GRL
+controller = GRL
+culture = icelandic
+religion = catholic
+is_city = yes
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = GRL
+trade_goods = fish

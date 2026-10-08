@@ -1,12 +1,13 @@
 # 4578 - Tzapotzingo
 
-owner = XLC
-controller = XLC
+owner = XAL
+controller = XAL
 culture = tepic
 religion = nahuatl
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 4
-add_core = XLC
-trade_goods = silver
+add_core = XAL
+trade_goods = gold

@@ -1,12 +1,13 @@
 # 2529 - Natchez
 
-owner = MSP
-controller = MSP
+owner = NTZ
+controller = NTZ
 culture = natchez
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = MSP
-trade_goods = grain
+add_core = NTZ
+trade_goods = cotton

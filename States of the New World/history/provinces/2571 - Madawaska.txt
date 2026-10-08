@@ -1,12 +1,13 @@
 # 2571 - Madawaska
 
-owner = ACD
-controller = ACD
-culture = mikmaq
+owner = MLS
+controller = MLS
+culture = maliseet
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = ACD
+base_manpower = 3
+add_core = MLS
 trade_goods = fish

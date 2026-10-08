@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 176 160 136 }
+
+monarch_names = { "Gilbert" "Havre" "Bonavista" "Trinity" "Conception" "Placentia" "Fortune" "Burin" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	naval_ideas
+}
+
+random_nation_chance = 0

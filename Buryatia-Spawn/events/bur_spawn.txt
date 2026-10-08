@@ -1,0 +1,209 @@
+########################################
+# Events for Buryatia Spawn
+#
+# Rise of the Buryat tribes
+########################################
+
+namespace = bur_spawn
+
+# Rise of Buryatia
+province_event = {
+	id = bur_spawn.1
+	title = bur_spawn.1.t
+	desc = bur_spawn.1.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		province_id = 1056
+		NOT = { exists = BRT }
+		is_year = 1444
+		buryatia_area = {
+			is_empty = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						area = buryatia_area
+					}
+				}
+				add_core = BRT
+				if = {
+					limit = {
+						owner = {
+							NOT = { has_country_flag = buryat_info_flag }
+						}
+					}
+					owner = {
+						country_event = { id = bur_spawn.3 }
+						set_country_flag = buryat_info_flag
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bur_spawn.1.a
+		every_province = {
+			limit = {
+				OR = {
+					area = buryatia_area
+				}
+				is_empty = yes
+			}
+			cede_province = BRT
+		}
+		hidden_effect = {
+			BRT = {
+				define_ruler = {
+					name = "Hutukta"
+					dynasty = "Borjigin"
+					change_mil = 3
+					change_adm = 2
+					claim = 100
+				}
+				adopt_reform_progress = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.7
+						cavalry = 0.3
+					}
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+				add_manpower = 10
+				add_treasury = 200
+			}
+		}
+	}
+
+	option = {	#Switch tag to Buryatia
+		name = bur_spawn.1.b
+		trigger = {
+			owner = {
+				ai = no
+			}
+		}
+		every_province = {
+			limit = {
+				OR = {
+					area = buryatia_area
+				}
+				is_empty = yes
+			}
+			cede_province = BRT
+		}
+		hidden_effect = {
+			BRT = {
+				define_ruler = {
+					name = "Hutukta"
+					dynasty = "Borjigin"
+					change_mil = 3
+					change_adm = 2
+					claim = 100
+				}
+				adopt_reform_progress = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.7
+						cavalry = 0.3
+					}
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+				add_manpower = 10
+				add_treasury = 200
+			}
+		}
+		owner = {
+			switch_tag = BRT
+		}
+	}
+}
+
+# Event to send to other province owners of the area when Buryatia is formed.
+country_event = {
+	id = bur_spawn.3
+	title = bur_spawn.1.t
+	desc = bur_spawn.1.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { owns = 1056 }
+	}
+
+	option = {
+		name = bur_spawn.1.a
+		tooltip = {
+			buryatia_area = {
+				add_core = BRT
+			}
+		}
+	}
+
+	option = {	#Switch to Buryatia
+		name = bur_spawn.1.b
+		trigger = {
+			NOT = {
+				calc_true_if = {
+					all_country = {
+						ai = no
+					}
+					amount = 2
+				}
+			}
+			ai = no
+		}
+		tooltip = {
+			buryatia_area = {
+				add_core = BRT
+			}
+		}
+		every_province = {
+			limit = {
+				OR = {
+					area = buryatia_area
+				}
+				is_empty = yes
+			}
+			cede_province = BRT
+		}
+		BRT = {
+			define_ruler = {
+				name = "Hutukta"
+				dynasty = "Borjigin"
+				change_mil = 3
+				change_adm = 2
+				claim = 100
+			}
+			adopt_reform_progress = ROOT
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.7
+					cavalry = 0.3
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			add_manpower = 10
+			add_treasury = 200
+		}
+		owner = {
+			switch_tag = BRT
+		}
+	}
+}

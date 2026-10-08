@@ -1,12 +1,13 @@
 # 2002 - Galapagos Islands
 
-owner = PEU
-controller = PEU
-culture = inca
-religion = inti
+owner = QTO
+controller = QTO
+culture = cara
+religion = animism
 is_city = yes
-base_tax = 4
-base_production = 4
+discovered_by = high_american
+base_tax = 3
+base_production = 3
 base_manpower = 4
-add_core = PEU
-trade_goods = silver
+add_core = QTO
+trade_goods = grain

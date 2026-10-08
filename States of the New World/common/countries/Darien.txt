@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 94 158 122 }
+
+monarch_names = { "Urraca" "Chiriqui" "Cueva" "Cocle" "Guna" "Embera" "Bribri" "Cofan" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

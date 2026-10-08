@@ -1,12 +1,13 @@
 # 960 - Onondaga
 
-owner = HDN
-controller = HDN
+owner = ONO
+controller = ONO
 culture = iroquois
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = HDN
-trade_goods = grain
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = ONO
+trade_goods = fur

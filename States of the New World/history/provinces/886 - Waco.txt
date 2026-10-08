@@ -1,12 +1,13 @@
 # 886 - Waco
 
-owner = TEX
-controller = TEX
-culture = caddo
+owner = WIC
+controller = WIC
+culture = wichita
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = TEX
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = WIC
 trade_goods = grain

@@ -1,0 +1,22 @@
+# No previous file for Tonala
+
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = tepic
+religion = nahuatl
+technology_group = high_american
+capital = 4640
+
+
+
+government_rank = 1
+1440.1.1 = {
+	monarch = {
+		name = "Cihuapilli"
+		dynasty = "Tzapotzinco"
+		adm = 3
+		dip = 2
+		mil = 2
+		female = yes
+	}
+} #Only known ruler of Tonalla in timeline. Actually ruled later. 

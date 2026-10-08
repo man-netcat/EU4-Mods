@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 122 154 106 }
+
+monarch_names = { "Henri" "Jean" "Pierre" "Antoine" "Philippe" "Louis" "Charles" "Francois" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	naval_ideas
+}
+
+random_nation_chance = 0

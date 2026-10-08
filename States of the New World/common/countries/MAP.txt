@@ -1,0 +1,11 @@
+graphical_culture = southamericagfx
+
+color = { 90 40 120 }
+
+monarch_names = { "Lautaro" "Caupolican" "Colocolo" "Antilen" "Millarapue" }
+
+historical_idea_groups = {
+	map_ideas
+}
+
+random_nation_chance = 0

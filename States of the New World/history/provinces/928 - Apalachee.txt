@@ -1,12 +1,13 @@
 # 928 - Apalachee
 
-owner = FLO
-controller = FLO
-culture = yamasee
+owner = APC
+controller = APC
+culture = creek
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = FLO
+base_manpower = 3
+add_core = APC
 trade_goods = fish

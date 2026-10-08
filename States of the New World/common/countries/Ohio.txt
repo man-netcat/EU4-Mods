@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 176 72 112 }
+
+monarch_names = { "Tecumseh" "Wyandot" "Shawnee" "Miami" "Scioto" "Cuyahoga" "Muskingum" "Hocking" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

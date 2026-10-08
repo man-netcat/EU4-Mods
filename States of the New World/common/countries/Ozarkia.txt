@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 122 150 96 }
+
+monarch_names = { "Osage" "White River" "Springfield" "Joplin" "Eureka" "Buffalo" "Taney" "Table Rock" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

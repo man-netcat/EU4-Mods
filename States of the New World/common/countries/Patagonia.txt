@@ -1,0 +1,13 @@
+graphical_culture = southamericagfx
+
+color = { 154 168 160 }
+
+monarch_names = { "Tehuelche" "Selknam" "Yaghan" "Chono" "Puelche" "Mapuche" "Huiliche" "Kawesqar" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

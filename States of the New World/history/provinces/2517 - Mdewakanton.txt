@@ -1,12 +1,13 @@
 # 2517 - Mdewakanton
 
-owner = NST
-controller = NST
+owner = SIO
+controller = SIO
 culture = dakota
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = NST
+base_manpower = 3
+add_core = SIO
 trade_goods = fur

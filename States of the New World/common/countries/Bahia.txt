@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 208 122 58 }
+
+monarch_names = { "Tome" "Garcia" "Mem" "Pero" "Lourenco" "Brito" "Caminha" "Anchieta" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

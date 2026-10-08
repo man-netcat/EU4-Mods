@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 109 72 34 }
+
+monarch_names = { "Kaku" "Hoyoma" "Wiyaka" "Saxui" "Tolemne" "Puyut" }
+
+historical_idea_groups = {
+	mwk_ideas
+}
+
+random_nation_chance = 0

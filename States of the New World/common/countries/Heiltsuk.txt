@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 44 130 110 }
+
+monarch_names = { "Qinax" "Tlabit" "Huaxta" "Kaxla" "Susa" "Waklas" }
+
+historical_idea_groups = {
+	hls_ideas
+}
+
+random_nation_chance = 0

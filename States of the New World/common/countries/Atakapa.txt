@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 52 112 150 }
+
+monarch_names = { "Akokisa" "Bidai" "Hakipaki" "Deadoses" "Quasmigdo" "Tlo" }
+
+historical_idea_groups = {
+	atp_ideas
+}
+
+random_nation_chance = 0

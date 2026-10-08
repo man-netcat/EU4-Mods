@@ -1,12 +1,33 @@
-# 4640 - Tecpatitlan
+# No previous file for Tecpatitlan
 
-owner = MEX
-controller = MEX
-culture = aztek
+culture = tepic
 religion = nahuatl
-is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = MEX
-trade_goods = silver
+owner = TON
+controller = TON
+add_core = TON
+capital = "Tonala"
+trade_goods = wool
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = mesoamerican
+
+
+discovered_by = high_american
+
+1532.1.1 = { 
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	is_city = yes
+	capital = "Guadalajara"
+}
+1810.9.16 = { owner = MEX add_core = MEX controller = MEX } # Mexican War of Independence

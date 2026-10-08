@@ -1,12 +1,13 @@
 # 2596 - Mahmikiwiniyak
 
-owner = ASB
-controller = ASB
-culture = chipewyan
+owner = NEH
+controller = NEH
+culture = plains_cree
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = ASB
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = NEH
 trade_goods = fur

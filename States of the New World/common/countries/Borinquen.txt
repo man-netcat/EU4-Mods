@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 160 111 159 }
+
+monarch_names = { "Agueybana" "Guaybana" "Mayaguez" "Caguax" "Arasibo" "Orocobix" "Jayuya" "Coamex" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

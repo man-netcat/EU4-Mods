@@ -1,12 +1,13 @@
 # 2833 - Madre de Dios
 
-owner = BOL
-controller = BOL
-culture = aimara
+owner = CSU
+controller = CSU
+culture = inca
 religion = inti
 is_city = yes
-base_tax = 4
-base_production = 4
+discovered_by = high_american
+base_tax = 3
+base_production = 3
 base_manpower = 4
-add_core = BOL
-trade_goods = silver
+add_core = CSU
+trade_goods = grain

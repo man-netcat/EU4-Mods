@@ -1,0 +1,569 @@
+PMO_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		global_trade_power = 0.15
+	}
+
+	trigger = {
+		tag = PMO
+	}
+	free = yes
+
+	pmo_canoe_highways = {
+		global_own_trade_power = 0.15
+	}
+	pmo_basket_wealth = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	pmo_clam_bank_rights = {
+		production_efficiency = 0.1
+	}
+	pmo_lake_strongholds = {
+		hostile_attrition = 1
+	}
+	pmo_gift_exchange = {
+		diplomatic_reputation = 1
+	}
+	pmo_reed_boat_fleets = {
+		movement_speed = 0.15
+	}
+	pmo_obsidian_route = {
+		global_institution_spread = 0.1
+	}
+}
+
+MWK_ideas = {
+	start = {
+		development_cost = -0.1
+		manpower_recovery_speed = 0.15
+	}
+
+	bonus = {
+		core_creation = -0.15
+	}
+
+	trigger = {
+		tag = MWK
+	}
+	free = yes
+
+	mwk_acorn_granaries = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	mwk_foothill_passes = {
+		global_own_trade_power = 0.15
+	}
+	mwk_harvest_rites = {
+		stability_cost_modifier = -0.1
+	}
+	mwk_hunting_clans = {
+		global_manpower_modifier = 0.15
+	}
+	mwk_storage_caches = {
+		production_efficiency = 0.1
+	}
+	mwk_valley_alliances = {
+		diplomatic_reputation = 1
+	}
+	mwk_ridgeline_watch = {
+		hostile_attrition = 1
+	}
+}
+
+MDU_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		global_own_trade_power = 0.15
+	}
+
+	bonus = {
+		global_tax_modifier = 0.15
+	}
+
+	trigger = {
+		tag = MDU
+	}
+	free = yes
+
+	mdu_river_fields = {
+		production_efficiency = 0.1
+	}
+	mdu_salmon_weirs = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	mdu_trade_moots = {
+		trade_efficiency = 0.1
+	}
+	mdu_earth_lodge_councils = {
+		legitimacy = 1
+	}
+	mdu_fish_drying_yards = {
+		manpower_recovery_speed = 0.15
+	}
+	mdu_irrigation_ditches = {
+		development_cost = -0.1
+	}
+	mdu_valley_caravans = {
+		caravan_power = 0.2
+	}
+}
+
+WNT_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		global_unrest = -1
+	}
+
+	bonus = {
+		trade_efficiency = 0.15
+	}
+
+	trigger = {
+		tag = WNT
+	}
+	free = yes
+
+	wnt_river_ferries = {
+		global_own_trade_power = 0.15
+	}
+	wnt_salmon_camps = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	wnt_dugout_masters = {
+		production_efficiency = 0.1
+	}
+	wnt_town_moots = {
+		diplomatic_reputation = 1
+	}
+	wnt_wicker_armor = {
+		infantry_cost = -0.1
+	}
+	wnt_fisher_levies = {
+		land_forcelimit_modifier = 0.2
+	}
+	wnt_corridor_claims = {
+		core_creation = -0.15
+	}
+}
+
+OHO_ideas = {
+	start = {
+		global_own_trade_power = 0.15
+		prestige = 1
+	}
+
+	bonus = {
+		trade_efficiency = 0.15
+	}
+
+	trigger = {
+		tag = OHO
+	}
+	free = yes
+
+	oho_shellmound_markers = {
+		global_unrest = -1
+	}
+	oho_tule_boats = {
+		movement_speed = 0.15
+	}
+	oho_bay_clam_flats = {
+		production_efficiency = 0.1
+	}
+	oho_abalone_guilds = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	oho_middlemen_role = {
+		diplomatic_reputation = 1
+	}
+	oho_fishing_camps = {
+		manpower_recovery_speed = 0.15
+	}
+	oho_signal_fires = {
+		hostile_attrition = 1
+	}
+}
+
+NKT_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.25
+		global_sailors_modifier = 0.2
+	}
+
+	bonus = {
+		navy_tradition = 1
+	}
+
+	trigger = {
+		tag = NKT
+	}
+	free = yes
+
+	nkt_whaling_canoes = {
+		global_own_trade_power = 0.15
+	}
+	nkt_sea_otter_pelts = {
+		trade_efficiency = 0.1
+	}
+	nkt_whale_harvest = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	nkt_harpoon_guilds = {
+		leader_naval_shock = 1
+	}
+	nkt_cedar_war_canoes = {
+		naval_morale = 0.15
+	}
+	nkt_chief_redistribution = {
+		prestige = 1
+	}
+	nkt_coastal_villages = {
+		defensiveness = 0.15
+	}
+}
+
+KWK_ideas = {
+	start = {
+		prestige = 1
+		production_efficiency = 0.1
+	}
+
+	bonus = {
+		global_autonomy = -0.05
+	}
+
+	trigger = {
+		tag = KWK
+	}
+	free = yes
+
+	kwk_cedar_masters = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	kwk_potlatch_ranks = {
+		legitimacy = 1
+	}
+	kwk_clan_crests = {
+		num_accepted_cultures = 1
+	}
+	kwk_stockaded_villages = {
+		hostile_attrition = 1
+	}
+	kwk_gift_peace = {
+		ae_impact = -0.1
+	}
+	kwk_salmon_weirs = {
+		manpower_recovery_speed = 0.15
+	}
+	kwk_council_of_chiefs = {
+		diplomatic_reputation = 1
+	}
+}
+
+TSM_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		naval_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		global_sailors_modifier = 0.25
+	}
+
+	trigger = {
+		tag = TSM
+	}
+	free = yes
+
+	tsm_grease_trails = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	tsm_totem_poles = {
+		prestige = 1
+	}
+	tsm_clan_federations = {
+		diplomatic_reputation = 1
+	}
+	tsm_canoe_raiders = {
+		naval_morale = 0.15
+	}
+	tsm_fort_chiefdoms = {
+		hostile_attrition = 1
+	}
+	tsm_oolichan_harvest = {
+		production_efficiency = 0.1
+	}
+	tsm_island_marts = {
+		global_own_trade_power = 0.15
+	}
+}
+
+HLS_ideas = {
+	start = {
+		global_unrest = -1
+		global_manpower_modifier = 0.15
+	}
+
+	bonus = {
+		defensiveness = 0.2
+	}
+
+	trigger = {
+		tag = HLS
+	}
+	free = yes
+
+	hls_fish_drying_racks = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	hls_clam_gardens = {
+		production_efficiency = 0.1
+	}
+	hls_mountain_redoubts = {
+		defensiveness = 0.15
+	}
+	hls_watch_towers = {
+		fort_maintenance_modifier = -0.1
+	}
+	hls_herring_spawns = {
+		manpower_recovery_speed = 0.15
+	}
+	hls_canoe_making = {
+		movement_speed = 0.15
+	}
+	hls_village_confederacy = {
+		diplomatic_reputation = 1
+	}
+}
+
+KRN_ideas = {
+	start = {
+		land_morale = 0.1
+		loot_amount = 0.25
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+
+	trigger = {
+		tag = KRN
+	}
+	free = yes
+
+	krn_lagoon_canoes = {
+		movement_speed = 0.15
+	}
+	krn_gulf_skiffs = {
+		land_attrition = -0.1
+	}
+	krn_raider_bands = {
+		manpower_recovery_speed = 0.15
+	}
+	krn_seasonal_migration = {
+		development_cost = -0.1
+	}
+	krn_alligator_warriors = {
+		hostile_attrition = 1
+	}
+	krn_island_camps = {
+		defensiveness = 0.15
+	}
+	krn_lagoon_passes = {
+		global_unrest = -1
+	}
+}
+
+TKA_ideas = {
+	start = {
+		cavalry_power = 0.1
+		trade_efficiency = 0.1
+	}
+
+	bonus = {
+		cavalry_power = 0.15
+	}
+
+	trigger = {
+		tag = TKA
+	}
+	free = yes
+
+	tka_bison_herds = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	tka_dog_caravans = {
+		caravan_power = 0.2
+	}
+	tka_buffalo_jumps = {
+		production_efficiency = 0.1
+	}
+	tka_war_honors = {
+		prestige = 1
+	}
+	tka_peace_brokering = {
+		diplomatic_reputation = 1
+	}
+	tka_mounted_scouts = {
+		movement_speed = 0.15
+	}
+	tka_hide_barter = {
+		global_own_trade_power = 0.15
+	}
+}
+
+ATP_ideas = {
+	start = {
+		defensiveness = 0.15
+		global_manpower_modifier = 0.15
+	}
+
+	bonus = {
+		defensiveness = 0.2
+	}
+
+	trigger = {
+		tag = ATP
+	}
+	free = yes
+
+	atp_swamp_skiffs = {
+		movement_speed = 0.15
+	}
+	atp_wetland_passes = {
+		hostile_attrition = 1
+	}
+	atp_fish_bays = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	atp_reef_forts = {
+		fort_maintenance_modifier = -0.1
+	}
+	atp_canoe_hunters = {
+		manpower_recovery_speed = 0.15
+	}
+	atp_salt_works = {
+		production_efficiency = 0.1
+	}
+	atp_shell_trade = {
+		trade_efficiency = 0.1
+	}
+}
+
+TMU_ideas = {
+	start = {
+		land_morale = 0.1
+		global_tax_modifier = 0.1
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+
+	trigger = {
+		tag = TMU
+	}
+	free = yes
+
+	tmu_maize_fields = {
+		production_efficiency = 0.1
+	}
+	tmu_chiefly_warfare = {
+		land_forcelimit_modifier = 0.2
+	}
+	tmu_stockaded_towns = {
+		defensiveness = 0.15
+	}
+	tmu_acorn_tithes = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	tmu_fire_ritual = {
+		stability_cost_modifier = -0.1
+	}
+	tmu_war_parties = {
+		manpower_recovery_speed = 0.15
+	}
+	tmu_federation_council = {
+		diplomatic_reputation = 1
+	}
+}
+
+APC_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		infantry_power = 0.1
+	}
+
+	bonus = {
+		infantry_power = 0.15
+	}
+
+	trigger = {
+		tag = APC
+	}
+	free = yes
+
+	apc_maize_surplus = {
+		production_efficiency = 0.1
+	}
+	apc_fortified_mounds = {
+		defensiveness = 0.15
+	}
+	apc_hereditary_nobles = {
+		legitimacy = 1
+	}
+	apc_mission_resistance = {
+		tolerance_own = 1
+	}
+	apc_war_clubs = {
+		infantry_cost = -0.1
+	}
+	apc_council_of_elders = {
+		global_unrest = -1
+	}
+	apc_river_trade = {
+		trade_efficiency = 0.1
+	}
+}
+
+CLS_ideas = {
+	start = {
+		production_efficiency = 0.1
+		prestige = 1
+	}
+
+	bonus = {
+		global_sailors_modifier = 0.25
+	}
+
+	trigger = {
+		tag = CLS
+	}
+	free = yes
+
+	cls_royal_canals = {
+		global_own_trade_power = 0.15
+	}
+	cls_island_palaces = {
+		legitimacy = 1
+	}
+	cls_fish_tithes = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	cls_gulf_dominion = {
+		naval_forcelimit_modifier = 0.25
+	}
+	cls_canoe_armadas = {
+		naval_morale = 0.15
+	}
+	cls_ceremonial_mounds = {
+		global_unrest = -1
+	}
+	cls_mainland_tribute = {
+		vassal_income = 0.25
+	}
+}

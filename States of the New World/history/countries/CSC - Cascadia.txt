@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = salish
+religion = totemism
+capital = 2484
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Stephen"
+		dynasty = "Fraser"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Thomas"
+		dynasty = "Fraser"
+		birth_date = 1424
+		death_date = 1486
+		claim = 88
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

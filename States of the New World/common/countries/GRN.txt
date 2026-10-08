@@ -1,0 +1,11 @@
+graphical_culture = southamericagfx
+
+color = { 30 120 60 }
+
+monarch_names = { "Tabare" "Maracaja" "Yaguaron" "Arapy" }
+
+historical_idea_groups = {
+	grn_ideas
+}
+
+random_nation_chance = 0

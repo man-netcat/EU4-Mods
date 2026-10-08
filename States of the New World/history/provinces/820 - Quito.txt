@@ -3,8 +3,9 @@
 owner = QTO
 controller = QTO
 culture = cara
-religion = inti
+religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 4
 base_production = 4
 base_manpower = 5

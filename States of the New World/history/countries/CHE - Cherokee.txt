@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = cherokee
+religion = totemism
+capital = 4879
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Tistoe"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}

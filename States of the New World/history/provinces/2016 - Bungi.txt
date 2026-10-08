@@ -1,12 +1,13 @@
 # 2016 - Bungi
 
-owner = NST
-controller = NST
-culture = dakota
+owner = ASI
+controller = ASI
+culture = nakota
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = NST
+base_manpower = 3
+add_core = ASI
 trade_goods = fur

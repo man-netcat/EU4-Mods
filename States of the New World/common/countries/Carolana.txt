@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 127 163 200 }
+
+monarch_names = { "Robert" "Margaret" "Cape Fear" "Neuse" "Pamlico" "Santee" "Waccamaw" "Catawba" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

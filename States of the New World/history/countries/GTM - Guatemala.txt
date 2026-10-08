@@ -1,29 +1,8 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = republic
+add_government_reform = presidential_despot_reform
 technology_group = western
 unit_type = western
 primary_culture = highland_mayan
-religion = mesoamerican_religion
-capital = 839
+religion = catholic
+capital = 841
 
-1444.11.11 = {
-	monarch = {
-		name = "Iximche"
-		dynasty = "of the Cakchiquel"
-		adm = 2
-		dip = 3
-		mil = 3
-	}
-}
-1444.11.11 = {
-	heir = {
-		name = "Tecun"
-		dynasty = "of the Cakchiquel"
-		birth_date = 1426
-		death_date = 1492
-		claim = 87
-		adm = 3
-		dip = 2
-		mil = 3
-	}
-}

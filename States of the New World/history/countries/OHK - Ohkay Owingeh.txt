@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = pueblo
+religion = totemism
+capital = 880
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Popé"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

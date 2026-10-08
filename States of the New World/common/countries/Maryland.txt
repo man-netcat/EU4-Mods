@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 192 176 96 }
+
+monarch_names = { "Calvert" "Cecil" "Leonard" "St. Marys" "Severn" "Patapsco" "Potomac" "Susquehannock" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

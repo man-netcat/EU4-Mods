@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = chinook
+religion = totemism
+capital = 975
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Wisaks"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Gwaas"
+		birth_date = 1432
+		death_date = 1499
+		claim = 72
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

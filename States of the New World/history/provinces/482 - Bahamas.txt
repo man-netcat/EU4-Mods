@@ -1,12 +1,13 @@
 # 482 - Bahamas
 
-owner = ANI
-controller = ANI
-culture = carib
+owner = LCN
+controller = LCN
+culture = arawak
 religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = ANI
+add_core = LCN
 trade_goods = sugar

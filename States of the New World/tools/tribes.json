@@ -1,0 +1,1972 @@
+{
+ "ABE": {
+  "prov": "2564",
+  "provname": "Sokoki",
+  "culture": "abenaki",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2564",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ABI": {
+  "prov": "2531",
+  "provname": "Napochi",
+  "culture": "creek",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "2531",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ACO": {
+  "prov": "2495",
+  "provname": "Acoma",
+  "culture": "pueblo",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "2495",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "AGG": {
+  "prov": "989",
+  "provname": "Ontario",
+  "culture": "huron",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "989",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "AGQ": {
+  "prov": "992",
+  "provname": "Algonquin",
+  "culture": "algonquin",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "992",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ALT": {
+  "prov": "2538",
+  "provname": "Yamasee",
+  "culture": "yamasee",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "2538",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ANL": {
+  "prov": "895",
+  "provname": "Arkansas",
+  "culture": "yoron",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "895",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "APA": {
+  "prov": "879",
+  "provname": "Apache",
+  "culture": "apache",
+  "religion": "totemism",
+  "trade_good": "salt",
+  "capital": "879",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ARN": {
+  "prov": "2585",
+  "provname": "Kichesipi",
+  "culture": "huron",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2585",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ARP": {
+  "prov": "2510",
+  "provname": "Mandan",
+  "culture": "arapaho",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2510",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ARW": {
+  "prov": "743",
+  "provname": "Essequibo",
+  "culture": "guajiro",
+  "religion": "animism",
+  "trade_good": "sugar",
+  "capital": "743",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ASI": {
+  "prov": "2016",
+  "provname": "Bungi",
+  "culture": "nakota",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2016",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ATA": {
+  "prov": "2532",
+  "provname": "Tohome",
+  "culture": "choctaw",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "2532",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ATT": {
+  "prov": "988",
+  "provname": "Huron",
+  "culture": "huron",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "988",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": {
+   "name": "huron_federation_name",
+   "members": [
+    "AGG",
+    "ARN",
+    "TAH"
+   ]
+  }
+ },
+ "ATW": {
+  "prov": "987",
+  "provname": "Niagara",
+  "culture": "tionontate",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "987",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "BLA": {
+  "prov": "2004",
+  "provname": "Niitsitapi",
+  "culture": "blackfoot",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2004",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CAB": {
+  "prov": "2805",
+  "provname": "Uyapari",
+  "culture": "carib",
+  "religion": "animism",
+  "trade_good": "coffee",
+  "capital": "2805",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CAD": {
+  "prov": "894",
+  "provname": "Caddo",
+  "culture": "caddo",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "894",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CAO": {
+  "prov": "917",
+  "provname": "Cahokia",
+  "culture": "illini",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "917",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CAQ": {
+  "prov": "897",
+  "provname": "Quapaw",
+  "culture": "yoron",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "897",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CAY": {
+  "prov": "959",
+  "provname": "Cayuga",
+  "culture": "iroquois",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "959",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CCA": {
+  "prov": "941",
+  "provname": "Cumberland",
+  "culture": "yuchi",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "941",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CCM": {
+  "prov": "857",
+  "provname": "Guachichil",
+  "culture": "chichimecan",
+  "religion": "animism",
+  "trade_good": "gold",
+  "capital": "857",
+  "monarch": null,
+  "federation": null
+ },
+ "CHE": {
+  "prov": "4879",
+  "provname": "Kituwah",
+  "culture": "cherokee",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "4879",
+  "monarch": {
+   "date": "1399.1.1",
+   "name": "Tistoe",
+   "dynasty": null,
+   "adm": 1,
+   "dip": 2,
+   "mil": 2,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CHI": {
+  "prov": "919",
+  "provname": "Chickasaw",
+  "culture": "chickasaw",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "919",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CHO": {
+  "prov": "920",
+  "provname": "Choctaw",
+  "culture": "choctaw",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "920",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CHY": {
+  "prov": "4902",
+  "provname": "Makandwewin",
+  "culture": "cheyenne",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "4902",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CIA": {
+  "prov": "935",
+  "provname": "Cherokee",
+  "culture": "yuchi",
+  "religion": "totemism",
+  "trade_good": "naval_supplies",
+  "capital": "935",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CLG": {
+  "prov": "2525",
+  "provname": "Chillicothe",
+  "culture": "shawnee",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2525",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CNK": {
+  "prov": "873",
+  "provname": "Chinook",
+  "culture": "chinook",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "873",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "COF": {
+  "prov": "933",
+  "provname": "Catawba",
+  "culture": "catawba",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "933",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "COM": {
+  "prov": "1809",
+  "provname": "Cheyenne",
+  "culture": "shoshone",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "1809",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "COO": {
+  "prov": "931",
+  "provname": "Chiaha",
+  "culture": "creek",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "931",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "COW": {
+  "prov": "925",
+  "provname": "Tuskegee",
+  "culture": "creek",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "925",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "CUA": {
+  "prov": "778",
+  "provname": "Rio de la Plata",
+  "culture": "charruan",
+  "religion": "animism",
+  "trade_good": "grain",
+  "capital": "778",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ERI": {
+  "prov": "954",
+  "provname": "Allegheny",
+  "culture": "tionontate",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "954",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ETO": {
+  "prov": "2540",
+  "provname": "Coweta",
+  "culture": "creek",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "2540",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "FOX": {
+  "prov": "944",
+  "provname": "Potawatomi",
+  "culture": "mesquakie",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "944",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "GAM": {
+  "prov": "2615",
+  "provname": "Guamares",
+  "culture": "guamares",
+  "religion": "animism",
+  "trade_good": "gold",
+  "capital": "2615",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Chimalpili",
+   "dynasty": "Guamares",
+   "adm": 3,
+   "dip": 1,
+   "mil": 2,
+   "birth": null
+  },
+  "federation": null
+ },
+ "GUA": {
+  "prov": "2884",
+  "provname": "Povos das Missoes",
+  "culture": "guarani",
+  "religion": "animism",
+  "trade_good": "tea",
+  "capital": "2884",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "HDA": {
+  "prov": "2022",
+  "provname": "Haida",
+  "culture": "haida",
+  "religion": "totemism",
+  "trade_good": "fish",
+  "capital": "2022",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "HNI": {
+  "prov": "2669",
+  "provname": "Hasinai",
+  "culture": "caddo",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2669",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "HWK": {
+  "prov": "4888",
+  "provname": "Tatteroa",
+  "culture": "shawnee",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "4888",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ICH": {
+  "prov": "2537",
+  "provname": "Hitchiti",
+  "culture": "yamasee",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "2537",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "INN": {
+  "prov": "2579",
+  "provname": "Piekougami",
+  "culture": "innu",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2579",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ISL": {
+  "prov": "4631",
+  "provname": "Towa",
+  "culture": "pueblo",
+  "religion": "totemism",
+  "trade_good": "salt",
+  "capital": "4631",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "JOA": {
+  "prov": "936",
+  "provname": "Cheraw",
+  "culture": "catawba",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "936",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "KIO": {
+  "prov": "2503",
+  "provname": "Ashshipite",
+  "culture": "kiowa",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2503",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "KSI": {
+  "prov": "930",
+  "provname": "Yamasee",
+  "culture": "creek",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "930",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "KSK": {
+  "prov": "916",
+  "provname": "Kaskaskia",
+  "culture": "illini",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "916",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "KSP": {
+  "prov": "2526",
+  "provname": "Shatteras",
+  "culture": "shawnee",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2526",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "LAK": {
+  "prov": "907",
+  "provname": "Dakota",
+  "culture": "dakota",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "907",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "LEN": {
+  "prov": "956",
+  "provname": "Lenape",
+  "culture": "delaware",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "956",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "LIP": {
+  "prov": "883",
+  "provname": "Lipan",
+  "culture": "lipan",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "883",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MAH": {
+  "prov": "969",
+  "provname": "Pocumtuk",
+  "culture": "mahican",
+  "religion": "totemism",
+  "trade_good": "naval_supplies",
+  "capital": "969",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MIK": {
+  "prov": "4891",
+  "provname": "Piktuk",
+  "culture": "mikmaq",
+  "religion": "totemism",
+  "trade_good": "fish",
+  "capital": "4891",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MIS": {
+  "prov": "838",
+  "provname": "Mosquito",
+  "culture": "miskito",
+  "religion": "animism",
+  "trade_good": "coffee",
+  "capital": "838",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MLS": {
+  "prov": "2571",
+  "provname": "Madawaska",
+  "culture": "maliseet",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2571",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MMI": {
+  "prov": "943",
+  "provname": "Miami",
+  "culture": "miami",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "943",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MOH": {
+  "prov": "964",
+  "provname": "Mohawk",
+  "culture": "iroquois",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "964",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MPC": {
+  "prov": "784",
+  "provname": "Huillimapu",
+  "culture": "mapuche",
+  "religion": "animism",
+  "trade_good": "fish",
+  "capital": "784",
+  "monarch": {
+   "date": "1444.1.1",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MSC": {
+  "prov": "882",
+  "provname": "Mescalero",
+  "culture": "mescalero",
+  "religion": "totemism",
+  "trade_good": "wool",
+  "capital": "882",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "MSG": {
+  "prov": "2671",
+  "provname": "Mississage",
+  "culture": "anishinabe",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2671",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "NAH": {
+  "prov": "878",
+  "provname": "Navajo",
+  "culture": "navajo",
+  "religion": "totemism",
+  "trade_good": "salt",
+  "capital": "878",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "NAK": {
+  "prov": "2593",
+  "provname": "Wappus",
+  "culture": "bungi",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2593",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "NEH": {
+  "prov": "2596",
+  "provname": "Mahmikiwiniyak",
+  "culture": "plains_cree",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2596",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "NTC": {
+  "prov": "2014",
+  "provname": "Natchitoches",
+  "culture": "caddo",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "2014",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "NTZ": {
+  "prov": "2529",
+  "provname": "Natchez",
+  "culture": "natchez",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "2529",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "OEO": {
+  "prov": "913",
+  "provname": "Fox",
+  "culture": "chiwere",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "913",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "OHK": {
+  "prov": "880",
+  "provname": "Pueblo",
+  "culture": "pueblo",
+  "religion": "totemism",
+  "trade_good": "salt",
+  "capital": "880",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "OJI": {
+  "prov": "4898",
+  "provname": "Noquet",
+  "culture": "anishinabe",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "4898",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ONE": {
+  "prov": "961",
+  "provname": "Oneida",
+  "culture": "iroquois",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "961",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ONO": {
+  "prov": "960",
+  "provname": "Onondaga",
+  "culture": "iroquois",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "960",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": {
+   "name": "iroquois_federation_name",
+   "members": [
+    "MOH",
+    "ONE",
+    "CAY",
+    "SEN"
+   ]
+  }
+ },
+ "OSA": {
+  "prov": "2524",
+  "provname": "Wabash",
+  "culture": "osage",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "2524",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "OSH": {
+  "prov": "993",
+  "provname": "Hochelega",
+  "culture": "laurentian",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "993",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "OTT": {
+  "prov": "2587",
+  "provname": "Odawa",
+  "culture": "anishinabe",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2587",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "PAW": {
+  "prov": "901",
+  "provname": "Pawnee",
+  "culture": "pawnee",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "901",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "PCH": {
+  "prov": "4923",
+  "provname": "Pacaha",
+  "culture": "yoron",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "4923",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "PEN": {
+  "prov": "971",
+  "provname": "Abnaki",
+  "culture": "abenaki",
+  "religion": "totemism",
+  "trade_good": "naval_supplies",
+  "capital": "971",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "PEO": {
+  "prov": "915",
+  "provname": "Illinois",
+  "culture": "illini",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "915",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": {
+   "name": "illini_federation_name",
+   "members": [
+    "CAO",
+    "KSK"
+   ]
+  }
+ },
+ "PEQ": {
+  "prov": "2010",
+  "provname": "Connecticut",
+  "culture": "pequot",
+  "religion": "totemism",
+  "trade_good": "fish",
+  "capital": "2010",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "PIM": {
+  "prov": "877",
+  "provname": "Pima",
+  "culture": "piman",
+  "religion": "totemism",
+  "trade_good": "salt",
+  "capital": "877",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "POT": {
+  "prov": "945",
+  "provname": "Michigan",
+  "culture": "anishinabe",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "945",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": {
+   "name": "THREE_FIRES_FEDERATION",
+   "members": [
+    "OJI",
+    "OTT",
+    "MSG"
+   ]
+  }
+ },
+ "POW": {
+  "prov": "952",
+  "provname": "Powhatan",
+  "culture": "powhatan",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "952",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "PTG": {
+  "prov": "751",
+  "provname": "Ceara",
+  "culture": "tupinamba",
+  "religion": "animism",
+  "trade_good": "sugar",
+  "capital": "751",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "QUI": {
+  "prov": "2528",
+  "provname": "Yazoo",
+  "culture": "natchez",
+  "religion": "totemism",
+  "trade_good": "cotton",
+  "capital": "2528",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "SAL": {
+  "prov": "874",
+  "provname": "Salish",
+  "culture": "salish",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "874",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "SAT": {
+  "prov": "2527",
+  "provname": "Chickamauga",
+  "culture": "creek",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2527",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "SEN": {
+  "prov": "958",
+  "provname": "Seneca",
+  "culture": "iroquois",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "958",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "SHO": {
+  "prov": "2020",
+  "provname": "Bannock",
+  "culture": "shoshone",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2020",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "SIO": {
+  "prov": "2517",
+  "provname": "Mdewakanton",
+  "culture": "dakota",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2517",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": {
+   "name": "SIO_federation_name",
+   "members": [
+    "WCY",
+    "LAK"
+   ]
+  }
+ },
+ "STA": {
+  "prov": "994",
+  "provname": "Stadacona",
+  "culture": "laurentian",
+  "religion": "totemism",
+  "trade_good": "fish",
+  "capital": "994",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "SUS": {
+  "prov": "2557",
+  "provname": "Atrakwaye",
+  "culture": "susquehannock",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "2557",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "TAH": {
+  "prov": "2670",
+  "provname": "Tkaronto",
+  "culture": "huron",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "2670",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "TAI": {
+  "prov": "829",
+  "provname": "Magdalena",
+  "culture": "muisca",
+  "religion": "animism",
+  "trade_good": "coffee",
+  "capital": "829",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "TIO": {
+  "prov": "2586",
+  "provname": "Tionontate",
+  "culture": "tionontate",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "2586",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "TPA": {
+  "prov": "748",
+  "provname": "Grao Para",
+  "culture": "tupinamba",
+  "religion": "animism",
+  "trade_good": "cocoa",
+  "capital": "748",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "TPQ": {
+  "prov": "757",
+  "provname": "Ilheus",
+  "culture": "tupinamba",
+  "religion": "animism",
+  "trade_good": "cocoa",
+  "capital": "757",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "TSC": {
+  "prov": "937",
+  "provname": "Tuscarora",
+  "culture": "iroquois",
+  "religion": "totemism",
+  "trade_good": "tobacco",
+  "capital": "937",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "TUA": {
+  "prov": "761",
+  "provname": "Espirito Santo",
+  "culture": "ge",
+  "religion": "animism",
+  "trade_good": "cocoa",
+  "capital": "761",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "WAM": {
+  "prov": "966",
+  "provname": "Nipmuc",
+  "culture": "massachusset",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "966",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "WCR": {
+  "prov": "2589",
+  "provname": "Kesagami",
+  "culture": "cree",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "2589",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "WCY": {
+  "prov": "4901",
+  "provname": "Saone",
+  "culture": "dakota",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "4901",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "WEN": {
+  "prov": "4872",
+  "provname": "Wenrohonon",
+  "culture": "tionontate",
+  "religion": "totemism",
+  "trade_good": "fur",
+  "capital": "4872",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "WIC": {
+  "prov": "886",
+  "provname": "Waco",
+  "culture": "wichita",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "886",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "YAQ": {
+  "prov": "862",
+  "provname": "Yaqui",
+  "culture": "piman",
+  "religion": "totemism",
+  "trade_good": "unknown",
+  "capital": "862",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "YKT": {
+  "prov": "4636",
+  "provname": "Choinumni",
+  "culture": "yokuts",
+  "religion": "totemism",
+  "trade_good": "grain",
+  "capital": "4636",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ },
+ "ZNI": {
+  "prov": "2494",
+  "provname": "Zuni",
+  "culture": "pueblo",
+  "religion": "totemism",
+  "trade_good": "wool",
+  "capital": "2494",
+  "monarch": {
+   "date": "1444.11.11",
+   "name": "Native Council",
+   "dynasty": null,
+   "adm": 3,
+   "dip": 3,
+   "mil": 3,
+   "birth": null
+  },
+  "federation": null
+ }
+}

@@ -1,0 +1,757 @@
+country_decisions = {
+
+	form_iroquois_confederacy = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = IRO }
+			OR = {
+				tag = ONO
+				tag = MOH
+				tag = ONE
+				tag = CAY
+				tag = SEN
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 960
+			owns_core_province = 961
+			owns_core_province = 964
+			owns_core_province = 959
+			owns_core_province = 958
+			NOT = { exists = IRO }
+		}
+		effect = {
+			change_tag = IRO
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_core = 960
+			add_core = 961
+			add_core = 964
+			add_core = 959
+			add_core = 958
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_huron_confederacy = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = HUR }
+			OR = {
+				tag = ATT
+				tag = AGG
+				tag = ARN
+				tag = TAH
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 988
+			owns_core_province = 989
+			owns_core_province = 2585
+			owns_core_province = 2670
+			NOT = { exists = HUR }
+		}
+		effect = {
+			change_tag = HUR
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_core = 988
+			add_core = 989
+			add_core = 2585
+			add_core = 2670
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_illiniwek_confederacy = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = ILL }
+			OR = {
+				tag = PEO
+				tag = CAO
+				tag = KSK
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 915
+			owns_core_province = 917
+			owns_core_province = 916
+			NOT = { exists = ILL }
+		}
+		effect = {
+			change_tag = ILL
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_core = 915
+			add_core = 917
+			add_core = 916
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_creek_nation = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = CRE }
+			OR = {
+				tag = COW
+				tag = KSI
+				tag = COO
+				tag = SAT
+				tag = ABI
+				tag = ETO
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 925
+			owns_core_province = 930
+			owns_core_province = 931
+			owns_core_province = 2527
+			owns_core_province = 2531
+			owns_core_province = 2540
+			NOT = { exists = CRE }
+		}
+		effect = {
+			change_tag = CRE
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_core = 925
+			add_core = 930
+			add_core = 931
+			add_core = 2527
+			add_core = 2531
+			add_core = 2540
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_pueblo_nation = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = PUE }
+			OR = {
+				tag = OHK
+				tag = ZNI
+				tag = ACO
+				tag = ISL
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 880
+			owns_core_province = 2494
+			owns_core_province = 2495
+			owns_core_province = 4631
+			NOT = { exists = PUE }
+		}
+		effect = {
+			change_tag = PUE
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_core = 880
+			add_core = 2494
+			add_core = 2495
+			add_core = 4631
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_shawnee_nation = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = SHA }
+			OR = {
+				tag = CLG
+				tag = KSP
+				tag = HWK
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 2525
+			owns_core_province = 2526
+			owns_core_province = 4888
+			NOT = { exists = SHA }
+		}
+		effect = {
+			change_tag = SHA
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_core = 2525
+			add_core = 2526
+			add_core = 4888
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_brazil = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = BRZ }
+			capital_scope = {
+				colonial_region = colonial_brazil
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_brazil
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = brazil_region
+				is_city = yes
+			}
+			NOT = { exists = BRZ }
+		}
+		effect = {
+			change_tag = BRZ
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_brazil = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = BRZ
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_argentina = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = ARG }
+			capital_scope = {
+				colonial_region = colonial_la_plata
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_la_plata
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = la_plata_region
+				is_city = yes
+			}
+			NOT = { exists = ARG }
+		}
+		effect = {
+			change_tag = ARG
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_la_plata = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ARG
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_mexico = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = MEX }
+			capital_scope = {
+				colonial_region = colonial_mexico
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_mexico
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = mexico_region
+				is_city = yes
+			}
+			NOT = { exists = MEX }
+		}
+		effect = {
+			change_tag = MEX
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_mexico = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MEX
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_peru = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = PEU }
+			capital_scope = {
+				colonial_region = colonial_peru
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_peru
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = peru_region
+				is_city = yes
+			}
+			NOT = { exists = PEU }
+		}
+		effect = {
+			change_tag = PEU
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_peru = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = PEU
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_colombia = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = COL }
+			capital_scope = {
+				colonial_region = colonial_colombia
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_colombia
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = colombia_region
+				is_city = yes
+			}
+			NOT = { exists = COL }
+		}
+		effect = {
+			change_tag = COL
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_colombia = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = COL
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_bolivia = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = BOL }
+			capital_scope = {
+				colonial_region = colonial_peru
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_peru
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = upper_peru_region
+				is_city = yes
+			}
+			NOT = { exists = BOL }
+		}
+		effect = {
+			change_tag = BOL
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_peru = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = BOL
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_guatemala = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = GTM }
+			capital_scope = {
+				colonial_region = colonial_mexico
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_mexico
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = central_america_region
+				is_city = yes
+			}
+			NOT = { exists = GTM }
+		}
+		effect = {
+			change_tag = GTM
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_mexico = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GTM
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_republic_of_california = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = RCA }
+			capital_scope = {
+				colonial_region = colonial_california
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_california
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = california_region
+				is_city = yes
+			}
+			NOT = { exists = RCA }
+		}
+		effect = {
+			change_tag = RCA
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_california = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = RCA
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_gulf_coast_federation = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = GLC }
+			capital_scope = {
+				colonial_region = colonial_mexico
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_mexico
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = rio_grande_region
+				is_city = yes
+			}
+			NOT = { exists = GLC }
+		}
+		effect = {
+			change_tag = GLC
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_mexico = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GLC
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_mississippi_confederation = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = MCP }
+			capital_scope = {
+				colonial_region = colonial_louisiana
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_louisiana
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = mississippi_region
+				is_city = yes
+			}
+			NOT = { exists = MCP }
+		}
+		effect = {
+			change_tag = MCP
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_louisiana = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MCP
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_federation_of_the_west_indies = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_random_new_world = no
+			NOT = { tag = FWN }
+			capital_scope = {
+				colonial_region = colonial_the_carribean
+				is_core = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			capital_scope = {
+				colonial_region = colonial_the_carribean
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = carribeans_region
+				is_city = yes
+			}
+			NOT = { exists = FWN }
+		}
+		effect = {
+			change_tag = FWN
+			on_change_tag_effect = yes
+			add_prestige = 25
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_the_carribean = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = FWN
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

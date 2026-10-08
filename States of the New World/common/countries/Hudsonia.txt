@@ -1,0 +1,14 @@
+graphical_culture = westerngfx
+
+color = { 94 143 176 }
+
+monarch_names = { "Hiawatha" "Deganawida" "Mohawk" "Oneida" "Onondaga" "Cayuga" "Seneca" "Manhattan" }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

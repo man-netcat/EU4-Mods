@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = guarani
+religion = animism
+capital = 776
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Tabare"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Curupi"
+		birth_date = 1429
+		death_date = 1493
+		claim = 80
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

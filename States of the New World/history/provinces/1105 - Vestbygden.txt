@@ -1,0 +1,13 @@
+# 1105 - Vestbygden
+
+owner = GRL
+controller = GRL
+culture = icelandic
+religion = catholic
+is_city = yes
+discovered_by = high_american
+base_tax = 2
+base_production = 2
+base_manpower = 2
+add_core = GRL
+trade_goods = fish

@@ -1,12 +1,13 @@
 # 778 - Rio de la Plata
 
-owner = LAP
-controller = LAP
-culture = het
+owner = CUA
+controller = CUA
+culture = charruan
 religion = animism
 is_city = yes
-base_tax = 5
-base_production = 5
-base_manpower = 5
-add_core = LAP
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = CUA
 trade_goods = grain

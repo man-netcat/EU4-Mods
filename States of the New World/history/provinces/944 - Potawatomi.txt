@@ -1,12 +1,13 @@
 # 944 - Potawatomi
 
-owner = MGA
-controller = MGA
-culture = anishinabe
+owner = FOX
+controller = FOX
+culture = mesquakie
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = MGA
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = FOX
 trade_goods = fur

@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 120 156 110 }
+
+monarch_names = { "Kolby" "Ronan" "Dillon" "Havre" "Eureka" "Bozeman" "Kalispell" "Anaconda" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

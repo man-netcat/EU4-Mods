@@ -1,12 +1,13 @@
 # 2610 - Heiltsuk
 
-owner = CSC
-controller = CSC
+owner = HLS
+controller = HLS
 culture = salish
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = CSC
+base_manpower = 3
+add_core = HLS
 trade_goods = fur

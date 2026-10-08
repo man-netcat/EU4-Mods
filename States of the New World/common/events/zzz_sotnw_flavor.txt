@@ -1,0 +1,332 @@
+# States of the New World - flavor events for the American nations.
+# Hand-written; do not let the generator overwrite this file.
+# Namespace zzz_sotnw is unique to this mod; no collision with vanilla namespaces.
+
+namespace = zzz_sotnw
+
+# 1 - The Strange Sickness (post-contact epidemic reaching native lands)
+country_event = {
+	id = zzz_sotnw.1
+	title = "zzz_sotnw.1.t"
+	desc = "zzz_sotnw.1.d"
+	picture = PLAGUE_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_sickness }
+		OR = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+		is_year = 1450
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 2
+			any_neighbor_country = { technology_group = western }
+		}
+	}
+
+	option = {
+		name = "zzz_sotnw.1.a"
+		ai_chance = { factor = 70 }
+		set_country_flag = zzz_sotnw_sickness
+		add_war_exhaustion = 1
+		add_manpower = -5000
+	}
+
+	option = {
+		name = "zzz_sotnw.1.b"
+		ai_chance = { factor = 30 }
+		set_country_flag = zzz_sotnw_sickness
+		add_stability = -1
+		add_prestige = 10
+	}
+}
+
+# 2 - Corsairs on the Florida Coast
+country_event = {
+	id = zzz_sotnw.2
+	title = "zzz_sotnw.2.t"
+	desc = "zzz_sotnw.2.d"
+	picture = BARBARY_PIRATES_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_corsairs }
+		any_owned_province = {
+			area = florida_area
+			is_port = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {
+		name = "zzz_sotnw.2.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = zzz_sotnw_corsairs
+		add_prestige = 5
+		add_military_power = 25
+	}
+
+	option = {
+		name = "zzz_sotnw.2.b"
+		ai_chance = { factor = 30 }
+		set_country_flag = zzz_sotnw_corsairs
+		add_treasury = -75
+	}
+
+	option = {
+		name = "zzz_sotnw.2.c"
+		ai_chance = { factor = 20 }
+		set_country_flag = zzz_sotnw_corsairs
+	}
+}
+
+# 3 - Gold in the Riverbed
+country_event = {
+	id = zzz_sotnw.3
+	title = "zzz_sotnw.3.t"
+	desc = "zzz_sotnw.3.d"
+	picture = EXPLORERS_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_gold }
+		any_owned_province = {
+			trade_goods = gold
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = "zzz_sotnw.3.a"
+		ai_chance = { factor = 60 }
+		set_country_flag = zzz_sotnw_gold
+		add_treasury = 100
+		add_inflation = 0.5
+	}
+
+	option = {
+		name = "zzz_sotnw.3.b"
+		ai_chance = { factor = 25 }
+		set_country_flag = zzz_sotnw_gold
+		add_prestige = 5
+	}
+
+	option = {
+		name = "zzz_sotnw.3.c"
+		ai_chance = { factor = 15 }
+		set_country_flag = zzz_sotnw_gold
+		add_legitimacy = 5
+		add_stability = 1
+	}
+}
+
+# 4 - The Horse Spreads North
+country_event = {
+	id = zzz_sotnw.4
+	title = "zzz_sotnw.4.t"
+	desc = "zzz_sotnw.4.d"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_horse }
+		is_year = 1450
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 2
+			any_neighbor_country = { technology_group = western }
+		}
+	}
+
+	option = {
+		name = "zzz_sotnw.4.a"
+		ai_chance = { factor = 55 }
+		set_country_flag = zzz_sotnw_horse
+		add_military_power = 50
+	}
+
+	option = {
+		name = "zzz_sotnw.4.b"
+		ai_chance = { factor = 25 }
+		set_country_flag = zzz_sotnw_horse
+		add_treasury = 100
+		add_diplomatic_power = 25
+	}
+
+	option = {
+		name = "zzz_sotnw.4.c"
+		ai_chance = { factor = 20 }
+		set_country_flag = zzz_sotnw_horse
+	}
+}
+
+# 5 - Foreign Missionaries
+country_event = {
+	id = zzz_sotnw.5
+	title = "zzz_sotnw.5.t"
+	desc = "zzz_sotnw.5.d"
+	picture = NATIVES_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_mission }
+		NOT = { religion_group = christian }
+		any_neighbor_country = {
+			religion_group = christian
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = "zzz_sotnw.5.a"
+		ai_chance = { factor = 55 }
+		set_country_flag = zzz_sotnw_mission
+		add_prestige = 5
+		add_war_exhaustion = 1
+	}
+
+	option = {
+		name = "zzz_sotnw.5.b"
+		ai_chance = { factor = 45 }
+		set_country_flag = zzz_sotnw_mission
+		add_diplomatic_power = 50
+	}
+}
+
+# 6 - Council of the Confederacy
+country_event = {
+	id = zzz_sotnw.6
+	title = "zzz_sotnw.6.t"
+	desc = "zzz_sotnw.6.d"
+	picture = NATIVES_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_council }
+		OR = {
+			tag = IRO
+			tag = HUR
+			tag = ILL
+			tag = CRE
+			tag = PUE
+			tag = SHA
+			has_custom_ideas = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.5
+			government_rank = 2
+		}
+	}
+
+	option = {
+		name = "zzz_sotnw.6.a"
+		ai_chance = { factor = 75 }
+		set_country_flag = zzz_sotnw_council
+		add_legitimacy = 5
+		add_prestige = 2
+	}
+
+	option = {
+		name = "zzz_sotnw.6.b"
+		ai_chance = { factor = 25 }
+		set_country_flag = zzz_sotnw_council
+	}
+}
+
+# 7 - Season of the Buffalo
+country_event = {
+	id = zzz_sotnw.7
+	title = "zzz_sotnw.7.t"
+	desc = "zzz_sotnw.7.d"
+	picture = NATIVES_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_buffalo }
+		is_year = 1500
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {
+		name = "zzz_sotnw.7.a"
+		ai_chance = { factor = 70 }
+		set_country_flag = zzz_sotnw_buffalo
+		add_manpower = 5000
+		add_stability = 1
+	}
+
+	option = {
+		name = "zzz_sotnw.7.b"
+		ai_chance = { factor = 30 }
+		set_country_flag = zzz_sotnw_buffalo
+		add_treasury = 50
+	}
+}
+
+# 8 - The Sky Burns (eclipse read as an omen)
+country_event = {
+	id = zzz_sotnw.8
+	title = "zzz_sotnw.8.t"
+	desc = "zzz_sotnw.8.d"
+	picture = FAMINE_eventPicture
+
+	trigger = {
+		is_random_new_world = no
+		NOT = { has_country_flag = zzz_sotnw_eclipse }
+		OR = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+		}
+		is_year = 1470
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = "zzz_sotnw.8.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = zzz_sotnw_eclipse
+		add_prestige = 10
+		add_stability = -1
+	}
+
+	option = {
+		name = "zzz_sotnw.8.b"
+		ai_chance = { factor = 35 }
+		set_country_flag = zzz_sotnw_eclipse
+		add_treasury = -25
+		add_prestige = 5
+	}
+
+	option = {
+		name = "zzz_sotnw.8.c"
+		ai_chance = { factor = 15 }
+		set_country_flag = zzz_sotnw_eclipse
+	}
+}

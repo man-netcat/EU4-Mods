@@ -1,0 +1,14 @@
+graphical_culture = westerngfx
+
+color = { 138 176 128 }
+
+monarch_names = { "Mackenzie" "Tecumseh" "Ottawa" "Huron" "Nipissing" "Algonquin" "Niagara" "Simcoe" }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 124 143 168 }
+
+monarch_names = { "Gordon" "Menominee" "Oconto" "Racine" "Sauk" "Waukesha" "Winnebago" "Sheboygan" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

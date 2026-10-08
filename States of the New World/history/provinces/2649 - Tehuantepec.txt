@@ -1,12 +1,13 @@
 # 2649 - Tehuantepec
 
-owner = CXA
-controller = CXA
-culture = lacandon
-religion = mesoamerican_religion
+owner = ZAP
+controller = ZAP
+culture = zapotek
+religion = nahuatl
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 3
-add_core = CXA
-trade_goods = grain
+base_manpower = 4
+add_core = ZAP
+trade_goods = copper

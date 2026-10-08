@@ -1,8 +1,8 @@
 government = monarchy
 add_government_reform = feudalism_reform
-technology_group = western
+technology_group = high_american
 unit_type = western
-primary_culture = iroquois
+primary_culture = delaware
 religion = totemism
 capital = 965
 government_rank = 2

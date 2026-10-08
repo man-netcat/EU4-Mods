@@ -1,12 +1,13 @@
 # 828 - Cartagena
 
-owner = COL
-controller = COL
-culture = guajiro
+owner = DRN
+controller = DRN
+culture = muisca
 religion = animism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = COL
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = DRN
 trade_goods = grain

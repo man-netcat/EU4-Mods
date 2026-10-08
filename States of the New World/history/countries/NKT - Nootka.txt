@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = aleutian
+religion = totemism
+capital = 972
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Tloqwa"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Tsawalk"
+		birth_date = 1429
+		death_date = 1491
+		claim = 78
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

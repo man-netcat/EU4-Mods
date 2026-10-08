@@ -1,0 +1,11 @@
+graphical_culture = westerngfx
+
+color = { 160 196 196 }
+
+monarch_names = { "Cacimar" "Arnaut" "Daguao" "Tibiri" }
+
+historical_idea_groups = {
+	klg_ideas
+}
+
+random_nation_chance = 0

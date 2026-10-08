@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 134 185 217 }
+
+monarch_names = { "Kalinago" "Arawak" "Krotoa" "Carbet" "Tiburon" "Gonave" "Samana" "Vieques" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	naval_ideas
+}
+
+random_nation_chance = 0

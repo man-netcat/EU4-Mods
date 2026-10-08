@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 155 127 90 }
+
+monarch_names = { "Borba" "Bartholomeu" "Sao Paulo" "Antonio" "Simao" "Jeronymo" "Alvarenga" "Guimaraes" }
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+}
+
+random_nation_chance = 0

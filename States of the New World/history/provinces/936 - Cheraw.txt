@@ -1,12 +1,13 @@
 # 936 - Cheraw
 
-owner = TNS
-controller = TNS
-culture = yuchi
+owner = JOA
+controller = JOA
+culture = catawba
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = TNS
-trade_goods = grain
+base_manpower = 3
+add_core = JOA
+trade_goods = tobacco

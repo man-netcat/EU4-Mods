@@ -1,12 +1,13 @@
 # 2832 - Exaltacion
 
-owner = BOL
-controller = BOL
-culture = aimara
-religion = inti
+owner = MTG
+controller = MTG
+culture = maipurean
+religion = animism
 is_city = yes
-base_tax = 4
-base_production = 4
+discovered_by = high_american
+base_tax = 3
+base_production = 3
 base_manpower = 4
-add_core = BOL
-trade_goods = silver
+add_core = MTG
+trade_goods = gold

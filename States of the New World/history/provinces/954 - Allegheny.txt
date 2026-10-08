@@ -1,12 +1,13 @@
 # 954 - Allegheny
 
-owner = VIR
-controller = VIR
-culture = powhatan
+owner = ERI
+controller = ERI
+culture = tionontate
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = VIR
-trade_goods = grain
+base_manpower = 3
+add_core = ERI
+trade_goods = fur

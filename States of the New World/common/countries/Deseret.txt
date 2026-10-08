@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 212 164 40 }
+
+monarch_names = { "Brigham" "Hyrum" "Ephraim" "Lehi" "Moses" "Aaron" "Nehemiah" "Josiah" }
+
+historical_idea_groups = {
+	defensive_ideas
+	economic_ideas
+	trade_ideas
+}
+
+random_nation_chance = 0

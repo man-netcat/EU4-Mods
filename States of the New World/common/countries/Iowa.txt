@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 185 194 104 }
+
+monarch_names = { "Cyrus" "Dubuque" "Davenport" "Keokuk" "Osceola" "Plymouth" "Sioux" "Tama" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

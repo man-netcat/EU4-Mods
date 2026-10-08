@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = huarpe
+religion = animism
+capital = 787
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Lautaro"
+		dynasty = "of the Long Coast"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Caupolican"
+		dynasty = "of the Long Coast"
+		birth_date = 1419
+		death_date = 1496
+		claim = 91
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}

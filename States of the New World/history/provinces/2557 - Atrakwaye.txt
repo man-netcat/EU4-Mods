@@ -1,12 +1,13 @@
 # 2557 - Atrakwaye
 
-owner = PNS
-controller = PNS
+owner = SUS
+controller = SUS
 culture = susquehannock
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = PNS
+add_core = SUS
 trade_goods = grain

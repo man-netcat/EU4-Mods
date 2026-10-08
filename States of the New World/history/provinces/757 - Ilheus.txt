@@ -1,12 +1,13 @@
 # 757 - Ilheus
 
-owner = BYA
-controller = BYA
-culture = ge
+owner = TPQ
+controller = TPQ
+culture = tupinamba
 religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = BYA
-trade_goods = sugar
+base_manpower = 3
+add_core = TPQ
+trade_goods = cocoa

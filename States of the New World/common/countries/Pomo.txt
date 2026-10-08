@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 30 92 66 }
+
+monarch_names = { "Kulantai" "Shanel" "Tsawai" "Bakayuk" "Sokei" "Elakmi" }
+
+historical_idea_groups = {
+	pmo_ideas
+}
+
+random_nation_chance = 0

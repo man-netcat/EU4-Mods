@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 56 80 140 }
+
+monarch_names = { "Tloqwa" "Tsawalk" "Hawilth" "Yaquotl" "Nookmi" "Hesquiat" }
+
+historical_idea_groups = {
+	nkt_ideas
+}
+
+random_nation_chance = 0

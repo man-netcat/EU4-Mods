@@ -1,10 +1,11 @@
-government = republic
-add_government_reform = merchant_republic_reform
-technology_group = western
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
 unit_type = western
 primary_culture = tupinamba
 religion = animism
-capital = 761
+capital = 763
+government_rank = 2
 
 1444.11.11 = {
 	monarch = {

@@ -1,12 +1,13 @@
 # 2526 - Shatteras
 
-owner = CMB
-controller = CMB
+owner = KSP
+controller = KSP
 culture = shawnee
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = CMB
-trade_goods = grain
+add_core = KSP
+trade_goods = fur

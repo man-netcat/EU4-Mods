@@ -1,12 +1,13 @@
 # 2531 - Napochi
 
-owner = ALM
-controller = ALM
+owner = ABI
+controller = ABI
 culture = creek
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = ALM
-trade_goods = grain
+add_core = ABI
+trade_goods = tobacco

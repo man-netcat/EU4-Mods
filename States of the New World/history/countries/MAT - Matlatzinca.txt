@@ -1,0 +1,21 @@
+# No previous file for Matlatzinca
+
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = matlatzinca
+religion = nahuatl
+technology_group = high_american
+capital = 2626
+
+#Rulers of Tizatlan
+
+government_rank = 2
+1440.1.1 = {
+	monarch = {
+		name = "Aztatlan"
+		dynasty = "Toluca"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+} #completely made up. Not known. 

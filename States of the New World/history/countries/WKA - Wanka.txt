@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = inca
+religion = inti
+technology_group = high_american
+unit_type = south_american
+capital = 810
+
+
+government_rank = 1
+1444.1.1 = {
+	monarch = {
+		name = "Catequil"
+		dynasty = "Wanka"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+#Annexed in 1460

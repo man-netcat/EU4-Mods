@@ -1,0 +1,14 @@
+graphical_culture = westerngfx
+
+color = { 0 150 150 }
+
+monarch_names = { "Juan" "Jose" "Carlos" "Manuel" "Antonio" "Francisco" "Jesus" "Diego" "Ramon" "Pedro" "Miguel" "Rafael" "Tomas" "Luis" "Ignacio" "Vicente" }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

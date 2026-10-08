@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 90 160 176 }
+
+monarch_names = { "Estacio de Sa" "Mem de Sa" "Salvador Correia" "Jeronimo de Albuquerque" "Martim Afonso" "Duarte da Costa" "Francisco de Souza" "Diogo Botelho" }
+
+historical_idea_groups = {
+	trade_ideas
+	naval_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

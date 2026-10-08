@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 99 44 99 }
+
+monarch_names = { "Gwayasdams" "Hamatsa" "Tsekame" "Tsawatti" "Klolwa" "Nagwis" }
+
+historical_idea_groups = {
+	kwk_ideas
+}
+
+random_nation_chance = 0

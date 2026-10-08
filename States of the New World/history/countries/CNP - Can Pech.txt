@@ -1,0 +1,21 @@
+# No previous file for Can Pech
+
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = yucatec
+religion = mesoamerican_religion
+technology_group = high_american
+capital = 845
+historical_rival = COC
+
+
+government_rank = 1
+1399.1.1 = {
+	monarch = {
+		name = "Ah"
+		dynasty = "Ceh Pech"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}

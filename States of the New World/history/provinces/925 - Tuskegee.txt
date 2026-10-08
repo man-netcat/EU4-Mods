@@ -1,12 +1,13 @@
 # 925 - Tuskegee
 
-owner = ALM
-controller = ALM
+owner = COW
+controller = COW
 culture = creek
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = ALM
-trade_goods = grain
+add_core = COW
+trade_goods = cotton

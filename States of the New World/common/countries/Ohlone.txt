@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 158 110 40 }
+
+monarch_names = { "Mutsun" "Rumsen" "Chochenyo" "Karkin" "Tamien" "Yelamu" }
+
+historical_idea_groups = {
+	oho_ideas
+}
+
+random_nation_chance = 0

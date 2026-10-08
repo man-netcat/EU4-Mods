@@ -1,12 +1,13 @@
 # 2494 - Zuni
 
-owner = CLD
-controller = CLD
-culture = wichita
+owner = ZNI
+controller = ZNI
+culture = pueblo
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
 base_manpower = 3
-add_core = CLD
-trade_goods = grain
+add_core = ZNI
+trade_goods = wool

@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 155 177 200 }
+
+monarch_names = { "Everett" "Selby" "Edmund" "Bismarck" "Huron" "Faulk" "Potter" "Cavalier" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

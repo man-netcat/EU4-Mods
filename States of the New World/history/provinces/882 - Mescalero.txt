@@ -1,12 +1,13 @@
 # 882 - Mescalero
 
-owner = TEX
-controller = TEX
-culture = caddo
+owner = MSC
+controller = MSC
+culture = mescalero
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = TEX
-trade_goods = grain
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = MSC
+trade_goods = wool

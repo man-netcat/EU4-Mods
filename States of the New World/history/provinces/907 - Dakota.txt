@@ -1,12 +1,13 @@
 # 907 - Dakota
 
-owner = DKT
-controller = DKT
-culture = pawnee
+owner = LAK
+controller = LAK
+culture = dakota
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = DKT
+base_manpower = 3
+add_core = LAK
 trade_goods = grain

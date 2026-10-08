@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 138 166 196 }
+
+monarch_names = { "Vaughan" "Loran" "Anoka" "Cass" "Itasca" "Mille" "Otter" "Pipestone" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

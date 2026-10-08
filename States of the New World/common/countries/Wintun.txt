@@ -1,0 +1,11 @@
+graphical_culture = northamericagfx
+
+color = { 46 105 121 }
+
+monarch_names = { "Nomlaki" "Wolok" "Paskenta" "Tsamkai" "Hewan" "Sawal" }
+
+historical_idea_groups = {
+	wnt_ideas
+}
+
+random_nation_chance = 0

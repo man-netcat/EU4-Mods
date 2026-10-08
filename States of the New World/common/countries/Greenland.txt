@@ -1,0 +1,13 @@
+graphical_culture = westerngfx
+
+color = { 186 206 216 }
+
+monarch_names = { "Eirik" "Snorri" "Thorgils" "Orm" "Koll" "Gunnar" "Thorvald" "Bjarni" }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+random_nation_chance = 0

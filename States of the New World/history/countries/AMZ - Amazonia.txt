@@ -1,7 +1,7 @@
-government = native
-add_government_reform = native_clan_council_reform
-technology_group = south_american
-unit_type = south_american
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
 primary_culture = tupinamba
 religion = animism
 capital = 2889

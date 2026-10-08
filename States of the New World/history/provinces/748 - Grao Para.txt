@@ -1,12 +1,13 @@
 # 748 - Grao Para
 
-owner = AMZ
-controller = AMZ
+owner = TPA
+controller = TPA
 culture = tupinamba
 religion = animism
 is_city = yes
-base_tax = 2
-base_production = 2
-base_manpower = 2
-add_core = AMZ
-trade_goods = fish
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = TPA
+trade_goods = cocoa

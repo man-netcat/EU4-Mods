@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = arawak
+religion = animism
+capital = 484
+government_rank = 2
+
+1444.11.11 = {
+	monarch = {
+		name = "Hatuey"
+		dynasty = "of the Ta'no"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Guama"
+		dynasty = "of the Ta'no"
+		birth_date = 1423
+		death_date = 1487
+		claim = 85
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

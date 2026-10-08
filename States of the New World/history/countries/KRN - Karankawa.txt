@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = high_american
+unit_type = western
+primary_culture = caddo
+religion = totemism
+capital = 884
+government_rank = 1
+
+1444.11.11 = {
+	monarch = {
+		name = "Kukan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1444.11.11 = {
+	heir = {
+		name = "Tamkol"
+		birth_date = 1430
+		death_date = 1490
+		claim = 74
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

@@ -1,0 +1,1169 @@
+### generated events for dynamic tags
+
+namespace = dynamic_tags_00_vanilla
+
+country_event = {
+    id = dynamic_tags_00_vanilla.0
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    immediate = {
+        if = { limit = { OR = { tag = DAN tag = AAA } } country_event = { id = dynamic_tags_00_vanilla.1 } }
+        if = { limit = { OR = { tag = SWE tag = AAB } } country_event = { id = dynamic_tags_00_vanilla.2 } }
+        if = { limit = { OR = { tag = NOR tag = AAD } } country_event = { id = dynamic_tags_00_vanilla.3 } }
+        if = { limit = { OR = { tag = ENG tag = AAE } } country_event = { id = dynamic_tags_00_vanilla.4 } }
+        if = { limit = { OR = { tag = GBR tag = AAF } } country_event = { id = dynamic_tags_00_vanilla.5 } }
+        if = { limit = { OR = { tag = IRE tag = AAG } } country_event = { id = dynamic_tags_00_vanilla.6 } }
+        if = { limit = { OR = { tag = SCO tag = AAH } } country_event = { id = dynamic_tags_00_vanilla.7 } }
+        if = { limit = { OR = { tag = WAL tag = AAI } } country_event = { id = dynamic_tags_00_vanilla.8 } }
+        if = { limit = { OR = { tag = CAS tag = AAJ } } country_event = { id = dynamic_tags_00_vanilla.9 } }
+        if = { limit = { OR = { tag = SPA tag = AAK } } country_event = { id = dynamic_tags_00_vanilla.10 } }
+        if = { limit = { OR = { tag = ARA tag = AAL } } country_event = { id = dynamic_tags_00_vanilla.11 } }
+        if = { limit = { OR = { tag = POR tag = AAM } } country_event = { id = dynamic_tags_00_vanilla.12 } }
+        if = { limit = { OR = { tag = NAV tag = AAN } } country_event = { id = dynamic_tags_00_vanilla.13 } }
+        if = { limit = { OR = { tag = CAT tag = AAO } } country_event = { id = dynamic_tags_00_vanilla.14 } }
+        if = { limit = { OR = { tag = FRA tag = AAP } } country_event = { id = dynamic_tags_00_vanilla.15 } }
+        if = { limit = { OR = { tag = BUR tag = AAQ } } country_event = { id = dynamic_tags_00_vanilla.16 } }
+        if = { limit = { OR = { tag = PRO tag = AAR } } country_event = { id = dynamic_tags_00_vanilla.17 } }
+        if = { limit = { OR = { tag = LOR tag = AAS } } country_event = { id = dynamic_tags_00_vanilla.18 } }
+        if = { limit = { OR = { tag = BRE tag = AAT } } country_event = { id = dynamic_tags_00_vanilla.19 } }
+        if = { limit = { OR = { tag = NED tag = AAU } } country_event = { id = dynamic_tags_00_vanilla.20 } }
+        if = { limit = { OR = { tag = HOL tag = AAV } } country_event = { id = dynamic_tags_00_vanilla.21 } }
+        if = { limit = { OR = { tag = LUX tag = AAW } } country_event = { id = dynamic_tags_00_vanilla.22 } }
+        if = { limit = { OR = { tag = VEN tag = AAX } } country_event = { id = dynamic_tags_00_vanilla.23 } }
+        if = { limit = { OR = { tag = NAP tag = AAY } } country_event = { id = dynamic_tags_00_vanilla.24 } }
+        if = { limit = { OR = { tag = MLO tag = AAZ } } country_event = { id = dynamic_tags_00_vanilla.25 } }
+        if = { limit = { OR = { tag = FLO tag = ABA } } country_event = { id = dynamic_tags_00_vanilla.26 } }
+        if = { limit = { OR = { tag = PAP tag = ABC } } country_event = { id = dynamic_tags_00_vanilla.27 } }
+        if = { limit = { OR = { tag = GEN tag = ABD } } country_event = { id = dynamic_tags_00_vanilla.28 } }
+        if = { limit = { OR = { tag = TUS tag = ABF } } country_event = { id = dynamic_tags_00_vanilla.29 } }
+        if = { limit = { OR = { tag = SIC tag = ABG } } country_event = { id = dynamic_tags_00_vanilla.30 } }
+        if = { limit = { OR = { tag = AQU tag = ABH } } country_event = { id = dynamic_tags_00_vanilla.31 } }
+        if = { limit = { OR = { tag = HAB tag = ABJ } } country_event = { id = dynamic_tags_00_vanilla.32 } }
+        if = { limit = { OR = { tag = HUN tag = ABK } } country_event = { id = dynamic_tags_00_vanilla.33 } }
+        if = { limit = { OR = { tag = BOH tag = ABL } } country_event = { id = dynamic_tags_00_vanilla.34 } }
+        if = { limit = { OR = { tag = SAX tag = ABM } } country_event = { id = dynamic_tags_00_vanilla.35 } }
+        if = { limit = { OR = { tag = BAV tag = ABN } } country_event = { id = dynamic_tags_00_vanilla.36 } }
+        if = { limit = { OR = { tag = PRU tag = ABO } } country_event = { id = dynamic_tags_00_vanilla.37 } }
+        if = { limit = { OR = { tag = GER tag = ABP } } country_event = { id = dynamic_tags_00_vanilla.38 } }
+        if = { limit = { OR = { tag = SWI tag = ABQ } } country_event = { id = dynamic_tags_00_vanilla.39 } }
+        if = { limit = { OR = { tag = POL tag = ABR } } country_event = { id = dynamic_tags_00_vanilla.40 } }
+        if = { limit = { OR = { tag = LIT tag = ABS } } country_event = { id = dynamic_tags_00_vanilla.41 } }
+        if = { limit = { OR = { tag = SER tag = ABT } } country_event = { id = dynamic_tags_00_vanilla.42 } }
+        if = { limit = { OR = { tag = BOS tag = ABU } } country_event = { id = dynamic_tags_00_vanilla.43 } }
+        if = { limit = { OR = { tag = CRO tag = ABV } } country_event = { id = dynamic_tags_00_vanilla.44 } }
+        if = { limit = { OR = { tag = ALB tag = ABW } } country_event = { id = dynamic_tags_00_vanilla.45 } }
+        if = { limit = { OR = { tag = RAG tag = ABX } } country_event = { id = dynamic_tags_00_vanilla.46 } }
+        if = { limit = { OR = { tag = TUR tag = ABY } } country_event = { id = dynamic_tags_00_vanilla.47 } }
+        if = { limit = { OR = { tag = MOS tag = ABZ } } country_event = { id = dynamic_tags_00_vanilla.48 } }
+        if = { limit = { OR = { tag = RUS tag = ACA } } country_event = { id = dynamic_tags_00_vanilla.49 } }
+        if = { limit = { OR = { tag = NOV tag = ACB } } country_event = { id = dynamic_tags_00_vanilla.50 } }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.0.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.1
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = DAN tag = AAA }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAA NOT = { government = republic } } change_tag = DAN }
+        if = { limit = { tag = DAN government = republic } change_tag = AAA }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.1.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.2
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = SWE tag = AAB }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAB NOT = { government = republic } } change_tag = SWE }
+        if = { limit = { tag = SWE government = republic } change_tag = AAB }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.2.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.3
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = NOR tag = AAD }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAD NOT = { government = republic } } change_tag = NOR }
+        if = { limit = { tag = NOR government = republic } change_tag = AAD }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.3.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.4
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = ENG tag = AAE }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAE NOT = { government = republic } } change_tag = ENG }
+        if = { limit = { tag = ENG government = republic } change_tag = AAE }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.4.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.5
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = GBR tag = AAF }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAF NOT = { government = republic } } change_tag = GBR }
+        if = { limit = { tag = GBR government = republic } change_tag = AAF }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.5.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.6
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = IRE tag = AAG }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAG NOT = { government = republic } } change_tag = IRE }
+        if = { limit = { tag = IRE government = republic } change_tag = AAG }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.6.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.7
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = SCO tag = AAH }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAH NOT = { government = republic } } change_tag = SCO }
+        if = { limit = { tag = SCO government = republic } change_tag = AAH }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.7.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.8
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = WAL tag = AAI }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAI NOT = { government = republic } } change_tag = WAL }
+        if = { limit = { tag = WAL government = republic } change_tag = AAI }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.8.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.9
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = CAS tag = AAJ }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAJ NOT = { government = republic } } change_tag = CAS }
+        if = { limit = { tag = CAS government = republic } change_tag = AAJ }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.9.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.10
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = SPA tag = AAK }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAK NOT = { government = republic } } change_tag = SPA }
+        if = { limit = { tag = SPA government = republic } change_tag = AAK }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.10.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.11
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = ARA tag = AAL }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAL NOT = { government = republic } } change_tag = ARA }
+        if = { limit = { tag = ARA government = republic } change_tag = AAL }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.11.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.12
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = POR tag = AAM }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAM NOT = { government = republic } } change_tag = POR }
+        if = { limit = { tag = POR government = republic } change_tag = AAM }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.12.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.13
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = NAV tag = AAN }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAN NOT = { government = republic } } change_tag = NAV }
+        if = { limit = { tag = NAV government = republic } change_tag = AAN }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.13.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.14
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = CAT tag = AAO }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAO NOT = { government = republic } } change_tag = CAT }
+        if = { limit = { tag = CAT government = republic } change_tag = AAO }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.14.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.15
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = FRA tag = AAP }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAP NOT = { government = republic } } change_tag = FRA }
+        if = { limit = { tag = FRA government = republic } change_tag = AAP }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.15.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.16
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = BUR tag = AAQ }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAQ NOT = { government = republic } } change_tag = BUR }
+        if = { limit = { tag = BUR government = republic } change_tag = AAQ }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.16.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.17
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = PRO tag = AAR }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAR NOT = { government = republic } } change_tag = PRO }
+        if = { limit = { tag = PRO government = republic } change_tag = AAR }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.17.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.18
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = LOR tag = AAS }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAS NOT = { government = republic } } change_tag = LOR }
+        if = { limit = { tag = LOR government = republic } change_tag = AAS }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.18.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.19
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = BRE tag = AAT }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAT NOT = { government = republic } } change_tag = BRE }
+        if = { limit = { tag = BRE government = republic } change_tag = AAT }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.19.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.20
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = NED tag = AAU }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAU NOT = { government = republic } } change_tag = NED }
+        if = { limit = { tag = NED government = republic } change_tag = AAU }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.20.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.21
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = HOL tag = AAV }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAV NOT = { government = republic } } change_tag = HOL }
+        if = { limit = { tag = HOL government = republic } change_tag = AAV }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.21.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.22
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = LUX tag = AAW }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAW NOT = { government = republic } } change_tag = LUX }
+        if = { limit = { tag = LUX government = republic } change_tag = AAW }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.22.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.23
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = VEN tag = AAX }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAX NOT = { government = republic } } change_tag = VEN }
+        if = { limit = { tag = VEN government = republic } change_tag = AAX }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.23.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.24
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = NAP tag = AAY }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAY NOT = { government = republic } } change_tag = NAP }
+        if = { limit = { tag = NAP government = republic } change_tag = AAY }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.24.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.25
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = MLO tag = AAZ }
+    }
+
+    immediate = {
+        if = { limit = { tag = AAZ NOT = { government = republic } } change_tag = MLO }
+        if = { limit = { tag = MLO government = republic } change_tag = AAZ }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.25.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.26
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = FLO tag = ABA }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABA NOT = { government = republic } } change_tag = FLO }
+        if = { limit = { tag = FLO government = republic } change_tag = ABA }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.26.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.27
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = PAP tag = ABC }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABC NOT = { government = republic } } change_tag = PAP }
+        if = { limit = { tag = PAP government = republic } change_tag = ABC }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.27.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.28
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = GEN tag = ABD }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABD NOT = { government = republic } } change_tag = GEN }
+        if = { limit = { tag = GEN government = republic } change_tag = ABD }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.28.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.29
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = TUS tag = ABF }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABF NOT = { government = republic } } change_tag = TUS }
+        if = { limit = { tag = TUS government = republic } change_tag = ABF }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.29.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.30
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = SIC tag = ABG }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABG NOT = { government = republic } } change_tag = SIC }
+        if = { limit = { tag = SIC government = republic } change_tag = ABG }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.30.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.31
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = AQU tag = ABH }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABH NOT = { government = republic } } change_tag = AQU }
+        if = { limit = { tag = AQU government = republic } change_tag = ABH }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.31.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.32
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = HAB tag = ABJ }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABJ NOT = { government = republic } } change_tag = HAB }
+        if = { limit = { tag = HAB government = republic } change_tag = ABJ }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.32.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.33
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = HUN tag = ABK }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABK NOT = { government = republic } } change_tag = HUN }
+        if = { limit = { tag = HUN government = republic } change_tag = ABK }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.33.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.34
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = BOH tag = ABL }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABL NOT = { government = republic } } change_tag = BOH }
+        if = { limit = { tag = BOH government = republic } change_tag = ABL }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.34.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.35
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = SAX tag = ABM }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABM NOT = { government = republic } } change_tag = SAX }
+        if = { limit = { tag = SAX government = republic } change_tag = ABM }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.35.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.36
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = BAV tag = ABN }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABN NOT = { government = republic } } change_tag = BAV }
+        if = { limit = { tag = BAV government = republic } change_tag = ABN }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.36.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.37
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = PRU tag = ABO }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABO NOT = { government = republic } } change_tag = PRU }
+        if = { limit = { tag = PRU government = republic } change_tag = ABO }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.37.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.38
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = GER tag = ABP }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABP NOT = { government = republic } } change_tag = GER }
+        if = { limit = { tag = GER government = republic } change_tag = ABP }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.38.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.39
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = SWI tag = ABQ }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABQ NOT = { government = republic } } change_tag = SWI }
+        if = { limit = { tag = SWI government = republic } change_tag = ABQ }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.39.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.40
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = POL tag = ABR }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABR NOT = { government = republic } } change_tag = POL }
+        if = { limit = { tag = POL government = republic } change_tag = ABR }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.40.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.41
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = LIT tag = ABS }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABS NOT = { government = republic } } change_tag = LIT }
+        if = { limit = { tag = LIT government = republic } change_tag = ABS }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.41.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.42
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = SER tag = ABT }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABT NOT = { government = republic } } change_tag = SER }
+        if = { limit = { tag = SER government = republic } change_tag = ABT }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.42.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.43
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = BOS tag = ABU }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABU NOT = { government = republic } } change_tag = BOS }
+        if = { limit = { tag = BOS government = republic } change_tag = ABU }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.43.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.44
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = CRO tag = ABV }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABV NOT = { government = republic } } change_tag = CRO }
+        if = { limit = { tag = CRO government = republic } change_tag = ABV }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.44.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.45
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = ALB tag = ABW }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABW NOT = { government = republic } } change_tag = ALB }
+        if = { limit = { tag = ALB government = republic } change_tag = ABW }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.45.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.46
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = RAG tag = ABX }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABX NOT = { government = republic } } change_tag = RAG }
+        if = { limit = { tag = RAG government = republic } change_tag = ABX }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.46.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.47
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = TUR tag = ABY }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABY NOT = { government = republic } } change_tag = TUR }
+        if = { limit = { tag = TUR government = republic } change_tag = ABY }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.47.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.48
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = MOS tag = ABZ }
+    }
+
+    immediate = {
+        if = { limit = { tag = ABZ NOT = { government = republic } } change_tag = MOS }
+        if = { limit = { tag = MOS government = republic } change_tag = ABZ }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.48.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.49
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = RUS tag = ACA }
+    }
+
+    immediate = {
+        if = { limit = { tag = ACA NOT = { government = republic } } change_tag = RUS }
+        if = { limit = { tag = RUS government = republic } change_tag = ACA }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.49.a
+    }
+}
+
+country_event = {
+    id = dynamic_tags_00_vanilla.50
+    hidden = yes
+    is_triggered_only = yes
+    title = "DUMMY"
+    desc = "DUMMY"
+    picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+    trigger = {
+        OR = { tag = NOV tag = ACB }
+    }
+
+    immediate = {
+        if = { limit = { tag = ACB NOT = { government = republic } } change_tag = NOV }
+        if = { limit = { tag = NOV government = republic } change_tag = ACB }
+    }
+
+    option = {
+        name = dynamic_tags_00_vanilla.50.a
+    }
+}

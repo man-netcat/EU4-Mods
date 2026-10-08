@@ -1,12 +1,13 @@
 # 874 - Salish
 
-owner = CSC
-controller = CSC
+owner = SAL
+controller = SAL
 culture = salish
 religion = totemism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 5
-add_core = CSC
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = SAL
 trade_goods = fur

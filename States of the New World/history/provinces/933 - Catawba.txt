@@ -1,12 +1,13 @@
 # 933 - Catawba
 
-owner = CRL
-controller = CRL
+owner = COF
+controller = COF
 culture = catawba
 religion = totemism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = CRL
-trade_goods = grain
+base_manpower = 3
+add_core = COF
+trade_goods = tobacco

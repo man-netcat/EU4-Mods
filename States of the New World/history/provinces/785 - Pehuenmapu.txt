@@ -1,12 +1,13 @@
 # 785 - Pehuenmapu
 
-owner = CHL
-controller = CHL
-culture = huarpe
+owner = MAP
+controller = MAP
+culture = mapuche
 religion = animism
 is_city = yes
-base_tax = 4
-base_production = 4
-base_manpower = 4
-add_core = CHL
+discovered_by = high_american
+base_tax = 3
+base_production = 3
+base_manpower = 3
+add_core = MAP
 trade_goods = grain

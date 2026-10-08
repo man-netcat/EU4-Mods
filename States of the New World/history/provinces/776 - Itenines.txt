@@ -1,12 +1,13 @@
 # 776 - Itenines
 
-owner = PRG
-controller = PRG
+owner = GRN
+controller = GRN
 culture = guarani
 religion = animism
 is_city = yes
+discovered_by = high_american
 base_tax = 3
 base_production = 3
-base_manpower = 4
-add_core = PRG
+base_manpower = 3
+add_core = GRN
 trade_goods = grain
