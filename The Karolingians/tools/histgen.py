@@ -116,10 +116,6 @@ def formation_decision(t) -> str:
         f"{T*3}}}"
         for a in t.form_areas
     )
-    held = "\n".join(
-        f"{T*4}NOT = {{ {p} = {{ country_or_non_sovereign_subject_holds = ROOT }} }}"
-        for p in basin
-    )
 
     return f"""country_decisions = {{
 {suppression(t)}
@@ -128,19 +124,18 @@ def formation_decision(t) -> str:
 \t\tmajor = yes
 
 \t\tpotential = {{
-\t\t\tNOT = {{ map_setup = map_setup_random }}
-\t\t\tNOT = {{ tag = {t.forms} }}
+\t\t\tnormal_or_historical_nations = yes
 \t\t\tNOT = {{ has_country_flag = {t.decision} }}
+\t\t\tNOT = {{ tag = {t.forms} }}
 \t\t\tNOT = {{ exists = {t.forms} }}
-\t\t\tis_free_or_tributary_trigger = yes
-\t\t\tis_nomad = no
 \t\t\ttag = {t.tag}
 \t\t\tOR = {{
 \t\t\t\tai = no
-\t\t\t\tAND = {{
-\t\t\t\t\tai = yes
-\t\t\t\t\tnum_of_cities = 40
-\t\t\t\t}}
+\t\t\t\tis_playing_custom_nation = no
+\t\t\t}}
+\t\t\tOR = {{
+\t\t\t\tis_free_or_tributary_trigger = yes
+\t\t\t\tai = no
 \t\t\t}}
 \t\t}}
 
@@ -152,9 +147,15 @@ def formation_decision(t) -> str:
 \t\t}}
 
 \t\tallow = {{
+\t\t\tnum_of_owned_provinces_with = {{
+\t\t\t\tcustom_trigger_tooltip = {{
+\t\t\t\t\ttooltip = {t.decision}_provinces_tooltip
+\t\t\t\t\t{t.decision}_provinces_trigger = yes
+\t\t\t\t}}
+\t\t\t\tvalue = {len(basin)}
+\t\t\t}}
 \t\t\tis_at_war = no
 \t\t\tis_free_or_tributary_trigger = yes
-{held}
 \t\t}}
 
 \t\teffect = {{
@@ -172,3 +173,19 @@ def formation_decision(t) -> str:
 \t}}
 }}
 """
+
+
+def formation_trigger_block(name, pids) -> str:
+    data = json.load(open(str(PROVDATA)))
+    want = set(pids)
+    used: set = set()
+    lines = []
+    for a in sorted(data["areas"]):
+        aps = {int(x) for x in data["areas"][a]}
+        if aps and aps <= want:
+            lines.append(f"{T*2}area = {a}")
+            used |= aps
+    for p in sorted(want - used):
+        nm = data["provs"].get(str(p), {}).get("name")
+        lines.append(f"{T*2}province_id = {p}" + (f" #{nm.lower()}" if nm else ""))
+    return f"{name} = {{\n{T}OR = {{\n" + "\n".join(lines) + f"\n{T}}}\n}}"

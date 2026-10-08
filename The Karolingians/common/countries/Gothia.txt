@@ -1,0 +1,29 @@
+graphical_culture = westerngfx
+
+color = { 200  170  40 }
+
+revolutionary_colors = { 5  0  10 }
+
+historical_score = 250
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+}
+
+monarch_names = {
+	"Bernat #0" = 35
+	"Guifre #0" = 30
+	"Borrell #0" = 20
+	"Sunyer #0" = 10
+	"Berenguer #0" = 5
+}
+
+leader_names = {
+	"de Gothia" "de Septimania" "de Roussillon"
+}
+
+ship_names = {
+	"Barcelona" "Narbonne" "Urgell"
+}

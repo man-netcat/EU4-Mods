@@ -1,10 +1,10 @@
 #213 - Barcelona
 
-owner = FRA
-controller = FRA
+owner = GTH
+controller = GTH
 add_core = ARA
 add_core = CAT
-add_core = FRA
+add_core = GTH
 culture = catalan
 religion = catholic
 hre = no
@@ -54,8 +54,8 @@ center_of_trade = 1
 1813.8.31 = { revolt = { type = pretender_rebels size = 1 } controller = REB }
 1813.12.11 = { revolt = {} controller = SPA }
 
-1444.11.11 = {	owner = FRA
-	controller = FRA
-	add_core = FRA
+1444.11.11 = {	owner = GTH
+	controller = GTH
+	add_core = GTH
 	hre = no
 }

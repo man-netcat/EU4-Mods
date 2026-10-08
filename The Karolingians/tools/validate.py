@@ -31,6 +31,7 @@ from build import (
     ALL_TAGS,
     CAPITAL,
     empire_core,
+    karling_realms,
     CULTURE_GONE_867,
     CONQUERED_BY_THE_ARABS,
     MUSLIM_RELIGIONS_867,
@@ -43,7 +44,7 @@ from build import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
 
 from build import BY_TAG  # noqa: E402
 
-from build import EMPIRE_KINGDOMS  # noqa: E402
+from tagdb import DIPLOMACY  # noqa: E402
 
 fail = []
 
@@ -320,41 +321,70 @@ def run() -> int:
     print("\n== hre decision matches the empire's land ==")
 
     expected = set(empire_core())
-    dec = open(
-        os.path.join(MOD, "decisions", "KarolingianHRE.txt"),
+    trig = open(
+        os.path.join(MOD, "common", "scripted_triggers", "KarolingianFormations.txt"),
         encoding="utf-8",
         errors="replace",
     ).read()
-    required = {
-        int(x)
-        for x in re.findall(
-            r"NOT = \{\s*(\d+)\s*=\s*\{\s*country_or_non_sovereign_subject_holds\s*=\s*ROOT",
-            dec,
-        )
-    }
+    blk = re.search(
+        r"kar_form_hre_provinces_trigger = \{(.*?)\n\}",
+        trig,
+        re.S,
+    )
+    body = blk.group(1) if blk else ""
+    cdata = json.load(open(str(CACHE / "provdata.json")))
+    required = {int(x) for x in re.findall(r"province_id = (\d+)", body)}
+    for a in re.findall(r"^\s*area = (\w+)", body, re.M):
+        required |= {int(x) for x in cdata["areas"].get(a, ())}
     note(
         required == expected,
-        f"decision requires exactly the {len(expected)} imperial provinces",
+        f"trigger covers exactly the {len(expected)} imperial provinces",
     )
     if required != expected:
-        print(f"        only in decision : {sorted(required - expected)}")
+        print(f"        only in trigger : {sorted(required - expected)}")
         print(f"        only in the core : {sorted(expected - required)}")
     note(
         not (required - expected),
         "no province outside the 867 empire is required to restore it",
+    )
+    hredec = open(
+        os.path.join(MOD, "decisions", "KarolingianHRE.txt"),
+        encoding="utf-8",
+        errors="replace",
+    ).read()
+    val = re.search(r"num_of_owned_provinces_with = \{.*?value = (\d+)", hredec, re.S)
+    note(
+        bool(val) and int(val.group(1)) == len(expected),
+        f"decision demands owning {len(expected)} provinces (value)",
+    )
+    note(
+        "dynasty = " in hredec,
+        "potential gates on the Karling dynasty",
     )
     hreloc = open(
         os.path.join(MOD, "localisation", "karolingian_hre_l_english.yml"),
         encoding="utf-8",
         errors="replace",
     ).read()
-    said = re.search(r"hold all (\d+) provinces", hreloc)
-    note(bool(said), "decision description quotes a province count")
-    if said:
-        note(
-            int(said.group(1)) == len(expected),
-            f"description says {said.group(1)}, partition has {len(expected)}",
+    note(
+        "kar_form_hre_title:0" in hreloc,
+        "decision name keyed kar_form_hre_title (EU4 reads <key>_title)",
+    )
+
+    print("\n== starting vassals ==")
+    dip = os.path.join(MOD, "history", "diplomacy", "karolingian_vassals.txt")
+    raw_dip = open(dip, encoding="cp1252", errors="replace").read()
+    found = list(
+        zip(
+            re.findall(r"first\s*=\s*([A-Z]{3})", raw_dip),
+            re.findall(r"second\s*=\s*([A-Z]{3})", raw_dip),
         )
+    )
+    expected_dip = [(d.liege, d.subject) for d in DIPLOMACY]
+    note(found == expected_dip, "diplomacy file lists exactly the starting vassals")
+    if found != expected_dip:
+        print(f"        in file    : {found}")
+        print(f"        in tagdb   : {expected_dip}")
 
     print("\n== custom tags registered ==")
 
@@ -367,18 +397,22 @@ def run() -> int:
         if not t.forms:
             continue
         basin = {int(pid) for a in t.form_areas for pid in cdata["areas"].get(a, ())}
-        dec = open(
-            os.path.join(MOD, "decisions", f"Form{t.forms}.txt"),
+        trig = open(
+            os.path.join(
+                MOD, "common", "scripted_triggers", "KarolingianFormations.txt"
+            ),
             encoding="utf-8",
             errors="replace",
         ).read()
-        required = {
-            int(x)
-            for x in re.findall(
-                r"NOT = \{\s*(\d+)\s*=\s*\{\s*country_or_non_sovereign_subject_holds\s*=\s*ROOT",
-                dec,
-            )
-        }
+        blk = re.search(
+            re.escape(t.decision) + r"_provinces_trigger = \{(.*?)\n\}",
+            trig,
+            re.S,
+        )
+        body = blk.group(1) if blk else ""
+        required = {int(x) for x in re.findall(r"province_id = (\d+)", body)}
+        for a in re.findall(r"^\s*area = (\w+)", body, re.M):
+            required |= {int(x) for x in cdata["areas"].get(a, ())}
         note(
             required == basin,
             f"{t.decision} requires exactly the {len(basin)} Carpathian Basin "
@@ -387,6 +421,11 @@ def run() -> int:
         if required != basin:
             print(f"        only in decision : {sorted(required - basin)}")
             print(f"        only in the land : {sorted(basin - required)}")
+        dec = open(
+            os.path.join(MOD, "decisions", f"Form{t.forms}.txt"),
+            encoding="utf-8",
+            errors="replace",
+        ).read()
         note(
             f"change_tag = {t.forms}" in dec,
             f"{t.decision} changes the tag to {t.forms}",
@@ -615,22 +654,27 @@ def run() -> int:
             rel = os.path.relpath(os.path.join(root, fn), MOD)
             note(raw == b"\xef\xbb\xbf", f"{rel} starts with a UTF-8 BOM")
 
-    print("\n== shared Carolingian dynasty ==")
-    seen_dyn = set()
-    for t in EMPIRE_KINGDOMS:
+    print("\n== Karling dynasty, lifted from CK3 ==")
+    dynasty, ktags = karling_realms()
+    for t in ktags:
         p = os.path.join(COUNTRY_OUT, f"{t}.txt")
         body = open(p, encoding="cp1252", errors="surrogateescape").read()
         blk = re.search(r"^1444\.1\.1 = \{.*?^\}", body, re.M | re.S)
         ds = re.findall(r'dynasty = "([^"]+)"', blk.group(0)) if blk else []
         note(
-            bool(ds) and len(set(ds)) == 1, f"{t} 1444 ruler and heir share one dynasty"
+            bool(ds) and set(ds) == {dynasty},
+            f"{t} 1444 ruler and heir carry the {dynasty} dynasty",
         )
-        for d in set(ds):
-            print(f"        {t}: {d}")
-        seen_dyn |= set(ds)
+    dec = open(
+        os.path.join(MOD, "decisions", "KarolingianHRE.txt"),
+        encoding="utf-8",
+        errors="replace",
+    ).read()
+    gates = re.findall(r'dynasty = "([^"]+)"', dec)
     note(
-        len(seen_dyn) == 1,
-        f"all {len(EMPIRE_KINGDOMS)} kingdoms use the same dynasty string ({', '.join(sorted(seen_dyn))})",
+        gates == [dynasty],
+        f"the decision gates on dynasty {dynasty} (only a Karling can restore the "
+        f"empire; if the Karlings die out, no one can)",
     )
 
     print("\n== HRE is dissolved ==")

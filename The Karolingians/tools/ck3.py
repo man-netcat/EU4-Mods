@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os, re
+from functools import lru_cache
 from pathlib import Path
 
 from enc import decode, encname
@@ -54,6 +55,7 @@ def _inner_blocks(body: str):
         yield m.group(1), body[m.end() : i]
 
 
+@lru_cache(maxsize=1)
 def load_titles():
     out = {}
     for f in sorted((Path(GAME_CK3) / "history" / "titles").glob("*.txt")):
@@ -91,6 +93,7 @@ def holder_at_exact(title, titles):
     return best if best else (None, None)
 
 
+@lru_cache(maxsize=1)
 def load_chars():
     out = {}
     for f in sorted((Path(GAME_CK3) / "history" / "characters").glob("*.txt")):
@@ -100,6 +103,7 @@ def load_chars():
     return out
 
 
+@lru_cache(maxsize=1)
 def load_dynasties():
     out = {}
     for f in sorted((Path(GAME_CK3) / "common" / "dynasties").glob("*.txt")):
@@ -110,6 +114,7 @@ def load_dynasties():
     return out
 
 
+@lru_cache(maxsize=1)
 def load_houses():
     out = {}
     for f in sorted((Path(GAME_CK3) / "common" / "dynasty_houses").glob("*.txt")):

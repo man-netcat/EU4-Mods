@@ -1,2 +1,3 @@
 MGY = "countries/Magyars.txt"
 ZEM = "countries/Samogitia.txt"
+GTH = "countries/Gothia.txt"

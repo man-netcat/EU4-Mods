@@ -1,7 +1,7 @@
 # 197 Roussillon - Principal cities: Perpignan
 
-owner = FRA
-controller = FRA
+owner = GTH
+controller = GTH
 add_core = CAT
 capital = "Perpignan"
 is_city = yes
@@ -14,7 +14,7 @@ trade_goods = wine
 base_manpower = 2
 add_core = ARA
 add_core = TOU
-add_core = FRA
+add_core = GTH
 fort_15th = yes
 
 
@@ -43,8 +43,8 @@ discovered_by = ottoman
 1793.4.17 = { controller = SPA } # Occupied by the Spanish army
 1793.5.1 = { controller = FRA }
 
-1444.11.11 = {	owner = FRA
-	controller = FRA
-	add_core = FRA
+1444.11.11 = {	owner = GTH
+	controller = GTH
+	add_core = GTH
 	hre = no
 }

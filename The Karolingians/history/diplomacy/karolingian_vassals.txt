@@ -1,0 +1,10 @@
+# Starting vassals of the Carolingian world.
+# No start_date: each holds from the mod's start.
+vassal = {
+	first = FRA
+	second = GTH
+}
+vassal = {
+	first = GER
+	second = BAV
+}

@@ -1,7 +1,7 @@
 # Narbonne - Principal cities: Narbonne
 
-owner = FRA
-controller = FRA
+owner = GTH
+controller = GTH
 capital = "Narbonne"
 is_city = yes
 culture = occitain
@@ -13,6 +13,7 @@ trade_goods = wine
 base_manpower = 3
 add_core = FRA
 add_core = TOU
+add_core = GTH
 fort_15th = yes
 
 
@@ -49,8 +50,8 @@ discovered_by = ottoman
 1686.1.17 = { religion = catholic } # Dragonnard campaign succesful: region reverts back to catholicism
 1689.1.1 = { unrest = 0 } # War of the Grand Alliance erupts: Louis XIV can't persue his religious policy anymore
 
-1444.11.11 = {	owner = FRA
-	controller = FRA
-	add_core = FRA
+1444.11.11 = {	owner = GTH
+	controller = GTH
+	add_core = GTH
 	hre = no
 }

@@ -13,19 +13,18 @@ country_decisions = {
 		major = yes
 
 		potential = {
-			NOT = { map_setup = map_setup_random }
-			NOT = { tag = HUN }
+			normal_or_historical_nations = yes
 			NOT = { has_country_flag = kar_form_hungary }
+			NOT = { tag = HUN }
 			NOT = { exists = HUN }
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
 			tag = MGY
 			OR = {
 				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 40
-				}
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
 			}
 		}
 
@@ -40,24 +39,15 @@ country_decisions = {
 		}
 
 		allow = {
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					tooltip = kar_form_hungary_provinces_tooltip
+					kar_form_hungary_provinces_trigger = yes
+				}
+				value = 16
+			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
-				NOT = { 135 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 153 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 155 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 156 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 157 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 158 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 1864 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 1951 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 1952 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 1953 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 1954 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 4125 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 4126 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 4127 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 4128 = { country_or_non_sovereign_subject_holds = ROOT } }
-				NOT = { 4240 = { country_or_non_sovereign_subject_holds = ROOT } }
 		}
 
 		effect = {

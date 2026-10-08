@@ -10,6 +10,7 @@ from histgen import (
     country_definition,
     country_history,
     formation_decision,
+    formation_trigger_block,
     ruler_block_for,
 )
 from tagdb import (
@@ -18,8 +19,8 @@ from tagdb import (
     BALATON_RESERVED,
     BY_TAG,
     CustomTag,
+    DIPLOMACY,
     IMPERIAL_ELECTORS,
-    EMPIRE_KINGDOMS,
     PROVINCE_OWNERS,
     TAGS,
     TITLES,
@@ -166,9 +167,33 @@ def owner_map(alloc=None):
     return {p: t for t, ps in alloc.items() for p in ps}
 
 
+def karling_realms():
+    """(start dynasty, karling tags) lifted from CK3: the dynasty that the
+    CK3-synced start holders share, and every CK3-synced tag whose start
+    holder carries it."""
+    from ck3 import load_chars, load_dynasties, load_houses, load_titles, resolve
+
+    titles, chars = load_titles(), load_chars()
+    dyns, houses = load_dynasties(), load_houses()
+    dyn_of = {
+        tag: resolve(tag, titles, chars, dyns, houses).get("dynasty")
+        for tag in sorted(TITLES)
+    }
+    counts = {}
+    for d in dyn_of.values():
+        if d:
+            counts[d] = counts.get(d, 0) + 1
+    dynasty = max(counts, key=counts.get)
+    ktags = sorted(t for t, d in dyn_of.items() if d == dynasty)
+    return dynasty, ktags
+
+
 def empire_core():
     alloc = build()
-    return sorted({p for t in EMPIRE_KINGDOMS for p in alloc.get(t, ())})
+    _, ktags = karling_realms()
+    tags = set(ktags)
+    tags |= {d.subject for d in DIPLOMACY if d.liege in tags}
+    return sorted({p for t in tags for p in alloc.get(t, ())})
 
 
 def dev(pid):
@@ -363,6 +388,7 @@ def step_hre() -> None:
     data = _pd()
     area_of = data["area_of"]
 
+    dynasty, ktags = karling_realms()
     empire_provs = empire_core()
     areas = sorted({area_of[str(p)] for p in empire_provs})
 
@@ -376,7 +402,6 @@ def step_hre() -> None:
     missing = [a for a in areas if a not in all_areas]
     assert not missing, f"unknown areas: {missing}"
 
-    area_or = "\n".join(f"{T*4}area = {a}" for a in areas)
     claims = "\n".join(
         f"{T*3}{a} = {{\n"
         f"{T*4}limit = {{\n"
@@ -387,11 +412,7 @@ def step_hre() -> None:
         f"{T*3}}}"
         for a in areas
     )
-    held = "\n".join(
-        f"{T*4}NOT = {{ {p} = {{ country_or_non_sovereign_subject_holds = ROOT }} }}"
-        for p in empire_provs
-    )
-    kingdoms_or = "\n".join(f"{T*4}tag = {t}" for t in EMPIRE_KINGDOMS)
+    dynasty_line = f'{T*3}dynasty = "{dynasty}"'
 
     txt = f"""country_decisions = {{
 
@@ -399,36 +420,22 @@ def step_hre() -> None:
 \t\tmajor = yes
 
 \t\tpotential = {{
-\t\t\tNOT = {{ map_setup = map_setup_random }}
-\t\t\tNOT = {{ tag = HLR }}
-\t\t\tNOT = {{ has_country_flag = kar_formed_hre }}
-\t\t\tNOT = {{ exists = ROM }}
-\t\t\tNOT = {{ exists = ARH }}
-\t\t\tis_free_or_tributary_trigger = yes
-\t\t\tis_nomad = no
-\t\t\tOR = {{
-{kingdoms_or}
-\t\t\t}}
-\t\t\tOR = {{
-\t\t\t\tai = no
-\t\t\t\tAND = {{
-\t\t\t\t\tai = yes
-\t\t\t\t\tnum_of_cities = 40
-\t\t\t\t}}
-\t\t\t}}
+{dynasty_line}
 \t\t}}
 
 \t\tprovinces_to_highlight = {{
-\t\t\tOR = {{
-{area_or}
-\t\t\t}}
-\t\t\tNOT = {{ country_or_non_sovereign_subject_holds = ROOT }}
+\t\t\tkar_form_hre_provinces_trigger = yes
+\t\t\tNOT = {{ owned_by = ROOT }}
 \t\t}}
 
 \t\tallow = {{
-\t\t\tis_at_war = no
-\t\t\tis_free_or_tributary_trigger = yes
-{held}
+\t\t\tnum_of_owned_provinces_with = {{
+\t\t\t\tcustom_trigger_tooltip = {{
+\t\t\t\t\ttooltip = kar_form_hre_provinces_tooltip
+\t\t\t\t\tkar_form_hre_provinces_trigger = yes
+\t\t\t\t}}
+\t\t\t\tvalue = {len(empire_provs)}
+\t\t\t}}
 \t\t}}
 
 \t\teffect = {{
@@ -458,8 +465,36 @@ def step_hre() -> None:
     print(f"  imperial provinces    : {len(empire_provs)}")
     print(f"  areas covered         : {len(areas)}")
     print(
-        f"  eligible tags         : the five kingdoms only ({', '.join(EMPIRE_KINGDOMS)}), then the land"
+        f"  karling dynasty (ck3): {dynasty} (tags: {', '.join(ktags)}), then the land"
     )
+
+
+def step_diplomacy() -> None:
+    lines = [
+        "# Starting vassals of the Carolingian world.",
+        "# No start_date: each holds from the mod's start.",
+    ]
+    for rel in DIPLOMACY:
+        if rel.relation == "vassal":
+            lines += [
+                "vassal = {",
+                "\tfirst = " + rel.liege,
+                "\tsecond = " + rel.subject,
+                "}",
+            ]
+        else:
+            lines += [
+                "dependency = {",
+                "\tsubject_type = " + rel.relation,
+                "\tfirst = " + rel.liege,
+                "\tsecond = " + rel.subject,
+                "}",
+            ]
+    path = os.path.join(MOD, "history", "diplomacy", "karolingian_vassals.txt")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="cp1252", errors="pdx").write("\n".join(lines) + "\n")
+    pairs = ", ".join(f"{d.subject} under {d.liege}" for d in DIPLOMACY)
+    print(f"wrote {path}  ({pairs})")
 
 
 def step_custom() -> None:
@@ -510,6 +545,38 @@ def step_custom() -> None:
 
     open(reg, "w", encoding="cp1252", errors="pdx").write("\n".join(reg_lines) + "\n")
     print(f"wrote {reg}")
+
+
+def step_formation_triggers() -> None:
+    specs = [("kar_form_hre", empire_core())]
+    for t in TAGS:
+        if isinstance(t, CustomTag) and t.forms:
+            specs.append((t.decision, basin_provinces(t)))
+
+    body = "\n\n".join(
+        formation_trigger_block(f"{k}_provinces_trigger", p) for k, p in specs
+    )
+    sdir = os.path.join(MOD, "common", "scripted_triggers")
+    os.makedirs(sdir, exist_ok=True)
+    spath = os.path.join(sdir, "KarolingianFormations.txt")
+    open(spath, "w", encoding="cp1252", errors="pdx").write(
+        "# province triggers backing the formation decisions\n" + body + "\n"
+    )
+    print(f"wrote {spath}  ({len(specs)} triggers)")
+
+    loc = "\n".join(
+        f' {k}_provinces_tooltip:0 "Is §YHighlighted§! by the Decision."'
+        for k, _ in specs
+    )
+    lpath = os.path.join(MOD, "localisation", "karolingian_formations_l_english.yml")
+    open(lpath, "w", encoding="utf-8").write("\ufeffl_english:\n" + loc + "\n")
+    print(f"wrote {lpath}")
+
+    old = os.path.join(
+        MOD, "common", "trigger_localisation", "KarolingianFormations_l_english.yml"
+    )
+    if os.path.exists(old):
+        os.remove(old)
 
 
 def step_names() -> None:

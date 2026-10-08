@@ -31,7 +31,6 @@ class Tag:
     provinces: frozenset = field(default_factory=frozenset)
     country: str = "vanilla"
     elector: bool = False
-    imperial_kingdom: bool = False
     ruler_block: Optional[str] = None
     no_heir_sync: bool = False
 
@@ -108,6 +107,18 @@ class CustomTag(Tag):
             )
 
 
+@dataclass(frozen=True)
+class Diplomacy:
+    """One start-date relationship, written into history/diplomacy by
+    step_diplomacy. `relation` is "vassal" for a plain vassalage, or the name
+    of a subject type from common/subject_types (e.g. "appanage") which is
+    then emitted as a dependency block."""
+
+    liege: str
+    subject: str
+    relation: str = "vassal"
+
+
 CTRY_DATE = "1444.1.1"
 
 DYNASTY = "de Carolingie"
@@ -145,7 +156,6 @@ TAGS: list[Tag] = [
 }}
 """,
         tag="FRA",
-        imperial_kingdom=True,
         name="West Francia",
         rank=2,
         capital=183,
@@ -167,13 +177,7 @@ TAGS: list[Tag] = [
             "west_burgundy_area",
             "flanders_area",
         ),
-        provinces=(
-            192,  # Bourgogne (Dijon)  (bourgogne_area; vanilla BUR)
-            197,  # Roussillon (Rosello)  (catalonia_area; vanilla ARA)
-            212,  # Girona                 (catalonia_area; vanilla ARA)
-            213,  # Barcelona              (catalonia_area; vanilla ARA)
-            2987,  # Urgell                 (catalonia_area; vanilla ARA)
-        ),
+        provinces=(192,),  # Bourgogne (Dijon)  (bourgogne_area; vanilla BUR)
     ),
     Tag(
         ruler_block=f"""
@@ -190,7 +194,6 @@ TAGS: list[Tag] = [
 }}
 """,
         tag="LOT",
-        imperial_kingdom=True,
         country="fresh",
         name="Lotharingia",
         rank=2,
@@ -243,7 +246,6 @@ TAGS: list[Tag] = [
 }}
 """,
         tag="GER",
-        imperial_kingdom=True,
         country="fresh",
         name="East Francia",
         rank=2,
@@ -302,7 +304,6 @@ TAGS: list[Tag] = [
 }}
 """,
         tag="BAV",
-        imperial_kingdom=True,
         country="fresh",
         name="Bavaria",
         rank=1,
@@ -352,7 +353,6 @@ TAGS: list[Tag] = [
 }}
 """,
         tag="ITA",
-        imperial_kingdom=True,
         country="fresh",
         name="Italy",
         rank=2,
@@ -796,6 +796,36 @@ TAGS: list[Tag] = [
         areas=("samogitia_area",),
         flag_source=os.path.join(HISTORICAL_TAGS_MOD, "gfx", "flags", "ZEM.tga"),
     ),
+    CustomTag(
+        tag="GTH",
+        country="fresh",
+        rank=1,
+        capital=2753,
+        culture="occitain",
+        religion="catholic",
+        technology_group="western",
+        ck3_title="d_barcelona",
+        in_alloc=True,
+        name="Gothia",
+        adjective="Gothic",
+        color=(200, 170, 40),
+        flag_from="CAT",
+        historical_units=(
+            "western_medieval_infantry",
+            "western_medieval_knights",
+            "western_men_at_arms",
+        ),
+        monarch_names=(
+            ("Bernat #0", 35),
+            ("Guifre #0", 30),
+            ("Borrell #0", 20),
+            ("Sunyer #0", 10),
+            ("Berenguer #0", 5),
+        ),
+        leader_names=('"de Gothia" "de Septimania" "de Roussillon"',),
+        ship_names=('"Barcelona" "Narbonne" "Urgell"',),
+        provinces=(197, 200, 212, 213, 2753, 2987),
+    ),
     Tag(
         tag="LIT",
         rank=1,
@@ -1029,7 +1059,10 @@ RULER_TITLES: dict = {t.tag: t.ruler_title for t in TAGS if t.ruler_title}
 
 NOT_CK3: dict = {t.tag: t.no_ck3 for t in TAGS if t.no_ck3 and t.tag not in TITLES}
 
-EMPIRE_KINGDOMS: list = [t.tag for t in TAGS if t.imperial_kingdom]
+DIPLOMACY: tuple = (
+    Diplomacy("FRA", "GTH"),  # Gothia, a vassal duchy of West Francia
+    Diplomacy("GER", "BAV"),  # Bavaria, a vassal duchy of East Francia
+)
 
 AREA_OWNERS: dict = {t.tag: t.areas for t in TAGS if t.areas}
 
@@ -1040,14 +1073,13 @@ TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.province
 
 def selfcheck() -> None:
     seen = set()
-    managed = [t.tag for t in TAGS if t.managed]
-    if managed[: len(EMPIRE_KINGDOMS)] != EMPIRE_KINGDOMS:
-        raise ValueError(
-            f"EMPIRE_KINGDOMS {EMPIRE_KINGDOMS} is not the first "
-            f"{len(EMPIRE_KINGDOMS)} managed realms in declaration order "
-            f"({managed[:len(EMPIRE_KINGDOMS) + 1]}) - the five kingdoms and the "
-            f"order the mod presents them are meant to be the same list"
-        )
+    known = {t.tag for t in TAGS}
+    for d in DIPLOMACY:
+        if d.liege not in known or d.subject not in known or d.liege == d.subject:
+            raise ValueError(
+                f"{d.liege} -> {d.subject}: a Diplomacy must link two different "
+                f"known tags"
+            )
 
     for t in TAGS:
         if t.tag in seen:
