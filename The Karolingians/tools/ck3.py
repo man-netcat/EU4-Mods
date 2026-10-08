@@ -4,7 +4,7 @@ import os, re
 from functools import lru_cache
 from pathlib import Path
 
-from enc import decode, encname
+from enc import encname
 from tagdb import BY_TAG, CTRY_DATE, NOT_CK3, RULER_TITLES, TITLES, shifted
 
 GAME_CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
@@ -111,6 +111,57 @@ def load_dynasties():
             n = re.search(r'name\s*=\s*"(dynn_\w+)"', body)
             if n:
                 out[key] = n.group(1)
+    return out
+
+
+@lru_cache(maxsize=1)
+def load_title_colors():
+    """{titlename: (r, g, b)} from landed_titles: the title's CK3 map colour.
+
+    CK3 titles carry `color = { r g b }` or `color = hsv{ h s v }`; hsv floats
+    are converted back to rgb. Title keys may contain dashes and digits
+    (e.g. e_caspian-pontic_steppe), and titles nest, so this walks every
+    block whose key looks like a title."""
+    from colorsys import hsv_to_rgb
+
+    title = re.compile(r"^[ecbksd]_[a-z0-9_\-]+$")
+    block = re.compile(r"^[ \t]*([a-zA-Z0-9_\-.:]+)\s*=\s*\{", re.M)
+    color = re.compile(
+        r"^[ \t]*color\s*=\s*(hsv\s*)?\{[ \t]*([0-9.]+)[ \t]+([0-9.]+)"
+        r"[ \t]+([0-9.]+)[ \t]*\}",
+        re.M,
+    )
+    out: dict = {}
+
+    def walk(body):
+        for m in block.finditer(body):
+            k = m.group(1)
+            if not title.match(k):
+                continue
+            i = body.index("{", m.start())
+            d = 0
+            j = i
+            while j < len(body):
+                if body[j] == "{":
+                    d += 1
+                elif body[j] == "}":
+                    d -= 1
+                    if d == 0:
+                        break
+                j += 1
+            sub = body[i + 1 : j]
+            cm = color.search(sub)
+            if cm and k not in out:
+                h, s, v = (float(x) for x in cm.groups()[1:])
+                if cm.group(1):
+                    r, g, b = (round(x * 255) for x in hsv_to_rgb(h, s, v))
+                else:
+                    r, g, b = (round(x) for x in (h, s, v))
+                out[k] = (r, g, b)
+            walk(sub)
+
+    for f in sorted((Path(GAME_CK3) / "common" / "landed_titles").glob("*.txt")):
+        walk(_norm(f.read_text(errors="replace")).lstrip("\ufeff"))
     return out
 
 
@@ -334,10 +385,14 @@ def step_ck3(argv):
         hd = heir_dynasty(text)
         heir_bad = (
             hd is not None
-            and decode(hd) != got["dynasty"]
+            and hd != encname(got["dynasty"])
             and not BY_TAG[tag].no_heir_sync
         )
-        ok = decode(cn) == got["name"] and decode(cd) == got["dynasty"] and not heir_bad
+        ok = (
+            cn == encname(got["name"])
+            and cd == encname(got["dynasty"])
+            and not heir_bad
+        )
         mark = "OK " if ok else "DRIFT"
         src = (
             f"<- {got['title']}"
@@ -349,7 +404,7 @@ def step_ck3(argv):
             + (f" (holder carried from {got['carried']})" if got.get("carried") else "")
         )
         print(f"  {mark} {tag} {src} / char {got['char']}")
-        print(f"        file: name={decode(cn)!r} dynasty={decode(cd)!r}")
+        print(f"        file: name={cn!r} dynasty={cd!r}")
         print(f"        CK3 : name={got['name']!r} dynasty={got['dynasty']!r}")
         if hd is not None:
             print(
@@ -391,15 +446,15 @@ def step_ck3(argv):
                     f"{encname(got['dynasty'])}"
                 )
             else:
-                if cn != got["name"] or cd != got["dynasty"]:
+                if cn != encname(got["name"]) or cd != encname(got["dynasty"]):
                     bad.append(
                         f"{tag}: file has {cn!r}/{cd!r}, CK3 has "
-                        f"{got['name']!r}/{got['dynasty']!r}"
+                        f"{encname(got['name'])!r}/{encname(got['dynasty'])!r}"
                     )
                 if heir_bad:
                     bad.append(
                         f"{tag}: heir dynasty is {hd!r} but the ruler's is "
-                        f"{got['dynasty']!r}"
+                        f"{encname(got['dynasty'])!r}"
                     )
 
     if bad:

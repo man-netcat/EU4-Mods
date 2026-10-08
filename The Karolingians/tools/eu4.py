@@ -14,7 +14,6 @@ from histgen import (
     ruler_block_for,
 )
 from tagdb import (
-    ALL_TAGS,
     AREA_OWNERS,
     BALATON_RESERVED,
     BY_TAG,
@@ -156,10 +155,33 @@ def build(verbose=False):
             set(alloc.get(tag, [])) | {p for p in extra if p not in claimed}
         )
 
+    by_owner = defaultdict(list)
+    for pid, pr in provs.items():
+        owner = pr.get("owner_1444", pr.get("owner"))
+        if owner:
+            by_owner[owner].append(int(pid))
+
+    swept = []
+    for spec in TAGS:
+        for pid in sorted(by_owner.get(spec.tag, ())):
+            if pid in owner_of or pid in BALATON_RESERVED:
+                continue
+            owner_of[pid] = spec.tag
+            alloc.setdefault(spec.tag, []).append(pid)
+            swept.append((pid, spec.tag))
+
+    for tag in alloc:
+        alloc[tag] = sorted(set(alloc[tag]))
+
     if verbose:
         for pid, name, prev, tag in LAYER2_MOVES:
             print(f"  override: province {pid} {name} {prev} -> {tag}")
-    return {t: sorted(alloc[t]) for t in ALL_TAGS if t in alloc and alloc[t]}
+        for pid, tag in swept:
+            print(
+                f"  sweep: province {pid} {provs[str(pid)]['name']}"
+                f" vanilla-kept by {tag}"
+            )
+    return {s.tag: sorted(alloc[s.tag]) for s in TAGS if alloc.get(s.tag)}
 
 
 def owner_map(alloc=None):
@@ -497,6 +519,59 @@ def step_diplomacy() -> None:
     print(f"wrote {path}  ({pairs})")
 
 
+def load_vanilla_countries() -> dict[str, tuple[str, str]]:
+    """{tag: (filename, text)} for every vanilla country definition."""
+    out = {}
+    cd = os.path.join(GAME, "common", "countries")
+    for fn in os.listdir(os.path.join(GAME, "common", "country_tags")):
+        if not fn.endswith(".txt"):
+            continue
+        text = open(
+            os.path.join(GAME, "common", "country_tags", fn),
+            encoding="cp1252",
+            errors="replace",
+        ).read()
+        for m in re.finditer(r'^([A-Z]{3})\s*=\s*"countries/([^"]+)"', text, re.M):
+            p = os.path.join(cd, m.group(2))
+            if os.path.exists(p):
+                base = open(p, encoding="cp1252", errors="replace").read()
+                out.setdefault(m.group(1), (m.group(2), base))
+    return out
+
+
+def step_vanilla_countries() -> None:
+    """Rewrite the vanilla realms' country definitions under the mod, copying
+    the vanilla data verbatim and swapping in the colour lifted from CK3, so
+    every tag covered by the mod matches its CK3 title's map colour."""
+    from ck3 import load_title_colors
+
+    colors = load_title_colors()
+    vanilla = load_vanilla_countries()
+    os.makedirs(os.path.join(MOD, "common", "countries"), exist_ok=True)
+    written = 0
+    for t in TAGS:
+        if isinstance(t, CustomTag) or t.rank is None or not t.ck3_title:
+            continue
+        want = colors.get(t.ck3_title)
+        base = vanilla.get(t.tag)
+        if not want or not base:
+            continue
+        fn, text = base
+        body = re.sub(
+            r"(?m)^color = \{.*?\}",
+            f"color = {{ {want[0]}  {want[1]}  {want[2]} }}",
+            text,
+            count=1,
+        )
+        if body == text:
+            print(f"  {t.tag}: {t.ck3_title} colour {want} already {fn}?")
+        p = os.path.join(MOD, "common", "countries", fn)
+        open(p, "w", encoding="cp1252", errors="pdx").write(body)
+        print(f"wrote {p}  (colour from {t.ck3_title} = {want})")
+        written += 1
+    print(f" {written} vanilla realm definitions rewritten under the mod")
+
+
 def step_custom() -> None:
     customs = [t for t in TAGS if isinstance(t, CustomTag)]
     if not customs:
@@ -577,21 +652,6 @@ def step_formation_triggers() -> None:
     )
     if os.path.exists(old):
         os.remove(old)
-
-
-def step_names() -> None:
-    from enc import NAMES, names_loc_body
-
-    loc = os.path.join(MOD, "localisation", "karolingian_names_l_english.yml")
-    if not NAMES:
-        if os.path.exists(loc):
-            os.unlink(loc)
-            print(f"removed {loc} (no keyed names)")
-        return
-    os.makedirs(os.path.join(MOD, "localisation"), exist_ok=True)
-    with open(loc, "w", encoding="utf-8") as fh:
-        fh.write("\ufeffl_english:\n" + names_loc_body() + "\n")
-    print(f"wrote {loc} ({len(NAMES)} names)")
 
 
 def find_vanilla(tag):
@@ -688,10 +748,7 @@ def step_countries():
                 what.append(f"capital -> {t.capital}")
             if ruler:
                 nm = re.search(r'name = "([^"]+)"', ruler)
-                what.append(
-                    f"867 ruler {nm.group(1) if nm else '?'}"
-                    + (" (from CK3)" if not t.ruler_block else "")
-                )
+                what.append(f"867 ruler {nm.group(1) if nm else '?'} (from CK3)")
             if was_elector:
                 what.append("electorate removed")
             what.append(f"rank {t.rank}")

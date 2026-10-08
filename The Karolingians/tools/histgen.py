@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from ck3 import ck3_block
+from ck3 import ck3_block, load_title_colors
 from enc import encname
 
 HERE = Path(__file__).resolve().parent
@@ -15,13 +15,10 @@ T = "\t"
 
 
 def ruler_block_for(t) -> str:
-    if t.ruler_block:
-        return t.ruler_block
     if t.ck3_title:
         return ck3_block(t.tag)
     raise SystemExit(
-        f"{t.tag}: a country written from scratch needs a ruler - "
-        f"give it a ruler_block or a ck3_title"
+        f"{t.tag}: no ck3_title - give it one, " f"so its 867 ruler is lifted from CK3"
     )
 
 
@@ -44,13 +41,23 @@ def country_history(t) -> str:
     return "\n".join(lines) + "\n"
 
 
+def lifted_color(t):
+    """The CK3 map colour of the title behind the tag; falls back to the
+    tag's own declared colour when CK3 has no colour for that title."""
+    if t.ck3_title:
+        got = load_title_colors().get(t.ck3_title)
+        if got:
+            return got
+    return t.color
+
+
 def country_definition(t) -> str:
     graphical = (
         "easterngfx"
         if getattr(t, "technology_group", None) == "eastern"
         else "westerngfx"
     )
-    r, g, b = t.color
+    r, g, b = lifted_color(t)
     rc = t.revolutionary_colors
     parts = [
         f"graphical_culture = {graphical}",

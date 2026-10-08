@@ -19,11 +19,9 @@ from build import TAGS as _REALMS  # noqa: E402
 
 from build import CustomTag  # noqa: E402
 
-from enc import decode, load_loc  # noqa: E402
+from enc import encname  # noqa: E402
 
-TAGS = sorted(
-    t.tag for t in _REALMS if t.in_alloc and (t.ruler_block or isinstance(t, CustomTag))
-)
+TAGS = sorted(t.tag for t in _REALMS if t.in_alloc and t.ck3_title)
 
 sys.path.insert(0, str(HERE))
 from build import (
@@ -115,6 +113,36 @@ def run() -> int:
             else ("mod common/countries" if t in mine else "NOWHERE")
         )
         note(t in base or t in mine, f"{t} country definition resolvable ({where})")
+
+    from ck3 import load_title_colors
+    from eu4 import load_vanilla_countries
+
+    vcountries = load_vanilla_countries()
+    ck3_colors = load_title_colors()
+    for t in _REALMS:
+        if t.rank is None or not t.ck3_title:
+            continue
+        if isinstance(t, CustomTag):
+            p = os.path.join(MC, t.country_file or f"{t.name}.txt")
+        else:
+            base = vcountries.get(t.tag)
+            if not base:
+                continue
+            p = os.path.join(MC, base[0])
+        want = ck3_colors.get(t.ck3_title)
+        body = open(p, encoding="utf-8", errors="replace").read()
+        m = re.search(r"(?m)^color = \{?\s*(\d+)\s+(\d+)\s+(\d+)", body)
+        got = tuple(int(x) for x in m.groups()) if m else None
+        if want is None:
+            note(
+                got == t.color,
+                f"{t.tag} colour stays {t.color} (CK3 has no {t.ck3_title} colour)",
+            )
+        else:
+            note(
+                got == want,
+                f"{t.tag} colour {got} lifted from CK3 {t.ck3_title} {want}",
+            )
     for t in TAGS:
         if t not in base and t not in mine:
             continue
@@ -454,9 +482,7 @@ def run() -> int:
     RULER_TAGS = sorted(
         t.tag
         for t in _REALMS
-        if (t.ruler_block or t.ck3_title)
-        and t.country in ("vanilla", "written")
-        and t.tag not in TAGS
+        if t.ck3_title and t.country in ("vanilla", "written") and t.tag not in TAGS
     )
 
     prov_owner = {}
@@ -541,7 +567,6 @@ def run() -> int:
         print("        build.py needs a CK3 install to read CK3's rulers.")
 
     if _b is not None:
-        load_loc(os.path.join(MOD, "localisation", "karolingian_names_l_english.yml"))
         _holders = _b.land_holders()
         _vanilla = {
             fn.split(" ")[0]
@@ -605,9 +630,9 @@ def run() -> int:
                 continue
             got_n, got_d = _b.current(blk.group(1))
             note(
-                decode(got_n) == want["name"] and decode(got_d) == want["dynasty"],
+                got_n == encname(want["name"]) and got_d == encname(want["dynasty"]),
                 f"{t} ruler name/dynasty matches CK3 867 "
-                f"({want['name']} / {want['dynasty']})",
+                f"({encname(want['name'])} / {encname(want['dynasty'])})",
             )
         print("        run `python3 tools/build.py --fix` to resync")
 

@@ -29,3 +29,9 @@ discovered_by = ottoman
 1725.1.1 = { base_manpower = 3 base_tax = 6 base_production = 6 }
 1730.1.1 = { base_manpower = 4 }
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
+
+1444.11.11 = {	owner = BRA
+	controller = BRA
+	add_core = BRA
+	hre = no
+}

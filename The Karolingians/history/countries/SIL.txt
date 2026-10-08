@@ -99,23 +99,23 @@ capital = 264
 1444.1.1 = {
 	monarch = {
 		name = "Gardomir"
-		dynasty = "KC_Slezan"
+		dynasty = "Slezan"
 		birth_date = 1421.1.1
 		death_date = 1489.1.1
 		adm = 2
 		dip = 2
-		mil = 3
+		mil = 2
 	}
 	heir = {
 		name = "Uniedrog"
 		monarch_name = "Uniedrog"
-		dynasty = "KC_Slezan"
+		dynasty = "Slezan"
 		birth_date = 1440.1.1
 		death_date = 1519.1.1
-		claim = 80
+		claim = 90
 		adm = 2
 		dip = 2
-		mil = 3
+		mil = 2
 	}
 }
 

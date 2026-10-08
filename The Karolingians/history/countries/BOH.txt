@@ -47,24 +47,23 @@ change_estate_land_share = {
 
 1444.1.1 = {
 	monarch = {
-		name = "Borivoj"
-		dynasty = "of Premyslid"
-		regent = yes
-		birth_date = 1429.1.1
-		death_date = 1466.1.1
-		adm = 1
+		name = "Neklan"
+		dynasty = "Premyslid"
+		birth_date = 1377.1.1
+		death_date = 1450.1.1
+		adm = 2
 		dip = 2
-		mil = 1
+		mil = 2
 	}
 	heir = {
-		name = "Spytihnev"
-		monarch_name = "Spytihnev"
-		dynasty = "of Premyslid"
-		birth_date = 1452.1.1
-		death_date = 1492.1.1
-		claim = 85
+		name = "Hostivít"
+		monarch_name = "Hostivít"
+		dynasty = "Premyslid"
+		birth_date = 1397.1.1
+		death_date = 1447.1.1
+		claim = 90
 		adm = 2
-		dip = 1
+		dip = 2
 		mil = 2
 	}
 }

@@ -20,8 +20,8 @@ def main() -> int:
         ("generate the empire decision", step_hre),
         ("write starting vassals", step_diplomacy),
         ("generate the Magyars", step_custom),
+        ("rewrite vanilla realm colours", step_vanilla_countries),
         ("write formation triggers", step_formation_triggers),
-        ("write name localisation", step_names),
         ("check CK3 rulers", step_ck3, []),
         ("check start-date ownership", step_start),
     ]

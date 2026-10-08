@@ -5,27 +5,26 @@ technology_group = western
 primary_culture = lombard
 religion = catholic
 capital = 4728
-
 1444.1.1 = {
 	monarch = {
 		name = "Louis"
 		dynasty = "Karling"
-		birth_date = 1403.1.1
-		death_date = 1452.8.13
-		adm = 3
-		dip = 3
-		mil = 3
+		birth_date = 1412.1.1
+		death_date = 1452.8.12
+		adm = 2
+		dip = 1
+		mil = 2
 	}
 	heir = {
-		name = "Berengar"
-		monarch_name = "Berengar"
+		name = "Gisele"
+		monarch_name = "Gisele"
 		dynasty = "Karling"
-		birth_date = 1422.1.1
-		death_date = 1501.10.17
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 3
+		birth_date = 1430.1.1
+		death_date = 1445.4.28
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 1
 	}
 }
 

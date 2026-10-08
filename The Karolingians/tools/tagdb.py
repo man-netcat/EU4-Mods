@@ -31,7 +31,6 @@ class Tag:
     provinces: frozenset = field(default_factory=frozenset)
     country: str = "vanilla"
     elector: bool = False
-    ruler_block: Optional[str] = None
     no_heir_sync: bool = False
 
     @property
@@ -131,30 +130,6 @@ def shifted(y, m=1, d=1):
 
 TAGS: list[Tag] = [
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Charles the Bald"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(823, 8, 13)}
-		death_date = {shifted(877, 10, 6)}
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-	heir = {{
-		name = "Louis"
-		monarch_name = "Louis the Stammerer"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(837, 9, 27)}
-		death_date = {shifted(879, 8, 10)}
-		claim = 95
-		adm = 3
-		dip = 2
-		mil = 3
-	}}
-}}
-""",
         tag="FRA",
         name="West Francia",
         rank=2,
@@ -180,19 +155,6 @@ TAGS: list[Tag] = [
         provinces=(192,),  # Bourgogne (Dijon)  (bourgogne_area; vanilla BUR)
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Lothair II"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(835)}
-		death_date = {shifted(869)}
-		adm = 2
-		dip = 2
-		mil = 2
-	}}
-}}
-""",
         tag="LOT",
         country="fresh",
         name="Lotharingia",
@@ -221,30 +183,6 @@ TAGS: list[Tag] = [
         ),
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Louis the German"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(817, 8, 27)}
-		death_date = {shifted(876, 9, 5)}
-		adm = 4
-		dip = 3
-		mil = 4
-	}}
-	heir = {{
-		name = "Charles"
-		monarch_name = "Charles the Fat"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(839)}
-		death_date = {shifted(888, 12, 13)}
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 4
-	}}
-}}
-""",
         tag="GER",
         country="fresh",
         name="East Francia",
@@ -279,30 +217,6 @@ TAGS: list[Tag] = [
         ),
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Carloman"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(817)}
-		death_date = {shifted(880)}
-		adm = 3
-		dip = 3
-		mil = 2
-	}}
-	heir = {{
-		name = "Arnulf"
-		monarch_name = "Arnulf"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(850)}
-		death_date = {shifted(907, 12, 14)}
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-}}
-""",
         tag="BAV",
         country="fresh",
         name="Bavaria",
@@ -328,30 +242,6 @@ TAGS: list[Tag] = [
         ),
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Louis II"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(826)}
-		death_date = {shifted(875, 8, 13)}
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-	heir = {{
-		name = "Berengar"
-		monarch_name = "Berengar"
-		dynasty = "{DYNASTY}"
-		birth_date = {shifted(845)}
-		death_date = {shifted(924, 10, 17)}
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 3
-	}}
-}}
-""",
         tag="ITA",
         country="fresh",
         name="Italy",
@@ -384,30 +274,6 @@ TAGS: list[Tag] = [
         ),
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Mstivoj"
-		dynasty = "of Lusatia"
-		birth_date = 1395.3.2
-		death_date = 1449.11.8
-		adm = 2
-		dip = 1
-		mil = 2
-	}}
-	heir = {{
-		name = "Mstivoj"
-		monarch_name = "Mstivoj"
-		dynasty = "of Lusatia"
-		birth_date = 1425.6.14
-		death_date = 1470.1.1
-		claim = 80
-		adm = 2
-		dip = 2
-		mil = 2
-	}}
-}}
-""",
         tag="SOR",
         country="fresh",
         name="Lusatia",
@@ -561,30 +427,6 @@ TAGS: list[Tag] = [
         },
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Gardomir Slezan"
-		dynasty = "Slezan"
-		birth_date = {shifted(844, 1, 1)}
-		death_date = {shifted(912, 1, 1)}
-		adm = 2
-		dip = 2
-		mil = 3
-	}}
-	heir = {{
-		name = "Uniedrog"
-		monarch_name = "Uniedrog"
-		dynasty = "Slezan"
-		birth_date = {shifted(863, 1, 1)}
-		death_date = {shifted(942, 1, 1)}
-		claim = 80
-		adm = 2
-		dip = 2
-		mil = 3
-	}}
-}}
-""",
         tag="SIL",
         rank=1,
         capital=264,
@@ -597,30 +439,6 @@ TAGS: list[Tag] = [
         ),
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Rostislav"
-		dynasty = "of Rostislav"
-		birth_date = {shifted(815, 1, 1)}
-		death_date = {shifted(869, 1, 1)}
-		adm = 3
-		dip = 4
-		mil = 3
-	}}
-	heir = {{
-		name = "Svatopluk"
-		monarch_name = "Svatopluk"
-		dynasty = "of Rostislav"
-		birth_date = {shifted(840, 1, 1)}
-		death_date = {shifted(894, 1, 1)}
-		claim = 90
-		adm = 4
-		dip = 4
-		mil = 4
-	}}
-}}
-""",
         tag="GMA",
         rank=2,
         capital=4237,
@@ -910,39 +728,12 @@ TAGS: list[Tag] = [
         "Horde appanage",
     ),
     Tag(
-        ruler_block=f"""
-{CTRY_DATE} = {{
-	monarch = {{
-		name = "Borivoj"
-		dynasty = "of Premyslid"
-		regent = yes
-		birth_date = {shifted(852, 1, 1)}
-		death_date = {shifted(889, 1, 1)}
-		adm = 1
-		dip = 2
-		mil = 1
-	}}
-	heir = {{
-		name = "Spytihnev"
-		monarch_name = "Spytihnev"
-		dynasty = "of Premyslid"
-		birth_date = {shifted(875, 1, 1)}
-		death_date = {shifted(915, 1, 1)}
-		claim = 85
-		adm = 2
-		dip = 1
-		mil = 2
-	}}
-}}
-""",
         tag="BOH",
         elector=True,
         rank=1,
         capital=266,
-        ck3_title=None,
+        ck3_title="d_bohemia",
         in_alloc=False,
-        no_ck3="mod-invented: Borivoj is the mod's own Bohemian ruler; CK3 "
-        "records no 867 holder for k_bohemia to verify against",
     ),
     Tag(
         tag="SAR",

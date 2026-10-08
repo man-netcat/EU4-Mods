@@ -11,20 +11,9 @@ technology_group = western
 		dynasty = "Mojmírid"
 		birth_date = 1392.1.1
 		death_date = 1446.1.1
-		adm = 3
-		dip = 4
-		mil = 3
-	}
-	heir = {
-		name = "Svatopluk"
-		monarch_name = "Svatopluk"
-		dynasty = "Mojmírid"
-		birth_date = 1417.1.1
-		death_date = 1471.1.1
-		claim = 90
-		adm = 4
-		dip = 4
-		mil = 4
+		adm = 2
+		dip = 2
+		mil = 2
 	}
 }
 
