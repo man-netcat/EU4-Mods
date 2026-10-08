@@ -442,6 +442,7 @@ def step_hre() -> None:
 \t\tmajor = yes
 
 \t\tpotential = {{
+\t\t\tNOT = {{ tag = HLR }}
 {dynasty_line}
 \t\t}}
 
@@ -638,14 +639,6 @@ def step_formation_triggers() -> None:
         "# province triggers backing the formation decisions\n" + body + "\n"
     )
     print(f"wrote {spath}  ({len(specs)} triggers)")
-
-    loc = "\n".join(
-        f' {k}_provinces_tooltip:0 "Is §YHighlighted§! by the Decision."'
-        for k, _ in specs
-    )
-    lpath = os.path.join(MOD, "localisation", "karolingian_formations_l_english.yml")
-    open(lpath, "w", encoding="utf-8").write("\ufeffl_english:\n" + loc + "\n")
-    print(f"wrote {lpath}")
 
     old = os.path.join(
         MOD, "common", "trigger_localisation", "KarolingianFormations_l_english.yml"

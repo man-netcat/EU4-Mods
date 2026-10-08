@@ -1,6 +1,0 @@
-﻿l_english:
- # Lotharingia is a vanilla key too, but it lives in emperor_map_l_english.yml,
- # not countries_l_english.yml. Overriding it from a countries_-named file is why
- # it has to be split out here rather than folded in with the realms above.
- LOT:1 "Lotharingia"
- LOT_ADJ:1 "Lotharingian"

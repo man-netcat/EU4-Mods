@@ -4,6 +4,7 @@ country_decisions = {
 		major = yes
 
 		potential = {
+			NOT = { tag = HLR }
 			dynasty = "Karling"
 		}
 

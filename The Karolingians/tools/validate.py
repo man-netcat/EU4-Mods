@@ -72,8 +72,6 @@ def run() -> int:
         "/home/rick/.local/share/Paradox Interactive/Europa Universalis IV/mod/The Karolingians.mod",
         f"{MOD}/descriptor.mod",
         f"{MOD}/localisation/replace/countries_l_english.yml",
-        f"{MOD}/localisation/replace/emperor_map_l_english.yml",
-        f"{MOD}/localisation/replace/areas_regions_l_english.yml",
     ]:
         note(os.path.exists(p), f"exists {os.path.relpath(p, MOD)}")
 
