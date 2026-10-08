@@ -17,7 +17,3 @@ capital = 38
 		mil = 2
 	}
 }
-
-1542.1.1 = {
-	religion = protestant
-}

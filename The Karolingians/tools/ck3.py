@@ -5,7 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from enc import encname
-from tagdb import BY_TAG, CTRY_DATE, NOT_CK3, RULER_TITLES, TITLES
+from tagdb import BY_TAG, CTRY_DATE, RULER_TITLES, TITLES
 
 GAME_CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
 
@@ -262,7 +262,7 @@ def land_holders():
     for f in sorted((MOD / "history" / "provinces").glob("*.txt")):
         pid = int(f.name.split("-")[0].strip())
         text = f.read_text(encoding="utf-8", errors="surrogateescape")
-        owner, _ctrl, _core, _hre = effective(text)
+        owner, _ctrl, _core = effective(text)
         if owner:
             out[owner] = out.get(owner, 0) + 1
     return out
@@ -311,30 +311,18 @@ def step_ck3(argv):
     vanilla = {
         fn.split(" ")[0] for fn in os.listdir(VANILLA_CDIR) if fn.endswith(".txt")
     }
-    kept_vanilla = sorted(
-        t for t in holders if t not in TITLES and t not in NOT_CK3 and t in vanilla
-    )
-    unclassified = sorted(
-        t for t in holders if t not in TITLES and t not in NOT_CK3 and t not in vanilla
-    )
+    kept_vanilla = sorted(t for t in holders if t not in TITLES and t in vanilla)
+    unclassified = sorted(t for t in holders if t not in TITLES and t not in vanilla)
     print(f"== {len(holders)} tags own land at the mod start date ==")
     print(f"   CK3-derived (name/dynasty checked): {len(TITLES)}")
-    print(f"   classified as not CK3-derived      : {len(NOT_CK3)}")
     print(f"   vanilla, untouched, ruler kept    : {len(kept_vanilla)}")
     for t in unclassified:
         bad.append(
-            f"{t} owns {holders[t]} provinces at the start date but is in "
-            f"neither TITLES nor NOT_CK3, and has no vanilla country file; "
-            f"give it a Tag.no_ck3 reason so it is accounted for"
+            f"{t} owns {holders[t]} provinces at the start date but has no "
+            f"CK3 title and no vanilla country file"
         )
     if unclassified:
         print(f"   UNCLASSIFIED: {', '.join(unclassified)}")
-    stale = [t for t in NOT_CK3 if t not in holders]
-    if stale:
-
-        print(
-            f"   note: NOT_CK3 lists tags with no land now: {', '.join(sorted(stale))}"
-        )
 
     for tag in sorted(TITLES):
         got = resolve(tag, titles, chars, dyns, houses)

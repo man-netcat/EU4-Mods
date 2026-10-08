@@ -16,49 +16,25 @@ HISTORICAL_TAGS_MOD = os.path.join(
 class Tag:
 
     tag: str
+    rank: int
 
     name: Optional[str] = None
-    rank: Optional[int] = None
     capital: Optional[int] = None
     culture: Optional[str] = None
     religion: Optional[str] = None
     ck3_title: Optional[str] = None
     ruler_title: Optional[str] = None
-    no_ck3: Optional[str] = None
     areas: tuple = ()
-    deferred: Optional[str] = None
-    in_alloc: bool = True
     provinces: frozenset = field(default_factory=frozenset)
     country: str = "vanilla"
-    elector: bool = False
     no_heir_sync: bool = False
 
     @property
-    def managed(self) -> bool:
-        return self.rank is not None
-
-    @property
     def writes_country_file(self) -> bool:
-        return self.deferred is None and self.rank is not None
+        return self.country != "none"
 
     def __post_init__(self):
         object.__setattr__(self, "provinces", frozenset(self.provinces))
-
-        if self.ck3_title is None and self.no_ck3 is None and self.deferred is None:
-            raise ValueError(
-                f"{self.tag}: ck3_title is None but neither no_ck3 nor deferred "
-                f"explains it - give one or the other, so the gap is deliberate"
-            )
-        if (
-            self.rank is None
-            and not self.deferred
-            and self.country not in ("none", "elector")
-        ):
-            raise ValueError(
-                f"{self.tag}: a Tag must have a rank, be deferred, or declare "
-                f'country "none" or "elector" - otherwise it is a realm of '
-                f"unclear status"
-            )
 
 
 @dataclass(frozen=True)
@@ -131,7 +107,6 @@ TAGS: list[Tag] = [
         capital=183,
         culture="frankish",
         ck3_title="k_france",
-        in_alloc=True,
         areas=(
             "ile_de_france_area",
             "normandy_area",
@@ -157,7 +132,6 @@ TAGS: list[Tag] = [
         capital=1878,
         culture="burgundian",
         ck3_title="k_lotharingia",
-        in_alloc=True,
         areas=(
             "lower_rhineland_area",
             "lorraine_area",
@@ -185,7 +159,6 @@ TAGS: list[Tag] = [
         capital=1876,
         culture="hessian",
         ck3_title="k_east_francia",
-        in_alloc=True,
         areas=(
             "hesse_area",
             "upper_rhineland_area",
@@ -219,7 +192,6 @@ TAGS: list[Tag] = [
         capital=65,
         culture="bavarian",
         ck3_title="d_bavaria",
-        in_alloc=True,
         areas=(
             "upper_bavaria_area",
             "lower_bavaria_area",
@@ -244,7 +216,6 @@ TAGS: list[Tag] = [
         capital=4728,
         culture="lombard",
         ck3_title="k_italy",
-        in_alloc=True,
         areas=(
             "lombardy_area",
             "piedmont_area",
@@ -276,7 +247,6 @@ TAGS: list[Tag] = [
         capital=60,
         culture="sorbian",
         ck3_title="d_lausitz",
-        in_alloc=True,
         areas=(
             "lusatia_area",
             "south_saxony_area",
@@ -288,9 +258,9 @@ TAGS: list[Tag] = [
         rank=2,
         capital=210,
         ck3_title="k_navarra",
-        in_alloc=True,
         provinces=(
             209,  # Vizcaya (Giscaya)   (basque_country; vanilla CAS)
+            210,  # Navarra             (basque_country; vanilla NAV)
             211,  # Huesca  (Osca)      (aragon_area;     vanilla ARA)
         ),
     ),
@@ -299,8 +269,7 @@ TAGS: list[Tag] = [
         rank=2,
         capital=172,
         ck3_title="k_brittany",
-        in_alloc=True,
-        provinces=(),
+        areas=("brittany_area",),
     ),
     Tag(
         tag="ASU",
@@ -308,7 +277,6 @@ TAGS: list[Tag] = [
         rank=2,
         capital=207,
         ck3_title="k_asturias",
-        in_alloc=True,
         areas=("asturias_area", "galicia_area", "leon_area"),
         provinces={
             4789,  # Segovia                (castille_area; vanilla CAS)
@@ -320,7 +288,6 @@ TAGS: list[Tag] = [
         rank=2,
         capital=225,
         ck3_title="k_andalusia",
-        in_alloc=True,
         areas=(
             "alentejo_area",
             "baleares_area",
@@ -350,7 +317,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=163,
         ck3_title="d_krete",
-        in_alloc=True,
         provinces={
             163,  # Crete                  (morea_area; vanilla VEN)
         },
@@ -361,7 +327,6 @@ TAGS: list[Tag] = [
         rank=3,
         capital=385,
         ck3_title="e_arabia",
-        in_alloc=True,
         areas=(
             "al_jazira_area",
             "aleppo_area",
@@ -406,7 +371,6 @@ TAGS: list[Tag] = [
         rank=2,
         capital=361,
         ck3_title="k_egypt",
-        in_alloc=True,
         areas=(
             "al_wahat_area",
             "bahari_area",
@@ -426,7 +390,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=264,
         ck3_title="d_lower_silesia",
-        in_alloc=True,
         provinces=(
             264,  # Breslau (Wroclaw)    (silesia_area; vanilla OPL)
             4238,  # Liegnitz (Legnica)   (silesia_area; vanilla GLG)
@@ -438,7 +401,6 @@ TAGS: list[Tag] = [
         rank=2,
         capital=4237,
         ck3_title="k_moravia",
-        in_alloc=True,
         areas=("moravia_area", "slovakia_area"),
         provinces={
             263,  # Ratibor                (silesia_area; vanilla OPL)
@@ -451,7 +413,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=136,
         ck3_title="d_dalmatia",
-        in_alloc=True,
         provinces={
             136,  # Dalmatia               (east_adriatic_coast_area; vanilla DAL)
             4753,  # Zadar                  (east_adriatic_coast_area; vanilla DAL)
@@ -463,7 +424,6 @@ TAGS: list[Tag] = [
         rank=3,
         capital=151,
         ck3_title="e_byzantium",
-        in_alloc=True,
         areas=(
             "aegean_archipelago_area",
             "albania_area",
@@ -505,7 +465,6 @@ TAGS: list[Tag] = [
         rank=2,
         capital=150,
         ck3_title="k_bulgaria",
-        in_alloc=True,
         areas=(
             "alfold_area",
             "bulgaria_area",
@@ -535,7 +494,6 @@ TAGS: list[Tag] = [
         culture="hungarian",
         technology_group="eastern",
         ck3_title="k_magyar",
-        in_alloc=True,
         name="Magyars",
         adjective="Magyar",
         color=(152, 85, 92),
@@ -587,7 +545,6 @@ TAGS: list[Tag] = [
         religion="catholic",
         technology_group="western",
         ck3_title="d_samogitia",
-        in_alloc=True,
         name="Samogitia",
         adjective="Samogitian",
         color=(210, 170, 30),
@@ -618,7 +575,6 @@ TAGS: list[Tag] = [
         religion="catholic",
         technology_group="western",
         ck3_title="d_barcelona",
-        in_alloc=True,
         name="Gothia",
         adjective="Gothic",
         color=(200, 170, 40),
@@ -644,7 +600,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=272,
         ck3_title="d_lithuanians",
-        in_alloc=True,
         areas=("lithuania_area",),
     ),
     Tag(
@@ -652,7 +607,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=138,
         ck3_title="c_duklja",
-        in_alloc=True,
         provinces={
             138,  # Zeta                   (rascia_area; vanilla MON)
             4754,  # Kotor                  (rascia_area; vanilla VEN)
@@ -663,7 +617,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=1841,
         ck3_title="d_prussia",
-        in_alloc=True,
         areas=("east_prussia_area", "west_prussia_area"),
     ),
     Tag(
@@ -671,7 +624,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=1935,
         ck3_title="d_courland",
-        in_alloc=True,
         provinces={
             39,  # Kurland                (curonia_area; vanilla LIV)
             1935,  # Semigallia             (curonia_area; vanilla LIV)
@@ -682,7 +634,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=45,
         ck3_title="c_lubeck",
-        in_alloc=True,
         provinces={
             45,  # Lubeck                (mecklenburg_area; vanilla HSA)
             2996,  # Wismar                (mecklenburg_area; vanilla MKL)
@@ -694,7 +645,6 @@ TAGS: list[Tag] = [
         rank=1,
         capital=38,
         ck3_title="d_livonia",
-        in_alloc=True,
         areas=("livonia_area",),
         provinces={
             35,  # Osel                   (curonia_area; vanilla LIV)
@@ -705,30 +655,14 @@ TAGS: list[Tag] = [
         rank=1,
         capital=36,
         ck3_title="d_esthonia",
-        in_alloc=True,
         areas=("estonia_ingria_area",),
     ),
     Tag(
-        tag="CRI",
-        rank=1,
-        capital=286,
-        ck3_title=None,
-        country="none",
-        in_alloc=True,
-        provinces={
-            286,  # Azow                   (azov_area; vanilla GEN)
-        },
-        no_ck3="no 867 Crimean polity exists to map",
-        deferred="no Crimean polity in 867: vanilla's file is a 1444 Golden "
-        "Horde appanage",
-    ),
-    Tag(
         tag="BOH",
-        elector=True,
         rank=1,
         capital=266,
         ck3_title="d_bohemia",
-        in_alloc=False,
+        areas=("bohemia_area", "erzgebirge_area"),
     ),
     Tag(
         tag="SAR",
@@ -743,82 +677,13 @@ TAGS: list[Tag] = [
         },
     ),
     Tag(
-        tag="BRA",
-        elector=True,
-        rank=None,
-        country="elector",
-        ck3_title=None,
-        no_ck3="vanilla Brandenburg, given the Order's Neumark provinces; the "
-        "mod runs no court of its own here",
-        provinces={
-            49,  # Neumark               (neumark_area; vanilla TEU)
-            4747,  # Dramburg              (neumark_area; vanilla TEU)
-        },
-    ),
-    Tag(
-        tag="POL",
-        rank=None,
-        country="none",
-        ck3_title=None,
-        in_alloc=True,
-        no_ck3="vanilla Poland, given Torun back; the mod runs no court of its "
-        "own here",
-        provinces={
-            1859,  # Torun                 (kuyavia_area; vanilla TEU)
-        },
-    ),
-    Tag(
-        tag="KOL",
-        elector=True,
-        rank=None,
-        country="elector",
-        ck3_title=None,
-        in_alloc=False,
-        no_ck3="vanilla elector; the mod only dissolves its vote",
-    ),
-    Tag(
-        tag="MAI",
-        elector=True,
-        rank=None,
-        country="elector",
-        ck3_title=None,
-        in_alloc=False,
-        no_ck3="vanilla elector; the mod only dissolves its vote",
-    ),
-    Tag(
-        tag="PAL",
-        elector=True,
-        rank=None,
-        country="elector",
-        ck3_title=None,
-        in_alloc=False,
-        no_ck3="vanilla elector; the mod only dissolves its vote",
-    ),
-    Tag(
-        tag="SAX",
-        elector=True,
-        rank=None,
-        country="elector",
-        ck3_title=None,
-        in_alloc=False,
-        no_ck3="vanilla elector; the mod only dissolves its vote",
-    ),
-    Tag(
-        tag="TRI",
-        elector=True,
-        rank=None,
-        country="elector",
-        ck3_title=None,
-        in_alloc=False,
-        no_ck3="vanilla elector; the mod only dissolves its vote",
-    ),
-    Tag(
         tag="PAP",
-        rank=None,
+        rank=2,
         capital=118,
         ck3_title="k_papal_state",
-        country="none",
-        in_alloc=False,
+        provinces={
+            118,  # Roma                  (lazio_area; vanilla PAP)
+        },
     ),
 ]
 
@@ -829,21 +694,15 @@ def _r(t: Tag):
     return t.tag
 
 
-ALL_TAGS: list[str] = [t.tag for t in TAGS if t.in_alloc]
+ALL_TAGS: list[str] = [t.tag for t in TAGS]
 
-IMPERIAL_ELECTORS: list = [t.tag for t in TAGS if t.elector]
+KEPT_REALMS: set = {t.tag for t in TAGS if t.writes_country_file}
 
-KEPT_REALMS: set = {t.tag for t in TAGS if t.managed}
-
-DEFERRED_REALMS: dict = {t.tag: t.deferred for t in TAGS if t.deferred}
-
-RANK: dict = {t.tag: t.rank for t in TAGS if t.rank is not None}
+RANK: dict = {t.tag: t.rank for t in TAGS}
 
 TITLES: dict = {t.tag: t.ck3_title for t in TAGS if t.ck3_title}
 
 RULER_TITLES: dict = {t.tag: t.ruler_title for t in TAGS if t.ruler_title}
-
-NOT_CK3: dict = {t.tag: t.no_ck3 for t in TAGS if t.no_ck3 and t.tag not in TITLES}
 
 DIPLOMACY: tuple = (
     Diplomacy("FRA", "GTH"),  # Gothia, a vassal duchy of West Francia
@@ -871,51 +730,21 @@ def selfcheck() -> None:
         if t.tag in seen:
             raise ValueError(f"{t.tag}: declared twice in TAGS")
         seen.add(t.tag)
-        if t.ck3_title and t.no_ck3:
-            raise ValueError(
-                f"{t.tag}: both ck3_title and no_ck3 are set - CK3 is the "
-                f"authority or it is not"
-            )
-        if t.country not in ("fresh", "vanilla", "elector", "written", "none"):
+        if t.country not in ("fresh", "vanilla", "written", "none"):
             raise ValueError(
                 f"{t.tag}: country={t.country!r} is not one of "
-                f"fresh/vanilla/elector/written/none"
+                f"fresh/vanilla/written/none"
             )
         if t.country == "fresh" and not (t.capital and t.culture):
             raise ValueError(
                 f"{t.tag}: a fresh realm needs capital and culture - build "
                 f"cannot make them up"
             )
-        if t.country == "none" and t.rank is not None and not t.deferred:
-            raise ValueError(
-                f"{t.tag}: country none but rank {t.rank} - a realm with a "
-                f"size writes a file"
-            )
-        if t.country == "elector" and not t.elector:
-            raise ValueError(
-                f"{t.tag}: country elector, but the Tag is not flagged elector"
-            )
-        if t.elector and t.country not in ("elector", "vanilla"):
-            raise ValueError(
-                f"{t.tag}: flagged elector but country {t.country} would leave "
-                f"its 1444 vote in place"
-            )
-        if (t.areas or t.provinces) and not t.in_alloc:
-            raise ValueError(
-                f"{t.tag}: declares {len(t.areas)} areas and "
-                f"{len(t.provinces)} provinces but has in_alloc off - the "
-                f"allocation would silently hand it nothing"
-            )
         if t.ruler_title and not t.ck3_title:
             raise ValueError(
                 f"{t.tag}: ruler_title is set but ck3_title is not - a ruler "
                 f"title only means something next to the realm title it overrides"
             )
-    missing = KEPT_REALMS - set(RANK) - set(DEFERRED_REALMS)
-    if missing:
-        raise ValueError(
-            f"managed realms with neither a rank nor a deferral: " f"{sorted(missing)}"
-        )
     for tag, blocks in TRANSFERS:
         if tag not in seen:
             raise ValueError(f"TRANSFERS names {tag}, which is not a Tag")

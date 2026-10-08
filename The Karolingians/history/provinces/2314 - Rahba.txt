@@ -22,34 +22,7 @@ discovered_by = east_african
 discovered_by = BYZ
 add_local_autonomy = 20
 
-1411.1.1 = {
-	owner = QAR
-	controller = QAR
-	add_core = QAR
-	add_claim = MAM
-} # The Qara Koyunlu
-1469.2.4 = {
-	owner = AKK
-	controller = AKK
-	add_core = AKK
-	remove_core = QAR
-}
-1507.1.1 = {
-	owner = PER
-	controller = PER
-	add_core = PER		
-	remove_core = AKK
-} # The Safavids took over
-1515.1.1 = { discovered_by = POR }
-1516.8.24 = {
-	owner = TUR
-	controller = TUR
-	add_core = TUR
-	remove_core = PER
-} # Part of the Ottoman Empire
-
 867.1.1 = {	owner = ARB
 	controller = ARB
 	add_core = ARB
-	hre = no
 }

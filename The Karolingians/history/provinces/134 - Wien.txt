@@ -13,7 +13,7 @@ base_manpower = 6
 fort_15th = yes #Vienna + Outer ring of fortifications
 capital = "Wien" 
 is_city = yes
-hre = no
+hre = yes
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL
@@ -26,13 +26,7 @@ discovered_by = ottoman
 extra_cost = 16
 center_of_trade = 2
 
-1545.1.1 = { base_manpower = 3 }
-1650.1.1 = { base_manpower = 4 }
-1700.1.1 = { base_manpower = 6 }
-1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
-
 867.1.1 = {	owner = BAV
 	controller = BAV
 	add_core = BAV
-	hre = no
 }

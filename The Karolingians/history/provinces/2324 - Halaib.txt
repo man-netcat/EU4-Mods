@@ -22,24 +22,7 @@ discovered_by = nomad_group
 discovered_by = indian
 discovered_by = east_african
 
-
-1510.1.1 = {
-	discovered_by = NUB
-	owner = NUB
-	controller = NUB
-	add_core = NUB
-	remove_core = MAM
-} # Funj replace Mamluks in control of Suakin
-1524.1.1 = {
-	owner = TUR
-	controller = TUR
-	add_core = TUR	
-} # Ottomans occupy Suakin
-1571.1.1 = { unrest = 8 } # Local Beja revolt against Ottoman governors
-1572.1.1 = { unrest = 0 } # Ottomans crush Beja revolt
-
 867.1.1 = {	owner = EGY
 	controller = EGY
 	add_core = EGY
-	hre = no
 }

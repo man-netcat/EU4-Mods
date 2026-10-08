@@ -27,27 +27,7 @@ center_of_trade = 1
 add_core = DAL
 add_core = ITA
 
-
-1797.10.17 = {
-	owner = HAB
-	controller = HAB
-	add_core = HAB
-} # Treaty of Campo Formio
-1805.12.26 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
-	remove_core = HAB
-} # Treaty of Pressburg
-1813.9.20 = { controller = HAB } # Occupied by Austrian forces
-1814.4.6 = {
-	owner = HAB
-	add_core = HAB
-	remove_core = FRA
-} # Napoleon abdicates
-
 867.1.1 = {	owner = ITA
 	controller = ITA
 	add_core = ITA
-	hre = no
 }

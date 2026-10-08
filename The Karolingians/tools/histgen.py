@@ -29,8 +29,7 @@ def country_history(t) -> str:
     reforms = getattr(t, "reforms", None) or ("feudalism_reform",)
     lines = [f"government = {government}"]
     lines += [f"add_government_reform = {r}" for r in reforms]
-    if t.rank is not None:
-        lines.append(f"government_rank = {t.rank}")
+    lines.append(f"government_rank = {t.rank}")
     lines += [
         f"technology_group = {technology}",
         f"primary_culture = {t.culture}",

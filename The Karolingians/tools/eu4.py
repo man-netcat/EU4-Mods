@@ -19,7 +19,6 @@ from tagdb import (
     BY_TAG,
     CustomTag,
     DIPLOMACY,
-    IMPERIAL_ELECTORS,
     PROVINCE_OWNERS,
     TAGS,
     TITLES,
@@ -44,7 +43,7 @@ UNTRACKED_OWNERS = {
 
 PROVINCE_OWNERS = {**UNTRACKED_OWNERS, **PROVINCE_OWNERS}
 
-CAPITAL = {t.tag: t.capital for t in BY_TAG.values() if t.in_alloc and t.capital}
+CAPITAL = {t.tag: t.capital for t in BY_TAG.values() if t.capital}
 NAME = {tag: BY_TAG[tag].name for tag in AREA_OWNERS}
 
 CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
@@ -155,32 +154,12 @@ def build(verbose=False):
             set(alloc.get(tag, [])) | {p for p in extra if p not in claimed}
         )
 
-    by_owner = defaultdict(list)
-    for pid, pr in provs.items():
-        owner = pr.get("owner_1444", pr.get("owner"))
-        if owner:
-            by_owner[owner].append(int(pid))
-
-    swept = []
-    for spec in TAGS:
-        for pid in sorted(by_owner.get(spec.tag, ())):
-            if pid in owner_of or pid in BALATON_RESERVED:
-                continue
-            owner_of[pid] = spec.tag
-            alloc.setdefault(spec.tag, []).append(pid)
-            swept.append((pid, spec.tag))
-
     for tag in alloc:
         alloc[tag] = sorted(set(alloc[tag]))
 
     if verbose:
         for pid, name, prev, tag in LAYER2_MOVES:
             print(f"  override: province {pid} {name} {prev} -> {tag}")
-        for pid, tag in swept:
-            print(
-                f"  sweep: province {pid} {provs[str(pid)]['name']}"
-                f" vanilla-kept by {tag}"
-            )
     return {s.tag: sorted(alloc[s.tag]) for s in TAGS if alloc.get(s.tag)}
 
 
@@ -240,7 +219,6 @@ def force_block(new_owner):
         f"\n{PROV_DATE} = {{\towner = {new_owner}\n"
         f"\tcontroller = {new_owner}\n"
         f"\tadd_core = {new_owner}\n"
-        f"\thre = no\n"
         f"}}\n"
     )
 
@@ -276,10 +254,6 @@ def patch(text, new_owner):
             out.append(ln)
             continue
         s = ln.strip()
-
-        if re.match(r"^hre\s*=", s):
-            out.append(re.sub(r"hre\s*=\s*\w+", "hre = no", ln))
-            continue
 
         m = re.match(r"^(owner|controller)\s*=\s*", s)
         if m:
@@ -318,8 +292,7 @@ def step_provinces(argv):
 
     data = _pd()
     provs = data["provs"]
-    hre_yes = {int(p) for p, pr in provs.items() if pr["hre"]}
-    todo = sorted(set(owner_of) | hre_yes | set(BALATON_RESERVED))
+    todo = sorted(set(owner_of) | set(BALATON_RESERVED))
 
     if os.path.isdir(PROV_OUT):
         shutil.rmtree(PROV_OUT)
@@ -335,16 +308,14 @@ def step_provinces(argv):
         if not src:
             print(f"!! no vanilla file for province {pid}")
             continue
-        text = apply_867_culture(
-            open(src, encoding="utf-8", errors="surrogateescape").read(), pid
-        )
+        text = strip_dated(open(src, encoding="utf-8", errors="surrogateescape").read())
+        text = apply_867_culture(text, pid)
         tag = owner_of.get(pid)
         if pid in BALATON_RESERVED:
             new = unown(text)
         else:
             new = patch(text, tag) if tag else text
 
-        new = re.sub(r"(\bhre\s*=\s*)yes\b", r"\1no", new)
         open(
             os.path.join(PROV_OUT, os.path.basename(src)),
             "w",
@@ -356,7 +327,6 @@ def step_provinces(argv):
     print(f"wrote {written} province files")
     for tag, ps in sorted(alloc.items(), key=lambda kv: -len(kv[1])):
         print(f"  {tag:4} {len(ps):3}")
-    print(f"  hre=yes stripped : {len(hre_yes)}")
     print(f"  total            : {len(todo)}")
 
 
@@ -388,11 +358,9 @@ def report(alloc):
         olds = defaultdict(int)
         for pid in ids:
             olds[provs[str(pid)]["owner"]] += 1
-        hre = sum(1 for pid in ids if provs[str(pid)]["hre"])
         print(
             f"{tag} {NAME.get(tag, tag):13} n={len(ids):3} dev={sum(dev(p) for p in ids):6.0f}"
             + (f" cap={cap}({provs[str(cap)]['name']})" if cap else "")
-            + f" hre={hre}"
         )
         print(
             "     from: "
@@ -551,7 +519,7 @@ def step_vanilla_countries() -> None:
     os.makedirs(os.path.join(MOD, "common", "countries"), exist_ok=True)
     written = 0
     for t in TAGS:
-        if isinstance(t, CustomTag) or t.rank is None or not t.ck3_title:
+        if isinstance(t, CustomTag) or not t.ck3_title:
             continue
         want = colors.get(t.ck3_title)
         base = vanilla.get(t.tag)
@@ -647,6 +615,22 @@ def step_formation_triggers() -> None:
         os.remove(old)
 
 
+def strip_dated(text):
+    out, depth = [], 0
+    for ln in text.splitlines():
+        if re.match(r"^\s*\d+\.\d+\.\d+\s*=", ln):
+            break
+        out.append(ln)
+        code = ln.split("#", 1)[0]
+        depth += code.count("{") - code.count("}")
+    while out and not out[-1].strip():
+        out.pop()
+    while depth > 0:
+        out.append("}")
+        depth -= 1
+    return "\n".join(out) + "\n"
+
+
 def find_vanilla(tag):
     for fn in os.listdir(VANILLA_CDIR):
         if fn.split(" ")[0] == tag and fn.endswith(".txt"):
@@ -654,15 +638,9 @@ def find_vanilla(tag):
     raise SystemExit(f"no vanilla history file for {tag}")
 
 
-def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None):
+def patch_vanilla(tag, capital=None, ruler=None, rank=None):
     path, fn = find_vanilla(tag)
     text = open(path, encoding="utf-8", errors="surrogateescape").read()
-    if strip_elector:
-
-        text, n = re.subn(
-            r"^elector\s*=\s*yes[^\n]*$", "elector = no", text, count=1, flags=re.M
-        )
-        assert n == 1, f"{tag}: no top-level 'elector = yes' to dissolve in {fn}"
     if capital is not None:
 
         m = re.search(r"^capital\s*=\s*(\d+)", text, flags=re.M)
@@ -677,43 +655,26 @@ def patch_vanilla(tag, capital=None, ruler=None, strip_elector=False, rank=None)
                 flags=re.M,
             )
             assert n == 1, f"{tag}: failed to patch capital in {fn}"
-    if rank is not None:
+    m = re.search(r"^government_rank\s*=\s*(\d+)", text, flags=re.M)
+    if m and int(m.group(1)) != rank:
+        text, n = re.subn(
+            r"^government_rank\s*=\s*\d+.*$",
+            f"government_rank = {rank}",
+            text,
+            count=1,
+            flags=re.M,
+        )
+        assert n == 1, f"{tag}: failed to patch government_rank in {fn}"
+    elif m is None:
 
-        m = re.search(r"^government_rank\s*=\s*(\d+)", text, flags=re.M)
-        if m and int(m.group(1)) != rank:
-            text, n = re.subn(
-                r"^government_rank\s*=\s*\d+.*$",
-                f"government_rank = {rank}",
-                text,
-                count=1,
-                flags=re.M,
-            )
-            assert n == 1, f"{tag}: failed to patch government_rank in {fn}"
-        elif m is None:
-
-            anchor = re.search(r"^\s*government\s*=\s*\w+.*$", text, re.M)
-            assert anchor, f"{tag}: no government line to anchor a rank to in {fn}"
-            text = (
-                text[: anchor.end()]
-                + f"\ngovernment_rank = {rank}"
-                + text[anchor.end() :]
-            )
+        anchor = re.search(r"^\s*government\s*=\s*\w+.*$", text, re.M)
+        assert anchor, f"{tag}: no government line to anchor a rank to in {fn}"
+        text = (
+            text[: anchor.end()] + f"\ngovernment_rank = {rank}" + text[anchor.end() :]
+        )
+    text = strip_dated(text)
     if ruler is not None:
-        lines = text.splitlines()
-
-        ins = len(lines)
-        for i, ln in enumerate(lines):
-            m = re.match(r"^(\d+)\.(\d+)\.(\d+)\s*=", ln.strip())
-            if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) >= (
-                867,
-                1,
-                1,
-            ):
-                ins = i
-                break
-        block = ruler.strip("\n").splitlines()
-        lines = lines[:ins] + block + [""] + lines[ins:]
-        text = "\n".join(lines) + "\n"
+        text = text.rstrip("\n") + "\n\n" + ruler.strip("\n") + "\n"
     return text
 
 
@@ -731,30 +692,19 @@ def step_countries():
                 f"capital {t.capital})"
             )
         elif t.country == "vanilla":
-            ruler = ruler_block_for(t)
-            was_elector = t.tag in IMPERIAL_ELECTORS
-            text = ck3_sync(
-                t.tag, patch_vanilla(t.tag, t.capital, ruler, was_elector, t.rank)
-            )
+            ruler = ruler_block_for(t) if t.ck3_title else None
+            text = ck3_sync(t.tag, patch_vanilla(t.tag, t.capital, ruler, t.rank))
             what = []
             if t.capital:
                 what.append(f"capital -> {t.capital}")
             if ruler:
                 nm = re.search(r'name = "([^"]+)"', ruler)
                 what.append(f"867 ruler {nm.group(1) if nm else '?'} (from CK3)")
-            if was_elector:
-                what.append("electorate removed")
             what.append(f"rank {t.rank}")
             print(
-                f"wrote {t.tag}.txt (vanilla history preserved, "
-                + ", ".join(what)
+                f"wrote {t.tag}.txt (from vanilla, "
+                + (", ".join(what) or "vanilla header")
                 + ")"
-            )
-        else:
-            text = patch_vanilla(t.tag, strip_elector=True)
-            print(
-                f"wrote {t.tag}.txt (vanilla history preserved, "
-                f"electorate dissolved)"
             )
 
         with open(
@@ -794,7 +744,6 @@ def parse(path):
     depth = 0
     started_dated = False
     scalars, cores0, cores_all = {}, [], []
-    hre_any = False
     for _, s in lines:
         opens = s.count("{")
         closes = s.count("}")
@@ -815,12 +764,10 @@ def parse(path):
         else:
             for c in re.findall(r"add_core\s*=\s*([A-Z]{3})", s):
                 cores_all.append(c)
-        if re.search(r"\bhre\s*=\s*yes\b", s):
-            hre_any = True
         depth += opens - closes
         if depth < 0:
             depth = 0
-    return scalars, cores0, cores_all, hre_any
+    return scalars, cores0, cores_all
 
 
 def parse_block_file(path):
@@ -895,7 +842,6 @@ def load_provinces():
             "controller": None,
             "culture": None,
             "religion": None,
-            "hre": False,
             "capital": False,
             "sea": False,
         }
@@ -916,8 +862,6 @@ def load_provinces():
                 d["culture"] = m2.group(1)
             elif m2 := re.match(r"^religion\s*=\s*([a-z0-9_]+)", s):
                 d["religion"] = m2.group(1)
-            elif m2 := re.match(r"^hre\s*=\s*(\w+)", s):
-                d["hre"] = m2.group(1) == "yes"
             elif m2 := re.match(r"^is_city\s*=\s*(\w+)", s):
                 d["is_city"] = m2.group(1) == "yes"
             elif m2 := re.match(r"^capital\s*=", s):
@@ -949,15 +893,6 @@ def step_probe():
         json.dump(data, f)
 
     print(f"provinces: {len(provs)}  areas: {len(areas)}")
-    print(f"hre=yes: {sum(1 for p in provs.values() if p['hre'])}")
-
-    hre_owners = defaultdict(list)
-    for p in provs.values():
-        if p["hre"]:
-            hre_owners[p["owner"]].append(p["id"])
-    print(f"\ndistinct owners inside HRE boundary: {len(hre_owners)}")
-    for t, ids in sorted(hre_owners.items(), key=lambda x: -len(x[1]))[:40]:
-        print(f"  {t:5} {len(ids):3}")
 
 
 if vanilla_is_newer():
@@ -970,7 +905,6 @@ START_DT = (867, 1, 1)
 
 DATE_RE = re.compile(r"^(\d+)\.(\d+)\.(\d+)\s*=\s*\{")
 KV_RE = re.compile(r"\b(owner|controller|add_core|remove_core)\s*=\s*([A-Za-z0-9_]+)")
-HRE_RE = re.compile(r"\bhre\s*=\s*(\w+)")
 
 
 def split_header_and_blocks(lines):
@@ -1000,7 +934,6 @@ def split_header_and_blocks(lines):
 def effective(text):
     owner = controller = None
     cores = set()
-    hre = None
     for date, block in split_header_and_blocks(text.splitlines()):
         if date is not None and date > START_DT:
             continue
@@ -1013,10 +946,7 @@ def effective(text):
                 cores.add(val)
             elif key == "remove_core":
                 cores.discard(val)
-        h = HRE_RE.search(block)
-        if h:
-            hre = h.group(1)
-    return owner, controller, cores, hre
+    return owner, controller, cores
 
 
 def step_start():
@@ -1027,13 +957,13 @@ def step_start():
         for p in alloc.get(t, []):
             expected[int(p)] = t
 
-    bad_owner, bad_ctrl, bad_hre, contested = [], [], [], []
+    bad_owner, bad_ctrl, contested = [], [], []
     for fn in sorted(os.listdir(PDIR)):
         pid = int(re.match(r"^(\d+)", fn).group(1))
         text = open(
             os.path.join(PDIR, fn), encoding="utf-8", errors="surrogateescape"
         ).read()
-        owner, controller, cores, hre = effective(text)
+        owner, controller, cores = effective(text)
         want = expected.get(pid)
         if want is None:
             continue
@@ -1041,8 +971,6 @@ def step_start():
             bad_owner.append((pid, fn, want, owner))
         if controller != want:
             bad_ctrl.append((pid, fn, want, controller))
-        if hre == "yes":
-            bad_hre.append((pid, fn))
         if want in cores:
             contested.append((pid, fn))
 
@@ -1051,12 +979,9 @@ def step_start():
     )
     print(f"  owner    != intended : {len(bad_owner)}")
     print(f"  controller!= intended: {len(bad_ctrl)}")
-    print(f"  hre = yes at start   : {len(bad_hre)}")
     for pid, fn, want, got in bad_owner[:20]:
         print(f"     {pid:5} {fn[:30]:30} want {want} got {got}")
-    for pid, fn in bad_hre[:10]:
-        print(f"     {pid:5} {fn[:30]:30} hre = yes")
-    if bad_owner or bad_ctrl or bad_hre:
+    if bad_owner or bad_ctrl:
         print("\nFAIL: vanilla events still win at the start date")
         return 1
     print("\nOK: every intended province is held at the start date")

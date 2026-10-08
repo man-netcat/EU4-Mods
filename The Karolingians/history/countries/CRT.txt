@@ -7,6 +7,7 @@ add_accepted_culture = lombard
 religion = orthodox
 capital = 163	# Heraklion
 fixed_capital = 163 # Cannot move capital away from this province & no power cost to move to it
+
 867.1.1 = {
 	monarch = {
 		name = "Shu'ayb"
@@ -29,4 +30,3 @@ fixed_capital = 163 # Cannot move capital away from this province & no power cos
 		mil = 2
 	}
 }
-

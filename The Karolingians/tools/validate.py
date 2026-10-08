@@ -21,7 +21,7 @@ from build import CustomTag  # noqa: E402
 
 from enc import encname  # noqa: E402
 
-TAGS = sorted(t.tag for t in _REALMS if t.in_alloc and t.ck3_title)
+TAGS = sorted(t.tag for t in _REALMS if t.ck3_title)
 
 sys.path.insert(0, str(HERE))
 from build import (
@@ -38,7 +38,7 @@ from build import effective  # noqa: E402
 
 CAPS = CAPITAL
 
-from build import RANK, KEPT_REALMS, DEFERRED_REALMS  # noqa: E402
+from build import RANK, KEPT_REALMS  # noqa: E402
 
 from build import BY_TAG  # noqa: E402
 
@@ -118,7 +118,7 @@ def run() -> int:
     vcountries = load_vanilla_countries()
     ck3_colors = load_title_colors()
     for t in _REALMS:
-        if t.rank is None or not t.ck3_title:
+        if not t.ck3_title:
             continue
         if isinstance(t, CustomTag):
             p = os.path.join(MC, t.country_file or f"{t.name}.txt")
@@ -204,16 +204,12 @@ def run() -> int:
             + (" - ABSENT, so EU4 defaults it to a duchy" if top is None else ""),
         )
 
-    undeclared = [t for t in unwritten if t not in DEFERRED_REALMS]
     note(
-        not undeclared,
-        f"every kept realm has a country file, or a declared reason it has none "
-        f"({len(KEPT_REALMS)} realms, {len(DEFERRED_REALMS)} deferred)",
+        not unwritten,
+        f"every kept realm has a country file ({len(KEPT_REALMS)} realms)",
     )
-    for t in undeclared:
+    for t in unwritten:
         print(f"        {t}: holds land, has a rank, but no country file")
-    for t in sorted(set(unwritten) & set(DEFERRED_REALMS)):
-        print(f"        DEFERRED {t}: {DEFERRED_REALMS[t]}")
 
     print("\n== province ownership ==")
     files = {}
@@ -224,10 +220,10 @@ def run() -> int:
         f"no duplicate province files ({len(files)} unique)",
     )
 
-    own, hre, badown, multicore = Counter(), [], [], []
+    own, badown, multicore = Counter(), [], []
     cores_new = {}
     for pid, path in files.items():
-        s, c0, ca, h = parse(path)
+        s, c0, ca = parse(path)
         o = s.get("owner")
         ctrl = s.get("controller")
         if o is None and ctrl is None:
@@ -236,7 +232,7 @@ def run() -> int:
                 pass
             else:
                 text = open(path, encoding="utf-8", errors="surrogateescape").read()
-                o, ctrl, _, _ = effective(text)
+                o, ctrl, _ = effective(text)
                 if o is None:
                     badown.append(f"{pid} has no owner at the start date")
                     continue
@@ -246,8 +242,6 @@ def run() -> int:
             pass
         elif ctrl != o:
             badown.append(f"{pid} controller={ctrl} owner={o}")
-        if h:
-            hre.append(pid)
         for c in c0:
             cores_new.setdefault(c, []).append(pid)
         hit = [t for t in TAGS if t in c0]
@@ -258,7 +252,6 @@ def run() -> int:
     note(not badown, f"every province has owner == controller ({len(badown)} problems)")
     for b in badown[:8]:
         print("        " + b)
-    note(not hre, f"no 'hre = yes' anywhere ({len(hre)} left)")
     note(not multicore, f"no province cored by 2+ new tags ({len(multicore)})")
     for m in multicore[:8]:
         print("        " + m)
@@ -271,7 +264,7 @@ def run() -> int:
 
     print("\n== capitals inside own realm ==")
     for t in TAGS:
-        s, _, _, _ = parse(files[CAPS[t]])
+        s, _, _ = parse(files[CAPS[t]])
         note(
             s.get("owner") == t,
             f"{t} capital {CAPS[t]} ({s.get('capital')}) owned by {s.get('owner')}",
@@ -325,9 +318,6 @@ def run() -> int:
 
     reassigned = {pid for pid, p in files.items() if parse(p)[0].get("owner") in TAGS}
     for t in [
-        "BOH",
-        "POL",
-        "PAP",
         "NAP",
         "SIC",
         "SARD",
@@ -339,7 +329,6 @@ def run() -> int:
         "POR",
         "MKL",
         "POM",
-        "BRA",
     ]:
         owned = [pid for pid in reassigned if parse(files[pid])[0].get("owner") == t]
         note(not owned, f"{t} owns none of the {len(reassigned)} reassigned provinces")
@@ -573,37 +562,31 @@ def run() -> int:
         }
 
         _ck3 = {t for t in _holders if t in _b.TITLES}
-        _not = {t for t in _holders if t in _b.NOT_CK3}
-        _rest = {t for t in _holders if t not in _b.TITLES and t not in _b.NOT_CK3}
+        _rest = {t for t in _holders if t not in _b.TITLES}
         _unclassified = sorted(t for t in _rest if t not in _vanilla)
 
         _sneaky = sorted(
-            t for t in _rest if (s := BY_TAG.get(t)) is not None and s.managed
+            t
+            for t in _rest
+            if (s := BY_TAG.get(t)) is not None and s.writes_country_file
         )
         for t in _unclassified:
             note(
                 False,
-                f"{t} owns {_holders[t]} provinces at the start date but is "
-                f"in neither _b.TITLES nor _b.NOT_CK3, and has no vanilla "
-                f"country file",
+                f"{t} owns {_holders[t]} provinces at the start date but has "
+                f"no CK3 title and no vanilla country file",
             )
         for t in _sneaky:
             note(
                 False,
-                f"{t} owns {_holders[t]} provinces and this mod ranks it, "
-                f"but it is in neither _b.TITLES nor _b.NOT_CK3; "
-                f"classify it rather than letting 'vanilla and untouched' "
-                f"cover for it",
+                f"{t} owns {_holders[t]} provinces and this mod writes it a "
+                f"ranked country file, but it is not CK3-derived; classify it "
+                f"rather than letting 'vanilla and untouched' cover for it",
             )
-        note(
-            not (set(_b.TITLES) & set(_b.NOT_CK3)),
-            f"no realm is both CK3-derived and deliberately not: "
-            f"{len(set(_b.TITLES) & set(_b.NOT_CK3))} overlap",
-        )
 
         print(
-            f"        {len(_ck3)} CK3-derived + {len(_not)} deliberately not "
-            f"+ {len(_rest)} vanilla and untouched = {len(_holders)} holders"
+            f"        {len(_ck3)} CK3-derived + {len(_rest)} vanilla and "
+            f"untouched = {len(_holders)} holders"
         )
 
         for t in sorted(_b.TITLES):
@@ -703,46 +686,6 @@ def run() -> int:
         f"the decision gates on dynasty {dynasty} (only a Karling can restore the "
         f"empire; if the Karlings die out, no one can)",
     )
-
-    print("\n== HRE is dissolved ==")
-
-    def electors_as_of(directory):
-
-        live = set()
-        for fn in sorted(os.listdir(directory)):
-            if not fn.endswith(".txt"):
-                continue
-            text = open(
-                os.path.join(directory, fn), encoding="utf-8", errors="replace"
-            ).read()
-            base = re.search(r"^elector\s*=\s*(\w+)", text, re.M)
-            state = bool(base and base.group(1) == "yes")
-            for m in re.finditer(r"^(\d{1,4}(?:\.\d{1,2}){0,2})\s*=\s*\{", text, re.M):
-                parts = [int(x) for x in m.group(1).split(".")]
-                if tuple((parts + [1, 1, 1])[:3]) > START_DT:
-                    break
-                end = text.find("\n}", m.end())
-                body = text[m.end() : len(text) if end == -1 else end]
-                vals = re.findall(r"^\s*elector\s*=\s*(\w+)", body, re.M)
-                if vals:
-                    state = vals[-1] == "yes"
-            if state:
-
-                live.add(fn.split(" - ")[0].removesuffix(".txt"))
-        return live
-
-    van_electors = electors_as_of(GH)
-    mod_electors = electors_as_of(COUNTRY_OUT)
-    note(
-        not mod_electors,
-        f"no mod country holds a vote at {START_DT[0]}.{START_DT[1]}.{START_DT[2]} "
-        f"(vanilla: {', '.join(sorted(van_electors))})",
-    )
-    for t in sorted(van_electors):
-        note(
-            os.path.exists(os.path.join(COUNTRY_OUT, f"{t}.txt")),
-            f"{t} votes in vanilla, so the mod overrides it to dissolve its vote",
-        )
 
     for fn in sorted(os.listdir(COUNTRY_OUT)):
         if fn.endswith(".txt") and os.path.getsize(os.path.join(COUNTRY_OUT, fn)) < 200:

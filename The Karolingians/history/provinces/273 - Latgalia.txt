@@ -23,26 +23,7 @@ discovered_by = QAS
 discovered_by = western
 discovered_by = eastern
 
-
-1561.1.1 = {
-	owner = LIT
-	controller = LIT
-	add_core = LIT
-	remove_core = LIV
-	} # Conquered by Lithuania
-1569.7.1 = {
-	owner = PLC
-	controller = PLC
-	add_core = PLC
-} # Union of Lublin
-1772.9.22 = {
-	owner = RUS
-	controller = RUS
-	add_core = RUS
-} # First partition of Poland
-
 867.1.1 = {	owner = LVA
 	controller = LVA
 	add_core = LVA
-	hre = no
 }

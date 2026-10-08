@@ -6,7 +6,7 @@ add_core = LUC
 add_core = ITA
 culture = tuscan
 religion = catholic
-hre = no
+hre = yes
 base_tax = 6
 base_production = 6
 trade_goods = cloth
@@ -20,22 +20,7 @@ discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
 
-
-1495.1.1 = { hre = no }
-1805.6.10 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
-}# Annexed by France
-1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
-1814.4.11 = {
-	owner = LUC
-	controller = LUC
-	remove_core = FRA
-} # Treaty of Fontainebleau, Napoleon abdicates unconditionally
-
 867.1.1 = {	owner = ITA
 	controller = ITA
 	add_core = ITA
-	hre = no
 }

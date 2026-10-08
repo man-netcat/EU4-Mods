@@ -6,7 +6,7 @@ culture = saxon
 religion = catholic
 capital = "Meissen"
 trade_goods = iron
-hre = no
+hre = yes
 base_tax = 6
 base_production = 6
 base_manpower = 2
@@ -21,18 +21,7 @@ discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
 
-
-1423.1.6 = { owner = SAX controller = SAX add_core = SAX remove_core = MEI capital = "Dresden" } # Incorporated into Saxony
-1444.1.1 = { add_core = MEI } # Meissen retains a core on its old capital
-1464.1.1 = { capital = "Dresden" }
-1531.1.1 = { religion = protestant }
-1589.1.1 = { fort_15th = no fort_16th = yes } # Current structure of Festung K�nigstein is built
-1790.8.1 = { unrest = 5 } # Peasant revolt
-1791.1.1 = { unrest = 0 }
-1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
-
 867.1.1 = {	owner = SOR
 	controller = SOR
 	add_core = SOR
-	hre = no
 }
