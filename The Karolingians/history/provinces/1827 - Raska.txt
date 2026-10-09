@@ -1,7 +1,7 @@
 #1827 - Raska
 
-owner = BUL
-controller = BUL
+owner = RSK
+controller = RSK
 culture = serbian
 religion = orthodox
 capital = "Trgoviste"
@@ -11,12 +11,11 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = SER
-add_core = BUL
+add_core = RSK
 
-867.1.1 = {	owner = BUL
-	controller = BUL
-	add_core = BUL
+867.1.1 = {	owner = RSK
+	controller = RSK
+	add_core = RSK
 }
 discovered_by = western
 discovered_by = eastern

@@ -2,7 +2,6 @@
 
 owner = BAV
 controller = BAV
-add_core = ING
 add_core = BAV
 culture = bavarian
 religion = catholic

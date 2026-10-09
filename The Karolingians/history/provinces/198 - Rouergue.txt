@@ -12,8 +12,6 @@ base_production = 3
 trade_goods = livestock
 base_manpower = 2
 add_local_autonomy = 25
-add_core = GUY
-add_core = TOU
 add_core = FRA
 
 867.1.1 = {	owner = FRA

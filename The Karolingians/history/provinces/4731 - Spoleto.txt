@@ -11,7 +11,6 @@ trade_goods = livestock
 base_manpower = 1
 capital = "Spoleto" 
 is_city = yes
-add_core = SPL
 add_core = PAP
 add_core = ITA
 

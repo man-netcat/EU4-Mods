@@ -11,8 +11,6 @@ trade_goods = livestock
 base_manpower = 4 
 capital = "Parma" 
 is_city = yes	# Estimated 
-add_core = MLO
-add_core = PAR
 add_core = ITA
 
 867.1.1 = {	owner = ITA

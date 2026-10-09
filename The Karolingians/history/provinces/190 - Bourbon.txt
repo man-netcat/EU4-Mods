@@ -12,7 +12,6 @@ base_production = 4
 trade_goods = iron
 base_manpower = 4
 add_local_autonomy = 25
-add_core = BOU
 add_core = FRA
 
 867.1.1 = {	owner = FRA

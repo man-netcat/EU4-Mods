@@ -173,6 +173,65 @@ papacy = {
 	}
 }
 
+# Later: Armenian Principalities become their own government reform with a
+# fixed principality rank (like papacy_reform's fixed_rank); then this block
+# keys off the reform instead of tag = ARM.
+armenian_principality = {
+	rank = {
+		1 = COUNTY
+		2 = DUCHY
+		3 = PRINCIPALITY
+		4 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = COUNT
+		2 = DUKE
+		3 = PRINCE
+		4 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = DUCHESS
+		3 = PRINCESS
+		4 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = PRINCESS
+		4 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = ARM
+	}
+}
+
 default_monarchy = {
 	rank = {
 		1 = COUNTY

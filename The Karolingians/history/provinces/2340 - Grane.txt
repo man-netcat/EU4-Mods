@@ -11,8 +11,6 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = ALH
-add_core = BSR
 add_core = ARB
 
 867.1.1 = {	owner = ARB

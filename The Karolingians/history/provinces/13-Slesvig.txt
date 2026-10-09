@@ -1,6 +1,5 @@
 #Sönderjylland-Slesvig, incl. Slesvig, Haderslev and Flensborg
 
-add_core = SHL
 add_core = JYL
 owner = JYL
 controller = JYL

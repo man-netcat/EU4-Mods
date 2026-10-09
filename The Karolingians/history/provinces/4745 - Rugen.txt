@@ -2,8 +2,6 @@
 
 owner = RAN
 controller = RAN
-add_core = RUG
-add_core = WOL
 add_core = RAN
 culture = polabian
 religion = catholic

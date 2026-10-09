@@ -11,7 +11,6 @@ base_tax = 5
 base_production = 5
 base_manpower = 4
 is_city = yes
-add_core = SLZ
 add_core = BAV
 center_of_trade = 1
 

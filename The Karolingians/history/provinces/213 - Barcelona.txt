@@ -2,8 +2,6 @@
 
 owner = GTH
 controller = GTH
-add_core = ARA
-add_core = CAT
 add_core = GTH
 culture = catalan
 religion = catholic

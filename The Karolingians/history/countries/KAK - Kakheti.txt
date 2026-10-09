@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = georgian
+religion = orthodox
+capital = 2203
+867.1.1 = {
+	monarch = {
+		name = "Bagrat"
+		dynasty = "Bagrationi"
+		birth_date = 815.1.1
+		death_date = 876.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Davit"
+		monarch_name = "Davit"
+		dynasty = "Bagrationi"
+		birth_date = 854.1.1
+		death_date = 881.1.1
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+

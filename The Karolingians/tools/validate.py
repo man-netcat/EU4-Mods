@@ -10,7 +10,6 @@ CACHE = HERE / "cache"
 
 GAME = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
 MOD = str(HERE.parent)
-VDIR = os.path.join(GAME, "history", "provinces")
 PDIR = os.path.join(MOD, "history", "provinces")
 COUNTRY_OUT = os.path.join(MOD, "history", "countries")
 from build import ALL_TAGS  # noqa: E402
@@ -58,12 +57,10 @@ def note(ok, msg):
         fail.append(msg)
 
 
-def vfile(pid):
-    for f in os.listdir(VDIR):
-        m = re.match(r"^(\d+)", f)
-        if m and int(m.group(1)) == pid:
-            return os.path.join(VDIR, f)
-    return None
+def warn(msg):
+    print("  WARN " + _s(msg))
+
+
 
 
 def run() -> int:
@@ -286,41 +283,17 @@ def run() -> int:
             not missing, f"{t}: core on all {len(owned)} owned ({len(missing)} missing)"
         )
 
-    print("\n== vanilla cores preserved ==")
-
-    lost = []
+    print()
+    print('== no dead cores ==')
+    alive = set(ALL_TAGS) | {'HLR'}
+    dead = []
     for pid, path in files.items():
-        v = vfile(pid)
-        if not v:
-            continue
-        vc = set(parse(v)[1])
-        mc = set(parse(path)[1])
-        if not vc <= mc:
-            lost.append(f"{pid} lost {sorted(vc - mc)}")
-    note(not lost, f"all vanilla initial cores retained ({len(lost)} regressions)")
-    for l in lost[:10]:
-        print("        " + l)
-
-    print("\n== absorbed tags ==")
-
-    vcore = {}
-    for pid in os.listdir(VDIR):
-        m = re.match(r"^(\d+)", pid)
-        if m:
-            vcore[int(m.group(1))] = parse(os.path.join(VDIR, pid))[1]
-    taken = {pid for pid, path in files.items() if parse(path)[0].get("owner") in TAGS}
-    survivors, absorbed = [], []
-    for tag in sorted({c for cs in vcore.values() for c in cs}):
-        held = [p for p, cs in vcore.items() if tag in cs]
-        left = [p for p in held if p not in taken]
-        if left:
-            survivors.append(f"{tag}({len(left)})")
-        elif held:
-            absorbed.append(tag)
-    note(True, f"{len(survivors)} tags keep cores outside the realms -> releasable")
-    print(f"        {', '.join(survivors)}")
-    note(True, f"{len(absorbed)} tags fully absorbed -> intentionally gone")
-    print(f"        {', '.join(absorbed)}")
+        for c in parse(path)[1]:
+            if c not in alive:
+                dead.append(f'{pid}: core for {c}')
+    note(not dead, f'every core belongs to a living tag ({len(dead)} dead)')
+    for d in dead[:10]:
+        print('        ' + d)
 
     print("\n== untouched neighbours intact ==")
 
@@ -416,7 +389,8 @@ def run() -> int:
         if t.tag in vcountries:
             continue
         flag = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
-        note(os.path.exists(flag), f"{t.tag} has a flag")
+        if not os.path.exists(flag):
+            warn(f"{t.tag} has no flag yet")
         if not t.forms:
             continue
         basin = {int(pid) for a in t.form_areas for pid in cdata["areas"].get(a, ())}

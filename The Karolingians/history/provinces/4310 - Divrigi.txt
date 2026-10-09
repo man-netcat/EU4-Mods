@@ -1,7 +1,7 @@
 #4308 - Divrigi
 
-owner = ARB
-controller = ARB
+owner = BYZ
+controller = BYZ
 culture = greek
 religion = shiite
 capital = "Divrigi"
@@ -11,12 +11,11 @@ base_tax = 2
 base_production = 2
 base_manpower = 2
 is_city = yes
-add_core = DUL
-add_core = ARB
+add_core = BYZ
 
-867.1.1 = {	owner = ARB
-	controller = ARB
-	add_core = ARB
+867.1.1 = {	owner = BYZ
+	controller = BYZ
+	add_core = BYZ
 }
 discovered_by = western
 discovered_by = eastern

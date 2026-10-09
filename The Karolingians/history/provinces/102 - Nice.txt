@@ -2,7 +2,6 @@
 
 owner = ITA
 controller = ITA
-add_core = SAV
 add_core = ITA
 culture = ligurian
 religion = catholic

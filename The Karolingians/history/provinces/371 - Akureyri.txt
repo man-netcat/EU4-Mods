@@ -1,0 +1,30 @@
+#371 - Akureyri
+
+owner = AUD
+controller = AUD
+add_core = AUD
+culture = icelandic
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+capital = "Akureyri"
+add_local_autonomy = 25
+is_city = yes	
+add_permanent_province_modifier = {
+	name = icelanding_fisher_sea
+	duration = -1
+}
+
+
+
+867.1.1 = {	owner = AUD
+	controller = AUD
+	add_core = AUD
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

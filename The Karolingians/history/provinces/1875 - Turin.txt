@@ -12,7 +12,6 @@ base_manpower = 4
 fort_15th = yes #Cittadellla of Alessandria
 capital = "Cuneo"
 is_city = yes		# Estimated
-add_core = SAV
 add_core = ITA
 
 

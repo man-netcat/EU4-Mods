@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = icelandic
+religion = catholic
+capital = 371
+867.1.1 = {
+	monarch = {
+		name = "Garðar"
+		dynasty = "Svavarsson"
+		birth_date = 825.3.21
+		death_date = 871.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Uni"
+		monarch_name = "Uni"
+		dynasty = "Svavarsson"
+		birth_date = 850.6.11
+		death_date = 894.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

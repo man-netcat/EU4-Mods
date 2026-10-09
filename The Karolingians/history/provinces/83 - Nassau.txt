@@ -1,6 +1,5 @@
 owner = GER
 controller = GER
-add_core = NSA
 add_core = GER
 capital = "Wiesbaden"
 trade_goods = copper

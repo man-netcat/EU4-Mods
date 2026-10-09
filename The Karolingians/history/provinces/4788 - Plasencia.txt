@@ -2,8 +2,6 @@
 
 owner = ADU
 controller = ADU
-add_core = CAS
-add_core = LON
 add_core = ADU
 culture = leonese
 religion = catholic

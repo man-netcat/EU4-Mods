@@ -2,7 +2,6 @@
 
 owner = GER
 controller = GER
-add_core = THU
 add_core = GER
 culture = saxon
 religion = catholic

@@ -2,7 +2,6 @@
 
 owner = LVA
 controller = LVA
-add_core = LIV
 add_core = EST
 add_core = LVA
 culture = estonian

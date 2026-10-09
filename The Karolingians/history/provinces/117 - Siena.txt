@@ -11,7 +11,6 @@ trade_goods = glass
 base_manpower = 4    
 capital = "Siena" 
 is_city = yes 
-add_core = SIE
 add_core = ITA
 
 867.1.1 = {	owner = ITA

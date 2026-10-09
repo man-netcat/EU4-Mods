@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = armenian
+religion = coptic
+capital = 2205
+867.1.1 = {
+	monarch = {
+		name = "Vasak"
+		dynasty = "Siwnik"
+		birth_date = 825.1.1
+		death_date = 892.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Philipo"
+		monarch_name = "Philipo"
+		dynasty = "Siwnik"
+		birth_date = 850.1.1
+		death_date = 943.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

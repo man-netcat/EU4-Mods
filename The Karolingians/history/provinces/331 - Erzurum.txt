@@ -1,7 +1,7 @@
 #331 - Erserum
 
-owner = ARB
-controller = ARB
+owner = MRW
+controller = MRW
 culture = armenian
 religion = coptic
 capital = "Erzurum"
@@ -11,12 +11,11 @@ base_tax = 4
 base_production = 4
 base_manpower = 4
 is_city = yes
-add_core = AKK
-add_core = ARB
+add_core = MRW
 
-867.1.1 = {	owner = ARB
-	controller = ARB
-	add_core = ARB
+867.1.1 = {	owner = MRW
+	controller = MRW
+	add_core = MRW
 }
 discovered_by = western
 discovered_by = eastern

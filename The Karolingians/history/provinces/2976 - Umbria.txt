@@ -11,7 +11,6 @@ trade_goods = wine
 base_manpower = 1
 capital = "Perugia" 
 is_city = yes
-add_core = PGA
 add_core = ITA
 
 867.1.1 = {	owner = ITA

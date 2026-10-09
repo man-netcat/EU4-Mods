@@ -12,7 +12,6 @@ base_production = 5
 base_manpower = 2
 is_city = yes
 add_core = BYZ
-add_core = TUR
 
 867.1.1 = {	owner = BYZ
 	controller = BYZ

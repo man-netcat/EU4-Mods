@@ -2,7 +2,6 @@
 
 owner = ADU
 controller = ADU
-add_core = GRA
 add_core = ADU
 culture = andalucian
 religion = sunni

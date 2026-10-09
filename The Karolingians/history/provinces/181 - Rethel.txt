@@ -11,8 +11,6 @@ base_tax = 6
 base_production = 6
 trade_goods = cloth
 base_manpower = 2
-add_core = NEV 
-add_core = CHP
 add_core = FRA
 fort_15th = yes
 

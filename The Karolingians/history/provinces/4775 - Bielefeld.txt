@@ -2,8 +2,6 @@
 
 owner = GER
 controller = GER
-add_core = BRG
-add_core = LPP
 add_core = GER
 culture = hannoverian
 religion = catholic

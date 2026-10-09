@@ -1,6 +1,5 @@
 owner = GER
 controller = GER
-add_core = KLE
 add_core = GER
 culture = hessian
 religion = catholic

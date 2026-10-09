@@ -6,7 +6,6 @@ latent_trade_goods = {
 
 owner = LOT
 controller = LOT
-add_core = BUR
 capital = "Namur"
 is_city = yes
 culture = wallonian
@@ -16,7 +15,6 @@ base_tax = 7
 base_production = 7
 trade_goods = iron
 base_manpower = 3
-add_core = HAI
 add_core = LOT
 fort_15th = yes
 

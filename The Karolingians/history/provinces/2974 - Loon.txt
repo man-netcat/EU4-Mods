@@ -2,7 +2,6 @@
 
 owner = LOT
 controller = LOT
-add_core = LIE
 add_core = LOT
 is_city = yes
 capital = "Borgloon"

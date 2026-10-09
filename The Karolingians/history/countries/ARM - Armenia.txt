@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = eastern
+primary_culture = armenian
+religion = coptic
+capital = 2204
+867.1.1 = {
+	monarch = {
+		name = "Ashot"
+		dynasty = "Bagratuni"
+		birth_date = 820.1.1
+		death_date = 890.1.1
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Smbat"
+		monarch_name = "Smbat"
+		dynasty = "Bagratuni"
+		birth_date = 850.1.1
+		death_date = 912.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

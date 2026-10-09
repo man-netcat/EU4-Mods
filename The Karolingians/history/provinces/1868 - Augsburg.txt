@@ -1,7 +1,6 @@
 # 1868 - Augsburg
 owner = BAV
 controller = BAV
-add_core = AUG
 add_core = BAV
 culture = swabian
 religion = catholic

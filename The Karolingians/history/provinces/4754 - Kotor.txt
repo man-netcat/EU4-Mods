@@ -12,8 +12,6 @@ base_production = 3
 base_manpower = 1
 is_city = yes
 add_core = MON
-add_core = SER
-add_core = VEN #Venetian Albania
 
 867.1.1 = {	owner = MON
 	controller = MON

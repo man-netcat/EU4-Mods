@@ -1,0 +1,25 @@
+#423 - Kartli
+
+owner = ARM
+controller = ARM
+culture = georgian
+religion = orthodox
+capital = "T'bilisi"
+trade_goods = dyes
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 2
+is_city = yes
+add_core = ARM
+extra_cost = 8
+center_of_trade = 1
+
+867.1.1 = {	owner = ARM
+	controller = ARM
+	add_core = ARM
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

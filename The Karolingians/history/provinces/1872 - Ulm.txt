@@ -1,7 +1,6 @@
 # 1872 - Ulm
 owner = GER
 controller = GER
-add_core = ULM
 add_core = GER
 culture = swabian
 religion = catholic

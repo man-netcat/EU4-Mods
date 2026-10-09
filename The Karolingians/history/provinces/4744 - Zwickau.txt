@@ -2,7 +2,6 @@
 
 owner = SOR
 controller = SOR
-add_core = SAX
 add_core = SOR
 culture = saxon
 religion = catholic

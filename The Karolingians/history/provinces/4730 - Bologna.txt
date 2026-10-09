@@ -11,7 +11,6 @@ trade_goods = cloth
 base_manpower = 3
 capital = "Bologna"
 is_city = yes
-add_core = BLG
 add_core = ITA
 
 

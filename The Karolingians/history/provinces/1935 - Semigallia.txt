@@ -2,7 +2,6 @@
 
 owner = KUR
 controller = KUR
-add_core = LIV
 add_core = KUR
 culture = latvian
 religion = catholic

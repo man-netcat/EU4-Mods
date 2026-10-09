@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = croatian
+religion = catholic
+capital = 1826
+867.1.1 = {
+	monarch = {
+		name = "Domagoj"
+		dynasty = "Domagojevic"
+		birth_date = 820.1.1
+		death_date = 876.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Iljko"
+		monarch_name = "Iljko"
+		dynasty = "Domagojevic"
+		birth_date = 845.1.1
+		death_date = 878.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

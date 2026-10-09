@@ -12,7 +12,6 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 fort_15th = yes
-add_core = MSY
 add_core = ARB
 
 867.1.1 = {	owner = ARB

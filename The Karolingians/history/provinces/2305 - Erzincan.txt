@@ -1,7 +1,7 @@
 #2305 - Erzincan
 
-owner = ARB
-controller = ARB
+owner = MRW
+controller = MRW
 culture = armenian
 religion = coptic
 capital = "Erzindjan"
@@ -11,13 +11,11 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = TIM
-add_core = ERE
-add_core = ARB
+add_core = MRW
 
-867.1.1 = {	owner = ARB
-	controller = ARB
-	add_core = ARB
+867.1.1 = {	owner = MRW
+	controller = MRW
+	add_core = MRW
 }
 discovered_by = western
 discovered_by = eastern

@@ -2,8 +2,6 @@
 
 owner = LVA
 controller = LVA
-add_core = LIV
-add_core = LTG
 add_core = LVA
 culture = latvian
 religion = catholic

@@ -2,7 +2,6 @@
  
 owner = ITA
 controller = ITA
-add_core = MAN
 add_core = ITA
 culture = romagnan 
 religion = catholic 

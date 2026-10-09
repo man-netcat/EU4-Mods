@@ -7,7 +7,6 @@ capital = "Trier"
 base_tax = 5
 base_production = 5
 is_city = yes
-add_core = TRI
 add_core = GER
 base_manpower = 2
 hre = yes

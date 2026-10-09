@@ -1,0 +1,29 @@
+#2961 - Lwow
+
+latent_trade_goods = {
+	coal
+}
+
+owner = HAL
+controller = HAL
+capital= "Lwów"
+culture = ruthenian
+religion = orthodox
+trade_goods = dyes #Polish cochineal
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 2
+is_city = yes
+add_core = HAL
+extra_cost = 8
+center_of_trade = 1
+
+867.1.1 = {	owner = HAL
+	controller = HAL
+	add_core = HAL
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

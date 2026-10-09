@@ -16,7 +16,6 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 add_core = BOH
-add_core = MVA
 add_core = GMA
 fort_15th = yes
 

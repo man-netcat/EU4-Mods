@@ -2,7 +2,6 @@
 
 owner = BAV
 controller = BAV
-add_core = MEM
 add_core = BAV
 culture = swabian
 religion = catholic

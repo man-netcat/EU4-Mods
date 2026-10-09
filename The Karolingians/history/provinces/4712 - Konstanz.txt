@@ -9,7 +9,6 @@ base_tax = 6
 base_production = 6
 base_manpower = 1
 trade_goods = cloth
-add_core = KNZ
 add_core = GER
 center_of_trade = 1
 

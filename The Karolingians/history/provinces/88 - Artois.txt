@@ -2,7 +2,6 @@
 
 owner = FRA
 controller = FRA
-add_core = BUR
 capital = "Arras"
 is_city = yes
 culture = wallonian
@@ -12,7 +11,6 @@ base_tax = 6
 base_production = 6
 trade_goods = cloth
 base_manpower = 3
-add_core = PIC
 add_core = FRA
 
 867.1.1 = {	owner = FRA

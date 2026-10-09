@@ -2,7 +2,6 @@
 culture = hannoverian
 owner = GER
 controller = GER
-add_core = RVA
 add_core = GER
 capital = "Dortmund"
 religion = catholic

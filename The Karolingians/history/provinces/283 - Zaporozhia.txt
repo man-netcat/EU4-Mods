@@ -11,8 +11,6 @@ trade_goods = livestock
 base_manpower = 2
 capital = "Sich"
 is_city = yes
-add_core = CRI
-add_core = ZAZ
 add_core = MGY
 
 867.1.1 = {	owner = MGY

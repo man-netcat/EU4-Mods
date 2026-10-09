@@ -26,7 +26,7 @@ def _norm(text: str) -> str:
 
 
 def _blocks(text: str):
-    for m in re.finditer(r"^([a-zA-Z_0-9]+)\s*=\s*\{", text, re.M):
+    for m in re.finditer(r"^([a-zA-Z_0-9-]+)\s*=\s*\{", text, re.M):
         i = m.end() - 1
         d = 0
         while i < len(text):

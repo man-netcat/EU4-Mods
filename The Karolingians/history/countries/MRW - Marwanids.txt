@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = armenian
+religion = sunni
+capital = 331
+867.1.1 = {
+	monarch = {
+		name = "Marwan"
+		dynasty = "Marwanid"
+		birth_date = 830.1.1
+		death_date = 900.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Abu-Hafs"
+		monarch_name = "Abu-Hafs"
+		dynasty = "Marwanid"
+		birth_date = 860.1.1
+		death_date = 940.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

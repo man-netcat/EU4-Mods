@@ -1,0 +1,28 @@
+#370 - Reykjavik
+
+owner = VES
+controller = VES
+culture = icelandic
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+add_local_autonomy = 25
+capital = "Reykjavik"
+is_city = yes 	
+add_core = VES
+add_permanent_province_modifier = {
+	name = icelanding_fisher_sea
+	duration = -1
+}
+
+867.1.1 = {	owner = VES
+	controller = VES
+	add_core = VES
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

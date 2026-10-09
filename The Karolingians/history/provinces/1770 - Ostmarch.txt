@@ -2,7 +2,6 @@
 
 owner = BAV
 controller = BAV
-add_core = HAB
 add_core = BAV
 culture = austrian
 religion = catholic

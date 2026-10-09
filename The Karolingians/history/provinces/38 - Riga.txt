@@ -2,7 +2,6 @@
 
 owner = LVA
 controller = LVA
-add_core = RIG
 add_core = LVA
 culture = baltic_german
 religion = catholic

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = catholic
+capital = 369
+867.1.1 = {
+	monarch = {
+		name = "Þorgil"
+		dynasty = "Fróni"
+		birth_date = 816.1.1
+		death_date = 881.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

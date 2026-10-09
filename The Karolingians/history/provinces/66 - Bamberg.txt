@@ -1,7 +1,6 @@
 # 66 - Bamberg
 owner = GER
 controller = GER
-add_core = BAM
 add_core = GER
 culture = franconian
 religion = catholic

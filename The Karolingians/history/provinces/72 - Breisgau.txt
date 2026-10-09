@@ -2,8 +2,6 @@
 
 owner = GER
 controller = GER
-add_core = HAB
-add_core = TIR
 add_core = GER
 culture = swabian
 religion = catholic

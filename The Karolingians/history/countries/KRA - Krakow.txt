@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = polish
+religion = catholic
+capital = 262
+867.1.1 = {
+	monarch = {
+		name = "Krak"
+		dynasty = "Wislan"
+		birth_date = 842.8.23
+		death_date = 914.9.15
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

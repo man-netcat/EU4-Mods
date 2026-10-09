@@ -11,7 +11,6 @@ base_tax = 6
 base_production = 6
 trade_goods = grain
 base_manpower = 5
-add_core = ORL
 add_core = FRA
 center_of_trade = 1
 

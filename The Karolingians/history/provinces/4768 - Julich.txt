@@ -9,7 +9,6 @@ capital = "Jülich"
 base_tax = 3
 base_production = 3
 is_city = yes
-add_core = BRG
 add_core = LOT
 base_manpower = 2
 hre = yes

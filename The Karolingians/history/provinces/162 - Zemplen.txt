@@ -1,7 +1,7 @@
 #162 - Zemplén
 
-owner = GMA
-controller = GMA
+owner = UNG
+controller = UNG
 culture = slovak
 religion = catholic
 capital = "Kassa"
@@ -11,16 +11,13 @@ base_tax = 3
 base_production = 2
 base_manpower = 2
 is_city = yes
-add_core = HUN
-add_core = TRA
 fort_15th = yes
-add_core = SLO
-add_core = GMA
+add_core = UNG
 extra_cost = 8
 
-867.1.1 = {	owner = GMA
-	controller = GMA
-	add_core = GMA
+867.1.1 = {	owner = UNG
+	controller = UNG
+	add_core = UNG
 }
 discovered_by = western
 discovered_by = eastern

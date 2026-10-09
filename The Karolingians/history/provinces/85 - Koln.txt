@@ -2,7 +2,6 @@
 
 owner = LOT
 controller = LOT
-add_core = KOL
 add_core = LOT
 culture = hessian
 religion = catholic

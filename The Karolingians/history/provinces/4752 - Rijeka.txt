@@ -1,0 +1,26 @@
+#4752 - Rijeka
+
+owner = CRO
+controller = CRO
+culture = croatian
+religion = catholic
+capital = "Rijeka"
+trade_goods = cloth
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 2
+is_city = yes
+add_core = CRO
+extra_cost = 8
+center_of_trade = 1
+add_core = DAL
+
+867.1.1 = {	owner = CRO
+	controller = CRO
+	add_core = CRO
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

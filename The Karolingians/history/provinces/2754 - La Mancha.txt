@@ -2,7 +2,6 @@
 
 owner = ADU
 controller = ADU
-add_core = CAS
 add_core = ADU
 culture = castillian
 religion = catholic

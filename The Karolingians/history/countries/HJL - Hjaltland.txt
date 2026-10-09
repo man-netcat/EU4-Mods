@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = catholic
+capital = 1978
+867.1.1 = {
+	monarch = {
+		name = "Einarr"
+		dynasty = "Herse"
+		birth_date = 803.1.1
+		death_date = 874.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

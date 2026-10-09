@@ -2,7 +2,6 @@
 
 owner = ITA
 controller = ITA
-add_core = TNT
 add_core = ITA
 culture = venetian
 religion = catholic

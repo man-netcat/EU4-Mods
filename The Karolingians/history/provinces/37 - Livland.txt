@@ -11,8 +11,6 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = LIV
-add_core = LTG
 add_core = LVA
 
 867.1.1 = {	owner = LVA

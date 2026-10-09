@@ -2,7 +2,6 @@
 
 owner = ASU
 controller = ASU
-add_core = CAS
 add_core = ASU
 culture = castillian
 religion = catholic

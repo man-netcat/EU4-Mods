@@ -2,7 +2,6 @@
 
 owner = LOT
 controller = LOT
-add_core = HOL
 add_core = LOT
 capital = "'s-Gravenhage"
 is_city = yes

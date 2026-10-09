@@ -1,7 +1,6 @@
 # 1769 - Görz
 owner = ITA
 controller = ITA
-add_core = HAB
 add_core = ITA
 culture = slovene
 religion = catholic

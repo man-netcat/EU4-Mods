@@ -1,7 +1,6 @@
 # 65 - München
 owner = BAV
 controller = BAV
-add_core = UBV
 add_core = BAV
 culture = bavarian
 religion = catholic

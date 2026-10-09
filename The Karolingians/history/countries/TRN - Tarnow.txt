@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = polish
+religion = catholic
+capital = 2959
+867.1.1 = {
+	monarch = {
+		name = "Aleksander"
+		dynasty = "Ledzian"
+		birth_date = 836.10.23
+		death_date = 892.3.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

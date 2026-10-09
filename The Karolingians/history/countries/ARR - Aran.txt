@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = azerbaijani
+religion = shiite
+capital = 420
+867.1.1 = {
+	monarch = {
+		name = "Smbat"
+		dynasty = "Arranshahik"
+		birth_date = 830.1.1
+		death_date = 891.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sahak"
+		monarch_name = "Sahak"
+		dynasty = "Arranshahik"
+		birth_date = 860.1.1
+		death_date = 921.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

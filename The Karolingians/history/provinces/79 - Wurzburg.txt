@@ -1,7 +1,6 @@
 #79 - Würzburg
 owner = GER
 controller = GER
-add_core = WBG
 add_core = GER
 culture = franconian
 religion = catholic

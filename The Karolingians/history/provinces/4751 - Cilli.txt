@@ -1,7 +1,6 @@
 # 4751 - Cilli
 owner = BAV
 controller = BAV
-add_core = CLI
 add_core = BAV
 culture = slovene
 religion = catholic

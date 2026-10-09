@@ -270,6 +270,18 @@ def patch(text, new_owner):
 DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman")
 
 
+def strip_dead_cores(text, keep):
+    # Cores are respawn vectors: any tag cored here can come back via rebels
+    # or release, so only living tags keep cores.
+    out = []
+    for ln in text.splitlines():
+        m = re.match(r"^\s*add_core\s*=\s*([A-Z]{3})\b", ln)
+        if m and m.group(1) not in keep:
+            continue
+        out.append(ln)
+    return "\n".join(out) + "\n"
+
+
 def take_visibility(text):
     # Own province visibility: drop every vanilla discovered_by line and
     # reveal the province to the tech groups of our world instead.
@@ -285,6 +297,7 @@ def step_provinces(argv):
     alloc = build(verbose="--report" in argv)
 
     owner_of = {p: t for t, ps in alloc.items() for p in ps}
+    keep = {s.tag for s in TAGS} | {"HLR"}
 
     data = _pd()
     provs = data["provs"]
@@ -312,6 +325,7 @@ def step_provinces(argv):
         tag = owner_of.get(pid)
         new = patch(text, tag) if tag else text
         new = take_visibility(new)
+        new = strip_dead_cores(new, keep)
 
         open(
             os.path.join(PROV_OUT, os.path.basename(src)),
@@ -572,14 +586,17 @@ def step_custom() -> None:
         open(cfile, "w", encoding="cp1252", errors="pdx").write(country_definition(t))
         print(f"wrote {cfile}")
 
-        flag = t.flag_source or os.path.join(GAME, "gfx", "flags", f"{t.flag_from}.tga")
-        assert os.path.exists(flag), f"no flag for {t.tag} at {flag}"
-        dest = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
-        if os.path.exists(dest):
-            print(f"kept gfx/flags/{t.tag}.tga (custom, not overwritten)")
+        if t.flag_source or t.flag_from:
+            flag = t.flag_source or os.path.join(GAME, "gfx", "flags", f"{t.flag_from}.tga")
+            assert os.path.exists(flag), f"no flag for {t.tag} at {flag}"
+            dest = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
+            if os.path.exists(dest):
+                print(f"kept gfx/flags/{t.tag}.tga (custom, not overwritten)")
+            else:
+                shutil.copy2(flag, dest)
+                print(f"copied gfx/flags/{t.tag}.tga")
         else:
-            shutil.copy2(flag, dest)
-            print(f"copied gfx/flags/{t.tag}.tga")
+            print(f"no flag for {t.tag} (needs one)")
 
         if not t.forms:
             print(f"  {t.tag} has no formable tag")

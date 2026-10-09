@@ -11,7 +11,6 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = ALH
 add_core = ARB
 fort_15th = yes
 extra_cost = 8

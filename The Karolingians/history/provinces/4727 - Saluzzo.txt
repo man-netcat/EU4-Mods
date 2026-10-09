@@ -10,7 +10,6 @@ trade_goods = iron
 base_manpower = 4
 capital = "Saluzzo"
 is_city = yes
-add_core = SZO
 add_core = ITA
 
 867.1.1 = {	owner = ITA

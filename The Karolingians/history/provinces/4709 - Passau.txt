@@ -9,7 +9,6 @@ base_tax = 5
 base_production = 5
 base_manpower = 1
 trade_goods = salt
-add_core = PSS
 add_core = BAV
 
 

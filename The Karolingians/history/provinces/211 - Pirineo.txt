@@ -2,7 +2,6 @@
 
 owner = NAV
 controller = NAV
-add_core = ARA
 add_core = NAV
 culture = aragonese
 religion = catholic

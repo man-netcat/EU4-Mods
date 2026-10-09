@@ -1,9 +1,6 @@
 # 129 - Krain
 owner = BAV
 controller = BAV
-add_core = HAB
-add_core = CLI
-add_core = STY
 add_core = BAV
 culture = slovene
 religion = catholic

@@ -1,7 +1,6 @@
 culture = swabian
 owner = GER
 controller = GER
-add_core = WUR
 add_core = GER
 capital = "Stuttgart"
 religion = catholic

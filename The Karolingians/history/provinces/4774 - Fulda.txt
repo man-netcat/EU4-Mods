@@ -1,7 +1,6 @@
 #4774 - Fulda
 owner = GER
 controller = GER
-add_core = WBG
 add_core = GER
 culture = hessian
 religion = catholic

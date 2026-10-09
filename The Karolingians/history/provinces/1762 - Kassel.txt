@@ -1,6 +1,5 @@
 owner = GER
 controller = GER
-add_core = HES
 add_core = GER
 capital = "Kassel"
 trade_goods = glass

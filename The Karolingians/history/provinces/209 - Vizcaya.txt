@@ -2,7 +2,6 @@
 
 owner = NAV
 controller = NAV
-add_core = CAS
 add_core = ASU
 add_core = NAV
 culture = basque

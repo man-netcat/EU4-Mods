@@ -2,8 +2,6 @@
 
 owner = LOT
 controller = LOT
-add_core = HAB
-add_core = TIR
 add_core = LOT
 capital = "Altkirch"
 is_city = yes

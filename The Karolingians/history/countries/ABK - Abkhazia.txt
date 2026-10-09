@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = eastern
+primary_culture = georgian
+religion = orthodox
+capital = 1856
+867.1.1 = {
+	monarch = {
+		name = "Demetre"
+		dynasty = "Anchabadze"
+		birth_date = 805.1.1
+		death_date = 873.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	heir = {
+		name = "Bagrat"
+		monarch_name = "Bagrat"
+		dynasty = "Anchabadze"
+		birth_date = 830.1.1
+		death_date = 899.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

@@ -4,8 +4,6 @@ latent_trade_goods = {
 }
 owner = ASU
 controller = ASU
-add_core = CAS
-add_core = LON
 add_core = ASU
 culture = leonese
 religion = catholic

@@ -1,0 +1,25 @@
+#131 - Zagorje
+
+owner = SLA
+controller = SLA
+culture = croatian
+religion = catholic
+capital = "Zagreb"
+trade_goods = cloth
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+is_city = yes
+fort_15th = yes
+add_core = CRO
+add_core = SLA
+
+867.1.1 = {	owner = SLA
+	controller = SLA
+	add_core = SLA
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

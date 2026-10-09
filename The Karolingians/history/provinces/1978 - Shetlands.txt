@@ -1,0 +1,26 @@
+#1978 - Shetlands
+
+owner = HJL
+controller = HJL
+culture = norwegian
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+capital = "Lerwick"
+is_city = yes # Estimated
+add_core = HJL
+
+
+
+
+867.1.1 = {	owner = HJL
+	controller = HJL
+	add_core = HJL
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

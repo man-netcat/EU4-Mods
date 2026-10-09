@@ -2,8 +2,6 @@
 
 owner = PRU
 controller = PRU
-add_core = TEU
-add_core = DNZ
 add_core = PRU
 capital = "Danzig"
 culture = prussian

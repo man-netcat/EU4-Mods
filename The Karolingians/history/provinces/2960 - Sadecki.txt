@@ -1,0 +1,23 @@
+#262 - Sadecki
+
+owner = KRA
+controller = KRA
+culture = polish
+religion = catholic
+capital = "Nowy Sacz"
+hre = no
+base_tax = 6
+base_production = 6
+trade_goods = iron
+base_manpower = 2
+is_city = yes
+add_core = KRA
+
+867.1.1 = {	owner = KRA
+	controller = KRA
+	add_core = KRA
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

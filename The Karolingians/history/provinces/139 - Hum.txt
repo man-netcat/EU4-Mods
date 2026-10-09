@@ -1,0 +1,23 @@
+#139 - Hum
+
+owner = ZAH
+controller = ZAH
+culture = bosnian
+religion = catholic
+capital = "Mostar"	# Unofficial capital of Herzegovina
+trade_goods = wool
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = ZAH
+
+867.1.1 = {	owner = ZAH
+	controller = ZAH
+	add_core = ZAH
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

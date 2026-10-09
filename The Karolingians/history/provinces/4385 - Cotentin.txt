@@ -12,7 +12,6 @@ base_production = 4
 trade_goods = naval_supplies
 base_manpower = 2
 add_core = FRA
-add_core = NRM
 extra_cost = 8
 center_of_trade = 1
 

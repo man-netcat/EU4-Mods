@@ -9,7 +9,6 @@ capital = "Opole"
 is_city = yes
 trade_goods = grain
 base_manpower = 2
-add_core = OPL
 add_core = GMA
 
 867.1.1 = {	owner = GMA

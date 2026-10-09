@@ -2,8 +2,6 @@
 
 owner = LUT
 controller = LUT
-add_core = BRA
-add_core = RUP
 add_core = LUT
 culture = polabian
 religion = catholic

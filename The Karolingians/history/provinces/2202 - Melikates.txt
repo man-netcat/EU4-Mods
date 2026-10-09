@@ -1,0 +1,23 @@
+#2202 - Melikates
+
+owner = ARR
+controller = ARR
+culture = armenian
+religion = coptic
+capital = "Khankendi"
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = ARR
+
+867.1.1 = {	owner = ARR
+	controller = ARR
+	add_core = ARR
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

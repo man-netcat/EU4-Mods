@@ -11,8 +11,6 @@ base_tax = 2
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = TUR
-add_core = GRM
 add_core = BYZ
 
 867.1.1 = {	owner = BYZ

@@ -1,0 +1,24 @@
+#4301 - Kartli
+
+owner = TAO
+controller = TAO
+culture = georgian
+religion = orthodox
+capital = "Gori"
+trade_goods = silk
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 2
+is_city = yes
+add_core = TAO
+fort_15th = yes #Gori
+
+867.1.1 = {	owner = TAO
+	controller = TAO
+	add_core = TAO
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

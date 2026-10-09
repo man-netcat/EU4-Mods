@@ -11,7 +11,6 @@ trade_goods = livestock
 base_manpower = 2
 capital = "Arezzo" 
 is_city = yes # Estimated 
-add_core = LAN
 add_core = ITA
 
 867.1.1 = {	owner = ITA
