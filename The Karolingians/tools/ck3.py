@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, re
+import json, os, pickle, re
 from functools import lru_cache
 from pathlib import Path
 
@@ -55,11 +55,39 @@ def _inner_blocks(body: str):
         yield m.group(1), body[m.end() : i]
 
 
+def _cached(name, files, parse):
+    # Disk cache for parsed CK3 bulk data: vanilla never changes under us,
+    # so a max-mtime stamp is a complete freshness check. First process
+    # warms it, every later build or validate run loads pickles instead.
+    files = sorted(files)
+    stamp = max(p.stat().st_mtime for p in files)
+    cache = Path(__file__).resolve().parent / "cache"
+    cp = cache / f"ck3_{name}.pkl"
+    sp = cache / f"ck3_{name}.mtime"
+    try:
+        if float(sp.read_text()) == stamp:
+            with open(cp, "rb") as fh:
+                return pickle.load(fh)
+    except (OSError, ValueError, EOFError):
+        pass
+    out = parse()
+    cache.mkdir(exist_ok=True)
+    with open(cp, "wb") as fh:
+        pickle.dump(out, fh, protocol=4)
+    sp.write_text(str(stamp))
+    return out
+
+
 @lru_cache(maxsize=1)
 def load_titles():
+    files = sorted((Path(GAME_CK3) / "history" / "titles").glob("*.txt"))
+    return _cached("titles", files, lambda: _parse_title_files(files))
+
+
+def _parse_title_files(files):
     out = {}
-    for f in sorted((Path(GAME_CK3) / "history" / "titles").glob("*.txt")):
-        text = _norm(f.read_text(errors="replace")).lstrip("\ufeff")
+    for f in files:
+        text = _norm(f.read_text(errors="replace")).lstrip("﻿")
         for tid, body in _blocks(text):
             out.setdefault(tid, []).extend(_inner_blocks(body))
     return out
@@ -95,9 +123,14 @@ def holder_at_exact(title, titles):
 
 @lru_cache(maxsize=1)
 def load_chars():
+    files = sorted((Path(GAME_CK3) / "history" / "characters").glob("*.txt"))
+    return _cached("chars", files, lambda: _parse_char_files(files))
+
+
+def _parse_char_files(files):
     out = {}
-    for f in sorted((Path(GAME_CK3) / "history" / "characters").glob("*.txt")):
-        text = _norm(f.read_text(errors="replace")).lstrip("\ufeff")
+    for f in files:
+        text = _norm(f.read_text(errors="replace")).lstrip("﻿")
         for cid, body in _blocks(text):
             out.setdefault(cid, body)
     return out
@@ -105,13 +138,21 @@ def load_chars():
 
 @lru_cache(maxsize=1)
 def load_dynasties():
+    files = sorted((Path(GAME_CK3) / "common" / "dynasties").glob("*.txt"))
+    return _cached("dynasties", files, lambda: _parse_dynasty_files(files))
+
+
+def _parse_dynasty_files(files):
     out = {}
-    for f in sorted((Path(GAME_CK3) / "common" / "dynasties").glob("*.txt")):
+    for f in files:
         for key, body in _blocks(_norm(f.read_text(errors="replace"))):
             n = re.search(r'name\s*=\s*"(dynn_\w+)"', body)
             if n:
                 out[key] = n.group(1)
     return out
+
+
+_CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"
 
 
 @lru_cache(maxsize=1)
@@ -131,6 +172,15 @@ def load_title_colors():
         r"[ \t]+([0-9.]+)[ \t]*\}",
         re.M,
     )
+    srcs = sorted((Path(GAME_CK3) / "common" / "landed_titles").glob("*.txt"))
+    stamp = max(p.stat().st_mtime for p in srcs)
+    if _CK3_COLORS_CACHE.exists():
+        try:
+            saved = json.loads(_CK3_COLORS_CACHE.read_text())
+            if saved.get("mtime") == stamp:
+                return {k: tuple(v) for k, v in saved["colors"].items()}
+        except (OSError, ValueError, KeyError):
+            pass
     out: dict = {}
 
     def walk(body):
@@ -160,15 +210,22 @@ def load_title_colors():
                 out[k] = (r, g, b)
             walk(sub)
 
-    for f in sorted((Path(GAME_CK3) / "common" / "landed_titles").glob("*.txt")):
+    for f in srcs:
         walk(_norm(f.read_text(errors="replace")).lstrip("\ufeff"))
+    _CK3_COLORS_CACHE.parent.mkdir(exist_ok=True)
+    _CK3_COLORS_CACHE.write_text(json.dumps({"mtime": stamp, "colors": out}))
     return out
 
 
 @lru_cache(maxsize=1)
 def load_houses():
+    files = sorted((Path(GAME_CK3) / "common" / "dynasty_houses").glob("*.txt"))
+    return _cached("houses", files, lambda: _parse_house_files(files))
+
+
+def _parse_house_files(files):
     out = {}
-    for f in sorted((Path(GAME_CK3) / "common" / "dynasty_houses").glob("*.txt")):
+    for f in files:
         for key, body in _blocks(_norm(f.read_text(errors="replace"))):
             n = re.search(r'name\s*=\s*"?\s*(dynn_\w+)\s*"?', body)
             d = re.search(r"^\s*dynasty\s*=\s*(\w+)", body, re.M)
@@ -180,28 +237,35 @@ def load_houses():
     return out
 
 
-_LOC_FILES = None
-
+    # (loc index now lives in _loc_index, cached on disk)
 _LOC_RE = re.compile(r'^[ \t]*([\w.\-]+)\s*:\d*\s*"(.*?)"[ \t\r\n]*$', re.M)
 
 
 def loc(key):
-    global _LOC_FILES
-    if _LOC_FILES is None:
-        _LOC_FILES = {}
-        for pat in ("localization/english", "localisation/english"):
-            root = Path(GAME_CK3) / pat
-            if not root.is_dir():
-                continue
-            for f in sorted(root.rglob("*.yml")):
-                try:
-                    t = _norm(f.read_text(errors="replace"))
-                except OSError:
-                    continue
-                for k, v in _LOC_RE.findall(t):
+    return _loc_index().get(key)
 
-                    _LOC_FILES.setdefault(k, v)
-    return _LOC_FILES.get(key)
+
+@lru_cache(maxsize=1)
+def _loc_index():
+    files = []
+    for pat in ("localization/english", "localisation/english"):
+        root = Path(GAME_CK3) / pat
+        if not root.is_dir():
+            continue
+        files.extend(sorted(root.rglob("*.yml")))
+    return _cached("loc_en", files, lambda: _parse_loc_files(files))
+
+
+def _parse_loc_files(files):
+    out = {}
+    for f in files:
+        try:
+            t = _norm(f.read_text(errors="replace"))
+        except OSError:
+            continue
+        for k, v in _LOC_RE.findall(t):
+            out.setdefault(k, v)
+    return out
 
 
 def resolve_dynasty(body, dyns, houses):
@@ -550,6 +614,20 @@ def _ck3_name(cid, chars, loc):
     return loc(m.group(1) or m.group(2)) or (m.group(1) or m.group(2))
 
 
+_KIDS: dict = {}
+
+
+def _children_of(cid, chars):
+    # father -> children index, built once: scanning every character body
+    # per tag is the slowest thing in the build.
+    if not _KIDS:
+        for k, b in chars.items():
+            m = re.search(r"^\s*father\s*=\s*(\d+)\b", b, re.M)
+            if m:
+                _KIDS.setdefault(m.group(1), []).append(k)
+    return _KIDS.get(str(cid), [])
+
+
 def ck3_block(tag):
     titles, chars = load_titles(), load_chars()
     dyns, houses = load_dynasties(), load_houses()
@@ -587,9 +665,7 @@ def ck3_block(tag):
 
     lines = [f"{CTRY_DATE} = {{", "\tmonarch = {", person(cid), "\t}"]
 
-    kids = [
-        k for k, b in chars.items() if re.search(rf"^\s*father\s*=\s*{cid}\b", b, re.M)
-    ]
+    kids = _children_of(cid, chars)
     kids.sort(key=lambda k: _ck3_dates_and_skills(k, chars)[0] or "9999.9.9")
     if kids:
         lines += ["\their = {", person(kids[0], claim=90), "\t}"]

@@ -2,6 +2,7 @@
 
 import json, os, re, shutil
 from collections import defaultdict
+from functools import lru_cache
 from pathlib import Path
 
 from ck3 import ck3_sync
@@ -184,18 +185,31 @@ def empire_core():
     return sorted({p for t in tags for p in alloc.get(t, ())})
 
 
+_VANILLA_PROV_FILES: dict = {}
+
+
+def vanilla_prov_file(pid):
+    # pid -> vanilla history/provinces path, via one directory scan: the
+    # per-pid listdir this replaces was the slowest loop in the province step.
+    if not _VANILLA_PROV_FILES:
+        for fn in os.listdir(VANILLA_PDIR):
+            m = re.match(r"^(\d+)\s*-.*\.txt$", fn)
+            if m:
+                _VANILLA_PROV_FILES.setdefault(int(m.group(1)), fn)
+    fn = _VANILLA_PROV_FILES.get(pid)
+    return os.path.join(VANILLA_PDIR, fn) if fn else None
+
+
 def dev(pid):
-    for fn in os.listdir(VANILLA_PDIR):
-        if re.match(rf"^{pid}\s*-", fn):
-            txt = open(
-                os.path.join(VANILLA_PDIR, fn), encoding="utf-8", errors="replace"
-            ).read()
-            ta = re.search(r"base_tax\s*=\s*([\d.]+)", txt)
-            pr = re.search(r"base_production\s*=\s*([\d.]+)", txt)
-            return (float(ta.group(1)) if ta else 0.0) + (
-                float(pr.group(1)) if pr else 0.0
-            )
-    return 0.0
+    src = vanilla_prov_file(pid)
+    if not src:
+        return 0.0
+    txt = open(src, encoding="utf-8", errors="replace").read()
+    ta = re.search(r"base_tax\s*=\s*([\d.]+)", txt)
+    pr = re.search(r"base_production\s*=\s*([\d.]+)", txt)
+    return (float(ta.group(1)) if ta else 0.0) + (
+        float(pr.group(1)) if pr else 0.0
+    )
 
 
 def sea_ids():
@@ -312,11 +326,7 @@ def step_provinces(argv):
     if missing:
         raise SystemExit(f"provinces not in the database: {sorted(missing)}")
     for pid in todo:
-        src = None
-        for fn in os.listdir(VANILLA_PDIR):
-            if re.match(rf"^{pid}\s*-.*\.txt$", fn):
-                src = os.path.join(VANILLA_PDIR, fn)
-                break
+        src = vanilla_prov_file(pid)
         if not src:
             print(f"!! no vanilla file for province {pid}")
             continue
@@ -340,13 +350,10 @@ def step_provinces(argv):
     assert not clashes, f"sea ids overlap our land: {clashes}"
     copied = 0
     for pid in sea:
-        for fn in os.listdir(VANILLA_PDIR):
-            if re.match(rf"^{pid}\s*-.*\.txt$", fn):
-                shutil.copy(
-                    os.path.join(VANILLA_PDIR, fn), os.path.join(PROV_OUT, fn)
-                )
-                copied += 1
-                break
+        src = vanilla_prov_file(pid)
+        if src:
+            shutil.copy(src, os.path.join(PROV_OUT, os.path.basename(src)))
+            copied += 1
     print(f"copied {copied} vanilla sea files")
 
     print(f"wrote {written} province files")
@@ -514,6 +521,7 @@ def step_diplomacy() -> None:
     print(f"wrote {path}  ({pairs})")
 
 
+@lru_cache(maxsize=1)
 def load_vanilla_countries() -> dict[str, tuple[str, str]]:
     """{tag: (filename, text)} for every vanilla country definition."""
     out = {}
@@ -659,13 +667,20 @@ def strip_dated(text):
     return "\n".join(out) + "\n"
 
 
+_VANILLA_CTRY_FILES: dict = {}
+
+
 def hist_name(t) -> str:
     # Name our file exactly like vanilla's when one exists for this tag, so
     # the engine skips the vanilla file instead of merging its OTL history
     # (rulers, idea groups, HRE/elector state, dated rank changes) into ours.
-    for fn in os.listdir(VANILLA_CDIR):
-        if fn.startswith(f"{t.tag} - ") and fn.endswith(".txt"):
-            return fn
+    if not _VANILLA_CTRY_FILES:
+        for fn in os.listdir(VANILLA_CDIR):
+            if fn.endswith(".txt"):
+                _VANILLA_CTRY_FILES.setdefault(fn.split(" - ")[0], fn)
+    hit = _VANILLA_CTRY_FILES.get(t.tag)
+    if hit:
+        return hit
     base = t.country_file or t.tag
     if base.endswith(".txt"):
         base = base[:-4]
@@ -723,6 +738,7 @@ def vanilla_is_newer() -> bool:
         return False
 
 
+@lru_cache(maxsize=None)
 def parse(path):
     txt = open(path, encoding="utf-8", errors="surrogateescape").read()
     lines = []
