@@ -1,8 +1,9 @@
 # 4745 - Rügen
 
-owner = RAN
-controller = RAN
-add_core = RAN
+owner = RUG
+controller = RUG
+add_core = RUG
+add_core = WOL
 culture = polabian
 religion = catholic
 hre = yes
@@ -17,9 +18,9 @@ unrest = 8 #pirate independence of thought
 
 
 
-867.1.1 = {	owner = RAN
-	controller = RAN
-	add_core = RAN
+867.1.1 = {	owner = RUG
+	controller = RUG
+	add_core = RUG
 }
 discovered_by = western
 discovered_by = eastern

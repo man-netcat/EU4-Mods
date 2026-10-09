@@ -1,0 +1,30 @@
+government = republic
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = venetian
+religion = catholic
+capital = 112
+867.1.1 = {
+	monarch = {
+		name = "Orso"
+		dynasty = "Participazio"
+		birth_date = 800.1.1
+		death_date = 881.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Giovanni"
+		monarch_name = "Giovanni"
+		dynasty = "Participazio"
+		birth_date = 822.1.1
+		death_date = 890.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

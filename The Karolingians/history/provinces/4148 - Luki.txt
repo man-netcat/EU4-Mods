@@ -1,0 +1,24 @@
+#4148 - Luki
+
+owner = NOV
+controller = NOV
+culture = novgorodian
+religion = orthodox
+hre = no
+base_tax = 2
+base_production = 1
+trade_goods = naval_supplies 
+base_manpower = 1
+capital = "Velikiye Luki"
+is_city = yes
+add_core = NOV
+fort_15th = yes
+
+867.1.1 = {	owner = NOV
+	controller = NOV
+	add_core = NOV
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

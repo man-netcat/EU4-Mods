@@ -1,0 +1,25 @@
+#276 - Minsk
+
+owner = MSK
+controller = MSK
+culture = byelorussian
+religion = orthodox
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = naval_supplies 
+base_manpower = 1
+capital = "Minsk"
+is_city = yes
+add_core = LIT
+add_core = MSK
+#fort_15th = yes
+
+867.1.1 = {	owner = MSK
+	controller = MSK
+	add_core = MSK
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

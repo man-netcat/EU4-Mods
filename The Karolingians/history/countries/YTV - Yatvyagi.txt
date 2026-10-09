@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = lithuanian
+religion = catholic
+capital = 40
+867.1.1 = {
+	monarch = {
+		name = "Pergrubrius"
+		dynasty = "Suvalkija"
+		birth_date = 844.1.1
+		death_date = 921.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Bardoyas"
+		monarch_name = "Bardoyas"
+		dynasty = "Suvalkija"
+		birth_date = 911.1.1
+		death_date = 1000.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

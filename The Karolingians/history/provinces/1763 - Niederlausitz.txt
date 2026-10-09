@@ -1,9 +1,10 @@
 #1763 - Niederlausitz
 
-owner = SOR
-controller = SOR
+owner = SPW
+controller = SPW
 add_core = SOR
 add_core = BOH
+add_core = SPW
 capital = "Chotebuz"
 culture = sorbian
 religion = catholic
@@ -15,9 +16,9 @@ base_manpower = 1
 is_city = yes
 latent_trade_goods =  { coal }
 
-867.1.1 = {	owner = SOR
-	controller = SOR
-	add_core = SOR
+867.1.1 = {	owner = SPW
+	controller = SPW
+	add_core = SPW
 }
 discovered_by = western
 discovered_by = eastern

@@ -12,6 +12,7 @@ base_manpower = 1
 capital = "Cherkasy"
 is_city = yes
 add_local_autonomy = 25
+add_core = KIE
 add_core = LIT
 add_core = MGY
 

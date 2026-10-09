@@ -1,8 +1,8 @@
 #2997 - Pomorskie
 
-owner = PRU
-controller = PRU
-add_core = PRU
+owner = KRJ
+controller = KRJ
+add_core = KRJ
 capital = "Tuchel"
 culture = prussian
 religion = catholic
@@ -14,9 +14,9 @@ base_manpower = 3
 is_city = yes
 fort_15th = yes
 
-867.1.1 = {	owner = PRU
-	controller = PRU
-	add_core = PRU
+867.1.1 = {	owner = KRJ
+	controller = KRJ
+	add_core = KRJ
 }
 discovered_by = western
 discovered_by = eastern

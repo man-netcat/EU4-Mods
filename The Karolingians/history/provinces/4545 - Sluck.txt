@@ -1,0 +1,27 @@
+#Sluck
+
+owner = PIN
+controller = PIN
+culture = byelorussian
+religion = orthodox
+hre = no
+base_tax = 2
+base_production = 3
+trade_goods = cloth 
+base_manpower = 1
+capital = "Sluck"
+is_city = yes
+add_core = LIT
+add_core = PIN
+
+
+
+
+867.1.1 = {	owner = PIN
+	controller = PIN
+	add_core = PIN
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

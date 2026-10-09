@@ -1,0 +1,27 @@
+#4539 - Kremenets
+
+owner = VOL
+controller = VOL
+culture = ruthenian
+religion = orthodox
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = livestock 
+base_manpower = 1
+capital = "Kremenets"
+is_city = yes
+add_core = VOL
+add_core = LIT
+
+
+
+
+867.1.1 = {	owner = VOL
+	controller = VOL
+	add_core = VOL
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

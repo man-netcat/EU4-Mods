@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = eastern
+primary_culture = novgorodian
+religion = orthodox
+capital = 310
+867.1.1 = {
+	monarch = {
+		name = "Rurik"
+		dynasty = "Rurikid"
+		birth_date = 830.1.1
+		death_date = 879.1.2
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	heir = {
+		name = "Helgi"
+		monarch_name = "Helgi"
+		dynasty = "Rurikid"
+		birth_date = 850.1.1
+		death_date = 912.1.1
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+

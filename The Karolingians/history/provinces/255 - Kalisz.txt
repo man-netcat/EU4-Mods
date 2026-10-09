@@ -1,0 +1,25 @@
+#255 - Kalisz
+
+owner = WIE
+controller = WIE
+culture = polish
+religion = catholic
+capital = "Kalisz"
+trade_goods = cloth
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+is_city = yes
+add_core = WIE
+
+
+
+867.1.1 = {	owner = WIE
+	controller = WIE
+	add_core = WIE
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

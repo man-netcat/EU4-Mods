@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = ruthenian
+religion = orthodox
+capital = 4538
+867.1.1 = {
+	monarch = {
+		name = "Pyotr"
+		dynasty = "Luchanev"
+		birth_date = 842.9.28
+		death_date = 903.8.15
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

@@ -1,0 +1,23 @@
+#1752 - Rzhev
+
+owner = NOV
+controller = NOV
+culture = russian
+religion = orthodox
+hre = no
+base_tax = 5 
+base_production = 5
+trade_goods = grain 
+base_manpower = 3
+capital = "Rzhev"
+is_city = yes
+add_core = NOV
+
+867.1.1 = {	owner = NOV
+	controller = NOV
+	add_core = NOV
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

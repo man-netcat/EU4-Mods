@@ -1,0 +1,24 @@
+#277 - Grodno
+
+owner = BES
+controller = BES
+culture = byelorussian
+religion = orthodox
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 1
+capital = "Grodno"
+is_city = yes 
+add_core = LIT
+add_core = BES
+
+867.1.1 = {	owner = BES
+	controller = BES
+	add_core = BES
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = pommeranian
+religion = catholic
+capital = 2994
+867.1.1 = {
+	monarch = {
+		name = "Ludvik"
+		dynasty = "Veleti"
+		birth_date = 845.3.20
+		death_date = 901.7.6
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

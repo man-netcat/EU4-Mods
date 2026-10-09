@@ -1,5 +1,5 @@
-owner = SOR
-controller = SOR
+owner = LBS
+controller = LBS
 capital = "Zhorelec"
 is_city = yes
 culture = sorbian
@@ -11,10 +11,11 @@ trade_goods = livestock
 base_manpower = 1
 add_core = SOR
 add_core = BOH
+add_core = LBS
 
-867.1.1 = {	owner = SOR
-	controller = SOR
-	add_core = SOR
+867.1.1 = {	owner = LBS
+	controller = LBS
+	add_core = LBS
 }
 discovered_by = western
 discovered_by = eastern

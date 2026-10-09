@@ -1,0 +1,23 @@
+#254 - Notec
+
+owner = KRJ
+controller = KRJ
+capital = "Naklo"
+culture = polish
+religion = catholic
+trade_goods = livestock
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = KRJ
+
+867.1.1 = {	owner = KRJ
+	controller = KRJ
+	add_core = KRJ
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

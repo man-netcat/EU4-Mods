@@ -382,6 +382,28 @@ def run() -> int:
         print(f"        in file    : {found}")
         print(f"        in tagdb   : {expected_dip}")
 
+    print()
+    print("== vanilla tag reuse is deliberate ==")
+    VANILLA_REUSE = frozenset(
+        "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT DAL EGY EST FRA "
+        "GER GMA HSA ITA KIE KRA KUR LIT LOT LVA MON NAV NOV PAP PLT PRU RUG SAR "
+        "SIL SOR SRV STE VEN VOL WOL".split()
+    )
+    vtags = set()
+    vd = os.path.join(GAME, "common", "country_tags")
+    for fn in os.listdir(vd):
+        if not fn.endswith(".txt"):
+            continue
+        vtags.update(
+            re.findall(
+                r'^([A-Z]{3})\s*=\s*"countries/',
+                open(os.path.join(vd, fn), encoding="cp1252", errors="replace").read(),
+                re.M,
+            )
+        )
+    clash = [t for t in ALL_TAGS if t in vtags and t not in VANILLA_REUSE]
+    note(not clash, f"no accidental vanilla tag reuse ({', '.join(clash) or 'none'})")
+
     print("\n== custom tags registered ==")
 
     cdata = json.load(open(str(CACHE / "provdata.json")))
@@ -635,6 +657,22 @@ def run() -> int:
             raw = open(os.path.join(root, fn), "rb").read(3)
             rel = os.path.relpath(os.path.join(root, fn), MOD)
             note(raw == b"\xef\xbb\xbf", f"{rel} starts with a UTF-8 BOM")
+
+    print("\n== no unrenderable z-carons ==")
+    bad_glyph = []
+    for root, _dirs, files in os.walk(LOC):
+        for fn in sorted(files):
+            if not fn.endswith("_l_english.yml"):
+                continue
+            for ln in open(os.path.join(root, fn), encoding="utf-8-sig").read().splitlines():
+                if '"' not in ln:
+                    continue
+                val = ln.split('"')[1]
+                if "ž" in val or "Ž" in val:
+                    bad_glyph.append(f"{fn}: {val.strip()!r} (renders as ? in game)")
+    note(not bad_glyph, f"no ž glyphs ({len(bad_glyph)} bad)")
+    for b in bad_glyph[:8]:
+        print("        " + b)
 
     print("\n== Karling dynasty, lifted from CK3 ==")
     dynasty, ktags = karling_realms()

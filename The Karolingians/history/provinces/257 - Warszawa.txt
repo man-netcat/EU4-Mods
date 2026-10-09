@@ -1,0 +1,25 @@
+#257 - Mazovia
+
+owner = STZ
+controller = STZ
+capital = "Warszawa"
+culture = polish
+religion = catholic
+trade_goods = cloth
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 2
+is_city = yes
+add_core = STZ
+extra_cost = 8
+center_of_trade = 1
+
+867.1.1 = {	owner = STZ
+	controller = STZ
+	add_core = STZ
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

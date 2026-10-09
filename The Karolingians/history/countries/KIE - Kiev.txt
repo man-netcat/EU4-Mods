@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = eastern
+primary_culture = ruthenian
+religion = orthodox
+capital = 280
+867.1.1 = {
+	monarch = {
+		name = "Dyre"
+		dynasty = "Oskyldr"
+		birth_date = 845.1.1
+		death_date = 882.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Halfdan"
+		monarch_name = "Halfdan"
+		dynasty = "Oskyldr"
+		birth_date = 864.1.1
+		death_date = 890.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

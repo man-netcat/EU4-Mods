@@ -1,0 +1,27 @@
+#Turov
+
+owner = TVR
+controller = TVR
+culture = byelorussian
+religion = orthodox
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = wool 
+base_manpower = 1
+capital = "Turov"
+is_city = yes
+add_core = LIT
+add_core = TVR
+
+
+
+
+867.1.1 = {	owner = TVR
+	controller = TVR
+	add_core = TVR
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

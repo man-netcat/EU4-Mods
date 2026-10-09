@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = catholic
+capital = 50
+867.1.1 = {
+	monarch = {
+		name = "Walenty"
+		dynasty = "Redari"
+		birth_date = 844.1.1
+		death_date = 901.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

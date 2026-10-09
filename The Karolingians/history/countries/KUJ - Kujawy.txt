@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = polish
+religion = catholic
+capital = 1859
+867.1.1 = {
+	monarch = {
+		name = "Stefan"
+		dynasty = "Goplan"
+		birth_date = 844.5.3
+		death_date = 888.12.26
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

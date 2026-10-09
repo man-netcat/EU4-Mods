@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = byelorussian
+religion = orthodox
+capital = 4544
+867.1.1 = {
+	monarch = {
+		name = "Gostomysl"
+		dynasty = "Radimich"
+		birth_date = 839.1.1
+		death_date = 890.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Zvonimir"
+		monarch_name = "Zvonimir"
+		dynasty = "Radimich"
+		birth_date = 860.1.1
+		death_date = 900.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

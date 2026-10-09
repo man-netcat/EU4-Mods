@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = catholic
+capital = 49
+867.1.1 = {
+	monarch = {
+		name = "Lucjan"
+		dynasty = "Pyritzi"
+		birth_date = 846.12.4
+		death_date = 891.6.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

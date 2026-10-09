@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = byelorussian
+religion = orthodox
+capital = 278
+867.1.1 = {
+	monarch = {
+		name = "Voislav"
+		dynasty = "Dregovich"
+		birth_date = 836.3.20
+		death_date = 901.4.15
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tatyana"
+		monarch_name = "Tatyana"
+		dynasty = "Dregovich"
+		birth_date = 859.9.13
+		death_date = 892.11.17
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

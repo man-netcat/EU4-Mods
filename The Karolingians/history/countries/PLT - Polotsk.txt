@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = byelorussian
+religion = orthodox
+capital = 275
+867.1.1 = {
+	monarch = {
+		name = "Igor"
+		dynasty = "Polochanin"
+		birth_date = 843.10.16
+		death_date = 910.6.8
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Iliya"
+		monarch_name = "Iliya"
+		dynasty = "Polochanin"
+		birth_date = 865.8.13
+		death_date = 917.5.5
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

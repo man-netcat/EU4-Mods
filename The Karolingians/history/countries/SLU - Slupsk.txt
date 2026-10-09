@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = pommeranian
+religion = catholic
+capital = 2995
+867.1.1 = {
+	monarch = {
+		name = "Jaromil"
+		dynasty = "Slovinci"
+		birth_date = 850.2.15
+		death_date = 914.11.26
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

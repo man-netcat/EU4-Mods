@@ -1,0 +1,27 @@
+# - Stolp
+
+owner = SLU
+controller = SLU
+add_core = WOL
+add_core = SLU
+culture = pommeranian
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 2
+trade_goods = fish
+base_manpower = 1
+capital = "Stolp"
+is_city = yes
+
+
+
+
+867.1.1 = {	owner = SLU
+	controller = SLU
+	add_core = SLU
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

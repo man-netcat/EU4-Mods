@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = ruthenian
+religion = orthodox
+capital = 279
+867.1.1 = {
+	monarch = {
+		name = "Yuriy"
+		dynasty = "Volhynsky"
+		birth_date = 834.5.16
+		death_date = 896.6.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Feodot"
+		monarch_name = "Feodot"
+		dynasty = "Volhynsky"
+		birth_date = 864.11.30
+		death_date = 926.8.14
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

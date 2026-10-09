@@ -1,8 +1,8 @@
 #43 - Danzig
 
-owner = PRU
-controller = PRU
-add_core = PRU
+owner = KRJ
+controller = KRJ
+add_core = KRJ
 capital = "Danzig"
 culture = prussian
 religion = catholic
@@ -20,9 +20,9 @@ add_permanent_province_modifier = {
 }
 center_of_trade = 2
 
-867.1.1 = {	owner = PRU
-	controller = PRU
-	add_core = PRU
+867.1.1 = {	owner = KRJ
+	controller = KRJ
+	add_core = KRJ
 }
 discovered_by = western
 discovered_by = eastern

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = sorbian
+religion = catholic
+capital = 4778
+867.1.1 = {
+	monarch = {
+		name = "Zistisbor"
+		dynasty = "Luzyc"
+		birth_date = 830.1.1
+		death_date = 885.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Bjarnat"
+		monarch_name = "Bjarnat"
+		dynasty = "Luzyc"
+		birth_date = 855.1.1
+		death_date = 920.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = polish
+religion = catholic
+capital = 257
+867.1.1 = {
+	monarch = {
+		name = "Maciej"
+		dynasty = "Mazur"
+		birth_date = 845.9.19
+		death_date = 899.11.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

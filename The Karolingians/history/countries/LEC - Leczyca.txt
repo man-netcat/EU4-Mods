@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = polish
+religion = catholic
+capital = 1939
+867.1.1 = {
+	monarch = {
+		name = "Waclaw"
+		dynasty = "Leczycan"
+		birth_date = 848.1.21
+		death_date = 912.8.23
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
