@@ -115,7 +115,6 @@ class Province(Base):
     name = Column(String)
     culture = Column(String, ForeignKey("cultures.name"))
     religion = Column(String, ForeignKey("religions.name"))
-    parked = Column(Boolean, nullable=False, default=False)
 
 
 class Culture(Base):

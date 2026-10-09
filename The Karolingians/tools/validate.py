@@ -23,7 +23,7 @@ TAGS = sorted(t.tag for t in _REALMS if t.ck3_title)
 
 sys.path.insert(0, str(HERE))
 from build import (
-    BALATON_RESERVED,  # noqa: E402
+    PROVINCES,
     ALL_TAGS,
     CAPITAL,
     empire_core,
@@ -236,8 +236,8 @@ def run() -> int:
         ctrl = s.get("controller")
         if o is None and ctrl is None:
 
-            if int(pid) in BALATON_RESERVED:
-                pass
+            if int(pid) not in PROVINCES:
+                pass  # a vanilla sea tile (no owner by design)
             else:
                 text = open(path, encoding="utf-8", errors="surrogateescape").read()
                 o, ctrl, _ = effective(text)

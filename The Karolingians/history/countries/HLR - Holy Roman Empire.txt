@@ -1,1 +1,3 @@
 # formed in-game by kar_form_hre; vanilla OTL history neutralized
+government = monarchy
+technology_group = western

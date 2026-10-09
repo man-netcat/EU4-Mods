@@ -14,7 +14,6 @@ from histgen import (
 )
 from tagdb import (
     AREA_OWNERS,
-    BALATON_RESERVED,
     BY_TAG,
     DIPLOMACY,
     PROVINCES,
@@ -199,6 +198,16 @@ def dev(pid):
     return 0.0
 
 
+def sea_ids():
+    # The engine's own sea list: every water province whose visibility we
+    # restore verbatim from vanilla (sea files carry only discovered_by).
+    txt = open(
+        os.path.join(GAME, "map", "default.map"), encoding="utf-8", errors="replace"
+    ).read()
+    m = re.search(r"sea_starts\s*=\s*\{([^}]*)\}", txt, re.S)
+    return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
+
+
 PROV_DATE = "867.1.1"
 
 
@@ -209,21 +218,6 @@ def force_block(new_owner):
         f"\tadd_core = {new_owner}\n"
         f"}}\n"
     )
-
-
-def unown(text):
-    lines = text.splitlines()
-    dated_start = len(lines)
-    for idx, ln in enumerate(lines):
-        if re.match(r"^\d+\.\d+\.\d+\s*=", ln.strip()):
-            dated_start = idx
-            break
-    out = [
-        ln
-        for idx, ln in enumerate(lines)
-        if idx >= dated_start or not re.match(r"^(owner|controller|add_core)\s*=", ln.strip())
-    ]
-    return "\n".join(out) + "\n"
 
 
 def patch(text, new_owner):
@@ -294,7 +288,7 @@ def step_provinces(argv):
 
     data = _pd()
     provs = data["provs"]
-    todo = sorted(set(owner_of) | set(BALATON_RESERVED))
+    todo = sorted(owner_of)
 
     if os.path.isdir(PROV_OUT):
         shutil.rmtree(PROV_OUT)
@@ -316,10 +310,7 @@ def step_provinces(argv):
         text = strip_dated(open(src, encoding="utf-8", errors="surrogateescape").read())
         text = apply_db_culture_religion(text, pid)
         tag = owner_of.get(pid)
-        if pid in BALATON_RESERVED:
-            new = unown(text)
-        else:
-            new = patch(text, tag) if tag else text
+        new = patch(text, tag) if tag else text
         new = take_visibility(new)
 
         open(
@@ -329,6 +320,20 @@ def step_provinces(argv):
             errors="pdx",
         ).write(new)
         written += 1
+
+    sea = sea_ids()
+    clashes = [p for p in sea if p in owner_of]
+    assert not clashes, f"sea ids overlap our land: {clashes}"
+    copied = 0
+    for pid in sea:
+        for fn in os.listdir(VANILLA_PDIR):
+            if re.match(rf"^{pid}\s*-.*\.txt$", fn):
+                shutil.copy(
+                    os.path.join(VANILLA_PDIR, fn), os.path.join(PROV_OUT, fn)
+                )
+                copied += 1
+                break
+    print(f"copied {copied} vanilla sea files")
 
     print(f"wrote {written} province files")
     for tag, ps in sorted(alloc.items(), key=lambda kv: -len(kv[1])):
@@ -668,13 +673,20 @@ def step_countries():
         print(f"wrote {name} (rank {t.rank}, capital {t.capital})")
     # HLR is formed in-game by kar_form_hre; neutralize vanilla's OTL file
     # (rank 3, Vienna capital, austrian/catholic defaults) so it never applies.
+    # A comment alone does not register as a history file, so carry the same
+    # neutral defaults the formation produces anyway (history is not
+    # re-applied on change_tag).
     with open(
         os.path.join(COUNTRY_OUT, "HLR - Holy Roman Empire.txt"),
         "w",
         encoding="cp1252",
         errors="pdx",
     ) as fh:
-        fh.write("# formed in-game by kar_form_hre; vanilla OTL history neutralized\n")
+        fh.write(
+            "# formed in-game by kar_form_hre; vanilla OTL history neutralized\n"
+            "government = monarchy\n"
+            "technology_group = western\n"
+        )
     print("wrote HLR - Holy Roman Empire.txt (neutralized)")
 
 

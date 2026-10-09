@@ -99,7 +99,7 @@ class Diplomacy:
 
 CTRY_DATE = "867.1.1"
 
-ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion parked")
+ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion")
 
 
 def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
@@ -129,7 +129,7 @@ def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
             )
         ]
         provs = {
-            r.pid: ProvinceInfo(r.pid, r.name, r.culture, r.religion, r.parked)
+            r.pid: ProvinceInfo(r.pid, r.name, r.culture, r.religion)
             for r in s.query(ProvinceRow).order_by(ProvinceRow.pid)
         }
 
@@ -194,8 +194,6 @@ PROVINCE_OWNERS: dict = {pid: t.tag for t in TAGS for pid in t.provinces}
 
 TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.provinces)
 
-BALATON_RESERVED: set = {p.pid for p in PROVINCES.values() if p.parked}
-
 
 def selfcheck() -> None:
     seen = set()
@@ -228,12 +226,6 @@ def selfcheck() -> None:
     for tag, blocks in TRANSFERS:
         if tag not in seen:
             raise ValueError(f"TRANSFERS names {tag}, which is not a Tag")
-    for pid in BALATON_RESERVED:
-        if pid in PROVINCE_OWNERS:
-            raise ValueError(
-                f"province {pid} is parked AND declared by "
-                f"{PROVINCE_OWNERS[pid]} - the database contradicts itself"
-            )
 
 
 selfcheck()
