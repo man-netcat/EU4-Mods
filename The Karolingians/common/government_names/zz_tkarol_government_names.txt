@@ -1,3 +1,122 @@
+muslim_monarchy = {
+	rank = {
+		1 = SHEIKHDOM
+		2 = EMIRATE
+		3 = SULTANATE
+		4 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = SHEIKH
+		2 = EMIR
+		3 = SULTAN
+		4 = GREAT_SULTAN
+	}
+
+	ruler_female = {
+		1 = SHEIKHA
+		2 = EMIRA
+		3 = SULTANA
+		4 = GREAT_SULTANA
+	}
+
+	consort_male = {
+		1 = SHEIKH
+		2 = EMIR_CONSORT
+		3 = SULTAN_CONSORT
+		4 = SULTAN_CONSORT
+	}
+
+	consort_female = {
+		1 = SHEIKHA
+		2 = EMIRA
+		3 = SULTANA
+		4 = SULTANA
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = steppe_horde }
+		religion_group = muslim
+		NOT = { has_reform = feudal_theocracy }
+	}
+}
+
+byzantine_monarchy = {
+	rank = {
+		1 = KLEISOURA
+		2 = THEMA
+		3 = DESPOTATE
+		4 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = KLEISOURARCH
+		2 = STRATEGOS
+		3 = DESPOT
+		4 = BASILEUS
+	}
+
+	ruler_female = {
+		1 = KLEISOURARCH
+		2 = STRATEGOS
+		3 = DESPOTISSA
+		4 = BASILISSA
+	}
+
+	consort_male = {
+		1 = KLEISOURARCH
+		2 = STRATEGOS
+		3 = DESPOT
+		4 = SYMBASILEUS
+	}
+
+	consort_female = {
+		1 = KLEISOURARCH
+		2 = STRATEGOS
+		3 = DESPOTISSA
+		4 = BASILISSA
+	}
+
+	heir_male = {
+		1 = KLEISOURARCH
+		2 = STRATEGOS
+		3 = DESPOT
+		4 = SYMBASILEUS
+	}
+
+	heir_female = {
+		1 = KLEISOURARCH
+		2 = STRATEGOS
+		3 = DESPOTISSA
+		4 = SYMBASILISSA
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+			tag = BYZ
+			tag = TRE
+			tag = EPI
+			tag = MOE
+		}
+	}
+}
+
 default_monarchy = {
 	rank = {
 		1 = COUNTY
