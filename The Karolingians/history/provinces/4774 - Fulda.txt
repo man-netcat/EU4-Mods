@@ -14,10 +14,6 @@ hre = yes
 
 
 
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 
 is_city = yes
 
@@ -25,3 +21,7 @@ is_city = yes
 	controller = GER
 	add_core = GER
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

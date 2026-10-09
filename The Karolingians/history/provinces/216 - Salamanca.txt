@@ -14,12 +14,12 @@ trade_goods = livestock
 base_manpower = 4
 capital = Salamanca
 is_city = yes
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
 
 867.1.1 = {	owner = ASU
 	controller = ASU
 	add_core = ASU
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

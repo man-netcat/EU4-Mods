@@ -14,10 +14,12 @@ is_city = yes
 add_core = LIV
 add_core = LTG
 add_core = LVA
-discovered_by = western
-discovered_by = eastern
 
 867.1.1 = {	owner = LVA
 	controller = LVA
 	add_core = LVA
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

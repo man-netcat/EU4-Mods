@@ -10,10 +10,6 @@ base_tax = 5
 base_production = 5
 base_manpower = 4
 is_city = yes
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 
 hre = yes
 
@@ -21,3 +17,7 @@ hre = yes
 	controller = GER
 	add_core = GER
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

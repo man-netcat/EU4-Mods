@@ -1,6 +1,8 @@
 #4240 - Fejér (Fejér + Veszprém + Györ + parts of Komárom)
 
-culture = hungarian
+owner = BLT
+controller = BLT
+culture = slovene
 religion = catholic
 capital = "Fehérvár"
 trade_goods = livestock
@@ -10,11 +12,12 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 add_core = HUN
-discovered_by = KAZ
-discovered_by = CRI
-discovered_by = GOL
-discovered_by = AST
-discovered_by = QAS
+add_core = BLT
+
+867.1.1 = {	owner = BLT
+	controller = BLT
+	add_core = BLT
+}
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

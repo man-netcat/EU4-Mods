@@ -13,10 +13,6 @@ add_core = BYT
 add_core = BAV
 fort_15th = yes
 
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 
 #copied from Ansbach but I think it is accurate
 
@@ -24,3 +20,7 @@ discovered_by = ottoman
 	controller = BAV
 	add_core = BAV
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

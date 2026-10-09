@@ -117,6 +117,62 @@ byzantine_monarchy = {
 	}
 }
 
+papacy = {
+	rank = {
+		1 = PAPACY
+		2 = PAPACY
+		3 = PAPACY
+		4 = PAPACY
+	}
+
+	ruler_male = {
+		1 = POPE
+		2 = POPE
+		3 = POPE
+		4 = POPE
+	}
+
+	ruler_female = {
+		1 = POPE
+		2 = POPE
+		3 = POPE
+		4 = POPE
+	}
+
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+		4 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+		4 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+	}
+
+	trigger = {
+		government = theocracy
+		tag = PAP
+	}
+}
+
 default_monarchy = {
 	rank = {
 		1 = COUNTY

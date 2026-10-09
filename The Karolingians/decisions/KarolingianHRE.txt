@@ -27,6 +27,7 @@ country_decisions = {
 			change_tag = HLR
 			on_change_tag_effect = yes
 			change_government_to_monarchy = yes
+			set_in_empire = no
 			set_country_flag = kar_formed_hre
 			hidden_effect = {
 				set_government_rank = 4

@@ -14,10 +14,6 @@ capital = "Nürnberg"
 is_city = yes
 hre = yes
 add_claim = ANS
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 extra_cost = 16
 center_of_trade = 2
 
@@ -25,3 +21,7 @@ center_of_trade = 2
 	controller = GER
 	add_core = GER
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

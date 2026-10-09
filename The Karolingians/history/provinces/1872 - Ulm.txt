@@ -12,10 +12,6 @@ base_manpower = 4
 capital = "Ulm"
 is_city = yes
 hre = yes
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
 
@@ -23,3 +19,7 @@ center_of_trade = 1
 	controller = GER
 	add_core = GER
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

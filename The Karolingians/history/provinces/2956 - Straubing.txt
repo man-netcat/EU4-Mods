@@ -13,10 +13,6 @@ base_manpower = 3
 capital	= "Straubing" 
 is_city = yes
 hre = yes
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 
 #Last of the Landshuter Wittelsbachs dies, Bavaria reunited
 
@@ -24,3 +20,7 @@ discovered_by = ottoman
 	controller = BAV
 	add_core = BAV
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

@@ -175,9 +175,18 @@ def run() -> int:
         print("        " + b)
 
     print("\n== country files ==")
+
+
+    def country_path(t: str) -> str:
+        for fn in os.listdir(COUNTRY_OUT):
+            if fn.startswith(f"{t} - ") and fn.endswith(".txt"):
+                return os.path.join(COUNTRY_OUT, fn)
+        return os.path.join(COUNTRY_OUT, f"{t}.txt")
+
+
     for t in TAGS:
         txt = open(
-            os.path.join(COUNTRY_OUT, f"{t}.txt"),
+            country_path(t),
             encoding="utf-8",
             errors="surrogateescape",
         ).read()
@@ -187,7 +196,7 @@ def run() -> int:
     print("\n== every kept realm has a deliberate rank ==")
     unwritten = []
     for t in sorted(KEPT_REALMS):
-        path = os.path.join(COUNTRY_OUT, f"{t}.txt")
+        path = country_path(t)
         if not os.path.exists(path):
             unwritten.append(t)
             continue
@@ -513,7 +522,7 @@ def run() -> int:
         spec = BY_TAG.get(t)
         if spec is None or spec.capital is None:
             continue
-        cp = os.path.join(COUNTRY_OUT, f"{t}.txt")
+        cp = country_path(t)
         if not os.path.exists(cp):
             continue
         got = re.search(
@@ -583,7 +592,7 @@ def run() -> int:
             if "error" in want:
                 note(False, f"{t} CK3 lookup failed: {want['error']}")
                 continue
-            cp = os.path.join(COUNTRY_OUT, f"{t}.txt")
+            cp = country_path(t)
             if not os.path.exists(cp):
 
                 print(
@@ -610,7 +619,7 @@ def run() -> int:
 
     START_DT = (867, 1, 1)
     for t in TAGS:
-        p = os.path.join(COUNTRY_OUT, f"{t}.txt")
+        p = country_path(t)
         if not os.path.exists(p):
             note(False, f"{t} has a history file")
             continue
@@ -656,7 +665,7 @@ def run() -> int:
     print("\n== Karling dynasty, lifted from CK3 ==")
     dynasty, ktags = karling_realms()
     for t in ktags:
-        p = os.path.join(COUNTRY_OUT, f"{t}.txt")
+        p = country_path(t)
         body = open(p, encoding="cp1252", errors="surrogateescape").read()
         blk = re.search(rf"^{re.escape(CTRY_DATE)} = \{{.*?^\}}", body, re.M | re.S)
         ds = re.findall(r'dynasty = "([^"]+)"', blk.group(0)) if blk else []
@@ -677,6 +686,8 @@ def run() -> int:
     )
 
     for fn in sorted(os.listdir(COUNTRY_OUT)):
+        if fn == "HLR - Holy Roman Empire.txt":
+            continue  # deliberately neutralized (formed in-game, no OTL history)
         if fn.endswith(".txt") and os.path.getsize(os.path.join(COUNTRY_OUT, fn)) < 200:
             note(
                 False,

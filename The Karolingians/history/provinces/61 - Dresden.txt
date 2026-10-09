@@ -14,10 +14,6 @@ is_city = yes
 fort_15th = yes
 add_core = MEI
 add_core = SOR
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
 
@@ -25,3 +21,7 @@ center_of_trade = 1
 	controller = SOR
 	add_core = SOR
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

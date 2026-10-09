@@ -15,12 +15,12 @@ base_manpower = 2
 capital = "Corunna" 
 is_city = yes
  # Santiago de Compostela pilgrimage
-discovered_by = eastern
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
 
 867.1.1 = {	owner = ASU
 	controller = ASU
 	add_core = ASU
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

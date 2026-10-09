@@ -18,10 +18,6 @@ add_core = ADU
 
 
 
-discovered_by = western
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = eastern
 
 
 #1415.8.21 = { controller = POR add_core = POR }
@@ -30,3 +26,7 @@ discovered_by = eastern
 	controller = ADU
 	add_core = ADU
 }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

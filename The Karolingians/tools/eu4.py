@@ -221,7 +221,7 @@ def unown(text):
     out = [
         ln
         for idx, ln in enumerate(lines)
-        if idx >= dated_start or not re.match(r"^(owner|controller)\s*=", ln.strip())
+        if idx >= dated_start or not re.match(r"^(owner|controller|add_core)\s*=", ln.strip())
     ]
     return "\n".join(out) + "\n"
 
@@ -273,6 +273,20 @@ def patch(text, new_owner):
     return "\n".join(out) + "\n" + force_block(new_owner)
 
 
+DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman")
+
+
+def take_visibility(text):
+    # Own province visibility: drop every vanilla discovered_by line and
+    # reveal the province to the tech groups of our world instead.
+    seen = [
+        ln for ln in text.splitlines() if not ln.strip().startswith("discovered_by")
+    ]
+    for g in DISCOVERY_GROUPS:
+        seen.append(f"discovered_by = {g}")
+    return "\n".join(seen) + "\n"
+
+
 def step_provinces(argv):
     alloc = build(verbose="--report" in argv)
 
@@ -306,6 +320,7 @@ def step_provinces(argv):
             new = unown(text)
         else:
             new = patch(text, tag) if tag else text
+        new = take_visibility(new)
 
         open(
             os.path.join(PROV_OUT, os.path.basename(src)),
@@ -424,6 +439,7 @@ def step_hre() -> None:
 \t\t\tchange_tag = HLR
 \t\t\ton_change_tag_effect = yes
 \t\t\tchange_government_to_monarchy = yes
+\t\t\tset_in_empire = no
 \t\t\tset_country_flag = kar_formed_hre
 \t\t\thidden_effect = {{
 \t\t\t\tset_government_rank = 4
@@ -621,18 +637,45 @@ def strip_dated(text):
     return "\n".join(out) + "\n"
 
 
+def hist_name(t) -> str:
+    # Name our file exactly like vanilla's when one exists for this tag, so
+    # the engine skips the vanilla file instead of merging its OTL history
+    # (rulers, idea groups, HRE/elector state, dated rank changes) into ours.
+    for fn in os.listdir(VANILLA_CDIR):
+        if fn.startswith(f"{t.tag} - ") and fn.endswith(".txt"):
+            return fn
+    base = t.country_file or t.tag
+    if base.endswith(".txt"):
+        base = base[:-4]
+    return f"{t.tag} - {base}.txt"
+
+
 def step_countries():
     os.makedirs(COUNTRY_OUT, exist_ok=True)
     for t in TAGS:
         text = ck3_sync(t.tag, country_history(t))
+        name = hist_name(t)
         with open(
-            os.path.join(COUNTRY_OUT, f"{t.tag}.txt"),
+            os.path.join(COUNTRY_OUT, name),
             "w",
             encoding="cp1252",
             errors="pdx",
         ) as fh:
             fh.write(text)
-        print(f"wrote {t.tag}.txt (rank {t.rank}, capital {t.capital})")
+        stale = os.path.join(COUNTRY_OUT, f"{t.tag}.txt")
+        if stale != os.path.join(COUNTRY_OUT, name) and os.path.exists(stale):
+            os.remove(stale)
+        print(f"wrote {name} (rank {t.rank}, capital {t.capital})")
+    # HLR is formed in-game by kar_form_hre; neutralize vanilla's OTL file
+    # (rank 3, Vienna capital, austrian/catholic defaults) so it never applies.
+    with open(
+        os.path.join(COUNTRY_OUT, "HLR - Holy Roman Empire.txt"),
+        "w",
+        encoding="cp1252",
+        errors="pdx",
+    ) as fh:
+        fh.write("# formed in-game by kar_form_hre; vanilla OTL history neutralized\n")
+    print("wrote HLR - Holy Roman Empire.txt (neutralized)")
 
 
 AREA = os.path.join(GAME, "map", "area.txt")
