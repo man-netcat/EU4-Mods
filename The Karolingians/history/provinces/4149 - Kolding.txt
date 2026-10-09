@@ -1,0 +1,25 @@
+#Eastern Jutland, incl. Vejle, Skanderborg, Kolding, and Fredericia.
+
+owner = JYL
+controller = JYL
+add_core = DAN
+add_core = JYL
+culture = danish
+religion = catholic
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 2
+capital = "Kolding"
+is_city = yes
+fort_15th = yes
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {	owner = JYL
+	controller = JYL
+	add_core = JYL
+}

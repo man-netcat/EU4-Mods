@@ -1,3 +1,6 @@
 MGY = "countries/Magyars.txt"
 ZEM = "countries/Samogitia.txt"
 GTH = "countries/Gothia.txt"
+JYL = "countries/Jylland.txt"
+LUT = "countries/Luticia.txt"
+RAN = "countries/Rana.txt"

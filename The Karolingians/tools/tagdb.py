@@ -71,6 +71,20 @@ class Tag:
         object.__setattr__(self, "provinces", frozenset(self.provinces))
 
 
+TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4}
+
+
+def rank_of(t: Tag) -> int:
+    """The EU4 government rank the CK3 title behind the tag implies
+    (c_=county, d_=duchy, k_=kingdom, e_=empire -> ranks 1-4). Falls back
+    to the tag's declared rank when there is no CK3 title to read."""
+    if t.ck3_title:
+        got = TITLE_TIER_RANK.get(t.ck3_title.split("_", 1)[0])
+        if got:
+            return got
+    return t.rank
+
+
 @dataclass(frozen=True)
 class Diplomacy:
     """One start-date relationship, written into history/diplomacy by
@@ -166,7 +180,7 @@ ALL_TAGS: list[str] = [t.tag for t in TAGS]
 
 KEPT_REALMS: set = {t.tag for t in TAGS}
 
-RANK: dict = {t.tag: t.rank for t in TAGS}
+RANK: dict = {t.tag: rank_of(t) for t in TAGS}
 
 TITLES: dict = {t.tag: t.ck3_title for t in TAGS if t.ck3_title}
 

@@ -56,7 +56,7 @@ country_decisions = {
 			change_government_to_monarchy = yes
 			set_country_flag = kar_form_hungary
 			hidden_effect = {
-				set_government_rank = 2
+				set_government_rank = 3
 			}
 			add_prestige = 25
 			add_legitimacy = 10

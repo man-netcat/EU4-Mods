@@ -1,6 +1,6 @@
 government = monarchy
-add_government_reform = iqta
-government_rank = 3
+add_government_reform = feudalism_reform
+government_rank = 4
 technology_group = muslim
 primary_culture = bedouin_arabic
 religion = sunni

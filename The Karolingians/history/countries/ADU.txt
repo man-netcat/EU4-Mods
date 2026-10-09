@@ -1,7 +1,6 @@
 government = monarchy
-add_government_reform = iqta
-add_government_reform = al_andalusia_government
-government_rank = 2
+add_government_reform = feudalism_reform
+government_rank = 3
 technology_group = muslim
 primary_culture = andalucian
 religion = sunni

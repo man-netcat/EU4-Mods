@@ -1,0 +1,29 @@
+# 4745 - Rügen
+
+owner = RAN
+controller = RAN
+add_core = RUG
+add_core = WOL
+add_core = RAN
+culture = polabian
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+capital = "Bergen auf Rügen"
+is_city = yes
+
+unrest = 8 #pirate independence of thought
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {	owner = RAN
+	controller = RAN
+	add_core = RAN
+}

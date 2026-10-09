@@ -29,7 +29,7 @@ country_decisions = {
 			change_government_to_monarchy = yes
 			set_country_flag = kar_formed_hre
 			hidden_effect = {
-				set_government_rank = 3
+				set_government_rank = 4
 			}
 			if = {
 				limit = { has_dlc = "Domination" }

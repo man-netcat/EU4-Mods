@@ -7,6 +7,7 @@ from pathlib import Path
 
 from ck3 import ck3_block, load_title_colors
 from enc import encname
+from tagdb import rank_of
 
 HERE = Path(__file__).resolve().parent
 PROVDATA = HERE / "cache" / "provdata.json"
@@ -25,7 +26,7 @@ def ruler_block_for(t) -> str:
 def country_history(t) -> str:
     lines = [f"government = {t.government}"]
     lines += [f"add_government_reform = {r}" for r in t.reforms]
-    lines.append(f"government_rank = {t.rank}")
+    lines.append(f"government_rank = {rank_of(t)}")
     lines += [
         f"technology_group = {t.technology_group}",
         f"primary_culture = {t.culture}",
@@ -104,7 +105,7 @@ def suppression(t) -> str:
 
 def formation_decision(t) -> str:
     basin = basin_provinces(t)
-    form_rank = t.form_rank or 2
+    form_rank = t.form_rank or 3
     area_or = "\n".join(f"{T*4}area = {a}" for a in t.form_areas)
     claims = "\n".join(
         f"{T*3}{a} = {{\n"

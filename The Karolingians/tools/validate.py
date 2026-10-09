@@ -121,11 +121,11 @@ def run() -> int:
     for t in _REALMS:
         if not t.ck3_title:
             continue
-        base = vcountries.get(t.tag)
-        if base is None:
+        vbase = vcountries.get(t.tag)
+        if vbase is None:
             p = os.path.join(MC, t.country_file or f"{t.name}.txt")
         else:
-            p = os.path.join(MC, base[0])
+            p = os.path.join(MC, vbase[0])
         want = ck3_colors.get(t.ck3_title)
         body = open(p, encoding="utf-8", errors="replace").read()
         m = re.search(r"(?m)^color = \{?\s*(\d+)\s+(\d+)\s+(\d+)", body)

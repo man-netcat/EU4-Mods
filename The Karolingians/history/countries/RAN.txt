@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = polabian
+religion = catholic
+capital = 4745
+867.1.1 = {
+	monarch = {
+		name = "Oldrich"
+		dynasty = "Rani"
+		birth_date = 834.8.30
+		death_date = 890.8.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

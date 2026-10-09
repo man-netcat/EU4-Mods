@@ -426,7 +426,7 @@ def step_hre() -> None:
 \t\t\tchange_government_to_monarchy = yes
 \t\t\tset_country_flag = kar_formed_hre
 \t\t\thidden_effect = {{
-\t\t\t\tset_government_rank = 3
+\t\t\t\tset_government_rank = 4
 \t\t\t}}
 \t\t\tif = {{
 \t\t\t\tlimit = {{ has_dlc = "Domination" }}
@@ -571,7 +571,7 @@ def step_custom() -> None:
         open(p, "w", encoding="cp1252", errors="pdx").write(txt)
         print(f"wrote {p}")
         print(
-            f"  formed tag            : {t.tag} -> {t.forms}, rank {t.form_rank or 2}"
+            f"  formed tag            : {t.tag} -> {t.forms}, rank {t.form_rank or 3}"
         )
         print(f"  basin provinces       : {len(basin)}")
         print(f"  areas covered         : {', '.join(t.form_areas)}")
