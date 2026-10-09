@@ -1,3 +1,59 @@
+abbasid_caliphate = {
+	rank = {
+		1 = SHEIKHDOM
+		2 = EMIRATE
+		3 = SULTANATE
+		4 = CALIPHATE
+	}
+
+	ruler_male = {
+		1 = SHEIKH
+		2 = EMIR
+		3 = SULTAN
+		4 = CALIPH
+	}
+
+	ruler_female = {
+		1 = SHEIKHA
+		2 = EMIRA
+		3 = SULTANA
+		4 = CALIPH
+	}
+
+	consort_male = {
+		1 = SHEIKH
+		2 = EMIR_CONSORT
+		3 = SULTAN_CONSORT
+		4 = SULTAN_CONSORT
+	}
+
+	consort_female = {
+		1 = SHEIKHA
+		2 = EMIRA
+		3 = SULTANA
+		4 = SULTANA
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		tag = ARB
+	}
+}
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM
