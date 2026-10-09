@@ -49,7 +49,6 @@ class Tag:
     no_heir_sync: bool = False
 
     color: Optional[tuple] = None
-    adjective: Optional[str] = None
     country_file: Optional[str] = None
     historical_score: int = 250
     revolutionary_colors: tuple = (5, 0, 10)
@@ -151,7 +150,6 @@ def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
             extra=r.extra,
             no_heir_sync=r.no_heir_sync,
             color=(r.color_r, r.color_g, r.color_b) if r.color_r is not None else None,
-            adjective=r.adjective,
             country_file=r.country_file,
             historical_score=r.historical_score,
             revolutionary_colors=(r.rev_r, r.rev_g, r.rev_b),

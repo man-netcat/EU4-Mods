@@ -43,7 +43,6 @@ class Tag(Base):
     color_r = Column(Integer)
     color_g = Column(Integer)
     color_b = Column(Integer)
-    adjective = Column(String)
     country_file = Column(String)
     historical_score = Column(Integer, nullable=False, default=250)
     rev_r = Column(Integer, nullable=False, default=5)
