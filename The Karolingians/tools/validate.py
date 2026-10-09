@@ -17,8 +17,6 @@ from build import ALL_TAGS  # noqa: E402
 
 from build import TAGS as _REALMS  # noqa: E402
 
-from build import CustomTag  # noqa: E402
-
 from enc import encname  # noqa: E402
 
 TAGS = sorted(t.tag for t in _REALMS if t.ck3_title)
@@ -30,10 +28,13 @@ from build import (
     CAPITAL,
     empire_core,
     karling_realms,
-    CULTURE_GONE_867,
-    CONQUERED_BY_THE_ARABS,
-    MUSLIM_RELIGIONS_867,
 )
+
+# this mod's 867 culture/religion expectations, checked against the files
+# the build writes
+CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
+CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310}
+MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
 from build import effective  # noqa: E402
 
 CAPS = CAPITAL
@@ -120,12 +121,10 @@ def run() -> int:
     for t in _REALMS:
         if not t.ck3_title:
             continue
-        if isinstance(t, CustomTag):
+        base = vcountries.get(t.tag)
+        if base is None:
             p = os.path.join(MC, t.country_file or f"{t.name}.txt")
         else:
-            base = vcountries.get(t.tag)
-            if not base:
-                continue
             p = os.path.join(MC, base[0])
         want = ck3_colors.get(t.ck3_title)
         body = open(p, encoding="utf-8", errors="replace").read()
@@ -405,7 +404,7 @@ def run() -> int:
 
     cdata = json.load(open(str(CACHE / "provdata.json")))
     for t in _REALMS:
-        if not isinstance(t, CustomTag):
+        if t.tag in vcountries:
             continue
         flag = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
         note(os.path.exists(flag), f"{t.tag} has a flag")
@@ -466,12 +465,6 @@ def run() -> int:
 
     print("\n== every realm holds its own capital ==")
 
-    RULER_TAGS = sorted(
-        t.tag
-        for t in _REALMS
-        if t.ck3_title and t.country in ("vanilla", "written") and t.tag not in TAGS
-    )
-
     prov_owner = {}
     for pid, path in files.items():
         prov_owner[pid] = parse(path)[0].get("owner")
@@ -502,7 +495,7 @@ def run() -> int:
                 return int(m.group(1)) if m else None
         return None
 
-    for t in dict.fromkeys(ALL_TAGS + RULER_TAGS):
+    for t in ALL_TAGS:
         cap = CAPS.get(t) or vanilla_capital(t)
         held = holds(t)
         if cap is None:
@@ -565,11 +558,7 @@ def run() -> int:
         _rest = {t for t in _holders if t not in _b.TITLES}
         _unclassified = sorted(t for t in _rest if t not in _vanilla)
 
-        _sneaky = sorted(
-            t
-            for t in _rest
-            if (s := BY_TAG.get(t)) is not None and s.writes_country_file
-        )
+        _sneaky = sorted(t for t in _rest if (s := BY_TAG.get(t)) is not None)
         for t in _unclassified:
             note(
                 False,
@@ -620,7 +609,7 @@ def run() -> int:
         print("        run `python3 tools/build.py --fix` to resync")
 
     START_DT = (867, 1, 1)
-    for t in TAGS + RULER_TAGS:
+    for t in TAGS:
         p = os.path.join(COUNTRY_OUT, f"{t}.txt")
         if not os.path.exists(p):
             note(False, f"{t} has a history file")

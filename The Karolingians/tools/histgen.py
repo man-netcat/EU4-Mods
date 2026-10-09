@@ -23,20 +23,18 @@ def ruler_block_for(t) -> str:
 
 
 def country_history(t) -> str:
-    technology = getattr(t, "technology_group", None) or "western"
-    religion = getattr(t, "religion", None) or "catholic"
-    government = getattr(t, "government", None) or "monarchy"
-    reforms = getattr(t, "reforms", None) or ("feudalism_reform",)
-    lines = [f"government = {government}"]
-    lines += [f"add_government_reform = {r}" for r in reforms]
+    lines = [f"government = {t.government}"]
+    lines += [f"add_government_reform = {r}" for r in t.reforms]
     lines.append(f"government_rank = {t.rank}")
     lines += [
-        f"technology_group = {technology}",
+        f"technology_group = {t.technology_group}",
         f"primary_culture = {t.culture}",
-        f"religion = {religion}",
+        f"religion = {t.religion}",
         f"capital = {t.capital}",
-        ruler_block_for(t),
     ]
+    if t.extra:
+        lines.append(t.extra.rstrip("\n"))
+    lines.append(ruler_block_for(t))
     return "\n".join(lines) + "\n"
 
 
@@ -51,11 +49,7 @@ def lifted_color(t):
 
 
 def country_definition(t) -> str:
-    graphical = (
-        "easterngfx"
-        if getattr(t, "technology_group", None) == "eastern"
-        else "westerngfx"
-    )
+    graphical = "easterngfx" if t.technology_group == "eastern" else "westerngfx"
     r, g, b = lifted_color(t)
     rc = t.revolutionary_colors
     parts = [

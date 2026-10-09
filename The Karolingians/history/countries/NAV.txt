@@ -1,11 +1,10 @@
 government = monarchy
-government_rank = 2
 add_government_reform = courts_of_navarra
+government_rank = 2
+technology_group = western
 primary_culture = basque
 religion = catholic
-technology_group = western
-capital = 210	# Pamplona
-
+capital = 210
 867.1.1 = {
 	monarch = {
 		name = "Gartzia"
@@ -28,3 +27,4 @@ capital = 210	# Pamplona
 		mil = 2
 	}
 }
+

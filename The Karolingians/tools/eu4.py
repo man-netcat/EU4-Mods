@@ -11,14 +11,13 @@ from histgen import (
     country_history,
     formation_decision,
     formation_trigger_block,
-    ruler_block_for,
 )
 from tagdb import (
     AREA_OWNERS,
     BALATON_RESERVED,
     BY_TAG,
-    CustomTag,
     DIPLOMACY,
+    PROVINCES,
     PROVINCE_OWNERS,
     TAGS,
     TITLES,
@@ -46,12 +45,6 @@ PROVINCE_OWNERS = {**UNTRACKED_OWNERS, **PROVINCE_OWNERS}
 CAPITAL = {t.tag: t.capital for t in BY_TAG.values() if t.capital}
 NAME = {tag: BY_TAG[tag].name for tag in AREA_OWNERS}
 
-CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
-
-CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310}
-
-MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
-
 _PROVDATA = None
 
 
@@ -62,21 +55,16 @@ def _pd():
     return _PROVDATA
 
 
-def apply_867_culture(text, pid):
-    m = re.search(r"^(\s*)culture\s*=\s*(\w+)", text, re.M)
-    if not m:
-        return text
-    culture = CULTURE_GONE_867.get(m.group(2))
-    if not culture:
-        return text
-    text = text[: m.start()] + f"{m.group(1)}culture = {culture}" + text[m.end() :]
-    if pid not in CONQUERED_BY_THE_ARABS:
-        text = re.sub(
-            rf"^(\s*religion\s*=\s*)({'|'.join(MUSLIM_RELIGIONS_867)})\b",
-            r"\1orthodox",
-            text,
-            flags=re.M,
-        )
+def apply_db_culture_religion(text, pid):
+    """Write the province's 867 culture and religion from the database,
+    leaving a line alone when the file already agrees (quoting included)."""
+    p = PROVINCES[pid]
+    for key, want in (("culture", p.culture), ("religion", p.religion)):
+        if not want:
+            continue
+        m = re.search(rf'^(\s*){key}\s*=\s*"?(\w+)"?', text, re.M)
+        if m and m.group(2) != want:
+            text = text[: m.start()] + f"{m.group(1)}{key} = {want}" + text[m.end() :]
     return text
 
 
@@ -299,6 +287,9 @@ def step_provinces(argv):
     os.makedirs(PROV_OUT, exist_ok=True)
 
     written = 0
+    missing = set(todo) - set(PROVINCES)
+    if missing:
+        raise SystemExit(f"provinces not in the database: {sorted(missing)}")
     for pid in todo:
         src = None
         for fn in os.listdir(VANILLA_PDIR):
@@ -309,7 +300,7 @@ def step_provinces(argv):
             print(f"!! no vanilla file for province {pid}")
             continue
         text = strip_dated(open(src, encoding="utf-8", errors="surrogateescape").read())
-        text = apply_867_culture(text, pid)
+        text = apply_db_culture_religion(text, pid)
         tag = owner_of.get(pid)
         if pid in BALATON_RESERVED:
             new = unown(text)
@@ -519,9 +510,7 @@ def step_vanilla_countries() -> None:
     os.makedirs(os.path.join(MOD, "common", "countries"), exist_ok=True)
     written = 0
     for t in TAGS:
-        if isinstance(t, CustomTag) or not t.ck3_title:
-            continue
-        want = colors.get(t.ck3_title)
+        want = colors.get(t.ck3_title) if t.ck3_title else None
         base = vanilla.get(t.tag)
         if not want or not base:
             continue
@@ -542,7 +531,8 @@ def step_vanilla_countries() -> None:
 
 
 def step_custom() -> None:
-    customs = [t for t in TAGS if isinstance(t, CustomTag)]
+    vanilla = load_vanilla_countries()
+    customs = [t for t in TAGS if t.tag not in vanilla]
     if not customs:
         return
 
@@ -594,7 +584,7 @@ def step_custom() -> None:
 def step_formation_triggers() -> None:
     specs = [("kar_form_hre", empire_core())]
     for t in TAGS:
-        if isinstance(t, CustomTag) and t.forms:
+        if t.forms:
             specs.append((t.decision, basin_provinces(t)))
 
     body = "\n\n".join(
@@ -631,82 +621,10 @@ def strip_dated(text):
     return "\n".join(out) + "\n"
 
 
-def find_vanilla(tag):
-    for fn in os.listdir(VANILLA_CDIR):
-        if fn.split(" ")[0] == tag and fn.endswith(".txt"):
-            return os.path.join(VANILLA_CDIR, fn), fn
-    raise SystemExit(f"no vanilla history file for {tag}")
-
-
-def patch_vanilla(tag, capital=None, ruler=None, rank=None):
-    path, fn = find_vanilla(tag)
-    text = open(path, encoding="utf-8", errors="surrogateescape").read()
-    if capital is not None:
-
-        m = re.search(r"^capital\s*=\s*(\d+)", text, flags=re.M)
-        assert m, f"{tag}: no top-level capital line in {fn}"
-        if int(m.group(1)) != capital:
-
-            text, n = re.subn(
-                r"^capital\s*=\s*\d+.*$",
-                f"capital = {capital}",
-                text,
-                count=1,
-                flags=re.M,
-            )
-            assert n == 1, f"{tag}: failed to patch capital in {fn}"
-    m = re.search(r"^government_rank\s*=\s*(\d+)", text, flags=re.M)
-    if m and int(m.group(1)) != rank:
-        text, n = re.subn(
-            r"^government_rank\s*=\s*\d+.*$",
-            f"government_rank = {rank}",
-            text,
-            count=1,
-            flags=re.M,
-        )
-        assert n == 1, f"{tag}: failed to patch government_rank in {fn}"
-    elif m is None:
-
-        anchor = re.search(r"^\s*government\s*=\s*\w+.*$", text, re.M)
-        assert anchor, f"{tag}: no government line to anchor a rank to in {fn}"
-        text = (
-            text[: anchor.end()] + f"\ngovernment_rank = {rank}" + text[anchor.end() :]
-        )
-    text = strip_dated(text)
-    if ruler is not None:
-        text = text.rstrip("\n") + "\n\n" + ruler.strip("\n") + "\n"
-    return text
-
-
 def step_countries():
     os.makedirs(COUNTRY_OUT, exist_ok=True)
     for t in TAGS:
-        if t.country == "written":
-            continue
-        if t.country == "none":
-            continue
-        if t.country == "fresh":
-            text = ck3_sync(t.tag, country_history(t))
-            print(
-                f"wrote {t.tag}.txt (from scratch, rank {t.rank}, "
-                f"capital {t.capital})"
-            )
-        elif t.country == "vanilla":
-            ruler = ruler_block_for(t) if t.ck3_title else None
-            text = ck3_sync(t.tag, patch_vanilla(t.tag, t.capital, ruler, t.rank))
-            what = []
-            if t.capital:
-                what.append(f"capital -> {t.capital}")
-            if ruler:
-                nm = re.search(r'name = "([^"]+)"', ruler)
-                what.append(f"867 ruler {nm.group(1) if nm else '?'} (from CK3)")
-            what.append(f"rank {t.rank}")
-            print(
-                f"wrote {t.tag}.txt (from vanilla, "
-                + (", ".join(what) or "vanilla header")
-                + ")"
-            )
-
+        text = ck3_sync(t.tag, country_history(t))
         with open(
             os.path.join(COUNTRY_OUT, f"{t.tag}.txt"),
             "w",
@@ -714,6 +632,7 @@ def step_countries():
             errors="pdx",
         ) as fh:
             fh.write(text)
+        print(f"wrote {t.tag}.txt (rank {t.rank}, capital {t.capital})")
 
 
 AREA = os.path.join(GAME, "map", "area.txt")

@@ -1,14 +1,13 @@
 government = monarchy
 add_government_reform = grand_duchy_reform
 government_rank = 1
+technology_group = eastern
 primary_culture = lithuanian
+religion = catholic
+capital = 272
 add_accepted_culture = byelorussian
 add_accepted_culture = ruthenian
-religion = catholic
-technology_group = eastern
 historical_friend = POL
-capital = 272 # Vilnius
-
 867.1.1 = {
 	monarch = {
 		name = "Palemon"
@@ -31,3 +30,4 @@ capital = 272 # Vilnius
 		mil = 2
 	}
 }
+

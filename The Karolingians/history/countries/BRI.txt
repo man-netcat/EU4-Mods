@@ -1,11 +1,10 @@
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 2
+technology_group = western
 primary_culture = breton
 religion = catholic
-technology_group = western
 capital = 172
-
 867.1.1 = {
 	monarch = {
 		name = "Salomon"
@@ -28,3 +27,4 @@ capital = 172
 		mil = 2
 	}
 }
+

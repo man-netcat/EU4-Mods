@@ -2,10 +2,9 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = western
-religion = catholic
 primary_culture = baltic_german
+religion = catholic
 capital = 38
-
 867.1.1 = {
 	monarch = {
 		name = "Meelis"
@@ -17,3 +16,4 @@ capital = 38
 		mil = 2
 	}
 }
+

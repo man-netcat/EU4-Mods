@@ -30,10 +30,10 @@ country_decisions = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = transdanubia_area
 				area = alfold_area
-				area = transylvania_area
 				area = southern_transylvania_area
+				area = transdanubia_area
+				area = transylvania_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -60,13 +60,6 @@ country_decisions = {
 			}
 			add_prestige = 25
 			add_legitimacy = 10
-			transdanubia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			alfold_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -74,14 +67,21 @@ country_decisions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			transylvania_area = {
+			southern_transylvania_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			southern_transylvania_area = {
+			transdanubia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			transylvania_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

@@ -1,15 +1,14 @@
 government = republic
 add_government_reform = merchants_reform
 government_rank = 1
-mercantilism = 25
 technology_group = western
-religion = catholic
 primary_culture = lower_saxon
-capital = 45	# Lübeck
+religion = catholic
+capital = 45
+mercantilism = 25
 historical_friend = HAM #Hamburg
 historical_friend = BRE #Bremen
 historical_friend = RIG #Riga
-
 867.1.1 = {
 	monarch = {
 		name = "Msciwoj"
@@ -32,3 +31,4 @@ historical_friend = RIG #Riga
 		mil = 2
 	}
 }
+

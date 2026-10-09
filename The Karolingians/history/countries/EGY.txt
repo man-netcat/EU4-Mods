@@ -1,3 +1,10 @@
+government = monarchy
+add_government_reform = iqta
+government_rank = 2
+technology_group = muslim
+primary_culture = al_misr_arabic
+religion = sunni
+capital = 361
 # Egypt. Vanilla EGY is a formable nation: it owns nothing at 1444, has no dated
 # blocks and therefore no ruler, because the Mamluks (the vanilla tag MAM) hold
 # Egypt's 26 provinces. This scenario folds the Mamluks into Egypt - every
@@ -12,13 +19,6 @@
 # beylikh has to land on one of them. The old note here said the mod 'only
 # promotes a realm to a higher tier when asked' and named ARB as the single
 # exception, which made rank a matter of who had remembered to ask.
-government_rank = 2
-government = monarchy
-add_government_reform = iqta
-primary_culture = al_misr_arabic
-religion = sunni
-technology_group = muslim
-capital = 361 # Cairo
 
 # Ruler taken from CK3, which starts in 867 like this scenario's flavour. CK3's
 # k_egypt holder at 867.1.1 is character 163115: Ahmad, of the Tulunid dynasty
@@ -34,10 +34,22 @@ capital = 361 # Cairo
 	monarch = {
 		name = "Ahmad"
 		dynasty = "Tulunid"
-		birth_date = 815.9.20
-		death_date = 884.1.1
+		birth_date = 835.9.20
+		death_date = 884.3.1
 		adm = 3
-		dip = 4
-		mil = 4
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "al-Abbas"
+		monarch_name = "al-Abbas"
+		dynasty = "Tulunid"
+		birth_date = 857.1.1
+		death_date = 884.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
 	}
 }
+

@@ -4,11 +4,10 @@ government_rank = 1
 technology_group = eastern
 primary_culture = serbian
 religion = orthodox
-capital = 138	# Zabljak
+capital = 138
 fixed_capital = 138 # Cannot move capital away from this province & no power cost to move to it
 
 #Grand Dukes of Duklija/Zeta
-
 867.1.1 = {
 	monarch = {
 		name = "Miroslav"
@@ -19,3 +18,4 @@ fixed_capital = 138 # Cannot move capital away from this province & no power cos
 		mil = 2
 	}
 }
+

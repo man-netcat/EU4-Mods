@@ -4,8 +4,7 @@ government_rank = 1
 technology_group = western
 primary_culture = prussian
 religion = catholic
-capital = 1935	# Mitau
-
+capital = 1935
 867.1.1 = {
 	monarch = {
 		name = "Kodere"
@@ -28,3 +27,4 @@ capital = 1935	# Mitau
 		mil = 2
 	}
 }
+

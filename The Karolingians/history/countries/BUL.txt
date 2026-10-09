@@ -1,14 +1,14 @@
 government = monarchy
+add_government_reform = feudalism_reform
 government_rank = 2
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 150
 # Rank: the First Bulgarian Empire under Boris is a kingdom by 867, a peer of
 # Byzantium's neighbours rather than a vassal duchy. The full argument lives on
 # the Tag for BUL in tools/tagdb.py.
 
-add_government_reform = feudalism_reform
-technology_group = eastern
-primary_culture = bulgarian
-religion = orthodox
-capital = 150	# Sofia
 
 # Ruler taken from CK3, which starts in 867 like this scenario's flavour.
 # CK3's k_bulgaria holder at 867.1.1 is character 70382: Boris, of the Balgarsko
@@ -21,10 +21,22 @@ capital = 150	# Sofia
 	monarch = {
 		name = "Boris"
 		dynasty = "Balgarsko"
-		birth_date = 815.1.1
-		death_date = 884.1.1
+		birth_date = 825.1.1
+		death_date = 907.5.2
 		adm = 3
-		dip = 4
-		mil = 4
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Anna"
+		monarch_name = "Anna"
+		dynasty = "Balgarsko"
+		birth_date = 842.1.1
+		death_date = 899.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
 	}
 }
+

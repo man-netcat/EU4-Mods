@@ -1,3 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = castillian
+religion = catholic
+capital = 207
 # ASU - Asturias.
 #
 # Whole-file override. Vanilla ASU is six lines with no dated history at all, so
@@ -35,26 +42,7 @@
 # The vanilla country header, which this file was missing entirely: without
 # these six lines ASU had no government, culture, religion, technology
 # group or capital at all, and fell back to defaults that no check read.
-government = monarchy
-add_government_reform = feudalism_reform
-primary_culture = castillian
-religion = catholic
-technology_group = western
-capital = 207 #Asturias
-government_rank = 2
 
-867.1.1 = {
-	monarch = {
-		name = "Alfonsu"
-		monarch_name = "Alfonsu II"
-		dynasty = "Cantabria"
-		birth_date = 815.1.1
-		death_date = 881.1.1
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
 
 867.1.1 = {
 	heir = {
@@ -85,3 +73,26 @@ government_rank = 2
 		death_date = 889.1.1
 	}
 }
+867.1.1 = {
+	monarch = {
+		name = "Alfonsu"
+		dynasty = "Cantabria"
+		birth_date = 848.1.1
+		death_date = 910.12.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "García"
+		monarch_name = "García"
+		dynasty = "Cantabria"
+		birth_date = 871.1.1
+		death_date = 914.1.19
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+

@@ -5,9 +5,7 @@ technology_group = western
 primary_culture = schlesian
 religion = catholic
 capital = 264
-
 # Dukes of Olawa/Lubin
-
 867.1.1 = {
 	monarch = {
 		name = "Gardomir"
@@ -30,3 +28,4 @@ capital = 264
 		mil = 2
 	}
 }
+

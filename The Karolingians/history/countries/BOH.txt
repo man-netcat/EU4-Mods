@@ -1,11 +1,11 @@
 government = monarchy
-government_rank = 1
 add_government_reform = bohemian_elective_kingdom_reform
+government_rank = 1
+technology_group = western
 primary_culture = czech
 religion = catholic
+capital = 266
 elector = yes
-capital = 266 # Praha
-technology_group = western
 add_accepted_culture = sorbian
 add_army_professionalism = 0.1
 
@@ -13,7 +13,6 @@ change_estate_land_share = {
 	estate = estate_burghers
 	share = -5
 }
-
 867.1.1 = {
 	monarch = {
 		name = "Neklan"
@@ -36,3 +35,4 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
+

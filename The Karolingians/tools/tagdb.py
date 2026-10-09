@@ -1,14 +1,30 @@
 #!/usr/bin/env python3
+"""The tag database: tools/tags.db, loaded into Tag dataclasses.
+
+Every realm is one row on the tags table with its land, reforms and
+suppression on their own tables - adding a tag is an INSERT, not a Python
+edit. Each Tag here carries everything a realm may declare, custom or not:
+the country file the mod writes, the definition and flag data for realms
+vanilla has never heard of, and the land it holds in 867.
+"""
 
 from __future__ import annotations
 
 import os
+from collections import namedtuple
 from dataclasses import dataclass, field
 from typing import Optional
 
-HISTORICAL_TAGS_MOD = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
-    "Historical European Tags",
+from db import DB_PATH, Session
+from models import (
+    Diplomacy as DiplomacyRow,
+    Province as ProvinceRow,
+    Tag as TagRow,
+    TagArea,
+    TagFormArea,
+    TagProvince,
+    TagReform,
+    TagSuppress,
 )
 
 
@@ -26,30 +42,15 @@ class Tag:
     ruler_title: Optional[str] = None
     areas: tuple = ()
     provinces: frozenset = field(default_factory=frozenset)
-    country: str = "vanilla"
+    government: str = "monarchy"
+    technology_group: str = "western"
+    reforms: tuple = ()
+    extra: str = ""
     no_heir_sync: bool = False
 
-    @property
-    def writes_country_file(self) -> bool:
-        return self.country != "none"
-
-    def __post_init__(self):
-        object.__setattr__(self, "provinces", frozenset(self.provinces))
-
-
-@dataclass(frozen=True)
-class CustomTag(Tag):
-    color: tuple = ()
-    country_file: Optional[str] = None
-    forms: Optional[str] = None
-    form_areas: tuple = ()
-    form_rank: Optional[int] = None
-    flag_from: Optional[str] = None
-    flag_source: Optional[str] = None
-    technology_group: Optional[str] = None
-    decision: Optional[str] = None
-    suppress: tuple = ()
+    color: Optional[tuple] = None
     adjective: Optional[str] = None
+    country_file: Optional[str] = None
     historical_score: int = 250
     revolutionary_colors: tuple = (5, 0, 10)
     historical_units: tuple = ()
@@ -57,29 +58,17 @@ class CustomTag(Tag):
     leader_names: tuple = ()
     ship_names: tuple = ()
 
+    forms: Optional[str] = None
+    form_areas: tuple = ()
+    form_rank: Optional[int] = None
+    decision: Optional[str] = None
+
+    flag_from: Optional[str] = None
+    flag_source: Optional[str] = None
+    suppress: tuple = ()
+
     def __post_init__(self):
-        super().__post_init__()
-        if self.country != "fresh":
-            raise ValueError(
-                f"{self.tag}: a CustomTag has no vanilla history file to inherit - "
-                f"only country fresh writes it from scratch"
-            )
-        if len(self.color) != 3:
-            raise ValueError(f"{self.tag}: a CustomTag needs an RGB color")
-        if not (self.name and self.adjective):
-            raise ValueError(
-                f"{self.tag}: CustomTag needs name and adjective for localisation"
-            )
-        if self.forms and not (self.form_areas and self.decision):
-            raise ValueError(
-                f"{self.tag}: a formable CustomTag must set forms AND form_areas "
-                f"AND decision together"
-            )
-        if not (self.flag_from or self.country_file or self.flag_source):
-            raise ValueError(
-                f"{self.tag}: CustomTag needs flag_from (or a country_file, "
-                f"or a flag_source path) so it has a banner to borrow"
-            )
+        object.__setattr__(self, "provinces", frozenset(self.provinces))
 
 
 @dataclass(frozen=True)
@@ -96,607 +85,86 @@ class Diplomacy:
 
 CTRY_DATE = "867.1.1"
 
-DYNASTY = "de Carolingie"
+ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion parked")
 
 
-TAGS: list[Tag] = [
-    Tag(
-        tag="FRA",
-        name="West Francia",
-        rank=2,
-        capital=183,
-        culture="frankish",
-        ck3_title="k_france",
-        areas=(
-            "ile_de_france_area",
-            "normandy_area",
-            "loire_area",
-            "orleans_area",
-            "poitou_area",
-            "guyenne_area",
-            "languedoc_area",
-            "massif_central_area",
-            "pyrenees_area",
-            "champagne_area",
-            "picardy_area",
-            "west_burgundy_area",
-            "flanders_area",
-        ),
-        provinces=(192,),  # Bourgogne (Dijon)  (bourgogne_area; vanilla BUR)
-    ),
-    Tag(
-        tag="LOT",
-        country="fresh",
-        name="Lotharingia",
-        rank=2,
-        capital=1878,
-        culture="burgundian",
-        ck3_title="k_lotharingia",
-        areas=(
-            "lower_rhineland_area",
-            "lorraine_area",
-            "alsace_area",
-            "wallonia_area",
-            "brabant_area",
-            "north_brabant_area",
-            "holland_area",
-            "frisia_area",
-            "bourgogne_area",
-            "romandie_area",
-            "savoy_dauphine_area",
-        ),
-        provinces=(
-            85,  # Koln
-            84,  # Berg
-            1743,  # Cambray
-        ),
-    ),
-    Tag(
-        tag="GER",
-        country="fresh",
-        name="East Francia",
-        rank=2,
-        capital=1876,
-        culture="hessian",
-        ck3_title="k_east_francia",
-        areas=(
-            "hesse_area",
-            "upper_rhineland_area",
-            "palatinate_area",
-            "north_rhine_area",
-            "westphalia_area",
-            "north_westphalia_area",
-            "weser_area",
-            "lower_saxony_area",
-            "braunschweig_area",
-            "thuringia_area",
-            "northern_saxony_area",
-            "lower_swabia_area",
-            "upper_swabia_area",
-            "switzerland_area",
-            "franconia_area",
-            "upper_franconia_area",
-        ),
-        provinces=(
-            80,  # Trier
-            1760,  # Koblenz
-            62,  # Leipzig (Leipzig)  (south_saxony_area; vanilla THU)
-            4141,  # Ditmarschen          (holstein_area; vanilla SHL)
-        ),
-    ),
-    Tag(
-        tag="BAV",
-        country="fresh",
-        name="Bavaria",
-        rank=1,
-        capital=65,
-        culture="bavarian",
-        ck3_title="d_bavaria",
-        areas=(
-            "upper_bavaria_area",
-            "lower_bavaria_area",
-            "east_bavaria_area",
-            "tirol_area",
-            "austria_proper_area",
-            "inner_austria_area",
-        ),
-        provinces=(
-            4717,  # Bayreuth
-            1868,  # Augsburg   (CK3 c_augsburg  -> d_augsburg -> k_bavaria)
-            68,  # Memmingen  (CK3 barony Memmingen -> c_kempten -> d_augsburg)
-            129,  # Krain      (carinthia_area; vanilla HAB)
-            4751,  # Cilli      (carinthia_area; vanilla CLI)
-        ),
-    ),
-    Tag(
-        tag="ITA",
-        country="fresh",
-        name="Italy",
-        rank=2,
-        capital=4728,
-        culture="lombard",
-        ck3_title="k_italy",
-        areas=(
-            "lombardy_area",
-            "piedmont_area",
-            "po_valley_area",
-            "liguria_area",
-            "venetia_area",
-            "emilia_romagna_area",
-            "tuscany_area",
-            "provence_area",
-            "carinthia_area",
-        ),
-        provinces=(
-            4720,  # Geneva
-            205,  # Savoie
-            110,  # Trent      (tirol_area; vanilla TNT)
-            2976,  # Umbria     (lazio_area; vanilla PGA)
-            4731,  # Spoleto    (lazio_area; vanilla PAP)
-            4732,  # Terracina  (lazio_area; vanilla PAP)
-            119,  # Ancona     (central_italy_area; vanilla PAP)
-            2977,  # Urbino    (central_italy_area; vanilla URB)
-            1247,  # Corsica    (corsica_sardinia_area; vanilla GEN)
-        ),
-    ),
-    Tag(
-        tag="SOR",
-        country="fresh",
-        name="Lusatia",
-        rank=1,
-        capital=60,
-        culture="sorbian",
-        ck3_title="d_lausitz",
-        areas=(
-            "lusatia_area",
-            "south_saxony_area",
-        ),
-        provinces=(2965,),  # Vogtland   (thuringia_area; vanilla THU)
-    ),
-    Tag(
-        tag="NAV",
-        rank=2,
-        capital=210,
-        ck3_title="k_navarra",
-        provinces=(
-            209,  # Vizcaya (Giscaya)   (basque_country; vanilla CAS)
-            210,  # Navarra             (basque_country; vanilla NAV)
-            211,  # Huesca  (Osca)      (aragon_area;     vanilla ARA)
-        ),
-    ),
-    Tag(
-        tag="BRI",
-        rank=2,
-        capital=172,
-        ck3_title="k_brittany",
-        areas=("brittany_area",),
-    ),
-    Tag(
-        tag="ASU",
-        country="written",
-        rank=2,
-        capital=207,
-        ck3_title="k_asturias",
-        areas=("asturias_area", "galicia_area", "leon_area"),
-        provinces={
-            4789,  # Segovia                (castille_area; vanilla CAS)
-        },
-    ),
-    Tag(
-        tag="ADU",
-        country="written",
-        rank=2,
-        capital=225,
-        ck3_title="k_andalusia",
-        areas=(
-            "alentejo_area",
-            "baleares_area",
-            "beieras_area",
-            "extremadura_area",
-            "lower_andalucia_area",
-            "toledo_area",
-            "upper_andalucia_area",
-            "valencia_area",
-        ),
-        provinces={
-            214,  # Aragon                 (aragon_area; vanilla ARA)
-            217,  # Madrid                 (castille_area; vanilla CAS)
-            367,  # The Azores             (macaronesia_area; vanilla -)
-            368,  # Madeira                (macaronesia_area; vanilla -)
-            1751,  # Ceuta                  (northern_morocco_area; vanilla MOR)
-            2755,  # Soria                  (castille_area; vanilla CAS)
-            2988,  # Tarragona              (catalonia_area; vanilla ARA)
-            2989,  # Rioja                  (basque_country; vanilla CAS)
-            2990,  # Teruel                 (aragon_area; vanilla ARA)
-            4551,  # Avila                  (castille_area; vanilla CAS)
-            4557,  # Lleida                 (aragon_area; vanilla ARA)
-        },
-    ),
-    Tag(
-        tag="CRT",
-        rank=1,
-        capital=163,
-        ck3_title="d_krete",
-        provinces={
-            163,  # Crete                  (morea_area; vanilla VEN)
-        },
-    ),
-    Tag(
-        tag="ARB",
-        country="written",
-        rank=3,
-        capital=385,
-        ck3_title="e_arabia",
-        areas=(
-            "al_jazira_area",
-            "aleppo_area",
-            "bahrain_area",
-            "basra_area",
-            "dulkadir_area",
-            "iraq_arabi_area",
-            "medina_area",
-            "palestine_area",
-            "syria_area",
-            "syrian_desert_area",
-            "tabuk_area",
-            "trans_jordan_area",
-        ),
-        provinces={
-            327,  # Adana                  (cukurova_area; vanilla RAM)
-            331,  # Erzurum                (erzurum_area; vanilla AKK)
-            385,  # Mecca                  (mecca_area; vanilla HED)
-            412,  # Khuzestan              (khuzestan_area; vanilla MSY)
-            415,  # Shahrizor              (shahrizor_area; vanilla TIM)
-            416,  # Tabriz                 (tabriz_area; vanilla QAR)
-            418,  # Diyarbakir             (north_kurdistan_area; vanilla AKK)
-            419,  # Yerevan                (armenia_area; vanilla TIM)
-            420,  # Ganja                  (armenia_area; vanilla QAR)
-            2205,  # Nakhchivan             (armenia_area; vanilla TIM)
-            2206,  # Urmia                  (tabriz_area; vanilla QAR)
-            2207,  # Maragheh               (tabriz_area; vanilla QAR)
-            2209,  # Ilam                   (luristan_area; vanilla TIM)
-            2305,  # Erzincan               (erzurum_area; vanilla TIM)
-            2306,  # Mush                   (north_kurdistan_area; vanilla AKK)
-            4272,  # Jawf                   (nafud_area; vanilla ANZ)
-            4289,  # Shushtar               (khuzestan_area; vanilla MSY)
-            4290,  # Hoveyzeh               (khuzestan_area; vanilla MSY)
-            4293,  # Arbil                  (shahrizor_area; vanilla QAR)
-            4294,  # Sulimaniyeh            (shahrizor_area; vanilla TIM)
-            4304,  # Khoy                   (tabriz_area; vanilla QAR)
-        },
-    ),
-    Tag(
-        tag="EGY",
-        country="written",
-        rank=2,
-        capital=361,
-        ck3_title="k_egypt",
-        areas=(
-            "al_wahat_area",
-            "bahari_area",
-            "cyrenaica_area",
-            "delta_area",
-            "gulf_of_arabia_area",
-            "said_area",
-            "vostani_area",
-        ),
-        provinces={
-            1232,  # Suakin                 (red_sea_coast_area; vanilla MAM)
-            2324,  # Halaib                 (red_sea_coast_area; vanilla MAM)
-        },
-    ),
-    Tag(
-        tag="SIL",
-        rank=1,
-        capital=264,
-        ck3_title="d_lower_silesia",
-        provinces=(
-            264,  # Breslau (Wroclaw)    (silesia_area; vanilla OPL)
-            4238,  # Liegnitz (Legnica)   (silesia_area; vanilla GLG)
-            2966,  # Glogau   (Glogow)    (silesia_area; vanilla GLG)
-        ),
-    ),
-    Tag(
-        tag="GMA",
-        rank=2,
-        capital=4237,
-        ck3_title="k_moravia",
-        areas=("moravia_area", "slovakia_area"),
-        provinces={
-            263,  # Ratibor                (silesia_area; vanilla OPL)
-            4723,  # Opole                  (silesia_area; vanilla OPL)
-        },
-    ),
-    Tag(
-        tag="DAL",
-        country="written",
-        rank=1,
-        capital=136,
-        ck3_title="d_dalmatia",
-        provinces={
-            136,  # Dalmatia               (east_adriatic_coast_area; vanilla DAL)
-            4753,  # Zadar                  (east_adriatic_coast_area; vanilla DAL)
-        },
-    ),
-    Tag(
-        tag="BYZ",
-        country="written",
-        rank=3,
-        capital=151,
-        ck3_title="e_byzantium",
-        areas=(
-            "aegean_archipelago_area",
-            "albania_area",
-            "ankara_area",
-            "aydin_area",
-            "germiyan_area",
-            "hudavendigar_area",
-            "karaman_area",
-            "kastamonu_area",
-            "northern_greece_area",
-            "rum_area",
-        ),
-        provinces={
-            122,  # Apulia                 (apulia_area; vanilla NAP)
-            145,  # Morea                  (morea_area; vanilla BYZ)
-            146,  # Athens                 (morea_area; vanilla VEN)
-            148,  # Thessaloniki           (macedonia_area; vanilla TUR)
-            149,  # Edirne                 (thrace_area; vanilla TUR)
-            151,  # Constantinople         (thrace_area; vanilla BYZ)
-            285,  # Kaffa                  (crimea_area; vanilla GEN)
-            321,  # Cyprus                 (cukurova_area; vanilla CYP)
-            330,  # Trebizond              (erzurum_area; vanilla TRE)
-            1773,  # Achaea                 (morea_area; vanilla ACH)
-            1853,  # Kastoria               (macedonia_area; vanilla TUR)
-            2302,  # Icel                   (cukurova_area; vanilla KAR)
-            2410,  # Theodoro               (crimea_area; vanilla TRE)
-            2447,  # Mantrega               (crimea_area; vanilla GEN)
-            2757,  # Kaffa                  (southern_ethiopia_area; vanilla KAF)
-            2982,  # Syracuse               (sicily_area; vanilla SIC)
-            4701,  # Corinth                (morea_area; vanilla ACH)
-            4702,  # Siroz                  (macedonia_area; vanilla TUR)
-            4705,  # Gumulcine              (thrace_area; vanilla TUR)
-            4779,  # Gallipoli              (thrace_area; vanilla TUR)
-        },
-    ),
-    Tag(
-        tag="BUL",
-        country="written",
-        rank=2,
-        capital=150,
-        ck3_title="k_bulgaria",
-        areas=(
-            "alfold_area",
-            "bulgaria_area",
-            "serbia_area",
-            "silistria_area",
-            "southern_transylvania_area",
-            "transylvania_area",
-            "wallachia_area",
-        ),
-        provinces={
-            153,  # Pest                   (transdanubia_area; vanilla HUN)
-            1756,  # Budjak                 (moldavia_area; vanilla MOL)
-            1764,  # Burgas                 (thrace_area; vanilla TUR)
-            1766,  # Kosovo                 (rascia_area; vanilla SER)
-            1827,  # Raska                  (rascia_area; vanilla SER)
-            3001,  # Skopje                 (macedonia_area; vanilla TUR)
-            4126,  # Bacs                   (transdanubia_area; vanilla HUN)
-            4173,  # Syrmia                 (slavonia_area; vanilla HUN)
-            4780,  # Ohrid                  (macedonia_area; vanilla TUR)
-        },
-    ),
-    CustomTag(
-        tag="MGY",
-        country="fresh",
-        rank=1,
-        capital=283,
-        culture="hungarian",
-        technology_group="eastern",
-        ck3_title="k_magyar",
-        name="Magyars",
-        adjective="Magyar",
-        color=(152, 85, 92),
-        revolutionary_colors=(5, 0, 10),
-        historical_units=("hungarian_hussar", "eastern_knights"),
-        monarch_names=(
-            ("Arpad #0", 0),
-            ("Zoltan #0", 0),
-            ("Taksony #0", 0),
-            ("Geza #0", 0),
-            ("Istvan #5", 40),
-            ("Laszlo #1", 20),
-            ("Kalman #1", 20),
-            ("Bela #4", 5),
-            ("Endre #3", 15),
-            ("Karoly #2", 15),
-        ),
-        leader_names=(
-            "Hunyadi Kinizsi Zrinyi",
-            "Esterhazy Rakoczi Thokoly",
-            "Bocskai Bethlen Bathory",
-        ),
-        ship_names=("Arpad Magyar", '"Szent Istvan kiraly"'),
-        forms="HUN",
-        form_areas=(
-            "transdanubia_area",
-            "alfold_area",
-            "transylvania_area",
-            "southern_transylvania_area",
-        ),
-        flag_from="HUN",
-        decision="kar_form_hungary",
-        suppress=("hungarian_nation",),
-        provinces={
-            282,  # Yedisan                (yedisan_area; vanilla CRI)
-            283,  # Zaporozhia             (zaporizhia_area; vanilla CRI)
-            1943,  # Bratslav               (podolia_volhynia_area; vanilla LIT)
-            1944,  # Cherkasy               (west_dniepr_area; vanilla LIT)
-            2406,  # Ingil                  (yedisan_area; vanilla CRI)
-            4540,  # Winnica                (podolia_volhynia_area; vanilla LIT)
-        },
-    ),
-    CustomTag(
-        tag="ZEM",
-        country="fresh",
-        rank=1,
-        capital=271,
-        culture="lithuanian",
-        religion="catholic",
-        technology_group="western",
-        ck3_title="d_samogitia",
-        name="Samogitia",
-        adjective="Samogitian",
-        color=(210, 170, 30),
-        revolutionary_colors=(16, 1, 16),
-        historical_units=(
-            "western_medieval_infantry",
-            "western_medieval_knights",
-            "western_men_at_arms",
-        ),
-        monarch_names=(
-            ("Velnias #0", 30),
-            ("Palemon #0", 25),
-            ("Vykintas #0", 20),
-            ("Algimantas #0", 20),
-            ("Kukovaitis #0", 5),
-        ),
-        leader_names=('"of Samogitia" "of Medininkai" "of Kretinga" "of Telsiai"',),
-        ship_names=('"Zemaitija" "Medininkai" "Telsiai"',),
-        areas=("samogitia_area",),
-        flag_source=os.path.join(HISTORICAL_TAGS_MOD, "gfx", "flags", "ZEM.tga"),
-    ),
-    CustomTag(
-        tag="GTH",
-        country="fresh",
-        rank=1,
-        capital=2753,
-        culture="occitain",
-        religion="catholic",
-        technology_group="western",
-        ck3_title="d_barcelona",
-        name="Gothia",
-        adjective="Gothic",
-        color=(200, 170, 40),
-        flag_from="CAT",
-        historical_units=(
-            "western_medieval_infantry",
-            "western_medieval_knights",
-            "western_men_at_arms",
-        ),
-        monarch_names=(
-            ("Bernat #0", 35),
-            ("Guifre #0", 30),
-            ("Borrell #0", 20),
-            ("Sunyer #0", 10),
-            ("Berenguer #0", 5),
-        ),
-        leader_names=('"de Gothia" "de Septimania" "de Roussillon"',),
-        ship_names=('"Barcelona" "Narbonne" "Urgell"',),
-        provinces=(197, 200, 212, 213, 2753, 2987),
-    ),
-    Tag(
-        tag="LIT",
-        rank=1,
-        capital=272,
-        ck3_title="d_lithuanians",
-        areas=("lithuania_area",),
-    ),
-    Tag(
-        tag="MON",
-        rank=1,
-        capital=138,
-        ck3_title="c_duklja",
-        provinces={
-            138,  # Zeta                   (rascia_area; vanilla MON)
-            4754,  # Kotor                  (rascia_area; vanilla VEN)
-        },
-    ),
-    Tag(
-        tag="PRU",
-        rank=1,
-        capital=1841,
-        ck3_title="d_prussia",
-        areas=("east_prussia_area", "west_prussia_area"),
-    ),
-    Tag(
-        tag="KUR",
-        rank=1,
-        capital=1935,
-        ck3_title="d_courland",
-        provinces={
-            39,  # Kurland                (curonia_area; vanilla LIV)
-            1935,  # Semigallia             (curonia_area; vanilla LIV)
-        },
-    ),
-    Tag(
-        tag="HSA",
-        rank=1,
-        capital=45,
-        ck3_title="c_lubeck",
-        provinces={
-            45,  # Lubeck                (mecklenburg_area; vanilla HSA)
-            2996,  # Wismar                (mecklenburg_area; vanilla MKL)
-            1775,  # Holstein              (holstein_area; vanilla SHL)
-        },
-    ),
-    Tag(
-        tag="LVA",
-        rank=1,
-        capital=38,
-        ck3_title="d_livonia",
-        areas=("livonia_area",),
-        provinces={
-            35,  # Osel                   (curonia_area; vanilla LIV)
-        },
-    ),
-    Tag(
-        tag="EST",
-        rank=1,
-        capital=36,
-        ck3_title="d_esthonia",
-        areas=("estonia_ingria_area",),
-    ),
-    Tag(
-        tag="BOH",
-        rank=1,
-        capital=266,
-        ck3_title="d_bohemia",
-        areas=("bohemia_area", "erzgebirge_area"),
-    ),
-    Tag(
-        tag="SAR",
-        rank=1,
-        capital=127,
-        ck3_title="d_sardinia",
-        ruler_title="c_arborea",
-        provinces={
-            127,  # Sassari               (corsica_sardinia_area; vanilla ARA)
-            2986,  # Cagliari              (corsica_sardinia_area; vanilla ARA)
-            4735,  # Arborea               (corsica_sardinia_area; vanilla ARA)
-        },
-    ),
-    Tag(
-        tag="PAP",
-        rank=2,
-        capital=118,
-        ck3_title="k_papal_state",
-        provinces={
-            118,  # Roma                  (lazio_area; vanilla PAP)
-        },
-    ),
-]
+def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
+    if not os.path.exists(DB_PATH):
+        raise SystemExit(f"{DB_PATH} is missing - the tag database lives in git")
+    with Session() as s:
+        rows = s.query(TagRow).order_by(TagRow.seq).all()
+        areas: dict[str, list] = {}
+        for r in s.query(TagArea).order_by(TagArea.area):
+            areas.setdefault(r.tag, []).append(r.area)
+        lands: dict[str, list] = {}
+        for r in s.query(TagProvince).order_by(TagProvince.pid):
+            lands.setdefault(r.tag, []).append(r.pid)
+        reforms: dict[str, list] = {}
+        for r in s.query(TagReform).order_by(TagReform.tag, TagReform.pos):
+            reforms.setdefault(r.tag, []).append(r.reform)
+        forms: dict[str, list] = {}
+        for r in s.query(TagFormArea).order_by(TagFormArea.area):
+            forms.setdefault(r.tag, []).append(r.area)
+        suppress: dict[str, list] = {}
+        for r in s.query(TagSuppress).order_by(TagSuppress.key):
+            suppress.setdefault(r.tag, []).append(r.key)
+        dips = [
+            Diplomacy(r.liege, r.subject, r.relation)
+            for r in s.query(DiplomacyRow).order_by(
+                DiplomacyRow.liege, DiplomacyRow.subject
+            )
+        ]
+        provs = {
+            r.pid: ProvinceInfo(r.pid, r.name, r.culture, r.religion, r.parked)
+            for r in s.query(ProvinceRow).order_by(ProvinceRow.pid)
+        }
+
+    tags = [
+        Tag(
+            tag=r.tag,
+            rank=r.rank,
+            name=r.name,
+            capital=r.capital,
+            culture=r.culture,
+            religion=r.religion,
+            ck3_title=r.ck3_title,
+            ruler_title=r.ruler_title,
+            areas=tuple(areas.get(r.tag, ())),
+            provinces=lands.get(r.tag, ()),
+            government=r.government,
+            technology_group=r.technology_group,
+            reforms=tuple(reforms.get(r.tag, ())),
+            extra=r.extra,
+            no_heir_sync=r.no_heir_sync,
+            color=(r.color_r, r.color_g, r.color_b) if r.color_r is not None else None,
+            adjective=r.adjective,
+            country_file=r.country_file,
+            historical_score=r.historical_score,
+            revolutionary_colors=(r.rev_r, r.rev_g, r.rev_b),
+            historical_units=tuple(r.historical_units),
+            monarch_names=tuple(tuple(p) for p in r.monarch_names),
+            leader_names=tuple(r.leader_names),
+            ship_names=tuple(r.ship_names),
+            forms=r.forms,
+            form_areas=tuple(forms.get(r.tag, ())),
+            form_rank=r.form_rank,
+            decision=r.decision,
+            flag_from=r.flag_from,
+            flag_source=r.flag_source,
+            suppress=tuple(suppress.get(r.tag, ())),
+        )
+        for r in rows
+    ]
+    return tags, dips, provs
+
+
+TAGS, DIPLOMACY, PROVINCES = _load()
 
 BY_TAG: dict[str, Tag] = {t.tag: t for t in TAGS}
 
-
-def _r(t: Tag):
-    return t.tag
-
-
 ALL_TAGS: list[str] = [t.tag for t in TAGS]
 
-KEPT_REALMS: set = {t.tag for t in TAGS if t.writes_country_file}
+KEPT_REALMS: set = {t.tag for t in TAGS}
 
 RANK: dict = {t.tag: t.rank for t in TAGS}
 
@@ -704,16 +172,15 @@ TITLES: dict = {t.tag: t.ck3_title for t in TAGS if t.ck3_title}
 
 RULER_TITLES: dict = {t.tag: t.ruler_title for t in TAGS if t.ruler_title}
 
-DIPLOMACY: tuple = (
-    Diplomacy("FRA", "GTH"),  # Gothia, a vassal duchy of West Francia
-    Diplomacy("GER", "BAV"),  # Bavaria, a vassal duchy of East Francia
-)
+DIPLOMACY: tuple = tuple(DIPLOMACY)
 
 AREA_OWNERS: dict = {t.tag: t.areas for t in TAGS if t.areas}
 
 PROVINCE_OWNERS: dict = {pid: t.tag for t in TAGS for pid in t.provinces}
 
 TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.provinces)
+
+BALATON_RESERVED: set = {p.pid for p in PROVINCES.values() if p.parked}
 
 
 def selfcheck() -> None:
@@ -728,16 +195,11 @@ def selfcheck() -> None:
 
     for t in TAGS:
         if t.tag in seen:
-            raise ValueError(f"{t.tag}: declared twice in TAGS")
+            raise ValueError(f"{t.tag}: declared twice in the database")
         seen.add(t.tag)
-        if t.country not in ("fresh", "vanilla", "written", "none"):
+        if not (t.capital and t.culture and t.religion):
             raise ValueError(
-                f"{t.tag}: country={t.country!r} is not one of "
-                f"fresh/vanilla/written/none"
-            )
-        if t.country == "fresh" and not (t.capital and t.culture):
-            raise ValueError(
-                f"{t.tag}: a fresh realm needs capital and culture - build "
+                f"{t.tag}: needs capital, culture and religion - build "
                 f"cannot make them up"
             )
         if t.ruler_title and not t.ck3_title:
@@ -745,11 +207,19 @@ def selfcheck() -> None:
                 f"{t.tag}: ruler_title is set but ck3_title is not - a ruler "
                 f"title only means something next to the realm title it overrides"
             )
+        if t.forms and not (t.form_areas and t.decision):
+            raise ValueError(
+                f"{t.tag}: forms is set, so form_areas and decision must be too"
+            )
     for tag, blocks in TRANSFERS:
         if tag not in seen:
             raise ValueError(f"TRANSFERS names {tag}, which is not a Tag")
+    for pid in BALATON_RESERVED:
+        if pid in PROVINCE_OWNERS:
+            raise ValueError(
+                f"province {pid} is parked AND declared by "
+                f"{PROVINCE_OWNERS[pid]} - the database contradicts itself"
+            )
 
 
 selfcheck()
-
-BALATON_RESERVED: tuple = (135, 1864, 4240)

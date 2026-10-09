@@ -1,3 +1,10 @@
+government = monarchy
+add_government_reform = iqta
+government_rank = 3
+technology_group = muslim
+primary_culture = bedouin_arabic
+religion = sunni
+capital = 385
 # The Abbasid Caliphate. Vanilla ARB is a formable tag with no land and no rank,
 # so this file exists only to promote it: government_rank = 3 makes it an Empire.
 # Rank 3 is the top tier, the one vanilla gives Byzantium, the HRE, Ethiopia,
@@ -7,13 +14,6 @@
 #
 # Kept byte-for-byte identical to vanilla "ARB - Arabia.txt" apart from the rank
 # line, and deliberately no BOM, matching the other country files in this mod.
-government = monarchy
-add_government_reform = iqta
-government_rank = 3
-primary_culture = bedouin_arabic
-religion = sunni
-technology_group = muslim
-capital = 385 # Mecca
 
 # Ruler taken from CK3. CK3's e_arabia and d_baghdad holder at 867.1.1 is
 # character 34014: al-Mu'tazz, Abbasid caliph of the Abbasid dynasty (CK3
@@ -31,10 +31,21 @@ capital = 385 # Mecca
 	monarch = {
 		name = "al-Mu'tazz"
 		dynasty = "Abbasid"
-		birth_date = 803.1.1
-		death_date = 889.1.1
+		birth_date = 847.1.1
+		death_date = 869.1.1
 		adm = 2
-		dip = 4
-		mil = 1
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Abdallah"
+		monarch_name = "Abdallah"
+		birth_date = 861.1.1
+		death_date = 908.12.17
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
 	}
 }
+

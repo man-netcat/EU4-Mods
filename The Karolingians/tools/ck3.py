@@ -287,7 +287,11 @@ def current(body):
 
 
 def heir_dynasty(text):
-    blk = re.search(rf"^{re.escape(CTRY_DATE)} = \{{\n(.*?)^\}}", text, re.M | re.S)
+    blk = re.search(
+        rf"^{re.escape(CTRY_DATE)} = \{{\s*\n\tmonarch = \{{(.*?)^\}}",
+        text,
+        re.M | re.S,
+    )
     if not blk:
         return None
     heir = re.search(r"heir = \{(.*?)\n\t\}", blk.group(1), re.S)
@@ -407,7 +411,9 @@ def step_ck3(argv):
             if fix:
 
                 blk = re.search(
-                    rf"^{re.escape(CTRY_DATE)} = \{{\n(.*?)^\}}", text, re.M | re.S
+                    rf"^{re.escape(CTRY_DATE)} = \{{\s*\n\tmonarch = \{{(.*?)^\}}",
+                    text,
+                    re.M | re.S,
                 )
                 new = blk.group(1)
                 if cn is not None:
@@ -495,7 +501,11 @@ def ck3_sync(tag, text):
     got = ck3_ruler(tag)
     if got is None:
         return text
-    blk = re.search(rf"^{re.escape(CTRY_DATE)} = \{{\n(.*?)^\}}", text, re.M | re.S)
+    blk = re.search(
+        rf"^{re.escape(CTRY_DATE)} = \{{\s*\n\tmonarch = \{{(.*?)^\}}",
+        text,
+        re.M | re.S,
+    )
     if not blk:
         return text
     new = re.sub(

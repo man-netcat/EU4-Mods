@@ -1,15 +1,15 @@
 government = monarchy
+add_government_reform = feudalism_reform
 government_rank = 1
+technology_group = eastern
+primary_culture = dalmatian
+religion = catholic
+capital = 136
 # Rank: a coastal duchy of city-states, nominally one realm. The full argument
 # lives on the Tag for DAL in tools/tagdb.py.
 
-add_government_reform = feudalism_reform
 mercantilism = 25
-primary_culture = dalmatian
-religion = catholic
 add_accepted_culture = croatian
-technology_group = eastern
-capital = 136 # Split
 add_army_professionalism = 0.05
 
 #union under Venice
@@ -19,17 +19,6 @@ add_army_professionalism = 0.05
 # "Radenos"), a Greek byzantiote rite, born 836.1.1, died 896.1.1, noted in CK3
 # as ruling both Dalmatia and Zadar. CK3 has no 1444, so as with Boris and
 # al-Mu'tazz the dates are shifted to sit around the 1444.11.11 start.
-867.1.1 = {
-	monarch = {
-		name = "Amphilochios"
-		dynasty = "Radenos"
-		birth_date = 817.1.1
-		death_date = 881.1.1
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
 
 
 1595.4.5 = {
@@ -130,3 +119,15 @@ add_army_professionalism = 0.05
 		mil = 3
 	}
 }
+867.1.1 = {
+	monarch = {
+		name = "Amphilochios"
+		dynasty = "Radenos"
+		birth_date = 836.1.1
+		death_date = 896.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

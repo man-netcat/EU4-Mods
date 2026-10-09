@@ -1,11 +1,10 @@
 government = monarchy
 add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
 primary_culture = czech
 religion = catholic
-government_rank = 2
-capital = 4237 # Olomouc
-technology_group = western
-
+capital = 4237
 867.1.1 = {
 	monarch = {
 		name = "Rostislav"
@@ -17,3 +16,4 @@ technology_group = western
 		mil = 2
 	}
 }
+
