@@ -158,7 +158,7 @@ def _parse_dynasty_files(files):
 
 # Bump whenever a parser in this file changes: caches are keyed on source
 # mtimes, so parser edits alone would otherwise serve stale pickles.
-_CACHE_VERSION = 2
+_CACHE_VERSION = 3
 
 
 _CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"
@@ -174,7 +174,7 @@ def load_title_colors():
     block whose key looks like a title."""
     from colorsys import hsv_to_rgb
 
-    title = re.compile(r"^[ecbksdh]_[a-z0-9_\-]+$")
+    title = re.compile(r"^[ecbksdh]_[a-zA-Z0-9_\-]+$")
     block = re.compile(r"^[ \t]*([a-zA-Z0-9_\-.:]+)\s*=\s*\{", re.M)
     color = re.compile(
         r"^[ \t]*color\s*=\s*(hsv\s*)?\{[ \t]*([0-9.]+)[ \t]+([0-9.]+)"

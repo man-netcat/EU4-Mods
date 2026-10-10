@@ -299,10 +299,8 @@ def run() -> int:
 
     reassigned = {pid for pid, p in files.items() if parse(p)[0].get("owner") in TAGS}
     for t in [
-        "NAP",
         "SIC",
         "SARD",
-        "DAN",
         "SWE",
         "NOR",
         "ENG",
@@ -385,9 +383,9 @@ def run() -> int:
     print()
     print("== vanilla tag reuse is deliberate ==")
     VANILLA_REUSE = frozenset(
-        "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT DAL EGY EST FRA "
-        "GER GMA HSA ITA KIE KRA KUR LIT LOT LVA MON NAV NOV PAP PLT PRU RUG SAR "
-        "SIL SOR SRV STE TNG VEN VOL WOL".split()
+        "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY EST FIN FRA "
+        "GER GMA GOT HSA ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT PRU RUG SAR "
+        "SIL SCO SOR SRV STE TNG TRA VEN VOL WOL".split()
     )
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")
@@ -739,6 +737,34 @@ def run() -> int:
         "every Greek province outside the Arab conquest is orthodox"
         + ("" if not stale_religion else f": {', '.join(stale_religion)}"),
     )
+
+    print("\n== every religion key exists in vanilla ==")
+    vrel = set(
+        re.findall(
+            r"(?m)^\s*([a-z_]+)\s*=\s*\{",
+            open(
+                os.path.join(GAME, "common", "religions", "00_religion.txt"),
+                encoding="utf-8",
+                errors="replace",
+            ).read(),
+        )
+    )
+    bad_rel = []
+    for fn in sorted(os.listdir(PDIR)):
+        if not fn.endswith(".txt"):
+            continue
+        m = re.match(r"^(\d+)", fn)
+        if not m:
+            continue
+        text = open(
+            os.path.join(PDIR, fn), encoding="utf-8", errors="surrogateescape"
+        ).read()
+        for rel in set(re.findall(r"^\s*religion\s*=\s*(\w+)", text, re.M)):
+            if rel not in vrel:
+                bad_rel.append(f"{m.group(1)} {rel}")
+    note(not bad_rel, f"all province religions are real keys ({len(bad_rel)} bad)")
+    for b in bad_rel[:8]:
+        print("        " + b)
 
     print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 

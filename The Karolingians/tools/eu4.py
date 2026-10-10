@@ -234,7 +234,7 @@ def force_block(new_owner):
     )
 
 
-def patch(text, new_owner):
+def patch(text, new_owner, pid=None):
     out, i, n = [], 0, len(text.splitlines())
     lines = text.splitlines()
 
@@ -244,6 +244,28 @@ def patch(text, new_owner):
         if re.match(r"^\d+\.\d+\.\d+\s*=", s):
             dated_start = idx
             break
+
+    head = []
+    if pid is not None and not any(
+        re.match(r"^\s*owner\s*=", lines[idx]) for idx in range(dated_start)
+    ):
+        # Vanilla-empty province (no top-level fields): seed the header from
+        # the DB. Economy default mirrors the empty northern belt (fur, 1/1/1).
+        info = PROVINCES.get(pid)
+        head = [
+            f"owner = {new_owner}",
+            f"controller = {new_owner}",
+            f"add_core = {new_owner}",
+            f"culture = {info.culture if info else 'nomad'}",
+            f"religion = {info.religion if info else 'animism'}",
+            "hre = no",
+            "base_tax = 1",
+            "base_production = 1",
+            "trade_goods = fur",
+            "base_manpower = 1",
+            "is_city = yes",
+            "",
+        ]
 
     for idx, ln in enumerate(lines):
         if idx >= dated_start:
@@ -265,7 +287,7 @@ def patch(text, new_owner):
     )
     core_line = f"add_core = {new_owner}"
     if have_core:
-        return "\n".join(out) + "\n" + force_block(new_owner)
+        return "\n".join(head + out) + "\n" + force_block(new_owner)
 
     ins = dated_start
     last_core = None
@@ -275,13 +297,13 @@ def patch(text, new_owner):
     if last_core is not None:
         ins = last_core + 1
         out.insert(ins, core_line)
-    else:
+    elif not head:
         out.insert(dated_start, core_line)
 
-    return "\n".join(out) + "\n" + force_block(new_owner)
+    return "\n".join(head + out) + "\n" + force_block(new_owner)
 
 
-DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman", "chinese")
+DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman", "chinese", "nomad_group")
 
 
 def strip_dead_cores(text, keep):
@@ -333,7 +355,7 @@ def step_provinces(argv):
         text = strip_dated(open(src, encoding="utf-8", errors="surrogateescape").read())
         text = apply_db_culture_religion(text, pid)
         tag = owner_of.get(pid)
-        new = patch(text, tag) if tag else text
+        new = patch(text, tag, pid) if tag else text
         new = take_visibility(new)
         new = strip_dead_cores(new, keep)
 
