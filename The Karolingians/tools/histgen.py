@@ -83,30 +83,32 @@ def country_definition(t) -> str:
     return "\n".join(parts) + "\n"
 
 
-def basin_provinces(t) -> list[int]:
+def requirement_provinces(fcode) -> list[int]:
+    """Province ids a formable requires: its areas expanded via provdata
+    plus its explicit provinces."""
+    from tagdb import BY_FORMABLE
+
     data = json.load(open(str(PROVDATA)))
-    return sorted({int(p) for a in t.form_areas for p in data["areas"].get(a, ())})
-
-
-def suppression(t) -> str:
-    return "\n".join(
-        f"{T}{key} = {{\n"
-        f"{T*2}potential = {{\n"
-        f"{T*3}always = no\n"
-        f"{T*2}}}\n"
-        f"{T*2}allow = {{\n"
-        f"{T*2}}}\n"
-        f"{T*2}effect = {{\n"
-        f"{T*2}}}\n"
-        f"{T}}}"
-        for key in t.suppress
+    fb = BY_FORMABLE[fcode]
+    return sorted(
+        {int(p) for a in fb.areas for p in data["areas"].get(a, ())}
+        | set(fb.provinces)
     )
 
 
-def formation_decision(t) -> str:
-    basin = basin_provinces(t)
-    form_rank = t.form_rank or 3
-    area_or = "\n".join(f"{T*4}area = {a}" for a in t.form_areas)
+def formation_decision(fcode, starters) -> str:
+    """One shared decision per formable; every starter that can fire it is
+    listed in the potential (a single starter keeps the old single-tag line
+    so its file stays byte-identical)."""
+    from tagdb import BY_FORMABLE
+
+    fb = BY_FORMABLE[fcode]
+    key = starters[0].decision
+    required = requirement_provinces(fcode)
+    area_or = "\n".join(
+        [f"{T*4}area = {a}" for a in fb.areas]
+        + [f"{T*4}province_id = {p}" for p in sorted(fb.provinces)]
+    )
     claims = "\n".join(
         f"{T*3}{a} = {{\n"
         f"{T*4}limit = {{\n"
@@ -115,21 +117,38 @@ def formation_decision(t) -> str:
         f"{T*4}}}\n"
         f"{T*4}add_permanent_claim = ROOT\n"
         f"{T*3}}}"
-        for a in t.form_areas
+        for a in fb.areas
+    )
+    if len(starters) == 1:
+        tag_line = f"\t\t\ttag = {starters[0].tag}"
+    else:
+        inner = "\n".join(f"\t\t\t\ttag = {s.tag}" for s in starters)
+        tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
+    supp = "\n".join(
+        f"{T}{k} = {{\n"
+        f"{T*2}potential = {{\n"
+        f"{T*3}always = no\n"
+        f"{T*2}}}\n"
+        f"{T*2}allow = {{\n"
+        f"{T*2}}}\n"
+        f"{T*2}effect = {{\n"
+        f"{T*2}}}\n"
+        f"{T}}}"
+        for k in sorted({k for s in starters for k in s.suppress})
     )
 
     return f"""country_decisions = {{
-{suppression(t)}
+{supp}
 
-\t{t.decision} = {{
+\t{key} = {{
 \t\tmajor = yes
 
 \t\tpotential = {{
 \t\t\tnormal_or_historical_nations = yes
-\t\t\tNOT = {{ has_country_flag = {t.decision} }}
-\t\t\tNOT = {{ tag = {t.forms} }}
-\t\t\tNOT = {{ exists = {t.forms} }}
-\t\t\ttag = {t.tag}
+\t\t\tNOT = {{ has_country_flag = {key} }}
+\t\t\tNOT = {{ tag = {fcode} }}
+\t\t\tNOT = {{ exists = {fcode} }}
+{tag_line}
 \t\t\tOR = {{
 \t\t\t\tai = no
 \t\t\t\tis_playing_custom_nation = no
@@ -149,23 +168,20 @@ def formation_decision(t) -> str:
 
 \t\tallow = {{
 \t\t\tnum_of_owned_provinces_with = {{
-\t\t\t\tcustom_trigger_tooltip = {{
-\t\t\t\t\ttooltip = {t.decision}_provinces_tooltip
-\t\t\t\t\t{t.decision}_provinces_trigger = yes
-\t\t\t\t}}
-\t\t\t\tvalue = {len(basin)}
+\t\t\t\tvalue = {len(required)}
+\t\t\t\t{key}_provinces_trigger = yes
 \t\t\t}}
 \t\t\tis_at_war = no
 \t\t\tis_free_or_tributary_trigger = yes
 \t\t}}
 
 \t\teffect = {{
-\t\t\tchange_tag = {t.forms}
+\t\t\tchange_tag = {fcode}
 \t\t\ton_change_tag_effect = yes
 \t\t\tchange_government_to_monarchy = yes
-\t\t\tset_country_flag = {t.decision}
+\t\t\tset_country_flag = {key}
 \t\t\thidden_effect = {{
-\t\t\t\tset_government_rank = {form_rank}
+\t\t\t\tset_government_rank = {fb.rank}
 \t\t\t}}
 \t\t\tadd_prestige = 25
 \t\t\tadd_legitimacy = 10

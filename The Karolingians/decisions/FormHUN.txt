@@ -40,11 +40,8 @@ country_decisions = {
 
 		allow = {
 			num_of_owned_provinces_with = {
-				custom_trigger_tooltip = {
-					tooltip = kar_form_hungary_provinces_tooltip
-					kar_form_hungary_provinces_trigger = yes
-				}
 				value = 16
+				kar_form_hungary_provinces_trigger = yes
 			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes

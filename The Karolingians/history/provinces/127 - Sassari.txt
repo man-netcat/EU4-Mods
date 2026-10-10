@@ -1,7 +1,7 @@
 #127 - Sardinia
 
-owner = SAR
-controller = SAR
+owner = GLL
+controller = GLL
 culture = sardinian 
 religion = catholic 
 hre = no 
@@ -11,14 +11,14 @@ trade_goods = fish
 base_manpower = 2
 capital = "Sassari" 
 is_city = yes 
-add_core = SAR
+add_core = GLL
 
 
 
 
-867.1.1 = {	owner = SAR
-	controller = SAR
-	add_core = SAR
+867.1.1 = {	owner = GLL
+	controller = GLL
+	add_core = GLL
 }
 discovered_by = western
 discovered_by = eastern

@@ -29,12 +29,12 @@ def fmt_file(path, check=False):
         out.pop()
     new_text = "\n".join(out) + "\n"
     new_raw = b"\xef\xbb\xbf" + new_text.encode("utf-8")
-    if new_raw != raw:
-        if not check:
-            with open(path, "wb") as f:
-                f.write(new_raw)
-        return fixes
-    return []
+    if new_raw == raw:
+        return []
+    if not check:
+        with open(path, "wb") as f:
+            f.write(new_raw)
+    return fixes or ["bom/eol/eof"]
 
 
 def main(argv):

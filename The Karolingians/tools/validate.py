@@ -42,7 +42,7 @@ from build import RANK, KEPT_REALMS  # noqa: E402
 
 from build import BY_TAG  # noqa: E402
 
-from tagdb import CTRY_DATE, DIPLOMACY  # noqa: E402
+from tagdb import BY_FORMABLE, CTRY_DATE, DIPLOMACY, FORMABLES, FORMABLE_TAGS  # noqa: E402
 
 fail = []
 
@@ -384,7 +384,7 @@ def run() -> int:
     print("== vanilla tag reuse is deliberate ==")
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY EST FIN FRA "
-        "GER GMA GOT HSA ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT PRU RUG SAR "
+        "GER GMA GOT HLR HSA HUN ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT PRU RUG SAR "
         "SIL SCO SOR SRV STE TNG TRA VEN VOL WOL".split()
     )
     vtags = set()
@@ -399,8 +399,11 @@ def run() -> int:
                 re.M,
             )
         )
-    clash = [t for t in ALL_TAGS if t in vtags and t not in VANILLA_REUSE]
-    note(not clash, f"no accidental vanilla tag reuse ({', '.join(clash) or 'none'})")
+    clash = [
+        t for t in set(ALL_TAGS) | FORMABLE_TAGS
+        if t in vtags and t not in VANILLA_REUSE
+    ]
+    note(not clash, f"no accidental vanilla tag reuse ({', '.join(sorted(clash)) or 'none'})")
 
     print("\n== custom tags registered ==")
 
@@ -413,7 +416,13 @@ def run() -> int:
             warn(f"{t.tag} has no flag yet")
         if not t.forms:
             continue
-        basin = {int(pid) for a in t.form_areas for pid in cdata["areas"].get(a, ())}
+        starters = [s for s in _REALMS if s.forms == t.forms]
+        if starters[0].tag != t.tag:
+            continue  # formation checks run once per formable
+        fb = BY_FORMABLE[t.forms]
+        key = t.decision
+        land = {int(pid) for a in fb.areas for pid in cdata["areas"].get(a, ())}
+        land |= set(fb.provinces)
         trig = open(
             os.path.join(
                 MOD, "common", "scripted_triggers", "KarolingianFormations.txt"
@@ -422,7 +431,7 @@ def run() -> int:
             errors="replace",
         ).read()
         blk = re.search(
-            re.escape(t.decision) + r"_provinces_trigger = \{(.*?)\n\}",
+            re.escape(key) + r"_provinces_trigger = \{(.*?)\n\}",
             trig,
             re.S,
         )
@@ -431,13 +440,12 @@ def run() -> int:
         for a in re.findall(r"^\s*area = (\w+)", body, re.M):
             required |= {int(x) for x in cdata["areas"].get(a, ())}
         note(
-            required == basin,
-            f"{t.decision} requires exactly the {len(basin)} Carpathian Basin "
-            f"provinces",
+            required == land,
+            f"{key} requires exactly the {len(land)} {fb.name} provinces",
         )
-        if required != basin:
-            print(f"        only in decision : {sorted(required - basin)}")
-            print(f"        only in the land : {sorted(basin - required)}")
+        if required != land:
+            print(f"        only in decision : {sorted(required - land)}")
+            print(f"        only in the land : {sorted(land - required)}")
         dec = open(
             os.path.join(MOD, "decisions", f"Form{t.forms}.txt"),
             encoding="utf-8",
@@ -445,25 +453,13 @@ def run() -> int:
         ).read()
         note(
             f"change_tag = {t.forms}" in dec,
-            f"{t.decision} changes the tag to {t.forms}",
+            f"{key} changes the tag to {t.forms}",
         )
-        for key in t.suppress:
-            pat = re.escape(key) + r"\s*=\s*\{\s*potential\s*=\s*\{\s*always\s*=\s*no"
+        for sk in sorted({k for s in starters for k in s.suppress}):
+            pat = re.escape(sk) + r"\s*=\s*\{\s*potential\s*=\s*\{\s*always\s*=\s*no"
             note(
                 bool(re.search(pat, dec)),
-                f"vanilla {key} decision suppressed with always = no",
-            )
-        loc = open(
-            os.path.join(MOD, "localisation", "magyars_l_english.yml"),
-            encoding="utf-8",
-            errors="replace",
-        ).read()
-        said = re.search(r"hold all (\d+) provinces", loc)
-        note(bool(said), f"{t.decision} description quotes a province count")
-        if said:
-            note(
-                int(said.group(1)) == len(basin),
-                f"description says {said.group(1)}, basin has {len(basin)}",
+                f"vanilla {sk} decision suppressed with always = no",
             )
 
     print("\n== every realm holds its own capital ==")

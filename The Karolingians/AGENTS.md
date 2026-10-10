@@ -70,6 +70,11 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   tags via rebels/release).
 - Localisation: English only, UTF-8 **with BOM** (the game ignores BOM-less
   files — verify bytes after writing). Generated files are cp1252.
+- Decision `desc` fields are pure flavour in vanilla style ("Let us…"):
+  never mention province counts or province names there. Formable
+  decisions carry no bespoke tooltips (HLR alone keeps its own); they
+  reference the generated trigger plainly, and validate checks the
+  trigger's land against the requirement table.
 - Never touch base-game files. Never touch `tools/cache/` contents by hand
   (safe to wipe; bump `_CACHE_VERSION` in `ck3.py` when changing a parser).
 

@@ -1,0 +1,57 @@
+country_decisions = {
+
+
+	kar_form_sardinia = {
+		major = yes
+
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = kar_form_sardinia }
+			NOT = { tag = SAR }
+			NOT = { exists = SAR }
+			OR = {
+				tag = CAG
+				tag = GLL
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 127
+				province_id = 2986
+				province_id = 4735
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 3
+				kar_form_sardinia_provinces_trigger = yes
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+		}
+
+		effect = {
+			change_tag = SAR
+			on_change_tag_effect = yes
+			change_government_to_monarchy = yes
+			set_country_flag = kar_form_sardinia
+			hidden_effect = {
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			add_legitimacy = 10
+
+		}
+	}
+}

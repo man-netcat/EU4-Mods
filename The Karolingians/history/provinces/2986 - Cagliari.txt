@@ -4,8 +4,8 @@ latent_trade_goods = {
 	coal
 }
 
-owner = SAR
-controller = SAR
+owner = CAG
+controller = CAG
 culture = sardinian 
 religion = catholic 
 hre = no 
@@ -15,14 +15,14 @@ trade_goods = copper
 base_manpower = 1
 capital = "Cagliari" 
 is_city = yes # Estimated 
-add_core = SAR
+add_core = CAG
 
 
 
 
-867.1.1 = {	owner = SAR
-	controller = SAR
-	add_core = SAR
+867.1.1 = {	owner = CAG
+	controller = CAG
+	add_core = CAG
 }
 discovered_by = western
 discovered_by = eastern

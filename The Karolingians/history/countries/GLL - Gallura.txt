@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = sardinian
+religion = catholic
+capital = 127
+867.1.1 = {
+	monarch = {
+		name = "Arzoccu"
+		dynasty = "Lacon"
+		birth_date = 849.1.1
+		death_date = 901.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Pancratziu"
+		monarch_name = "Pancratziu"
+		dynasty = "Lacon"
+		birth_date = 880.1.1
+		death_date = 945.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

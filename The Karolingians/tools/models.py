@@ -53,9 +53,8 @@ class Tag(Base):
     leader_names = Column(JSON, nullable=False, default=list)
     ship_names = Column(JSON, nullable=False, default=list)
 
-    # formation: this tag is formed from other tags' land
+    # formation: this tag can form another tag via a decision
     forms = Column(String)
-    form_rank = Column(Integer)
     decision = Column(String)
 
     # flag to borrow when vanilla ships no flag for the tag
@@ -85,11 +84,35 @@ class TagReform(Base):
     reform = Column(String, nullable=False)
 
 
-class TagFormArea(Base):
-    __tablename__ = "tag_form_areas"
+class Formable(Base):
+    """A tag that does not exist at the start date but can be formed in-game.
+    Requirements live on formable_areas (EU4 areas) and formable_provinces
+    (explicit provinces); the HRE-style dynamic requirement stays in code."""
 
-    tag = Column(String, ForeignKey("tags.tag"), primary_key=True)
+    __tablename__ = "formables"
+
+    tag = Column(String, primary_key=True)
+    name = Column(String)
+    adj = Column(String)
+    ck3_title = Column(String)
+    rank = Column(Integer, nullable=False)
+    color_r = Column(Integer)
+    color_g = Column(Integer)
+    color_b = Column(Integer)
+
+
+class FormableArea(Base):
+    __tablename__ = "formable_areas"
+
+    formable = Column(String, ForeignKey("formables.tag"), primary_key=True)
     area = Column(String, primary_key=True)
+
+
+class FormableProvince(Base):
+    __tablename__ = "formable_provinces"
+
+    formable = Column(String, ForeignKey("formables.tag"), primary_key=True)
+    pid = Column(Integer, ForeignKey("provinces.pid"), primary_key=True)
 
 
 class TagSuppress(Base):

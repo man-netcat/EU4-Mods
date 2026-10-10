@@ -11,6 +11,7 @@ vanilla has never heard of, and the land it holds in 867.
 from __future__ import annotations
 
 import os
+from abc import ABC
 from collections import namedtuple
 from dataclasses import dataclass, field
 from typing import Optional
@@ -18,10 +19,12 @@ from typing import Optional
 from db import DB_PATH, Session
 from models import (
     Diplomacy as DiplomacyRow,
+    Formable as FormableRow,
+    FormableArea,
+    FormableProvince,
     Province as ProvinceRow,
     Tag as TagRow,
     TagArea,
-    TagFormArea,
     TagProvince,
     TagReform,
     TagSuppress,
@@ -29,16 +32,33 @@ from models import (
 
 
 @dataclass(frozen=True)
-class Tag:
+class Tag(ABC):
+    """Abstract realm: every landed, formable or releasable tag.
+
+    Only the identity, rank, display name, CK3 title link and map colour
+    live here; everything else belongs on the subclasses."""
 
     tag: str
     rank: int
 
     name: Optional[str] = None
+    ck3_title: Optional[str] = None
+    color: Optional[tuple] = None
+
+    def __post_init__(self):
+        if type(self) is Tag:
+            raise TypeError(
+                "Tag is abstract - use LandedTag, FormableTag or ReleasableTag"
+            )
+
+
+@dataclass(frozen=True)
+class LandedTag(Tag):
+    """A realm holding land on the 867 start date."""
+
     capital: Optional[int] = None
     culture: Optional[str] = None
     religion: Optional[str] = None
-    ck3_title: Optional[str] = None
     ruler_title: Optional[str] = None
     areas: tuple = ()
     provinces: frozenset = field(default_factory=frozenset)
@@ -48,7 +68,6 @@ class Tag:
     extra: str = ""
     no_heir_sync: bool = False
 
-    color: Optional[tuple] = None
     country_file: Optional[str] = None
     historical_score: int = 250
     revolutionary_colors: tuple = (5, 0, 10)
@@ -58,8 +77,6 @@ class Tag:
     ship_names: tuple = ()
 
     forms: Optional[str] = None
-    form_areas: tuple = ()
-    form_rank: Optional[int] = None
     decision: Optional[str] = None
 
     flag_from: Optional[str] = None
@@ -67,7 +84,27 @@ class Tag:
     suppress: tuple = ()
 
     def __post_init__(self):
+        super().__post_init__()
         object.__setattr__(self, "provinces", frozenset(self.provinces))
+
+
+@dataclass(frozen=True)
+class FormableTag(Tag):
+    """A formable tag with its requirement land: EU4 areas plus explicit
+    provinces. HLR-style dynamic requirements stay in code (empire_core)."""
+
+    adj: Optional[str] = None
+    areas: tuple = ()
+    provinces: frozenset = field(default_factory=frozenset)
+
+    def __post_init__(self):
+        super().__post_init__()
+        object.__setattr__(self, "provinces", frozenset(self.provinces))
+
+
+@dataclass(frozen=True)
+class ReleasableTag(Tag):
+    """A tag that starts dead but can be released in-game. Unused for now."""
 
 
 TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4}
@@ -101,7 +138,7 @@ CTRY_DATE = "867.1.1"
 ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion")
 
 
-def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
+def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], list[FormableTag]]:
     if not os.path.exists(DB_PATH):
         raise SystemExit(f"{DB_PATH} is missing - the tag database lives in git")
     with Session() as s:
@@ -115,12 +152,30 @@ def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
         reforms: dict[str, list] = {}
         for r in s.query(TagReform).order_by(TagReform.tag, TagReform.pos):
             reforms.setdefault(r.tag, []).append(r.reform)
-        forms: dict[str, list] = {}
-        for r in s.query(TagFormArea).order_by(TagFormArea.area):
-            forms.setdefault(r.tag, []).append(r.area)
         suppress: dict[str, list] = {}
         for r in s.query(TagSuppress).order_by(TagSuppress.key):
             suppress.setdefault(r.tag, []).append(r.key)
+        fareas: dict[str, list] = {}
+        for r in s.query(FormableArea).order_by(FormableArea.area):
+            fareas.setdefault(r.formable, []).append(r.area)
+        fprovs: dict[str, list] = {}
+        for r in s.query(FormableProvince).order_by(FormableProvince.pid):
+            fprovs.setdefault(r.formable, []).append(r.pid)
+        formables = [
+            FormableTag(
+                tag=r.tag,
+                rank=r.rank,
+                name=r.name,
+                adj=r.adj,
+                ck3_title=r.ck3_title,
+                color=(r.color_r, r.color_g, r.color_b)
+                if r.color_r is not None
+                else None,
+                areas=tuple(fareas.get(r.tag, ())),
+                provinces=frozenset(fprovs.get(r.tag, ())),
+            )
+            for r in s.query(FormableRow).order_by(FormableRow.tag)
+        ]
         dips = [
             Diplomacy(r.liege, r.subject, r.relation)
             for r in s.query(DiplomacyRow).order_by(
@@ -133,7 +188,7 @@ def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
         }
 
     tags = [
-        Tag(
+        LandedTag(
             tag=r.tag,
             rank=r.rank,
             name=r.name,
@@ -158,8 +213,6 @@ def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
             leader_names=tuple(r.leader_names),
             ship_names=tuple(r.ship_names),
             forms=r.forms,
-            form_areas=tuple(forms.get(r.tag, ())),
-            form_rank=r.form_rank,
             decision=r.decision,
             flag_from=r.flag_from,
             flag_source=r.flag_source,
@@ -167,12 +220,16 @@ def _load() -> tuple[list[Tag], list[Diplomacy], dict[int, ProvinceInfo]]:
         )
         for r in rows
     ]
-    return tags, dips, provs
+    return tags, dips, provs, formables
 
 
-TAGS, DIPLOMACY, PROVINCES = _load()
+TAGS, DIPLOMACY, PROVINCES, FORMABLES = _load()
 
-BY_TAG: dict[str, Tag] = {t.tag: t for t in TAGS}
+BY_TAG: dict[str, LandedTag] = {t.tag: t for t in TAGS}
+
+BY_FORMABLE: dict[str, FormableTag] = {f.tag: f for f in FORMABLES}
+
+FORMABLE_TAGS: set = set(BY_FORMABLE)
 
 ALL_TAGS: list[str] = [t.tag for t in TAGS]
 
@@ -217,9 +274,25 @@ def selfcheck() -> None:
                 f"{t.tag}: ruler_title is set but ck3_title is not - a ruler "
                 f"title only means something next to the realm title it overrides"
             )
-        if t.forms and not (t.form_areas and t.decision):
+        if t.forms and not t.decision:
+            raise ValueError(f"{t.tag}: forms is set, so decision must be too")
+        if t.forms and t.forms not in BY_FORMABLE:
+            raise ValueError(f"{t.tag}: forms {t.forms}, which is no formable")
+    for fb in FORMABLES:
+        if not fb.areas and not fb.provinces and fb.tag != "HLR":
             raise ValueError(
-                f"{t.tag}: forms is set, so form_areas and decision must be too"
+                f"formable {fb.tag}: needs areas or provinces (HLR alone "
+                "takes its requirement from empire_core)"
+            )
+    starters: dict[str, list] = {}
+    for t in TAGS:
+        if t.forms:
+            starters.setdefault(t.forms, []).append(t)
+    for fcode, sts in starters.items():
+        keys = {s.decision for s in sts}
+        if len(keys) != 1:
+            raise ValueError(
+                f"formable {fcode}: starters share one decision, got {keys}"
             )
     for tag, blocks in TRANSFERS:
         if tag not in seen:

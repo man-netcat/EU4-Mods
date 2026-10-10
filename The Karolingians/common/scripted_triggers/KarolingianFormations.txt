@@ -83,3 +83,11 @@ kar_form_hungary_provinces_trigger = {
 		area = transylvania_area
 	}
 }
+
+kar_form_sardinia_provinces_trigger = {
+	OR = {
+		province_id = 127 #sassari
+		province_id = 2986 #cagliari
+		province_id = 4735 #arborea
+	}
+}

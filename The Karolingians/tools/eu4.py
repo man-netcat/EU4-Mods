@@ -7,16 +7,18 @@ from pathlib import Path
 
 from ck3 import ck3_sync
 from histgen import (
-    basin_provinces,
     country_definition,
     country_history,
     formation_decision,
     formation_trigger_block,
+    requirement_provinces,
 )
 from tagdb import (
     AREA_OWNERS,
+    BY_FORMABLE,
     BY_TAG,
     DIPLOMACY,
+    FORMABLES,
     PROVINCES,
     PROVINCE_OWNERS,
     TAGS,
@@ -577,9 +579,11 @@ def step_vanilla_countries() -> None:
     vanilla = load_vanilla_countries()
     os.makedirs(os.path.join(MOD, "common", "countries"), exist_ok=True)
     written = 0
-    for t in TAGS:
-        want = colors.get(t.ck3_title) if t.ck3_title else None
-        base = vanilla.get(t.tag)
+    pairs = [(t.tag, t.ck3_title) for t in TAGS]
+    pairs += [(fb.tag, fb.ck3_title) for fb in FORMABLES]
+    for code, title in pairs:
+        want = colors.get(title) if title else None
+        base = vanilla.get(code)
         if not want or not base:
             continue
         fn, text = base
@@ -590,10 +594,10 @@ def step_vanilla_countries() -> None:
             count=1,
         )
         if body == text:
-            print(f"  {t.tag}: {t.ck3_title} colour {want} already {fn}?")
+            print(f"  {code}: {title} colour {want} already {fn}?")
         p = os.path.join(MOD, "common", "countries", fn)
         open(p, "w", encoding="cp1252", errors="pdx").write(body)
-        print(f"wrote {p}  (colour from {t.ck3_title} = {want})")
+        print(f"wrote {p}  (colour from {title} = {want})")
         written += 1
     print(f" {written} vanilla realm definitions rewritten under the mod")
 
@@ -635,18 +639,28 @@ def step_custom() -> None:
             print(f"  {t.tag} has no formable tag")
             continue
 
-        basin = basin_provinces(t)
-        txt = formation_decision(t)
+    by_formable: dict[str, list] = {}
+    for t in TAGS:
+        if t.forms:
+            by_formable.setdefault(t.forms, []).append(t)
+    for fcode, starters in sorted(by_formable.items()):
+        fb = BY_FORMABLE[fcode]
+        req = requirement_provinces(fcode)
+        txt = formation_decision(fcode, starters)
         os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
-        p = os.path.join(MOD, "decisions", f"Form{t.forms}.txt")
+        p = os.path.join(MOD, "decisions", f"Form{fcode}.txt")
         open(p, "w", encoding="cp1252", errors="pdx").write(txt)
         print(f"wrote {p}")
         print(
-            f"  formed tag            : {t.tag} -> {t.forms}, rank {t.form_rank or 3}"
+            f"  formed tag            : {', '.join(s.tag for s in starters)}"
+            f" -> {fcode}, rank {fb.rank}"
         )
-        print(f"  basin provinces       : {len(basin)}")
-        print(f"  areas covered         : {', '.join(t.form_areas)}")
-        print(f"  suppressed decisions  : {', '.join(t.suppress)}")
+        print(f"  required provinces    : {len(req)}")
+        print(f"  areas covered         : {', '.join(fb.areas) or 'none'}")
+        print(
+            "  suppressed decisions  : "
+            + ", ".join(sorted({k for s in starters for k in s.suppress}))
+        )
 
     open(reg, "w", encoding="cp1252", errors="pdx").write("\n".join(reg_lines) + "\n")
     print(f"wrote {reg}")
@@ -654,9 +668,11 @@ def step_custom() -> None:
 
 def step_formation_triggers() -> None:
     specs = [("kar_form_hre", empire_core())]
+    done = set()
     for t in TAGS:
-        if t.forms:
-            specs.append((t.decision, basin_provinces(t)))
+        if t.forms and t.forms not in done:
+            done.add(t.forms)
+            specs.append((t.decision, requirement_provinces(t.forms)))
 
     body = "\n\n".join(
         formation_trigger_block(f"{k}_provinces_trigger", p) for k, p in specs
