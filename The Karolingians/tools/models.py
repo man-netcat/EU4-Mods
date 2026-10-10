@@ -99,6 +99,12 @@ class Formable(Base):
     color_r = Column(Integer)
     color_g = Column(Integer)
     color_b = Column(Integer)
+    # percent of the requirement land needed to form (NULL = all of it)
+    percent = Column(Integer)
+    # would-be capital, held to form only when own_capital is set
+    capital = Column(Integer, ForeignKey("provinces.pid"))
+    # require holding the capital province to form
+    own_capital = Column(Boolean, nullable=False, default=False)
 
 
 class FormableArea(Base):

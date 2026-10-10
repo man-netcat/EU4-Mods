@@ -120,6 +120,14 @@ def main(argv):
     culture, religion = datas[capital][1], datas[capital][2]
     seq = c.execute("select max(seq) from tags").fetchone()[0] + 1
     country_file = (a.file or ascii_name(name)) + ".txt"
+    from eu4 import load_vanilla_countries
+
+    taken_files = {fn for fn, _text in load_vanilla_countries().values()}
+    if country_file in taken_files:
+        sys.exit(
+            f"{country_file} is a vanilla country file for another tag - "
+            "pass --file to pick a free name"
+        )
 
     values = ((a.tag, seq, rank, name, capital, culture, religion, a.title, None,
                a.gov, a.tech, "", 0) + tuple(colors[a.title])

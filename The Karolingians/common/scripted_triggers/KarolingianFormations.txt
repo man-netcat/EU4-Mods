@@ -84,6 +84,13 @@ kar_form_hungary_provinces_trigger = {
 	}
 }
 
+kar_form_galicia_volhynia_provinces_trigger = {
+	OR = {
+		area = red_ruthenia_area
+		area = volhynia_area
+	}
+}
+
 kar_form_poland_provinces_trigger = {
 	OR = {
 		area = central_poland_area

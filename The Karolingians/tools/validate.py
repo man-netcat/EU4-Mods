@@ -42,7 +42,7 @@ from build import RANK, KEPT_REALMS  # noqa: E402
 
 from build import BY_TAG  # noqa: E402
 
-from tagdb import BY_FORMABLE, CTRY_DATE, DIPLOMACY, FORMABLES, FORMABLE_TAGS  # noqa: E402
+from tagdb import BY_FORMABLE, CTRY_DATE, DIPLOMACY, FORMABLES, FORMABLE_TAGS, required_count  # noqa: E402
 
 fail = []
 
@@ -414,11 +414,13 @@ def run() -> int:
         flag = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
         if not os.path.exists(flag):
             warn(f"{t.tag} has no flag yet")
-        if not t.forms:
+
+    done = set()
+    for t in _REALMS:
+        if not t.forms or t.forms in done:
             continue
+        done.add(t.forms)
         starters = [s for s in _REALMS if s.forms == t.forms]
-        if starters[0].tag != t.tag:
-            continue  # formation checks run once per formable
         fb = BY_FORMABLE[t.forms]
         key = t.decision
         land = {int(pid) for a in fb.areas for pid in cdata["areas"].get(a, ())}
@@ -455,6 +457,22 @@ def run() -> int:
             f"change_tag = {t.forms}" in dec,
             f"{key} changes the tag to {t.forms}",
         )
+        val = re.search(r"num_of_owned_provinces_with = \{\s*value = (\d+)", dec)
+        exp = required_count(len(land), fb.percent)
+        note(
+            bool(val) and int(val.group(1)) == exp,
+            f"{key} enacts at {exp} of {len(land)} provinces"
+            + (f" ({fb.percent}%)" if fb.percent else ""),
+        )
+        if fb.own_capital:
+            note(
+                fb.capital in land,
+                f"{fb.name} capital {fb.capital} is inside the requirement land",
+            )
+            note(
+                f"owns = {fb.capital}" in dec,
+                f"{key} requires holding the capital ({fb.capital})",
+            )
         for sk in sorted({k for s in starters for k in s.suppress}):
             pat = re.escape(sk) + r"\s*=\s*\{\s*potential\s*=\s*\{\s*always\s*=\s*no"
             note(

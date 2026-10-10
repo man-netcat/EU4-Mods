@@ -7,7 +7,7 @@ from pathlib import Path
 
 from ck3 import ck3_block, load_title_colors
 from enc import encname
-from tagdb import rank_of
+from tagdb import BY_FORMABLE, rank_of, required_count
 
 HERE = Path(__file__).resolve().parent
 PROVDATA = HERE / "cache" / "provdata.json"
@@ -86,8 +86,6 @@ def country_definition(t) -> str:
 def requirement_provinces(fcode) -> list[int]:
     """Province ids a formable requires: its areas expanded via provdata
     plus its explicit provinces."""
-    from tagdb import BY_FORMABLE
-
     data = json.load(open(str(PROVDATA)))
     fb = BY_FORMABLE[fcode]
     return sorted(
@@ -100,11 +98,13 @@ def formation_decision(fcode, starters) -> str:
     """One shared decision per formable; every starter that can fire it is
     listed in the potential (a single starter keeps the old single-tag line
     so its file stays byte-identical)."""
-    from tagdb import BY_FORMABLE
-
     fb = BY_FORMABLE[fcode]
     key = starters[0].decision
     required = requirement_provinces(fcode)
+    want = required_count(len(required), fb.percent)
+    cap_req = ""
+    if fb.own_capital:
+        cap_req = "\n\t\t\towns = " + str(fb.capital)
     area_or = "\n".join(
         [f"{T*4}area = {a}" for a in fb.areas]
         + [f"{T*4}province_id = {p}" for p in sorted(fb.provinces)]
@@ -168,9 +168,9 @@ def formation_decision(fcode, starters) -> str:
 
 \t\tallow = {{
 \t\t\tnum_of_owned_provinces_with = {{
-\t\t\t\tvalue = {len(required)}
+\t\t\t\tvalue = {want}
 \t\t\t\t{key}_provinces_trigger = yes
-\t\t\t}}
+\t\t\t}}{cap_req}
 \t\t\tis_at_war = no
 \t\t\tis_free_or_tributary_trigger = yes
 \t\t}}

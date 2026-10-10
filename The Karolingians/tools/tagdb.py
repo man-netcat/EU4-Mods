@@ -44,6 +44,7 @@ class Tag(ABC):
     name: Optional[str] = None
     ck3_title: Optional[str] = None
     color: Optional[tuple] = None
+    capital: Optional[int] = None
 
     def __post_init__(self):
         if type(self) is Tag:
@@ -56,7 +57,6 @@ class Tag(ABC):
 class LandedTag(Tag):
     """A realm holding land on the 867 start date."""
 
-    capital: Optional[int] = None
     culture: Optional[str] = None
     religion: Optional[str] = None
     ruler_title: Optional[str] = None
@@ -96,6 +96,8 @@ class FormableTag(Tag):
     adj: Optional[str] = None
     areas: tuple = ()
     provinces: frozenset = field(default_factory=frozenset)
+    percent: Optional[int] = None
+    own_capital: bool = False
 
     def __post_init__(self):
         super().__post_init__()
@@ -108,6 +110,13 @@ class ReleasableTag(Tag):
 
 
 TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4}
+
+
+def required_count(total: int, percent: Optional[int]) -> int:
+    """How many of total requirement provinces a percent needs (rounded up,
+    so the enacted share is never below the mark; NULL means all of it)."""
+    pct = percent if percent is not None else 100
+    return (total * pct + 99) // 100
 
 
 def rank_of(t: Tag) -> int:
@@ -173,6 +182,9 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
                 else None,
                 areas=tuple(fareas.get(r.tag, ())),
                 provinces=frozenset(fprovs.get(r.tag, ())),
+                percent=r.percent,
+                capital=r.capital,
+                own_capital=bool(r.own_capital),
             )
             for r in s.query(FormableRow).order_by(FormableRow.tag)
         ]
@@ -283,6 +295,10 @@ def selfcheck() -> None:
             raise ValueError(
                 f"formable {fb.tag}: needs areas or provinces (HLR alone "
                 "takes its requirement from empire_core)"
+            )
+        if fb.own_capital and not fb.capital:
+            raise ValueError(
+                f"formable {fb.tag}: own_capital is set but capital is not"
             )
     starters: dict[str, list] = {}
     for t in TAGS:

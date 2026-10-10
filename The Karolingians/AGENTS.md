@@ -52,6 +52,21 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 7. If the CK3 title has no 867 holder the build fails loudly: either the
    title is wrong for 867 or use `ruler_title` (a lower title, SAR precedent).
 
+## Formables
+
+- Formable tags live on `formables` (+ `formable_areas`/`formable_provinces`
+  for requirements), not on `tags`: they hold no land at the start date.
+- Starters point at them via `tags.forms`/`tags.decision`; all starters of
+  one formable share a single decision key and get one shared file
+  (`decisions/FormX.txt`). HLR's requirement stays dynamic (`empire_core`).
+- `formables.percent` (NULL = all) enacts at that share of the requirement
+  land, rounded up; `formables.own_capital` additionally requires holding
+  the formable's `capital` (which lives on the base `Tag`, like the
+  capital of a landed tag). Validate checks the enacted value, the land
+  and the capital line in the decision file.
+- Tags come in three flavours: `LandedTag` (starts on the map),
+  `FormableTag` (requirements, no land), `ReleasableTag` (stub, unused).
+
 ## Standing conventions
 
 - Provinces keep **vanilla culture/religion** (standing rule, no exceptions).

@@ -45,9 +45,10 @@ country_decisions = {
 
 		allow = {
 			num_of_owned_provinces_with = {
-				value = 26
+				value = 20
 				kar_form_poland_provinces_trigger = yes
 			}
+			owns = 262
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 		}

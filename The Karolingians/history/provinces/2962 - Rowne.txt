@@ -1,7 +1,7 @@
 #279 - Rowne
 
-owner = VOL
-controller = VOL
+owner = VDM
+controller = VDM
 culture = ruthenian
 religion = orthodox
 hre = no
@@ -11,15 +11,15 @@ trade_goods = livestock
 base_manpower = 1
 capital = "Rowne"
 is_city = yes
-add_core = VOL
 add_core = LIT
+add_core = VDM
 
 
 
 
-867.1.1 = {	owner = VOL
-	controller = VOL
-	add_core = VOL
+867.1.1 = {	owner = VDM
+	controller = VDM
+	add_core = VDM
 }
 discovered_by = western
 discovered_by = eastern
