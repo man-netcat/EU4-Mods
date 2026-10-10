@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = celestial_empire
+government_rank = 5
+technology_group = chinese
+primary_culture = zhongyuan
+religion = confucianism
+capital = 700
+867.1.1 = {
+	monarch = {
+		name = "Cui"
+		dynasty = "Li"
+		birth_date = 833.12.28
+		death_date = 873.8.15
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

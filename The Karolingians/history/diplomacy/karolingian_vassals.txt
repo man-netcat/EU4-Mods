@@ -12,3 +12,4 @@ vassal = {
 	first = GER
 	second = BAV
 }
+867.1.1 = { celestial_emperor = TNG }

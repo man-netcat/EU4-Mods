@@ -59,13 +59,17 @@ def _cached(name, files, parse):
     # Disk cache for parsed CK3 bulk data: vanilla never changes under us,
     # so a max-mtime stamp is a complete freshness check. First process
     # warms it, every later build or validate run loads pickles instead.
+    # NOTE: bump _CACHE_VERSION above whenever a parser itself changes,
+    # otherwise stale pickles survive source-mtime checks.
+    version = _CACHE_VERSION
     files = sorted(files)
     stamp = max(p.stat().st_mtime for p in files)
     cache = Path(__file__).resolve().parent / "cache"
     cp = cache / f"ck3_{name}.pkl"
     sp = cache / f"ck3_{name}.mtime"
     try:
-        if float(sp.read_text()) == stamp:
+        saved_version, saved_stamp = sp.read_text().split()
+        if int(saved_version) == version and float(saved_stamp) == stamp:
             with open(cp, "rb") as fh:
                 return pickle.load(fh)
     except (OSError, ValueError, EOFError):
@@ -74,7 +78,7 @@ def _cached(name, files, parse):
     cache.mkdir(exist_ok=True)
     with open(cp, "wb") as fh:
         pickle.dump(out, fh, protocol=4)
-    sp.write_text(str(stamp))
+    sp.write_text(f"{version} {stamp}")
     return out
 
 
@@ -110,7 +114,7 @@ def holder_at_exact(title, titles):
         d = f"{m[1]}.{m[2]}.{m[3]}"
         if _date_key(d) > _date_key(DATE):
             continue
-        h = re.search(r"holder\s*=\s*(\d+)", body)
+        h = re.search(r"holder\s*=\s*([A-Za-z0-9_]+)", body)
         if not h:
             continue
         if _date_key(d) == _date_key(DATE):
@@ -152,6 +156,11 @@ def _parse_dynasty_files(files):
     return out
 
 
+# Bump whenever a parser in this file changes: caches are keyed on source
+# mtimes, so parser edits alone would otherwise serve stale pickles.
+_CACHE_VERSION = 2
+
+
 _CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"
 
 
@@ -165,7 +174,7 @@ def load_title_colors():
     block whose key looks like a title."""
     from colorsys import hsv_to_rgb
 
-    title = re.compile(r"^[ecbksd]_[a-z0-9_\-]+$")
+    title = re.compile(r"^[ecbksdh]_[a-z0-9_\-]+$")
     block = re.compile(r"^[ \t]*([a-zA-Z0-9_\-.:]+)\s*=\s*\{", re.M)
     color = re.compile(
         r"^[ \t]*color\s*=\s*(hsv\s*)?\{[ \t]*([0-9.]+)[ \t]+([0-9.]+)"
@@ -177,7 +186,7 @@ def load_title_colors():
     if _CK3_COLORS_CACHE.exists():
         try:
             saved = json.loads(_CK3_COLORS_CACHE.read_text())
-            if saved.get("mtime") == stamp:
+            if saved.get("v") == _CACHE_VERSION and saved.get("mtime") == stamp:
                 return {k: tuple(v) for k, v in saved["colors"].items()}
         except (OSError, ValueError, KeyError):
             pass
@@ -213,7 +222,7 @@ def load_title_colors():
     for f in srcs:
         walk(_norm(f.read_text(errors="replace")).lstrip("\ufeff"))
     _CK3_COLORS_CACHE.parent.mkdir(exist_ok=True)
-    _CK3_COLORS_CACHE.write_text(json.dumps({"mtime": stamp, "colors": out}))
+    _CK3_COLORS_CACHE.write_text(json.dumps({"v": _CACHE_VERSION, "mtime": stamp, "colors": out}))
     return out
 
 
@@ -238,7 +247,7 @@ def _parse_house_files(files):
 
 
     # (loc index now lives in _loc_index, cached on disk)
-_LOC_RE = re.compile(r'^[ \t]*([\w.\-]+)\s*:\d*\s*"(.*?)"[ \t\r\n]*$', re.M)
+_LOC_RE = re.compile(r'^[ \t]*([\w.\-]+)\s*:\d*\s*"([^"]*)"', re.M)
 
 
 def loc(key):
@@ -596,6 +605,11 @@ def _ck3_dates_and_skills(cid, chars):
             birth = date
         if re.search(r"^\s*death\s*=", block, re.M):
             death = date
+    for date, block in re.findall(r"(\d+\.\d+\.\d+)\s*=\s*\{([^{}]*)\}", body):
+        if re.search(r"^\s*birth\s*=", block, re.M):
+            birth = date
+        if re.search(r"^\s*death\s*=", block, re.M):
+            death = date
 
     def skill(key):
         m = re.search(r"^\s*" + key + r"\s*=\s*(\d+)", body, re.M)
@@ -611,7 +625,11 @@ def _ck3_name(cid, chars, loc):
     m = re.search(r'^\s*name\s*=\s*(?:"([^"]*)"|([^\s#"]+))', chars[cid], re.M)
     if not m:
         return None
-    return loc(m.group(1) or m.group(2)) or (m.group(1) or m.group(2))
+    raw = m.group(1) or m.group(2)
+    # CK3 encodes CJK names as ASCII plus codepoint (Cui_6F3C); our outputs
+    # cannot render those, so use the plain stem.
+    raw = re.sub(r"_[0-9A-F]{4}$", "", raw)
+    return loc(raw) or raw
 
 
 _KIDS: dict = {}

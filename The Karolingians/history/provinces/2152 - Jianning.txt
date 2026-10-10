@@ -1,0 +1,27 @@
+# 2152 - Jianning
+
+owner = TNG
+controller = TNG
+culture = chimin
+religion = confucianism
+capital = "Jianning"
+trade_goods = tea
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 2
+is_city = yes
+add_core = TNG
+
+
+
+
+867.1.1 = {	owner = TNG
+	controller = TNG
+	add_core = TNG
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese

@@ -4,6 +4,7 @@ abbasid_caliphate = {
 		2 = EMIRATE
 		3 = SULTANATE
 		4 = CALIPHATE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -11,6 +12,7 @@ abbasid_caliphate = {
 		2 = EMIR
 		3 = SULTAN
 		4 = CALIPH
+		5 = CALIPH
 	}
 
 	ruler_female = {
@@ -18,6 +20,7 @@ abbasid_caliphate = {
 		2 = EMIRA
 		3 = SULTANA
 		4 = CALIPH
+		5 = CALIPH
 	}
 
 	consort_male = {
@@ -25,6 +28,7 @@ abbasid_caliphate = {
 		2 = EMIR_CONSORT
 		3 = SULTAN_CONSORT
 		4 = SULTAN_CONSORT
+		5 = SULTAN_CONSORT
 	}
 
 	consort_female = {
@@ -32,6 +36,7 @@ abbasid_caliphate = {
 		2 = EMIRA
 		3 = SULTANA
 		4 = SULTANA
+		5 = SULTANA
 	}
 
 	heir_male = {
@@ -39,6 +44,7 @@ abbasid_caliphate = {
 		2 = SHAHZADE
 		3 = SHAHZADE
 		4 = SHAHZADE
+		5 = SHAHZADE
 	}
 
 	heir_female = {
@@ -46,6 +52,7 @@ abbasid_caliphate = {
 		2 = SHAHZADE
 		3 = SHAHZADE
 		4 = SHAHZADE
+		5 = SHAHZADE
 	}
 
 	trigger = {
@@ -60,6 +67,7 @@ muslim_monarchy = {
 		2 = EMIRATE
 		3 = SULTANATE
 		4 = EMPIRE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -67,6 +75,7 @@ muslim_monarchy = {
 		2 = EMIR
 		3 = SULTAN
 		4 = GREAT_SULTAN
+		5 = GREAT_SULTAN
 	}
 
 	ruler_female = {
@@ -74,6 +83,7 @@ muslim_monarchy = {
 		2 = EMIRA
 		3 = SULTANA
 		4 = GREAT_SULTANA
+		5 = GREAT_SULTANA
 	}
 
 	consort_male = {
@@ -81,6 +91,7 @@ muslim_monarchy = {
 		2 = EMIR_CONSORT
 		3 = SULTAN_CONSORT
 		4 = SULTAN_CONSORT
+		5 = SULTAN_CONSORT
 	}
 
 	consort_female = {
@@ -88,6 +99,7 @@ muslim_monarchy = {
 		2 = EMIRA
 		3 = SULTANA
 		4 = SULTANA
+		5 = SULTANA
 	}
 
 	heir_male = {
@@ -95,6 +107,7 @@ muslim_monarchy = {
 		2 = SHAHZADE
 		3 = SHAHZADE
 		4 = SHAHZADE
+		5 = SHAHZADE
 	}
 
 	heir_female = {
@@ -102,6 +115,7 @@ muslim_monarchy = {
 		2 = SHAHZADE
 		3 = SHAHZADE
 		4 = SHAHZADE
+		5 = SHAHZADE
 	}
 
 	trigger = {
@@ -118,6 +132,7 @@ byzantine_monarchy = {
 		2 = THEMA
 		3 = DESPOTATE
 		4 = EMPIRE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -125,6 +140,7 @@ byzantine_monarchy = {
 		2 = STRATEGOS
 		3 = DESPOT
 		4 = BASILEUS
+		5 = BASILEUS
 	}
 
 	ruler_female = {
@@ -132,6 +148,7 @@ byzantine_monarchy = {
 		2 = STRATEGOS
 		3 = DESPOTISSA
 		4 = BASILISSA
+		5 = BASILISSA
 	}
 
 	consort_male = {
@@ -139,6 +156,7 @@ byzantine_monarchy = {
 		2 = STRATEGOS
 		3 = DESPOT
 		4 = SYMBASILEUS
+		5 = SYMBASILEUS
 	}
 
 	consort_female = {
@@ -146,6 +164,7 @@ byzantine_monarchy = {
 		2 = STRATEGOS
 		3 = DESPOTISSA
 		4 = BASILISSA
+		5 = BASILISSA
 	}
 
 	heir_male = {
@@ -153,6 +172,7 @@ byzantine_monarchy = {
 		2 = STRATEGOS
 		3 = DESPOT
 		4 = SYMBASILEUS
+		5 = SYMBASILEUS
 	}
 
 	heir_female = {
@@ -160,6 +180,7 @@ byzantine_monarchy = {
 		2 = STRATEGOS
 		3 = DESPOTISSA
 		4 = SYMBASILISSA
+		5 = SYMBASILISSA
 	}
 
 	trigger = {
@@ -179,6 +200,7 @@ papacy = {
 		2 = PAPACY
 		3 = PAPACY
 		4 = PAPACY
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -186,6 +208,7 @@ papacy = {
 		2 = POPE
 		3 = POPE
 		4 = POPE
+		5 = POPE
 	}
 
 	ruler_female = {
@@ -193,6 +216,7 @@ papacy = {
 		2 = POPE
 		3 = POPE
 		4 = POPE
+		5 = POPE
 	}
 
 	consort_male = {
@@ -200,6 +224,7 @@ papacy = {
 		2 = CONSORT
 		3 = CONSORT
 		4 = CONSORT
+		5 = CONSORT
 	}
 
 	consort_female = {
@@ -207,6 +232,7 @@ papacy = {
 		2 = CONSORT
 		3 = CONSORT
 		4 = CONSORT
+		5 = CONSORT
 	}
 
 	heir_male = {
@@ -214,6 +240,7 @@ papacy = {
 		2 = HEIR
 		3 = HEIR
 		4 = HEIR
+		5 = HEIR
 	}
 
 	heir_female = {
@@ -221,6 +248,7 @@ papacy = {
 		2 = HEIR_fem
 		3 = HEIR_fem
 		4 = HEIR_fem
+		5 = HEIR_fem
 	}
 
 	trigger = {
@@ -238,6 +266,7 @@ armenian_principality = {
 		2 = DUCHY
 		3 = PRINCIPALITY
 		4 = EMPIRE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -245,6 +274,7 @@ armenian_principality = {
 		2 = DUKE
 		3 = PRINCE
 		4 = EMPEROR
+		5 = EMPEROR
 	}
 
 	ruler_female = {
@@ -252,6 +282,7 @@ armenian_principality = {
 		2 = DUCHESS
 		3 = PRINCESS
 		4 = EMPRESS
+		5 = EMPRESS
 	}
 
 	consort_male = {
@@ -259,6 +290,7 @@ armenian_principality = {
 		2 = PRINCE_CONSORT
 		3 = PRINCE_CONSORT
 		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
 	}
 
 	consort_female = {
@@ -266,6 +298,7 @@ armenian_principality = {
 		2 = CONSORT
 		3 = PRINCESS
 		4 = EMPRESS_CONSORT
+		5 = EMPRESS_CONSORT
 	}
 
 	heir_male = {
@@ -273,6 +306,7 @@ armenian_principality = {
 		2 = HEIR
 		3 = HEIR
 		4 = HEIR
+		5 = HEIR
 	}
 
 	heir_female = {
@@ -280,6 +314,7 @@ armenian_principality = {
 		2 = HEIR_fem
 		3 = HEIR_fem
 		4 = HEIR_fem
+		5 = HEIR_fem
 	}
 
 	trigger = {
@@ -294,6 +329,7 @@ default_monarchy = {
 		2 = DUCHY
 		3 = KINGDOM
 		4 = EMPIRE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -301,6 +337,7 @@ default_monarchy = {
 		2 = DUKE
 		3 = KING
 		4 = EMPEROR
+		5 = EMPEROR
 	}
 
 	ruler_female = {
@@ -308,6 +345,7 @@ default_monarchy = {
 		2 = DUCHESS
 		3 = QUEEN
 		4 = EMPRESS
+		5 = EMPRESS
 	}
 
 	consort_male = {
@@ -315,6 +353,7 @@ default_monarchy = {
 		2 = PRINCE_CONSORT
 		3 = PRINCE_CONSORT
 		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
 	}
 
 	consort_female = {
@@ -322,6 +361,7 @@ default_monarchy = {
 		2 = CONSORT
 		3 = QUEEN_CONSORT
 		4 = EMPRESS_CONSORT
+		5 = EMPRESS_CONSORT
 	}
 
 	heir_male = {
@@ -329,6 +369,7 @@ default_monarchy = {
 		2 = HEIR
 		3 = HEIR
 		4 = HEIR
+		5 = HEIR
 	}
 
 	heir_female = {
@@ -336,6 +377,7 @@ default_monarchy = {
 		2 = HEIR_fem
 		3 = HEIR_fem
 		4 = HEIR_fem
+		5 = HEIR_fem
 	}
 
 	government_reform = monarchy_mechanic
@@ -351,6 +393,7 @@ default_republic = {
 		2 = GRAND_REPUBLIC
 		3 = GREAT_REPUBLIC
 		4 = GREAT_REPUBLIC
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -358,6 +401,7 @@ default_republic = {
 		2 = GRAND_CONSUL
 		3 = GREAT_CONSUL
 		4 = GREAT_CONSUL
+		5 = GREAT_CONSUL
 	}
 
 	ruler_female = {
@@ -365,6 +409,7 @@ default_republic = {
 		2 = GRAND_CONSULESS
 		3 = GREAT_CONSULESS
 		4 = GREAT_CONSULESS
+		5 = GREAT_CONSULESS
 	}
 
 	consort_male = {
@@ -372,6 +417,7 @@ default_republic = {
 		2 = CONSORT
 		3 = CONSORT
 		4 = CONSORT
+		5 = CONSORT
 	}
 
 	consort_female = {
@@ -379,6 +425,7 @@ default_republic = {
 		2 = CONSORT
 		3 = CONSORT
 		4 = CONSORT
+		5 = CONSORT
 	}
 
 	government_reform = republic_mechanic
@@ -394,6 +441,7 @@ default_theocracy = {
 		2 = ARCHBISHOPRIC
 		3 = PATRIARCHATE
 		4 = PATRIARCHATE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -401,6 +449,7 @@ default_theocracy = {
 		2 = ARCHBISHOP
 		3 = PATRIARCH
 		4 = PATRIARCH
+		5 = PATRIARCH
 	}
 
 	ruler_female = {
@@ -408,6 +457,7 @@ default_theocracy = {
 		2 = ARCHBISHOP_fem
 		3 = MATRIARCH
 		4 = MATRIARCH
+		5 = MATRIARCH
 	}
 
 	consort_male = {
@@ -415,6 +465,7 @@ default_theocracy = {
 		2 = CONSORT
 		3 = CONSORT
 		4 = CONSORT
+		5 = CONSORT
 	}
 
 	consort_female = {
@@ -422,6 +473,7 @@ default_theocracy = {
 		2 = CONSORT
 		3 = CONSORT
 		4 = CONSORT
+		5 = CONSORT
 	}
 
 	heir_male = {
@@ -429,6 +481,7 @@ default_theocracy = {
 		2 = HEIR
 		3 = HEIR
 		4 = HEIR
+		5 = HEIR
 	}
 
 	heir_female = {
@@ -436,6 +489,7 @@ default_theocracy = {
 		2 = HEIR_fem
 		3 = HEIR_fem
 		4 = HEIR_fem
+		5 = HEIR_fem
 	}
 
 	government_reform = theocracy_mechanic
@@ -451,6 +505,7 @@ default_tribal = {
 		2 = TRIBAL_KINGDOM
 		3 = TRIBAL_EMPIRE
 		4 = TRIBAL_EMPIRE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -458,6 +513,7 @@ default_tribal = {
 		2 = KING
 		3 = EMPEROR
 		4 = EMPEROR
+		5 = EMPEROR
 	}
 
 	ruler_female = {
@@ -465,6 +521,7 @@ default_tribal = {
 		2 = QUEEN
 		3 = EMPRESS
 		4 = EMPRESS
+		5 = EMPRESS
 	}
 
 	consort_male = {
@@ -472,6 +529,7 @@ default_tribal = {
 		2 = PRINCE_CONSORT
 		3 = PRINCE_CONSORT
 		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
 	}
 
 	consort_female = {
@@ -479,6 +537,7 @@ default_tribal = {
 		2 = QUEEN_CONSORT
 		3 = EMPRESS_CONSORT
 		4 = EMPRESS_CONSORT
+		5 = EMPRESS_CONSORT
 	}
 
 	heir_male = {
@@ -486,6 +545,7 @@ default_tribal = {
 		2 = HEIR
 		3 = HEIR
 		4 = HEIR
+		5 = HEIR
 	}
 
 	heir_female = {
@@ -493,6 +553,7 @@ default_tribal = {
 		2 = HEIR_fem
 		3 = HEIR_fem
 		4 = HEIR_fem
+		5 = HEIR_fem
 	}
 
 	government_reform = tribe_mechanic
@@ -511,6 +572,7 @@ hre_county = {
 		2 = DUCHY
 		3 = KINGDOM
 		4 = EMPIRE
+		5 = HEGEMONY
 	}
 
 	ruler_male = {
@@ -518,6 +580,7 @@ hre_county = {
 		2 = DUKE
 		3 = KING
 		4 = EMPEROR
+		5 = EMPEROR
 	}
 
 	ruler_female = {
@@ -525,6 +588,7 @@ hre_county = {
 		2 = DUCHESS
 		3 = QUEEN
 		4 = EMPRESS
+		5 = EMPRESS
 	}
 
 	consort_male = {
@@ -532,6 +596,7 @@ hre_county = {
 		2 = PRINCE_CONSORT
 		3 = PRINCE_CONSORT
 		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
 	}
 
 	consort_female = {
@@ -539,6 +604,7 @@ hre_county = {
 		2 = CONSORT
 		3 = QUEEN_CONSORT
 		4 = EMPRESS_CONSORT
+		5 = EMPRESS_CONSORT
 	}
 
 	heir_male = {
@@ -546,6 +612,7 @@ hre_county = {
 		2 = HEIR
 		3 = HEIR
 		4 = HEIR
+		5 = HEIR
 	}
 
 	heir_female = {
@@ -553,6 +620,7 @@ hre_county = {
 		2 = HEIR_fem
 		3 = HEIR_fem
 		4 = HEIR_fem
+		5 = HEIR_fem
 	}
 
 	government_reform = monarchy_mechanic

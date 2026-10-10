@@ -1,0 +1,26 @@
+#668 - Macau
+
+owner = TNG
+controller = TNG
+culture = cantonese
+religion = confucianism
+capital = "Macau"
+trade_goods = fish
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+is_city = yes
+add_core = TNG
+extra_cost = 8
+center_of_trade = 1
+
+867.1.1 = {	owner = TNG
+	controller = TNG
+	add_core = TNG
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese

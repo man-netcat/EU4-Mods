@@ -1,0 +1,27 @@
+#664 - Lingyun
+
+owner = TNG
+controller = TNG
+culture = zhuang
+religion = confucianism
+capital = "Lingyun"
+trade_goods = tea
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = TNG
+
+
+
+
+867.1.1 = {	owner = TNG
+	controller = TNG
+	add_core = TNG
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese

@@ -281,7 +281,7 @@ def patch(text, new_owner):
     return "\n".join(out) + "\n" + force_block(new_owner)
 
 
-DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman")
+DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman", "chinese")
 
 
 def strip_dead_cores(text, keep):
@@ -516,6 +516,9 @@ def step_diplomacy() -> None:
             ]
     path = os.path.join(MOD, "history", "diplomacy", "karolingian_vassals.txt")
     os.makedirs(os.path.dirname(path), exist_ok=True)
+    lines += [
+        "867.1.1 = { celestial_emperor = TNG }",
+    ]
     open(path, "w", encoding="cp1252", errors="pdx").write("\n".join(lines) + "\n")
     pairs = ", ".join(f"{d.subject} under {d.liege}" for d in DIPLOMACY)
     print(f"wrote {path}  ({pairs})")

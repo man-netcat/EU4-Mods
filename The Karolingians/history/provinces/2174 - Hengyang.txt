@@ -1,0 +1,27 @@
+# 2174 - Hengyang
+
+owner = TNG
+controller = TNG
+culture = xiang
+religion = animism
+capital = "Hengyang"
+trade_goods = gold
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = TNG
+
+
+
+
+867.1.1 = {	owner = TNG
+	controller = TNG
+	add_core = TNG
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese

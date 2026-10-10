@@ -1,0 +1,27 @@
+#688 - Kaifeng (can't change file name)
+
+owner = TNG
+controller = TNG
+culture = zhongyuan
+religion = confucianism
+capital = "Kaifeng"
+trade_goods = chinaware
+hre = no
+base_tax = 8 
+base_production = 8
+base_manpower = 4
+is_city = yes
+add_core = TNG
+
+
+
+
+867.1.1 = {	owner = TNG
+	controller = TNG
+	add_core = TNG
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese

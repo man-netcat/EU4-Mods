@@ -1,0 +1,29 @@
+# 2151 - Poyang
+
+owner = TNG
+controller = TNG
+culture = gan
+religion = confucianism
+capital = "Poyang"
+trade_goods = chinaware
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = TNG
+
+add_permanent_province_modifier = {
+	name = jingdezhen_kilns
+	duration = -1
+}
+
+867.1.1 = {	owner = TNG
+	controller = TNG
+	add_core = TNG
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
