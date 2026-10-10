@@ -384,7 +384,7 @@ def run() -> int:
     print("== vanilla tag reuse is deliberate ==")
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY EST FIN FRA "
-        "GER GMA GOT HLR HSA HUN ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT PRU RUG SAR "
+        "GER GMA GOT HLR HSA HUN ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT POL PRU RUG SAR "
         "SIL SCO SOR SRV STE TNG TRA VEN VOL WOL".split()
     )
     vtags = set()
