@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = chinese
+primary_culture = korean
+religion = mahayana
+capital = 726
+867.1.1 = {
+	monarch = {
+		name = "Geon-hwang"
+		dynasty = "Dae"
+		birth_date = 799.1.1
+		death_date = 871.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

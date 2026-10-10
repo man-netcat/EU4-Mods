@@ -1,6 +1,14 @@
 # Starting vassals of the Carolingian world.
 # No start_date: each holds from the mod's start.
 vassal = {
+	first = BUL
+	second = TRA
+}
+vassal = {
+	first = BUL
+	second = VSG
+}
+vassal = {
 	first = BYZ
 	second = DAL
 }

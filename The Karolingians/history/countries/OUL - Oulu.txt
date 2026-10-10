@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = finnish
+religion = catholic
+capital = 19
+867.1.1 = {
+	monarch = {
+		name = "Kaleva"
+		dynasty = "Kemiläinen"
+		birth_date = 842.1.1
+		death_date = 907.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Jurva"
+		monarch_name = "Jurva"
+		dynasty = "Kemiläinen"
+		birth_date = 885.1.1
+		death_date = 953.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

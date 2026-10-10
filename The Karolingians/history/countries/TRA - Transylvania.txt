@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = eastern
+primary_culture = transylvanian
+religion = orthodox
+capital = 4127
+867.1.1 = {
+	monarch = {
+		name = "Dox"
+		dynasty = "Balgarsko"
+		birth_date = 827.1.1
+		death_date = 877.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

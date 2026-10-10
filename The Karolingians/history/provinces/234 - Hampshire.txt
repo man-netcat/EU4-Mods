@@ -1,0 +1,26 @@
+#234 - Hampshire + Wiltshire
+
+owner = SMT
+controller = SMT
+culture = english
+religion = catholic
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = fish
+base_manpower = 3
+capital = "Salisbury"
+is_city = yes
+add_core = SMT
+#Salisbury and Winchester Cathedrals
+
+867.1.1 = {	owner = SMT
+	controller = SMT
+	add_core = SMT
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+discovered_by = nomad_group

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = neapolitan
+religion = catholic
+capital = 121
+867.1.1 = {
+	monarch = {
+		name = "Gregorios"
+		dynasty = "Spartenos"
+		birth_date = 826.1.1
+		death_date = 870.3.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+	heir = {
+		name = "Sergios"
+		monarch_name = "Sergios"
+		dynasty = "Spartenos"
+		birth_date = 846.1.1
+		death_date = 880.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

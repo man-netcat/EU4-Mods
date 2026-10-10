@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = cornish
+religion = catholic
+capital = 233
+867.1.1 = {
+	monarch = {
+		name = "Dumnarth"
+		dynasty = "Cerneu"
+		birth_date = 830.1.1
+		death_date = 875.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Ricat"
+		monarch_name = "Ricat"
+		dynasty = "Cerneu"
+		birth_date = 866.1.1
+		death_date = 910.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = chinese
+primary_culture = korean
+religion = mahayana
+capital = 2745
+867.1.1 = {
+	monarch = {
+		name = "Eung-ryeom"
+		dynasty = "Kim"
+		birth_date = 846.1.1
+		death_date = 875.8.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

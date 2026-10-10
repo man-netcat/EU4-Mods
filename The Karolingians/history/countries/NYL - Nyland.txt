@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = finnish
+religion = catholic
+capital = 28
+867.1.1 = {
+	monarch = {
+		name = "Mielus"
+		dynasty = "Hämäläinen"
+		birth_date = 837.1.1
+		death_date = 910.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Lalli"
+		monarch_name = "Lalli"
+		dynasty = "Hämäläinen"
+		birth_date = 859.1.1
+		death_date = 926.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = scottish
+religion = catholic
+capital = 249
+867.1.1 = {
+	monarch = {
+		name = "Artgal"
+		dynasty = "Alt Clut"
+		birth_date = 804.1.1
+		death_date = 872.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+	heir = {
+		name = "Rhun"
+		monarch_name = "Rhun"
+		dynasty = "Alt Clut"
+		birth_date = 827.1.1
+		death_date = 878.1.1
+		claim = 90
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+

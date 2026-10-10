@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = english
+religion = catholic
+capital = 239
+867.1.1 = {
+	monarch = {
+		name = "Æthelred"
+		dynasty = "Wessex"
+		birth_date = 840.1.1
+		death_date = 871.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+

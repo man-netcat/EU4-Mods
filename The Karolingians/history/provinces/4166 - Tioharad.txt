@@ -1,0 +1,25 @@
+#Western Småland - Tiohärads Lagsaga, ie: Värend, Finnveden och Njudung
+
+add_core = SMA
+owner = SMA
+controller = SMA
+culture = swedish
+religion = catholic
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = naval_supplies
+base_manpower = 1
+capital = "Växjö"
+is_city = yes
+
+867.1.1 = {	owner = SMA
+	controller = SMA
+	add_core = SMA
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+discovered_by = nomad_group

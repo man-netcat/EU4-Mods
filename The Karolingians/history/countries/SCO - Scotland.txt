@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = western
+primary_culture = highland_scottish
+religion = catholic
+capital = 250
+867.1.1 = {
+	monarch = {
+		name = "Causantín"
+		dynasty = "Ailpin"
+		birth_date = 841.1.2
+		death_date = 877.1.2
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Domnall"
+		monarch_name = "Domnall"
+		dynasty = "Ailpin"
+		birth_date = 861.1.2
+		death_date = 900.1.2
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+

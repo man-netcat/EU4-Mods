@@ -1,7 +1,7 @@
 #703 - Chengde
 
-owner = TNG
-controller = TNG
+owner = KTN
+controller = KTN
 culture = chahar
 religion = vajrayana
 capital = "Chengde"
@@ -11,14 +11,15 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = TNG
+add_core = KTN
 
-867.1.1 = {	owner = TNG
-	controller = TNG
-	add_core = TNG
+867.1.1 = {	owner = KTN
+	controller = KTN
+	add_core = KTN
 }
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = chinese
+discovered_by = nomad_group

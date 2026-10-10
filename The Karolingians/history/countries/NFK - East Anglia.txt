@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = english
+religion = catholic
+capital = 1860
+867.1.1 = {
+	monarch = {
+		name = "Eadmund"
+		dynasty = "East Anglia"
+		birth_date = 840.1.1
+		death_date = 869.11.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = novgorodian
+religion = orthodox
+capital = 1958
+867.1.1 = {
+	monarch = {
+		name = "Everkki"
+		dynasty = "Chudi"
+		birth_date = 826.4.15
+		death_date = 884.1.30
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Faina"
+		monarch_name = "Faina"
+		dynasty = "Chudi"
+		birth_date = 850.9.22
+		death_date = 919.2.17
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

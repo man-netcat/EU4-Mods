@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = novgorodian
+religion = orthodox
+capital = 313
+867.1.1 = {
+	monarch = {
+		name = "Mandak"
+		dynasty = "Dvinok"
+		birth_date = 824.8.9
+		death_date = 887.3.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

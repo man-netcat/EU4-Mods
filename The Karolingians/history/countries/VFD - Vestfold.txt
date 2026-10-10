@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = catholic
+capital = 4143
+867.1.1 = {
+	monarch = {
+		name = "Haraldr"
+		dynasty = "Yngling"
+		birth_date = 850.1.1
+		death_date = 933.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Froði"
+		monarch_name = "Froði"
+		dynasty = "Yngling"
+		birth_date = 891.1.1
+		death_date = 938.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = nomad_group
+primary_culture = khitan
+religion = shamanist
+capital = 703
+867.1.1 = {
+	monarch = {
+		name = "Saladi"
+		dynasty = "Yelü"
+		birth_date = 848.1.1
+		death_date = 901.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
