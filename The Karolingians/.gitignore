@@ -11,3 +11,7 @@ tools/cache/
 # Python bytecode from the tool scripts.
 __pycache__/
 *.pyc
+
+# IDE project files.
+.idea/
+*.iml
