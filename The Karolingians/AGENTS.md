@@ -37,7 +37,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
    (`grep -rn "^XXX\s*="`, vanilla uses tabs!) or the build collides silently
    with a wrong vanilla tag (this happened with BER/Berry once).
 2. Run `python3 tools/addtag.py TAG ck3_title PID...` — it checks the code,
-   pulls CK3 name/colour, inserts `tags`/`provinces`/`tag_provinces`/
+   pulls CK3 name/colour, takes the 867 holder's CK3 culture as the tag
+   culture (lifting it via `tools/culturelift.py` when we lack the key —
+   only mapped keys with a lift spec; `--culture` still overrides), and
+   inserts `tags`/`provinces`/`tag_provinces`/
    `tag_reforms` and the loc pair (`--rank/--capital/--tech/--take` as needed;
    `--to TAG` appends land to an existing tag, `--culture/--religion`
    override vanilla values, e.g. english provinces take anglosaxon).
@@ -90,6 +93,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 ## Standing conventions
 
 - Provinces keep **vanilla culture/religion** (standing rule, no exceptions).
+  Tags take their **867 holder's CK3 culture** instead (`culturelift.py`
+  maps and lifts on demand; a starter whose ruler culture misses the
+  formable gate fails `selfcheck` — drop the starter link or keep the
+  land culture).
 - Ranks: 1 county, 2 duchy, 3 kingdom, 4 empire, 5 hegemony (Tang only).
   `MAX_GOV_RANK`, `common/government_ranks/`, `RANK_1..RANK_5` loc and the
   rank-5 rungs in every `government_names` block must stay in sync.

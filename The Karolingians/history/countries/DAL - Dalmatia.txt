@@ -2,7 +2,7 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 2
 technology_group = eastern
-primary_culture = dalmatian
+primary_culture = greek
 religion = catholic
 capital = 136
 # Rank: a coastal duchy of city-states, nominally one realm. The full argument

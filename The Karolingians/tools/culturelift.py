@@ -1,0 +1,426 @@
+#!/usr/bin/env python3
+"""Ruler-culture pipeline: every tag takes its 867 holder's CK3 culture.
+
+Maps the holder culture to our EU4 key (CK3_TO_EU4) and lifts the culture
+(entry + CK3 names + loc + DB row, Pictish precedent) when we don't have
+the key yet. Only cultures in LIFT_SPECS can be lifted (a new key needs a
+human-picked group anchor); anything else resolves to None and the caller
+falls back to the vanilla province culture.
+"""
+
+import os
+import re
+import sqlite3
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import ck3  # noqa: E402
+
+CULT_FILE = os.path.join(HERE, "..", "common", "cultures", "00_cultures.txt")
+CULT_LOC = os.path.join(
+    HERE, "..", "localisation", "karolingian_cultures_l_english.yml"
+)
+DB = os.path.join(HERE, "tags.db")
+CK3_LISTS = os.path.join(
+    ck3.GAME_CK3, "common", "culture", "name_lists"
+)
+
+CK3_TO_EU4 = {
+    # CK3 867 county/holder culture -> our EU4 key. Every value must exist
+    # in common/cultures/00_cultures.txt (--selftest enforces this).
+    # 867-fallbacks for cultures with no EU4 key are documented inline.
+    "frankish": "frankish", "occitan": "occitain", "catalan": "catalan",
+    "aragonese": "aragonese", "castilian": "castillian", "leonese": "leonese",
+    "galician": "galician", "portuguese": "castillian",
+    "andalusian": "andalusian", "levantine": "levantine",
+    "egyptian": "al_misr_arabic",
+    "basque": "basque", "breton": "breton", "welsh": "welsh",
+    "cornish": "cornish", "irish": "irish", "gaelic": "irish",
+    "pictish": "pictish", "cumbrian": "cumbrian", "scottish": "scottish",
+    "anglo_saxon": "anglosaxon", "saxon": "saxon", "dutch": "dutch",
+    "frisian": "frisian", "bavarian": "bavarian", "swabian": "swabian",
+    "franconian": "franconian", "french": "frankish",
+    "lombard": "lombard", "italian": "italian", "cisalpine": "cisalpine",
+    "venetian": "venetian", "sardinian": "sardinian",
+    "sicilian": "sicilian", "umbrian": "umbrian", "neapolitan": "neapolitan",
+    "greek": "greek", "armenian": "armenian", "georgian": "georgian",
+    "alan": "circassian", "gothic": "goths",
+    "swedish": "swedish", "norwegian": "norwegian", "danish": "danish",
+    "norse": "norse", "icelandic": "norse",
+    "finnish": "finnish", "karelian": "karelian", "estonian": "estonian",
+    "livonian": "livonian", "latgallian": "latvian", "latvian": "latvian",
+    "lithuanian": "lithuanian", "samogitian": "lithuanian",
+    "prussian": "prussian", "pommeranian": "pommeranian",
+    "sami": "sapmi", "samoyed": "samoyed",
+    "polish": "polish", "polabian": "polabian", "czech": "czech",
+    "slovak": "slovak", "slovien": "slovene", "carantanian": "slovene",
+    "croatian": "croatian", "serbian": "serbian", "bulgarian": "bulgarian",
+    "bolghar": "bulgarian", "bosnian": "bosnian", "dalmatian": "dalmatian",
+    "romanian": "romanian", "vlach": "romanian",
+    "rus": "russian", "russian": "russian", "novgorodian": "novgorodian",
+    "ryazanian": "ryazanian", "severian": "ryazanian",
+    "magyar": "magyar", "hungarian": "magyar", "avar": "avar",
+    "khazar": "bulgarian", "pecheneg": "turkmeni", "cuman": "khazak",
+    "kipchak": "khazak", "kimek": "khazak", "oghuz": "turkmeni",
+    "karluk": "uzbehk", "sogdian": "uzbehk", "tocharian": "uyghur",
+    "saka": "uyghur", "khwarezmian": "khorasani", "tajik": "persian",
+    "tibetan": "tibetan", "bodpa": "tibetan", "tsangpa": "tibetan",
+    "sumpa": "tibetan", "laktan": "tibetan", "zhangzhung": "tibetan",
+    "tuyuhun": "tibetan", "butr": "tibetan",
+    "turkish": "turkmeni", "turkmeni": "turkmeni",
+    "azeri": "azerbaijani", "kurdish": "kurdish",
+    "persian": "persian", "baloch": "baluchi", "daylamite": "mazandarani",
+    "bedouin": "bedouin_arabic",
+    "syrian": "levantine",
+    "maghrebi": "maghrebi", "berber": "berber", "baranis": "berber",
+    "guanches": "berber", "tuareg": "tuareg",
+    "coptic": "al_misr_arabic", "nubian": "nubian", "beja": "beja",
+    "somali": "somali", "afar": "afar", "oromo": "oromo",
+    "gala": "oromo", "ethiopian": "amhara",
+    "swahili": "swahili", "east_bantu": "swahili", "bantu": "swahili",
+    "malagasy": "madagascan",
+    "manden": "mali", "malinke": "mali", "mel": "mali", "bambara": "bambara",
+    "marka": "bambara", "bozo": "bambara", "bobo": "bambara",
+    "songhai": "songhai", "sorko": "songhai", "sao": "kanuri",
+    "mossi": "mossi", "gur": "mossi", "daju": "tunjur", "zaghawa": "tunjur",
+    "hausa": "hausa", "kanuri": "kanuri", "fulani": "fulani",
+    "pulaar": "fulani", "wolof": "fulani", "dyola": "fulani",
+    "guan": "fon", "fon": "fon", "ewe": "fon", "akan": "fon", "kru": "fon",
+    "yoruba": "yorumba", "nupe": "yorumba", "edo": "yorumba",
+    "igbo": "yorumba", "jukun": "jukun",
+    "chinese": "wu", "min": "hakka", "wu": "wu", "yue": "cantonese",
+    "gan": "gan", "xiang": "xiang", "jin": "jin",
+    "korean": "korean", "balhae": "korean", "silla": "korean",
+    "khitan": "khitan", "jurchen": "manchu", "mongol": "mongol",
+    "buryat": "buryat", "oirat": "oirats", "naiman": "mongol",
+    "kerait": "mongol", "kirghiz": "kirgiz", "khalkha": "mongol",
+    "uriankhai": "mongol", "tatar": "siberian",
+    "uyghur": "uyghur", "tangut": "tibetan",
+    "tibetan_group": "tibetan",
+    "vietnamese": "vietnamese", "khmer": "khmer", "lao": "lao",
+    "thai": "central_thai", "burmese": "burmese", "mon": "mon",
+    "shan": "shan", "kachin": "kachin", "chin": "chin", "karen": "karen",
+    "arakanese": "arakanese", "pyu": "burmese",
+    "malay": "malay", "senoi": "malay", "nakkavaram": "malay",
+    "javanese": "javanese", "sundanese": "javanese",
+    "tagalog": "filipino", "cham": "cham",
+    "papuan": "papuan", "melanesian": "melanesian",
+    "polynesian": "polynesian", "aboriginal": "aboriginal",
+    "hebrew": "hebrew", "radhanite": "hebrew", "aramaic": "aramaic",
+    "assyrian": "aramaic", "syriac": "aramaic",
+    "coptic_egyptian": "al_misr_arabic",
+    "armenian_chalcedonian": "armenian",
+    "samaritan": "hebrew", "jewish": "hebrew",
+    "sindhi": "sindhi", "panjabi": "panjabi", "punjabi": "panjabi",
+    "gujarati": "gujarati", "marathi": "marathi", "kannada": "kannada",
+    "telegu": "telegu", "telugu": "telegu", "malayalam": "malayalam",
+    "oriya": "oriya", "sinhala": "sinhala", "tamil": "tamil",
+    "rajput": "rajput", "malvi": "malvi", "gondi": "gondi", "gond": "gondi",
+    "kashmiri": "kashmiri", "nepali": "nepali", "kirati": "nepali",
+    "assamese": "assamese", "bihari": "bihari", "avadhi": "avadhi",
+    "kanauji": "kanauji", "hindustani": "kanauji",
+    "bhil": "gondi", "korku": "gondi", "kharia": "gondi",
+    "santal": "gondi", "munda": "gondi",
+    "nuristani": "khorasani", "kati": "khorasani", "kamkata": "khorasani",
+    "dardic": "kashmiri", "shina": "kashmiri", "kohistani": "kashmiri",
+    "balti": "tibetan", "burusho": "tibetan",
+    "nuristani_kati": "khorasani",
+    "wakhi": "khorasani", "shughni": "khorasani", "yazghulami": "khorasani",
+    "ishkashimi": "khorasani", "yidgha": "khorasani", "munji": "khorasani",
+    "parachi": "khorasani", "ormuri": "khorasani",
+    "sanglechi": "khorasani",
+    "brahui": "baluchi", "makrani": "baluchi",
+    "sistani": "persian", "fars": "persian", "kermani": "persian",
+    "yazdi": "persian", "larestani": "persian", "bandari": "persian",
+    "khuzestani": "luri", "lori": "luri", "bakhtiari": "luri",
+    "gilaki": "mazandarani", "talysh": "mazandarani",
+    "tati": "mazandarani", "semnani": "mazandarani",
+    "sorkhei": "mazandarani",
+    "hazara": "khorasani", "aimaq": "khorasani", "firozkohi": "khorasani",
+    "jamshidi": "khorasani", "taimuri": "khorasani", "timuri": "khorasani",
+    "nuristani_ashkun": "khorasani", "prasuni": "khorasani",
+    "waigali": "khorasani", "katarkala": "khorasani",
+    "pashayi": "khorasani", "laghmani": "khorasani",
+    "tregami": "khorasani", "savi": "khorasani",
+    "gawar": "khorasani", "nishei": "khorasani",
+    "shumashti": "khorasani", "grangali": "khorasani",
+    # second-wave fills (encountered at county level)
+    "acehnese": "acehnese", "afghan": "khorasani", "ainu": "ainu",
+    "asturleonese": "castillian", "bashkir": "bashkir", "bengali": "bengali",
+    "chuvash": "bulgarian", "emishi": "ainu", "japanese": "japanese",
+    "khanty": "ostyaki", "komi": "bulgarian", "latgalian": "latvian",
+    "mari": "bulgarian", "merya": "bulgarian", "meshchera": "bulgarian",
+    "mogyer": "magyar", "mohe": "tungus", "mordvin": "bulgarian",
+    "muroma": "bulgarian", "nivkh": "nivkh", "shiwei": "mongol",
+    "soninke": "soninke", "vepsian": "karelian", "welayta": "oromo",
+    "yemeni": "yemeni_culture",
+}
+
+LIFT_SPECS = {
+    # eu4 key -> group anchor (entry goes right before it), display name,
+    # CK3 name-list file and list key.
+    "russian": {
+        "anchor": "\truthenian = {",
+        "display": "Russian",
+        "file": "00_east_slavic.txt",
+        "list": "name_list_russian",
+    },
+    "levantine": {
+        "anchor": "\tal_misr_arabic = {",
+        "display": "Levantine",
+        "file": "00_arabic.txt",
+        "list": "name_list_levantine",
+    },
+    "andalusian": {
+        "anchor": "\tandalucian = {",
+        "display": "Andalusian",
+        "file": "00_arabic.txt",
+        "list": "name_list_andalusian",
+    },
+}
+
+_WALK_KEYS = ("father", "real_father", "mother")
+_WALK_DEPTH = 3
+
+
+def holder_culture(title):
+    """(holder id, CK3 culture at 867) for a title; culture walks up to
+    three generations when the holder's own is unscripted."""
+    titles = ck3.load_titles()
+    chars = ck3.load_chars()
+    holder = ck3.holder_at(title, titles)
+    if not holder:
+        return None, None
+    seen = set()
+
+    def body_culture(body):
+        depth, best, cur = 0, None, ""
+        for ln in body.splitlines():
+            s = ln.strip()
+            if re.match(r"^\d+\.\d+\.\d+\s*=", s) and depth == 0:
+                cur = s.split("=")[0].strip()
+            code = ln.split("#", 1)[0]
+            opens = code.count("{")
+            m = re.match(r'^culture\s*=\s*"?([a-z_]+)"?\s*$', s)
+            if m:
+                if depth == 0:
+                    return m.group(1)
+                if best is None and cur <= "867.1.1":
+                    best = m.group(1)
+            depth += opens - code.count("}")
+            if depth <= 0:
+                depth, cur = 0, ""
+        return best
+
+    def walk(cid, d):
+        if not cid or cid in seen or d > _WALK_DEPTH:
+            return None
+        seen.add(cid)
+        body = chars.get(cid)
+        if not body:
+            return None
+        got = body_culture(body)
+        if got:
+            return got
+        for key in _WALK_KEYS:
+            m = re.search(r"(?m)^\s*%s\s*=\s*([A-Za-z0-9_]+)" % key, body)
+            if m:
+                got = walk(m.group(1), d + 1)
+                if got:
+                    return got
+        return None
+
+    return holder, walk(holder, 0)
+
+
+def file_has(eu4key):
+    try:
+        text = open(CULT_FILE, encoding="cp1252", errors="replace").read()
+    except FileNotFoundError:
+        return False
+    return bool(re.search(r"(?m)^[ \t]*%s = \{" % re.escape(eu4key), text))
+
+
+def have_culture(eu4key):
+    if eu4key is None or not file_has(eu4key):
+        return False
+    db = sqlite3.connect(DB)
+    return bool(
+        db.execute("SELECT name FROM cultures WHERE name=?", (eu4key,)).fetchone()
+    )
+
+
+def _ck3_list(spec):
+    text = open(
+        os.path.join(CK3_LISTS, spec["file"]), encoding="utf-8", errors="replace"
+    ).read()
+    i = text.find(spec["list"])
+    if i < 0:
+        sys.exit(f"no {spec['list']} in {spec['file']}")
+    j = text.find("{", i)
+    depth, k = 0, j
+    while True:
+        if text[k] == "{":
+            depth += 1
+        elif text[k] == "}":
+            depth -= 1
+            if depth == 0:
+                break
+        k += 1
+    return text[j + 1 : k]
+
+
+def _section(block, *names):
+    for nm in names:
+        i = block.find(nm)
+        if i < 0:
+            continue
+        j = block.find("{", i)
+        depth, k = 0, j
+        while True:
+            if block[k] == "{":
+                depth += 1
+            elif block[k] == "}":
+                depth -= 1
+                if depth == 0:
+                    break
+            k += 1
+        return block[j + 1 : k]
+    return ""
+
+
+def _tokens(text):
+    return re.findall(r'"([^"]+)"|(\S+)', text)
+
+
+def _clean(tok):
+    tok = tok.replace("_", " ")
+    tok = re.sub(r"\s+", " ", tok).strip()
+    try:
+        tok.encode("cp1252")
+    except UnicodeEncodeError:
+        return None
+    return tok or None
+
+
+def lift_culture(eu4key):
+    """Insert a missing culture from its CK3 name list. Returns True."""
+    spec = LIFT_SPECS[eu4key]
+    block = _ck3_list(spec)
+    dyns = []
+    for raw, bare in _tokens(_section(block, "cadet_dynasty_names", "dynasty_names")):
+        tok = raw or bare
+        if not tok.startswith("dynn_"):
+            continue
+        clean = _clean(tok[len("dynn_") :])
+        if clean:
+            dyns.append(clean)
+    males = [
+        c
+        for t in _tokens(_section(block, "male_names"))
+        for c in [_clean(t[0] or t[1])]
+        if c
+    ]
+    females = [
+        c
+        for t in _tokens(_section(block, "female_names"))
+        for c in [_clean(t[0] or t[1])]
+        if c
+    ]
+    if not (dyns and males and females):
+        sys.exit(f"short name list for {eu4key}: {len(dyns)}/{len(males)}/{len(females)}")
+
+    def q(tok):
+        return f'"{tok}"' if re.search(r"[^A-Za-z0-9_'-]", tok) else tok
+
+    def wrap(items):
+        lines, cur = [], "\t\t\t"
+        for tok in dict.fromkeys(items):
+            tok = q(tok)
+            if len(cur) + len(tok) + 1 > 110:
+                lines.append(cur.rstrip())
+                cur = "\t\t\t"
+            cur += tok + " "
+        lines.append(cur.rstrip())
+        return "\n".join(lines)
+
+    entry = (
+        f"\t{eu4key} = {{\n"
+        f"\t\tdynasty_names = {{\n{wrap(dyns)}\n\t\t}}\n"
+        f"\t\tmale_names = {{\n{wrap(males)}\n\t\t}}\n"
+        f"\t\tfemale_names = {{\n{wrap(females)}\n\t\t}}\n"
+        f"\t}}\n"
+    )
+    text = open(CULT_FILE, encoding="cp1252").read()
+    if spec["anchor"] not in text:
+        sys.exit(f"anchor {spec['anchor']!r} not found in cultures file")
+    text = text.replace(spec["anchor"], entry + "\n" + spec["anchor"], 1)
+    open(CULT_FILE, "w", encoding="cp1252", errors="replace").write(text)
+
+    loc = open(CULT_LOC, encoding="utf-8-sig").read()
+    if f"\n {eu4key}:" not in loc:
+        if not loc.endswith("\n"):
+            loc += "\n"
+        loc += f' {eu4key}:0 "{spec["display"]}"\n'
+        open(CULT_LOC, "w", encoding="utf-8-sig", newline="").write(loc)
+
+    db = sqlite3.connect(DB)
+    db.execute("INSERT OR IGNORE INTO cultures(name) VALUES (?)", (eu4key,))
+    db.commit()
+    print(
+        f"lifted {eu4key} ({spec['display']}): "
+        f"{len(dyns)} dynasties, {len(males)}/{len(females)} names"
+    )
+    return True
+
+
+def ensure_culture(ck3cult):
+    """EU4 key for a CK3 culture: repair the DB row when the key exists,
+    lift the whole culture when it doesn't (needs a LIFT_SPECS entry),
+    else None so the caller falls back to the land culture."""
+    eu4key = CK3_TO_EU4.get(ck3cult) if ck3cult else None
+    if eu4key is None:
+        return None
+    if not file_has(eu4key):
+        if eu4key not in LIFT_SPECS:
+            print(f"  {ck3cult} -> {eu4key}: no lift spec, keeping land culture")
+            return None
+        lift_culture(eu4key)
+    else:
+        db = sqlite3.connect(DB, timeout=60)
+        db.execute("INSERT OR IGNORE INTO cultures(name) VALUES (?)", (eu4key,))
+        db.commit()
+        db.close()
+    return eu4key
+
+
+def selftest():
+    """Every mapped value must exist in our cultures file (direct check:
+    substring key lists lie, e.g. catalan contains alan)."""
+    text = open(CULT_FILE, encoding="cp1252", errors="replace").read()
+    bad = sorted(
+        {v for v in CK3_TO_EU4.values() if not re.search(r"(?m)^[ \t]*%s = \{" % v, text)}
+    )
+    if bad:
+        print("UNDEFINED EU4 KEYS:", bad)
+        return 1
+    print(f"map OK ({len(set(CK3_TO_EU4.values()))} keys defined)")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(selftest())
+
+
+def ruler_default(title):
+    """EU4 culture for a new tag from its title's 867 holder (None to
+    fall back to the vanilla province culture)."""
+    holder, cc = holder_culture(title)
+    if not cc:
+        print(f"  no holder culture for {title}, keeping land culture")
+        return None
+    eu4key = ensure_culture(cc)
+    if eu4key:
+        print(f"  {title}: holder {holder} is {cc} -> {eu4key}")
+    return eu4key

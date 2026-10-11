@@ -2,7 +2,7 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 3
 technology_group = muslim
-primary_culture = andalucian
+primary_culture = levantine
 religion = sunni
 capital = 225
 # Rank 2 matches what vanilla's andalusian_nation decision forces, so forming

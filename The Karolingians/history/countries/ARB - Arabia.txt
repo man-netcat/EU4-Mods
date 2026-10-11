@@ -2,7 +2,7 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 4
 technology_group = muslim
-primary_culture = bedouin_arabic
+primary_culture = levantine
 religion = sunni
 capital = 385
 # The Abbasid Caliphate. Vanilla ARB is a formable tag with no land and no rank,

@@ -171,7 +171,12 @@ def main(argv):
     if capital not in a.pids:
         sys.exit("capital must be one of the provinces")
     datas = {pid: prov_data(pid) for pid in a.pids}
-    culture = a.culture or datas[capital][1]
+    if a.culture:
+        culture = a.culture
+    else:
+        from culturelift import ruler_default  # noqa: E402
+
+        culture = ruler_default(a.title) or datas[capital][1]
     religion = a.religion or datas[capital][2]
     seq = c.execute("select max(seq) from tags").fetchone()[0] + 1
     country_file = (a.file or ascii_name(name)) + ".txt"
