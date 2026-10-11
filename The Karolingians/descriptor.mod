@@ -3,6 +3,7 @@ path="/home/rick/.local/share/Paradox Interactive/Europa Universalis IV/mod/The 
 replace_path="common/government_names"
 replace_path="common/government_ranks"
 replace_path="common/cultures"
+replace_path="common/bookmarks"
 replace_path="history/diplomacy"
 replace_path="history/wars"
 replace_path="history/advisors"

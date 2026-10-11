@@ -1,0 +1,3 @@
+#1020 - Yamashiro (Kyoto)
+
+discovered_by = chinese

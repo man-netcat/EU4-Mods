@@ -44,4 +44,3 @@ change_estate_land_share = {
 		mil = 2
 	}
 }
-

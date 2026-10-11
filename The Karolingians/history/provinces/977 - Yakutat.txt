@@ -1,0 +1,3 @@
+#977 - Yakutat
+
+discovered_by = north_american

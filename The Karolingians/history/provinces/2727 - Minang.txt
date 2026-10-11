@@ -1,0 +1,3 @@
+#2727 - Minang
+
+discovered_by = aboriginal_tech

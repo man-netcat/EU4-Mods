@@ -1,0 +1,4 @@
+#4122 - Shenkursk
+
+discovered_by = eastern
+discovered_by = western

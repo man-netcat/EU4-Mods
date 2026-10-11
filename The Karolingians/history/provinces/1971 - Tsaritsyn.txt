@@ -1,0 +1,7 @@
+#1971 - Tsaritsyn
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+discovered_by = ottoman
+discovered_by = muslim

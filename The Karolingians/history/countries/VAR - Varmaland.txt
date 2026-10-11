@@ -16,4 +16,3 @@ capital = 5
 		mil = 2
 	}
 }
-

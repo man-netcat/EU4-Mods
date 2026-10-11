@@ -1,0 +1,3 @@
+#762 - Sao Tome
+
+discovered_by = south_american

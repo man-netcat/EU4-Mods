@@ -1,0 +1,3 @@
+#954 - Allegheny
+
+discovered_by = north_american

@@ -1,0 +1,4 @@
+#2383 - Khukhanor Surin
+
+discovered_by = chinese
+discovered_by = indian

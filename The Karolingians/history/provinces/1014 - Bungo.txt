@@ -1,0 +1,3 @@
+#1014 - Bungo
+
+discovered_by = chinese

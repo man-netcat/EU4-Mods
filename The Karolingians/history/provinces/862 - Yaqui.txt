@@ -1,0 +1,4 @@
+#862 - Yaqui
+
+discovered_by = north_american
+discovered_by = mesoamerican

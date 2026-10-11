@@ -1,0 +1,3 @@
+#970 - Pennacook
+
+discovered_by = north_american

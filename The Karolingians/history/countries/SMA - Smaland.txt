@@ -16,4 +16,3 @@ capital = 3
 		mil = 2
 	}
 }
-

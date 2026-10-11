@@ -1,0 +1,4 @@
+#787 - Picunmapu
+
+discovered_by = south_american
+discovered_by = andean

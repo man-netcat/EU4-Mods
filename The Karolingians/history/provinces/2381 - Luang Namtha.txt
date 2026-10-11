@@ -1,0 +1,4 @@
+#2381 - Luang Namtha
+
+discovered_by = chinese
+discovered_by = indian

@@ -1,0 +1,3 @@
+#1116 - Wolof
+
+discovered_by = sub_saharan

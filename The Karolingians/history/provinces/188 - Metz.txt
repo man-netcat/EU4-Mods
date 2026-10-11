@@ -1,31 +1,30 @@
 # 188 Metz - Principal cities: Metz, Thionville
 
-latent_trade_goods = {
-	coal
-}
-
 owner = LOT
 controller = LOT
+add_core = LOT
 capital = "Metz"
-is_city = yes
 culture = frankish
 religion = catholic
 hre = yes
-base_tax = 6 
+base_tax = 6
 base_production = 6
 trade_goods = glass
 base_manpower = 5
-add_core = LOT
-extra_cost = 8
+is_city = yes
 center_of_trade = 1
+latent_trade_goods = {
+	coal
+}
+extra_cost = 8
 
-867.1.1 = {	owner = LOT
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = LOT
 	controller = LOT
 	add_core = LOT
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

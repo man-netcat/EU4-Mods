@@ -1,0 +1,3 @@
+# No previous file for Guanipa
+
+discovered_by = south_american

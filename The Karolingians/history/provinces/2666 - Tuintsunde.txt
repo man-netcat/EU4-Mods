@@ -1,0 +1,4 @@
+# No previous file for Tuintsundé
+
+discovered_by = mesoamerican
+discovered_by = north_american

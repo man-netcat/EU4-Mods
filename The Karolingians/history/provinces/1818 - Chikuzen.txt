@@ -1,0 +1,3 @@
+#1818 - Chikuzen
+
+discovered_by = chinese

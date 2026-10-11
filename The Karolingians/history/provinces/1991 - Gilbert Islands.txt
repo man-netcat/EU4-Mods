@@ -1,0 +1,3 @@
+#1991 - Gilbert Islands
+
+discovered_by = polynesian_tech

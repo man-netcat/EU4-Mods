@@ -1,0 +1,3 @@
+#958 - Seneca (Area was Wenro until 1638)
+
+discovered_by = north_american

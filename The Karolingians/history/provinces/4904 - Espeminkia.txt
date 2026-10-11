@@ -1,0 +1,3 @@
+# No previous file for Espeminkia
+
+discovered_by = north_american

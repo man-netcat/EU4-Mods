@@ -1,0 +1,3 @@
+# 2271 - Azawagh
+
+discovered_by = sub_saharan

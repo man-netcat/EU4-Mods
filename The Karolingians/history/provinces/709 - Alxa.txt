@@ -1,0 +1,4 @@
+#709 - Alxa
+
+discovered_by = chinese
+discovered_by = nomad_group

@@ -1,0 +1,3 @@
+#988 - Huron
+
+discovered_by = north_american

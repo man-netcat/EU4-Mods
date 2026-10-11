@@ -2,27 +2,27 @@
 
 owner = BYZ
 controller = BYZ
-culture = albanian
-religion = orthodox
-capital = "Durrës"
-trade_goods = salt
-hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 1
-is_city = yes
 add_core = VEN
 add_core = BYZ
-extra_cost = 8
+capital = "Durrës"
+culture = albanian
+religion = orthodox
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = salt
+base_manpower = 1
+is_city = yes
 center_of_trade = 1
+extra_cost = 8
 
-867.1.1 = {	owner = BYZ
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+discovered_by = western
+
+867.1.1 = {
+	owner = BYZ
 	controller = BYZ
 	add_core = BYZ
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

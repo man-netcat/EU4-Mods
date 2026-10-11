@@ -1,0 +1,4 @@
+#808 - Cuzco
+
+discovered_by = south_american
+discovered_by = andean

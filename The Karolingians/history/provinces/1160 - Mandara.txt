@@ -1,0 +1,3 @@
+#1160 - Mandara
+
+discovered_by = sub_saharan

@@ -2,27 +2,27 @@
 
 owner = SOR
 controller = SOR
+add_core = SOR
+capital = "Meissen"
 culture = sorbian
 religion = catholic
-capital = "Meissen"
-trade_goods = iron
 hre = yes
 base_tax = 6
 base_production = 6
+trade_goods = iron
 base_manpower = 2
 is_city = yes
-fort_15th = yes
-add_core = SOR
-extra_cost = 8
 center_of_trade = 1
+fort_15th = yes
+extra_cost = 8
 
-867.1.1 = {	owner = SOR
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = SOR
 	controller = SOR
 	add_core = SOR
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

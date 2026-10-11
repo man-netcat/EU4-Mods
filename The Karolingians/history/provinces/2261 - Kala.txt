@@ -1,0 +1,3 @@
+# No previous file for Kala
+
+discovered_by = sub_saharan

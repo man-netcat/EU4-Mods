@@ -1,0 +1,3 @@
+#4934 - Maui
+
+discovered_by = polynesian_tech

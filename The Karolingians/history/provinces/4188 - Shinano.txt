@@ -1,0 +1,3 @@
+#2017 - Shinano
+
+discovered_by = chinese

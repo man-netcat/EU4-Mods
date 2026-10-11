@@ -1,25 +1,25 @@
 # 4767 - Zweibrücken
 
+owner = GER
+controller = GER
+add_core = GER
 capital = "Zweibrücken"
 culture = frankish
 religion = catholic
-trade_goods = cloth
-owner = GER
+hre = yes
 base_tax = 3
 base_production = 3
+trade_goods = cloth
 base_manpower = 2
 is_city = yes
-controller = GER
-add_core = GER
-hre = yes
 
-867.1.1 = {	owner = GER
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = GER
 	controller = GER
 	add_core = GER
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

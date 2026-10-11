@@ -1,0 +1,4 @@
+#1077 - Solikamsk
+
+discovered_by = eastern
+discovered_by = nomad_group

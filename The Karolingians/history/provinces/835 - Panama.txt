@@ -1,0 +1,3 @@
+#835 - Panama 
+
+discovered_by = south_american

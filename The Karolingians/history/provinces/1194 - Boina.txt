@@ -1,0 +1,3 @@
+#1194 - Boina
+
+discovered_by = east_african

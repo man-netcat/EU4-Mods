@@ -1,0 +1,3 @@
+# No previous file for Calusa
+
+discovered_by = north_american

@@ -1,0 +1,3 @@
+#649 - Ternate
+
+discovered_by = chinese

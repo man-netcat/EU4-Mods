@@ -1,0 +1,3 @@
+#1153 - Pindinga
+
+discovered_by = sub_saharan

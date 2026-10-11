@@ -13,58 +13,9 @@ set_estate_privilege = estate_church_union_of_the_churches
 set_estate_privilege = estate_burghers_reliance_on_republics
 set_estate_privilege = estate_burghers_exkousseiai_for_latins
 
-1391.2.16 = {
-	mashriq_region = {
-		discover_country = BYZ
-	}
-	monarch = {
-		name = "Manuel II"
-		dynasty = "Palaiologos"
-		birth_date = 1350.6.27		
-		adm = 1
-		dip = 2
-		mil = 1
-	}
-}
 
-1392.12.18 = {
-	heir = {
-		name = "Ioannes"
-		monarch_name = "Ioannes VIII"
-		dynasty = "Palaiologos"
-		birth_date = 1392.12.18
-		death_date = 1448.10.31
-		claim = 95
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
 
-1425.7.21 = {
-	monarch = {
-		name = "Ioannes VIII"
-		dynasty = "Palaiologos"
-		birth_date = 1392.12.18
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
 
-1425.7.21 = {
-	heir = {
-		name = "Konstantinos"
-		monarch_name = "Konstantinos XI"
-		dynasty = "Palaiologos"
-		birth_date = 1405.2.8
-		death_date = 1453.5.29
-		claim = 60 #he did not go on the throne without a pretender
-		adm = 5 #previous experience as despot of morea
-		dip = 2 #uneventful campaigns to garner western support
-		mil = 3 #Experience campaigning against the Ottomans in thessaly. Event will bump it up to 4.
-	}
-}
 
 # 867 court installed as the 1444 start state, the same thing every other
 # transferred tag does in this mod (BUL's Boris Balgarsko, CRT's Abu Hafs Umar,
@@ -90,46 +41,9 @@ set_estate_privilege = estate_burghers_exkousseiai_for_latins
 # education_learning_3), the eldest of his sons. Leon is a study, not a soldier,
 # which is why the adm/dip lead and mil sits lowest - the deliberate opposite of
 # his father, and the reason a 867 court can lose a war to the Ottomans later.
-1444.1.1 = {
-	monarch = {
-		name = "Basileios"
-		monarch_name = "Basileios"
-		dynasty = "Makedon"
-		birth_date = 1392.4.30
-		death_date = 1471.12.15
-		adm = 2
-		dip = 2
-		mil = 4
-	}
-}
 
-1444.1.1 = {
-	heir = {
-		name = "Leon"
-		monarch_name = "Leon"
-		dynasty = "Makedon"
-		birth_date = 1408.9.29
-		death_date = 1461.1.1
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 1
-	}
-}
 
-1448.10.31 = {
-	monarch = {
-		name = "Konstantinos XI"
-		dynasty = "Palaiologos"
-		birth_date = 1405.2.8
-		adm = 5 
-		dip = 2 
-		mil = 3 
-		#leader = {	name = "Konstantinos XI"	type = general	fire = 3	shock = 3	manuever = 4	siege = 0 } via event now
-	}
-}
 
-1452.1.1 = { leader = {	name = "Giovanni Giustiniani"	type = general	fire = 2	shock = 2	manuever = 3	siege = 0	death_date = 1453.5.29 } }
 867.1.1 = {
 	monarch = {
 		name = "Basileios"
@@ -152,4 +66,3 @@ set_estate_privilege = estate_burghers_exkousseiai_for_latins
 		mil = 2
 	}
 }
-

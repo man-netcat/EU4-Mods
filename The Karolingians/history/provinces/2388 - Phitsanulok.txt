@@ -1,0 +1,4 @@
+#2388 - Phitsanulok
+
+discovered_by = chinese
+discovered_by = indian

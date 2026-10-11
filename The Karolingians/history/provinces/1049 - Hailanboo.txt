@@ -1,0 +1,4 @@
+#1049 - Hailanboo
+
+discovered_by = chinese
+discovered_by = nomad_group

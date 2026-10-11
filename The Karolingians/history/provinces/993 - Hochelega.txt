@@ -1,0 +1,3 @@
+#993 - Hochelega
+
+discovered_by = north_american

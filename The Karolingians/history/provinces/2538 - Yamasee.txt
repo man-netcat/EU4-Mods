@@ -1,0 +1,3 @@
+# No previous file for Yamasee
+
+discovered_by = north_american

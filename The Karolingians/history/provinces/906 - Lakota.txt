@@ -1,0 +1,3 @@
+#906 - Lakota
+
+discovered_by = north_american

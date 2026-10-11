@@ -1,0 +1,3 @@
+# No previous file for Shaggami
+
+discovered_by = north_american

@@ -1,0 +1,4 @@
+#2399 - Pagan
+
+discovered_by = chinese
+discovered_by = indian

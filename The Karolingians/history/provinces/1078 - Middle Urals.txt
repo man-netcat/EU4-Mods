@@ -1,0 +1,4 @@
+#1078 - Middle Urals
+
+discovered_by = eastern
+discovered_by = nomad_group

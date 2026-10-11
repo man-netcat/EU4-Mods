@@ -1,0 +1,3 @@
+#938 - Pamlico
+
+discovered_by = north_american

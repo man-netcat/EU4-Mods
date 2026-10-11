@@ -1,0 +1,3 @@
+#4352 - Cebu
+
+discovered_by = chinese

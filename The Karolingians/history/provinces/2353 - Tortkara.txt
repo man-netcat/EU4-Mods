@@ -1,0 +1,5 @@
+# 2353 - Tortkara
+
+discovered_by = nomad_group
+discovered_by = ottoman
+discovered_by = muslim

@@ -1,0 +1,3 @@
+# - Vila Rica
+
+discovered_by = south_american

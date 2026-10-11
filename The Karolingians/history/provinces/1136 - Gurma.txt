@@ -1,0 +1,3 @@
+#1136 - Gurma
+
+discovered_by = sub_saharan

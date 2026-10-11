@@ -1,0 +1,6 @@
+#586 - Pegu
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman

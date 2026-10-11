@@ -1,0 +1,3 @@
+#2018 - Tsuu Tina
+
+discovered_by = north_american

@@ -1,0 +1,4 @@
+#615 - Luang Prabang
+
+discovered_by = chinese
+discovered_by = indian

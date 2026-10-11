@@ -1,0 +1,4 @@
+#718 - Govi Altay
+
+discovered_by = chinese
+discovered_by = nomad_group

@@ -1,0 +1,6 @@
+#4266 - Izhkar
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+discovered_by = ottoman

@@ -1,0 +1,3 @@
+#1015 - Okinawa
+
+discovered_by = chinese

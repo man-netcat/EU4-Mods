@@ -1,0 +1,3 @@
+#4026 - Antemoro
+
+discovered_by = east_african

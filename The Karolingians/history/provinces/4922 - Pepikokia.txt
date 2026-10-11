@@ -1,0 +1,3 @@
+# No previous file for Pepikokia
+
+discovered_by = north_american

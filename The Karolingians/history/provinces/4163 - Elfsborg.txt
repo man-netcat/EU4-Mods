@@ -1,8 +1,9 @@
 #Elfsborgs Län
 
-add_core = VAS
 owner = VAS
 controller = VAS
+add_core = VAS
+capital = "Elfsborg"
 culture = norse
 religion = catholic
 hre = no
@@ -10,19 +11,18 @@ base_tax = 2
 base_production = 1
 trade_goods = grain
 base_manpower = 1
-fort_15th = yes #Old Älvsborg Castle
-capital = "Elfsborg"
 is_city = yes
-extra_cost = 8
 center_of_trade = 1
+fort_15th = yes #Old Älvsborg Castle
+extra_cost = 8
 
-867.1.1 = {	owner = VAS
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = VAS
 	controller = VAS
 	add_core = VAS
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

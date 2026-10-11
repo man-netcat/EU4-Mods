@@ -1,0 +1,3 @@
+#952 - Powhatan
+
+discovered_by = north_american

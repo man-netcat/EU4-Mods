@@ -1,0 +1,3 @@
+#934 - Shawnee
+
+discovered_by = north_american

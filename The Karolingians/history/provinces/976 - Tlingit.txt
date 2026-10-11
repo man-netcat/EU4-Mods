@@ -1,0 +1,3 @@
+#976 - Tlingit
+
+discovered_by = north_american

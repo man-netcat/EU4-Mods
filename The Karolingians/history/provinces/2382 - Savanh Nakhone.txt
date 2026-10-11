@@ -1,0 +1,4 @@
+#2382 - Savanh Nakhone
+
+discovered_by = chinese
+discovered_by = indian

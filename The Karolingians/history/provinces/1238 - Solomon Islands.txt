@@ -1,0 +1,3 @@
+#1238 - Solomon Islands
+
+discovered_by = polynesian_tech

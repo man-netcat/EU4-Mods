@@ -1,0 +1,3 @@
+#1242 - Fiji
+
+discovered_by = polynesian_tech

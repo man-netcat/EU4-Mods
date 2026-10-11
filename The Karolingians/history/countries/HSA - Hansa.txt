@@ -31,4 +31,3 @@ historical_friend = RIG #Riga
 		mil = 2
 	}
 }
-

@@ -1,27 +1,28 @@
 # 1876 - Frankfurt
+
+owner = GER
+controller = GER
+add_core = GER
 capital = "Frankfurt"
 culture = frankish
 religion = catholic
-trade_goods = paper
-owner = GER
+hre = yes
 base_tax = 7
 base_production = 7
+trade_goods = paper
 base_manpower = 4
 is_city = yes
-fort_15th = yes
-add_core = GER
-controller = GER
-hre = yes
-extra_cost = 16
 center_of_trade = 2
+fort_15th = yes
+extra_cost = 16
 
-867.1.1 = {	owner = GER
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = GER
 	controller = GER
 	add_core = GER
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

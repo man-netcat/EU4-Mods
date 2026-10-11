@@ -1,0 +1,3 @@
+#1120 - Bambuk
+
+discovered_by = sub_saharan

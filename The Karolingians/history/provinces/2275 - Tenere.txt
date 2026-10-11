@@ -1,0 +1,3 @@
+# 2275 - Tenere
+
+discovered_by = sub_saharan

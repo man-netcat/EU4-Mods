@@ -1,0 +1,3 @@
+#652 - Maguindanao
+
+discovered_by = chinese

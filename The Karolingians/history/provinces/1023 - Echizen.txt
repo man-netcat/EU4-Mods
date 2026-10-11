@@ -1,0 +1,3 @@
+#1023 - Echizen
+
+discovered_by = chinese

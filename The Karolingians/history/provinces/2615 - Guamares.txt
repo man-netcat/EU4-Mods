@@ -1,0 +1,3 @@
+# No previous file for Guamares
+
+discovered_by = mesoamerican

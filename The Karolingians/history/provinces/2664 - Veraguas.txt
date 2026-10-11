@@ -1,0 +1,4 @@
+# No previous file for Veraguas
+
+discovered_by = mesoamerican
+discovered_by = south_american

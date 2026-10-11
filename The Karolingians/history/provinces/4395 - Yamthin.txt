@@ -1,0 +1,4 @@
+#4395 - Yamethin
+
+discovered_by = chinese
+discovered_by = indian

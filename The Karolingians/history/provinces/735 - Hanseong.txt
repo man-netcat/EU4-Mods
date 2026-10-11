@@ -2,27 +2,25 @@
 
 owner = SLL
 controller = SLL
+add_core = SLL
+capital = "Hanseong"
 culture = korean
 religion = confucianism
-capital = "Hanseong"
-trade_goods = paper
 hre = no
 base_tax = 9
 base_production = 10
+trade_goods = paper
 base_manpower = 6
 is_city = yes
-add_core = SLL
+center_of_trade = 1
 fort_15th = yes
 extra_cost = 8
-center_of_trade = 1
 
-867.1.1 = {	owner = SLL
+discovered_by = chinese
+discovered_by = nomad_group
+
+867.1.1 = {
+	owner = SLL
 	controller = SLL
 	add_core = SLL
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

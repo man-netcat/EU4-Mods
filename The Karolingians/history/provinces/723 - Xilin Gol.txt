@@ -1,0 +1,4 @@
+#723 - Xilin Gol
+
+discovered_by = chinese
+discovered_by = nomad_group

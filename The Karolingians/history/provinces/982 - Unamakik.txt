@@ -1,0 +1,3 @@
+#982 - Unamakik
+
+discovered_by = north_american

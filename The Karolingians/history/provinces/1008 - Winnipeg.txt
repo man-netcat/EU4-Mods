@@ -1,0 +1,3 @@
+#1008 - Winnipeg
+
+discovered_by = north_american

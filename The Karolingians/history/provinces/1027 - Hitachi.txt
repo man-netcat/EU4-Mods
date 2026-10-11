@@ -1,0 +1,3 @@
+#1027 - Hitachi
+
+discovered_by = chinese

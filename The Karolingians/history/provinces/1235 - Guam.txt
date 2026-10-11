@@ -1,0 +1,3 @@
+#1235 - Guam
+
+discovered_by = polynesian_tech

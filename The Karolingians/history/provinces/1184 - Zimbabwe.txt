@@ -1,0 +1,4 @@
+#1184 - Zimbabwe
+
+discovered_by = east_african
+discovered_by = central_african

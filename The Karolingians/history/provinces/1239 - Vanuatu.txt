@@ -1,0 +1,3 @@
+#1239 - Vanuatu
+
+discovered_by = polynesian_tech

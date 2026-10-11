@@ -1,0 +1,3 @@
+#967 - Narraganset
+
+discovered_by = north_american

@@ -1,0 +1,4 @@
+#701 - Ordos
+
+discovered_by = chinese
+discovered_by = nomad_group

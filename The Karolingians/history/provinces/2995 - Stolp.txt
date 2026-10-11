@@ -4,6 +4,7 @@ owner = SLU
 controller = SLU
 add_core = WOL
 add_core = SLU
+capital = "Stolp"
 culture = pommeranian
 religion = catholic
 hre = yes
@@ -11,19 +12,15 @@ base_tax = 2
 base_production = 2
 trade_goods = fish
 base_manpower = 1
-capital = "Stolp"
 is_city = yes
 
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
 
-
-
-867.1.1 = {	owner = SLU
+867.1.1 = {
+	owner = SLU
 	controller = SLU
 	add_core = SLU
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

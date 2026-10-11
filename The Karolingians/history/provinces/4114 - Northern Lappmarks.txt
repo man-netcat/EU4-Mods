@@ -1,37 +1,33 @@
 owner = SIG
 controller = SIG
 add_core = SIG
-culture = sapmi
-religion = catholic
-hre = no
-base_tax = 1
-base_production = 1
-trade_goods = fur
-base_manpower = 1
-is_city = yes
-
+add_core = SIG
 #Lapland, the far north wastelands.
-
 capital = "Jokkmokk"
 culture = sapmi
-add_core = SIG
+culture = sapmi
+religion = catholic
 religion = catholic
 hre = no
-base_tax = 1 
+hre = no
+base_tax = 1
+base_tax = 1
 base_production = 1
+base_production = 1
+trade_goods = fur
 trade_goods = unknown
 base_manpower = 1
+base_manpower = 1
+is_city = yes
 native_hostileness = 1
 native_size = 3
 native_ferocity = 2
 
-867.1.1 = {	owner = SIG
+discovered_by = eastern
+discovered_by = western
+
+867.1.1 = {
+	owner = SIG
 	controller = SIG
 	add_core = SIG
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

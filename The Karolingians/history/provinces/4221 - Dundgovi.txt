@@ -1,0 +1,4 @@
+#4221 - Dundgovi
+
+discovered_by = chinese
+discovered_by = nomad_group

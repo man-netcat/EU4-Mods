@@ -1,0 +1,3 @@
+#840 - Honduras
+
+discovered_by = mesoamerican

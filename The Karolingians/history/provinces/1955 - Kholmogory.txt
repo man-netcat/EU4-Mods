@@ -1,0 +1,4 @@
+#1955 - Kholmogory
+
+discovered_by = eastern
+discovered_by = western

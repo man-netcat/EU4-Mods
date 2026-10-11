@@ -1,0 +1,3 @@
+#2700 - Panay
+
+discovered_by = chinese

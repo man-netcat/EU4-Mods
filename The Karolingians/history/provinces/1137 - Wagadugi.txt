@@ -1,0 +1,3 @@
+#1137 - Wagadugi
+
+discovered_by = sub_saharan

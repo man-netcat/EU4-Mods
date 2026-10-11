@@ -1,0 +1,3 @@
+#1159 - Bagirmi
+
+discovered_by = sub_saharan

@@ -1,0 +1,3 @@
+#2010 - Connecticut
+
+discovered_by = north_american

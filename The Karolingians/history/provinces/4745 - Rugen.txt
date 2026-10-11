@@ -4,6 +4,7 @@ owner = RUG
 controller = RUG
 add_core = RUG
 add_core = WOL
+capital = "Bergen auf Rügen"
 culture = polabian
 religion = catholic
 hre = yes
@@ -11,20 +12,16 @@ base_tax = 2
 base_production = 1
 trade_goods = fish
 base_manpower = 1
-capital = "Bergen auf Rügen"
 is_city = yes
-
 unrest = 8 #pirate independence of thought
 
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
 
-
-867.1.1 = {	owner = RUG
+867.1.1 = {
+	owner = RUG
 	controller = RUG
 	add_core = RUG
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

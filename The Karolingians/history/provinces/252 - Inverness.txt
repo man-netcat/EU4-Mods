@@ -2,6 +2,8 @@
 
 owner = SCO
 controller = SCO
+add_core = SCO
+capital = "Inverness"
 culture = highland_scottish
 religion = catholic
 hre = no
@@ -9,17 +11,15 @@ base_tax = 2
 base_production = 2
 trade_goods = wool
 base_manpower = 3
-capital = "Inverness"
 is_city = yes
-add_core = SCO
 
-867.1.1 = {	owner = SCO
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+867.1.1 = {
+	owner = SCO
 	controller = SCO
 	add_core = SCO
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

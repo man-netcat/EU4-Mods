@@ -1,0 +1,3 @@
+#974 - Kwakiutl
+
+discovered_by = north_american

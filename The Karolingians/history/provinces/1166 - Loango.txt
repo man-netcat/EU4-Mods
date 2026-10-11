@@ -1,0 +1,4 @@
+#1166 - Loango
+
+discovered_by = central_african
+discovered_by = sub_saharan

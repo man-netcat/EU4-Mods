@@ -1,0 +1,3 @@
+#1992 - Nauru
+
+discovered_by = polynesian_tech

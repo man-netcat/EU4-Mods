@@ -1,0 +1,4 @@
+#589 - Chiang Mai
+
+discovered_by = chinese
+discovered_by = indian

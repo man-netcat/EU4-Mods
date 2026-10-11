@@ -1,0 +1,3 @@
+#4020 - Comoros
+
+discovered_by = east_african

@@ -27,4 +27,3 @@ capital = 20
 		mil = 2
 	}
 }
-

@@ -1,0 +1,3 @@
+#1147 - Benin
+
+discovered_by = sub_saharan

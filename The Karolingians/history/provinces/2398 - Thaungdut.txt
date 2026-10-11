@@ -1,0 +1,4 @@
+#2398 - Thaungdut
+
+discovered_by = chinese
+discovered_by = indian

@@ -1,0 +1,3 @@
+# No previous file for Kichessipirini
+
+discovered_by = north_american

@@ -1,0 +1,4 @@
+#1844 - Xiankhouang
+
+discovered_by = chinese
+discovered_by = indian

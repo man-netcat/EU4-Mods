@@ -1,0 +1,3 @@
+#1006 - Chipewyan
+
+discovered_by = north_american

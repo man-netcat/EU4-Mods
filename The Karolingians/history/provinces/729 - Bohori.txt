@@ -1,0 +1,4 @@
+#729 - Bohori
+
+discovered_by = chinese
+discovered_by = nomad_group

@@ -16,4 +16,3 @@ capital = 11
 		mil = 2
 	}
 }
-

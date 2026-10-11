@@ -1,0 +1,3 @@
+#909 - Mandan
+
+discovered_by = north_american

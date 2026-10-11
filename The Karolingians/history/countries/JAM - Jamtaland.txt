@@ -16,4 +16,3 @@ capital = 10
 		mil = 2
 	}
 }
-

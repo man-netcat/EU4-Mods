@@ -1,0 +1,3 @@
+#1172 - Benguela
+
+discovered_by = sub_saharan

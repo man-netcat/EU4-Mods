@@ -1,0 +1,3 @@
+#1995 - Micronesia
+
+discovered_by = polynesian_tech

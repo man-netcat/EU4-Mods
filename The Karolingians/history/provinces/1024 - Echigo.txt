@@ -1,0 +1,3 @@
+#1024 - Echigo
+
+discovered_by = chinese

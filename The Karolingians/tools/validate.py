@@ -171,6 +171,25 @@ def run() -> int:
     for b in bad[:10]:
         print("        " + b)
 
+    print("\n== 867 only ==")
+    n = 0
+    bad = []
+    for d in (PDIR, COUNTRY_OUT):
+        for fn in sorted(os.listdir(d)):
+            if not fn.endswith(".txt"):
+                continue
+            n += 1
+            t = open(
+                os.path.join(d, fn), encoding="utf-8", errors="surrogateescape"
+            ).read()
+            for m in re.finditer(r"(?m)^\s*(\d+\.\d+\.\d+)\s*=", t):
+                if m.group(1) != "867.1.1":
+                    bad.append(f"{fn}: {m.group(1)}")
+                    break
+    note(not bad, f"no non-867 history in {n} files")
+    for b in bad[:10]:
+        print("        " + b)
+
     print("\n== country files ==")
 
 
@@ -225,7 +244,13 @@ def run() -> int:
         f"no duplicate province files ({len(files)} unique)",
     )
 
-    from eu4 import lake_ids, vanilla_prov_file, waste_ids  # noqa: E402
+    from eu4 import (  # noqa: E402
+        lake_ids,
+        sea_ids,
+        vanilla_prov_file,
+        vanilla_prov_ids,
+        waste_ids,
+    )
 
     for label, ids in (("wasteland", waste_ids()), ("lake", lake_ids())):
         wfiles = [p for p in ids if vanilla_prov_file(p)]
@@ -239,18 +264,24 @@ def run() -> int:
         note(not wowned, f"no owner on {label} provinces ({len(wowned)} problems)")
         for b in wowned[:8]:
             print("        " + str(b))
-        wtags = sorted(
-            p
-            for p in wfiles
-            if p in files
-            and re.search(
-                r"(?m)^\s*discovered_by\s*=\s*[A-Z]{3}\s*$",
-                open(files[p], encoding="utf-8", errors="surrogateescape").read(),
-            )
+
+    vmiss = sorted(p for p in vanilla_prov_ids() if p not in files)
+    note(not vmiss, f"every vanilla province has a file ({len(vmiss)} missing)")
+    for b in vmiss[:8]:
+        print("        " + str(b))
+    seaset = set(sea_ids())  # sea tiles stay undated, tags and all
+    vtags = sorted(
+        p
+        for p in files
+        if p not in seaset
+        and re.search(
+            r"(?m)^\s*discovered_by\s*=\s*([A-Z]{3})\s*$",
+            open(files[p], encoding="utf-8", errors="surrogateescape").read(),
         )
-        note(not wtags, f"no dead tags discovering {label} ({len(wtags)} problems)")
-        for b in wtags[:8]:
-            print("        " + str(b))
+    )
+    note(not vtags, f"no tag-specific discovery on land ({len(vtags)} problems)")
+    for b in vtags[:8]:
+        print("        " + str(b))
 
     unownable = set(waste_ids()) | set(lake_ids())  # never owned by design
 

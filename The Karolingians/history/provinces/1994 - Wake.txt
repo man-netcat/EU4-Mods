@@ -1,0 +1,3 @@
+#1994 - Wake
+
+discovered_by = polynesian_tech

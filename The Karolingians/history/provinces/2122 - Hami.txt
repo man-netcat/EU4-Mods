@@ -1,0 +1,4 @@
+# 2122 - Hami
+
+discovered_by = chinese
+discovered_by = nomad_group

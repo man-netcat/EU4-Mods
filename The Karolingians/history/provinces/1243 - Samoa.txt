@@ -1,0 +1,3 @@
+#1243 - Samoa
+
+discovered_by = polynesian_tech

@@ -1,0 +1,3 @@
+#2698 - Pangasinan
+
+discovered_by = chinese

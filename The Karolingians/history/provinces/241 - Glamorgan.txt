@@ -1,11 +1,9 @@
 #241 - Glamorgan+Monmouthshire
 
-latent_trade_goods = {
-	coal
-}
-
 owner = DEH
 controller = DEH
+add_core = DEH
+capital = "Swansea"
 culture = welsh
 religion = catholic
 hre = no
@@ -13,17 +11,18 @@ base_tax = 2
 base_production = 2
 trade_goods = iron
 base_manpower = 1
-capital = "Swansea"
 is_city = yes
-add_core = DEH
+latent_trade_goods = {
+	coal
+}
 
-867.1.1 = {	owner = DEH
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+867.1.1 = {
+	owner = DEH
 	controller = DEH
 	add_core = DEH
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

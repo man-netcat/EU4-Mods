@@ -1,0 +1,3 @@
+# No previous file for Danezaa
+
+discovered_by = north_american

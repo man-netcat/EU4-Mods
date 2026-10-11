@@ -1,0 +1,4 @@
+#580 - Kale
+
+discovered_by = chinese
+discovered_by = indian

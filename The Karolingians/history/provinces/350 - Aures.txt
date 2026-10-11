@@ -1,0 +1,5 @@
+#350 - Laghwat
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman

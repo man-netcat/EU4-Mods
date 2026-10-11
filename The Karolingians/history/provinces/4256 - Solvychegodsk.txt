@@ -1,0 +1,4 @@
+#4256 - Solvychegodsk
+
+discovered_by = eastern
+discovered_by = western

@@ -1,0 +1,4 @@
+#2389 - Phra Bang
+
+discovered_by = chinese
+discovered_by = indian

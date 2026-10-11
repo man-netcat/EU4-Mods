@@ -1,0 +1,4 @@
+#614 - Vientiane
+
+discovered_by = chinese
+discovered_by = indian

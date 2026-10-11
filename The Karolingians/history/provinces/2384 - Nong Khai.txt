@@ -1,0 +1,4 @@
+#2384 - Nong Khai
+
+discovered_by = chinese
+discovered_by = indian

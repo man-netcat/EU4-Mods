@@ -1,0 +1,3 @@
+#1832 - Yamato
+
+discovered_by = chinese

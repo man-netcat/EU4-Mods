@@ -1,0 +1,3 @@
+# No previous file for Hualapai
+
+discovered_by = north_american

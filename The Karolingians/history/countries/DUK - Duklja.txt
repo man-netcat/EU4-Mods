@@ -18,4 +18,3 @@ fixed_capital = 138 # Cannot move capital away from this province & no power cos
 		mil = 2
 	}
 }
-

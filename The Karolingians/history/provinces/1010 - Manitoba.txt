@@ -1,0 +1,3 @@
+#1010 - Manitoba
+
+discovered_by = north_american

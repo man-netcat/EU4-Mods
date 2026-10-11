@@ -16,4 +16,3 @@ capital = 33
 		mil = 2
 	}
 }
-

@@ -1,0 +1,4 @@
+#4404 - Minsin
+
+discovered_by = chinese
+discovered_by = indian

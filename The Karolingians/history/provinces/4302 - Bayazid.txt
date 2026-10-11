@@ -2,24 +2,26 @@
 
 owner = ARM
 controller = ARM
+add_core = ARM
+capital = "Bayazid"
 culture = armenian
 religion = coptic
-capital = "Bayazid"
-trade_goods = wool
 hre = no
 base_tax = 2
 base_production = 2
+trade_goods = wool
 base_manpower = 1
 is_city = yes
-add_core = ARM
 
-867.1.1 = {	owner = ARM
+discovered_by = east_african
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+discovered_by = nomad_group
+
+867.1.1 = {
+	owner = ARM
 	controller = ARM
 	add_core = ARM
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

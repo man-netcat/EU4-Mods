@@ -1,0 +1,4 @@
+#2371 - Song La
+
+discovered_by = chinese
+discovered_by = indian

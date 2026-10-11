@@ -1,0 +1,3 @@
+#2695 - East Timor
+
+discovered_by = chinese

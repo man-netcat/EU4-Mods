@@ -16,4 +16,3 @@ capital = 50
 		mil = 2
 	}
 }
-

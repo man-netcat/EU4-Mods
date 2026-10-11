@@ -1,0 +1,3 @@
+#655 - Palawan
+
+discovered_by = chinese

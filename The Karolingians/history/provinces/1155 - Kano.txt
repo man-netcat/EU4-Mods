@@ -1,0 +1,3 @@
+#1155 - Kano
+
+discovered_by = sub_saharan

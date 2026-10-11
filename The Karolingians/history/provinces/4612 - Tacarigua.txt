@@ -1,0 +1,3 @@
+# No previous file for Tacarigua
+
+discovered_by = south_american

@@ -1,0 +1,3 @@
+#944 - Potawatomi
+
+discovered_by = north_american

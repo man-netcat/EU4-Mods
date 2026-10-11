@@ -1,0 +1,6 @@
+#1215 - Tajura
+
+discovered_by = east_african
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = indian

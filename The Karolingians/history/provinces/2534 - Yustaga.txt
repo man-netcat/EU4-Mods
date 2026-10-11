@@ -1,0 +1,3 @@
+# No previous file for Yustaga
+
+discovered_by = north_american

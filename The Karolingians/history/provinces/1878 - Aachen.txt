@@ -1,31 +1,28 @@
 #1878 - Aachen
 
+owner = LOT
+controller = LOT
+add_core = LOT
+capital = "Aachen"
+culture = frankish
+religion = catholic
+hre = yes
+base_tax = 6
+base_production = 6
+trade_goods = grain
+base_manpower = 2
+is_city = yes
 latent_trade_goods = {
 	coal
 }
 
-owner = LOT
-controller = LOT
-culture = frankish
-religion = catholic
-trade_goods = grain
-capital = "Aachen"
-base_tax = 6
-base_production = 6
-is_city = yes
-add_core = LOT
-base_manpower = 2
-hre = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
 
-
-
-867.1.1 = {	owner = LOT
+867.1.1 = {
+	owner = LOT
 	controller = LOT
 	add_core = LOT
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

@@ -1,0 +1,5 @@
+#570 - Naga
+
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = chinese

@@ -1,0 +1,3 @@
+#1003 - Moose Cree
+
+discovered_by = north_american

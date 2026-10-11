@@ -1,0 +1,4 @@
+#4396 - Prome
+
+discovered_by = chinese
+discovered_by = indian

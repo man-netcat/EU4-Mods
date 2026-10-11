@@ -1,0 +1,3 @@
+#648 - Halmahera
+
+discovered_by = chinese

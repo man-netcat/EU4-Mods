@@ -1,0 +1,3 @@
+# No previous file for Okouara
+
+discovered_by = north_american

@@ -1,0 +1,4 @@
+#836 - Chorotega
+
+discovered_by = mesoamerican
+discovered_by = south_american

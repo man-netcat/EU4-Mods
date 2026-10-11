@@ -1,0 +1,4 @@
+#800 - Chiquitos
+
+discovered_by = south_american
+discovered_by = andean

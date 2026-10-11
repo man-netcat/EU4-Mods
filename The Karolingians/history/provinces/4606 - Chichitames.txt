@@ -1,0 +1,4 @@
+# No previous file for Chichitames
+
+discovered_by = north_american
+discovered_by = mesoamerican

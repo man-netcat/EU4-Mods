@@ -1,0 +1,4 @@
+#2386 - Chaiyaphum
+
+discovered_by = chinese
+discovered_by = indian

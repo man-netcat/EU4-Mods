@@ -1,0 +1,4 @@
+#2759 - Gambela
+
+discovered_by = east_african
+discovered_by = muslim

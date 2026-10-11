@@ -1,0 +1,3 @@
+#2006 - Apsáalooke
+
+discovered_by = north_american

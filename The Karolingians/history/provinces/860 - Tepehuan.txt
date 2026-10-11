@@ -1,0 +1,4 @@
+#860 - Tepehuan
+
+discovered_by = north_american
+discovered_by = mesoamerican

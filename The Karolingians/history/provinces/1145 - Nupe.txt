@@ -1,0 +1,3 @@
+#1145 - Nupe
+
+discovered_by = sub_saharan

@@ -3,6 +3,7 @@
 owner = ASU
 controller = ASU
 add_core = ASU
+capital = "Corunna"
 culture = galician
 religion = catholic
 hre = no
@@ -10,17 +11,16 @@ base_tax = 3
 base_production = 2
 trade_goods = fish
 base_manpower = 2
-capital = "Corunna" 
 is_city = yes
  # Santiago de Compostela pilgrimage
+discovered_by = eastern
 
-867.1.1 = {	owner = ASU
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = ASU
 	controller = ASU
 	add_core = ASU
 }
-discovered_by = western
-discovered_by = eastern
-discovered_by = muslim
-discovered_by = ottoman
-discovered_by = chinese
-discovered_by = nomad_group

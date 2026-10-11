@@ -1,0 +1,3 @@
+#2433 - Kemerovo
+
+discovered_by = nomad_group

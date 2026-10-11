@@ -1,0 +1,6 @@
+#2225 - Bamyan
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = indian
+discovered_by = nomad_group

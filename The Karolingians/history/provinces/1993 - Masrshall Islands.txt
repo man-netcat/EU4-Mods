@@ -1,0 +1,3 @@
+#1993 - Marshal Islands
+
+discovered_by = polynesian_tech

@@ -1,0 +1,4 @@
+#832 - Tunja
+
+discovered_by = south_american
+discovered_by = andean

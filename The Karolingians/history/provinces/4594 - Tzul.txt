@@ -1,0 +1,3 @@
+# No previous file for Tzul
+
+discovered_by = mesoamerican

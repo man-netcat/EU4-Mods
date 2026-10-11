@@ -61,18 +61,6 @@ capital = 207
 # A general is given because the three areas arrive with no court at all, and a
 # realm of 12 provinces still needs a field army against Castile's rump to the
 # south and Aragon to the east.
-867.11.10 = {
-	leader = {
-		name = "Pelayo"
-		dynasty = "Cantabria"
-		type = general
-		fire = 3
-		shock = 2
-		manuever = 2
-		siege = 1
-		death_date = 889.1.1
-	}
-}
 867.1.1 = {
 	monarch = {
 		name = "Alfonsu"
@@ -95,4 +83,3 @@ capital = 207
 		mil = 2
 	}
 }
-

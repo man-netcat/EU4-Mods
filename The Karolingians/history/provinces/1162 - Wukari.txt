@@ -1,0 +1,3 @@
+#1162 - Wukari
+
+discovered_by = sub_saharan

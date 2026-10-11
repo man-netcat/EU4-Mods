@@ -1,0 +1,3 @@
+#1989 - Tonga
+
+discovered_by = polynesian_tech

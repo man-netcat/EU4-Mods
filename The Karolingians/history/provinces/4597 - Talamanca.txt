@@ -1,0 +1,3 @@
+# No previous file for Talamanca
+
+discovered_by = mesoamerican

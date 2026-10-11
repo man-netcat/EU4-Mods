@@ -1,0 +1,3 @@
+#2737 - Wairarapa
+
+discovered_by = polynesian_tech

@@ -1,0 +1,3 @@
+# No previous file for Klamath
+
+discovered_by = north_american

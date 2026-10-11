@@ -1,0 +1,4 @@
+#X2 - Turpan
+
+discovered_by = chinese
+discovered_by = nomad_group

@@ -1,0 +1,3 @@
+#892 - Wichita
+
+discovered_by = north_american

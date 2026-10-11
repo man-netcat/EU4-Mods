@@ -94,15 +94,22 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   byzantine, papacy, armenian…) must precede their defaults. It and
   `government_ranks` are `replace_path`ed — the only gov files that load.
 - History/provinces/countries/diplomacy/wars/advisors/missions/events/cultures plus
-  `gfx/flags` are all `replace_path`ed: no vanilla content loads there.
+  `gfx/flags` and `common/bookmarks` (single 867 bookmark, keys already in
+  `karolingian_bookmark_l_english.yml`) are all `replace_path`ed: no vanilla content loads there.
+- No history besides 867.1.1 anywhere: country files keep top-level fields
+  plus the 867 ruler block only (`strip_non_867`); every province file keeps
+  its undated head only, plus our 867 block on owned land.
   Province/country files must reuse vanilla's **exact filenames** or vanilla's
   version merges back in. Sea tiles are copied verbatim from vanilla
   (`sea_starts`); wasteland the same from the `impassable` block of vanilla
   `map/climate.txt` and lakes from the `lakes` block of vanilla
   `map/default.map` (`waste_ids()`/`lake_ids()` — grey/water, always-visible,
   owned by nobody, so the build asserts no overlap with our land; only tech-group
-  `discovered_by` lines survive, dead tags are dropped); province `discovered_by` is ours (western/eastern/muslim/
-  ottoman/chinese/nomad_group); dead-tag cores are stripped (cores respawn
+  `discovered_by` lines survive, dead tags are dropped); every other vanilla
+  province gets a visibility-only file (vanilla title comment plus its
+  tech-group `discovered_by` lines, gameplay data later); owned provinces
+  keep their vanilla tech-group `discovered_by` too, so visibility matches
+  the base game everywhere; dead-tag cores are stripped (cores respawn
   tags via rebels/release).
 - Localisation: English only, UTF-8 **with BOM** (the game ignores BOM-less
   files — verify bytes after writing). Generated files are cp1252.

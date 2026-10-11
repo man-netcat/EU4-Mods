@@ -1,0 +1,3 @@
+#1106 - Te Tai Tokerau
+
+discovered_by = polynesian_tech

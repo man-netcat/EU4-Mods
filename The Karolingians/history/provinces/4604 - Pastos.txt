@@ -1,0 +1,4 @@
+# No previous file for Pastos
+
+discovered_by = south_american
+discovered_by = andean

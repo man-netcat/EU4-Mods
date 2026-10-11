@@ -1,0 +1,3 @@
+#978 - Alaska
+
+discovered_by = north_american

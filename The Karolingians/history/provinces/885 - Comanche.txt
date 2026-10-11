@@ -1,0 +1,3 @@
+#885 - Comanche
+
+discovered_by = north_american

@@ -1,0 +1,3 @@
+#1986 - New Caledonia
+
+discovered_by = polynesian_tech

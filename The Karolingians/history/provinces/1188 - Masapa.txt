@@ -1,0 +1,4 @@
+#1188 - Masapa
+
+discovered_by = east_african
+discovered_by = central_african

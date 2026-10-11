@@ -1,0 +1,3 @@
+#950 - Chesapeake
+
+discovered_by = north_american

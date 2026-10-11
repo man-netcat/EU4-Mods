@@ -202,6 +202,13 @@ def vanilla_prov_file(pid):
     return os.path.join(VANILLA_PDIR, fn) if fn else None
 
 
+def vanilla_prov_ids():
+    # Every province id with a vanilla history file.
+    if not _VANILLA_PROV_FILES:
+        vanilla_prov_file(0)
+    return sorted(_VANILLA_PROV_FILES)
+
+
 def dev(pid):
     src = vanilla_prov_file(pid)
     if not src:
@@ -228,7 +235,7 @@ def waste_ids():
     # The engine's own wasteland list: every province in the impassable
     # section of vanilla map/climate.txt renders grey and always-visible.
     # We ship no map files, so the set is vanilla's; like sea tiles these
-    # files carry only discovered_by and are restored verbatim.
+    # files carry only discovered_by and keep their tech-group lines.
     txt = open(
         os.path.join(GAME, "map", "climate.txt"), encoding="utf-8", errors="replace"
     ).read()
@@ -251,11 +258,97 @@ PROV_DATE = "867.1.1"
 
 def force_block(new_owner):
     return (
-        f"\n{PROV_DATE} = {{\towner = {new_owner}\n"
+        f"\n{PROV_DATE} = {{\n"
+        f"\towner = {new_owner}\n"
         f"\tcontroller = {new_owner}\n"
         f"\tadd_core = {new_owner}\n"
         f"}}\n"
     )
+
+
+PROV_FIELD_ORDER = (
+    "owner",
+    "controller",
+    "add_core",
+    "capital",
+    "culture",
+    "religion",
+    "hre",
+    "base_tax",
+    "base_production",
+    "trade_goods",
+    "base_manpower",
+    "is_city",
+    "center_of_trade",
+)
+
+
+def tidy_province(text):
+    # Canonical layout for owned-province files: title comment, identity
+    # and economy fields in a fixed order, discovery lines, dated blocks
+    # last. Unknown keys keep their relative order after the known fields;
+    # comments stay glued to the line they precede. No data is dropped.
+    rank = {k: i for i, k in enumerate(PROV_FIELD_ORDER)}
+    header, fields, found, blocks = [], [], [], []
+    pending, cur, depth = [], None, 0
+    seen_content = False
+    it = iter(text.splitlines())
+    for ln in it:
+        s = ln.strip()
+        if not seen_content:
+            if not s or s.startswith("#"):
+                if s:
+                    header.append(ln.rstrip())
+                continue
+            seen_content = True
+        if cur is not None:
+            cur.append(ln.rstrip())
+            code = ln.split("#", 1)[0]
+            depth += code.count("{") - code.count("}")
+            if depth <= 0:
+                blocks.append(cur)
+                cur = None
+            continue
+        if not s:
+            continue
+        if s.startswith("#"):
+            pending.append(ln.rstrip())
+            continue
+        if re.match(r"^\d+\.\d+\.\d+\s*=", s):
+            cur = pending + [ln.rstrip()]
+            pending = []
+            code = ln.split("#", 1)[0]
+            depth = code.count("{") - code.count("}")
+            if depth <= 0:
+                blocks.append(cur)
+                cur = None
+            continue
+        m = re.match(r"^([A-Za-z_]+)\s*=", s)
+        key = m.group(1) if m else ""
+        unit = pending + [ln.rstrip()]
+        pending = []
+        code = ln.split("#", 1)[0]
+        bal = code.count("{") - code.count("}")
+        while bal > 0:
+            nxt = next(it, None)
+            if nxt is None:
+                break
+            unit.append(nxt.rstrip())
+            c2 = nxt.split("#", 1)[0]
+            bal += c2.count("{") - c2.count("}")
+        if key == "discovered_by" and len(unit) == 1:
+            found.extend(unit)
+        else:
+            fields.append((rank.get(key, len(rank)), len(fields), unit))
+    if pending:
+        fields.append((len(rank), len(fields), pending))
+    fields = [ln for _, _, ls in sorted(fields) for ln in ls]
+    out = header + [""] + fields if header else fields
+    if found:
+        out += [""] + found
+    for b in blocks:
+        out += [""] + b
+    return "\n".join(out).strip("\n") + "\n"
 
 
 def patch(text, new_owner, pid=None):
@@ -342,20 +435,10 @@ def strip_dead_cores(text, keep):
     return "\n".join(out) + "\n"
 
 
-def take_visibility(text):
-    # Own province visibility: drop every vanilla discovered_by line and
-    # reveal the province to the tech groups of our world instead.
-    seen = [
-        ln for ln in text.splitlines() if not ln.strip().startswith("discovered_by")
-    ]
-    for g in DISCOVERY_GROUPS:
-        seen.append(f"discovered_by = {g}")
-    return "\n".join(seen) + "\n"
-
-
 def take_group_visibility(text):
-    # Wasteland visibility: keep only tech-group discovered_by lines.
-    # Specific tags are dead in our world and only spam the error log.
+    # Visibility everywhere: keep only tech-group discovered_by lines.
+    # No tag-specific discoveries: dead tags spam the log, and living tags
+    # see their land and surroundings through simple group vision anyway.
     out = []
     for ln in text.splitlines():
         m = re.match(r"^\s*discovered_by\s*=\s*([A-Za-z_]+)\s*$", ln)
@@ -392,8 +475,9 @@ def step_provinces(argv):
         text = apply_db_culture_religion(text, pid)
         tag = owner_of.get(pid)
         new = patch(text, tag, pid) if tag else text
-        new = take_visibility(new)
+        new = take_group_visibility(new)
         new = strip_dead_cores(new, keep)
+        new = tidy_province(new)
 
         open(
             os.path.join(PROV_OUT, os.path.basename(src)),
@@ -410,9 +494,17 @@ def step_provinces(argv):
     for pid in sea:
         src = vanilla_prov_file(pid)
         if src:
-            shutil.copy(src, os.path.join(PROV_OUT, os.path.basename(src)))
+            text = strip_dated(
+                open(src, encoding="utf-8", errors="surrogateescape").read()
+            )
+            open(
+                os.path.join(PROV_OUT, os.path.basename(src)),
+                "w",
+                encoding="cp1252",
+                errors="pdx",
+            ).write(text)
             copied += 1
-    print(f"copied {copied} vanilla sea files")
+    print(f"copied {copied} vanilla sea files (undated head only)")
 
     waste = waste_ids()
     wclash = [p for p in waste if p in owner_of]
@@ -429,7 +521,7 @@ def step_provinces(argv):
                 "w",
                 encoding="cp1252",
                 errors="pdx",
-            ).write(take_group_visibility(text))
+            ).write(take_group_visibility(strip_dated(text)))
             wcopied += 1
     print(f"restored {wcopied} vanilla wasteland files (tech groups only)")
 
@@ -448,9 +540,30 @@ def step_provinces(argv):
                 "w",
                 encoding="cp1252",
                 errors="pdx",
-            ).write(take_group_visibility(text))
+            ).write(take_group_visibility(strip_dated(text)))
             lcopied += 1
     print(f"restored {lcopied} vanilla lake files (tech groups only)")
+
+    have = set(todo) | set(sea) | set(waste) | set(lakes)
+    rest = sorted(p for p in vanilla_prov_ids() if p not in have)
+    vcopied = 0
+    for pid in rest:
+        src = os.path.join(VANILLA_PDIR, _VANILLA_PROV_FILES[pid])
+        text = strip_dated(
+            open(src, encoding="utf-8", errors="surrogateescape").read()
+        )
+        lines = text.splitlines()
+        title = next((ln for ln in lines if ln.strip().startswith("#")), f"#{pid}")
+        seen = [ln for ln in lines if ln.strip().startswith("discovered_by")]
+        body = take_group_visibility("\n".join(seen) + "\n") if seen else ""
+        open(
+            os.path.join(PROV_OUT, _VANILLA_PROV_FILES[pid]),
+            "w",
+            encoding="cp1252",
+            errors="pdx",
+        ).write(f"{title}\n\n{body}")
+        vcopied += 1
+    print(f"wrote {vcopied} visibility-only files for unowned provinces")
 
     print(f"wrote {written} province files")
     for tag, ps in sorted(alloc.items(), key=lambda kv: -len(kv[1])):
@@ -780,6 +893,37 @@ def strip_dated(text):
     return "\n".join(out) + "\n"
 
 
+def strip_non_867(text):
+    # Drop every dated block but 867.1.1: no history besides the start date.
+    # Top-level fields stay (they describe the start); only dated entries go.
+    out, cur, keep, depth = [], None, False, 0
+    for ln in text.splitlines():
+        s = ln.strip()
+        if cur is None:
+            m = re.match(r"^(\d+\.\d+\.\d+)\s*=", s)
+            if m:
+                keep = m.group(1) == PROV_DATE
+                code = ln.split("#", 1)[0]
+                depth = code.count("{") - code.count("}")
+                cur = [ln] if keep else []
+                if depth <= 0:
+                    if keep:
+                        out.extend(cur)
+                    cur = None
+                continue
+            out.append(ln)
+        else:
+            if keep:
+                cur.append(ln)
+            code = ln.split("#", 1)[0]
+            depth += code.count("{") - code.count("}")
+            if depth <= 0:
+                if keep:
+                    out.extend(cur)
+                cur = None
+    return "\n".join(out).strip("\n") + "\n"
+
+
 _VANILLA_CTRY_FILES: dict = {}
 
 
@@ -804,6 +948,7 @@ def step_countries():
     os.makedirs(COUNTRY_OUT, exist_ok=True)
     for t in TAGS:
         text = ck3_sync(t.tag, country_history(t))
+        text = strip_non_867(text)
         name = hist_name(t)
         with open(
             os.path.join(COUNTRY_OUT, name),

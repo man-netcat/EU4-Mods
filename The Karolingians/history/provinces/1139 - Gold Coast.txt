@@ -1,0 +1,3 @@
+#1139 - Gold Coast
+
+discovered_by = sub_saharan

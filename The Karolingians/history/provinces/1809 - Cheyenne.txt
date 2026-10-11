@@ -1,0 +1,3 @@
+#1809 - Cheyenne
+
+discovered_by = north_american

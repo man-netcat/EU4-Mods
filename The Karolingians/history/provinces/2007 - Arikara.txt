@@ -1,0 +1,3 @@
+#2007 - Arikara
+
+discovered_by = north_american

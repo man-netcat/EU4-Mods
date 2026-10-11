@@ -1,0 +1,4 @@
+# No previous file for Cotoname
+
+discovered_by = north_american
+discovered_by = mesoamerican

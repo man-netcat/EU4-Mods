@@ -30,4 +30,3 @@ historical_friend = POL
 		mil = 2
 	}
 }
-

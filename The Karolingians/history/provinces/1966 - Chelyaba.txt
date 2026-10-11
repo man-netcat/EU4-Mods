@@ -1,0 +1,4 @@
+#1966 - Chelyaba
+
+discovered_by = nomad_group
+discovered_by = muslim

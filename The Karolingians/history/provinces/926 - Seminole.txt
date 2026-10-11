@@ -1,0 +1,3 @@
+#926 - Seminole
+
+discovered_by = north_american

@@ -1,0 +1,3 @@
+#876 - Yavapai
+
+discovered_by = north_american

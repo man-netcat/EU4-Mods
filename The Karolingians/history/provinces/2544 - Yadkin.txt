@@ -1,0 +1,3 @@
+# No previous file for Yadkin
+
+discovered_by = north_american

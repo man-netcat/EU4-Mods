@@ -1,0 +1,4 @@
+# No previous file for Pijaos
+
+discovered_by = south_american
+discovered_by = andean

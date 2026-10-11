@@ -1,0 +1,5 @@
+#1222 - Gezira
+
+discovered_by = east_african
+discovered_by = muslim
+discovered_by = ottoman

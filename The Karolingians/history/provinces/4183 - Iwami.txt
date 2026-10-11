@@ -1,0 +1,3 @@
+#4183 - Iwami
+
+discovered_by = chinese

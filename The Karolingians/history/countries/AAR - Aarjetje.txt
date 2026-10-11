@@ -16,4 +16,3 @@ capital = 18
 		mil = 2
 	}
 }
-

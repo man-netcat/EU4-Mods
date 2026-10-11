@@ -1,0 +1,6 @@
+# 2362 - Gurganj
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+discovered_by = indian

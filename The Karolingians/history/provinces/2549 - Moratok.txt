@@ -1,0 +1,3 @@
+# 2549 - Moratok
+
+discovered_by = north_american

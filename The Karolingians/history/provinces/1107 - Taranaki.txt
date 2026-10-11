@@ -1,0 +1,3 @@
+#1107 - Taranaki
+
+discovered_by = polynesian_tech

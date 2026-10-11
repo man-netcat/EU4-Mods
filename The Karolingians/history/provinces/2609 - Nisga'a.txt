@@ -1,0 +1,3 @@
+# No previous file for Nisga'a
+
+discovered_by = north_american

@@ -1,0 +1,3 @@
+#1244 - Tahiti
+
+discovered_by = polynesian_tech

@@ -1,0 +1,3 @@
+# No previous file for Piktuk
+
+discovered_by = north_american

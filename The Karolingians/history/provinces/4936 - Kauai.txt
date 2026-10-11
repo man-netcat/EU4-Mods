@@ -1,0 +1,3 @@
+#4936 - Kauai
+
+discovered_by = polynesian_tech

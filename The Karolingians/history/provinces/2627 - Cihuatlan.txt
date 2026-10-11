@@ -1,0 +1,3 @@
+# 2627 - Cihuatlan
+
+discovered_by = mesoamerican
