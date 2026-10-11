@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = catholic
+capital = 2752
+867.1.1 = {
+	monarch = {
+		name = "Rögnvaldr"
+		dynasty = "Trönde"
+		birth_date = 830.1.1
+		death_date = 892.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hrolfr"
+		monarch_name = "Hrolfr"
+		dynasty = "Trönde"
+		birth_date = 860.1.1
+		death_date = 932.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

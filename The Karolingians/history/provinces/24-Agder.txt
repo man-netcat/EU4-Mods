@@ -1,0 +1,25 @@
+#Stavanger
+
+owner = ROG
+controller = ROG
+add_core = ROG
+culture = norwegian
+religion = catholic
+hre = no
+base_tax = 3 
+base_production = 2
+trade_goods = fish
+base_manpower = 1
+capital = "Stavanger"
+is_city = yes
+
+867.1.1 = {	owner = ROG
+	controller = ROG
+	add_core = ROG
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+discovered_by = nomad_group

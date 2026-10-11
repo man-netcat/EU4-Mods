@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = catholic
+capital = 23
+867.1.1 = {
+	monarch = {
+		name = "Eirikr"
+		dynasty = "Horðalandi"
+		birth_date = 819.1.1
+		death_date = 870.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Gyda"
+		monarch_name = "Gyda"
+		dynasty = "Horðalandi"
+		birth_date = 854.1.1
+		death_date = 935.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

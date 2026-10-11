@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = catholic
+capital = 10
+867.1.1 = {
+	monarch = {
+		name = "Björn"
+		dynasty = "Jämtland"
+		birth_date = 840.1.1
+		death_date = 882.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

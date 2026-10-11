@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norwegian
+religion = catholic
+capital = 21
+867.1.1 = {
+	monarch = {
+		name = "Björgolf"
+		dynasty = "Torgar"
+		birth_date = 810.1.1
+		death_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Brynjolf"
+		monarch_name = "Brynjolf"
+		dynasty = "Torgar"
+		birth_date = 830.1.1
+		death_date = 885.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
