@@ -93,7 +93,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - `government_names` is first-match-wins: specific blocks (abbasid, muslim,
   byzantine, papacy, armenian…) must precede their defaults. It and
   `government_ranks` are `replace_path`ed — the only gov files that load.
-- History/provinces/countries/diplomacy/wars/advisors/missions/cultures plus
+- History/provinces/countries/diplomacy/wars/advisors/missions/events/cultures plus
   `gfx/flags` are all `replace_path`ed: no vanilla content loads there.
   Province/country files must reuse vanilla's **exact filenames** or vanilla's
   version merges back in. Sea tiles are copied verbatim from vanilla

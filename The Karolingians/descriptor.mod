@@ -9,6 +9,7 @@ replace_path="history/advisors"
 replace_path="history/provinces"
 replace_path="history/countries"
 replace_path="missions"
+replace_path="events"
 replace_path="gfx/flags"
 supported_version="1.37.*"
 tags={
