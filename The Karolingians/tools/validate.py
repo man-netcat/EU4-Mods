@@ -425,7 +425,7 @@ def run() -> int:
         "decision name keyed kar_form_hre_title (EU4 reads <key>_title)",
     )
 
-    print("\n== starting vassals ==")
+    print("\n== starting subjects ==")
     dip = os.path.join(MOD, "history", "diplomacy", "karolingian_vassals.txt")
     raw_dip = open(dip, encoding="cp1252", errors="replace").read()
     found = list(
@@ -435,7 +435,7 @@ def run() -> int:
         )
     )
     expected_dip = [(d.liege, d.subject) for d in DIPLOMACY]
-    note(found == expected_dip, "diplomacy file lists exactly the starting vassals")
+    note(found == expected_dip, "diplomacy file lists exactly the starting subjects")
     if found != expected_dip:
         print(f"        in file    : {found}")
         print(f"        in tagdb   : {expected_dip}")
@@ -444,9 +444,8 @@ def run() -> int:
     print("== vanilla tag reuse is deliberate ==")
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY ENG EST FIN FRA "
-        "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT POL POM PRU RUG SAR "
-        "SIL SCO SOR SRV STE TNG TRA VEN VOL WLS WOL".split()
-    )
+        "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOR NOV PAP PLT POL POM PRU RUG SAR "
+        "SIL SCO SOR SRV STE SWE TNG TRA VEN VOL WLS WOL".split()    )
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")
     for fn in os.listdir(vd):
@@ -558,6 +557,15 @@ def run() -> int:
             note(
                 f"owns = {fb.capital}" in dec,
                 f"{key} requires holding the capital ({fb.capital})",
+            )
+        if fb.home_capital:
+            m = re.search(r"capital_scope = \{(.*?)\n\t\t\t\}", dec, re.S)
+            body = m.group(1) if m else ""
+            note(
+                bool(m)
+                and all(f"area = {a}" in body for a in fb.areas)
+                and all(f"province_id = {p}" in body for p in fb.provinces),
+                f"{key} requires a homeland capital ({len(fb.areas)} areas)",
             )
         for culture, stag, name in fb.renames:
             trig = f"tag = {stag}" if stag else f"primary_culture = {culture}"

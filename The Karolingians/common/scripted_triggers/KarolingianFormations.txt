@@ -93,6 +93,14 @@ kar_form_lithuania_provinces_trigger = {
 	}
 }
 
+kar_form_denmark_provinces_trigger = {
+	OR = {
+		area = denmark_area
+		area = jutland_area
+		area = skaneland_area
+	}
+}
+
 kar_form_galicia_volhynia_provinces_trigger = {
 	OR = {
 		area = red_ruthenia_area
@@ -112,13 +120,6 @@ kar_form_poland_provinces_trigger = {
 	}
 }
 
-kar_form_iceland_provinces_trigger = {
-	OR = {
-		province_id = 370 #reykjavik
-		province_id = 371 #akureyri
-	}
-}
-
 kar_form_pomerania_provinces_trigger = {
 	OR = {
 		area = hinter_pommern_area
@@ -126,6 +127,24 @@ kar_form_pomerania_provinces_trigger = {
 		area = mittelmark_area
 		area = neumark_area
 		area = vorpommern_area
+	}
+}
+
+kar_form_sweden_provinces_trigger = {
+	OR = {
+		area = gotaland_area
+		area = norrland_area
+		area = ostra_svealand_area
+		area = svealand_area
+		area = vastra_gotaland_area
+	}
+}
+
+kar_form_norway_provinces_trigger = {
+	OR = {
+		area = eastern_norway
+		area = northern_norway
+		area = western_norway
 	}
 }
 

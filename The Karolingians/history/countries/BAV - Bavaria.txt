@@ -1,29 +1,29 @@
 government = monarchy
 add_government_reform = feudalism_reform
-government_rank = 2
+government_rank = 3
 technology_group = western
 primary_culture = franconian
 religion = catholic
 capital = 65
 867.1.1 = {
 	monarch = {
+		name = "Ludwig"
+		dynasty = "Karling"
+		birth_date = 806.1.1
+		death_date = 876.1.29
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
 		name = "Karlmann"
+		monarch_name = "Karlmann"
 		dynasty = "Karling"
 		birth_date = 830.1.14
 		death_date = 880.9.29
+		claim = 90
 		adm = 2
 		dip = 2
 		mil = 3
-	}
-	heir = {
-		name = "Arnulf"
-		monarch_name = "Arnulf"
-		dynasty = "Karling"
-		birth_date = 850.1.1
-		death_date = 899.8.12
-		claim = 90
-		adm = 1
-		dip = 3
-		mil = 1
 	}
 }

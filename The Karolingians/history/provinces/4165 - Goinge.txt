@@ -1,8 +1,8 @@
 #Eastern Skåne - More or less Kristianstad Län. Includes Göinge, Gladsax Len, Listerlandet, and others.
 
-owner = DAN
-controller = DAN
-add_core = DAN
+owner = SJA
+controller = SJA
+add_core = SJA
 capital = "Gladsax"
 culture = norse
 religion = catholic
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = DAN
-	controller = DAN
-	add_core = DAN
+	owner = SJA
+	controller = SJA
+	add_core = SJA
 }

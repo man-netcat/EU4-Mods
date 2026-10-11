@@ -3,7 +3,6 @@
 owner = GOT
 controller = GOT
 add_core = GOT
-add_core = DAN
  # Visborg Castle
 capital = "Visby"
 culture = norse

@@ -68,8 +68,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   Iceland), a primary `culture` (Wales, Sardinia, Poland, England),
   `culture_group`s (Britannia: british, brythonic and gaelic — gaelic
   displays in-game as Celtic), or a `dynasty` (the Karlings alone restore
-  the Empire). HLR's custom decision stays handwritten; the table records
-  the correspondence.
+  the Empire). A fifth, `home_capital`, requires the firing tag's capital
+  to sit inside the requirement land instead of holding a fixed capital
+  (Denmark, and Norway/Sweden when they come); it excludes `own_capital`.
+  HLR's custom decision stays handwritten; the table records the correspondence.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

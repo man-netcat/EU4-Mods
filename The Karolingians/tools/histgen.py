@@ -105,6 +105,16 @@ def formation_decision(fcode, starters) -> str:
     cap_req = ""
     if fb.own_capital:
         cap_req = "\n\t\t\towns = " + str(fb.capital)
+    home_req = ""
+    if fb.home_capital:
+        home_or = "\n".join(
+            [f"{T*4}area = {a}" for a in fb.areas]
+            + [f"{T*4}province_id = {p}" for p in sorted(fb.provinces)]
+        )
+        home_req = (
+            f"\n\t\t\tcapital_scope = {{\n\t\t\t\tOR = {{\n{home_or}\n"
+            f"\t\t\t\t}}\n\t\t\t}}"
+        )
     area_or = "\n".join(
         [f"{T*4}area = {a}" for a in fb.areas]
         + [f"{T*4}province_id = {p}" for p in sorted(fb.provinces)]
@@ -162,7 +172,7 @@ def formation_decision(fcode, starters) -> str:
 \t\t\tNOT = {{ has_country_flag = {key} }}
 \t\t\tNOT = {{ tag = {fcode} }}
 \t\t\tNOT = {{ exists = {fcode} }}
-{tag_line}
+{tag_line}{home_req}
 \t\t\tOR = {{
 \t\t\t\tai = no
 \t\t\t\tis_playing_custom_nation = no

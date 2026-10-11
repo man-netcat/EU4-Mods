@@ -2,7 +2,6 @@
 
 owner = JYL
 controller = JYL
-add_core = DAN
 add_core = JYL
 capital = "Kolding"
 culture = norse

@@ -1,4 +1,4 @@
-# Starting vassals of the Carolingian world.
+# Starting subjects of the Carolingian world (vassals and unions).
 # No start_date: each holds from the mod's start.
 vassal = {
 	first = BUL
@@ -16,7 +16,7 @@ vassal = {
 	first = FRA
 	second = GTH
 }
-vassal = {
+union = {
 	first = GER
 	second = BAV
 }

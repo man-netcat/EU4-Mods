@@ -105,6 +105,9 @@ class Formable(Base):
     capital = Column(Integer, ForeignKey("provinces.pid"))
     # require holding the capital province to form
     own_capital = Column(Boolean, nullable=False, default=False)
+    # require the firing tag's capital to sit inside the requirement land
+    # (homeland rule for Denmark/Norway/Sweden); never with own_capital
+    home_capital = Column(Boolean, nullable=False, default=False)
     # primary culture that may fire the decision (NULL = listed starters only)
     culture = Column(String, ForeignKey("cultures.name"))
     # culture groups that may fire it, space-separated (GBR: the isles'

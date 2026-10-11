@@ -100,6 +100,7 @@ class FormableTag(Tag):
     provinces: frozenset = field(default_factory=frozenset)
     percent: Optional[int] = None
     own_capital: bool = False
+    home_capital: bool = False
     culture: Optional[str] = None
     culture_group: tuple = ()
     renames: tuple = ()
@@ -200,6 +201,7 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
                 percent=r.percent,
                 capital=r.capital,
                 own_capital=bool(r.own_capital),
+                home_capital=bool(r.home_capital),
                 culture=r.culture,
                 culture_group=tuple(r.culture_group.split())
                 if r.culture_group
@@ -350,6 +352,10 @@ def selfcheck() -> None:
         if fb.own_capital and not fb.capital:
             raise ValueError(
                 f"formable {fb.tag}: own_capital is set but capital is not"
+            )
+        if fb.own_capital and fb.home_capital:
+            raise ValueError(
+                f"formable {fb.tag}: own_capital and home_capital exclude each other"
             )
     starters: dict[str, list] = {}
     for t in TAGS:
