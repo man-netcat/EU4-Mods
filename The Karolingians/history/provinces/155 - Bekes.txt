@@ -2,8 +2,8 @@
 
 owner = VSG
 controller = VSG
-culture = hungarian
-religion = catholic
+culture = avar
+religion = tengri_pagan_reformed
 capital = "Gyula"
 trade_goods = wine
 hre = no

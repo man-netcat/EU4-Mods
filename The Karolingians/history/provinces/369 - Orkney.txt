@@ -2,7 +2,7 @@
 
 owner = ORK
 controller = ORK
-culture = norwegian
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1 

@@ -1,6 +1,6 @@
 # 1876 - Frankfurt
 capital = "Frankfurt"
-culture = hessian
+culture = frankish
 religion = catholic
 trade_goods = paper
 owner = GER

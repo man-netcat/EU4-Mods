@@ -1,6 +1,6 @@
 owner = ITA
 controller = ITA
-culture = swiss
+culture = burgundian
 religion = catholic
 capital = "Geneva"
 trade_goods = cloth

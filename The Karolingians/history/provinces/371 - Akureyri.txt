@@ -3,7 +3,7 @@
 owner = AUD
 controller = AUD
 add_core = AUD
-culture = icelandic
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1 

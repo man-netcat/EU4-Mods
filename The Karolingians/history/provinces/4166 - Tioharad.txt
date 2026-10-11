@@ -3,7 +3,7 @@
 add_core = SMA
 owner = SMA
 controller = SMA
-culture = swedish
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1

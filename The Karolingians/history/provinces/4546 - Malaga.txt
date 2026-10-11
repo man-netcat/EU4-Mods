@@ -3,7 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
-culture = andalucian
+culture = bedouin_arabic
 religion = sunni
 hre = no
 base_tax = 3

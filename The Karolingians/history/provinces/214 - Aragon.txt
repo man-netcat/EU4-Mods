@@ -3,7 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
-culture = aragonese
+culture = basque
 religion = catholic
 hre = no
 base_tax = 5

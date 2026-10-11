@@ -6,7 +6,7 @@ latent_trade_goods = {
 
 owner = LOT
 controller = LOT
-culture = hessian
+culture = frankish
 religion = catholic
 trade_goods = grain
 capital = "Aachen"

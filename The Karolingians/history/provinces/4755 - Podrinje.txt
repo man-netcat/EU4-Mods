@@ -2,7 +2,7 @@
 
 owner = RSK
 controller = RSK
-culture = bosnian
+culture = serbian
 religion = orthodox
 capital = "Visegrad"
 trade_goods = salt

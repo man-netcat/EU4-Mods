@@ -3,7 +3,7 @@
 add_core = VAR
 owner = VAR
 controller = VAR
-culture = swedish
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1

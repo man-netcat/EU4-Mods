@@ -2,7 +2,7 @@
 
 owner = ITA
 controller = ITA
-culture = sardinian
+culture = italian
 religion = catholic
 capital = "Bastia"
 hre = yes

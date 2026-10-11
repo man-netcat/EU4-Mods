@@ -2,7 +2,7 @@
 
 owner = VES
 controller = VES
-culture = icelandic
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1 

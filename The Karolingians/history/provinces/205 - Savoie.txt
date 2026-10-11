@@ -2,7 +2,7 @@
 
 owner = ITA
 controller = ITA
-culture = occitain
+culture = burgundian
 religion = catholic
 hre = yes
 base_tax = 6

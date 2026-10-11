@@ -2,8 +2,8 @@
 
 owner = BUL
 controller = BUL
-culture = hungarian
-religion = catholic
+culture = avar
+religion = tengri_pagan_reformed
 capital = "Bács"
 trade_goods = livestock
 hre = no

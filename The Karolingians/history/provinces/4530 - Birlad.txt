@@ -2,7 +2,7 @@
 
 owner = BUC
 controller = BUC
-culture = romanian
+culture = bulgarian
 religion = orthodox
 capital = "Birlad"
 trade_goods = wine

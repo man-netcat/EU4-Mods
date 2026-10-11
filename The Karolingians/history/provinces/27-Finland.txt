@@ -3,7 +3,7 @@
 owner = FIN
 controller = FIN
 add_core = FIN
-culture = swedish
+culture = finnish
 religion = catholic
 hre = no
 base_tax = 3 

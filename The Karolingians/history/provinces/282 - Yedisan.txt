@@ -2,7 +2,7 @@
 
 owner = MGY
 controller = MGY
-culture = crimean
+culture = magyar
 religion = sunni
 hre = no
 base_tax = 2

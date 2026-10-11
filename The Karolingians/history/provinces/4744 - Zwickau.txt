@@ -3,7 +3,7 @@
 owner = SOR
 controller = SOR
 add_core = SOR
-culture = saxon
+culture = sorbian
 religion = catholic
 hre = yes
 base_tax = 2

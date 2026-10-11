@@ -2,7 +2,7 @@
 
 owner = MLK
 controller = MLK
-culture = azerbaijani
+culture = georgian
 religion = sunni
 capital = "Shaki"
 trade_goods = wool

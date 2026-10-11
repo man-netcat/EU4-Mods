@@ -3,7 +3,7 @@
 owner = CED
 controller = CED
 #add_core = BRA
-culture = saxon
+culture = polabian
 religion = catholic
 hre = yes
 base_tax = 2 

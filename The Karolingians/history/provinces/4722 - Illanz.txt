@@ -1,6 +1,6 @@
 owner = GER
 controller = GER
-culture = swiss
+culture = swabian
 religion = catholic
 capital = "Illanz"
 trade_goods = livestock

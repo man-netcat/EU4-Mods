@@ -2,7 +2,7 @@
 
 owner = LOI
 controller = LOI
-culture = highland_scottish
+culture = irish
 religion = catholic
 hre = no
 base_tax = 1 

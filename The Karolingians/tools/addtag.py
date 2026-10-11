@@ -2,6 +2,7 @@
 """Insert a new realm tag: DB rows + loc pair. Then run build + validate.
 
 Usage: python3 tools/addtag.py TAG ck3_title PID [PID ...]
+       python3 tools/addtag.py --to TAG PID [PID ...]   (append to a tag)
        [--rank N] [--capital PID] [--tech GROUP] [--gov GOV]
        [--name STR] [--adj STR] [--file NAME] [--take]
 
@@ -72,9 +73,13 @@ def prov_data(pid):
 
 def main(argv):
     ap = argparse.ArgumentParser()
-    ap.add_argument("tag")
-    ap.add_argument("title")
+    ap.add_argument("tag", nargs="?")
+    ap.add_argument("title", nargs="?")
     ap.add_argument("pids", nargs="+", type=int)
+    ap.add_argument("--to",
+                    help="append the provinces to an existing tag (no title)")
+    ap.add_argument("--culture", help="override the vanilla province culture")
+    ap.add_argument("--religion", help="override the vanilla province religion")
     ap.add_argument("--rank", type=int)
     ap.add_argument("--capital", type=int)
     ap.add_argument("--tech", default="western")
@@ -87,11 +92,50 @@ def main(argv):
                     help="code is a vanilla tag taken over deliberately")
     a = ap.parse_args(argv)
 
+    c = sqlite3.connect(DB)
+    if a.to:
+        if a.tag or a.title:
+            sys.exit("--to takes only pids, no tag/title")
+        if not c.execute("select tag from tags where tag=?", (a.to,)).fetchone():
+            sys.exit(f"{a.to} is no tag in tags.db")
+        taken = c.execute(
+            f"select tag,pid from tag_provinces where pid in ({','.join('?' * len(a.pids))})",
+            a.pids).fetchall()
+        if taken and not a.take:
+            sys.exit(f"provinces owned already ({taken}); pass --take to reassign")
+        for tag, pid in taken:
+            c.execute("delete from tag_provinces where tag=? and pid=?", (tag, pid))
+            print(f"  took {pid} from {tag}")
+    if a.to:
+        datas = {pid: prov_data(pid) for pid in a.pids}
+        for pid in a.pids:
+            name, cul, rel = datas[pid]
+            if not c.execute("select pid from provinces where pid=?", (pid,)).fetchone():
+                c.execute("INSERT INTO provinces VALUES (?,?,?,?)",
+                          (pid, name, a.culture or cul, a.religion or rel))
+            c.execute("INSERT INTO tag_provinces VALUES (?,?)", (a.to, pid))
+        c.commit()
+        print(f"{a.to} gains {len(a.pids)} provinces")
+        return 0
+
+    datas = {pid: prov_data(pid) for pid in a.pids}
+    have = set()
+    import glob as _glob
+    for fn in _glob.glob(os.path.join(HERE, "..", "localisation", "..",
+                                      "common", "cultures", "*.txt")):
+        for ln in open(fn, encoding="cp1252", errors="replace"):
+            m = re.match(r"^\t([a-z_0-9]+) = \{$", ln)
+            if m:
+                have.add(m.group(1))
+    for pid, (_nm, cul, _rel) in datas.items():
+        if cul not in have and not a.culture:
+            sys.exit(f"province {pid} is vanilla {cul}, undefined here - "
+                     "pass --culture to pick the 867 key")
+
     if not re.fullmatch(r"[A-Z]{3}", a.tag):
         sys.exit("tag must be 3 uppercase letters")
     if a.tag in vanilla_tags() and not a.reuse:
         sys.exit(f"{a.tag} is a vanilla tag (pass --reuse to take it over deliberately)")
-    c = sqlite3.connect(DB)
     if c.execute("select tag from tags where tag=?", (a.tag,)).fetchone():
         sys.exit(f"{a.tag} already in tags.db")
     taken = c.execute(
@@ -117,7 +161,8 @@ def main(argv):
     if capital not in a.pids:
         sys.exit("capital must be one of the provinces")
     datas = {pid: prov_data(pid) for pid in a.pids}
-    culture, religion = datas[capital][1], datas[capital][2]
+    culture = a.culture or datas[capital][1]
+    religion = a.religion or datas[capital][2]
     seq = c.execute("select max(seq) from tags").fetchone()[0] + 1
     country_file = (a.file or ascii_name(name)) + ".txt"
     from eu4 import load_vanilla_countries
@@ -132,11 +177,13 @@ def main(argv):
     values = ((a.tag, seq, rank, name, capital, culture, religion, a.title, None,
                a.gov, a.tech, "", 0) + tuple(colors[a.title])
               + (country_file, 250, 5, 0, 10,
-                 "[]", "[]", "[]", "[]", None, None, None, None, None))
+                 "[]", "[]", "[]", "[]", None, None, None, None))
     c.execute(f"INSERT INTO tags VALUES ({','.join('?' * len(values))})", values)
     for pid in a.pids:
         if not c.execute("select pid from provinces where pid=?", (pid,)).fetchone():
-            c.execute("INSERT INTO provinces VALUES (?,?,?,?)", (pid,) + datas[pid])
+            pname, pcul, prel = datas[pid]
+            c.execute("INSERT INTO provinces VALUES (?,?,?,?)",
+                      (pid, pname, a.culture or pcul, a.religion or prel))
         c.execute("INSERT INTO tag_provinces VALUES (?,?)", (a.tag, pid))
     c.execute("INSERT INTO tag_reforms VALUES (?,?,?)",
               (a.tag, seq, "feudalism_reform"))

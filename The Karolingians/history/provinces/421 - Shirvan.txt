@@ -2,7 +2,7 @@
 
 owner = SRV
 controller = SRV
-culture = azerbaijani
+culture = persian
 religion = sunni
 capital = "Baku"
 trade_goods = silk #And Salt and Petroleum

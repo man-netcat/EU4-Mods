@@ -2,7 +2,7 @@
 
 owner = MLK
 controller = MLK
-culture = azerbaijani
+culture = persian
 religion = shiite
 capital = "Ganja"
 trade_goods = cotton

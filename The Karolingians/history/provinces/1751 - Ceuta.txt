@@ -2,7 +2,7 @@
 
 owner = ADU
 controller = ADU
-culture = moroccan
+culture = berber
 religion = sunni
 capital = "Cebta"
 trade_goods = fish

@@ -2,7 +2,7 @@
 
 owner = BNV
 controller = BNV
-culture = neapolitan 
+culture = lombard 
 religion = catholic 
 hre = no 
 base_tax = 3

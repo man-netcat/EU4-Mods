@@ -3,7 +3,7 @@
 add_core = VAS
 owner = VAS
 controller = VAS
-culture = swedish
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1

@@ -2,8 +2,8 @@
 
 owner = TRA
 controller = TRA
-culture = transylvanian
-religion = catholic
+culture = avar
+religion = tengri_pagan_reformed
 capital = "Temesvár"
 trade_goods = wool
 hre = no

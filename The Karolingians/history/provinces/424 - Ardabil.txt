@@ -2,7 +2,7 @@
 
 owner = ARB
 controller = ARB
-culture = azerbaijani
+culture = persian
 religion = shiite
 capital = "Ardabil"
 trade_goods = dyes

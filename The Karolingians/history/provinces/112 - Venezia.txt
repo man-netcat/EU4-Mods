@@ -2,7 +2,7 @@
 
 owner = VEN
 controller = VEN
-culture = venetian 
+culture = greek 
 religion = catholic 
 hre = no 
 base_tax = 10 

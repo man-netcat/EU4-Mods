@@ -3,7 +3,7 @@
 add_core = JYL
 owner = JYL
 controller = JYL
-culture = danish
+culture = norse
 religion = catholic
 hre = no
 base_tax = 4

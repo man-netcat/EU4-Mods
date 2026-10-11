@@ -1,6 +1,6 @@
 owner = LOT
 controller = LOT
-culture = occitain
+culture = burgundian
 religion = catholic
 hre = yes
 base_tax = 3

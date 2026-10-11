@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = anglosaxon
+religion = catholic
+capital = 245
+867.1.1 = {
+	monarch = {
+		name = "Halfdan"
+		dynasty = "Hvitserk"
+		birth_date = 828.1.1
+		death_date = 875.1.1
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+	heir = {
+		name = "Sigfrið"
+		monarch_name = "Sigfrið"
+		dynasty = "Hvitserk"
+		birth_date = 843.1.1
+		death_date = 888.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

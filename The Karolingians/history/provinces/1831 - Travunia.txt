@@ -2,7 +2,7 @@
 
 owner = ZAH
 controller = ZAH
-culture = bosnian
+culture = serbian
 religion = orthodox
 capital = "Herceg Novi"
 trade_goods = wool

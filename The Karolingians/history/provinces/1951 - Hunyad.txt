@@ -6,8 +6,8 @@ latent_trade_goods = {
 
 owner = TRA
 controller = TRA
-culture = transylvanian
-religion = orthodox
+culture = avar
+religion = tengri_pagan_reformed
 capital = "Alba Iulia"
 trade_goods = iron
 hre = no

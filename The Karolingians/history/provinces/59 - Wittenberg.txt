@@ -2,7 +2,7 @@
 
 owner = SOR
 controller = SOR
-culture = saxon
+culture = sorbian
 religion = catholic
 capital = "Wittenberg"
 trade_goods = wool

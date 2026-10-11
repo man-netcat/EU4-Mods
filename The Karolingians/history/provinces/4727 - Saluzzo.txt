@@ -1,7 +1,7 @@
 #4727 - Saluzzo
 owner = ITA
 controller = ITA
-culture = piedmontese
+culture = cisalpine
 religion = catholic
 hre = yes
 base_tax = 3

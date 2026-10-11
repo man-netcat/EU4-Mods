@@ -3,7 +3,7 @@
 owner = GTH
 controller = GTH
 add_core = GTH
-culture = catalan
+culture = goths
 religion = catholic
 hre = no
 base_tax = 6 

@@ -2,7 +2,7 @@
 
 owner = GER
 controller = GER
-culture = hannoverian
+culture = polabian
 religion = catholic
 capital = "Oldenburg"
 trade_goods = salt

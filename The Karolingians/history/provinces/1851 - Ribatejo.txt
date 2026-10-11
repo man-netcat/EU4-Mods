@@ -2,7 +2,7 @@
 
 owner = ADU
 controller = ADU
-culture = portugese
+culture = galician
 religion = catholic
 capital = "Coimbra"
 trade_goods = grain

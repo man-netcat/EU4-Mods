@@ -3,7 +3,7 @@
 owner = TEL
 controller = TEL
 add_core = TEL
-culture = norwegian
+culture = norse
 religion = catholic
 hre = no
 base_tax = 2 

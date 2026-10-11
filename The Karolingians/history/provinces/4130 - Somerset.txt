@@ -2,7 +2,7 @@
 
 owner = SMT
 controller = SMT
-culture = english
+culture = anglosaxon
 religion = catholic
 hre = no
 base_tax = 2

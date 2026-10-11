@@ -1,7 +1,7 @@
 #77 - Heidelberg
 
 capital = "Heidelberg"
-culture = hessian
+culture = frankish
 religion = catholic
 trade_goods = wine
 owner = GER

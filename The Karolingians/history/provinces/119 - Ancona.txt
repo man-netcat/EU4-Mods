@@ -2,7 +2,7 @@
 
 owner = ITA
 controller = ITA
-culture = umbrian 
+culture = greek 
 religion = catholic 
 hre = no 
 base_tax = 5 

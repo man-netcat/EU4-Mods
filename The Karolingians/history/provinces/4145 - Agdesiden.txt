@@ -3,7 +3,7 @@
 owner = NES
 controller = NES
 add_core = NES
-culture = norwegian
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1

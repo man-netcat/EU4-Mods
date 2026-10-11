@@ -2,7 +2,7 @@
 
 owner = ITA
 controller = ITA
-culture = romagnan 
+culture = lombard 
 religion = catholic 
 hre = yes 
 base_tax = 5 

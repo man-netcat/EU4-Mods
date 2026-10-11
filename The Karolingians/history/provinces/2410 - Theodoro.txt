@@ -2,7 +2,7 @@
 
 owner = BYZ
 controller = BYZ
-culture = goths
+culture = greek
 religion = orthodox
 hre = no
 base_tax = 3 

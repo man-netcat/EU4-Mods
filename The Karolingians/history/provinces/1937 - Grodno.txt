@@ -2,7 +2,7 @@
 
 owner = BES
 controller = BES
-culture = byelorussian
+culture = prussian
 religion = orthodox
 hre = no
 base_tax = 2

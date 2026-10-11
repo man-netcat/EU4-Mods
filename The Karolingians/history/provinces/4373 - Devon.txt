@@ -2,7 +2,7 @@
 
 owner = CRN
 controller = CRN
-culture = english
+culture = anglosaxon
 religion = catholic
 hre = no
 base_tax = 2

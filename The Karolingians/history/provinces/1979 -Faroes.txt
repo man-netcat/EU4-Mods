@@ -2,7 +2,7 @@
 
 owner = FAE
 controller = FAE
-culture = icelandic
+culture = norse
 religion = catholic
 hre = no
 base_tax = 1 

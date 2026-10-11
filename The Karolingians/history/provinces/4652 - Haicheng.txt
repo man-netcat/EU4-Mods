@@ -3,7 +3,7 @@
 owner = BHE
 controller = BHE
 add_core = BHE
-culture = manchu_new # check
+culture = manchu # check
 religion = confucianism
 capital = "Haicheng"
 trade_goods = fish

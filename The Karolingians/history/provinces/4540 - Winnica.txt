@@ -2,7 +2,7 @@
 
 owner = MGY
 controller = MGY
-culture = ruthenian
+culture = magyar
 religion = orthodox
 hre = no
 base_tax = 1

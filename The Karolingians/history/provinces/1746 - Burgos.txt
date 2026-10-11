@@ -3,7 +3,7 @@
 owner = ASU
 controller = ASU
 add_core = ASU
-culture = castillian
+culture = leonese
 religion = catholic
 hre = no
 base_tax = 3

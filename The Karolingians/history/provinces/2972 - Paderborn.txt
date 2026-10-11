@@ -1,7 +1,7 @@
 #Paderborn
 owner = GER
 controller = GER
-culture = hannoverian
+culture = saxon
 religion = catholic
 trade_goods = wool
 capital = "Paderborn"

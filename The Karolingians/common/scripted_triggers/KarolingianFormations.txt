@@ -110,3 +110,9 @@ kar_form_sardinia_provinces_trigger = {
 		province_id = 4735 #arborea
 	}
 }
+
+kar_form_wales_provinces_trigger = {
+	OR = {
+		area = wales_area
+	}
+}

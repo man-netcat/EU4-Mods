@@ -1,5 +1,5 @@
 # 69 - Dortmund
-culture = hannoverian
+culture = saxon
 owner = GER
 controller = GER
 add_core = GER

@@ -1,7 +1,7 @@
 #1774 - Treviso
 owner = ITA
 controller = ITA
-culture = venetian 
+culture = cisalpine 
 religion = catholic 
 hre = no
 base_tax = 7 

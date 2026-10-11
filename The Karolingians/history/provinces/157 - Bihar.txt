@@ -2,8 +2,8 @@
 
 owner = TRA
 controller = TRA
-culture = transylvanian
-religion = orthodox
+culture = avar
+religion = tengri_pagan_reformed
 capital = "Oradea"
 trade_goods = naval_supplies
 hre = no

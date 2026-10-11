@@ -2,7 +2,7 @@
 
 owner = ARB
 controller = ARB
-culture = azerbaijani
+culture = armenian
 religion = sunni
 capital = "Khoy"
 trade_goods = wool

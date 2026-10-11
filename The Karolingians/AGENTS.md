@@ -38,7 +38,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
    with a wrong vanilla tag (this happened with BER/Berry once).
 2. Run `python3 tools/addtag.py TAG ck3_title PID...` — it checks the code,
    pulls CK3 name/colour, inserts `tags`/`provinces`/`tag_provinces`/
-   `tag_reforms` and the loc pair (`--rank/--capital/--tech/--take` as needed).
+   `tag_reforms` and the loc pair (`--rank/--capital/--tech/--take` as needed;
+   `--to TAG` appends land to an existing tag, `--culture/--religion`
+   override vanilla values, e.g. english provinces take anglosaxon).
 3. Vanilla tags (SRV, ARM, KRA…) need no registration/flag/loc — but add the
    code to `VANILLA_REUSE` in `validate.py` or the collision guard fails.
    New tags are auto-registered in `00_karolingian_custom.txt` on rebuild.

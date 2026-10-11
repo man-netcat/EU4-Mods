@@ -3,7 +3,7 @@
 owner = LVA
 controller = LVA
 add_core = LVA
-culture = baltic_german
+culture = livonian
 religion = catholic
 hre = no
 base_tax = 5 

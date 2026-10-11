@@ -3,7 +3,7 @@
 owner = DAN
 controller = DAN
 add_core = DAN
-culture = norwegian
+culture = norse
 religion = catholic
 hre = no
 base_tax = 2 

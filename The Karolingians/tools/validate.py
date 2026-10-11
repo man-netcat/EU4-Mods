@@ -385,7 +385,7 @@ def run() -> int:
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY EST FIN FRA "
         "GER GMA GOT HLR HSA HUN ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT POL PRU RUG SAR "
-        "SIL SCO SOR SRV STE TNG TRA VEN VOL WOL".split()
+        "SIL SCO SOR SRV STE TNG TRA VEN VOL WLS WOL".split()
     )
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")

@@ -2,7 +2,7 @@
 
 owner = SAW
 controller = SAW
-culture = sicilian 
+culture = greek 
 religion = catholic 
 hre = no 
 base_tax = 2 

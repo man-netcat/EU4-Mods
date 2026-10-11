@@ -2,7 +2,7 @@
 
 owner = BUC
 controller = BUC
-culture = romanian
+culture = bulgarian
 religion = orthodox
 capital = "Bender"
 trade_goods = wine

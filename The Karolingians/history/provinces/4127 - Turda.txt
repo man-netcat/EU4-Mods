@@ -2,8 +2,8 @@
 
 owner = TRA
 controller = TRA
-culture = transylvanian
-religion = orthodox
+culture = avar
+religion = tengri_pagan_reformed
 capital = "Turda"
 trade_goods = salt # Famous salt mines
 hre = no

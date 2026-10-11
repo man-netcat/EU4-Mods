@@ -3,7 +3,7 @@
 owner = VFD
 controller = VFD
 add_core = VFD
-culture = norwegian
+culture = norse
 religion = catholic
 hre = no
 base_tax = 3

@@ -2,7 +2,7 @@
 
 owner = BUL
 controller = BUL
-culture = serbian
+culture = bulgarian
 religion = orthodox
 capital = "Mitrovica"
 trade_goods = grain

@@ -1,6 +1,6 @@
 owner = GER
 controller = GER
-culture = hessian
+culture = frankish
 religion = catholic
 trade_goods = grain
 capital = "Koblenz"

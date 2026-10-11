@@ -2,7 +2,7 @@
 
 owner = BUL
 controller = BUL
-culture = romanian
+culture = bulgarian
 religion = orthodox
 capital = "Tîrgoviste"
 trade_goods = livestock

@@ -1,6 +1,6 @@
 owner = LOT
 controller = LOT
-culture = swiss
+culture = burgundian
 religion = catholic
 capital = "Fribourg"
 trade_goods = livestock
