@@ -110,6 +110,16 @@ kar_form_iceland_provinces_trigger = {
 	}
 }
 
+kar_form_pomerania_provinces_trigger = {
+	OR = {
+		area = hinter_pommern_area
+		area = mecklenburg_area
+		area = mittelmark_area
+		area = neumark_area
+		area = vorpommern_area
+	}
+}
+
 kar_form_britannia_provinces_trigger = {
 	OR = {
 		area = connacht_area
