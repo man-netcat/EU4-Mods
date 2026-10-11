@@ -92,6 +92,16 @@ def main(argv):
                     help="code is a vanilla tag taken over deliberately")
     a = ap.parse_args(argv)
 
+    if a.to and (a.tag is not None or a.title is not None):
+        # --to takes only pids: argparse files leading pids as tag/title,
+        # so fold any numeric ones back into pids.
+        try:
+            extra = [int(x) for x in ([a.tag] if a.tag else []) + ([a.title] if a.title else [])]
+        except ValueError:
+            sys.exit("--to takes only pids, no tag/title")
+        a.pids = extra + (a.pids or [])
+        a.tag = a.title = None
+
     c = sqlite3.connect(DB)
     if a.to:
         if a.tag or a.title:

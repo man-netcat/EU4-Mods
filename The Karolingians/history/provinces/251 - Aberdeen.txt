@@ -2,7 +2,7 @@
 
 owner = SCO
 controller = SCO
-culture = scottish #Mix of Highland and Lowland Scotts 
+culture = pictish #Mix of Highland and Lowland Scotts 
 religion = catholic
 hre = no
 base_tax = 3
