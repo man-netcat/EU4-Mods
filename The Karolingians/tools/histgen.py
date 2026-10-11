@@ -119,7 +119,9 @@ def formation_decision(fcode, starters) -> str:
         f"{T*3}}}"
         for a in fb.areas
     )
-    if len(starters) == 1:
+    if fb.culture:
+        tag_line = f"\t\t\tprimary_culture = {fb.culture}"
+    elif len(starters) == 1:
         tag_line = f"\t\t\ttag = {starters[0].tag}"
     else:
         inner = "\n".join(f"\t\t\t\ttag = {s.tag}" for s in starters)

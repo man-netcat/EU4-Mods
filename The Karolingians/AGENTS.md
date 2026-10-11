@@ -61,6 +61,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - Starters point at them via `tags.forms`/`tags.decision`; all starters of
   one formable share a single decision key and get one shared file
   (`decisions/FormX.txt`). HLR's requirement stays dynamic (`empire_core`).
+- Gating comes in three flavours: listed starter tags (Hungary, Volhynia),
+  a primary `culture` (Wales, Sardinia, Poland), or a `dynasty` (the
+  Karlings alone restore the Empire). HLR's custom decision stays
+  handwritten; the table records the correspondence.
 - `formables.percent` (NULL = all) enacts at that share of the requirement
   land, rounded up; `formables.own_capital` additionally requires holding
   the formable's `capital` (which lives on the base `Tag`, like the
@@ -68,6 +72,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   and the capital line in the decision file.
 - Tags come in three flavours: `LandedTag` (starts on the map),
   `FormableTag` (requirements, no land), `ReleasableTag` (stub, unused).
+- New formables need exact requirements (land, starters, percent, capital,
+  rank, CK3 title): if the request doesn't give them, ask first — never
+  assume them.
 
 ## Standing conventions
 

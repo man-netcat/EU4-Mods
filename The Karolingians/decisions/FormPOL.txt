@@ -9,17 +9,7 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_poland }
 			NOT = { tag = POL }
 			NOT = { exists = POL }
-			OR = {
-				tag = KRA
-				tag = TRN
-				tag = LEC
-				tag = WIE
-				tag = KUJ
-				tag = KRJ
-				tag = PLO
-				tag = STZ
-				tag = SAN
-			}
+			primary_culture = polish
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

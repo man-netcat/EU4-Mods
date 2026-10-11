@@ -9,12 +9,7 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_wales }
 			NOT = { tag = WLS }
 			NOT = { exists = WLS }
-			OR = {
-				tag = GWY
-				tag = PEM
-				tag = DEH
-				tag = CRD
-			}
+			primary_culture = welsh
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

@@ -384,7 +384,7 @@ def run() -> int:
     print("== vanilla tag reuse is deliberate ==")
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY EST FIN FRA "
-        "GER GMA GOT HLR HSA HUN ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT POL PRU RUG SAR "
+        "GER GMA GOT HLR HSA HUN ICE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT POL PRU RUG SAR "
         "SIL SCO SOR SRV STE TNG TRA VEN VOL WLS WOL".split()
     )
     vtags = set()
@@ -457,6 +457,16 @@ def run() -> int:
             f"change_tag = {t.forms}" in dec,
             f"{key} changes the tag to {t.forms}",
         )
+        if fb.culture:
+            note(
+                f"primary_culture = {fb.culture}" in dec,
+                f"{key} is culture-gated on {fb.culture}",
+            )
+        else:
+            note(
+                all(f"tag = {s.tag}" in dec for s in starters),
+                f"{key} is gated on its starters",
+            )
         val = re.search(r"num_of_owned_provinces_with = \{\s*value = (\d+)", dec)
         exp = required_count(len(land), fb.percent)
         note(
@@ -707,6 +717,10 @@ def run() -> int:
         gates == [dynasty],
         f"the decision gates on dynasty {dynasty} (only a Karling can restore the "
         f"empire; if the Karlings die out, no one can)",
+    )
+    note(
+        BY_FORMABLE["HLR"].dynasty == dynasty,
+        "the HLR formable records the same dynasty",
     )
 
     for fn in sorted(os.listdir(COUNTRY_OUT)):

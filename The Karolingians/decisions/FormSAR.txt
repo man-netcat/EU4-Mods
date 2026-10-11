@@ -9,10 +9,7 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_sardinia }
 			NOT = { tag = SAR }
 			NOT = { exists = SAR }
-			OR = {
-				tag = CAG
-				tag = GLL
-			}
+			primary_culture = sardinian
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

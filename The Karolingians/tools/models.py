@@ -105,6 +105,10 @@ class Formable(Base):
     capital = Column(Integer, ForeignKey("provinces.pid"))
     # require holding the capital province to form
     own_capital = Column(Boolean, nullable=False, default=False)
+    # primary culture that may fire the decision (NULL = listed starters only)
+    culture = Column(String, ForeignKey("cultures.name"))
+    # dynasty that may fire the decision (HLR: Karlings; NULL = not gated)
+    dynasty = Column(String)
 
 
 class FormableArea(Base):

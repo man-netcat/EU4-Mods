@@ -103,6 +103,13 @@ kar_form_poland_provinces_trigger = {
 	}
 }
 
+kar_form_iceland_provinces_trigger = {
+	OR = {
+		area = subarctic_islands_area
+		province_id = 369 #orkney
+	}
+}
+
 kar_form_sardinia_provinces_trigger = {
 	OR = {
 		province_id = 127 #sassari

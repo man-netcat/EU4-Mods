@@ -15,3 +15,5 @@
 | Argent (white) | 246,246,246 |
 | Sable (black) | 51,51,51 |
 | Gules (red) | 188,46,46 |
+| Purpure (WappenWiki murrey) | 145,58,106 |
+| Vert (Welsh green) | 0,150,70 |

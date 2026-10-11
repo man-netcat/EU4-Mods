@@ -98,6 +98,8 @@ class FormableTag(Tag):
     provinces: frozenset = field(default_factory=frozenset)
     percent: Optional[int] = None
     own_capital: bool = False
+    culture: Optional[str] = None
+    dynasty: Optional[str] = None
 
     def __post_init__(self):
         super().__post_init__()
@@ -185,6 +187,8 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
                 percent=r.percent,
                 capital=r.capital,
                 own_capital=bool(r.own_capital),
+                culture=r.culture,
+                dynasty=r.dynasty,
             )
             for r in s.query(FormableRow).order_by(FormableRow.tag)
         ]
@@ -310,6 +314,13 @@ def selfcheck() -> None:
             raise ValueError(
                 f"formable {fcode}: starters share one decision, got {keys}"
             )
+        fb = BY_FORMABLE[fcode]
+        if fb.culture:
+            off = sorted({s.tag for s in sts if s.culture != fb.culture})
+            if off:
+                raise ValueError(
+                    f"formable {fcode}: {off} are not {fb.culture}"
+                )
     for tag, blocks in TRANSFERS:
         if tag not in seen:
             raise ValueError(f"TRANSFERS names {tag}, which is not a Tag")
