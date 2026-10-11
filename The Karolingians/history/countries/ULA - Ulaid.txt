@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 4121
+867.1.1 = {
+	monarch = {
+		name = "Cathalán"
+		dynasty = "Dál Fiatach"
+		birth_date = 827.1.1
+		death_date = 870.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Cummascach"
+		monarch_name = "Cummascach"
+		dynasty = "Dál Fiatach"
+		birth_date = 858.1.1
+		death_date = 910.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

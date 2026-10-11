@@ -1,0 +1,27 @@
+#4118 - Earldom of Desmond
+
+owner = DES
+controller = DES
+culture = irish
+religion = catholic
+hre = no
+base_tax = 2
+base_production = 3
+trade_goods = copper
+base_manpower = 1
+capital = "Cork"
+is_city = yes
+add_core = DES
+extra_cost = 8
+center_of_trade = 1
+
+867.1.1 = {	owner = DES
+	controller = DES
+	add_core = DES
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+discovered_by = nomad_group

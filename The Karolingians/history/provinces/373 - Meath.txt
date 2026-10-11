@@ -3,7 +3,7 @@
 owner = LOI
 controller = LOI
 add_core = LOI
-culture = irish
+culture = norse
 religion = catholic
 hre = no
 base_tax = 3

@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 4119
+867.1.1 = {
+	monarch = {
+		name = "Mugrón"
+		dynasty = "Briúin Aí"
+		birth_date = 808.1.1
+		death_date = 872.7.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Muiredach"
+		monarch_name = "Muiredach"
+		dynasty = "Briúin Aí"
+		birth_date = 847.1.1
+		death_date = 912.7.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

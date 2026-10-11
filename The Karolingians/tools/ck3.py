@@ -150,7 +150,7 @@ def _parse_dynasty_files(files):
     out = {}
     for f in files:
         for key, body in _blocks(_norm(f.read_text(errors="replace"))):
-            n = re.search(r'name\s*=\s*"(dynn_\w+)"', body)
+            n = re.search(r'name\s*=\s*"(dynn_[\w-]+)"', body)
             if n:
                 out[key] = n.group(1)
     return out
@@ -158,7 +158,7 @@ def _parse_dynasty_files(files):
 
 # Bump whenever a parser in this file changes: caches are keyed on source
 # mtimes, so parser edits alone would otherwise serve stale pickles.
-_CACHE_VERSION = 3
+_CACHE_VERSION = 4
 
 
 _CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"
@@ -236,7 +236,7 @@ def _parse_house_files(files):
     out = {}
     for f in files:
         for key, body in _blocks(_norm(f.read_text(errors="replace"))):
-            n = re.search(r'name\s*=\s*"?\s*(dynn_\w+)\s*"?', body)
+            n = re.search(r'name\s*=\s*"?\s*(dynn_[\w-]+)\s*"?', body)
             d = re.search(r"^\s*dynasty\s*=\s*(\w+)", body, re.M)
             name_key = n.group(1) if n else None
             out[key] = (

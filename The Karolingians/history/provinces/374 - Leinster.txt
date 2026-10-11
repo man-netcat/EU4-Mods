@@ -1,7 +1,7 @@
 #374 - Leinster
 
-owner = LOI
-controller = LOI
+owner = DUB
+controller = DUB
 culture = norse
 religion = catholic
 hre = no
@@ -11,11 +11,11 @@ trade_goods = livestock
 base_manpower = 2
 capital = "Wexford"
 is_city = yes
-add_core = LOI
+add_core = DUB
 
-867.1.1 = {	owner = LOI
-	controller = LOI
-	add_core = LOI
+867.1.1 = {	owner = DUB
+	controller = DUB
+	add_core = DUB
 }
 discovered_by = western
 discovered_by = eastern

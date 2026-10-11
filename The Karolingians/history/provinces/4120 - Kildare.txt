@@ -1,7 +1,7 @@
 #4120 - Kildare
 
-owner = LOI
-controller = LOI
+owner = LER
+controller = LER
 culture = norse
 religion = catholic
 hre = no
@@ -11,11 +11,11 @@ trade_goods = grain
 base_manpower = 3
 capital = "Naas"
 is_city = yes
-add_core = LOI
+add_core = LER
 
-867.1.1 = {	owner = LOI
-	controller = LOI
-	add_core = LOI
+867.1.1 = {	owner = LER
+	controller = LER
+	add_core = LER
 }
 discovered_by = western
 discovered_by = eastern

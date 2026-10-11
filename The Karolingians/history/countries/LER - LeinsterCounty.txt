@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 4120
+867.1.1 = {
+	monarch = {
+		name = "Coirpre"
+		dynasty = "Cheinnselaig"
+		birth_date = 791.1.1
+		death_date = 876.7.1
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+	heir = {
+		name = "Cináed"
+		monarch_name = "Cináed"
+		dynasty = "Cheinnselaig"
+		birth_date = 861.1.1
+		death_date = 935.7.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
