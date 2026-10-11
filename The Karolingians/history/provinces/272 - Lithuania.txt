@@ -1,7 +1,7 @@
 #272 Lithuania
 
-owner = LIT
-controller = LIT
+owner = LTU
+controller = LTU
 capital = "Vilna"
 is_city = yes
 culture = lithuanian
@@ -12,13 +12,13 @@ base_tax = 5
 base_production = 5
 base_manpower = 3
 fort_15th = yes #Vilnius Castle Complex
-add_core = LIT
+add_core = LTU
 extra_cost = 8
 center_of_trade = 1
 
-867.1.1 = {	owner = LIT
-	controller = LIT
-	add_core = LIT
+867.1.1 = {	owner = LTU
+	controller = LTU
+	add_core = LTU
 }
 discovered_by = western
 discovered_by = eastern

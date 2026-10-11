@@ -1,7 +1,7 @@
 #4535 - Wilkimierz
 
-owner = LIT
-controller = LIT
+owner = LTU
+controller = LTU
 capital = "Vilkmerge"
 is_city = yes
 culture = lithuanian
@@ -11,11 +11,11 @@ hre = no
 base_tax = 2
 base_production = 2
 base_manpower = 2
-add_core = LIT
+add_core = LTU
 
-867.1.1 = {	owner = LIT
-	controller = LIT
-	add_core = LIT
+867.1.1 = {	owner = LTU
+	controller = LTU
+	add_core = LTU
 }
 discovered_by = western
 discovered_by = eastern

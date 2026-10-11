@@ -13,7 +13,6 @@ add_local_autonomy = 50
 capital = "Ula"
 is_city = yes 
 add_core = PLT
-add_core = LIT
 add_core = MSK
 
 867.1.1 = {	owner = MSK

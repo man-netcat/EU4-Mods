@@ -14,7 +14,6 @@ is_city = yes
 #fort_15th = yes #Bratslav Castle
 add_local_autonomy = 25
 add_core = KIE
-add_core = LIT
 add_core = MGY
 
 867.1.1 = {	owner = MGY
