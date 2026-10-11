@@ -1,6 +1,4 @@
 country_decisions = {
-
-
 	kar_form_galicia_volhynia = {
 		major = yes
 

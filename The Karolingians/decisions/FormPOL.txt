@@ -1,14 +1,4 @@
 country_decisions = {
-	polish_nation = {
-		potential = {
-			always = no
-		}
-		allow = {
-		}
-		effect = {
-		}
-	}
-
 	kar_form_poland = {
 		major = yes
 

@@ -153,22 +153,7 @@ def formation_decision(fcode, starters) -> str:
     else:
         inner = "\n".join(f"\t\t\t\ttag = {s.tag}" for s in starters)
         tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
-    supp = "\n".join(
-        f"{T}{k} = {{\n"
-        f"{T*2}potential = {{\n"
-        f"{T*3}always = no\n"
-        f"{T*2}}}\n"
-        f"{T*2}allow = {{\n"
-        f"{T*2}}}\n"
-        f"{T*2}effect = {{\n"
-        f"{T*2}}}\n"
-        f"{T}}}"
-        for k in sorted({k for s in starters for k in s.suppress})
-    )
-
     return f"""country_decisions = {{
-{supp}
-
 \t{key} = {{
 \t\tmajor = yes
 

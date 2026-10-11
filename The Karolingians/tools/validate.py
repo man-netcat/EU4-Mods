@@ -476,6 +476,17 @@ def run() -> int:
             warn(f"{t.tag} has no flag yet")
 
     done = set()
+    from eu4 import VANILLA_FORMATION_FILES  # noqa: E402
+
+    supp_files = {
+        k: open(
+            os.path.join(MOD, "decisions", fn),
+            encoding="utf-8",
+            errors="replace",
+        ).read()
+        for fn, keys in VANILLA_FORMATION_FILES.items()
+        for k in keys
+    }
     for t in _REALMS:
         if not t.forms or t.forms in done:
             continue
@@ -557,8 +568,8 @@ def run() -> int:
         for sk in sorted({k for s in starters for k in s.suppress}):
             pat = re.escape(sk) + r"\s*=\s*\{\s*potential\s*=\s*\{\s*always\s*=\s*no"
             note(
-                bool(re.search(pat, dec)),
-                f"vanilla {sk} decision suppressed with always = no",
+                sk in supp_files and bool(re.search(pat, supp_files[sk])),
+                f"vanilla {sk} decision neutralized in its own file",
             )
 
     print("\n== every realm holds its own capital ==")

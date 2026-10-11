@@ -1,14 +1,4 @@
 country_decisions = {
-	irish_nation = {
-		potential = {
-			always = no
-		}
-		allow = {
-		}
-		effect = {
-		}
-	}
-
 	kar_form_ireland = {
 		major = yes
 

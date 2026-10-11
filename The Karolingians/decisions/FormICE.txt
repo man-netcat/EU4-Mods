@@ -1,14 +1,4 @@
 country_decisions = {
-	icelandic_nation = {
-		potential = {
-			always = no
-		}
-		allow = {
-		}
-		effect = {
-		}
-	}
-
 	kar_form_iceland = {
 		major = yes
 

@@ -787,6 +787,18 @@ def step_vanilla_countries() -> None:
     print(f" {written} vanilla realm definitions rewritten under the mod")
 
 
+VANILLA_FORMATION_FILES = {
+    # Vanilla decision file -> formation keys we neutralize there.
+    "IrishNation.txt": ["irish_nation"],
+    "EnglishNation.txt": ["english_nation"],
+    "HungarianNation.txt": ["hungarian_nation"],
+    "PolishNation.txt": ["polish_nation"],
+    "BritishNation.txt": ["british_nation", "british_nation_diplomatically"],
+    "MiscCountryFormations.txt": ["icelandic_nation"],
+    "HRE_FormableNations.txt": ["pomerania_nation"],
+}
+
+
 def step_custom() -> None:
     vanilla = load_vanilla_countries()
     customs = [t for t in TAGS if t.tag not in vanilla]
@@ -846,6 +858,33 @@ def step_custom() -> None:
             "  suppressed decisions  : "
             + ", ".join(sorted({k for s in starters for k in s.suppress}))
         )
+
+    # Vanilla formation decisions are neutralized by same-filename dummy
+    # files: duplicate keys coexist across files, so stubs in our own files
+    # never win. Each dummy carries only the always-no stubs.
+    stubbed = sorted({k for t in TAGS if t.forms for k in t.suppress})
+    for fn, keys in VANILLA_FORMATION_FILES.items():
+        kill = [k for k in keys if k in stubbed]
+        if not kill:
+            continue
+        stubs = "\n".join(
+            f"\t{k} = {{\n"
+            f"\t\tpotential = {{\n"
+            f"\t\t\talways = no\n"
+            f"\t\t}}\n"
+            f"\t\tallow = {{\n"
+            f"\t\t}}\n"
+            f"\t\teffect = {{\n"
+            f"\t\t}}\n"
+            f"\t}}"
+            for k in kill
+        )
+        sp = os.path.join(MOD, "decisions", fn)
+        open(sp, "w", encoding="cp1252", errors="pdx").write(
+            f"# dummy: vanilla formations neutralized, use our kar_form_* instead\n"
+            f"country_decisions = {{\n{stubs}\n}}\n"
+        )
+        print(f"wrote {sp} (dummy, neutralized {len(kill)})")
 
     open(reg, "w", encoding="cp1252", errors="pdx").write("\n".join(reg_lines) + "\n")
     print(f"wrote {reg}")

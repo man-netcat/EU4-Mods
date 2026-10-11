@@ -78,8 +78,11 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - Tags come in three flavours: `LandedTag` (starts on the map),
   `FormableTag` (requirements, no land), `ReleasableTag` (stub, unused).
 - When the base game has its own formation decision for a formable tag,
-  the starters suppress it via `tag_suppress` (HUN/POL/ENG/ICE do;
-  SAR/VOL/WLS/HLR have no vanilla counterpart).
+  the starters suppress it via `tag_suppress` (HUN/POL/ENG/ICE/IRE do;
+  SAR/VOL/WLS/HLR have no vanilla counterpart). Neutralization is by
+  same-filename dummy (`VANILLA_FORMATION_FILES`): duplicate keys coexist
+  across files, so stubs in our own files never win — and anything else in
+  those vanilla files dies with them.
 - New formables need exact requirements (land, starters, percent, capital,
   rank, CK3 title): if the request doesn't give them, ask first — never
   assume them.

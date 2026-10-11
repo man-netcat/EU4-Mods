@@ -1,6 +1,4 @@
 country_decisions = {
-
-
 	kar_form_lithuania = {
 		major = yes
 

@@ -1,14 +1,4 @@
 country_decisions = {
-	pomerania_nation = {
-		potential = {
-			always = no
-		}
-		allow = {
-		}
-		effect = {
-		}
-	}
-
 	kar_form_pomerania = {
 		major = yes
 

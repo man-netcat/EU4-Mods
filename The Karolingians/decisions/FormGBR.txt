@@ -1,32 +1,4 @@
 country_decisions = {
-	british_nation = {
-		potential = {
-			always = no
-		}
-		allow = {
-		}
-		effect = {
-		}
-	}
-	british_nation_diplomatically = {
-		potential = {
-			always = no
-		}
-		allow = {
-		}
-		effect = {
-		}
-	}
-	english_nation = {
-		potential = {
-			always = no
-		}
-		allow = {
-		}
-		effect = {
-		}
-	}
-
 	kar_form_britannia = {
 		major = yes
 
