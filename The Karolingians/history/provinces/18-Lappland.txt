@@ -1,0 +1,37 @@
+owner = AAR
+controller = AAR
+add_core = AAR
+culture = sapmi
+religion = catholic
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+is_city = yes
+
+#Ume, Åsele, Piteå Lappmarks
+
+capital = "Arvidsjaur"
+add_core = AAR
+culture = sapmi
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+native_hostileness = 1
+native_size = 3
+native_ferocity = 2
+
+867.1.1 = {	owner = AAR
+	controller = AAR
+	add_core = AAR
+}
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+discovered_by = nomad_group
