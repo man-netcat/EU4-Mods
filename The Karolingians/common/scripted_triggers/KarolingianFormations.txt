@@ -110,6 +110,18 @@ kar_form_iceland_provinces_trigger = {
 	}
 }
 
+kar_form_england_provinces_trigger = {
+	OR = {
+		area = east_anglia_area
+		area = east_midlands_area
+		area = home_counties_area
+		area = scottish_marches_area
+		area = wessex_area
+		area = west_midlands_area
+		area = yorkshire_area
+	}
+}
+
 kar_form_sardinia_provinces_trigger = {
 	OR = {
 		province_id = 127 #sassari
