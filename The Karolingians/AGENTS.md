@@ -97,7 +97,11 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `gfx/flags` are all `replace_path`ed: no vanilla content loads there.
   Province/country files must reuse vanilla's **exact filenames** or vanilla's
   version merges back in. Sea tiles are copied verbatim from vanilla
-  (`sea_starts`); province `discovered_by` is ours (western/eastern/muslim/
+  (`sea_starts`); wasteland the same from the `impassable` block of vanilla
+  `map/climate.txt` and lakes from the `lakes` block of vanilla
+  `map/default.map` (`waste_ids()`/`lake_ids()` — grey/water, always-visible,
+  owned by nobody, so the build asserts no overlap with our land; only tech-group
+  `discovered_by` lines survive, dead tags are dropped); province `discovered_by` is ours (western/eastern/muslim/
   ottoman/chinese/nomad_group); dead-tag cores are stripped (cores respawn
   tags via rebels/release).
 - Localisation: English only, UTF-8 **with BOM** (the game ignores BOM-less

@@ -224,6 +224,28 @@ def sea_ids():
     return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
 
 
+def waste_ids():
+    # The engine's own wasteland list: every province in the impassable
+    # section of vanilla map/climate.txt renders grey and always-visible.
+    # We ship no map files, so the set is vanilla's; like sea tiles these
+    # files carry only discovered_by and are restored verbatim.
+    txt = open(
+        os.path.join(GAME, "map", "climate.txt"), encoding="utf-8", errors="replace"
+    ).read()
+    m = re.search(r"impassable\s*=\s*\{(.*?)\}", txt, re.S)
+    return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
+
+
+def lake_ids():
+    # The engine's own lake list from vanilla map/default.map: water that
+    # is neither sea nor land. Same treatment as sea and wasteland.
+    txt = open(
+        os.path.join(GAME, "map", "default.map"), encoding="utf-8", errors="replace"
+    ).read()
+    m = re.search(r"^lakes\s*=\s*\{(.*?)\}", txt, re.S | re.M)
+    return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
+
+
 PROV_DATE = "867.1.1"
 
 
@@ -331,6 +353,18 @@ def take_visibility(text):
     return "\n".join(seen) + "\n"
 
 
+def take_group_visibility(text):
+    # Wasteland visibility: keep only tech-group discovered_by lines.
+    # Specific tags are dead in our world and only spam the error log.
+    out = []
+    for ln in text.splitlines():
+        m = re.match(r"^\s*discovered_by\s*=\s*([A-Za-z_]+)\s*$", ln)
+        if m and re.match(r"^[A-Z]{3}$", m.group(1)):
+            continue
+        out.append(ln)
+    return "\n".join(out) + "\n"
+
+
 def step_provinces(argv):
     alloc = build(verbose="--report" in argv)
 
@@ -379,6 +413,44 @@ def step_provinces(argv):
             shutil.copy(src, os.path.join(PROV_OUT, os.path.basename(src)))
             copied += 1
     print(f"copied {copied} vanilla sea files")
+
+    waste = waste_ids()
+    wclash = [p for p in waste if p in owner_of]
+    assert not wclash, f"impassable ids overlap our land: {wclash}"
+    wcopied = 0
+    for pid in waste:
+        if pid in sea:
+            continue
+        src = vanilla_prov_file(pid)
+        if src:
+            text = open(src, encoding="utf-8", errors="surrogateescape").read()
+            open(
+                os.path.join(PROV_OUT, os.path.basename(src)),
+                "w",
+                encoding="cp1252",
+                errors="pdx",
+            ).write(take_group_visibility(text))
+            wcopied += 1
+    print(f"restored {wcopied} vanilla wasteland files (tech groups only)")
+
+    lakes = lake_ids()
+    lclash = [p for p in lakes if p in owner_of]
+    assert not lclash, f"lake ids overlap our land: {lclash}"
+    lcopied = 0
+    for pid in lakes:
+        if pid in sea:
+            continue
+        src = vanilla_prov_file(pid)
+        if src:
+            text = open(src, encoding="utf-8", errors="surrogateescape").read()
+            open(
+                os.path.join(PROV_OUT, os.path.basename(src)),
+                "w",
+                encoding="cp1252",
+                errors="pdx",
+            ).write(take_group_visibility(text))
+            lcopied += 1
+    print(f"restored {lcopied} vanilla lake files (tech groups only)")
 
     print(f"wrote {written} province files")
     for tag, ps in sorted(alloc.items(), key=lambda kv: -len(kv[1])):

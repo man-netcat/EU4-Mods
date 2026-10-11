@@ -225,6 +225,35 @@ def run() -> int:
         f"no duplicate province files ({len(files)} unique)",
     )
 
+    from eu4 import lake_ids, vanilla_prov_file, waste_ids  # noqa: E402
+
+    for label, ids in (("wasteland", waste_ids()), ("lake", lake_ids())):
+        wfiles = [p for p in ids if vanilla_prov_file(p)]
+        wmiss = sorted(p for p in wfiles if p not in files)
+        note(not wmiss, f"every vanilla {label} province has a file ({len(wmiss)} missing)")
+        for b in wmiss[:8]:
+            print("        " + str(b))
+        wowned = sorted(
+            p for p in wfiles if p in files and parse(files[p])[0].get("owner") is not None
+        )
+        note(not wowned, f"no owner on {label} provinces ({len(wowned)} problems)")
+        for b in wowned[:8]:
+            print("        " + str(b))
+        wtags = sorted(
+            p
+            for p in wfiles
+            if p in files
+            and re.search(
+                r"(?m)^\s*discovered_by\s*=\s*[A-Z]{3}\s*$",
+                open(files[p], encoding="utf-8", errors="surrogateescape").read(),
+            )
+        )
+        note(not wtags, f"no dead tags discovering {label} ({len(wtags)} problems)")
+        for b in wtags[:8]:
+            print("        " + str(b))
+
+    unownable = set(waste_ids()) | set(lake_ids())  # never owned by design
+
     own, badown, multicore = Counter(), [], []
     cores_new = {}
     for pid, path in files.items():
@@ -233,8 +262,8 @@ def run() -> int:
         ctrl = s.get("controller")
         if o is None and ctrl is None:
 
-            if int(pid) not in PROVINCES:
-                pass  # a vanilla sea tile (no owner by design)
+            if int(pid) not in PROVINCES or int(pid) in unownable:
+                pass  # a vanilla sea tile, lake or wasteland (no owner by design)
             else:
                 text = open(path, encoding="utf-8", errors="surrogateescape").read()
                 o, ctrl, _ = effective(text)
