@@ -11,6 +11,7 @@ vanilla has never heard of, and the land it holds in 867.
 from __future__ import annotations
 
 import os
+import re
 from abc import ABC
 from collections import namedtuple
 from dataclasses import dataclass, field
@@ -22,6 +23,7 @@ from models import (
     Formable as FormableRow,
     FormableArea,
     FormableProvince,
+    FormableRename,
     Province as ProvinceRow,
     Tag as TagRow,
     TagArea,
@@ -99,6 +101,8 @@ class FormableTag(Tag):
     percent: Optional[int] = None
     own_capital: bool = False
     culture: Optional[str] = None
+    culture_group: tuple = ()
+    renames: tuple = ()
     dynasty: Optional[str] = None
 
     def __post_init__(self):
@@ -172,6 +176,15 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
         fprovs: dict[str, list] = {}
         for r in s.query(FormableProvince).order_by(FormableProvince.pid):
             fprovs.setdefault(r.formable, []).append(r.pid)
+        frenames: dict[str, list] = {}
+        for r in (
+            s.query(FormableRename)
+            .order_by(FormableRename.culture, FormableRename.tag)
+            .all()
+        ):
+            frenames.setdefault(r.formable, []).append(
+                (r.culture, r.tag, r.name)
+            )
         formables = [
             FormableTag(
                 tag=r.tag,
@@ -188,6 +201,10 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
                 capital=r.capital,
                 own_capital=bool(r.own_capital),
                 culture=r.culture,
+                culture_group=tuple(r.culture_group.split())
+                if r.culture_group
+                else (),
+                renames=tuple(frenames.get(r.tag, ())),
                 dynasty=r.dynasty,
             )
             for r in s.query(FormableRow).order_by(FormableRow.tag)
@@ -266,6 +283,36 @@ PROVINCE_OWNERS: dict = {pid: t.tag for t in TAGS for pid in t.provinces}
 TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.provinces)
 
 
+_GROUPS: dict[str, list[str]] = {}
+
+
+def culture_groups() -> dict[str, list[str]]:
+    """Top-level group -> member cultures, parsed from the mod's own
+    cultures file: the single source of truth, read once per process."""
+    global _GROUPS
+    if not _GROUPS:
+        path = os.path.join(
+            os.path.dirname(DB_PATH),
+            "..",
+            "common",
+            "cultures",
+            "00_cultures.txt",
+        )
+        depth = 0
+        cur = None
+        with open(path, encoding="cp1252", errors="replace") as fh:
+            for line in fh:
+                s = line.strip()
+                m = re.match(r"^([a-z_]+)\s*=\s*\{", s)
+                if m and depth == 0:
+                    cur = m.group(1)
+                    _GROUPS[cur] = []
+                elif m and depth == 1 and cur is not None:
+                    _GROUPS[cur].append(m.group(1))
+                depth += line.count("{") - line.count("}")
+    return _GROUPS
+
+
 def selfcheck() -> None:
     seen = set()
     known = {t.tag for t in TAGS}
@@ -320,6 +367,31 @@ def selfcheck() -> None:
             if off:
                 raise ValueError(
                     f"formable {fcode}: {off} are not {fb.culture}"
+                )
+        if fb.culture_group:
+            want = {
+                c for g in fb.culture_group for c in culture_groups().get(g, [])
+            }
+            off = sorted({s.tag for s in sts if s.culture not in want})
+            if off:
+                raise ValueError(
+                    f"formable {fcode}: {off} are in none of "
+                    f"{sorted(fb.culture_group)}"
+                )
+        for culture, stag, name in fb.renames:
+            if bool(culture) == bool(stag) or not name:
+                raise ValueError(
+                    f"formable {fcode}: a rename sets exactly one of "
+                    "culture/tag, plus a name"
+                )
+            if stag and stag not in {s.tag for s in sts}:
+                raise ValueError(
+                    f"formable {fcode}: rename tag {stag} is no starter"
+                )
+            if culture and culture not in {s.culture for s in sts}:
+                raise ValueError(
+                    f"formable {fcode}: rename culture {culture} "
+                    "covers no starter"
                 )
     for tag, blocks in TRANSFERS:
         if tag not in seen:

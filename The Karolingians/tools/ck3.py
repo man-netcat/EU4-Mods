@@ -634,6 +634,13 @@ def _ck3_name(cid, chars, loc):
     return loc(raw) or raw
 
 
+def _alive_at(cid, chars):
+    facts = _ck3_dates_and_skills(cid, chars)
+    if not facts or not facts[0] or not facts[1]:
+        return False
+    return _date_key(facts[0]) <= _date_key(DATE) < _date_key(facts[1])
+
+
 _KIDS: dict = {}
 
 
@@ -648,37 +655,37 @@ def _children_of(cid, chars):
     return _KIDS.get(str(cid), [])
 
 
-def _alive_at(cid, chars):
-    facts = _ck3_dates_and_skills(cid, chars)
-    if not facts or not facts[0] or not facts[1]:
-        return False
-    return _date_key(facts[0]) <= _date_key(DATE) < _date_key(facts[1])
+def _is_female(cid, chars):
+    return (
+        re.search(r"^\s*female\s*=\s*yes", chars[str(cid)], re.M) is not None
+    )
 
 
 def _successor(cid, chars):
-    """The 867 heir: eldest living child, else eldest living sibling.
-
-    Birth order only - no sex or dynasty filter. A sister, a half-blood
-    sibling or a sibling of a matrilineal house is a lawful heir, so the
-    fallback never requires the ruler's dynasty."""
-    kids = sorted(
-        (k for k in _children_of(cid, chars) if _alive_at(k, chars)),
-        key=lambda k: _date_key(_ck3_dates_and_skills(k, chars)[0]),
-    )
-    if kids:
-        return kids[0]
+    """The 867 heir from the 867 status quo alone: eldest living son, then
+    eldest living brother, then daughters, then sisters. Male kin inherit
+    first in 867, but there is no dynasty filter - a half-blood sibling or
+    a sibling of a matrilineal house is lawful. Nothing dated after 867
+    decides anything."""
+    kids = _children_of(cid, chars)
+    sibs = []
     m = re.search(r"^\s*father\s*=\s*(\d+)\b", chars[str(cid)], re.M)
-    if not m:
-        return None
-    sibs = sorted(
-        (
-            k
-            for k in _KIDS.get(m.group(1), [])
-            if k != str(cid) and _alive_at(k, chars)
-        ),
-        key=lambda k: _date_key(_ck3_dates_and_skills(k, chars)[0]),
-    )
-    return sibs[0] if sibs else None
+    if m:
+        sibs = [k for k in _KIDS.get(m.group(1), []) if k != str(cid)]
+    pools = [
+        [k for k in kids if not _is_female(k, chars)],
+        [k for k in sibs if not _is_female(k, chars)],
+        [k for k in kids if _is_female(k, chars)],
+        [k for k in sibs if _is_female(k, chars)],
+    ]
+    for pool in pools:
+        living = sorted(
+            (k for k in pool if _alive_at(k, chars)),
+            key=lambda k: _date_key(_ck3_dates_and_skills(k, chars)[0]),
+        )
+        if living:
+            return living[0]
+    return None
 
 
 def ck3_block(tag):

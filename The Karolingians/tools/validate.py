@@ -384,7 +384,7 @@ def run() -> int:
     print("== vanilla tag reuse is deliberate ==")
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY ENG EST FIN FRA "
-        "GER GMA GOT HLR HSA HUN ICE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT POL PRU RUG SAR "
+        "GBR GER GMA GOT HLR HSA HUN ICE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOV PAP PLT POL PRU RUG SAR "
         "SIL SCO SOR SRV STE TNG TRA VEN VOL WLS WOL".split()
     )
     vtags = set()
@@ -457,7 +457,12 @@ def run() -> int:
             f"change_tag = {t.forms}" in dec,
             f"{key} changes the tag to {t.forms}",
         )
-        if fb.culture:
+        if fb.culture_group:
+            note(
+                all(f"culture_group = {g}" in dec for g in fb.culture_group),
+                f"{key} is group-gated on {', '.join(fb.culture_group)}",
+            )
+        elif fb.culture:
             note(
                 f"primary_culture = {fb.culture}" in dec,
                 f"{key} is culture-gated on {fb.culture}",
@@ -482,6 +487,12 @@ def run() -> int:
             note(
                 f"owns = {fb.capital}" in dec,
                 f"{key} requires holding the capital ({fb.capital})",
+            )
+        for culture, stag, name in fb.renames:
+            trig = f"tag = {stag}" if stag else f"primary_culture = {culture}"
+            note(
+                trig in dec and f"override_country_name = {name}" in dec,
+                f"{key} renames to {name} for {trig}",
             )
         for sk in sorted({k for s in starters for k in s.suppress}):
             pat = re.escape(sk) + r"\s*=\s*\{\s*potential\s*=\s*\{\s*always\s*=\s*no"
@@ -704,8 +715,8 @@ def run() -> int:
         blk = re.search(rf"^{re.escape(CTRY_DATE)} = \{{.*?^\}}", body, re.M | re.S)
         ds = re.findall(r'dynasty = "([^"]+)"', blk.group(0)) if blk else []
         note(
-            bool(ds) and set(ds) == {dynasty},
-            f"{t} 867 ruler and heir carry the {dynasty} dynasty",
+            bool(ds) and ds[0] == dynasty,
+            f"{t} 867 ruler carries the {dynasty} dynasty",
         )
     dec = open(
         os.path.join(MOD, "decisions", "KarolingianHRE.txt"),

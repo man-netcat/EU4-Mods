@@ -119,7 +119,34 @@ def formation_decision(fcode, starters) -> str:
         f"{T*3}}}"
         for a in fb.areas
     )
-    if fb.culture:
+    rename = ""
+    if fb.renames:
+        ordered = sorted(
+            ((t, f"tag = {t}", n) for c, t, n in fb.renames if t)
+        ) + sorted(
+            ((c, f"primary_culture = {c}", n) for c, t, n in fb.renames if c)
+        )
+        parts = []
+        for _key, trig, name in ordered:
+            kw = "if" if not parts else "else_if"
+            parts.append(
+                f"{T*3}{kw} = {{\n"
+                f"{T*4}limit = {{\n"
+                f"{T*5}{trig}\n"
+                f"{T*4}}}\n"
+                f"{T*4}override_country_name = {name}\n"
+                f"{T*3}}}"
+            )
+        rename = "\n" + "\n".join(parts)
+    if fb.culture_group:
+        if len(fb.culture_group) == 1:
+            tag_line = f"\t\t\tculture_group = {fb.culture_group[0]}"
+        else:
+            inner = "\n".join(
+                f"\t\t\t\tculture_group = {g}" for g in fb.culture_group
+            )
+            tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
+    elif fb.culture:
         tag_line = f"\t\t\tprimary_culture = {fb.culture}"
     elif len(starters) == 1:
         tag_line = f"\t\t\ttag = {starters[0].tag}"
@@ -187,7 +214,7 @@ def formation_decision(fcode, starters) -> str:
 \t\t\t}}
 \t\t\tadd_prestige = 25
 \t\t\tadd_legitimacy = 10
-{claims}
+{claims}{rename}
 \t\t}}
 \t}}
 }}

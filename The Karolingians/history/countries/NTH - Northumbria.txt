@@ -16,11 +16,11 @@ capital = 244
 		mil = 2
 	}
 	heir = {
-		name = "Blæja"
-		monarch_name = "Blæja"
+		name = "Ælfgar"
+		monarch_name = "Ælfgar"
 		dynasty = "Northumbria"
-		birth_date = 841.1.1
-		death_date = 893.1.1
+		birth_date = 843.1.1
+		death_date = 867.3.21
 		claim = 90
 		adm = 2
 		dip = 2

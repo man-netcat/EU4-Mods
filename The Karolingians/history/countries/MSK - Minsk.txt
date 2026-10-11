@@ -16,11 +16,11 @@ capital = 276
 		mil = 2
 	}
 	heir = {
-		name = "Gradislava"
-		monarch_name = "Gradislava"
+		name = "Vyshata"
+		monarch_name = "Vyshata"
 		dynasty = "Krivichi"
-		birth_date = 844.5.13
-		death_date = 873.10.30
+		birth_date = 848.12.5
+		death_date = 920.4.16
 		claim = 90
 		adm = 2
 		dip = 2

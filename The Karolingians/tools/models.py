@@ -107,6 +107,9 @@ class Formable(Base):
     own_capital = Column(Boolean, nullable=False, default=False)
     # primary culture that may fire the decision (NULL = listed starters only)
     culture = Column(String, ForeignKey("cultures.name"))
+    # culture groups that may fire it, space-separated (GBR: the isles'
+    # groups; NULL = not gated). Used instead of culture, never with it.
+    culture_group = Column(String)
     # dynasty that may fire the decision (HLR: Karlings; NULL = not gated)
     dynasty = Column(String)
 
@@ -123,6 +126,20 @@ class FormableProvince(Base):
 
     formable = Column(String, ForeignKey("formables.tag"), primary_key=True)
     pid = Column(Integer, ForeignKey("provinces.pid"), primary_key=True)
+
+
+class FormableRename(Base):
+    """A rename for a formable: when the former is TAG or of CULTURE
+    (exactly one set, "" means unset), the decision runs
+    override_country_name with NAME (a loc key) - the Armenia pattern.
+    Emitted most-specific first: tag rows, then culture rows."""
+
+    __tablename__ = "formable_renames"
+
+    formable = Column(String, ForeignKey("formables.tag"), primary_key=True)
+    culture = Column(String, primary_key=True)
+    tag = Column(String, primary_key=True)
+    name = Column(String, nullable=False)
 
 
 class TagSuppress(Base):

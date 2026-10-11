@@ -141,11 +141,11 @@ set_estate_privilege = estate_burghers_exkousseiai_for_latins
 		mil = 2
 	}
 	heir = {
-		name = "Anastasia"
-		monarch_name = "Anastasia"
+		name = "Konstantinos"
+		monarch_name = "Konstantinos"
 		dynasty = "Makedon"
-		birth_date = 862.1.1
-		death_date = 920.1.1
+		birth_date = 864.1.1
+		death_date = 879.9.3
 		claim = 90
 		adm = 2
 		dip = 2

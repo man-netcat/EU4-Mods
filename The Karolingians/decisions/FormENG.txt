@@ -1,5 +1,13 @@
 country_decisions = {
-
+	english_nation = {
+		potential = {
+			always = no
+		}
+		allow = {
+		}
+		effect = {
+		}
+	}
 
 	kar_form_england = {
 		major = yes
