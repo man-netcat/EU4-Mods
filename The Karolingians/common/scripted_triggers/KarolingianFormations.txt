@@ -156,3 +156,12 @@ kar_form_sardinia_provinces_trigger = {
 		province_id = 4735 #arborea
 	}
 }
+
+kar_form_ireland_provinces_trigger = {
+	OR = {
+		area = connacht_area
+		area = leinster_area
+		area = munster_area
+		area = ulster_area
+	}
+}
