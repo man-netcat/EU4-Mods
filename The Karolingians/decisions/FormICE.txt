@@ -25,18 +25,15 @@ country_decisions = {
 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 369
 				province_id = 370
 				province_id = 371
-				province_id = 1978
-				province_id = 1979
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		allow = {
 			num_of_owned_provinces_with = {
-				value = 5
+				value = 2
 				kar_form_iceland_provinces_trigger = yes
 			}
 			is_at_war = no

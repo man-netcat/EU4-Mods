@@ -15,16 +15,5 @@ capital = 30
 		dip = 2
 		mil = 2
 	}
-	heir = {
-		name = "Satatieto"
-		monarch_name = "Satatieto"
-		dynasty = "Itkonen"
-		birth_date = 882.1.1
-		death_date = 955.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 

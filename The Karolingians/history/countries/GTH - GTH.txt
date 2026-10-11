@@ -15,5 +15,16 @@ capital = 2753
 		dip = 3
 		mil = 3
 	}
+	heir = {
+		name = "Émenon"
+		monarch_name = "Émenon"
+		dynasty = "Gellones"
+		birth_date = 844.1.1
+		death_date = 878.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

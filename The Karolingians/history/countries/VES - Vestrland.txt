@@ -15,5 +15,16 @@ capital = 370
 		dip = 3
 		mil = 2
 	}
+	heir = {
+		name = "Björn"
+		monarch_name = "Björn"
+		dynasty = "Flatnefr"
+		birth_date = 835.1.1
+		death_date = 885.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

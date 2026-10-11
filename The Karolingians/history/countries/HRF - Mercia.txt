@@ -15,5 +15,16 @@ capital = 240
 		dip = 2
 		mil = 2
 	}
+	heir = {
+		name = "Eadburh"
+		monarch_name = "Eadburh"
+		dynasty = "Mercia"
+		birth_date = 826.1.1
+		death_date = 885.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

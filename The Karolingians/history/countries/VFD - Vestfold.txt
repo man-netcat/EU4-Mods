@@ -15,16 +15,5 @@ capital = 4143
 		dip = 2
 		mil = 2
 	}
-	heir = {
-		name = "Froði"
-		monarch_name = "Froði"
-		dynasty = "Yngling"
-		birth_date = 891.1.1
-		death_date = 938.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 

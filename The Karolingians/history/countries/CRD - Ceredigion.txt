@@ -15,5 +15,16 @@ capital = 4366
 		dip = 2
 		mil = 2
 	}
+	heir = {
+		name = "Angharad"
+		monarch_name = "Angharad"
+		dynasty = "Seisyllwg"
+		birth_date = 822.1.1
+		death_date = 880.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

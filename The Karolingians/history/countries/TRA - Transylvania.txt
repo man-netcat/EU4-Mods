@@ -15,5 +15,16 @@ capital = 4127
 		dip = 2
 		mil = 2
 	}
+	heir = {
+		name = "Boris"
+		monarch_name = "Boris"
+		dynasty = "Balgarsko"
+		birth_date = 825.1.1
+		death_date = 907.5.2
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
 }
 

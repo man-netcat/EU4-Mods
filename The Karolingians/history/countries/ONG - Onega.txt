@@ -15,5 +15,16 @@ capital = 313
 		dip = 2
 		mil = 2
 	}
+	heir = {
+		name = "Nyalku"
+		monarch_name = "Nyalku"
+		dynasty = "Dvinok"
+		birth_date = 826.1.15
+		death_date = 890.12.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

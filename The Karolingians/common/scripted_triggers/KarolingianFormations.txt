@@ -105,8 +105,8 @@ kar_form_poland_provinces_trigger = {
 
 kar_form_iceland_provinces_trigger = {
 	OR = {
-		area = subarctic_islands_area
-		province_id = 369 #orkney
+		province_id = 370 #reykjavik
+		province_id = 371 #akureyri
 	}
 }
 

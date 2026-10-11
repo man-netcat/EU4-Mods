@@ -15,16 +15,5 @@ capital = 4526
 		dip = 2
 		mil = 2
 	}
-	heir = {
-		name = "Lestek"
-		monarch_name = "Lestek"
-		dynasty = "Piast"
-		birth_date = 870.1.1
-		death_date = 930.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 

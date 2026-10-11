@@ -15,5 +15,16 @@ capital = 239
 		dip = 2
 		mil = 2
 	}
+	heir = {
+		name = "Æthelswith"
+		monarch_name = "Æthelswith"
+		dynasty = "Wessex"
+		birth_date = 838.1.1
+		death_date = 888.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

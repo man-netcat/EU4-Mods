@@ -15,16 +15,5 @@ capital = 19
 		dip = 2
 		mil = 2
 	}
-	heir = {
-		name = "Jurva"
-		monarch_name = "Jurva"
-		dynasty = "Kemiläinen"
-		birth_date = 885.1.1
-		death_date = 953.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 

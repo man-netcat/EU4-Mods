@@ -451,12 +451,11 @@ def step_ck3(argv):
                     f"invented to cover the gap."
                 )
             continue
+        exp = _successor(got["char"], chars)
+        exp_dy = resolve_dynasty(chars[exp], dyns, houses) if exp else None
+        exp_hd = encname(exp_dy) if exp_dy else None
         hd = heir_dynasty(text)
-        heir_bad = (
-            hd is not None
-            and hd != encname(got["dynasty"])
-            and not BY_TAG[tag].no_heir_sync
-        )
+        heir_bad = hd != exp_hd and not BY_TAG[tag].no_heir_sync
         ok = (
             cn == encname(got["name"])
             and cd == encname(got["dynasty"])
@@ -475,10 +474,10 @@ def step_ck3(argv):
         print(f"  {mark} {tag} {src} / char {got['char']}")
         print(f"        file: name={cn!r} dynasty={cd!r}")
         print(f"        CK3 : name={got['name']!r} dynasty={got['dynasty']!r}")
-        if hd is not None:
+        if hd is not None or exp_hd is not None:
             print(
                 f"        heir dynasty={hd!r}"
-                + ("  <- should match the ruler's" if heir_bad else "")
+                + (f"  <- CK3 heir is {exp_hd!r}" if heir_bad else "")
             )
         if not ok:
             if fix:
@@ -503,15 +502,16 @@ def step_ck3(argv):
                         new,
                         count=1,
                     )
-                if heir_bad:
+                if heir_bad and exp_hd is not None:
                     heir = re.search(r"heir = \{.*?\n\t\}", new, re.S)
-                    nb = re.sub(
-                        r'dynasty = "[^"]+"',
-                        f'dynasty = "{encname(got["dynasty"])}"',
-                        heir.group(0),
-                        count=1,
-                    )
-                    new = new[: heir.start()] + nb + new[heir.end() :]
+                    if heir:
+                        nb = re.sub(
+                            r'dynasty = "[^"]+"',
+                            f'dynasty = "{exp_hd}"',
+                            heir.group(0),
+                            count=1,
+                        )
+                        new = new[: heir.start()] + nb + new[heir.end() :]
                 text = text[: blk.start(1)] + new + text[blk.end(1) :]
                 path.write_text(text, encoding="cp1252", errors="pdx")
                 print(
@@ -526,8 +526,8 @@ def step_ck3(argv):
                     )
                 if heir_bad:
                     bad.append(
-                        f"{tag}: heir dynasty is {hd!r} but the ruler's is "
-                        f"{encname(got['dynasty'])!r}"
+                        f"{tag}: heir dynasty is {hd!r} but CK3's heir is "
+                        f"{exp_hd!r}"
                     )
 
     if bad:
@@ -584,7 +584,9 @@ def ck3_sync(tag, text):
     new = re.sub(
         r'name = "[^"]+"', f'name = "{encname(got["name"])}"', blk.group(1), count=1
     )
-    new = re.sub(r'dynasty = "[^"]+"', f'dynasty = "{encname(got["dynasty"])}"', new)
+    new = re.sub(
+        r'dynasty = "[^"]+"', f'dynasty = "{encname(got["dynasty"])}"', new, count=1
+    )
     return text[: blk.start(1)] + new + text[blk.end(1) :]
 
 
@@ -646,6 +648,39 @@ def _children_of(cid, chars):
     return _KIDS.get(str(cid), [])
 
 
+def _alive_at(cid, chars):
+    facts = _ck3_dates_and_skills(cid, chars)
+    if not facts or not facts[0] or not facts[1]:
+        return False
+    return _date_key(facts[0]) <= _date_key(DATE) < _date_key(facts[1])
+
+
+def _successor(cid, chars):
+    """The 867 heir: eldest living child, else eldest living sibling.
+
+    Birth order only - no sex or dynasty filter. A sister, a half-blood
+    sibling or a sibling of a matrilineal house is a lawful heir, so the
+    fallback never requires the ruler's dynasty."""
+    kids = sorted(
+        (k for k in _children_of(cid, chars) if _alive_at(k, chars)),
+        key=lambda k: _date_key(_ck3_dates_and_skills(k, chars)[0]),
+    )
+    if kids:
+        return kids[0]
+    m = re.search(r"^\s*father\s*=\s*(\d+)\b", chars[str(cid)], re.M)
+    if not m:
+        return None
+    sibs = sorted(
+        (
+            k
+            for k in _KIDS.get(m.group(1), [])
+            if k != str(cid) and _alive_at(k, chars)
+        ),
+        key=lambda k: _date_key(_ck3_dates_and_skills(k, chars)[0]),
+    )
+    return sibs[0] if sibs else None
+
+
 def ck3_block(tag):
     titles, chars = load_titles(), load_chars()
     dyns, houses = load_dynasties(), load_houses()
@@ -683,9 +718,8 @@ def ck3_block(tag):
 
     lines = [f"{CTRY_DATE} = {{", "\tmonarch = {", person(cid), "\t}"]
 
-    kids = _children_of(cid, chars)
-    kids.sort(key=lambda k: _ck3_dates_and_skills(k, chars)[0] or "9999.9.9")
-    if kids:
-        lines += ["\their = {", person(kids[0], claim=90), "\t}"]
+    heir = _successor(cid, chars)
+    if heir is not None:
+        lines += ["\their = {", person(heir, claim=90), "\t}"]
     lines += ["}", ""]
     return "\n".join(lines)

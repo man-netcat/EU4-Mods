@@ -15,5 +15,16 @@ capital = 1841
 		dip = 2
 		mil = 2
 	}
+	heir = {
+		name = "Gauronas"
+		monarch_name = "Gauronas"
+		dynasty = "Wilks"
+		birth_date = 845.1.1
+		death_date = 900.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

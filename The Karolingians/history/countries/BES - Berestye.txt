@@ -15,5 +15,16 @@ capital = 277
 		dip = 2
 		mil = 2
 	}
+	heir = {
+		name = "Rogvolod"
+		monarch_name = "Rogvolod"
+		dynasty = "Betula"
+		birth_date = 849.7.14
+		death_date = 896.1.23
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
 }
 

@@ -15,16 +15,5 @@ capital = 27
 		dip = 2
 		mil = 2
 	}
-	heir = {
-		name = "Otso"
-		monarch_name = "Otso"
-		dynasty = "Virtanen"
-		birth_date = 881.1.1
-		death_date = 957.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 

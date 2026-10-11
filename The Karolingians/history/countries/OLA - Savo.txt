@@ -15,16 +15,5 @@ capital = 31
 		dip = 2
 		mil = 2
 	}
-	heir = {
-		name = "Satajalka"
-		monarch_name = "Satajalka"
-		dynasty = "Savolainen"
-		birth_date = 876.1.1
-		death_date = 955.1.1
-		claim = 90
-		adm = 2
-		dip = 2
-		mil = 2
-	}
 }
 
