@@ -1,0 +1,214 @@
+########################################
+# Flavor events for Holland/The Netherlands
+#
+# written by Sara Wendel-�rtqvist & Johan Andersson
+########################################
+
+namespace = flavor_hol
+normal_or_historical_nations = yes
+
+#Erasmus
+
+#Hugo Grotius
+
+#Christiaan Huygens
+
+#  Mercator
+
+#Constitutionalism and the General Estates
+
+#Creation of the Amsterdam Stock Exchange
+
+#Veerinigte Westindische Companie
+
+# Dutch Military Reforms
+
+# Calvinism in the Netherlands
+
+#Statholder office is made Hereditary in Oranien Dynasty
+
+#The Revolution in Holland
+
+#Jan de Witt
+
+# Anthony Heinsius
+
+# Leiden University
+
+#Synod of Dort
+
+# Statenvertaling
+
+# Simon Stevin
+
+# Wilhelmus 
+
+################################################
+# Additional Flavor Events by Henrik Lohmander
+################################################
+
+# Tulip Crash
+
+# House of Elzevir
+
+# Groot Desseyn, The Grand Design
+
+# The Fluyte
+
+# Hardships of the VoC
+
+#VoC in financial peril
+
+#Nationalization of the VoC?
+
+#The Bank of Amsterdam & The International Capital Market
+
+#The Immortal Seven
+
+#Invitation to William
+
+# The Meddlesome Dutch
+
+# Conspirators in the cold
+
+#Franco-Dutch tensions
+
+
+#Le Prisonnier de Hollande / Franco-Dutch Relations
+country_event = {
+	id = flavor_hol.19
+	title = flavor_hol.19.t
+	desc = flavor_hol.19.d
+	picture = LAND_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_hol.19.a #Ok.
+		custom_tooltip = flavor_hol.19.a.tt
+	}
+}
+
+#Dejima - Japan
+
+#Dejima - Netherlands
+
+#Arumer Zwarte Hoop
+
+#Pruikentijd - The Age of the Wigwearers
+
+#Baruch Spinoza
+
+
+
+country_event = {
+	id = flavor_hol.202
+	title = flavor_hol.202.t 
+	desc = flavor_hol.202.d 
+	picture = CITY_VIEW_eventPicture
+	fire_only_once = yes
+	trigger = {
+		owns_core_province = 1744
+		1744 = { 
+			NOT = { unrest = 1 }
+			if = { 
+				limit = { has_dlc = "Mandate of Heaven" } 
+				NOT = { devastation = 1 } 
+			}
+			num_of_times_improved = 5
+			num_of_buildings_in_province = 4
+		}
+		OR = {
+			primary_culture = dutch
+			primary_culture = flemish
+			primary_culture = frisian
+		}
+		is_subject = no
+		capital_scope = { region = low_countries_region }
+		NOT = { is_year = 1525 }
+	}
+	
+	option = {
+		name = flavor_hol.202.a 
+		
+		1744 = {
+			add_base_tax = 2
+		}
+		custom_tooltip = " "
+		1744 = { set_center_level_2_center_of_trade = yes }
+		custom_tooltip = " "
+		add_mercantilism_or_monarch_power = { amount = 1 } 
+	}
+}
+
+
+country_event = { #The Port of Amsterdam 
+	id = flavor_hol.204
+	title = flavor_hol.204.t 
+	desc = flavor_hol.204.d 
+	picture = CITY_VIEW_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			primary_culture = dutch
+			primary_culture = flemish
+			primary_culture = frisian
+		}
+		owns_core_province = 97
+		97 = { num_of_times_improved = 10 }
+		97 = { has_production_building_trigger = yes }
+		is_year = 1525
+	}
+
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	option = {
+		name = flavor_hol.204.a 
+		
+		97 = {
+			upgrade_production_building = yes
+		}
+	}
+}
+
+country_event = { #Rempbrant
+	id = flavor_hol.205
+	title = flavor_hol.205.t 
+	desc = flavor_hol.205.d 
+	picture = PAINTER_ARTIST_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = dutch
+			primary_culture = flemish
+			primary_culture = frisian
+		}
+		capital_scope = { region = low_countries_region }
+		is_year = 1629
+		NOT = { is_year = 1670 }
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = flavor_hol.205.a 
+		
+		define_advisor = {
+			type = artist 
+			name = "Rembrandt van Rijn"
+			cost_multiplier = 0.25
+			skill = 3
+		}
+		if = {
+			limit = { has_dlc = "Rule Britannia" }
+			change_innovativeness = 3 
+		}
+		else = { add_dip_power = 50 }
+	}
+}

@@ -1,0 +1,55 @@
+########################################
+# Flavor Events for Knights of St:John
+#
+# Scripted by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_kni
+normal_or_historical_nations = yes
+
+# Pierre d'Aubusson
+
+# Rhodians and other Greeks accepted into the Order
+#Changed to decision
+#country_event = {
+#	id = flavor_kni.2
+#	title = "flavor_kni.EVTNAME2"
+#	desc = "flavor_kni.EVTDESC2"
+#	picture = BATTLE_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = KNI
+#		is_year = 1500
+#		NOT = { is_year = 1550 }
+#		owns = 320 # Rhodes
+#		is_at_war = no
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 200
+#	}
+#	
+#	option = {
+#		name = "flavor_kni.EVTOPTA2"
+#		add_accepted_culture = greek
+#		320 = {
+#			add_province_modifier = { 
+#				name = kni_accepted_cultures 
+#				duration = -1 
+#			}
+#		}
+#	}
+#}
+
+# The Great Carrack of Alexandria
+
+# Gabriele Tadini de Martinengo
+
+# Jean Parisot de la Valette
+
+
+
+
+# The Knights of St. John of Jerusalem

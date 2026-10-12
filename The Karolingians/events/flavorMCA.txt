@@ -1,0 +1,22 @@
+########################################
+# Events for Muisca
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_mca
+normal_or_historical_nations = yes
+
+	
+# The Zipa and the Zaque
+
+#The Salt Mines of Zipaquira
+
+#Ambitions of the Zipa.
+#Repeating, max 1 time per ruler.
+
+#Ambitions of the Zaque.
+
+#Influence of the Iraca
+
+#The Muisca Stand United

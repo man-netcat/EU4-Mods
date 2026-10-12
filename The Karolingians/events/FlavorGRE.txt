@@ -1,0 +1,10 @@
+###############################################################
+# Flavor Events for Greece
+#
+# written by Henrik Lohmander
+###############################################################
+
+namespace = flavor_gre
+normal_or_historical_nations = yes
+
+# Greek Cores

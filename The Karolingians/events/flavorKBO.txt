@@ -1,0 +1,24 @@
+########################################
+# Events for Borno
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_kbo
+normal_or_historical_nations = yes
+
+#The two branches of the Sayfawa dynasty
+
+#Foundation of Gazargamu
+
+#Enforcing Orthodoxy on the ruling class.
+
+#Reduction of local titleholders might. Especially in the north. Kingmakers.
+
+#Calipha
+
+#Reforms of Idris bin Ali
+
+#Magira Aisha
+
+#The two branches of the Sayfawa dynasty

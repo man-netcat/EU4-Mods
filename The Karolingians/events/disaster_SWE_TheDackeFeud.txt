@@ -1,0 +1,35 @@
+namespace = the_dacke_feud
+
+
+
+# Province Rise in Support of Dacke
+
+# The Revolt in Province
+
+
+# The Dacke Feud Ends
+country_event = {
+	id = the_dacke_feud.100
+	title = the_dacke_feud.100.t
+	desc = the_dacke_feud.100.d
+	picture = ANGRY_MOB_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		on_non_estate_disaster_end = yes
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = dacke_prov
+				clr_province_flag = dacke_feud_trade_embargo_flag
+				remove_province_modifier = dacke_feud_trade_embargo
+			}
+		}
+	}
+
+	option = {
+		name = "the_dacke_feud.100.a"
+		add_stability_or_adm_power = yes
+	}
+}

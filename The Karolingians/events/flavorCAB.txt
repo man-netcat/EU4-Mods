@@ -1,0 +1,14 @@
+########################################
+# Events for the Carib
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_cab
+normal_or_historical_nations = yes
+
+#The Orinoco Trade
+
+#Refugees from the Carib Wars, Carib Expulsion, etc
+
+#Arawak settle the mouth of the Orinoco

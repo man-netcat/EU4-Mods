@@ -1,0 +1,139 @@
+# Flavor Events for the Powhatan (written by Veronica Pazos)
+
+namespace = flavor_pow
+normal_or_historical_nations = yes
+
+# First Contact
+
+# The Virginia Company
+
+# Anglo-Powhatan Wars
+
+# Tribal Trade
+country_event = {
+	id = flavor_pow.4
+	title = flavor_pow.4.t
+	desc = flavor_pow.4.d
+	picture = ECONOMY_eventPicture
+	
+	trigger = {
+		primary_culture = powhatan
+		has_dlc = "Leviathan"
+		any_owned_province = {
+			OR = {
+				has_building = native_storehouse
+				has_building = workshop
+				has_building = marketplace
+			}
+		}
+		any_ally = {
+			technology_group = north_american
+			any_owned_province = {
+				continent = north_america
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.8
+			religion = totemism
+		}
+	}
+	
+	option = { #change trade_goods to copper
+		name = flavor_pow.4.a
+		random_owned_province = {
+			limit = {
+				NOT = { trade_goods = copper }
+			}
+			change_trade_goods = copper
+		}
+	}
+	
+	option = { #don't change
+		name = flavor_pow.4.b
+		every_owned_province = {
+			limit = {
+				is_core = ROOT
+			}
+			add_province_modifier = {
+				name = "pow_indigenous_trade_goods"
+				duration = 1825
+			}
+		}
+	}
+}
+
+# European Trade
+country_event = {
+	id = flavor_pow.5
+	title = flavor_pow.5.t
+	desc = flavor_pow.5.d
+	picture = ECONOMY_eventPicture
+	
+	trigger = {
+		primary_culture = powhatan
+		has_dlc = "Leviathan"
+		OR = {
+			has_country_flag = the_virginia_company
+			has_country_flag = european_first_contact
+		}
+		any_known_country = {
+			capital_scope = { continent = europe }
+			any_owned_province = {
+				continent = north_america
+			}
+			NOT = { war_with = ROOT }
+		}
+		any_owned_province = {
+			base_production = 2
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.6
+			has_idea_group = economic_ideas
+		}
+	}
+	
+	option = { #change trade_goods to iron
+		name = flavor_pow.5.a
+		random_owned_province = {
+			limit = {
+				NOT = { trade_goods = iron }
+				base_production = 2
+			}
+			add_base_production = -1
+			change_trade_goods = iron
+		}
+	}
+	
+	option = { #change trade_goods to wool
+		name = flavor_pow.5.b
+		random_owned_province = {
+			limit = {
+				NOT = { trade_goods = wool }
+				base_production = 2
+			}
+			add_base_production = -1
+			change_trade_goods = wool
+		}
+	}
+	
+	option = { #don't change
+		name = flavor_pow.5.c
+		every_owned_province = {
+			limit = {
+				is_core = ROOT
+			}
+			add_province_modifier = {
+				name = "pow_indigenous_trade_goods"
+				duration = 1825
+			}
+		}
+	}
+}

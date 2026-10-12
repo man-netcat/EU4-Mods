@@ -1,0 +1,57 @@
+# Tumu Crisis by Daniel Tolman
+
+namespace = flavor_oir
+normal_or_historical_nations = yes
+
+# Yingzong Emperor leads the army against the Oirats
+
+# Emperor captured in battle
+
+# Notification for Ming
+country_event = {
+	id = flavor_oir.3
+	title = flavor_oir.2.t
+	desc = flavor_oir.3.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Disastrous!
+		name = "flavor_oir.3.a"
+		if = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			add_mandate = -20
+		}
+		add_stability = -1
+		hidden_effect = {
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				exile_heir_as = mng_exiled_heir
+				set_country_flag = mng_exiled_heir_flag
+			}
+			exile_ruler_as = { name = mng_exiled_ruler }
+		}
+		define_ruler = {
+			regency = yes
+			ADM = 2
+			DIP = 2
+			MIL = 2
+		}
+	}
+}
+	
+# Ming appoints new Emperor
+	
+# Oirats capture Beijing
+	
+# Ming accepts demands
+
+# Emperor dies in captivity
+# For Oirat
+
+# The Dzunghars

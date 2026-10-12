@@ -1,0 +1,306 @@
+# Flavour events for Majapahit
+# Written by Daniel Tolman
+
+namespace = majapahit
+normal_or_historical_nations = yes
+
+# A hero emerges
+
+# Damarwulan returns victorious
+
+# Fall of Majapahit Disaster
+
+# Start event
+country_event = {
+	id = majapahit.3
+	title = majapahit.3.t
+	desc = majapahit.3.d
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = maj_disaster_start
+		}
+	}
+	
+	option = {
+		name = majapahit.3.a
+		add_stability = -5
+		add_legitimacy = -50
+		add_heir_claim = -50
+		set_country_flag = majapahit_disaster_flag
+	}
+}
+
+# End event
+country_event = {
+	id = majapahit.4
+	title = majapahit.4.t
+	desc = majapahit.4.d
+	picture = NUSANTARA_THRONE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		on_non_estate_disaster_end = yes
+		hidden_effect = {
+			set_country_flag = had_fall_of_majapahit
+		}
+	}
+	
+	option = {
+		name = majapahit.4.a
+		add_stability = 1 # other rewards are in missions
+	}
+}
+
+# The Rise of Demak
+
+# The Rise of Mataram
+
+# Subject liberty desire
+country_event = {
+	id = majapahit.7
+	title = majapahit.7.t
+	desc = majapahit.7.d
+	picture = {
+		trigger = { has_dlc = "Star and Crescent" }
+		picture = CONQUEST_eventPicture 
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Star and Crescent" } }
+		picture = TRADEGOODS_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_flag = maj_no_more_subject_liberty }
+		any_subject_country = {
+			liberty_desire = 50
+			ai = yes
+			NOT = { truce_with = ROOT }
+			NOT = { ROOT = { truce_with = PREV } }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = tributary_state
+					liberty_desire = 50
+					ai = yes
+				}
+				save_event_target_as = maj_tributary_country
+			}
+		}
+	}
+	
+	option = {
+		name = majapahit.7.a
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+			limit = {
+				event_target:maj_tributary_country = {
+					liberty_desire = 75
+				}
+			}
+			event_target:maj_tributary_country = {
+				grant_independence = yes
+			}
+		}
+		else = {
+			event_target:maj_tributary_country = {
+				add_liberty_desire = 15
+			}
+		}
+	}
+	option = {
+		name = majapahit.7.b
+		trigger = {
+			event_target:maj_tributary_country = {
+				NOT = { liberty_desire = 80 }
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+		add_legitimacy = -10
+		event_target:maj_tributary_country = {
+			add_liberty_desire = -5
+		}
+	}
+}
+
+# Pretender to Majapahit
+country_event = {
+	id = majapahit.8
+	title = majapahit.8.t
+	desc = majapahit.8.d
+	picture = NUSANTARA_THRONE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_disaster = fall_of_majapahit
+		NOT = { has_country_flag = maj_no_more_pretenders }
+		any_owned_province = {
+			region = indonesia_region
+			controlled_by = ROOT
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_saved_name = {
+				key = maj_pretender
+				type = leader
+			}
+			random_owned_province = {
+				limit = {
+					region = indonesia_region
+					controlled_by = ROOT
+				}
+				save_event_target_as = maj_pretender_province
+				spawn_rebels = {
+					type = pretender_rebels
+					leader = maj_pretender
+					size = 2
+				}
+			}
+			set_country_flag = maj_pretender_event
+		}
+	}
+	
+	option = {
+		name = majapahit.8.a
+		tooltip = {
+			event_target:maj_pretender_province = {
+				spawn_rebels = {
+					type = pretender_rebels
+					leader = maj_pretender
+					size = 2
+				}
+			}
+		}
+	}
+}
+
+# Aid from Muslim Merchants
+country_event = {
+	id = majapahit.9
+	title = majapahit.9.t
+	desc = majapahit.9.d
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		had_country_flag = {	
+			flag = majapahit_disaster_flag
+			days = 1825
+		}
+	}
+	
+	option = {
+		name = majapahit.9.a
+		ai_chance = {
+			factor = 1
+		}
+		add_treasury = 500
+		add_mercantilism = -1
+		custom_tooltip = maj_muslim_traders_tt
+		set_country_flag = maj_accepted_muslim_help
+		if = {
+			limit = {
+				629 = {
+					owned_by = ROOT
+					NOT = { religion = sunni }
+				}
+			}
+			629 = {
+				change_religion = sunni
+			}
+		}
+	}
+	option = {
+		name = majapahit.9.b
+		ai_chance = {
+			factor = 0
+		}
+		add_mercantilism = 1
+		add_country_modifier = {
+			name = maj_harmed_trade_relations
+			duration = 7300
+		}
+	}
+}
+
+# Spread of Islam in [province]
+country_event = {
+	id = majapahit.10
+	title = majapahit.10.t
+	desc = majapahit.10.d
+	picture = {
+		trigger = { has_dlc = "Star and Crescent" }
+		picture = PIETY_eventPicture
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Star and Crescent" } }
+		picture = RELIGION_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			religion = sunni
+			NOT = { has_country_flag = maj_no_more_bad_religion_events }
+		}
+		has_country_flag = maj_accepted_muslim_help
+		any_owned_province = {
+			region = indonesia_region
+			NOT = { religion = sunni }
+			OR = {
+				has_port = yes
+				any_neighbor_province = {
+					religion = sunni
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					region = indonesia_region
+					NOT = { religion = sunni }
+					OR = {
+						has_port = yes
+						any_neighbor_province = {
+							religion = sunni
+						}
+					}
+				}
+				save_event_target_as = maj_sunni_province
+			}
+		}
+	}
+	
+	option = {
+		name = majapahit.10.a
+		event_target:maj_sunni_province = {
+			change_religion = sunni
+		}
+	}
+}

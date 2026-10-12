@@ -1,0 +1,108 @@
+########################################
+# Event for Switzerland
+#
+# written by Katya Magnusson
+########################################
+
+namespace = flavor_swi
+
+#Paracelsus
+
+
+##########################################################
+# Dynamic Events for the Swiss (written by James Beaumont)
+##########################################################
+
+#Genevan independence events
+
+
+# Geneva asks for Swiss provinces (Savoy)
+
+# Geneva is denied
+
+#Geneva asks to join Switzerland
+
+#Swiss Response
+
+# Independent Geneva (written by Hubert Leung)
+
+########################################
+# Swiss Flavor Events                  #
+########################################
+
+# Three Leagues Join Switzerland Event
+
+# John Calvin arrives in Geneva
+
+#John Calvin returns to Geneva
+
+#John Calvin becomes Spiritual Leader of Geneva
+
+#Spiritual Leader supercedes secular leader
+country_event = {
+	id = flavor_swi.8
+	title = "flavor_swi.EVTNAME8"
+	desc = "flavor_swi.EVTDESC8"
+	picture = PROTESTANT_GREAT_REFORMER_eventPicture
+
+
+	fire_only_once = yes
+	
+
+	trigger = {
+		has_country_modifier = john_calvin_modifier
+		is_subject = no
+		current_age = age_of_reformation
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	option = {	# Calvin becomes leader
+		name = "flavor_swi.EVTOPTA8"
+		ai_chance = { 
+			factor = 50
+		}
+		trigger = {
+			primary_culture = swiss
+		}
+		if = {
+			limit = {
+				NOT = {
+					religion = reformed
+				}
+			}
+			change_religion = reformed
+		}
+		change_government = theocracy
+		add_government_reform = united_cantons_reform
+		#set_legacy_government = theocratic_government
+		define_ruler = {
+			name = "Jean"
+			dynasty = "Calvin"
+			culture = cosmopolitan_french
+			religion = reformed
+			adm = 4
+			dip = 3
+			mil = 4
+			age = 36
+			claim = 95
+		}
+	}
+	
+	option = {		# Kick him out for real for real this time
+		name = "flavor_swi.EVTOPTB8"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		remove_country_modifier = john_calvin_modifier
+	}
+}
+
+#Hundred Years War mercenaries
+
+#Mercenary Monopoly
+
+#Helvetic Republic
+
+#Helvetic Republic (Switzerland)

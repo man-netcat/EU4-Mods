@@ -1,0 +1,421 @@
+########################################
+# Events for The Papacy
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = papacy_events
+
+# The Swiss Guard
+
+# Passetto di Borgo
+
+# Cardinal-Nephew
+
+# Cardinal-Nephew from the Pope
+
+# Accepted Cardinal-Nephew
+country_event = {
+	id = papacy_events.8
+	title = papacy_events.8.t
+	desc = papacy_events.8.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = papacy_events.8.a
+		tooltip = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_cardinal_nephew
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = opinion_cardinal_nephew
+			}
+		}
+	}
+}
+
+# Refused Cardinal-Nephew
+country_event = {
+	id = papacy_events.9
+	title = papacy_events.9.t
+	desc = papacy_events.9.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = papacy_events.9.a
+		add_prestige = -5
+	}
+}
+
+# Sack of Rome
+
+# The Vatican Library
+
+# Sistine Chapel
+
+# Decorate the Sistine Chapel
+
+# Selling of Indulgences
+
+# Simony
+
+# Veneration of Relics
+
+# Galileo - the Earth revolves around the sun
+
+# Sublimis Deus
+#country_event = {
+#	id = papacy_events.18
+#	title = papacy_events.18.t
+#	desc = papacy_events.18.d
+#	picture = RELIGION_eventPicture
+#	
+#	trigger = {
+#		has_dlc = "Common Sense"
+#		tag = PAP
+#		NOT = { has_country_flag = pap_condemned_slavery }
+#		any_known_country = {
+#			religion = catholic 
+#			any_owned_province = {
+#				is_colony = yes
+#				OR = {
+#					continent = south_america
+#					continent = north_america
+#				}
+#			}
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 500
+#		modifier = {
+#			factor = 0.9
+#			NOT = { is_year = 1600 }
+#		}
+#	}
+#	
+#	option = {
+#		name = papacy_events.18.a
+#		set_country_flag = pap_condemned_slavery
+#		add_devotion = 10
+#		every_known_country = {
+#			limit = {
+#				religion = catholic 
+#				any_owned_province = {
+#					is_colony = yes
+#					OR = {
+#						continent = south_america
+#						continent = north_america
+#					}
+#				}
+#				NOT = { has_country_modifier = pap_condemn_slavery }
+#			}
+#			country_event = {
+#				id = papacy_events.19
+#				tooltip = papacy_events.19.t
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = papacy_events.18.b
+#		add_stability_or_adm_power = yes
+#		add_devotion = -15
+#	}
+#}
+
+# The Pope Condemns Slavery
+#country_event = {
+#	id = papacy_events.19
+#	title = papacy_events.19.t
+#	desc = papacy_events.19.d
+#	picture = RELIGION_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = papacy_events.19.a #Accept the Papal Bull
+#		add_papal_influence = 5
+#		add_country_modifier = {
+#			name = pap_condemn_slavery
+#			duration = 3650
+#		}
+#		PAP = {
+#			add_opinion = {
+#				who = ROOT
+#				modifier = opinion_condemn_slavery
+#			}
+#			country_event = {
+#				id = papacy_events.20
+#				tooltip = papacy_events.20.t
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = papacy_events.19.b #Refuse and Continue the practice
+#		add_papal_influence = -5
+#		PAP = {
+#			add_opinion = {
+#				who = ROOT
+#				modifier = opinion_allows_slavery
+#			}
+#			country_event = {
+#				id = papacy_events.21
+#				tooltip = papacy_events.21.t
+#			}
+#		}
+#	}
+#}
+
+# COUNTRY accepts
+#country_event = {
+#	id = papacy_events.20
+#	title = papacy_events.20.t
+#	desc = papacy_events.20.d
+#	picture = RELIGION_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = papacy_events.20.a
+#		tooltip = {
+#			add_opinion = {
+#				who = FROM
+#				modifier = opinion_condemn_slavery
+#			}
+#		}
+#	}
+#}
+
+# COUNTRY refuses
+#country_event = {
+#	id = papacy_events.21
+#	title = papacy_events.21.t
+#	desc = papacy_events.21.d
+#	picture = RELIGION_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = papacy_events.21.a
+#		tooltip = {
+#			add_opinion = {
+#				who = FROM
+#				modifier = opinion_allows_slavery
+#			}
+#		}
+#	}
+#}
+
+# Witch Trials
+## note: this chain uses confusing similar global_flags, be careful not to mix them up (pap_condemn_witchtrials_bad_flag, pap_condemn_witchtrials_good_flag, pap_allows_witchtrials_bad_flag and pap_allows_witchtrials_good_flag)
+
+# Pope condemns Witch Trials
+
+# $FROMCOUNTRY$ Stops The Witch Trials
+country_event = {
+	id = papacy_events.24
+	title = papacy_events.24.t
+	desc = papacy_events.24.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_global_flag = pap_condemn_witchtrials_good_flag
+			has_global_flag = pap_condemn_witchtrials_bad_flag
+		}
+	}
+	
+	option = {
+		name = papacy_events.24.a
+		trigger = {
+			has_global_flag = pap_condemn_witchtrials_good_flag
+		}
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_condemn_witchtrials_good
+			}
+		}
+		clr_global_flag = pap_condemn_witchtrials_good_flag
+	}
+	option = {
+		name = papacy_events.24.b
+		trigger = {
+			has_global_flag = pap_condemn_witchtrials_bad_flag
+		}
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_condemn_witchtrials_bad
+			}
+		}
+		clr_global_flag = pap_condemn_witchtrials_bad_flag
+	}
+}
+
+# $COUNTRY$ Refuses
+country_event = {
+	id = papacy_events.25
+	title = papacy_events.25.t
+	desc = papacy_events.25.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = papacy_events.25.a
+		trigger = {
+			has_global_flag = pap_allows_witchtrials_bad_flag
+		}
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_allows_witchtrials_bad
+			}
+		}
+		clr_global_flag = pap_allows_witchtrials_bad_flag
+	}
+	option = {
+		name = papacy_events.25.b
+		trigger = {
+			has_global_flag = pap_allows_witchtrials_good_flag
+		}
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_allows_witchtrials_good
+			}
+		}
+		clr_global_flag = pap_allows_witchtrials_good_flag
+	}
+}
+
+# $COUNTRY$ asks for advise from the Pope
+country_event = {
+	id = papacy_events.26
+	title = papacy_events.26.t
+	desc = papacy_events.26.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = papacy_events.26.a
+		ai_chance = {
+			factor = 90
+		}
+		add_devotion = 10
+		FROM = {
+			country_event = {
+				id = papacy_events.27
+				tooltip = papacy_events.27.t
+			}
+		}
+	}
+	
+	option = {
+		name = papacy_events.26.b
+		ai_chance = {
+			factor = 10
+		}
+		add_reform_desire = -0.05
+		FROM = {
+			country_event = {
+				id = papacy_events.28
+				tooltip = papacy_events.28.t
+			}
+		}
+	}
+}
+
+# Pope says to condemn witch trials
+
+# Pope says to accept witch trials
+
+# The bad, bad Pope
+
+# Papal controller: Pope's decision
+country_event = {
+	id = papacy_events.30
+	title = papacy_events.30.t
+	desc = papacy_events.30.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = papacy_events.30.a
+		trigger = {
+			has_country_flag = pap_erased_rival_pope_flag
+		}
+		clr_country_flag = pap_erased_rival_pope_flag
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_erased_rival_pope
+			}
+		}
+	}
+	
+	option = {
+		name = papacy_events.30.b
+		trigger = {
+			has_country_flag = pap_not_erased_rival_pope_flag
+		}
+		clr_country_flag = pap_not_erased_rival_pope_flag
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_not_erased_rival_pope
+			}
+		}
+	}
+}
+
+# Former Papal controller: Pope's decision
+country_event = {
+	id = papacy_events.31
+	title = papacy_events.31.t
+	desc = papacy_events.31.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = papacy_events.31.a
+		trigger = {
+			has_country_flag = pap_erased_pope_flag
+		}
+		clr_country_flag = pap_erased_pope_flag
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_erased_pope
+			}
+		}
+	}
+	
+	option = {
+		name = papacy_events.31.b
+		trigger = {
+			has_country_flag = pap_not_erased_pope_flag
+		}
+		clr_country_flag = pap_not_erased_pope_flag
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = opinion_not_erased_pope
+			}
+		}
+	}
+}

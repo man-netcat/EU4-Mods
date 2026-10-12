@@ -1,0 +1,254 @@
+namespace = counts_feud
+
+########################################
+# Count's Feud
+########################################
+
+# Support monarch or pretender?
+country_event = {
+	id = counts_feud.1
+	title = counts_feud.1.t
+	desc = counts_feud.1.d
+	picture = {
+		picture = ROYAL_STRESS_eventPicture
+		trigger = {
+			has_dlc = "Lions of the North"
+			technology_group = western
+		}
+	}
+	picture = {
+		picture = BAD_WITH_MONARCH_eventPicture
+		trigger = {
+			OR = {
+				NOT = { has_dlc = "Lions of the North" }
+				NOT = { technology_group = western }
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = had_counts_feud
+		set_country_flag = counts_feud_start_event
+	
+		add_stability = -1
+	
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					continent = europe
+				}
+				set_province_flag = counts_feud
+			}
+			random_owned_province = {
+				limit = {
+					continent = europe
+					NOT = { has_province_flag = counts_feud }
+				}
+				set_province_flag = counts_feud
+			}
+		}
+	}
+	
+	option = {
+		name = counts_feud.1.a
+		
+		set_country_flag = monarch_flag
+		
+		every_owned_province = {
+			limit = {
+				has_province_flag = counts_feud
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 1
+				win = yes
+				unrest = 20
+				leader = "Christoffer"
+				leader_dynasty = "von Oldenburg"
+			}
+			clr_province_flag = counts_feud
+		}
+	}
+	option = {
+		name = counts_feud.1.b
+
+		set_country_flag = pretender_flag
+		
+		
+		if = {
+			limit = {
+				has_regency = no
+			}
+			tooltip = {
+				kill_ruler = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = { allow_new_heir = no }
+		}
+		define_ruler = {
+			adm = 2
+			dip = 3
+			mil = 2
+			name = "Christoffer"
+			dynasty = "von Oldenburg"
+		}
+		if = {
+			limit = {
+				has_states_general_mechanic = yes
+			}
+			change_statists_vs_orangists = 1
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = counts_feud
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+			clr_province_flag = counts_feud
+		}
+	}
+
+	after = {
+		clr_country_flag = counts_feud_start_event
+	}
+}
+
+# Manors burned down!
+country_event = {
+	id = counts_feud.2
+	title = counts_feud.2.t
+	desc = counts_feud.2.d
+	picture = ANGRY_MOB_eventPicture
+	
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					continent = europe
+				}
+				set_province_flag = manors_burned_down
+			}
+		}
+	}
+	
+	option = {
+		name = "flavor_dan.EVTOPTOK"
+		if = {
+			limit = {
+				has_country_flag = pretender_flag
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = manors_burned_down
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+				clr_province_flag = manors_burned_down
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = monarch_flag
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = manors_burned_down
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+				}
+				clr_province_flag = manors_burned_down
+			}
+		}
+	}
+}
+
+
+
+
+# Event for Sweden! Send forces to help?
+
+# DAN: SWE helped rebels!?
+
+# DAN: SWE helped us!
+
+# Skipper Clement captured
+country_event = {
+	id = counts_feud.6
+	title = counts_feud.6.t
+	desc = counts_feud.6.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	
+	option = {
+		name = "flavor_dan.EVTOPTOK"
+		add_prestige = 5
+		every_owned_province = {
+			limit = {
+				continent = europe
+			}
+			add_unrest = -5
+		}
+	}
+}
+
+# The Aftermath
+country_event = {
+	id = counts_feud.100
+	title = counts_feud.100.t
+	desc = counts_feud.100.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		on_non_estate_disaster_end = yes
+		hidden_effect = {
+			clr_country_flag = pretender_flag
+			clr_country_flag = monarch_flag
+		}
+	}
+	
+	option = {
+		name = counts_feud.100.a
+		add_prestige = 10
+		add_legitimacy = 10
+		add_treasury = 50
+	}
+}

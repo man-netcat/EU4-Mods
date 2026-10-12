@@ -1,0 +1,10 @@
+########################################
+# Events for Calchaqui
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_ccq
+normal_or_historical_nations = yes
+
+# Inca Hualpa

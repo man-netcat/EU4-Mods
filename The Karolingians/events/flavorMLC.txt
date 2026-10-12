@@ -1,0 +1,72 @@
+########################################
+# Events for Malacca
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_mlc
+normal_or_historical_nations = yes
+
+	
+# The Plot against Raja Ibrahim
+
+# Bendahara Tun Perak
+
+
+# Piracy in the Malayan Sea (Repeating)
+
+# Islam and the Malaccan state
+
+# Customs and Duties
+
+# Hang Tuah
+
+# Arrival of the Portuguese
+
+
+# Pick a name and capital for Malaya
+country_event = {
+	id = flavor_mlc.9
+	title = flavor_mlc.9.t
+	desc = flavor_mlc.9.desc
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_mlc.9.a
+		trigger = {
+			dynasty = "Srivijaya"
+		}
+		override_country_name = SRIVIJAYA
+		set_country_flag = is_srijivaya_flag
+		ai_chance = {
+			factor = 1000
+		}
+	}
+	option = {
+		name = flavor_mlc.9.b
+		trigger = {
+			primary_culture = javanese
+		}
+		override_country_name = MAJAPAHIT_EMPIRE
+		set_country_flag = is_majapahit_empire_flag
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = flavor_mlc.9.c
+		override_country_name = NUSANTARA
+		set_country_flag = is_nusantara_flag
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = flavor_mlc.9.d
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

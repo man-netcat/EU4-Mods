@@ -1,0 +1,60 @@
+namespace = flavor_sun
+normal_or_historical_nations = yes
+
+# Flavor events for Sunda by Daniel Tolman
+
+# The Sunni Faith
+country_event = {
+	id = flavor_sun.1
+	title = flavor_sun.1.t
+	desc = flavor_sun.1.d
+	picture = BUDDHA_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_sun.1.a
+		ai_chance = {
+			factor = 1
+		}
+		change_religion = sunni
+		if = {
+			limit = {
+				capital_scope = {
+					NOT = { religion = sunni }
+				}
+			}
+			capital_scope = {
+				change_religion = sunni
+			}
+		}
+		random_owned_province = {
+			limit = {
+				superregion = east_indies_superregion
+				NOT = { religion = sunni }
+			}
+			change_religion = sunni
+		}
+		random_owned_province = {
+			limit = {
+				superregion = east_indies_superregion
+				NOT = { religion = sunni }
+			}
+			change_religion = sunni
+		}
+	}
+	option = {
+		name = flavor_sun.1.b
+		ai_chance = {
+			factor = 0
+		}
+		add_country_modifier = {
+			name = sun_kept_the_faith
+			duration = -1
+		}
+	}
+}
+
+# A New Capital
+
+# A Wedding

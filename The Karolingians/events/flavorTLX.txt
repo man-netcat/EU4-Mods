@@ -1,0 +1,12 @@
+########################################
+# Events for Tlaxcala
+#
+# written by Sara Wendel-�rtqvist
+####################################
+
+namespace = flavor_tlx
+normal_or_historical_nations = yes
+
+# Flower war
+
+# Legend of Tlalhuicole

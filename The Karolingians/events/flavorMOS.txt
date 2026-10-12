@@ -1,0 +1,441 @@
+########################################
+# Events for Muscovy
+#
+# written by Ogulcan Yildirim
+########################################
+
+namespace = flavor_mos
+normal_or_historical_nations = yes
+
+# The Tatar Yoke Tribute Introduction
+
+# The end of the Tatar Yoke
+country_event = {
+	id = flavor_mos.2
+	title = flavor_mos.2.t
+	desc = {
+		trigger = { has_country_flag = was_horde_flag }
+		desc = flavor_mos.2.desc_horde
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = was_horde_flag }
+			owns = 466
+			has_global_flag = mos_too_powerful
+			NOT = { has_country_flag = is_mos }
+		}
+		desc = flavor_mos.2.desc_mos_too_strong
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = was_horde_flag }
+			NOT = { owns = 466 }
+			has_global_flag = mos_too_powerful
+		}
+		desc = flavor_mos.2.desc_mos
+	}
+	desc = {
+		trigger = { NOT = { has_country_flag = was_horde_flag } }
+		desc = flavor_mos.2.desc
+	}
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = is_mos }
+				save_event_target_as = target_country
+			}
+		}
+	}
+	after = {
+		clr_global_flag = mos_too_powerful
+		every_country = {
+			limit = { has_country_flag = is_mos }
+			clr_country_flag = is_mos
+		}
+	}
+
+	option = {
+		name = flavor_mos.2.a
+		trigger = {
+			NOT = { has_country_flag = was_horde_flag }
+			OR = {
+				NOT = { owns = 466 }
+				NOT = { has_global_flag = mos_too_powerful }
+				has_country_flag = is_mos
+			}
+		}
+		if = {
+			limit = { has_country_modifier = the_tatar_yoke }
+			remove_country_modifier = the_tatar_yoke
+			add_stability_or_adm_power = yes
+		}
+		else = {
+			every_country = {
+				limit = { has_country_modifier = the_tatar_yoke }
+				remove_country_modifier = the_tatar_yoke
+				add_stability_or_adm_power = yes
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_mos.2.c
+		trigger = {
+			NOT = { has_country_flag = was_horde_flag }
+			owns = 466
+			has_global_flag = mos_too_powerful
+			NOT = { has_country_flag = is_mos }
+		}
+		if = {
+			limit = { has_country_modifier = the_tatar_yoke }
+			remove_country_modifier = the_tatar_yoke
+			add_stability_or_adm_power = yes
+		}
+		else = {
+			every_country = {
+				limit = { has_country_modifier = the_tatar_yoke }
+				remove_country_modifier = the_tatar_yoke
+				add_stability_or_adm_power = yes
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = flavor_mos.2.b
+		trigger = { has_country_flag = was_horde_flag }
+		if = {
+			limit = { has_country_modifier = the_tatar_yoke }
+			remove_country_modifier = the_tatar_yoke
+			add_stability_or_adm_power = yes
+		}
+		else = {
+			every_country = {
+				limit = { has_country_modifier = the_tatar_yoke }
+				remove_country_modifier = the_tatar_yoke
+				add_stability_or_adm_power = yes
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The yearly Tatar Yoke Tribute
+country_event = {
+	id = flavor_mos.3
+	title = flavor_mos.3.t
+	desc = flavor_mos.3.desc
+	picture = TRIBUTE_TO_TATARS_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		has_dlc = "Domination"
+		NOT = { has_global_flag = end_of_the_tatar_yoke }
+		has_country_modifier = the_tatar_yoke
+		466 = {
+			owner = {
+				NOT = { war_with = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+    
+    immediate = {
+        hidden_effect = {
+            export_to_variable = {
+                which = mos_tribute_to_pay
+                value = monthly_income
+                who = ROOT
+            }
+            multiply_variable = {
+                which = mos_tribute_to_pay
+                value = 2
+            }
+        }
+    }
+
+	#Pay the Annual Tribute
+	option = {
+		name = flavor_mos.3.a
+		custom_tooltip = flavor_mos.3.a.tt
+		hidden_effect = {
+			466 = {
+				owner = {
+					country_event = {
+						id = flavor_mos.4
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { years_of_income = 0.3 }
+					466 = {
+						owner = {
+							OR = {
+								is_at_war = yes
+								NOT = { manpower_percentage = 0.5 }
+								NOT = { mil_power_cost = 50 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Refuse to pay the Annual Tribute
+	option = {
+		name = flavor_mos.3.b
+		custom_tooltip = flavor_mos.3.b.tt
+		hidden_effect = {
+			466 = {
+				owner = {
+					country_event = {
+						id = flavor_mos.5
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				years_of_income = 0.3
+				466 = {
+					owner = {
+						is_at_war = no
+						manpower_percentage = 0.5
+						mil_power_cost = 50
+					}
+				}
+			}
+		}
+	}
+}
+
+# FROM pays Tribute
+country_event = {
+	id = flavor_mos.4
+	title = flavor_mos.4.t
+	desc = flavor_mos.4.desc
+	picture = TRIBUTE_TO_TATARS_eventPicture
+	is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            export_to_variable = {
+                which = mos_tribute_to_pay
+                value = monthly_income
+                who = FROM
+            }
+            multiply_variable = {
+                which = mos_tribute_to_pay
+                value = 3
+            }
+        }
+    }
+
+	option = {
+		name = flavor_mos.4.a
+		transfer_treasury = {
+			giver = FROM
+			taker = ROOT
+			variable = mos_tribute_to_pay
+			custom_tooltip = flavor_mos.4.a.tt
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# FROM refuses to pay Tribute
+country_event = {
+	id = flavor_mos.5
+	title = flavor_mos.5.t
+	desc = flavor_mos.5.desc
+	picture = TRIBUTE_TO_TATARS_eventPicture
+	is_triggered_only = yes
+
+	#Retaliate against them!
+	option = {
+		name = flavor_mos.5.a
+		mil_power_cost = 50
+		add_yearly_manpower = -0.2
+		custom_tooltip = flavor_mos.5.a.tt
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = flavor_mos.6
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_at_war = yes
+					NOT = { manpower_percentage = 0.5 }
+					NOT = { mil_power_cost = 50 }
+				}
+			}
+		}
+	}
+
+	#We have to live without it
+	option = {
+		name = flavor_mos.5.b
+		add_prestige = -5
+		add_horde_unity = -2
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+				manpower_percentage = 0.5
+				mil_power_cost = 50
+			}
+			modifier = {
+				factor = 0
+				truce_with = ROOT
+			}
+		}
+	}
+}
+
+# FROM retaliates!
+country_event = {
+	id = flavor_mos.6
+	title = flavor_mos.6.t
+	desc = flavor_mos.6.desc
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mos.6.a
+		custom_tooltip = flavor_mos.6.a.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = russia_region
+				}
+				remove_loot = {
+					who = FROM
+					amount = 5
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Third Period of the Muscovite Civil War - The blinding of Vasily II
+
+#The Rule of Dmitry
+
+#Dmitry defeated
+
+# The end of the Tatar Yoke - Tatar Yoke broke on its own
+country_event = {
+	id = flavor_mos.10
+	title = flavor_mos.10.t
+	desc = flavor_mos.10.desc
+	picture = GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_country_modifier = the_tatar_yoke
+		total_development = 300
+		OR = {
+			controls = 466
+			total_development = 450
+		}
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { total_development = 450 }
+				set_global_flag = mos_too_powerful
+				set_country_flag = is_mos
+			}
+		}
+	}
+
+	option = {
+		name = flavor_mos.2.a
+		set_global_flag = end_of_the_tatar_yoke
+		if = {
+			limit = { has_country_modifier = the_tatar_yoke }
+			remove_country_modifier = the_tatar_yoke
+			add_stability_or_adm_power = yes
+		}
+		else = {
+			every_country = {
+				limit = { has_country_modifier = the_tatar_yoke }
+				remove_country_modifier = the_tatar_yoke
+				add_stability_or_adm_power = yes
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The end of the Tatar Yoke - Tatar Yoke broke from a mission
+country_event = {
+	id = flavor_mos.11
+	title = flavor_mos.10.t
+	desc = flavor_mos.10.desc
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mos.2.a
+		set_global_flag = end_of_the_tatar_yoke
+		if = {
+			limit = { has_country_modifier = the_tatar_yoke }
+			remove_country_modifier = the_tatar_yoke
+			add_stability_or_adm_power = yes
+		}
+		else = {
+			every_country = {
+				limit = { has_country_modifier = the_tatar_yoke }
+				remove_country_modifier = the_tatar_yoke
+				add_stability_or_adm_power = yes
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,89 @@
+########################################
+# Events for Guarani
+#
+# written by Sara Wendel-�rtqvist
+####################################
+
+namespace = flavor_gua
+normal_or_historical_nations = yes
+
+# Bandeirantes
+
+# Bandeirantes
+country_event = {
+	id = flavor_gua.2
+	title = flavor_gua.2.t
+	desc = flavor_gua.2.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_gua.2.a
+		random_owned_province = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = FROM
+				}
+			}
+			add_base_tax = 1
+		}
+		tooltip = {
+			add_opinion = { who = FROM modifier = gua_accept_bandeirantes }
+		}
+		tooltip = {
+			FROM = {
+				country_event = {
+					id = flavor_gua.3
+					days = 7
+					tooltip = flavor_gua.3.tta
+				}
+				country_event = {
+					id = flavor_gua.3
+					days = 7
+					tooltip = flavor_gua.3.ttb
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = flavor_gua.3
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+# Bandeirantes
+country_event = {
+	id = flavor_gua.3
+	title = flavor_gua.3.t
+	desc = flavor_gua.3.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_gua.3.a
+		reverse_add_opinion = { who = FROM modifier = gua_accept_bandeirantes }
+		add_ruler_modifier = {
+			name = gua_bandeirantes
+			duration = 3650
+		}			
+	}
+	option = {
+		name = flavor_gua.3.b
+		add_stability_or_adm_power = yes
+		reverse_add_opinion = { who = FROM modifier = gua_oppose_bandeirantes }
+	}
+}
+
+## Yerba Mate
+
+# Nhe�u
+
+# Sep� Tiaraju
+ 
+# Karai Pyhare

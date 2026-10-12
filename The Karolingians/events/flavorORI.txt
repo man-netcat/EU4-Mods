@@ -1,0 +1,46 @@
+########################################
+# Events for Orissa
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_ori
+normal_or_historical_nations = yes
+
+
+# The Gajapatis and the Cult of Jagganath
+	
+# Abolishment of the Salt Tax
+
+# Death of Kapilendra
+
+# Death of Kapilendra - Info for neighbors
+country_event = {
+	id = flavor_ori.4
+	title = flavor_ori.4.t
+	desc = flavor_ori.4.d
+	picture = KING_SICK_IN_BED_eventPicture
+	is_triggered_only = yes
+
+	
+	
+	option = { 
+		name = flavor_ori.4.a	#Ok
+		
+	}
+	
+}
+
+# Hamviras Offer
+
+# The Bahmanis back Hamvira
+
+# Hamvira Victorious
+
+# Hamvira pays his debts
+
+# Removes Jagannath modifier if Gajaptis no longer rules Orissa
+
+#Birth of Oriya Literature
+
+#Mahapurusha Achyutananda

@@ -1,0 +1,33 @@
+country_decisions = {
+
+	unite_habsburg_lands = {
+		major = yes
+		potential = {
+			has_estate_privilege = estate_nobles_habsburg_disunity
+		}
+		allow = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				has_estate_privilege = estate_nobles_habsburg_disunity
+			}
+			crown_land_share = 40
+			total_development = 200
+			monthly_income = 20
+			monthly_adm = 9
+		}
+		effect = {
+			remove_estate_privilege = estate_nobles_habsburg_disunity
+			set_country_flag = hab_united_habsburg_land
+			add_country_modifier = {
+				name = hab_a_house_united
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}

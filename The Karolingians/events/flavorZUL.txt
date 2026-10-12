@@ -1,0 +1,11 @@
+##############################
+# Zulu Flavor Events
+#                            
+# Written by Ogulcan Yildirim
+##############################
+
+namespace = flavor_zul
+normal_or_historical_nations = yes
+
+	
+# The appearance of the Zulu

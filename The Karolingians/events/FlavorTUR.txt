@@ -1,0 +1,2316 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = flavor_tur
+normal_or_historical_nations = yes
+
+# The Economic Reforms of Mehmed II
+
+# Military Reforms
+
+# Enderun Academy
+
+# Land Reforms of Mehmed II
+
+# The Veneto-Turkish Conflict
+
+# The Turko-Persian Conflicts: Shiite rebels
+
+# Murad III's campaigns against Persia
+
+# Persians take advantage of Ottoman instability
+
+# The Expansion of the Royal Bureaucracy
+
+# The Great Naval Reform
+
+# Cem Sultan's Rebellion
+
+# The 1st Celali Uprising
+
+# Protector of the Pilgrimage
+
+# Mameluk Uprising under Canbirdi Ghazeli
+
+# Mimar Sinan's Great Constructions
+
+# The Legal Reforms of Suleyman the Magnificent
+
+# K�sem Sultana
+
+# The Murder of K�sem Sultana
+
+# The Age of the K�pr�l�s
+
+# The Reforms of Kemankes
+
+# The Treaty of Kasr-i Sirin with Persia
+
+# The Treaty of Kasr-i Sirin
+
+# Persian Response
+
+# Persian Response
+country_event = {
+	id = flavor_tur.3
+	title = "flavor_tur.EVTNAME3"
+	desc = "flavor_tur.EVTDESC3"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {		# They will pay for this insult
+		name = "flavor_tur.EVTOPTA3"
+	}
+}
+
+# The Tunisian Rebellion
+
+# The Tripolitanian Rebellion
+
+# Ali Bey's Rebellion in Egypt
+
+# The Horrible Plague in Anatolia
+
+# Fate of the Patriarchate
+
+# The Algerian Rebellion
+
+
+########################################
+# Provincial System                    #
+########################################
+
+# The Decentralizing Effect of the Provincial System
+
+
+
+
+########################################
+# Jannisaries                          #
+########################################
+
+# The Janissaries
+country_event = {
+	id = flavor_tur.100
+	title = "flavor_tur.EVTNAME100"
+	desc = "flavor_tur.EVTDESC100"
+	picture = MILITARY_CAMP_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	option = {		# Continue building up the Janissaries
+		name = "flavor_tur.EVTOPTA100"
+		add_country_modifier = {
+			name = tur_janissary
+			duration = -1
+		}
+		custom_tooltip = janissary_disaster_notifier
+		set_country_flag = janissary_timer
+	}
+}
+
+# The Janissaries and the Bektashi Order
+country_event = {
+	id = flavor_tur.101
+	title = "flavor_tur.EVTNAME101"
+	desc = "flavor_tur.EVTDESC101"
+	picture = MILITARY_CAMP_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger ={
+		NOT = { has_disaster = janissary_decadence }
+		OR = {
+			has_country_modifier = tur_janissary
+			AND = {
+				num_of_janissaries = 10
+				janissary_percentage = 0.1
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	
+	option = {		# 
+		name = "flavor_tur.EVTOPTA101"
+		add_piety = -0.10
+	}
+}
+
+# Janissary Reward
+country_event = {
+	id = flavor_tur.102
+	title = "flavor_tur.EVTNAME102"
+	desc = "flavor_tur.EVTDESC102"
+	picture = MILITARY_CAMP_eventPicture
+	
+	trigger ={
+		has_reform = ottoman_government
+		NOT = { has_disaster = janissary_decadence }
+		if = {
+			limit = {
+				NOT = { has_dlc = "Cradle of Civilization" }
+				NOT = { has_dlc = "Domination" }
+			}
+			has_country_modifier = tur_janissary
+		}
+		else = {
+			num_of_janissaries = 3
+			has_estate = estate_janissaries
+		}
+		has_regency = no
+	}
+	
+	is_triggered_only = yes
+	
+	option = {		# Give a reward and higher wages
+		name = "flavor_tur.EVTOPTA102"
+		if = {
+			limit = { 
+				NOT = { has_dlc = "Domination" }
+			}
+			add_years_of_income = -0.5
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_country_flag = tur_low_salary } }
+				if = { 
+					limit = { has_country_flag = tur_toprak_janissary_wages_flag }
+					custom_tooltip = tur_according_to_ruler_ability_tt
+					if = { 
+						limit = { dip = 6 }
+						add_years_of_income = -0.10
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 5 }
+						add_years_of_income = -0.15
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 4 }
+						add_years_of_income = -0.2
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 3 }
+						add_years_of_income = -0.25
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 2 }
+						add_years_of_income = -0.3
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 7.5
+						}
+					}
+					else_if = { 
+						limit = { dip = 1 }
+						add_years_of_income = -0.35
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 7.5
+						}
+					}
+					else_if = { 
+						limit = { dip = 0 }
+						add_years_of_income = -0.4
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 10
+						}
+					}
+				}	
+				else = { add_years_of_income = -0.6 }
+			}
+			else = { add_years_of_income = -0.1 }
+		}
+	}
+	option = {		# Refuse such blackmail
+		name = "flavor_tur.EVTOPTB102"
+		if = { 
+			limit = { 
+				estate_influence = { 
+					estate = estate_janissaries
+					influence = 70 
+				}
+			}
+			custom_tooltip = tur_janissaries_kill_ruler
+			hidden_effect = { 
+				random_list = { 
+					20 = { 	
+						kill_ruler = yes  
+					}
+					80 = { }
+				}
+			}
+		}
+		add_ruler_modifier = {
+			name = janissaries_denied_reward
+		}
+		if = { 
+			limit = { has_estate = estate_janissaries } 
+			add_estate_loyalty = { 
+				estate = estate_janissaries 
+				loyalty = -50
+			}
+		}
+	}
+}
+
+
+# Janissaries Demand Pay
+country_event = {
+	id = flavor_tur.111
+	title = "flavor_tur.EVTNAME111"
+	desc = "flavor_tur.EVTDESC111"
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		OR = {
+			has_country_modifier = tur_janissary
+			num_of_janissaries = 10
+		}
+		NOT = { has_disaster = janissary_decadence }
+		NOT = {
+			has_country_modifier = tur_janissaries_timer
+		}
+		num_of_owned_provinces_with = {
+			value = 30
+			is_core = ROOT
+		}
+		is_at_war = no
+		NOT = {
+			war_exhaustion = 1
+		}
+		NOT = {
+			adm = 6
+		}
+		NOT = {
+			mil = 6
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 700
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = tur_janissaries_timer
+				duration = 18250
+				hidden = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "flavor_tur.EVTOPTA111"
+		if = {
+			limit = { 
+				NOT = { has_dlc = "Domination" }
+			}
+			add_years_of_income = -0.5
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_country_flag = tur_low_salary } }
+				if = { 
+					limit = { has_country_flag = tur_toprak_janissary_wages_flag }
+					custom_tooltip = tur_according_to_ruler_ability_tt
+					if = { 
+						limit = { dip = 6 }
+						add_years_of_income = -0.10
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 5 }
+						add_years_of_income = -0.15
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 4 }
+						add_years_of_income = -0.2
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 3 }
+						add_years_of_income = -0.25
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 5
+						}
+					}
+					else_if = { 
+						limit = { dip = 2 }
+						add_years_of_income = -0.3
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 7.5
+						}
+					}
+					else_if = { 
+						limit = { dip = 1 }
+						add_years_of_income = -0.35
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 7.5
+						}
+					}
+					else_if = { 
+						limit = { dip = 0 }
+						add_years_of_income = -0.4
+						change_estate_land_share = {
+							estate = estate_janissaries
+							share = 10
+						}
+					}
+				}	
+				else = { add_years_of_income = -0.6 }
+			}
+			else = { add_years_of_income = -0.1 }
+		}
+	}
+	option = {
+		name = "flavor_tur.EVTOPTB111"
+		add_ruler_modifier = {
+			name = tur_janissaries_salary
+		}
+		if = { 
+			limit = { has_estate = estate_janissaries } 
+			add_estate_loyalty = { 
+				estate = estate_janissaries 
+				loyalty = -50
+			}
+		}
+	}
+	option = {
+		name = "flavor_tur.EVTOPTC111"
+		add_stability = -1
+		if = { 
+			limit = { has_estate = estate_janissaries } 
+			add_estate_loyalty = { 
+				estate = estate_janissaries 
+				loyalty = -50
+			}
+		}
+		
+		if = { 
+			limit = { 
+				estate_influence = { 
+					estate = estate_janissaries
+					influence = 70 
+				}
+			}
+			custom_tooltip = tur_janissaries_kill_ruler
+			hidden_effect = { 
+				random_list = { 
+					20 = { 	
+						kill_ruler = yes  
+					}
+					80 = { }
+				}
+			}
+		}
+	}
+}
+
+# Civilianization
+country_event = {
+	id = flavor_tur.105
+	title = "flavor_tur.EVTNAME105"
+	desc = "flavor_tur.EVTDESC105"
+	picture = MILITARY_CAMP_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		if = {
+			limit = { has_dlc = "Cradle of Civilization" }
+			num_of_janissaries = 10
+			janissary_percentage = 0.1
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Cradle of Civilization" }
+			}
+			has_country_modifier = tur_janissary
+		}
+		NOT = { current_age = age_of_discovery }
+		NOT = { has_country_flag = had_janissary_civilianization }
+		NOT = { has_ruler_modifier = janissaries_disciplined }
+		NOT = { has_disaster = janissary_decadence }
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	option = {		# Everyone needs to make a living.
+		name = "flavor_tur.EVTOPTA105"
+		if = {
+			limit = { NOT = { has_dlc = "Cradle of Civilization" } }
+			add_ruler_modifier = {
+				name = janissary_landholders
+			}
+		}
+		else = {
+			add_ruler_modifier = {
+				name = janissary_landholders
+				duration = 3650
+			}
+		}
+		add_mercantilism = 1
+		add_estate_burghers_loyalty_effect = yes
+	}
+	option = {		# Let us increase drilling and salaries instead.
+		name = "flavor_tur.EVTOPTB105"
+		if = {
+			limit = {
+				NOT = { has_dlc = "Cradle of Civilization" }
+			}
+			add_ruler_modifier = {
+				name = janissaries_upset
+			}
+			set_country_flag = had_janissary_civilianization
+		}
+		else = {
+			add_ruler_modifier = {
+				name = janissaries_disciplined
+				duration = 3650
+			}
+		}
+		add_mercantilism = -1
+		reduce_estate_burghers_loyalty_effect = yes
+	}
+}
+
+# Dissolution of the janissary corp - Tag Switch
+country_event = {
+	id = flavor_tur.106
+	title = "flavor_tur.106.t"
+	desc = "flavor_tur.106.d"
+	picture = MILITARY_CAMP_eventPicture
+	
+	
+	trigger = {
+		has_country_modifier = tur_janissary
+		NOT = { has_disaster = janissary_decadence }
+		NOT = { has_reform = ottoman_government }
+  }
+	
+	mean_time_to_happen = {
+		months = 10
+		
+	}
+	
+	immediate = {
+		remove_country_modifier = tur_janissary
+	}
+	
+	option = {		# Ok.
+		name = "flavor_tur.106.a"
+	}
+}
+
+# Muslims in the Janissary rolls
+country_event = {
+	id = flavor_tur.107
+	title = "flavor_tur.107.t"
+	desc = "flavor_tur.107.d"
+	picture = MILITARY_CAMP_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { current_age = age_of_discovery }
+		NOT = { has_disaster = janissary_decadence }
+		OR = {
+			has_country_modifier = tur_janissary
+			AND = {
+				num_of_janissaries = 10
+				janissary_percentage = 0.1
+			}
+		}
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			has_estate_privilege = estate_janissary_janissaries_from_muslims
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = { 
+				limit = { NOT = { has_country_flag = had_muslim_janissaries } }
+				set_country_flag = had_muslim_janissaries
+			}
+		}
+	}
+	
+	
+	option = {		# 
+		name = "flavor_tur.107.a"
+		add_country_modifier = {
+			name = "strictly_enforced_janissary_discipline"
+			duration = 3650
+		}
+	}
+	option = {		# 
+		name = "flavor_tur.107.b"
+		add_country_modifier = {
+			name = "non_christian_janissaries"
+			duration = 3650
+		}
+	}
+}
+
+# Lapse of the Devshirme
+country_event = {
+	id = flavor_tur.108
+	title = "flavor_tur.108.t"
+	desc = "flavor_tur.108.d"
+	picture = MILITARY_CAMP_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { current_age = age_of_discovery }
+		NOT = { current_age = age_of_reformation }
+		NOT = { has_disaster = janissary_decadence }
+		OR = {
+			has_country_modifier = the_devshirme_system
+			has_reform = devshirme_system_reform
+		}
+		num_of_cities = 50
+		has_country_flag = had_muslim_janissaries
+		NOT = { has_country_flag = lapse_of_devshirme }
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	
+	option = {		# 
+		name = "flavor_tur.108.a"
+		remove_country_modifier = the_devshirme_system
+		set_country_flag = lapse_of_devshirme
+	}
+}
+
+########################################
+# 1.35 Events for the Ottomans
+#
+# written by Ogulcan Yildirim
+# and Big Boss
+########################################
+
+# A [Root.GetAdjective]-Venetian Trade Deal?
+
+# Break of the [Root.GetAdjective]-Venetian Trade Deal
+
+# Expansion of the Trade Deal?
+
+# The Victory of the Varna Crusade - written by Big Boss
+
+# The Hungarian Military Engineer Urban
+
+# The Conquest of Constantinople
+country_event = {
+	id = flavor_tur.205
+	title = flavor_tur.205.t
+	desc = flavor_tur.205.desc
+	picture = CONQUEROR_eventPicture
+	is_triggered_only = yes
+	
+	option = {	# 
+		name = flavor_tur.205.a
+		add_country_modifier = {
+			name = defeated_byzantine_empire
+			duration = 5475
+		}
+		151 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = tur_resettlement_of_constantinople
+				duration = 9125
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Internal Power Structure
+
+# The Conquest of Rodos (remove the raid province modifier from all raided provinces, banish the knights from the island) - written by Big Boss
+
+# The Janissaries
+country_event = {
+	id = flavor_tur.208
+	title = flavor_tur.208.t
+	desc = flavor_tur.208.desc
+	picture = JANISSARY_ESTATE_eventPicture
+	is_triggered_only = yes
+	
+	option = {	# 
+		name = flavor_tur.208.a
+		add_mil_power = 25
+		add_country_modifier = {
+			name = tur_janissary_loyalty
+			duration = 36500
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Eyalet of Hungary
+
+# The Carpathian Eyalet
+
+# The Fall of Vienna
+
+# The Turkish Fear
+country_event = {
+	id = flavor_tur.212
+	title = flavor_tur.212.t
+	desc = flavor_tur.212.desc
+	picture = PANIC_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_dlc = "Domination"
+		capital_scope = {
+			OR = {
+				region = north_german_region
+				region = south_german_region
+				region = italy_region
+			}
+		}
+		religion_group = christian
+	}
+	
+	option = {
+		name = flavor_tur.212.a
+		reduce_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = tur_turkish_fear
+			duration = 9125
+		}
+	}
+}
+
+# The Eyalet of Austria
+
+# The Eyalet of Northern Italy
+
+# The Restoration of the Emirate of Siciy
+
+# Crown of Rome - written by Big Boss
+country_event = {
+	id = flavor_tur.216
+	title = flavor_tur.216.t 
+	desc = flavor_tur.216.desc
+	picture = DEVLET_I_RUM_eventPicture
+	is_triggered_only = yes 
+	
+	#We shall be officially recognized as the Devlet-i R�m!
+	option = { 
+		name = flavor_tur.216.a 
+		
+		override_country_name = TRK 
+		set_country_flag = is_TRK_flag
+		add_country_modifier = { 
+			name = tur_crown_of_rome_modifier
+			duration = -1 
+		}
+		country_event = {
+			id = flavor_tur.217
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	#We should rather stay humble
+	option = {
+		name = flavor_tur.216.b
+		add_country_modifier = { 
+			name = tur_crown_of_rome_modifier
+			duration = -1 
+		}
+		country_event = {
+			id = flavor_tur.217
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Rome - the new Imperial Capital?
+country_event = {
+	id = flavor_tur.217
+	title = flavor_tur.217.t 
+	desc = flavor_tur.217.desc
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes 
+
+	#Move the capital to Rome!
+	option = {
+		name = flavor_tur.217.a
+		goto = 118
+		118 = {
+			add_base_tax = 4
+			add_base_production = 4
+			add_base_manpower = 3
+		}
+		set_capital = 118
+		custom_tooltip = tur_accept_all_italian_cultures_tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = tur_legitimate_roman_empire_modifier
+				duration = -1 
+				hidden = yes 
+			}
+			add_accepted_culture = lombard
+			add_accepted_culture = tuscan
+			add_accepted_culture = sardinian
+			add_accepted_culture = romagnan
+			add_accepted_culture = ligurian
+			add_accepted_culture = venetian
+			add_accepted_culture = dalmatian
+			add_accepted_culture = neapolitan
+			add_accepted_culture = piedmontese
+			add_accepted_culture = umbrian
+			add_accepted_culture = sicilian
+			add_accepted_culture = maltese
+		}
+		custom_tooltip = tur_take_over_italian_eyalets_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					OR = {
+						is_subject_of_type = eyalet
+						is_subject_of_type = core_eyalet
+					}
+					capital_scope = {
+						region = italy_region
+					}
+				}
+				every_owned_province = {
+					limit = {
+						region = italy_region
+					}
+					remove_core = PREV
+					if = {
+						limit = { NOT = { is_core = ROOT } }
+						add_territorial_core = ROOT
+					}
+					cede_province = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	#Constantinople is and will always be the heart of our empire
+	option = {
+		name = flavor_tur.217.b
+		goto = 151
+		151 = {
+			add_base_tax = 4
+			add_base_production = 4
+			add_base_manpower = 3
+			add_province_modifier = {
+				name = tur_expanded_governmential_offices
+				duration = -1
+			}
+		}
+		custom_tooltip = tur_enable_central_italy_eyalet_event_tt
+		hidden_effect = {
+			set_country_flag = tur_can_spawn_central_italy_eyalet
+		}
+		add_country_modifier = {
+			name = tur_eyalet_management
+			duration = -1
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Eyalet of Rome
+
+# Granadan Moriscos seek Refuge in [151.GetName] - written by Big Boss
+country_event = {
+	id = flavor_tur.219
+	title = flavor_tur.219.t
+	desc = flavor_tur.219.desc
+	picture = PILGRIMAGE_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.219.a 
+		
+		thrace_area = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_province_modifier = {
+				name = tur_morisco_refugees_modifier
+				duration = 7300
+			}
+		}
+		define_advisor = { 
+			type = artist 
+			cost_multiplier = 0.5
+			culture = andalucian 
+			religion = sunni 
+		}
+		set_country_flag = tur_accepted_moriscos_flag
+	}
+
+	option = { 
+		name = flavor_tur.219.b 
+		
+		add_prestige = 10 
+	}
+}
+
+# The Eyalet of Al-Andalus
+
+# The Eyalet of Tunis
+
+# The Eyalet in the Tunisian area
+
+#Hayreddin Barbarossa
+
+# The Eyalet of Algiers
+
+# The Eyalet of Morocco
+
+# The Eyalet in the Moroccan area
+
+# The Eyalet of Adal
+
+# The Eyalet in the Adal area
+
+# Seizing the Caliphate - written by Big Boss
+country_event = {
+	id = flavor_tur.229
+	title = flavor_tur.229.t
+	desc = flavor_tur.229.desc
+	picture = EYALET_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_tur.229.a
+		custom_tooltip = tur_legalism_path_tt
+		hidden_effect = {
+			set_country_flag = tur_chose_legalism
+			clr_country_flag = tur_chose_mysticism
+			clr_country_flag = tur_non_muslim_path_flag
+		}
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+			name = tur_embraced_legalism_modifier
+			duration = 18250
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = flavor_tur.229.b
+		custom_tooltip = tur_mysticism_path_tt
+		hidden_effect = {
+			clr_country_flag = tur_chose_legalism
+			set_country_flag = tur_chose_mysticism
+			clr_country_flag = tur_non_muslim_path_flag
+		}
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+			name = tur_embraced_mysticism_modifier
+			duration = 18250
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Ending the Caliphate (for the unlikely case we have Orthomans again)
+country_event = {
+	id = flavor_tur.230
+	title = flavor_tur.230.t
+	desc = flavor_tur.230.desc
+	picture = EYALET_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_tur.230.a
+		custom_tooltip = tur_non_muslim_path_tt
+		hidden_effect = {
+			clr_country_flag = tur_chose_legalism
+			clr_country_flag = tur_chose_mysticism
+			set_country_flag = tur_non_muslim_path_flag
+		}
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+			name = tur_end_of_the_caliphate_modifier
+			duration = 18250
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Victory for the Ottoman House - written by Big Boss
+country_event = {
+	id = flavor_tur.231
+	title = flavor_tur.231.t
+	desc = flavor_tur.231.desc
+	picture = BORDER_TENSION_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.231.a
+		
+		anatolia_region = { 
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			add_province_modifier = { 
+				name = tur_integration_in_the_ottoman_government_modifier
+				duration = 5475
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Christians of the Caucasus
+country_event = {
+	id = flavor_tur.232
+	title = flavor_tur.232.t
+	desc = flavor_tur.232.desc
+	picture = LIBERUM_VETO_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.232.a
+		add_mil_power = 50
+		caucasia_region = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_province_modifier = {
+				name = tur_caucasian_conquest
+				duration = 9125
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Eyalet of Yemen
+
+# The Eyalet in the Yemen area
+
+# The Eyalet of Persia
+
+# Supremacy Over the Emerald Lion - written by Big Boss
+country_event = {
+	id = flavor_tur.237
+	title = flavor_tur.237.t
+	desc = flavor_tur.237.desc
+	picture = JANISSARIES_IN_FORMATION_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.237.a
+		khorasan_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		add_splendor = 200
+		add_prestige_or_monarch_power = {
+			amount = 50
+		}
+		add_country_modifier = {
+			name = tur_conquest_of_persia
+			duration = 18250
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Millet System - written by Big Boss
+
+# Suleiman the Magnificent - written by Big Boss
+
+# Collapse of the Mamluks - Ottoman event - written by Big Boss
+
+# Collapse of the Mamluks - Mamluk event
+country_event = {
+	id = flavor_tur.241
+	title = flavor_tur.241.t
+	desc = flavor_tur.241.desc
+	picture = COUNTRY_COLLAPSE_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_tur.241.a
+		custom_tooltip = flavor_tur.241.a.tt
+		add_stability = -3
+		add_war_exhaustion = 10
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Collapse of the Mamluks - Creation of the Egyptian Eyalet
+
+# Egyptian Eyalet breaks free!
+country_event = {
+	id = flavor_tur.243
+	title = flavor_tur.243.t
+	desc = flavor_tur.243.desc
+	picture = EYALET_REBELLION_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_country_modifier = tur_mamlukian_administration
+		NOT = { is_subject_of_type = eyalet }
+		NOT = { is_subject_of_type = core_eyalet }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = flavor_tur.243.a
+		restore_country_name = yes
+		restore_country_color = yes
+		clr_country_flag = has_eyalet_country_name
+		clr_country_flag = is_EY7_flag
+		remove_country_modifier = tur_mamlukian_administration
+		add_prestige = 20
+		add_stability_or_adm_power = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Egypt under Ottoman Rule
+country_event = {
+	id = flavor_tur.244
+	title = flavor_tur.244.t
+	desc = flavor_tur.244.desc
+	picture = PASHAS_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.244.a
+		add_adm_power = 100
+		egypt_region = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_province_modifier = {
+				name = tur_investment_into_infrastructure
+				duration = 9125
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Rocket Man - written by Big Boss
+
+# Imperial School of Military Engineering
+country_event = {
+	id = flavor_tur.246
+	title = flavor_tur.246.t
+	desc = flavor_tur.246.desc
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.246.a
+		define_advisor = {
+			type = commandant
+			skill = 3
+			discount = yes
+		}
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+			}
+			add_army_professionalism = 0.05
+		}
+		else = {
+			add_army_tradition = 10
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = tur_imperial_school_of_military_engineering
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Expansion of the Devshirme
+country_event = {
+	id = flavor_tur.247
+	title = flavor_tur.247.t
+	desc = flavor_tur.247.desc
+	picture = DEVSHIRME_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.247.a
+		add_mil_power = 100
+		unlock_government_reform = {
+			government_reform = expanded_devshirme_system_reform
+		}
+		add_government_reform = expanded_devshirme_system_reform
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = { 
+		name = flavor_tur.247.b
+		add_mil_power = 100
+		unlock_government_reform = {
+			government_reform = expanded_devshirme_system_reform
+		}
+		change_government_reform_progress = 50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Commercial Ventures in the East - written by Big Boss
+country_event = { 
+	id = flavor_tur.248
+	title = flavor_tur.248.t
+	desc = flavor_tur.248.desc
+	picture = MERCHANTS_TALKING_eventPicture
+	is_triggered_only = yes 
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						superregion = india_superregion 
+						province_has_center_of_trade_of_level = 1 
+					}
+				}
+				for = {
+					effect = "
+					random_owned_province = {
+						limit = {
+							superregion = india_superregion 
+							province_has_center_of_trade_of_level = 1
+							NOT = { has_province_flag = tur_marked }
+						}
+						set_province_flag = tur_marked
+					}"
+					amount = 3
+				}
+			}
+		}
+	}
+	
+	option = { 
+		name = flavor_tur.248.a 
+		
+		if = { 	
+			limit = { 
+				any_ally = { 
+					capital_scope = { superregion = india_superregion }
+					has_opinion = { 
+						who = ROOT 
+						value = 150 
+					}
+					if = {
+						limit = { has_dlc = "Leviathan" }
+						trust = { 
+							who = ROOT 
+							value = 80 
+						}
+					}
+				}
+			}
+			random_ally = { 
+				limit = { 
+					capital_scope = { superregion = india_superregion }
+					has_opinion = { 
+						who = ROOT 
+						value = 150 
+					}
+					trust = { 
+						who = ROOT 
+						value = 80 
+					}
+				}
+				add_country_modifier = {
+					name = tur_exporting_to_the_west_modifier
+					duration = 9125 
+				}
+			}
+		}
+		if = {
+			limit = { 
+				504 = { 
+					trade_share = {
+						country = ROOT 
+						share = 30
+					}
+				}
+			}
+			504 = { 
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 50
+					key = STRONG_MERCHANTS
+				}
+			}
+		}
+		if = {
+			limit = { 
+				1340 = { 
+					trade_share = {
+						country = ROOT 
+						share = 30
+					}
+				}
+			}
+			1340 = { 
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 50
+					key = STRONG_MERCHANTS
+				}
+			}
+		}
+		if = {
+			limit = { 
+				1343 = { 
+					trade_share = {
+						country = ROOT 
+						share = 30
+					}
+				}
+			}
+			1343 = { 
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 50
+					key = STRONG_MERCHANTS
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = tur_marked
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_province_flag = tur_marked
+				}
+				clr_province_flag = tur_marked
+				add_province_modifier = {
+					name = tur_trade_center_of_the_ottoman_empire_modifier
+					duration = -1 
+				}
+			}
+		}
+	}
+}
+
+# The Siyasah
+country_event = {
+	id = flavor_tur.249
+	title = flavor_tur.249.t 
+	desc = flavor_tur.249.desc
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.249.a 
+		trigger = {
+			religion_group = muslim
+		}
+		add_adm_power = 100
+		unlock_government_reform = {
+			government_reform = ottoman_siyasah_tax_reform
+		}
+		add_government_reform = ottoman_siyasah_tax_reform
+	}
+	
+	option = { 
+		name = flavor_tur.249.b
+		add_adm_power = 100
+		change_government_reform_progress = 50
+		unlock_government_reform = {
+			government_reform = ottoman_siyasah_tax_reform
+		}
+	}
+}
+
+# The Baghdad Eyalet - written by Big Boss
+country_event = {
+	id = flavor_tur.250
+	title = flavor_tur.250.t
+	desc = flavor_tur.250.desc
+	picture = CITY_VIEW_eventPicture 
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.250.a 
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+			}
+			if = {
+				limit = { 
+					religion_group = muslim 
+				} 
+				enable_baseline_invite_scholar_no_privilege = yes
+			}
+			else = {
+				hidden_effect = { enable_baseline_invite_scholar_no_privilege = yes }
+				add_adm_power = 100
+			} 
+		}
+		else = {
+			add_adm_power = 100
+		}
+		add_country_modifier = {
+			name = tur_baghdad_city_of_learning
+			duration = 10850
+		}
+	}
+}
+
+# Reformation of the Sipahi - written by Big Boss
+country_event = {
+	id = flavor_tur.251
+	title = flavor_tur.251.t
+	desc = flavor_tur.251.desc
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.251.a 
+		
+		add_country_modifier = { 
+			name = tur_allowed_tatars_in_sipahi_modifier
+			duration = 7300
+		}
+	}
+	
+	option = { 
+		name = flavor_tur.251.b
+		trigger = {
+			has_estate = estate_janissaries
+		}
+		add_country_modifier = {
+			name = tur_safeguarded_jan_privileges_modifier
+			duration = 9125
+		}
+	}
+}
+
+# Weaving Gold & Silk - written by Big Boss
+country_event = {
+	id = flavor_tur.252
+	title = flavor_tur.252.t 
+	desc = flavor_tur.252.desc
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.252.a 
+		custom_tooltip = tur_25_goods_fabrics_tt
+		hidden_effect = { 
+			every_owned_province = { 
+				limit = { 
+					OR = { 
+						trade_goods = wool
+						trade_goods = cloth 
+						trade_goods = cotton 
+						trade_goods = silk
+						trade_goods = dyes
+					}
+				}
+				add_province_modifier = {
+					name = tur_increased_fabric_production_modifier
+					duration = -1 
+				}
+			}
+		}
+		add_country_modifier = { 
+			name = tur_golden_silk_modifier
+			duration = -1 
+		}
+	}
+}	
+
+# The Development of Trade in Egypt - written by Big Boss
+
+# The Three Court System of the Ottoman Empire - written by Big Boss
+country_event = {
+	id = flavor_tur.254
+	title = flavor_tur.254.t 
+	desc = flavor_tur.254.desc
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.254.a 
+		change_ruler_stat = {
+			type = adm
+			amount = 2
+		}
+		add_ruler_modifier = { 
+			name = tur_legendary_lawgiver_modifier 
+			duration = -1 
+		}
+	}
+}
+
+# Second Islamic Golden Age
+country_event = {
+	id = flavor_tur.255
+	title = flavor_tur.255.t
+	desc = flavor_tur.255.desc
+	picture = HAJJ_eventPicture
+	is_triggered_only = yes 
+	major = yes
+	major_trigger = {
+		NOT = { religion_group = muslim }
+	}
+
+	option = {
+		name = flavor_tur.255.a
+		if = {
+			limit = { has_dlc = "Mandate of Heaven" }
+			custom_tooltip = tur_enable_second_golden_era_decision_tt
+			hidden_effect = {
+				set_country_flag = tur_enable_second_golden_era_decision
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = tur_second_islamic_golden_era_modifier
+				duration = 18250
+			}
+		}
+		custom_tooltip = flavor_tur.255.a.tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion_group = muslim
+					NOT = { tag = ROOT }
+				}
+				country_event = {
+					id = flavor_tur.256
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Second Islamic Golden Age
+country_event = {
+	id = flavor_tur.256
+	title = flavor_tur.256.t
+	desc = flavor_tur.256.desc
+	picture = PILGRIMAGE_eventPicture
+	is_triggered_only = yes 
+
+	option = {
+		name = flavor_tur.256.a
+		if = {
+			limit = { has_dlc = "Mandate of Heaven" }
+			custom_tooltip = tur_enable_second_golden_era_decision_tt
+			hidden_effect = {
+				set_country_flag = tur_enable_second_golden_era_decision
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = tur_second_islamic_golden_era_modifier
+				duration = 18250
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Sharia
+country_event = {
+	id = flavor_tur.257
+	title = flavor_tur.257.t
+	desc = flavor_tur.257.desc
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.257.a
+		trigger = {
+			religion_group = muslim
+		}
+		add_adm_power = 100
+		unlock_government_reform = {
+			government_reform = fiqh_laws_reform
+		}
+		add_government_reform = fiqh_laws_reform
+	}
+	
+	option = { 
+		name = flavor_tur.257.b
+		add_adm_power = 100
+		change_government_reform_progress = 50
+		unlock_government_reform = {
+			government_reform = fiqh_laws_reform
+		}
+	}
+}
+
+# Sufism
+country_event = {
+	id = flavor_tur.258
+	title = flavor_tur.258.t
+	desc = flavor_tur.258.desc
+	picture = PRAYING_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.258.a
+		trigger = {
+			religion_group = muslim
+		}
+		add_adm_power = 100
+		unlock_government_reform = {
+			government_reform = sufism_decree_reform
+		}
+		add_government_reform = sufism_decree_reform
+	}
+	
+	option = { 
+		name = flavor_tur.258.b
+		add_adm_power = 100
+		change_government_reform_progress = 50
+		unlock_government_reform = {
+			government_reform = sufism_decree_reform
+		}
+	}
+}
+
+# Persia under Ottoman Rule
+country_event = {
+	id = flavor_tur.259
+	title = flavor_tur.259.t
+	desc = flavor_tur.259.desc
+	picture = PASHAS_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.259.a
+		add_adm_power = 100
+		persia_region = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_province_modifier = {
+				name = tur_investment_into_infrastructure
+				duration = 9125
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Peak of the Ottomans - CCR buff when you have the large Ottoman borders
+
+# Janissary Demands - Transform good privilege to bad privilege
+
+# Reign of Women - written by Big Boss
+
+# The Harem makes a move
+
+# Dissolving the Harem
+country_event = {
+	id = flavor_tur.264
+	title = flavor_tur.264.t 
+	desc = flavor_tur.264.desc
+	picture = HAREM_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			capital_scope = {
+				save_event_target_as = capital
+			}
+		}
+	}
+	goto = capital
+	#The Harem is no more
+	option = {
+		name = flavor_tur.264.a
+		custom_tooltip = flavor_tur.264.a.tt
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+		add_country_modifier = {
+			name = tur_weakened_the_harem
+			duration = -1
+		}
+	}
+}
+
+# The Ottoman Line of Succession - written by Big Boss
+
+# The Sadness of Those Who Live - written by Big Boss
+country_event = {
+	id = flavor_tur.266
+	title = flavor_tur.266.t
+	desc = flavor_tur.266.desc
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.266.a 
+		
+		custom_tooltip = tur_i_did_this_tt
+		kill_heir = { }  
+		add_legitimacy = -10
+	}
+}
+
+# The Fate of the Holy City - written by Big Boss
+
+# The letter from the Pope to Mehmed II
+
+# Myrrh Imports for the Dhimmi - written by Big Boss
+
+# The Bay Toll of Hormuz
+
+# Travelling the Asian Trade Routes - written by Big Boss
+
+# Surgun Flock to [151.GetName] - written by Big Boss
+	
+# Dhimmi Religions Thrive in [151.GetName] - written by Big Boss
+
+# Qizilbash Rebellion - written by Big Boss
+
+# Sahkulu Rebellions - written by Big Boss
+
+# Mehmed II. Italian Ambitions
+
+# Franco-Ottoman Alliance - France
+
+# Franco-Ottoman Alliance - Ottomans
+country_event = {
+	id = flavor_tur.279
+	title = flavor_tur.279.t
+	desc = flavor_tur.279.desc
+	picture = TRANSYLVANIAN_OTTOMAN_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		NOT = { tag = FROM }
+		capital_scope = {
+			continent = europe
+		}
+	}
+	#Accept the Alliance
+	option = {
+		name = flavor_tur.279.a
+		create_alliance = FROM
+		add_historical_friend = FROM
+		FROM = { add_historical_friend = ROOT }
+		FROM = {
+			country_event = {
+				id = flavor_tur.280
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#Refuse the Alliance
+	option = {
+		name = flavor_tur.279.b
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		FROM = {
+			country_event = {
+				id = flavor_tur.281
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Franco-Ottoman Alliance - Ottomans accepts
+country_event = {
+	id = flavor_tur.280
+	title = flavor_tur.280.t
+	desc = flavor_tur.280.desc
+	picture = TRANSYLVANIAN_OTTOMAN_eventPicture
+	is_triggered_only = yes
+	#Neat
+	option = {
+		name = flavor_tur.280.a
+		add_dip_power = -10
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Franco-Ottoman Alliance - Ottomans refuses
+country_event = {
+	id = flavor_tur.281
+	title = flavor_tur.281.t
+	desc = flavor_tur.281.desc
+	picture = TRANSYLVANIAN_OTTOMAN_eventPicture
+	is_triggered_only = yes
+	#A shame
+	option = {
+		name = flavor_tur.281.a
+		add_dip_power = 25
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Siyer-i Nebi - written by Big Boss
+	
+# The tomb of Abu Hanifa - written by Big Boss
+	
+# Islamic Epistemology in Mehmet's Era - written by Big Boss
+
+# Poor Economic Policies of [Root.Monarch.GetName] - written by Big Boss
+
+# Fate of the Devshirme System
+country_event = {
+	id = flavor_tur.286
+	title = flavor_tur.286.t 
+	desc = flavor_tur.286.desc
+	picture = DEVSHIRME_eventPicture
+	is_triggered_only = yes
+	
+	#Abolish it for good
+	option = {
+		name = flavor_tur.286.a
+		set_country_flag = tur_abolished_devshirme_for_good
+		add_piety = 0.25
+		remove_government_reform = devshirme_system_reform
+		unlock_government_reform = {
+			government_reform = ottoman_conscription_reform
+		}
+		add_government_reform = ottoman_conscription_reform
+		if = {
+			limit = { has_unlocked_government_reform = { government_reform = expanded_devshirme_system_reform } }
+			unlock_government_reform = {
+				government_reform = reformed_ottoman_conscription_reform
+			}
+			add_government_reform = reformed_ottoman_conscription_reform
+		}
+		add_yearly_manpower = 3
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	#Overhaul it instead
+	option = {
+		name = flavor_tur.286.b
+		add_piety = -0.25
+		add_stability_or_adm_power = yes
+		if = {
+			limit = { has_estate = estate_janissaries }
+			add_estate_loyalty = {
+				estate = estate_janissaries
+				loyalty = 100
+			}
+		}
+		else = {
+			add_mil_power = 100
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Expansion of the Mansure Army Recruitment
+country_event = {
+	id = flavor_tur.287
+	title = flavor_tur.287.t
+	desc = flavor_tur.287.desc
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_tur.287.a
+		add_mil_power = 100
+		unlock_government_reform = {
+			government_reform = reformed_ottoman_conscription_reform
+		}
+		add_government_reform = reformed_ottoman_conscription_reform
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = { 
+		name = flavor_tur.287.b
+		add_mil_power = 100
+		unlock_government_reform = {
+			government_reform = reformed_ottoman_conscription_reform
+		}
+		change_government_reform_progress = 50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Westernization of the Mansure Army
+country_event = { 
+	id = flavor_tur.288
+	title = flavor_tur.288.t 
+	desc = flavor_tur.288.desc
+	picture = MILITARY_CAMP_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = tur_fight_against_the_janissaries_1_flag
+			clr_country_flag = tur_fight_against_the_janissaries_2_flag
+			clr_country_flag = tur_fight_against_the_janissaries_3_flag
+		}
+	}
+	
+	option = { 
+		name = flavor_tur.288.a 
+		unlock_government_reform = {
+			government_reform = mansure_army_reform
+		}
+		add_government_reform = mansure_army_reform
+		change_technology_group = western 
+		change_unit_type = western 
+	}
+	
+	option = { 
+		name = flavor_tur.288.b
+		change_government_reform_progress = 50
+		unlock_government_reform = {
+			government_reform = mansure_army_reform
+		}
+		change_technology_group = western 
+		change_unit_type = western 
+	}
+}
+
+# Reigned the Janissaries
+country_event = { 
+	id = flavor_tur.289
+	title = flavor_tur.289.t 
+	desc = flavor_tur.289.desc
+	picture = JANISSARIES_IN_FORMATION_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = tur_fight_against_the_janissaries_1_flag
+			clr_country_flag = tur_fight_against_the_janissaries_2_flag
+			clr_country_flag = tur_fight_against_the_janissaries_3_flag
+		}
+	}
+	
+	option = { 
+		name = flavor_tur.289.a 
+		unlock_government_reform = {
+			government_reform = janissary_military_reform
+		}
+		add_government_reform = janissary_military_reform
+		add_estate_loyalty = {
+			estate = estate_janissaries
+			loyalty = 100
+		}
+	}
+	
+	option = { 
+		name = flavor_tur.289.b
+		change_government_reform_progress = 50
+		unlock_government_reform = {
+			government_reform = janissary_military_reform
+		}
+		add_estate_loyalty = {
+			estate = estate_janissaries
+			loyalty = 100
+		}
+	}
+}
+
+# Rework of the Millits
+country_event = { 
+	id = flavor_tur.290
+	title = flavor_tur.290.t 
+	desc = flavor_tur.290.desc
+	picture = ECONOMY_eventPicture
+	is_triggered_only = yes
+	
+	option = { 
+		name = flavor_tur.290.a 
+		unlock_government_reform = {
+			government_reform = standardized_millets_reform
+		}
+		add_government_reform = standardized_millets_reform
+		add_adm_power = 200
+	}
+	
+	option = { 
+		name = flavor_tur.290.b
+		change_government_reform_progress = 50
+		unlock_government_reform = {
+			government_reform = standardized_millets_reform
+		}
+		add_adm_power = 200
+	}
+}
+
+# Janissary Demands - Get bad privileges if the player tries to avoidd giving any privileges entirely
+
+# Success of the Janissaries
+
+########################################
+# 1.35 Decadence events
+########################################
+
+# Loss of a war
+country_event = { 
+	id = flavor_tur.300
+	title = flavor_tur.300.t 
+	desc = flavor_tur.300.desc
+	picture = BAD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_dlc = "Domination"
+		has_government_mechanic = ottoman_decadence_mechanic
+		NOT = {
+			government_power_frozen = {
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_overseas = no
+					is_in_capital_area = yes
+				}
+				save_event_target_as = revolt_province
+			}
+		}
+	}
+	
+	#Blame the Janissaries
+	option = {
+		name = flavor_tur.300.a
+		goto = revolt_province
+		event_target:revolt_province = {
+			spawn_rebels = {
+				type = janissary_rebels
+				size = 1
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_janissaries
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	#It is what it is
+	option = {
+		name = flavor_tur.300.b
+		add_government_power = {
+			mechanic_type = ottoman_decadence_mechanic
+			power_type = ottoman_decadence
+			value = 20
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Overextension of an Empire
+country_event = { 
+	id = flavor_tur.301
+	title = flavor_tur.301.t 
+	desc = flavor_tur.301.desc
+	picture = OVEREXTENSION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_dlc = "Domination"
+		has_government_mechanic = ottoman_decadence_mechanic
+		NOT = {
+			government_power_frozen = {
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	#Use our resources to fight against it
+	option = {
+		name = flavor_tur.301.a
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	#It is what it is
+	option = {
+		name = flavor_tur.301.b
+		add_government_power = {
+			mechanic_type = ottoman_decadence_mechanic
+			power_type = ottoman_decadence
+			value = 5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Sultan's Relative declares war of independence (need this event because otherwise the game cries in the error log)
+country_event = { 
+	id = flavor_tur.998
+	title = flavor_tur.998.t 
+	desc = flavor_tur.998.desc
+	picture = REVOLUTION_eventPicture
+	is_triggered_only = yes
+	
+	option = { 
+		name = flavor_tur.998.a 
+		declare_war_with_cb = {
+			casus_belli = cb_triggered_independence_war
+			who = overlord
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# [Root.Monarch.GetTitle]'s Newest Fascination 
+#Has absolutely no historical context behind it, but the idea of a completely unhinged Sultan is fun
+
+# Liberated Eyalet
+country_event = {
+	id = flavor_tur.1000
+	title = flavor_tur.1000.t
+	desc = flavor_tur.1000.desc
+	picture = EYALET_eventPicture
+	is_triggered_only = yes
+	
+	option = {	# We are free from the Turks!
+		name = flavor_tur.1000.a
+		clr_country_flag = has_eyalet_country_name
+		clr_country_flag = has_eyalet_color
+		if = { 
+			limit = { has_country_flag = is_EY0_flag }
+			clr_country_flag = is_EY0_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY1_flag }
+			clr_country_flag = is_EY1_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY2_flag }
+			clr_country_flag = is_EY2_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY3_flag }
+			clr_country_flag = is_EY3_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY4_flag }
+			clr_country_flag = is_EY4_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY5_flag }
+			clr_country_flag = is_EY5_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY6_flag }
+			clr_country_flag = is_EY6_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY7_flag }
+			clr_country_flag = is_EY7_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY8_flag }
+			clr_country_flag = is_EY8_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY9_flag }
+			clr_country_flag = is_EY9_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E10_flag }
+			clr_country_flag = is_E10_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E11_flag }
+			clr_country_flag = is_E11_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E12_flag }
+			clr_country_flag = is_E12_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E13_flag }
+			clr_country_flag = is_E13_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E14_flag }
+			clr_country_flag = is_E14_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E15_flag }
+			clr_country_flag = is_E15_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E16_flag }
+			clr_country_flag = is_E16_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E17_flag }
+			clr_country_flag = is_E17_flag
+		}
+		restore_country_name = yes
+		restore_country_color = yes
+		add_prestige = 20
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

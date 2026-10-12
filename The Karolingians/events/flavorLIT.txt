@@ -1,0 +1,176 @@
+########################################
+# Flavor Events for Lithuania
+#
+# Scripted by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_lit
+normal_or_historical_nations = yes
+
+# Wave of Protestantism
+
+# Wave of Calvinism
+
+# Strategic Axis with Sweden
+
+# Strategic Axis with Prussia
+
+# Strategic Axis with Austria
+
+# Strategic Axis with Austria
+
+# Magnates crave 'Polish Rights'
+
+# Magnates crave 'Polish Rights'
+
+# Magnates crave 'Polish Rights'
+
+# Royal Reaction on the Polish Liberum Veto
+
+# Civil War in Lithuania
+country_event = {
+	id = flavor_lit.11
+	title = "flavor_lit.EVTNAME11"
+	desc = "flavor_lit.EVTDESC11"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_lit.EVTOPTA11"
+		add_stability_or_adm_power = yes
+		add_years_of_income = -0.5
+		every_owned_province = {
+			limit = {
+				is_core = ROOT
+				unrest = 1
+			}
+			create_revolt = 1
+		}
+	}
+	option = {
+		name = "flavor_lit.EVTOPTB11"
+		every_owned_province = {
+			limit = {
+				unrest = 1
+				is_core = ROOT
+			}
+			create_revolt = 1
+		}
+	}
+}
+
+# The Horrible Plague in Lithuania
+
+# Pietism
+### Scandinavian DLC Lithuania Events scripted by Big Boss
+
+country_event = { 
+	id = flavor_lit.14 
+	title = flavor_lit.14.t 
+	desc = flavor_lit.14.d 
+	picture = RELIGION_eventPicture
+	is_triggered_only = yes 
+	
+	option = {
+		name = flavor_lit.14.a 
+		
+		add_country_modifier = {
+			name = canonization_of_casimir_modifier
+			duration = 9125 
+		}
+	}
+}
+
+country_event = { 
+	id = flavor_lit.15
+	title = flavor_lit.15.t 
+	desc = flavor_lit.15.d 
+	picture = RELIGION_eventPicture
+	is_triggered_only = yes 
+	
+	option = {
+		name = flavor_lit.15.a 
+		
+		add_country_modifier = {
+			name = lit_forum_thought_modifier
+			duration = 7300 
+		}
+		if = {
+			limit = { has_dlc = "Rule Britannia" }
+			change_innovativeness = 3 
+		}
+		else = { add_adm_power = 50 add_dip_power = 50 add_mil_power = 50 } 
+	}
+}
+
+
+country_event = { #The Crimean Steppes
+	id = flavor_lit.17
+	title = flavor_lit.17.t 
+	desc = flavor_lit.17.d 
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes 
+	
+	option = {
+		name = flavor_lit.17.a 
+		ai_chance = { factor = 5 }
+		trigger = { 
+			has_estate = estate_cossacks
+		}
+		
+		add_country_modifier = {
+			name = lit_landed_cossack_lords_modifier
+			duration = 7300 
+		}
+	}
+	
+	option = {
+		name = flavor_lit.17.b 
+		ai_chance = { factor = 10 } 
+		trigger = { 
+			current_age = age_of_discovery 
+			has_dlc = "The Cossacks"
+			NOT = { has_estate = estate_nomadic_tribes }
+		}
+		
+		custom_tooltip = lit_enable_nomads_for_30_years
+		hidden_effect = {
+			add_country_modifier = {
+				name = enable_estate_nomadic_tribes_modifier
+				duration = 10950 
+				hidden = yes
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_lit.17.c 
+		
+		ai_chance = { factor = 5 } 
+		add_mercantilism = 2
+		if = {
+			limit = {
+				has_dlc = "Dharma"
+				285 = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+				}
+			}
+			285 = {
+				add_center_of_trade_level = 1
+			}
+		}
+		else = {
+			285 = {
+				add_trade_modifier = {
+					who = root
+					duration = 7300
+					power = 50
+					key = crimean_trade
+				}
+			}
+		}
+	}
+}

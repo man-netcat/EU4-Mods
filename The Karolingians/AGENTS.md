@@ -110,9 +110,16 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - `government_names` is first-match-wins: specific blocks (abbasid, muslim,
   byzantine, papacy, armenian…) must precede their defaults. It and
   `government_ranks` are `replace_path`ed — the only gov files that load.
-- History/provinces/countries/diplomacy/wars/advisors/missions/events/cultures plus
+- History/provinces/countries/diplomacy/wars/advisors/missions/cultures plus
   `gfx/flags` and `common/bookmarks` (single 867 bookmark, keys already in
   `karolingian_bookmark_l_english.yml`) are all `replace_path`ed: no vanilla content loads there.
+- Vanilla events load as-is except tag-specific ones: `step_events` vendors
+  every vanilla event file into `events/` with any event naming a tag cut
+  out (detection is automatic: 3-letter tag tokens outside comments). Our
+  own event files use non-vanilla names and are never touched.
+- Same for vanilla decisions (`step_filter_decisions`, hand-curated
+  formation dummies excepted): tag-specific decisions go, generic ones
+  stay byte-identical in same-filename files.
 - No history besides 867.1.1 anywhere: country files keep top-level fields
   plus the 867 ruler block only (`strip_non_867`); every province file keeps
   its undated head only, plus our 867 block on owned land.

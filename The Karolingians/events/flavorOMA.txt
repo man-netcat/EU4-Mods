@@ -1,0 +1,32 @@
+########################################
+# Events for Oman
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_oma
+normal_or_historical_nations = yes
+
+#Struggle (repeating event)
+
+#Conflict with Portugal
+
+
+#POR gets a cb!
+country_event = {
+	id = flavor_oma.3
+	title = flavor_oma.3.t
+	desc = flavor_oma.3.d
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {	
+		name = flavor_oma.3.a
+		add_prestige = 5
+		add_claim = 399	#Suhar
+	}
+}
+
+
+# Ship building of Sur

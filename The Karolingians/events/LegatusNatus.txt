@@ -1,0 +1,37 @@
+# Legatus Natus event series
+
+normal_or_historical_nations = yes
+
+# Legatus Natus
+
+# Title of Legatus Natus Lost
+
+# Envoy from the Pope
+
+# Position as Legatus Natus Revoked
+country_event = {
+	id = 964
+	title = "EVTNAME964"
+	desc = "EVTDESC964"
+	picture = POPE_PREACHING_eventPicture
+	
+	trigger = {
+		has_country_modifier = legatus_natus
+		OR = {
+			capital_scope = { is_part_of_hre = no }
+			NOT = { has_reform = leading_clergy_reform }
+			NOT = { religion = catholic }
+#			NOT = { reverse_has_opinion ={ who = PAP value = 0 } } #covered in 764
+			NOT = { papacy_active = yes }
+			exists = no
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "EVTOPTA964"
+		remove_country_modifier = legatus_natus
+		set_global_flag = no_legatus_natus
+	}
+}

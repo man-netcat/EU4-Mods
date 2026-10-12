@@ -1,0 +1,12 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = flavor_efr
+normal_or_historical_nations = yes
+
+# East Frisia asks to join HRE
+
+# Emperor recieves East Frisia's offer to join the HRE
+
+# East Frisia joins the HRE

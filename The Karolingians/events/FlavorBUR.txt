@@ -1,0 +1,177 @@
+#1559.5.12 - New bishoprics in the Lowlands create an outrage
+#1565.1.1 - Letters of Segovia, Philip I orders the harsh persecution of Calvinists
+#1566.4.5 - 'Eedverbond der Edelen', Margaretha of Parma promises leniency
+#1567.9.10 - Counts of Egmont & Hoorne arrested
+#1569.1.1 - The Duke of Alba reforms the taxation system ('tiende penning')
+#1570.1.1 - The Duke of Alba reforms the penal system, 'Blood Council' (Bloedraad) established
+
+
+namespace = flavor_bur
+normal_or_historical_nations = yes
+
+
+
+### Dutch Revolt ###
+
+# This is now the on_start event for dutch revolt disaster
+# PROVINCENAME Revolts!
+
+# Random rebels event for disaster
+# PROVINCENAME Revolts!
+
+# Netherlands Declare Independence!
+# ends the disaster by virtue of NED existing
+
+# Dutch Mobilization
+
+# Dutch Claims
+
+# Dutch state joins the Netherlands
+
+# Incorporated into the Netherlands
+
+# Dutch Nobility demands General Estates
+# This event will stop Burgundy from getting the disaster dependin on its choice
+
+# The Count of Charolais and the Edict of Blood
+
+# The Count of Ma�on and the Union of Arras
+
+# Netherland revolters call on the rivals of their enemy
+
+#BUR retains independence 
+
+
+
+#################################################################
+### New Burgundy events by Pierre du Plessis                  ###
+#################################################################
+
+#new start in a more civilised tongue
+namespace = new_flavour_bur
+
+#The Feast of the Pheasant
+
+#The Feast of the Pheasant (Burgundy version)
+
+#The Feast of the Pheasant (Ottoman version)
+country_event = {
+	id = new_flavour_bur.3
+	title = new_flavour_bur.3.name
+	desc = new_flavour_bur.3.desc
+	picture = FEAST_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = new_flavour_bur.3.A
+		custom_tooltip = emp_bur_feast_of_pheasants_event_effect_tooltip
+	}
+}
+
+#Lothair's Legacy
+
+#The Court of [Ruler Name]
+
+
+#The League of the Public Weal
+country_event = {
+	id = new_flavour_bur.6
+	title = new_flavour_bur.6.name
+	desc = new_flavour_bur.6.desc
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = new_flavour_bur.6.A
+
+		tooltip = {
+			ile_de_france_area = {
+				limit = {
+					NOT = { is_core = from }
+					NOT = { is_permanent_claim = from }
+				}
+				add_permanent_claim = from
+			}
+			champagne_area = {
+				limit = {
+					NOT = { is_core = from }
+					NOT = { is_permanent_claim = from }
+				}
+				add_permanent_claim = from
+			}
+			orleans_area = {
+				limit = {
+					NOT = { is_core = from }
+					NOT = { is_permanent_claim = from }
+				}
+				add_permanent_claim = from
+			}
+			every_subject_country = {
+				limit = { capital_scope = { region = france_region } }
+				add_liberty_desire = 50
+			}
+		}
+
+		add_opinion = {
+			who = from
+			modifier = opinion_bur_rebellious_burgundy
+		}
+	}
+}
+
+
+
+#Burgundy is King of the Franks (tell France and the world)
+country_event = {
+	id = new_flavour_bur.7
+	title = new_flavour_bur.7.name
+	desc = new_flavour_bur.7.desc
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	major = yes
+
+	option = {
+		name = new_flavour_bur.7.A
+
+		from = { custom_tooltip = emp_bur_league_of_public_weal_effect_tooltip }
+
+		every_subject_country = {
+			limit = {
+				capital_scope = {
+					region = france_region
+				}
+			}
+			set_country_flag = FRA_vassal_to_be_given_to_BUR
+			custom_tooltip = THIS_vassalised_by_FROM
+		}
+		every_country = {
+			limit = { has_country_flag = FRA_vassal_to_be_given_to_BUR }
+			hidden_effect = {
+				clr_country_flag = FRA_vassal_to_be_given_to_BUR
+				ROOT = { free_vassal = prev }
+				FROM = { vassalize = prev }
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					has_opinion_modifier = {
+						who = from
+						modifier = opinion_bur_rebellious_burgundy
+					}
+				}
+				remove_opinion = {
+					who = from
+					modifier = opinion_bur_rebellious_burgundy
+				}
+			}
+		}
+		add_opinion = {
+			who = from
+			modifier = opinion_bur_usurpers_of_france
+		}
+	}
+}

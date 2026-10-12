@@ -1,0 +1,10 @@
+namespace = austrian_revolt_events
+
+
+
+
+#The Austrians subject breaks away!
+
+#The Austrian vassal joins us, but war happens!
+
+#The Austrian vassal joins us, but war happens!

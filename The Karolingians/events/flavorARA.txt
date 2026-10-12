@@ -1,0 +1,35 @@
+########################################
+# Flavor Events for Aragon
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_ara
+normal_or_historical_nations = yes
+
+# Consulate of the Sea
+
+# Book of the Consulate of the Sea
+
+# Antonio Beccadelli (poet)
+
+# Iovianus Pontanus
+
+# Monastery of Santa Mar�a de Sigena
+
+# Sindicat Remen�a
+
+
+
+########################################
+# Additions by Michael Kundak Cowall
+########################################
+
+# The Neapolitan Succession
+
+
+
+
+
+
+#1.35 Content by Big Boss#

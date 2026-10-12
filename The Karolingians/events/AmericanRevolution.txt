@@ -1,0 +1,8 @@
+normal_or_historical_nations = yes
+
+# American quest for independence
+
+
+# Trade restrictions
+
+# Colonial assembly

@@ -1,0 +1,9 @@
+######################################
+### Incident for Austrian Emperor gaining Spain PU ###
+### By LordVarangian ###
+######################################
+
+namespace = universal_empire
+
+
+#Union being Formed

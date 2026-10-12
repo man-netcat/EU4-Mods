@@ -1,0 +1,58 @@
+########################################
+# Events for Gujarat
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_guj
+normal_or_historical_nations = yes
+
+	
+# Growth of Ahmedabad
+
+# Champaner - A second capital?
+
+
+# Champaner - A new city
+
+# Champaner Lost - Project Terminated
+
+# Burhanuddin Qutub e Alam
+
+# The Jain and Hindu Merchant Community - Vasanta Vilasa
+
+# An Embassy to the Ottoman Sultan
+
+# Time to get involved in the Indian Ocean?
+
+# The Ottomans reply
+country_event = {
+	id = flavor_guj.9
+	title = flavor_guj.9.t
+	desc = flavor_guj.9.d
+	picture = SHIP_SAILING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_guj.9.a #Ok
+		add_dip_power = 50
+		random_owned_province = {
+			limit = {
+				has_port = yes
+			}
+			build_to_forcelimit = {
+				light_ship = 0.2 #Galleys really
+			}
+		}
+	}
+}
+
+# The Ottomans reply
+
+# Death of Ahmad Kattu
+
+# Qissa-i Sanjan
+
+
+# Mirat-i-Sikandiri

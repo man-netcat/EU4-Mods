@@ -1,0 +1,18 @@
+########################################
+# Flavor Events for Mewar
+#
+# Scripted by Henrik Lohmander
+########################################
+
+namespace = flavor_mer
+normal_or_historical_nations = yes
+
+#Vijaya Sthambha
+
+#The return of Rana Jodha Rathore
+
+#Kumbalgarh
+
+#Mira Bai
+
+#The Plot against Rana Kumbha

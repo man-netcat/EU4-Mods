@@ -1,0 +1,96 @@
+########################################
+# Flavor Events for Delhi
+#
+# Scripted by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_dlh
+normal_or_historical_nations = yes
+
+# The Marathi Revolt
+
+# Tiger on the Border
+
+# The Lodi Dynasty
+
+# The Incompetence of the Lodis
+
+
+# The Rise of Bahlul Lodi
+
+# The Rise of Bahlul Lodi
+
+
+# The Rise of Bahlul Lodi
+country_event = {
+	id = flavor_dlh.7
+	title = "flavor_dlh.7.t"
+	desc = "flavor_dlh.7.d"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_dlh.7.a"
+		FROM = {
+			free_vassal = ROOT
+			add_truce_with = ROOT
+		}
+		hidden_effect = { add_truce_with = FROM }
+		create_alliance = FROM
+		add_opinion = {
+			 who = FROM
+			 modifier = opinion_lodi_released 
+		}
+	}
+}
+
+########################################
+# Additional Flavor Events for Delhi
+#
+# Scripted by Daniel Tolman
+########################################
+
+# The Founding of Agra
+country_event = {
+	id = flavor_dlh.8
+	title = "flavor_dlh.EVTNAME8"
+	desc = "flavor_dlh.EVTDESC8"
+	picture = 9_Vaisya_Estate_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Dharma"
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # keep capital in Delhi
+		name = "flavor_dlh.EVTOPTA8"
+		capital_scope = {
+			add_base_manpower = 2
+			add_base_tax = 2
+			add_base_production = 2
+		}
+		524 = {
+			change_province_name = "Agra"
+			rename_capital = "Agra"
+		}
+	}
+	option = { # move capital to Agra
+		name = "flavor_dlh.EVTOPTB8"
+		524 = {
+			move_capital_effect = yes
+			change_province_name = "Agra"
+			rename_capital = "Agra"
+			add_base_manpower = 2
+			add_base_tax = 2
+			add_base_production = 2
+		}
+	}
+}

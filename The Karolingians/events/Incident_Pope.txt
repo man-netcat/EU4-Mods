@@ -1,0 +1,7 @@
+namespace = incident_pope
+
+# Pope wants to join the Empire
+
+# dummy incident for emperor
+
+# Pope wants to leave if Empire official faith is not Catholic after league war

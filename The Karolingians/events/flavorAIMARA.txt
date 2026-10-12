@@ -1,0 +1,16 @@
+########################################
+# Events for the Aimara culture
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_aimara
+normal_or_historical_nations = yes
+
+# Submit to the Incas?
+
+# Titi'kaka
+
+# T�pac Amaru II and Micaela Bastidas Puyucahua
+
+# The Troublesome Yatiri

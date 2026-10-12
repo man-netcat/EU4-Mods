@@ -1,0 +1,68 @@
+########################################
+# Flavor Events for Bengal
+#
+# Scripted by Henrik Lohmander
+########################################
+
+namespace = flavor_bng
+normal_or_historical_nations = yes
+
+#The Chishti Order and the Sultans of Bengal.
+
+#Sayid Sultan Publishes the Nabibangsha
+
+
+#The Mosque city of Bagerhat
+
+
+#Reclamation of the Delta
+
+# Aristocrats on the Run
+
+# Rise of the Tiger (Sher Shah Sur)
+
+#Kingdom of Bhurshut
+
+# The Grant of Calcutta
+
+# Growth of Calcutta
+
+# The Black Hole of Calcutta
+
+#The Black hole of Calcutta
+
+# The Tiger Triumphant
+# By Daniel Tolman
+
+country_event = {
+	id = flavor_bng.12
+	title = flavor_bng.12.t
+	desc = flavor_bng.12.d
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "flavor_bng.12.a"
+		if = {
+			limit = {
+				NOT = {
+					government_rank = 3
+				}
+			}
+			set_government_rank = 3
+		}
+		add_prestige = 20
+		capital_scope = {
+			add_base_tax = 4
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		add_country_modifier = {
+			name = "tiger_triumphant"
+			duration = 18250
+		}
+	}
+}

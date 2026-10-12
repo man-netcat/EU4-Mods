@@ -1,0 +1,26 @@
+###########################################
+# Flavor Events for the Bahmani Sultanate
+#
+# Scripted by Henrik Lohmander
+###########################################
+
+namespace = flavor_bah
+normal_or_historical_nations = yes
+
+#Bidar, a true capital for the Bahmanis
+
+#Attracting the Right People
+
+
+#Mahmud Gawan
+
+#The Loyal Habshis
+
+#Deccanis and Gharbians
+#Court 2 sides etc
+
+#Bidriware
+
+#Large Diamond found
+
+#Afanasy Nikitin

@@ -1,0 +1,11 @@
+########################################
+# Events for Mainz
+#
+# written by Johan Andersson
+########################################
+
+
+namespace = flavor_mai
+normal_or_historical_nations = yes
+
+# Gutenberg and the Printing Press

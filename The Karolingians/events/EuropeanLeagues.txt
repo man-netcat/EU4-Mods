@@ -1,0 +1,189 @@
+########################################
+# Events for Various Leagues
+#
+# written by Johan Andersson
+########################################
+
+namespace = league_events
+
+###############################
+# League of Augsburg
+###############################
+
+# We can join or not...
+
+# Join League of Augsburg
+
+# Does not join...
+country_event = {
+	id = league_events.4
+	title = league_events.4.t
+	desc = league_events.4.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = league_events.4.a
+		add_prestige = -5
+		
+	}
+}
+
+###############################
+# League of Schmalkalden	
+###############################
+
+###############################
+# Catholic League
+###############################
+country_event = {
+	id = league_events.6
+	title = league_events.6.t
+	desc = league_events.6.d
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		NOT = { has_dlc = "Art of War" }
+		religion = catholic
+		is_part_of_hre = yes			
+		is_religion_enabled = protestant
+		is_year = 1605
+		is_at_war = no
+		NOT = { has_country_flag = catholic_league }
+		NOT = { is_year = 1630 }
+	}
+	
+	mean_time_to_happen = {
+		months = 64
+	}
+	
+	immediate = {
+		set_country_flag = catholic_league 
+	}
+	
+	option = {
+		name = league_events.6.a
+		ai_chance = { factor = 10 }
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				religion = catholic
+				is_part_of_hre = yes			
+			}
+			add_opinion = { who = ROOT modifier = catholic_league_catholic }
+		}
+		every_country = {
+			limit = {
+				OR = {
+					religion = protestant
+					religion = reformed
+				}
+			}
+			add_opinion = { who = ROOT modifier = catholic_league_protestant }
+		}		
+		
+	}
+	option = {
+		name = league_events.6.b
+		ai_chance = { factor = 1 }
+		add_prestige = -30
+
+	}
+}
+
+###############################
+# Evangelical Union
+###############################
+country_event = {
+	id = league_events.7
+	title = league_events.7.t
+	desc = league_events.7.d
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		NOT = { has_dlc = "Art of War" }
+		OR = {
+			religion = protestant
+			religion = reformed
+		}
+		is_year = 1615
+		is_at_war = no
+		NOT = { has_country_flag = evangelical_union }
+		NOT = { is_year = 1630 }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	immediate = {
+		set_country_flag = evangelical_union 
+	}
+	
+	option = {
+		name = league_events.7.a
+		ai_chance = { factor = 10 }
+		every_country = {
+			limit = {
+				religion = catholic
+				is_part_of_hre = yes			
+			}
+			add_opinion = { who = ROOT modifier = evangelical_union_catholic }
+		}
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+				OR = {
+					religion = protestant
+					religion = reformed
+				}
+			}
+			add_opinion = { who = ROOT modifier = evangelical_union_protestant }
+		}
+	}
+	option = {
+		name = league_events.7.b
+		ai_chance = { factor = 1 }
+		add_prestige = -30
+	}
+}
+
+###############################
+# League of Cambrai
+###############################
+
+# For Venice
+country_event = {
+	id = league_events.9
+	title = league_events.9.t
+	desc = league_events.9.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = league_events.9.a
+		add_papal_influence = -25
+	}
+}
+
+# Question
+
+# Joins
+
+# Does not join...
+country_event = {
+	id = league_events.12
+	title = league_events.12.t
+	desc = league_events.12.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = league_events.12.a
+		add_prestige = -5
+		
+	}
+}

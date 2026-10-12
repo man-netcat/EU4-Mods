@@ -1,0 +1,974 @@
+######################################## 
+# Flavor events for Poland
+# 
+# written by Sara Wendel-�rtqvist
+######################################## 
+
+namespace = flavor_pol
+normal_or_historical_nations = yes
+
+# The Nieszawa Privileges-'Conventiones Particulares'
+
+# The Statute of Piotrkow
+
+# The Polish Inheritance of Masovia
+country_event = {
+	id = flavor_pol.3473
+	title = "flavor_pol.EVTNAME3473"
+	desc = "flavor_pol.EVTDESC3473"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_pol.EVTOPTA3473" # Make it a personal royal fiefdom
+		257 = { # Warszawa
+			if = {
+				limit = {
+					NOT = { has_dlc = "Common Sense" }
+				}
+				add_base_tax = 2
+			}
+			if = {
+				limit = {
+					has_dlc = "Common Sense"
+				}
+				add_province_modifier = {
+					name = "economic_development_of_mazovia"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+# The Jesuit King
+
+# The Pacta Conventa and the Henrykian Articles
+
+# The Sobieskian Army Reforms
+
+# The Great Northern Conflict
+
+# Turko-Polish Tension
+
+# The Horrible Plague in Lithuania
+
+# Ending the Stagnation - Jan Sobieski
+
+# Ending the Stagnation - Friedrich Augustus II
+
+# Ending the Stagnation - Stanislaus Poniatowski
+
+# Ending the Stagnation - King Stanislaus
+
+# The Sejm refuse to allow the mobilization of more troops
+
+# The Sejm comply to your policies
+
+# The Sejm veto all your policies
+country_event = {
+	id = flavor_pol.3744
+	title = "flavor_pol.EVTNAME3744"
+	desc = "flavor_pol.EVTDESC3744"
+	picture = LIBERUM_VETO_eventPicture
+	
+	trigger = {
+		has_regency = no
+		has_country_flag = pol_pact_conventa_flag
+		NOT = {
+			has_ruler_modifier = pol_sejm_refuse_timer
+		}
+		government = monarchy
+		NOT = { has_reform = polish_autocratic_monarchy }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	immediate = {
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = pol_sejm_refuse_timer
+				hidden = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "flavor_pol.EVTOPTOK"
+		add_ruler_modifier = { name = pol_sejm_veto } 
+	}
+	option = {
+		name = "flavor_pol.EVTOPTA3738"
+		add_legitimacy = -20
+		add_stability = -1
+	}
+
+}
+
+# Nicolaus Copernicus
+country_event = {
+	id = flavor_pol.5100
+	title = "flavor_pol.EVTNAME5100"
+	desc = "flavor_pol.EVTDESC5100"
+	picture = ADVISOR_eventPicture	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_pol.EVTOPTOK"
+		
+		define_advisor = {
+			type = natural_scientist
+			name = "Nicolaus Copernicus"
+			culture = polish
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+}
+
+# Polish-Lithuanian Commonwealth Navy
+country_event = {
+	id = flavor_pol.1
+	title = "flavor_pol.EVTNAME1"
+	desc = "flavor_pol.EVTDESC1"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		num_of_ports = 1
+	}
+	
+	option = {
+		name = "flavor_pol.EVTOPTA1" # Build a Great Navy
+		add_navy_tradition = 20
+
+		random_owned_province = {
+			limit = {
+				has_port = yes
+			}
+			add_unit_construction = {
+				type = heavy_ship
+				amount = 5
+				speed = 0.1
+				cost = 0
+			}
+		}
+	}
+}
+
+# Sigismund's Column
+
+# Merkuriusz Polski Ordynaryjny
+
+# Vilnius University
+
+# Jan Brozek
+
+# Michal Sedziw�j
+
+# Zamojski Academy
+
+### THE STRUGGLE FOR ROYAL POWER ### 
+# Reworked into a disaster
+country_event = {
+	id = flavor_pol.3481
+	title = "flavor_pol.EVTNAME3481"
+	desc = "flavor_pol.EVTDESC3481"
+	picture = SEJM_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = pol_zebrzydowski_rebellion_flag
+	}
+	option = {
+		name = "flavor_pol.EVTOPTC3481" # Wage a war of extermination on the Nobility
+		add_stability = -3		
+		random_owned_province = {
+			limit = {
+				is_capital = yes
+			}
+			polish_noble_rebels = 6
+		}
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				continent = europe
+			}
+			polish_noble_rebels = 3
+		}
+	}
+}
+
+# Konfederacja
+country_event = {
+	id = flavor_pol.10
+	title = "flavor_pol.EVTNAME10"
+	desc = "flavor_pol.EVTDESC10"
+	picture = SEJM_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		had_country_flag = {
+			flag = pol_zebrzydowski_rebellion_flag
+			days = 1095
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = pol_konfederacja_flag
+		}
+	}
+	
+	option = {
+		name = "flavor_pol.EVTOPTA10" # Accept their demands
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				any_country = {
+					junior_union_with = ROOT
+				}
+			}
+		}
+		set_country_flag = pol_concedes_1
+		custom_tooltip = pol_disaster_concede_tt
+		give_estate_land_share_small = { estate = estate_nobles }
+		add_ruler_modifier = {
+			name = pol_konfederacja
+		}
+	}
+	option = {
+		name = "flavor_pol.EVTOPTB10" # Reject their demands
+		ai_chance = {
+			factor = 75
+		}
+		add_prestige = -5
+		take_estate_land_share_small = { estate = estate_nobles }
+		random_owned_province = {
+			limit = {
+				continent = europe
+			}
+			polish_noble_rebels = 3
+		}
+		random_owned_province = {
+			limit = {
+				continent = europe
+			}
+			polish_noble_rebels = 2
+		}
+	}
+}
+
+# Rokosz Sandomierski
+country_event = {
+	id = flavor_pol.11
+	title = "flavor_pol.EVTNAME11"
+	desc = "flavor_pol.EVTDESC11"
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		had_country_flag = {
+			flag = pol_konfederacja_flag
+			days = 1095
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = rokosz_flag
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+				}
+				set_province_flag = POL_rokosz_sandomierski_flag1
+			}
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					NOT = {
+						has_province_flag = POL_rokosz_sandomierski_flag1
+					}
+				}
+				set_province_flag = POL_rokosz_sandomierski_flag2
+			}
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					NOT = {
+						has_province_flag = POL_rokosz_sandomierski_flag1
+					}
+					NOT = {
+						has_province_flag = POL_rokosz_sandomierski_flag2
+					}
+				}
+				set_province_flag = POL_rokosz_sandomierski_flag3
+			}
+		}
+	}
+	
+	option = {
+		name = "flavor_pol.EVTOPTA11" # Confer with the rebel leaders
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 0
+				any_country = {
+					junior_union_with = ROOT
+				}
+			}
+		}
+		set_country_flag = pol_concedes_2
+		custom_tooltip = pol_disaster_concede_tt
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		add_legitimacy = -50
+		give_estate_land_share_small = { estate = estate_nobles }
+		every_neighbor_country = {
+			limit = {
+				NOT = { is_subject_of = ROOT }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_negotiated_rebels
+			}
+		}
+	}
+	option = {
+		name = "flavor_pol.EVTOPTB11" # Suppress the rebels
+		ai_chance = { factor = 75 }
+		take_estate_land_share_small = { estate = estate_nobles }
+		random_owned_province = {
+			limit = {
+				has_province_flag = POL_rokosz_sandomierski_flag1
+			}
+			polish_noble_rebels = 3
+			clr_province_flag = POL_rokosz_sandomierski_flag1
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = POL_rokosz_sandomierski_flag2
+			}
+			polish_noble_rebels = 2
+			clr_province_flag = POL_rokosz_sandomierski_flag2
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = POL_rokosz_sandomierski_flag3
+			}
+			polish_noble_rebels = 1
+			clr_province_flag = POL_rokosz_sandomierski_flag3
+		}
+		every_neighbor_country = {
+			limit = {
+				NOT = { is_subject_of = ROOT }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_suppressed_rebels
+			}
+		}
+	}
+}
+
+# Pacification Sejm
+country_event = {
+	id = flavor_pol.12
+	title = "flavor_pol.EVTNAME12"
+	desc = "flavor_pol.EVTDESC12"
+	picture = SEJM_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		had_country_flag = { flag = rokosz_flag days = 1095 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		OR = {
+			NOT = {	has_country_flag = pol_concedes_1 }
+			NOT = {	has_country_flag = pol_concedes_2 }
+		}
+	}
+	
+	option = {
+		name = "flavor_pol.EVTOPTA12" # The nobles has formally surrendered
+		remove_estate_privilege = estate_nobles_pacta_conventa
+		clr_country_flag = pol_pact_conventa_flag
+		remove_country_modifier = pol_sejm_veto
+		remove_country_modifier = pol_sejm_refuse_troops
+		remove_country_modifier = pol_sejm_comply_policies
+		add_prestige = 50
+		add_stability = 3
+		add_legitimacy = 50
+		take_estate_land_share_large = { estate = estate_nobles }
+		remove_estate_privilege = estate_nobles_golden_liberty
+		if = {
+			limit = {
+				has_reform = elective_monarchy
+			}
+			remove_government_reform = elective_monarchy
+			#set_legacy_government = administrative_monarchy
+			remove_heir = {}
+			add_absolutism = 10
+		}
+		if = { 
+			limit = { has_reform = polish_elective_monarchy }
+			remove_government_reform = polish_elective_monarchy 
+		}
+		else_if = {
+			limit = { has_reform = polish_great_sejm }
+			remove_government_reform = polish_great_sejm
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_estate_privilege = estate_nobles_nieszawa_privileges }
+				remove_estate_privilege = estate_nobles_nieszawa_privileges
+			}
+		}
+		if = {
+			limit = {
+				has_estate_privilege = estate_nobles_pacta_conventa
+			}
+			remove_estate_privilege = estate_nobles_pacta_conventa
+		}
+	}
+}
+
+# cleanup event for hotfix
+#country_event = {
+#	id = flavor_pol.13
+#	title = "flavor_pol.EVTNAME12"
+#	desc = "flavor_pol.EVTDESC12"
+#	picture = ANGRY_MOB_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		has_country_modifier = pol_zebrzydowski_rebellion_flag
+#		NOT = { has_country_flag = pol_zebrzydowski_rebellion_flag }
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#	
+#	option = {
+#		name = "flavor_pol.EVTOPTA12" # The nobles has formally surrendered
+#		remove_estate_privilege = estate_nobles_pacta_conventa
+#		remove_country_modifier = pol_zebrzydowski_rebellion_flag
+#		remove_country_modifier = pol_sejm_veto
+#		remove_country_modifier = pol_sejm_refuse_troops
+#		remove_country_modifier = pol_sejm_comply_policies
+#		clr_country_flag = pol_konfederacja_flag
+#	}
+#}
+
+# Collegium Hosianum
+
+# The Radziwill Bible & the Reformation in Poland
+
+#State religion resulting in the suspension of the College.
+
+#Clearing of Teutonic Rivalry
+
+#Election of Kasimir
+
+# Become elective
+country_event = {
+	id = flavor_pol.20
+	title = flavor_pol.20.t
+	desc = flavor_pol.20.d
+
+	picture = LIBERUM_VETO_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = flavor_pol.20.a
+		add_government_reform = polish_elective_monarchy
+		if = {
+			limit = {
+				NOT = { has_estate_privilege = estate_nobles_golden_liberty }
+			}
+			if = {
+				limit = {
+					num_of_estate_privileges = { estate = estate_nobles	value = 6 }
+				}
+				if = {
+					limit = {
+						has_estate_privilege = estate_nobles_nobility_primacy
+					}
+					remove_estate_privilege = estate_nobles_nobility_primacy
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_land_rights
+					}
+					remove_estate_privilege = estate_nobles_land_rights
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_officer_corp
+					}
+					remove_estate_privilege = estate_nobles_officer_corp
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_levies
+					}
+					remove_estate_privilege = estate_nobles_levies
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_advisors
+					}
+					remove_estate_privilege = estate_nobles_advisors
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_right_of_counsel
+					}
+					remove_estate_privilege = estate_nobles_right_of_counsel
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_supremacy_over_crown
+					}
+					remove_estate_privilege = estate_nobles_supremacy_over_crown
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_supremacy_over_crown
+					}
+					remove_estate_privilege = estate_nobles_supremacy_over_crown
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_strong_duchies
+					}
+					remove_estate_privilege = estate_nobles_strong_duchies
+				}
+				else_if = {
+					limit = {
+						has_estate_privilege = estate_nobles_better_integration
+					}
+					remove_estate_privilege = estate_nobles_better_integration
+				}
+			}
+			set_estate_privilege = estate_nobles_golden_liberty
+		}
+	}
+}
+
+# New events for Struggle for Royal Power Disaster
+# by Daniel Tolman
+
+# Alternate ending - Sejm Seizes control
+country_event = {
+	id = flavor_pol.21
+	title = flavor_pol.21.t
+	desc = flavor_pol.21.d
+	picture = SEJM_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = pol_concedes_1
+		has_country_flag = pol_concedes_2
+		had_country_flag = { flag = pol_zebrzydowski_rebellion_flag days = 1000 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+	}
+	
+	option = {
+		name = "flavor_pol.EVTOPTB3481" # Resign completely and read theological books instead
+		add_prestige = -100
+		give_estate_land_share_large = { estate = estate_nobles }
+		if = {
+			limit = { NOT = { has_reform = celestial_empire } }
+			change_government = republic
+			add_government_reform = noble_elite_reform
+		}
+		hidden_effect = {
+			kill_ruler = yes
+		}
+		remove_estate_privilege = estate_nobles_nieszawa_privileges
+		remove_country_modifier = pol_statute_piotrkow
+		remove_estate_privilege = estate_nobles_pacta_conventa
+		clr_country_flag = librium_veto
+		clr_country_flag = pol_pact_conventa_flag
+		complete_mission = plc_golden_liberty
+	}
+}
+
+# Disaster end event
+country_event = {
+	id = flavor_pol.22
+	title = flavor_pol.22.t
+	desc = flavor_pol.22.d
+	picture = SEJM_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		on_non_estate_disaster_end = yes
+	}
+	
+	option = {
+		trigger = {
+			government = monarchy
+		}
+		if = {
+			limit = {
+				OR = {
+					has_reform = polish_elective_monarchy
+					has_reform = elective_monarchy
+				}
+			}
+			remove_government_reform = elective_monarchy
+			remove_government_reform = polish_elective_monarchy
+			#set_legacy_government = administrative_monarchy
+			remove_heir = {}
+			add_absolutism = 10
+		}
+		if = {
+			limit = { has_estate_privilege = estate_nobles_golden_liberty }
+			remove_estate_privilege = estate_nobles_golden_liberty
+		}
+		set_country_flag = pol_royal_power_monarchy_won_flag
+		name = flavor_pol.22.a
+	}
+	option = {
+		trigger = {
+			NOT = { government = monarchy }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_reform = polish_elective_monarchy
+					has_reform = elective_monarchy
+				}
+			}
+			remove_government_reform = elective_monarchy
+			remove_government_reform = polish_elective_monarchy
+			#set_legacy_government = administrative_monarchy
+			remove_heir = {}
+			add_absolutism = 10
+			if = {
+				limit = { has_estate_privilege = estate_nobles_golden_liberty }
+				remove_estate_privilege = estate_nobles_golden_liberty
+			}
+		}
+		set_country_flag = pol_royal_power_non_monarchy_won_flag
+		name = flavor_pol.22.b
+	}
+}
+
+####Lions of the North#### scripted by Big Boss
+
+country_event = { #The Little Kings Uprising
+	id = flavor_pol.23
+	title = flavor_pol.23.t
+	desc = flavor_pol.23.d
+	picture = REVOLUTION_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_pol.23.a 
+		
+		add_country_modifier = { 
+			name = pol_centralized_royal_court_authority_modifier
+			duration = -1 
+		}
+		if = {
+			limit = { ai = yes } 
+			random_owned_province = {
+				limit = { continent = europe } 
+				spawn_rebels = {
+					type = noble_rebels
+					size = 3
+				}
+			}
+		}
+		else = { 
+			random_owned_province = {
+				limit = { continent = europe } 
+				spawn_rebels = {
+					type = noble_rebels
+					size = 3
+				}
+			}
+			random_owned_province = {
+				limit = { continent = europe } 
+				spawn_rebels = {
+					type = noble_rebels
+					size = 3
+				}
+			}
+			random_owned_province = {
+				limit = { continent = europe } 
+				spawn_rebels = {
+					type = noble_rebels
+					size = 3
+				}
+			}
+		}
+	}
+}
+
+country_event = { #The Constitution of [GetYear]
+	id = flavor_pol.24
+	title = flavor_pol.24.t
+	desc = flavor_pol.24.d
+	picture = REFORM_eventPicture
+	is_triggered_only = yes
+	
+	option = { 
+		name = flavor_pol.24.a 
+		
+		change_government_reform_progress = -150
+		add_stability = -1
+		add_adm_tech = 1 
+		add_country_modifier = { 
+			name = pol_judicial_reforms_modifier
+			duration = 7300 
+		}
+		if = { 
+			limit = { has_estate = estate_nobles } 
+			custom_tooltip = pol_disable_nobles_tt
+			set_country_flag = pol_disable_nobles_flag 
+		}
+	}
+	
+	option = { 
+		name = flavor_pol.24.b 
+		
+		custom_tooltip = pol_every_courthouse_1_random_dev_tt
+		hidden_effect = { 
+			every_owned_province = { 
+				limit = { has_courthouse_building_trigger = yes } 
+				random_list = {
+					50 = { add_base_manpower = 1 } 
+					50 = { add_base_production = 1 } 
+				}
+			}
+		}
+		change_government_reform_progress = -100
+		if = { 
+			limit = { adm = 6 } 
+			add_adm_power = 100 
+		}
+		else = { change_adm = 1 } 
+	}
+	
+	option = { 
+		name = flavor_pol.24.c 
+		highlight = yes 
+		trigger = { has_country_modifier = pol_cardinal_laws_modifier } 
+		if = { 
+			limit = { 
+				NOT = { government = republic } 
+			}
+			change_government = republic 
+		}
+		
+		remove_country_modifier = pol_cardinal_laws_modifier 
+		add_country_modifier = {
+			name = pol_cardinal_laws2_modifier
+			duration = -1 
+		}
+	}
+}
+
+
+
+country_event = { #Expanding the Quarter Army 
+	id = flavor_pol.27
+	title = flavor_pol.27.t 
+	desc = flavor_pol.27.d 
+	picture = HUSSARS_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_pol.27.a 
+		
+		if = { 
+			limit = { has_dlc = "Cradle of Civilization" }
+			add_country_modifier = { 
+				name = pol_modernized_army_modifier
+				duration = -1 
+			}
+		}
+		else = { 
+			add_country_modifier = {
+				name = pol_modernized_army_2_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	option = { 
+		name = flavor_pol.27.b 
+		
+		trigger = {
+			OR = { 
+				num_of_hussars = 8
+				num_of_cavalry = 65 
+			}
+		}
+		if = { 
+			limit = { has_dlc = "Lions of the North" }
+			add_country_modifier = { 
+				name = pol_elite_hussar_cavalry_modifier
+				duration = -1 
+			}
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Lions of the North"
+				has_estate = estate_nobles 
+			}
+			set_estate_privilege = estate_nobles_sponsor_hussars 
+		}
+		else = { 
+			add_country_modifier = { 
+				name = pol_elite_hussar_cavalry_2_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	option = { 
+		name = flavor_pol.27.c 
+		
+		trigger = { 
+			OR = { 
+				has_global_modifier_value = {
+					which = infantry_power 
+					value = 0.30 
+				}
+				has_global_modifier_value = {
+					which = discipline  
+					value = 0.25
+				}
+			}
+		}
+		add_country_modifier = { 
+			name = modernized_fire_ranks_modifier
+			duration = -1 
+		}
+	}
+	
+	option = { 
+		name = flavor_pol.27.dee
+		
+		trigger = { 
+			estate_loyalty = { 
+				estate = estate_cossacks 
+				loyalty = 60 
+			}
+			num_of_estate_privileges = {	
+				estate = estate_cossacks 
+				value = 5 
+			}
+		}
+		add_country_modifier = { 
+			name = pol_cavalry_with_state_modifier 
+			duration = -1 
+		}
+	}
+}
+
+country_event = { #Collegium Maius & the Growth of Thought
+	id = flavor_pol.28
+	title = flavor_pol.28.t 
+	desc = flavor_pol.28.d 
+	picture = GREAT_BUILDING_eventPicture
+	is_triggered_only = yes 
+	
+	option = {
+		name = flavor_pol.28.a 
+		
+		if = {
+			limit = { has_dlc = "Rule Britannia" } 
+			change_innovativeness = 3 
+		}
+		else = { 
+			add_adm_power = 25 
+			add_dip_power = 25
+		}
+		if = { 
+			limit = { 
+				262 = { 
+					NOT = { has_building = university } 
+				}
+			}
+			262 = { add_building = university } 
+		}
+		else_if = {
+			limit = { has_dlc = "Rights of Man" } 
+			add_ruler_personality = scholar_personality
+		}
+		else = { 
+			262 = { add_base_tax = 1 } 
+		}
+		custom_tooltip = pol_institutions_will_slowly_grow_in_262_tt
+		hidden_effect = {
+			262 = { 
+				add_province_modifier = { 
+					name = pol_krakow_university_modifier 
+					duration = -1
+					hidden = yes 
+				}
+			}
+		}
+	}
+}
+
+
+
+country_event = { #Baltic Gold & the Gates of Kings 
+	id = flavor_pol.31
+	title = flavor_pol.31.t 
+	desc = flavor_pol.31.d 
+	picture = CITY_DEVELOPMENT_eventPicture
+	is_triggered_only = yes 
+	
+	option = {
+		name = flavor_pol.31.a 
+		
+		43 = {
+			add_province_modifier = {
+				name = pol_thriving_center_of_gdansk_modifier
+				duration = 9125 
+			}
+			add_base_production = 1 
+			if = { 
+				limit = { has_dlc = "Mandate of Heaven" }
+				add_prosperity = 100 
+			}
+			else = { add_base_tax = 1 }
+		}
+	}
+}

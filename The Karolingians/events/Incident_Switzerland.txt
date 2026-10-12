@@ -1,0 +1,7 @@
+### Switzerland leaves the HRE ###
+### By Daniel Tolman ###
+
+namespace = incident_switzerland
+
+
+# dummy incident for the emperor

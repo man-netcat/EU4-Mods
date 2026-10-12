@@ -1,0 +1,12 @@
+########################################
+# Events for Chimu
+#
+# written by Sara Wendel-�rtqvist
+####################################
+
+namespace = flavor_chm
+normal_or_historical_nations = yes
+
+# The Great Artisans of Chimu
+
+# Reforming the Hierarchy of Chim�

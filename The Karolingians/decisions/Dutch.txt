@@ -1,0 +1,25 @@
+country_decisions = {
+
+	
+	
+
+
+	overthrow_statist_stadholder = {
+		potential = {
+			has_estate_privilege = estate_nobles_orangist_privileges	
+			has_government_attribute = has_dutch_election			
+		}
+		allow = {
+			is_statists_in_power = yes
+			NOT = { has_ruler_flag = ned_orangist_ruler_flag }
+			is_lesser_in_union = no
+		}
+		effect = {
+			kill_ruler = yes
+			add_republican_tradition = -20
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+}

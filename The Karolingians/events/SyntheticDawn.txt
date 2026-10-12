@@ -1,0 +1,11 @@
+namespace = synthetic_dawn
+
+# Synthetics!
+
+# Bordering the Synthetics
+
+# Defeated the Synthetics!
+
+# Province occupied by Synthetics
+
+# Mayans open a temporal rift to fight the synthetics

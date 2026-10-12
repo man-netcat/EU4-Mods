@@ -1,0 +1,119 @@
+namespace = holstein
+
+# Dummy incident
+country_event = {
+	id = holstein.1
+	title = holstein.1.t
+	picture = GOOD_WITH_MONARCH_eventPicture
+	desc = holstein.1.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			1775 = {
+				owner = {
+					save_event_target_as = holstein_owner
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = holstein.1.a
+		event_target:holstein_owner = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_holstein_bad
+			}
+		}
+		custom_tooltip = demand_holstein_tt
+		hidden_effect = {
+			1775 = {
+				owner = {
+					country_event = { id = holstein.2 days = 3 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				1775 = {
+					owner = {
+						OR = {
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_rivalry
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_hostile
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_threatened
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_outraged
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_disloyal
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_rebellious
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = holstein.1.b
+		event_target:holstein_owner = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_holstein_good
+			}
+		}
+		add_imperial_influence = -10
+		1775 = {
+			set_in_empire = no
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				1775 = {
+					owner = {
+						OR = {
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_friendly
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_loyal
+							}
+							ai_attitude = {
+								who = ROOT
+								attitude = attitude_allied
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+
+
+# Holstein owner reacts
+
+# Startup event for Emperor

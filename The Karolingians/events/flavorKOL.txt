@@ -1,0 +1,10 @@
+########################################
+# Events for Cologne
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_kol
+normal_or_historical_nations = yes
+
+# The Bavarian Archbishops

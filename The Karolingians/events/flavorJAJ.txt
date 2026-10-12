@@ -1,0 +1,10 @@
+########################################
+# Flavor Events for Habsan / Janjira
+#
+# Scripted by Henrik Lohmander
+########################################
+
+namespace = flavor_jaj
+normal_or_historical_nations = yes
+
+#Creation of Habsan/Janjira

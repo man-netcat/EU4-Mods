@@ -1,0 +1,86 @@
+namespace = hungarian_revolt_events
+
+
+
+
+
+country_event = {
+	id = hungarian_revolt_events.5
+	title = hungarian_revolt_events.5.t
+	desc = hungarian_revolt_events.5.d
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungarian_revolt_events.5.a
+		
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture_group = ROOT
+				}
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 2
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 2
+			}
+		}
+	}
+	
+	option = {
+		name = hungarian_revolt_events.5.b
+		
+		random_owned_province = {
+			limit = {
+				NOT = {
+					culture_group = ROOT
+				}
+			}
+			add_local_autonomy = 50
+		}
+	}
+}
+
+country_event = {
+	id = hungarian_revolt_events.6
+	title = hungarian_revolt_events.6.t
+	desc = hungarian_revolt_events.6.d
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		is_emperor = yes
+	}
+	
+	option = {
+		name = hungarian_revolt_events.6.a
+		
+		add_imperial_influence = -10
+	}
+}
+
+country_event = {
+	id = hungarian_revolt_events.7
+	title = hungarian_revolt_events.7.t
+	desc = hungarian_revolt_events.7.d
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungarian_revolt_events.7.a
+		
+		add_stability = -1
+	}
+}
+
+#The Hungarian subject breaks away!
+
+#The Hungarian vassal joins us, but war happens!
+
+#The Hungarian vassal joins us, but war happens!

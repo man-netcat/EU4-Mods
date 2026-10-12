@@ -1,0 +1,101 @@
+#### The King in Prussia ###
+### By Daniel Tolman ###
+
+namespace = king_in_prussia
+
+
+# Mock imperial incident
+
+# Follow-up for Prussia
+country_event = {
+	id = king_in_prussia.3
+	title = king_in_prussia.3.t
+	desc = {
+		trigger = {
+			has_country_flag = king_in_prussia_elevated
+		}
+		desc = king_in_prussia.3.d
+	}
+	desc = {
+		trigger = {
+			has_country_flag = king_in_prussia_compromise
+		}
+		desc = king_in_prussia.3.d2
+	}
+	desc = {
+		trigger = {
+			has_country_flag = king_in_prussia_rejection
+		}
+		desc = king_in_prussia.3.d3
+	}
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		trigger = {
+			has_country_flag = king_in_prussia_elevated
+		}
+		name = king_in_prussia.3.a
+		set_government_rank = 2
+		add_prestige = 25
+		add_legitimacy = 25
+		reverse_add_opinion = {
+			who = emperor
+			modifier = elevated_prussia
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = king_in_prussia_compromise
+		}
+		name = king_in_prussia.3.b
+		set_government_rank = 2
+		add_prestige = 10
+		add_legitimacy = 10
+		reverse_add_opinion = {
+			who = emperor
+			modifier = opinion_king_in_prussia
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = king_in_prussia_rejection
+		}
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 100
+				total_development = 500
+			}
+		}
+		name = king_in_prussia.3.c
+		set_government_rank = 2
+		set_in_empire = no
+		reverse_add_opinion = {
+			who = emperor
+			modifier = opinion_prussia_not_recognized
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = king_in_prussia_rejection
+		}
+		ai_chance = { 
+			factor = 100 
+			modifier = {
+				factor = 0
+				total_development = 500
+			}
+		}
+		name = king_in_prussia.3.optd
+		add_prestige = -10
+		add_legitimacy = -10
+		add_casus_belli = {
+			target = emperor
+			type = cb_insult
+			months = 24
+		}
+	}
+}

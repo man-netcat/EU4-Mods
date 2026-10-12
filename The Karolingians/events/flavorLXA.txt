@@ -1,0 +1,10 @@
+namespace = flavor_lxa
+normal_or_historical_nations = yes
+
+# Civil War Breakup Events by Daniel Tolman
+
+# Champassak
+
+# Vientiane
+
+# Luang Prabang

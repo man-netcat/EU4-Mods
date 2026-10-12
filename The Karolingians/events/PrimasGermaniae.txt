@@ -1,0 +1,76 @@
+# Primas Germaniae event series
+
+normal_or_historical_nations = yes
+
+# Primas Germaniae
+
+# Title of Primas Germaniae Questioned
+
+# Primas Germaniae
+country_event = {
+	id = 761
+	title = "EVTNAME761"
+	desc = "EVTDESC761"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA761"
+		every_country = {
+			limit = { has_country_modifier = primas_germaniae }
+			remove_country_modifier = primas_germaniae
+			set_country_flag = primas_germaniae_lost
+			add_opinion = { who = ROOT modifier = opinion_accepted_primas_germaniae }
+		}
+		add_country_modifier = {
+			name = "primas_germaniae"
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB761"
+	}
+	option = {
+		name = "EVTOPTC761"
+		add_opinion = { who = FROM modifier = opinion_supported_primas_germaniae }
+		set_country_flag = primas_germaniae_declined
+	}
+}
+
+# Primas Germaniae Lost
+country_event = {
+	id = 762
+	title = "EVTNAME762"
+	desc = "EVTDESC762"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		papacy_active = yes
+		has_country_flag = primas_germaniae_lost
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "EVTOPTA762"
+		every_country = {
+			limit = { has_country_modifier = primas_germaniae }
+			add_opinion = { who = ROOT modifier = opinion_congratulated_new_primas_germaniae }
+		}
+		clr_country_flag = primas_germaniae_lost
+		add_prestige = 1
+	}
+	option = {
+		name = "EVTOPTB762"
+		every_country = {
+			limit = { has_country_modifier = primas_germaniae }
+			add_opinion = { who = ROOT modifier = opinion_lost_primas_germaniae }
+		}
+		clr_country_flag = primas_germaniae_lost
+	}
+}
+
+# Title of Primas Germaniae Lost
+
+# Envoy from the Pope

@@ -1,0 +1,67 @@
+########################################
+# Made by Parmelion
+########################################
+
+namespace = georgian_crisis
+
+# Georgian Crisis
+country_event = {
+	id = georgian_crisis.1
+	title = georgian_crisis.1.t
+	desc = georgian_crisis.1.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	immediate = {
+		hidden_effect = { set_country_flag = geo_crisis_fired }
+	}
+
+	option = {
+		name = "georgian_crisis.1.a"
+		add_stability = -2
+		random_owned_province = {
+			limit = { is_core = ROOT }
+			spawn_rebels = {
+				type = 	pretender_rebels
+				religion = ROOT
+				size = 1
+			}
+		}
+		random_owned_province = {
+			limit = { is_core = ROOT }
+			spawn_rebels = {
+				type = 	pretender_rebels
+				religion = ROOT
+				size = 1
+			}
+		}
+	}
+}
+
+# Order Restored
+country_event = {
+	id = georgian_crisis.2
+	title = georgian_crisis.2.t
+	desc = georgian_crisis.2.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+	immediate = {
+		on_non_estate_disaster_end = yes
+	}
+
+	option = {
+		name = "georgian_crisis.2.a"
+		add_stability_or_adm_power = yes
+		set_country_flag = geo_crisis_completed
+	}
+}
+
+# Atabegs Declare Independence
+
+# Imereti Declares Independence

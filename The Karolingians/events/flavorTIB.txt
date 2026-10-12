@@ -1,0 +1,12 @@
+########################################
+# Flavor Events for Tibet
+#
+# Scripted by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_tib
+normal_or_historical_nations = yes
+
+# The Dalai Lama takes control
+
+# Tibetan relations with the Hordes by Daniel Tolman

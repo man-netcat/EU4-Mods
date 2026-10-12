@@ -1,0 +1,33 @@
+namespace = flavor_gra
+normal_or_historical_nations = yes
+
+#Fall of Granada
+
+
+country_event = {
+	id = flavor_gra.3
+	title = "flavor_gra.3.t"
+	desc = "flavor_gra.3.d"
+	picture = BIG_BOOK_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_gra.3.a"
+		set_capital = 361 #Cairo
+		change_religion = shiite
+		add_country_modifier = {
+			name = "adu_popular_appeal"
+			duration = 7300
+		}
+	}
+	
+	option = {
+		name = "flavor_gra.3.b"
+		add_country_modifier = {
+			name = "adu_conservative_backlash"
+			duration = 7300
+		}
+	}
+	
+}

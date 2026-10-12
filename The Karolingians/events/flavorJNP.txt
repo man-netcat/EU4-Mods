@@ -1,0 +1,30 @@
+########################################
+# Flavor Events for Jaunpur
+#
+# Scripted by Henrik Lohmander
+########################################
+
+namespace = flavor_jnp
+normal_or_historical_nations = yes
+
+#The decline of Delhi and the rise of Jaunpur
+
+#The Rajputs of the Doab
+
+#Kabir
+
+#The Jaunpur Qila
+
+#Jami Masjid Mosque
+
+#The Varanasi Pilgrims
+
+#The Sadak-e-Azam
+
+#The Kalpi War
+
+#The fate of Kalpi
+
+#Permission Granted
+
+#The Sultan of Malwa refuses

@@ -1,0 +1,15 @@
+########################################
+# Events for Nubia
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_nub
+normal_or_historical_nations = yes
+
+
+
+# Spawn Funj
+
+
+# Event to send to other province owners of the area when Funj is formed.

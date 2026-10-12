@@ -1,0 +1,725 @@
+########################################
+# Events for Women in History
+#
+# written by Sara Wendel-Örtqvist
+########################################
+
+namespace = women_history_events
+
+normal_or_historical_nations = yes
+
+# Queen Elizabeth I (1533-1603)
+
+# Queen Catherine II (the Great) (1729-1796)
+
+# Kösem Sultan (1590-1651)
+
+# Maria Theresa (1717-1780)
+
+# Roxelana (1500-1558)
+
+# Queen Christina of Sweden (1626-1689)
+
+# Germaine de Staël (1766-1817)
+
+# Mary Wollstonecraft (1759-1797)
+
+# Aphra Behn (1640-1689)
+
+# Eliza Lucas 1722-1793
+
+# Isabella of Castile (1451-1504)
+
+# Sophie Germain (1776 - 1831)
+
+# Caterina Sforza
+
+# Catherine de Medici 1519-1589
+
+# Amalie Elisabeth
+
+# La Malinche (c. 1500-unknown)
+
+# Juana Ines de la Cruz
+
+# Jeanne d'Albret
+
+# Nzinga of Ndongo and Matamba
+
+# Tarabai
+
+# Jane Austen
+
+# Gráinne Ní Mháille
+country_event = {
+	id = women_history_events.22
+	title = women_history_events.22.t
+	desc = women_history_events.22.d
+	picture = wihgfx_FEMALES_eventPicture
+
+	trigger = {
+		OR = {
+			AND = {
+				has_government_attribute = is_pirate_republic_reform
+				has_global_flag = grace_omalley_flag
+			}
+			AND = {
+				owns = 375
+				owns = 376
+				is_year = 1530
+				NOT = {
+					is_year = 1605
+				}
+			}
+		}
+		NOT = {
+			has_global_flag = wih_grainnenimhaille_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_grainnenimhaille_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.22.a
+		trigger = {
+			NOT = { has_global_flag  = grace_omalley_flag }
+		}
+		add_meritocracy_effect = yes
+		define_advisor = {
+			female = yes
+			type = commandant
+			culture = irish
+			skill = 2
+			name = "Grainne Ni Mhaille"
+			discount = yes
+		}
+	}
+	option = {
+		name = women_history_events.22.b
+		trigger = {
+			NOT = { has_global_flag  = grace_omalley_flag }
+		}
+		define_admiral = {
+			name = "Grainne Ni Mhaille"
+			shock = 4
+			fire = 4
+			manuever = 3
+			female = yes
+		}
+	}
+	option = {
+		name = women_history_events.22.c
+		trigger = {
+			NOT = { has_global_flag  = grace_omalley_flag }
+		}
+		add_prestige = 10
+	}
+	option = {
+		name = women_history_events.22.da
+		trigger = {
+			has_global_flag  = grace_omalley_flag
+		}
+		define_ruler = {
+			name = "Grainne Ni Mhaille"
+			adm = 3
+			dip = 4
+			mil = 5
+			culture = irish
+		}
+		if = {
+			limit = {
+				has_spare_flagship_capacity = yes
+				capital_scope = {
+					has_port = yes
+				}
+			}
+			capital_scope = {
+				create_flagship = {	
+					name = "White Seahorse"
+					type = heavy_ship
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				capital_scope = {
+					has_port = yes
+				}
+			}
+			capital_scope = {
+				create_named_ship = {
+					name = "White Seahorse"
+					type = heavy_ship
+				}
+			}
+		}
+	}
+}
+
+# Julie d'Aubigny
+
+# Anne Boleyn
+
+# Siti Wan Kembang
+country_event = {
+	id = women_history_events.25
+	title = women_history_events.25.t
+	desc = women_history_events.25.d
+	picture = wihgfx_FEMALE_GENERAL_eventPicture
+
+	trigger = {
+		has_consort = no
+		owns = 599
+		is_year = 1585
+		NOT = {
+			is_year = 1630
+		}
+		NOT = {
+			has_global_flag = wih_sitiwankembang_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_sitiwankembang_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.25.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			female = yes
+			type = commandant
+			skill = 2
+			name = "Siti Wan Kembang"
+			culture = malayan
+			discount = yes
+		}
+	}
+	option = {
+		name = women_history_events.25.b
+		define_general = {
+			name = "Siti Wan Kembang"
+			shock = 5
+			fire = 2
+			manuever = 5
+			siege = 1
+			female = yes
+		}
+	}
+	option = {
+		name = women_history_events.25.c
+		add_prestige = 10
+	}
+}
+
+# Catherine of Aragon 
+
+# Margaret of Anjou
+
+# Louise of Mecklenburg-Strelitz (1776 - 1810)
+
+# Ayse Hafsa Sultan
+
+# Roshanara Begum
+
+# Abigail Adams (1744 - 1818)
+
+# Rani Abbakka Chowta
+
+# Sacagawea (1787? - 1812)
+
+# Pari Khan Khanum (d. 1578)
+
+# Meera Bai
+country_event = {
+	id = women_history_events.35
+	title = women_history_events.35.t
+	desc = women_history_events.35.d
+	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
+
+	trigger = {
+		religion = hinduism
+		primary_culture = rajput
+		capital_scope = {
+			region = west_india_region
+		}
+		NOT = {
+			is_year = 1500
+		}
+		NOT = {
+			has_global_flag = wih_meerabai_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_meerabai_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.35.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			female = yes
+			type = theologian
+			culture = rajput
+			discount = yes
+			skill = 2
+			name = "Meera Bai"
+		}
+	}
+	option = {
+		name = women_history_events.35.b
+		add_country_modifier = {
+			name = wih_meera_bai
+			duration = 7300
+		}
+	}
+}
+
+# Amina
+
+# Mandukhai Khatun
+
+# Ho Xuan Huong
+
+# Inion Dubh
+
+# Rani Durgavati
+
+# Kateri Tekakwitha
+country_event = {
+	id = women_history_events.41
+	title = women_history_events.41.t
+	desc = women_history_events.41.d
+	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
+
+	trigger = {
+		OR = {
+			owns = 965 # Manhattan
+			owns = 992 # Algonquin
+		}
+		religion = catholic
+		is_year = 1656
+		NOT = {
+			is_year = 1700
+		}
+		NOT = {
+			has_global_flag = wih_kateritekakwitha_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_kateritekakwitha_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.41.a
+		add_country_modifier = {
+			name = wih_kateritekakwitha
+			duration = 7300
+		}
+	}
+}
+
+# Maria Sibylla Merian
+
+# Kenau Simonsdochter Hasselaer
+
+# Elena Cornaro Piscopia
+
+# Yekaterina Romanovna Vorontsova-Dashkova
+
+# Marie Crous
+
+# Ohatsu
+country_event = {
+	id = women_history_events.47
+	title = women_history_events.47.t
+	desc = women_history_events.47.d
+	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
+
+	trigger = {
+		OR = {
+			has_reform = shogunate
+			has_reform = daimyo
+		}
+		is_year = 1570
+		NOT = {
+			is_year = 1633
+		}
+		NOT = {
+			has_global_flag = wih_ohatsu_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_ohatsu_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.47.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			female = yes
+			type = diplomat
+			discount = yes
+			skill = 2
+			culture = japanese
+			name = "Ohatsu"
+		}
+	}
+	option = {
+		name = women_history_events.47.b
+		add_country_modifier = {
+			name = wih_ohatsu
+			duration = 7300
+		}
+	}
+}
+
+# Empress Dowager Xiaozhuang (1613 - 1688)
+
+# Inés de Suárez
+
+# Kaihime
+country_event = {
+	id = women_history_events.50
+	title = women_history_events.50.t
+	desc = women_history_events.50.d
+	picture = wihgfx_FEMALES_eventPicture
+
+	trigger = {
+		OR = {
+			has_reform = shogunate
+			has_reform = daimyo
+		}
+		is_year = 1572
+		NOT = {
+			is_year = 1650
+		}
+		NOT = {
+			has_global_flag = wih_kaihime_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_kaihime_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.50.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			female = yes
+			discount = yes
+			type = commandant
+			culture = japanese
+			skill = 2
+			name = "Kaihime"
+		}
+	}
+	option = {
+		name = women_history_events.50.b
+		define_general = {
+			name = "Kaihime"
+			female = yes
+			fire = 5
+			shock = 3
+			manuever = 4
+			siege = 2
+		}
+	}
+}
+
+# Nazo Tokhi
+
+# Qin Liangyu
+
+# Ilona Zrinyi
+
+# Wang Zhenyi
+
+# Suriyothai
+
+# Sayyida al Hurra
+country_event = {
+	id = women_history_events.56
+	title = women_history_events.56.t
+	desc = women_history_events.56.d
+	picture = wihgfx_FEMALES_eventPicture
+
+	trigger = {
+		NOT = { has_dlc = "Golden Century" }
+		OR = {
+			owns = 1751
+			owns = 334
+		}
+		religion_group = muslim
+		is_year = 1485
+		NOT = {
+			is_year = 1543
+		}
+		NOT = {
+			has_global_flag = wih_sayyidaalhurra_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_sayyidaalhurra_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.56.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			name = "Sayyida al Hurra"
+			culture = berber
+			type = navigator
+			discount = yes
+			skill = 2
+			female = yes
+		}
+	}
+	option = {
+		name = women_history_events.56.b
+		define_admiral = {
+			name = "Sayyida al Hurra"
+			shock = 4
+			fire = 4
+			manuever = 4
+			female = yes
+		}
+	}
+}
+
+# Olympe de Gouges
+
+# Izumo no Okuni
+country_event = {
+	id = women_history_events.58
+	title = women_history_events.58.t
+	desc = women_history_events.58.d
+	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
+
+	trigger = {
+		OR = {
+			has_reform = shogunate
+			has_reform = daimyo
+		}
+		is_year = 1571
+		NOT = {
+			is_year = 1800
+		}
+		NOT = {
+			has_global_flag = wih_izumonookuni_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_izumonookuni_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.58.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			name = "Izumo no Okuni"
+			culture = japanese
+			discount = yes
+			type = artist
+			skill = 2
+			female = yes
+		}
+	}
+	option = {
+		name = women_history_events.58.b
+		add_country_modifier = {
+			name = wih_izumonookuni
+			duration = 7300
+		}
+	}
+}
+
+# Nora of Kelmendi
+
+# Martha Washington
+
+# Elizabeth Wilbraham
+
+# Anna Bunina
+
+# Dorothea of Saxe-Lauenburg
+
+# Mary of Hungary
+
+# Margaret of Austria, Duchess of Savoy
+
+# Isabella Clara Eugenia
+
+# Urszula Meyerin
+
+# Elzbieta Helena Sieniawska
+
+# Marie Louise Gonzaga
+
+# Maria Carolina of Austria
+
+# Marie Antoinette
+
+# Anacaona
+country_event = {
+	id = women_history_events.72
+	title = women_history_events.72.t
+	desc = women_history_events.72.d
+	picture = wihgfx_FEMALES_eventPicture
+
+	trigger = {
+		is_year = 1474
+		NOT = {
+			is_year = 1503
+		}
+		any_owned_province = {
+			region = carribeans_region
+		}
+		capital_scope = {
+			continent = europe
+		}
+		NOT = {
+			has_global_flag = wih_anacaona_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = wih_anacaona_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.72.a
+		add_meritocracy_effect = yes
+		define_advisor = {
+			name = "Anacaona"
+			type = statesman
+			discount = yes
+			culture = arawak
+			religion = animism
+			skill = 2
+			female = yes
+		}
+	}
+	option = {
+		name = women_history_events.72.b
+		add_dip_power = 50
+	}
+}
+
+# Barbara of Cilli
+
+# Eleni of Ethiopia
+
+# Tun Fatimah
+
+# Khayr al-Nisa Begum
+
+# Sophia Alekseyevna
+
+# Madame Tussaud
+
+# Queen Pokou
+
+# Ratu Hijau
+
+# Rani Mangammal
+
+# Anne Bonny
+
+# Lucrezia Borgia
+
+# Nur Jahan
+
+# Mary Read
+
+# Mumtaz Mahal
+
+# Nanyehi
+
+# Vendela Skytte
+
+# Ahilyabai Holkar
+
+# Jahanzeb Banu Begum
+
+# Ching Shih
+
+# Mentewab
+
+# Safiye Sultan
+
+# Angelica Kauffman
+
+# Elizabeth of Russia
+
+# Anna of Russia
+
+# Nurbanu Sultan
+
+# Heo Nanseolheon
+
+# Mariam-uz-Zamani
+
+# Franciszka Urszula Radziwillowa

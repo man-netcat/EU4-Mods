@@ -1,0 +1,14 @@
+########################################
+# Events for Sulu
+#
+# written by Rufus Tronde
+########################################
+
+
+namespace = flavor_sul
+normal_or_historical_nations = yes
+
+# Spawn Sulu
+
+
+# Event to send to other province owners of the area when Sulu is formed.

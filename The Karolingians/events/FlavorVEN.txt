@@ -1,0 +1,575 @@
+###############################################################
+# Events for Venice
+#
+# written by Johan Andersson, Niklas Strid & Henrik Lohmander
+###############################################################
+
+namespace = flavor_ven
+normal_or_historical_nations = yes
+
+# The Veneto-Turkish Conflict
+
+# Compensation Denied
+country_event = {
+	id = flavor_ven.2
+	title = "flavor_ven.EVTNAME2"
+	desc = "flavor_ven.EVTDESC2"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {		# At least we now have a claim on it
+		name = "flavor_ven.EVTOPTA2"
+	}
+}
+
+# Alexandria Aquired
+country_event = {
+	id = flavor_ven.3
+	title = "flavor_ven.EVTNAME3"
+	desc = "flavor_ven.EVTDESC3"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {		# Excellent
+		name = "EXCELLENT"
+	}
+}
+
+# Control of Famagusta (from CYP event)
+country_event = {
+	id = flavor_ven.4
+	title = flavor_ven.4.t
+	desc = flavor_ven.4.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_ven.4.a
+		add_prestige = 5
+		163 = {
+			add_trade_modifier = {
+				who = root
+				duration = 7300
+				power = 5
+				key = control_of_famagusta
+			}
+		}		
+	}
+}
+
+# Stratioti
+
+# Ottomans in Morea
+
+#Ottoman response to .6
+
+# Monte Vecchio & Monte Nuovo
+
+# Dominican Inquistion
+
+# Arte dell'Abbaco
+
+# Conflict with the Papacy
+
+# The Town of Sin
+
+#Spice Trade Threatened
+
+# Venice sends help
+country_event = {
+	id = flavor_ven.14
+	title = flavor_ven.14.t
+	desc = flavor_ven.14.d
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = flavor_ven.14.a
+		4346 = {
+			add_trade_modifier = {
+				who = root
+				duration = 3650
+				power = 15
+				key = venetian_help
+			}
+		}
+
+	}
+}	
+
+# Ministers of the Waterways
+
+# The Ghetto of Venice	
+
+# Antonio Pigafetta
+
+# Conscription to Galleys
+
+#Fortezza di Sant'Andrea
+	
+# Plague in Venice
+
+# Ponte di Rialto	
+
+# L'Orfeo - The First Opera
+
+# The Birth of Modern Science
+
+# The growing power of the Council of Ten.
+
+# Revoke the laws restraining the Ten.
+
+# Expansion of the Great Council.
+
+# The Barnabotti
+
+# Accademia della Guidecca
+
+# Renier Zen
+
+
+# The Plague of YEAR (1631)
+
+#Dwindling Nobility
+
+#Aldus Manutius & the Aldine Press
+
+#Growth of the Murano Glass Industry
+
+#Guiseppe Briate & the Ciocca
+
+#The trial of Veronica Franco
+
+#Gondola Extravagance
+
+#Venetian School
+
+#Venice is a monarchy
+
+
+##         History of Venice Events         ##
+##         written, designed, localised by  ##
+##                  Big Boss	            ##
+
+#Made for you, to share the love for a game we both hold dear
+
+country_event = { #Tiziano - Venice's Renaissance Champion
+	id = flavor_ven.40
+	title = flavor_ven.40.t
+	desc = flavor_ven.40.d
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.40.a
+
+		define_advisor = {
+			name = "Tiziano"
+			type = artist 
+			cost_multiplier = 0.25
+			skill = 3
+		}
+		if = {
+			limit = { has_dlc = "Rule Britannia" }
+			change_innovativeness = 2
+		}
+		else = { add_adm_power = 25 add_dip_power = 25 add_mil_power = 25 }
+	}
+
+	option = {
+		name = flavor_ven.40.b
+
+		custom_tooltip = tell_me_more_tt
+		hidden_effect = {
+			define_advisor = {
+				name = "Tiziano"
+				type = artist 
+				cost_multiplier = 0.25
+				skill = 3
+			}
+			if = {
+				limit = { has_dlc = "Rule Britannia" }
+				change_innovativeness = 2
+			}
+			else = { add_adm_power = 25 add_dip_power = 25 add_mil_power = 25 }
+		}
+		
+		country_event = {
+			id = flavor_ven.41
+		}
+	}
+}
+
+country_event = { #Venice During the Renaissance
+	id = flavor_ven.41
+	title = flavor_ven.41.t
+	desc = flavor_ven.41.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = flavor_ven.41.a
+
+		#Fascinating!
+	}
+}
+
+country_event = {
+	id = flavor_ven.42 #* 
+	title = flavor_ven.42.t
+	desc = flavor_ven.42.d
+	picture = IMPORTANT_STATUE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ven_splendor_flag
+		}
+	}
+
+	option = {
+		name = flavor_ven.42.a
+
+		add_republican_tradition = 5
+		if = {
+			limit = { has_dlc = "Mandate of Heaven" }
+			custom_tooltip = adm_advisors_will_generate_1_splendor_per_level
+		}
+		else = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+		}
+	}
+
+	option = {
+		name = flavor_ven.40.b
+		
+		add_republican_tradition = 5
+		if = {
+			limit = { has_dlc = "Mandate of Heaven" }
+			custom_tooltip = adm_advisors_will_generate_1_splendor_per_level
+		}
+		else = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+		}
+		custom_tooltip = tell_me_more_tt
+		country_event = {
+			id = flavor_ven.43
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ven.43
+	title = flavor_ven.43.t
+	desc = flavor_ven.43.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.43.a
+
+	}
+}
+
+country_event = { #The Power of the Doge
+	id = flavor_ven.44
+	title = flavor_ven.44.t
+	desc = flavor_ven.44.d
+	picture = ARTWORK_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.44.a
+
+		add_government_power = {
+			mechanic_type = council_of_ten
+			power_type = authority_power
+			value = -10
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ven.45
+	title = flavor_ven.45.t
+	desc = flavor_ven.45.d
+	picture = DOGE_PALACE_eventPicture
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.45.a
+
+		add_government_power = {
+			mechanic_type = council_of_ten
+			power_type = authority_power
+			value = -25
+		}
+		change_estate_land_share = {
+			estate = all
+			share = -5
+		}
+		add_dip_power = 100
+	}
+}
+
+country_event = {
+	id = flavor_ven.46
+	title = flavor_ven.46.t
+	desc = flavor_ven.46.d
+	picture = ARTWORK_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.46.a
+
+		define_advisor = {
+			type = artist
+			cost_multiplier = 0.1
+			skill = 3
+		}
+		custom_tooltip = empty_line_tt
+		add_adm_power = 100
+	}
+}
+
+country_event = { #The Loredanian Academy
+	id = flavor_ven.47
+	title = flavor_ven.47.t
+	desc = flavor_ven.47.d
+	picture = ARTWORK_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.47.a
+
+		if = {
+			limit = { has_dlc = "Rule Britannia" }
+			custom_tooltip = ven_academy_of_the_unknowns_reward_dlc_tt
+		}
+		else = {
+			custom_tooltip = ven_academy_of_the_unknowns_reward_tt
+		}
+		change_ruler_stat = {
+			type = adm
+			amount = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ven.48
+	title = flavor_ven.48.t
+	desc = flavor_ven.48.d
+	picture = ARTWORK_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.48.a
+		change_country_color = { 
+			color = { 128 0 32 }
+		}
+		set_country_flag = has_overriden_color_flag
+		override_country_name = LNS
+		set_country_flag = is_LNS_flag
+		set_country_flag = has_overriden_name_flag
+		set_country_flag = LNS_ideas_flag
+		clr_country_flag = ven_upgrade_state_inuisition_idea_flag
+		country_event = { id = ideagroups.1 }
+	}
+
+	option = {
+		name = flavor_ven.48.b
+		
+		change_country_color = { 
+			color = { 128 0 32 }
+		}
+		set_country_flag = has_overriden_color_flag
+		set_country_flag = LNS_ideas_flag
+		clr_country_flag = ven_upgrade_state_inuisition_idea_flag
+		country_event = { id = ideagroups.1 }
+	}
+
+	option = {
+		name = flavor_ven.48.c
+		
+		override_country_name = LNS
+		set_country_flag = is_LNS_flag
+		set_country_flag = has_overriden_name_flag
+		set_country_flag = LNS_ideas_flag
+		clr_country_flag = ven_upgrade_state_inuisition_idea_flag
+		country_event = { id = ideagroups.1 }
+	}
+
+	option = {
+		name = flavor_ven.48.e
+		
+		set_country_flag = LNS_ideas_flag
+		clr_country_flag = ven_upgrade_state_inuisition_idea_flag
+		country_event = { id = ideagroups.1 }
+	}
+
+	option = {
+		name = flavor_ven.48.f
+		
+		add_prestige_or_monarch_power = { amount = 25 }
+	}
+}
+
+country_event = {
+	id = flavor_ven.49
+	title = flavor_ven.49.t
+	desc = flavor_ven.49.d
+	picture = ARTWORK_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.49.a
+		103 = {
+			if = {
+				limit = { has_building = courthouse }
+				remove_building = courthouse
+				add_building = town_hall
+			}
+			add_base_tax = 3
+		}
+		define_advisor = {
+			name = "Amedeo di Castellamonte"
+			type = natural_scientist
+			cost_multiplier = 0.25
+			skill = 3
+		}
+		add_legitimacy = 10
+		add_republican_tradition = 5
+		add_horde_unity = 10
+		add_devotion = 5
+	}
+}
+
+country_event = {
+	id = flavor_ven.50
+	title = flavor_ven.50.t
+	desc = flavor_ven.50.d
+	picture = ARTWORK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.50.a
+
+		112 = {
+			if = {
+				limit = { has_building = shipyard }
+				remove_building = shipyard
+				add_building_construction = {
+					building = grand_shipyard
+				}
+			}
+			else_if = {
+				limit = { has_building = grand_shipyard }
+				add_base_production = 3
+			}
+			else = { add_building = shipyard }
+		}
+		add_country_modifier = {
+			name = "ven_arsenal_marines"
+			duration = -1
+		}
+	}
+}
+
+
+country_event = { #Venice and the Italian Power Struggle
+	id = flavor_ven.52
+	title = flavor_ven.52.t
+	desc = flavor_ven.52.d
+	picture = ARTWORK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.52.a
+		italy_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		if = { 
+			limit = { 
+				has_dlc = "Rights of Man" 
+				NOT = { num_of_ruler_traits = { amount = 3 } }
+			}				
+			add_ruler_personality = conqueror_personality
+		}
+		else = { 
+			change_ruler_stat = {
+				type = mil
+				amount = 1
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					4740 = {
+						NOT = { trade_goods = silk }
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				4740 = {
+					province_event = { 
+						id = new_flavour_mlo.15 
+						days = 30
+						random = 30
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_ven.53
+	title = flavor_ven.53.t
+	desc = flavor_ven.53.d
+	picture = ARTWORK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_ven.53.a
+
+		add_navy_tradition = 20
+		add_mercantilism_or_monarch_power = { amount = 3 }
+		capital_scope = {
+			add_base_production = 1
+		}
+	}
+}

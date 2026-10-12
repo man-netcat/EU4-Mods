@@ -1,0 +1,55 @@
+country_decisions = {
+
+	
+	christian_daimyo = {
+		potential = {
+			has_reform = daimyo
+			religion = shinto
+			NOT = { has_dlc = "Mandate of Heaven" } #Uses incidents instead.
+			any_owned_province = {
+				religion = catholic
+			}
+		}
+		
+		allow = {
+			dominant_religion = catholic
+			stability = 3
+		}
+		
+		effect = {
+			change_religion = catholic
+			add_stability = -4
+		}
+	}
+	
+	malay_islam_decision = {
+		potential = {
+			culture_group = malay
+			OR = {
+				religion_group = dharmic
+				religion_group = eastern
+			}
+			is_free_or_tributary_trigger = yes
+		}
+		
+		allow = {
+			dominant_religion = sunni
+			stability = 0
+		}
+		
+		effect = {
+			change_religion = sunni
+			add_stability = -1
+			every_known_country = {
+				limit = {
+					culture_group = malay
+					religion = sunni
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_malay_converted_to_islam
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+namespace = tribal_succession
+
+# Tribal Succession Crisis
+
+# Succession Secured!
+country_event = {
+	id = tribal_succession.2
+	title = tribal_succession.2.t
+	desc = tribal_succession.2.d
+	picture = NEW_HEIR_eventPicture
+	
+	trigger = {
+		OR = {
+			has_reform = steppe_horde
+			has_reform = tribal_federation
+		}
+		has_ruler_modifier = tribal_succession_crisis
+		NOT = {
+			has_spawned_rebels = pretender_rebels
+		}
+		has_regency = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = tribal_succession.2.a
+		remove_country_modifier = tribal_succession_crisis
+		add_stability_or_adm_power = yes
+		add_horde_unity = 25
+	}
+}

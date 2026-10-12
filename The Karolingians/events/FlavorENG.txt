@@ -1,0 +1,556 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = flavor_eng
+normal_or_historical_nations = yes
+
+# The Lollard Heresy
+
+# The End of the Hundred Years War
+
+# The Justices of Peace
+
+# Support Middle-class Bureaucrats
+
+# Court of the Star Chamber
+
+# The Enclosure Movement
+
+# The Act of Supremacy
+
+# The Admirality
+
+# The Royal Army
+
+# Jane Grey
+
+# Bloody Mary and King Felip� of England
+
+# The Muscovy Trade Company
+
+# Sir Francis Walsingham
+
+# Sir Thomas Gresham's Currency Reform
+
+# The Northern Rebellion
+
+# The Creation of the London Stock Exchange
+
+# The Canceling of Royal Monopolies
+
+# Hugh O'Neills Irish Rebellion
+
+# The Petition of Rights
+
+# The Parliamentary Conflict
+
+# The Act of Navigation
+
+# The Decree of Indulgence and the Bill of Test
+
+# The Creation of Bank of England
+
+# Jacobite Rebellion
+
+# Sir Robert Walpole
+
+# Captain Jenkins Ear
+
+# Jacobite Rebellion
+
+# William Pitt the Elder
+
+# The East India Company
+country_event = {
+	id = flavor_eng.9145
+	title = "flavor_eng.EVTNAME9145"
+	desc = "flavor_eng.EVTDESC9145"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {			# We will exploit this!
+		name = "flavor_eng.EVTOPTA9145"
+		add_treasury = 100
+	}
+}
+
+# William Pitt the Younger
+
+# The Meuthen Agreement
+
+# The Gunpowder Plot
+
+
+########################################
+# Minor Flavor Events                  #
+########################################
+
+# Thomas Hobbes publishes the 'Leviathan'
+
+# Adam Smith publishes 'The Wealth of Nations'
+
+# David Hume
+
+# John Locke
+
+# Isaac Newton
+
+# Shakespeare
+
+# Lack of an Heir
+
+# Rumors Dispelled
+
+# The Rise of the Tudors
+country_event = { 
+	id = flavor_eng.9237
+	title = flavor_eng.9237.t
+	desc = flavor_eng.9237.d
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+ 
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	trigger = {
+		has_country_flag = war_of_the_roses_ended
+		OR = {
+			dynasty = York
+			dynasty = Lancaster
+		}
+		is_lesser_in_union = no
+		has_government_attribute = heir
+		NOT = { had_country_flag = { flag = war_of_the_roses_was_had days = 3650 } } #If you're under a union and get out of it quickly enough you'll still get this but otherwise you won't.
+	}
+
+	option = {
+	name = flavor_eng.9237.a  # There will never be reconciliation between our two houses
+		ai_chance = { factor = 0 }
+		every_owned_province = {
+			add_province_modifier = {
+				name = add_unrest_5_modifier
+				duration = 1825
+			}
+		}
+		add_prestige = 10
+	}
+
+	option = {
+		name = flavor_eng.9237.b  # It is time for peace, let us join our two houses together in marriage 
+		ai_chance = { factor = 100 }
+		add_stability_or_adm_power = yes
+		define_heir = {
+			claim = 100
+			name = "Henry #0"
+			dynasty = "Tudor"
+			culture = english
+			adm = 3
+			dip = 4
+			mil = 2
+			age = 24
+		}
+	}
+}
+	
+# Rule Britannia - Oxbridge rivalry
+country_event = { 
+	id = flavor_eng.9880
+	title = flavor_eng.9880.t
+	desc = flavor_eng.9880.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		237 = {
+			owned_by = ROOT
+		}
+		4370 = {
+			owned_by = ROOT
+		}
+		OR = {
+			mission_completed = eng_rb_universities
+			mission_completed = gbr_ave_renovate_universities
+		}
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = flavor_eng.9880.a
+		
+		if = {
+			limit = {
+				check_variable = {
+					which = oxbridge_subject
+					value = 1
+				}
+				NOT = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 2
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "rb_eng_passage_spheres"
+				duration = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = oxbridge_subject
+					value = 2
+				}
+				NOT = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 3
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "rb_eng_theory_warfare"
+				duration = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = oxbridge_subject
+					value = 3
+				}
+				NOT = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 4
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "rb_eng_philosophy_royalty"
+				duration = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = oxbridge_subject
+					value = 4
+				}
+				NOT = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 5
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "rb_eng_divine_common"
+				duration = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = oxbridge_subject
+					value = 5
+				}
+			}
+			add_country_modifier = {
+				name = "rb_eng_national_economy"
+				duration = 1825
+			}
+		}
+		custom_tooltip = "flavor_eng.9880.a.tooltip"
+		hidden_effect = {
+			country_event = {
+				id = flavor_eng.9880
+				days = 3650
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 1
+					}
+					NOT = {
+						check_variable = {
+							which = oxbridge_subject
+							value = 2
+						}
+					}
+				}
+				random_list = {
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 2
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 3
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 4
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 5
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 2
+					}
+					NOT = {
+						check_variable = {
+							which = oxbridge_subject
+							value = 3
+						}
+					}
+				}
+				random_list = {
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 1
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 3
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 4
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 5
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 3
+					}
+					NOT = {
+						check_variable = {
+							which = oxbridge_subject
+							value = 4
+						}
+					}
+				}
+				random_list = {
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 1
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 2
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 4
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 5
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 4
+					}
+					NOT = {
+						check_variable = {
+							which = oxbridge_subject
+							value = 5
+						}
+					}
+				}
+				random_list = {
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 1
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 2
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 3
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 5
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_subject
+						value = 5
+					}
+				}
+				random_list = {
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 1
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 2
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 3
+						}
+					}
+					25 = {
+						set_variable = {
+							which = oxbridge_subject
+							value = 4
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_symposium
+						value = 0
+					}
+					NOT = {
+						check_variable = {
+							which = oxbridge_symposium
+							value = 1
+						}
+					}
+				}	
+				set_variable = { which = oxbridge_symposium value = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_symposium
+						value = 1
+					}
+					NOT = {
+						check_variable = {
+							which = oxbridge_symposium
+							value = 2
+						}
+					}
+				}	
+				set_variable = { which = oxbridge_symposium value = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = oxbridge_symposium
+						value = 2
+					}
+				}	
+				set_variable = { which = oxbridge_symposium value = 1 }
+			}
+		}
+	}
+}
+
+# Emperor - Votes for Women (by James Beaumont)
+country_event = {
+	id = flavor_eng.99
+	title = flavor_eng.99.t
+	desc = flavor_eng.99.d
+	picture = wihgfx_FEMALE_GENERAL_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		capital_scope = {
+			region = british_isles_region
+		}
+		OR = {
+			culture_group = british
+			culture_group = gaelic
+			primary_culture = anglois
+			primary_culture = anglosaxon
+		}
+		has_reform = revolutionary_republic_reform
+	}
+
+	mean_time_to_happen = {
+		years = 2
+	}
+	
+	option = {
+		name = flavor_eng.99.a
+		add_country_modifier = {
+			name = sister_suffragettes
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = flavor_eng.99.b
+		add_country_modifier = {
+			name = sexist_revolution
+			duration = 3650
+		}
+	}
+}

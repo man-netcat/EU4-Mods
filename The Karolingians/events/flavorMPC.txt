@@ -1,0 +1,12 @@
+########################################
+# Events for Mapuche
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_mpc
+normal_or_historical_nations = yes
+
+# Toqui
+
+# State Organisation

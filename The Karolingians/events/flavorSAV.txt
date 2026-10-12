@@ -1,0 +1,103 @@
+######################################
+## Flavour Events of Savoy-Piedmont ##
+## by Pierre du Plessis             ##
+######################################
+
+namespace = new_flavour_sav
+normal_or_historical_nations = yes
+
+#The City of Turin
+country_event = {
+	id = new_flavour_sav.1
+	title = new_flavour_sav.1.name
+	desc = new_flavour_sav.1.desc
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = new_flavour_sav.1.A
+
+		if = {
+			limit = {
+				NOT = {
+					capital_scope = {
+						province_id = 103
+					}
+				}
+			}
+			set_capital = 103
+		}
+		103 = {
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				num_of_owned_provinces_with = {
+					value = 10
+					culture_group = latin
+				}
+			}
+		}
+	}
+	option = {
+		name = new_flavour_sav.1.B
+
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+		}
+
+		if = {
+			limit = {
+				capital_scope = {
+					culture = occitain
+				}
+			}
+			change_primary_culture = occitain
+			add_accepted_culture = piedmontese
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 4
+						culture = occitain
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				num_of_owned_provinces_with = {
+					value = 10
+					culture_group = french
+				}
+			}
+			modifier = {
+				factor = 10
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 2
+						culture_group = latin
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#The Order of Saints Maurice and Lazarus
+
+
+#Claim to the Kingdom of Cyprus
+
+#Antipope Felix V

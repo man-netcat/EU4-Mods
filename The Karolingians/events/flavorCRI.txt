@@ -1,0 +1,61 @@
+########################################
+# Flavor Events for Crimea
+#
+# Scripted by Henrik Lohmander
+########################################
+
+namespace = flavor_cri
+normal_or_historical_nations = yes
+
+# Death of Haji I Giray
+
+# Crimean Ruler asks for Ottoman Support
+
+#Crimean Pretender Asks for Ottoman Support
+
+#The Ottoman Sultan sends support
+
+#The Ottomans Refuse to Help
+country_event = {
+	id = flavor_cri.5
+	title = "flavor_cri.5.t"
+	desc = "flavor_cri.5.d"
+	picture = RELIGION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "flavor_cri.5.a" #And so we stand alone.
+		random_owned_province = {
+			limit = { is_capital = no }
+			spawn_rebels = {
+				size = 1
+				type = pretender_rebels
+			}
+		}
+	}
+}
+
+#The Ottomans have installed Mengli Giray
+
+#Mengli Giray Installed in the Crimean Khanate
+country_event = {
+	id = flavor_cri.7
+	title = "flavor_cri.7.t"
+	desc = "flavor_cri.7.d"
+	picture = RELIGION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "flavor_cri.7.a" #
+		custom_tooltip = flavor_cri.7.a.tt
+	}
+}
+
+# Restoration of the Ilkhanate (alt history)
+# by Daniel Tolman

@@ -1,0 +1,21 @@
+namespace = hansa_incident
+
+# For Lubeck
+
+# Dummy incident
+
+# For free cities
+
+# Notification of Embargo
+country_event = {
+	id = hansa_incident.4
+	title = hansa_incident.4.t
+	picture = HRE_eventPicture
+	desc = hansa_incident.4.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hansa_incident.4.a
+	}
+}

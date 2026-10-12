@@ -1,0 +1,10 @@
+########################################
+# Flavor Events for Novgorod
+#
+# Scripted by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_nov
+normal_or_historical_nations = yes
+
+# Civil War in Novgorod

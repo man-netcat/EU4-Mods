@@ -1,0 +1,36 @@
+country_decisions = {
+
+
+	
+	no_more_celestial_empire = {
+		potential = {
+			has_reform = celestial_empire
+			NOT = { has_dlc = "Mandate of Heaven" }
+		}
+		allow = {
+			OR = {
+				ADM = 4
+				DIP = 4
+				MIL = 4
+			}
+			has_institution = feudalism
+			has_institution = renaissance
+			has_institution = new_world_i
+			has_institution = printing_press
+			OR ={
+				has_institution = global_trade
+				has_institution = manufactories
+				has_institution = enlightenment
+			}
+			reform_level = 4
+		}
+		effect = {
+			remove_government_reform = celestial_empire
+			add_government_reform = parliamentary_reform
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

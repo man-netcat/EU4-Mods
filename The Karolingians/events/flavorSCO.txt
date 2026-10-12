@@ -1,0 +1,66 @@
+
+normal_or_historical_nations = yes
+
+# Braveheart
+
+########################################
+# Flavor Events for Scotland
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_sco
+
+#The Breaking of the Douglases
+
+#The Auld Alliance
+
+#Cardinal Beaton
+
+#John Knox and the Religious Strife
+
+# The First Covenant
+
+# The Scottish East India Company
+
+# Major Road Constructions in the Highlands
+
+#The Glasgow Chamber of Commerce
+
+# George Bruce of Carnock
+
+# Witchcraft Acts
+
+# The Annexation of London
+country_event = {
+	id = flavor_sco.11
+	title = "flavor_sco.EVTNAME11"
+	desc = "flavor_sco.EVTDESC11"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	# move everything to edinburgh
+	option = {
+		name = "flavor_sco.EVTOPTA11"
+		236 = {
+			add_base_tax = -2
+			add_base_manpower = -2
+			add_base_production = -2
+		}
+		248 = {
+			add_base_tax = 3
+			add_base_manpower = 3
+			add_base_production = 3
+			add_province_modifier = {
+				name = "edinburgh_london_modifier"
+				duration = 7300
+			}
+		}
+	}
+	# leave london alone
+	option = {
+		name = "flavor_sco.EVTOPTB11"
+		add_stability_or_adm_power = yes
+	}
+}

@@ -1,0 +1,183 @@
+namespace = emp_mission_events
+
+# The Pope cedes Avignon to Provence
+
+# Geneva wants to join the Confederacy
+
+# The Geneva Conventions
+
+# Geneva overlord notified of increased liberty desire
+
+# The HRE is crowned by the Pope
+
+# The Fire of Moscow
+country_event = {
+	id = emp_mission_events.6
+	title = emp_mission_events.6.t
+	desc = emp_mission_events.6.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			295 = {
+				owner = {
+					save_event_target_as = firestarter_country
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = emp_mission_events.6.a
+		295 = {
+			add_base_tax = -4
+			add_base_production = -4
+			add_base_manpower = -4
+		}
+	}
+}
+
+# Smashing of the Ducal Ring of Normandy
+
+# Bohemia decides the fate of Brandenburg
+
+# Bohemia decides the fate of Saxony
+
+# The Duke of Alen�on by Daniel Tolman
+
+
+
+# Swabian nations join the rising Swabia
+country_event = {
+	id = emp_mission_events.11
+	title = emp_mission_events.11.name
+	desc = emp_mission_events.11.desc
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { # join them
+		name = emp_mission_events.11.a
+		
+		from = {
+			hidden_effect = { country_event = { id = emp_mission_events.13 } }
+			tooltip = { inherit = root }
+		}
+		if = {
+			limit = { ai = no }
+			custom_tooltip = full_annexation_tooltip
+		}
+
+		ai_chance = {
+			factor = 1.5
+			modifier = {
+				factor = 0.5
+				NOT = {
+					has_opinion = {
+						who = from
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = from
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = from
+					value = 190
+				}
+			}
+			modifier = {
+				factor = 0.5
+				num_of_cities = 3
+			}
+			modifier = {
+				factor = 0.1
+				num_of_cities = 5
+			}
+		}
+	}
+	option = { # do not join them
+		name = emp_mission_events.11.b
+
+		add_stability = -1
+		from = { country_event = { id = emp_mission_events.12 } }
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_opinion = {
+					who = from
+					value = 120
+				}
+				NOT = {
+					num_of_cities = 5
+				}
+			}
+		}
+	}
+}
+
+# They said no to .11
+country_event = {
+	id = emp_mission_events.12
+	title = emp_mission_events.12.name
+	desc = emp_mission_events.12.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UNFORTUNATE
+		from = {
+			every_owned_province = {
+				limit = {
+					culture = swabian
+				}
+				add_claim = root
+			}
+		}
+	}
+}
+
+# They said yes to .11
+country_event = {
+	id = emp_mission_events.13
+	title = emp_mission_events.13.name
+	desc = emp_mission_events.13.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		inherit = from
+	}
+}
+
+
+
+country_event = {
+	id = emp_mission_events.14
+	title = emp_mission_events.14.name
+	desc = emp_mission_events.14.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OH_NO
+		tooltip = {
+			from = { vassalize = root }
+		}
+	}
+}

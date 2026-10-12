@@ -1,0 +1,580 @@
+########################################
+# USA DLC Events
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = usa_dlc
+normal_or_historical_nations = yes
+
+# Congress of the Confederation
+ 
+# 5% duty on imports
+country_event = {
+	id = usa_dlc.2
+	title = "usa_dlc.EVTNAME2"
+	desc = "usa_dlc.EVTDESC2"
+	picture = TEA_PARTY_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = import_duty_flag
+		}
+	}
+	
+	option = {
+		name = "usa_dlc.EVTOPTA2"
+		add_inflation = -2
+		add_years_of_income = -0.2
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = northwest_ordinance_flag
+				}
+				any_owned_province = {
+					OR = {
+						region = great_lakes_region
+						region = canada_region
+					}
+				}
+			}
+			country_event = {
+				id = usa_dlc.3
+			}
+		}
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB2"
+		add_inflation = 2
+		add_years_of_income = 1
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = northwest_ordinance_flag
+				}
+				any_owned_province = {
+					OR = {
+						region = great_lakes_region
+						region = canada_region
+					}
+				}
+			}
+			country_event = {
+				id = usa_dlc.3
+			}
+		}
+	}
+}
+
+# Northwest Ordinance - Prohibit slavery there? 
+country_event = {
+	id = usa_dlc.3
+	title = "usa_dlc.EVTNAME3"
+	desc = "usa_dlc.EVTDESC3"
+	picture = CONGRESS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = northwest_ordinance_flag
+		}
+	}
+	
+	option = {
+		name = "usa_dlc.EVTOPTA3" # Prohibit slavery!
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = canada_region
+					region = great_lakes_region
+				}
+			}
+			add_province_modifier = {
+				name = northwest_ordinance_slavery_prohibited
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = import_duty_flag
+				}
+			}
+			country_event = {
+				id = usa_dlc.2
+			}
+		}
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB3" # Let them decide for themselves
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = canada_region
+					region = great_lakes_region
+				}
+			}
+			add_province_modifier = {
+				name = add_unrest_5_modifier
+				duration = 1825
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = import_duty_flag
+				}
+			}
+			country_event = {
+				id = usa_dlc.2
+			}
+		}
+	}
+}
+
+# Articles of Confederation
+
+# Formal declaration of American Independence
+
+# American Independence
+
+# American Independence?
+country_event = {
+	id = usa_dlc.7
+	title = "usa_dlc.EVTNAME6"
+	desc = "usa_dlc.EVTDESC7"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "usa_dlc.EVTOPTA7" # Yay!
+		trigger = {
+			has_country_flag = yay_independence_flag
+		}
+		clr_country_flag = yay_independence_flag
+		set_country_flag = independence_acknowledged_flag
+		add_opinion = {
+			who = FROM
+			modifier = opinion_yay_independence
+			years = 100
+		}
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB7" # Nay! - We don't need their approval!
+		trigger = {
+			has_country_flag = nay_independence_flag
+		}
+		clr_country_flag = nay_independence_flag
+		add_opinion = {
+			who = FROM
+			modifier = opinion_nay_independence
+			years = 100
+		}
+	}
+}
+
+# Constitutional Convention
+
+# Government Forms
+country_event = {
+	id = usa_dlc.11
+	title = "usa_dlc.EVTNAME11"
+	desc = "usa_dlc.EVTDESC11"
+	picture = CONSTITUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_revolutionary = no
+	}
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = usa_dlc.12
+				days = 365
+			}
+		}
+	}
+	
+	option = {
+		name = "usa_dlc.EVTOPTA11"
+		change_government = republic
+		add_government_reform = american_republic
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB11"
+		change_government = republic
+		add_government_reform = federal_republic
+	}
+	option = {
+		name = "usa_dlc.EVTOPTC11"
+		change_government = monarchy
+		add_government_reform = parliamentary_reform
+	}
+}
+
+# Abolition of the slave trade
+country_event = {
+	id = usa_dlc.12
+	title = "usa_dlc.EVTNAME12"
+	desc = "usa_dlc.EVTDESC12"
+	picture = CONSTITUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = usa_dlc.13
+				days = 365
+			}
+		}
+	}
+	
+	option = {
+		name = "usa_dlc.EVTOPTA12"
+		add_country_modifier = {
+			name = abolish_slavery
+			duration = -1
+		}		
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB12"
+		every_owned_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = northwest_ordinance_slavery_prohibited
+				}
+			}
+			add_province_modifier = {
+				name = usa_slavery
+				duration = -1
+			}
+		}
+	}
+}
+
+# What offenses should be impeachable?
+country_event = {
+	id = usa_dlc.13
+	title = "usa_dlc.EVTNAME13"
+	desc = "usa_dlc.EVTDESC13"
+	picture = CONSTITUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = usa_dlc.14
+				days = 365
+			}
+		}
+	}
+	
+	option = {
+		name = "usa_dlc.EVTOPTA13"
+		add_country_modifier = {
+			name = harsh_laws_usa
+			duration = -1
+		}
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB13"
+		add_country_modifier = {
+			name = medium_laws_usa
+			duration = -1
+		}
+	}
+	option = {
+		name = "usa_dlc.EVTOPTC13"
+		add_country_modifier = {
+			name = mild_laws_usa
+			duration = -1
+		}
+	}
+	option = {
+		name = "usa_dlc.EVTOPTD13"
+		add_country_modifier = {
+			name = easy_laws_usa
+			duration = -1
+		}
+	}
+}
+
+# United States Constitution
+country_event = {
+	id = usa_dlc.14
+	title = "usa_dlc.EVTNAME14"
+	desc = "usa_dlc.EVTDESC14"
+	picture = CONSTITUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "usa_dlc.EVTOPTA14"
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+
+# GBR supplies weapons to Indians?
+
+# Indians supplied with weapons from GBR
+
+# USA learns about GBR supplying Indians with weapons
+
+# Benjamin Franklin
+
+# Fur Trade
+
+# Cultural assimilation of Native Americans
+
+# American Academy of Arts and Sciences
+
+# Union Fire Company
+
+# Treaty of Amity and Commerce
+
+# Dunlap Broadside
+country_event = {
+	id = usa_dlc.31
+	title = "usa_dlc.EVTNAME31"
+	desc = "usa_dlc.EVTDESC31"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "American Dream"
+		has_country_flag = usa_declaration_independence_flag
+	}
+	
+	mean_time_to_happen = { months = 200 }
+	
+	option = {
+		name = "usa_dlc.EVTOPTA31"
+		add_country_modifier = { 
+			name = dunlap_broadside 
+			duration = 7300
+		} 
+	}
+}
+
+# Nonintercourse Act
+
+# Whiskey Rebellion
+
+# Boston Post Road
+
+# American Philosophical Society
+
+# Evacuation Day
+
+# Massachusetts Humane Society
+country_event = {
+	id = usa_dlc.37
+	title = "usa_dlc.EVTNAME37"
+	desc = "usa_dlc.EVTDESC37"
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "American Dream"
+		owns = 968 # Massachusetts
+		is_year = 1786
+		NOT = { 
+			has_country_modifier = massachusetts_humane_society 
+		} 
+	}
+	
+	mean_time_to_happen = { 
+		months = 200 
+	}
+	
+	option = {
+		name = "usa_dlc.EVTOPTA37"
+		add_country_modifier = { 
+			name = massachusetts_humane_society 
+			duration = 7300 
+		}
+		add_adm_power = -20
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB37"
+		add_adm_power = 10
+	}
+}
+
+# Committee of Safety
+country_event = {
+	id = usa_dlc.38
+	title = "usa_dlc.EVTNAME38"
+	desc = "usa_dlc.EVTDESC38"
+	picture = CONSTITUTION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "American Dream"
+		has_country_flag = usa_declaration_independence_flag
+		NOT = { 
+			has_country_modifier = committee_of_safety 
+		} 
+	}
+	
+	mean_time_to_happen = { months = 200 }
+	
+	option = {
+		name = "usa_dlc.EVTOPTA38"
+		add_country_modifier = { 
+			name = committee_of_safety 
+			duration = 3650 
+		}
+		add_years_of_income = -0.1
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB38"
+		add_prestige = 10
+	}
+}
+
+# Liberty pole
+
+# Great Fire of New York
+
+# Lewis and Clark Expedition
+
+# First Bank of the United States
+
+# Women in the American Revolution
+
+# The Invention of the Cotton Gin
+
+# United States Mint
+
+# Tecumseh
+
+# Shays' Rebellion
+
+# The Netherlands recognise USA as an independent government?
+
+# Netherlands: Independent USA?
+
+# USA: Netherlands acknowledged independence
+country_event = {
+	id = usa_dlc.50
+	title = "usa_dlc.EVTNAME48"
+	desc = "usa_dlc.EVTDESC50"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "usa_dlc.EVTOPTA50"
+		tooltip = {
+			reverse_add_opinion = {
+				who = FROM
+				modifier = opinion_acknowledged_independence
+				years = 20
+			}
+		}
+	}
+}
+
+# USA: Netherlands rejected independence
+country_event = {
+	id = usa_dlc.51
+	title = "usa_dlc.EVTNAME48"
+	desc = "usa_dlc.EVTDESC51"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "usa_dlc.EVTOPTA51"
+		tooltip = {
+			reverse_add_opinion = {
+				who = FROM
+				modifier = opinion_disgruntled
+				years = 20
+			}
+		}
+	}
+}
+
+# New York Manumission Society
+
+### USA Major Events from EUII ###
+
+# The Creation of the Continental Army
+
+# The Congress' Printing Machine
+
+# US.Presidential Election of 1796
+
+# Federal Taxes on Property
+
+# US.Presidential Election of 1800
+
+# The Louisiana Purchase
+
+# US.Presidential Election of 1804
+
+# US.Presidential Election of 1808
+
+# Hawks and Doves of 1812
+
+# US.Presidential Election of 1812
+
+# US.Presidential Election of 1816
+
+# Adam-On�s Treaty
+
+# The Economic Dependency on England is broken
+
+# More buns for the people!
+country_event = {
+	id = usa_dlc.100
+	title = "usa_dlc.EVTNAME100"
+	desc = "usa_dlc.EVTDESC100"
+	picture = COMET_SIGHTED_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		prestige = 100
+		OR = {
+			has_dlc = "American Dream"
+			has_dlc = "Star and Crescent"
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 500000
+	}
+	
+	option = {
+		name = "usa_dlc.EVTOPTA100"
+		add_prestige = 5
+	}
+	option = {
+		name = "usa_dlc.EVTOPTB100"
+		add_adm_power = 5
+	}
+	option = {
+		name = "usa_dlc.EVTOPTC100"
+		add_dip_power = 5
+	}
+	option = {
+		name = "usa_dlc.EVTOPTD100"
+		add_mil_power = 5
+	}
+}

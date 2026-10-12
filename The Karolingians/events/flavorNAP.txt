@@ -1,0 +1,139 @@
+########################################
+# Events for Naples
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_nap
+normal_or_historical_nations = yes
+
+# The Baronial Revolt
+
+# France gets happy
+country_event = {
+	id = flavor_nap.2
+	title = flavor_nap.2.t
+	desc = flavor_nap.2.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_nap.2.a
+		custom_tooltip = naples_in_union_with_france
+		add_prestige = 10
+	}
+}
+
+# Renaissance Centre
+
+#Baroque Era
+
+# Masaniello's Revolt
+
+# Plague in Naples
+
+########################################
+# More Events for Naples
+#
+# written by Pierre du Plessis
+########################################
+
+namespace = new_flavour_nap
+
+# Senatus Populusque Neapolitanus (version where NAP is not in a PU)
+
+
+# Senatus Populusque Neapolitanus (version where NAP is in a PU)
+
+# Senatus Populusque Neapolitanus (senior PU partner)
+country_event = {
+	id = new_flavour_nap.3
+	title = new_flavour_nap.2.name
+	desc = new_flavour_nap.2.desc
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = new_flavour_nap.2.A
+		tooltip = {
+			121 = {
+				spawn_rebels = {
+					type = nap_republican_rebels
+					size = 3
+					leader = "Masaniello"
+					win = yes
+				}
+			}
+		}
+		custom_tooltip = new_flavour_nap.3.A.tooltip
+		tooltip = { event_target:rival_of_overlord = { country_event = { id = new_flavour_nap.4 days = 30 } } }
+	}
+}
+
+# Neapolitan Republican Emissaries to overlord's rival
+
+
+# Naples: Embassy successful
+
+# Naples: Embassy unsuccessful
+country_event = {
+	id = new_flavour_nap.6
+	title = new_flavour_nap.6.name
+	desc = new_flavour_nap.6.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = new_flavour_nap.6.A
+	}
+}
+
+# Overlord: Rival supporting rebellion
+country_event = {
+	id = new_flavour_nap.7
+	title = new_flavour_nap.7.name
+	desc = new_flavour_nap.7.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = new_flavour_nap.7.A
+		tooltip = {
+			add_opinion = {
+				who = from
+				modifier = opinion_supported_republican_uprising_overlord
+			}
+		}
+	}
+}
+
+
+# Sponsor country: Success notification
+country_event = {
+	id = new_flavour_nap.8
+	title = new_flavour_nap.8.name
+	desc = new_flavour_nap.8.desc
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+
+
+	option = {
+		name = new_flavour_nap.8.A
+		tooltip = {
+			reverse_add_opinion = {
+				who = from
+				modifier = opinion_supported_republican_uprising
+			}
+			add_opinion = {
+				who = from
+				modifier = opinion_sponsors_of_republican_uprising
+			}
+		}
+	}
+}

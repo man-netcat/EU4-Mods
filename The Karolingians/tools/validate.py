@@ -662,6 +662,49 @@ def run() -> int:
                 f"vanilla {sk} decision neutralized in its own file",
             )
 
+    print("\n== events carry no tag references ==")
+    from eu4 import event_mentions_tag, split_event_blocks, all_known_tags  # noqa: E402
+
+    tagset = all_known_tags()
+    vdir = os.path.join(GAME, "events")
+    vanilla_events = {fn for fn in os.listdir(vdir) if fn.endswith(".txt")}
+    edir = os.path.join(MOD, "events")
+    n_files, dirty = 0, []
+    for fn in sorted(os.listdir(edir)):
+        if not fn.endswith(".txt") or fn not in vanilla_events:
+            continue
+        n_files += 1
+        text = open(os.path.join(edir, fn), encoding="utf-8", errors="replace").read()
+        for kind, lines in split_event_blocks(text):
+            if kind == "event" and event_mentions_tag("\n".join(lines), tagset):
+                dirty.append(fn)
+                break
+    note(not dirty, f"no tag-specific events in {n_files} files ({len(dirty)} dirty)")
+    for b in dirty[:10]:
+        print("        " + b)
+
+    print("\n== decisions carry no tag references ==")
+    from eu4 import split_decision_blocks, VANILLA_FORMATION_FILES  # noqa: E402
+
+    vddir = os.path.join(GAME, "decisions")
+    vanilla_decs = {fn for fn in os.listdir(vddir) if fn.endswith(".txt")}
+    ddir = os.path.join(MOD, "decisions")
+    n_files, dirty = 0, []
+    for fn in sorted(os.listdir(ddir)):
+        if not fn.endswith(".txt") or fn not in vanilla_decs:
+            continue
+        if fn in VANILLA_FORMATION_FILES:
+            continue
+        n_files += 1
+        text = open(os.path.join(ddir, fn), encoding="utf-8", errors="replace").read()
+        for kind, key, lines in split_decision_blocks(text):
+            if kind == "decision" and event_mentions_tag("\n".join(lines), tagset):
+                dirty.append(f"{fn}:{key}")
+                break
+    note(not dirty, f"no tag-specific decisions in {n_files} files ({len(dirty)} dirty)")
+    for b in dirty[:10]:
+        print("        " + b)
+
     print("\n== every realm holds its own capital ==")
 
     prov_owner = {}

@@ -1,0 +1,140 @@
+###########################################
+# Flavor Events for Morocco
+#
+# Scripted by Henrik Lohmander
+###########################################
+
+namespace = flavor_mor
+normal_or_historical_nations = yes
+
+#Crisis of the Maghreb
+
+#Moorish Refugees
+
+#Muhammad al-Jazuli and the Dala'il al-Khayrat
+
+#Idrisid Cult of Fez
+
+#The Wattasid Viziers - Foreboding
+
+#A Wattasid Conspiracy?
+
+#Wattasid Revolt
+country_event = {
+	id = flavor_mor.7
+	title = flavor_mor.7.t
+	desc = flavor_mor.7.d
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = wattasid_resolution
+	}
+	
+	option = {
+		name = flavor_mor.7.a
+		random_owned_province = {
+			limit = {
+				is_capital = no
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+				culture = berber
+				religion = sunni
+				leader = "Muhammad"
+				leader_dynasty = "ibn Yahya Wattasid"
+			}
+		}
+	}
+	
+}
+
+#Wattasid Ultimatum
+
+#The Sudanese Expedition
+
+#The Sudanese Expedition - Info Popup
+
+#Crisis of the Maghreb - Info Popup
+
+# New for 1.28
+
+# Imperial Cities of Morocco by Daniel Tolman
+country_event = {
+	id = flavor_mor.12
+	title = flavor_mor.12.t
+	desc = flavor_mor.12.desc
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_mor.12.a"
+		343 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "flavor_mor.12.b"
+		344 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "flavor_mor.12.c"
+		2467 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+	option = {
+		name = "flavor_mor.12.d"
+		342 = {
+			if = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+				}
+				move_capital_effect = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Tribes and Sufis sense weakness

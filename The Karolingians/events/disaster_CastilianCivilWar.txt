@@ -1,0 +1,84 @@
+########################################
+# Civil War in Castile
+# Mix of Castilian Civil Wars involving
+# nobles and outside intervention
+########################################
+
+namespace = castilian_civil_war
+
+# Civil War in Castile
+
+# The Civil War Spreads to PROVINCE
+country_event = {
+	id = castilian_civil_war.2
+	title = "castilian_civil_war.2.t"
+	desc = "castilian_civil_war.2.d"
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			continent = europe
+			is_capital = no
+			controlled_by = owner
+			NOT = { has_province_flag = civil_war_spreads }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					continent = europe
+					is_capital = no
+					controlled_by = owner
+					NOT = { has_province_flag = civil_war_spreads }
+				}
+				random_list = {
+					85 = { set_province_flag = revolt_1 }
+					15 = { set_province_flag = revolt_2 }
+				}
+				area = { set_province_flag = civil_war_spreads }
+			}
+		}
+	}
+	
+	option = {		# Where is the loyalty...
+		name = "flavor_spa.EVTOPTA3560"
+		random_owned_province = {
+			limit = { has_province_flag = revolt_2 }
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+			clr_province_flag = revolt_2
+		}
+		random_owned_province = {
+			limit = { has_province_flag = revolt_1 }
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 1
+			}
+			clr_province_flag = revolt_1
+		}
+	}
+}
+
+# Civil War in Castile - Portugal
+
+# Portuguese Support
+
+# Castilian Civil War - Aragon
+
+# Aragonese Support
+
+# Castilian Civil War - France
+
+# French Meddling
+
+# End of Castilian Civil War

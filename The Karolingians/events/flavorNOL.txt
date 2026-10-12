@@ -1,0 +1,14 @@
+########################################
+# Events for Northumberland
+#
+# written by James Beaumont
+########################################
+
+namespace = flavor_nol
+normal_or_historical_nations = yes
+
+#The King of the North
+
+#Deciding our Dynasty
+
+#Claiming Norway

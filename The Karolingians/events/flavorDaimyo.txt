@@ -1,0 +1,389 @@
+########################################
+# Events for the various Daimyos of Japan
+# And the Shogunate/a United Japan
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_daimyo
+normal_or_historical_nations = yes
+
+#Tag Specific:
+#Hosokawa: 3
+#Yamana: 1
+#Uesugi: 2
+#Takeda: 1
+#Hatakeyama: 1
+#Shiba: 1
+#Oda: 4
+#Ryuku: 1
+#Ouchi: 1
+
+#Rise of the Chosokabe
+
+#Rise of the Later Hojo
+
+#The Mori Clan
+
+#Shiba Yoshikado
+
+#Rightful Succession
+
+#Succession of [Root.Monarch.GetName]
+
+
+#Rise of the Miyoshi Family
+
+#The Ogigayatsu
+
+#Restoration of the Akamatsu
+
+#The Meireki Conflagration
+country_event = {
+	id = flavor_daimyo.10
+	title = flavor_daimyo.10.t
+	desc = flavor_daimyo.10.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		owns = 1028 #Musashi
+		is_year = 1655 #Meireki Era
+		NOT = { is_year = 1658 } #End of Meireki Era
+	}
+	
+	mean_time_to_happen = {
+		months = 9
+	}	
+	
+	option = {	
+		name = flavor_daimyo.10.a #We need large boulevards and dedicated fire brigades.
+		add_years_of_income = -0.25
+		1028 = {
+			add_province_modifier = {
+				name = "restructuring_edo_safer"
+				duration = 5475
+			}
+			add_devastation = 75
+		}
+	}
+	option = {
+		name = flavor_daimyo.10.b #We must focus on restoring the homes of our poor citizens.
+		add_years_of_income = -0.25
+		1028 = {
+			add_province_modifier = {
+				name = "restructuring_edo_charitable"
+				duration = 5475
+			}
+			add_devastation = 75
+		}
+	}
+	option = {
+		name = flavor_daimyo.10.c #Fires and Quarrels are the Flowers of Edo.
+		custom_tooltip = flavor_daimyo.10.c.tt
+		1028 = {
+			add_devastation = 75
+		}
+	}
+}
+
+#Nankai Tsunami
+country_event = {
+	id = flavor_daimyo.11
+	title = flavor_daimyo.11.t
+	desc = flavor_daimyo.11.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1600
+		NOT = { is_year = 1610 }
+		owns = 4187
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					OR = {
+						owns = 1030
+						owns = 1819
+						owns = 1820
+						owns = 1839
+						owns = 4189
+						owns = 4359
+						owns = 4360
+					}
+				}
+				country_event = { id = flavor_daimyo.12 }
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_daimyo.11.a #We will remember the dead.
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 1030
+					province_id = 1819
+					province_id = 1820
+					province_id = 1839
+					province_id = 4187
+					province_id = 4189
+					province_id = 4359
+					province_id = 4360
+				}
+			}
+			add_devastation = 65
+			add_province_modifier = {
+				name = "nankai_tsunami"
+				duration = 1825
+			}
+		}
+	}
+}
+
+
+#Nankai Tsunami
+country_event = {
+	id = flavor_daimyo.12
+	title = flavor_daimyo.12.t
+	desc = flavor_daimyo.12.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_daimyo.12.a #
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 1030
+					province_id = 1819
+					province_id = 1820
+					province_id = 1839
+					province_id = 4187
+					province_id = 4189
+					province_id = 4359
+					province_id = 4360
+				}
+			}
+			add_devastation = 65
+			add_province_modifier = {
+				name = "nankai_tsunami"
+				duration = 1825
+			}
+		}
+	}
+}
+
+#Hoei Eruption of Mt Fuji
+country_event = {
+	id = flavor_daimyo.13
+	title = flavor_daimyo.13.t
+	desc = flavor_daimyo.13.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1704 #Start of Hoei
+		NOT = { is_year = 1711 } #End of Hoei
+		owns = 1029 #Kai
+	}
+	
+	mean_time_to_happen = {
+		months = 21
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					OR = {
+						owns = 1030
+						owns = 1819
+						owns = 1820
+						owns = 1839
+						owns = 4187
+						owns = 4189
+						owns = 4359
+						owns = 4360
+					}
+				}
+				country_event = { id = flavor_daimyo.14 }
+			}
+		}
+	}
+	
+	option = {	
+		name = flavor_daimyo.13.a #We will remember the dead.
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 1029
+					province_id = 1030
+					province_id = 1819
+					province_id = 1820
+					province_id = 1839
+					province_id = 4187
+					province_id = 4189
+					province_id = 4359
+					province_id = 4360
+				}
+			}
+			add_devastation = 15
+			add_province_modifier = {
+				name = "ashes_of_mount_fuji"
+				duration = 1825
+			}
+		}
+	}
+}
+
+#Hoei Eruption of Mt Fuji
+country_event = {
+	id = flavor_daimyo.14
+	title = flavor_daimyo.14.t
+	desc = flavor_daimyo.14.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = flavor_daimyo.14.a #We will remember the dead.
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 1029
+					province_id = 1030
+					province_id = 1819
+					province_id = 1820
+					province_id = 1839
+					province_id = 4187
+					province_id = 4189
+					province_id = 4359
+					province_id = 4360
+				}
+			}
+			add_devastation = 15
+			add_province_modifier = {
+				name = "ashes_of_mount_fuji"
+				duration = 1825
+			}
+		}
+	}
+}
+
+#Shimabara Rebellion
+country_event = {
+	id = flavor_daimyo.15
+	title = flavor_daimyo.15.t
+	desc = flavor_daimyo.15.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		has_reform = shogunate
+		is_year = 1630 #
+		NOT = { is_year = 1650 } #
+		owns = 1017 #Suo
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	
+	option = {	
+		name = flavor_daimyo.15.a #Crush them.
+		1017 = {
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 2
+			}
+		}
+		random_owned_province = {
+			limit = {
+				any_neighbor_province = {
+					province_id = 1017
+				}
+			}
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 1
+			}
+		}
+	}
+}
+
+#The Ako Vendetta
+country_event = {
+	id = flavor_daimyo.16
+	title = flavor_daimyo.16.t
+	desc = flavor_daimyo.16.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		has_reform = shogunate
+		is_year = 1700
+		NOT = { is_year = 1730 }
+	}
+	
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	
+	option = {	
+		name = flavor_daimyo.16.a #Let them take their own life honorably through Seppuku.
+		add_stability = -2
+		add_country_modifier = {
+			name = "chushingura"
+			duration = 3650
+		}
+	}
+	
+	option = {	
+		name = flavor_daimyo.16.b #Law and order must rule, let us execute these ronin.
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = "chushingura_popular_bandits"
+			duration = 3650
+		}
+	}
+}
+
+#The rise of the Yamana
+
+#Kyoto of the West
+
+#Merchant of Sakai
+
+#Revolt of Harunobu
+
+#The Kyotoku Incident
+
+
+#Azuchi Castle
+
+#Nobunagas Ambition
+
+#Hideyoshi
+
+
+#Economic Reforms of [Root.Monarch.GetName]
+
+#The Great Days of Chuzan

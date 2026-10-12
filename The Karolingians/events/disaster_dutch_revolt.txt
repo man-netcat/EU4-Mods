@@ -1,0 +1,7 @@
+namespace = dutch_revolt
+
+# on disaster end event
+
+# mock incident
+
+# The Netherlands leaves the Empire

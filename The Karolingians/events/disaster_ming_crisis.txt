@@ -1,0 +1,251 @@
+namespace = ming_crisis
+
+# Mandate Questioned
+country_event = {
+	id = ming_crisis.1
+	title = "ming_crisis.1.t"
+	desc = "ming_crisis.1.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels 
+					size = 6
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels 
+					size = 6
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels 
+					size = 6
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels 
+					size = 6
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					superregion = china_superregion
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels 
+					size = 6
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ming_crisis.1.a
+		add_stability = -2
+		add_mandate = -35
+		add_corruption = 5
+	}
+}
+
+# The Mandate Restored
+country_event = {
+	id = ming_crisis.2
+	title = "ming_crisis.2.t"
+	desc = "ming_crisis.2.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ming_crisis.2.a
+		add_stability = 1
+		add_mandate = 20
+		
+		if = { 
+			limit = { 
+				has_estate = estate_eunuchs 
+				num_of_estate_privileges = { 
+					estate = estate_eunuchs 
+					value = 1 
+				}
+			}
+			add_ruler_modifier = {
+				name = mng_undisputed_mandate_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+# Li Zicheng's rebellion and the Shun dynasty
+
+# Yunnan Protectorate
+
+# Losing Control in the South
+
+# Peasants revolt in [area]
+country_event = {
+	id = ming_crisis.6
+	title = "ming_crisis.6.t"
+	desc = "ming_crisis.6.d"
+	picture = ANGRY_MOB_eventPicture
+	goto = ming_disaster_rebel_province
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			is_state = yes
+			superregion = china_superregion
+			NOT = { local_autonomy = 75 }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_state = yes
+					superregion = china_superregion
+					NOT = { local_autonomy = 75 }
+				}
+				save_event_target_as = ming_disaster_rebel_province
+			}
+		}
+	}
+	
+	option = {
+		name = ming_crisis.6.a
+		ai_chance = { factor = 1 }
+		add_mandate = 5
+		event_target:ming_disaster_rebel_province = {
+			spawn_rebels = {
+				type = anti_tax_rebels 
+				size = 6
+			}
+		}
+	}
+	option = {
+		name = ming_crisis.6.b
+		ai_chance = { factor = 0 }
+		add_mandate = -10
+		event_target:ming_disaster_rebel_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_local_autonomy = 50
+			}
+		}
+	}
+}
+
+
+# Gatekeeper for ending depending on whether you kept the Mandate or not
+country_event = {
+	id = ming_crisis.7
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		on_non_estate_disaster_end = yes
+		hidden_effect = {
+			set_country_flag = ming_crisis_happened
+		}
+		if = {
+			limit = {
+				is_emperor_of_china = yes
+			}
+			country_event = { id = ming_crisis.2 }
+		}
+		else = {
+			country_event = { id = ming_crisis.8 }
+		}
+	}
+	option = { }
+}
+
+# The Mandate Restored
+country_event = {
+	id = ming_crisis.8
+	title = "ming_crisis.8.t"
+	desc = "ming_crisis.8.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_emperor_of_china = yes
+				}
+				save_event_target_as = emperor_of_china
+			}
+		}
+	}
+	
+	option = {
+		name = ming_crisis.8.a
+		add_stability = 1
+	}
+}
+
+
+# Manchu/Nomadic Intervention on Shun
+
+country_event = {
+	id = ming_crisis.10
+	title = "ming_crisis.10.t"
+	desc = "ming_crisis.10.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ming_crisis.10.a
+		grant_independence = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = ming_crisis.10.b
+		custom_tooltip = ming_crisis.10.tt
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+	
+# Ming falls apart!

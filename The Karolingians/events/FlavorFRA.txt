@@ -1,0 +1,537 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = flavor_fra
+normal_or_historical_nations = yes
+
+# The Birth of a Permanent Taxation System
+
+# The End of the Hundred Years War
+
+# The Inheritance of Anjou
+
+# The State take control of the Guilds
+
+# Le Tellier and Louvois
+
+# Samuel de Champlain and the Hurons
+
+# Revolt in France
+
+# Protestant Revolt in B?arn
+
+# Richelieu
+
+# The Fronde in France
+
+# Acad?mie Francaise
+
+# Colbert
+
+# The Commissioning of Versailles
+
+
+# Chambers of Reunion
+
+# Protestants expelled from France
+
+# Protestants expelled from France
+country_event = {
+	id = flavor_fra.1
+	title = "flavor_fra.EVTNAME1"
+	desc = "flavor_fra.EVTDESC1"
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# They are a welcome addition
+		name = "flavor_fra.EVTOPTA1"
+		random_owned_province = {
+			limit = {
+				religion = protestant
+			}
+			add_base_tax = 1
+		}
+	}
+
+}
+
+# Protestants expelled from France
+country_event = {
+	id = flavor_fra.2
+	title = "flavor_fra.EVTNAME2"
+	desc = "flavor_fra.EVTDESC2"
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# They are a welcome addition
+		name = "flavor_fra.EVTOPTA2"
+		random_owned_province = {
+			limit = {
+				religion = reformed
+			}
+			add_base_tax = 1
+		}
+	}
+
+}
+
+# The Mississippi Trade Company
+
+# Mississippi Trade Company Folds
+
+# Expansion in North America
+
+# Charles-Fran?ois de Broglie
+
+# Andr?-Hercule de Fleury
+
+# Machault and the 5% tax
+
+# Turgot and the Economic Reforms
+
+# Necker announce the Budget Deficiet
+
+# The Eden Agreement
+
+
+########################################
+# Minor Flavor Events                  #
+########################################
+
+# Rousseau publishes 'The Social Contract'
+
+# Voltaire publishes 'Lettres Philosophiques'
+
+# Montesquieu publishes 'The Spirit of Laws'
+
+# Ren? Descartes
+
+# Vauban
+
+# The Royal Musketeers
+
+# The Surrender of Maine
+
+# The Surrender of Maine
+
+# The Surrender of Maine
+
+# Francois Villon
+
+#New event by Pierre du Plessis
+#Reference is to Louise Marie Therese, The Black Nun of Moret
+
+
+country_event = { #The Habsburg Ring 
+	id = flavor_fra.102 
+	title = flavor_fra.102.t 
+	desc = flavor_fra.102.d 
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		ai_chance = { factor = 0 }
+		name = flavor_fra.102.a 
+		trigger = { hre_size = 1 ai = yes }
+		add_country_modifier = {
+			name = fra_charlemagne_legacy_modifier
+			duration = 7300
+		}
+		every_elector = {
+			limit = { 
+				has_opinion = { 
+					who = ROOT 
+					value = 0 
+				}
+			}
+			add_opinion = { 
+				who = ROOT 
+				modifier = fra_charlemagne_legacy_opinion_modifier
+			}
+		}
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		clr_country_flag = fra_fufujoni_flag
+		set_country_flag = fra_shed_the_blood_of_the_saxon_man_flag
+		custom_tooltip = fra_charlemagne_legacy_tt
+		swap_non_generic_missions = yes 
+	}
+	
+	option = { 
+		name = flavor_fra.102.b 
+		ai_chance = { factor = 100 }
+		trigger = { is_emperor = no ai = yes }
+		add_country_modifier = { 
+			name = fra_war_east_modifier 
+			duration = 5475
+		}
+		if = { 
+			limit = { hre_size = 1 }
+			custom_tooltip = fra_enable_war_on_the_empire_cb_tt
+			hidden_effect = { set_country_flag = fra_enable_war_on_the_empire_cb_flag }
+		}
+		clr_country_flag = fra_shed_the_blood_of_the_saxon_man_flag
+		set_country_flag = fra_fufujoni_flag
+		custom_tooltip = fra_destroy_empire_tt
+		swap_non_generic_missions = yes 
+	}
+	
+	option = { 
+		name = flavor_fra.102.c 
+		
+		trigger = { 
+			NOT = { hre_size = 1 } 
+		}
+		add_country_modifier = { 
+			name = fra_triumph_over_austria_modifier
+			duration = -1 
+		}
+		add_dip_power = 200 
+		
+		set_country_flag = fra_fufujoni_flag
+		swap_non_generic_missions = yes
+	}
+	
+	option = {
+		name = flavor_fra.102.e
+		trigger = {
+			hre_size = 1
+			ai = no
+		}
+		enable_branching_mission_review_without_ai = { key = FRA_HRE }
+	}
+}
+
+country_event = { #The Garden of France 
+	id = flavor_fra.103
+	title = flavor_fra.103.t 
+	desc = flavor_fra.103.d 
+	picture = big_castle_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_fra.103.a 
+		
+		if = { 
+			limit = { has_estate = estate_nobles } 
+			add_country_modifier = { 
+				name = fra_loire_royal_residences_modifier
+				duration = 7300
+			}
+		}
+		else = { add_prestige = 10 } 
+		loire_area = { add_base_manpower = 1 }
+	}
+	
+	option = { 
+		name = flavor_fra.103.b 
+		
+		add_years_of_income = 0.2 
+		add_adm_power = 50 
+	}
+}
+
+country_event = { #Catholicon 
+	id = flavor_fra.104
+	title = flavor_fra.104.t 
+	desc = flavor_fra.104.d 
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_fra.104.a 
+		
+		define_advisor = { 
+			type = theologian
+			name = "Jehan Lagadeuc" 
+			culture = breton
+			skill = 2
+			cost_multiplier = 0.5
+		}
+		if = { 
+			limit = { is_lacking_institutions = yes } 
+			add_country_modifier = { 
+				name = fra_first_trilingual_dictionary_modifier
+				duration = 9125
+			}
+		}
+		else_if = { 
+			limit = { has_dlc = "Rule Britannia" } 
+			change_innovativeness = 3 
+		}
+		else = { 
+			add_adm_power = 50 
+			add_dip_power = 50 
+			add_mil_power = 50 
+		}
+	}
+}	
+
+
+
+
+
+
+	
+	
+	
+	
+country_event = { #Early Opera Flourishes
+	id = flavor_fra.118
+	title = flavor_fra.118.t 
+	desc = flavor_fra.118.d 
+	picture = CULTURE_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_fra.118.a 
+		
+		define_advisor = {
+			type = artist
+			cost_multiplier = 0.5
+			skill = 3 
+		}
+		if = {
+			limit = { has_dlc = "Rule Britannia" }
+			change_innovativeness = 2 
+		}
+		else = { add_dip_power = 25 }
+	}
+}
+
+	
+	
+
+country_event = { #The French Alliance Prevails!
+	id = flavor_fra.200
+	title = flavor_fra.200.t 
+	desc = flavor_fra.200.d 
+	picture = CONQUEST_eventPicture
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	
+	major_trigger = { 
+		capital_scope = { continent = europe } 
+	}
+	
+	option = { 
+		name = flavor_fra.200.a 
+		
+		add_country_modifier = {
+			name = fra_french_supremacy2_modifier
+			duration = 9125 
+		}
+	}
+}
+
+country_event = { #I Protect the Saxon Man!
+	id = flavor_fra.201
+	title = flavor_fra.201.t 
+	desc = flavor_fra.201.d 
+	picture = HRE_eventPicture
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	
+	major_trigger = { 
+		capital_scope = { continent = europe } 
+	}
+	
+	option = { 
+		name = flavor_fra.201.a 
+		
+		add_ruler_modifier = {
+			name = fra_defender_emperor_modifier
+			duration = -1 
+		}
+	}
+}
+
+country_event = { #The Rade of the Toulon Arsenal
+	id = flavor_fra.202
+	title = flavor_fra.202.t 
+	desc = flavor_fra.202.d 
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = flavor_fra.202.a 
+		
+		4696 = {
+			add_province_modifier = {
+				name = pro_natural_anchorage_of_the_mediterranean_modifier
+				duration = -1 
+			}
+		}
+		custom_tooltip = pro_upgrade_dock_and_shipyard_if_possible_tt
+		hidden_effect = {
+			4696 = {
+				if = {
+					limit = { has_building = dock }
+					remove_building = dock 
+					add_building = drydock
+				}
+				if = {
+					limit = { has_building = shipyard }
+					remove_building = shipyard
+					add_building = grand_shipyard
+				}
+			}
+		}
+	}
+}
+	
+	
+country_event = { #Rise of the French Isles
+	id = flavor_fra.203
+	title = flavor_fra.203.t 
+	desc = flavor_fra.203.d 
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_fra.203.a 
+		
+		add_country_modifier = {
+			name = fra_rules_the_waves_modifier
+			duration = -1 
+		}
+		add_accepted_culture = english 
+		
+		# custom_tooltip = fra_enabling_parliamentarism_extra_bonus_tt
+		# set_country_flag = fra_powerful_parliament_flag
+		change_government_reform_progress = 150
+	}
+	
+	option = {
+		name = flavor_fra.203.b 
+		
+		add_country_modifier = {
+			name = fra_french_isles_modifier
+			duration = -1 
+		}
+		
+		if = { 
+			limit = { has_dlc = "Leviathan" }
+			custom_tooltip = fra_concentrate_dev_tt
+		}
+	}
+}
+
+country_event = { #La Sorbonne
+	id = flavor_fra.204
+	title = flavor_fra.204.t 
+	desc = flavor_fra.204.d 
+	picture = GREAT_BUILDING_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = flavor_fra.204.a 
+		
+		183 = {
+			add_province_modifier = {
+				name = fra_university_of_paris_modifier
+				duration = -1 
+			}
+		}
+		
+		if = { 
+			limit = { has_dlc = "Rule Britannia" }
+			custom_tooltip = fra_inno_mana_tt
+			hidden_effect = {
+				196 = {
+					if = { 
+						limit = {
+							OR = { 
+								num_of_times_improved = 5 
+								has_building = university 
+							}
+							num_of_buildings_in_province = 2 
+						}
+						ROOT = { change_innovativeness = 1 add_adm_power = 10 add_dip_power = 10 add_mil_power = 10 } 
+					}
+				}
+				184 = {
+					if = { 
+						limit = {
+							OR = { 
+								num_of_times_improved = 5 
+								has_building = university 
+							}
+							num_of_buildings_in_province = 2 
+						}
+						ROOT = { change_innovativeness = 1 add_adm_power = 10 add_dip_power = 10 add_mil_power = 10 } 
+					}
+				}
+				200 = {
+					if = { 
+						limit = {
+							OR = { 
+								num_of_times_improved = 5 
+								has_building = university 
+							}
+							num_of_buildings_in_province = 2 
+						}
+						ROOT = { change_innovativeness = 1 add_adm_power = 10 add_dip_power = 10 add_mil_power = 10 } 
+					}
+				}
+				204 = {
+					if = { 
+						limit = {
+							OR = { 
+								num_of_times_improved = 5 
+								has_building = university 
+							}
+							num_of_buildings_in_province = 2 
+						}
+						ROOT = { change_innovativeness = 1 add_adm_power = 10 add_dip_power = 10 add_mil_power = 10 } 
+					}
+				}
+				177 = {
+					if = { 
+						limit = {
+							OR = { 
+								num_of_times_improved = 5 
+								has_building = university 
+							}
+							num_of_buildings_in_province = 2 
+						}
+						ROOT = { change_innovativeness = 1 add_adm_power = 10 add_dip_power = 10 add_mil_power = 10 } 
+					}
+				}
+				201 = {
+					if = { 
+						limit = {
+							OR = { 
+								num_of_times_improved = 5 
+								has_building = university 
+							}
+							num_of_buildings_in_province = 2 
+						}
+						ROOT = { change_innovativeness = 1 add_adm_power = 10 add_dip_power = 10 add_mil_power = 10 } 
+					}
+				}
+				174 = {
+					if = { 
+						limit = {
+							OR = { 
+								num_of_times_improved = 5 
+								has_building = university 
+							}
+							num_of_buildings_in_province = 2 
+						}
+						ROOT = { change_innovativeness = 1 add_adm_power = 10 add_dip_power = 10 add_mil_power = 10 } 
+					}
+				}
+			}
+		}
+	}
+}

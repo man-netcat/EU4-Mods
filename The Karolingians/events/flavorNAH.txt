@@ -1,0 +1,185 @@
+# Flavor Events for the Navajos (written by Veronica Pazos)
+
+namespace = flavor_nah
+normal_or_historical_nations = yes
+
+# A New Advisor
+country_event = {
+	id = flavor_nah.1
+	title = flavor_nah.1.t
+	desc = flavor_nah.1.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Leviathan"
+		primary_culture = navajo
+		religion = totemism
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = flavor_nah.1.a
+		define_advisor = {
+			type = theologian
+			religion = totemism
+			culture = navajo
+			discount = yes
+			skill = 1
+		}
+		set_country_flag = nah_new_advisor
+	}
+}
+
+# A Helping Hand
+country_event = {
+	id = flavor_nah.2
+	title = flavor_nah.2.t
+	desc = flavor_nah.2.d
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Leviathan"
+		primary_culture = navajo
+		religion = totemism
+		has_country_flag = nah_new_advisor
+		NOT = { has_country_modifier = nah_helping_hand }
+		OR = { #so he gets ill
+			NOT = { is_month = 3 }
+			NOT = { is_month = 4 }
+			NOT = { is_month = 5 }
+			NOT = { is_month = 6 }
+			NOT = { is_month = 7 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.9
+			religious_unity = 1
+		}
+	}
+	
+	option = {
+		name = flavor_nah.2.a
+		add_country_modifier = {
+			name = nah_helping_hand
+			duration = 3650
+		}
+	}
+}
+
+# Growing Older
+country_event = {
+	id = flavor_nah.3
+	title = flavor_nah.3.t
+	desc = flavor_nah.3.d
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		has_dlc = "Leviathan"
+		primary_culture = navajo
+		has_female_heir = yes
+		heir_age = 15
+		NOT = { heir_age = 16 }
+	}
+	
+	mean_time_to_happen = {
+		months = 75
+	}
+	
+	option = { 
+		name = flavor_nah.3.a
+		add_country_modifier = {
+			name = nah_the_changing_girl
+			duration = 3650
+		}
+		add_treasury = -15
+		add_heir_claim = 30
+	}
+}
+
+# Pueblo Merchants
+
+# Assembly
+country_event = {
+	id = flavor_nah.5
+	title = flavor_nah.5.t
+	desc = flavor_nah.5.d
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		has_dlc = "Leviathan"
+		primary_culture = navajo
+		government = native
+		has_reform = native_clan_council_reform
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.8
+			has_reform = native_becomes_republic_reform
+		}
+	}
+	
+	option  = {
+		name = flavor_nah.5.a
+		add_mil_power = 50
+		random_known_country = {
+			limit = {
+				is_neighbor_of = ROOT
+				OR = {
+					religion = totemism
+					government = native
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_naachid
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_naachid
+			}
+		}
+	}
+	
+	option  = {
+		name = flavor_nah.5.b
+		add_dip_power = 50
+		random_known_country = {
+			limit = {
+				is_neighbor_of = ROOT
+				OR = {
+					religion = totemism
+					government = native
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_naachid
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_naachid
+			}
+		}
+	}
+}
+
+# Comanche Raiders

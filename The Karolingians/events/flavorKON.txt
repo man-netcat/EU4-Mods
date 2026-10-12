@@ -1,0 +1,321 @@
+########################################
+# Events for Kongo
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_kon
+normal_or_historical_nations = yes
+
+	
+# Portuguese Missionaries
+
+# Missionaries accepted
+
+# Missionaries rebuffed!
+
+# The King of Kongo Converts!
+
+# Conversion of the Kongo!
+country_event = {
+	id = flavor_kon.5
+	title = flavor_kon.5.t
+	desc = flavor_kon.5.d
+	picture = POPE_PREACHING_eventPicture
+	is_triggered_only = yes
+		
+	option = { # Another investment pays off.
+		name = flavor_kon.5.a
+		add_prestige = 25
+		add_papal_influence = 25
+	}
+}
+
+########################################
+# DLC events for Kongo
+#
+# written by Ogulcan Yildirim
+########################################
+
+# Europeans find Kongo
+
+# Decide to oppose or side with Europeans
+
+# Enable missions for a Kongo, which was annexed at some point and is free again
+country_event = {
+	id = flavor_kon.8
+	title = flavor_kon.8.t
+	desc = flavor_kon.8.d	
+	picture = AFRICAN_CATHOLIC_eventPicture
+	
+	trigger = {
+		has_mission = kon_annex_vassals
+		NOT = { has_country_flag = kon_picked_oppose_europeans }
+		NOT = { has_country_flag = kon_picked_side_with_europeans }
+		NOT = { has_country_flag = kon_chooses_new_missions }
+		has_global_flag = kon_kongo_got_discovered_by_europeans
+		has_dlc = "Origins"
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kon_chooses_new_missions
+		}
+	}
+		
+	option = { # Side with the Europeans!
+		name = flavor_kon.8.a
+		custom_tooltip = flavor_kon.8.a.tt
+		hidden_effect = {
+			clr_country_flag = kon_picked_oppose_europeans
+			set_country_flag = kon_picked_side_with_europeans
+		}
+		add_stability = -1
+		add_prestige = -25
+		add_legitimacy = -25
+		random_owned_province = {
+			limit = {
+				NOT = { religion = catholic }
+			}
+			change_religion = catholic
+ 		}
+
+		ai_chance = {
+			factor = 90
+		}
+	}
+		
+	option = { # Oppose the Europeans!
+		name = flavor_kon.8.b
+		custom_tooltip = flavor_kon.8.b.tt
+		hidden_effect = {
+			set_country_flag = kon_picked_oppose_europeans
+			clr_country_flag = kon_picked_side_with_europeans
+		}		
+		add_stability_or_adm_power = yes
+		add_prestige = 10
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	after = {
+		swap_non_generic_missions = yes
+	}
+}
+
+# Kongo has become catholic!
+country_event = {
+	id = flavor_kon.9
+	title = flavor_kon.9.t
+	desc = flavor_kon.9.d	
+	picture = AFRICAN_CATHOLIC_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = { # Let us hope it is for the better of our people
+		name = flavor_kon.9.a
+		add_stability = 2
+		if = {
+			limit = {
+				NOT = { prestige = 0 }
+			}
+			set_prestige_to_zero = yes
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Kongo receives more missionaries!
+
+# Kongo prepares journey to Europe
+
+# Kongo buys a cardinal from the Pope
+country_event = {
+	id = flavor_kon.12
+	title = flavor_kon.12.t
+	desc = flavor_kon.12.d	
+	picture = AFRICAN_CATHOLIC_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = flavor_kon.12.a
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			add_curia_treasury = 500
+		}
+		else = {
+			add_treasury = 500
+		}
+		FROM = {
+			country_event = {
+				id = flavor_kon.15
+				days = 160
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Kongo buys a cardinal from an ally
+country_event = {
+	id = flavor_kon.13
+	title = flavor_kon.13.t
+	desc = flavor_kon.13.d	
+	picture = AFRICAN_CATHOLIC_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = flavor_kon.13.a
+		add_treasury = 500
+		add_papal_influence = 100
+		random_owned_province = {
+			limit = {
+				has_cardinal = yes
+			}
+			remove_cardinal = yes
+		}
+		FROM = {
+			country_event = {
+				id = flavor_kon.15
+				days = 160
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Kongo buys a cardinal from a stranger (fallback event)
+country_event = {
+	id = flavor_kon.14
+	title = flavor_kon.14.t
+	desc = flavor_kon.14.d	
+	picture = AFRICAN_CATHOLIC_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = flavor_kon.14.a
+		add_treasury = 1000
+		random_owned_province = {
+			limit = {
+				has_cardinal = yes
+			}
+			remove_cardinal = yes
+		}
+		FROM = {
+			country_event = {
+				id = flavor_kon.15
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Kongo gets the cardinal
+country_event = {
+	id = flavor_kon.15
+	title = flavor_kon.15.t
+	desc = flavor_kon.15.d	
+	picture = AFRICAN_CATHOLIC_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = flavor_kon.15.a		
+		capital_scope = {
+			add_cardinal = yes
+			custom_tooltip = flavor_kon.15.a.tt
+			hidden_effect = {
+				add_province_triggered_modifier = kongo_cardinal_modifier
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Become a Monarchy!
+country_event = {
+	id = flavor_kon.16
+	title = flavor_kon.16.t
+	desc = flavor_kon.16.d	
+	picture = AFRICAN_CATHOLIC_eventPicture
+	is_triggered_only = yes
+		
+	option = {
+		name = flavor_kon.16.a
+		trigger = {
+			NOT = { government = monarchy }
+		}
+		change_government = monarchy
+		add_stability_or_adm_power = yes
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+		
+	option = {
+		name = flavor_kon.16.b
+		change_government_reform_progress = 50
+		add_adm_power = 100
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Gurantee a cardinal exists in the province with "Cardinal of Africa"
+province_event = {
+	id = flavor_kon.103
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	trigger = {
+		papacy_active = yes
+		has_active_triggered_province_modifier = kongo_cardinal_modifier
+		has_cardinal = no
+		owner = {
+			NOT = { num_of_cardinals = 7 }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		add_cardinal = yes
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

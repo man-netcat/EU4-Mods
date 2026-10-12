@@ -1,0 +1,495 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = flavor_spa
+normal_or_historical_nations = yes
+
+# The Iberian Wedding
+
+# Torquemada and the Conversion of the Moors
+
+# Expulsion of the Moors
+country_event = {
+	id = flavor_spa.3151
+	title = "flavor_spa.EVTNAME3151"
+	desc = "flavor_spa.EVTDESC3151"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# They are a welcome addition
+		name = "flavor_spa.EVTOPTA3151"
+		ai_chance = { factor = 90 }
+		random_owned_province = {
+			add_base_tax = 1
+		}
+	}
+
+}
+
+# Christopher Columbus
+country_event = {
+	id = flavor_spa.1
+	title = "flavor_spa.EVTNAME1"
+	desc = "flavor_spa.EVTDESC1"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = columbus_happened }
+		has_idea = quest_for_the_new_world
+		OR = {
+			NOT = {
+				north_america = {
+					has_discovered = ROOT
+				}
+			}
+			NOT = {
+				south_america = {
+					has_discovered = ROOT
+				}
+			}
+			NOT = {
+				any_known_country = {
+					north_america = {
+						has_discovered = PREV
+					}
+				}
+			}
+			NOT = {
+				any_known_country = {
+					south_america = {
+						has_discovered = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {		# Reject his proposal
+		name = "flavor_spa.EVTOPTA1"
+		ai_chance = { factor = 10 }
+		set_country_flag = turned_down_columbus
+		random_known_country = {
+			limit = {
+				NOT = { has_country_flag = turned_down_columbus }
+				religion = catholic
+				has_idea = quest_for_the_new_world
+			}
+			country_event = { id = flavor_spa.1 }
+		}
+	}
+	option = {		# Hire Columbus
+		name = "flavor_spa.EVTOPTB1"
+		ai_chance = { factor = 90 }
+		add_years_of_income = -0.25
+		set_global_flag = columbus_happened
+		define_explorer = {
+			name = "NAME_CRISTOBAL_COLON"
+			fire = 2
+			shock = 2
+			manuever = 6
+			siege = 0
+		}
+	}
+}
+
+# Discovery of the New World!
+
+# Ignacio de Loyola
+
+# The Quest for the New World
+
+# Crusade against Oran
+
+# Laws of Burgos
+
+
+# Casa de Contrataci�n
+
+# The Sun Never Sets
+
+# The Trade Center of Sevilla
+
+# The Fuggers
+
+# The Communeros
+
+
+# State Bankruptcy
+
+# The Expulsion of the Moriscos
+
+# Expulsion of the Moriscos
+country_event = {
+	id = flavor_spa.3161
+	title = "flavor_spa.EVTNAME3161"
+	desc = "flavor_spa.EVTDESC3161"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# They are a welcome addition
+		name = "flavor_spa.EVTOPTA3161"
+		ai_chance = { factor = 90 }
+		random_owned_province = {
+			add_base_tax = 1
+		}
+	}
+
+}
+
+# Baltasar de Zuniga
+
+# Olivares
+
+# The Portuguese Crown
+
+
+# State Bankruptcy
+
+# Epidemic Plague
+
+# The Iberian Revolts
+
+# National revolt in Portugal
+
+# The Italian Revolts
+
+# Giulio Alberoni
+
+# Jos� Monino
+
+# The Constitution of 1812
+
+
+
+########################################
+# Minor Flavor Events                  #
+########################################
+
+# Miguel de Cervantes
+
+# Tom�s Luis de Victoria
+
+########################################
+# The Italian Wars
+########################################
+
+# The Italian Wars
+
+
+
+
+# The Italian Wars
+country_event = {
+	id = flavor_spa.1008
+	title = "flavor_spa.EVTNAME1008"
+	desc = "flavor_spa.EVTDESC1008"
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = ITALIAN_wars_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = MILITARY_CAMP_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	option = {		# Then counter-claim all ADJECTIVE provinces!
+		name = "flavor_spa.EVTOPTA1008"
+		ai_chance = { factor = 90 }
+		FROM = {
+			every_owned_province = {
+				limit = {
+					region = italy_region
+				}
+				add_claim = ROOT
+			}
+			tooltip = {
+				add_opinion = {
+					who = ROOT
+					modifier = claimed_italy
+				}
+			}
+			hidden_effect = {
+				country_event = { id = flavor_spa.1009 days = 10 }
+			}
+		}
+	}
+	option = {		# We should back down in Italy
+		name = "flavor_spa.EVTOPTB1008"
+		ai_chance = { factor = 10 }
+		add_prestige = -10
+	}
+}
+
+# The Italian Wars
+country_event = {
+	id = flavor_spa.1009
+	title = "flavor_spa.EVTNAME1009"
+	desc = "flavor_spa.EVTDESC1009"
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = ITALIAN_wars_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = MILITARY_CAMP_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	option = {		# How dare they?! Italy is ours!
+		name = "flavor_spa.EVTOPTA1009"
+		add_opinion = {
+			who = FROM
+			modifier = claimed_italy
+		}
+	}
+}
+
+###################################
+# Additional Flavor Events
+# Scripted by Henrik Lohmander
+###################################
+
+#Valladolid Debate
+
+#Alhambra Decree
+
+# Unification of Spain / Nueva Planta Decrees
+
+# Grammar of the Castilian Language (localized to whatever culture formed Spain)
+
+# S�lo Madrid es corte
+
+# War of Las Alpujarras
+
+#Fate of the Kingdom of Granada
+
+# New Testament Translated into Spanish
+
+# Ottoman Encroachment in the Mediterrenean
+# Deposed Hafsid ruler seeks Spanish Aid
+
+# Reforming the Colonial Administration (Bourbon Reforms)
+
+# Supression of the Society of Jesus
+
+
+#A Habsburg Heir in Spain
+
+#Habsburg in Spain notification for Austria
+country_event = {
+	id = flavor_spa.14
+	title = flavor_spa.14.t
+	desc = flavor_spa.14.d
+	picture = NEW_HEIR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_spa.14.a
+		add_prestige = 5
+	}
+}
+
+#The Low Countries Pass to Spain
+
+# Merino Wool and the Mesta by Daniel Tolman
+
+# Merino Wool
+
+# The Mesta
+
+
+#1.35 Events# 
+
+country_event = { #The Infantes of Aragon
+	id = flavor_spa.18
+	title = flavor_spa.18.t
+	desc = flavor_spa.18.d
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes 
+	is_triggered_only = yes 	
+	
+	option = { 
+		name = flavor_spa.18.a 
+		set_country_flag = cas_royalist_flag
+		add_stability = -1
+		random_owned_province = {
+			limit = { 
+				region = iberia_region 
+				controlled_by = ROOT 
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3
+				win = yes 
+				should_take_capital = yes
+			}
+		}
+		random_owned_province = {
+			limit = { 
+				region = iberia_region 
+				controlled_by = ROOT 
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+				win = yes 
+				should_take_capital = yes
+			}
+		}
+		custom_tooltip = cas_impact_mission_tt
+	}
+	
+	option = { 
+		name = flavor_spa.18.b
+		set_country_flag = cas_infantes_flag
+		
+		random_owned_province = {
+			limit = { 
+				region = iberia_region 
+				controlled_by = ROOT 
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+				leader = "Alvaro de Luna"
+				win = yes 
+				should_take_capital = yes
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_leader = "Alvaro de Luna"
+				}
+				kill_leader = {
+					type = "Alvaro de Luna"
+				}
+			}
+		}
+		custom_tooltip = cas_impact_mission_tt
+	}
+}
+
+country_event = { # End of the Infantes 
+	id = flavor_spa.20
+	title = flavor_spa.20.t
+	desc = flavor_spa.20.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	immediate = {
+		on_non_estate_disaster_end = yes
+	}
+	
+	option = { 
+		name = flavor_spa.20.a 
+		
+		add_legitimacy = 20 
+		if = { 
+			limit = { has_country_flag = cas_royalist_flag }
+			change_estate_land_share = { 
+				estate = all 
+				share = -5
+			}
+		}
+		else = { 
+			add_estate_loyalty = {
+				estate = estate_nobles 
+				loyalty = 20 
+			}
+			custom_tooltip = spa_no_isabella_event_tt
+			set_country_flag = no_isabella_event_flag
+		}
+		add_yearly_manpower = 2
+		set_country_flag = ended_infantes_disaster_flag
+	}    
+}
+
+# country_event = { #
+	# id = flavor_spa.21
+	# title = flavor_spa.21.t
+	# desc = flavor_spa.21.d
+	# picture = GOOD_WITH_MONARCH_eventPicture
+	# fire_only_once = yes 
+	# is_triggered_only = yes 
+	
+	# option = { 
+		# name = flavor_spa.21.a 
+		
+		
+	# }
+# }
+
+country_event = { #The Spanish Dollar
+	id = flavor_spa.22
+	title = flavor_spa.22.t
+	desc = flavor_spa.22.d
+	picture = MERCHANTS_TALKING_eventPicture
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	
+	option = { 
+		name = flavor_spa.22.a 
+		
+		add_country_modifier = {
+			name = spa_spanish_dollar_modifier
+			duration = 7300
+		}
+		
+		change_ruler_stat = {
+			type = adm
+			amount = 1
+		}
+		
+	}
+}
+
+country_event = { #San Lorenzo de El Escorial 
+	id = flavor_spa.23
+	title = flavor_spa.23.t
+	desc = flavor_spa.23.d
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	goto = 217
+	option = { 
+		name = flavor_spa.23.a 
+		
+		if = { 
+			limit = { has_dlc = "Leviathan" } 
+			217 = {
+				add_great_project_tier = {
+					type = el_escorial
+					tier = 2 
+				}
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = spa_san_lorenzo_escorial_modifier
+				duration = 9125
+			}
+			217 = {
+				add_base_production = 2 
+				add_base_manpower = 1
+			}
+		}
+	}
+}

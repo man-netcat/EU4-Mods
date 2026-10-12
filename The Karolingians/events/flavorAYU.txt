@@ -1,0 +1,28 @@
+########################################
+# Flavor Events for Ayutthaya
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_ayu
+normal_or_historical_nations = yes
+
+# Boromo Trailokanat's Reforms
+
+#Maha Chakkrap'at's Army Reforms
+
+# Prasat T'ang's Economic Reforms
+
+#King Ekit'at's Incompetence
+
+#The Foundation of the Modern Thai State
+
+#Wat Chaiwatthanaram
+
+#Phrabat Somdet Phra Chairachathirat
+
+#Buddha footprint
+
+#Constantine Phaulkon
+
+#Wat Ratchaburana

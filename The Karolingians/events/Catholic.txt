@@ -1,0 +1,66 @@
+##############################
+# Catholic Flavor Events     #
+#                            #
+# Written by Johan Andersson #
+##############################
+
+namespace = catholic_flavor
+
+# The Kingdom of God on Earth
+country_event = {
+	id = catholic_flavor.2
+	title = catholic_flavor.2.t
+	desc = catholic_flavor.2.d
+	picture = POPE_PREACHING_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = catholic_flavor.2.a
+		add_government_reform = kingdom_of_god_reform
+		#set_government_rank = 3
+	}
+
+	option = {
+		name = catholic_flavor.2.b
+		add_prestige = 10
+	}
+}
+
+
+# The Pentarchy
+country_event = {
+	id = catholic_flavor.3
+	title = catholic_flavor.3.t
+	desc = catholic_flavor.3.d
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name = catholic_flavor.3.a
+		add_prestige = 25
+		add_legitimacy = 25
+		set_religion_papacy_active = {
+			religion = catholic
+			active = no
+		}
+	}
+}
+
+# Simony
+
+# Selling of indulgences
+
+# Veneration of Relics
+
+# Veneration of the Virgin Mary 
+
+# The Doctrine of Particular Judgement
+
+# A new Confession of Faith
+
+#A Promise of Safe Passage?

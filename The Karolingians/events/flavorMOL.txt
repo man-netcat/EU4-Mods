@@ -1,0 +1,13 @@
+# Flavour events for Moldavia - Roman II's Coup
+# By Daniel Tolman
+
+namespace = flavor_mol
+normal_or_historical_nations = yes
+
+# For Poland. Support for Roman
+
+# For Moldavia
+
+# Poland reacts to Moldavian decision
+
+# For Hungary

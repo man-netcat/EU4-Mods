@@ -1,0 +1,522 @@
+########################################
+# Events for Hungary
+#
+# written by Johan Andersson & Henrik Lohmander
+########################################
+
+namespace = flavor_hun
+normal_or_historical_nations = yes
+
+# Diet of 1445
+
+# Mattias Corvinus or a Habsburg king
+
+# Ladislaus Postumus dies of Leukemia (copy of flavor_hun.2 with adaptations)
+
+# Union with Hungary
+country_event = {
+	id = flavor_hun.3
+	title = flavor_hun.3.t
+	desc = flavor_hun.3.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_hun.3.a
+		add_legitimacy = 5
+		add_prestige = 5
+	}
+}
+
+# The magyar Throne
+
+# Administrative and Social Reforms of Mathias Corvinus
+
+# Academia Istropolitana
+
+# Printing Press in Buda
+
+# Decline of Royal Power
+
+# Elizabeth Bathory
+
+#Advance of the Turks.
+
+#magyar Peasant Revolt
+#György Dózsa
+
+#Tamás Bakócz
+
+
+#The Catholics in Bohemia seek our aid
+
+#Crowning of X
+
+#Banditry in Slovakia
+
+
+
+#Black Army
+
+#Maintain the Black Army?
+
+#End of the Black Army
+country_event = {
+	id = flavor_hun.18
+	title = flavor_hun.18.t
+	desc = flavor_hun.18.d
+	picture = MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		current_age = age_of_reformation
+		has_country_modifier = hun_black_army
+		NOT = { has_reform = black_army_reform }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = flavor_hun.18.a
+		remove_country_modifier = hun_black_army
+		add_army_tradition = 20
+		add_absolutism = 10
+		add_mil_power = 75
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			custom_tooltip = end_of_black_army_tooltip
+		}
+	}
+	option = { # new option, keep the black army
+		name = flavor_hun.18.b
+		trigger = {
+			is_subject = no
+			OR = {
+				has_dlc = "Emperor"
+				has_dlc = "Domination"
+			}
+		}
+		set_country_flag = black_army_reform_flag
+		add_government_reform = black_army_reform
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -15
+			}
+		}
+	}
+}
+
+#Mutiny in the Black Army
+country_event = {
+	id = flavor_hun.19
+	title = flavor_hun.19.t
+	desc = flavor_hun.19.d
+	picture = MILITARY_CAMP_eventPicture
+
+	trigger = {
+		has_country_modifier = hun_black_army
+		OR = {
+			NOT = { has_country_flag = had_black_army_mutiny }
+			had_country_flag = { flag = had_black_army_mutiny days = 7300 }
+		}
+		is_at_war = yes
+		num_of_cities = 5
+		any_owned_province = {
+			is_capital = no
+			is_in_capital_area = yes
+			NOT = { has_province_modifier = mercenary_concessions }
+		}
+		num_of_mercenaries = 1
+		NOT = { has_reform = black_army_reform }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_black_army_mutiny
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_in_capital_area = yes
+					NOT = { has_province_modifier = mercenary_concessions }
+				}
+				save_event_target_as = mercenary_mutiny_province
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_in_capital_area = yes
+					development = 6
+					NOT = { has_province_modifier = mercenary_concessions }
+				}
+				save_event_target_as = mercenary_mutiny_province
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_in_capital_area = yes
+					development = 10
+					NOT = { has_province_modifier = mercenary_concessions }
+				}
+				save_event_target_as = mercenary_mutiny_province
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	option = {
+		name = flavor_hun.19.a
+		event_target:mercenary_mutiny_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+			add_devastation = 35
+		}
+	}
+	option = {
+		name = flavor_hun.19.b
+		event_target:mercenary_mutiny_province = {
+			add_province_modifier = {
+				name = "mercenary_concessions"
+				duration = 7300
+			}
+		}
+	}
+}
+
+
+#Walls of Belgrade and the Ottoman Threat
+
+
+#Fall of Serbia
+
+#Synod of Debrecen
+
+#Támas Nádasdy
+
+#Voivodes of Transylvania Abolish their title
+#Triggers after the advance of the Turks
+
+#magyar Estates elect X to lead them
+
+#Statuta Valachorum
+
+# Romanian Revolt
+
+
+# Tamás Erdödy
+
+
+# Matthias Dévay
+
+# Janus Pannonius
+
+# City leagues of Upper Hungary
+
+#Slovak National Awakening
+
+#Kurucs and Hajduks
+
+
+#Francis (II) Rákóczi
+#Event for independent Hungary
+
+#Francis (II) Rákóczi
+#Event for subjected Hungary
+
+#Francis (II) Rákóczi
+#Event for subjected Hungary
+
+
+#Francis (II) Rákóczi
+#Event for subjected Hungary
+
+
+########################################
+# More Events for Hungary
+#
+# written by Pierre du Plessis
+########################################
+
+namespace = new_flavour_hun
+
+#Ask the Emperor to become part of the Empire?
+
+#Hungary Joins the Empire? - Incident
+
+
+#The Greeks in Constantinople (used by Austria too)
+country_event = {
+	id = new_flavour_hun.3
+	title = new_flavour_hun.3.name
+	desc = new_flavour_hun.3.desc
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Bring back the Greeks
+		name = new_flavour_hun.3.A
+
+		151 = {
+			change_culture = greek
+			change_religion = orthodox
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { #Leave it as is
+		name = new_flavour_hun.3.B
+
+		151 = {
+			add_nationalism = -5
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+########################################
+# New Hungarian flavor events for 1.37
+#
+# written by Parmelion
+########################################
+
+#Addressing the Ethnic Situation
+country_event = {
+	id = flavor_hun.38
+	title = flavor_hun.38.t
+	desc = flavor_hun.38.d
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Promote the Hungarian culture
+		name = flavor_hun.38.a
+		add_country_modifier = {
+			name = "hun_promote_hungarian_culture"
+			duration = -1
+		}
+	}
+	option = { #Guarantee the minority rights
+		name = flavor_hun.38.b
+		add_country_modifier = {
+			name = "hun_guarantee_minority_rights"
+			duration = -1
+		}
+	}
+}
+
+#Balazs Magyar
+
+#Gubec's Peasant Uprising
+
+#Ascendant Hungary
+country_event = {
+    id = flavor_hun.41
+	title = flavor_hun.41.t
+	desc = flavor_hun.41.d
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+	    name = flavor_hun.41.a
+		ai_chance = { factor = 90 }
+		add_dip_power = 200
+		add_country_modifier = {
+			name = hun_imperial_crown_bid
+			duration = 7300
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 10 }
+	    name = flavor_hun.41.b
+		custom_tooltip = hun_elector_cb_tt
+		hidden_effect = {
+			every_elector = {
+				reverse_add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 300
+				}
+			}
+			emperor = {
+				reverse_add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 300
+				}
+			}
+		}
+	}
+}
+
+# Adam František Kollár
+
+
+# Pal Kinizsi
+
+#Beatrice of Aragon
+
+#Tripartitum 
+
+# Saxons convert to Protestantism	
+
+#Bibliotheca Corviniana
+country_event = { 
+    id = flavor_hun.47
+	title = flavor_hun.47.t
+	desc = flavor_hun.47.d
+	picture = BIG_BOOK_eventPicture 
+
+	is_triggered_only = yes
+	
+	option = { 
+	    name = flavor_hun.47.a
+		goto = 153
+		add_country_modifier = {
+			name = hun_corviana_library
+			duration = 7300
+		}
+		153 = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+					has_great_project = {
+						type = buda_castle
+						tier = 0
+					}
+				}
+				set_great_project_tier_1 = {
+					type = buda_castle
+				}
+			}
+			else = {
+				add_base_tax = 3
+			}
+		}
+	}
+}
+
+#Capital in Danger
+
+#Juraj Jánošík
+
+#Jánošík Strikes Again
+
+#The End of J�no��k
+
+country_event = {
+	id = flavor_hun.52
+	title = flavor_hun.52.t
+	desc = flavor_hun.52.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_hun.52.a
+	}
+}
+
+#New Trade Goods in Pest
+country_event = {
+	id = flavor_hun.53
+	title = flavor_hun.53.t
+	desc = flavor_hun.53.d
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_hun.53.a"
+		153 = {
+			change_trade_goods = cloth
+		}
+		153 = {
+			add_base_production = 1
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "flavor_hun.53.b"
+		153 = {
+			change_trade_goods = copper
+		}
+		153 = {
+			add_base_production = 1
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "flavor_hun.53.c"
+		153 = {
+			change_trade_goods = iron
+		}
+		153 = {
+			add_base_production = 1
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "flavor_hun.53.de"
+		153 = {
+			change_trade_goods = glass
+		}
+		153 = {
+			add_base_production = 1
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "flavor_hun.53.e"
+		153 = {
+			add_base_production = 3
+		}
+	}	
+}
+
+#Hungary Joins the Empire - Negative Response
+country_event = {
+	id = flavor_hun.54
+	title = flavor_hun.54.t
+	desc = flavor_hun.54.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_hun.54.a
+	}
+}

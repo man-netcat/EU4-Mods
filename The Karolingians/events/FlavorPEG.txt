@@ -1,0 +1,9 @@
+# Flavour events for Pegu by Daniel Tolman
+
+namespace = flavor_peg
+normal_or_historical_nations = yes
+
+
+# Shin Sawbu
+
+# Dhammazedi

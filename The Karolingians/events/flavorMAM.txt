@@ -1,0 +1,699 @@
+########################################
+# Events for The Mamelukes
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_mam
+normal_or_historical_nations = yes
+
+# Turks take Constantinople
+
+#The Public works of Cairo
+
+# Install a vassal ruler on Cyprus... 'James II'
+
+# Cyprus response
+
+# CYP has installed him
+
+# CYP bribes us
+country_event = {
+	id = flavor_mam.6
+	title = flavor_mam.6.t
+	desc = flavor_mam.6.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = flavor_mam.6.a
+		add_years_of_income = 0.25
+		add_prestige = 5
+	}
+}
+
+# CYP confronts us
+country_event = {
+	id = flavor_mam.7
+	title = flavor_mam.7.t
+	desc = flavor_mam.7.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = flavor_mam.7.a
+		add_claim = 321
+	}
+}
+
+# Ibn Taghribirdi
+
+# Nobility demands
+
+# Fire in Medina
+
+# Spanish friends...
+
+# SPA gets to know it...
+
+# Plague in Cairo
+
+#Revenue Administration
+
+# Portugese - Mamluk - Trade Conflict
+
+# POR gets a cb!
+
+# The anti-ottoman coalition of Shah Ismail
+
+# Emissaries going through Mamelukes, we can decide
+
+# Venice response
+
+# MAM, final decision
+
+# Inform new coalition members
+country_event = {
+	id = flavor_mam.21
+	title = flavor_mam.21.t
+	desc = flavor_mam.21.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = flavor_mam.21.a
+		add_prestige = 5
+	}	
+}
+
+# Turkey gets chance to eliminate them for good
+
+# The Holy Cities
+
+#1.36
+
+# 
+country_event = {
+	id = flavor_mam.100
+	title = flavor_mam.100.t
+	desc = flavor_mam.100.d
+	picture = SHIP_SAILING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mam.100.a
+
+		trigger = { 
+			has_dlc = "Rule Britannia"
+		}
+
+		custom_tooltip = mam_unlock_galley_doctrine_tt
+
+		clr_country_flag = mam_unlock_galley_doctrine_flag
+		clr_country_flag = mam_unlock_light_doctrine_flag
+		clr_country_flag = mam_unlock_warships_doctrine_flag
+		clr_country_flag = mam_unlock_transports_doctrine_flag
+
+		set_country_flag = mam_unlock_galley_doctrine_flag
+	}
+
+	option = {
+		name = flavor_mam.100.b
+
+		trigger = { 
+			has_dlc = "Rule Britannia"
+		}
+
+		custom_tooltip = mam_unlock_light_doctrine_tt
+
+		clr_country_flag = mam_unlock_galley_doctrine_flag
+		clr_country_flag = mam_unlock_light_doctrine_flag
+		clr_country_flag = mam_unlock_warships_doctrine_flag
+		clr_country_flag = mam_unlock_transports_doctrine_flag
+
+		set_country_flag = mam_unlock_light_doctrine_flag
+	}
+
+	option = {
+		name = flavor_mam.100.c
+
+		trigger = { 
+			has_dlc = "Rule Britannia"
+		}
+
+		custom_tooltip = mam_unlock_warships_doctrine_tt
+
+		clr_country_flag = mam_unlock_galley_doctrine_flag
+		clr_country_flag = mam_unlock_light_doctrine_flag
+		clr_country_flag = mam_unlock_warships_doctrine_flag
+		clr_country_flag = mam_unlock_transports_doctrine_flag
+
+		set_country_flag = mam_unlock_warships_doctrine_flag
+	}
+
+	option = {
+		name = flavor_mam.100.e
+
+		trigger = { has_dlc = "Rule Britannia" }
+
+		custom_tooltip = mam_unlock_transports_doctrine_tt
+		
+		clr_country_flag = mam_unlock_galley_doctrine_flag
+		clr_country_flag = mam_unlock_light_doctrine_flag
+		clr_country_flag = mam_unlock_warships_doctrine_flag
+		clr_country_flag = mam_unlock_transports_doctrine_flag
+
+		set_country_flag = mam_unlock_transports_doctrine_flag
+	}
+
+	option = {
+		name = flavor_mam.100.f
+
+		trigger = { 
+			NOT = { has_dlc = "Rule Britannia" }
+		}
+
+		create_admiral = { tradition = 80 }
+		add_navy_tradition = 10
+		
+	}
+}
+
+#Renovating the Zahiriyya Library
+country_event = { 
+	id = flavor_mam.101
+	title = flavor_mam.101.t
+	desc = flavor_mam.101.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mam.101.a
+
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
+			}
+			change_innovativeness = 3
+		}
+		else = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+	}
+
+	option = {
+		name = flavor_mam.101.b
+
+		add_years_of_income = -2
+		unlock_government_reform = {
+			government_reform = state_madrasas_reform
+		}
+	}
+}
+
+#The Grain Trade in Egypt
+country_event = { 
+	id = flavor_mam.102
+	title = flavor_mam.102.t
+	desc = flavor_mam.102.d
+	picture = muslimgfx_DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mam.102.a 
+
+		custom_tooltip = mam_expand_nile_estuaries_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = nile_estuary_modifier
+				}
+				remove_province_modifier = nile_estuary_modifier
+				add_province_modifier = {
+					name = expanded_nile_estuary_modifier
+					duration = -1 
+				}
+				add_base_production = 1
+			}
+		}
+	}
+
+	option = {
+		name = flavor_mam.102.b
+
+		add_mercantilism = 2
+		custom_tooltip = mam_expand_grain_production_tt
+		custom_tooltip = mam_more_exports_2_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = granary_of_the_mediterranean
+				}
+				remove_province_modifier = granary_of_the_mediterranean
+				add_province_modifier = {
+					name = expanded_granary_of_the_mediterranean_modifier
+					duration = -1 
+				}
+			}
+			set_country_flag = increase_exports_to_6_flag
+		}
+	}
+}
+
+
+#The Administration of the Mamluk Empire
+
+#The Waqf of [Root.Monarch.GetName]
+country_event = { 
+	id = flavor_mam.104
+	title = flavor_mam.104.t
+	desc = flavor_mam.104.d
+	picture = muslimgfx_ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mam.104.a 
+
+		add_years_of_income = -2
+		capital_scope = {
+			if = {
+				limit = { has_building = university }
+				add_base_production = 2
+			}
+			else = { add_building = university }
+		}
+		custom_tooltip = mam_adm_advisors_generate_idea_cost_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = mam_adm_advisors_generate_idea_cost_modifier
+				duration = 7300
+				hidden = yes
+			}
+		}
+	}
+
+	option = {
+		name = flavor_mam.104.b
+
+		add_years_of_income = -2
+
+		capital_scope = {
+			if = {
+				limit = { has_building = cathedral }
+				add_base_tax = 3
+			}
+			else = {
+				add_building = cathedral
+				if = {
+					limit = { has_building = temple }
+					hidden_effect = {
+						remove_building = temple
+					}
+				}
+			}
+		}
+
+		custom_tooltip = mam_mosque_great_mosque_generates_crown_land_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = mam_mosque_great_mosque_generates_crown_land_modifier
+				duration = 7300
+				hidden = yes
+			}
+		}
+		custom_tooltip = add_5_crown_land_share
+		hidden_effect = {
+			change_estate_land_share = {
+				estate = all
+				share = -5
+			}
+		}
+	}
+
+	option = {
+		name = flavor_mam.104.c
+
+		trigger = {
+			has_dlc = "Leviathan"
+			361 = {
+				owned_by = ROOT
+				NOT = {
+					has_great_project = {
+						type = al_azhar_university
+						tier = 3
+					}
+				}
+			}
+		}
+		add_years_of_income = -2
+		361 = {
+			add_great_project_tier = {
+				type = al_azhar_university
+				tier = 1
+			}
+		}
+		change_innovativeness = 3
+	}
+
+	option = {
+		name = flavor_mam.104.e
+
+		add_prestige_or_monarch_power = { amount = 10 }
+	}
+}
+
+#Coffea Arabica
+country_event = { 
+	id = flavor_mam.105
+	title = flavor_mam.105.t
+	desc = flavor_mam.105.d
+	picture = muslimgfx_MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mam.105.a 
+
+		custom_tooltip = mam_enable_coffee_monopoly_tt
+		set_country_flag = mam_enable_coffee_monopoly_flag
+
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 20
+		}
+	}
+
+	option = {
+		name = flavor_mam.105.b 
+
+		add_mercantilism = 5
+
+		custom_tooltip = mam_1_prod_in_coffee_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = { trade_goods = coffee }
+				add_base_production = 1
+			}
+		}
+	}
+}
+
+
+country_event = { #A Competent Ethiopian Noble
+	id = flavor_mam.107
+	title = flavor_mam.107.t
+	desc = flavor_mam.107.d
+	picture = muslimgfx_THEATRE_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = {
+		has_country_flag = mam_eth_flavor_flag
+	}
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = flavor_mam.107.a 
+
+		define_advisor = {
+			type = treasurer
+			skill = 3
+			culture = amhara
+			religion = coptic
+			cost_multiplier = 0.25
+		}
+
+		change_government_reform_progress = 50
+	}
+}
+
+country_event = { #The Many Capitals of the Ethiopians
+	id = flavor_mam.108
+	title = flavor_mam.108.t
+	desc = flavor_mam.108.d
+	picture = muslimgfx_RELIGIOUS_CONVERSION_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = {
+		has_country_flag = mam_eth_flavor_flag
+		any_owned_province = {
+			culture = amhara
+		}
+	}
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = flavor_mam.108.a 
+
+		random_owned_province = {
+			limit = { culture = amhara }
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1
+			add_prosperity = 10
+		}
+
+		add_stability_or_adm_power = yes 
+	}
+
+	option = {
+		name = flavor_mam.108.b
+		
+		add_estate_loyalty = {
+			estate = estate_nobles 
+			loyalty = 20
+		}
+		add_prestige_or_monarch_power = { amount = 15 }
+	}
+}
+
+country_event = { #Coptic Monasteries Flourish
+	id = flavor_mam.109
+	title = flavor_mam.109.t
+	desc = flavor_mam.109.d
+	picture = ORTHODOX_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = {
+		has_country_flag = mam_eth_flavor_flag
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT 
+			religion = coptic
+		}
+	}
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = flavor_mam.109.a 
+
+		random_province = {
+			limit = {
+				religion = coptic 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_random_development = 1
+		}
+		random_province = {
+			limit = {
+				religion = coptic 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_random_development = 1
+		}
+		random_province = {
+			limit = {
+				religion = coptic 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_random_development = 1
+		}
+		random_province = {
+			limit = {
+				religion = coptic 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			add_random_development = 1
+		}
+
+		add_stability_or_adm_power = yes
+
+	}
+}
+
+country_event = { #Ethiopian Recruits in the Army
+	id = flavor_mam.110
+	title = flavor_mam.110.t
+	desc = flavor_mam.110.d
+	picture = muslimgfx_MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = {
+		has_country_flag = mam_eth_flavor_flag
+		any_owned_province = {
+			country_or_non_sovereign_subject_holds = ROOT 
+			culture = amhara
+		}
+	}
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = flavor_mam.110.a 
+
+		add_yearly_manpower = 1
+		add_mil_power = 100
+	}
+}
+
+
+
+country_event = { #The Dar al-Makhzen
+	id = flavor_mam.113
+	title = flavor_mam.113.t
+	desc = flavor_mam.113.d
+	picture = muslimgfx_GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	goto = 343
+	option = {
+		name = flavor_mam.113.a 
+
+		add_years_of_income = -0.5
+		343 = {
+			add_base_tax = 3 
+			add_base_production = 3 
+			add_base_manpower = 3
+			change_culture = ROOT 
+			change_religion = ROOT 
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				add_devastation = -25
+				add_prosperity = 25 
+			}
+		}
+	}
+
+	option = {
+		name = flavor_mam.113.b 
+
+		343 = {
+			add_base_tax = 1 
+			add_base_production = 1
+			add_base_manpower = 1 
+			change_religion = ROOT
+		}
+	}
+}
+
+country_event = { #Architecture in Safavid Persia
+	id = flavor_mam.114
+	title = flavor_mam.114.t
+	desc = flavor_mam.114.d
+	picture = muslimgfx_CITY_VIEW_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = flavor_mam.114.a 
+
+		if = {
+			limit = { 
+				has_dlc = "Mandate of Heaven"
+				current_age = age_of_reformation
+				NOT = { is_year = 1590 }
+			}
+			custom_tooltip = enable_persian_age_ability_tt
+			set_country_flag = enable_persian_age_ability_flag
+		}
+		else = {
+			add_country_modifier = {
+				name = mam_adopted_persian_architecture_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+
+country_event = { #Construction Commences in [4316.GetName]
+	id = flavor_mam.115
+	title = flavor_mam.115.t
+	desc = flavor_mam.115.d
+	picture = BYZ_HARBOUR_eventPicture
+	is_triggered_only = yes 
+	major_trigger = {
+		has_discovered = 2316
+	}
+
+	option = {
+		name = flavor_mam.115.a 
+
+		hidden_effect = {
+			add_treasury = 20000
+		}
+		4316 = {
+			add_great_project = {
+				type = suez_canal
+				instant = no
+				builder = root
+			}
+		}
+		hidden_effect = {
+			add_treasury = -20000
+		}
+	}
+	after = {
+	}
+}
+
+# Extension of Coffee Monopoly
+country_event = {
+	id = flavor_mam.116
+	title = flavor_mam.116.t
+	desc = flavor_mam.116.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_burghers_monopoly_of_coffee }
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_burghers_monopoly_of_coffee }
+	}
+	option = {
+		name = monopoly_privileges.1.b
+		custom_tooltip = YEM_revoke_yemen_event_tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = coffee
+				}
+				apply_estate_monopoly_modifier = { privilege = estate_burghers_monopoly_of_coffee }
+			}
+		}
+	}
+}

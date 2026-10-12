@@ -1,0 +1,10 @@
+########################################
+# Events for Cyprus
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_cyp
+normal_or_historical_nations = yes
+
+# Recovery of Famagusta

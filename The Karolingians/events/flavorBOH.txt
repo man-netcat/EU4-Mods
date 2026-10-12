@@ -1,0 +1,285 @@
+########################################
+# Events for Bohemia
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_boh
+normal_or_historical_nations = yes
+
+#Hussites march on Prague
+
+#The Heretic King
+
+# Confederacy of Zelena Hora
+
+# The Vladislav Hall
+
+# Municipal Constitution
+
+# Brahe & Kepler
+
+# Hussite Traditions
+
+# Winter King in Prague
+
+
+# The Hussites of Bohemia (Papal reaction)
+country_event = {
+	id = flavor_boh.9
+	title = flavor_boh.9.t
+	desc = flavor_boh.9.d
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = ADULT_BAPTISME_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = POPE_PREACHING_eventPicture
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_boh.9.a #Condemn the [From.Monarch.GetTitle]
+		ai_chance = { factor = 90 }
+		add_devotion = 10
+		add_reform_desire = -0.01
+		FROM = {
+			country_event = { id = flavor_boh.10 }
+			add_opinion = {
+				who = root
+				modifier = boh_heretic_hussite
+			}
+		}
+	}
+	option = {
+		name = flavor_boh.9.b #We must seek Reconciliation
+		ai_chance = { factor = 10 }
+		add_reform_desire = 0.005
+		add_devotion = -10
+		FROM = {
+			country_event = { id = flavor_boh.11 }
+			add_opinion = {
+				who = root
+				modifier = boh_papal_reconciled
+			}
+		}
+	}
+}
+
+# The Pope Condemns [Root.Monarch.GetName]
+country_event = {
+	id = flavor_boh.10
+	title = flavor_boh.10.t
+	desc = flavor_boh.10.d
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = ADULT_BAPTISME_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = POPE_PREACHING_eventPicture
+	}
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = flavor_boh.10.a
+		add_prestige = -5 #Real effects are in the modifier you already got.
+	}
+}
+
+# Papacy remains 
+
+# New Events for Bohemia by Daniel Tolman
+
+# Compacts of Basel
+
+province_event = {
+	id = flavor_boh.13
+	title = none
+	desc = none
+	picture = none
+	hidden = yes	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_reform_center = hussite
+	}
+	
+	option = { }
+}
+
+########################################
+# 1.37 Bohemia by Parmelion
+########################################
+
+country_event = {
+    id = flavor_boh.14
+    title = none
+    desc = none
+    picture = none
+    hidden = yes
+    is_triggered_only = yes
+    option = {
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { religion = catholic }
+			}
+		}
+        set_country_flag = boh_catholic_missions
+        clr_country_flag = boh_hussite_missions
+        swap_non_generic_missions = yes
+    }
+    option = {
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { religion = hussite }
+			}
+		}
+        set_country_flag = boh_hussite_missions
+        clr_country_flag = boh_catholic_missions
+        swap_non_generic_missions = yes
+    }
+}
+
+#The Aftermath of the Hussite Wars
+country_event = {
+	id = flavor_boh.15
+	title = flavor_boh.15.t
+	desc = flavor_boh.15.d
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = HUSSITE_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = BATTLE_eventPicture
+	}
+	
+	immediate = {
+		hidden_effect = {
+			bohemia_area = {
+				add_devastation = 50
+			}
+			erzgebirge_area = {
+				add_devastation = 20
+			}
+			moravia_area = {
+				add_devastation = 20
+			}
+			if = {
+				limit = {
+					has_dlc = "Winds of Change"
+				}
+				add_country_modifier = {
+					name = boh_hussite_destruction
+					duration = 10950
+				}
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_boh.15.a
+		custom_tooltip = boh_starting_event_devastation
+		if = {
+			limit = {
+				has_dlc = "Winds of Change"
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = boh_hussite_destruction
+					duration = 10950
+					desc = boh_complete_mission
+				}
+			}
+		}
+	}
+}
+	
+#Legacy of Great Moravia
+country_event = {
+	id = flavor_boh.16
+	title = flavor_boh.16.t
+	desc = flavor_boh.16.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_boh.16.a
+		set_country_flag = boh_unlocked_great_moravia
+		custom_tooltip = boh_unlock_great_moravia_tt
+		change_ruler_stat = {
+			type = mil
+			amount = 2
+		}
+		add_ruler_modifier = {
+			name = boh_svatopluks_heir
+			duration = -1
+		}
+	}
+}
+
+#Reformatio Sigismundi
+country_event = {
+	id = flavor_boh.17
+	title = flavor_boh.17.t
+	desc = flavor_boh.17.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_boh.17.a
+		add_imperial_influence = 20
+		add_country_modifier = {
+			name = "boh_reformatio_sigismundi_hre"
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = flavor_boh.17.b
+		unlock_estate_privilege = { estate_privilege = estate_nobles_reformatio_sigismundi }
+	}
+	
+	option = {
+		name = flavor_boh.17.c
+		change_ruler_stat = {
+			type = dip
+			amount = 3
+		}
+	}
+}
+
+#Jan Rokycana
+
+#Kilian Ignaz Dientzenhofer
+
+#Jan Amos Komensky
+
+#Ji�� Melantrich z Aventina

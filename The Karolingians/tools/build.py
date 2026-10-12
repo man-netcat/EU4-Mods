@@ -22,6 +22,8 @@ def main() -> int:
         ("generate the Magyars", step_custom),
         ("rewrite vanilla realm colours", step_vanilla_countries),
         ("write formation triggers", step_formation_triggers),
+        ("filter vanilla events", step_events),
+        ("filter vanilla decisions", step_filter_decisions),
         ("check CK3 rulers", step_ck3, []),
         ("check start-date ownership", step_start),
     ]

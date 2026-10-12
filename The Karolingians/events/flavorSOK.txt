@@ -1,0 +1,25 @@
+########################################
+# Events for Sokoto
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_sok
+normal_or_historical_nations = yes
+
+#Usman dan Fodio
+
+#The followers of Usman Dan Fodio
+country_event = {
+	id = flavor_sok.2
+	title = flavor_sok.2.t
+	desc = flavor_sok.2.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_sok.2.a	#Accept the invitation of dan Fodio
+		custom_tooltip = flavor_sok.2.a.tt
+	}
+}

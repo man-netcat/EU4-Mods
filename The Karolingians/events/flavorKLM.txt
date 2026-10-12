@@ -1,0 +1,4 @@
+# Arrival of the Kalmyks by Daniel Tolman
+
+namespace = flavor_klm
+normal_or_historical_nations = yes

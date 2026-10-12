@@ -1,0 +1,92 @@
+country_decisions = {
+
+	
+	
+	rus_sell_vodka_to_the_people = {
+		potential = {
+			has_country_flag = rus_enable_vodka_sales_decision
+		}
+		allow = {
+			grain = 1
+			custom_trigger_tooltip = {
+				tooltip = decision_once_every_ten_years
+				OR = {
+					NOT = { has_country_flag = rus_sold_vodka_to_the_people }
+					had_country_flag = {
+						flag = rus_sold_vodka_to_the_people
+						days = 3650
+					}
+				}
+			}
+		}
+		effect = {
+			clr_country_flag = rus_sold_vodka_to_the_people
+			set_country_flag = rus_sold_vodka_to_the_people
+			add_rebel_progress = {
+				value = -20
+			}
+			add_years_of_owned_provinces_production_income = {
+				custom_tooltip = MONOPOLY_INCOME_GRAIN_DESC
+				trigger = {
+					trade_goods = grain
+				}
+				years = 6
+			}
+			custom_tooltip = rus_sell_vodka_to_the_people_bt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = grain
+					}
+					add_prosperity = -10
+				}
+			}
+			if = {
+				limit = { has_country_modifier = rus_vodka_sales }
+				extend_country_modifier = {
+					name = rus_vodka_sales
+					duration = 3650
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = rus_vodka_sales
+					duration = 7300
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	rus_abolish_the_serfdom = {
+		potential = {
+			has_country_flag = final_serfdom_privileges
+		}
+		allow = {
+			stability = 1
+			adm_power_cost = 100
+			dip_power_cost = 100
+			mil_power_cost = 100
+		}
+		effect = {
+			clr_country_flag = final_serfdom_privileges
+			add_stability = -1
+			adm_power_cost = 100
+			dip_power_cost = 100
+			mil_power_cost = 100
+			rus_clear_peasantry_estate_privileges = yes
+			random_owned_province = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

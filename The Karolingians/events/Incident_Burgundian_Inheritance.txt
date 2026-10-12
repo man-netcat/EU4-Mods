@@ -1,0 +1,81 @@
+#### The Burgundian Inheritance ###
+### By James Beaumont ###
+
+
+namespace = incidents_bur_inheritance
+normal_or_historical_nations = yes
+
+# Mary is appointed regent
+
+# Ruler of Burgundy Dies
+
+# France can DoW Burgundy
+
+# Emperor demands the Lowlands
+
+# Country is notified they inherited Burgundy
+
+
+# Burgundy with the Emperor incident
+
+# Burgundy with Strong Ally OR France
+
+# demanding the lowlands
+
+# DoW notification
+
+# Burgundy stands alone
+
+# Mary dies
+
+# Overlord accepts integration
+
+# Overlord fights Burgundy
+
+# Mary is successful and changes inheritance laws
+country_event = {
+	id = incidents_bur_inheritance.6
+	title = "incidents_bur_inheritance.6.t"
+	desc = "incidents_bur_inheritance.6.d"
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Mary changes the inheritance laws
+		name = "incidents_bur_inheritance.6.a"
+		add_country_modifier = { name = mary_inheritance_reforms duration = -1 }
+	}
+
+	option = { #Mary is a stable ruler to trust in
+		name = "incidents_bur_inheritance.6.b"
+		add_stability_or_adm_power = yes
+		add_ruler_modifier = { name = mary_reputation }
+	}
+}
+
+# Delay event, checks if Burgundy is eligible to trigger the Succession Crisis or if they just fell into a PU naturally
+
+# Burgundian Marriage Cleaner
+country_event = {
+	id = incidents_bur_inheritance.1001
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		every_known_country = {
+			limit = {
+				has_country_flag = received_burgundian_marriage
+				NOT = { marriage_with = root }
+			}
+			clr_country_flag = received_burgundian_marriage
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

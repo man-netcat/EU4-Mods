@@ -1,0 +1,247 @@
+########################################
+# Flavor Events for Brandenburg - Prussia
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_brapru
+normal_or_historical_nations = yes
+
+# The incorporation of Prussia into Brandenburg
+
+# Reform of the Brandenburg Army
+
+# The Prussian (Brandenburg) African Trade Company
+
+# Immanuel Kant
+
+# The Absolutism
+
+# The Reform of the Prussian Army
+
+# The Enlightened Reforms of Frederick the Great
+
+# Von Scharnhorst's and Von Stein's Reforms
+
+# Berliner Unwille
+
+#The Sale of Indulgences
+
+# University of K�nigsberg
+
+#The Grain Tax
+
+#Leonhard Thurneysser
+
+#Prutenic Tables
+
+#Teutons Pawn Neumark?
+
+#The fate of Neumark
+
+#Treaty of C�lln
+
+#The Teutonic Order Declines our Offer.
+country_event = {
+	id = flavor_brapru.18
+	title = "flavor_brapru.18.t"
+	desc = "flavor_brapru.18.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_brapru.18.a" #Ack!
+	}
+}
+
+#State of Brandenburg
+
+#The Matter of Berlin
+
+#Unification of Berlin
+country_event = {
+	id = flavor_brapru.21
+	title = flavor_brapru.21.t
+	desc = flavor_brapru.21.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		had_country_flag = { flag = pru_berlin_renovations_flag days = 3650 }
+		owns_core_province = 50
+		50 = {
+			has_province_modifier = pru_berlin_renovations
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = { #Great!
+		name = flavor_brapru.21.a
+		clr_country_flag = pru_berlin_renovations_flag
+		50 = {
+			rename_capital = "Berlin"
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			remove_province_modifier = pru_berlin_renovations
+			add_province_modifier = {
+				name = "pru_unification_of_berlin"
+				duration = -1
+			}
+		}
+	}
+	
+}
+
+#Succession of Albrecht Achilles
+#Silent start
+
+#Hohenzollers of Brandenburg
+
+#Franconian Holdings
+
+#Dispositio Achillea
+
+
+country_event = {
+	id = flavor_brapru.251
+	title = none
+	desc = none
+	picture = none
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		define_ruler = {
+			dynasty = "von Hohenzollern"
+		}
+	}
+	option = {
+		
+	}
+}
+
+#A man of Law and Integrity
+
+#Legal Reforms of Frederick the Great
+
+#The Edict of Potsdam
+
+# Carl von Clausewitz
+
+# The Burghers of K�nigsberg (Hieronymus Roth)
+
+
+# Dreaming of Sanssouci
+
+# Palace of Sanssouci finished
+country_event = {
+	id = flavor_brapru.32
+	title = flavor_brapru.32.t
+	picture = GREAT_BUILDING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = pru_sanssouci_palace_flag
+		owns = 1759
+	}
+
+	immediate = {
+		hidden_effect = {
+			1759 = {
+				save_event_target_as = potsdam_province
+			}
+		}
+	}
+
+	desc = { trigger = { has_ruler_flag = pru_sanssouci_builder_flag }
+		desc = flavor_brapru.32.da
+	}
+	desc = { trigger = { NOT = { has_ruler_flag = pru_sanssouci_builder_flag } }
+		desc = flavor_brapru.32.db
+	}
+
+	option = { #Great!
+		name = flavor_brapru.32.a
+		add_prestige = 10
+		1759 = {
+			add_province_modifier = {
+				name = "pru_sanssouci_palace"
+				duration = -1
+			}
+		}
+		clr_country_flag = pru_sanssouci_palace_flag
+		clr_ruler_flag = pru_sanssouci_builder_flag
+	}
+}
+
+# Diet of 1653
+
+# Construction of Canals to Berlin-C�lln has run out of funding
+
+# Praxis pietatis melica
+
+# The Prussian Canton System
+# One-time megaboost for military minded Prussian monarchs some-time in the 18th century..
+
+# Moses Mendelssohn
+
+#Confiscation of Herrshaft Ruppin
+
+#Johannes Agricola
+
+#Resurgence of the Robber-Barons
+
+#Economic Downturn - Alleviate by extending the privileges of the estates through the Kreditwerk?
+
+
+#Credit for these events goes to Stiopa and his team
+
+country_event = {
+	id = flavor_brapru.44
+	title = flavor_brapru.44.t #Toleranzedikt
+	desc = flavor_brapru.44.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_brapru.44.a #A great development.
+		
+		ai_chance = { factor = 100 }
+		
+		set_country_flag = ME_PRU_Tolerance
+		add_country_modifier = {
+			name = PRU_bitter_resistance
+			duration = 5475
+		}
+		add_country_modifier = {
+			name = PRU_toleranzedikt
+			duration = 10590
+		}
+
+	}
+	
+	option = {
+		name = flavor_brapru.44.b #The churches can't be united, we are wasting our time
+		
+		ai_chance = { factor = 100 }
+		
+		if = { 
+			limit = { has_estate = estate_church }
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 5
+			}
+		}
+		else = { add_prestige_or_monarch_power = { amount = 10 } }
+	}
+}

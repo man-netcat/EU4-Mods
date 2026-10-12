@@ -1,0 +1,14 @@
+# Flavor Events for the Cherokee (written by Veronica Pazos)
+
+namespace = flavor_che
+normal_or_historical_nations = yes
+
+# Smoky Mountains
+
+# Blood Revenge
+
+# European Contact
+
+# Treaty With Foreign Traders
+
+# Cherokee National Council

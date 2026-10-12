@@ -1,0 +1,2625 @@
+########################################
+# Flavor Events for Denmark
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_dan
+normal_or_historical_nations = yes
+
+# The Pluralistic Reforms of Christian II
+
+# The Scandinavian Constitution
+
+# The Great Naval Reform
+
+# Peder Oxe
+
+# The Mercantile Reforms of Christian IV
+
+# The Absolutism
+
+# The Modernisation of the Navy
+
+# Peder Griffenfeld
+
+# The Great Northern Conflict
+
+# The Mercantile Reforms of Christian VI
+
+# Pietism
+
+# The Regency of J.H.E. Bernstorff
+
+# The Regency of Struensee
+
+# The Regency of Ove Hoeg-Guldberg
+
+# The Regency of A.P.Bernstorff
+
+# The Great Agricultural Reform
+
+# MINOR FLAVOR EVENTS #
+
+# Tycho Brahe
+
+# University of Copenhagen
+
+# St. Clare's Monastery
+
+########################################
+# More Events for Denmark
+#
+# written by Henrik Lohmander
+########################################
+
+# Second Great Mandrowning
+country_event = {
+	id = flavor_dan.1
+	title = "flavor_dan.1.t"
+	desc = "flavor_dan.1.d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	trigger = {
+		is_year = 1630
+		NOT = { is_year = 1640 }
+		OR = {
+			13 = {
+				owned_by = ROOT
+				NOT = { has_province_flag = drowned }
+			}
+			4141 = {
+				owned_by = ROOT
+				NOT = { has_province_flag = drowned }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		name = "flavor_dan.1.a" #
+		if = {
+			limit = { owns = 13 }
+			13 = {
+				if = {
+					limit = { NOT = { base_tax = 3 } }
+					set_base_tax = 1
+				}
+				else = { add_base_tax = -2 }
+				if = {
+					limit = { NOT = { base_manpower = 3 } }
+					set_base_manpower = 1
+				}
+				else = { add_base_manpower = -2 }
+				add_devastation = 100
+				set_province_flag = drowned
+			}
+		}
+		if = {
+			limit = { NOT = { owns = 13 } }
+			tooltip = {
+				13 = {
+					if = {
+						limit = { NOT = { base_tax = 3 } }
+						set_base_tax = 1
+					}
+					else = { add_base_tax = -2 }
+					if = {
+						limit = { NOT = { base_manpower = 3 } }
+						set_base_manpower = 1
+					}
+					else = { add_base_manpower = -2 }
+					add_devastation = 100
+				}
+			}
+			hidden_effect = {
+				13 = {
+					owner = {
+						country_event = { id = flavor_dan.1 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = { owns = 4141 }
+			4141 = {
+				if = {
+					limit = { NOT = { base_tax = 3 } }
+					set_base_tax = 1
+				}
+				else = { add_base_tax = -2 }
+				if = {
+					limit = { NOT = { base_manpower = 3 } }
+					set_base_manpower = 1
+				}
+				else = { add_base_manpower = -2 }
+				add_devastation = 100
+				set_province_flag = drowned
+			}
+		}
+		if = {
+			limit = { NOT = { owns = 4141 } }
+			tooltip = {
+				4141 = {
+					if = {
+						limit = { NOT = { base_tax = 3 } }
+						set_base_tax = 1
+					}
+					else = { add_base_tax = -2 }
+					if = {
+						limit = { NOT = { base_manpower = 3 } }
+						set_base_manpower = 1
+					}
+					else = { add_base_manpower = -2 }
+					add_devastation = 100
+				}
+			}
+			hidden_effect = {
+				4141 = {
+					owner = {
+						country_event = { id = flavor_dan.1 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Death of Adolf VIII
+
+#Treaty of Ribe
+
+#The State of Denmark
+#Background to the situation in 1444 as well as an opening to dealing with based on the historical crisis in the 1460's. While This combines the reigns of Cristopher and Christian I the time frame is very small and we could not expect Cristopher dying to really alter the way you would attempt to chastise the Danish Nobility.
+
+#Bavarian Inheritance
+
+#Election of Christian von Oldenburg
+#Can trigger if without an heir in the 15th century. Probably won't happen in all games.
+
+#The Herring Runs Out
+country_event = {
+	id = flavor_dan.9
+	title = "flavor_dan.9.t"
+	desc = "flavor_dan.9.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 6 #Sk�ne
+		is_year = 1550
+		NOT = { is_year = 1600 }
+		6 = {
+			has_province_modifier = skanemarket
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			6 = {
+				save_event_target_as = scanian_target
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	
+	option = {
+		name = "flavor_dan.9.a" #
+		add_prestige = -5
+		6 = {
+			change_trade_goods = grain
+			remove_province_modifier = skanemarket
+		}
+	}
+}
+
+#Danish East India Company
+
+#An Embassy from Denmark
+country_event = {
+	id = flavor_dan.11
+	title = "flavor_dan.11.t"
+	desc = "flavor_dan.11.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					is_capital = no
+					superregion = india_superregion
+				}
+				save_event_target_as = dansborg
+			}
+		}
+	}
+	
+	option = {
+		name = "flavor_dan.11.a" #
+		ai_chance = { factor = 600 }
+		add_treasury = 100
+		FROM = { country_event = { id = flavor_dan.12 days = 24 } }
+		event_target:dansborg = {
+			add_province_modifier = {
+				name = dansborg_factory
+				duration = -1
+			}
+			tooltip = { add_permanent_claim = FROM }
+		}
+	}
+	option = {
+		name = "flavor_dan.11.b" #
+		ai_chance = { factor = 40 }
+		FROM = { country_event = { id = flavor_dan.13 days = 24 } }
+	}
+}
+
+#Captain Gjedde returns
+country_event = {
+	id = flavor_dan.12
+	title = "flavor_dan.12.t"
+	desc = "flavor_dan.12.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_dan.12.a" #
+		add_treasury = 150
+		event_target:dansborg = { add_permanent_claim = ROOT }
+	}
+}
+
+#No Danish India this time
+country_event = {
+	id = flavor_dan.13
+	title = "flavor_dan.13.t"
+	desc = "flavor_dan.13.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_dan.13.a" #
+		add_prestige = -10
+	}
+}
+
+#Great Fire of Copenhagen
+
+#The Murder of Poul Laxmand
+
+#Dutch Influences, ie: Reforms of Christian II
+#Effects inherited from old event (which is now related directly to ruling without support of the Nobility).
+
+#Hans Tausen & Poul Helgesen
+
+#The Oxen Road
+
+#Markus Hess
+
+#Intrigues between Council and King
+
+#Om miracler, tegn oc obenbaringer oc deris udleggelse
+
+
+#Niels Juel
+
+########################################
+# DLC Events for Denmark
+#
+# written by Ogulcan Yildirim
+########################################
+
+#Rebellious Pretenders! - Triggers every 3 years
+#country_event = {
+#	id = flavor_dan.100
+#	title = "flavor_dan.100.t"
+#	desc = "flavor_dan.100.desc"
+#	picture = ANGRY_MOB_eventPicture
+#	is_triggered_only = yes
+#	trigger = {
+#		has_dlc = "Lions of the North"
+#		NOT = { has_country_flag = dan_no_more_swedish_rebels }
+#		has_reform = kalmar_union
+#		SWE = { is_subject_of = ROOT }
+#	}
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	option = {
+#		name = "flavor_dan.100.a"
+#		SWE = {
+#			capital_scope = {
+#				spawn_rebels = {
+#					type = pretender_rebels
+#					size = 2
+#					friend = SWE
+#				}
+#			}
+#			random_owned_province = {
+#				limit = { is_capital = no }
+#				spawn_rebels = {
+#					type = pretender_rebels
+#					size = 1
+#					friend = SWE
+#				}
+#			}
+#		}
+#
+#		ai_chance = {
+#			factor = 1
+#		}
+#	}
+#}
+
+#The Fate of Eric Gryf
+
+#A new World!
+country_event = {
+	id = flavor_dan.102
+	title = "flavor_dan.102.t"
+	desc = "flavor_dan.102.desc"
+	picture = COLONIZATION_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { is_random_new_world = yes }
+				random_province = {
+					limit = {
+						continent = new_world
+						is_empty = yes
+						has_discovered = ROOT
+						has_port = yes
+					}
+					save_event_target_as = dan_rnw_colonial_province
+				}
+			}
+			else = {
+				random_province = {
+					limit = {
+						region = hudson_bay_region
+						is_empty = yes
+						has_discovered = ROOT
+						has_port = yes
+					}
+					save_event_target_as = dan_hudson_bay_colonial_province
+				}
+				random_province = {
+					limit = {
+						region = canada_region
+						is_empty = yes
+						has_discovered = ROOT
+						has_port = yes
+					}
+					save_event_target_as = dan_canada_colonial_province
+				}
+				random_province = {
+					limit = {
+						region = northeast_america_region
+						is_empty = yes
+						has_discovered = ROOT
+						has_port = yes
+					}
+					save_event_target_as = dan_northeast_america_colonial_province
+				}
+				random_province = {
+					limit = {
+						region = southeast_america_region
+						is_empty = yes
+						has_discovered = ROOT
+						has_port = yes
+					}
+					save_event_target_as = dan_southeast_america_colonial_province
+				}
+			}
+		}
+	}
+	
+	option = {	#Colonize the Random New World
+		name = "flavor_dan.102.a"
+		goto = dan_rnw_colonial_province
+		trigger = {
+			has_saved_event_target = dan_rnw_colonial_province
+		}
+		event_target:dan_rnw_colonial_province = {
+			change_religion = ROOT
+			change_culture = ROOT
+			add_siberian_construction = 400
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {	#Colonize Hudson Bay
+		name = "flavor_dan.102.b"
+		goto = dan_hudson_bay_colonial_province
+		trigger = {
+			has_saved_event_target = dan_hudson_bay_colonial_province
+		}
+		event_target:dan_hudson_bay_colonial_province = {
+			change_religion = ROOT
+			change_culture = ROOT
+			add_siberian_construction = 400
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {	#Colonize Canada
+		name = "flavor_dan.102.c"
+		goto = dan_canada_colonial_province
+		trigger = {
+			has_saved_event_target = dan_canada_colonial_province
+		}
+		event_target:dan_canada_colonial_province = {
+			change_religion = ROOT
+			change_culture = ROOT
+			add_siberian_construction = 400
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {	#Colonize Northeast America
+		name = "flavor_dan.102.d"
+		goto = dan_northeast_america_colonial_province
+		trigger = {
+			has_saved_event_target = dan_northeast_america_colonial_province
+		}
+		event_target:dan_northeast_america_colonial_province = {
+			change_religion = ROOT
+			change_culture = ROOT
+			add_siberian_construction = 400
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {	#Colonize Southeast America
+		name = "flavor_dan.102.e"
+		goto = dan_southeast_america_colonial_province
+		trigger = {
+			has_saved_event_target = dan_southeast_america_colonial_province
+		}
+		event_target:dan_southeast_america_colonial_province = {
+			change_religion = ROOT
+			change_culture = ROOT
+			add_siberian_construction = 400
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {	#Fallback
+		name = "flavor_dan.102.zzz"
+		trigger = {
+			NOT = { has_saved_event_target = dan_rnw_colonial_province }
+			NOT = { has_saved_event_target = dan_hudson_bay_colonial_province }
+			NOT = { has_saved_event_target = dan_canada_colonial_province }
+			NOT = { has_saved_event_target = dan_northeast_america_colonial_province }
+			NOT = { has_saved_event_target = dan_southeast_america_colonial_province }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Ratification of the Kalmar Union
+country_event = {
+	id = flavor_dan.103
+	title = "flavor_dan.103.t"
+	desc = "flavor_dan.103.desc"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_dan.103.a"
+		remove_government_reform = kalmar_union
+		add_government_reform = danish_archkingdom
+	}
+}
+
+#University of Kobenhavn
+country_event = {
+	id = flavor_dan.104
+	title = "flavor_dan.104.t"
+	desc = "flavor_dan.104.desc"
+	picture = UNIVERSITY_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_dan.104.a"
+		change_innovativeness = 2
+		change_government_reform_progress = 50
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		12 = { add_building = university }
+	}
+}
+
+#Unification of Scandinavia
+country_event = {
+	id = flavor_dan.105
+	title = flavor_dan.105.t
+	desc = flavor_dan.105.desc
+	picture = EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_dan.105.a
+		if = {
+			limit = { NOT = { government_rank = 3 } }
+			set_government_rank = 3
+		}
+		add_country_modifier = {
+			name = dan_great_empire_of_scandinavia
+			duration = -1
+		}
+		add_legitimacy = 100
+		add_prestige = 100
+		custom_tooltip = allow_earlier_scandinavia_formation_tt
+		hidden_effect = { set_country_flag = can_form_scandinavia_earlier }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#The [Root.Capital.GetName] Bloodbath
+country_event = {
+	id = flavor_dan.106
+	title = "flavor_dan.106.t"
+	desc = "flavor_dan.106.desc"
+	picture = REVOLUTION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		is_subject = yes
+		overlord = { NOT = { has_country_flag = got_no_swedish_disloayalty_to_gotland } }
+	}
+	
+	option = {
+		name = "flavor_dan.106.a"
+		set_country_flag = dan_had_stockholm_bloodbath
+		FROM = { add_historical_rival = ROOT }
+		add_historical_rival = FROM
+		add_liberty_desire = -100
+		add_country_modifier = {
+			name = stockholm_bloodbath
+			duration = 36500
+		}
+		add_opinion = {
+			who = FROM
+			modifier = stockholm_bloodbath_opinion
+		}
+		add_opinion = {
+			who = FROM
+			modifier = stockholm_bloodbath_extra_opinion
+		}
+	}
+
+	after = {
+		FROM = {
+			country_event = {
+				id = flavor_dan.122
+			}
+		}
+	}
+}
+
+#Select your India Reward
+country_event = {
+	id = flavor_dan.107
+	title = "flavor_dan.107.t"
+	desc = "flavor_dan.107.desc"
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = "flavor_dan.107.a"
+		define_advisor = {
+			type = master_of_mint
+			discount = yes
+			skill = 3
+		}
+	}
+	
+	option = {
+		name = "flavor_dan.107.b"
+		define_advisor = {
+			type = trader
+			discount = yes
+			skill = 3
+		}
+	}
+	
+	option = {
+		name = "flavor_dan.107.c"
+		define_advisor = {
+			type = navigator
+			discount = yes
+			skill = 3
+		}
+	}
+	
+	option = {
+		name = "flavor_dan.107.c"
+		define_advisor = {
+			type = grand_captain
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#Trade with Denmark in India
+country_event = {
+	id = flavor_dan.108
+	title = flavor_dan.108.t
+	desc = flavor_dan.108.desc
+	picture = MERCHANTS_TALKING_eventPicture	
+	is_triggered_only = yes
+	
+	option = {	#Good idea
+		name = flavor_dan.108.a
+		add_country_modifier = {
+			name = dan_danish_investment
+			duration = 9125
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_rivalry
+					}
+				}
+			}
+		}
+	}
+	
+	option = {	#Nah
+		name = flavor_dan.108.b
+		add_mercantilism = 2
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_hostile
+					}
+				}
+				NOT = {
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_outraged
+					}
+				}
+				NOT = {
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_rivalry
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Succession Struggle of the Kalmar Union - Info event
+country_event = {
+	id = flavor_dan.109
+	title = flavor_dan.109.t
+	desc = flavor_dan.109.desc
+	picture = BAD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_government_attribute = kalmar_union_succession
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {	#Good lord
+		name = flavor_dan.109.a
+		custom_tooltip = flavor_dan.109.a.tt
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Denmark provokes a trade conflict
+country_event = {
+	id = flavor_dan.110
+	title = flavor_dan.110.t
+	desc = flavor_dan.110.desc
+	picture = ACCUSATION_eventPicture	
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { set_country_flag = dan_considers_war_with_denmark } }
+	after = { clr_country_flag = dan_considers_war_with_denmark }
+	
+	option = {	#That's it! We wage war with the Danes!
+		name = flavor_dan.110.a
+		declare_war_with_cb = {
+			casus_belli = cb_trade_conflict_triggered
+			who = FROM
+		}
+		if = {
+			limit = {
+				is_trade_league_leader = yes
+			}
+			custom_tooltip = flavor_dan.110.a.tt
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_in_trade_league_with = ROOT
+						NOT = { has_country_flag = dan_considers_war_with_denmark }
+					}
+					join_all_offensive_wars_of = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = yes
+			}
+		}
+	}
+	
+	option = {	#We cannot afford a conflict with Denmark...
+		name = flavor_dan.110.b
+		45 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 18250
+				power = -15
+				key = dan_submitted_to_danish_trade_dominance_modifier
+			}
+		}
+		hidden_effect = {
+			set_country_flag = dan_submitted_to_danish_trade_dominance
+			FROM = {
+				country_event = {
+					id = flavor_dan.111
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+	}
+}
+
+#[From.GetName] submits to Danish Trade Dominance
+country_event = {
+	id = flavor_dan.111
+	title = flavor_dan.111.t
+	desc = flavor_dan.111.desc
+	picture = CONQUEST_eventPicture	
+	is_triggered_only = yes
+	
+	option = {	#Excellent!
+		name = flavor_dan.111.a
+		tooltip = {
+			45 = {
+				add_trade_modifier = {
+					who = FROM
+					duration = 18250
+					power = -15
+					key = dan_submitted_to_danish_trade_dominance_modifier
+				}
+			}
+		}
+		FROM = {
+			custom_tooltip = dan_submitted_to_danish_trade_dominance_tt
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Norway's Role in the Kalmar Union
+
+#Merc Contracts for Denmark
+country_event = {
+	id = flavor_dan.113
+	title = flavor_dan.113.t
+	desc = flavor_dan.113.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { 61 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 61_owner_allow_merc_company_flag
+			}
+			if = {
+				limit = { 1762 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 1762_owner_allow_merc_company_flag
+			}
+			if = {
+				limit = { 70 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 70_owner_allow_merc_company_flag
+			}
+			if = {
+				limit = { 4382 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 4382_owner_allow_merc_company_flag
+			}
+			if = {
+				limit = { 90 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 90_owner_allow_merc_company_flag
+			}
+			if = {
+				limit = { 41 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 41_owner_allow_merc_company_flag
+			}
+			if = {
+				limit = { 165 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 165_owner_allow_merc_company_flag
+			}
+			if = {
+				limit = { 4758 = { OR = { country_or_non_sovereign_subject_holds = ROOT owner = { has_opinion = { who = ROOT value = 100 } } } } }
+				set_country_flag = 4758_owner_allow_merc_company_flag
+			}
+		}
+	}
+
+	option = {
+		name = flavor_dan.113.a
+		if = {
+			limit = { has_country_flag = 61_owner_allow_merc_company_flag }
+			clr_country_flag = 61_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_schwarze_garde
+			}
+		}
+		if = {
+			limit = { has_country_flag = 1762_owner_allow_merc_company_flag }
+			clr_country_flag = 1762_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_hessian_jaegerkorps
+			}
+		}
+		if = {
+			limit = { has_country_flag = 70_owner_allow_merc_company_flag }
+			clr_country_flag = 70_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_doppelsoeldner
+			}
+		}
+		if = {
+			limit = { has_country_flag = 4382_owner_allow_merc_company_flag }
+			clr_country_flag = 4382_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_frisian_free_company
+			}
+		}
+		if = {
+			limit = { has_country_flag = 90_owner_allow_merc_company_flag }
+			clr_country_flag = 90_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_flemish_company
+			}
+		}
+		if = {
+			limit = { has_country_flag = 41_owner_allow_merc_company_flag }
+			clr_country_flag = 41_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_prussian_volunteer_army
+				free_merc = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = 165_owner_allow_merc_company_flag }
+			clr_country_flag = 165_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_reislaufer
+			}
+		}
+		if = {
+			limit = { has_country_flag = 4758_owner_allow_merc_company_flag }
+			clr_country_flag = 4758_owner_allow_merc_company_flag
+			unlock_merc_company = {
+				merc_company = merc_tyrolean_guard
+			}
+		}
+		add_country_modifier = {
+			name = dan_sca_merc_contract
+			duration = -1
+		}
+		if = {
+			limit = { has_dlc = "Cradle of Civilization" }
+			custom_tooltip = dan_sca_merc_contract_tt
+		}
+	}
+}
+
+#Sweden's Role in the Kalmar Union
+
+#Sweden's Dream of Independence
+
+# The Scandinavian Constitution
+
+#Discontent of the Swedish Nobility
+
+# Swedish Nobility Rebellion
+
+# A new North Sea Empire
+country_event = {
+	id = flavor_dan.119
+	title = "flavor_dan.119.t"
+	desc = "flavor_dan.119.desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	
+	option = {	#Make London to our new Capital!
+		name = "flavor_dan.119.a"
+		set_capital = 236
+		add_accepted_culture_or_dip_power = {
+			culture = english
+			dip_reward = yes
+		}
+		236 = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 2
+		}
+	}
+	option = {	#We rule from Coppenhagen!
+		name = "flavor_dan.119.b"
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 2
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Loss of the English Channel Trade
+country_event = {
+	id = flavor_dan.120
+	title = "flavor_dan.120.t"
+	desc = "flavor_dan.120.desc"
+	picture = BUCCANEERS_eventPicture
+	trigger = {
+		has_country_modifier = dan_control_over_the_english_channel
+		NOT = {
+			1269 = {
+				trade_share = {
+					country = ROOT
+					share = 1
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	fire_only_once = yes
+	
+	option = {	#Darn
+		name = "flavor_dan.120.a"
+		remove_country_modifier = dan_control_over_the_english_channel
+	}
+}
+
+#Remove subject related modifiers when they are no longer applicable
+
+# Consequences of the Stockholm Bloodbath
+country_event = {
+	id = flavor_dan.122
+	title = "flavor_dan.122.t"
+	desc = "flavor_dan.122.desc"
+	picture = REVOLUTION_eventPicture
+	is_triggered_only = yes
+	
+	option = {	#Keeping them loyal will be impossible now...
+		name = "flavor_dan.122.a"
+		tooltip = {
+			FROM = {
+				add_historical_rival = ROOT
+				add_liberty_desire = -100
+				add_country_modifier = {
+					name = stockholm_bloodbath
+					duration = 36500
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = stockholm_bloodbath_opinion
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = stockholm_bloodbath_extra_opinion
+				}
+			}
+			add_historical_rival = FROM
+		}
+	}
+}
+
+# The last Pretender Rebellions of Sweden
+
+#Choose between Mercs and Standing Army
+country_event = {
+	id = flavor_dan.124
+	title = flavor_dan.124.t
+	desc = flavor_dan.124.desc
+	picture = MILITARY_CAMP_eventPicture
+	is_triggered_only = yes
+	
+	option = {	#Double down on Mercs
+		name = flavor_dan.124.a
+		add_country_modifier = {
+			name = dan_sca_standing_professional_merc_army
+			duration = -1
+		}
+	}
+	
+	option = {	#The time for Mercs is long over
+		name = flavor_dan.124.b
+		remove_country_modifier = dan_sca_merc_contract
+		remove_country_modifier = dan_sca_grand_merc_army
+		add_country_modifier = {
+			name = dan_sca_refocus_on_personal_armies
+			duration = -1
+		}
+		custom_tooltip = dan_sca_refocus_on_personal_armies_tt	#Can no longer recruit mercenaries as long this modifier is active
+	}
+}
+
+#Kalmar Union mechanics
+namespace = kalmar_union_events
+
+#A new ruler comes to the throne
+country_event = {
+	id = kalmar_union_events.1
+	title = kalmar_union_events.1.t
+	desc = kalmar_union_events.1.desc
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = kalmar_union_succession
+		NOT = { has_ruler_flag = suggested_ruler_flag } 
+	}
+	major = yes
+	major_trigger = {
+		is_subject_of = ROOT
+		is_subject_of_type = personal_union
+		capital_scope = { region = scandinavia_region }
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 50
+				}
+				set_country_flag = dan_rebellious_union_partner
+			}
+			every_subject_country = {
+				limit = { has_country_flag = dan_already_suggested_new_ruler }
+				clr_country_flag = dan_already_suggested_new_ruler
+			}
+		}
+	}
+	after = {
+		every_subject_country = {
+			limit = { has_country_flag = dan_rebellious_union_partner }
+			clr_country_flag = dan_rebellious_union_partner
+		}
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = personal_union
+				capital_scope = { region = scandinavia_region }
+			}
+			country_event = {
+				id = kalmar_union_events.2
+			}
+		}
+	}
+
+	option = {	#The kingdoms will have to accept [Root.Monarch.GetName]
+		name = kalmar_union_events.1.a
+		custom_tooltip = kalmar_union_events.1.a.tt
+
+		ai_chance = {
+			factor = 1
+			#Some subject is getting annoying
+			modifier = {
+				factor = 0
+				current_age = age_of_discovery
+				any_subject_country = { has_country_flag = dan_rebellious_union_partner }
+			}
+			#Rebellious subject
+			modifier = {
+				factor = 0
+				current_age = age_of_discovery
+				any_subject_country = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 75
+				}
+			}
+			#The Kalmar Union should fall apart after the Age of Discovery
+			#Some subject is getting annoying
+			modifier = {
+				factor = 0.8
+				NOT = { current_age = age_of_discovery }
+				any_subject_country = { has_country_flag = dan_rebellious_union_partner }
+			}
+			#Rebellious subject
+			modifier = {
+				factor = 0.7
+				NOT = { current_age = age_of_discovery }
+				any_subject_country = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 75
+				}
+			}
+			modifier = {
+				factor = 0.6
+				any_subject_country = {
+					prestige = prev
+				}					
+			}
+			modifier = {
+				factor = 0.5
+				any_subject_country = {
+					diplomatic_reputation = prev
+				}					
+			}
+		}
+	}
+
+	option = {	#Ensure the love of the kingdoms
+		name = kalmar_union_events.1.b
+		add_ruler_modifier = {
+			name = dan_granting_privileges_to_juniors
+			duration = -1
+		}
+		custom_tooltip = kalmar_union_events.1.b.tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					has_country_flag = dan_rebellious_union_partner
+				}
+				ROOT = { 
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = -10
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 15
+				}
+				add_ruler_modifier = {
+					name = dan_granted_privileges_to_nobility
+					duration = -1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			#Has a really good ruler which doesn't get rejected
+			modifier = {
+				factor = 0
+				ruler_total_stats = {
+					amount = 14
+				}
+			}
+			#Has an okay ruler which doesn't get rejected
+			modifier = {
+				factor = 0.5
+				ruler_total_stats = {
+					amount = 11
+				}
+			}
+		}
+	}
+
+	option = {	#Make concessions for the Rebellious nobels
+		name = kalmar_union_events.1.c
+		trigger = {
+			any_subject_country = {
+				is_subject_of_type = personal_union
+				capital_scope = { region = scandinavia_region }
+				liberty_desire = 75
+			}
+		}
+		add_ruler_modifier = {
+			name = dan_granting_privileges_to_juniors_extra
+			duration = -1
+		}
+		custom_tooltip = kalmar_union_events.1.c.tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					has_country_flag = dan_rebellious_union_partner
+				}
+				ROOT = { 
+					add_legitimacy = -10
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = -15
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 25
+				}
+				add_ruler_modifier = {
+					name = dan_granted_privileges_to_nobility_extra
+					duration = -1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+			#Has a really good ruler which doesn't get rejected
+			modifier = {
+				factor = 0
+				ruler_total_stats = {
+					amount = 14
+				}
+			}
+			#Has an okay ruler which doesn't get rejected
+			modifier = {
+				factor = 0.5
+				ruler_total_stats = {
+					amount = 11
+				}
+			}
+			modifier = {
+				factor = 1.1
+				any_subject_country = {
+					prestige = prev
+				}					
+			}
+			modifier = {
+				factor = 1.25
+				any_subject_country = {
+					diplomatic_reputation = prev
+				}					
+			}
+		}
+	}
+}
+
+#Election of the new King of the Kalmar Union
+
+#Select one of the estates to become the new King
+country_event = {
+	id = kalmar_union_events.3
+	title = kalmar_union_events.3.t
+	desc = kalmar_union_events.3.desc
+	picture = DEBATE_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			overlord = {
+				save_event_target_as = kalmar_union_leader
+				set_ruler_flag = suggested_ruler_flag
+			}
+		}
+	}
+
+	option = {	#Select one from the Clergy
+		name = kalmar_union_events.3.a
+		custom_tooltip = kalmar_union_events.3.a.tt
+		hidden_effect = {
+			overlord = { set_country_flag = dan_a_new_king_from_the_clergy_estate_from_@ROOT }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				monthly_adm = 8
+			}
+			modifier = {
+				factor = 1.5
+				OR = { 
+					NOT = { crown_land_share = estate_church }
+					estate_influence = {
+						estate = estate_church 
+						influence = 75 
+					}
+					num_of_estate_privileges = {
+						estate = estate_church 
+						value = 5 
+					}
+				}
+				NOT = { 
+					estate_influence = {
+						estate = estate_nobles 
+						influence = 75 
+					}
+				}
+				NOT = {
+					num_of_estate_privileges = {
+						estate = estate_nobles  
+						value = 5
+					}
+				}
+				NOT = { 
+					estate_influence = {
+						estate = estate_burghers 
+						influence = 75 
+					}
+				}
+				NOT = {
+					num_of_estate_privileges = {
+						estate = estate_burghers  
+						value = 5
+					}
+				}
+			}
+		}
+	}
+
+	option = {	#Select one from the Burghers
+		name = kalmar_union_events.3.b
+		custom_tooltip = kalmar_union_events.3.b.tt
+		hidden_effect = {
+			overlord = { set_country_flag = dan_a_new_king_from_the_burghers_estate_from_@ROOT }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				monthly_dip = 8
+			}
+			modifier = {
+				factor = 1.5
+				OR = { 
+					NOT = { crown_land_share = estate_burghers }
+					estate_influence = {
+						estate = estate_burghers 
+						influence = 75 
+					}
+					num_of_estate_privileges = {
+						estate = estate_burghers 
+						value = 5 
+					}
+				}
+				NOT = { 
+					estate_influence = {
+						estate = estate_nobles 
+						influence = 75 
+					}
+				}
+				NOT = {
+					num_of_estate_privileges = {
+						estate = estate_nobles  
+						value = 5
+					}
+				}
+				NOT = { 
+					estate_influence = {
+						estate = estate_church 
+						influence = 75 
+					}
+				}
+				NOT = {
+					num_of_estate_privileges = {
+						estate = estate_church  
+						value = 5
+					}
+				}
+			}
+		}
+	}
+
+	option = {	#Select one from the Nobility
+		name = kalmar_union_events.3.c
+		custom_tooltip = kalmar_union_events.3.c.tt
+		hidden_effect = {
+			overlord = { set_country_flag = dan_a_new_king_from_the_nobles_estate_from_@ROOT }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				monthly_mil = 8
+			}
+			modifier = {
+				factor = 1.5
+				OR = { 
+					NOT = { crown_land_share = estate_nobles }
+					estate_influence = {
+						estate = estate_nobles 
+						influence = 75 
+					}
+					num_of_estate_privileges = {
+						estate = estate_nobles 
+						value = 5 
+					}
+				}
+				NOT = { 
+					estate_influence = {
+						estate = estate_church 
+						influence = 75 
+					}
+				}
+				NOT = {
+					num_of_estate_privileges = {
+						estate = estate_church  
+						value = 5
+					}
+				}
+				NOT = { 
+					estate_influence = {
+						estate = estate_burghers 
+						influence = 75 
+					}
+				}
+				NOT = {
+					num_of_estate_privileges = {
+						estate = estate_burghers  
+						value = 5
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		set_country_flag = dan_already_suggested_new_ruler
+		overlord = {
+			if = { 
+				limit = { 
+					NOT = { has_ruler_flag = suggested_ruler_flag }
+				}
+				country_event = {
+					id = kalmar_union_events.4
+				}
+			}
+		}
+	}
+}
+
+#The candidate from [From.GetName]
+country_event = {
+	id = kalmar_union_events.4
+	title = kalmar_union_events.4.t
+	desc = kalmar_union_events.4.desc
+	picture = NOBLE_ESTATE_eventPicture
+	is_triggered_only = yes
+
+	option = {	#Accept him
+		name = kalmar_union_events.4.a
+		trigger = {
+			OR = {
+				has_country_flag = dan_a_new_king_from_the_nobles_estate_from_@FROM
+				has_country_flag = dan_a_new_king_from_the_burghers_estate_from_@FROM
+				has_country_flag = dan_a_new_king_from_the_clergy_estate_from_@FROM
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			dan_a_new_king_from_the_nobles_estate_from_@FROM = {
+				define_ruler = {
+					change_adm = -1
+					change_dip = -1
+					change_mil = 2
+					max_random_adm = 3
+					max_random_dip = 3
+					max_random_mil = 5
+					culture = FROM
+					religion = FROM
+					claim = 40
+					min_age = 30
+					max_age = 50
+				}
+			}
+			dan_a_new_king_from_the_burghers_estate_from_@FROM = {
+				define_ruler = {
+					change_adm = -1
+					change_dip = 2
+					change_mil = -1
+					max_random_adm = 3
+					max_random_dip = 5
+					max_random_mil = 3
+					culture = FROM
+					religion = FROM
+					claim = 40
+					min_age = 30
+					max_age = 50
+				}
+			}
+			dan_a_new_king_from_the_clergy_estate_from_@FROM = {
+				define_ruler = {
+					change_adm = 2
+					change_dip = -1
+					change_mil = -1
+					max_random_adm = 5
+					max_random_dip = 3
+					max_random_mil = 3
+					culture = FROM
+					religion = FROM
+					claim = 40
+					min_age = 30
+					max_age = 50
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = dan_new_elected_ruler
+			FROM = { set_country_flag = dan_picked_suggested_ruler }
+			if = {
+				limit = {
+					any_subject_country = {
+						is_subject_of_type = personal_union
+						capital_scope = { region = scandinavia_region }
+						NOT = { has_country_flag = dan_picked_suggested_ruler }
+					}
+				}
+				country_event = {
+					id = kalmar_union_events.5
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			#Has a really good ruler which doesn't get rejected
+			modifier = {
+				factor = 0
+				ruler_total_stats = {
+					amount = 14
+				}
+			}
+			#Has an okay ruler which doesn't get rejected
+			modifier = {
+				factor = 0.5
+				ruler_total_stats = {
+					amount = 11
+				}
+			}
+		}
+	}
+
+	option = {	#Refuse to take him
+		name = kalmar_union_events.4.b
+		trigger = {
+			OR = {
+				has_country_flag = dan_a_new_king_from_the_nobles_estate_from_@FROM
+				has_country_flag = dan_a_new_king_from_the_burghers_estate_from_@FROM
+				has_country_flag = dan_a_new_king_from_the_clergy_estate_from_@FROM
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			dan_a_new_king_from_the_nobles_estate_from_@FROM = {
+				FROM = {
+					random_owned_province = {
+						spawn_rebels = {
+							type = noble_rebels
+							size = 1
+						}
+					}
+				}
+			}
+			dan_a_new_king_from_the_burghers_estate_from_@FROM = {
+				FROM = {
+					random_owned_province = {
+						spawn_rebels = {
+							type = particularist_rebels
+							size = 1
+						}
+					}
+				}
+			}
+			dan_a_new_king_from_the_clergy_estate_from_@FROM = {
+				FROM = {
+					random_owned_province = {
+						spawn_province_religious_rebels = {
+							size = 1
+						}
+					}
+				}
+			}
+		}
+		FROM = { 
+			add_liberty_desire = 20
+		}
+		add_prestige = -10
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {	#Fallback
+		name = kalmar_union_events.4.c
+		trigger = {
+			NOT = { has_country_flag = dan_a_new_king_from_the_nobles_estate_from_@FROM }
+			NOT = { has_country_flag = dan_a_new_king_from_the_burghers_estate_from_@FROM }
+			NOT = { has_country_flag = dan_a_new_king_from_the_clergy_estate_from_@FROM }
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = dan_a_new_king_from_the_nobles_estate_from_@FROM
+					has_country_flag = dan_a_new_king_from_the_burghers_estate_from_@FROM
+					has_country_flag = dan_a_new_king_from_the_clergy_estate_from_@FROM
+				}
+			}
+			clr_country_flag = dan_a_new_king_from_the_nobles_estate_from_@FROM
+			clr_country_flag = dan_a_new_king_from_the_burghers_estate_from_@FROM
+			clr_country_flag = dan_a_new_king_from_the_clergy_estate_from_@FROM
+		}
+	}
+}
+
+#A new ruler comes to the throne
+country_event = {
+	id = kalmar_union_events.5
+	title = kalmar_union_events.5.t
+	desc = kalmar_union_events.5.desc
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = {
+						region = scandinavia_region
+					}
+					liberty_desire = 50
+				}
+				set_country_flag = dan_rebellious_union_partner
+			}
+		}
+	}
+	after = {
+		every_known_country = {
+			limit = { has_country_flag = dan_rebellious_union_partner }
+			clr_country_flag = dan_rebellious_union_partner
+		}
+		every_subject_country = {
+			limit = { has_country_flag = dan_already_suggested_new_ruler }
+			clr_country_flag = dan_already_suggested_new_ruler
+		}
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = personal_union
+				capital_scope = { region = scandinavia_region }
+			}
+			country_event = {
+				id = kalmar_union_events.6
+			}
+		}
+	}
+
+	option = {	#The kingdoms will have to accept [Root.Monarch.GetName]
+		name = kalmar_union_events.1.a
+		custom_tooltip = kalmar_union_events.1.a.tt
+
+		ai_chance = {
+			factor = 1
+			#Has the money to burn
+			modifier = {
+				factor = 0
+				years_of_income = 3
+			}
+			#Some subject is getting annoying
+			modifier = {
+				factor = 0
+				any_subject_country = { 
+					has_country_flag = dan_rebellious_union_partner
+					NOT = { has_country_flag = dan_picked_suggested_ruler }
+				}
+				years_of_income = 2
+			}
+			#Rebellious subject
+			modifier = {
+				factor = 0
+				any_subject_country = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					NOT = { has_country_flag = dan_picked_suggested_ruler }
+					liberty_desire = 75
+				}
+			}
+		}
+	}
+
+	option = {	#Ensure the love of the kingdoms
+		name = kalmar_union_events.1.b
+		custom_tooltip = kalmar_union_events.1.b.tt
+		add_ruler_modifier = {
+			name = dan_granting_privileges_to_juniors
+			duration = -1
+		}
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+				}
+				ROOT = { 
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = -10
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 15
+				}
+				add_ruler_modifier = {
+					name = dan_granted_privileges_to_nobility
+					duration = -1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			#Has a really good ruler which doesn't get rejected
+			modifier = {
+				factor = 0
+				ruler_total_stats = {
+					amount = 14
+				}
+			}
+			#Has an okay ruler which doesn't get rejected
+			modifier = {
+				factor = 0.5
+				ruler_total_stats = {
+					amount = 11
+				}
+			}
+		}
+	}
+
+	option = {	#Make concessions for the Rebellious nobels
+		name = kalmar_union_events.1.c
+		trigger = {
+			any_subject_country = {
+				is_subject_of_type = personal_union
+				capital_scope = { region = scandinavia_region }
+				liberty_desire = 75
+				NOT = { has_country_flag = dan_picked_suggested_ruler }
+			}
+		}
+		custom_tooltip = kalmar_union_events.1.c.tt
+		add_ruler_modifier = {
+			name = dan_granting_privileges_to_juniors_extra
+			duration = -1
+		}
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					has_country_flag = dan_rebellious_union_partner
+				}
+				ROOT = { 
+					add_legitimacy = -10
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = -15
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 25
+				}
+				add_ruler_modifier = {
+					name = dan_granted_privileges_to_nobility_extra
+					duration = -1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+			#Has a really good ruler which doesn't get rejected
+			modifier = {
+				factor = 0
+				ruler_total_stats = {
+					amount = 14
+				}
+			}
+			#Has an okay ruler which doesn't get rejected
+			modifier = {
+				factor = 0.5
+				ruler_total_stats = {
+					amount = 11
+				}
+			}
+		}
+	}
+}
+
+#Election of the new King of the Kalmar Union - without new candidate
+country_event = {
+	id = kalmar_union_events.6
+	title = kalmar_union_events.6.t
+	desc = kalmar_union_events.6.desc
+	picture = ELECTION_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		overlord_of = ROOT
+		is_subject_of_type = personal_union
+		capital_scope = { region = scandinavia_region }
+	}
+
+	after = {
+		clr_country_flag = dan_picked_suggested_ruler
+	}
+
+	option = {	#[Root.Monarch.GetName] shall be the elected [Root.Monarch.GetTitle] of [Root.GetName]!
+		name = kalmar_union_events.2.a
+		FROM = { 
+			add_prestige = 10
+			add_legitimacy = 5
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = dan_have_same_king
+		}
+		add_opinion = {
+			who = FROM
+			modifier = dan_have_same_king
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				liberty_desire = 90
+				factor = 0
+			}
+			modifier = {
+				OR = {
+					AND = {
+						liberty_desire = 80
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						liberty_desire = 70
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						liberty_desire = 60
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.2
+			}
+			modifier = {
+				OR = {
+					AND = {
+						liberty_desire = 70
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						liberty_desire = 60
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						liberty_desire = 50
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.4
+			}
+			modifier = {
+				OR = {
+					AND = {
+						liberty_desire = 60
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						liberty_desire = 50
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						liberty_desire = 40
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.6
+			}
+			modifier = {
+				OR = {
+					AND = {
+						liberty_desire = 50
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						liberty_desire = 40
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						liberty_desire = 30
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.8
+			}
+		}
+	}
+
+	option = {	#How about... no?
+		name = kalmar_union_events.2.c
+		add_liberty_desire = 20
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+			}
+		}
+		random_owned_province = {
+			limit = {
+				same_continent = ROOT
+				is_capital = no
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+		FROM = { add_prestige = -20 }
+		ai_chance = {
+			factor = 1
+			#That's our ruler on the throne!
+			modifier = {
+				factor = 0
+				has_country_flag = dan_picked_suggested_ruler
+			}
+			#Has a really good ruler which doesn't get rejected
+			modifier = {
+				factor = 0
+				ruler_total_stats = {
+					amount = 14
+				}
+			}
+			#Has an okay ruler which doesn't get rejected
+			modifier = {
+				factor = 0.5
+				ruler_total_stats = {
+					amount = 11
+				}
+			}
+			modifier = {
+				NOT = { liberty_desire = 10 }
+				factor = 0
+			}
+			modifier = {
+				OR = {
+					AND = {
+						NOT = { liberty_desire = 40 }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						NOT = { liberty_desire = 30 }
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						NOT = { liberty_desire = 20 }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.2
+			}
+			modifier = {
+				OR = {
+					AND = {
+						NOT = { liberty_desire = 50 }
+						liberty_desire = 40
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						NOT = { liberty_desire = 40 }
+						liberty_desire = 30
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						NOT = { liberty_desire = 30 }
+						liberty_desire = 20
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.4
+			}
+			modifier = {
+				OR = {
+					AND = {
+						NOT = { liberty_desire = 60 }
+						liberty_desire = 50
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						NOT = { liberty_desire = 50 }
+						liberty_desire = 40
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						NOT = { liberty_desire = 40 }
+						liberty_desire = 30
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.6
+			}
+			modifier = {
+				OR = {
+					AND = {
+						NOT = { liberty_desire = 70 }
+						liberty_desire = 60
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						NOT = { liberty_desire = 60 }
+						liberty_desire = 50
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						NOT = { liberty_desire = 50 }
+						liberty_desire = 40
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 0.8
+			}
+			modifier = {
+				OR = {
+					AND = {
+						NOT = { liberty_desire = 80 }
+						liberty_desire = 70
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						NOT = { liberty_desire = 70 }
+						liberty_desire = 60
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						NOT = { liberty_desire = 60 }
+						liberty_desire = 50
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 2
+			}
+			modifier = {
+				OR = {
+					AND = {
+						NOT = { liberty_desire = 90 }
+						liberty_desire = 80
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						NOT = { liberty_desire = 80 }
+						liberty_desire = 70
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						NOT = { liberty_desire = 70 }
+						liberty_desire = 60
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					AND = {
+						NOT = { liberty_desire = 100 }
+						liberty_desire = 90
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						NOT = { liberty_desire = 90 }
+						liberty_desire = 80
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						NOT = { liberty_desire = 80 }
+						liberty_desire = 70
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 4
+			}
+			modifier = {
+				OR = {
+					AND = {
+						liberty_desire = 100
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						has_ruler_modifier = dan_granted_privileges_to_nobility_extra
+					}
+					AND = {
+						liberty_desire = 90
+						has_ruler_modifier = dan_granted_privileges_to_nobility
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+					AND = {
+						liberty_desire = 80
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+						NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					}
+				}
+				factor = 5
+			}
+		}
+	}
+}
+
+#Random Kalmar Events - Triggered by on_five_year_pulse_4
+#Pretender Rebels	- Bad Event
+country_event = {
+	id = kalmar_union_events.7
+	title = kalmar_union_events.7.t
+	desc = kalmar_union_events.7.desc
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		overlord_of = ROOT
+		is_subject_of_type = personal_union
+		capital_scope = { region = scandinavia_region }
+	}
+	trigger = {
+		has_government_attribute = kalmar_union_succession
+		any_subject_country = {
+			is_subject_of_type = personal_union
+			capital_scope = { region = scandinavia_region }
+			OR = {
+				AND = {
+					liberty_desire = 50
+					NOT = { current_age = age_of_discovery }
+				}
+				AND = {
+					liberty_desire = 75
+					current_age = age_of_discovery
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 50
+				}
+				save_event_target_as = dan_rebellious_junior_partner
+			}
+		}
+	}
+
+	option = {	#Fight off the pretenders
+		name = kalmar_union_events.7.a
+		event_target:dan_rebellious_junior_partner = {
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+				}
+			}
+			random_owned_province = {
+				limit = {
+					same_continent = ROOT
+					is_capital = no
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				years_of_income = 1
+			}
+		}
+	}
+
+	option = {	#Orchestrate the assassination of the leader
+		name = kalmar_union_events.7.b
+		add_years_of_income = -0.5
+		random_list = {
+			75 = {
+				trigger = { NOT = { has_idea_group = spy_ideas } }
+				event_target:dan_rebellious_junior_partner = {
+					add_liberty_desire = 30
+				}
+			}
+			25 = {
+				trigger = { NOT = { has_idea_group = spy_ideas } }
+			}
+			75 = {
+				trigger = { has_idea_group = spy_ideas }
+			}
+			25 = {
+				trigger = { has_idea_group = spy_ideas }
+				event_target:dan_rebellious_junior_partner = {
+					add_liberty_desire = 30
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 1 }
+			}
+		}
+	}
+}
+
+#Current king loses support	- Bad Event
+country_event = {
+	id = kalmar_union_events.8
+	title = kalmar_union_events.8.t
+	desc = kalmar_union_events.8.desc
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		overlord_of = ROOT
+		is_subject_of_type = personal_union
+		capital_scope = { region = scandinavia_region }
+	}
+	trigger = {
+		has_government_attribute = kalmar_union_succession
+		any_subject_country = {
+			is_subject_of_type = personal_union
+			capital_scope = { region = scandinavia_region }
+			OR = {
+				AND = {
+					liberty_desire = 25
+					NOT = { current_age = age_of_discovery }
+				}
+				AND = {
+					liberty_desire = 50
+					current_age = age_of_discovery
+				}
+			}
+			NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+			NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					OR = {
+						AND = {
+							liberty_desire = 25
+							NOT = { current_age = age_of_discovery }
+						}
+						AND = {
+							liberty_desire = 50
+							current_age = age_of_discovery
+						}
+					}
+					NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility }
+					NOT = { has_ruler_modifier = dan_granted_privileges_to_nobility_extra }
+					NOT = { has_ruler_modifier = dan_losing_ruling_grip }
+				}
+				save_event_target_as = dan_rebellious_junior_partner
+			}
+		}
+	}
+
+	option = {	#Doesn't really matter
+		name = kalmar_union_events.8.a
+		event_target:dan_rebellious_junior_partner = {
+			add_ruler_modifier = {
+				name = dan_losing_ruling_grip
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				current_age = age_of_discovery
+			}
+		}
+	}
+
+	option = {	#Give dan_rebellious_junior_partner nobility extra privileges
+		name = kalmar_union_events.8.b
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_ruler_modifier = {
+			name = dan_granting_privileges_to_juniors
+			duration = -1
+		}
+		event_target:dan_rebellious_junior_partner = {
+			add_ruler_modifier = {
+				name = dan_granted_privileges_to_nobility
+				duration = -1
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { current_age = age_of_discovery }
+			}
+		}
+	}
+}
+
+#Own nobility demands stuff	- Bad Event
+country_event = {
+	id = kalmar_union_events.9
+	title = kalmar_union_events.9.t
+	desc = kalmar_union_events.9.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	is_triggered_only = yes
+	goto = noble_rebels_province
+	trigger = {
+		has_government_attribute = kalmar_union_succession
+		has_estate = estate_nobles
+		NOT = { has_country_flag = dan_no_more_pesky_nobles_events }
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+				}
+				save_event_target_as = dan_rebellious_junior_partner
+			}
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 20
+				}
+				save_event_target_as = dan_rebellious_junior_partner
+			}
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 40
+				}
+				save_event_target_as = dan_rebellious_junior_partner
+			}
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 60
+				}
+				save_event_target_as = dan_rebellious_junior_partner
+			}
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+					capital_scope = { region = scandinavia_region }
+					liberty_desire = 80
+				}
+				save_event_target_as = dan_rebellious_junior_partner
+			}
+			random_list = {
+				1 = { set_country_flag = dan_nobles_demand_crownland }
+				1 = { set_country_flag = dan_nobles_demand_soldiers }
+				1 = { set_country_flag = dan_nobles_demand_cash }
+				1 = { set_country_flag = dan_nobles_demand_privileges }
+				1 = {
+					trigger = {
+						has_heir = yes
+						heir_age = 15
+					}
+					set_country_flag = dan_nobles_demand_go_hunting
+				}
+				1 = { set_country_flag = dan_nobles_demand_peasant_suppression }
+				1 = { set_country_flag = dan_nobles_demand_kill_some_rebels }
+				1 = { set_country_flag = dan_nobles_demand_forget_corruption }
+				1 = { set_country_flag = dan_nobles_demand_administrative_support }
+				1 = { set_country_flag = dan_nobles_demand_diplomatic_support }
+				1 = { set_country_flag = dan_nobles_demand_military_support }
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						is_capital = yes
+						same_continent = capital
+					}
+				}
+				save_event_target_as = noble_rebels_province
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = dan_nobles_demand_crownland
+		clr_country_flag = dan_nobles_demand_soldiers
+		clr_country_flag = dan_nobles_demand_cash
+		clr_country_flag = dan_nobles_demand_privileges
+		clr_country_flag = dan_nobles_demand_go_hunting
+		clr_country_flag = dan_nobles_demand_peasant_suppression
+		clr_country_flag = dan_nobles_demand_kill_some_rebels
+		clr_country_flag = dan_nobles_demand_forget_corruption
+		clr_country_flag = dan_nobles_demand_administrative_support
+		clr_country_flag = dan_nobles_demand_diplomatic_support
+		clr_country_flag = dan_nobles_demand_military_support
+	}
+
+	option = {	#Crush the Nobility
+		name = kalmar_union_events.9.a
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+		event_target:noble_rebels_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {	#Fight off the pretenders
+		name = kalmar_union_events.9.b
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 15
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			dan_nobles_demand_crownland = {
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = 2
+				}
+			}
+			dan_nobles_demand_soldiers = {
+				add_yearly_manpower = -1
+			}
+			dan_nobles_demand_cash = {
+				add_years_of_income = -1
+			}
+			dan_nobles_demand_privileges = {
+				add_legitimacy = -10
+			}
+			dan_nobles_demand_go_hunting = {
+				add_heir_claim = 5
+				random = {
+					chance = 25
+					country_event = {
+						id = 9459
+					}
+				}
+			}
+			dan_nobles_demand_peasant_suppression = {
+				add_stability = -1
+			}
+			dan_nobles_demand_kill_some_rebels = {
+				event_target:noble_rebels_province = {
+					spawn_rebels = {
+						type = anti_tax_rebels
+						size = 2
+					}
+				}
+			}
+			dan_nobles_demand_forget_corruption = {
+				add_corruption = 2
+			}
+			dan_nobles_demand_administrative_support = {
+				add_adm_power = -50
+			}
+			dan_nobles_demand_diplomatic_support = {
+				add_dip_power = -50
+			}
+			dan_nobles_demand_military_support = {
+				add_mil_power = -50
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Kalmar Union falls apart

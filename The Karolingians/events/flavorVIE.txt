@@ -1,0 +1,10 @@
+########################################
+# Flavor Events for Vientiane
+#
+# Scripted by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_vie
+normal_or_historical_nations = yes
+
+# The Succession Crisis

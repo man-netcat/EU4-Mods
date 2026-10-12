@@ -1,0 +1,75 @@
+###########################################################
+# Events for Special Regencies
+#
+# written by Ver�nica Pazos
+###########################################################
+
+namespace = special_regency_events
+normal_or_historical_nations = yes
+
+#Joao Takes the Crown
+
+# Recovering the Ch�teau de Chenonceau
+
+# Sten Sture the Elder
+
+# Nguyễn Thị Anh Is Doing Great
+
+# The Education of the Heir
+# Jung Soon > Queen Dowager Yesun
+
+# Queen Dowager Yesun Sinyu Persecution
+country_event = {
+	id = special_regency_events.7
+	title = special_regency_events.7.t
+	desc = special_regency_events.7.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_regency = no
+		is_year = 1759
+		NOT = { is_year = 1805 }
+		has_country_flag = queen_jung_soon
+		any_owned_province = {
+			religion_group = christian
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 30
+		modifier = {
+			factor = 0.8
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 65
+			}
+		}
+	}
+	
+	option = { #execute the Catholics
+		name = special_regency_events.7.a
+		every_owned_province = {
+			limit = {
+				religion_group = christian
+			}
+			change_religion = ROOT
+			add_unrest = 2
+		}
+	}
+	
+	option = { #this won't look good on us
+		name = special_regency_events.7.b
+		every_owned_province = {
+			limit = {
+				religion_group = christian
+			}
+			add_unrest = -1
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles 
+			loyalty = -10
+		}
+	}
+}

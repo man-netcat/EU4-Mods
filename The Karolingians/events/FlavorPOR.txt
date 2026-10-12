@@ -1,0 +1,68 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = flavor_por
+normal_or_historical_nations = yes
+
+# Colonial Policy
+
+# The Duke of Coimbra
+
+# Commercial Conflict in the Indian Ocean
+
+
+# The Holy Inquisition
+
+# Governor Martim Afonso de Sousa in Brazil
+
+# King Sebasti�o's Expedition to North Africa
+
+# Epidemic Plague
+
+# The Meuthen Agreement
+
+# Count da Ericeira
+
+# Earthquake destroy Lisboa
+
+# Marqu�s de Pombal
+
+# The Tavoras Conspiracy
+
+# The Expulsion of Marqu�s de Pombal
+
+# Christopher Columbus
+
+# Atlantic Slave Trade
+
+# Missionaries in the Spice Islands
+
+# Portuguese East India Company
+
+# Capture of Santa Catarina
+
+# Capture of Santa Catarina
+
+# The Dutch Return Cargo
+country_event = {
+	id = flavor_por.7
+	title = "flavor_por.EVTNAME7"
+	desc = "flavor_por.EVTDESC7"
+	picture = SHIP_SAILING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {		# Very well
+		name = "flavor_por.EVTOPTA7"
+		add_years_of_income = 0.5
+	}
+}
+
+# The Dutch Keep Cargo
+
+# The Tower of Bel�m
+
+# Jer�nimos Monastery
+
+# Vasco da Gama in India

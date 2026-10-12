@@ -1,0 +1,163 @@
+country_decisions = {
+	liv_dissolve_bishopric = {
+		major = yes
+		potential = {
+			OR = {
+				has_estate_privilege = estate_church_bishopric_of_dorpat
+				has_estate_privilege = estate_church_bishopric_of_osel_wiek
+				has_estate_privilege = estate_church_bishopric_of_courland
+				has_estate_privilege = estate_church_bishopric_of_reval
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_dorpat }
+					province_id = 1834
+				}
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_osel_wiek }
+					province_id = 35
+				}
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_courland }
+					province_id = 39
+				}
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_reval }
+					province_id = 36
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_dorpat
+					owns_core_province = 1834
+				}
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_osel_wiek
+					owns_core_province = 35
+				}
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_courland
+					owns_core_province = 39
+				}
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_reval
+					owns_core_province = 36
+				}
+			}
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			if = {
+				limit = {
+					uses_devotion = yes
+				}
+				legitimacy_equivalent = 90
+			}
+			custom_trigger_tooltip = {
+				tooltip = liv_tried_to_get_rid_of_bishopric_tt
+				OR = {
+					NOT = { has_country_flag = liv_tried_to_get_rid_of_bishopric }
+					had_country_flag = {
+						flag = liv_tried_to_get_rid_of_bishopric
+						days = 730
+					}
+				}
+			}
+		}
+		effect = {
+			clr_country_flag = liv_tried_to_get_rid_of_bishopric
+			set_country_flag = liv_tried_to_get_rid_of_bishopric
+			add_legitimacy_equivalent = {
+				amount = -20
+				republican_tradition = -5
+			}
+			country_event = {
+				id = flavor_liv.2
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+	liv_purchase_bishopric = {
+		major = yes
+		potential = {
+			OR = {
+				has_estate_privilege = estate_church_bishopric_of_dorpat
+				has_estate_privilege = estate_church_bishopric_of_osel_wiek
+				has_estate_privilege = estate_church_bishopric_of_courland
+				has_estate_privilege = estate_church_bishopric_of_reval
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_dorpat }
+					province_id = 1834
+				}
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_osel_wiek }
+					province_id = 35
+				}
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_courland }
+					province_id = 39
+				}
+				AND = {
+					ROOT = { has_estate_privilege = estate_church_bishopric_of_reval }
+					province_id = 36
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_dorpat
+					owns_core_province = 1834
+				}
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_osel_wiek
+					owns_core_province = 35
+				}
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_courland
+					owns_core_province = 39
+				}
+				AND = {
+					has_estate_privilege = estate_church_bishopric_of_reval
+					owns_core_province = 36
+				}
+			}
+			NOT = { num_of_loans = 6 }
+			is_in_deficit = no
+			NOT = { corruption = 1 }
+			treasury = 50
+			custom_trigger_tooltip = {
+				tooltip = liv_tried_to_get_rid_of_bishopric_tt
+				OR = {
+					NOT = { has_country_flag = liv_tried_to_get_rid_of_bishopric }
+					had_country_flag = {
+						flag = liv_tried_to_get_rid_of_bishopric
+						days = 730
+					}
+				}
+			}
+		}
+		effect = {
+			clr_country_flag = liv_tried_to_get_rid_of_bishopric
+			set_country_flag = liv_tried_to_get_rid_of_bishopric
+			add_treasury = -50
+			country_event = {
+				id = flavor_liv.3
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

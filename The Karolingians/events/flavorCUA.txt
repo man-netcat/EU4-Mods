@@ -1,0 +1,38 @@
+########################################
+# Events for Charrua
+#
+# written by Sara Wendel-�rtqvist
+########################################
+
+namespace = flavor_cua
+normal_or_historical_nations = yes
+
+# The Meeting at Salsipuedes
+
+# The Salsipuedes Massacre
+country_event = {
+	id = flavor_cua.2
+	title = flavor_cua.2.t
+	desc = flavor_cua.2.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_cua.2.a
+		add_manpower = -2
+		random_neighbor_country = {
+			limit = {
+				has_opinion_modifier = { who = ROOT modifier = cua_refused_meeting }
+			}
+			reverse_add_opinion = { who = ROOT modifier = cua_salsipuedes_massacre }
+			reverse_add_casus_belli = {
+				target = ROOT
+				type = cb_border_war
+				months = 24
+			}
+		}
+	}
+}
+
+# Juan D�az de Sol�s

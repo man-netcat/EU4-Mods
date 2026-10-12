@@ -1,0 +1,13 @@
+########################################
+# Events for the Arawak
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = flavor_arw
+normal_or_historical_nations = yes
+
+	
+#Caribs expand towards the mouth of the Orinoco
+
+#European Settlers in the Guyana

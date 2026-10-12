@@ -1,0 +1,60 @@
+# Flavour events for Navarra by Daniel Tolman
+
+namespace = flavor_nav
+normal_or_historical_nations = yes
+
+
+# Terranova
+country_event = {
+	id = flavor_nav.1
+	title = flavor_nav.1.t
+	desc = flavor_nav.1.d
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { # Relocate to Newfoundland
+		name = flavor_nav.1.a
+		trigger = {
+			owns = 2573
+			NOT = { num_of_cities = 10 }
+		}
+		2573 = {
+			move_capital_effect = yes
+			rename_capital = Terranova
+			change_province_name = "Terranova"
+			change_culture = ROOT
+			change_religion = ROOT
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		if = {
+			limit = {
+				owns_core_province = 210
+			}
+			210 = {
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+		}
+	}
+	option = { # Develop the town
+		name = flavor_nav.1.b
+		2573 = {
+			rename_capital = Terranova
+			change_province_name = "Terranova"
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+# Aragon-Navarra Succession on startup
+
+# Succession event for Aragon
+
+# For Navarra if player

@@ -1,0 +1,291 @@
+########################################
+# DLC Events for Riga
+#
+# written by Ogulcan Yildirim
+# localised by Big Boss
+########################################
+
+namespace = flavor_rig
+normal_or_historical_nations = yes
+
+# The Subjugation of the Teutonic Order
+
+# The order becomes free
+
+# Riga loses the Teutonic Order
+
+# Riga loses the Livonian Order
+
+#Transfer Money event
+country_event = {
+	id = flavor_rig.5
+	title = none
+	desc = none
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+	hidden = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            export_to_variable = {
+                which = rig_money_to_transfer
+                value = monthly_income
+                who = ROOT
+            }
+            multiply_variable = {
+                which = rig_money_to_transfer
+                value = 3
+            }
+        }
+    }
+	
+	option = {
+		transfer_treasury = {
+            giver = ROOT
+            taker = FROM
+            variable = rig_money_to_transfer
+		}
+		
+		ai_chance = { 
+			factor = 1
+		}
+    }
+}
+
+# Dissolving a bishopric
+
+# Buying a bishopric
+
+# Imperial Connection
+country_event = {
+	id = flavor_rig.9
+	title = flavor_rig.9.t
+	desc = flavor_rig.9.desc
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	
+	option = {	#
+		name = flavor_rig.9.a
+		set_in_empire = yes
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {	#
+		name = flavor_rig.9.b
+		add_prestige = 10
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Become a Theocratic Plutocracy...
+country_event = {
+	id = flavor_rig.10
+	title = flavor_rig.10.t
+	desc = flavor_rig.10.desc
+	picture = PAY_POPE_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			unlock_government_reform = {
+				government_reform = merchant_theocracy_reform
+			}
+		}
+	}
+	
+	option = {	#A Theocracy with a Merchant focus
+		name = flavor_rig.10.a
+		unlock_government_reform = {
+			government_reform = merchant_theocracy_reform
+		}
+		if = {
+			limit = { NOT = { government = theocracy } }
+			change_government = theocracy
+		}
+		add_government_reform = merchant_theocracy_reform
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {	#Thanks, but I don't want to be either of them
+		name = flavor_rig.10.b
+		hidden_effect = {
+			unlock_government_reform = {
+				government_reform = merchant_theocracy_reform
+			}
+		}
+		change_government_reform_progress = 50
+		add_papal_influence = 50
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 20
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Become a Reformer State
+country_event = {
+	id = flavor_rig.11
+	title = flavor_rig.10.t
+	desc = flavor_rig.11.desc
+	picture = PROTESTANT_RELIGIOUS_DOUBTS_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			unlock_government_reform = {
+				government_reform = merchant_theocracy_reform
+			}
+		}
+	}
+	
+	option = {	#A Theocracy with a Merchant focus
+		name = flavor_rig.11.a
+		unlock_government_reform = {
+			government_reform = reformer_state_reform
+		}
+		if = {
+			limit = { NOT = { government = theocracy } }
+			change_government = theocracy
+		}
+		add_government_reform = reformer_state_reform
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {	#Thanks, but I don't want to be either of them
+		name = flavor_rig.11.b
+		hidden_effect = {
+			unlock_government_reform = {
+				government_reform = reformer_state_reform
+			}
+		}
+		add_stability_or_adm_power = yes
+		change_government_reform_progress = 100
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 20
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Hansa breaks apart! - L�beck
+country_event = {
+	id = flavor_rig.12
+	title = flavor_rig.12.t
+	desc = flavor_rig.12.desc
+	picture = SAD_MERCHANT_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				save_global_event_target_as = rigan_trade_league
+			}
+		}
+	}
+	
+	option = {	#Oof
+		name = flavor_rig.12.a
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					is_trade_league_leader = no
+					is_in_trade_league_with = ROOT
+					NOT = { tag = FROM }
+				}
+				set_country_flag = former_hansa_member
+			}
+		}
+		if = {
+			limit = {
+				prestige = -30
+			}
+			custom_tooltip = flavor_rig.12.a.tt
+			hidden_effect = {
+				add_prestige = -200
+				add_prestige = 30
+			}
+		}
+		every_known_country = {
+			limit = {
+				has_country_flag = former_hansa_member
+			}
+			country_event = {
+				id = flavor_rig.13
+				days = 3
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {	#Grant them more freedom, immediately!
+		name = flavor_rig.12.b
+		add_country_modifier = {
+			name = rig_broken_hanseatic_league
+			duration = 18250
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Hansa breaks apart! - Trade League members
+country_event = {
+	id = flavor_rig.13
+	title = flavor_rig.13.t
+	desc = flavor_rig.13.desc
+	picture = SAD_MERCHANT_eventPicture
+	is_triggered_only = yes
+	after = {
+		clr_country_flag = former_hansa_member
+	}
+	
+	option = {	#We are now part of Riga's Trade League!
+		name = flavor_rig.13.a
+		event_target:rigan_trade_league = { join_trade_league = ROOT }
+		reverse_add_opinion = {
+			who = FROM
+			modifier = rig_left_the_hansa
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {	#Thanks, but I don't want to be either of them
+		name = flavor_rig.13.b
+		reverse_add_opinion = {
+			who = FROM
+			modifier = rig_stayed_in_the_hansa
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

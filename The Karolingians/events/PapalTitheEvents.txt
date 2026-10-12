@@ -1,0 +1,161 @@
+namespace = curia
+
+# Pope siphons money from the Curia treasury
+
+# The Pope's Bankers
+# Curia treasury is stored in Italian banks, including the Medici bank
+
+# For banker country
+
+# War in Italy, Curia bankers move money to a secure location
+	# for banker country
+
+# Pope is notified of money being moved
+country_event = {
+	id = curia.5
+	title = curia.5.t
+	desc = curia.5.d
+	picture = BAD_POPE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = curia.5.a
+		ai_chance = { 
+			factor = 5 
+		}
+		tooltip = {
+			reduce_curia_treasury_huge_effect = yes
+		}
+	}
+	option = {
+		name = curia.5.b
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 0
+				alliance_with = FROM
+			}
+		}
+		add_treasury = -50
+		tooltip = {
+			FROM = {
+				add_opinion = {
+					who = ROOT
+					modifier = pope_ambushed_curia_money
+				}
+			}
+		}
+		add_curia_treasury_huge_effect = yes
+		FROM = { country_event = { id = curia.6 days = 7 } }
+	}
+}
+
+# for bank country if money ambushed
+country_event = {
+	id = curia.6
+	title = curia.6.t
+	desc = curia.6.d
+	picture = BAD_POPE_eventPicture
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = curia.6.a
+		add_opinion = {
+			who = FROM
+			modifier = pope_ambushed_curia_money
+		}
+		set_country_flag = wont_bank_for_pope
+		clr_country_flag = moving_curia_money
+	}
+}
+
+# Peace is restored, bankers return money to the curia treasury
+country_event = {
+	id = curia.7
+	title = curia.7.t
+	desc = curia.7.d
+	picture = BAD_POPE_eventPicture
+	
+	trigger = {
+		has_dlc = "Emperor"
+		OR = {
+			has_country_flag = protecting_curia_money
+			has_country_flag = moving_curia_money
+		}
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = curia.7.a
+		add_curia_treasury_huge_effect = yes
+		add_country_modifier = {
+			name = reliable_papal_banker
+			duration = 5475
+		}
+		clr_country_flag = protecting_curia_money
+		clr_country_flag = moving_curia_money
+	}	
+}
+
+# Country loses its capital, the money disappears
+country_event = {
+	id = curia.8
+	title = curia.8.t
+	desc = curia.8.d
+	picture = BAD_POPE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		FROM = { owned_by = ROOT is_capital = yes }
+		has_country_flag = protecting_curia_money
+	}
+	
+	option = {
+		name = curia.8.a
+		reduce_curia_treasury_huge_effect = yes
+		add_country_modifier = {
+			name = "unreliable_papal_banker"
+			duration = 5475
+		}
+		clr_country_flag = protecting_curia_money
+	}
+}
+
+# A generous donation
+# For a country that contributes a lot to the treasury
+
+# Country taxes the church
+
+
+# Treasury income is low (probably because of heretics), big country asked to tithe more
+# Country responds to request to increase tithes
+
+# Use the Curia treasury to fund a crusade
+
+# Crusader receives Curia funding
+country_event = {
+	id = curia.13
+	title = curia.13.t
+	desc = curia.13.d
+	picture = BAD_POPE_eventPicture
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = curia.13.a
+		add_years_of_income = 1
+		add_opinion = {
+			who = ROOT
+			modifier = opinion_pope_supported_crusade
+		}
+	}
+}

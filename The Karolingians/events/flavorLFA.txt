@@ -1,0 +1,10 @@
+#################################################
+# Flavor Events for the Lanfang Republic
+#
+# written by Veronica Pazos
+#################################################
+
+namespace = flavor_lfa
+normal_or_historical_nations = yes
+
+# Gold Mining Event

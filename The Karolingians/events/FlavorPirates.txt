@@ -1,0 +1,102 @@
+###### DHE's to spawn pirate republics ######
+###### by Daniel Tolman ######
+
+namespace = pirates
+normal_or_historical_nations = yes
+
+# The Pirates of New Providence
+
+# Libertatia
+
+# Sale
+
+# Tetouan
+
+# Port Royal
+
+# Tortuga - Brethren of the Coast
+
+# Palembang - Return of Piracy
+
+# Pattani - The Lin Daoqian Band
+
+# The Golden Age of Piracy
+country_event = {
+	id = pirates.20
+	title = "pirates.20.t"
+	picture = PIRATE_CAPTAINS_eventPicture
+	desc = "pirates.20.d"
+
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_dlc = "Golden Century"
+		OR = {
+			any_subject_country = {
+				capital_scope = {
+					region = carribeans_region
+				}
+			}
+			1516 = {
+				privateer_power = { country = ROOT share = 5 }
+			}
+		}
+		OR = {
+			any_country = {
+				truce_with = ROOT
+				OR = {
+					any_subject_country = {
+						capital_scope = {
+							region = carribeans_region
+						}
+					}
+					1516 = {
+						privateer_power = { country = PREV share = 5 }
+					}
+				}
+			}
+			1516 = { # or just have a whole lot of privateers
+				privateer_power = { country = ROOT share = 25 }
+			}
+		}
+		has_privateers = yes
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		name = "pirates.20.a"
+		set_global_flag = golden_age_of_piracy
+		custom_tooltip = golden_age_of_piracy_tooltip
+	}
+}
+
+# Wokou Pirates in So
+
+
+
+# Pirates of Rugen
+
+# Pirates of Penzance (by James Beaumont)
+
+# Gilbert and Sulivan references to appease Daniel (by James Beaumont)
+
+
+# [Root.Monarch.GetName] is now a legendary pirate!
+country_event = {
+	id = pirates.25
+	title = pirates.25.t
+	desc = pirates.25.desc
+	picture = SMUGGLERS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = pirates.25.a
+		make_ruler_to_legendary_pirate = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

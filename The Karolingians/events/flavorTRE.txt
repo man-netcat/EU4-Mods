@@ -1,0 +1,128 @@
+########################################
+# Made by Parmelion
+########################################
+
+namespace = flavor_tre
+
+#The Komnenian Restoration
+country_event = {
+	id = flavor_tre.1
+	title = flavor_tre.1.t
+	desc = flavor_tre.1.d
+	picture = {	
+		trigger = {
+			has_dlc = "Purple Phoenix"
+		}
+		picture = BYZ_BYZANTINE_EMPEROR_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Purple Phoenix" }
+		}
+		picture = GOOD_WITH_MONARCH_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = flavor_tre.1.a
+		add_permanent_power_projection = {
+			type = tre_permanent_power_projection
+			amount = 10
+		}
+		custom_tooltip = tre_modify_komnenian_restoration_4_tt
+		custom_tooltip = tre_core_unowned_greek_provinces
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_modifier = tre_komnenian_restoration3
+				}
+				remove_country_modifier = tre_komnenian_restoration3
+				add_country_modifier = {
+					name = "tre_komnenian_restoration4"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = {
+					culture = greek
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_core = ROOT
+			}
+		}
+	}
+}
+
+#Culture Conversion Province
+
+#The Komnenian Restoration
+country_event = {
+	id = flavor_tre.3
+	title = flavor_tre.3.t
+	desc = flavor_tre.3.d
+	picture = {	
+		trigger = {
+			has_dlc = "Purple Phoenix"
+		}
+		picture = BYZ_BYZANTINE_EAGLE_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Purple Phoenix" }
+		}
+		picture = BATTLE_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = flavor_tre.3.a
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		add_country_modifier = {
+			name = tre_avengers_of_manzikert
+			duration = 5475 
+		}
+	}
+	
+	option = {
+		name = flavor_tre.3.b
+		add_accepted_culture_or_dip_power = {
+			culture = turkish
+			dip_reward = yes
+			free = yes 
+		}
+		custom_tooltip = tre_manzikert_turkish_tt
+		tooltip = {
+			add_province_modifier = {
+				name = tre_grecoturkish_reconciliation
+				duration = 9125
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = turkish
+				}
+				add_province_modifier = {
+					name = tre_grecoturkish_reconciliation
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+#Vassalization of Theodoro - Theodoro Event
+
+#Vassalization of Theodoro - Theodoro Agrees
+
+#Vassalization of Theodoro - Theodoro Rejects
