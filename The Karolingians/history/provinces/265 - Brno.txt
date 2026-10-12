@@ -3,7 +3,6 @@
 owner = GMA
 controller = GMA
 #is_city = yes
-add_core = BOH
 add_core = GMA
 capital = "Brno"
 culture = czech

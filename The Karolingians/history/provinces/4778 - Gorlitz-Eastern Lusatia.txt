@@ -1,7 +1,6 @@
 owner = LBS
 controller = LBS
 add_core = SOR
-add_core = BOH
 add_core = LBS
 capital = "Zhorelec"
 culture = sorbian

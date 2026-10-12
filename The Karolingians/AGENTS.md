@@ -21,7 +21,8 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 
 - `tools/tags.db` (SQLite) is the source of truth. Tables: `tags`,
   `provinces`, `tag_provinces`, `tag_areas`, `tag_reforms`, `tag_form_areas`,
-  `tag_suppress`, `diplomacy`, `cultures`, `religions`.
+  `tag_suppress`, `diplomacy`, `rivalries`, `friendships`, `core_deny`,
+  `cultures`, `religions`.
 - `tagdb.py` loads/validates the DB (`selfcheck()` runs on import).
 - `eu4.py` writes provinces, countries, flags (clones only), decisions,
   diplomacy, triggers. `step_provinces` **wipes** `history/provinces/` first.
@@ -134,7 +135,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   tech-group `discovered_by` lines, gameplay data later); owned provinces
   keep their vanilla tech-group `discovered_by` too, so visibility matches
   the base game everywhere; dead-tag cores are stripped (cores respawn
-  tags via rebels/release).
+  tags via rebels/release). Reassigning land drops the previous living
+  owner's cores (`patch()`), and judged-dormant claims go in `core_deny`
+  (holder, owner) pairs, enforced by validate.
 - Localisation: English only, UTF-8 **with BOM** (the game ignores BOM-less
   files — verify bytes after writing). Generated files are cp1252.
 - Decision `desc` fields are pure flavour in vanilla style ("Let us…"):

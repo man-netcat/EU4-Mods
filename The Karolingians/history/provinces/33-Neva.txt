@@ -2,7 +2,6 @@
 
 owner = VOD
 controller = VOD
-add_core = NOV
 add_core = VOD
 capital = "Oreshek" # initial Russian name
 culture = karelian

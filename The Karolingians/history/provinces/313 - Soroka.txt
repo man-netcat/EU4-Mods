@@ -2,7 +2,6 @@
 
 owner = ONG
 controller = ONG
-add_core = NOV
 add_core = ONG
 capital = "Soroka"
 culture = novgorodian

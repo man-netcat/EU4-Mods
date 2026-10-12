@@ -5,10 +5,12 @@ technology_group = western
 primary_culture = frankish
 religion = catholic
 capital = 183
+historical_rival = GER
+historical_rival = LOT
+historical_friend = PAP
 add_accepted_culture = gascon
 add_accepted_culture = occitain
 national_focus = DIP
-historical_rival = GER
 
 change_estate_land_share = {
 	estate = estate_nobles

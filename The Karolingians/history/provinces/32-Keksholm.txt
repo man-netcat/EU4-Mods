@@ -2,7 +2,6 @@
 
 owner = KKS
 controller = KKS
-add_core = NOV
 add_core = KRL
 add_core = KKS
 capital = "Korela" # initial Russian name

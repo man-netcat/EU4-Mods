@@ -2,7 +2,6 @@
 
 owner = CRT
 controller = CRT
-add_core = VEN
 add_core = CRT
 capital = "Heraklion"
 culture = greek

@@ -24,7 +24,9 @@ from models import (
     FormableArea,
     FormableProvince,
     FormableRename,
+    Friendship as FriendshipRow,
     Province as ProvinceRow,
+    Rivalry as RivalryRow,
     Tag as TagRow,
     TagArea,
     TagProvince,
@@ -84,6 +86,8 @@ class LandedTag(Tag):
     flag_from: Optional[str] = None
     flag_source: Optional[str] = None
     suppress: tuple = ()
+    rivals: tuple = ()
+    friends: tuple = ()
 
     def __post_init__(self):
         super().__post_init__()
@@ -172,6 +176,12 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
         suppress: dict[str, list] = {}
         for r in s.query(TagSuppress).order_by(TagSuppress.key):
             suppress.setdefault(r.tag, []).append(r.key)
+        rivals: dict[str, list] = {}
+        for r in s.query(RivalryRow).order_by(RivalryRow.other):
+            rivals.setdefault(r.tag, []).append(r.other)
+        friends: dict[str, list] = {}
+        for r in s.query(FriendshipRow).order_by(FriendshipRow.other):
+            friends.setdefault(r.tag, []).append(r.other)
         fareas: dict[str, list] = {}
         for r in s.query(FormableArea).order_by(FormableArea.area):
             fareas.setdefault(r.formable, []).append(r.area)
@@ -254,6 +264,8 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
             flag_from=r.flag_from,
             flag_source=r.flag_source,
             suppress=tuple(suppress.get(r.tag, ())),
+            rivals=tuple(rivals.get(r.tag, ())),
+            friends=tuple(friends.get(r.tag, ())),
         )
         for r in rows
     ]

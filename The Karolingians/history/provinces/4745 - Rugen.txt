@@ -3,7 +3,6 @@
 owner = RUG
 controller = RUG
 add_core = RUG
-add_core = WOL
 capital = "Bergen auf Rügen"
 culture = polabian
 religion = catholic

@@ -5,7 +5,7 @@ technology_group = western
 primary_culture = czech
 religion = catholic
 capital = 266
-elector = yes
+historical_rival = GMA
 add_accepted_culture = sorbian
 add_army_professionalism = 0.1
 

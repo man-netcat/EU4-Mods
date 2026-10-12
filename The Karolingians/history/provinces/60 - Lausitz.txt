@@ -3,7 +3,6 @@
 owner = SOR
 controller = SOR
 add_core = SOR
-add_core = BOH
 capital = "Budyšín"
 culture = sorbian
 religion = catholic

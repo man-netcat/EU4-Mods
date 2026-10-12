@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = croatian
 religion = catholic
 capital = 1826
+historical_friend = PAP
 867.1.1 = {
 	monarch = {
 		name = "Domagoj"

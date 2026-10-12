@@ -321,6 +321,31 @@ def run() -> int:
     for m in multicore[:8]:
         print("        " + m)
 
+    denied = {}
+    import sqlite3  # noqa: E402
+
+    db = sqlite3.connect(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "tags.db")
+    )
+    for holder, owner in db.execute("SELECT holder, owner FROM core_deny").fetchall():
+        denied.setdefault(owner, set()).add(holder)
+    db.close()
+    stray = []
+    for pid, path in files.items():
+        s, _, _ = parse(path)
+        o = s.get("owner")
+        if o in denied:
+            text = open(path, encoding="utf-8", errors="surrogateescape").read()
+            hit = sorted(
+                set(re.findall(r"(?m)^\s*add_core\s*=\s*([A-Z]{3})", text))
+                & denied[o]
+            )
+            if hit:
+                stray.append(f"{pid} owned by {o} still cored by {hit}")
+    note(not stray, f"denied cores stay out ({len(stray)} problems)")
+    for b in stray[:8]:
+        print("        " + b)
+
     print("\n== realm sizes ==")
     for t in TAGS:
         note(own[t] > 0, f"{t} owns {own[t]} provinces")
@@ -502,6 +527,45 @@ def run() -> int:
     if found != expected_dip:
         print(f"        in file    : {found}")
         print(f"        in tagdb   : {expected_dip}")
+
+    print("\n== historical friendships and rivalries ==")
+    bad_rel = []
+    for tag in sorted(BY_TAG):
+        t = BY_TAG[tag]
+        body = open(
+            country_path(tag), encoding="utf-8", errors="surrogateescape"
+        ).read()
+        for other in t.rivals:
+            if f"historical_rival = {other}" not in body:
+                bad_rel.append(f"{tag} vs {other}")
+        for other in t.friends:
+            if f"historical_friend = {other}" not in body:
+                bad_rel.append(f"{tag} + {other}")
+    note(not bad_rel, "all rivalries and friendships written "
+         f"({len(bad_rel)} missing)")
+    for b in bad_rel[:10]:
+        print("        " + b)
+
+    print("\n== reconquista claims ==")
+    from eu4 import IBERIA_AREAS  # noqa: E402
+
+    area_of = {}
+    for a, pids in cdata["areas"].items():
+        for pid in pids:
+            area_of[int(pid)] = a
+    bad_rec = []
+    for pid, path in files.items():
+        s, _, _ = parse(path)
+        if s.get("owner") != "ADU" or area_of.get(pid) not in IBERIA_AREAS:
+            continue
+        text = open(path, encoding="utf-8", errors="surrogateescape").read()
+        m = re.search(r"^867\.1\.1 = \{(.*?)^\}", text, re.M | re.S)
+        blk = m.group(1) if m else ""
+        if "add_claim = ASU" not in blk or "add_claim = NAV" not in blk:
+            bad_rec.append(str(pid))
+    note(not bad_rec, f"andalusi iberia carries asu+nav claims ({len(bad_rec)} missing)")
+    for b in bad_rec[:10]:
+        print("        " + b)
 
     print()
     print("== vanilla tag reuse is deliberate ==")

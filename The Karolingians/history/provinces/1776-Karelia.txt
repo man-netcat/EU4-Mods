@@ -2,7 +2,6 @@
 
 owner = KRL
 controller = KRL
-add_core = NOV
 add_core = KRL
 capital = "Kem"
 culture = karelian

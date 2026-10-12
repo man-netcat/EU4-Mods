@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json, os, re, shutil
+import sqlite3
 from collections import defaultdict
 from functools import lru_cache
 from pathlib import Path
@@ -261,14 +262,26 @@ def lake_ids():
 PROV_DATE = "867.1.1"
 
 
-def force_block(new_owner):
-    return (
-        f"\n{PROV_DATE} = {{\n"
-        f"\towner = {new_owner}\n"
-        f"\tcontroller = {new_owner}\n"
-        f"\tadd_core = {new_owner}\n"
-        f"}}\n"
-    )
+def force_block(new_owner, claims=()):
+    lines = [
+        f"\n{PROV_DATE} = {{",
+        f"\towner = {new_owner}",
+        f"\tcontroller = {new_owner}",
+        f"\tadd_core = {new_owner}",
+    ] + [f"\tadd_claim = {c}" for c in claims] + [
+        "}",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+#: EU4 areas of Iberia: Andalusi-held land here carries the Reconquista.
+IBERIA_AREAS = frozenset(
+    "alentejo_area aragon_area asturias_area baleares_area basque_country "
+    "beieras_area castille_area catalonia_area extremadura_area galicia_area "
+    "leon_area lower_andalucia_area toledo_area upper_andalucia_area "
+    "valencia_area".split()
+)
 
 
 PROV_FIELD_ORDER = (
@@ -367,6 +380,19 @@ def patch(text, new_owner, pid=None):
             dated_start = idx
             break
 
+    old_owner = None
+    for idx in range(dated_start):
+        m = re.match(r"^\s*owner\s*=\s*([A-Z]{3})\s*$", lines[idx])
+        if m:
+            old_owner = m.group(1)
+            break
+    live = {s.tag for s in TAGS} | {"HLR"}
+    drop_cores = (
+        old_owner
+        if old_owner and old_owner != new_owner and old_owner in live
+        else None
+    )
+
     head = []
     if pid is not None and not any(
         re.match(r"^\s*owner\s*=", lines[idx]) for idx in range(dated_start)
@@ -401,6 +427,11 @@ def patch(text, new_owner, pid=None):
             out.append(f"{indent}{m.group(1)} = {new_owner}")
             continue
 
+        if drop_cores and re.match(
+            rf"^\s*add_core\s*=\s*{re.escape(drop_cores)}\s*$", s
+        ):
+            continue
+
         out.append(ln)
 
     have_core = any(
@@ -408,8 +439,13 @@ def patch(text, new_owner, pid=None):
         for idx in range(dated_start)
     )
     core_line = f"add_core = {new_owner}"
+    claims = []
+    if new_owner == "ADU" and pid is not None:
+        area = _pd()["area_of"].get(str(pid))
+        if area in IBERIA_AREAS:
+            claims = ["ASU", "NAV"]
     if have_core:
-        return "\n".join(head + out) + "\n" + force_block(new_owner)
+        return "\n".join(head + out) + "\n" + force_block(new_owner, claims)
 
     ins = dated_start
     last_core = None
@@ -422,7 +458,7 @@ def patch(text, new_owner, pid=None):
     elif not head:
         out.insert(dated_start, core_line)
 
-    return "\n".join(head + out) + "\n" + force_block(new_owner)
+    return "\n".join(head + out) + "\n" + force_block(new_owner, claims)
 
 
 DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman", "chinese", "nomad_group")
@@ -435,6 +471,32 @@ def strip_dead_cores(text, keep):
     for ln in text.splitlines():
         m = re.match(r"^\s*add_core\s*=\s*([A-Z]{3})\b", ln)
         if m and m.group(1) not in keep:
+            continue
+        out.append(ln)
+    return "\n".join(out) + "\n"
+
+
+def strip_denied_cores(text, owner):
+    # Dormant claims judged dead by hand live in core_deny(holder, owner):
+    # a living holder keeps no cores on that owner's land.
+    if not owner:
+        return text
+    db = sqlite3.connect(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "tags.db")
+    )
+    denied = {
+        r[0]
+        for r in db.execute(
+            "SELECT holder FROM core_deny WHERE owner=?", (owner,)
+        ).fetchall()
+    }
+    db.close()
+    if not denied:
+        return text
+    out = []
+    for ln in text.splitlines():
+        m = re.match(r"^\s*add_core\s*=\s*([A-Z]{3})\b", ln)
+        if m and m.group(1) in denied:
             continue
         out.append(ln)
     return "\n".join(out) + "\n"
@@ -482,6 +544,7 @@ def step_provinces(argv):
         new = patch(text, tag, pid) if tag else text
         new = take_group_visibility(new)
         new = strip_dead_cores(new, keep)
+        new = strip_denied_cores(new, tag)
         new = tidy_province(new)
 
         open(

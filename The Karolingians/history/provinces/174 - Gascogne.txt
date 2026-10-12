@@ -2,7 +2,6 @@
 
 owner = AQI
 controller = AQI
-add_core = FRA
 add_core = AQI
 capital = "Bordeaux"
 culture = gascon

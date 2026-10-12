@@ -2,7 +2,6 @@
 
 owner = KRG
 controller = KRG
-add_core = NOV
 add_core = KRG
 capital = "Kargopol"
 culture = novgorodian

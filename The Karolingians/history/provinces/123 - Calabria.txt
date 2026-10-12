@@ -2,7 +2,6 @@
 
 owner = SAW
 controller = SAW
-add_core = NAP
 add_core = SAW
 capital = "Reggio di Calabria"
 culture = greek

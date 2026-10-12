@@ -5,6 +5,8 @@ technology_group = western
 primary_culture = castillian
 religion = catholic
 capital = 207
+historical_rival = ADU
+historical_friend = PAP
 # ASU - Asturias.
 #
 # Whole-file override. Vanilla ASU is six lines with no dated history at all, so

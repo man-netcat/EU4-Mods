@@ -2,7 +2,6 @@
 
 owner = KIL
 controller = KIL
-add_core = NOV
 add_core = KIL
 capital = "Kola"
 culture = sapmi

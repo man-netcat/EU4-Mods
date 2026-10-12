@@ -2,7 +2,6 @@
 
 owner = SLU
 controller = SLU
-add_core = WOL
 add_core = SLU
 capital = "Stolp"
 culture = pommeranian

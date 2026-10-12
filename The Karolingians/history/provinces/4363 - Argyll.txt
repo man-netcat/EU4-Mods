@@ -2,7 +2,6 @@
 
 owner = LOI
 controller = LOI
-add_core = SCO
 add_core = LOI
 capital = "Loch Awe"
 culture = irish

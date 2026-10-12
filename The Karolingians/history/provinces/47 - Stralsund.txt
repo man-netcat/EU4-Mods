@@ -2,7 +2,6 @@
 
 owner = RUG
 controller = RUG
-add_core = WOL
 add_core = RUG
 capital = "Stralsund"
 culture = polabian

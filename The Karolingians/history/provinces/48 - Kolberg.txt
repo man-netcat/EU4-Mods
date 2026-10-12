@@ -2,7 +2,6 @@
 
 owner = STE
 controller = STE
-add_core = WOL
 add_core = STE
 capital = "Kolberg"
 culture = pommeranian

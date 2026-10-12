@@ -33,6 +33,8 @@ def country_history(t) -> str:
         f"religion = {t.religion}",
         f"capital = {t.capital}",
     ]
+    lines += [f"historical_rival = {r}" for r in t.rivals]
+    lines += [f"historical_friend = {f}" for f in t.friends]
     if t.extra:
         lines.append(t.extra.rstrip("\n"))
     lines.append(ruler_block_for(t))

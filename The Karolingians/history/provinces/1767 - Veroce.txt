@@ -2,7 +2,6 @@
 
 owner = SLA
 controller = SLA
-add_core = CRO
 add_core = SLA
 capital = "Osijek"
 culture = croatian

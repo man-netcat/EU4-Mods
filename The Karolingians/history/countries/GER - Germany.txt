@@ -6,6 +6,7 @@ primary_culture = franconian
 religion = catholic
 capital = 1876
 historical_rival = FRA
+historical_rival = LOT
 867.1.1 = {
 	monarch = {
 		name = "Ludwig"

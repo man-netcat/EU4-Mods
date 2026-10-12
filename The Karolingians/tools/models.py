@@ -162,6 +162,20 @@ class Diplomacy(Base):
     relation = Column(String, nullable=False, default="vassal")
 
 
+class Rivalry(Base):
+    __tablename__ = "rivalries"
+
+    tag = Column(String, ForeignKey("tags.tag"), primary_key=True)
+    other = Column(String, ForeignKey("tags.tag"), primary_key=True)
+
+
+class Friendship(Base):
+    __tablename__ = "friendships"
+
+    tag = Column(String, ForeignKey("tags.tag"), primary_key=True)
+    other = Column(String, ForeignKey("tags.tag"), primary_key=True)
+
+
 class Province(Base):
     __tablename__ = "provinces"
 

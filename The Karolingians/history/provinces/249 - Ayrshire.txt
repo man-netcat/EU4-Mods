@@ -2,7 +2,6 @@
 
 owner = GLW
 controller = GLW
-add_core = SCO
 add_core = GLW
 capital = "Ayr"
 culture = cumbrian

@@ -2,7 +2,6 @@
 
 owner = MLK
 controller = MLK
-add_core = SRV
 add_core = MLK
 capital = "Shaki"
 culture = georgian

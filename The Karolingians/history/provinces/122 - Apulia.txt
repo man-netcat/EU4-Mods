@@ -2,7 +2,6 @@
 
 owner = BYZ
 controller = BYZ
-add_core = NAP
 add_core = BYZ
 capital = "Taranto"
 culture = greek

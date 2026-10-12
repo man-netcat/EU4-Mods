@@ -2,7 +2,6 @@
 
 owner = NTH
 controller = NTH
-add_core = SCO
 add_core = NTH
 capital = "Jedburgh"
 culture = anglosaxon

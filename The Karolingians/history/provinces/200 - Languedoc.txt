@@ -2,7 +2,6 @@
 
 owner = GTH
 controller = GTH
-add_core = FRA
 add_core = GTH
 capital = "Montpellier"
 culture = goths

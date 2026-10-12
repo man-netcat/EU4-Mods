@@ -1,6 +1,5 @@
 owner = GMA
 controller = GMA
-add_core = BOH
 add_core = GMA
 capital = "Hradiste"
 culture = czech

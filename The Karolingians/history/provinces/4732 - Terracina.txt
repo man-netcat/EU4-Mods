@@ -2,7 +2,6 @@
 
 owner = ITA
 controller = ITA
-add_core = PAP
 add_core = ITA
 capital = "Terracina"
 culture = italian

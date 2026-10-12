@@ -5,6 +5,12 @@ technology_group = western
 primary_culture = italian
 religion = catholic
 capital = 118
+historical_friend = ASU
+historical_friend = BUL
+historical_friend = CRO
+historical_friend = FRA
+historical_friend = GMA
+historical_friend = ITA
 fixed_capital = 118  # Cannot move capital away from this province & no power cost to move to it
 add_army_professionalism = 0.05
 

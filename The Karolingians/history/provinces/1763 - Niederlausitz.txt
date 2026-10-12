@@ -3,7 +3,6 @@
 owner = SPW
 controller = SPW
 add_core = SOR
-add_core = BOH
 add_core = SPW
 capital = "Chotebuz"
 culture = sorbian
