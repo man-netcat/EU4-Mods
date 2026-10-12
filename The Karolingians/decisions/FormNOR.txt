@@ -8,13 +8,7 @@ country_decisions = {
 			NOT = { tag = NOR }
 			NOT = { exists = NOR }
 			primary_culture = norse
-			capital_scope = {
-				OR = {
-				area = eastern_norway
-				area = northern_norway
-				area = western_norway
-				}
-			}
+			kar_form_norway_capital_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -26,11 +20,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = eastern_norway
-				area = northern_norway
-				area = western_norway
-			}
+			kar_form_norway_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

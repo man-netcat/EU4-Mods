@@ -8,13 +8,7 @@ country_decisions = {
 			NOT = { tag = DAN }
 			NOT = { exists = DAN }
 			primary_culture = norse
-			capital_scope = {
-				OR = {
-				area = denmark_area
-				area = jutland_area
-				area = skaneland_area
-				}
-			}
+			kar_form_denmark_capital_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -26,11 +20,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = denmark_area
-				area = jutland_area
-				area = skaneland_area
-			}
+			kar_form_denmark_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

@@ -425,6 +425,65 @@ def run() -> int:
         "decision name keyed kar_form_hre_title (EU4 reads <key>_title)",
     )
 
+    print("\n== finland decisions cover finland and bothnia ==")
+
+    finland = {27, 28, 29, 31, 4123, 19, 4113, 4152}
+    fblk = re.search(
+        r"kar_form_finland_provinces_trigger = \{(.*?)\n\}",
+        trig,
+        re.S,
+    )
+    fbody = fblk.group(1) if fblk else ""
+    freq = {int(x) for x in re.findall(r"province_id = (\d+)", fbody)}
+    for a in re.findall(r"^\s*area = (\w+)", fbody, re.M):
+        freq |= {int(x) for x in cdata["areas"].get(a, ())}
+    note(freq == finland, f"trigger covers exactly the {len(finland)} finnish provinces")
+    cblk = re.search(
+        r"kar_form_finland_capital_trigger = \{(.*?)\n\}",
+        trig,
+        re.S,
+    )
+    cbody = cblk.group(1) if cblk else ""
+    creq = {int(x) for x in re.findall(r"province_id = (\d+)", cbody)}
+    for a in re.findall(r"^\s*area = (\w+)", cbody, re.M):
+        creq |= {int(x) for x in cdata["areas"].get(a, ())}
+    note(creq == finland, "capital trigger covers exactly the finnish provinces")
+    findec = open(
+        os.path.join(MOD, "decisions", "FinlandKingdom.txt"),
+        encoding="utf-8",
+        errors="replace",
+    ).read()
+    note(
+        "tag = FIN" in findec and "change_tag = FIN" in findec,
+        "crown path stays FIN, form path changes to FIN",
+    )
+    note(
+        "NOT = { government_rank = 3 }" in findec,
+        "crown path needs Finland below kingdom rank",
+    )
+    note(
+        "NOT = { exists = FIN }" in findec,
+        "form path needs Finland gone",
+    )
+    note(
+        "primary_culture = finnish" in findec,
+        "form path is finnish-gated",
+    )
+    note(
+        "set_government_rank = 3" in findec,
+        "both paths crown rank 3",
+    )
+    finloc = open(
+        os.path.join(MOD, "localisation", "finland_l_english.yml"),
+        encoding="utf-8",
+        errors="replace",
+    ).read()
+    note(
+        "kar_form_finland_title:0" in finloc
+        and "kar_crown_finland_title:0" in finloc,
+        "both decisions named in loc",
+    )
+
     print("\n== starting subjects ==")
     dip = os.path.join(MOD, "history", "diplomacy", "karolingian_vassals.txt")
     raw_dip = open(dip, encoding="cp1252", errors="replace").read()
@@ -445,7 +504,7 @@ def run() -> int:
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY ENG EST FIN FRA "
         "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOR NOV PAP PLT POL POM PRU RUG SAR "
-        "SIL SCO SOR SRV STE SWE TNG TRA VEN VOL WLS WOL".split()    )
+        "SIL SCA SCO SMI SOR SRV STE SWE TNG TRA VEN VOL WLS WOL".split()    )
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")
     for fn in os.listdir(vd):
@@ -559,13 +618,27 @@ def run() -> int:
                 f"{key} requires holding the capital ({fb.capital})",
             )
         if fb.home_capital:
-            m = re.search(r"capital_scope = \{(.*?)\n\t\t\t\}", dec, re.S)
-            body = m.group(1) if m else ""
             note(
-                bool(m)
-                and all(f"area = {a}" in body for a in fb.areas)
-                and all(f"province_id = {p}" in body for p in fb.provinces),
-                f"{key} requires a homeland capital ({len(fb.areas)} areas)",
+                f"{key}_capital_trigger = yes" in dec,
+                f"{key} requires a homeland capital",
+            )
+            cblk = re.search(
+                re.escape(key) + r"_capital_trigger = \{(.*?)\n\}",
+                trig,
+                re.S,
+            )
+            cbody = cblk.group(1) if cblk else ""
+            creq = {int(x) for x in re.findall(r"province_id = (\d+)", cbody)}
+            for a in re.findall(r"^\s*area = (\w+)", cbody, re.M):
+                creq |= {int(x) for x in cdata["areas"].get(a, ())}
+            note(
+                creq == land,
+                f"{key} capital trigger covers exactly the {len(land)} provinces",
+            )
+        if fb.rank_required:
+            note(
+                f"government_rank = {fb.rank_required}" in dec,
+                f"{key} needs rank {fb.rank_required}",
             )
         for culture, stag, name in fb.renames:
             trig = f"tag = {stag}" if stag else f"primary_culture = {culture}"

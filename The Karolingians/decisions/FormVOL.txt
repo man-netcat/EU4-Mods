@@ -22,10 +22,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = red_ruthenia_area
-				area = volhynia_area
-			}
+			kar_form_galicia_volhynia_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

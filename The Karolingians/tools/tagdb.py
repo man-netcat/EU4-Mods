@@ -101,6 +101,7 @@ class FormableTag(Tag):
     percent: Optional[int] = None
     own_capital: bool = False
     home_capital: bool = False
+    rank_required: Optional[int] = None
     culture: Optional[str] = None
     culture_group: tuple = ()
     renames: tuple = ()
@@ -202,6 +203,7 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
                 capital=r.capital,
                 own_capital=bool(r.own_capital),
                 home_capital=bool(r.home_capital),
+                rank_required=r.rank_required,
                 culture=r.culture,
                 culture_group=tuple(r.culture_group.split())
                 if r.culture_group

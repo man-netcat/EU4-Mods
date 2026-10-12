@@ -148,6 +148,12 @@ kar_form_norway_provinces_trigger = {
 	}
 }
 
+kar_form_sapmi_provinces_trigger = {
+	OR = {
+		area = laponia_area
+	}
+}
+
 kar_form_britannia_provinces_trigger = {
 	OR = {
 		area = connacht_area
@@ -168,6 +174,26 @@ kar_form_britannia_provinces_trigger = {
 	}
 }
 
+kar_form_scandinavia_provinces_trigger = {
+	OR = {
+		area = bothnia_area
+		area = denmark_area
+		area = eastern_norway
+		area = finland_area
+		area = gotaland_area
+		area = jutland_area
+		area = laponia_area
+		area = norrland_area
+		area = northern_norway
+		area = ostra_svealand_area
+		area = skaneland_area
+		area = subarctic_islands_area
+		area = svealand_area
+		area = vastra_gotaland_area
+		area = western_norway
+	}
+}
+
 kar_form_sardinia_provinces_trigger = {
 	OR = {
 		province_id = 127 #sassari
@@ -182,5 +208,53 @@ kar_form_ireland_provinces_trigger = {
 		area = leinster_area
 		area = munster_area
 		area = ulster_area
+	}
+}
+
+kar_form_finland_provinces_trigger = {
+	OR = {
+		area = bothnia_area
+		area = finland_area
+	}
+}
+
+kar_form_denmark_capital_trigger = {
+	capital_scope = {
+	OR = {
+		area = denmark_area
+		area = jutland_area
+		area = skaneland_area
+	}
+	}
+}
+
+kar_form_sweden_capital_trigger = {
+	capital_scope = {
+	OR = {
+		area = gotaland_area
+		area = norrland_area
+		area = ostra_svealand_area
+		area = svealand_area
+		area = vastra_gotaland_area
+	}
+	}
+}
+
+kar_form_norway_capital_trigger = {
+	capital_scope = {
+	OR = {
+		area = eastern_norway
+		area = northern_norway
+		area = western_norway
+	}
+	}
+}
+
+kar_form_finland_capital_trigger = {
+	capital_scope = {
+	OR = {
+		area = bothnia_area
+		area = finland_area
+	}
 	}
 }

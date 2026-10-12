@@ -19,11 +19,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				province_id = 127
-				province_id = 2986
-				province_id = 4735
-			}
+			kar_form_sardinia_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

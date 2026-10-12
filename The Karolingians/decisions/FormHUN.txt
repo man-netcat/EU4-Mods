@@ -19,12 +19,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = alfold_area
-				area = southern_transylvania_area
-				area = transdanubia_area
-				area = transylvania_area
-			}
+			kar_form_hungary_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

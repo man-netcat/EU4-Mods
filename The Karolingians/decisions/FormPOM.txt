@@ -19,13 +19,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = hinter_pommern_area
-				area = mecklenburg_area
-				area = mittelmark_area
-				area = neumark_area
-				area = vorpommern_area
-			}
+			kar_form_pomerania_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

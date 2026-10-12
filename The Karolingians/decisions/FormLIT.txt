@@ -19,12 +19,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = east_prussia_area
-				area = lithuania_area
-				area = samogitia_area
-				area = west_prussia_area
-			}
+			kar_form_lithuania_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

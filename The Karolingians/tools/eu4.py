@@ -9,6 +9,7 @@ from ck3 import ck3_sync
 from histgen import (
     country_definition,
     country_history,
+    formation_capital_trigger_block,
     formation_decision,
     formation_trigger_block,
     requirement_provinces,
@@ -185,6 +186,10 @@ def empire_core():
     tags = set(ktags)
     tags |= {d.subject for d in DIPLOMACY if d.liege in tags}
     return sorted({p for t in tags for p in alloc.get(t, ())})
+
+
+#: Requirement areas of the same-tag Finland kingdom path.
+FINLAND_AREAS = ("finland_area", "bothnia_area")
 
 
 _VANILLA_PROV_FILES: dict = {}
@@ -803,6 +808,7 @@ VANILLA_FORMATION_FILES = {
     "BritishNation.txt": ["british_nation", "british_nation_diplomatically"],
     "MiscCountryFormations.txt": ["icelandic_nation"],
     "HRE_FormableNations.txt": ["pomerania_nation"],
+    "ScandinavianNation.txt": ["scandinavian_nation"],
 }
 
 
@@ -900,14 +906,27 @@ def step_custom() -> None:
 def step_formation_triggers() -> None:
     specs = [("kar_form_hre", empire_core())]
     done = set()
+    capitals = []
     for t in TAGS:
         if t.forms and t.forms not in done:
             done.add(t.forms)
             specs.append((t.decision, requirement_provinces(t.forms)))
+            if BY_FORMABLE[t.forms].home_capital:
+                capitals.append((t.decision, requirement_provinces(t.forms)))
+    finland = sorted(
+        {int(p) for a in FINLAND_AREAS for p in _pd()["areas"].get(a, ())}
+    )
+    specs.append(("kar_form_finland", finland))
+    capitals.append(("kar_form_finland", finland))
 
     body = "\n\n".join(
         formation_trigger_block(f"{k}_provinces_trigger", p) for k, p in specs
     )
+    if capitals:
+        body += "\n\n" + "\n\n".join(
+            formation_capital_trigger_block(f"{k}_capital_trigger", p)
+            for k, p in capitals
+        )
     sdir = os.path.join(MOD, "common", "scripted_triggers")
     os.makedirs(sdir, exist_ok=True)
     spath = os.path.join(sdir, "KarolingianFormations.txt")

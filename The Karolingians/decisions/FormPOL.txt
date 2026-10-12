@@ -19,15 +19,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = central_poland_area
-				area = kuyavia_area
-				area = malopolska_area
-				area = mazovia_area
-				area = sandomierz_area
-				area = silesia_area
-				area = wielkopolska_area
-			}
+			kar_form_poland_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

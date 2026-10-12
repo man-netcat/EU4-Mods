@@ -8,15 +8,7 @@ country_decisions = {
 			NOT = { tag = SWE }
 			NOT = { exists = SWE }
 			primary_culture = norse
-			capital_scope = {
-				OR = {
-				area = gotaland_area
-				area = norrland_area
-				area = ostra_svealand_area
-				area = svealand_area
-				area = vastra_gotaland_area
-				}
-			}
+			kar_form_sweden_capital_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -28,13 +20,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				area = gotaland_area
-				area = norrland_area
-				area = ostra_svealand_area
-				area = svealand_area
-				area = vastra_gotaland_area
-			}
+			kar_form_sweden_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

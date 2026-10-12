@@ -72,6 +72,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   to sit inside the requirement land instead of holding a fixed capital
   (Denmark, and Norway/Sweden when they come); it excludes `own_capital`.
   HLR's custom decision stays handwritten; the table records the correspondence.
+  FIN's same-tag kingdom is custom the same way (`decisions/FinlandKingdom.txt`:
+  crown in place below kingdom rank, or proclaim when FIN is gone); no
+  formable row, the triggers are hardcoded specs like the HRE one.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

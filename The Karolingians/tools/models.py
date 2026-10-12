@@ -108,6 +108,8 @@ class Formable(Base):
     # require the firing tag's capital to sit inside the requirement land
     # (homeland rule for Denmark/Norway/Sweden); never with own_capital
     home_capital = Column(Boolean, nullable=False, default=False)
+    # require an exact government rank to fire (Scandinavia: kings only)
+    rank_required = Column(Integer)
     # primary culture that may fire the decision (NULL = listed starters only)
     culture = Column(String, ForeignKey("cultures.name"))
     # culture groups that may fire it, space-separated (GBR: the isles'

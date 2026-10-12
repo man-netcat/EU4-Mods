@@ -107,18 +107,10 @@ def formation_decision(fcode, starters) -> str:
         cap_req = "\n\t\t\towns = " + str(fb.capital)
     home_req = ""
     if fb.home_capital:
-        home_or = "\n".join(
-            [f"{T*4}area = {a}" for a in fb.areas]
-            + [f"{T*4}province_id = {p}" for p in sorted(fb.provinces)]
-        )
-        home_req = (
-            f"\n\t\t\tcapital_scope = {{\n\t\t\t\tOR = {{\n{home_or}\n"
-            f"\t\t\t\t}}\n\t\t\t}}"
-        )
-    area_or = "\n".join(
-        [f"{T*4}area = {a}" for a in fb.areas]
-        + [f"{T*4}province_id = {p}" for p in sorted(fb.provinces)]
-    )
+        home_req = f"\n\t\t\t{key}_capital_trigger = yes"
+    rank_req = ""
+    if fb.rank_required:
+        rank_req = f"\n\t\t\tgovernment_rank = {fb.rank_required}"
     claims = "\n".join(
         f"{T*3}{a} = {{\n"
         f"{T*4}limit = {{\n"
@@ -172,7 +164,7 @@ def formation_decision(fcode, starters) -> str:
 \t\t\tNOT = {{ has_country_flag = {key} }}
 \t\t\tNOT = {{ tag = {fcode} }}
 \t\t\tNOT = {{ exists = {fcode} }}
-{tag_line}{home_req}
+{tag_line}{home_req}{rank_req}
 \t\t\tOR = {{
 \t\t\t\tai = no
 \t\t\t\tis_playing_custom_nation = no
@@ -184,9 +176,7 @@ def formation_decision(fcode, starters) -> str:
 \t\t}}
 
 \t\tprovinces_to_highlight = {{
-\t\t\tOR = {{
-{area_or}
-\t\t\t}}
+\t\t\t{key}_provinces_trigger = yes
 \t\t\tNOT = {{ country_or_non_sovereign_subject_holds = ROOT }}
 \t\t}}
 
@@ -217,6 +207,24 @@ def formation_decision(fcode, starters) -> str:
 
 
 def formation_trigger_block(name, pids) -> str:
+    return (
+        f"{name} = {{\n{T}OR = {{\n"
+        + "\n".join(_trigger_land_lines(pids))
+        + f"\n{T}}}\n}}"
+    )
+
+
+def formation_capital_trigger_block(name, pids) -> str:
+    """Homeland-capital check for home_capital formables: the firing tag's
+    capital must sit inside the requirement land."""
+    return (
+        f"{name} = {{\n{T}capital_scope = {{\n{T}OR = {{\n"
+        + "\n".join(_trigger_land_lines(pids))
+        + f"\n{T}}}\n{T}}}\n}}"
+    )
+
+
+def _trigger_land_lines(pids) -> list[str]:
     data = json.load(open(str(PROVDATA)))
     want = set(pids)
     used: set = set()
@@ -229,4 +237,4 @@ def formation_trigger_block(name, pids) -> str:
     for p in sorted(want - used):
         nm = data["provs"].get(str(p), {}).get("name")
         lines.append(f"{T*2}province_id = {p}" + (f" #{nm.lower()}" if nm else ""))
-    return f"{name} = {{\n{T}OR = {{\n" + "\n".join(lines) + f"\n{T}}}\n}}"
+    return lines
