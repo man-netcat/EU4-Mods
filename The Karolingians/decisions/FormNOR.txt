@@ -9,6 +9,7 @@ country_decisions = {
 			NOT = { exists = NOR }
 			primary_culture = norse
 			kar_form_norway_capital_trigger = yes
+			NOT = { government_rank = 3 }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

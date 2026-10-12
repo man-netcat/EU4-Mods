@@ -8,6 +8,7 @@ country_decisions = {
 			NOT = { tag = HUN }
 			NOT = { exists = HUN }
 			tag = MGY
+			NOT = { government_rank = 3 }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

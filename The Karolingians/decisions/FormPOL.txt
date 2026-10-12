@@ -8,6 +8,7 @@ country_decisions = {
 			NOT = { tag = POL }
 			NOT = { exists = POL }
 			primary_culture = polish
+			NOT = { government_rank = 3 }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

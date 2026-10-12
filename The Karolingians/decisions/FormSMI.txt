@@ -8,6 +8,7 @@ country_decisions = {
 			NOT = { tag = SMI }
 			NOT = { exists = SMI }
 			primary_culture = sapmi
+			NOT = { government_rank = 3 }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

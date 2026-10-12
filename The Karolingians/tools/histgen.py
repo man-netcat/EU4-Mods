@@ -111,6 +111,8 @@ def formation_decision(fcode, starters) -> str:
     rank_req = ""
     if fb.rank_required:
         rank_req = f"\n\t\t\tgovernment_rank = {fb.rank_required}"
+    elif fb.rank == 3:
+        rank_req = "\n\t\t\tNOT = { government_rank = 3 }"
     claims = "\n".join(
         f"{T*3}{a} = {{\n"
         f"{T*4}limit = {{\n"

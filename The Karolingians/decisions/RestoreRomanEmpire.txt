@@ -1,0 +1,12 @@
+# dummy: vanilla formations neutralized, use our kar_form_* instead
+country_decisions = {
+	restore_roman_empire = {
+		potential = {
+			always = no
+		}
+		allow = {
+		}
+		effect = {
+		}
+	}
+}

@@ -67,6 +67,7 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_finland }
 			NOT = { tag = FIN }
 			NOT = { exists = FIN }
+			NOT = { government_rank = 3 }
 			primary_culture = finnish
 			OR = {
 				ai = no

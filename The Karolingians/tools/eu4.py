@@ -809,6 +809,7 @@ VANILLA_FORMATION_FILES = {
     "MiscCountryFormations.txt": ["icelandic_nation"],
     "HRE_FormableNations.txt": ["pomerania_nation"],
     "ScandinavianNation.txt": ["scandinavian_nation"],
+    "RestoreRomanEmpire.txt": ["restore_roman_empire"],
 }
 
 
@@ -854,6 +855,10 @@ def step_custom() -> None:
         if t.forms:
             by_formable.setdefault(t.forms, []).append(t)
     for fcode, starters in sorted(by_formable.items()):
+        if fcode == "ROM":
+            # Rome restores via decisions/FormROM.txt (handwritten, vanilla
+            # behaviour); nothing to generate here.
+            continue
         fb = BY_FORMABLE[fcode]
         req = requirement_provinces(fcode)
         txt = formation_decision(fcode, starters)

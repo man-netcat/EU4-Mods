@@ -470,6 +470,10 @@ def run() -> int:
         "form path is finnish-gated",
     )
     note(
+        findec.count("NOT = { government_rank = 3 }") >= 2,
+        "both finland paths need a non-kingdom firer",
+    )
+    note(
         "set_government_rank = 3" in findec,
         "both paths crown rank 3",
     )
@@ -503,7 +507,7 @@ def run() -> int:
     print("== vanilla tag reuse is deliberate ==")
     VANILLA_REUSE = frozenset(
         "ADU ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN EGY ENG EST FIN FRA "
-        "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOR NOV PAP PLT POL POM PRU RUG SAR "
+        "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK NAP NAV NOR NOV PAP PLT POL POM PRU ROM RUG SAR "
         "SIL SCA SCO SMI SOR SRV STE SWE TNG TRA VEN VOL WLS WOL".split()    )
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")
@@ -639,6 +643,11 @@ def run() -> int:
             note(
                 f"government_rank = {fb.rank_required}" in dec,
                 f"{key} needs rank {fb.rank_required}",
+            )
+        elif fb.rank == 3:
+            note(
+                "NOT = { government_rank = 3 }" in dec,
+                f"{key} needs a non-kingdom firer",
             )
         for culture, stag, name in fb.renames:
             trig = f"tag = {stag}" if stag else f"primary_culture = {culture}"

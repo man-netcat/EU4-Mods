@@ -8,6 +8,7 @@ country_decisions = {
 			NOT = { tag = LIT }
 			NOT = { exists = LIT }
 			culture_group = baltic
+			NOT = { government_rank = 3 }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

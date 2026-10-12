@@ -42,6 +42,7 @@ CK3_TO_EU4 = {
     "frisian": "frisian", "bavarian": "bavarian", "swabian": "swabian",
     "franconian": "franconian", "french": "frankish",
     "lombard": "lombard", "italian": "italian", "cisalpine": "cisalpine",
+    "roman": "roman",
     "venetian": "venetian", "sardinian": "sardinian",
     "sicilian": "sicilian", "umbrian": "umbrian", "neapolitan": "neapolitan",
     "greek": "greek", "armenian": "armenian", "georgian": "georgian",
@@ -177,6 +178,12 @@ LIFT_SPECS = {
         "display": "Andalusian",
         "file": "00_arabic.txt",
         "list": "name_list_andalusian",
+    },
+    "roman": {
+        "anchor": "\titalian = {",
+        "display": "Roman",
+        "file": "00_latin.txt",
+        "list": "name_list_roman",
     },
 }
 

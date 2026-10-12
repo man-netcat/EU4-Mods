@@ -75,6 +75,8 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   FIN's same-tag kingdom is custom the same way (`decisions/FinlandKingdom.txt`:
   crown in place below kingdom rank, or proclaim when FIN is gone); no
   formable row, the triggers are hardcoded specs like the HRE one.
+  ROM's restoration is custom too (`decisions/FormROM.txt` carries vanilla's
+  behaviour at hegemony rank); HLR fires it through its tag, BYZ starts it.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).
