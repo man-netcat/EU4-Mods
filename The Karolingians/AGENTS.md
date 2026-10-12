@@ -100,7 +100,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 
 ## Standing conventions
 
-- Provinces keep **vanilla culture/religion** (standing rule, no exceptions).
+- Provinces keep **vanilla culture** (standing rule, no exceptions). All
+  Christian provinces and tags are `catholic` for now, displayed as
+  Chalcedonian (`karolingian_religion_l_english.yml`); fix the ones that
+  should not be later.
   Tags take their **867 holder's CK3 culture** instead (`culturelift.py`
   maps and lifts on demand; a starter whose ruler culture misses the
   formable gate fails `selfcheck` — drop the starter link or keep the
