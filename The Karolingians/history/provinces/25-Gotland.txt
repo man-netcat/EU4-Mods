@@ -6,7 +6,7 @@ add_core = GOT
  # Visborg Castle
 capital = "Visby"
 culture = norse
-religion = catholic
+religion = norse_pagan_reformed
 hre = no
 base_tax = 4
 base_production = 4

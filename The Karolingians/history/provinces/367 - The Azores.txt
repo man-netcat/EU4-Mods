@@ -5,8 +5,8 @@ capital = "The Azores"
 culture = berber
 #367 - The Azores
 culture = berber
-religion = animism
-religion = animism
+religion = sunni
+religion = sunni
 hre = no
 hre = no
 base_tax = 1

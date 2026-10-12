@@ -5,8 +5,8 @@ capital = "Funchal"
 culture = berber
 #368 - Madeira
 culture = berber
-religion = animism
-religion = animism
+religion = sunni
+religion = sunni
 hre = no
 hre = no
 base_tax = 1

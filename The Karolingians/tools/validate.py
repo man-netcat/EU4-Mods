@@ -1045,7 +1045,48 @@ def run() -> int:
         + ("" if not stale_religion else f": {', '.join(stale_religion)}"),
     )
 
-    print("\n== every religion key exists in vanilla ==")
+    print("\n== interface religion-strip overrides stay in sync ==")
+    REL_SPRITES = {
+        "countryview.gfx": [
+            "GFX_icon_religion",
+            "GFX_country_icon_religion",
+            "GFX_icon_religion_small",
+        ],
+        "ledger.gfx": ["GFX_religion_icon_strip"],
+        "provinceview.gfx": ["GFX_province_view_religion"],
+    }
+    gfx_bad = []
+    for fn, want in REL_SPRITES.items():
+        vtext = open(
+            os.path.join(GAME, "interface", fn), encoding="utf-8", errors="replace"
+        ).read()
+        mtext = open(os.path.join(MOD, "interface", fn), encoding="utf-8").read()
+        vspr = re.findall(r'name = "(GFX_[^"]+)"', vtext)
+        mspr = re.findall(r'name = "(GFX_[^"]+)"', mtext)
+        if vspr != mspr:
+            gfx_bad.append(f"{fn} sprite list drifted")
+        for spr in want:
+            m = re.search(
+                r'name = "' + spr + r'".*?texturefile = "([^"]+)"',
+                mtext,
+                re.S,
+            )
+            if not m or not m.group(1).endswith(".tga"):
+                gfx_bad.append(f"{fn} {spr} not pointed at our TGA strip")
+                continue
+            rel = re.split(r"[\\/]+", m.group(1))[-1]
+            if not os.path.exists(os.path.join(MOD, "gfx", "interface", rel)):
+                gfx_bad.append(f"{fn} {spr} target missing: {rel}")
+            f = re.search(
+                r'name = "' + spr + r'".*?noOfFrames = (\d+)', mtext, re.S
+            )
+            if not f or int(f.group(1)) != 32:
+                gfx_bad.append(f"{fn} {spr} frames != 32")
+    note(not gfx_bad, f"religion icon overrides intact ({len(gfx_bad)} bad)")
+    for b in gfx_bad[:8]:
+        print("        " + b)
+
+    print("\n== every religion key exists in vanilla or our additions ==")
     vrel = set(
         re.findall(
             r"(?m)^\s*([a-z_]+)\s*=\s*\{",
@@ -1056,6 +1097,14 @@ def run() -> int:
             ).read(),
         )
     )
+    own_rel = os.path.join(MOD, "common", "religions", "00_religion.txt")
+    if os.path.exists(own_rel):
+        vrel |= set(
+            re.findall(
+                r"(?m)^\s*([a-z_]+)\s*=\s*\{",
+                open(own_rel, encoding="utf-8", errors="replace").read(),
+            )
+        )
     bad_rel = []
     for fn in sorted(os.listdir(PDIR)):
         if not fn.endswith(".txt"):

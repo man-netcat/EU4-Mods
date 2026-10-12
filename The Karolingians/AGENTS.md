@@ -100,10 +100,30 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 
 ## Standing conventions
 
-- Provinces keep **vanilla culture** (standing rule, no exceptions). All
-  Christian provinces and tags are `catholic` for now, displayed as
-  Chalcedonian (`karolingian_religion_l_english.yml`); fix the ones that
-  should not be later.
+- Provinces keep **vanilla culture** (standing rule, no exceptions). Religion is
+  CK3's 867 distribution on an area basis (`tags`/`provinces` religion cols):
+  Norse world + Dublin `norse_pagan_reformed`; Slavic lands `slavic`; Baltic
+  lands `romuva`;   Finnic lands `suomenusko` — all three lifted from CK2
+  (867 unreformed names/colours/icons; descs are ours). They live in
+  `common/religions/00_religion.txt`, a full vanilla copy with the three
+  appended to the pagan group (Norse-clone mechanics, small thematic
+  country bonus, no personal deities). Engine file-override is by exact
+  filename, so the vanilla DDS strips cannot be extended in place: per the
+  wiki recipe, icons are appended as frames 30-32 to TGA copies of all
+  four religion strips (`icon`, `icon_small`, `country_icon`,
+  `province_view`) in `gfx/interface/`, and `interface/countryview.gfx`
+  (three sprites) plus `interface/ledger.gfx` and
+  `interface/provinceview.gfx` (one each) are full vanilla copies
+  repointed at the TGAs with `noOfFrames` 29→32 — miss any strip/sprite
+  and icons shift (the classic bug). Re-sync all eight files against the
+  base game on patches; validate guards the
+  vanilla key set, both sprite lists, the TGA targets and the frame counts.
+  Steppe + Khitan + Magyars + Avar remnant `tengri_pagan_reformed`;
+  Armenia/Georgia highlands `coptic`; Muslims `sunni`; rest `catholic`,
+  displayed as Chalcedonian (`karolingian_religion_l_english.yml`). Where CK3's
+  ruler differs from the population the tag keeps the ruler faith on foreign
+  land: YRK/KIE/NOV Norse tags on catholic/slavic land, CRT Sunni tag on
+  catholic Crete, MRW Sunni tag on coptic Erzurum. Per-province refinement later.
   Tags take their **867 holder's CK3 culture** instead (`culturelift.py`
   maps and lifts on demand; a starter whose ruler culture misses the
   formable gate fails `selfcheck` — drop the starter link or keep the
