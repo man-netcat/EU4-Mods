@@ -709,13 +709,20 @@ def step_hre() -> None:
 
 def step_diplomacy() -> None:
     lines = [
-        "# Starting subjects of the Carolingian world (vassals and unions).",
+        "# Starting subjects and guarantees of the Carolingian world.",
         "# No start_date: each holds from the mod's start.",
     ]
     for rel in DIPLOMACY:
         if rel.relation == "vassal":
             lines += [
                 "vassal = {",
+                "\tfirst = " + rel.liege,
+                "\tsecond = " + rel.subject,
+                "}",
+            ]
+        elif rel.relation == "guarantee":
+            lines += [
+                "guarantee = {",
                 "\tfirst = " + rel.liege,
                 "\tsecond = " + rel.subject,
                 "}",

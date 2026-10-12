@@ -1,8 +1,9 @@
 # 174 Gascogne - Principal cities: Bordeaux
 
-owner = FRA
-controller = FRA
+owner = AQI
+controller = AQI
 add_core = FRA
+add_core = AQI
 capital = "Bordeaux"
 culture = gascon
 religion = catholic
@@ -25,7 +26,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = AQI
+	controller = AQI
+	add_core = AQI
 }

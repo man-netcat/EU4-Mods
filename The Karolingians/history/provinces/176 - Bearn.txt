@@ -1,8 +1,8 @@
 # 176 Béarn - Principal cities: Pau
 
-owner = FRA
-controller = FRA
-add_core = FRA
+owner = AQI
+controller = AQI
+add_core = AQI
 capital = "Pau"
 culture = gascon
 religion = catholic
@@ -14,7 +14,7 @@ base_manpower = 4
 is_city = yes
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = AQI
+	controller = AQI
+	add_core = AQI
 }

@@ -1,8 +1,8 @@
 # 173 Labourd - Principal cities: Bayonne (can't change file name)
 
-owner = FRA
-controller = FRA
-add_core = FRA
+owner = AQI
+controller = AQI
+add_core = AQI
 capital = "Bayonne"
 culture = basque
 religion = catholic
@@ -20,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = AQI
+	controller = AQI
+	add_core = AQI
 }

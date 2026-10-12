@@ -1,8 +1,9 @@
 # 4112 - Cahors
 
-owner = FRA
-controller = FRA
+owner = AQI
+controller = AQI
 add_core = FRA
+add_core = AQI
 capital = "Cahors"
 culture = gascon
 religion = catholic
@@ -19,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = AQI
+	controller = AQI
+	add_core = AQI
 }

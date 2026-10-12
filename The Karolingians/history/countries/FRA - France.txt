@@ -8,7 +8,7 @@ capital = 183
 add_accepted_culture = gascon
 add_accepted_culture = occitain
 national_focus = DIP
-historical_rival = HAB
+historical_rival = GER
 
 change_estate_land_share = {
 	estate = estate_nobles
@@ -22,6 +22,8 @@ change_estate_land_share = {
 	estate = estate_burghers
 	share = -5
 }
+add_accepted_culture = wallonian
+add_accepted_culture = burgundian
 867.1.1 = {
 	monarch = {
 		name = "Charles"

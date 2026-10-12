@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = western
+primary_culture = occitain
+religion = catholic
+capital = 174
+add_accepted_culture = gascon
+867.1.1 = {
+	monarch = {
+		name = "Charles"
+		dynasty = "Karling"
+		birth_date = 823.1.14
+		death_date = 877.6.10
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+	heir = {
+		name = "Louis"
+		monarch_name = "Louis"
+		dynasty = "Karling"
+		birth_date = 843.1.2
+		death_date = 879.1.11
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

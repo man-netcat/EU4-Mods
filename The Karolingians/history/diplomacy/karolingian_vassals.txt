@@ -1,5 +1,9 @@
-# Starting subjects of the Carolingian world (vassals and unions).
+# Starting subjects and guarantees of the Carolingian world.
 # No start_date: each holds from the mod's start.
+vassal = {
+	first = AQI
+	second = GTH
+}
 vassal = {
 	first = BUL
 	second = TRA
@@ -12,9 +16,25 @@ vassal = {
 	first = BYZ
 	second = DAL
 }
-vassal = {
+union = {
 	first = FRA
-	second = GTH
+	second = AQI
+}
+guarantee = {
+	first = FRA
+	second = BOH
+}
+guarantee = {
+	first = FRA
+	second = GMA
+}
+guarantee = {
+	first = FRA
+	second = JYL
+}
+guarantee = {
+	first = FRA
+	second = SJA
 }
 union = {
 	first = GER
