@@ -1071,12 +1071,21 @@ def run() -> int:
                 mtext,
                 re.S,
             )
-            if not m or not m.group(1).endswith(".tga"):
-                gfx_bad.append(f"{fn} {spr} not pointed at our TGA strip")
+            if not m or not m.group(1).endswith(".dds"):
+                gfx_bad.append(f"{fn} {spr} not pointed at our DDS strip")
                 continue
             rel = re.split(r"[\\/]+", m.group(1))[-1]
-            if not os.path.exists(os.path.join(MOD, "gfx", "interface", rel)):
+            full = os.path.join(MOD, "gfx", "interface", rel)
+            if not os.path.exists(full):
                 gfx_bad.append(f"{fn} {spr} target missing: {rel}")
+                continue
+            with open(full, "rb") as fh:
+                head = fh.read(24)
+            import struct as _st
+
+            w = _st.unpack("<I", head[16:20])[0] if head[:4] == b"DDS " else 0
+            if w not in (2048, 1024):
+                gfx_bad.append(f"{fn} {spr} strip width {w} != 32 frames")
             f = re.search(
                 r'name = "' + spr + r'".*?noOfFrames = (\d+)', mtext, re.S
             )

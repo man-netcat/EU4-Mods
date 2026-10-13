@@ -108,14 +108,13 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `common/religions/00_religion.txt`, a full vanilla copy with the three
   appended to the pagan group (Norse-clone mechanics, small thematic
   country bonus, no personal deities). Engine file-override is by exact
-  filename, so the vanilla DDS strips cannot be extended in place: per the
-  wiki recipe, icons are appended as frames 30-32 to TGA copies of all
-  four religion strips (`icon`, `icon_small`, `country_icon`,
-  `province_view`) in `gfx/interface/`, and `interface/countryview.gfx`
-  (three sprites) plus `interface/ledger.gfx` and
-  `interface/provinceview.gfx` (one each) are full vanilla copies
-  repointed at the TGAs with `noOfFrames` 29→32 — miss any strip/sprite
-  and icons shift (the classic bug). Re-sync all eight files against the
+  filename, so per the wiki recipe the four vanilla DDS strips are
+  extended in place (same filenames, uncompressed 32-bit RGBA exactly
+  like vanilla) with the new icons as frames 30-32, and
+  `interface/countryview.gfx` (three sprites) plus `interface/ledger.gfx`
+  and `interface/provinceview.gfx` (one each) are full vanilla copies
+  with `noOfFrames` 29→32 — miss any strip/sprite and icons shift (the
+  classic bug). Re-sync all eight files against the
   base game on patches; validate guards the
   vanilla key set, both sprite lists, the TGA targets and the frame counts.
   Steppe + Khitan + Magyars + Avar remnant `tengri_pagan_reformed`;
