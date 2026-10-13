@@ -154,6 +154,16 @@ def formation_decision(fcode, starters) -> str:
             tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
     elif fb.culture:
         tag_line = f"\t\t\tprimary_culture = {fb.culture}"
+    elif fb.exclusive and len(starters) > 1:
+        branches = []
+        for s in starters:
+            others = "\n".join(
+                f"\t\t\t\tNOT = {{ exists = {o.tag} }}" for o in starters if o != s
+            )
+            branches.append(
+                f"\t\t\tAND = {{\n\t\t\t\ttag = {s.tag}\n{others}\n\t\t\t}}"
+            )
+        tag_line = "\t\t\tOR = {\n" + "\n".join(branches) + "\n\t\t\t}"
     elif len(starters) == 1:
         tag_line = f"\t\t\ttag = {starters[0].tag}"
     else:

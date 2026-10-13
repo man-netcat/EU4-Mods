@@ -669,6 +669,16 @@ def run() -> int:
                 all(f"tag = {s.tag}" in dec for s in starters),
                 f"{key} is gated on its starters",
             )
+        if fb.exclusive:
+            missing = [
+                f"{s.tag} fires while {o.tag} lives"
+                for s in starters
+                for o in starters
+                if o != s and f"NOT = {{ exists = {o.tag} }}" not in dec
+            ]
+            note(not missing, f"{key} is exclusive between starters")
+            for b in missing[:4]:
+                print("        " + b)
         val = re.search(r"num_of_owned_provinces_with = \{\s*value = (\d+)", dec)
         exp = required_count(len(land), fb.percent)
         note(
@@ -1046,6 +1056,17 @@ def run() -> int:
     )
 
     print("\n== interface religion-strip overrides stay in sync ==")
+    max_icon = max(
+        int(n)
+        for n in re.findall(
+            r"(?m)^\t\ticon = (\d+)",
+            open(
+                os.path.join(MOD, "common", "religions", "00_religion.txt"),
+                encoding="utf-8",
+                errors="replace",
+            ).read(),
+        )
+    )
     REL_SPRITES = {
         "countryview.gfx": [
             "GFX_icon_religion",
@@ -1084,13 +1105,13 @@ def run() -> int:
             import struct as _st
 
             w = _st.unpack("<I", head[16:20])[0] if head[:4] == b"DDS " else 0
-            if w not in (2048, 1024):
-                gfx_bad.append(f"{fn} {spr} strip width {w} != 32 frames")
+            if w % max_icon or w // max(1, max_icon) not in (64, 32):
+                gfx_bad.append(f"{fn} {spr} strip width {w} != {max_icon} frames")
             f = re.search(
                 r'name = "' + spr + r'".*?noOfFrames = (\d+)', mtext, re.S
             )
-            if not f or int(f.group(1)) != 32:
-                gfx_bad.append(f"{fn} {spr} frames != 32")
+            if not f or int(f.group(1)) != max_icon:
+                gfx_bad.append(f"{fn} {spr} frames != {max_icon}")
     note(not gfx_bad, f"religion icon overrides intact ({len(gfx_bad)} bad)")
     for b in gfx_bad[:8]:
         print("        " + b)

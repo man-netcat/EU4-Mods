@@ -117,6 +117,9 @@ class Formable(Base):
     culture_group = Column(String)
     # dynasty that may fire the decision (HLR: Karlings; NULL = not gated)
     dynasty = Column(String)
+    # listed starters are mutually exclusive rivals: each may fire only
+    # once the others are gone (Galicia-Volhynia: Halych/Volodymyr)
+    exclusive = Column(Boolean, nullable=False, default=False)
 
 
 class FormableArea(Base):

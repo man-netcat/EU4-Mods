@@ -72,6 +72,8 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   the Empire). A fifth, `home_capital`, requires the firing tag's capital
   to sit inside the requirement land instead of holding a fixed capital
   (Denmark, and Norway/Sweden when they come); it excludes `own_capital`.
+  A sixth, `exclusive`, makes listed starters mutual rivals: each may fire
+  only once the others are gone (Galicia-Volhynia: Halych/Volodymyr).
   HLR's custom decision stays handwritten; the table records the correspondence.
   FIN's same-tag kingdom is custom the same way (`decisions/FinlandKingdom.txt`:
   crown in place below kingdom rank, or proclaim when FIN is gone); no
@@ -118,8 +120,17 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   base game on patches; validate guards the
   vanilla key set, both sprite lists, the TGA targets and the frame counts.
   Steppe + Khitan + Magyars + Avar remnant `tengri_pagan_reformed`;
-  Armenia/Georgia highlands `coptic`; Muslims `sunni`; rest `catholic`,
-  displayed as Chalcedonian (`karolingian_religion_l_english.yml`). Where CK3's
+  Armenia/Georgia highlands `coptic`; central Bosnia (140, 3002)
+  `krstjani` — CK3's own Bosnian-Church faith (christian group, CK3 name,
+  colour, icon and desc) under Slavic RSK/ZAH; Muslims `sunni`;
+  rest `catholic`, displayed as Chalcedonian
+  (`localisation/replace/karolingian_religion_l_english.yml` — note:
+  same-key loc conflicts resolve vanilla-side on this install, so vanilla
+  renames must live in `localisation/replace/`). The Christian set is
+  closed at those two keys: no rite splits (Carolingian/Roman/Ambrosian
+  were in communion in 867; splitting would gut the papacy/HRE/crusade
+  mechanics, all keyed to the single entry — rites belong in the school
+  mechanic if ever). Where CK3's
   ruler differs from the population the tag keeps the ruler faith on foreign
   land: YRK/KIE/NOV Norse tags on catholic/slavic land, CRT Sunni tag on
   catholic Crete, MRW Sunni tag on coptic Erzurum. Per-province refinement later.

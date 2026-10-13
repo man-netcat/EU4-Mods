@@ -110,6 +110,7 @@ class FormableTag(Tag):
     culture_group: tuple = ()
     renames: tuple = ()
     dynasty: Optional[str] = None
+    exclusive: bool = False
 
     def __post_init__(self):
         super().__post_init__()
@@ -220,6 +221,7 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
                 else (),
                 renames=tuple(frenames.get(r.tag, ())),
                 dynasty=r.dynasty,
+                exclusive=bool(r.exclusive),
             )
             for r in s.query(FormableRow).order_by(FormableRow.tag)
         ]

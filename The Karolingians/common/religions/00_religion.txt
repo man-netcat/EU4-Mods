@@ -895,6 +895,21 @@ christian = {
 			local_missionary_strength = 0.02
 		}
 	}
+
+	krstjani = {
+		icon = 33
+		color = { 153 117 134 }
+		country = {
+			tolerance_own = 1
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			galley_power = 0.2
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+	}
 }
 
 muslim = {

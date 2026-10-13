@@ -8,8 +8,14 @@ country_decisions = {
 			NOT = { tag = VOL }
 			NOT = { exists = VOL }
 			OR = {
+			AND = {
 				tag = HAL
+				NOT = { exists = VDM }
+			}
+			AND = {
 				tag = VDM
+				NOT = { exists = HAL }
+			}
 			}
 			NOT = { government_rank = 3 }
 			OR = {
