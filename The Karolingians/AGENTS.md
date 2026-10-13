@@ -119,7 +119,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   classic bug). Re-sync all eight files against the
   base game on patches; validate guards the
   vanilla key set, both sprite lists, the TGA targets and the frame counts.
-  Steppe + Khitan + Magyars + Avar remnant `tengri_pagan_reformed`;
+  Steppe + Khitan + Avar remnant `tengri_pagan_reformed`; Magyars
+  `taltosist` — CK3's own faith (pagan group, CK3 name/colour/icon) on
+  Etelköz;
   Armenia/Georgia highlands `coptic`; central Bosnia (140, 3002)
   `krstjani` — CK3's own Bosnian-Church faith (christian group, CK3 name,
   colour, icon and desc) under Slavic RSK/ZAH; Muslims `sunni`;

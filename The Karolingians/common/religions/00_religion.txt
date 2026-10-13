@@ -910,6 +910,21 @@ christian = {
 			local_missionary_strength = 0.02
 		}
 	}
+
+	taltosist = {
+		icon = 34
+		color = { 250 120 90 }
+		country = {
+			cavalry_power = 0.10
+		}
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			galley_power = 0.2
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+	}
 }
 
 muslim = {
