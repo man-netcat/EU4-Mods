@@ -1,0 +1,12 @@
+name = "Andalusian Rebellion"
+war_goal = {
+	type = defend_capital_independence
+	casus_belli = cb_independence_war
+	tag = TOL
+}
+
+866.1.1 = {
+	add_attacker = ARG
+	add_attacker = TOL
+	add_defender = ADU
+}

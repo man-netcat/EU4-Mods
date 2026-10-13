@@ -19,6 +19,7 @@ def main() -> int:
         ("generate country files", step_countries),
         ("generate the empire decision", step_hre),
         ("write starting vassals", step_diplomacy),
+        ("write preset wars", step_wars),
         ("generate the Magyars", step_custom),
         ("rewrite vanilla realm colours", step_vanilla_countries),
         ("write formation triggers", step_formation_triggers),

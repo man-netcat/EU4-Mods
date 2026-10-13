@@ -189,8 +189,13 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   (inner) must carry the **same** `replace_path` lines — update both, and
   never edit either while the game/launcher is running (it rewrites the
   outer file and drops the lines).
-- Empty replace-dirs (`missions/`, `history/wars/`, `history/advisors/`)
-  need `.gitkeep` files or git drops them.
+- Empty replace-dirs (`missions/`, `history/advisors/`)
+  need `.gitkeep` files or git drops them. `history/wars/` instead holds
+  our preset start-date wars, one file per war (CK3's Iberia opens at
+  war: Vimara's conquest ASU vs PRT+ADU over Porto, with ASU claims on
+  Porto/Braganca written by the Reconquista claims rule; the Andalusian
+  Rebellion TOL+ARG vs ADU for independence). Validate guards live sides
+  and real CBs; preset subject-vs-overlord wars are unproven in-engine.
 - New CK3 title syntax (hyphenated keys like `d_tao-klarjeti`, `han_XXXX`
   holders, single-line birth/death blocks, commented loc values) is handled
   in `ck3.py` — extend there, not per-tag.

@@ -1186,6 +1186,36 @@ def run() -> int:
     for b in vis_bad[:8]:
         print("        " + b)
 
+    print("\n== preset wars use live tags and real CBs ==")
+    cbkeys = set(
+        re.findall(
+            r"(?m)^\s*(cb_[a-z_]+) = \{",
+            open(
+                os.path.join(GAME, "common", "cb_types", "00_cb_types.txt"),
+                encoding="utf-8",
+                errors="replace",
+            ).read(),
+        )
+    )
+    livetags = {t.tag for t in _REALMS} | set(BY_TAG)
+    war_bad = []
+    wdir = os.path.join(MOD, "history", "wars")
+    for fn in sorted(os.listdir(wdir)):
+        if not fn.endswith(".txt"):
+            continue
+        wtext = open(os.path.join(wdir, fn), encoding="utf-8").read()
+        for side in re.findall(
+            r"add_(?:attacker|defender)\s*=\s*([A-Z]{3})", wtext
+        ):
+            if side not in livetags:
+                war_bad.append(f"{fn}: dead side {side}")
+        for cb in re.findall(r"casus_belli\s*=\s*(\w+)", wtext):
+            if cb not in cbkeys:
+                war_bad.append(f"{fn}: unknown CB {cb}")
+    note(not war_bad, f"preset wars are firable ({len(war_bad)} bad)")
+    for b in war_bad[:8]:
+        print("        " + b)
+
     print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 
     return 1 if fail else 0

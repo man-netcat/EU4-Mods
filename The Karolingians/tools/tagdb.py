@@ -32,6 +32,8 @@ from models import (
     TagProvince,
     TagReform,
     TagSuppress,
+    War as WarRow,
+    WarSide as WarSideRow,
 )
 
 
@@ -155,12 +157,32 @@ class Diplomacy:
     relation: str = "vassal"
 
 
+@dataclass(frozen=True)
+class War:
+    """One preset start-date war, written into history/wars by step_wars."""
+
+    slug: str
+    title: str
+    cb: str
+    goal: str
+    goal_tag: str
+    date: str
+    attackers: tuple = ()
+    defenders: tuple = ()
+
+
 CTRY_DATE = "867.1.1"
 
 ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion")
 
 
-def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], list[FormableTag]]:
+def _load() -> tuple[
+    list[LandedTag],
+    list[Diplomacy],
+    dict[int, ProvinceInfo],
+    list[FormableTag],
+    list[War],
+]:
     if not os.path.exists(DB_PATH):
         raise SystemExit(f"{DB_PATH} is missing - the tag database lives in git")
     with Session() as s:
@@ -231,6 +253,22 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
                 DiplomacyRow.liege, DiplomacyRow.subject
             )
         ]
+        sides: dict[str, dict[str, list]] = {}
+        for r in s.query(WarSideRow).order_by(WarSideRow.war, WarSideRow.tag):
+            sides.setdefault(r.war, {}).setdefault(r.side, []).append(r.tag)
+        wars = [
+            War(
+                r.slug,
+                r.title,
+                r.cb,
+                r.goal,
+                r.goal_tag,
+                r.date,
+                tuple(sides.get(r.slug, {}).get("attacker", ())),
+                tuple(sides.get(r.slug, {}).get("defender", ())),
+            )
+            for r in s.query(WarRow).order_by(WarRow.slug)
+        ]
         provs = {
             r.pid: ProvinceInfo(r.pid, r.name, r.culture, r.religion)
             for r in s.query(ProvinceRow).order_by(ProvinceRow.pid)
@@ -271,10 +309,10 @@ def _load() -> tuple[list[LandedTag], list[Diplomacy], dict[int, ProvinceInfo], 
         )
         for r in rows
     ]
-    return tags, dips, provs, formables
+    return tags, dips, provs, formables, wars
 
 
-TAGS, DIPLOMACY, PROVINCES, FORMABLES = _load()
+TAGS, DIPLOMACY, PROVINCES, FORMABLES, WARS = _load()
 
 BY_TAG: dict[str, LandedTag] = {t.tag: t for t in TAGS}
 
@@ -340,6 +378,14 @@ def selfcheck() -> None:
                 f"{d.liege} -> {d.subject}: a Diplomacy must link two different "
                 f"known tags"
             )
+    for w in WARS:
+        if not w.attackers or not w.defenders:
+            raise ValueError(f"war {w.slug}: needs attackers and defenders")
+        for s in w.attackers + w.defenders:
+            if s not in known:
+                raise ValueError(f"war {w.slug}: unknown side {s}")
+        if w.goal_tag not in known:
+            raise ValueError(f"war {w.slug}: unknown goal tag {w.goal_tag}")
 
     for t in TAGS:
         if t.tag in seen:

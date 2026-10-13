@@ -440,10 +440,13 @@ def patch(text, new_owner, pid=None):
     )
     core_line = f"add_core = {new_owner}"
     claims = []
-    if new_owner == "ADU" and pid is not None:
+    if pid is not None:
         area = _pd()["area_of"].get(str(pid))
-        if area in IBERIA_AREAS:
+        if new_owner == "ADU" and area in IBERIA_AREAS:
             claims = ["ASU", "NAV"]
+        elif new_owner == "PRT" and area == "beieras_area":
+            # Vimara's 868 targets (CK3 war_867_Vimara_conquest_Portucale)
+            claims = ["ASU"]
     if have_core:
         return "\n".join(head + out) + "\n" + force_block(new_owner, claims)
 
@@ -842,6 +845,30 @@ def step_diplomacy() -> None:
     open(path, "w", encoding="cp1252", errors="pdx").write("\n".join(lines) + "\n")
     pairs = ", ".join(f"{d.subject} under {d.liege}" for d in DIPLOMACY)
     print(f"wrote {path}  ({pairs})")
+
+
+def step_wars() -> None:
+    from tagdb import WARS
+
+    wdir = os.path.join(MOD, "history", "wars")
+    os.makedirs(wdir, exist_ok=True)
+    for w in WARS:
+        sides = "\n".join(
+            [f"\tadd_attacker = {t}" for t in w.attackers]
+            + [f"\tadd_defender = {t}" for t in w.defenders]
+        )
+        txt = (
+            f'name = "{w.title}"\n'
+            f"war_goal = {{\n"
+            f"\ttype = {w.goal}\n"
+            f"\tcasus_belli = {w.cb}\n"
+            f"\ttag = {w.goal_tag}\n"
+            f"}}\n\n"
+            f"{w.date} = {{\n{sides}\n}}\n"
+        )
+        p = os.path.join(wdir, f"{w.slug}.txt")
+        open(p, "w", encoding="cp1252", errors="pdx").write(txt)
+        print(f"wrote {p}  ({w.title})")
 
 
 @lru_cache(maxsize=1)

@@ -1,0 +1,12 @@
+name = "Vimara's Conquest of Porto"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	tag = PRT
+}
+
+867.1.1 = {
+	add_attacker = ASU
+	add_defender = ADU
+	add_defender = PRT
+}

@@ -179,6 +179,27 @@ class Friendship(Base):
     other = Column(String, ForeignKey("tags.tag"), primary_key=True)
 
 
+class War(Base):
+    """A preset start-date war, written to history/wars by step_wars."""
+
+    __tablename__ = "wars"
+
+    slug = Column(String, primary_key=True)
+    title = Column(String)
+    cb = Column(String)
+    goal = Column(String)
+    goal_tag = Column(String, ForeignKey("tags.tag"))
+    date = Column(String)
+
+
+class WarSide(Base):
+    __tablename__ = "war_sides"
+
+    war = Column(String, ForeignKey("wars.slug"), primary_key=True)
+    tag = Column(String, ForeignKey("tags.tag"), primary_key=True)
+    side = Column(String)
+
+
 class Province(Base):
     __tablename__ = "provinces"
 

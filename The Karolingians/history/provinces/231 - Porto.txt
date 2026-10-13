@@ -28,4 +28,5 @@ discovered_by = eastern
 	owner = PRT
 	controller = PRT
 	add_core = PRT
+	add_claim = ASU
 }
