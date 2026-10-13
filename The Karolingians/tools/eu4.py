@@ -515,6 +515,25 @@ def take_group_visibility(text):
     return "\n".join(out) + "\n"
 
 
+def undated_group_visibility(full):
+    # Tech-group discovered_by at depth 0 anywhere in the file. Vanilla
+    # sometimes parks them between dated blocks (Bearn 176); strip_dated
+    # only sees the head, so harvest here to keep visibility identical.
+    out, depth = [], 0
+    for ln in full.splitlines():
+        if depth == 0:
+            m = re.match(r"^\s*discovered_by\s*=\s*([A-Za-z_]+)\s*$", ln)
+            if (
+                m
+                and not re.match(r"^[A-Z]{3}$", m.group(1))
+                and ln not in out
+            ):
+                out.append(ln)
+        code = ln.split("#", 1)[0]
+        depth += code.count("{") - code.count("}")
+    return out
+
+
 def step_provinces(argv):
     alloc = build(verbose="--report" in argv)
 
@@ -543,6 +562,11 @@ def step_provinces(argv):
         tag = owner_of.get(pid)
         new = patch(text, tag, pid) if tag else text
         new = take_group_visibility(new)
+        for ln in undated_group_visibility(
+            open(src, encoding="utf-8", errors="surrogateescape").read()
+        ):
+            if ln not in new.splitlines():
+                new += ln + "\n"
         new = strip_dead_cores(new, keep)
         new = strip_denied_cores(new, tag)
         new = tidy_province(new)
@@ -622,7 +646,12 @@ def step_provinces(argv):
         )
         lines = text.splitlines()
         title = next((ln for ln in lines if ln.strip().startswith("#")), f"#{pid}")
-        seen = [ln for ln in lines if ln.strip().startswith("discovered_by")]
+        seen = [
+            ln
+            for ln in undated_group_visibility(
+                open(src, encoding="utf-8", errors="surrogateescape").read()
+            )
+        ]
         body = take_group_visibility("\n".join(seen) + "\n") if seen else ""
         open(
             os.path.join(PROV_OUT, _VANILLA_PROV_FILES[pid]),

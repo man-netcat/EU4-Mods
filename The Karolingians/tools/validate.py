@@ -1152,6 +1152,40 @@ def run() -> int:
     for b in bad_rel[:8]:
         print("        " + b)
 
+    print("\n== vanilla tech-group visibility survives everywhere ==")
+    from eu4 import undated_group_visibility  # noqa: E402
+
+    vis_bad = []
+    for fn in sorted(os.listdir(PDIR)):
+        if not fn.endswith(".txt"):
+            continue
+        m = re.match(r"^(\d+)", fn)
+        if not m:
+            continue
+        ours = {
+            ln.strip()
+            for ln in open(
+                os.path.join(PDIR, fn), encoding="utf-8", errors="surrogateescape"
+            )
+            if ln.strip().startswith("discovered_by")
+        }
+        for vfn in os.listdir(os.path.join(GAME, "history", "provinces")):
+            if vfn == fn:
+                want = undated_group_visibility(
+                    open(
+                        os.path.join(GAME, "history", "provinces", vfn),
+                        encoding="utf-8",
+                        errors="replace",
+                    ).read()
+                )
+                missing = [ln for ln in want if ln.strip() not in ours]
+                if missing:
+                    vis_bad.append(f"{m.group(1)} drops {len(missing)}")
+                break
+    note(not vis_bad, f"no dropped tech-group discovery ({len(vis_bad)} bad)")
+    for b in vis_bad[:8]:
+        print("        " + b)
+
     print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 
     return 1 if fail else 0
