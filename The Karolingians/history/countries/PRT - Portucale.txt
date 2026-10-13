@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = galician
+religion = catholic
+capital = 231
+867.1.1 = {
+	monarch = {
+		name = "Sa'dun"
+		dynasty = "al"
+		birth_date = 840.1.1
+		death_date = 881.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

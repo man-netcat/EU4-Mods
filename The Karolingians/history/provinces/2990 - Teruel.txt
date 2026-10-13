@@ -1,8 +1,8 @@
 #214 - Teruel
 
-owner = ADU
-controller = ADU
-add_core = ADU
+owner = ARG
+controller = ARG
+add_core = ARG
 capital = "Teruel"
 culture = andalucian
 religion = catholic
@@ -19,9 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = ADU
-	controller = ADU
-	add_core = ADU
-	add_claim = ASU
-	add_claim = NAV
+	owner = ARG
+	controller = ARG
+	add_core = ARG
 }

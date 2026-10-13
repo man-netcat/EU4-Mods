@@ -1,6 +1,18 @@
 # Starting subjects and guarantees of the Carolingian world.
 # No start_date: each holds from the mod's start.
 vassal = {
+	first = ADU
+	second = ARG
+}
+vassal = {
+	first = ADU
+	second = PRT
+}
+vassal = {
+	first = ADU
+	second = TOL
+}
+vassal = {
 	first = AQI
 	second = GTH
 }

@@ -1,8 +1,8 @@
 #231 - Porto
 
-owner = ADU
-controller = ADU
-add_core = ADU
+owner = PRT
+controller = PRT
+add_core = PRT
 capital = "Porto"
 culture = galician
 religion = catholic
@@ -25,9 +25,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = ADU
-	controller = ADU
-	add_core = ADU
-	add_claim = ASU
-	add_claim = NAV
+	owner = PRT
+	controller = PRT
+	add_core = PRT
 }
