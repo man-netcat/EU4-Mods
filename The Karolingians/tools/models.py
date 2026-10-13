@@ -189,6 +189,7 @@ class War(Base):
     cb = Column(String)
     goal = Column(String)
     goal_tag = Column(String, ForeignKey("tags.tag"))
+    goal_province = Column(Integer)
     date = Column(String)
 
 

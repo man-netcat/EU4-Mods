@@ -192,10 +192,17 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - Empty replace-dirs (`missions/`, `history/advisors/`)
   need `.gitkeep` files or git drops them. `history/wars/` instead holds
   our preset start-date wars, one file per war (CK3's Iberia opens at
-  war: Vimara's conquest ASU vs PRT+ADU over Porto, with ASU claims on
+  war: Alfonso's invasion ASU vs ADU over Andalusia, with ASU claims on
   Porto/Braganca written by the Reconquista claims rule; the Andalusian
-  Rebellion TOL+ARG vs ADU for independence). Validate guards live sides
-  and real CBs; preset subject-vs-overlord wars are unproven in-engine.
+  Rebellion independent PRT+TOL vs ADU for independence — no subjects
+  fight overlords, so both use proven mechanics). Validate guards live sides
+  and real CBs. Crash lesson (Oct 2026, SIGSEGV in
+  `CWar::AddAttacker`→`CProvince::AddAsClaim`, see `crashes/` dumps):
+  conquest-family goals (`take_claim`, `take_border`) need
+  `province = <claimed pid>` — vanilla never uses `tag` there and the
+  claim lookup segfaults without it; throne/independence-capital goals
+  use `tag = <country>`. The table carries both (`goal_tag` xor
+  `goal_province`, enforced by selfcheck).
 - New CK3 title syntax (hyphenated keys like `d_tao-klarjeti`, `han_XXXX`
   holders, single-line birth/death blocks, commented loc values) is handled
   in `ck3.py` — extend there, not per-tag.

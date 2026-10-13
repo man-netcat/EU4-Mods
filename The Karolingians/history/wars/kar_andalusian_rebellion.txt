@@ -6,7 +6,7 @@ war_goal = {
 }
 
 866.1.1 = {
-	add_attacker = ARG
+	add_attacker = PRT
 	add_attacker = TOL
 	add_defender = ADU
 }

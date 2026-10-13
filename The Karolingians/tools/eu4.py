@@ -857,12 +857,17 @@ def step_wars() -> None:
             [f"\tadd_attacker = {t}" for t in w.attackers]
             + [f"\tadd_defender = {t}" for t in w.defenders]
         )
+        objective = (
+            f"\tprovince = {w.goal_province}"
+            if w.goal_province
+            else f"\ttag = {w.goal_tag}"
+        )
         txt = (
             f'name = "{w.title}"\n'
             f"war_goal = {{\n"
             f"\ttype = {w.goal}\n"
             f"\tcasus_belli = {w.cb}\n"
-            f"\ttag = {w.goal_tag}\n"
+            f"{objective}\n"
             f"}}\n\n"
             f"{w.date} = {{\n{sides}\n}}\n"
         )

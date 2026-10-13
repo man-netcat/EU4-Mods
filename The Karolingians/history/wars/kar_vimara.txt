@@ -1,12 +1,11 @@
-name = "Vimara's Conquest of Porto"
+name = "Alfonso III's Invasion of Andalusia"
 war_goal = {
 	type = take_claim
 	casus_belli = cb_conquest
-	tag = PRT
+	province = 218
 }
 
 867.1.1 = {
 	add_attacker = ASU
 	add_defender = ADU
-	add_defender = PRT
 }

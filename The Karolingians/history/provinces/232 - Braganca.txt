@@ -1,8 +1,8 @@
 #232 - Bragança
 
-owner = ADU
-controller = ADU
-add_core = ADU
+owner = PRT
+controller = PRT
+add_core = PRT
 capital = "Bragança"
 culture = galician
 religion = catholic
@@ -19,9 +19,8 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = ADU
-	controller = ADU
-	add_core = ADU
+	owner = PRT
+	controller = PRT
+	add_core = PRT
 	add_claim = ASU
-	add_claim = NAV
 }

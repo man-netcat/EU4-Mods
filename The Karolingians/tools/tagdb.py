@@ -165,7 +165,8 @@ class War:
     title: str
     cb: str
     goal: str
-    goal_tag: str
+    goal_tag: Optional[str]
+    goal_province: Optional[int]
     date: str
     attackers: tuple = ()
     defenders: tuple = ()
@@ -263,6 +264,7 @@ def _load() -> tuple[
                 r.cb,
                 r.goal,
                 r.goal_tag,
+                r.goal_province,
                 r.date,
                 tuple(sides.get(r.slug, {}).get("attacker", ())),
                 tuple(sides.get(r.slug, {}).get("defender", ())),
@@ -384,7 +386,11 @@ def selfcheck() -> None:
         for s in w.attackers + w.defenders:
             if s not in known:
                 raise ValueError(f"war {w.slug}: unknown side {s}")
-        if w.goal_tag not in known:
+        if bool(w.goal_tag) == bool(w.goal_province):
+            raise ValueError(
+                f"war {w.slug}: needs exactly one of goal_tag/goal_province"
+            )
+        if w.goal_tag and w.goal_tag not in known:
             raise ValueError(f"war {w.slug}: unknown goal tag {w.goal_tag}")
 
     for t in TAGS:
