@@ -5,6 +5,10 @@ vassal = {
 	second = GTH
 }
 vassal = {
+	first = ASU
+	second = CST
+}
+vassal = {
 	first = BUL
 	second = TRA
 }

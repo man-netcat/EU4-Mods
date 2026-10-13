@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = andalusian
+religion = catholic
+capital = 1746
+867.1.1 = {
+	monarch = {
+		name = "Lubb"
+		dynasty = "Burgusid"
+		birth_date = 832.1.1
+		death_date = 882.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Nurah"
+		monarch_name = "Nurah"
+		dynasty = "Burgusid"
+		birth_date = 857.1.1
+		death_date = 907.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

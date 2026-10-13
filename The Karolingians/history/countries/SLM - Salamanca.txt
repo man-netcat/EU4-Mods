@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = andalusian
+religion = catholic
+capital = 216
+867.1.1 = {
+	monarch = {
+		name = "Boutros"
+		dynasty = "Salamanqid"
+		birth_date = 835.1.1
+		death_date = 885.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ludriqh"
+		monarch_name = "Ludriqh"
+		dynasty = "Salamanqid"
+		birth_date = 860.1.1
+		death_date = 910.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
