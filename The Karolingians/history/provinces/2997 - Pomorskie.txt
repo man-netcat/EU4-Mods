@@ -12,7 +12,6 @@ base_production = 4
 trade_goods = grain
 base_manpower = 3
 is_city = yes
-fort_15th = yes
 
 discovered_by = eastern
 discovered_by = western

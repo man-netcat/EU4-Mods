@@ -16,7 +16,6 @@ is_city = yes
 latent_trade_goods = {
 	coal
 }
-fort_15th = yes
 
 discovered_by = western
 discovered_by = muslim

@@ -306,6 +306,7 @@ PROV_FIELD_ORDER = (
     "trade_goods",
     "base_manpower",
     "is_city",
+    "fort_15th",
     "center_of_trade",
 )
 
@@ -478,6 +479,30 @@ def patch(text, new_owner, pid=None):
 DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman", "chinese", "nomad_group")
 
 
+def strip_fort(text):
+    # Drop the vanilla fortress: only provinces flagged in the database
+    # keep (or gain) one, everything else goes.
+    out = []
+    for ln in text.splitlines():
+        if re.match(r"^\s*fort_15th\s*=", ln):
+            continue
+        out.append(ln)
+    return "\n".join(out) + "\n"
+
+
+def ensure_fort(text, want):
+    has = bool(re.search(r"(?m)^\s*fort_15th\s*=", text))
+    if want and not has:
+        text, n = re.subn(
+            r"(?m)^(\s*is_city\s*=.*)$", r"\1\nfort_15th = yes", text, count=1
+        )
+        if not n:
+            text = text.rstrip("\n") + "\nfort_15th = yes"
+    elif has and not want:
+        text = strip_fort(text)
+    return text
+
+
 def strip_dead_cores(text, keep):
     # Cores are respawn vectors: any tag cored here can come back via rebels
     # or release, so only living tags keep cores.
@@ -575,6 +600,7 @@ def step_provinces(argv):
         text = apply_db_culture_religion(text, pid)
         tag = owner_of.get(pid)
         new = patch(text, tag, pid) if tag else text
+        new = ensure_fort(new, PROVINCES[pid].fort)
         new = take_group_visibility(new)
         for ln in undated_group_visibility(
             open(src, encoding="utf-8", errors="surrogateescape").read()

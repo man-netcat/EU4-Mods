@@ -12,7 +12,6 @@ base_production = 4
 trade_goods = cloth
 base_manpower = 2
 is_city = yes	# Estimated
-fort_15th = yes # Extensive fortifications were only dismantled in 1525-7
 
 discovered_by = western
 discovered_by = eastern

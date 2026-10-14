@@ -36,6 +36,29 @@ feudalism_reform = {
 	}
 }
 
+# The Magyar horse-lords fight from the saddle: a tier-1 pick for MGY
+# (replacing feudalism, which is dead weight without vassals) inherited by
+# no one - formation strips it for feudalism. The flat force limit aims
+# MGY at roughly 20 total; the maintenance line keeps the host affordable
+# on steppe income. Numbers are first-pass for the balance pass.
+magyar_horse_lords_reform = {
+	icon = "cavalry"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		tag = MGY
+	}
+	modifiers = {
+		cavalry_power = 0.2
+		cavalry_cost = -0.15
+		land_forcelimit = 12
+		land_maintenance_modifier = -0.25
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
 autocracy_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes

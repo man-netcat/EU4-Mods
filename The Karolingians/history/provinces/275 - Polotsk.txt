@@ -13,7 +13,6 @@ trade_goods = iron
 base_manpower = 1
 is_city = yes
 add_local_autonomy = 50
-fort_15th = yes
 
 discovered_by = western
 discovered_by = eastern

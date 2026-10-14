@@ -13,7 +13,6 @@ trade_goods = cloth
 base_manpower = 6
 is_city = yes
 center_of_trade = 2
-fort_15th = yes
 extra_cost = 16
 add_province_triggered_modifier = religious_center
 

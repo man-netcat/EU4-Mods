@@ -200,6 +200,20 @@ def run() -> int:
         return os.path.join(COUNTRY_OUT, f"{t}.txt")
 
 
+    vanilla_hist = {
+        fn.split(" - ")[0]
+        for fn in os.listdir(os.path.join(GAME, "history", "countries"))
+        if fn.endswith(".txt")
+    }
+    for t in TAGS:
+        spec = BY_TAG.get(t)
+        if spec is not None and not spec.country_file and t not in vanilla_hist:
+            note(
+                False,
+                f"{t} needs country_file set (else its file is '{t} - {t}.txt')",
+            )
+
+
     for t in TAGS:
         txt = open(
             country_path(t),
@@ -384,6 +398,20 @@ def run() -> int:
     note(not dead, f'every core belongs to a living tag ({len(dead)} dead)')
     for d in dead[:10]:
         print('        ' + d)
+
+    print('\n== forts only where the database says so ==')
+    kept = {pid for pid, p in PROVINCES.items() if p.fort}
+    fort_bad = []
+    for pid, path in files.items():
+        text = open(path, encoding="utf-8", errors="surrogateescape").read()
+        has = bool(re.search(r"(?m)^\s*fort_15th\s*=", text))
+        if pid in kept and not has:
+            fort_bad.append(f"{pid}: keep-flagged but unfortified")
+        elif pid not in kept and has:
+            fort_bad.append(f"{pid}: fortified without a flag")
+    note(not fort_bad, f"forts match the database ({len(fort_bad)} bad)")
+    for b in fort_bad[:10]:
+        print('        ' + b)
 
     print("\n== untouched neighbours intact ==")
 

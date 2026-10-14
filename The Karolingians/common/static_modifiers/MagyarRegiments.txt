@@ -1,0 +1,9 @@
+# Magyar horse-archer regiment stats for the special_unit_category of the
+# same name (created at game start by the on_startup call in
+# common/on_actions/MagyarOnActions.txt). Numbers are first-pass for the
+# balance pass.
+magyar_horse_regiment = {
+	shock_damage = 0.2
+	movement_speed = 0.1
+	land_maintenance_modifier = -0.5
+}

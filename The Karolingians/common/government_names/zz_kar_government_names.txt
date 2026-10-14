@@ -323,6 +323,73 @@ armenian_principality = {
 	}
 }
 
+# The Magyar realm styles itself a Grand Principality while it keeps the
+# old faith; conversion drops it to the default kingdom below (Stephen's
+# arc for free). Placed with the other specific blocks, ahead of default.
+magyar_principality = {
+	rank = {
+		1 = COUNTY
+		2 = DUCHY
+		3 = GRAND_PRINCIPALITY
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = COUNT
+		2 = DUKE
+		3 = GRAND_PRINCE
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = DUCHESS
+		3 = GRAND_PRINCESS
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = GRAND_PRINCESS
+		4 = EMPRESS_CONSORT
+		5 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		tag = HUN
+		religion = taltosist
+	}
+}
+
 default_monarchy = {
 	rank = {
 		1 = COUNTY

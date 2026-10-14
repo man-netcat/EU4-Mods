@@ -208,6 +208,10 @@ class Province(Base):
     name = Column(String)
     culture = Column(String, ForeignKey("cultures.name"))
     religion = Column(String, ForeignKey("religions.name"))
+    fort = Column(Boolean, nullable=False, default=False)
+    # the province keeps (or gains) a vanilla fort in the generated file;
+    # everything else is stripped, so Bessarabia-grade surprises need one
+    # row here, not a build exception
 
 
 class Culture(Base):

@@ -12,7 +12,6 @@ base_production = 3
 trade_goods = iron
 base_manpower = 3
 is_city = yes
-fort_15th = yes #Strong City Fortifications
 
 discovered_by = eastern
 discovered_by = western

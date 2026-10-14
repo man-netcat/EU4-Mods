@@ -181,7 +181,7 @@ class War:
 
 CTRY_DATE = "867.1.1"
 
-ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion")
+ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion fort")
 
 
 def _load() -> tuple[
@@ -279,7 +279,7 @@ def _load() -> tuple[
             for r in s.query(WarRow).order_by(WarRow.slug)
         ]
         provs = {
-            r.pid: ProvinceInfo(r.pid, r.name, r.culture, r.religion)
+            r.pid: ProvinceInfo(r.pid, r.name, r.culture, r.religion, bool(r.fort))
             for r in s.query(ProvinceRow).order_by(ProvinceRow.pid)
         }
 

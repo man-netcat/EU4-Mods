@@ -17,7 +17,6 @@ center_of_trade = 2
 latent_trade_goods = {
 	coal
 }
-fort_15th = yes
 extra_cost = 16
 
 discovered_by = eastern

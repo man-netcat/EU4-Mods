@@ -13,7 +13,6 @@ on_war_won = {
 			}
 			FROM = {
 				OR = {
-					tag = BLT
 					tag = BUL
 					tag = TRA
 					tag = VSG
@@ -21,5 +20,21 @@ on_war_won = {
 			}
 		}
 		ROOT = { country_event = { id = magyar_settlement.3 } }
+	}
+}
+
+# Migration-war chest on game start exactly (no MTTH, no event): the clans
+# melt down their treasures before the first muster. ROOT is each country
+# at startup (vanilla's own per-country setup pattern).
+on_startup = {
+	if = {
+		limit = { tag = MGY }
+		add_treasury = 500
+		add_army_tradition = 20
+		create_unit_forcelimit_percentage = {
+			type = cavalry
+			special_unit_category = magyar_horse
+			force_limit_percentage = 1.0
+		}
 	}
 }

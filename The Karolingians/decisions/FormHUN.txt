@@ -46,6 +46,11 @@ country_decisions = {
 			}
 			add_prestige = 25
 			add_legitimacy = 10
+			if = {
+				limit = { has_reform = magyar_horse_lords_reform }
+				remove_government_reform = magyar_horse_lords_reform
+			}
+			add_government_reform = feudalism_reform
 			alfold_area = {
 				limit = {
 					NOT = { is_core = ROOT }

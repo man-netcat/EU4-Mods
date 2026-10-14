@@ -13,7 +13,6 @@ trade_goods = naval_supplies
 base_manpower = 2
 is_city = yes
 center_of_trade = 2
-fort_15th = yes
 extra_cost = 16
 
 discovered_by = western

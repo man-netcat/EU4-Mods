@@ -14,7 +14,6 @@ base_manpower = 1
 is_city = yes
 center_of_trade = 2
 add_local_autonomy = 50
-fort_15th = yes
 extra_cost = 16
 
 discovered_by = western

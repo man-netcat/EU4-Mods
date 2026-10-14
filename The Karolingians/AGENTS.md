@@ -145,7 +145,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `MAX_GOV_RANK`, `common/government_ranks/`, `RANK_1..RANK_5` loc and the
   rank-5 rungs in every `government_names` block must stay in sync.
 - `government_names` is first-match-wins: specific blocks (abbasid, muslim,
-  byzantine, papacy, armenian…) must precede their defaults. It and
+  byzantine, papacy, armenian, magyar principality…) must precede their defaults. It and
   `government_ranks` are `replace_path`ed — the only gov files that load.
 - History/provinces/countries/diplomacy/wars/advisors/missions/cultures plus
   `gfx/flags` and `common/bookmarks` (single 867 bookmark, keys already in
@@ -178,11 +178,22 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   the base game everywhere; dead-tag cores are stripped (cores respawn
   tags via rebels/release). Reassigning land drops the previous living
   owner's cores (`patch()`), and judged-dormant claims go in `core_deny`
-  (holder, owner) pairs, enforced by validate. Targeted conquest claims
+  (holder, owner) pairs, enforced by validate. Forts exist only where the
+  database says so (`provinces.fort`, stone-walled cities still garrisoned
+  in 867: Constantinople, Rome, Alexandria, Damascus, Thessaloniki, Xi'an,
+  Belgrade, Diyarbakir, Toledo, Jerusalem, Antioch, Baghdad) — everything
+  else is stripped, capitals included unless specifically listed; validate
+  enforces both directions. Targeted conquest claims
   use the same writer: ASU/NAV on Andalusi Iberia, ASU on Porto/Braganca,
   MGY on the HUN basin (CK3's Hungarian-migration CB as claims plus the
-  existing HUN path). Etelkoz is Magyar-held at the start (MGY's demesne
-  on all six provinces); three Pecheneg tags (YED, ODS, DNI, under CK3's
+  existing HUN path). MGY fights under the MGY-only
+  `magyar_horse_lords_reform` (tier-1: cavalry power and cost, flat force
+  limit aiming ~20 total, maintenance cover; first-pass numbers for the
+  balance pass) and marches behind the starting general
+  Kurszán (6 shock, dead 904); formation strips the reform for feudalism,
+  so settled Hungary keeps the standard pick. Etelkoz is Magyar-held at
+  the start (MGY's demesne on all six provinces); three Pecheneg tags
+  (YED, ODS, DNI, under CK3's
   d_yedisan, c_odessa and c_lower_dniepr shares) hold nothing until the
   migration releases them Jerusalem-style (tagdb DORMANT: cores seeded on
   the abandoned demesne, then `release` creates the countries - DNI's
@@ -240,8 +251,18 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   Rebellion independent PRT+TOL vs ADU for independence; the Magyar
   migration MGY vs BUL/TRA/VSG under the custom `cb_magyar_migration`
   (humiliate's peace table: gold and humiliate only, so no land changes
-  hands in the deal and the settlement event allocates everything) — no
-  subjects fight overlords, so all use proven mechanics). Validate guards live sides
+  hands in the deal and the settlement event allocates everything)
+  — no subjects fight overlords, so all use proven mechanics). The opening
+  war would be unwinnable on paper (dev 17 against 207), so MGY marches
+  behind Kurszán (6 shock) under the horse-lords reform, and musters on
+  `on_startup` with a 500-ducat chest plus tradition for instant
+  mercenaries - regular stacks on day one, no MTTH, no rebels. A bespoke
+  all-cavalry `merc_magyar_horse` company (tag-gated, first-pass rate and
+  bonus) gives them unique swords to hire. Unique special cavalry
+  (`magyar_horse_regiment` + `create_unit_forcelimit_percentage` at 100%
+  in the same `on_startup`, Cossack pattern) musters beside them, for a
+  ~30-strong host all told (Ibn Rustah's 20,000 horse, rounded up).
+  Validate guards live sides
   and real CBs. Crash lesson (Oct 2026, SIGSEGV in
   `CWar::AddAttacker`→`CProvince::AddAsClaim`, see `crashes/` dumps):
   conquest-family goals (`take_claim`, `take_border`) need
@@ -264,4 +285,6 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   (optimisations must leave it byte-identical), and in-game confirmation.
 - When verifying whitespace-sensitive edits, read the bytes back (repr),
   don't trust tool echoes — tabs and escapes have been mangled in transit
-  before.
+  before. Conditional generated blocks must anchor mid-line
+  (`...10{magyar_swap}`, value starting in `\n`): a conditional on its own
+  template line emits a blank line when empty.

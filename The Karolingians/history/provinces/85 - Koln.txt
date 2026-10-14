@@ -13,7 +13,6 @@ trade_goods = paper
 base_manpower = 3
 is_city = yes
 center_of_trade = 2
-fort_15th = yes #Godesberg
 extra_cost = 16
 
 discovered_by = eastern

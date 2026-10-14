@@ -10,7 +10,9 @@ description: Insert tag, land, and base-game data into tools/tags.db and let scr
 ## Tables (`tools/models.py`, FKs enforced via `tools/db.py:13-15`)
 
 - `tags(tag,seq,rank,name,capital,culture,religion,ck3_title,ruler_title,government,technology_group,extra,no_heir_sync,color_r/g/b,country_file,historical_score,rev_r/g/b,historical_units,monarch_names,leader_names,ship_names,forms,decision,flag_from,flag_source)` — 159 rows. One row per landed realm.
-- `provinces(pid,name,culture,religion)` — 964 rows. FK target: insert before linking.
+- `provinces(pid,name,culture,religion,fort)` — province facts (FK target:
+  insert before linking); `fort` keeps (or adds) the vanilla fort,
+  everything else is stripped.
 - `tag_provinces(tag,pid)` / `tag_areas(tag,area)` — land. Explicit pids override areas at build (`tools/eu4.py:102-155`).
 - `tag_reforms(tag,pos,reform)` — one `feudalism_reform` row per tag.
 - `tag_suppress(tag,key)` — vanilla formation keys this tag neutralizes.

@@ -37,7 +37,19 @@ def country_history(t) -> str:
     lines += [f"historical_friend = {f}" for f in t.friends]
     if t.extra:
         lines.append(t.extra.rstrip("\n"))
-    lines.append(ruler_block_for(t))
+    rb = ruler_block_for(t)
+    if t.tag == "MGY":
+        # Starting general for the migration war (TEU precedent): Kurszan
+        # rides from day one. Placed after the monarch block, which the
+        # ruler-sync regexes anchor on; MGY's Arpad heirship is asserted so
+        # a CK3 data change fails the build loudly instead of misplacing it.
+        assert rb.count("\n\their = {") == 1
+        rb = rb.replace(
+            "\n\their = {",
+            '\n\tleader = { name = "Kurszán" type = general fire = 1 shock = 6 manuever = 3 siege = 0 death_date = 904.1.1 }\n\their = {',
+            1,
+        )
+    lines.append(rb)
     return "\n".join(lines) + "\n"
 
 
@@ -119,6 +131,11 @@ def formation_decision(fcode, starters) -> str:
     # HLR's own).
     settle_call = ""
     settle_tip = ""
+    magyar_swap = ""
+    if fcode == "HUN":
+        magyar_swap = ("\n\t\t\tif = {\n\t\t\t\tlimit = { has_reform = magyar_horse_lords_reform }\n"
+            "\t\t\t\tremove_government_reform = magyar_horse_lords_reform\n\t\t\t}\n"
+            "\t\t\tadd_government_reform = feudalism_reform")
     if fcode == "HUN":
         settle_call = "\n\t\t\tkar_magyar_settlement_effect = yes"
         settle_tip = "\n\t\t\tcustom_tooltip = kar_form_hungary_migration_tooltip"
@@ -227,7 +244,7 @@ def formation_decision(fcode, starters) -> str:
 \t\t\t\tset_government_rank = {fb.rank}
 \t\t\t}}
 \t\t\tadd_prestige = 25
-\t\t\tadd_legitimacy = 10
+\t\t\tadd_legitimacy = 10{magyar_swap}
 {claims}{rename}{settle_call}
 \t\t}}
 \t}}

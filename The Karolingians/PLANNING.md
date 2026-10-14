@@ -1,5 +1,13 @@
 # PLANNING.md — parked plans (do not execute without asking)
 
+## Fort audit (parked)
+
+Goal: review all 186 vanilla `fort_15th` persistences for 867
+appropriateness. Most are 15th-century-level anachronisms kept by the
+parity convention; known-good: Constantinople's Theodosian Walls.
+Known-removed: Budjak/Akkerman (no fortress there in 867), stripped via
+`provinces.no_fort` + `strip_fort` — reuse that mechanism per province.
+
 ## Feudal vassal gameplay (parked)
 
 Goal: heavier emphasis on vassals for the feudal era — many more tags as

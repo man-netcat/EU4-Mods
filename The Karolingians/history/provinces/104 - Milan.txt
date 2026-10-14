@@ -13,7 +13,6 @@ trade_goods = cloth
 base_manpower = 6
 is_city = yes	# Estimated
 center_of_trade = 2
-fort_15th = yes #Sforza Castle
 extra_cost = 16
 
 discovered_by = western

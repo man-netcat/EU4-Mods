@@ -12,6 +12,7 @@ base_production = 5
 trade_goods = grain
 base_manpower = 3
 is_city = yes
+fort_15th = yes
 add_province_triggered_modifier = jerusalem_held
 add_province_triggered_modifier = promised_land_modifier
 

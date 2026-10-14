@@ -10,7 +10,6 @@ base_production = 4
 trade_goods = grain
 base_manpower = 2
 is_city = yes
-fort_15th = yes #Eltz & Stolzenfels Castles
 
 discovered_by = eastern
 discovered_by = western

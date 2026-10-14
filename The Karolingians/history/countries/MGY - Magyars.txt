@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = magyar_horse_lords_reform
 government_rank = 3
 technology_group = eastern
 primary_culture = magyar
@@ -15,6 +15,7 @@ capital = 283
 		dip = 2
 		mil = 3
 	}
+	leader = { name = "Kurszán" type = general fire = 1 shock = 6 manuever = 3 siege = 0 death_date = 904.1.1 }
 	heir = {
 		name = "Árpád"
 		monarch_name = "Árpád"
