@@ -1,0 +1,11 @@
+# Migration-war CB (CK3's hungarian_migration_cb, ported): the war is
+# fought over the basin, but no land changes hands in the deal itself -
+# the wargoal carries humiliate's peace table (gold and humiliate only),
+# and the settlement event allocates everything afterwards.
+cb_magyar_migration = {
+	prerequisites = {
+		claim = FROM
+	}
+
+	war_goal = humiliate
+}

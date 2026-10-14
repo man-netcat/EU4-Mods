@@ -784,6 +784,52 @@ def run() -> int:
     for b in dirty[:10]:
         print("        " + b)
 
+    print("\n== custom script has no per-pid limit blocks ==")
+    # A bare `PID = { ... }` effect block takes no `limit` child (the
+    # engine rejects it and drops surrounding effects): condition province
+    # work with `if = { limit = { PID = { ... } } }` (Brazil pattern) and
+    # keep area scopes (which do take limits) for the rest. Only our own
+    # files can carry the bug: vendored vanilla files stay byte-identical.
+    import glob as _glob
+
+    def _mod_only(subdir, vanilla_dir):
+        vanilla = {
+            fn for fn in os.listdir(vanilla_dir) if fn.endswith(".txt")
+        }
+        return sorted(
+            p
+            for p in _glob.glob(os.path.join(MOD, subdir, "*.txt"))
+            if os.path.basename(p) not in vanilla
+        )
+
+    scope_bad = []
+    for path in (
+        _mod_only("events", os.path.join(GAME, "events"))
+        + _mod_only("common/scripted_effects", os.path.join(GAME, "common", "scripted_effects"))
+        + _mod_only("common/on_actions", os.path.join(GAME, "common", "on_actions"))
+    ):
+        text = open(path, encoding="utf-8", errors="replace").read()
+        for m in re.finditer(r"(?m)^\t*(\d+) = \{$", text):
+            depth, i = 1, m.end()
+            while depth > 0 and i < len(text):
+                if text[i] == "{":
+                    depth += 1
+                elif text[i] == "}":
+                    depth -= 1
+                i += 1
+            inner, d = text[m.end() : i], 0
+            for ln in inner.splitlines():
+                code = ln.split("#", 1)[0]
+                if d == 0 and re.match(r"^\s*limit\s*=", code):
+                    scope_bad.append(
+                        f"{os.path.basename(path)}:{m.group(1)}"
+                    )
+                    break
+                d += code.count("{") - code.count("}")
+    note(not scope_bad, f"no per-pid limits in {len(scope_bad)} blocks ({len(scope_bad)} bad)")
+    for b in scope_bad[:10]:
+        print("        " + b)
+
     print("\n== every realm holds its own capital ==")
 
     prov_owner = {}
@@ -1204,6 +1250,20 @@ def run() -> int:
             ).read(),
         )
     )
+    own_cb = os.path.join(MOD, "common", "cb_types")
+    if os.path.isdir(own_cb):
+        for fn in sorted(os.listdir(own_cb)):
+            if fn.endswith(".txt"):
+                cbkeys |= set(
+                    re.findall(
+                        r"(?m)^\s*((?:cb|kar)_[a-z_]+) = \{",
+                        open(
+                            os.path.join(own_cb, fn),
+                            encoding="utf-8",
+                            errors="replace",
+                        ).read(),
+                    )
+                )
     livetags = {t.tag for t in _REALMS} | set(BY_TAG)
     war_bad = []
     wdir = os.path.join(MOD, "history", "wars")

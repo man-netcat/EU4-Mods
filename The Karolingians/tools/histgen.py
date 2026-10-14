@@ -112,6 +112,16 @@ def formation_decision(fcode, starters) -> str:
     cap_move = ""
     if fb.own_capital:
         cap_move = "\n\t\t\tset_capital = " + str(fb.capital)
+    # HUN alone settles immediately: invoke the one settlement effect at
+    # the end of FormHUN (the effect below reaches it the same way, so
+    # every path converges on one implementation). HUN also carries the
+    # migration tooltip below (the only bespoke formable tooltip besides
+    # HLR's own).
+    settle_call = ""
+    settle_tip = ""
+    if fcode == "HUN":
+        settle_call = "\n\t\t\tkar_magyar_settlement_effect = yes"
+        settle_tip = "\n\t\t\tcustom_tooltip = kar_form_hungary_migration_tooltip"
     home_req = ""
     if fb.home_capital:
         home_req = f"\n\t\t\t{key}_capital_trigger = yes"
@@ -208,7 +218,7 @@ def formation_decision(fcode, starters) -> str:
 \t\t\tis_free_or_tributary_trigger = yes
 \t\t}}
 
-\t\teffect = {{
+\t\teffect = {{{settle_tip}
 \t\t\tchange_tag = {fcode}
 \t\t\ton_change_tag_effect = yes
 \t\t\tchange_government_to_monarchy = yes{cap_move}
@@ -218,7 +228,7 @@ def formation_decision(fcode, starters) -> str:
 \t\t\t}}
 \t\t\tadd_prestige = 25
 \t\t\tadd_legitimacy = 10
-{claims}{rename}
+{claims}{rename}{settle_call}
 \t\t}}
 \t}}
 }}

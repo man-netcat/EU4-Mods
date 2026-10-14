@@ -1,8 +1,8 @@
 name = "Magyar Migration into Pannonia"
 war_goal = {
-	type = take_claim
-	casus_belli = cb_conquest
-	province = 4126
+	type = humiliate
+	casus_belli = cb_magyar_migration
+	tag = BUL
 }
 
 867.1.1 = {

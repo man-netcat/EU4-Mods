@@ -35,6 +35,7 @@ country_decisions = {
 		}
 
 		effect = {
+			custom_tooltip = kar_form_hungary_migration_tooltip
 			change_tag = HUN
 			on_change_tag_effect = yes
 			change_government_to_monarchy = yes
@@ -73,6 +74,7 @@ country_decisions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			kar_magyar_settlement_effect = yes
 		}
 	}
 }

@@ -1,9 +1,12 @@
-# Hungarian-formation behaviour shared by the Magyar events (CK3's
+# Hungarian-formation behaviour shared by the Magyar paths (CK3's
 # hungarian_migration_cb victory: the whole basin plus the crown).
-# Called from magyar_settlement.2 (AI auto-formation) and
-# magyar_settlement.3 (migration-war victory); decisions/FormHUN.txt
-# carries the same block generated from the formables row - keep all three
-# in sync. Scope: the country becoming Hungary (MGY).
+# kar_form_hungary_crown_effect changes the tag and claims the basin;
+# kar_magyar_settlement_effect settles it (basin flips, dormant releases,
+# steppe flips). Every path invokes one thing: the decision and the two
+# events below call the crown effect, which ends by calling the settlement
+# effect. decisions/FormHUN.txt carries the crown block generated from the
+# formables row plus the settlement call - keep all three in sync. Scope:
+# the country becoming Hungary (MGY).
 kar_form_hungary_crown_effect = {
 	change_tag = HUN
 	on_change_tag_effect = yes
@@ -43,4 +46,155 @@ kar_form_hungary_crown_effect = {
 		}
 		add_permanent_claim = ROOT
 	}
+	kar_magyar_settlement_effect = yes
+}
+
+# The settlement itself, as one effect (no MTTH, no choice): basin Avars
+# take up Magyar tongue and faith, the abandoned demesne is released to
+# the dormant Pecheneg tags Jerusalem-style (cores, then `release`,
+# configured in-scope, backed by Funj-style cedes), and the steppe flips
+# Pecheneg. Scope: Hungary, right after the crown above.
+kar_magyar_settlement_effect = {
+	alfold_area = {
+		limit = { owned_by = ROOT culture = avar }
+		change_culture = magyar
+	}
+	alfold_area = {
+		limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+		change_religion = taltosist
+	}
+	southern_transylvania_area = {
+		limit = { owned_by = ROOT culture = avar }
+		change_culture = magyar
+	}
+	southern_transylvania_area = {
+		limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+		change_religion = taltosist
+	}
+	transdanubia_area = {
+		limit = { owned_by = ROOT culture = avar }
+		change_culture = magyar
+	}
+	transdanubia_area = {
+		limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+		change_religion = taltosist
+	}
+	transylvania_area = {
+		limit = { owned_by = ROOT culture = avar }
+		change_culture = magyar
+	}
+	transylvania_area = {
+		limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+		change_religion = taltosist
+	}
+	1943 = { add_core = YED }
+	1944 = { add_core = YED }
+	4540 = { add_core = YED }
+	282 = { add_core = ODS }
+	283 = { add_core = DNI }
+	2406 = { add_core = DNI }
+	if = {
+		limit = { any_owned_province = { is_core = YED } }
+		release = YED
+		YED = {
+			set_capital = 1944
+			change_primary_culture = pecheneg
+			change_religion = tengri_pagan_reformed
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+		}
+	}
+	if = {
+		limit = { any_owned_province = { is_core = ODS } }
+		release = ODS
+		ODS = {
+			set_capital = 282
+			change_primary_culture = pecheneg
+			change_religion = tengri_pagan_reformed
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 1
+		}
+	}
+	if = {
+		limit = { any_owned_province = { is_core = DNI } }
+		release = DNI
+		DNI = {
+			set_capital = 283
+			change_primary_culture = pecheneg
+			change_religion = tengri_pagan_reformed
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+		}
+	}
+	if = {
+		limit = { 1943 = { owned_by = ROOT } }
+		1943 = { cede_province = YED }
+	}
+	if = {
+		limit = { 1944 = { owned_by = ROOT } }
+		1944 = { cede_province = YED }
+	}
+	if = {
+		limit = { 4540 = { owned_by = ROOT } }
+		4540 = { cede_province = YED }
+	}
+	if = {
+		limit = { 282 = { owned_by = ROOT } }
+		282 = { cede_province = ODS }
+	}
+	if = {
+		limit = { 283 = { owned_by = ROOT } }
+		283 = { cede_province = DNI }
+	}
+	if = {
+		limit = { 2406 = { owned_by = ROOT } }
+		2406 = { cede_province = DNI }
+	}
+	YED = { set_capital = 1944 }
+	ODS = { set_capital = 282 }
+	DNI = { set_capital = 283 }
+	1943 = {
+		remove_core = HUN
+		remove_core = MGY
+	}
+	1944 = {
+		remove_core = HUN
+		remove_core = MGY
+	}
+	4540 = {
+		remove_core = HUN
+		remove_core = MGY
+	}
+	282 = {
+		remove_core = HUN
+		remove_core = MGY
+	}
+	283 = {
+		remove_core = HUN
+		remove_core = MGY
+	}
+	2406 = {
+		remove_core = HUN
+		remove_core = MGY
+	}
+	every_province = {
+		limit = { culture = magyar }
+		change_culture = pecheneg
+	}
+	every_province = {
+		limit = { religion = taltosist }
+		change_religion = tengri_pagan_reformed
+	}
+	if = {
+		limit = { primary_culture = pecheneg }
+		change_primary_culture = magyar
+	}
+	if = {
+		limit = { religion = tengri_pagan_reformed }
+		change_religion = taltosist
+	}
+	set_country_flag = kar_magyar_settled
 }

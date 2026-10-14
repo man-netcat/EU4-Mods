@@ -153,7 +153,12 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - Vanilla events load as-is except tag-specific ones: `step_events` vendors
   every vanilla event file into `events/` with any event naming a tag cut
   out (detection is automatic: 3-letter tag tokens outside comments). Our
-  own event files use non-vanilla names and are never touched.
+  own event files use non-vanilla names and are never touched. Effect
+  blocks scoped to a bare province id (`1943 = { ... }`) take no `limit`
+  child (the engine rejects the block and drops surrounding effects —
+  this killed the first settlement): condition province work with
+  `if = { limit = { 1943 = { ... } } }` (Brazil precedent) or use area
+  scopes, which do take limits (GOT/Norway precedent).
 - Same for vanilla decisions (`step_filter_decisions`, hand-curated
   formation dummies excepted): tag-specific decisions go, generic ones
   stay byte-identical in same-filename files.
@@ -188,23 +193,34 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   the generic non-kingdom gate would leave Hungary unformable). The AI
   forms through `magyar_settlement.2` (same file), which mirrors the
   decision's effect the moment its conditions hold; the player fires the
-  decision by hand. Formation then fires `magyar_settlement.1`:
-  Avar basin provinces turn
+  decision by hand. Settling is one effect, not an MTTH event:
+  `kar_magyar_settlement_effect` (basin flips, dormant releases, steppe
+  flips) runs at the end of the crown effect and of `FormHUN`, so every
+  path settles in the same tick it crowns: Avar basin provinces turn
   magyar/taltosist and the steppe host pecheneg/tengri_pagan_reformed
   (CK3's two culture flips); the demesne is released to them there (1943,
-  1944 and 4540 to YED, 282 to ODS, the old capital 283 and 2406 to DNI),
-  so HUN keeps the Basin only. A human ruler may instead hold both lands
-  (option B, AI never takes it, and the dormant tags then never appear). An MGY victory over a basin
+  1944 and 4540 to YED, 282 to ODS, the old capital 283 and 2406 to DNI;
+  each release is guarded on its cores and backed by Funj-style cedes, so
+  lost land degrades gracefully), so HUN keeps the Basin only,
+  unconditionally. An MGY victory over a basin
   holder fires `magyar_settlement.3` through `on_war_won`
   (`common/on_actions/MagyarOnActions.txt`, an additive merge with
-  vanilla's on-actions carrying only our guard), which completes the whole
-  basin and crowns at once; the shared crown body lives in
-  `common/scripted_effects/MagyarEffects.txt`.
+  vanilla's on-actions carrying only our guard), which completes the basin
+  held by BUL and its vassals TRA and VSG only (Balaton stays out) and
+  crowns at once; the shared crown body lives in
+  `common/scripted_effects/MagyarEffects.txt`. Formation fires the
+  settlement deterministically (`country_event` at the end of the effect
+  and of `FormHUN`, never the MTTH alone). The settlement also repairs
+  Hungary to magyar/taltosist if anything flipped it, and strips HUN and
+  dead MGY cores off the released land. All vanilla `release` precedents
+  free a single tag; three releases in one effect is uncharted - if only
+  the first successor appears in-game, split them into chained events.
 - Localisation: English only, UTF-8 **with BOM** (the game ignores BOM-less
   files — verify bytes after writing). Generated files are cp1252.
 - Decision `desc` fields are pure flavour in vanilla style ("Let us…"):
   never mention province counts or province names there. Formable
-  decisions carry no bespoke tooltips (HLR alone keeps its own); they
+  decisions carry no bespoke tooltips (HLR alone keeps its own, plus HUN's
+  migration tooltip); they
   reference the generated trigger plainly, and validate checks the
   trigger's land against the requirement table.
 - Never touch base-game files. Never touch `tools/cache/` contents by hand
@@ -222,8 +238,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   war: Alfonso's invasion ASU vs ADU over Andalusia, with ASU claims on
   Porto/Braganca written by the Reconquista claims rule; the Andalusian
   Rebellion independent PRT+TOL vs ADU for independence; the Magyar
-  migration MGY vs BUL over Bacs, with MGY claims on the whole HUN
-  basin — no subjects fight overlords, so all use proven mechanics). Validate guards live sides
+  migration MGY vs BUL/TRA/VSG under the custom `cb_magyar_migration`
+  (humiliate's peace table: gold and humiliate only, so no land changes
+  hands in the deal and the settlement event allocates everything) — no
+  subjects fight overlords, so all use proven mechanics). Validate guards live sides
   and real CBs. Crash lesson (Oct 2026, SIGSEGV in
   `CWar::AddAttacker`→`CProvince::AddAsClaim`, see `crashes/` dumps):
   conquest-family goals (`take_claim`, `take_border`) need
