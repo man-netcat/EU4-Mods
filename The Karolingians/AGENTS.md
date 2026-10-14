@@ -145,7 +145,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `MAX_GOV_RANK`, `common/government_ranks/`, `RANK_1..RANK_5` loc and the
   rank-5 rungs in every `government_names` block must stay in sync.
 - `government_names` is first-match-wins: specific blocks (abbasid, muslim,
-  byzantine, papacy, armenian, magyar principality…) must precede their defaults. It and
+  byzantine, papacy, armenian, magyar principality, norse…) must precede their defaults. It and
   `government_ranks` are `replace_path`ed — the only gov files that load.
 - History/provinces/countries/diplomacy/wars/advisors/missions/cultures plus
   `gfx/flags` and `common/bookmarks` (single 867 bookmark, keys already in

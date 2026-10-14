@@ -390,6 +390,73 @@ magyar_principality = {
 	}
 }
 
+# The Norse world styles itself in CK3's tribal ranks (culture_titles):
+# jarls below, high chieftains above them, kings and high kings beyond.
+# CK3 uses Jarl for women too, kept here deliberately. Placed with the
+# other specific blocks, ahead of default.
+norse_monarchy = {
+	rank = {
+		1 = JARLDOM
+		2 = HIGH_CHIEFDOM
+		3 = KINGDOM
+		4 = HIGH_KINGDOM
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = JARL
+		2 = HIGH_CHIEFTAIN
+		3 = KING
+		4 = HIGH_KING
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = JARL
+		2 = HIGH_CHIEFESS
+		3 = QUEEN
+		4 = HIGH_QUEEN
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = JARL
+		2 = HIGH_CHIEFTAIN
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = JARL
+		2 = HIGH_CHIEFESS
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = norse
+	}
+}
+
 default_monarchy = {
 	rank = {
 		1 = COUNTY

@@ -22,10 +22,7 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				province_id = 370
-				province_id = 371
-			}
+			kar_form_iceland_provinces_trigger = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
