@@ -1,8 +1,8 @@
 #4119 - Sligo
 
-owner = MID
-controller = MID
-add_core = MID
+owner = CON
+controller = CON
+add_core = CON
 capital = "Sligo"
 culture = irish
 religion = catholic
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = MID
-	controller = MID
-	add_core = MID
+	owner = CON
+	controller = CON
+	add_core = CON
 }

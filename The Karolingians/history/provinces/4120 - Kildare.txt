@@ -1,8 +1,8 @@
 #4120 - Kildare
 
-owner = LER
-controller = LER
-add_core = LER
+owner = OSR
+controller = OSR
+add_core = OSR
 capital = "Naas"
 culture = irish
 religion = catholic
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = LER
-	controller = LER
-	add_core = LER
+	owner = OSR
+	controller = OSR
+	add_core = OSR
 }
