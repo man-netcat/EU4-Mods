@@ -1,0 +1,46 @@
+# Hungarian-formation behaviour shared by the Magyar events (CK3's
+# hungarian_migration_cb victory: the whole basin plus the crown).
+# Called from magyar_settlement.2 (AI auto-formation) and
+# magyar_settlement.3 (migration-war victory); decisions/FormHUN.txt
+# carries the same block generated from the formables row - keep all three
+# in sync. Scope: the country becoming Hungary (MGY).
+kar_form_hungary_crown_effect = {
+	change_tag = HUN
+	on_change_tag_effect = yes
+	change_government_to_monarchy = yes
+	set_capital = 153
+	set_country_flag = kar_form_hungary
+	hidden_effect = {
+		set_government_rank = 3
+	}
+	add_prestige = 25
+	add_legitimacy = 10
+	alfold_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	southern_transylvania_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	transdanubia_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	transylvania_area = {
+		limit = {
+			NOT = { is_core = ROOT }
+			NOT = { is_permanent_claim = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}

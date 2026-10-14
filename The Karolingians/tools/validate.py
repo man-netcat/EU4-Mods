@@ -42,7 +42,7 @@ from build import RANK, KEPT_REALMS  # noqa: E402
 
 from build import BY_TAG  # noqa: E402
 
-from tagdb import BY_FORMABLE, CTRY_DATE, DIPLOMACY, FORMABLES, FORMABLE_TAGS, required_count  # noqa: E402
+from tagdb import BY_FORMABLE, CTRY_DATE, DIPLOMACY, DORMANT, FORMABLES, FORMABLE_TAGS, required_count  # noqa: E402
 
 fail = []
 
@@ -348,12 +348,17 @@ def run() -> int:
 
     print("\n== realm sizes ==")
     for t in TAGS:
+        if t in DORMANT:
+            note(own[t] == 0, f"{t} dormant (has {own[t]})")
+            continue
         note(own[t] > 0, f"{t} owns {own[t]} provinces")
     note(own["HLR"] == 0, f"HLR owns 0 provinces (has {own['HLR']})")
     print(f"        new total = {sum(own[t] for t in TAGS)}")
 
     print("\n== capitals inside own realm ==")
     for t in TAGS:
+        if t in DORMANT:
+            continue
         s, _, _ = parse(files[CAPS[t]])
         note(
             s.get("owner") == t,
@@ -812,6 +817,8 @@ def run() -> int:
         return None
 
     for t in ALL_TAGS:
+        if t in DORMANT:
+            continue
         cap = CAPS.get(t) or vanilla_capital(t)
         held = holds(t)
         if cap is None:

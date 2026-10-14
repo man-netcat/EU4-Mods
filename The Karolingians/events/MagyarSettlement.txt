@@ -1,0 +1,344 @@
+# Settlement of Pannonia after kar_form_hungary (CK3's
+# launch_hungarian_migration_scripted_effect, ported): the Avar remnants of
+# the basin take up Magyar tongue and faith, while the camps left behind on
+# the eastern steppes fall to Pecheneg ways.
+# The old lands split three ways between the Pecheneg tags (CK3's
+# d_yedisan, c_odessa and c_lower_dniepr shares: YED takes Bratslav,
+# Cherkasy and Winnica, ODS takes Yedisan, DNI takes Zaporozhia and Ingil).
+# The tags hold no land at the start date (tagdb DORMANT); here they are
+# released Jerusalem-style - cores seeded on the abandoned demesne, then
+# `release` creates the countries with no fanfare, configured in-scope.
+# Option B lets a human ruler hold both lands instead (the AI always
+# settles, and without a release the dormant tags simply never appear).
+namespace = magyar_settlement
+
+country_event = {
+	id = magyar_settlement.1
+	title = magyar_settlement_1_title
+	desc = magyar_settlement_1_desc
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	trigger = {
+		tag = HUN
+		has_country_flag = kar_form_hungary
+		NOT = { has_country_flag = kar_magyar_settled }
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = magyar_settlement_1_a
+		ai_chance = { factor = 100 }
+		alfold_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		alfold_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		southern_transylvania_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		southern_transylvania_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		transdanubia_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		transdanubia_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		transylvania_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		transylvania_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		1943 = {
+			limit = { owned_by = ROOT }
+			add_core = YED
+		}
+		1944 = {
+			limit = { owned_by = ROOT }
+			add_core = YED
+		}
+		4540 = {
+			limit = { owned_by = ROOT }
+			add_core = YED
+		}
+		282 = {
+			limit = { owned_by = ROOT }
+			add_core = ODS
+		}
+		283 = {
+			limit = { owned_by = ROOT }
+			add_core = DNI
+		}
+		2406 = {
+			limit = { owned_by = ROOT }
+			add_core = DNI
+		}
+		release = YED
+		release = ODS
+		release = DNI
+		YED = {
+			set_capital = 1944
+			change_primary_culture = pecheneg
+			change_religion = tengri_pagan_reformed
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+		}
+		ODS = {
+			set_capital = 282
+			change_primary_culture = pecheneg
+			change_religion = tengri_pagan_reformed
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 1
+		}
+		DNI = {
+			set_capital = 283
+			change_primary_culture = pecheneg
+			change_religion = tengri_pagan_reformed
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			set_government_rank = 2
+		}
+		282 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		282 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		283 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		283 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		1943 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		1943 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		1944 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		1944 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		2406 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		2406 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		4540 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		4540 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		set_country_flag = kar_magyar_settled
+	}
+
+	option = {
+		name = magyar_settlement_1_b
+		ai_chance = { factor = 0 }
+		alfold_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		alfold_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		southern_transylvania_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		southern_transylvania_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		transdanubia_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		transdanubia_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		transylvania_area = {
+			limit = { owned_by = ROOT culture = avar }
+			change_culture = magyar
+		}
+		transylvania_area = {
+			limit = { owned_by = ROOT religion = tengri_pagan_reformed }
+			change_religion = taltosist
+		}
+		282 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		282 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		283 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		283 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		1943 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		1943 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		1944 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		1944 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		2406 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		2406 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		4540 = {
+			limit = { culture = magyar }
+			change_culture = pecheneg
+		}
+		4540 = {
+			limit = { religion = taltosist }
+			change_religion = tengri_pagan_reformed
+		}
+		set_country_flag = kar_magyar_settled
+	}
+}
+
+# AI auto-formation (CK3's game-rule events govern the AI migration while
+# the player takes the decision by hand): fires kar_form_hungary's effect
+# for AI MGY the moment its allow conditions hold. The land/capital/rank
+# numbers mirror decisions/FormHUN.txt (generated from the formables row);
+# the shared body lives in common/scripted_effects/MagyarEffects.txt.
+# The settlement event above then fires for the new HUN in turn.
+country_event = {
+	id = magyar_settlement.2
+	title = magyar_settlement_2_title
+	desc = magyar_settlement_2_desc
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	trigger = {
+		ai = yes
+		tag = MGY
+		NOT = { exists = HUN }
+		NOT = { has_country_flag = kar_form_hungary }
+		government_rank = 3
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		owns = 153
+		num_of_owned_provinces_with = {
+			value = 12
+			kar_form_hungary_provinces_trigger = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = magyar_settlement_2_a
+		ai_chance = { factor = 100 }
+		kar_form_hungary_crown_effect = yes
+	}
+}
+
+# Migration-war victory (CK3's hungarian_migration_cb on_victory: the whole
+# basin plus the crown at once). Fired from on_war_won for an MGY victory
+# over a basin holder; the peace deal's own spoils land first, then this
+# completes the de-jure basin. Simplification against CK3, which seizes only
+# the defender's share: the event takes every unheld basin province.
+country_event = {
+	id = magyar_settlement.3
+	title = magyar_settlement_3_title
+	desc = magyar_settlement_3_desc
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MGY
+		NOT = { exists = HUN }
+		NOT = { has_country_flag = kar_form_hungary }
+	}
+
+	option = {
+		name = magyar_settlement_3_a
+		ai_chance = { factor = 100 }
+		alfold_area = {
+			limit = { NOT = { owned_by = ROOT } }
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		southern_transylvania_area = {
+			limit = { NOT = { owned_by = ROOT } }
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		transdanubia_area = {
+			limit = { NOT = { owned_by = ROOT } }
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		transylvania_area = {
+			limit = { NOT = { owned_by = ROOT } }
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		kar_form_hungary_crown_effect = yes
+	}
+
+	option = {
+		name = magyar_settlement_3_b
+		ai_chance = { factor = 0 }
+		add_prestige = 10
+	}
+}

@@ -86,7 +86,8 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - `formables.percent` (NULL = all) enacts at that share of the requirement
   land, rounded up; `formables.own_capital` additionally requires holding
   the formable's `capital` (which lives on the base `Tag`, like the
-  capital of a landed tag). Validate checks the enacted value, the land
+  capital of a landed tag) and moves the seat there on formation
+  (`set_capital`, Somalia precedent). Validate checks the enacted value, the land
   and the capital line in the decision file.
 - Tags come in three flavours: `LandedTag` (starts on the map),
   `FormableTag` (requirements, no land), `ReleasableTag` (stub, unused).
@@ -172,7 +173,33 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   the base game everywhere; dead-tag cores are stripped (cores respawn
   tags via rebels/release). Reassigning land drops the previous living
   owner's cores (`patch()`), and judged-dormant claims go in `core_deny`
-  (holder, owner) pairs, enforced by validate.
+  (holder, owner) pairs, enforced by validate. Targeted conquest claims
+  use the same writer: ASU/NAV on Andalusi Iberia, ASU on Porto/Braganca,
+  MGY on the HUN basin (CK3's Hungarian-migration CB as claims plus the
+  existing HUN path). Etelkoz is Magyar-held at the start (MGY's demesne
+  on all six provinces); three Pecheneg tags (YED, ODS, DNI, under CK3's
+  d_yedisan, c_odessa and c_lower_dniepr shares) hold nothing until the
+  migration releases them Jerusalem-style (tagdb DORMANT: cores seeded on
+  the abandoned demesne, then `release` creates the countries - DNI's
+  duchy has no 867 holder so it rules through c_odessa, the SAR
+  ruler_title precedent; YED shares Almos's line with MGY, which is
+  mechanically inert). HUN's sole starter MGY is kingdom-ranked, so the
+  formable carries `rank_required = 3` (the Scandinavia kings-only pattern;
+  the generic non-kingdom gate would leave Hungary unformable). The AI
+  forms through `magyar_settlement.2` (same file), which mirrors the
+  decision's effect the moment its conditions hold; the player fires the
+  decision by hand. Formation then fires `magyar_settlement.1`:
+  Avar basin provinces turn
+  magyar/taltosist and the steppe host pecheneg/tengri_pagan_reformed
+  (CK3's two culture flips); the demesne is released to them there (1943,
+  1944 and 4540 to YED, 282 to ODS, the old capital 283 and 2406 to DNI),
+  so HUN keeps the Basin only. A human ruler may instead hold both lands
+  (option B, AI never takes it, and the dormant tags then never appear). An MGY victory over a basin
+  holder fires `magyar_settlement.3` through `on_war_won`
+  (`common/on_actions/MagyarOnActions.txt`, an additive merge with
+  vanilla's on-actions carrying only our guard), which completes the whole
+  basin and crowns at once; the shared crown body lives in
+  `common/scripted_effects/MagyarEffects.txt`.
 - Localisation: English only, UTF-8 **with BOM** (the game ignores BOM-less
   files — verify bytes after writing). Generated files are cp1252.
 - Decision `desc` fields are pure flavour in vanilla style ("Let us…"):
@@ -194,8 +221,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   our preset start-date wars, one file per war (CK3's Iberia opens at
   war: Alfonso's invasion ASU vs ADU over Andalusia, with ASU claims on
   Porto/Braganca written by the Reconquista claims rule; the Andalusian
-  Rebellion independent PRT+TOL vs ADU for independence — no subjects
-  fight overlords, so both use proven mechanics). Validate guards live sides
+  Rebellion independent PRT+TOL vs ADU for independence; the Magyar
+  migration MGY vs BUL over Bacs, with MGY claims on the whole HUN
+  basin — no subjects fight overlords, so all use proven mechanics). Validate guards live sides
   and real CBs. Crash lesson (Oct 2026, SIGSEGV in
   `CWar::AddAttacker`→`CProvince::AddAsClaim`, see `crashes/` dumps):
   conquest-family goals (`take_claim`, `take_border`) need

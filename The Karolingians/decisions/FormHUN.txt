@@ -8,7 +8,7 @@ country_decisions = {
 			NOT = { tag = HUN }
 			NOT = { exists = HUN }
 			tag = MGY
-			NOT = { government_rank = 3 }
+			government_rank = 3
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -38,6 +38,7 @@ country_decisions = {
 			change_tag = HUN
 			on_change_tag_effect = yes
 			change_government_to_monarchy = yes
+			set_capital = 153
 			set_country_flag = kar_form_hungary
 			hidden_effect = {
 				set_government_rank = 3

@@ -124,6 +124,13 @@ class ReleasableTag(Tag):
     """A tag that starts dead but can be released in-game. Unused for now."""
 
 
+#: Tags that hold no land at the start date and enter play only through a
+#: scripted release (the Jerusalem pattern: cores are seeded and `release`
+#: creates the country - no rebels, no dormant cores, no pre-existence).
+#: The Pecheneg successors sleep until magyar_settlement.1 releases them.
+DORMANT = frozenset({"YED", "ODS", "DNI"})
+
+
 TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4}
 
 
@@ -411,6 +418,16 @@ def selfcheck() -> None:
             raise ValueError(f"{t.tag}: forms is set, so decision must be too")
         if t.forms and t.forms not in BY_FORMABLE:
             raise ValueError(f"{t.tag}: forms {t.forms}, which is no formable")
+        if not t.provinces and not t.areas and t.tag not in DORMANT:
+            raise ValueError(
+                f"{t.tag}: holds no land - either give it provinces or list "
+                f"it in DORMANT"
+            )
+        if t.tag in DORMANT and (t.provinces or t.areas):
+            raise ValueError(
+                f"{t.tag}: listed DORMANT but holds land - dormant tags "
+                f"enter play only through their scripted release"
+            )
     for fb in FORMABLES:
         if not fb.areas and not fb.provinces and fb.tag != "HLR":
             raise ValueError(

@@ -107,6 +107,11 @@ def formation_decision(fcode, starters) -> str:
     cap_req = ""
     if fb.own_capital:
         cap_req = "\n\t\t\towns = " + str(fb.capital)
+    # Own-capital formables crown in their capital (Somalia/Hausa precedent):
+    # the firer already holds it (see cap_req), so this only moves the seat.
+    cap_move = ""
+    if fb.own_capital:
+        cap_move = "\n\t\t\tset_capital = " + str(fb.capital)
     home_req = ""
     if fb.home_capital:
         home_req = f"\n\t\t\t{key}_capital_trigger = yes"
@@ -206,7 +211,7 @@ def formation_decision(fcode, starters) -> str:
 \t\teffect = {{
 \t\t\tchange_tag = {fcode}
 \t\t\ton_change_tag_effect = yes
-\t\t\tchange_government_to_monarchy = yes
+\t\t\tchange_government_to_monarchy = yes{cap_move}
 \t\t\tset_country_flag = {key}
 \t\t\thidden_effect = {{
 \t\t\t\tset_government_rank = {fb.rank}

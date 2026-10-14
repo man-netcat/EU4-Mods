@@ -1,0 +1,13 @@
+name = "Magyar Migration into Pannonia"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 4126
+}
+
+867.1.1 = {
+	add_attacker = MGY
+	add_defender = BUL
+	add_defender = TRA
+	add_defender = VSG
+}

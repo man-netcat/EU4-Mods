@@ -24,4 +24,5 @@ discovered_by = ottoman
 	owner = VSG
 	controller = VSG
 	add_core = VSG
+	add_claim = MGY
 }

@@ -4520,6 +4520,23 @@ altaic = {
 			Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
 		}
 	}
+	pecheneg = {
+		dynasty_names = {
+			Kankali Tzopon Paguman Belermen Thonuzoba "YU regir" "BeC enek" "BU gdU z" "U C ok" "C avuldur" Bayandur
+			Irtim Talmat Batas Alayuntlu "C epni" "EymU r" Salgurlu
+		}
+		male_names = {
+			"C elgil" Aba Baitzas Balgor Batan Batas Bator "BayC a" "BiC kili" Bizel Boru Bula Giazis Ildey Ipa Ipaos
+			Kabuksin Karaca Kaydum Kegen Konel Korkutan Kortan Kostas Kourkoutai Kuchug "KuerC i" Kugel Kure "KU rA"
+			Metiga Sol Suru Tatus Teber Temir Tyrach Yavdi Yazi Yeke
+		}
+		female_names = {
+			"C iC ek" "C ilen" "C iltanesi" "O zgul" "O zlem" Akgul Asli Ayasun Ayten "BozC in" Dilek Esin
+			"GulC iC ek" Gulay Gunduz Gundes Gunes Ilkay Ipek Ipekel Irge Karacik Mala Mutlu Peksen Samur Sarica Sati
+			Sevilay Sevindik Sibel Sirin Sirma Songul "TekC e" Tura Umay Usunbike Yasar Yeldem Yildiz
+		}
+	}
+
 	turkmeni = {
 		primary = KHI
 		province = { local_has_qizilbash = yes }

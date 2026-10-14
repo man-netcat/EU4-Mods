@@ -284,6 +284,15 @@ IBERIA_AREAS = frozenset(
 )
 
 
+#: HUN requirement land: whoever holds it carries Magyar migration claims
+#: (CK3 hungarian_migration_cb, translated as claims + the existing HUN
+#: path — no timer, no custom CB).
+HUN_AREAS = frozenset(
+    "alfold_area southern_transylvania_area transdanubia_area "
+    "transylvania_area".split()
+)
+
+
 PROV_FIELD_ORDER = (
     "owner",
     "controller",
@@ -447,6 +456,8 @@ def patch(text, new_owner, pid=None):
         elif new_owner == "PRT" and area == "beieras_area":
             # Vimara's 868 targets (CK3 war_867_Vimara_conquest_Portucale)
             claims = ["ASU"]
+        elif new_owner != "MGY" and area in HUN_AREAS:
+            claims = ["MGY"]
     if have_core:
         return "\n".join(head + out) + "\n" + force_block(new_owner, claims)
 

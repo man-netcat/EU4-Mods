@@ -62,7 +62,7 @@ CK3_TO_EU4 = {
     "rus": "russian", "russian": "russian", "novgorodian": "novgorodian",
     "ryazanian": "ryazanian", "severian": "ryazanian",
     "magyar": "magyar", "hungarian": "magyar", "avar": "avar",
-    "khazar": "bulgarian", "pecheneg": "turkmeni", "cuman": "khazak",
+    "khazar": "bulgarian", "pecheneg": "pecheneg", "cuman": "khazak",
     "kipchak": "khazak", "kimek": "khazak", "oghuz": "turkmeni",
     "karluk": "uzbehk", "sogdian": "uzbehk", "tocharian": "uyghur",
     "saka": "uyghur", "khwarezmian": "khorasani", "tajik": "persian",
@@ -184,6 +184,12 @@ LIFT_SPECS = {
         "display": "Roman",
         "file": "00_latin.txt",
         "list": "name_list_roman",
+    },
+    "pecheneg": {
+        "anchor": "\tturkmeni = {",
+        "display": "Pecheneg",
+        "file": "00_turkic.txt",
+        "list": "name_list_pecheneg",
     },
 }
 

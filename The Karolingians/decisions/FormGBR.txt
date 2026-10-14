@@ -42,6 +42,7 @@ country_decisions = {
 			change_tag = GBR
 			on_change_tag_effect = yes
 			change_government_to_monarchy = yes
+			set_capital = 236
 			set_country_flag = kar_form_britannia
 			hidden_effect = {
 				set_government_rank = 4

@@ -12,7 +12,7 @@ Formable tags live on `formables` (+ `formable_areas`/`formable_provinces`), not
 1. Require exact requirements before writing anything: land (areas + explicit provinces), starters, percent, capital, rank, CK3 title. If the request does not give them, ask first — never assume them.
 2. Insert the `formables` row: `tag/name/adj/ck3_title/rank/color/percent/capital/own_capital/home_capital/rank_required/culture/culture_group/dynasty/exclusive`.
    - `percent` NULL = all land; otherwise enacted at that share rounded up (`required_count`, `tools/tagdb.py:130-134`). Validate checks the enacted value.
-   - `own_capital` requires holding the formable's `capital` (lives on base `Tag`). `home_capital` requires the firing tag's capital inside the requirement land (Denmark/Norway/Sweden pattern); it excludes `own_capital`.
+   - `own_capital` requires holding the formable's `capital` (lives on base `Tag`). `home_capital` requires the firing tag's capital inside the requirement land (Denmark/Norway/Sweden pattern); it excludes `own_capital`. Generated `own_capital` effects move the seat via `set_capital` (Somalia precedent).
    - `rank_required` requires an exact government rank to fire (Scandinavia/GBR kings-only = 3).
 3. Point starters via `tags.forms`/`tags.decision`. All starters of one formable share a single decision key and one shared file `decisions/FormX.txt`. HLR's requirement stays dynamic (`empire_core`, `tools/eu4.py:184-189`); its custom decision stays handwritten.
    - FIN same-tag kingdom (`decisions/FinlandKingdom.txt`) and ROM restoration (`decisions/FormROM.txt`, hegemony rank 5) are custom the same way — no/extra formable row, hardcoded triggers.

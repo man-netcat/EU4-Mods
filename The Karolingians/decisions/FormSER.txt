@@ -38,6 +38,7 @@ country_decisions = {
 			change_tag = SER
 			on_change_tag_effect = yes
 			change_government_to_monarchy = yes
+			set_capital = 1827
 			set_country_flag = kar_form_serbia
 			hidden_effect = {
 				set_government_rank = 3

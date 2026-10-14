@@ -22,4 +22,5 @@ discovered_by = ottoman
 	owner = BUL
 	controller = BUL
 	add_core = BUL
+	add_claim = MGY
 }

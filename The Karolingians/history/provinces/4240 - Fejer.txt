@@ -22,4 +22,5 @@ discovered_by = ottoman
 	owner = BLT
 	controller = BLT
 	add_core = BLT
+	add_claim = MGY
 }

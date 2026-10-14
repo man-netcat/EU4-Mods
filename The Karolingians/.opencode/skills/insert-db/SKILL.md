@@ -18,6 +18,7 @@ description: Insert tag, land, and base-game data into tools/tags.db and let scr
 - `diplomacy(liege,subject,relation)` / `rivalries(tag,other)` / `friendships(tag,other)` / `core_deny(holder,owner)` — relations and dormant claims.
 - `wars(slug,title,cb,goal,goal_tag,goal_province,date)` + `war_sides(war,tag,side)` — exactly one of `goal_tag`/`goal_province`.
 - `cultures(name)` / `religions(name)` — lookup tables; insert before a tag references the key.
+- Post-start emergents (states that must not exist at 867) hold no land: give them capital/culture/religion/CK3 rows as usual and list them in tagdb `DORMANT` (selfcheck enforces both directions; validate exempts them from the landed checks). They enter play through a scripted `release`, never through pre-seeded land, rebels, or dormant cores.
 
 ## Workflow
 

@@ -1,0 +1,25 @@
+# Additive file: merged with vanilla's common/on_actions/00_on_actions.txt
+# (same-key on_action blocks coexist across files, like decisions), so this
+# carries only our guard. If the engine ever stops merging, this file must
+# become a full vanilla copy instead.
+# ROOT = winning country, FROM = loser country.
+on_war_won = {
+	if = {
+		limit = {
+			ROOT = {
+				tag = MGY
+				NOT = { exists = HUN }
+				NOT = { has_country_flag = kar_form_hungary }
+			}
+			FROM = {
+				OR = {
+					tag = BLT
+					tag = BUL
+					tag = TRA
+					tag = VSG
+				}
+			}
+		}
+		ROOT = { country_event = { id = magyar_settlement.3 } }
+	}
+}
