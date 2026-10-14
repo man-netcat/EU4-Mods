@@ -23,6 +23,7 @@ from tagdb import (
     FORMABLES,
     PROVINCES,
     PROVINCE_OWNERS,
+    SEED_CORES,
     TAGS,
     TITLES,
     TRANSFERS,
@@ -601,6 +602,8 @@ def step_provinces(argv):
         tag = owner_of.get(pid)
         new = patch(text, tag, pid) if tag else text
         new = ensure_fort(new, PROVINCES[pid].fort)
+        for st in SEED_CORES.get(pid, ()):
+            new += f"add_core = {st}\n"
         new = take_group_visibility(new)
         for ln in undated_group_visibility(
             open(src, encoding="utf-8", errors="surrogateescape").read()

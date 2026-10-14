@@ -1,8 +1,8 @@
 #4380 - Donegal
 
-owner = AIL
-controller = AIL
-add_core = AIL
+owner = ULA
+controller = ULA
+add_core = ULA
 capital = "Donegal"
 culture = irish
 religion = catholic
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = AIL
-	controller = AIL
-	add_core = AIL
+	owner = ULA
+	controller = ULA
+	add_core = ULA
 }

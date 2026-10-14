@@ -157,6 +157,17 @@ class TagSuppress(Base):
     key = Column(String, primary_key=True)
 
 
+class SeedCore(Base):
+    """A dormant core seeded onto its province at build: the tag holds no
+    land there (often no land at all), but rebels or a manual release can
+    wake it. Dublin's cores on Sudreyjar-held Dyflin are the precedent."""
+
+    __tablename__ = "seed_cores"
+
+    tag = Column(String, ForeignKey("tags.tag"), primary_key=True)
+    pid = Column(Integer, ForeignKey("provinces.pid"), primary_key=True)
+
+
 class Diplomacy(Base):
     __tablename__ = "diplomacy"
 

@@ -3,6 +3,7 @@
 owner = LOI
 controller = LOI
 add_core = LOI
+add_core = DUB
 capital = "Dublin"
 culture = norse
 religion = norse_pagan_reformed

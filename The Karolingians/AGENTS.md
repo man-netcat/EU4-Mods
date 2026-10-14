@@ -145,7 +145,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `MAX_GOV_RANK`, `common/government_ranks/`, `RANK_1..RANK_5` loc and the
   rank-5 rungs in every `government_names` block must stay in sync.
 - `government_names` is first-match-wins: specific blocks (abbasid, muslim,
-  byzantine, papacy, armenian, magyar principality, norse…) must precede their defaults. It and
+  byzantine, papacy, armenian, magyar principality, norse, tribal chiefdoms,
+  russian principalities, petty kingdoms, gaelic, welsh, brythonic petty
+  kingdoms, croatian…) must precede their defaults. It and
   `government_ranks` are `replace_path`ed — the only gov files that load.
 - History/provinces/countries/diplomacy/wars/advisors/missions/cultures plus
   `gfx/flags` and `common/bookmarks` (single 867 bookmark, keys already in
@@ -178,7 +180,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   the base game everywhere; dead-tag cores are stripped (cores respawn
   tags via rebels/release). Reassigning land drops the previous living
   owner's cores (`patch()`), and judged-dormant claims go in `core_deny`
-  (holder, owner) pairs, enforced by validate. Forts exist only where the
+  (holder, owner) pairs, enforced by validate. Dormant cores for future
+  releasables live in `seed_cores` (Dublin on Sudreyjar-held Dyflin:
+  rebels or a manual release wake it, no scripted path needed). Forts exist only where the
   database says so (`provinces.fort`, stone-walled cities still garrisoned
   in 867: Constantinople, Rome, Alexandria, Damascus, Thessaloniki, Xi'an,
   Belgrade, Diyarbakir, Toledo, Jerusalem, Antioch, Baghdad) — everything

@@ -128,69 +128,64 @@ muslim_monarchy = {
 
 byzantine_monarchy = {
 	rank = {
-		1 = KLEISOURA
-		2 = THEMA
+		1 = COUNTY
+		2 = DUCHY
 		3 = DESPOTATE
 		4 = EMPIRE
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = KLEISOURARCH
-		2 = STRATEGOS
+		1 = COUNT
+		2 = DOUX
 		3 = DESPOT
 		4 = BASILEUS
 		5 = BASILEUS
 	}
 
 	ruler_female = {
-		1 = KLEISOURARCH
-		2 = STRATEGOS
+		1 = COUNTESS
+		2 = DOUX
 		3 = DESPOTISSA
 		4 = BASILISSA
 		5 = BASILISSA
 	}
 
 	consort_male = {
-		1 = KLEISOURARCH
-		2 = STRATEGOS
+		1 = COUNT
+		2 = DOUX
 		3 = DESPOT
 		4 = SYMBASILEUS
 		5 = SYMBASILEUS
 	}
 
 	consort_female = {
-		1 = KLEISOURARCH
-		2 = STRATEGOS
+		1 = COUNTESS
+		2 = DOUX
 		3 = DESPOTISSA
 		4 = BASILISSA
 		5 = BASILISSA
 	}
 
 	heir_male = {
-		1 = KLEISOURARCH
-		2 = STRATEGOS
-		3 = DESPOT
-		4 = SYMBASILEUS
-		5 = SYMBASILEUS
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = BASILEUS
+		5 = BASILEUS
 	}
 
 	heir_female = {
-		1 = KLEISOURARCH
-		2 = STRATEGOS
-		3 = DESPOTISSA
-		4 = SYMBASILISSA
-		5 = SYMBASILISSA
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = BASILISSA
+		5 = BASILISSA
 	}
 
 	trigger = {
 		government = monarchy
-		OR = {
-			tag = BYZ
-			tag = TRE
-			tag = EPI
-			tag = MOE
-		}
+		primary_culture = greek
 	}
 }
 
@@ -394,10 +389,76 @@ magyar_principality = {
 # jarls below, high chieftains above them, kings and high kings beyond.
 # CK3 uses Jarl for women too, kept here deliberately. Placed with the
 # other specific blocks, ahead of default.
+# Varmaland stays a tribal chiefdom while its Norse neighbours are
+# jarldoms: a tag-keyed exception ahead of norse_monarchy, in CK3's
+# default tribal words.
+varmland_chiefdom = {
+	rank = {
+		1 = CHIEFDOM
+		2 = JARLDOM
+		3 = KINGDOM
+		4 = HIGH_KINGDOM
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CHIEFTAIN
+		2 = JARL
+		3 = KING
+		4 = HIGH_KING
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = JARL
+		3 = QUEEN
+		4 = HIGH_QUEEN
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = CHIEFTAIN
+		2 = JARL
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CHIEFTESS
+		2 = JARL
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		tag = VAR
+	}
+}
+
 norse_monarchy = {
 	rank = {
 		1 = JARLDOM
-		2 = HIGH_CHIEFDOM
+		2 = JARLDOM
 		3 = KINGDOM
 		4 = HIGH_KINGDOM
 		5 = HEGEMONY
@@ -405,7 +466,7 @@ norse_monarchy = {
 
 	ruler_male = {
 		1 = JARL
-		2 = HIGH_CHIEFTAIN
+		2 = JARL
 		3 = KING
 		4 = HIGH_KING
 		5 = EMPEROR
@@ -413,7 +474,7 @@ norse_monarchy = {
 
 	ruler_female = {
 		1 = JARL
-		2 = HIGH_CHIEFESS
+		2 = JARL
 		3 = QUEEN
 		4 = HIGH_QUEEN
 		5 = EMPRESS
@@ -421,7 +482,7 @@ norse_monarchy = {
 
 	consort_male = {
 		1 = JARL
-		2 = HIGH_CHIEFTAIN
+		2 = JARL
 		3 = PRINCE_CONSORT
 		4 = PRINCE_CONSORT
 		5 = PRINCE_CONSORT
@@ -429,7 +490,7 @@ norse_monarchy = {
 
 	consort_female = {
 		1 = JARL
-		2 = HIGH_CHIEFESS
+		2 = JARL
 		3 = QUEEN_CONSORT
 		4 = QUEEN_CONSORT
 		5 = QUEEN_CONSORT
@@ -454,6 +515,481 @@ norse_monarchy = {
 	trigger = {
 		government = monarchy
 		primary_culture = norse
+	}
+}
+
+# Croatia and Slavonia are banates under a Ban (CK3's banate keys, same
+# word for women rulers there too), ahead of the south-slavic chiefdoms.
+croatian_banate = {
+	rank = {
+		1 = CHIEFDOM
+		2 = BANATE
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CHIEFTAIN
+		2 = BAN
+		3 = KING
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = BAN
+		3 = QUEEN
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = CHIEFTAIN
+		2 = BAN
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CHIEFTESS
+		2 = BAN
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = croatian
+	}
+}
+
+# The Finnic and Baltic worlds have no culture-specific ranks in CK3, so
+# they use its default tribal track: chieftains below, high chieftains
+# above. One block covers the baltic, scandinavian and finno_ugric groups
+# (Finnish sits in scandinavian here, Estonian in baltic); norse tags are
+# caught by the block above first.
+tribal_chiefdoms = {
+	rank = {
+		1 = CHIEFDOM
+		2 = HIGH_CHIEFDOM
+		3 = KINGDOM
+		4 = HIGH_KINGDOM
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CHIEFTAIN
+		2 = HIGH_CHIEFTAIN
+		3 = KING
+		4 = HIGH_KING
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = HIGH_CHIEFESS
+		3 = QUEEN
+		4 = HIGH_QUEEN
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = CHIEFTAIN
+		2 = HIGH_CHIEFTAIN
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CHIEFTESS
+		2 = HIGH_CHIEFESS
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+			culture_group = baltic
+			culture_group = scandinavian
+			culture_group = finno_ugric
+			culture_group = west_slavic
+			culture_group = south_slavic
+		}
+	}
+}
+
+# The East Slavs follow CK3's Russian track instead: chieftains below,
+# grand princes at duchy tier, plain kings above (the grand-prince style
+# for kingdom-tier rulers belongs to title mechanics CK3 keeps elsewhere),
+# tsars only if anyone ever reaches empire.
+russian_principalities = {
+	rank = {
+		1 = CHIEFDOM
+		2 = GRAND_PRINCIPALITY
+		3 = KINGDOM
+		4 = TSARDOM
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CHIEFTAIN
+		2 = GRAND_PRINCE
+		3 = KING
+		4 = TSAR
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = GRAND_PRINCESS
+		3 = QUEEN
+		4 = TSARITSA
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = CHIEFTAIN
+		2 = GRAND_PRINCE
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CHIEFTESS
+		2 = GRAND_PRINCESS
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = carpathian
+	}
+}
+
+# The Anglo-Saxon Heptarchy realms are petty kingdoms, not kingdoms:
+# ealdormen below (the 867 shire-reeve office), petty kings at duchy tier
+# where Wessex, Mercia, East Anglia and Northumbria all sit, plain kings
+# above (formed England displays properly). Same word for women rulers,
+# after the Jarl precedent.
+petty_kingdoms = {
+	rank = {
+		1 = EARLDOM
+		2 = PETTY_KINGDOM
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = EARL
+		2 = PETTY_KING
+		3 = KING
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = PETTY_KING
+		3 = QUEEN
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = EARL
+		2 = PETTY_KING
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = COUNTESS
+		2 = PETTY_KING
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = british
+	}
+}
+
+# The Irish tuatha are earldoms, their over-kingdoms high chiefdoms
+# (which covers Meath with no tag exception), Alba alone a kingdom.
+gaelic_kings = {
+	rank = {
+		1 = EARLDOM
+		2 = HIGH_CHIEFDOM
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = EARL
+		2 = HIGH_CHIEFTAIN
+		3 = KING
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = HIGH_CHIEFESS
+		3 = QUEEN
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = EARL
+		2 = HIGH_CHIEFTAIN
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = COUNTESS
+		2 = HIGH_CHIEFESS
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = gaelic
+	}
+}
+
+# The Welsh cantrefi are lordships under their princes: lordships at
+# county tier, principalities (Gwynedd, Deheubarth) at duchy tier, a plain
+# kingdom above (formed Wales displays properly).
+welsh_principalities = {
+	rank = {
+		1 = LORDSHIP
+		2 = PRINCIPALITY
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = PRINCE
+		3 = KING
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = PRINCESS
+		3 = QUEEN
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = LORD
+		2 = PRINCE
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = LADY
+		2 = PRINCESS
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = welsh
+	}
+}
+
+# Cornish Cornwall and Cumbrian Strathclyde are petty kingdoms too, on a
+# shared Brythonic key so the Heptarchy block's shire-reeve styling never
+# leaks across the Tamar or the Solway. (Welsh tags match the block above
+# first.)
+brythonic_petty_kingdoms = {
+	rank = {
+		1 = EARLDOM
+		2 = PETTY_KINGDOM
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = EARL
+		2 = PETTY_KING
+		3 = KING
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = PETTY_KING
+		3 = QUEEN
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	consort_male = {
+		1 = EARL
+		2 = PETTY_KING
+		3 = PRINCE_CONSORT
+		4 = PRINCE_CONSORT
+		5 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = COUNTESS
+		2 = PETTY_KING
+		3 = QUEEN_CONSORT
+		4 = QUEEN_CONSORT
+		5 = QUEEN_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = EMPEROR
+		5 = EMPEROR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = EMPRESS
+		5 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+			primary_culture = cornish
+			primary_culture = cumbrian
+		}
 	}
 }
 

@@ -27,6 +27,7 @@ from models import (
     Friendship as FriendshipRow,
     Province as ProvinceRow,
     Rivalry as RivalryRow,
+    SeedCore as SeedCoreRow,
     Tag as TagRow,
     TagArea,
     TagProvince,
@@ -127,8 +128,11 @@ class ReleasableTag(Tag):
 #: Tags that hold no land at the start date and enter play only through a
 #: scripted release (the Jerusalem pattern: cores are seeded and `release`
 #: creates the country - no rebels, no dormant cores, no pre-existence).
-#: The Pecheneg successors sleep until magyar_settlement.1 releases them.
-DORMANT = frozenset({"YED", "ODS", "DNI"})
+#: The Pecheneg successors sleep until magyar_settlement.1 releases them;
+#: Dublin sleeps until rebels or a manual release wake it (cores seeded via
+#: seed_cores). Listed here so validate exempts them from the
+#: landed checks, and selfcheck fails any unlisted landless tag.
+DORMANT = frozenset({"YED", "ODS", "DNI", "DUB"})
 
 
 TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4}
@@ -190,6 +194,7 @@ def _load() -> tuple[
     dict[int, ProvinceInfo],
     list[FormableTag],
     list[War],
+    dict[int, list],
 ]:
     if not os.path.exists(DB_PATH):
         raise SystemExit(f"{DB_PATH} is missing - the tag database lives in git")
@@ -207,6 +212,9 @@ def _load() -> tuple[
         suppress: dict[str, list] = {}
         for r in s.query(TagSuppress).order_by(TagSuppress.key):
             suppress.setdefault(r.tag, []).append(r.key)
+        seeds: dict[int, list] = {}
+        for r in s.query(SeedCoreRow).order_by(SeedCoreRow.tag):
+            seeds.setdefault(r.pid, []).append(r.tag)
         rivals: dict[str, list] = {}
         for r in s.query(RivalryRow).order_by(RivalryRow.other):
             rivals.setdefault(r.tag, []).append(r.other)
@@ -318,10 +326,10 @@ def _load() -> tuple[
         )
         for r in rows
     ]
-    return tags, dips, provs, formables, wars
+    return tags, dips, provs, formables, wars, seeds
 
 
-TAGS, DIPLOMACY, PROVINCES, FORMABLES, WARS = _load()
+TAGS, DIPLOMACY, PROVINCES, FORMABLES, WARS, SEED_CORES = _load()
 
 BY_TAG: dict[str, LandedTag] = {t.tag: t for t in TAGS}
 

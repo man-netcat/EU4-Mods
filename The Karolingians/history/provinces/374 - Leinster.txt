@@ -1,11 +1,11 @@
 #374 - Leinster
 
-owner = DUB
-controller = DUB
-add_core = DUB
+owner = LER
+controller = LER
+add_core = LER
 capital = "Wexford"
-culture = norse
-religion = norse_pagan_reformed
+culture = irish
+religion = catholic
 hre = no
 base_tax = 2
 base_production = 2
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = DUB
-	controller = DUB
-	add_core = DUB
+	owner = LER
+	controller = LER
+	add_core = LER
 }
