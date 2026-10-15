@@ -75,7 +75,7 @@ CK3_TO_EU4 = {
     "bedouin": "bedouin_arabic",
     "syrian": "levantine",
     "maghrebi": "maghrebi", "berber": "berber", "baranis": "berber", "butr": "berber",
-    "guanches": "berber", "tuareg": "tuareg",
+    "guanches": "guanche", "tuareg": "tuareg",
     "coptic": "al_misr_arabic", "nubian": "nubian", "beja": "beja",
     "somali": "somali", "afar": "afar", "oromo": "oromo",
     "gala": "oromo", "ethiopian": "amhara",

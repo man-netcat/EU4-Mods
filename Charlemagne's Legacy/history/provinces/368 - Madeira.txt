@@ -2,9 +2,9 @@ owner = MDR
 controller = MDR
 add_core = MDR
 capital = "Funchal"
-culture = berber
+culture = guanche
 #368 - Madeira
-culture = berber
+culture = guanche
 religion = sunni
 religion = sunni
 hre = no

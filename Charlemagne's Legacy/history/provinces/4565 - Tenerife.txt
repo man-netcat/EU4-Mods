@@ -3,8 +3,8 @@ controller = CNI
 add_core = CNI
 #tenerife
 capital = "Tenerife"
-culture = berber
-culture = berber
+culture = guanche
+culture = guanche
 religion = animism
 religion = animism
 hre = no

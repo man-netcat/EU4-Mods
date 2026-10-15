@@ -4080,6 +4080,18 @@ maghrebi = {
 			Tasa Tasa'fut Taszellayt Tatbirt Tati Taweckint Tawenza Tawnat Tawzalt Tayri Tayyurt Tazdayt 
 		}
 	}
+	guanche = {
+		primary = CNI
+		dynasty_names = {
+			"Guanarteme" "Tanausu" "Bencomo"
+		}
+		male_names = {
+			Abentahar Adiam Alcoidar Acosayda Achurteyga Adeun Aja Algzcin Ancor Atubkewn Atacaicate Bentagai Bentago Bentahor Bentejui Caitafa Doramas Egenenaca Egonaiga Gaifa Gamonales Ganana Gararasa Gitama Gomidafe Guanarteme Hama Heupelio Himar Isaco Malagua Naira Nauzet Orchena Rinima Sambor Semidan Soront Tagooreate Tagotin Tajaste Tamadaba Tanfia Tara Tazarte Tiferan Tijandarte Acaymo Acerina Adargoma Afche Afur Agoney Airam Alguim Anaterve Augeron Ayoze Belicar Belmaco
+		}
+		female_names = {
+			Absnchara Aquejata Arimgua Arminda Andamana Aremoga Amoca Dara Faya Guayarmina Masaquera Meteimba Nascique Tazirga Tonaguana Tenesoya Vidina Mifaya Tibiabin Tamonante Iballa Hama Heupelio Himar Orchena Rinima Sambor Semidan Soront Tagooreate Tagotin Tajaste Tamadaba Tara Atidamana Cathaysa Dacil Fayna Gara Guacimara
+		}
+	}
 	berber = {
 		primary = TLC
 		dynasty_names = {

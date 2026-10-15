@@ -2,9 +2,9 @@ owner = GHT
 controller = GHT
 add_core = GHT
 capital = "Tajhari"
-culture = berber
+culture = butr
 # - Tajhari (Idehan Murzuq)
-culture = berber
+culture = butr
 religion = ibadi
 religion = ibadi
 hre = no
