@@ -813,7 +813,7 @@ christian = {
 		flag_emblem_index_range = { 1 4 }
 
 		color = { 210 235 87 }
-		icon = 14
+		icon = 36
 		country = {
 			defensiveness = 0.15
 			tolerance_own = 1
@@ -853,7 +853,7 @@ christian = {
 		flag_emblem_index_range = { 1 4 }
 
 		color = { 204 102 26 }
-		icon = 14
+		icon = 35
 		country = {
 			defensiveness = 0.15
 			tolerance_own = 1
