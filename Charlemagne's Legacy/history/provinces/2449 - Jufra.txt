@@ -1,6 +1,26 @@
 #2449 - Jufra
 
+owner = GHT
+controller = GHT
+add_core = GHT
+capital = "Hun"
+culture = berber
+religion = sunni
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
+add_local_autonomy = 25
+
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = GHT
+	controller = GHT
+	add_core = GHT
+}

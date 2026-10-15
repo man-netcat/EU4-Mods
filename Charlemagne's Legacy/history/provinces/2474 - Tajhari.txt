@@ -1,4 +1,32 @@
+owner = GHT
+controller = GHT
+add_core = GHT
+capital = "Tajhari"
+culture = berber
 # - Tajhari (Idehan Murzuq)
+culture = berber
+religion = sunni
+religion = sunni
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 30
+native_ferocity = 4
+native_hostileness = 9
 
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = GHT
+	controller = GHT
+	add_core = GHT
+}
