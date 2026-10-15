@@ -121,8 +121,8 @@ def main(argv):
         for pid in a.pids:
             name, cul, rel = datas[pid]
             if not c.execute("select pid from provinces where pid=?", (pid,)).fetchone():
-                c.execute("INSERT INTO provinces VALUES (?,?,?,?)",
-                          (pid, name, a.culture or cul, a.religion or rel))
+                c.execute("INSERT INTO provinces VALUES (?,?,?,?,?)",
+                          (pid, name, a.culture or cul, a.religion or rel, 0))
             c.execute("INSERT INTO tag_provinces VALUES (?,?)", (a.to, pid))
         c.commit()
         print(f"{a.to} gains {len(a.pids)} provinces")
@@ -197,8 +197,8 @@ def main(argv):
     for pid in a.pids:
         if not c.execute("select pid from provinces where pid=?", (pid,)).fetchone():
             pname, pcul, prel = datas[pid]
-            c.execute("INSERT INTO provinces VALUES (?,?,?,?)",
-                      (pid, pname, a.culture or pcul, a.religion or prel))
+            c.execute("INSERT INTO provinces VALUES (?,?,?,?,?)",
+                      (pid, pname, a.culture or pcul, a.religion or prel, 0))
         c.execute("INSERT INTO tag_provinces VALUES (?,?)", (a.tag, pid))
     c.execute("INSERT INTO tag_reforms VALUES (?,?,?)",
               (a.tag, seq, "feudalism_reform"))
