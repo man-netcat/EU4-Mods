@@ -1,6 +1,6 @@
-owner = ADU
-controller = ADU
-add_core = ADU
+owner = MDR
+controller = MDR
+add_core = MDR
 capital = "Funchal"
 culture = berber
 #368 - Madeira
@@ -23,7 +23,7 @@ native_ferocity = 0
 native_hostileness = 0
 
 867.1.1 = {
-	owner = ADU
-	controller = ADU
-	add_core = ADU
+	owner = MDR
+	controller = MDR
+	add_core = MDR
 }

@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = berber
+religion = sunni
+capital = 351
+867.1.1 = {
+	monarch = {
+		name = "Berkan"
+		dynasty = "Berkanid"
+		birth_date = 825.1.1
+		death_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

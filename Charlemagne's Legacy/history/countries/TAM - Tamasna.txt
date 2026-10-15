@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = berber
+religion = sunni
+capital = 2470
+867.1.1 = {
+	monarch = {
+		name = "Yunus"
+		dynasty = "Barghawata"
+		birth_date = 820.1.1
+		death_date = 885.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Salih"
+		monarch_name = "Salih"
+		dynasty = "Barghawata"
+		birth_date = 823.1.1
+		death_date = 883.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

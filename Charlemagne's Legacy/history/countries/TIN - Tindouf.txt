@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = berber
+religion = sunni
+capital = 348
+867.1.1 = {
+	monarch = {
+		name = "Abu Gazzula"
+		dynasty = "Gazzula"
+		birth_date = 837.1.1
+		death_date = 889.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

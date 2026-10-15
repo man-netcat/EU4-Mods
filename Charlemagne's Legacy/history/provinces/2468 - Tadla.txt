@@ -1,5 +1,24 @@
 # - Tadla
 
+owner = MOR
+controller = MOR
+add_core = MOR
+capital = "Tadla"
+culture = moroccan
+religion = sunni
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = copper
+base_manpower = 1
+is_city = yes
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = western
+
+867.1.1 = {
+	owner = MOR
+	controller = MOR
+	add_core = MOR
+}

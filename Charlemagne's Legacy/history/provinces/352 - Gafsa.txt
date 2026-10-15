@@ -1,8 +1,8 @@
 #352 - Gafsa
 
-owner = AGL
-controller = AGL
-add_core = AGL
+owner = TUN
+controller = TUN
+add_core = TUN
 capital = "Gafsa"
 culture = berber
 religion = sunni
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = AGL
-	controller = AGL
-	add_core = AGL
+	owner = TUN
+	controller = TUN
+	add_core = TUN
 }

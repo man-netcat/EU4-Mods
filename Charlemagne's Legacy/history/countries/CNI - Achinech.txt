@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = berber
+religion = animism
+capital = 4565
+867.1.1 = {
+	monarch = {
+		name = "Guanareme"
+		dynasty = "Tikanariyen"
+		birth_date = 831.1.1
+		death_date = 877.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Añaterve"
+		monarch_name = "Añaterve"
+		dynasty = "Tikanariyen"
+		birth_date = 850.1.1
+		death_date = 906.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

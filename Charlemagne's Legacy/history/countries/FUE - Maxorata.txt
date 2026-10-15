@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = berber
+religion = animism
+capital = 366
+867.1.1 = {
+	monarch = {
+		name = "Kadidu"
+		dynasty = "Tagatemiotise"
+		birth_date = 840.1.1
+		death_date = 902.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Abentahar"
+		monarch_name = "Abentahar"
+		dynasty = "Tagatemiotise"
+		birth_date = 860.1.1
+		death_date = 918.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

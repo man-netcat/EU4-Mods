@@ -1,8 +1,8 @@
 #1751 - Ceuta
 
-owner = ADU
-controller = ADU
-add_core = ADU
+owner = TGI
+controller = TGI
+add_core = TGI
 capital = "Cebta"
 culture = berber
 religion = sunni
@@ -20,7 +20,7 @@ discovered_by = eastern
 
 #1415.8.21 = { controller = POR add_core = POR }
 867.1.1 = {
-	owner = ADU
-	controller = ADU
-	add_core = ADU
+	owner = TGI
+	controller = TGI
+	add_core = TGI
 }

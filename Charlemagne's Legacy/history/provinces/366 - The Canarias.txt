@@ -1,2 +1,29 @@
+owner = FUE
+controller = FUE
+add_core = FUE
+capital = "Las Palmas"
+culture = berber
 #366 - The Canarias
+culture = berber
+religion = animism
+religion = animism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 3
+base_production = 1
+base_production = 3
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 5
+native_ferocity = 1
+native_hostileness = 0
 
+867.1.1 = {
+	owner = FUE
+	controller = FUE
+	add_core = FUE
+}

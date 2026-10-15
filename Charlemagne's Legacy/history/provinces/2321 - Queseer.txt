@@ -1,8 +1,8 @@
 #2321 - Queseer
 
-owner = EGY
-controller = EGY
-add_core = EGY
+owner = EDE
+controller = EDE
+add_core = EDE
 capital = "Al Qusair"
 culture = al_misr_arabic
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = EGY
-	controller = EGY
-	add_core = EGY
+	owner = EDE
+	controller = EDE
+	add_core = EDE
 }

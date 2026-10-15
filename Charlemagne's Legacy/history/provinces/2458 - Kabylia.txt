@@ -1,5 +1,24 @@
 # - Hodna
 
+owner = ZAB
+controller = ZAB
+add_core = ZAB
+capital = "Msila"
+culture = algerian
+religion = sunni
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = salt
+base_manpower = 1
+is_city = yes
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = western
+
+867.1.1 = {
+	owner = ZAB
+	controller = ZAB
+	add_core = ZAB
+}

@@ -1,5 +1,24 @@
 # - Touggourt
 
+owner = MZB
+controller = MZB
+add_core = MZB
+capital = "Touggourt"
+culture = algerian
+religion = sunni
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = spices
+base_manpower = 1
+is_city = yes
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = western
+
+867.1.1 = {
+	owner = MZB
+	controller = MZB
+	add_core = MZB
+}

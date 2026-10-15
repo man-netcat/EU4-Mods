@@ -1,8 +1,8 @@
 #341 - Tunis
 
-owner = AGL
-controller = AGL
-add_core = AGL
+owner = TUN
+controller = TUN
+add_core = TUN
 capital = "Tunis"
 culture = tunisian
 religion = sunni
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = AGL
-	controller = AGL
-	add_core = AGL
+	owner = TUN
+	controller = TUN
+	add_core = TUN
 }

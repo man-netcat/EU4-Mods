@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = maghrebi
+religion = sunni
+capital = 343
+867.1.1 = {
+	monarch = {
+		name = "Yahya"
+		dynasty = "Idrisid"
+		birth_date = 845.1.2
+		death_date = 874.12.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "al-Qasim"
+		monarch_name = "al-Qasim"
+		dynasty = "Idrisid"
+		birth_date = 860.1.2
+		death_date = 880.12.16
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

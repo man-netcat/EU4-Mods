@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = moroccan
+religion = sunni
+capital = 346
+867.1.1 = {
+	monarch = {
+		name = "Maymun"
+		dynasty = "Midrarid"
+		birth_date = 830.1.1
+		death_date = 875.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

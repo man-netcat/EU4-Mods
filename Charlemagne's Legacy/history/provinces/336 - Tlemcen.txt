@@ -1,6 +1,27 @@
 #336 - Tlemcen
 
+owner = ALG
+controller = ALG
+add_core = ALG
+capital = "Tlemcen"
+culture = berber
+religion = sunni
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = cloth
+base_manpower = 3
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = ALG
+	controller = ALG
+	add_core = ALG
+}

@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = berber
+religion = sunni
+capital = 334
+867.1.1 = {
+	monarch = {
+		name = "Tifan"
+		dynasty = "Ghomara"
+		birth_date = 839.1.1
+		death_date = 886.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

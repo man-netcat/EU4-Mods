@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = berber
+religion = sunni
+capital = 335
+867.1.1 = {
+	monarch = {
+		name = "Sa'id"
+		dynasty = "Salihid"
+		birth_date = 830.1.1
+		death_date = 916.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Salih"
+		monarch_name = "Salih"
+		dynasty = "Salihid"
+		birth_date = 855.1.1
+		death_date = 927.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
