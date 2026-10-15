@@ -1,8 +1,8 @@
 # 204 Dauphiné - Principal cities: Grenoble
 
-owner = LOT
-controller = LOT
-add_core = LOT
+owner = DAU
+controller = DAU
+add_core = DAU
 capital = "Grenoble"
 culture = burgundian
 religion = catholic
@@ -20,7 +20,7 @@ discovered_by = ottoman
 
 #fort_15th = yes
 867.1.1 = {
-	owner = LOT
-	controller = LOT
-	add_core = LOT
+	owner = DAU
+	controller = DAU
+	add_core = DAU
 }

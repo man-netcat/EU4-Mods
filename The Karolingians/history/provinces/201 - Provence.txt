@@ -1,8 +1,8 @@
 # 201 Provence - Principal cities: Aix-en-Provence, Marseille
 
-owner = ITA
-controller = ITA
-add_core = ITA
+owner = PRO
+controller = PRO
+add_core = PRO
 capital = "Aix-en-Provence"
 culture = occitain
 religion = catholic
@@ -25,7 +25,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = ITA
-	controller = ITA
-	add_core = ITA
+	owner = PRO
+	controller = PRO
+	add_core = PRO
 }

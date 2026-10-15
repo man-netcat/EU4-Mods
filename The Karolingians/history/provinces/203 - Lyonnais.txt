@@ -1,8 +1,8 @@
 # 203 Lyonnais - Principal cities: Lyon
 
-owner = LOT
-controller = LOT
-add_core = LOT
+owner = DAU
+controller = DAU
+add_core = DAU
 capital = "Lyon"
 culture = burgundian
 religion = catholic
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = LOT
-	controller = LOT
-	add_core = LOT
+	owner = DAU
+	controller = DAU
+	add_core = DAU
 }

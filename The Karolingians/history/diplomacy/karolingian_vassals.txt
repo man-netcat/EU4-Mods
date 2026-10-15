@@ -48,4 +48,12 @@ union = {
 	first = GER
 	second = BAV
 }
+union = {
+	first = ITA
+	second = PRO
+}
+union = {
+	first = LOT
+	second = DAU
+}
 867.1.1 = { celestial_emperor = TNG }
