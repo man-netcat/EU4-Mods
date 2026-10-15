@@ -3980,6 +3980,18 @@ turko_semitic = { #Levantine
 
 maghrebi = {
 	graphical_culture = muslimgfx
+	maghrebi = {
+		primary = SIC
+		dynasty_names = {
+			"Salimid" "Hammadid" "Hafsid" "Zayanid" "Marinid"
+		}
+		male_names = {
+			Aaron Abanoub Abderahman "Abd-al-Aziz" "Abdul-Haq" "Abdul-Madjid" "Abdul-Salaam" Abdullah Abianos Abisalom Ablarion Abraam "Abu-Bakr" Adnan Agathon Agathonikos Agathos Ahmad Akbar Alam Ali Amr Androus Anthinos Arsenios Ashraf Asim Athanasios Badr Bashir Biktor Binyamin Bishoi Boutros Danyal Dawlat "Da oud" Ezra Farhan Firuz "Gabri el" Georgios Habil Hakam Hammud Hanri Haroun Hisham Hussayn Ibrahim Ilyas "Is mail" Jawdat Jerjer Khalil Krystafer Latif Lot Malik Matta Mehtar Mikail Mikhael Milad Mina Muammar Muhammad Mukhtar Murad Murshid Musa Nabil Nasir Nassib Pamin Qadir "Ra uf" Rafiq Ridwan Sabah Salim "Sha ban" Sharif Suhail Tadros Tayyib Touma Usama Walid Yahya Yared Yassir Youkhanna Youssef Zaia Zakariyah
+		}
+		female_names = {
+			Acenith Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima Jamila Khadija Majida Mariam Nabila Nura Radiya Rana Sacmis Safiya Samira Suhaila Tawaret Taweret Titi Thuriya Zara Zahra
+		}
+	}
 	moroccan = {
 		primary = MOR
 		dynasty_names = {

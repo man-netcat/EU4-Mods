@@ -32,7 +32,7 @@ from build import (
 # this mod's 867 culture/religion expectations, checked against the files
 # the build writes
 CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
-CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310}
+CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310, 124, 125, 4736, 4737}
 MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
 from build import effective  # noqa: E402
 
