@@ -1,0 +1,25 @@
+# - Susa
+
+owner = AGL
+controller = AGL
+add_core = AGL
+capital = "Susa"
+culture = tunisian
+religion = sunni
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = sugar
+base_manpower = 2
+is_city = yes
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+
+867.1.1 = {
+	owner = AGL
+	controller = AGL
+	add_core = AGL
+}

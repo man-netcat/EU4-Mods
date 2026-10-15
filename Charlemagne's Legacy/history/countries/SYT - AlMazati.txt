@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = tunisian
+religion = sunni
+capital = 355
+867.1.1 = {
+	monarch = {
+		name = "Al-Khayr"
+		dynasty = "al-Mazâtî"
+		birth_date = 847.1.1
+		death_date = 903.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

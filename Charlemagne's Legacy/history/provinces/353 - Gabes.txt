@@ -1,0 +1,25 @@
+#353 - Tataouine
+
+owner = AGL
+controller = AGL
+add_core = AGL
+capital = "Tataouine"
+culture = tunisian
+religion = sunni
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+867.1.1 = {
+	owner = AGL
+	controller = AGL
+	add_core = AGL
+}

@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = tunisian
+religion = sunni
+capital = 2450
+867.1.1 = {
+	monarch = {
+		name = "Masnsen"
+		dynasty = "Tanata"
+		birth_date = 840.1.1
+		death_date = 890.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

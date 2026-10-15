@@ -1,0 +1,25 @@
+# - Ghadames
+
+owner = GHA
+controller = GHA
+add_core = GHA
+capital = "Ghadames"
+culture = tunisian
+religion = sunni
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = spices #Dates
+base_manpower = 1
+is_city = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = GHA
+	controller = GHA
+	add_core = GHA
+}

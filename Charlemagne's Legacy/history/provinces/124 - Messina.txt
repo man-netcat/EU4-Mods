@@ -1,0 +1,26 @@
+#124 - Messina
+
+owner = SIC
+controller = SIC
+add_core = SIC
+add_core = NAP
+capital = "Messina"
+culture = sicilian
+religion = sunni
+hre = no
+base_tax = 6
+base_production = 6
+trade_goods = fish
+base_manpower = 5
+is_city = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+867.1.1 = {
+	owner = SIC
+	controller = SIC
+	add_core = SIC
+}

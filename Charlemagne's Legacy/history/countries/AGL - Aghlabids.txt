@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = tunisian
+religion = sunni
+capital = 2454
+867.1.1 = {
+	monarch = {
+		name = "Muhammad"
+		dynasty = "Aghlabid"
+		birth_date = 830.1.1
+		death_date = 875.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	heir = {
+		name = "Ibrahim"
+		monarch_name = "Ibrahim"
+		dynasty = "Aghlabid"
+		birth_date = 831.1.1
+		death_date = 902.1.1
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}

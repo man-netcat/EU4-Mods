@@ -1,0 +1,25 @@
+# - Thubaqt
+
+owner = TLP
+controller = TLP
+add_core = TLP
+capital = "Thubaqt"
+culture = tunisian
+religion = sunni
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = cloth
+base_manpower = 1
+is_city = yes
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+867.1.1 = {
+	owner = TLP
+	controller = TLP
+	add_core = TLP
+}

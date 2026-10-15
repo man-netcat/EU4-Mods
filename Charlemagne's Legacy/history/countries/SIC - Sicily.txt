@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = maghrebi
+religion = sunni
+capital = 125
+867.1.1 = {
+	monarch = {
+		name = "Khafaja"
+		dynasty = "Salimid"
+		birth_date = 810.1.1
+		death_date = 869.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
