@@ -5,8 +5,8 @@ capital = "Tajhari"
 culture = berber
 # - Tajhari (Idehan Murzuq)
 culture = berber
-religion = sunni
-religion = sunni
+religion = ibadi
+religion = ibadi
 hre = no
 hre = no
 base_tax = 1

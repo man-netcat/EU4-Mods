@@ -3740,7 +3740,7 @@ turko_semitic = { #Levantine
 		}
 		male_names = {
 			Abdul-Azeem Abdul-Hamid Abdul-Lateef Abdul-Razzaq Abdul-Wahad Abdullah Adhid Adil Akab "Ala i" Ali Amir
-			Ashraf Aziz Bashar Boutros "Da ud" Faisal Fayiz Ghazi Hakam Hamdan Hussayn Ibrahim Isa "Is mail" Ismat
+			Ashraf Aziz Bashar Boutros "Da ud" Faisal Fayiz Ghazi Hakam Hamdan Hussayn Ibrahim Isa Ismail Ismat
 			Jahan Jamil Kamran Khalid Khudayar Majid "Mas ud" Muaddam Muhammad Muhsin Mukhtar Murad Musa Muzaffar Nuri
 			Radhi Rasul "Sa ud" Seyfullah Sharaf Sirhan Taimur Tawfiq Umaya Wahid Yahya "Ya qub" Yasar Youkhanna Zahir
 		}
@@ -3986,10 +3986,32 @@ maghrebi = {
 			"Salimid" "Hammadid" "Hafsid" "Zayanid" "Marinid"
 		}
 		male_names = {
-			Aaron Abanoub Abderahman "Abd-al-Aziz" "Abdul-Haq" "Abdul-Madjid" "Abdul-Salaam" Abdullah Abianos Abisalom Ablarion Abraam "Abu-Bakr" Adnan Agathon Agathonikos Agathos Ahmad Akbar Alam Ali Amr Androus Anthinos Arsenios Ashraf Asim Athanasios Badr Bashir Biktor Binyamin Bishoi Boutros Danyal Dawlat "Da oud" Ezra Farhan Firuz "Gabri el" Georgios Habil Hakam Hammud Hanri Haroun Hisham Hussayn Ibrahim Ilyas "Is mail" Jawdat Jerjer Khalil Krystafer Latif Lot Malik Matta Mehtar Mikail Mikhael Milad Mina Muammar Muhammad Mukhtar Murad Murshid Musa Nabil Nasir Nassib Pamin Qadir "Ra uf" Rafiq Ridwan Sabah Salim "Sha ban" Sharif Suhail Tadros Tayyib Touma Usama Walid Yahya Yared Yassir Youkhanna Youssef Zaia Zakariyah
+			Aaron Abanoub Abderahman "Abd-al-Aziz" "Abdul-Haq" "Abdul-Madjid" "Abdul-Salaam" Abdullah Abianos Abisalom Ablarion Abraam "Abu-Bakr" Adnan Agathon Agathonikos Agathos Ahmad Akbar Alam Ali Amr Androus Anthinos Arsenios Ashraf Asim Athanasios Badr Bashir Biktor Binyamin Bishoi Boutros Danyal Dawlat Daoud Ezra Farhan Firuz Gabriel Georgios Habil Hakam Hammud Hanri Haroun Hisham Hussayn Ibrahim Ilyas Ismail Jawdat Jerjer Khalil Krystafer Latif Lot Malik Matta Mehtar Mikail Mikhael Milad Mina Muammar Muhammad Mukhtar Murad Murshid Musa Nabil Nasir Nassib Pamin Qadir Rauf Rafiq Ridwan Sabah Salim Shaban Sharif Suhail Tadros Tayyib Touma Usama Walid Yahya Yared Yassir Youkhanna Youssef Zaia Zakariyah
 		}
 		female_names = {
 			Acenith Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima Jamila Khadija Majida Mariam Nabila Nura Radiya Rana Sacmis Safiya Samira Suhaila Tawaret Taweret Titi Thuriya Zara Zahra
+		}
+	}
+	baranis = {
+		dynasty_names = {
+			"Hammadid" "Zirid" "Hafsid" "Almohad"
+		}
+		male_names = {
+			Abakada Abazza Abbas Abdul-Azeem Abdul-Haleem Abdul-Kareem Abdul-Rahman Abdullah Abidin Adal Adam Aderbal Adergazuz Adherbal Admer Adrir Adum Afaghis Afalawas Afalku Afer Afulay Agafay Agama Agdada Agdun Agellid Aggur Aghali Aghecher Aghilas Agwillul Ahamatu Aheyyad Ahmad Ajdir Ajeddig Akaday Akateiaji Akli Akorakor Aksel Aksil Akutla Akzer Ali Alyamas Amawal Amayas Ambay Amdegh Amellal Amennay Ameska Amessan Amin Amma Ammuc Amray Amri Amud Anaba Annaber Antalas Anwa Aras Asad Asaru Asirem Aszellay
+		}
+		female_names = {
+			Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah Adiba Adilah Adilia Adiva Adjan Aeesha Aesha Aisha Amira Badeea Badia Badra Bahac Bahiyya Bajila Bakka Baraah Barakah Baria Bashira Basilie Basima Basimah Bghnat Bibya Bilqis Cala Cantara Daisha Dalal Dasin Dema Dimah Dinara Dua Durra Durriyya Edza
+		}
+	}
+	butr = {
+		dynasty_names = {
+			"Marinid" "Zayyanid" "Wattasid" "Rustamid"
+		}
+		male_names = {
+			Abakada Abazza Abbas Abdul-Azeem Abdul-Haleem Abdul-Kareem Abdul-Rahman Abdullah Abidin Adal Adam Aderbal Adergazuz Adherbal Admer Adrir Adum Afaghis Afalawas Afalku Afer Afulay Agafay Agama Agdada Agdun Agellid Aggur Aghali Aghecher Aghilas Agwillul Ahamatu Aheyyad Ahmad Ajdir Ajeddig Akaday Akateiaji Akli Akorakor Aksel Aksil Akutla Akzer al-Athir Ali Alyamas Amawal Amayas Ambay Amdegh Amellal Amennay Ameska Amessan Amin Amma Ammuc Amray Amri Amud Anaba Annaber Antalas Anwa Aras Asad Asaru Asirem
+		}
+		female_names = {
+			Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah Adiba Adilah Adilia Adiva Adjan Aeesha Aesha Aisha Amira Badeea Badia Badra Bahac Bahiyya Bajila Bakka Baraah Barakah Baria Bashira Basilie Basima Basimah Bghnat Bibya Bilqis Cala Cantara Daisha Dalal Dasin Dema Dimah Dinara Dua Durra Durriyya Edza
 		}
 	}
 	moroccan = {
