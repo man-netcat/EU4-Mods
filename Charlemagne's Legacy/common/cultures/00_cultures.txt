@@ -1419,7 +1419,6 @@ iberian	= {
 			Thashim Umayna Urraka Usayma Utayqa Wahida Wallada Yasmin Zahida Zahra
 		}
 	}
-
 	andalucian = {
 		primary = GRA
 		province = { local_has_caravel = yes local_has_galleon = yes }
@@ -1443,6 +1442,7 @@ iberian	= {
 			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
 		}
 	}
+
 	brazilian = {
 		province = { local_has_caravel = yes local_has_galleon = yes }
 		primary = BRZ
@@ -1738,7 +1738,7 @@ french	= {
 		
 		primary = BUR
 	}
-	occitan = {
+	occitain = {
 		
 		primary = PRO
 	}
