@@ -5,6 +5,10 @@ vassal = {
 	second = ARG
 }
 vassal = {
+	first = ADU
+	second = PRT
+}
+vassal = {
 	first = AQI
 	second = GTH
 }

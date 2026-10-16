@@ -126,7 +126,7 @@ class ReleasableTag(Tag):
 #: Dublin sleeps until rebels or a manual release wake it (cores seeded via
 #: seed_cores). Listed here so validate exempts them from the
 #: landed checks, and selfcheck fails any unlisted landless tag.
-DORMANT = frozenset({"YED", "ODS", "DNI", "DUB"})
+DORMANT = frozenset({"YED", "ODS", "DNI", "DUB", "GAL"})
 
 
 TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4}

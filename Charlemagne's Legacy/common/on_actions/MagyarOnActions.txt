@@ -37,4 +37,10 @@ on_startup = {
 			force_limit_percentage = 1.0
 		}
 	}
+	# The Upper March never loved Cordoba: Saraqustah starts restive under
+	# the Banu Qasi (vanilla counts liberty desire from 50 as disloyal).
+	if = {
+		limit = { tag = ARG }
+		add_liberty_desire = 50
+	}
 }

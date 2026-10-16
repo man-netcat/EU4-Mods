@@ -1,0 +1,28 @@
+government = monarchy
+government_rank = 3
+technology_group = western
+primary_culture = galician
+religion = catholic
+capital = 206
+867.1.1 = {
+	monarch = {
+		name = "Hermenexildo"
+		dynasty = "Menéndez"
+		birth_date = 847.1.1
+		death_date = 912.5.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Arias"
+		monarch_name = "Arias"
+		dynasty = "Menéndez"
+		birth_date = 865.10.1
+		death_date = 924.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

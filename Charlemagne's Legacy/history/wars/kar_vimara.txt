@@ -2,7 +2,7 @@ name = "Alfonso III's Invasion of Andalusia"
 war_goal = {
 	type = take_claim
 	casus_belli = cb_conquest
-	province = 218
+	province = 231
 }
 
 867.1.1 = {

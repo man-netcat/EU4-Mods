@@ -776,6 +776,7 @@ def step_diplomacy() -> None:
 def step_wars() -> None:
     wdir = os.path.join(MOD, "history", "wars")
     os.makedirs(wdir, exist_ok=True)
+    live = set()
     for w in WARS:
         sides = "\n".join(
             [f"\tadd_attacker = {t}" for t in w.attackers]
@@ -797,7 +798,12 @@ def step_wars() -> None:
         )
         p = os.path.join(wdir, f"{w.slug}.txt")
         write_out(p, txt)
+        live.add(f"{w.slug}.txt")
         print(f"wrote {p}  ({w.title})")
+    for fn in sorted(os.listdir(wdir)):
+        if fn.endswith(".txt") and fn not in live:
+            os.remove(os.path.join(wdir, fn))
+            print(f"removed stale {fn}")
 
 
 @lru_cache(maxsize=1)
@@ -833,6 +839,11 @@ def step_vanilla_countries() -> None:
     pairs += [(fb.tag, fb.ck3_title) for fb in FORMABLES]
     for code, title in pairs:
         want = colors.get(title) if title else None
+        if want is None:
+            # Dormant tags with no CK3 title colour (Galicia) carry their
+            # own declared colour instead.
+            row = BY_TAG.get(code)
+            want = row.color if row and row.color[0] is not None else None
         base = vanilla.get(code)
         if not want or not base:
             continue

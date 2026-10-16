@@ -2,7 +2,9 @@
 
 owner = ASU
 controller = ASU
+add_core = GAL
 add_core = ASU
+add_core = GAL
 capital = "Pontevedra"
 culture = galician
 religion = catholic
