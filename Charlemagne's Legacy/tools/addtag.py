@@ -15,17 +15,25 @@ reassign provinces from their current owner).
 import argparse
 import os
 import re
-import sqlite3
 import sys
 import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import db  # noqa: E402
 from eu4 import GAME, vanilla_prov_file  # noqa: E402
+from models import (  # noqa: E402
+    Culture as CultureRow,
+    Province as ProvinceRow,
+    Religion as ReligionRow,
+    Tag as TagRow,
+    TagProvince as TagProvinceRow,
+    TagReform as TagReformRow,
+)
+from sqlalchemy import func  # noqa: E402
 
 import ck3  # noqa: E402
 
-DB = os.path.join(HERE, "tags.db")
 LOC = os.path.join(HERE, "..", "localisation", "replace", "countries_l_english.yml")
 RANK_OF = {"c": 1, "d": 2, "k": 3, "e": 4}
 _ASCII_MAP = {"æ": "ae", "Æ": "Ae", "œ": "oe", "Œ": "Oe", "ø": "o", "Ø": "O",
@@ -102,29 +110,29 @@ def main(argv):
         a.pids = extra + (a.pids or [])
         a.tag = a.title = None
 
-    c = sqlite3.connect(DB)
+    s = db.session()
     if a.to:
         if a.tag or a.title:
             sys.exit("--to takes only pids, no tag/title")
-        if not c.execute("select tag from tags where tag=?", (a.to,)).fetchone():
+        if s.get(TagRow, a.to) is None:
             sys.exit(f"{a.to} is no tag in tags.db")
-        taken = c.execute(
-            f"select tag,pid from tag_provinces where pid in ({','.join('?' * len(a.pids))})",
-            a.pids).fetchall()
+        taken = s.query(TagProvinceRow.tag, TagProvinceRow.pid).filter(
+            TagProvinceRow.pid.in_(a.pids)).all()
         if taken and not a.take:
             sys.exit(f"provinces owned already ({taken}); pass --take to reassign")
         for tag, pid in taken:
-            c.execute("delete from tag_provinces where tag=? and pid=?", (tag, pid))
+            s.delete(s.get(TagProvinceRow, (tag, pid)))
             print(f"  took {pid} from {tag}")
     if a.to:
         datas = {pid: prov_data(pid) for pid in a.pids}
         for pid in a.pids:
             name, cul, rel = datas[pid]
-            if not c.execute("select pid from provinces where pid=?", (pid,)).fetchone():
-                c.execute("INSERT INTO provinces VALUES (?,?,?,?,?)",
-                          (pid, name, a.culture or cul, a.religion or rel, 0))
-            c.execute("INSERT INTO tag_provinces VALUES (?,?)", (a.to, pid))
-        c.commit()
+            if s.get(ProvinceRow, pid) is None:
+                s.add(ProvinceRow(pid=pid, name=name, culture=a.culture or cul,
+                                  religion=a.religion or rel, fort=False))
+            s.add(TagProvinceRow(tag=a.to, pid=pid))
+        s.commit()
+        s.close()
         print(f"{a.to} gains {len(a.pids)} provinces")
         return 0
 
@@ -146,15 +154,14 @@ def main(argv):
         sys.exit("tag must be 3 uppercase letters")
     if a.tag in vanilla_tags() and not a.reuse:
         sys.exit(f"{a.tag} is a vanilla tag (pass --reuse to take it over deliberately)")
-    if c.execute("select tag from tags where tag=?", (a.tag,)).fetchone():
+    if s.get(TagRow, a.tag) is not None:
         sys.exit(f"{a.tag} already in tags.db")
-    taken = c.execute(
-        f"select tag,pid from tag_provinces where pid in ({','.join('?' * len(a.pids))})",
-        a.pids).fetchall()
+    taken = s.query(TagProvinceRow.tag, TagProvinceRow.pid).filter(
+        TagProvinceRow.pid.in_(a.pids)).all()
     if taken and not a.take:
         sys.exit(f"provinces owned already ({taken}); pass --take to reassign")
     for tag, pid in taken:
-        c.execute("delete from tag_provinces where tag=? and pid=?", (tag, pid))
+        s.delete(s.get(TagProvinceRow, (tag, pid)))
         print(f"  took {pid} from {tag}")
 
     rank = a.rank or RANK_OF.get(a.title.split("_")[0])
@@ -176,9 +183,13 @@ def main(argv):
     else:
         from culturelift import ruler_default  # noqa: E402
 
-        culture = ruler_default(a.title) or datas[capital][1]
+        culture = ruler_default(a.title, s) or datas[capital][1]
     religion = a.religion or datas[capital][2]
-    seq = c.execute("select max(seq) from tags").fetchone()[0] + 1
+    for key, model, val in (("culture", CultureRow, culture),
+                            ("religion", ReligionRow, religion)):
+        if s.get(model, val) is None:
+            sys.exit(f"{val} is no {key} in tags.db - lift it first")
+    seq = s.query(func.max(TagRow.seq)).scalar() + 1
     country_file = (a.file or ascii_name(name)) + ".txt"
     from eu4 import load_vanilla_countries
 
@@ -189,20 +200,20 @@ def main(argv):
             "pass --file to pick a free name"
         )
 
-    values = ((a.tag, seq, rank, name, capital, culture, religion, a.title, None,
-               a.gov, a.tech, "", 0) + tuple(colors[a.title])
-              + (country_file, 250, 5, 0, 10,
-                 "[]", "[]", "[]", "[]", None, None, None, None))
-    c.execute(f"INSERT INTO tags VALUES ({','.join('?' * len(values))})", values)
+    r, g, bl = colors[a.title]
+    s.add(TagRow(tag=a.tag, seq=seq, rank=rank, name=name, capital=capital,
+                 culture=culture, religion=religion, ck3_title=a.title,
+                 government=a.gov, technology_group=a.tech, color_r=r,
+                 color_g=g, color_b=bl, country_file=country_file))
     for pid in a.pids:
-        if not c.execute("select pid from provinces where pid=?", (pid,)).fetchone():
+        if s.get(ProvinceRow, pid) is None:
             pname, pcul, prel = datas[pid]
-            c.execute("INSERT INTO provinces VALUES (?,?,?,?,?)",
-                      (pid, pname, a.culture or pcul, a.religion or prel, 0))
-        c.execute("INSERT INTO tag_provinces VALUES (?,?)", (a.tag, pid))
-    c.execute("INSERT INTO tag_reforms VALUES (?,?,?)",
-              (a.tag, seq, "feudalism_reform"))
-    c.commit()
+            s.add(ProvinceRow(pid=pid, name=pname, culture=a.culture or pcul,
+                              religion=a.religion or prel, fort=False))
+        s.add(TagProvinceRow(tag=a.tag, pid=pid))
+    s.add(TagReformRow(tag=a.tag, pos=seq, reform="feudalism_reform"))
+    s.commit()
+    s.close()
 
     with open(LOC, encoding="utf-8-sig") as f:
         lines = f.read().split("\n")

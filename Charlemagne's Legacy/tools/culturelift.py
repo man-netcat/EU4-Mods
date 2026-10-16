@@ -10,18 +10,18 @@ falls back to the vanilla province culture.
 
 import os
 import re
-import sqlite3
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import ck3  # noqa: E402
+import db  # noqa: E402
+from models import Culture as CultureRow  # noqa: E402
 
 CULT_FILE = os.path.join(HERE, "..", "common", "cultures", "00_cultures.txt")
 CULT_LOC = os.path.join(
     HERE, "..", "localisation", "karolingian_cultures_l_english.yml"
 )
-DB = os.path.join(HERE, "tags.db")
 CK3_LISTS = os.path.join(
     ck3.GAME_CK3, "common", "culture", "name_lists"
 )
@@ -258,10 +258,10 @@ def file_has(eu4key):
 def have_culture(eu4key):
     if eu4key is None or not file_has(eu4key):
         return False
-    db = sqlite3.connect(DB)
-    return bool(
-        db.execute("SELECT name FROM cultures WHERE name=?", (eu4key,)).fetchone()
-    )
+    s = db.session()
+    found = s.get(CultureRow, eu4key) is not None
+    s.close()
+    return found
 
 
 def _ck3_list(spec):
@@ -317,7 +317,7 @@ def _clean(tok):
     return tok or None
 
 
-def lift_culture(eu4key):
+def lift_culture(eu4key, session=None):
     """Insert a missing culture from its CK3 name list. Returns True."""
     spec = LIFT_SPECS[eu4key]
     block = _ck3_list(spec)
@@ -378,9 +378,11 @@ def lift_culture(eu4key):
         loc += f' {eu4key}:0 "{spec["display"]}"\n'
         open(CULT_LOC, "w", encoding="utf-8-sig", newline="").write(loc)
 
-    db = sqlite3.connect(DB)
-    db.execute("INSERT OR IGNORE INTO cultures(name) VALUES (?)", (eu4key,))
-    db.commit()
+    s = session or db.session()
+    s.merge(CultureRow(name=eu4key))
+    if session is None:
+        s.commit()
+        s.close()
     print(
         f"lifted {eu4key} ({spec['display']}): "
         f"{len(dyns)} dynasties, {len(males)}/{len(females)} names"
@@ -388,10 +390,13 @@ def lift_culture(eu4key):
     return True
 
 
-def ensure_culture(ck3cult):
+def ensure_culture(ck3cult, session=None):
     """EU4 key for a CK3 culture: repair the DB row when the key exists,
     lift the whole culture when it doesn't (needs a LIFT_SPECS entry),
-    else None so the caller falls back to the land culture."""
+    else None so the caller falls back to the land culture. Pass the
+    caller's session when one already holds the database: a second
+    connection deadlocks against an uncommitted write (the addtag
+    --take-then-lift crash)."""
     eu4key = CK3_TO_EU4.get(ck3cult) if ck3cult else None
     if eu4key is None:
         return None
@@ -399,12 +404,13 @@ def ensure_culture(ck3cult):
         if eu4key not in LIFT_SPECS:
             print(f"  {ck3cult} -> {eu4key}: no lift spec, keeping land culture")
             return None
-        lift_culture(eu4key)
+        lift_culture(eu4key, session)
     else:
-        db = sqlite3.connect(DB, timeout=60)
-        db.execute("INSERT OR IGNORE INTO cultures(name) VALUES (?)", (eu4key,))
-        db.commit()
-        db.close()
+        s = session or db.session()
+        s.merge(CultureRow(name=eu4key))
+        if session is None:
+            s.commit()
+            s.close()
     return eu4key
 
 
@@ -426,14 +432,14 @@ if __name__ == "__main__":
     sys.exit(selftest())
 
 
-def ruler_default(title):
+def ruler_default(title, session=None):
     """EU4 culture for a new tag from its title's 867 holder (None to
     fall back to the vanilla province culture)."""
     holder, cc = holder_culture(title)
     if not cc:
         print(f"  no holder culture for {title}, keeping land culture")
         return None
-    eu4key = ensure_culture(cc)
+    eu4key = ensure_culture(cc, session)
     if eu4key:
         print(f"  {title}: holder {holder} is {cc} -> {eu4key}")
     return eu4key

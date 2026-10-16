@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
 import json, os, re, shutil
-import sqlite3
 from collections import defaultdict
 from functools import lru_cache
 from pathlib import Path
 
 from ck3 import ck3_sync
+from db import core_deny_map
 from histgen import (
     country_definition,
     country_history,
@@ -516,27 +516,19 @@ def strip_dead_cores(text, keep):
     return "\n".join(out) + "\n"
 
 
-def strip_denied_cores(text, owner):
+def strip_denied_cores(text, owner, denied):
     # Dormant claims judged dead by hand live in core_deny(holder, owner):
-    # a living holder keeps no cores on that owner's land.
+    # a living holder keeps no cores on that owner's land. The map is
+    # preloaded once per build (db.core_deny_map) - never per province.
     if not owner:
         return text
-    db = sqlite3.connect(
-        os.path.join(os.path.dirname(os.path.abspath(__file__)), "tags.db")
-    )
-    denied = {
-        r[0]
-        for r in db.execute(
-            "SELECT holder FROM core_deny WHERE owner=?", (owner,)
-        ).fetchall()
-    }
-    db.close()
-    if not denied:
+    gone = denied.get(owner)
+    if not gone:
         return text
     out = []
     for ln in text.splitlines():
         m = re.match(r"^\s*add_core\s*=\s*([A-Z]{3})\b", ln)
-        if m and m.group(1) in denied:
+        if m and m.group(1) in gone:
             continue
         out.append(ln)
     return "\n".join(out) + "\n"
@@ -592,6 +584,7 @@ def step_provinces(argv):
     missing = set(todo) - set(PROVINCES)
     if missing:
         raise SystemExit(f"provinces not in the database: {sorted(missing)}")
+    denied = core_deny_map()
     for pid in todo:
         src = vanilla_prov_file(pid)
         if not src:
@@ -611,7 +604,7 @@ def step_provinces(argv):
             if ln not in new.splitlines():
                 new += ln + "\n"
         new = strip_dead_cores(new, keep)
-        new = strip_denied_cores(new, tag)
+        new = strip_denied_cores(new, tag, denied)
         new = tidy_province(new)
 
         open(

@@ -168,6 +168,15 @@ class SeedCore(Base):
     pid = Column(Integer, ForeignKey("provinces.pid"), primary_key=True)
 
 
+class CoreDeny(Base):
+    """A judged-dormant claim: HOLDER keeps no cores on OWNER's land."""
+
+    __tablename__ = "core_deny"
+
+    holder = Column(String, ForeignKey("tags.tag"), primary_key=True)
+    owner = Column(String, ForeignKey("tags.tag"), primary_key=True)
+
+
 class Diplomacy(Base):
     __tablename__ = "diplomacy"
 

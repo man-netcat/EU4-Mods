@@ -3,6 +3,7 @@
 import json, os, re, sys
 from collections import Counter
 from build import parse
+from db import core_deny_map
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -336,14 +337,8 @@ def run() -> int:
         print("        " + m)
 
     denied = {}
-    import sqlite3  # noqa: E402
-
-    db = sqlite3.connect(
-        os.path.join(os.path.dirname(os.path.abspath(__file__)), "tags.db")
-    )
-    for holder, owner in db.execute("SELECT holder, owner FROM core_deny").fetchall():
-        denied.setdefault(owner, set()).add(holder)
-    db.close()
+    for owner, holders in core_deny_map().items():
+        denied.setdefault(owner, set()).update(holders)
     stray = []
     for pid, path in files.items():
         s, _, _ = parse(path)
