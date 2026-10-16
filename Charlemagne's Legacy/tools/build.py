@@ -15,7 +15,7 @@ def main() -> int:
 
     phases = [
         ("check the Tag database", selfcheck),
-        ("generate province files", step_provinces, []),
+        ("generate province files", step_provinces),
         ("generate country files", step_countries),
         ("generate the empire decision", step_hre),
         ("write starting vassals", step_diplomacy),

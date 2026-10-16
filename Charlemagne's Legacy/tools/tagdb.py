@@ -58,6 +58,8 @@ class Tag(ABC):
             raise TypeError(
                 "Tag is abstract - use LandedTag, FormableTag or ReleasableTag"
             )
+        if hasattr(self, "provinces"):
+            object.__setattr__(self, "provinces", frozenset(self.provinces))
 
 
 @dataclass(frozen=True)
@@ -92,10 +94,6 @@ class LandedTag(Tag):
     rivals: tuple = ()
     friends: tuple = ()
 
-    def __post_init__(self):
-        super().__post_init__()
-        object.__setattr__(self, "provinces", frozenset(self.provinces))
-
 
 @dataclass(frozen=True)
 class FormableTag(Tag):
@@ -114,10 +112,6 @@ class FormableTag(Tag):
     renames: tuple = ()
     dynasty: Optional[str] = None
     exclusive: bool = False
-
-    def __post_init__(self):
-        super().__post_init__()
-        object.__setattr__(self, "provinces", frozenset(self.provinces))
 
 
 @dataclass(frozen=True)
@@ -188,6 +182,14 @@ CTRY_DATE = "867.1.1"
 ProvinceInfo = namedtuple("ProvinceInfo", "pid name culture religion fort")
 
 
+def _grouped(rows, key, value=None):
+    """{row.key: [row.value...]} in query order; value defaults to the row."""
+    out = {}
+    for r in rows:
+        out.setdefault(getattr(r, key), []).append(r if value is None else value(r))
+    return out
+
+
 def _load() -> tuple[
     list[LandedTag],
     list[Diplomacy],
@@ -200,42 +202,32 @@ def _load() -> tuple[
         raise SystemExit(f"{DB_PATH} is missing - the tag database lives in git")
     with Session() as s:
         rows = s.query(TagRow).order_by(TagRow.seq).all()
-        areas: dict[str, list] = {}
-        for r in s.query(TagArea).order_by(TagArea.area):
-            areas.setdefault(r.tag, []).append(r.area)
-        lands: dict[str, list] = {}
-        for r in s.query(TagProvince).order_by(TagProvince.pid):
-            lands.setdefault(r.tag, []).append(r.pid)
-        reforms: dict[str, list] = {}
-        for r in s.query(TagReform).order_by(TagReform.tag, TagReform.pos):
-            reforms.setdefault(r.tag, []).append(r.reform)
-        suppress: dict[str, list] = {}
-        for r in s.query(TagSuppress).order_by(TagSuppress.key):
-            suppress.setdefault(r.tag, []).append(r.key)
-        seeds: dict[int, list] = {}
-        for r in s.query(SeedCoreRow).order_by(SeedCoreRow.tag):
-            seeds.setdefault(r.pid, []).append(r.tag)
-        rivals: dict[str, list] = {}
-        for r in s.query(RivalryRow).order_by(RivalryRow.other):
-            rivals.setdefault(r.tag, []).append(r.other)
-        friends: dict[str, list] = {}
-        for r in s.query(FriendshipRow).order_by(FriendshipRow.other):
-            friends.setdefault(r.tag, []).append(r.other)
-        fareas: dict[str, list] = {}
-        for r in s.query(FormableArea).order_by(FormableArea.area):
-            fareas.setdefault(r.formable, []).append(r.area)
-        fprovs: dict[str, list] = {}
-        for r in s.query(FormableProvince).order_by(FormableProvince.pid):
-            fprovs.setdefault(r.formable, []).append(r.pid)
-        frenames: dict[str, list] = {}
-        for r in (
-            s.query(FormableRename)
-            .order_by(FormableRename.culture, FormableRename.tag)
-            .all()
-        ):
-            frenames.setdefault(r.formable, []).append(
-                (r.culture, r.tag, r.name)
-            )
+        areas = _grouped(s.query(TagArea).order_by(TagArea.area), "tag", lambda r: r.area)
+        lands = _grouped(s.query(TagProvince).order_by(TagProvince.pid), "tag", lambda r: r.pid)
+        reforms = _grouped(
+            s.query(TagReform).order_by(TagReform.tag, TagReform.pos), "tag", lambda r: r.reform
+        )
+        suppress = _grouped(s.query(TagSuppress).order_by(TagSuppress.key), "tag", lambda r: r.key)
+        seeds = _grouped(s.query(SeedCoreRow).order_by(SeedCoreRow.tag), "pid", lambda r: r.tag)
+        rivals = _grouped(
+            s.query(RivalryRow).order_by(RivalryRow.other), "tag", lambda r: r.other
+        )
+        friends = _grouped(
+            s.query(FriendshipRow).order_by(FriendshipRow.other), "tag", lambda r: r.other
+        )
+        fareas = _grouped(
+            s.query(FormableArea).order_by(FormableArea.area), "formable", lambda r: r.area
+        )
+        fprovs = _grouped(
+            s.query(FormableProvince).order_by(FormableProvince.pid),
+            "formable",
+            lambda r: r.pid,
+        )
+        frenames = _grouped(
+            s.query(FormableRename).order_by(FormableRename.culture, FormableRename.tag),
+            "formable",
+            lambda r: (r.culture, r.tag, r.name),
+        )
         formables = [
             FormableTag(
                 tag=r.tag,
@@ -337,8 +329,6 @@ BY_FORMABLE: dict[str, FormableTag] = {f.tag: f for f in FORMABLES}
 
 FORMABLE_TAGS: set = set(BY_FORMABLE)
 
-ALL_TAGS: list[str] = [t.tag for t in TAGS]
-
 KEPT_REALMS: set = {t.tag for t in TAGS}
 
 RANK: dict = {t.tag: rank_of(t) for t in TAGS}
@@ -352,8 +342,6 @@ DIPLOMACY: tuple = tuple(DIPLOMACY)
 AREA_OWNERS: dict = {t.tag: t.areas for t in TAGS if t.areas}
 
 PROVINCE_OWNERS: dict = {pid: t.tag for t in TAGS for pid in t.provinces}
-
-TRANSFERS: tuple = tuple((t.tag, tuple(t.provinces)) for t in TAGS if t.provinces)
 
 
 _GROUPS: dict[str, list[str]] = {}
@@ -492,9 +480,6 @@ def selfcheck() -> None:
                     f"formable {fcode}: rename culture {culture} "
                     "covers no starter"
                 )
-    for tag, blocks in TRANSFERS:
-        if tag not in seen:
-            raise ValueError(f"TRANSFERS names {tag}, which is not a Tag")
 
 
 selfcheck()

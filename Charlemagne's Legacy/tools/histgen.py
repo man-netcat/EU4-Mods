@@ -14,6 +14,31 @@ PROVDATA = HERE / "cache" / "provdata.json"
 
 T = "\t"
 
+_PROVDATA = None
+
+
+def _pd():
+    global _PROVDATA
+    if _PROVDATA is None:
+        _PROVDATA = json.load(open(str(PROVDATA)))
+    return _PROVDATA
+
+
+def area_claim_lines(areas) -> list[str]:
+    """One add_permanent_claim block per area (skipping land already cored
+    or claimed): the Reconquista pattern, shared by formation decisions
+    and the HRE restoration."""
+    return [
+        f"{T*3}{a} = {{\n"
+        f"{T*4}limit = {{\n"
+        f"{T*5}NOT = {{ is_core = ROOT }}\n"
+        f"{T*5}NOT = {{ is_permanent_claim = ROOT }}\n"
+        f"{T*4}}}\n"
+        f"{T*4}add_permanent_claim = ROOT\n"
+        f"{T*3}}}"
+        for a in areas
+    ]
+
 
 def ruler_block_for(t) -> str:
     if t.ck3_title:
@@ -100,7 +125,7 @@ def country_definition(t) -> str:
 def requirement_provinces(fcode) -> list[int]:
     """Province ids a formable requires: its areas expanded via provdata
     plus its explicit provinces."""
-    data = json.load(open(str(PROVDATA)))
+    data = _pd()
     fb = BY_FORMABLE[fcode]
     return sorted(
         {int(p) for a in fb.areas for p in data["areas"].get(a, ())}
@@ -128,7 +153,7 @@ def formation_decision(fcode, starters) -> str:
     # the end of FormHUN (the effect below reaches it the same way, so
     # every path converges on one implementation). HUN also carries the
     # migration tooltip below (the only bespoke formable tooltip besides
-    # HLR's own).
+    # HLR's own), and sheds the horse-lords reform for feudalism.
     settle_call = ""
     settle_tip = ""
     magyar_swap = ""
@@ -136,7 +161,6 @@ def formation_decision(fcode, starters) -> str:
         magyar_swap = ("\n\t\t\tif = {\n\t\t\t\tlimit = { has_reform = magyar_horse_lords_reform }\n"
             "\t\t\t\tremove_government_reform = magyar_horse_lords_reform\n\t\t\t}\n"
             "\t\t\tadd_government_reform = feudalism_reform")
-    if fcode == "HUN":
         settle_call = "\n\t\t\tkar_magyar_settlement_effect = yes"
         settle_tip = "\n\t\t\tcustom_tooltip = kar_form_hungary_migration_tooltip"
     home_req = ""
@@ -147,16 +171,7 @@ def formation_decision(fcode, starters) -> str:
         rank_req = f"\n\t\t\tgovernment_rank = {fb.rank_required}"
     elif fb.rank == 3:
         rank_req = "\n\t\t\tNOT = { government_rank = 3 }"
-    claims = "\n".join(
-        f"{T*3}{a} = {{\n"
-        f"{T*4}limit = {{\n"
-        f"{T*5}NOT = {{ is_core = ROOT }}\n"
-        f"{T*5}NOT = {{ is_permanent_claim = ROOT }}\n"
-        f"{T*4}}}\n"
-        f"{T*4}add_permanent_claim = ROOT\n"
-        f"{T*3}}}"
-        for a in fb.areas
-    )
+    claims = "\n".join(area_claim_lines(fb.areas))
     rename = ""
     if fb.renames:
         ordered = sorted(
@@ -271,7 +286,7 @@ def formation_capital_trigger_block(name, pids) -> str:
 
 
 def _trigger_land_lines(pids) -> list[str]:
-    data = json.load(open(str(PROVDATA)))
+    data = _pd()
     want = set(pids)
     used: set = set()
     lines = []

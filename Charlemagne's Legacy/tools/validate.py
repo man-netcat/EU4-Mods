@@ -13,8 +13,6 @@ GAME = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
 MOD = str(HERE.parent)
 PDIR = os.path.join(MOD, "history", "provinces")
 COUNTRY_OUT = os.path.join(MOD, "history", "countries")
-from build import ALL_TAGS  # noqa: E402
-
 from build import TAGS as _REALMS  # noqa: E402
 
 from enc import encname  # noqa: E402
@@ -24,7 +22,6 @@ TAGS = sorted(t.tag for t in _REALMS if t.ck3_title)
 sys.path.insert(0, str(HERE))
 from build import (
     PROVINCES,
-    ALL_TAGS,
     CAPITAL,
     empire_core,
     karling_realms,
@@ -384,7 +381,7 @@ def run() -> int:
 
     print()
     print('== no dead cores ==')
-    alive = set(ALL_TAGS) | {'HLR'}
+    alive = KEPT_REALMS | {'HLR'}
     dead = []
     for pid, path in files.items():
         for c in parse(path)[1]:
@@ -614,7 +611,7 @@ def run() -> int:
             )
         )
     clash = [
-        t for t in set(ALL_TAGS) | FORMABLE_TAGS
+        t for t in KEPT_REALMS | FORMABLE_TAGS
         if t in vtags and t not in VANILLA_REUSE
     ]
     note(not clash, f"no accidental vanilla tag reuse ({', '.join(sorted(clash)) or 'none'})")
@@ -885,7 +882,7 @@ def run() -> int:
                 return int(m.group(1)) if m else None
         return None
 
-    for t in ALL_TAGS:
+    for t in sorted(KEPT_REALMS):
         if t in DORMANT:
             continue
         cap = CAPS.get(t) or vanilla_capital(t)
@@ -901,7 +898,7 @@ def run() -> int:
         )
 
     print("\n== Tag.capital agrees with the country file ==")
-    for t in ALL_TAGS:
+    for t in sorted(KEPT_REALMS):
         spec = BY_TAG.get(t)
         if spec is None or spec.capital is None:
             continue

@@ -1,13 +1,21 @@
 #!/usr/bin/env python3
 
 import json, os, re, shutil
-from collections import defaultdict
 from functools import lru_cache
 from pathlib import Path
 
-from ck3 import ck3_sync
+from ck3 import (
+    ck3_sync,
+    load_chars,
+    load_dynasties,
+    load_houses,
+    load_title_colors,
+    load_titles,
+    resolve,
+)
 from db import core_deny_map
 from histgen import (
+    area_claim_lines,
     country_definition,
     country_history,
     formation_capital_trigger_block,
@@ -19,6 +27,7 @@ from tagdb import (
     AREA_OWNERS,
     BY_FORMABLE,
     BY_TAG,
+    CTRY_DATE,
     DIPLOMACY,
     FORMABLES,
     PROVINCES,
@@ -26,7 +35,7 @@ from tagdb import (
     SEED_CORES,
     TAGS,
     TITLES,
-    TRANSFERS,
+    WARS,
 )
 
 HERE = Path(__file__).resolve().parent
@@ -41,14 +50,7 @@ VANILLA_CDIR = Path(GAME) / "history" / "countries"
 PDIR = PROV_OUT = MOD / "history" / "provinces"
 COUNTRY_OUT = MOD / "history" / "countries"
 
-UNTRACKED_OWNERS = {
-    112: "VEN",
-}
-
-PROVINCE_OWNERS = {**UNTRACKED_OWNERS, **PROVINCE_OWNERS}
-
 CAPITAL = {t.tag: t.capital for t in BY_TAG.values() if t.capital}
-NAME = {tag: BY_TAG[tag].name for tag in AREA_OWNERS}
 
 _PROVDATA = None
 
@@ -73,38 +75,10 @@ def apply_db_culture_religion(text, pid):
     return text
 
 
-LAYER2_MOVES: list = []
-
-
-def _owned(tag, region=None, exclude_regions=()):
-    data = _pd()
-    _AREA_OF, _REGION_OF_AREA = data["area_of"], data["region_of_area"]
-
-    if isinstance(exclude_regions, str):
-        exclude_regions = (exclude_regions,)
-    out = []
-    for pid, pr in data["provs"].items():
-        if pr.get("owner_1444", pr.get("owner")) != tag:
-            continue
-        reg = _REGION_OF_AREA.get(_AREA_OF.get(pid))
-        if region is not None and reg != region:
-            continue
-        if reg in exclude_regions:
-            continue
-        out.append(int(pid))
-    return sorted(out)
-
-
-def _region(pid):
-    data = _pd()
-    return data["region_of_area"].get(data["area_of"].get(str(pid)))
-
-
-def build(verbose=False):
+def build() -> dict:
     data = _pd()
     provs, AREAS = data["provs"], data["areas"]
 
-    LAYER2_MOVES.clear()
     alloc: dict = {}
     owner_of: dict = {}
     overlaps = []
@@ -136,37 +110,17 @@ def build(verbose=False):
         alloc.setdefault(tag, [])
         if pid not in alloc[tag]:
             alloc[tag] = sorted(alloc[tag] + [pid])
-        LAYER2_MOVES.append((pid, provs[str(pid)]["name"], prev, tag))
-
-    for tag, extra in TRANSFERS:
-        claimed = set(alloc.get(tag, ()))
-        for other in alloc:
-            if other != tag:
-                claimed |= set(alloc[other])
-        alloc[tag] = sorted(
-            set(alloc.get(tag, [])) | {p for p in extra if p not in claimed}
-        )
 
     for tag in alloc:
         alloc[tag] = sorted(set(alloc[tag]))
 
-    if verbose:
-        for pid, name, prev, tag in LAYER2_MOVES:
-            print(f"  override: province {pid} {name} {prev} -> {tag}")
     return {s.tag: sorted(alloc[s.tag]) for s in TAGS if alloc.get(s.tag)}
-
-
-def owner_map(alloc=None):
-    alloc = build() if alloc is None else alloc
-    return {p: t for t, ps in alloc.items() for p in ps}
 
 
 def karling_realms():
     """(start dynasty, karling tags) lifted from CK3: the dynasty that the
     CK3-synced start holders share, and every CK3-synced tag whose start
     holder carries it."""
-    from ck3 import load_chars, load_dynasties, load_houses, load_titles, resolve
-
     titles, chars = load_titles(), load_chars()
     dyns, houses = load_dynasties(), load_houses()
     dyn_of = {
@@ -190,8 +144,13 @@ def empire_core():
     return sorted({p for t in tags for p in alloc.get(t, ())})
 
 
-#: Requirement areas of the same-tag Finland kingdom path.
-FINLAND_AREAS = ("finland_area", "bothnia_area")
+#: Decisions with no formables row that still need province triggers:
+#: decision key -> requirement areas. Finland crowns in place through its
+#: custom kingdom file (like Denmark/Norway/Sweden it wants the capital
+#: in the homeland), so its land lives here instead of the database.
+CUSTOM_TRIGGERS = {
+    "kar_form_finland": ("finland_area", "bothnia_area"),
+}
 
 
 _VANILLA_PROV_FILES: dict = {}
@@ -216,26 +175,18 @@ def vanilla_prov_ids():
     return sorted(_VANILLA_PROV_FILES)
 
 
-def dev(pid):
-    src = vanilla_prov_file(pid)
-    if not src:
-        return 0.0
-    txt = open(src, encoding="utf-8", errors="replace").read()
-    ta = re.search(r"base_tax\s*=\s*([\d.]+)", txt)
-    pr = re.search(r"base_production\s*=\s*([\d.]+)", txt)
-    return (float(ta.group(1)) if ta else 0.0) + (
-        float(pr.group(1)) if pr else 0.0
-    )
+def _vanilla_id_set(path, section, flags=0):
+    # Province ids from a vanilla map section (sea_starts, impassable,
+    # lakes): grey/water land we never own, only restore visibility for.
+    txt = open(path, encoding="utf-8", errors="replace").read()
+    m = re.search(section + r"\s*=\s*\{(.*?)\}", txt, re.S | flags)
+    return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
 
 
 def sea_ids():
     # The engine's own sea list: every water province whose visibility we
     # restore verbatim from vanilla (sea files carry only discovered_by).
-    txt = open(
-        os.path.join(GAME, "map", "default.map"), encoding="utf-8", errors="replace"
-    ).read()
-    m = re.search(r"sea_starts\s*=\s*\{([^}]*)\}", txt, re.S)
-    return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
+    return _vanilla_id_set(os.path.join(GAME, "map", "default.map"), r"sea_starts")
 
 
 def waste_ids():
@@ -243,29 +194,21 @@ def waste_ids():
     # section of vanilla map/climate.txt renders grey and always-visible.
     # We ship no map files, so the set is vanilla's; like sea tiles these
     # files carry only discovered_by and keep their tech-group lines.
-    txt = open(
-        os.path.join(GAME, "map", "climate.txt"), encoding="utf-8", errors="replace"
-    ).read()
-    m = re.search(r"impassable\s*=\s*\{(.*?)\}", txt, re.S)
-    return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
+    return _vanilla_id_set(os.path.join(GAME, "map", "climate.txt"), r"impassable")
 
 
 def lake_ids():
     # The engine's own lake list from vanilla map/default.map: water that
     # is neither sea nor land. Same treatment as sea and wasteland.
-    txt = open(
-        os.path.join(GAME, "map", "default.map"), encoding="utf-8", errors="replace"
-    ).read()
-    m = re.search(r"^lakes\s*=\s*\{(.*?)\}", txt, re.S | re.M)
-    return sorted({int(x) for x in re.findall(r"\d+", m.group(1))})
+    return _vanilla_id_set(os.path.join(GAME, "map", "default.map"), r"^lakes", re.M)
 
 
-PROV_DATE = "867.1.1"
+START_DT = tuple(int(x) for x in CTRY_DATE.split("."))
 
 
 def force_block(new_owner, claims=()):
     lines = [
-        f"\n{PROV_DATE} = {{",
+        f"\n{CTRY_DATE} = {{",
         f"\towner = {new_owner}",
         f"\tcontroller = {new_owner}",
         f"\tadd_core = {new_owner}",
@@ -291,6 +234,16 @@ IBERIA_AREAS = frozenset(
 HUN_AREAS = frozenset(
     "alfold_area southern_transylvania_area transdanubia_area "
     "transylvania_area".split()
+)
+
+#: Who carries conquest claims, and on whose land: exact (owner, areas)
+#: matches. Whoever holds the Hungarian basin answers MGY instead (CK3's
+#: migration CB as claims); MGY itself never claims its own cradle.
+CLAIM_RULES = (
+    # Andalusi Iberia feeds the Reconquista (ASU/NAV claims).
+    ("ADU", IBERIA_AREAS, ("ASU", "NAV")),
+    # Vimara's 868 targets (CK3 war_867_Vimara_conquest_Portucale).
+    ("PRT", frozenset({"beieras_area"}), ("ASU",)),
 )
 
 
@@ -397,6 +350,9 @@ def patch(text, new_owner, pid=None):
         if m:
             old_owner = m.group(1)
             break
+    # HLR is formable-only (no landed row), so without the exception its
+    # cores would be stripped as dead; the formation and its neutralized
+    # history need them.
     live = {s.tag for s in TAGS} | {"HLR"}
     drop_cores = (
         old_owner
@@ -453,31 +409,28 @@ def patch(text, new_owner, pid=None):
     claims = []
     if pid is not None:
         area = _pd()["area_of"].get(str(pid))
-        if new_owner == "ADU" and area in IBERIA_AREAS:
-            claims = ["ASU", "NAV"]
-        elif new_owner == "PRT" and area == "beieras_area":
-            # Vimara's 868 targets (CK3 war_867_Vimara_conquest_Portucale)
-            claims = ["ASU"]
-        elif new_owner != "MGY" and area in HUN_AREAS:
+        match = next(
+            (
+                claimants
+                for owner, areas, claimants in CLAIM_RULES
+                if new_owner == owner and area in areas
+            ),
+            (),
+        )
+        claims = list(match)
+        if not claims and new_owner != "MGY" and area in HUN_AREAS:
             claims = ["MGY"]
-    if have_core:
-        return "\n".join(head + out) + "\n" + force_block(new_owner, claims)
-
-    ins = dated_start
-    last_core = None
-    for idx in range(dated_start):
-        if re.match(r"^\s*add_core\s*=", lines[idx]):
-            last_core = idx
-    if last_core is not None:
-        ins = last_core + 1
-        out.insert(ins, core_line)
-    elif not head:
-        out.insert(dated_start, core_line)
+    if not have_core:
+        last_core = None
+        for idx in range(dated_start):
+            if re.match(r"^\s*add_core\s*=", lines[idx]):
+                last_core = idx
+        if last_core is not None:
+            out.insert(last_core + 1, core_line)
+        elif not head:
+            out.insert(dated_start, core_line)
 
     return "\n".join(head + out) + "\n" + force_block(new_owner, claims)
-
-
-DISCOVERY_GROUPS = ("western", "eastern", "muslim", "ottoman", "chinese", "nomad_group")
 
 
 def strip_fort(text):
@@ -566,10 +519,20 @@ def undated_group_visibility(full):
     return out
 
 
-def step_provinces(argv):
-    alloc = build(verbose="--report" in argv)
+def write_out(path, text, encoding="cp1252", errors="pdx"):
+    """Write one generated file: cp1252 with the pdx handler like every
+    generated game file (the events/decisions vendoring passes utf-8)."""
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
+    open(path, "w", encoding=encoding, errors=errors).write(text)
+
+
+def step_provinces():
+    alloc = build()
 
     owner_of = {p: t for t, ps in alloc.items() for p in ps}
+    # HLR as above: its cores survive the dead-core strip.
     keep = {s.tag for s in TAGS} | {"HLR"}
 
     data = _pd()
@@ -590,7 +553,8 @@ def step_provinces(argv):
         if not src:
             print(f"!! no vanilla file for province {pid}")
             continue
-        text = strip_dated(open(src, encoding="utf-8", errors="surrogateescape").read())
+        src_text = open(src, encoding="utf-8", errors="surrogateescape").read()
+        text = strip_dated(src_text)
         text = apply_db_culture_religion(text, pid)
         tag = owner_of.get(pid)
         new = patch(text, tag, pid) if tag else text
@@ -598,21 +562,14 @@ def step_provinces(argv):
         for st in SEED_CORES.get(pid, ()):
             new += f"add_core = {st}\n"
         new = take_group_visibility(new)
-        for ln in undated_group_visibility(
-            open(src, encoding="utf-8", errors="surrogateescape").read()
-        ):
+        for ln in undated_group_visibility(src_text):
             if ln not in new.splitlines():
                 new += ln + "\n"
         new = strip_dead_cores(new, keep)
         new = strip_denied_cores(new, tag, denied)
         new = tidy_province(new)
 
-        open(
-            os.path.join(PROV_OUT, os.path.basename(src)),
-            "w",
-            encoding="cp1252",
-            errors="pdx",
-        ).write(new)
+        write_out(os.path.join(PROV_OUT, os.path.basename(src)), new)
         written += 1
 
     sea = sea_ids()
@@ -625,12 +582,7 @@ def step_provinces(argv):
             text = strip_dated(
                 open(src, encoding="utf-8", errors="surrogateescape").read()
             )
-            open(
-                os.path.join(PROV_OUT, os.path.basename(src)),
-                "w",
-                encoding="cp1252",
-                errors="pdx",
-            ).write(text)
+            write_out(os.path.join(PROV_OUT, os.path.basename(src)), text)
             copied += 1
     print(f"copied {copied} vanilla sea files (undated head only)")
 
@@ -644,12 +596,10 @@ def step_provinces(argv):
         src = vanilla_prov_file(pid)
         if src:
             text = open(src, encoding="utf-8", errors="surrogateescape").read()
-            open(
+            write_out(
                 os.path.join(PROV_OUT, os.path.basename(src)),
-                "w",
-                encoding="cp1252",
-                errors="pdx",
-            ).write(take_group_visibility(strip_dated(text)))
+                take_group_visibility(strip_dated(text)),
+            )
             wcopied += 1
     print(f"restored {wcopied} vanilla wasteland files (tech groups only)")
 
@@ -663,12 +613,10 @@ def step_provinces(argv):
         src = vanilla_prov_file(pid)
         if src:
             text = open(src, encoding="utf-8", errors="surrogateescape").read()
-            open(
+            write_out(
                 os.path.join(PROV_OUT, os.path.basename(src)),
-                "w",
-                encoding="cp1252",
-                errors="pdx",
-            ).write(take_group_visibility(strip_dated(text)))
+                take_group_visibility(strip_dated(text)),
+            )
             lcopied += 1
     print(f"restored {lcopied} vanilla lake files (tech groups only)")
 
@@ -689,12 +637,7 @@ def step_provinces(argv):
             )
         ]
         body = take_group_visibility("\n".join(seen) + "\n") if seen else ""
-        open(
-            os.path.join(PROV_OUT, _VANILLA_PROV_FILES[pid]),
-            "w",
-            encoding="cp1252",
-            errors="pdx",
-        ).write(f"{title}\n\n{body}")
+        write_out(os.path.join(PROV_OUT, _VANILLA_PROV_FILES[pid]), f"{title}\n\n{body}")
         vcopied += 1
     print(f"wrote {vcopied} visibility-only files for unowned provinces")
 
@@ -702,47 +645,6 @@ def step_provinces(argv):
     for tag, ps in sorted(alloc.items(), key=lambda kv: -len(kv[1])):
         print(f"  {tag:4} {len(ps):3}")
     print(f"  total            : {len(todo)}")
-
-
-def report(alloc):
-    data = _pd()
-    provs = data["provs"]
-
-    owner_of = owner_map(alloc)
-    caps = {}
-    for fn in os.listdir(VANILLA_CDIR):
-        if not fn.endswith(".txt"):
-            continue
-        tag = fn.split(" ")[0].split("-")[0].strip()
-        m = re.search(
-            r"^\s*capital\s*=\s*(\d+)",
-            open(
-                os.path.join(VANILLA_CDIR, fn), encoding="utf-8", errors="replace"
-            ).read(),
-            re.M,
-        )
-        if m:
-            caps[tag] = int(m.group(1))
-    total = 0
-    for tag in sorted(alloc, key=lambda t: -len(alloc[t])):
-        ids = alloc[tag]
-        cap = CAPITAL.get(tag)
-        if cap is not None:
-            assert cap in ids, f"{tag} capital {cap} not in its own area set!"
-        olds = defaultdict(int)
-        for pid in ids:
-            olds[provs[str(pid)]["owner"]] += 1
-        print(
-            f"{tag} {NAME.get(tag, tag):13} n={len(ids):3} dev={sum(dev(p) for p in ids):6.0f}"
-            + (f" cap={cap}({provs[str(cap)]['name']})" if cap else "")
-        )
-        print(
-            "     from: "
-            + " ".join(f"{k}:{v}" for k, v in sorted(olds.items(), key=lambda x: -x[1]))
-        )
-        total += len(ids)
-    print("=" * 78)
-    print(f"{len(owner_of)} provinces reassigned")
 
 
 T = "\t"
@@ -766,16 +668,7 @@ def step_hre() -> None:
     missing = [a for a in areas if a not in all_areas]
     assert not missing, f"unknown areas: {missing}"
 
-    claims = "\n".join(
-        f"{T*3}{a} = {{\n"
-        f"{T*4}limit = {{\n"
-        f"{T*5}NOT = {{ is_core = ROOT }}\n"
-        f"{T*5}NOT = {{ is_permanent_claim = ROOT }}\n"
-        f"{T*4}}}\n"
-        f"{T*4}add_permanent_claim = ROOT\n"
-        f"{T*3}}}"
-        for a in areas
-    )
+    claims = "\n".join(area_claim_lines(areas))
     dynasty_line = f'{T*3}dynasty = "{dynasty}"'
 
     txt = f"""country_decisions = {{
@@ -826,7 +719,7 @@ def step_hre() -> None:
 
     os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
     p = os.path.join(MOD, "decisions", "KarolingianHRE.txt")
-    open(p, "w", encoding="cp1252", errors="pdx").write(txt)
+    write_out(p, txt)
     print(f"wrote {p}")
     print(f"  imperial provinces    : {len(empire_provs)}")
     print(f"  areas covered         : {len(areas)}")
@@ -875,14 +768,12 @@ def step_diplomacy() -> None:
     lines += [
         "867.1.1 = { celestial_emperor = TNG }",
     ]
-    open(path, "w", encoding="cp1252", errors="pdx").write("\n".join(lines) + "\n")
+    write_out(path, "\n".join(lines) + "\n")
     pairs = ", ".join(f"{d.subject} under {d.liege}" for d in DIPLOMACY)
     print(f"wrote {path}  ({pairs})")
 
 
 def step_wars() -> None:
-    from tagdb import WARS
-
     wdir = os.path.join(MOD, "history", "wars")
     os.makedirs(wdir, exist_ok=True)
     for w in WARS:
@@ -905,7 +796,7 @@ def step_wars() -> None:
             f"{w.date} = {{\n{sides}\n}}\n"
         )
         p = os.path.join(wdir, f"{w.slug}.txt")
-        open(p, "w", encoding="cp1252", errors="pdx").write(txt)
+        write_out(p, txt)
         print(f"wrote {p}  ({w.title})")
 
 
@@ -934,8 +825,6 @@ def step_vanilla_countries() -> None:
     """Rewrite the vanilla realms' country definitions under the mod, copying
     the vanilla data verbatim and swapping in the colour lifted from CK3, so
     every tag covered by the mod matches its CK3 title's map colour."""
-    from ck3 import load_title_colors
-
     colors = load_title_colors()
     vanilla = load_vanilla_countries()
     os.makedirs(os.path.join(MOD, "common", "countries"), exist_ok=True)
@@ -957,7 +846,7 @@ def step_vanilla_countries() -> None:
         if body == text:
             print(f"  {code}: {title} colour {want} already {fn}?")
         p = os.path.join(MOD, "common", "countries", fn)
-        open(p, "w", encoding="cp1252", errors="pdx").write(body)
+        write_out(p, body)
         print(f"wrote {p}  (colour from {title} = {want})")
         written += 1
     print(f" {written} vanilla realm definitions rewritten under the mod")
@@ -1064,7 +953,7 @@ def step_events() -> None:
         if os.path.exists(dest):
             old = open(dest, encoding="utf-8", errors="replace").read()
         if old != out:
-            open(dest, "w", encoding="utf-8").write(out)
+            write_out(dest, out, encoding="utf-8", errors="strict")
         kept_files += 1
     print(f"events: {kept_files} files, {kept_events} generic events kept, "
           f"{dropped} tag-specific dropped")
@@ -1139,7 +1028,7 @@ def step_filter_decisions() -> None:
         if os.path.exists(dest):
             old = open(dest, encoding="utf-8", errors="replace").read()
         if old != out:
-            open(dest, "w", encoding="utf-8").write(out)
+            write_out(dest, out, encoding="utf-8", errors="strict")
         kept_files += 1
     print(f"decisions: {kept_files} files, {kept_decisions} kept, "
           f"{len(dropped)} tag-specific dropped")
@@ -1163,7 +1052,7 @@ def step_custom() -> None:
         reg_lines.append(f'{t.tag} = "countries/{cname}"')
 
         cfile = os.path.join(MOD, "common", "countries", cname)
-        open(cfile, "w", encoding="cp1252", errors="pdx").write(country_definition(t))
+        write_out(cfile, country_definition(t))
         print(f"wrote {cfile}")
 
         if t.flag_source or t.flag_from:
@@ -1196,7 +1085,7 @@ def step_custom() -> None:
         txt = formation_decision(fcode, starters)
         os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
         p = os.path.join(MOD, "decisions", f"Form{fcode}.txt")
-        open(p, "w", encoding="cp1252", errors="pdx").write(txt)
+        write_out(p, txt)
         print(f"wrote {p}")
         print(
             f"  formed tag            : {', '.join(s.tag for s in starters)}"
@@ -1230,46 +1119,42 @@ def step_custom() -> None:
             for k in kill
         )
         sp = os.path.join(MOD, "decisions", fn)
-        open(sp, "w", encoding="cp1252", errors="pdx").write(
+        write_out(
+            sp,
             f"# dummy: vanilla formations neutralized, use our kar_form_* instead\n"
-            f"country_decisions = {{\n{stubs}\n}}\n"
+            f"country_decisions = {{\n{stubs}\n}}\n",
         )
         print(f"wrote {sp} (dummy, neutralized {len(kill)})")
 
-    open(reg, "w", encoding="cp1252", errors="pdx").write("\n".join(reg_lines) + "\n")
+    write_out(reg, "\n".join(reg_lines) + "\n")
     print(f"wrote {reg}")
 
 
 def step_formation_triggers() -> None:
-    specs = [("kar_form_hre", empire_core())]
+    specs = [("kar_form_hre", empire_core(), False)]
     done = set()
-    capitals = []
     for t in TAGS:
         if t.forms and t.forms not in done:
             done.add(t.forms)
-            specs.append((t.decision, requirement_provinces(t.forms)))
-            if BY_FORMABLE[t.forms].home_capital:
-                capitals.append((t.decision, requirement_provinces(t.forms)))
-    finland = sorted(
-        {int(p) for a in FINLAND_AREAS for p in _pd()["areas"].get(a, ())}
-    )
-    specs.append(("kar_form_finland", finland))
-    capitals.append(("kar_form_finland", finland))
+            req = requirement_provinces(t.forms)
+            specs.append((t.decision, req, BY_FORMABLE[t.forms].home_capital))
+    for decision, areas in CUSTOM_TRIGGERS.items():
+        req = sorted({int(p) for a in areas for p in _pd()["areas"].get(a, ())})
+        specs.append((decision, req, True))
 
     body = "\n\n".join(
-        formation_trigger_block(f"{k}_provinces_trigger", p) for k, p in specs
+        formation_trigger_block(f"{k}_provinces_trigger", p) for k, p, _ in specs
     )
-    if capitals:
+    if any(cap for _, _, cap in specs):
         body += "\n\n" + "\n\n".join(
             formation_capital_trigger_block(f"{k}_capital_trigger", p)
-            for k, p in capitals
+            for k, p, cap in specs
+            if cap
         )
     sdir = os.path.join(MOD, "common", "scripted_triggers")
     os.makedirs(sdir, exist_ok=True)
     spath = os.path.join(sdir, "KarolingianFormations.txt")
-    open(spath, "w", encoding="cp1252", errors="pdx").write(
-        "# province triggers backing the formation decisions\n" + body + "\n"
-    )
+    write_out(spath, "# province triggers backing the formation decisions\n" + body + "\n")
     print(f"wrote {spath}  ({len(specs)} triggers)")
 
     old = os.path.join(
@@ -1304,7 +1189,7 @@ def strip_non_867(text):
         if cur is None:
             m = re.match(r"^(\d+\.\d+\.\d+)\s*=", s)
             if m:
-                keep = m.group(1) == PROV_DATE
+                keep = m.group(1) == CTRY_DATE
                 code = ln.split("#", 1)[0]
                 depth = code.count("{") - code.count("}")
                 cur = [ln] if keep else []
@@ -1352,13 +1237,7 @@ def step_countries():
         text = ck3_sync(t.tag, country_history(t))
         text = strip_non_867(text)
         name = hist_name(t)
-        with open(
-            os.path.join(COUNTRY_OUT, name),
-            "w",
-            encoding="cp1252",
-            errors="pdx",
-        ) as fh:
-            fh.write(text)
+        write_out(os.path.join(COUNTRY_OUT, name), text)
         stale = os.path.join(COUNTRY_OUT, f"{t.tag}.txt")
         if stale != os.path.join(COUNTRY_OUT, name) and os.path.exists(stale):
             os.remove(stale)
@@ -1368,17 +1247,12 @@ def step_countries():
     # A comment alone does not register as a history file, so carry the same
     # neutral defaults the formation produces anyway (history is not
     # re-applied on change_tag).
-    with open(
+    write_out(
         os.path.join(COUNTRY_OUT, "HLR - Holy Roman Empire.txt"),
-        "w",
-        encoding="cp1252",
-        errors="pdx",
-    ) as fh:
-        fh.write(
-            "# formed in-game by kar_form_hre; vanilla OTL history neutralized\n"
-            "government = monarchy\n"
-            "technology_group = western\n"
-        )
+        "# formed in-game by kar_form_hre; vanilla OTL history neutralized\n"
+        "government = monarchy\n"
+        "technology_group = western\n",
+    )
     print("wrote HLR - Holy Roman Empire.txt (neutralized)")
 
 
@@ -1499,41 +1373,35 @@ def load_provinces():
         if not m:
             continue
         pid, pname = int(m.group(1)), m.group(2)
-        text = open(path, encoding="utf-8", errors="replace").read()
-        d = {
+        scalars, cores, _ = parse(path)
+
+        def tok(key, cls):
+            # First token in the old character class only: vanilla parks
+            # two keys on one line (culture = ge discovered_by = ...) and
+            # quotes some values (religion = "hinduism") - neither counted.
+            v = scalars.get(key)
+            if not v:
+                return None
+            first = v.split()[0]
+            return first if re.fullmatch(cls, first) else None
+
+        provs[pid] = {
             "id": pid,
             "name": pname,
             "file": fn,
-            "cores": [],
-            "owner": None,
-            "controller": None,
-            "culture": None,
-            "religion": None,
-            "capital": False,
+            "cores": [
+                c.split()[0]
+                for c in cores
+                if re.fullmatch(r"[A-Z0-9_]+", c.split()[0])
+            ],
+            "owner": tok("owner", r"[A-Z0-9_]+"),
+            "controller": tok("controller", r"[A-Z0-9_]+"),
+            "culture": tok("culture", r"[a-z0-9_]+"),
+            "religion": tok("religion", r"[a-z0-9_]+"),
+            "capital": "capital" in scalars,
+            "is_city": scalars.get("is_city") == "yes",
             "sea": False,
         }
-
-        for ln in text.splitlines():
-            s = ln.strip()
-            if re.match(r"^\d+\.\d+\.\d+\s*=", s):
-                break
-            if s.startswith("#") or not s:
-                continue
-            if m2 := re.match(r"^owner\s*=\s*([A-Z0-9_]+)", s):
-                d["owner"] = m2.group(1)
-            elif m2 := re.match(r"^controller\s*=\s*([A-Z0-9_]+)", s):
-                d["controller"] = m2.group(1)
-            elif m2 := re.match(r"^add_core\s*=\s*([A-Z0-9_]+)", s):
-                d["cores"].append(m2.group(1))
-            elif m2 := re.match(r"^culture\s*=\s*([a-z0-9_]+)", s):
-                d["culture"] = m2.group(1)
-            elif m2 := re.match(r"^religion\s*=\s*([a-z0-9_]+)", s):
-                d["religion"] = m2.group(1)
-            elif m2 := re.match(r"^is_city\s*=\s*(\w+)", s):
-                d["is_city"] = m2.group(1) == "yes"
-            elif m2 := re.match(r"^capital\s*=", s):
-                d["capital"] = True
-        provs[pid] = d
     return provs
 
 
@@ -1567,8 +1435,6 @@ if vanilla_is_newer():
     step_probe()
 else:
     print("\n\033[1m==> probe\033[0m\n    cache is current, skipping")
-
-START_DT = (867, 1, 1)
 
 DATE_RE = re.compile(r"^(\d+)\.(\d+)\.(\d+)\s*=\s*\{")
 KV_RE = re.compile(r"\b(owner|controller|add_core|remove_core)\s*=\s*([A-Za-z0-9_]+)")
@@ -1642,7 +1508,7 @@ def step_start():
             contested.append((pid, fn))
 
     print(
-        f"provinces checked against the {START_DT[0]}.{START_DT[1]}.{START_DT[2]} start: {len(expected)}"
+        f"provinces checked against the {CTRY_DATE} start: {len(expected)}"
     )
     print(f"  owner    != intended : {len(bad_owner)}")
     print(f"  controller!= intended: {len(bad_ctrl)}")
