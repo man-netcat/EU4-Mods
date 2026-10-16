@@ -55,7 +55,7 @@ CK3_TO_EU4 = {
     "prussian": "prussian", "pommeranian": "pommeranian",
     "sami": "sapmi", "samoyed": "samoyed",
     "polish": "polish", "polabian": "polabian", "czech": "czech",
-    "slovak": "slovak", "slovien": "slovene", "carantanian": "slovene",
+    "slovak": "slovak", "slovien": "slovien", "carantanian": "carantanian",
     "croatian": "croatian", "serbian": "serbian", "bulgarian": "bulgarian",
     "bolghar": "bulgarian", "bosnian": "bosnian", "dalmatian": "dalmatian",
     "romanian": "romanian", "vlach": "romanian",

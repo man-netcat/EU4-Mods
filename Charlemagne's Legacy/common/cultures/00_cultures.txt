@@ -1738,7 +1738,7 @@ french	= {
 		
 		primary = BUR
 	}
-	occitain = {
+	occitan = {
 		
 		primary = PRO
 	}
@@ -1971,7 +1971,7 @@ south_slavic = {
 			"Brakovic" "Balsic" "Vukovic" "Branovic"
 		}
 	}
-	slovene = {
+	slovien = {
 		primary = CLI
 		male_names = {
 			Andrej Albreht Alojzij Anton Adam Avgust Boris Blaz	Davorin	Etbin Filip Franc Friderik
@@ -1986,6 +1986,17 @@ south_slavic = {
 			Bogenski Breski Celjski Crnomaljski Cresnjevec Hadik Izanski Jablaniski Koroski Lenkovic
 			Mocnik Pustalski Ptujski Rusbachi Strmski Savinjski Turjaski Visnjegorski Vovbrzani
 			Zovneski Zois Zagar Zelko
+		}
+	}
+	carantanian = {
+		male_names = {
+			Bedoslav Bogdan Bogomir Borislav Borut Branimir Budislav Ceh Cerno Cestimir Cheitmar Chezil Cholo Cuk Dalibor Dobroslav Domicjan Domislav Drago Dragomir Dragoslav Etgar Gojimir Gojmir Golob Golomir Gorazd Grabec Hoten Hotimir Hraber Hrvat Inko Ivko Izeslav Izbor Jans Jaroslav Jazbec Jelen Jurk Kadalhoh Kajtimar Kazimir Kos Kosuta Kragel Kuono Lastigoj Lenart Lisjak Liuzo Ljuban Ljubotin Ljudevit Lupa Macek Majoran Malej Maligoj
+		}
+		female_names = {
+			Alena Anna Antonia Barbora Belica Berta Blagica Bogdana Bogumila Boguslava Bojana Brajna Bratrica Bratina Ctislava Danica Darja Deva Dejana Dobrava Dobromila Dobroslava Domaslava Dominika Dorota Doubravka Draga Dragica Dragoslava Eva Gertruda Godeslava Gostinja Govica Gradislava
+		}
+		dynasty_names = {
+			"Karantanec" "Kosez" "Baier"
 		}
 	}
 	bosnian = {
