@@ -6,9 +6,12 @@ Usage: python3 tools/addtag.py TAG ck3_title PID [PID ...]
        [--rank N] [--capital PID] [--tech GROUP] [--gov GOV]
        [--name STR] [--adj STR] [--file NAME] [--take]
 
-Defaults: rank from title tier (c1/d2/k3/e4), capital = first PID,
-tech western, gov monarchy, name/adj from CK3 loc, culture/religion =
-vanilla values of the capital, country file = ASCII-ised name.
+Defaults: rank from title tier (c1/d2/k3/e4), capital = first PID, gov
+monarchy, name/adj from CK3 loc, culture/religion = vanilla values of
+the capital, country file = ASCII-ised name. Tech group is mandatory:
+`--tech` must be passed and named correctly (for reuse codes the base
+game's own tech is expected unless the 867 reality says otherwise -
+then say it explicitly).
 Aborts if the code is taken or a province is owned (use --take to
 reassign provinces from their current owner).
 """
@@ -74,9 +77,7 @@ def prov_data(pid):
     txt = open(src, encoding="cp1252", errors="replace").read()
     cul = re.search(r"^culture\s*=\s*(\w+)", txt, re.M)
     rel = re.search(r"^religion\s*=\s*([\w_]+)", txt, re.M)
-    if not cul or not rel:
-        sys.exit(f"no culture/religion in {src}")
-    return name, cul.group(1), rel.group(1)
+    return name, cul.group(1) if cul else None, rel.group(1) if rel else None
 
 
 def main(argv):
@@ -90,7 +91,7 @@ def main(argv):
     ap.add_argument("--religion", help="override the vanilla province religion")
     ap.add_argument("--rank", type=int)
     ap.add_argument("--capital", type=int)
-    ap.add_argument("--tech", default="western")
+    ap.add_argument("--tech", default=None)
     ap.add_argument("--gov", default="monarchy")
     ap.add_argument("--name")
     ap.add_argument("--adj")
@@ -125,6 +126,14 @@ def main(argv):
             print(f"  took {pid} from {tag}")
     if a.to:
         datas = {pid: prov_data(pid) for pid in a.pids}
+        for pid, (nm, cul, rel) in datas.items():
+            if (cul is None and not a.culture) or (rel is None and not a.religion):
+                sys.exit(f"vanilla province {pid} has no culture/religion head "
+                         "(uncolonized in 1444) - pass --culture/--religion")
+            for key, val, model in (("culture", a.culture or cul, CultureRow),
+                                    ("religion", a.religion or rel, ReligionRow)):
+                if s.get(model, val) is None:
+                    sys.exit(f"{val} is no {key} in tags.db - seed it first")
         for pid in a.pids:
             name, cul, rel = datas[pid]
             if s.get(ProvinceRow, pid) is None:
@@ -137,12 +146,22 @@ def main(argv):
         return 0
 
     datas = {pid: prov_data(pid) for pid in a.pids}
+    for pid, (_nm, cul, rel) in datas.items():
+        if (cul is None and not a.culture) or (rel is None and not a.religion):
+            sys.exit(f"vanilla province {pid} has no culture/religion head "
+                     "(uncolonized in 1444) - pass --culture/--religion")
+        for key, val, model in (("culture", a.culture or cul, CultureRow),
+                                ("religion", a.religion or rel, ReligionRow)):
+            # session still empty - safe to look up (and seed if missing)
+            if s.get(model, val) is None:
+                sys.exit(f"{val} is no {key} in tags.db - seed it first")
     have = set()
     import glob as _glob
     for fn in _glob.glob(os.path.join(HERE, "..", "localisation", "..",
                                       "common", "cultures", "*.txt")):
         for ln in open(fn, encoding="cp1252", errors="replace"):
-            m = re.match(r"^\t([a-z_0-9]+) = \{$", ln)
+            # tolerate trailing comments (most cultures carry #Name)
+            m = re.match(r"^\t([a-z_0-9]+) = \{", ln)
             if m:
                 have.add(m.group(1))
     for pid, (_nm, cul, _rel) in datas.items():
@@ -164,6 +183,23 @@ def main(argv):
         s.delete(s.get(TagProvinceRow, (tag, pid)))
         print(f"  took {pid} from {tag}")
 
+    if a.tech is None:
+        hint = "pass --tech"
+        if a.reuse:
+            import glob as _glob
+            hits = _glob.glob(os.path.join(
+                GAME, "history", "countries", f"{a.tag} - *.txt"))
+            if hits:
+                m = re.search(r"(?m)^\s*technology_group\s*=\s*([a-z_]+)",
+                              open(hits[0], encoding="cp1252",
+                                   errors="replace").read())
+                if m and m.group(1) != "western":
+                    hint = (f"pass --tech (careful: reuse of vanilla "
+                            f"{m.group(1)} tech - an 867 realm may want it "
+                            f"kept, so say --tech {m.group(1)} explicitly)")
+                else:
+                    hint = f"pass --tech (vanilla tech is {m.group(1)})" if m else "pass --tech"
+        sys.exit(f"{a.tag}: no tech group given - {hint}")
     rank = a.rank or RANK_OF.get(a.title.split("_")[0])
     if not rank:
         sys.exit("cannot derive rank from title; pass --rank")
@@ -193,8 +229,11 @@ def main(argv):
     country_file = (a.file or ascii_name(name)) + ".txt"
     from eu4 import load_vanilla_countries
 
-    taken_files = {fn for fn, _text in load_vanilla_countries().values()}
-    if country_file in taken_files:
+    vanilla_countries = load_vanilla_countries()
+    taken_files = {fn for fn, _text in vanilla_countries.values()}
+    if country_file in taken_files and not (
+            a.reuse and vanilla_countries.get(a.tag, ("",))[0] == country_file
+    ):
         sys.exit(
             f"{country_file} is a vanilla country file for another tag - "
             "pass --file to pick a free name"

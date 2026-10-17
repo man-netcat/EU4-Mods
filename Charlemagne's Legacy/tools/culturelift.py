@@ -132,6 +132,7 @@ CK3_TO_EU4 = {
     "parachi": "khorasani", "ormuri": "khorasani",
     "sanglechi": "khorasani",
     "brahui": "baluchi", "makrani": "baluchi",
+    "han": "zhongyuan",
     "sistani": "persian", "fars": "persian", "kermani": "persian",
     "yazdi": "persian", "larestani": "persian", "bandari": "persian",
     "khuzestani": "luri", "lori": "luri", "bakhtiari": "luri",
@@ -197,34 +198,37 @@ _WALK_KEYS = ("father", "real_father", "mother")
 _WALK_DEPTH = 3
 
 
-def holder_culture(title):
-    """(holder id, CK3 culture at 867) for a title; culture walks up to
-    three generations when the holder's own is unscripted."""
+def _body_value(body, key):
+    """Value of a dated-aware character field: the undated entry wins,
+    else the latest value dated at or before 867.1.1."""
+    depth, best, cur = 0, None, ""
+    for ln in body.splitlines():
+        s = ln.strip()
+        if re.match(r"^\d+\.\d+\.\d+\s*=", s) and depth == 0:
+            cur = s.split("=")[0].strip()
+        code = ln.split("#", 1)[0]
+        opens = code.count("{")
+        m = re.match(r'^%s\s*=\s*"?([a-z_0-9]+)"?\s*$' % key, s)
+        if m:
+            if depth == 0:
+                return m.group(1)
+            if best is None and cur <= "867.1.1":
+                best = m.group(1)
+        depth += opens - code.count("}")
+        if depth <= 0:
+            depth, cur = 0, ""
+    return best
+
+
+def _holder_with(title, key):
+    """(holder id, value at 867) for a title's character field, walking
+    up to three generations when the holder's own is unscripted."""
     titles = ck3.load_titles()
     chars = ck3.load_chars()
     holder = ck3.holder_at(title, titles)
     if not holder:
         return None, None
     seen = set()
-
-    def body_culture(body):
-        depth, best, cur = 0, None, ""
-        for ln in body.splitlines():
-            s = ln.strip()
-            if re.match(r"^\d+\.\d+\.\d+\s*=", s) and depth == 0:
-                cur = s.split("=")[0].strip()
-            code = ln.split("#", 1)[0]
-            opens = code.count("{")
-            m = re.match(r'^culture\s*=\s*"?([a-z_]+)"?\s*$', s)
-            if m:
-                if depth == 0:
-                    return m.group(1)
-                if best is None and cur <= "867.1.1":
-                    best = m.group(1)
-            depth += opens - code.count("}")
-            if depth <= 0:
-                depth, cur = 0, ""
-        return best
 
     def walk(cid, d):
         if not cid or cid in seen or d > _WALK_DEPTH:
@@ -233,11 +237,11 @@ def holder_culture(title):
         body = chars.get(cid)
         if not body:
             return None
-        got = body_culture(body)
+        got = _body_value(body, key)
         if got:
             return got
-        for key in _WALK_KEYS:
-            m = re.search(r"(?m)^\s*%s\s*=\s*([A-Za-z0-9_]+)" % key, body)
+        for key_ in _WALK_KEYS:
+            m = re.search(r"(?m)^\s*%s\s*=\s*([A-Za-z0-9_]+)" % key_, body)
             if m:
                 got = walk(m.group(1), d + 1)
                 if got:
@@ -245,6 +249,17 @@ def holder_culture(title):
         return None
 
     return holder, walk(holder, 0)
+
+
+def holder_culture(title):
+    """(holder id, CK3 culture at 867) for a title's holder."""
+    return _holder_with(title, "culture")
+
+
+def holder_faith(title):
+    """(holder id, CK3 faith at 867) - the character's `rite` entry."""
+    return _holder_with(title, "rite")
+
 
 
 def file_has(eu4key):
@@ -432,6 +447,44 @@ if __name__ == "__main__":
     sys.exit(selftest())
 
 
+# CK3 faith at 867 -> our EU4 religion key. The Christian map collapses
+# to the standing two-key church (rites stay in communion; 867 has no
+# splits), Islam loses the madhab shading (EU4 keeps sunni/ibadi/shiite),
+# and the pagan keys carry over per the religion build-up notes.
+FAITH_TO_RELIGION = {
+    # one western church: Roman, Carolingian, Beneventan, Insular
+    # Celtic, Mozarabic rites alike
+    "roman_rite": "catholic",
+    "carolingian_christianity": "catholic",
+    "beneventan_rite": "catholic",
+    "insular_celtic": "catholic",
+    "mozarabic_church": "catholic",
+    "byzantine_rite": "orthodox",
+    "georgian_rite": "orthodox",
+    "armenian_rite": "apostolic",
+    # Church of the East (Nestorian) is its own lifted faith, never in
+    # Chalcedonian communion.
+    "nestorian": "nestorian",
+    # legal-school shading within Sunni (EU4 has no madhab keys)
+    "maliki": "sunni", "hanafi": "sunni", "shafii": "sunni",
+    "ibadi": "ibadi",
+    # Ibadi-family seceders and the Zaydi imamate split onto their
+    # nearest EU4 keys
+    "najdat": "ibadi", "sufri": "ibadi", "zayidi": "shiite",
+    # pagans: the lifted keys keep their standing diet
+    "norse_pagan": "norse_pagan_reformed",
+    "slavic_pagan": "slavic",
+    "baltic_pagan": "romuva",
+    "finnish_pagan": "suomenusko",
+    "magyar_pagan": "taltosist",
+    "tengri_pagan": "tengri_pagan_reformed",
+    # vanilla animism is the generic catch-all for the berber pagan
+    "north_african_acham_pagan": "animism",
+    # Buddhist families onto the EU4 keys
+    "vinaya": "buddhism", "avatamsaka": "mahayana", "mantrayana": "vajrayana",
+}
+
+
 def ruler_default(title, session=None):
     """EU4 culture for a new tag from its title's 867 holder (None to
     fall back to the vanilla province culture)."""
@@ -443,3 +496,12 @@ def ruler_default(title, session=None):
     if eu4key:
         print(f"  {title}: holder {holder} is {cc} -> {eu4key}")
     return eu4key
+
+
+def ruler_religion(title):
+    """EU4 religion for a new tag from its title's 867 holder's faith
+    (None to fall back to the vanilla province religion)."""
+    _holder, faith = holder_faith(title)
+    if not faith:
+        return None
+    return FAITH_TO_RELIGION.get(faith)

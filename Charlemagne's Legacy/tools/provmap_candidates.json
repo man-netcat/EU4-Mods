@@ -30344,6 +30344,20 @@
     }
    },
    {
+    "title": "b_donge",
+    "rank": "barony",
+    "ck3_name": "Donge",
+    "county": "c_yunzhou",
+    "duchy": "d_yuncao",
+    "score": 0.8,
+    "holder867": null,
+    "dejure": {
+     "county": "Yunzhou",
+     "duchy": "Yuncao",
+     "kingdom": "Qingxu"
+    }
+   },
+   {
     "title": "c_lxj_yuyidong",
     "rank": "county",
     "ck3_name": "Yuyidong",
@@ -30355,20 +30369,6 @@
      "county": "Yuyidong",
      "duchy": "Raole",
      "kingdom": "Raole"
-    }
-   },
-   {
-    "title": "c_wulong",
-    "rank": "county",
-    "ck3_name": "Wulong",
-    "county": "c_wulong",
-    "duchy": "d_xiyuan",
-    "score": 0.727,
-    "holder867": "tribal_tianguile_huang_1",
-    "dejure": {
-     "county": "Wulong",
-     "duchy": "Xiyuan",
-     "kingdom": "Qianzhong"
     }
    },
    {
@@ -30386,17 +30386,17 @@
     }
    },
    {
-    "title": "c_datong_2",
+    "title": "c_dongju",
     "rank": "county",
-    "ck3_name": "Datong",
-    "county": "c_datong_2",
-    "duchy": "d_yunshuo",
+    "ck3_name": "Dongju",
+    "county": "c_dongju",
+    "duchy": "d_gyoju",
     "score": 0.727,
-    "holder867": "han_3330",
+    "holder867": "korean_gim_gangneung_31",
     "dejure": {
-     "county": "Datong",
-     "duchy": "Yunshuo",
-     "kingdom": "Daibei"
+     "county": "Dongju",
+     "duchy": "Gyoju",
+     "kingdom": "Goguryeo"
     }
    },
    {
@@ -30414,20 +30414,6 @@
     }
    },
    {
-    "title": "c_andong",
-    "rank": "county",
-    "ck3_name": "Andong",
-    "county": "c_andong",
-    "duchy": "d_gyeongju",
-    "score": 0.727,
-    "holder867": "korean_gim_silla_33",
-    "dejure": {
-     "county": "Andong",
-     "duchy": "Gyeongju",
-     "kingdom": "Silla"
-    }
-   },
-   {
     "title": "d_hedong",
     "rank": "duchy",
     "ck3_name": "Hedong",
@@ -30439,6 +30425,20 @@
      "county": null,
      "duchy": "Hedong",
      "kingdom": "Hedong"
+    }
+   },
+   {
+    "title": "d_dongji",
+    "rank": "duchy",
+    "ck3_name": "Dongji",
+    "county": null,
+    "duchy": "d_dongji",
+    "score": 0.727,
+    "holder867": "han_2981",
+    "dejure": {
+     "county": null,
+     "duchy": "Dongji",
+     "kingdom": "Henan"
     }
    }
   ]
@@ -37733,17 +37733,17 @@
     }
    },
    {
-    "title": "c_ansongo",
-    "rank": "county",
-    "ck3_name": "Ansongo",
-    "county": "c_ansongo",
-    "duchy": "d_kawkaw",
-    "score": 0.8,
-    "holder867": "161047",
+    "title": "d_gaeseong",
+    "rank": "duchy",
+    "ck3_name": "Gaeseong",
+    "county": null,
+    "duchy": "d_gaeseong",
+    "score": 0.75,
+    "holder867": "korean_wang_goryeo_43",
     "dejure": {
-     "county": "Ansongo",
-     "duchy": "Kawkaw",
-     "kingdom": "Songhay"
+     "county": null,
+     "duchy": "Gaeseong",
+     "kingdom": "Goguryeo"
     }
    }
   ]
@@ -140929,20 +140929,6 @@
   "pick": null,
   "candidates": [
    {
-    "title": "b_chin",
-    "rank": "barony",
-    "ck3_name": "Chin",
-    "county": "c_kale",
-    "duchy": "d_tagaung",
-    "score": 0.727,
-    "holder867": null,
-    "dejure": {
-     "county": "Kale",
-     "duchy": "Tagaung",
-     "kingdom": "Pagan"
-    }
-   },
-   {
     "title": "b_yunjie",
     "rank": "barony",
     "ck3_name": "Wucheng",
@@ -141038,6 +141024,20 @@
      "county": "Ezhou",
      "duchy": "Eyue",
      "kingdom": "Shannan"
+    }
+   },
+   {
+    "title": "b_pucheng",
+    "rank": "barony",
+    "ck3_name": "Pucheng",
+    "county": "c_jian_an",
+    "duchy": "d_jianning",
+    "score": 0.714,
+    "holder867": null,
+    "dejure": {
+     "county": "Jianzhou",
+     "duchy": "Jianning",
+     "kingdom": "Fujian"
     }
    }
   ]
@@ -164684,6 +164684,20 @@
     }
    },
    {
+    "title": "d_cd_santa_agata",
+    "rank": "duchy",
+    "ck3_name": "Sant'Agata",
+    "county": null,
+    "duchy": "d_cd_santa_agata",
+    "score": 0.667,
+    "holder867": null,
+    "dejure": {
+     "county": null,
+     "duchy": "Sant'Agata",
+     "kingdom": null
+    }
+   },
+   {
     "title": "d_cantabria",
     "rank": "duchy",
     "ck3_name": "Cantabria",
@@ -164695,20 +164709,6 @@
      "county": null,
      "duchy": "Cantabria",
      "kingdom": "Castile"
-    }
-   },
-   {
-    "title": "d_angara",
-    "rank": "duchy",
-    "ck3_name": "Angara",
-    "county": null,
-    "duchy": "d_angara",
-    "score": 0.667,
-    "holder867": null,
-    "dejure": {
-     "county": null,
-     "duchy": "Angara",
-     "kingdom": "Angara"
     }
    }
   ]
@@ -176176,6 +176176,20 @@
     }
    },
    {
+    "title": "b_tianxing",
+    "rank": "barony",
+    "ck3_name": "Tianxing",
+    "county": "c_fengxiang",
+    "duchy": "d_fengxiang",
+    "score": 0.8,
+    "holder867": null,
+    "dejure": {
+     "county": "Fengxiang",
+     "duchy": "Fengxiang",
+     "kingdom": "Guannei"
+    }
+   },
+   {
     "title": "b_mainling",
     "rank": "barony",
     "ck3_name": "Mainling",
@@ -176215,20 +176229,6 @@
      "county": "Xining",
      "duchy": "Xining",
      "kingdom": "Amdo"
-    }
-   },
-   {
-    "title": "b_jining",
-    "rank": "barony",
-    "ck3_name": "Jining",
-    "county": "c_jiushijiuquan",
-    "duchy": "d_sanggan",
-    "score": 0.769,
-    "holder867": null,
-    "dejure": {
-     "county": "Jiushijiuquan",
-     "duchy": "Sanggan",
-     "kingdom": "Daibei"
     }
    },
    {

@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = bedouin_arabic
+religion = ibadi
+capital = 398
+867.1.1 = {
+	monarch = {
+		name = "as-Salt"
+		dynasty = "Yahmad"
+		birth_date = 850.1.1
+		death_date = 890.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

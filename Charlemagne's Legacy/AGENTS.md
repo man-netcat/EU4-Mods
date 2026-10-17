@@ -130,10 +130,12 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   (`localisation/replace/karolingian_religion_l_english.yml` — note:
   same-key loc conflicts resolve vanilla-side on this install, so vanilla
   renames must live in `localisation/replace/`). The Christian set is
-  closed at those two keys: no rite splits (Carolingian/Roman/Ambrosian
+  closed at `catholic` + `krstjani` + `apostolic` + `nestorian`: no
+  Latin/Byzantine rite splits (Carolingian/Roman/Ambrosian
   were in communion in 867; splitting would gut the papacy/HRE/crusade
   mechanics, all keyed to the single entry — rites belong in the school
-  mechanic if ever). Where CK3's
+  mechanic if ever; the Church of the East and the Armenian Apostolic
+  Church were never in communion, so they stand outside the closure). Where CK3's
   ruler differs from the population the tag keeps the ruler faith on foreign
   land: YRK/KIE/NOV Norse tags on catholic/slavic land, CRT Sunni tag on
   catholic Crete, MRW Sunni tag on coptic Erzurum. Per-province refinement later.

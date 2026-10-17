@@ -28,6 +28,7 @@ country_decisions = {
 				tag = GER
 				tag = GMA
 				tag = GOT
+				tag = HDR
 				tag = HSA
 				tag = ITA
 				tag = KIE
@@ -37,12 +38,15 @@ country_decisions = {
 				tag = LOI
 				tag = LOT
 				tag = LVA
+				tag = MHR
 				tag = MLK
 				tag = MOR
 				tag = MZB
+				tag = NAJ
 				tag = NAP
 				tag = NAV
 				tag = NOV
+				tag = OMA
 				tag = PAP
 				tag = PLT
 				tag = PRO
@@ -199,6 +203,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = HDR }
+			change_country_color = {
+				color = { 16 142 49 }
+			}
+		}
+		if = {
 			limit = { tag = HSA }
 			change_country_color = {
 				color = { 156 179 189 }
@@ -253,6 +263,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = MHR }
+			change_country_color = {
+				color = { 53 191 176 }
+			}
+		}
+		if = {
 			limit = { tag = MLK }
 			change_country_color = {
 				color = { 117 167 117 }
@@ -271,6 +287,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = NAJ }
+			change_country_color = {
+				color = { 50 105 70 }
+			}
+		}
+		if = {
 			limit = { tag = NAP }
 			change_country_color = {
 				color = { 100 50 150 }
@@ -286,6 +308,12 @@ country_decisions = {
 			limit = { tag = NOV }
 			change_country_color = {
 				color = { 97 126 37 }
+			}
+		}
+		if = {
+			limit = { tag = OMA }
+			change_country_color = {
+				color = { 98 134 153 }
 			}
 		}
 		if = {

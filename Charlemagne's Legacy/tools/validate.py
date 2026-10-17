@@ -293,6 +293,23 @@ def run() -> int:
         for b in wowned[:8]:
             print("        " + str(b))
 
+    print("\n== unownable land is unowned in the database ==")
+    # The database is the source of truth: catch a grey/water claim in a
+    # tag row before any file is generated. The build asserts the merged
+    # output; this checks the claims themselves - wastelands, lakes and
+    # sea tiles alike can have no landlord.
+    from eu4 import build  # noqa: E402
+    unownable = set(waste_ids()) | set(lake_ids()) | set(sea_ids())
+    claimed = sorted(
+        {p for _tag, ps in build().items() for p in ps if p in unownable}
+    )
+    note(
+        not claimed,
+        f"no database tag claims grey or water ({len(claimed)} problems)",
+    )
+    for b in claimed[:8]:
+        print("        " + str(b))
+
     vmiss = sorted(p for p in vanilla_prov_ids() if p not in files)
     note(not vmiss, f"every vanilla province has a file ({len(vmiss)} missing)")
     for b in vmiss[:8]:
@@ -309,6 +326,82 @@ def run() -> int:
     )
     note(not vtags, f"no tag-specific discovery on land ({len(vtags)} problems)")
     for b in vtags[:8]:
+        print("        " + str(b))
+
+    print("\n== reuse tags keep vanilla tech ==")
+    # A tag whose code exists in the base game carries the same tech group
+    # vanilla gives it - anything else hides its neighbours (the Arabia
+    # class of bug). 867-correct divergences get named rows below; each
+    # must earn its keep in the AGENTS notes.
+    from tagdb import TAGS as _tagrows  # noqa: E402
+    import glob as _glob
+    deliberate = {("SIC", "muslim")}  # Aghlabid realm on vanilla western
+    drift = []
+    for t in _tagrows:
+        hits = _glob.glob(os.path.join(GAME, "history", "countries",
+                                       f"{t.tag} - *.txt"))
+        if not hits:
+            continue
+        txt = open(hits[0], encoding="cp1252", errors="replace").read()
+        m = re.search(r"(?m)^\s*technology_group\s*=\s*([a-z_]+)", txt)
+        if not m:
+            continue
+        if t.technology_group != m.group(1) and (t.tag, t.technology_group) \
+                not in deliberate:
+            drift.append(f"{t.tag}: ours {t.technology_group}, "
+                         f"vanilla {m.group(1)}")
+    note(
+        not drift,
+        f"reuse tags carry vanilla tech ({len(drift)} drifting)",
+    )
+    for b in drift[:8]:
+        print("        " + b)
+
+    print("\n== tags carry their ruler's culture and faith ==")
+    # Every tag takes its CK3 title's 867 holder culture and faith - the
+    # ruler calls stand even on foreign land (Norse tags on Slavic
+    # ground), and provinces keep their vanilla culture regardless.
+    # Holders with unscripted CK3 data slip out (counted, not verified).
+    from culturelift import holder_culture, holder_faith, CK3_TO_EU4, FAITH_TO_RELIGION  # noqa: E402
+    cult_drift, rel_drift, unscripted = [], [], []
+    for t in _tagrows:
+        if not t.ck3_title:
+            continue
+        _h, cculture = holder_culture(t.ck3_title)
+        ecu = CK3_TO_EU4.get(cculture) if cculture else None
+        if not cculture:
+            unscripted.append(f"{t.tag} (no ruler culture)")
+        elif not ecu:
+            unscripted.append(f"{t.tag} (ruler culture {cculture} unmapped)")
+        elif ecu != t.culture:
+            cult_drift.append(f"{t.tag}: db {t.culture}, ruler {ecu}")
+        _h2, faith = holder_faith(t.ck3_title)
+        erel = FAITH_TO_RELIGION.get(faith) if faith else None
+        if not faith:
+            unscripted.append(f"{t.tag} (no ruler faith)")
+        elif not erel:
+            unscripted.append(f"{t.tag} (faith {faith} unmapped)")
+        elif erel != t.religion:
+            rel_drift.append(f"{t.tag}: db {t.religion}, ruler {erel}")
+    note(
+        not cult_drift,
+        f"tag cultures track the ruler ({len(cult_drift)} drifting)",
+    )
+    for b in cult_drift[:8]:
+        print("        " + str(b))
+    note(
+        not rel_drift,
+        f"tag faiths track the ruler ({len(rel_drift)} drifting)",
+    )
+    for b in rel_drift[:8]:
+        print("        " + str(b))
+    note(
+        len(unscripted) < 40,
+        f"CK3 data covers most lookups "
+        f"({len(_tagrows) * 2 - len(unscripted)} verified, "
+        f"{len(unscripted)} holders unscripted)",
+    )
+    for b in unscripted[:10]:
         print("        " + str(b))
 
     unownable = set(waste_ids()) | set(lake_ids())  # never owned by design
@@ -612,7 +705,7 @@ def run() -> int:
     VANILLA_REUSE = frozenset(
         "ADU ALG ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN DAU EGY ENG EST FIN FRA GAL "
         "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MLK MOR MZB NAP NAV NOR NOV PAP PLT POL POM PRU PRO ROM RUG SAR "
-        "SIL SCA SCO SER SIC SMI SOR SRV STE SWE TNG TRA TRP TUN VEN VOL WLS WOL".split()    )
+        "SIL SCA SCO SER SIC SMI SOR SRV STE SWE TNG TRA TRP TUN VEN VOL WLS WOL NAJ HDR MHR OMA".split()    )
 
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")

@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = bedouin_arabic
+religion = sunni
+capital = 4277
+867.1.1 = {
+	monarch = {
+		name = "Nahik"
+		dynasty = "Hilalid"
+		birth_date = 835.1.1
+		death_date = 885.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Abu-Rebia"
+		monarch_name = "Abu-Rebia"
+		dynasty = "Hilalid"
+		birth_date = 860.1.1
+		death_date = 910.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

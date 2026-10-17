@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = bedouin_arabic
+religion = ibadi
+capital = 389
+867.1.1 = {
+	monarch = {
+		name = "Samir"
+		dynasty = "Mahrid"
+		birth_date = 848.1.1
+		death_date = 899.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

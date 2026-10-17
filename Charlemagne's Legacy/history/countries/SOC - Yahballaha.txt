@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = yemeni_culture
+religion = nestorian
+capital = 1099
+867.1.1 = {
+	monarch = {
+		name = "Denha"
+		dynasty = "Yahballaha"
+		birth_date = 825.1.1
+		death_date = 872.3.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Abraham"
+		monarch_name = "Abraham"
+		dynasty = "Yahballaha"
+		birth_date = 845.1.1
+		death_date = 897.6.3
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
