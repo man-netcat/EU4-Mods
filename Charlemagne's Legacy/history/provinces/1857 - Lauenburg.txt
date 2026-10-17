@@ -6,7 +6,6 @@ add_core = GER
 capital = "Lauenburg"
 culture = polabian
 religion = catholic
-hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = salt

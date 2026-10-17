@@ -5,7 +5,6 @@ add_core = LBS
 capital = "Zhorelec"
 culture = polabian
 religion = slavic
-hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = livestock

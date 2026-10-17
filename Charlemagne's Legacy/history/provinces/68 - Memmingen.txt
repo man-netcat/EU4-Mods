@@ -6,7 +6,6 @@ add_core = BAV
 capital = "Memmingen"
 culture = swabian
 religion = catholic
-hre = yes
 base_tax = 5
 base_production = 5
 trade_goods = cloth

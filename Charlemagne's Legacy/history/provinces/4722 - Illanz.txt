@@ -4,7 +4,6 @@ add_core = GER
 capital = "Illanz"
 culture = swabian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 2
 trade_goods = livestock

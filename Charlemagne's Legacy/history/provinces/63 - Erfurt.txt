@@ -6,7 +6,6 @@ add_core = GER
 capital = "Erfurt"
 culture = saxon
 religion = catholic
-hre = yes
 base_tax = 5
 base_production = 4
 trade_goods = dyes #Woad, also a center for glassmaking

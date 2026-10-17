@@ -6,7 +6,6 @@ add_core = BAV
 capital = "Innsbruck"
 culture = bavarian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 4
 trade_goods = gold

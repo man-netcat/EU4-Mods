@@ -6,7 +6,6 @@ add_core = GER
 capital = "Hamburg"
 culture = saxon
 religion = catholic
-hre = yes
 base_tax = 7
 base_production = 7
 trade_goods = fish

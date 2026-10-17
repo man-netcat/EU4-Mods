@@ -6,7 +6,6 @@ add_core = BAV
 capital = "Wien"
 culture = bavarian
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 6
 trade_goods = wine

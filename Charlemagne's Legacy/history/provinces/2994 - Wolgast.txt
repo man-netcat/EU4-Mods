@@ -6,7 +6,6 @@ add_core = WOL
 capital = "Wolgast"
 culture = pommeranian
 religion = slavic
-hre = yes
 base_tax = 3
 base_production = 2
 trade_goods = salt

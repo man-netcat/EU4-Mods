@@ -6,7 +6,6 @@ add_core = HSA
 capital = "Lübeck"
 culture = polabian
 religion = slavic
-hre = yes
 base_tax = 7
 base_production = 7
 trade_goods = naval_supplies

@@ -7,7 +7,6 @@ capital = "Landsberg"
 #add_core = BRA
 culture = polabian
 religion = slavic
-hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = livestock

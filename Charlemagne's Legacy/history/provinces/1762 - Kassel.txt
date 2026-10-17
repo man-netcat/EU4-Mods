@@ -4,7 +4,6 @@ add_core = GER
 capital = "Kassel"
 culture = hessian
 religion = catholic
-hre = yes
 base_tax = 5
 base_production = 5
 trade_goods = glass

@@ -6,7 +6,6 @@ add_core = ITA
 capital = "Bergamo"
 culture = cisalpine
 religion = catholic
-hre = yes
 base_tax = 4
 base_production = 3
 trade_goods = cloth

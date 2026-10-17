@@ -6,7 +6,6 @@ add_core = GER
 capital = "Halle"
 culture = polabian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 3
 trade_goods = salt #the name "Halle" apparently might even derive from the Indo-Germanic word for salt

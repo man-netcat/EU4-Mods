@@ -6,7 +6,6 @@ add_core = ITA
 capital = "Genova"
 culture = ligurian
 religion = catholic
-hre = yes
 base_tax = 10
 base_production = 10
 trade_goods = paper

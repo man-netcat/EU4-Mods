@@ -6,7 +6,6 @@ add_core = ITA
 capital = "Mantova"
 culture = cisalpine
 religion = catholic
-hre = yes
 base_tax = 8
 base_production = 8
 trade_goods = livestock

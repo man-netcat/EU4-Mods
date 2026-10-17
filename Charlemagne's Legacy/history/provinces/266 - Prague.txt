@@ -6,7 +6,6 @@ add_core = PMS
 capital = "Praha"
 culture = czech
 religion = slavic
-hre = yes
 base_tax = 8
 base_production = 8
 trade_goods = cloth

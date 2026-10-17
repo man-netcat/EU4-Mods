@@ -7,7 +7,6 @@ add_core = UKI
 capital = "Berlin-Cölln"
 culture = polabian
 religion = slavic
-hre = yes
 base_tax = 4
 base_production = 4
 trade_goods = cloth

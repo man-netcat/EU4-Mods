@@ -6,7 +6,6 @@ add_core = SLU
 capital = "Dramburg"
 culture = pommeranian
 religion = slavic
-hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = livestock

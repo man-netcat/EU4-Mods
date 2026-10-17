@@ -6,7 +6,6 @@ add_core = LUT
 capital = "Pankow"
 culture = polabian
 religion = slavic
-hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = livestock

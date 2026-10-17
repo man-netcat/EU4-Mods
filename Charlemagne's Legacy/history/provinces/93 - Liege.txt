@@ -6,7 +6,6 @@ add_core = LOT
 capital = "Liège"
 culture = wallonian
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 6
 trade_goods = glass

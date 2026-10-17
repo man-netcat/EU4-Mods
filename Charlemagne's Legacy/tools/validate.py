@@ -256,6 +256,22 @@ def run() -> int:
         f"no duplicate province files ({len(files)} unique)",
     )
 
+    print("\n== no province is in the vanilla HRE ==")
+    # 867 knows no Holy Roman Empire: vanilla heads ship `hre = yes` on the
+    # whole former empire's land, and one leaking line puts a whole realm
+    # (whatever sits on that capital) inside the vanilla HRE.
+    hre_dirty = []
+    for fn in sorted(os.listdir(PDIR)):
+        if fn.endswith(".txt") and re.search(
+            r"^hre\s*=\s*yes",
+            open(os.path.join(PDIR, fn), encoding="utf-8", errors="replace").read(),
+            re.M,
+        ):
+            hre_dirty.append(fn)
+    note(not hre_dirty, f"no hre = yes in {len(files)} province files ({len(hre_dirty)} dirty)")
+    for b in hre_dirty[:10]:
+        print("        " + b)
+
     from eu4 import (  # noqa: E402
         lake_ids,
         sea_ids,
@@ -803,6 +819,24 @@ def run() -> int:
     note(not dirty, f"no tag-specific decisions in {n_files} files ({len(dirty)} dirty)")
     for b in dirty[:10]:
         print("        " + b)
+
+    print("\n== vanilla HRE electorate decisions stubbed dead ==")
+    from eu4 import VANILLA_STUB_DECISION_FILES  # noqa: E402
+
+    for fn, keys in sorted(VANILLA_STUB_DECISION_FILES.items()):
+        text = open(
+            os.path.join(ddir, fn), encoding="utf-8", errors="replace"
+        ).read()
+        dead = [
+            k
+            for k in keys
+            if re.search(rf"^\s*{k}\s*=\s*\{{", text, re.M)
+            and re.search(r"^\s*always\s*=\s*no", text, re.M)
+        ]
+        note(
+            len(dead) == len(keys),
+            f"{fn} stubbed dead ({len(dead)}/{len(keys)})",
+        )
 
     print("\n== custom script has no per-pid limit blocks ==")
     # A bare `PID = { ... }` effect block takes no `limit` child (the

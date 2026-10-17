@@ -4,7 +4,6 @@ add_core = ITA
 capital = "Geneva"
 culture = burgundian
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 4
 trade_goods = cloth

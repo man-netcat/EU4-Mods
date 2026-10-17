@@ -6,7 +6,6 @@ add_core = BAV
 capital = "Krems"
 culture = bavarian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 3
 trade_goods = wine

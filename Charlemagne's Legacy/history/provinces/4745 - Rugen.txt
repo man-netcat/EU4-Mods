@@ -6,7 +6,6 @@ add_core = RUG
 capital = "Bergen auf Rügen"
 culture = polabian
 religion = slavic
-hre = yes
 base_tax = 2
 base_production = 1
 trade_goods = fish

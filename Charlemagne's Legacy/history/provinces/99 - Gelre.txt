@@ -6,7 +6,6 @@ add_core = LOT
 capital = "Arnhem"
 culture = dutch
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 6
 trade_goods = livestock

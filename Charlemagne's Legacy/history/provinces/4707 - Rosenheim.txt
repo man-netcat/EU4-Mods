@@ -4,7 +4,6 @@ add_core = BAV
 capital = "Wasserburg"
 culture = bavarian
 religion = catholic
-hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = salt #Bad Reichenhall

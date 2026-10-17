@@ -6,7 +6,6 @@ add_core = ITA
 capital = "Cremona"
 culture = cisalpine
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 5
 trade_goods = grain

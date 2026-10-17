@@ -6,7 +6,6 @@ add_core = GER
 capital = "Ansbach"
 culture = franconian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 3
 trade_goods = salt

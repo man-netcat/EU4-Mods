@@ -6,7 +6,6 @@ add_core = PMS
 capital = "Cheb"
 culture = czech
 religion = slavic
-hre = yes
 base_tax = 4
 base_production = 4
 trade_goods = gold #Joachimstal mines

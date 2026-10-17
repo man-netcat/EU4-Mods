@@ -6,7 +6,6 @@ add_core = GER
 capital = "Meldorf"
 culture = saxon
 religion = catholic
-hre = yes
 base_tax = 2
 base_production = 3
 trade_goods = grain

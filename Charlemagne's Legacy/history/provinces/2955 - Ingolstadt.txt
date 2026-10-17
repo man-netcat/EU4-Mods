@@ -6,7 +6,6 @@ add_core = BAV
 capital	= "Ingolstadt"
 culture = bavarian
 religion = catholic
-hre = yes
 base_tax = 5
 base_production = 5
 trade_goods = wine #Would shift to beer over time

@@ -6,7 +6,6 @@ add_core = GER
 capital = "Ulm"
 culture = swabian
 religion = catholic
-hre = yes
 base_tax = 5
 base_production = 6
 trade_goods = cloth	#fustians

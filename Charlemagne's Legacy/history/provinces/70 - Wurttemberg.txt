@@ -4,7 +4,6 @@ add_core = GER
 capital = "Stuttgart"
 culture = swabian
 religion = catholic
-hre = yes
 base_tax = 4
 base_production = 4
 trade_goods = grain

@@ -6,7 +6,6 @@ add_core = ITA
 capital = "Torino"
 culture = cisalpine
 religion = catholic
-hre = yes
 base_tax = 7
 base_production = 7
 trade_goods = wine

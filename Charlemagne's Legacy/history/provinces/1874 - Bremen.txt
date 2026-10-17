@@ -6,7 +6,6 @@ add_core = GER
 capital = "Bremen"
 culture = saxon
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 6
 trade_goods = fish

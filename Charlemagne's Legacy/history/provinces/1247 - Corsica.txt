@@ -6,7 +6,6 @@ add_core = ITA
 capital = "Bastia"
 culture = sardinian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 3
 trade_goods = naval_supplies

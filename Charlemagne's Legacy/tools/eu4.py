@@ -399,6 +399,11 @@ def patch(text, new_owner, pid=None):
         ):
             continue
 
+        # 867 knows no Holy Roman Empire: never let vanilla membership leak
+        # (hre = no heads stay verbatim; only membership lines are dropped)
+        if re.match(r"^hre\s*=\s*yes", s):
+            continue
+
         out.append(ln)
 
     have_core = any(
@@ -888,6 +893,17 @@ VANILLA_FORMATION_FILES = {
     "RestoreRomanEmpire.txt": ["restore_roman_empire"],
 }
 
+# Vanilla electorate decisions: 867 has no emperor and no electors (our
+# history/diplomacy carries none), so the keys are stubbed dead by
+# same-filename file override.
+VANILLA_STUB_DECISION_FILES = {
+    "ElectorateDecisions.txt": (
+        "purchase_the_electorate",
+        "request_the_electorate",
+        "usurp_the_electorate",
+    ),
+}
+
 
 def all_known_tags():
     """Every 3-letter tag vanilla can name. Ours are irrelevant here: we
@@ -1032,6 +1048,8 @@ def step_filter_decisions() -> None:
     for fn in sorted(vanilla):
         if fn in VANILLA_FORMATION_FILES:
             continue
+        if fn in VANILLA_STUB_DECISION_FILES:
+            continue
         text = open(os.path.join(vdir, fn), encoding="utf-8",
                     errors="replace").read()
         segs = split_decision_blocks(text)
@@ -1055,6 +1073,29 @@ def step_filter_decisions() -> None:
         kept_files += 1
     print(f"decisions: {kept_files} files, {kept_decisions} kept, "
           f"{len(dropped)} tag-specific dropped")
+
+    # Vanilla keys stubbed dead: same-filename file wins whole, and the
+    # stubs (always-no potential, empty effect) do nothing for anyone.
+    for fn, keys in sorted(VANILLA_STUB_DECISION_FILES.items()):
+        stubs = "\n".join(
+            f"\t{k} = {{\n"
+            f"\t\tpotential = {{\n"
+            f"\t\t\talways = no\n"
+            f"\t\t}}\n"
+            f"\t\tallow = {{\n"
+            f"\t\t}}\n"
+            f"\t\teffect = {{\n"
+            f"\t\t}}\n"
+            f"\t}}"
+            for k in keys
+        )
+        sp = os.path.join(ddir, fn)
+        write_out(
+            sp,
+            f"# dummy: 867 has no emperor and no electors\n"
+            f"country_decisions = {{\n{stubs}\n}}\n",
+        )
+        print(f"wrote {sp} (stub, {len(keys)} keys dead)")
 
 
 def step_custom() -> None:

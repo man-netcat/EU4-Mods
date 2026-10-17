@@ -4,7 +4,6 @@ add_core = DAU
 capital = "Bourg-en-Bresse"
 culture = burgundian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 2
 trade_goods = cloth

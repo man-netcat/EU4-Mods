@@ -6,7 +6,6 @@ add_core = LUT
 capital = "Potsdam"
 culture = polabian
 religion = slavic
-hre = yes
 base_tax = 3
 base_production = 3
 trade_goods = wool
