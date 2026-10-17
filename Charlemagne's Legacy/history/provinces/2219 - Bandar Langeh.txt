@@ -2,6 +2,7 @@
 
 owner = SAF
 controller = SAF
+add_core = TIM
 add_core = SAF
 capital = "Bandar Langeh"
 culture = persian

@@ -3,6 +3,7 @@ bookmark =
 	name = "KAROLINGIANS_NAME"
 	desc = "KAROLINGIANS_DESC"
 	date = 867.1.1
+	default = yes
 
 	center = 183
 
@@ -12,6 +13,6 @@ bookmark =
 	country = BAV
 	country = ITA
 	country = PAP
-	country = BYZ
-	country = BOH
+	country = ADU
+	country = AQI
 }

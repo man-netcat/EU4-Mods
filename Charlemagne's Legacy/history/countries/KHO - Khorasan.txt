@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = persian
+religion = sunni
+capital = 4326
+867.1.1 = {
+	monarch = {
+		name = "Muhammad"
+		dynasty = "Tahirid"
+		birth_date = 840.2.5
+		death_date = 910.1.1
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+	heir = {
+		name = "Tahir"
+		monarch_name = "Tahir"
+		dynasty = "Tahirid"
+		birth_date = 863.1.1
+		death_date = 914.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

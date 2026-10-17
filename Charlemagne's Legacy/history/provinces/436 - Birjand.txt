@@ -2,6 +2,7 @@
 
 owner = SAF
 controller = SAF
+add_core = KHO
 add_core = SAF
 capital = "Birjand"
 culture = khorasani

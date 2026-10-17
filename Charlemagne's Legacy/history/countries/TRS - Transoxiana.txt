@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = persian
+religion = sunni
+capital = 2228
+867.1.1 = {
+	monarch = {
+		name = "Nasr"
+		dynasty = "Samanid"
+		birth_date = 830.9.1
+		death_date = 892.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ahmad"
+		monarch_name = "Ahmad"
+		dynasty = "Samanid"
+		birth_date = 859.1.1
+		death_date = 915.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

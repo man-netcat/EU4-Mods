@@ -120,6 +120,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   classic bug). Re-sync all eight files against the
   base game on patches; validate guards the
   vanilla key set, both sprite lists, the TGA targets and the frame counts.
+  New religions go in via `tools/addreligion.py` (block clone, loc,
+  registry, CK3 icon decode onto all four strips by row, gfx frame
+  counts - one idempotent call; hand-edit only what it cannot do).
   Steppe + Khitan + Avar remnant `tengri_pagan_reformed`; Magyars
   `taltosist` — CK3's own faith (pagan group, CK3 name/colour/icon) on
   Etelköz;

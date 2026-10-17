@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = persian
+religion = mahayana
+capital = 449
+867.1.1 = {
+	monarch = {
+		name = "Surí"
+		dynasty = "Ghurid"
+		birth_date = 842.3.5
+		death_date = 925.10.22
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}

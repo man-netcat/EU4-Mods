@@ -1,6 +1,27 @@
 #2224 - Ferah
 
+owner = TIM
+controller = TIM
+add_core = TIM
+add_core = AFG
+add_core = KHO
+capital = "Ferah"
+culture = khorasani
+religion = sunni
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TIM
+	controller = TIM
+	add_core = TIM
+}

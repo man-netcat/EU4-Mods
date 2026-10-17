@@ -61,6 +61,72 @@ abbasid_caliphate = {
 	}
 }
 
+# Khwarazm under the Afrigids: a Vilayah at county rank, the
+# Khwarezmshahdom proper from the duchy on; Shahbanu sits as presiding
+# queen as well as consort.
+khwarezmian_shahdom = {
+	rank = {
+		1 = VILAYAH
+		2 = KHWAREZMSHAHDOM
+		3 = KHWAREZMSHAHDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = EMIR
+		2 = SHAH
+		3 = SHAH
+		4 = SHAHANSHAH
+		5 = SHAHANSHAH
+	}
+
+	ruler_female = {
+		1 = EMIRA
+		2 = SHAHBANU
+		3 = SHAHBANU
+		4 = SHAHBANU
+		5 = SHAHBANU
+	}
+
+	consort_male = {
+		1 = EMIR_CONSORT
+		2 = SHAH_CONSORT
+		3 = SHAH_CONSORT
+		4 = SHAH_CONSORT
+		5 = SHAH_CONSORT
+	}
+
+	consort_female = {
+		1 = EMIRA
+		2 = SHAHBANU
+		3 = SHAHBANU
+		4 = SHAHBANU
+		5 = SHAHBANU
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = khwarezmian
+	}
+}
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = bedouin_arabic
+religion = shiite
+capital = 426
+867.1.1 = {
+	monarch = {
+		name = "Hasan"
+		dynasty = "Hashimid"
+		birth_date = 830.2.25
+		death_date = 884.1.6
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Muhammad"
+		monarch_name = "Muhammad"
+		dynasty = "Hashimid"
+		birth_date = 832.1.1
+		death_date = 900.10.3
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}

@@ -7,6 +7,7 @@ country_decisions = {
 		potential = {
 			OR = {
 				tag = ADU
+				tag = AFG
 				tag = ALG
 				tag = ARB
 				tag = ARM
@@ -32,6 +33,7 @@ country_decisions = {
 				tag = HSA
 				tag = ITA
 				tag = JAP
+				tag = KHO
 				tag = KIE
 				tag = KRA
 				tag = KRL
@@ -59,9 +61,11 @@ country_decisions = {
 				tag = SOR
 				tag = SRV
 				tag = STE
+				tag = TIM
 				tag = TNG
 				tag = TRA
 				tag = TRP
+				tag = TRS
 				tag = TUN
 				tag = VEN
 				tag = WOL
@@ -75,6 +79,12 @@ country_decisions = {
 			limit = { tag = ADU }
 			change_country_color = {
 				color = { 240 230 155 }
+			}
+		}
+		if = {
+			limit = { tag = AFG }
+			change_country_color = {
+				color = { 102 128 52 }
 			}
 		}
 		if = {
@@ -225,6 +235,12 @@ country_decisions = {
 			limit = { tag = JAP }
 			change_country_color = {
 				color = { 194 53 60 }
+			}
+		}
+		if = {
+			limit = { tag = KHO }
+			change_country_color = {
+				color = { 130 168 224 }
 			}
 		}
 		if = {
@@ -390,6 +406,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = TIM }
+			change_country_color = {
+				color = { 213 0 39 }
+			}
+		}
+		if = {
 			limit = { tag = TNG }
 			change_country_color = {
 				color = { 208 119 102 }
@@ -405,6 +427,12 @@ country_decisions = {
 			limit = { tag = TRP }
 			change_country_color = {
 				color = { 25 105 90 }
+			}
+		}
+		if = {
+			limit = { tag = TRS }
+			change_country_color = {
+				color = { 49 185 191 }
 			}
 		}
 		if = {

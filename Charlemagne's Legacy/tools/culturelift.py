@@ -65,7 +65,7 @@ CK3_TO_EU4 = {
     "khazar": "bulgarian", "pecheneg": "pecheneg", "cuman": "khazak",
     "kipchak": "khazak", "kimek": "khazak", "oghuz": "turkmeni",
     "karluk": "uzbehk", "sogdian": "uzbehk", "tocharian": "uyghur",
-    "saka": "uyghur", "khwarezmian": "khorasani", "tajik": "persian",
+    "saka": "uyghur", "khwarezmian": "khwarezmian", "tajik": "persian",
     "tibetan": "tibetan", "bodpa": "tibetan", "tsangpa": "tibetan",
     "sumpa": "tibetan", "laktan": "tibetan", "zhangzhung": "tibetan",
     "tuyuhun": "tibetan",
@@ -483,6 +483,10 @@ FAITH_TO_RELIGION = {
     "vinaya": "buddhism", "avatamsaka": "mahayana", "mantrayana": "vajrayana",
     # pundarika is CK3's Lotus-school Buddhism (the Heian court's faith)
     "pundarika": "mahayana",
+    # the plain Mahayana key itself (the Buddhist Ghurids of 867) and
+    # the Shaiva milieus of the Kabul Shahi
+    "mahayana": "mahayana",
+    "shaivism": "hinduism",
 }
 
 

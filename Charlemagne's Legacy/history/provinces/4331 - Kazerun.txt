@@ -2,6 +2,7 @@
 
 owner = ARB
 controller = ARB
+add_core = TIM
 add_core = ARB
 capital = "Kazerun"
 culture = luri

@@ -163,7 +163,7 @@ def main(argv):
                                       "common", "cultures", "*.txt")):
         for ln in open(fn, encoding="cp1252", errors="replace"):
             # tolerate trailing comments (most cultures carry #Name)
-            m = re.match(r"^\t([a-z_0-9]+) = \{", ln)
+            m = re.match(r"^\t([a-z_0-9]+)\s*=\s*\{", ln)
             if m:
                 have.add(m.group(1))
     for pid, (_nm, cul, _rel) in datas.items():
