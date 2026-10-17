@@ -2,6 +2,7 @@
 
 owner = SYT
 controller = SYT
+add_core = TRP
 add_core = SYT
 capital = "Ben Jawad"
 culture = butr

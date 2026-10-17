@@ -1,8 +1,8 @@
 #354 - Tripoli
 
-owner = TLP
-controller = TLP
-add_core = TLP
+owner = TRP
+controller = TRP
+add_core = TRP
 capital = "Tripoli" #Tripoli in the West.
 culture = butr
 religion = ibadi
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = TLP
-	controller = TLP
-	add_core = TLP
+	owner = TRP
+	controller = TRP
+	add_core = TRP
 }
