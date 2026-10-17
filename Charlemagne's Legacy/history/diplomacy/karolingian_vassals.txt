@@ -34,15 +34,15 @@ union = {
 }
 guarantee = {
 	first = FRA
-	second = BOH
-}
-guarantee = {
-	first = FRA
 	second = GMA
 }
 guarantee = {
 	first = FRA
 	second = JYL
+}
+guarantee = {
+	first = FRA
+	second = PMS
 }
 guarantee = {
 	first = FRA

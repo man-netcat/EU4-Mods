@@ -1,6 +1,6 @@
-owner = BOH
-controller = BOH
-add_core = BOH
+owner = PMS
+controller = PMS
+add_core = PMS
 capital = "Chlumec"
 culture = czech
 religion = slavic
@@ -17,7 +17,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BOH
-	controller = BOH
-	add_core = BOH
+	owner = PMS
+	controller = PMS
+	add_core = PMS
 }

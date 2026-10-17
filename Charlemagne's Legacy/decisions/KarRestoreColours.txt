@@ -12,7 +12,6 @@ country_decisions = {
 				tag = ARM
 				tag = ASU
 				tag = BAV
-				tag = BOH
 				tag = BRI
 				tag = BUL
 				tag = BYZ
@@ -101,12 +100,6 @@ country_decisions = {
 			limit = { tag = BAV }
 			change_country_color = {
 				color = { 17 116 193 }
-			}
-		}
-		if = {
-			limit = { tag = BOH }
-			change_country_color = {
-				color = { 161 139 40 }
 			}
 		}
 		if = {

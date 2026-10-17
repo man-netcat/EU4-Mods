@@ -1,0 +1,37 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = czech
+religion = slavic
+capital = 266
+historical_rival = GMA
+add_accepted_culture = sorbian
+add_army_professionalism = 0.1
+
+change_estate_land_share = {
+	estate = estate_burghers
+	share = -5
+}
+867.1.1 = {
+	monarch = {
+		name = "Neklan"
+		dynasty = "Premyslid"
+		birth_date = 800.1.1
+		death_date = 873.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hostivít"
+		monarch_name = "Hostivít"
+		dynasty = "Premyslid"
+		birth_date = 820.1.1
+		death_date = 870.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

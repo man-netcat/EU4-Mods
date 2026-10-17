@@ -242,6 +242,16 @@ kar_form_serbia_provinces_trigger = {
 	}
 }
 
+kar_form_bohemia_provinces_trigger = {
+	OR = {
+		area = bohemia_area
+		area = erzgebirge_area
+		area = lusatia_area
+		area = moravia_area
+		area = silesia_area
+	}
+}
+
 kar_form_denmark_provinces_trigger = {
 	OR = {
 		area = denmark_area
