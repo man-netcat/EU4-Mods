@@ -22,6 +22,7 @@ def main() -> int:
         ("write preset wars", step_wars),
         ("generate the Magyars", step_custom),
         ("rewrite vanilla realm colours", step_vanilla_countries),
+        ("generate the restore-colours decision", step_restore_colours),
         ("write formation triggers", step_formation_triggers),
         ("filter vanilla events", step_events),
         ("filter vanilla decisions", step_filter_decisions),

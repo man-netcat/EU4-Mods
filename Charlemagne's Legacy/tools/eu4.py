@@ -519,6 +519,18 @@ def undated_group_visibility(full):
     return out
 
 
+def write_loc(path, pairs) -> None:
+    """Write one generated localisation file: UTF-8 with BOM (the game
+    ignores BOM-less files), one `key:0 "value"` pair per line."""
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
+    with open(path, "w", encoding="utf-8-sig", newline="") as fh:
+        fh.write("l_english:\n")
+        for k, v in pairs:
+            fh.write(f' {k}:0 "{v}"\n')
+
+
 def write_out(path, text, encoding="cp1252", errors="pdx"):
     """Write one generated file: cp1252 with the pdx handler like every
     generated game file (the events/decisions vendoring passes utf-8)."""
@@ -1240,6 +1252,82 @@ def hist_name(t) -> str:
     if base.endswith(".txt"):
         base = base[:-4]
     return f"{t.tag} - {base}.txt"
+
+
+@lru_cache(maxsize=1)
+def vanilla_colours() -> dict[str, tuple[int, int, int]]:
+    """{tag: (r,g,b)} straight from the base game's country files."""
+    out = {}
+    for tag, (fn, text) in load_vanilla_countries().items():
+        m = re.search(r"(?m)^\s*color\s*=\s*\{\s*(\d+)\s+(\d+)\s+(\d+)", text)
+        if not m:
+            raise ValueError(f"vanilla country file {fn} ({tag}) has no colour line")
+        out[tag] = (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    return out
+
+
+def step_restore_colours() -> None:
+    """One singular decision: any tag the mod reuses from the base game may
+    put the base game's own colours back (our files carry the CK3 palette;
+    this is the player's way home). The map of every basegame tag in the mod
+    against its vanilla colour is written as one if-branch per tag inside
+    the decision, so it stays singular and always matches the current tag.
+    """
+    os.makedirs(os.path.join(MOD, "decisions"), exist_ok=True)
+    colors = vanilla_colours()
+    targets = sorted({t.tag for t in TAGS if t.tag in colors})
+    key = "kar_restore_base_game_colours"
+    ors = "\n".join(f"\t\t\t\ttag = {tag}" for tag in targets)
+    branches = "\n".join(
+        f"\t\tif = {{\n"
+        f"\t\t\tlimit = {{ tag = {tag} }}\n"
+        f"\t\t\tchange_country_color = {{\n"
+        f"\t\t\t\tcolor = {{ {r} {g} {b} }}\n"
+        f"\t\t\t}}\n"
+        f"\t\t}}"
+        for tag, (r, g, b) in sorted(colors.items()) if tag in set(targets)
+    )
+    txt = (
+        "# The CK3 palette stands in the country files; this one decision lets\n"
+        "# any tag the mod reuses from the base game restore the base game's\n"
+        "# own colours. One generated branch per basegame tag in the mod, so\n"
+        "# the decision stays singular and always matches the current tag.\n"
+        "country_decisions = {\n"
+        f"\t{key} = {{\n"
+        "\t\tpotential = {\n"
+        "\t\t\tOR = {\n"
+        f"{ors}\n"
+        "\t\t\t}\n"
+        "\t\t}\n"
+        "\t\tallow = {\n"
+        "\t\t\talways = yes\n"
+        "\t\t}\n"
+        "\t\teffect = {\n"
+        f"{branches}\n"
+        "\t\t}\n"
+        "\t\tai_will_do = {\n"
+        "\t\t\tfactor = 0\n"
+        "\t\t}\n"
+        "\t}\n"
+        "}\n"
+    )
+    p = os.path.join(MOD, "decisions", "KarRestoreColours.txt")
+    write_out(p, txt)
+    loc = os.path.join(MOD, "localisation", "karolingian_colours_l_english.yml")
+    write_loc(
+        loc,
+        [
+            (key, "Restore the Old Colors"),
+            (key + "_title", "Restore the Old Colors"),
+            (
+                key + "_desc",
+                "Whoever wears the crown today, the old realm once flew colors "
+                "that men could name from across the field. Let us look to our "
+                "fathers' banners again and restore the true colors of our nation.",
+            ),
+        ],
+    )
+    print(f"wrote {p} ({len(targets)} basegame tags)")
 
 
 def step_countries():

@@ -1,0 +1,405 @@
+# The CK3 palette stands in the country files; this one decision lets
+# any tag the mod reuses from the base game restore the base game's
+# own colours. One generated branch per basegame tag in the mod, so
+# the decision stays singular and always matches the current tag.
+country_decisions = {
+	kar_restore_base_game_colours = {
+		potential = {
+			OR = {
+				tag = ADU
+				tag = ALG
+				tag = ARB
+				tag = ARM
+				tag = ASU
+				tag = BAV
+				tag = BOH
+				tag = BRI
+				tag = BUL
+				tag = BYZ
+				tag = CRN
+				tag = CRO
+				tag = CRT
+				tag = DAL
+				tag = DAU
+				tag = EGY
+				tag = EST
+				tag = FIN
+				tag = FRA
+				tag = GAL
+				tag = GER
+				tag = GMA
+				tag = GOT
+				tag = HSA
+				tag = ITA
+				tag = KIE
+				tag = KRA
+				tag = KRL
+				tag = KUR
+				tag = LOI
+				tag = LOT
+				tag = LVA
+				tag = MLK
+				tag = MOR
+				tag = MZB
+				tag = NAP
+				tag = NAV
+				tag = NOV
+				tag = PAP
+				tag = PLT
+				tag = PRO
+				tag = PRU
+				tag = RUG
+				tag = SCO
+				tag = SIC
+				tag = SIL
+				tag = SOR
+				tag = SRV
+				tag = STE
+				tag = TNG
+				tag = TRA
+				tag = TRP
+				tag = TUN
+				tag = VEN
+				tag = WOL
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+		if = {
+			limit = { tag = ADU }
+			change_country_color = {
+				color = { 240 230 155 }
+			}
+		}
+		if = {
+			limit = { tag = ALG }
+			change_country_color = {
+				color = { 230 225 110 }
+			}
+		}
+		if = {
+			limit = { tag = ARB }
+			change_country_color = {
+				color = { 76 141 58 }
+			}
+		}
+		if = {
+			limit = { tag = ARM }
+			change_country_color = {
+				color = { 145 30 75 }
+			}
+		}
+		if = {
+			limit = { tag = ASU }
+			change_country_color = {
+				color = { 104 173 230 }
+			}
+		}
+		if = {
+			limit = { tag = BAV }
+			change_country_color = {
+				color = { 17 116 193 }
+			}
+		}
+		if = {
+			limit = { tag = BOH }
+			change_country_color = {
+				color = { 161 139 40 }
+			}
+		}
+		if = {
+			limit = { tag = BRI }
+			change_country_color = {
+				color = { 118 99 151 }
+			}
+		}
+		if = {
+			limit = { tag = BUL }
+			change_country_color = {
+				color = { 116 107 140 }
+			}
+		}
+		if = {
+			limit = { tag = BYZ }
+			change_country_color = {
+				color = { 149 45 102 }
+			}
+		}
+		if = {
+			limit = { tag = CRN }
+			change_country_color = {
+				color = { 155 56 0 }
+			}
+		}
+		if = {
+			limit = { tag = CRO }
+			change_country_color = {
+				color = { 104 94 247 }
+			}
+		}
+		if = {
+			limit = { tag = CRT }
+			change_country_color = {
+				color = { 138 110 130 }
+			}
+		}
+		if = {
+			limit = { tag = DAL }
+			change_country_color = {
+				color = { 46 128 188 }
+			}
+		}
+		if = {
+			limit = { tag = DAU }
+			change_country_color = {
+				color = { 93 194 122 }
+			}
+		}
+		if = {
+			limit = { tag = EGY }
+			change_country_color = {
+				color = { 255 220 104 }
+			}
+		}
+		if = {
+			limit = { tag = EST }
+			change_country_color = {
+				color = { 248 125 125 }
+			}
+		}
+		if = {
+			limit = { tag = FIN }
+			change_country_color = {
+				color = { 182 134 100 }
+			}
+		}
+		if = {
+			limit = { tag = FRA }
+			change_country_color = {
+				color = { 20 50 210 }
+			}
+		}
+		if = {
+			limit = { tag = GAL }
+			change_country_color = {
+				color = { 240 167 130 }
+			}
+		}
+		if = {
+			limit = { tag = GER }
+			change_country_color = {
+				color = { 75 130 135 }
+			}
+		}
+		if = {
+			limit = { tag = GMA }
+			change_country_color = {
+				color = { 215 17 32 }
+			}
+		}
+		if = {
+			limit = { tag = GOT }
+			change_country_color = {
+				color = { 153 126 0 }
+			}
+		}
+		if = {
+			limit = { tag = HSA }
+			change_country_color = {
+				color = { 156 179 189 }
+			}
+		}
+		if = {
+			limit = { tag = ITA }
+			change_country_color = {
+				color = { 125 171 84 }
+			}
+		}
+		if = {
+			limit = { tag = KIE }
+			change_country_color = {
+				color = { 81 123 210 }
+			}
+		}
+		if = {
+			limit = { tag = KRA }
+			change_country_color = {
+				color = { 138 193 231 }
+			}
+		}
+		if = {
+			limit = { tag = KRL }
+			change_country_color = {
+				color = { 244 38 38 }
+			}
+		}
+		if = {
+			limit = { tag = KUR }
+			change_country_color = {
+				color = { 99 137 153 }
+			}
+		}
+		if = {
+			limit = { tag = LOI }
+			change_country_color = {
+				color = { 0 105 104 }
+			}
+		}
+		if = {
+			limit = { tag = LOT }
+			change_country_color = {
+				color = { 95 106 207 }
+			}
+		}
+		if = {
+			limit = { tag = LVA }
+			change_country_color = {
+				color = { 20 14 150 }
+			}
+		}
+		if = {
+			limit = { tag = MLK }
+			change_country_color = {
+				color = { 117 167 117 }
+			}
+		}
+		if = {
+			limit = { tag = MOR }
+			change_country_color = {
+				color = { 191 110 62 }
+			}
+		}
+		if = {
+			limit = { tag = MZB }
+			change_country_color = {
+				color = { 185 172 208 }
+			}
+		}
+		if = {
+			limit = { tag = NAP }
+			change_country_color = {
+				color = { 100 50 150 }
+			}
+		}
+		if = {
+			limit = { tag = NAV }
+			change_country_color = {
+				color = { 252 233 58 }
+			}
+		}
+		if = {
+			limit = { tag = NOV }
+			change_country_color = {
+				color = { 97 126 37 }
+			}
+		}
+		if = {
+			limit = { tag = PAP }
+			change_country_color = {
+				color = { 211 220 178 }
+			}
+		}
+		if = {
+			limit = { tag = PLT }
+			change_country_color = {
+				color = { 16 113 155 }
+			}
+		}
+		if = {
+			limit = { tag = PRO }
+			change_country_color = {
+				color = { 93 160 163 }
+			}
+		}
+		if = {
+			limit = { tag = PRU }
+			change_country_color = {
+				color = { 0 49 83 }
+			}
+		}
+		if = {
+			limit = { tag = RUG }
+			change_country_color = {
+				color = { 51 59 76 }
+			}
+		}
+		if = {
+			limit = { tag = SCO }
+			change_country_color = {
+				color = { 199 175 12 }
+			}
+		}
+		if = {
+			limit = { tag = SIC }
+			change_country_color = {
+				color = { 73 152 76 }
+			}
+		}
+		if = {
+			limit = { tag = SIL }
+			change_country_color = {
+				color = { 84 166 93 }
+			}
+		}
+		if = {
+			limit = { tag = SOR }
+			change_country_color = {
+				color = { 67 80 128 }
+			}
+		}
+		if = {
+			limit = { tag = SRV }
+			change_country_color = {
+				color = { 98 206 253 }
+			}
+		}
+		if = {
+			limit = { tag = STE }
+			change_country_color = {
+				color = { 33 119 58 }
+			}
+		}
+		if = {
+			limit = { tag = TNG }
+			change_country_color = {
+				color = { 208 119 102 }
+			}
+		}
+		if = {
+			limit = { tag = TRA }
+			change_country_color = {
+				color = { 211 207 173 }
+			}
+		}
+		if = {
+			limit = { tag = TRP }
+			change_country_color = {
+				color = { 25 105 90 }
+			}
+		}
+		if = {
+			limit = { tag = TUN }
+			change_country_color = {
+				color = { 146 134 57 }
+			}
+		}
+		if = {
+			limit = { tag = VEN }
+			change_country_color = {
+				color = { 54 167 156 }
+			}
+		}
+		if = {
+			limit = { tag = WOL }
+			change_country_color = {
+				color = { 235 178 18 }
+			}
+		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
