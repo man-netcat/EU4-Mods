@@ -1,4 +1,25 @@
 #1955 - Kholmogory
 
+owner = KLG
+controller = KLG
+add_core = KLG
+capital = "Kholmogory"
+culture = bjarmian
+religion = suomenusko
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = fur
+base_manpower = 1
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = eastern
 discovered_by = western
+
+867.1.1 = {
+	owner = KLG
+	controller = KLG
+	add_core = KLG
+}

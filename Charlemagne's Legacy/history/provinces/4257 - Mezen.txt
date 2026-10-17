@@ -1,4 +1,23 @@
 #4257 - Mezen
 
+owner = KLG
+controller = KLG
+add_core = KLG
+capital = "Okladnikova Sloboda"
+culture = bjarmian
+religion = suomenusko
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+is_city = yes
+
 discovered_by = eastern
 discovered_by = western
+
+867.1.1 = {
+	owner = KLG
+	controller = KLG
+	add_core = KLG
+}

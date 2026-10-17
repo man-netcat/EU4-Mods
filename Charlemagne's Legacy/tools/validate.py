@@ -1254,6 +1254,80 @@ def run() -> int:
     for b in bad_rel[:8]:
         print("        " + b)
 
+    print("\n== culture blocks sit at group depth ==")
+    # A culture block nested inside another culture silently does nothing
+    # in game (the carantanian bug): the engine reads cultures only at
+    # group depth. Every culture the mod actually uses must own exactly
+    # one depth-1 block. Same-name groups and cultures (frankish,
+    # maghrebi) are the mod's own split-group pattern and are fine.
+    from db import session as db_session
+    from models import Culture as DbCulture
+
+    _s2 = db_session()
+    # every row keyed on a culture column, in any table
+    used_cultures = set()
+    for _tbl in [
+        r[0]
+        for r in _s2.execute(
+            __import__("sqlalchemy").text(
+                "SELECT name FROM sqlite_master WHERE type='table'"
+            )
+        )
+    ]:
+        _tabs = [
+            r[1]
+            for r in _s2.execute(
+                __import__("sqlalchemy").text(f"PRAGMA table_info({_tbl})")
+            )
+        ]
+        if "culture" in _tabs:
+            used_cultures |= {
+                r[0]
+                for r in _s2.execute(
+                    __import__("sqlalchemy").text(
+                        f"SELECT DISTINCT culture FROM {_tbl} WHERE culture IS NOT NULL"
+                    )
+                )
+            }
+    _s2.close()
+    for fn in sorted(os.listdir(PDIR)):
+        if fn.endswith(".txt"):
+            for c in re.findall(
+                r"(?m)^\s*culture\s*=\s*([a-z_0-9]+)",
+                open(os.path.join(PDIR, fn), encoding="utf-8", errors="replace").read(),
+            ):
+                used_cultures.add(c)
+    cpath = os.path.join(MOD, "common", "cultures", "00_cultures.txt")
+    openers = []  # (key, depth) for every block opener, comments stripped
+    _depth = 0
+    for ln in open(cpath, encoding="utf-8", errors="replace").read().splitlines():
+        code = ln.split("#", 1)[0]
+        m = re.match(r"\s*([A-Za-z_0-9]+)\s*=\s*\{", code)
+        if m:
+            openers.append((m.group(1), _depth))
+        _depth += code.count("{") - code.count("}")
+    # name lists and vanilla's country/province interaction blocks are
+    # fields, never cultures
+    FIELD_BLOCKS = frozenset(
+        {"male_names", "female_names", "dynasty_names", "unit_names", "ship_names",
+         "army_names", "fleet_names", "names_from_culture", "country", "province"}
+    )
+    bad_cult = [f"{k} nests at depth {d}" for k, d in openers
+                if k not in FIELD_BLOCKS and d >= 2]
+    for k in sorted(used_cultures):
+        ds = [d for key, d in openers if key == k and d >= 1]
+        if ds.count(1) != 1:
+            bad_cult.append(
+                f"{k} appears {len(ds)}x as a culture block (need exactly one depth-1 block)"
+            )
+    note(
+        not bad_cult,
+        f"all {len(used_cultures)} used cultures own exactly one depth-1 block"
+        + ("" if not bad_cult else f" ({len(bad_cult)} bad)"),
+    )
+    for b in bad_cult[:12]:
+        print("        " + b)
+
     print("\n== vanilla tech-group visibility survives everywhere ==")
     from eu4 import undated_group_visibility  # noqa: E402
 

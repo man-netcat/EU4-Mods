@@ -206,7 +206,11 @@ def main(argv):
                  government=a.gov, technology_group=a.tech, color_r=r,
                  color_g=g, color_b=bl, country_file=country_file))
     for pid in a.pids:
-        if s.get(ProvinceRow, pid) is None:
+        # no_autoflush: the lookups must not flush the pending Tag row,
+        # whose capital FK points at a province this loop only then adds
+        with s.no_autoflush:
+            fresh = s.get(ProvinceRow, pid) is None
+        if fresh:
             pname, pcul, prel = datas[pid]
             s.add(ProvinceRow(pid=pid, name=pname, culture=a.culture or pcul,
                               religion=a.religion or prel, fort=False))
