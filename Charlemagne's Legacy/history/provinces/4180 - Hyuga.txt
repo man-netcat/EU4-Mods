@@ -1,3 +1,22 @@
 #4180 - Hyuga
 
+owner = JAP
+controller = JAP
+add_core = JAP
+capital = "Obi"
+culture = japanese
+religion = mahayana
+hre = no
+base_tax = 3
+base_production = 2
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = JAP
+	controller = JAP
+	add_core = JAP
+}

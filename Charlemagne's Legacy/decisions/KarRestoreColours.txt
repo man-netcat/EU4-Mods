@@ -31,6 +31,7 @@ country_decisions = {
 				tag = HDR
 				tag = HSA
 				tag = ITA
+				tag = JAP
 				tag = KIE
 				tag = KRA
 				tag = KRL
@@ -218,6 +219,12 @@ country_decisions = {
 			limit = { tag = ITA }
 			change_country_color = {
 				color = { 125 171 84 }
+			}
+		}
+		if = {
+			limit = { tag = JAP }
+			change_country_color = {
+				color = { 194 53 60 }
 			}
 		}
 		if = {

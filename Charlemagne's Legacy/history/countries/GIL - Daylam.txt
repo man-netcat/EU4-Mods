@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = mazandarani
+religion = shiite
+capital = 4339
+867.1.1 = {
+	monarch = {
+		name = "Wahsudan"
+		dynasty = "Justanid"
+		birth_date = 835.1.1
+		death_date = 905.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Justan"
+		monarch_name = "Justan"
+		dynasty = "Justanid"
+		birth_date = 860.1.1
+		death_date = 916.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

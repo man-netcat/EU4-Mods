@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 4
+technology_group = chinese
+primary_culture = japanese
+religion = mahayana
+capital = 1020
+867.1.1 = {
+	monarch = {
+		name = "Yoshifusa"
+		dynasty = "Fujiwara"
+		birth_date = 804.1.1
+		death_date = 872.10.7
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

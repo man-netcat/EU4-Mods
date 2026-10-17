@@ -63,3 +63,55 @@ A only if the whole world should be calmer (not recommended).
 
 1. Target density: 3–5 vassals per overlord, or a real swarm (8–12)?
 2. Prototype the custom type now (needs in-game testing) or tune first?
+
+## Abbasid decline disaster (parked)
+
+Goal: nerf the Abbasids via a break-up disaster, modeled on the vanilla
+`decline_of_mali` (`common/disasters/decline_of_mali.txt` +
+`events/flavorMAL.txt`.9–23) — progress/can_start/can_stop/modifier/on_start/
+on_end/on_monthly pattern, `progress = { modifier = { factor = 100 } }` to
+tick fast, the ARB tag as `potential`.
+
+History for flavor: 867 is mid-"Anarchy at Samarra" (861–870, four caliphs
+deposed/murdered in nine years, treasury broke, Turkish guard in command);
+Ya'qub al-Saffar took Nishapur in the start year; Tulunid Egypt stops
+tribute from 868/878; Zanj revolt 869–883 devastates Lower Iraq; the last
+true revival is al-Mu'tadid–al-Muktafi (892–908); the Buyids take Baghdad
+in 945 and passive decline follows (the caliphate's nominal end is 1258).
+
+Beats, in order:
+1. `on_start`: stability −1 ("the Anarchy has begun").
+2. **Tulunid breakaway** (the first monthly event, fire-once guarded):
+   fires for ARB; `every_subject_country = { limit = { tag = EGY }
+   grant_independence = yes }` — quiet, NO war (the vanilla
+   Japan/Georgian-crisis precedent; historically Ahmad ibn Tulun simply
+   withheld the kharaj and the mutinous caliphate never marched). If a war
+   flavor is ever wanted instead, fire the event for EGY with an
+   independence-declaration option.
+3. **Zanj revolt**: `spawn_rebels = { type = peasant_rebels size = 3 }`
+   (rebel-spawn effect verified in vanilla `flavor_mal.16`) in Lower
+   Iraq: Basra 408, Hillah 409, Wasit 2312.
+4. Optional further beats (pick among): Kharijite riders in the Jazira
+   (`noble_rebels` in Arbil 4293), treasury collapse (pay the army vs
+   arrears: lose ducats vs discipline/manpower hit), more breakaways.
+
+Prerequisites not yet in the tree:
+- `diplomacy` row `ARB -> EGY vassal` (Tulunids as caliphal vassals at
+  start; EGY already displays "Tulunids", holder is Ahmad ibn Tulun).
+- Disaster + event files: `common/disasters/AnarchyAtSamarra.txt`,
+  `events/AnarchyAtSamarra.txt` (both non-vanilla names), loc in a
+  `karolingian_*_l_english.yml` file (BOM), ids `namespace = kar_anarchy`
+  with house `kar_anarchy_N_title/_desc/_a` keys (MagyarSettlement style),
+  `grant_independence`/`spawn_rebels` scopes as above.
+
+Open questions for the user (decide before building):
+1. What ends the disaster: `can_end = { stability = 1 }`-style threshold,
+   or a scripted "al-Mu'tadid revival" event?
+2. Progress speed (Mali ticks within months; maybe gate on ruler/lack of
+   claims instead)?
+3. Which optional beats make the final chain?
+4. Does ARB keep any claim/CB on Egypt after the break?
+
+Toolchain note: tags no longer take manual `--culture/--religion` for
+values that the 867 ruler already provides (addtag now lifts both from
+the ruler; manual args are a documented exception only).

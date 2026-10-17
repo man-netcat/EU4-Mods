@@ -468,9 +468,8 @@ FAITH_TO_RELIGION = {
     # legal-school shading within Sunni (EU4 has no madhab keys)
     "maliki": "sunni", "hanafi": "sunni", "shafii": "sunni",
     "ibadi": "ibadi",
-    # Ibadi-family seceders and the Zaydi imamate split onto their
-    # nearest EU4 keys
-    "najdat": "ibadi", "sufri": "ibadi", "zayidi": "shiite",
+    # third Ibadi-family seceder school after najdat/sufri
+    "najdat": "ibadi", "sufri": "ibadi", "azariqa": "ibadi", "zayidi": "shiite",
     # pagans: the lifted keys keep their standing diet
     "norse_pagan": "norse_pagan_reformed",
     "slavic_pagan": "slavic",
@@ -482,6 +481,8 @@ FAITH_TO_RELIGION = {
     "north_african_acham_pagan": "animism",
     # Buddhist families onto the EU4 keys
     "vinaya": "buddhism", "avatamsaka": "mahayana", "mantrayana": "vajrayana",
+    # pundarika is CK3's Lotus-school Buddhism (the Heian court's faith)
+    "pundarika": "mahayana",
 }
 
 

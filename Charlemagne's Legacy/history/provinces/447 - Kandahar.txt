@@ -1,6 +1,25 @@
 #447 - Kandahar
 
+owner = SAF
+controller = SAF
+add_core = SAF
+capital = "Kandahar"
+culture = afghani
+religion = sunni
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = cotton
+base_manpower = 3
+is_city = yes
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = SAF
+	controller = SAF
+	add_core = SAF
+}

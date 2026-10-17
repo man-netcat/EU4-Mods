@@ -33943,17 +33943,17 @@
     }
    },
    {
-    "title": "b_huang",
+    "title": "b_sanga",
     "rank": "barony",
-    "ck3_name": "Huang",
-    "county": "c_dengzhou",
-    "duchy": "d_ziqing",
+    "ck3_name": "Sanga",
+    "county": "c_yatenga",
+    "duchy": "d_yatenga",
     "score": 0.727,
     "holder867": null,
     "dejure": {
-     "county": "Dengzhou",
-     "duchy": "Ziqing",
-     "kingdom": "Qingxu"
+     "county": "Yatenga",
+     "duchy": "Yatenga",
+     "kingdom": "Gurma"
     }
    },
    {
@@ -37733,17 +37733,17 @@
     }
    },
    {
-    "title": "d_gaeseong",
-    "rank": "duchy",
-    "ck3_name": "Gaeseong",
-    "county": null,
-    "duchy": "d_gaeseong",
-    "score": 0.75,
-    "holder867": "korean_wang_goryeo_43",
+    "title": "c_ansongo",
+    "rank": "county",
+    "ck3_name": "Ansongo",
+    "county": "c_ansongo",
+    "duchy": "d_kawkaw",
+    "score": 0.8,
+    "holder867": "161047",
     "dejure": {
-     "county": null,
-     "duchy": "Gaeseong",
-     "kingdom": "Goguryeo"
+     "county": "Ansongo",
+     "duchy": "Kawkaw",
+     "kingdom": "Songhay"
     }
    }
   ]
@@ -122338,31 +122338,17 @@
     }
    },
    {
-    "title": "b_IDO_Taliwang",
+    "title": "b_tra_lan",
     "rank": "barony",
-    "ck3_name": "Taliwang",
-    "county": "c_IDO_lombok_and_sumbawa",
-    "duchy": "d_IDO_bali",
-    "score": 0.8,
-    "holder867": null,
-    "dejure": {
-     "county": "Lombok and Sumbawa",
-     "duchy": "Bali",
-     "kingdom": "Yavakadvipa"
-    }
-   },
-   {
-    "title": "b_tawang",
-    "rank": "barony",
-    "ck3_name": "Tawang",
-    "county": "c_tawang",
-    "duchy": "d_monyul",
+    "ck3_name": "Tra Lan",
+    "county": "c_nghe_an",
+    "duchy": "d_nghe_an",
     "score": 0.769,
     "holder867": null,
     "dejure": {
-     "county": "Tawang",
-     "duchy": "Monyul",
-     "kingdom": "Lhomon"
+     "county": "Nghe An",
+     "duchy": "Nghe An",
+     "kingdom": "$dai_viet$"
     }
    },
    {
@@ -122394,20 +122380,6 @@
     }
    },
    {
-    "title": "c_tawang",
-    "rank": "county",
-    "ck3_name": "Tawang",
-    "county": "c_tawang",
-    "duchy": "d_monyul",
-    "score": 0.769,
-    "holder867": "304112",
-    "dejure": {
-     "county": "Tawang",
-     "duchy": "Monyul",
-     "kingdom": "Lhomon"
-    }
-   },
-   {
     "title": "c_thalner",
     "rank": "county",
     "ck3_name": "Thalner",
@@ -122433,6 +122405,34 @@
      "county": "Thaldat",
      "duchy": "Aksai Chin",
      "kingdom": "Maryül"
+    }
+   },
+   {
+    "title": "c_palanga",
+    "rank": "county",
+    "ck3_name": "Palanga",
+    "county": "c_palanga",
+    "duchy": "d_samogitia",
+    "score": 0.714,
+    "holder867": "82141",
+    "dejure": {
+     "county": "Palanga",
+     "duchy": "Samogitia",
+     "kingdom": "Lithuania"
+    }
+   },
+   {
+    "title": "c_halland",
+    "rank": "county",
+    "ck3_name": "Halland",
+    "county": "c_halland",
+    "duchy": "d_skane",
+    "score": 0.714,
+    "holder867": "6843",
+    "dejure": {
+     "county": "Halland",
+     "duchy": "Skåne",
+     "kingdom": "Denmark"
     }
    }
   ]
@@ -140929,6 +140929,20 @@
   "pick": null,
   "candidates": [
    {
+    "title": "b_chin",
+    "rank": "barony",
+    "ck3_name": "Chin",
+    "county": "c_kale",
+    "duchy": "d_tagaung",
+    "score": 0.727,
+    "holder867": null,
+    "dejure": {
+     "county": "Kale",
+     "duchy": "Tagaung",
+     "kingdom": "Pagan"
+    }
+   },
+   {
     "title": "b_yunjie",
     "rank": "barony",
     "ck3_name": "Wucheng",
@@ -141013,31 +141027,17 @@
     }
    },
    {
-    "title": "b_wuchang",
+    "title": "b_lucheng_1",
     "rank": "barony",
-    "ck3_name": "Wuchang",
-    "county": "c_ezhou",
-    "duchy": "d_eyue",
+    "ck3_name": "Lucheng",
+    "county": "c_longde",
+    "duchy": "d_zelu",
     "score": 0.714,
     "holder867": null,
     "dejure": {
-     "county": "Ezhou",
-     "duchy": "Eyue",
-     "kingdom": "Shannan"
-    }
-   },
-   {
-    "title": "b_pucheng",
-    "rank": "barony",
-    "ck3_name": "Pucheng",
-    "county": "c_jian_an",
-    "duchy": "d_jianning",
-    "score": 0.714,
-    "holder867": null,
-    "dejure": {
-     "county": "Jianzhou",
-     "duchy": "Jianning",
-     "kingdom": "Fujian"
+     "county": "Luzhou",
+     "duchy": "Zelu",
+     "kingdom": "Hedong"
     }
    }
   ]
@@ -164642,20 +164642,6 @@
     }
    },
    {
-    "title": "b_JAV_Tangaram",
-    "rank": "barony",
-    "ck3_name": "Tangaram",
-    "county": "c_JAV_sunda",
-    "duchy": "d_JAV_taruma",
-    "score": 0.706,
-    "holder867": null,
-    "dejure": {
-     "county": "Sunda",
-     "duchy": "Taruma",
-     "kingdom": "Yavakadvipa"
-    }
-   },
-   {
     "title": "c_atkarsk",
     "rank": "county",
     "ck3_name": "Atkara",
@@ -164667,6 +164653,20 @@
      "county": "Atkara",
      "duchy": "Chuvashia",
      "kingdom": "Mordvinia"
+    }
+   },
+   {
+    "title": "c_medantaka",
+    "rank": "county",
+    "ck3_name": "Medantaka",
+    "county": "c_medantaka",
+    "duchy": "d_maru",
+    "score": 0.667,
+    "holder867": "191621",
+    "dejure": {
+     "county": "Medantaka",
+     "duchy": "Maru",
+     "kingdom": "Rajputana"
     }
    },
    {
@@ -164684,20 +164684,6 @@
     }
    },
    {
-    "title": "d_cd_santa_agata",
-    "rank": "duchy",
-    "ck3_name": "Sant'Agata",
-    "county": null,
-    "duchy": "d_cd_santa_agata",
-    "score": 0.667,
-    "holder867": null,
-    "dejure": {
-     "county": null,
-     "duchy": "Sant'Agata",
-     "kingdom": null
-    }
-   },
-   {
     "title": "d_cantabria",
     "rank": "duchy",
     "ck3_name": "Cantabria",
@@ -164709,6 +164695,20 @@
      "county": null,
      "duchy": "Cantabria",
      "kingdom": "Castile"
+    }
+   },
+   {
+    "title": "d_angara",
+    "rank": "duchy",
+    "ck3_name": "Angara",
+    "county": null,
+    "duchy": "d_angara",
+    "score": 0.667,
+    "holder867": null,
+    "dejure": {
+     "county": null,
+     "duchy": "Angara",
+     "kingdom": "Angara"
     }
    }
   ]
@@ -176176,20 +176176,6 @@
     }
    },
    {
-    "title": "b_tianxing",
-    "rank": "barony",
-    "ck3_name": "Tianxing",
-    "county": "c_fengxiang",
-    "duchy": "d_fengxiang",
-    "score": 0.8,
-    "holder867": null,
-    "dejure": {
-     "county": "Fengxiang",
-     "duchy": "Fengxiang",
-     "kingdom": "Guannei"
-    }
-   },
-   {
     "title": "b_mainling",
     "rank": "barony",
     "ck3_name": "Mainling",
@@ -176229,6 +176215,20 @@
      "county": "Xining",
      "duchy": "Xining",
      "kingdom": "Amdo"
+    }
+   },
+   {
+    "title": "b_jining",
+    "rank": "barony",
+    "ck3_name": "Jining",
+    "county": "c_jiushijiuquan",
+    "duchy": "d_sanggan",
+    "score": 0.769,
+    "holder867": null,
+    "dejure": {
+     "county": "Jiushijiuquan",
+     "duchy": "Sanggan",
+     "kingdom": "Daibei"
     }
    },
    {
@@ -209862,6 +209862,20 @@
     }
    },
    {
+    "title": "b_wenan",
+    "rank": "barony",
+    "ck3_name": "Wenan",
+    "county": "c_mozhou",
+    "duchy": "d_yingmo",
+    "score": 0.727,
+    "holder867": null,
+    "dejure": {
+     "county": "Mozhou",
+     "duchy": "Yingmo",
+     "kingdom": "Youji"
+    }
+   },
+   {
     "title": "b_prang",
     "rank": "barony",
     "ck3_name": "Prang",
@@ -209873,34 +209887,6 @@
      "county": "Bono",
      "duchy": "Brong",
      "kingdom": "Akan"
-    }
-   },
-   {
-    "title": "b_nyang",
-    "rank": "barony",
-    "ck3_name": "Nyang",
-    "county": "c_gongbo",
-    "duchy": "d_nyingchi",
-    "score": 0.727,
-    "holder867": null,
-    "dejure": {
-     "county": "Gongbo",
-     "duchy": "Nyingchi",
-     "kingdom": "Kham"
-    }
-   },
-   {
-    "title": "b_hengyang",
-    "rank": "barony",
-    "ck3_name": "Hengyang",
-    "county": "c_wenzhou_2",
-    "duchy": "d_zhedong",
-    "score": 0.714,
-    "holder867": null,
-    "dejure": {
-     "county": "Wenzhou",
-     "duchy": "Zhedong",
-     "kingdom": "Liangzhe"
     }
    },
    {
@@ -209932,17 +209918,31 @@
     }
    },
    {
-    "title": "c_LIAO_shenyang",
+    "title": "c_penza",
     "rank": "county",
-    "ck3_name": "Shenyang",
-    "county": "c_LIAO_shenyang",
-    "duchy": "d_LIAO_dongjing",
-    "score": 0.714,
-    "holder867": "balhae_go_1",
+    "ck3_name": "Penza",
+    "county": "c_penza",
+    "duchy": "d_chuvashia",
+    "score": 0.727,
+    "holder867": "302276",
     "dejure": {
-     "county": "Shenyang",
-     "duchy": "Liaodong",
-     "kingdom": null
+     "county": "Penza",
+     "duchy": "Chuvashia",
+     "kingdom": "Mordvinia"
+    }
+   },
+   {
+    "title": "c_henan",
+    "rank": "county",
+    "ck3_name": "Henan",
+    "county": "c_henan",
+    "duchy": "d_dongji",
+    "score": 0.727,
+    "holder867": "han_2981",
+    "dejure": {
+     "county": "Henan",
+     "duchy": "Dongji",
+     "kingdom": "Henan"
     }
    }
   ]

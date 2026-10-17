@@ -1,3 +1,22 @@
 #4651 - Tsushima
 
+owner = JAP
+controller = JAP
+add_core = JAP
+capital = "Tsushima"
+culture = japanese
+religion = mahayana
+hre = no
+base_tax = 2
+base_production = 1
+trade_goods = chinaware
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = JAP
+	controller = JAP
+	add_core = JAP
+}

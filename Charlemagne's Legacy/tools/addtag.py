@@ -7,8 +7,10 @@ Usage: python3 tools/addtag.py TAG ck3_title PID [PID ...]
        [--name STR] [--adj STR] [--file NAME] [--take]
 
 Defaults: rank from title tier (c1/d2/k3/e4), capital = first PID, gov
-monarchy, name/adj from CK3 loc, culture/religion = vanilla values of
-the capital, country file = ASCII-ised name. Tech group is mandatory:
+monarchy, name/adj from CK3 loc, culture and religion lifted from the
+title's 867 ruler (capital's vanilla values take over only when the
+ruler's own data is unscripted; --culture/--religion are a documented
+EXCEPTION on top, never the norm), country file = ASCII-ised name. Tech group is mandatory:
 `--tech` must be passed and named correctly (for reuse codes the base
 game's own tech is expected unless the 867 reality says otherwise -
 then say it explicitly).
@@ -214,13 +216,21 @@ def main(argv):
     if capital not in a.pids:
         sys.exit("capital must be one of the provinces")
     datas = {pid: prov_data(pid) for pid in a.pids}
+    from culturelift import ruler_default, ruler_religion  # noqa: E402
+
     if a.culture:
+        # documented exception: manual culture overriding the ruler lift
         culture = a.culture
     else:
-        from culturelift import ruler_default  # noqa: E402
-
         culture = ruler_default(a.title, s) or datas[capital][1]
-    religion = a.religion or datas[capital][2]
+    if a.religion:
+        # documented exception: manual faith overriding the ruler lift
+        religion = a.religion
+    else:
+        ruler_rel = ruler_religion(a.title)
+        if ruler_rel is None:
+            print(f"  no ruler faith for {a.title}, keeping land religion")
+        religion = ruler_rel or datas[capital][2]
     for key, model, val in (("culture", CultureRow, culture),
                             ("religion", ReligionRow, religion)):
         if s.get(model, val) is None:

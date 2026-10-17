@@ -1,3 +1,22 @@
 #4181 - Higo
 
+owner = JAP
+controller = JAP
+add_core = JAP
+capital = "Kumamoto"
+culture = japanese
+religion = mahayana
+hre = no
+base_tax = 2
+base_production = 3
+trade_goods = fish
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = JAP
+	controller = JAP
+	add_core = JAP
+}

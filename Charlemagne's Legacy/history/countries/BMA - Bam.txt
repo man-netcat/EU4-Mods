@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = levantine
+religion = ibadi
+capital = 2220
+867.1.1 = {
+	monarch = {
+		name = "Esma'il"
+		dynasty = "azariqa_bamid"
+		birth_date = 821.12.12
+		death_date = 868.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}

@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = persian
+religion = sunni
+capital = 435
+867.1.1 = {
+	monarch = {
+		name = "Ya'qub"
+		dynasty = "Saffarid"
+		birth_date = 840.1.1
+		death_date = 879.6.5
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	heir = {
+		name = "Amr"
+		monarch_name = "Amr"
+		dynasty = "Saffarid"
+		birth_date = 841.1.1
+		death_date = 902.1.1
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
