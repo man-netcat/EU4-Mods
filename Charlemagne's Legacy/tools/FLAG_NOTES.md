@@ -12,6 +12,10 @@
 - Flag canvas: 256x256 TGA.
 - Charge flags (LUT, RAN, BOH, ABK): charge 176x210, pasted at (40,23)
   on the field colour.
+- Charge proportions are immutable: only uniform scaling of the whole
+  charge is permitted. Never stretch, squash, crop or reshape the artwork
+  to fill the slot — fit it inside 176x210 keeping its aspect ratio, and
+  centre the result on the (40,23) slot.
 
 ## Standard palette
 
