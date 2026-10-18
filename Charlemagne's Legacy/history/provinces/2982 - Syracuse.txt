@@ -1,9 +1,9 @@
 # - Syracusa
 
-owner = BYZ
-controller = BYZ
+owner = SYC
+controller = SYC
 add_core = NAP
-add_core = BYZ
+add_core = SYC
 capital = "Syracusa"
 culture = greek
 religion = catholic
@@ -20,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = SYC
+	controller = SYC
+	add_core = SYC
 }

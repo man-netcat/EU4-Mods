@@ -2618,6 +2618,981 @@ butr_titles = {
 }
 
 
+polabian_titles = {
+# CK3 ladders for SOR(r2), HSA(r1), LUT(r2), RUG(r1), WOL(r1), UKI(r1), SPW(r1), LBS(r1)
+	rank = {
+		1 = POLABIAN_COUNTY  # county_feudal
+		2 = POLABIAN_DUCHY  # duchy_feudal
+		3 = POLABIAN_KINGDOM  # kingdom_feudal
+		4 = POLABIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = POLABIAN_COUNT_MALE  # count_feudal_male
+		2 = POLABIAN_DUKE_MALE  # duke_feudal_male
+		3 = POLABIAN_KING_MALE  # king_feudal_male
+		4 = POLABIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = POLABIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = POLABIAN_COUNT_FEMALE  # count_feudal_female
+		2 = POLABIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = POLABIAN_KING_FEMALE  # king_feudal_female
+		4 = POLABIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = POLABIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = POLABIAN_COUNT_MALE  # consort uses the ruler form
+		2 = POLABIAN_DUKE_MALE  # consort uses the ruler form
+		3 = POLABIAN_KING_MALE  # consort uses the ruler form
+		4 = POLABIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = POLABIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = POLABIAN_COUNT_FEMALE  # count_feudal_female
+		2 = POLABIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = POLABIAN_KING_FEMALE  # king_feudal_female
+		4 = POLABIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = POLABIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = polabian
+	}
+}
+
+
+polish_titles = {
+# CK3 ladders for SIL(r2), KRA(r1), TRN(r1), LEC(r1), WIE(r2), KUJ(r1), PLO(r1), STZ(r1), SAN(r1)
+	rank = {
+		1 = POLISH_COUNTY  # county_feudal
+		2 = POLISH_DUCHY  # duchy_feudal
+		3 = POLISH_KINGDOM  # kingdom_feudal
+		4 = POLISH_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = POLISH_COUNT_MALE  # count_feudal_male
+		2 = POLISH_DUKE_MALE  # duke_feudal_male
+		3 = POLISH_KING_MALE  # king_feudal_male
+		4 = POLISH_EMPEROR_MALE  # emperor_feudal_male
+		5 = POLISH_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = POLISH_COUNT_FEMALE  # count_feudal_female
+		2 = POLISH_DUKE_FEMALE  # duke_feudal_female
+		3 = POLISH_KING_FEMALE  # king_feudal_female
+		4 = POLISH_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = POLISH_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = POLISH_COUNT_MALE  # consort uses the ruler form
+		2 = POLISH_DUKE_MALE  # consort uses the ruler form
+		3 = POLISH_KING_MALE  # consort uses the ruler form
+		4 = POLISH_EMPEROR_MALE  # consort uses the ruler form
+		5 = POLISH_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = POLISH_COUNT_FEMALE  # count_feudal_female
+		2 = POLISH_DUKE_FEMALE  # duke_feudal_female
+		3 = POLISH_KING_FEMALE  # king_feudal_female
+		4 = POLISH_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = POLISH_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = polish
+	}
+}
+
+
+bulgarian_titles = {
+# CK3 ladders for BUL(r3), TRA(r2), MOZ(r1), VLD(r1)
+	rank = {
+		1 = BULGARIAN_COUNTY  # county_feudal
+		2 = BULGARIAN_DUCHY  # duchy_feudal
+		3 = BULGARIAN_KINGDOM  # kingdom_feudal
+		4 = BULGARIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BULGARIAN_COUNT_MALE  # count_feudal_male
+		2 = BULGARIAN_DUKE_MALE  # duke_feudal_male
+		3 = BULGARIAN_KING_MALE  # king_feudal_male
+		4 = BULGARIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = BULGARIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BULGARIAN_COUNT_FEMALE  # count_feudal_female
+		2 = BULGARIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = BULGARIAN_KING_FEMALE  # king_feudal_female
+		4 = BULGARIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = BULGARIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BULGARIAN_COUNT_MALE  # consort uses the ruler form
+		2 = BULGARIAN_DUKE_MALE  # consort uses the ruler form
+		3 = BULGARIAN_KING_MALE  # consort uses the ruler form
+		4 = BULGARIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = BULGARIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BULGARIAN_COUNT_FEMALE  # count_feudal_female
+		2 = BULGARIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = BULGARIAN_KING_FEMALE  # king_feudal_female
+		4 = BULGARIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = BULGARIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = bulgarian
+	}
+}
+
+
+magyar_titles = {
+# CK3 ladders for MGY(r3), YED(r2), ODS(r1)
+	rank = {
+		1 = MAGYAR_COUNTY  # county_feudal
+		2 = MAGYAR_DUCHY  # duchy_feudal_prince_always
+		3 = MAGYAR_KINGDOM  # kingdom_feudal_grand_prince_independent
+		4 = MAGYAR_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = MAGYAR_COUNT_MALE  # count_feudal_male
+		2 = MAGYAR_DUKE_MALE  # duke_feudal_male_prince_always
+		3 = MAGYAR_KING_MALE  # king_feudal_male_grand_prince_independent
+		4 = MAGYAR_EMPEROR_MALE  # emperor_feudal_male
+		5 = MAGYAR_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = MAGYAR_COUNT_FEMALE  # count_feudal_female
+		2 = MAGYAR_DUKE_FEMALE  # duke_feudal_female_prince_always
+		3 = MAGYAR_KING_FEMALE  # king_feudal_female_grand_prince_independent
+		4 = MAGYAR_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = MAGYAR_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = MAGYAR_COUNT_MALE  # consort uses the ruler form
+		2 = MAGYAR_DUKE_MALE  # consort uses the ruler form
+		3 = MAGYAR_KING_MALE  # consort uses the ruler form
+		4 = MAGYAR_EMPEROR_MALE  # consort uses the ruler form
+		5 = MAGYAR_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = MAGYAR_COUNT_FEMALE  # count_feudal_female
+		2 = MAGYAR_DUKE_FEMALE  # duke_feudal_female_prince_always
+		3 = MAGYAR_KING_FEMALE  # king_feudal_female_grand_prince_independent
+		4 = MAGYAR_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = MAGYAR_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = magyar
+	}
+}
+
+
+lithuanian_titles = {
+# CK3 ladders for ZEM(r2), LTU(r2), YTV(r1)
+	rank = {
+		1 = LITHUANIAN_COUNTY  # county_feudal
+		2 = LITHUANIAN_DUCHY  # duchy_feudal
+		3 = LITHUANIAN_KINGDOM  # kingdom_feudal_grand_duke_independent
+		4 = LITHUANIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = LITHUANIAN_COUNT_MALE  # count_feudal_male
+		2 = LITHUANIAN_DUKE_MALE  # duke_feudal_male
+		3 = LITHUANIAN_KING_MALE  # king_feudal_male_grand_duke_independent
+		4 = LITHUANIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = LITHUANIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = LITHUANIAN_COUNT_FEMALE  # count_feudal_female
+		2 = LITHUANIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = LITHUANIAN_KING_FEMALE  # king_feudal_female_grand_duke_independent
+		4 = LITHUANIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = LITHUANIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = LITHUANIAN_COUNT_MALE  # consort uses the ruler form
+		2 = LITHUANIAN_DUKE_MALE  # consort uses the ruler form
+		3 = LITHUANIAN_KING_MALE  # consort uses the ruler form
+		4 = LITHUANIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = LITHUANIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = LITHUANIAN_COUNT_FEMALE  # count_feudal_female
+		2 = LITHUANIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = LITHUANIAN_KING_FEMALE  # king_feudal_female_grand_duke_independent
+		4 = LITHUANIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = LITHUANIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = lithuanian
+	}
+}
+
+
+serbian_titles = {
+# CK3 ladders for DUK(r1), RSK(r2), ZAH(r1)
+	rank = {
+		1 = SERBIAN_COUNTY  # county_feudal
+		2 = SERBIAN_DUCHY  # duchy_feudal
+		3 = SERBIAN_KINGDOM  # kingdom_feudal
+		4 = SERBIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SERBIAN_COUNT_MALE  # count_feudal_male
+		2 = SERBIAN_DUKE_MALE  # duke_feudal_male
+		3 = SERBIAN_KING_MALE  # king_feudal_male
+		4 = SERBIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = SERBIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SERBIAN_COUNT_FEMALE  # count_feudal_female
+		2 = SERBIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = SERBIAN_KING_FEMALE  # king_feudal_female
+		4 = SERBIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = SERBIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SERBIAN_COUNT_MALE  # consort uses the ruler form
+		2 = SERBIAN_DUKE_MALE  # consort uses the ruler form
+		3 = SERBIAN_KING_MALE  # consort uses the ruler form
+		4 = SERBIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = SERBIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SERBIAN_COUNT_FEMALE  # count_feudal_female
+		2 = SERBIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = SERBIAN_KING_FEMALE  # king_feudal_female
+		4 = SERBIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = SERBIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = serbian
+	}
+}
+
+
+prussian_titles = {
+# CK3 ladders for PRU(r2)
+	rank = {
+		1 = PRUSSIAN_COUNTY  # county_feudal
+		2 = PRUSSIAN_DUCHY  # duchy_feudal
+		3 = PRUSSIAN_KINGDOM  # kingdom_feudal
+		4 = PRUSSIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = PRUSSIAN_COUNT_MALE  # count_feudal_male
+		2 = PRUSSIAN_DUKE_MALE  # duke_feudal_male
+		3 = PRUSSIAN_KING_MALE  # king_feudal_male
+		4 = PRUSSIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = PRUSSIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = PRUSSIAN_COUNT_FEMALE  # count_feudal_female
+		2 = PRUSSIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = PRUSSIAN_KING_FEMALE  # king_feudal_female
+		4 = PRUSSIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = PRUSSIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = PRUSSIAN_COUNT_MALE  # consort uses the ruler form
+		2 = PRUSSIAN_DUKE_MALE  # consort uses the ruler form
+		3 = PRUSSIAN_KING_MALE  # consort uses the ruler form
+		4 = PRUSSIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = PRUSSIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = PRUSSIAN_COUNT_FEMALE  # count_feudal_female
+		2 = PRUSSIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = PRUSSIAN_KING_FEMALE  # king_feudal_female
+		4 = PRUSSIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = PRUSSIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = prussian
+	}
+}
+
+
+latvian_titles = {
+# CK3 ladders for KUR(r2)
+	rank = {
+		1 = LATVIAN_COUNTY  # county_feudal
+		2 = LATVIAN_DUCHY  # duchy_feudal
+		3 = LATVIAN_KINGDOM  # kingdom_feudal
+		4 = LATVIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = LATVIAN_COUNT_MALE  # count_feudal_male
+		2 = LATVIAN_DUKE_MALE  # duke_feudal_male
+		3 = LATVIAN_KING_MALE  # king_feudal_male
+		4 = LATVIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = LATVIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = LATVIAN_COUNT_FEMALE  # count_feudal_female
+		2 = LATVIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = LATVIAN_KING_FEMALE  # king_feudal_female
+		4 = LATVIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = LATVIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = LATVIAN_COUNT_MALE  # consort uses the ruler form
+		2 = LATVIAN_DUKE_MALE  # consort uses the ruler form
+		3 = LATVIAN_KING_MALE  # consort uses the ruler form
+		4 = LATVIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = LATVIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = LATVIAN_COUNT_FEMALE  # count_feudal_female
+		2 = LATVIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = LATVIAN_KING_FEMALE  # king_feudal_female
+		4 = LATVIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = LATVIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = latvian
+	}
+}
+
+
+estonian_titles = {
+# CK3 ladders for LVA(r2), EST(r2), VOD(r1)
+	rank = {
+		1 = ESTONIAN_COUNTY  # county_feudal
+		2 = ESTONIAN_DUCHY  # duchy_feudal
+		3 = ESTONIAN_KINGDOM  # kingdom_feudal
+		4 = ESTONIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ESTONIAN_COUNT_MALE  # count_feudal_male
+		2 = ESTONIAN_DUKE_MALE  # duke_feudal_male
+		3 = ESTONIAN_KING_MALE  # king_feudal_male
+		4 = ESTONIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = ESTONIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ESTONIAN_COUNT_FEMALE  # count_feudal_female
+		2 = ESTONIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = ESTONIAN_KING_FEMALE  # king_feudal_female
+		4 = ESTONIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ESTONIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ESTONIAN_COUNT_MALE  # consort uses the ruler form
+		2 = ESTONIAN_DUKE_MALE  # consort uses the ruler form
+		3 = ESTONIAN_KING_MALE  # consort uses the ruler form
+		4 = ESTONIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = ESTONIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ESTONIAN_COUNT_FEMALE  # count_feudal_female
+		2 = ESTONIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = ESTONIAN_KING_FEMALE  # king_feudal_female
+		4 = ESTONIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ESTONIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = estonian
+	}
+}
+
+
+czech_titles = {
+# CK3 ladders for PMS(r2)
+	rank = {
+		1 = CZECH_COUNTY  # county_feudal
+		2 = CZECH_DUCHY  # duchy_feudal
+		3 = CZECH_KINGDOM  # kingdom_feudal
+		4 = CZECH_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CZECH_COUNT_MALE  # count_feudal_male
+		2 = CZECH_DUKE_MALE  # duke_feudal_male
+		3 = CZECH_KING_MALE  # king_feudal_male
+		4 = CZECH_EMPEROR_MALE  # emperor_feudal_male
+		5 = CZECH_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CZECH_COUNT_FEMALE  # count_feudal_female
+		2 = CZECH_DUKE_FEMALE  # duke_feudal_female
+		3 = CZECH_KING_FEMALE  # king_feudal_female
+		4 = CZECH_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CZECH_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CZECH_COUNT_MALE  # consort uses the ruler form
+		2 = CZECH_DUKE_MALE  # consort uses the ruler form
+		3 = CZECH_KING_MALE  # consort uses the ruler form
+		4 = CZECH_EMPEROR_MALE  # consort uses the ruler form
+		5 = CZECH_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CZECH_COUNT_FEMALE  # count_feudal_female
+		2 = CZECH_DUKE_FEMALE  # duke_feudal_female
+		3 = CZECH_KING_FEMALE  # king_feudal_female
+		4 = CZECH_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CZECH_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = czech
+	}
+}
+
+
+pommeranian_titles = {
+# CK3 ladders for KRJ(r1), STE(r1), SLU(r1), CED(r1)
+	rank = {
+		1 = POMMERANIAN_COUNTY  # county_feudal
+		2 = POMMERANIAN_DUCHY  # duchy_feudal
+		3 = POMMERANIAN_KINGDOM  # kingdom_feudal
+		4 = POMMERANIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = POMMERANIAN_COUNT_MALE  # count_feudal_male
+		2 = POMMERANIAN_DUKE_MALE  # duke_feudal_male
+		3 = POMMERANIAN_KING_MALE  # king_feudal_male
+		4 = POMMERANIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = POMMERANIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = POMMERANIAN_COUNT_FEMALE  # count_feudal_female
+		2 = POMMERANIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = POMMERANIAN_KING_FEMALE  # king_feudal_female
+		4 = POMMERANIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = POMMERANIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = POMMERANIAN_COUNT_MALE  # consort uses the ruler form
+		2 = POMMERANIAN_DUKE_MALE  # consort uses the ruler form
+		3 = POMMERANIAN_KING_MALE  # consort uses the ruler form
+		4 = POMMERANIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = POMMERANIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = POMMERANIAN_COUNT_FEMALE  # count_feudal_female
+		2 = POMMERANIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = POMMERANIAN_KING_FEMALE  # king_feudal_female
+		4 = POMMERANIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = POMMERANIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = pommeranian
+	}
+}
+
+
+finnish_titles = {
+# CK3 ladders for FIN(r2), NYL(r1), OLA(r1), OUL(r1)
+	rank = {
+		1 = FINNISH_COUNTY  # county_feudal
+		2 = FINNISH_DUCHY  # duchy_feudal
+		3 = FINNISH_KINGDOM  # kingdom_feudal
+		4 = FINNISH_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = FINNISH_COUNT_MALE  # count_feudal_male
+		2 = FINNISH_DUKE_MALE  # duke_feudal_male
+		3 = FINNISH_KING_MALE  # king_feudal_male
+		4 = FINNISH_EMPEROR_MALE  # emperor_feudal_male
+		5 = FINNISH_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = FINNISH_COUNT_FEMALE  # count_feudal_female
+		2 = FINNISH_DUKE_FEMALE  # duke_feudal_female
+		3 = FINNISH_KING_FEMALE  # king_feudal_female
+		4 = FINNISH_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = FINNISH_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = FINNISH_COUNT_MALE  # consort uses the ruler form
+		2 = FINNISH_DUKE_MALE  # consort uses the ruler form
+		3 = FINNISH_KING_MALE  # consort uses the ruler form
+		4 = FINNISH_EMPEROR_MALE  # consort uses the ruler form
+		5 = FINNISH_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = FINNISH_COUNT_FEMALE  # count_feudal_female
+		2 = FINNISH_DUKE_FEMALE  # duke_feudal_female
+		3 = FINNISH_KING_FEMALE  # king_feudal_female
+		4 = FINNISH_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = FINNISH_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = finnish
+	}
+}
+
+
+karelian_titles = {
+# CK3 ladders for KKS(r1), KRG(r1), KRL(r2)
+	rank = {
+		1 = KARELIAN_COUNTY  # county_feudal
+		2 = KARELIAN_DUCHY  # duchy_feudal
+		3 = KARELIAN_KINGDOM  # kingdom_feudal
+		4 = KARELIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KARELIAN_COUNT_MALE  # count_feudal_male
+		2 = KARELIAN_DUKE_MALE  # duke_feudal_male
+		3 = KARELIAN_KING_MALE  # king_feudal_male
+		4 = KARELIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = KARELIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = KARELIAN_COUNT_FEMALE  # count_feudal_female
+		2 = KARELIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = KARELIAN_KING_FEMALE  # king_feudal_female
+		4 = KARELIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = KARELIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = KARELIAN_COUNT_MALE  # consort uses the ruler form
+		2 = KARELIAN_DUKE_MALE  # consort uses the ruler form
+		3 = KARELIAN_KING_MALE  # consort uses the ruler form
+		4 = KARELIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = KARELIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KARELIAN_COUNT_FEMALE  # count_feudal_female
+		2 = KARELIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = KARELIAN_KING_FEMALE  # king_feudal_female
+		4 = KARELIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = KARELIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = karelian
+	}
+}
+
+
+samoyed_titles = {
+# CK3 ladders for ONG(r1), KLG(r1)
+	rank = {
+		1 = SAMOYED_COUNTY  # county_feudal
+		2 = SAMOYED_DUCHY  # duchy_feudal
+		3 = SAMOYED_KINGDOM  # kingdom_feudal
+		4 = SAMOYED_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SAMOYED_COUNT_MALE  # count_feudal_male
+		2 = SAMOYED_DUKE_MALE  # duke_feudal_male
+		3 = SAMOYED_KING_MALE  # king_feudal_male
+		4 = SAMOYED_EMPEROR_MALE  # emperor_feudal_male
+		5 = SAMOYED_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SAMOYED_COUNT_FEMALE  # count_feudal_female
+		2 = SAMOYED_DUKE_FEMALE  # duke_feudal_female
+		3 = SAMOYED_KING_FEMALE  # king_feudal_female
+		4 = SAMOYED_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = SAMOYED_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SAMOYED_COUNT_MALE  # consort uses the ruler form
+		2 = SAMOYED_DUKE_MALE  # consort uses the ruler form
+		3 = SAMOYED_KING_MALE  # consort uses the ruler form
+		4 = SAMOYED_EMPEROR_MALE  # consort uses the ruler form
+		5 = SAMOYED_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SAMOYED_COUNT_FEMALE  # count_feudal_female
+		2 = SAMOYED_DUKE_FEMALE  # duke_feudal_female
+		3 = SAMOYED_KING_FEMALE  # king_feudal_female
+		4 = SAMOYED_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = SAMOYED_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = samoyed
+	}
+}
+
+
+sapmi_titles = {
+# CK3 ladders for KIL(r1), ROU(r1), KTK(r1), INA(r1), SIG(r1), AAR(r2)
+	rank = {
+		1 = SAPMI_COUNTY  # county_feudal
+		2 = SAPMI_DUCHY  # duchy_feudal
+		3 = SAPMI_KINGDOM  # kingdom_feudal
+		4 = SAPMI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SAPMI_COUNT_MALE  # count_feudal_male
+		2 = SAPMI_DUKE_MALE  # duke_feudal_male
+		3 = SAPMI_KING_MALE  # king_feudal_male
+		4 = SAPMI_EMPEROR_MALE  # emperor_feudal_male
+		5 = SAPMI_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SAPMI_COUNT_FEMALE  # count_feudal_female
+		2 = SAPMI_DUKE_FEMALE  # duke_feudal_female
+		3 = SAPMI_KING_FEMALE  # king_feudal_female
+		4 = SAPMI_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = SAPMI_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SAPMI_COUNT_MALE  # consort uses the ruler form
+		2 = SAPMI_DUKE_MALE  # consort uses the ruler form
+		3 = SAPMI_KING_MALE  # consort uses the ruler form
+		4 = SAPMI_EMPEROR_MALE  # consort uses the ruler form
+		5 = SAPMI_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SAPMI_COUNT_FEMALE  # count_feudal_female
+		2 = SAPMI_DUKE_FEMALE  # duke_feudal_female
+		3 = SAPMI_KING_FEMALE  # king_feudal_female
+		4 = SAPMI_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = SAPMI_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = sapmi
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM
@@ -3022,7 +3997,7 @@ varmland_chiefdom = {
 
 norse_monarchy = {
 	rank = {
-		1 = JARLDOM
+		1 = CHIEFDOM
 		2 = JARLDOM
 		3 = KINGDOM
 		4 = HIGH_KINGDOM
@@ -3030,7 +4005,7 @@ norse_monarchy = {
 	}
 
 	ruler_male = {
-		1 = JARL
+		1 = CHIEFTAIN
 		2 = JARL
 		3 = KING
 		4 = HIGH_KING
@@ -3038,7 +4013,7 @@ norse_monarchy = {
 	}
 
 	ruler_female = {
-		1 = JARL
+		1 = CHIEFTESS
 		2 = JARL
 		3 = QUEEN
 		4 = HIGH_QUEEN
@@ -3046,7 +4021,7 @@ norse_monarchy = {
 	}
 
 	consort_male = {
-		1 = JARL
+		1 = CHIEFTAIN
 		2 = JARL
 		3 = PRINCE_CONSORT
 		4 = PRINCE_CONSORT
@@ -3054,7 +4029,7 @@ norse_monarchy = {
 	}
 
 	consort_female = {
-		1 = JARL
+		1 = CHIEFTESS
 		2 = JARL
 		3 = QUEEN_CONSORT
 		4 = QUEEN_CONSORT

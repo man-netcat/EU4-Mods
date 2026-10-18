@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = greek
+religion = catholic
+capital = 2982
+867.1.1 = {
+	monarch = {
+		name = "Konstantinos"
+		dynasty = "Kontomytes"
+		birth_date = 839.1.1
+		death_date = 891.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

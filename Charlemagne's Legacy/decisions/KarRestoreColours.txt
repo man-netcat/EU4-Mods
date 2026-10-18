@@ -56,7 +56,6 @@ country_decisions = {
 				tag = PRU
 				tag = RUG
 				tag = SCO
-				tag = SIC
 				tag = SIL
 				tag = SOR
 				tag = SRV
@@ -373,12 +372,6 @@ country_decisions = {
 			limit = { tag = SCO }
 			change_country_color = {
 				color = { 199 175 12 }
-			}
-		}
-		if = {
-			limit = { tag = SIC }
-			change_country_color = {
-				color = { 73 152 76 }
 			}
 		}
 		if = {

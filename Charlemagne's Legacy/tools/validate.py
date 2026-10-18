@@ -335,7 +335,7 @@ def run() -> int:
     # must earn its keep in the AGENTS notes.
     from tagdb import TAGS as _tagrows  # noqa: E402
     import glob as _glob
-    deliberate = {("SIC", "muslim")}  # Aghlabid realm on vanilla western
+    deliberate = set()  # no landed tag carries deliberate vanilla-tech drift
     drift = []
     for t in _tagrows:
         hits = _glob.glob(os.path.join(GAME, "history", "countries",
@@ -1429,7 +1429,7 @@ def run() -> int:
     # gameplay edit: vassal max_government_rank 1 -> 0. The engine
     # (CCountry::CalcGovernmentRank) clamps a subject's displayed rank down to
     # its subject type's cap; our CK3-true vassal duchies (TRA/VSG/GTH/DAL/
-    # SIC/CST/ARG/PRT) must read as Duchy, and personal_union/tributary_state
+    # SIQ/CST/ARG/PRT) must read as Duchy, and personal_union/tributary_state
     # inherit the default (no limit). Re-copy the file on patches, keep the
     # vassal line flipped.
 

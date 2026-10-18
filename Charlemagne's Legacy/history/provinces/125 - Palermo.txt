@@ -1,9 +1,9 @@
 #125 - Palermo
 
-owner = SIC
-controller = SIC
-add_core = SIC
+owner = SIQ
+controller = SIQ
 add_core = NAP
+add_core = SIQ
 capital = "Palermo"
 culture = maghrebi
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = SIC
-	controller = SIC
-	add_core = SIC
+	owner = SIQ
+	controller = SIQ
+	add_core = SIQ
 }

@@ -377,6 +377,16 @@ kar_form_ireland_provinces_trigger = {
 	}
 }
 
+kar_form_sicily_provinces_trigger = {
+	OR = {
+		area = apulia_area
+		area = calabria_area
+		area = naples_area
+		area = sicily_area
+		area = western_sicily_area
+	}
+}
+
 kar_form_finland_provinces_trigger = {
 	OR = {
 		area = bothnia_area
