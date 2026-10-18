@@ -1,18 +1,18 @@
 government = monarchy
 add_government_reform = feudalism_reform
-government_rank = 2
+government_rank = 1
 technology_group = muslim
-primary_culture = persian
-religion = sunni
+primary_culture = levantine
+religion = ibadi
 capital = 446
 867.1.1 = {
 	monarch = {
-		name = "Ibrahim"
-		dynasty = "Samanid"
-		birth_date = 823.1.1
-		death_date = 868.1.1
-		adm = 2
-		dip = 2
-		mil = 2
+		name = "Abd-al-Rahim"
+		dynasty = "Karukhid"
+		birth_date = 815.6.4
+		death_date = 875.1.1
+		adm = 1
+		dip = 3
+		mil = 4
 	}
 }

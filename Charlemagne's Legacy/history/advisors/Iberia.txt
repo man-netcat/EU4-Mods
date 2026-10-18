@@ -1,0 +1,14 @@
+
+# Advisor history, Iberia: the only country in the region scripted with a
+# start-date advisor. Vanilla shape: flat advisor blocks (skill/type/date,
+# no dynasty or birth-date here), one per man.
+
+# Umar, Andalusi army reformer (created 867, died 875)
+advisor = {
+	name = "Umar"
+	location = 225
+	skill = 2
+	type = army_reformer
+	date = 867.1.1
+	death_date = 875.1.1
+}

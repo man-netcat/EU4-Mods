@@ -26,7 +26,7 @@ country_event = {
 	option = {
 		name = kar_leon_1_a
 		ai_chance = { factor = 100 }
-		capital = 208
+		set_capital = 208
 		change_tag = LON
 	}
 	option = {
@@ -60,7 +60,7 @@ country_event = {
 	option = {
 		name = kar_portugal_1_a
 		ai_chance = { factor = 100 }
-		capital = 227
+		set_capital = 227
 		change_tag = POR
 		hidden_effect = {
 			set_government_rank = 3

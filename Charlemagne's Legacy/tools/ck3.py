@@ -150,7 +150,7 @@ def _parse_dynasty_files(files):
     out = {}
     for f in files:
         for key, body in _blocks(_norm(f.read_text(errors="replace"))):
-            n = re.search(r'name\s*=\s*"(dynn_[\w-]+)"', body)
+            n = re.search(r'name\s*=\s*"?(dynn_[\w-]+)"?', body)
             if n:
                 out[key] = n.group(1)
     return out
@@ -158,7 +158,7 @@ def _parse_dynasty_files(files):
 
 # Bump whenever a parser in this file changes: caches are keyed on source
 # mtimes, so parser edits alone would otherwise serve stale pickles.
-_CACHE_VERSION = 4
+_CACHE_VERSION = 5
 
 
 _CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"
@@ -278,19 +278,37 @@ def _parse_loc_files(files):
 
 
 def resolve_dynasty(body, dyns, houses):
-    m = re.search(r"^\s*dynasty\s*=\s*(\w+)", body, re.M)
-    if m:
-        return loc(dyns.get(m.group(1), "")) or m.group(1)
-    h = re.search(r"^\s*dynasty_house\s*=\s*(\w+)", body, re.M)
-    if h:
-        house = h.group(1)
-        name_key, nested = houses.get(house, (None, None))
-        name_key = HOUSE_NAME_OVERRIDE.get(house, name_key)
+    """The latest dated identity change at or before 867.1.1 wins
+    (Haytham is born Shaybanid but moves to the Yazidid house in 844);
+    the undated dynasty key is only the birth-state fallback."""
+    events = []  # (date, kind, key) in file order, cur == "" is the head
+    depth, cur = 0, ""
+    for ln in body.splitlines():
+        s = ln.strip()
+        if re.match(r"^\d+\.\d+\.\d+\s*=", s) and depth == 0:
+            cur = s.split("=")[0].strip()
+        code = ln.split("#", 1)[0]
+        m = re.search(r"^\s*dynasty\s*=\s*(\w+)", code)
+        if m and (not cur or cur <= "867.1.1"):
+            events.append((cur, "dynasty", m.group(1)))
+        m = re.search(r"^\s*dynasty_house\s*=\s*(\w+)", code)
+        if m and (not cur or cur <= "867.1.1"):
+            events.append((cur, "house", m.group(1)))
+        depth += code.count("{") - code.count("}")
+        if depth <= 0:
+            depth, cur = 0, ""
+    if not events:
+        return None
+    _d, kind, key = events[-1]
+    if kind == "house":
+        name_key, nested = houses.get(key, (None, None))
+        name_key = HOUSE_NAME_OVERRIDE.get(key, name_key)
         if name_key:
             return loc(name_key) or name_key
         if nested:
             return loc(dyns.get(nested, "")) or nested
-    return None
+        return None
+    return loc(dyns.get(key, "")) or key
 
 
 def resolve(tag, titles, chars, dyns, houses):

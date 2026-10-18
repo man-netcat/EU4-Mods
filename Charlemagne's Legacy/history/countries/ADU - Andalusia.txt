@@ -33,30 +33,17 @@ change_estate_land_share = {
 
 add_accepted_culture = berber
 
-
+# Yusuf, the 867 starting general (vanilla leader block
+# format; advisors belong in history/advisors/ - see Iberia.txt)
 867.1.1 = {
-	general = {
+	leader = {
 		name = "Yusuf"
-		dynasty = "Umayyad"
-		birth_date = 814.1.1
+		type = general
+		fire = 2
+		shock = 2
+		manuever = 2
+		siege = 1
 		death_date = 890.1.1
-		fire = 2
-		shock = 2
-		manuever = 2
-		siege = 1
-	}
-}
-
-867.1.1 = {
-	advisor = {
-		name = "Umar"
-		dynasty = "Umayyad"
-		birth_date = 810.1.1
-		death_date = 875.1.1
-		fire = 2
-		shock = 2
-		manuever = 2
-		siege = 1
 	}
 }
 

@@ -129,7 +129,10 @@ class ReleasableTag(Tag):
 DORMANT = frozenset({"YED", "ODS", "DNI", "DUB", "GAL"})
 
 
-TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4}
+#: CK3 title prefixes -> the government rank they imply. The declared
+#: tags.rank IS this number (selfcheck enforces equality); h_ hegemon
+#: realms are the only rank 5.
+TITLE_TIER_RANK = {"c": 1, "d": 2, "k": 3, "e": 4, "h": 5}
 
 
 def required_count(total: int, percent: Optional[int]) -> int:
@@ -141,7 +144,8 @@ def required_count(total: int, percent: Optional[int]) -> int:
 
 def rank_of(t: Tag) -> int:
     """The EU4 government rank the CK3 title behind the tag implies
-    (c_=county, d_=duchy, k_=kingdom, e_=empire -> ranks 1-4). Falls back
+    (c_=county, d_=duchy, k_=kingdom, e_=empire, h_=hegemony -> ranks
+    1-5; selfcheck also enforces declared rank == this). Falls back
     to the tag's declared rank when there is no CK3 title to read."""
     if t.ck3_title:
         got = TITLE_TIER_RANK.get(t.ck3_title.split("_", 1)[0])
@@ -405,10 +409,21 @@ def selfcheck() -> None:
                 f"{t.tag}: needs capital, culture and religion - build "
                 f"cannot make them up"
             )
-        if t.ruler_title and not t.ck3_title:
+        if not (t.rank and 1 <= t.rank <= 5):
             raise ValueError(
-                f"{t.tag}: ruler_title is set but ck3_title is not - a ruler "
-                f"title only means something next to the realm title it overrides"
+                f"{t.tag}: needs a government rank 1..5 - the explicit tier "
+                f"anchor for government_names titles"
+            )
+        if not t.ck3_title:
+            raise ValueError(
+                f"{t.tag}: needs ck3_title - every TAG must have a real CK3 "
+                f"title; the ruler_title lane is deprecated"
+            )
+        want = TITLE_TIER_RANK.get(t.ck3_title[:1])
+        if want and t.rank != want:
+            raise ValueError(
+                f"{t.tag}: rank {t.rank} but {t.ck3_title} implies rank "
+                f"{want} - the tier the CK3 title grants is what ranks"
             )
         if t.forms and not t.decision:
             raise ValueError(f"{t.tag}: forms is set, so decision must be too")

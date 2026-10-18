@@ -3,7 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 2
 technology_group = eastern
 primary_culture = greek
-religion = orthodox
+religion = catholic
 capital = 136
 # Rank: a coastal duchy of city-states, nominally one realm. The full argument
 # lives on the Tag for DAL in tools/tagdb.py.

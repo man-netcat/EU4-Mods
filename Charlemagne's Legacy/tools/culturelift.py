@@ -74,7 +74,7 @@ CK3_TO_EU4 = {
     "persian": "persian", "baloch": "baluchi", "daylamite": "mazandarani",
     "bedouin": "bedouin_arabic",
     "syrian": "levantine",
-    "maghrebi": "maghrebi", "berber": "berber", "baranis": "berber", "butr": "berber",
+    "maghrebi": "maghrebi", "berber": "berber", "baranis": "baranis", "butr": "butr",
     "guanches": "guanche", "tuareg": "tuareg",
     "coptic": "al_misr_arabic", "nubian": "nubian", "beja": "beja",
     "somali": "somali", "afar": "afar", "oromo": "oromo",
@@ -199,25 +199,27 @@ _WALK_DEPTH = 3
 
 
 def _body_value(body, key):
-    """Value of a dated-aware character field: the undated entry wins,
-    else the latest value dated at or before 867.1.1."""
-    depth, best, cur = 0, None, ""
+    """Value of a dated-aware character field as of 867.1.1: the latest
+    dated change at or before 867.1.1 wins (Boris's birth Tengri vs his
+    864 Greek-rite baptism); the undated head value is only the
+    start-state fallback."""
+    undated, best, depth, cur = None, None, 0, ""
     for ln in body.splitlines():
         s = ln.strip()
         if re.match(r"^\d+\.\d+\.\d+\s*=", s) and depth == 0:
             cur = s.split("=")[0].strip()
         code = ln.split("#", 1)[0]
         opens = code.count("{")
-        m = re.match(r'^%s\s*=\s*"?([a-z_0-9]+)"?\s*$' % key, s)
+        m = re.match(r'^%s\s*=\s*"?([a-z_0-9]+)"?\s*$' % key, code.strip())
         if m:
-            if depth == 0:
-                return m.group(1)
-            if best is None and cur <= "867.1.1":
+            if depth == 0 and undated is None:
+                undated = m.group(1)
+            elif cur and cur <= "867.1.1":
                 best = m.group(1)
         depth += opens - code.count("}")
         if depth <= 0:
             depth, cur = 0, ""
-    return best
+    return best if best is not None else undated
 
 
 def _holder_with(title, key):
@@ -459,8 +461,8 @@ FAITH_TO_RELIGION = {
     "beneventan_rite": "catholic",
     "insular_celtic": "catholic",
     "mozarabic_church": "catholic",
-    "byzantine_rite": "orthodox",
-    "georgian_rite": "orthodox",
+    "byzantine_rite": "catholic",
+    "georgian_rite": "catholic",
     "armenian_rite": "apostolic",
     # Church of the East (Nestorian) is its own lifted faith, never in
     # Chalcedonian communion.
