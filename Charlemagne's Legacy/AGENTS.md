@@ -55,8 +55,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
    (validate only WARNS). See `tools/FLAG_NOTES.md` for palette and layout;
    render Illustrator SVGs with inkscape (cairosvg chokes), verify visually.
 6. `python3 tools/build.py && python3 tools/validate.py` — both green.
-7. If the CK3 title has no 867 holder the build fails loudly: either the
-   title is wrong for 867 or use `ruler_title` (a lower title, SAR precedent).
+7. If the CK3 title has no 867 holder the build fails loudly: the title
+   must be wrong for 867. `ruler_title` is deprecated - every tag MUST sit
+   on a real CK3 title; selfcheck fails a tag without `ck3_title`, and its
+   declared `rank` must equal the title's tier (c=1, d=2, k=3, e=4, h=5).
 
 ## Formables
 
@@ -118,8 +120,14 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   and `interface/provinceview.gfx` (one each) are full vanilla copies
   with `noOfFrames` 29→32 — miss any strip/sprite and icons shift (the
   classic bug). Re-sync all eight files against the
-  base game on patches; validate guards the
-  vanilla key set, both sprite lists, the TGA targets and the frame counts.
+  base game on patches; validate guards the vanilla key set, both sprite
+  lists, the TGA targets and the frame counts.
+  `common/subject_types/00_subject_types.txt` is an exact-filename vanilla
+  copy with only one gameplay edit: vassal `max_government_rank` 1→0 — the
+  engine clamps subjects down to their subject type's cap, and CK3-true
+  vassals hold duchy titles (rank follows titles, not vassalage); unions and
+  tributaries inherit vanilla's no-limit. Re-sync on patches; validate guards
+  the delta.
   New religions go in via `tools/addreligion.py` (block clone, loc,
   registry, CK3 icon decode onto all four strips by row, gfx frame
   counts - one idempotent call; hand-edit only what it cannot do).
@@ -146,6 +154,34 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   maps and lifts on demand; a starter whose ruler culture misses the
   formable gate fails `selfcheck` — drop the starter link or keep the
   land culture).
+- Culture government titles lift from CK3 via `tools/culturetitles.py`.
+  Rerunning `python3 tools/culturetitles.py` bare is the routine pass:
+  it covers **every tags.db tag** (rank, `ck3_title`, culture and
+  ruler faith read from the DB; `selfcheck` enforces `ck3_title` and
+  `rank == the title's tier`). Tags an already-written block covers
+  (a trigger naming the tag, the culture key or the culture group;
+  `default_*`/`muslim_monarchy`/`hre_county` never count) are skipped —
+  deliberate hand flavor wins. The rest group per our culture key
+  (tags.db `culture` may hold a CK3 id *or* the lifted EU4 key; the
+  resolver reverse-maps and disambiguates collisions through the 867
+  title holder's own CK3 culture) into
+  `<key>_titles` blocks — trigger `primary_culture = key`, or a tag
+  OR-list when the key is not one of ours — inserted into
+  `zz_kar_government_names.txt` before `muslim_monarchy`, with
+  `<CULTURE>_<TIER>[_MALE/_FEMALE]` loc appended to
+  `title_names_l_english.yml` (fresh keys only). A tag whose pick-set
+  diverges (title-bound specials, religion split) gets its own
+  `<key>_<TAG>_titles` block with suffixed keys, placed first.
+  CK3's government gate is inferred per tag: tribal→tribal,
+  theocracy→ecclesiastical ids, republic→republic, muslim monarchies
+  clan+feudal, the rest feudal; `--govs` merges extras (Roman heirs).
+  Gates that cannot be verified in EU4 scope (contract flags, faiths,
+  `de_jure_liege`) are skipped, never guessed; rites resolve to their
+  parent religion; heirs print SHAHZADE at ranks 2+ for islam realms
+  and HEIR otherwise; consorts reuse the ruler form; missing slots fall
+  back to vanilla keys. Re-running is idempotent. Hand-polish only what
+  lift output lacks (rare heir/consort specks — CK3's spouse rules are
+  culture-specific, e.g. korea, and stay unlifted).
 - Ranks: 1 county, 2 duchy, 3 kingdom, 4 empire, 5 hegemony (Tang only).
   `MAX_GOV_RANK`, `common/government_ranks/`, `RANK_1..RANK_5` loc and the
   rank-5 rungs in every `government_names` block must stay in sync.
@@ -288,6 +324,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - More doing, less thinking. No bloat: don't add validate notes for
   one-offs; do add guards for recurring bug classes (dead cores, tag
   collisions, unrenderable glyphs, invalid religion keys).
+- Never carve an exception (override table, allowlist, hand-authored
+  deviating value) without consulting the user first — if the resolver
+  disagrees with the data, suspect the resolver, not the data.
 - Commit only when explicitly asked, with prose subjects. The tree should
   be left clean.
 - Test evidence beats theory: game logs, `git diff` on generated output

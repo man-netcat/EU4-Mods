@@ -1170,7 +1170,34 @@ def run() -> int:
             rel = os.path.relpath(os.path.join(root, fn), MOD)
             note(raw == b"\xef\xbb\xbf", f"{rel} starts with a UTF-8 BOM")
 
-    print("\n== no unrenderable z-carons ==")
+    print("\n== loc values use glyphs EU4 renders ==")
+    # EU4's text pipeline drops any character its font set lacks (error.log
+    # "Couldn't find Latin1 character" e.g. the CK3 macrons a-ogonek
+    # title rows) while still rendering vanilla's Polish/Celtic marks, so
+    # the honest baseline is the glyph set vanilla English loc itself uses.
+    ALLOWED = {
+        chr(c) for c in range(0x20, 0x7F)
+    } | {
+        chr(c) for c in range(0xA0, 0x100)
+    }
+    vdir = os.path.join(
+        "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV",
+        "localisation")
+    for fn in sorted(os.listdir(vdir)):
+        if not fn.endswith("_l_english.yml"):
+            continue
+        raw = open(os.path.join(vdir, fn), "rb").read()
+        try:
+            txt = raw.decode("utf-8-sig")
+        except UnicodeDecodeError:
+            txt = raw.decode("cp1252", errors="replace")
+        ALLOWED |= set(txt)   # chars directly, not findall chunks
+    ALLOWED |= {chr(c) for c in range(0x20, 0x7F)}
+    # e-ogonek: beyond vanilla's set? proven rendered either way (never
+    # logged as dropped with our Polish names live); keep it allowed so the
+    # check measures what drops, not what lotr-writers used.
+    ALLOWED |= set("ę")   # e-ogonek: renders (never logged, our Polish names live)
+    ALLOWED |= set("Ł")   # capital L-stroke: renders the same way (no log drops)
     bad_glyph = []
     for root, _dirs, files in os.walk(LOC):
         for fn in sorted(files):
@@ -1180,9 +1207,16 @@ def run() -> int:
                 if '"' not in ln:
                     continue
                 val = ln.split('"')[1]
-                if "ž" in val or "Ž" in val:
-                    bad_glyph.append(f"{fn}: {val.strip()!r} (renders as ? in game)")
-    note(not bad_glyph, f"no ž glyphs ({len(bad_glyph)} bad)")
+                bad = [c for c in val if c not in ALLOWED]
+                if bad:
+                    bad_glyph.append(
+                        f"{fn}: {val.strip()!r} "
+                        f"(unrenderable: {''.join(bad)!r} - the game drops "
+                        f"the string, see error.log 'Couldn't find Latin1 "
+                        f"character'; fold via encname)")
+    note(not bad_glyph,
+         f"all loc glyphs render ({len(bad_glyph)} bad)"
+         if bad_glyph else "all loc glyphs render")
     for b in bad_glyph[:8]:
         print("        " + b)
 
@@ -1382,6 +1416,39 @@ def run() -> int:
     for b in bad_rel[:8]:
         print("        " + b)
 
+    print("\n== subject types keep CK3-true vassal ranks ==")
+    # The mod ships an exact-filename copy of vanilla subject_types with one
+    # gameplay edit: vassal max_government_rank 1 -> 0. The engine
+    # (CCountry::CalcGovernmentRank) clamps a subject's displayed rank down to
+    # its subject type's cap; our CK3-true vassal duchies (TRA/VSG/GTH/DAL/
+    # SIC/CST/ARG/PRT) must read as Duchy, and personal_union/tributary_state
+    # inherit the default (no limit). Re-copy the file on patches, keep the
+    # vassal line flipped.
+
+    def _code_lines(p):
+        txt = open(p, encoding="cp1252", errors="replace").read()
+        return [
+            l.split("#", 1)[0].strip()
+            for l in txt.splitlines()
+            if l.split("#", 1)[0].strip()
+        ]
+
+    vsub = _code_lines(os.path.join(GAME, "common", "subject_types",
+                                    "00_subject_types.txt"))
+    msub = _code_lines(os.path.join(MOD, "common", "subject_types",
+                                    "00_subject_types.txt"))
+    sdiff = [(a, b) for a, b in zip(vsub, msub) if a != b]
+    note(
+        len(vsub) == len(msub)
+        and len(sdiff) == 1
+        and sdiff[0][0] == "max_government_rank = 1"
+        and sdiff[0][1] == "max_government_rank = 0",
+        "subject types = vanilla copy with only the vassal cap lifted",
+    )
+    if len(vsub) != len(msub) or len(sdiff) != 1:
+        print(f"        {len(vsub)} vanilla vs {len(msub)} ours, "
+              f"{len(sdiff)} code-line diffs: {sdiff[:4]}")
+
     print("\n== culture blocks sit at group depth ==")
     # A culture block nested inside another culture silently does nothing
     # in game (the carantanian bug): the engine reads cultures only at
@@ -1488,6 +1555,26 @@ def run() -> int:
                 break
     note(not vis_bad, f"no dropped tech-group discovery ({len(vis_bad)} bad)")
     for b in vis_bad[:8]:
+        print("        " + b)
+
+    print("\n== country history uses vanilla key shapes ==")
+    # EU4's country-history parser rejects `general = {`/`advisor = {`
+    # ("Unknown effect type" in error.log - the block silently vanishes;
+    # generals are `leader = { type = general }`, advisors belong in
+    # history/advisors/). Guarded because tags.extra is hand-written and
+    # this killed ADU's 867 general silently once.
+    badkey = []
+    for fn in sorted(os.listdir(COUNTRY_OUT)):
+        if not fn.endswith(".txt"):
+            continue
+        text = open(os.path.join(COUNTRY_OUT, fn),
+                    encoding="cp1252", errors="replace").read()
+        for m in re.finditer(r"(?m)^\s*(general|advisor)\s*=\s*\{", text):
+            badkey.append(f"{fn}: {m.group(0).strip()}")
+    note(not badkey, "no general/advisor keys in country history"
+         if not badkey else
+         f"{len(badkey)} wrong-key country-history blocks")
+    for b in badkey[:8]:
         print("        " + b)
 
     print("\n== preset wars use live tags and real CBs ==")
