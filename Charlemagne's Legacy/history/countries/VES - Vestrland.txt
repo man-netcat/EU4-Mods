@@ -9,6 +9,7 @@ capital = 370
 	monarch = {
 		name = "Auðr"
 		dynasty = "Flatnefr"
+		female = yes
 		birth_date = 833.1.1
 		death_date = 900.1.1
 		adm = 2

@@ -19,6 +19,7 @@ capital = 1955
 		name = "Senda"
 		monarch_name = "Senda"
 		dynasty = "Angolk"
+		female = yes
 		birth_date = 857.4.13
 		death_date = 908.7.23
 		claim = 90

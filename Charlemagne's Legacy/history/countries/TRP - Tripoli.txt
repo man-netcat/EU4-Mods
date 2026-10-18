@@ -19,6 +19,7 @@ capital = 354
 		name = "Kenwa"
 		monarch_name = "Kenwa"
 		dynasty = "Hawwâra"
+		female = yes
 		birth_date = 849.1.1
 		death_date = 903.1.1
 		claim = 90

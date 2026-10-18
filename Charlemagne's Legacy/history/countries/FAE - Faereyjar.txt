@@ -19,6 +19,7 @@ capital = 1979
 		name = "Helga"
 		monarch_name = "Helga"
 		dynasty = "Naddoðr"
+		female = yes
 		birth_date = 843.1.1
 		death_date = 900.1.1
 		claim = 90

@@ -19,6 +19,7 @@ capital = 4789
 		name = "Belay"
 		monarch_name = "Belay"
 		dynasty = "Siqubiyyahid"
+		female = yes
 		birth_date = 866.1.1
 		death_date = 916.1.1
 		claim = 90

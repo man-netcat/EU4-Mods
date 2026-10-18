@@ -19,6 +19,7 @@ capital = 216
 		name = "Ludriqh"
 		monarch_name = "Ludriqh"
 		dynasty = "Salamanqid"
+		female = yes
 		birth_date = 860.1.1
 		death_date = 910.1.1
 		claim = 90

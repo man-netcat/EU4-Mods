@@ -19,6 +19,7 @@ capital = 240
 		name = "Eadburh"
 		monarch_name = "Eadburh"
 		dynasty = "Mercia"
+		female = yes
 		birth_date = 826.1.1
 		death_date = 885.1.1
 		claim = 90

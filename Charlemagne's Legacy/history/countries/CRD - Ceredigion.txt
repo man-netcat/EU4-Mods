@@ -19,6 +19,7 @@ capital = 4366
 		name = "Angharad"
 		monarch_name = "Angharad"
 		dynasty = "Seisyllwg"
+		female = yes
 		birth_date = 822.1.1
 		death_date = 880.1.1
 		claim = 90

@@ -731,6 +731,10 @@ def ck3_block(tag):
             out.append(f'\t\tmonarch_name = "{encname(nm)}"')
         if dy:
             out.append(f'\t\tdynasty = "{encname(dy)}"')
+        if _is_female(cid_, chars):
+            # vanilla shape (MBZ/KAC): the game spawns the queen/heiress
+            # forms only when the definition says so; male blocks omit it
+            out.append("\t\tfemale = yes")
         for label, d_ in (("birth_date", b), ("death_date", d)):
             if not d_:
                 raise SystemExit(f"{tag}: CK3 character {cid_} has no {label}")

@@ -19,6 +19,7 @@ capital = 1935
 		name = "Darate"
 		monarch_name = "Darate"
 		dynasty = "Penikis"
+		female = yes
 		birth_date = 849.1.1
 		death_date = 899.1.1
 		claim = 90

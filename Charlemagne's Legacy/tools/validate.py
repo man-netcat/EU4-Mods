@@ -1123,6 +1123,14 @@ def run() -> int:
                 f"{t} ruler name/dynasty matches CK3 867 "
                 f"({encname(want['name'])} / {encname(want['dynasty'])})",
             )
+            import ck3
+            want_female = ck3._is_female(want["char"], _chars)
+            got_female = re.search(r"^\s*female\s*=\s*yes", blk.group(1), re.M) is not None
+            note(
+                want_female == got_female,
+                f"{t} ruler gender matches CK3 867 "
+                f"({'female' if want_female else 'male'})",
+            )
         print("        run `python3 tools/build.py --fix` to resync")
 
     START_DT = (867, 1, 1)

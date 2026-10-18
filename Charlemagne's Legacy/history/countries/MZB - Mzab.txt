@@ -19,6 +19,7 @@ capital = 2457
 		name = "Silya"
 		monarch_name = "Silya"
 		dynasty = "Righa"
+		female = yes
 		birth_date = 846.1.1
 		death_date = 902.1.1
 		claim = 90

@@ -19,6 +19,7 @@ capital = 1746
 		name = "Nurah"
 		monarch_name = "Nurah"
 		dynasty = "Burgusid"
+		female = yes
 		birth_date = 857.1.1
 		death_date = 907.1.1
 		claim = 90

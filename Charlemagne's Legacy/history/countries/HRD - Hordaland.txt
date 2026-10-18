@@ -19,6 +19,7 @@ capital = 23
 		name = "Gyda"
 		monarch_name = "Gyda"
 		dynasty = "Horðalandi"
+		female = yes
 		birth_date = 854.1.1
 		death_date = 935.1.1
 		claim = 90

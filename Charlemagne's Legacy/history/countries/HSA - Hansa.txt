@@ -23,6 +23,7 @@ historical_friend = RIG #Riga
 		name = "Smiechna"
 		monarch_name = "Smiechna"
 		dynasty = "Obodrytow"
+		female = yes
 		birth_date = 849.1.1
 		death_date = 897.1.1
 		claim = 90

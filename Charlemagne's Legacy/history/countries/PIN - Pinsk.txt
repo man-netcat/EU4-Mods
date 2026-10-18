@@ -19,6 +19,7 @@ capital = 278
 		name = "Tatyana"
 		monarch_name = "Tatyana"
 		dynasty = "Dregovich"
+		female = yes
 		birth_date = 859.9.13
 		death_date = 892.11.17
 		claim = 90

@@ -19,6 +19,7 @@ capital = 40
 		name = "Giltine"
 		monarch_name = "Giltine"
 		dynasty = "Suvalkija"
+		female = yes
 		birth_date = 850.1.1
 		death_date = 927.1.1
 		claim = 90
