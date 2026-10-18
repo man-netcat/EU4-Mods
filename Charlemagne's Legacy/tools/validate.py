@@ -1174,9 +1174,18 @@ def run() -> int:
         for fn in sorted(files):
             if not fn.endswith("_l_english.yml"):
                 continue
-            raw = open(os.path.join(root, fn), "rb").read(3)
+            raw = open(os.path.join(root, fn), "rb").read()
             rel = os.path.relpath(os.path.join(root, fn), MOD)
-            note(raw == b"\xef\xbb\xbf", f"{rel} starts with a UTF-8 BOM")
+            note(raw.startswith(b"\xef\xbb\xbf"), f"{rel} starts with a UTF-8 BOM")
+            # A headerless file segfaults the loc parser at startup
+            # (SLanguageData::AddKeyValuePair -> LocalizeYmlAddKey, no
+            # language registered): the l_english: line must come first.
+            body = raw[3:].decode("utf-8", errors="replace")
+            head = next((ln for ln in body.splitlines()
+                         if ln.strip() and not ln.strip().startswith("#")), "")
+            note(head.strip() == "l_english:",
+                 f"{rel} declares the l_english: header first (got {head.strip()!r})"
+                 if head.strip() != "l_english:" else f"{rel} declares l_english: first")
 
     print("\n== loc values use glyphs EU4 renders ==")
     # EU4's text pipeline drops any character its font set lacks (error.log
