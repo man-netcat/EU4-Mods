@@ -22,6 +22,24 @@ WappenWiki-derived flags are licensed under [CC BY-NC-SA
 terms; the mod itself is and stays free. If you reuse those flags, credit
 WappenWiki and share them under the same license.
 
+The Tulunids used to carry an inscription banner traced from Ahmad ibn
+Tulun's gold dinar of AH 268; per the CK3-CoA pipeline they now carry
+Patrum Scuta's Or/Argent crescent design like every other covered tag.
+
+The dynasty CoAs (`tools/coaflags.py`) render straight from CK3's own
+coat-of-arms system instead: Patrum Scuta's authored designs come first
+(its files load after the base game's, so its blocks win in-game), then
+the base game's `90_dynasties.txt`; dynasties with no authored design
+(the CK3-random ones — every muslim realm from ALG to ZAM and the
+Mozarabic houses BGS, CUE, MLR, SLM, VLL among them) read
+their generated instance out of a non-ironman 867 bookmark — the save's
+`coat_of_arms_manager_database` carries every CoA the engine rolled,
+reached through the dynasty record's `coat_of_arms_id` (`save_dynasty_coa`,
+with the title entity as fallback), so the flags match what CK3 itself
+displays for the dynasty at the start date. Colours snap to the
+WappenWiki tincture canon per the palette table in
+`tools/FLAG_NOTES.md`.
+
 ## Developing
 
 Everything is generated from a SQLite database. From the mod folder:

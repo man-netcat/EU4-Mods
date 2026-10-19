@@ -277,10 +277,11 @@ def _parse_loc_files(files):
     return out
 
 
-def resolve_dynasty(body, dyns, houses):
-    """The latest dated identity change at or before 867.1.1 wins
-    (Haytham is born Shaybanid but moves to the Yazidid house in 844);
-    the undated dynasty key is only the birth-state fallback."""
+def dynasty_events(body):
+    """Dated identity events of a character body: (date, kind, key) in
+    file order, at or before 867.1.1; cur == "" is the undated birth-state
+    fallback. Shared by resolve_dynasty (name) and the CoA flag writer
+    (keys)."""
     events = []  # (date, kind, key) in file order, cur == "" is the head
     depth, cur = 0, ""
     for ln in body.splitlines():
@@ -297,6 +298,14 @@ def resolve_dynasty(body, dyns, houses):
         depth += code.count("{") - code.count("}")
         if depth <= 0:
             depth, cur = 0, ""
+    return events
+
+
+def resolve_dynasty(body, dyns, houses):
+    """The latest dated identity change at or before 867.1.1 wins
+    (Haytham is born Shaybanid but moves to the Yazidid house in 844);
+    the undated dynasty key is only the birth-state fallback."""
+    events = dynasty_events(body)
     if not events:
         return None
     _d, kind, key = events[-1]
