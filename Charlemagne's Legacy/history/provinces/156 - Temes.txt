@@ -1,8 +1,8 @@
 #156 - Temes
 
-owner = TRA
-controller = TRA
-add_core = TRA
+owner = TEM
+controller = TEM
+add_core = TEM
 capital = "Temesvár"
 culture = avar
 religion = tengri_pagan_reformed
@@ -20,8 +20,8 @@ discovered_by = ottoman
 
  # Great plague
 867.1.1 = {
-	owner = TRA
-	controller = TRA
-	add_core = TRA
+	owner = TEM
+	controller = TEM
+	add_core = TEM
 	add_claim = MGY
 }

@@ -23,6 +23,10 @@ vassal = {
 }
 vassal = {
 	first = BUL
+	second = TEM
+}
+vassal = {
+	first = BUL
 	second = TRA
 }
 vassal = {

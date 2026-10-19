@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = eastern
+primary_culture = bulgarian
+religion = catholic
+capital = 156
+867.1.1 = {
+	monarch = {
+		name = "Zalan"
+		dynasty = "Zalanid"
+		birth_date = 845.1.1
+		death_date = 895.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

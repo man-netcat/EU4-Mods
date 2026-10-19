@@ -37,6 +37,7 @@ country_decisions = {
 				tag = KIE
 				tag = KRA
 				tag = KRL
+				tag = KSH
 				tag = KUR
 				tag = LOI
 				tag = LOT
@@ -258,6 +259,12 @@ country_decisions = {
 			limit = { tag = KRL }
 			change_country_color = {
 				color = { 244 38 38 }
+			}
+		}
+		if = {
+			limit = { tag = KSH }
+			change_country_color = {
+				color = { 63 150 30 }
 			}
 		}
 		if = {

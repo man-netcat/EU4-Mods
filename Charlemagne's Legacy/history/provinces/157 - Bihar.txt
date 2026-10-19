@@ -1,8 +1,9 @@
 #157 - Bihar
 
-owner = TRA
-controller = TRA
+owner = VSG
+controller = VSG
 add_core = TRA
+add_core = VSG
 capital = "Oradea"
 culture = avar
 religion = tengri_pagan_reformed
@@ -19,8 +20,8 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = TRA
-	controller = TRA
-	add_core = TRA
+	owner = VSG
+	controller = VSG
+	add_core = VSG
 	add_claim = MGY
 }

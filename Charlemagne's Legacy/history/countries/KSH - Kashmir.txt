@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = indian
+primary_culture = kashmiri
+religion = hinduism
+capital = 508
+867.1.1 = {
+	monarch = {
+		name = "Avantivarma"
+		dynasty = "Utpala"
+		birth_date = 805.1.1
+		death_date = 881.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Samkaravarman"
+		monarch_name = "Samkaravarman"
+		dynasty = "Utpala"
+		birth_date = 840.1.1
+		death_date = 902.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
