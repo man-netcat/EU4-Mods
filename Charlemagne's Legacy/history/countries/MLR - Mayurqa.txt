@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = andalusian
+religion = catholic
+capital = 333
+867.1.1 = {
+	monarch = {
+		name = "Yuhanna"
+		dynasty = "Mayurqid"
+		birth_date = 842.1.1
+		death_date = 903.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Filibus"
+		monarch_name = "Filibus"
+		dynasty = "Mayurqid"
+		birth_date = 867.1.1
+		death_date = 917.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

@@ -1,8 +1,8 @@
 #333 - The Baleares
 
-owner = ADU
-controller = ADU
-add_core = ADU
+owner = MLR
+controller = MLR
+add_core = MLR
 capital = "Palma"
 culture = catalan
 religion = catholic
@@ -19,9 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = ADU
-	controller = ADU
-	add_core = ADU
-	add_claim = ASU
-	add_claim = NAV
+	owner = MLR
+	controller = MLR
+	add_core = MLR
 }
