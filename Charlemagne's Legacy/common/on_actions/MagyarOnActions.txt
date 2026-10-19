@@ -16,6 +16,7 @@ on_war_won = {
 					tag = BUL
 					tag = TRA
 					tag = VSG
+					tag = TEM
 				}
 			}
 		}

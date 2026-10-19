@@ -262,7 +262,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   holder fires `magyar_settlement.3` through `on_war_won`
   (`common/on_actions/MagyarOnActions.txt`, an additive merge with
   vanilla's on-actions carrying only our guard), which completes the basin
-  held by BUL and its vassals TRA and VSG only (Balaton stays out) and
+  held by BUL and its vassals TRA, VSG and TEM (Balaton stays out) and
   crowns at once; the shared crown body lives in
   `common/scripted_effects/MagyarEffects.txt`. Formation fires the
   settlement deterministically (`country_event` at the end of the effect

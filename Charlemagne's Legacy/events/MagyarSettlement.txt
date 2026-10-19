@@ -73,6 +73,7 @@ country_event = {
 					owned_by = BUL
 					owned_by = TRA
 					owned_by = VSG
+					owned_by = TEM
 				}
 			}
 			add_core = ROOT
@@ -85,6 +86,7 @@ country_event = {
 					owned_by = BUL
 					owned_by = TRA
 					owned_by = VSG
+					owned_by = TEM
 				}
 			}
 			add_core = ROOT
@@ -97,6 +99,7 @@ country_event = {
 					owned_by = BUL
 					owned_by = TRA
 					owned_by = VSG
+					owned_by = TEM
 				}
 			}
 			add_core = ROOT
@@ -109,6 +112,7 @@ country_event = {
 					owned_by = BUL
 					owned_by = TRA
 					owned_by = VSG
+					owned_by = TEM
 				}
 			}
 			add_core = ROOT
