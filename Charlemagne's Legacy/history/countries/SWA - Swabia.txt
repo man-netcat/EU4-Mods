@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = franconian
+religion = catholic
+capital = 4713
+867.1.1 = {
+	monarch = {
+		name = "Karl"
+		dynasty = "Karling"
+		birth_date = 839.1.14
+		death_date = 888.1.14
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	heir = {
+		name = "Karlmann"
+		monarch_name = "Karlmann"
+		dynasty = "Karling"
+		birth_date = 830.1.14
+		death_date = 880.9.29
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

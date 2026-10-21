@@ -79,6 +79,10 @@ vassal = {
 }
 vassal = {
 	first = GER
+	second = SWA
+}
+vassal = {
+	first = GER
 	second = THU
 }
 vassal = {

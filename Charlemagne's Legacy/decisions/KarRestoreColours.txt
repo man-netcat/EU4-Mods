@@ -68,6 +68,7 @@ country_decisions = {
 				tag = SOR
 				tag = SRV
 				tag = STE
+				tag = SWA
 				tag = THU
 				tag = TIM
 				tag = TNG
@@ -455,6 +456,12 @@ country_decisions = {
 			limit = { tag = STE }
 			change_country_color = {
 				color = { 33 119 58 }
+			}
+		}
+		if = {
+			limit = { tag = SWA }
+			change_country_color = {
+				color = { 225 98 87 }
 			}
 		}
 		if = {
