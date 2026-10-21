@@ -68,4 +68,6 @@ add_accepted_culture = berber
 		dip = 1
 		mil = 2
 	}
+
+	set_country_flag = kar_gov_clan_government
 }

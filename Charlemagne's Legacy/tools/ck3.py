@@ -126,6 +126,47 @@ def holder_at_exact(title, titles):
 
 
 @lru_cache(maxsize=1)
+def load_title_governments():
+    files = sorted((Path(GAME_CK3) / "history" / "titles").glob("*.txt"))
+    return _cached("title_governments", files,
+                   lambda: _parse_title_governments(files))
+
+
+def _parse_title_governments(files):
+    """{title: government in force at the 867 start}.
+
+    CK3 title history sets a government per dated entry; the last one at
+    or before the start date wins. A title with no entry takes the engine
+    default (feudal_government carries the fallback = 1 marker)."""
+    start = _date_key(DATE)
+    out = {}
+    for f in files:
+        text = _norm(f.read_text(errors="replace")).lstrip("\ufeff")
+        for tid, body in _blocks(text):
+            date = (0, 0, 0)
+            gov = None
+            for line in body.split("\n"):
+                dm = re.match(r"^\s*(\d{1,3})\.(\d{1,2})\.(\d{1,2})\s*=",
+                              line)
+                if dm:
+                    date = tuple(int(x) for x in dm.groups())
+                    continue
+                gm = re.match(r"^\s*government\s*=\s*([a-z_0-9]+)", line)
+                if gm and date <= start:
+                    gov = gm.group(1)
+            if gov:
+                out[tid] = gov
+    return out
+
+
+def title_government(title):
+    """The CK3 government a title's history pins at 867, or None when the
+    history leaves it to the engine (which then picks dynamically; the EU4
+    government mapping covers those)."""
+    return load_title_governments().get(title)
+
+
+@lru_cache(maxsize=1)
 def load_chars():
     files = sorted((Path(GAME_CK3) / "history" / "characters").glob("*.txt"))
     return _cached("chars", files, lambda: _parse_char_files(files))
@@ -158,7 +199,7 @@ def _parse_dynasty_files(files):
 
 # Bump whenever a parser in this file changes: caches are keyed on source
 # mtimes, so parser edits alone would otherwise serve stale pickles.
-_CACHE_VERSION = 5
+_CACHE_VERSION = 6
 
 
 _CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"

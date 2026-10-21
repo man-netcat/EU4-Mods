@@ -1,8 +1,9 @@
 # 196 Toulouse - Principal cities: Toulouse
 
-owner = AQI
-controller = AQI
-add_core = AQI
+owner = TOU
+controller = TOU
+add_core = TOU
+add_core = GUY
 capital = "Toulouse"
 culture = occitain
 religion = catholic
@@ -19,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = AQI
-	controller = AQI
-	add_core = AQI
+	owner = TOU
+	controller = TOU
+	add_core = TOU
 }

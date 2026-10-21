@@ -29,6 +29,7 @@ country_decisions = {
 				tag = GER
 				tag = GMA
 				tag = GOT
+				tag = GUY
 				tag = HDR
 				tag = HSA
 				tag = ITA
@@ -63,6 +64,7 @@ country_decisions = {
 				tag = STE
 				tag = TIM
 				tag = TNG
+				tag = TOU
 				tag = TRA
 				tag = TRP
 				tag = TRS
@@ -211,6 +213,12 @@ country_decisions = {
 			limit = { tag = GOT }
 			change_country_color = {
 				color = { 153 126 0 }
+			}
+		}
+		if = {
+			limit = { tag = GUY }
+			change_country_color = {
+				color = { 32 144 204 }
 			}
 		}
 		if = {
@@ -415,6 +423,12 @@ country_decisions = {
 			limit = { tag = TNG }
 			change_country_color = {
 				color = { 208 119 102 }
+			}
+		}
+		if = {
+			limit = { tag = TOU }
+			change_country_color = {
+				color = { 127 170 146 }
 			}
 		}
 		if = {

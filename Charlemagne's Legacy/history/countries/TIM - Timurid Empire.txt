@@ -15,4 +15,6 @@ capital = 446
 		dip = 3
 		mil = 4
 	}
+
+	set_country_flag = kar_gov_clan_government
 }

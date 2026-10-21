@@ -12,6 +12,14 @@ vassal = {
 	first = AQI
 	second = GTH
 }
+vassal = {
+	first = AQI
+	second = GUY
+}
+vassal = {
+	first = AQI
+	second = TOU
+}
 dependency = {
 	subject_type = tributary_state
 	first = ARB

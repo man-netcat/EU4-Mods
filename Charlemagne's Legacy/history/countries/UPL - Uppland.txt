@@ -26,4 +26,6 @@ capital = 2
 		dip = 1
 		mil = 1
 	}
+
+	set_country_flag = kar_gov_tribal_government
 }

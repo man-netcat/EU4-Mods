@@ -35,4 +35,6 @@ change_estate_land_share = {
 		dip = 2
 		mil = 2
 	}
+
+	set_country_flag = kar_gov_ecclesiastical_government
 }

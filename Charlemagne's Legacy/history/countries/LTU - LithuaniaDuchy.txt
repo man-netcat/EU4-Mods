@@ -29,4 +29,6 @@ add_accepted_culture = ruthenian
 		dip = 2
 		mil = 2
 	}
+
+	set_country_flag = kar_gov_tribal_government
 }

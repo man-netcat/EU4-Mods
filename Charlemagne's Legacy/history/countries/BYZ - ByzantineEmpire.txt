@@ -67,4 +67,6 @@ set_estate_privilege = estate_burghers_exkousseiai_for_latins
 		dip = 2
 		mil = 2
 	}
+
+	set_country_flag = kar_gov_administrative_government
 }

@@ -1,6 +1,6 @@
-owner = AQI
-controller = AQI
-add_core = AQI
+owner = DAU
+controller = DAU
+add_core = DAU
 capital = "Montbrison"
 culture = occitain
 religion = catholic
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = AQI
-	controller = AQI
-	add_core = AQI
+	owner = DAU
+	controller = DAU
+	add_core = DAU
 }

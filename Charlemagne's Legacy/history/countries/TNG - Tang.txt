@@ -15,4 +15,6 @@ capital = 700
 		dip = 2
 		mil = 2
 	}
+
+	set_country_flag = kar_gov_celestial_government
 }

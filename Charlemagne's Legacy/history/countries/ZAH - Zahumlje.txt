@@ -14,4 +14,6 @@ capital = 139
 		dip = 2
 		mil = 2
 	}
+
+	set_country_flag = kar_gov_feudal_government
 }

@@ -54,6 +54,8 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 5. Flags: never clone placeholders — missing flags must stay visibly missing
    (validate only WARNS). See `tools/FLAG_NOTES.md` for palette and layout;
    render Illustrator SVGs with inkscape (cairosvg chokes), verify visually.
+   Uncommitted `gfx/flags/*.tga` are the user's own work by default: never
+   overwrite or delete a flag without permission.
 6. `python3 tools/build.py && python3 tools/validate.py` — both green.
 7. If the CK3 title has no 867 holder the build fails loudly: the title
    must be wrong for 867. `ruler_title` is deprecated - every tag MUST sit
@@ -172,9 +174,16 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `title_names_l_english.yml` (fresh keys only). A tag whose pick-set
   diverges (title-bound specials, religion split) gets its own
   `<key>_<TAG>_titles` block with suffixed keys, placed first.
-  CK3's government gate is inferred per tag: tribal→tribal,
-  theocracy→ecclesiastical ids, republic→republic, muslim monarchies
-  clan+feudal, the rest feudal; `--govs` merges extras (Roman heirs).
+  CK3's government gate is read from the title's own history at 867
+  (Byzantine themes are administrative, so their Greek counts read
+  Tourma while feudal Greek Napoli reads County/Count); titles CK3
+  leaves to the engine fall back to the EU4 government mapping
+  (tribal→tribal, theocracy→ecclesiastical ids, republic→republic,
+  muslim monarchies clan+feudal, the rest feudal); `--govs` merges
+  extras (Roman heirs). The build writes the resolved government into
+  country history as a `kar_gov_*` start flag, so a culture spanning
+  several CK3 governments (greek: feudal vs administrative) gates its
+  shared ladder on it.
   Gates that cannot be verified in EU4 scope (contract flags, faiths,
   `de_jure_liege`) are skipped, never guessed; rites resolve to their
   parent religion; heirs print SHAHZADE at ranks 2+ for islam realms

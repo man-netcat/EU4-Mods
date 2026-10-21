@@ -7,7 +7,7 @@ from pathlib import Path
 
 from ck3 import ck3_block, load_title_colors
 from enc import encname
-from tagdb import BY_FORMABLE, rank_of, required_count
+from tagdb import BY_FORMABLE, ck3_government, rank_of, required_count
 
 HERE = Path(__file__).resolve().parent
 PROVDATA = HERE / "cache" / "provdata.json"
@@ -74,6 +74,11 @@ def country_history(t) -> str:
             '\n\tleader = { name = "Kurszán" type = general fire = 1 shock = 6 manuever = 3 siege = 0 death_date = 904.1.1 }\n\their = {',
             1,
         )
+    # CK3 government at 867, carried into EU4 as a start flag so
+    # government_names can gate on it (Greek feudal Napoli = County/Count,
+    # Greek administrative Syracusa = Tourma).
+    assert rb.endswith("}\n")
+    rb = rb[:-2] + f"\n\tset_country_flag = kar_gov_{ck3_government(t)}\n}}\n"
     lines.append(rb)
     return "\n".join(lines) + "\n"
 

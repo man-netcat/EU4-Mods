@@ -32,8 +32,14 @@ SHAHZADE at ranks 2+ for islam realms (ARB/AFR precedent) and HEIR
 otherwise; consorts use the ruler form (CK3 has no consort terms).
 
 Ranks: 1 county / 2 duchy / 3 kingdom / 4 empire / 5 hegemony; both
-realm and ruler rows carry the same CK3 tier. Feudal+clan governments
-by default (--govs adds administrative_government for Roman heirs).
+realm and ruler rows carry the same CK3 tier. The realm government is
+the one CK3's own title history gives the title at 867 (feudal unless
+stated), so a Greek feudal county reads County/Count while an
+administrative theme reads Tourma; --govs adds more (Roman heirs). The
+emitted EU4 trigger gates on the members' own EU4 government, so a
+republic tag (Venice) gets a republic block instead of a dead one; a
+culture spanning several CK3 governments also gates on the `kar_gov_*`
+start flag the build writes into country history.
 $alias$ indirections resolve; [SelectLocalization pseudo-loc values
 count as absent; contract-flagged rules (castellan and friends) can
 never carry over and are skipped.
@@ -81,11 +87,32 @@ DEFAULT_GOVS = ""  # --govs optional add (administrative_government for Roman he
 MUSLIM_EU4 = {"sunni", "ibadi", "shiite"}
 
 
+def ck3_gov_of(t):
+    """The government CK3's title history pins for the tag's title at the
+    867 start (None when the history leaves it to the engine)."""
+    from ck3 import title_government
+    if not t.ck3_title:
+        return None
+    return title_government(t.ck3_title)
+
+
+def gov_flag_of(t):
+    """The CK3 government the `kar_gov_*` start flag names."""
+    from tagdb import ck3_government
+    return ck3_government(t)
+
+
 def gov_set(t, extra):
-    """The CK3 governments a tag's realm can be read as. EU4 government +
-    EU4 religion: tribal is tribal; theocracy covers CK3's theocratic ids;
+    """The CK3 governments a tag's realm can be read as. The title's own
+    history wins - CK3 gates every flavorization rule on the realm's
+    government (Greek feudal Napoli = County/Count, Greek administrative
+    Syracusa = Tourma). The EU4 government only backs titles CK3 does not
+    describe: tribal is tribal; theocracy covers CK3's theocratic ids;
     muslim monarchies are clan (feudal gates stay in the sibling rules);
     the rest are feudal. --govs adds more (Roman heirs)."""
+    g = ck3_gov_of(t)
+    if g:
+        return {g} | extra
     g = (t.government or "monarchy").lower()
     if g == "tribal":
         return {"tribal_government"} | extra
@@ -99,7 +126,7 @@ def gov_set(t, extra):
     return {"feudal_government"} | extra
 
 WHERE = {"county": "COUNT", "duchy": "DUKE", "kingdom": "KING",
-         "empire": "EMPEROR", "hegemony": "EMPEROR"}
+         "empire": "EMPEROR", "hegemony": "HEGEMON"}
 LOC_RE = re.compile(
     r'^ *([A-Za-z0-9_.\-]+):\s*(\d*)[ \t]*"((?:[^"\\]|\\.)*)"', re.M)
 TIER_OF_PREFIX = {"b": "barony", "c": "county", "d": "duchy", "k": "kingdom",
@@ -280,7 +307,10 @@ def pick(rules, tier, rtype, gender, title, heritage, name_list, religion,
     """CK3 semantics: rules sorted by priority then file order, first
     eligible wins. A rule with a narrower gate we cannot verify
     (contract flags, faiths, name lists) is never a guess."""
-    for r in sorted(rules.values(), key=lambda r: (-r.priority, -r.order)):
+    # CK3 only replaces an eligible rule with a STRICTLY higher priority
+    # (_flavourization.info), so equal priorities keep the earlier rule -
+    # the culture-specific rows above the defaults.
+    for r in sorted(rules.values(), key=lambda r: (-r.priority, r.order)):
         if r.type != rtype:
             continue
         if r.special not in (None, "holder"):
@@ -349,19 +379,33 @@ def trigger_of(body):
 
 
 def coverage_index(blocks):
-    """(tags, cultures, groups) covered by existing non-default blocks."""
+    """(tags, cultures, groups) -> [(block, government flag)] entries.
+    A block whose trigger names a CK3-government flag only covers tags
+    with that government (a Greek feudal county is not covered by the
+    administrative byzantine ladder); a block without one covers all."""
     tagmap, cultmap, groupmap = {}, {}, {}
     for name, body in blocks.items():
         if name in GENERIC_BLOCKS or name.endswith("_titles"):
             continue
         trig = trigger_of(body)
+        fm = re.search(r"has_country_flag\s*=\s*(kar_gov_[a-z_0-9]+)", trig)
+        gov = fm.group(1) if fm else None
         for t in re.findall(r"(?m)^\s*tag\s*=\s*([A-Z0-9]{3})", trig):
-            tagmap.setdefault(t, name)
+            tagmap.setdefault(t, []).append((name, gov))
         for c in re.findall(r"primary_culture\s*=\s*([a-z_0-9]+)", trig):
-            cultmap.setdefault(c, name)
+            cultmap.setdefault(c, []).append((name, gov))
         for g in re.findall(r"culture_group\s*=\s*([a-z_0-9]+)", trig):
-            groupmap.setdefault(g, name)
+            groupmap.setdefault(g, []).append((name, gov))
     return tagmap, cultmap, groupmap
+
+
+def covering(mapping, key, gov_flag):
+    """(block, government flag) covering this key when the block's gate,
+    if any, matches; (None, None) when nothing covers it."""
+    for name, gov in mapping.get(key, ()):
+        if gov is None or gov == gov_flag:
+            return name, gov
+    return None, None
 
 
 def our_cultures():
@@ -403,10 +447,12 @@ def identity(picks):
         for r in range(1, 6))
 
 
-def body_of(key, suffixed, tags, picks, islam, reg):
+def body_of(key, suffixed, tags, picks, islam, reg, governments,
+            ck3_govs=()):
     """Block body + fresh loc keys (outcome: dict KEY -> value).
     suffixed = tag code for a tag-specific block, None for the shared
-    culture block."""
+    culture block. ck3_govs gates a shared block on the members' CK3
+    government start flags (needed when one culture spans governments)."""
     up = key.upper()
     if suffixed:
         up = f"{up}_{suffixed}"
@@ -473,7 +519,22 @@ def body_of(key, suffixed, tags, picks, islam, reg):
     lines.append("\t}")
     lines.append("")
     lines.append("\ttrigger = {")
-    lines.append("\t\tgovernment = monarchy")
+    govs = sorted(governments)
+    if len(govs) == 1:
+        lines.append(f"\t\tgovernment = {govs[0]}")
+    else:
+        lines.append("\t\tOR = {")
+        for g in govs:
+            lines.append(f"\t\t\tgovernment = {g}")
+        lines.append("\t\t}")
+    flags = sorted(f"kar_gov_{g}" for g in ck3_govs)
+    if len(flags) == 1:
+        lines.append(f"\t\thas_country_flag = {flags[0]}")
+    elif flags:
+        lines.append("\t\tOR = {")
+        for f in flags:
+            lines.append(f"\t\t\thas_country_flag = {f}")
+        lines.append("\t\t}")
     if suffixed:
         lines.append(f"\t\ttag = {suffixed}")
     elif reg:
@@ -507,6 +568,20 @@ def main(argv):
     blocks = zz_blocks()
     tagcov, cultcov, groupcov = coverage_index(blocks)
     ours = our_cultures()
+    # A culture whose tags span CK3 governments needs government-gated
+    # blocks (greek: feudal Napoli/Dalmatia vs administrative Syracusa/Byzantium).
+    culture_govs = {}
+    for r in all_tags([]):
+        if not r.ck3_title:
+            continue
+        rck, rkey = resolve_culture(r.culture, r.ck3_title)
+        if rkey is None:
+            continue
+        if rkey != r.culture:
+            rkey = CK3_TO_EU4.get(rck, rkey)
+        rgov = gov_flag_of(r)
+        if rgov:
+            culture_govs.setdefault(rkey, set()).add(rgov)
     tier_of_title = landed_tiers()
     rules = parse_rules(tier_of_title)
     locmap = ck3_loc_map()
@@ -515,7 +590,7 @@ def main(argv):
     existing_loc = set(re.findall(r"(?m)^ ([A-Za-z0-9_]+):", loc_file))
 
     broken = []
-    covered_keys = set()
+    covered_keys = {}
     plan = []
     for t in all_tags(a.tags):
         if not t.ck3_title:
@@ -533,12 +608,16 @@ def main(argv):
         if key != t.culture:
             key = CK3_TO_EU4.get(ck3cult, key)
         reg = key in ours
-        backing = (tagcov.get(t.tag)
-                   or (cultcov.get(key) if reg else None)
-                   or (groupcov.get(ours[key]) if reg else None))
+        gov = gov_flag_of(t)
+        gov_flag = f"kar_gov_{gov}"
+        backing, bgov = covering(tagcov, t.tag, gov_flag)
+        if not backing and reg:
+            backing, bgov = covering(cultcov, key, gov_flag)
+        if not backing and reg:
+            backing, bgov = covering(groupcov, ours[key], gov_flag)
         if backing:
             print(f"  {t.tag:<5} covered        by {backing}")
-            covered_keys.add(key)
+            covered_keys.setdefault(key, set()).add(bgov)
             continue
         heritage, name_list = culture_info(ck3cult)
         if not heritage:
@@ -568,7 +647,9 @@ def main(argv):
         plan.append({"key": key, "tag": t.tag, "rank": t.rank,
                      "title": t.ck3_title,
                      "religion": religion or None, "islam": islam,
-                     "reg": reg, "picks": picks})
+                     "reg": reg, "gov": (t.government or "monarchy").lower(),
+                     "ck3_gov": gov,
+                     "picks": picks})
 
     inserts = []
     groups = {}
@@ -577,7 +658,17 @@ def main(argv):
         groups.setdefault(p["key"], []).append(p)
         if p["key"] not in order_keys:
             order_keys.append(p["key"])
-    clash = covered_keys & set(groups)
+    clash = []
+    for key in order_keys:
+        cov = covered_keys.get(key)
+        if cov is None:
+            continue
+        # An ungated hand block, or one gated on the same CK3 government,
+        # would be shadowed by the planned ladder; a differently gated one
+        # (the administrative byzantine ladder against the feudal greek
+        # ladder) cannot match the same tag.
+        if None in cov or ({p["ck3_gov"] for p in groups[key]} & cov):
+            clash.append(key)
     for key in clash:
         print(f"  ! {key}: planned ladder would shadow an existing hand "
               f"block for a covered tag of the same culture - dropping "
@@ -604,7 +695,7 @@ def main(argv):
                     f"{key}_titles block cannot express; Islam heir = "
                     f"{p['islam']}")
             body, keys = body_of(key, p["tag"], [p["tag"]], p["picks"],
-                                 p["islam"], p["reg"])
+                                 p["islam"], p["reg"], {p["gov"]})
             inserts.append((name, head, body, keys, p))
             print(f"  {p['tag']:<5} own block     {name}")
         if common:
@@ -614,13 +705,23 @@ def main(argv):
                       f"({len(common)} tags)")
                 continue
             ladders = ", ".join(f"{p['tag']}(r{p['rank']})" for p in common)
-            head = (f"# CK3 ladders for {ladders}"
+            mixed = len(culture_govs.get(key, ())) > 1
+            govnote = ""
+            if mixed:
+                gs = sorted({p["ck3_gov"] for p in common})
+                govnote = (" - " + "/".join(
+                    g.replace("_government", "") for g in gs)
+                    + " CK3 government")
+            head = (f"# CK3 ladders for {ladders}{govnote}"
                     + (f" - islam realms (Shahzade)"
                        if all(p["islam"] for p in common) else ""))
             body, keys = body_of(key, None, [p["tag"] for p in common],
                                  common[0]["picks"], common[0]["islam"]
                                  and len({p["islam"] for p in common}) == 1,
-                                 common[0]["reg"])
+                                 common[0]["reg"],
+                                 {p["gov"] for p in common},
+                                 {p["ck3_gov"] for p in common}
+                                 if mixed else ())
             inserts.append((name, head, body, keys, common[0]))
             print(f"  {key:<18} culture block {name} ({ladders})")
 

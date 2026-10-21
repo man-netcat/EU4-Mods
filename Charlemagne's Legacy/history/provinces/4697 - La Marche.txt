@@ -1,5 +1,6 @@
 owner = AQI
 controller = AQI
+add_core = GUY
 add_core = AQI
 capital = "Guéret"
 culture = occitain

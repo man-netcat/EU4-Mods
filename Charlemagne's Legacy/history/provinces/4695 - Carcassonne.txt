@@ -1,6 +1,7 @@
-owner = AQI
-controller = AQI
-add_core = AQI
+owner = GTH
+controller = GTH
+add_core = TOU
+add_core = GTH
 capital = "Carcassonne"
 culture = occitain
 religion = catholic
@@ -17,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = AQI
-	controller = AQI
-	add_core = AQI
+	owner = GTH
+	controller = GTH
+	add_core = GTH
 }

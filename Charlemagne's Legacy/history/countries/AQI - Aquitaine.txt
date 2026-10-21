@@ -4,7 +4,7 @@ government_rank = 3
 technology_group = western
 primary_culture = frankish
 religion = catholic
-capital = 174
+capital = 180
 add_accepted_culture = gascon
 867.1.1 = {
 	monarch = {
@@ -27,4 +27,6 @@ add_accepted_culture = gascon
 		dip = 2
 		mil = 2
 	}
+
+	set_country_flag = kar_gov_feudal_government
 }

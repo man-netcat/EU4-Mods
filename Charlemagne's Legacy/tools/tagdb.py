@@ -154,6 +154,31 @@ def rank_of(t: Tag) -> int:
     return t.rank
 
 
+MUSLIM_EU4 = {"sunni", "ibadi", "shiite"}
+
+
+def ck3_government(t: Tag) -> str:
+    """The CK3 government at the 867 start: the title history's own pick
+    when it pins one (Byzantine themes are administrative), otherwise the
+    engine's dynamic choice modelled through the EU4 government - tribal,
+    theocratic, republic, clan for a Muslim monarchy, feudal for the rest.
+    Also the `kar_gov_*` start flag country history carries."""
+    from ck3 import title_government
+    got = title_government(t.ck3_title) if t.ck3_title else None
+    if got:
+        return got
+    g = (t.government or "monarchy").lower()
+    if g == "tribal":
+        return "tribal_government"
+    if g == "theocracy":
+        return "ecclesiastical_government"
+    if g == "republic":
+        return "republic_government"
+    if (t.religion or "") in MUSLIM_EU4:
+        return "clan_government"
+    return "feudal_government"
+
+
 @dataclass(frozen=True)
 class Diplomacy:
     """One start-date relationship, written into history/diplomacy by

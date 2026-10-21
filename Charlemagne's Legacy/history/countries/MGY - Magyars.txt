@@ -27,4 +27,6 @@ capital = 283
 		dip = 2
 		mil = 3
 	}
+
+	set_country_flag = kar_gov_nomad_government
 }
