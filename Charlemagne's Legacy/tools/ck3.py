@@ -5,7 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from enc import encname
-from tagdb import BY_TAG, CTRY_DATE, RULER_TITLES, TITLES
+from tagdb import BY_TAG, CTRY_DATE, RULER_TITLES, TITLES, ck3_government
 
 GAME_CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
 
@@ -384,10 +384,12 @@ def resolve(tag, titles, chars, dyns, houses):
     raw = nm.group(1) or nm.group(2)
 
     name = loc(raw) or raw
+    display = ruler_display(tag, cid, name, chars, titles, ruler_title)
     dy = resolve_dynasty(body, dyns, houses)
     return {
         "char": cid,
         "name": name,
+        "display": display,
         "dynasty": dy,
         "title": title,
         "ruler_title": ruler_title,
@@ -481,7 +483,7 @@ def step_ck3(argv):
             print(f"        no {path.name}: keeps the vanilla file, nothing to sync")
             if got.get("no_dynasty"):
                 print(
-                    f"        CK3 867: name={got['name']!r} and NO dynasty - "
+                    f"        CK3 867: name={got['display']!r} and NO dynasty - "
                     f"CK3 records neither dynasty nor dynasty_house for this "
                     f"character. Nothing is invented for it: if this tag ever "
                     f"gets a country file, map it to a title whose 867 holder "
@@ -489,7 +491,7 @@ def step_ck3(argv):
                 )
             else:
                 print(
-                    f"        CK3 867: name={got['name']!r} "
+                    f"        CK3 867: name={got['display']!r} "
                     f"dynasty={got['dynasty']!r}"
                 )
             unwritten.append(tag)
@@ -500,7 +502,7 @@ def step_ck3(argv):
 
             if cd is not None:
                 bad.append(
-                    f"{tag}: CK3 character {got['char']} ({got['name']}) has "
+                    f"{tag}: CK3 character {got['char']} ({got['display']}) has "
                     f"neither dynasty nor dynasty_house, but {path.name} "
                     f"declares dynasty={cd!r}. That dynasty is invented - "
                     f"drop it, or map the tag to a CK3 title whose 867 "
@@ -508,12 +510,12 @@ def step_ck3(argv):
                 )
                 print(f"  FAIL {tag} {got['title']} / char {got['char']}")
                 print(f"        file: name={cn!r} dynasty={cd!r}  <- INVENTED")
-                print(f"        CK3 : name={got['name']!r} and NO dynasty")
+                print(f"        CK3 : name={got['display']!r} and NO dynasty")
             else:
                 print(f"  OK   {tag} {got['title']} / char {got['char']}")
                 print(f"        file: name={cn!r} dynasty={cd!r}")
                 print(
-                    f"        CK3 : name={got['name']!r} and NO dynasty - the file "
+                    f"        CK3 : name={got['display']!r} and NO dynasty - the file "
                     f"declares none either, which is the correct handling: CK3 "
                     f"records neither dynasty nor dynasty_house, so nothing is "
                     f"invented to cover the gap."
@@ -525,7 +527,7 @@ def step_ck3(argv):
         hd = heir_dynasty(text)
         heir_bad = hd != exp_hd and not BY_TAG[tag].no_heir_sync
         ok = (
-            cn == encname(got["name"])
+            cn == encname(got["display"])
             and cd == encname(got["dynasty"])
             and not heir_bad
         )
@@ -541,7 +543,7 @@ def step_ck3(argv):
         )
         print(f"  {mark} {tag} {src} / char {got['char']}")
         print(f"        file: name={cn!r} dynasty={cd!r}")
-        print(f"        CK3 : name={got['name']!r} dynasty={got['dynasty']!r}")
+        print(f"        CK3 : name={got['display']!r} dynasty={got['dynasty']!r}")
         if hd is not None or exp_hd is not None:
             print(
                 f"        heir dynasty={hd!r}"
@@ -559,7 +561,7 @@ def step_ck3(argv):
                 if cn is not None:
                     new = re.sub(
                         r'name = "[^"]+"',
-                        f'name = "{encname(got["name"])}"',
+                        f'name = "{encname(got["display"])}"',
                         new,
                         count=1,
                     )
@@ -583,14 +585,14 @@ def step_ck3(argv):
                 text = text[: blk.start(1)] + new + text[blk.end(1) :]
                 path.write_text(text, encoding="cp1252", errors="pdx")
                 print(
-                    f"        fixed -> {encname(got['name'])} / "
+                    f"        fixed -> {encname(got['display'])} / "
                     f"{encname(got['dynasty'])}"
                 )
             else:
-                if cn != encname(got["name"]) or cd != encname(got["dynasty"]):
+                if cn != encname(got["display"]) or cd != encname(got["dynasty"]):
                     bad.append(
                         f"{tag}: file has {cn!r}/{cd!r}, CK3 has "
-                        f"{encname(got['name'])!r}/{encname(got['dynasty'])!r}"
+                        f"{encname(got['display'])!r}/{encname(got['dynasty'])!r}"
                     )
                 if heir_bad:
                     bad.append(
@@ -650,7 +652,10 @@ def ck3_sync(tag, text):
     if not blk:
         return text
     new = re.sub(
-        r'name = "[^"]+"', f'name = "{encname(got["name"])}"', blk.group(1), count=1
+        r'name = "[^"]+"',
+        f'name = "{encname(got["display"])}"',
+        blk.group(1),
+        count=1,
     )
     new = re.sub(
         r'dynasty = "[^"]+"', f'dynasty = "{encname(got["dynasty"])}"', new, count=1
@@ -691,15 +696,220 @@ def _ck3_dates_and_skills(cid, chars):
     return birth, death, adm, dip, mil
 
 
-def _ck3_name(cid, chars, loc):
-    m = re.search(r'^\s*name\s*=\s*(?:"([^"]*)"|([^\s#"]+))', chars[cid], re.M)
+def _raw_name(body):
+    m = re.search(r'^\s*name\s*=\s*(?:"([^"]*)"|([^\s#"]+))', body, re.M)
     if not m:
         return None
     raw = m.group(1) or m.group(2)
     # CK3 encodes CJK names as ASCII plus codepoint (Cui_6F3C); our outputs
     # cannot render those, so use the plain stem.
-    raw = re.sub(r"_[0-9A-F]{4}$", "", raw)
-    return loc(raw) or raw
+    return re.sub(r"_[0-9A-F]{4}$", "", raw)
+
+
+def _ck3_name(cid, chars, loc):
+    raw = _raw_name(chars[cid])
+    return (loc(raw) or raw) if raw else None
+
+
+@lru_cache(maxsize=1)
+def load_name_equivalencies():
+    """{CK3 name key: equivalency group}. CK3 numbers rulers by name group,
+    so a Ludwig counts every earlier Louis (and Ludvig, Lluis...)."""
+    files = sorted(
+        (Path(GAME_CK3) / "common" / "culture" / "name_equivalency").glob("*.txt")
+    )
+    return _cached("name_equiv", files, lambda: _parse_name_equiv(files))
+
+
+def _parse_name_equiv(files):
+    out = {}
+    for f in files:
+        text = _norm(f.read_text(errors="replace")).lstrip("\ufeff")
+        for m in re.finditer(
+            r"^\s*([a-zA-Z0-9_]+)_(?:male|female)\s*=\s*\{([^}]*)\}", text, re.M
+        ):
+            for name in m.group(2).split():
+                out.setdefault(name, m.group(1))
+    return out
+
+
+def _name_group(body):
+    raw = _raw_name(body)
+    if not raw:
+        return None
+    return load_name_equivalencies().get(raw, raw)
+
+
+@lru_cache(maxsize=1)
+def load_title_regnal():
+    """{title: disable_regnal_numbers setting} from landed_titles; a title
+    absent from it takes CK3's default, auto."""
+    files = sorted((Path(GAME_CK3) / "common" / "landed_titles").glob("*.txt"))
+    return _cached("title_regnal", files, lambda: _parse_title_regnal(files))
+
+
+def _parse_title_regnal(files):
+    out = {}
+    for f in files:
+        text = _norm(f.read_text(errors="replace")).lstrip("\ufeff")
+        for tid, body in _blocks(text):
+            m = re.search(r"^\s*disable_regnal_numbers\s*=\s*(\w+)", body, re.M)
+            if m:
+                out[tid] = m.group(1)
+    return out
+
+
+@lru_cache(maxsize=1)
+def load_government_regnal():
+    """{government: regnal numbers disabled?} from common/governments."""
+    files = sorted((Path(GAME_CK3) / "common" / "governments").glob("*.txt"))
+    return _cached("gov_regnal", files, lambda: _parse_gov_regnal(files))
+
+
+def _parse_gov_regnal(files):
+    out = {}
+    for f in files:
+        text = _norm(f.read_text(errors="replace")).lstrip("\ufeff")
+        for gid, body in _blocks(text):
+            if not gid.endswith("_government"):
+                continue
+            m = re.search(r"^\s*disable_regnal_numbers\s*=\s*(\w+)", body, re.M)
+            out[gid] = bool(m and m.group(1) == "yes")
+    return out
+
+
+_ROMAN = (
+    (1000, "M"),
+    (900, "CM"),
+    (500, "D"),
+    (400, "CD"),
+    (100, "C"),
+    (90, "XC"),
+    (50, "L"),
+    (40, "XL"),
+    (10, "X"),
+    (9, "IX"),
+    (5, "V"),
+    (4, "IV"),
+    (1, "I"),
+)
+
+
+def _roman(n):
+    out = []
+    for v, s in _ROMAN:
+        while n >= v:
+            out.append(s)
+            n -= v
+    return "".join(out)
+
+
+_TIER_RANK = {"b_": 1, "c_": 2, "d_": 3, "k_": 4, "e_": 5, "h_": 6}
+
+
+@lru_cache(maxsize=1)
+def load_start_holders():
+    """{character: [(title, tenure start)]} for every title held at 867."""
+    titles = load_titles()
+    out = {}
+    for tid in titles:
+        cid, at = holder_at_exact(tid, titles)
+        if not cid or cid == "0":
+            continue
+        out.setdefault(cid, []).append((tid, at or DATE))
+    return out
+
+
+def primary_title(cid, chars):
+    """The title CK3 treats as a character's primary at 867: the one their
+    history pins, else their highest-tier title, the oldest tenure first.
+    Rulers of several tags carry one regnal number, taken from this title."""
+    cid = str(cid)
+    held = load_start_holders().get(cid, [])
+    if not held:
+        return None
+    key = None
+    depth, cur = 0, ""
+    for ln in chars.get(cid, "").splitlines():
+        s = ln.strip()
+        if re.match(r"^\d+\.\d+\.\d+\s*=", s) and depth == 0:
+            cur = s.split("=")[0].strip()
+        code = ln.split("#", 1)[0]
+        m = re.search(
+            r"^\s*set_primary_title_to\s*=\s*title:([A-Za-z0-9_\-]+)", code
+        )
+        if m and (not cur or _date_key(cur) <= _date_key(DATE)):
+            key = m.group(1)
+        depth += code.count("{") - code.count("}")
+        if depth <= 0:
+            depth, cur = 0, ""
+    if key and any(t == key for t, _ in held):
+        return key
+    return min(
+        held, key=lambda x: (-_TIER_RANK.get(x[0][:2], 0), _date_key(x[1]), x[0])
+    )[0]
+
+
+def _regnal_allowed(tag, title):
+    """Mirror CK3: a title may force numbers on (never), switch them off
+    (always), or follow its government (auto, the default)."""
+    mode = load_title_regnal().get(title, "auto")
+    if mode == "never":
+        return True
+    if mode == "always":
+        return False
+    return not load_government_regnal().get(ck3_government(BY_TAG[tag]), False)
+
+
+def _regnal_number(title, cid, chars, titles, prior=()):
+    """1 + the earlier holders of the title whose names share this one's
+    CK3 name-equivalency group; a Ludwig counts an earlier Louis."""
+    cid = str(cid)
+    group = _name_group(chars.get(cid, ""))
+    if group is None:
+        return 1
+    seen = set()
+    n = 0
+    for head, body in titles.get(title, []):
+        m = re.match(r"^(\d+)\.(\d+)\.(\d+)", head)
+        if not m or tuple(int(x) for x in m.groups()) >= _date_key(DATE):
+            continue
+        h = re.search(r"holder\s*=\s*([A-Za-z0-9_]+)", body)
+        if not h:
+            continue
+        hid = h.group(1)
+        if hid == "0" or hid == cid or hid in seen:
+            continue
+        seen.add(hid)
+        if _name_group(chars.get(hid, "")) == group:
+            n += 1
+    for pcid in prior:
+        pcid = str(pcid)
+        if pcid == cid or pcid in seen:
+            continue
+        seen.add(pcid)
+        if _name_group(chars.get(pcid, "")) == group:
+            n += 1
+    return n + 1
+
+
+def ruler_display(tag, cid, name, chars, titles, title, prior=(), primary=True):
+    """The name EU4 shows for a ruler: CK3's personal name and its regnal
+    number (unless CK3 would suppress it). EU4 has no nickname system and
+    every later monarch is generated plain, so epithets stop at the start
+    date and are left out.
+    `prior` adds holders who precede the character but are not in the
+    title history yet (the reigning ruler, for an heir's future name);
+    `primary=False` keeps the given title instead of the holder's own
+    primary one, which is what an heir is about to inherit."""
+    if primary:
+        title = primary_title(cid, chars) or title
+    parts = [name]
+    if _regnal_allowed(tag, title):
+        n = _regnal_number(title, cid, chars, titles, prior)
+        if n > 1:
+            parts.append(_roman(n))
+    return " ".join(parts)
 
 
 def _alive_at(cid, chars):
@@ -769,16 +979,26 @@ def ck3_block(tag):
     birth, death, adm, dip, mil = facts
     if not birth or not death:
         raise SystemExit(f"{tag}: CK3 character {cid} has no birth or death date")
-    name = _ck3_name(cid, chars, loc)
-    dynasty = got["dynasty"]
+    ruler_name = got["display"]
 
     def person(cid_, claim=None):
         nm = _ck3_name(cid_, chars, loc)
         b, d, a, dp, ml = _ck3_dates_and_skills(cid_, chars)
         dy = resolve_dynasty(chars[cid_], dyns, houses)
-        out = [f'\t\tname = "{encname(nm)}"']
+        shown = ruler_name if cid_ == cid else nm
+        out = [f'\t\tname = "{encname(shown)}"']
         if claim is not None:
-            out.append(f'\t\tmonarch_name = "{encname(nm)}"')
+            future = ruler_display(
+                tag,
+                cid_,
+                nm,
+                chars,
+                titles,
+                got["ruler_title"],
+                prior=(cid,),
+                primary=False,
+            )
+            out.append(f'\t\tmonarch_name = "{encname(future)}"')
         if dy:
             out.append(f'\t\tdynasty = "{encname(dy)}"')
         if _is_female(cid_, chars):

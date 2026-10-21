@@ -17,7 +17,7 @@ capital = 4734
 	}
 	heir = {
 		name = "Radelchis"
-		monarch_name = "Radelchis"
+		monarch_name = "Radelchis II"
 		dynasty = "Radelchisidi"
 		birth_date = 845.1.1
 		death_date = 907.1.1

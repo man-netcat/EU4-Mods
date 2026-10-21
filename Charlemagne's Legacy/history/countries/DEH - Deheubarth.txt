@@ -17,7 +17,7 @@ capital = 241
 	}
 	heir = {
 		name = "Arthfael"
-		monarch_name = "Arthfael"
+		monarch_name = "Arthfael II"
 		dynasty = "Morgannwg"
 		birth_date = 849.1.1
 		death_date = 916.1.1

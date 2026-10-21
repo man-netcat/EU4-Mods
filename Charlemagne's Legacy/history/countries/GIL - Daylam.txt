@@ -17,7 +17,7 @@ capital = 4339
 	}
 	heir = {
 		name = "Justan"
-		monarch_name = "Justan"
+		monarch_name = "Justan III"
 		dynasty = "Justanid"
 		birth_date = 860.1.1
 		death_date = 916.1.1

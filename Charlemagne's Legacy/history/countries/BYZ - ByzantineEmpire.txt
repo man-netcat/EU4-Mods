@@ -58,7 +58,7 @@ set_estate_privilege = estate_burghers_exkousseiai_for_latins
 	}
 	heir = {
 		name = "Konstantinos"
-		monarch_name = "Konstantinos"
+		monarch_name = "Konstantinos VII"
 		dynasty = "Makedon"
 		birth_date = 864.1.1
 		death_date = 879.9.3

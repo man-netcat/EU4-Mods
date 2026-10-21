@@ -17,7 +17,7 @@ capital = 112
 	}
 	heir = {
 		name = "Giovanni"
-		monarch_name = "Giovanni"
+		monarch_name = "Giovanni II"
 		dynasty = "Participazio"
 		birth_date = 822.1.1
 		death_date = 890.1.1

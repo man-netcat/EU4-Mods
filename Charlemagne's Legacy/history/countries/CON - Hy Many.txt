@@ -17,7 +17,7 @@ capital = 376
 	}
 	heir = {
 		name = "Muiredach"
-		monarch_name = "Muiredach"
+		monarch_name = "Muiredach II"
 		dynasty = "Briúin Aí"
 		birth_date = 847.1.1
 		death_date = 912.7.1

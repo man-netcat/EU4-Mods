@@ -65,7 +65,7 @@ historical_friend = PAP
 # south and Aragon to the east.
 867.1.1 = {
 	monarch = {
-		name = "Alfonsu"
+		name = "Alfonsu III"
 		dynasty = "Cantabria"
 		birth_date = 848.1.1
 		death_date = 910.12.20
@@ -75,7 +75,7 @@ historical_friend = PAP
 	}
 	heir = {
 		name = "Fruela"
-		monarch_name = "Fruela"
+		monarch_name = "Fruela II"
 		dynasty = "Cantabria"
 		birth_date = 849.1.1
 		death_date = 896.1.1

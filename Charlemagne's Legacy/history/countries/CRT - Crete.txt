@@ -19,7 +19,7 @@ fixed_capital = 163 # Cannot move capital away from this province & no power cos
 	}
 	heir = {
 		name = "Umar"
-		monarch_name = "Umar"
+		monarch_name = "Umar II"
 		dynasty = "Hafsid"
 		birth_date = 830.1.1
 		death_date = 895.1.1

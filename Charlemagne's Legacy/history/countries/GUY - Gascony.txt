@@ -7,7 +7,7 @@ religion = catholic
 capital = 174
 867.1.1 = {
 	monarch = {
-		name = "Antso"
+		name = "Antso III"
 		dynasty = "Vasconia"
 		birth_date = 825.1.1
 		death_date = 893.1.1
@@ -17,7 +17,7 @@ capital = 174
 	}
 	heir = {
 		name = "Gartzia"
-		monarch_name = "Gartzia"
+		monarch_name = "Gartzia II"
 		dynasty = "Vasconia"
 		birth_date = 850.1.1
 		death_date = 920.1.1

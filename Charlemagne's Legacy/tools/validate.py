@@ -1105,7 +1105,7 @@ def run() -> int:
 
                 print(
                     f"  SKIP {t} has no mod country file; keeps vanilla's ruler "
-                    f"(CK3 {t} would be {want['name']} / {want['dynasty']})"
+                    f"(CK3 {t} would be {want['display']} / {want['dynasty']})"
                 )
                 continue
             body = open(cp, encoding="cp1252", errors="surrogateescape").read()
@@ -1119,9 +1119,9 @@ def run() -> int:
                 continue
             got_n, got_d = _b.current(blk.group(1))
             note(
-                got_n == encname(want["name"]) and got_d == encname(want["dynasty"]),
+                got_n == encname(want["display"]) and got_d == encname(want["dynasty"]),
                 f"{t} ruler name/dynasty matches CK3 867 "
-                f"({encname(want['name'])} / {encname(want['dynasty'])})",
+                f"({encname(want['display'])} / {encname(want['dynasty'])})",
             )
             import ck3
             want_female = ck3._is_female(want["char"], _chars)

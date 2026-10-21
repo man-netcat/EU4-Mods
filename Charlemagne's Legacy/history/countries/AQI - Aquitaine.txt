@@ -8,7 +8,7 @@ capital = 180
 add_accepted_culture = gascon
 867.1.1 = {
 	monarch = {
-		name = "Charles"
+		name = "Charles II"
 		dynasty = "Karling"
 		birth_date = 823.1.14
 		death_date = 877.6.10
@@ -18,7 +18,7 @@ add_accepted_culture = gascon
 	}
 	heir = {
 		name = "Louis"
-		monarch_name = "Louis"
+		monarch_name = "Louis II"
 		dynasty = "Karling"
 		birth_date = 843.1.2
 		death_date = 879.1.11

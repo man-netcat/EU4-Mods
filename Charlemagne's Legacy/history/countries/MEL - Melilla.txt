@@ -7,7 +7,7 @@ religion = sunni
 capital = 335
 867.1.1 = {
 	monarch = {
-		name = "Sa'id"
+		name = "Sa'id II"
 		dynasty = "Salihid"
 		birth_date = 830.1.1
 		death_date = 916.1.1
@@ -17,7 +17,7 @@ capital = 335
 	}
 	heir = {
 		name = "Salih"
-		monarch_name = "Salih"
+		monarch_name = "Salih III"
 		dynasty = "Salihid"
 		birth_date = 855.1.1
 		death_date = 927.1.1

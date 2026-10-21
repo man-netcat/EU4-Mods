@@ -9,7 +9,7 @@ historical_rival = SAW
 historical_friend = PAP
 867.1.1 = {
 	monarch = {
-		name = "Louis"
+		name = "Louis II"
 		dynasty = "Karling"
 		birth_date = 835.1.1
 		death_date = 875.8.12
@@ -19,7 +19,7 @@ historical_friend = PAP
 	}
 	heir = {
 		name = "Lothaire"
-		monarch_name = "Lothaire"
+		monarch_name = "Lothaire II"
 		dynasty = "Karling"
 		birth_date = 836.1.1
 		death_date = 869.8.8

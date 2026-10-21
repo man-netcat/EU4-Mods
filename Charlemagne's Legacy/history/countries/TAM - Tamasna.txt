@@ -17,7 +17,7 @@ capital = 2470
 	}
 	heir = {
 		name = "Salih"
-		monarch_name = "Salih"
+		monarch_name = "Salih II"
 		dynasty = "Barghawata"
 		birth_date = 823.1.1
 		death_date = 883.1.1
