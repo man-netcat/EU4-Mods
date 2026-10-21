@@ -5757,6 +5757,74 @@ default_republic = {
 	}
 }
 
+prince_archbishoprics = {
+	rank = {
+		1 = BISHOPRIC
+		2 = ARCHBISHOPRIC
+		3 = PATRIARCHATE
+		4 = PATRIARCHATE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BISHOP
+		2 = PRINCE_ARCHBISHOP
+		3 = PATRIARCH
+		4 = PATRIARCH
+		5 = PATRIARCH
+	}
+
+	ruler_female = {
+		1 = BISHOP_fem
+		2 = PRINCE_ARCHBISHOP_fem
+		3 = MATRIARCH
+		4 = MATRIARCH
+		5 = MATRIARCH
+	}
+
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+		4 = CONSORT
+		5 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+		4 = CONSORT
+		5 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	government_reform = theocracy_mechanic
+
+	trigger = {
+		government = theocracy
+		OR = {
+			tag = KOL
+			tag = TRI
+		}
+	}
+}
+
 default_theocracy = {
 	rank = {
 		1 = BISHOPRIC

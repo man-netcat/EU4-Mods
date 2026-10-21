@@ -901,3 +901,6 @@
  UYGHUR_KING_FEMALE:0 "Khanum"
  UYGHUR_EMPEROR_FEMALE:0 "Khatun"
  UYGHUR_HEGEMON_FEMALE:0 "Hegemoness"
+
+ PRINCE_ARCHBISHOP:0 "Prince-Archbishop"
+ PRINCE_ARCHBISHOP_fem:0 "Princess-Archbishop"

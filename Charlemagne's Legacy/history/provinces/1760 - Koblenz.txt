@@ -1,6 +1,6 @@
-owner = GER
-controller = GER
-add_core = GER
+owner = TRI
+controller = TRI
+add_core = TRI
 capital = "Koblenz"
 culture = frankish
 religion = catholic
@@ -16,7 +16,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = GER
-	controller = GER
-	add_core = GER
+	owner = TRI
+	controller = TRI
+	add_core = TRI
 }

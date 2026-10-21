@@ -32,11 +32,13 @@ country_decisions = {
 				tag = GOT
 				tag = GUY
 				tag = HDR
+				tag = HOL
 				tag = HSA
 				tag = ITA
 				tag = JAP
 				tag = KHO
 				tag = KIE
+				tag = KOL
 				tag = KRA
 				tag = KRL
 				tag = KSH
@@ -68,6 +70,7 @@ country_decisions = {
 				tag = TNG
 				tag = TOU
 				tag = TRA
+				tag = TRI
 				tag = TRP
 				tag = TRS
 				tag = TUN
@@ -236,6 +239,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = HOL }
+			change_country_color = {
+				color = { 156 96 100 }
+			}
+		}
+		if = {
 			limit = { tag = HSA }
 			change_country_color = {
 				color = { 156 179 189 }
@@ -263,6 +272,12 @@ country_decisions = {
 			limit = { tag = KIE }
 			change_country_color = {
 				color = { 81 123 210 }
+			}
+		}
+		if = {
+			limit = { tag = KOL }
+			change_country_color = {
+				color = { 84 124 48 }
 			}
 		}
 		if = {
@@ -449,6 +464,12 @@ country_decisions = {
 			limit = { tag = TRA }
 			change_country_color = {
 				color = { 211 207 173 }
+			}
+		}
+		if = {
+			limit = { tag = TRI }
+			change_country_color = {
+				color = { 208 104 44 }
 			}
 		}
 		if = {

@@ -1,8 +1,8 @@
 # 4383 Ommeland - Groningen, Ommeland & Drenthe
 
-owner = LOT
-controller = LOT
-add_core = LOT
+owner = HOL
+controller = HOL
+add_core = HOL
 capital = "Groningen"
 culture = frisian
 religion = catholic
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = LOT
-	controller = LOT
-	add_core = LOT
+	owner = HOL
+	controller = HOL
+	add_core = HOL
 }

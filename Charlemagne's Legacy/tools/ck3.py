@@ -84,7 +84,7 @@ def _cached(name, files, parse):
 
 @lru_cache(maxsize=1)
 def load_titles():
-    files = sorted((Path(GAME_CK3) / "history" / "titles").glob("*.txt"))
+    files = sorted((Path(GAME_CK3) / "history" / "titles").rglob("*.txt"))
     return _cached("titles", files, lambda: _parse_title_files(files))
 
 
@@ -127,7 +127,7 @@ def holder_at_exact(title, titles):
 
 @lru_cache(maxsize=1)
 def load_title_governments():
-    files = sorted((Path(GAME_CK3) / "history" / "titles").glob("*.txt"))
+    files = sorted((Path(GAME_CK3) / "history" / "titles").rglob("*.txt"))
     return _cached("title_governments", files,
                    lambda: _parse_title_governments(files))
 
@@ -199,7 +199,7 @@ def _parse_dynasty_files(files):
 
 # Bump whenever a parser in this file changes: caches are keyed on source
 # mtimes, so parser edits alone would otherwise serve stale pickles.
-_CACHE_VERSION = 6
+_CACHE_VERSION = 7
 
 
 _CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"

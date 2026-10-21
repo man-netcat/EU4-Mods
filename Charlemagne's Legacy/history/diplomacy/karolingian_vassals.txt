@@ -74,6 +74,18 @@ union = {
 	second = DAU
 }
 vassal = {
+	first = LOT
+	second = HOL
+}
+vassal = {
+	first = LOT
+	second = KOL
+}
+vassal = {
+	first = LOT
+	second = TRI
+}
+vassal = {
 	first = TUN
 	second = SIQ
 }

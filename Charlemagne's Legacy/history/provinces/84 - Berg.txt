@@ -1,8 +1,8 @@
 # 84 - Berg
 
-owner = LOT
-controller = LOT
-add_core = LOT
+owner = KOL
+controller = KOL
+add_core = KOL
 capital = "Düsseldorf"
 culture = frankish
 religion = catholic
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = LOT
-	controller = LOT
-	add_core = LOT
+	owner = KOL
+	controller = KOL
+	add_core = KOL
 }
