@@ -5819,6 +5819,7 @@ prince_archbishoprics = {
 	trigger = {
 		government = theocracy
 		OR = {
+			tag = HAM
 			tag = KOL
 			tag = MAI
 			tag = SLZ

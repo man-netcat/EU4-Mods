@@ -167,7 +167,9 @@ def main(argv):
             if m:
                 have.add(m.group(1))
     for pid, (_nm, cul, _rel) in datas.items():
-        if cul not in have and not a.culture:
+        # an existing province keeps the culture already in the DB; only a
+        # fresh one would be written with the vanilla (possibly dead) key.
+        if s.get(ProvinceRow, pid) is None and cul not in have and not a.culture:
             sys.exit(f"province {pid} is vanilla {cul}, undefined here - "
                      "pass --culture to pick the 867 key")
 

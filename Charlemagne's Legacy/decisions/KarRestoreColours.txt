@@ -31,6 +31,7 @@ country_decisions = {
 				tag = GMA
 				tag = GOT
 				tag = GUY
+				tag = HAM
 				tag = HDR
 				tag = HOL
 				tag = HSA
@@ -234,6 +235,12 @@ country_decisions = {
 			limit = { tag = GUY }
 			change_country_color = {
 				color = { 32 144 204 }
+			}
+		}
+		if = {
+			limit = { tag = HAM }
+			change_country_color = {
+				color = { 227 95 7 }
 			}
 		}
 		if = {
