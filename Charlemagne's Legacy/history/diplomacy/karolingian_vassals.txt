@@ -31,6 +31,10 @@ vassal = {
 }
 vassal = {
 	first = BAV
+	second = NRD
+}
+vassal = {
+	first = BAV
 	second = SLZ
 }
 vassal = {
@@ -68,6 +72,18 @@ vassal = {
 union = {
 	first = GER
 	second = BAV
+}
+vassal = {
+	first = GER
+	second = MAI
+}
+vassal = {
+	first = GER
+	second = THU
+}
+vassal = {
+	first = GER
+	second = WFR
 }
 union = {
 	first = ITA

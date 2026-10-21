@@ -5820,6 +5820,7 @@ prince_archbishoprics = {
 		government = theocracy
 		OR = {
 			tag = KOL
+			tag = MAI
 			tag = SLZ
 			tag = TRI
 		}

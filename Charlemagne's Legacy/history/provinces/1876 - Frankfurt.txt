@@ -1,8 +1,8 @@
 # 1876 - Frankfurt
 
-owner = GER
-controller = GER
-add_core = GER
+owner = MAI
+controller = MAI
+add_core = MAI
 capital = "Frankfurt"
 culture = frankish
 religion = catholic
@@ -20,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = GER
-	controller = GER
-	add_core = GER
+	owner = MAI
+	controller = MAI
+	add_core = MAI
 }

@@ -12,6 +12,36 @@
   renders through the CK3-CoA pipeline below; the tools/fonts note
   (Amiri Bold) applies to nothing live.
 
+## Two flag paths — do not mix them
+
+Flags reach `gfx/flags/` one of two ways, and they are different jobs:
+
+**1. A WappenWiki charge SVG the user names** (hand-composed flag).
+The user points at a charge in `/home/rick/Downloads/charges/`
+(`Wittelsbach_Pfalz.svg`, `England.svg`, ...); that SVG is the charge
+and the field is one flat tincture. Render it with inkscape (cairosvg
+chokes on Illustrator exports), trim to the alpha bbox, scale it
+uniformly into the charge slot, alpha-composite it centred on the field
+and write the 24bpp TGA directly — **not** through `coaflags.py`. The
+artwork's own fills are kept verbatim: a gold lion keeps its gules
+crown, claws and tongue. There is no tincture snapping, no CK3 shader
+and no #111111 keying on this path. Precedent: WFR
+(`Wittelsbach_Pfalz.svg` on sable).
+
+**2. A CK3 coat-of-arms bake** (`tools/coaflags.py`). The source is an
+authored CK3/Patrum Scuta `coat_of_arms` block (title with `--title`,
+dynasty with `--house`, the tag's `ruler_coa` otherwise) and the script
+reimplements the shipped CK3 shader: pattern channel lerps, emblem
+stacking and masks, instance transforms, CK3 colour names through the
+tincture canon, output clamped to [51,246] on the #111111 underlay.
+Precedent: NRD (`d_nordgau`), the alphabet round flags.
+
+The difference is what "the charge" is. An SVG charge is finished art
+with its own colours and must be placed as such. A CK3 CoA is a recipe
+(pattern + colour names + DDS emblems) that has to be executed. Never
+feed an SVG through `coaflags`, never hand-place a CK3 emblem DDS, and
+never apply the tincture canon to an SVG charge's fills.
+
 ## CK3-dynasty CoA pipeline (`tools/coaflags.py`)
 
 Run per tag or for the whole `-ids` set:
@@ -104,6 +134,10 @@ The tags carry CK3's own coat of arms for that 867 dynasty:
 - Flag canvas: 256x256 TGA.
 - Charge flags (LUT, RAN, BOH, ABK): charge 176x210, pasted at (40,23)
   on the field colour.
+- SVG charges (path 1 above): trim to the alpha bbox first, then fit
+  the ink to 85% of the canvas height (218px) and centre it — the same
+  visual weight as a CK3 single-charge bake. WFR's lion lands at
+  183x218, centred on (36,19).
 - Charge proportions are immutable: only uniform scaling of the whole
   charge is permitted. Never stretch, squash, crop or reshape the artwork
   to fill the slot — fit it inside 176x210 keeping its aspect ratio, and

@@ -1,6 +1,6 @@
-owner = GER
-controller = GER
-add_core = GER
+owner = WFR
+controller = WFR
+add_core = WFR
 capital = "Coburg"
 culture = franconian
 religion = catholic
@@ -16,7 +16,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = GER
-	controller = GER
-	add_core = GER
+	owner = WFR
+	controller = WFR
+	add_core = WFR
 }

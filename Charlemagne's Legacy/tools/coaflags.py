@@ -1,11 +1,12 @@
-"""Render CK3 dynasty coats of arms into EU4 flag TGAs.
+"""Render CK3 coats of arms into EU4 flag TGAs.
 
-The CoA compositions come from CK3's authored dynasty designs
-(common/coat_of_arms/coat_of_arms/90_dynasties.txt blocks keyed by
-dynasty id or house key): a pattern texture whose RGB channels are
-colour-slot masks (R->color1, G->color2, B->color3, alpha=opacity),
-shape, and colour-slot masks in RGB (B->color1, G->color2, R->color3)
-placed at normalized position/scale.
+A tag takes either its 867 ruler's house/dynasty arms or the arms of its
+landed title (d_/c_ key): the composition comes from CK3's authored
+designs (common/coat_of_arms/coat_of_arms/ blocks keyed by dynasty id,
+house key or title): a pattern texture whose RGB channels are colour-slot
+masks (R->color1, G->color2, B->color3, alpha=opacity), shape, and
+colour-slot masks in RGB (B->color1, G->color2, R->color3) placed at
+normalized position/scale.
 All colours snap to the WappenWiki tincture canon from FLAG_NOTES
 before rendering, so the flags match the family palette exactly.
 """
@@ -418,6 +419,15 @@ def bake(canvas, tag, size=256, outdir=None):
     return out
 
 
+def dump_coa(coa, label=None):
+    """Human-readable definition for --dry."""
+    if label:
+        print(label)
+    print("pattern:", coa["pattern"], "| colors:", coa["colors"])
+    for em in coa["emblems"]:
+        print("  emblem:", em["texture"], em["colors"], len(em["instances"]))
+
+
 def _dynasty_ids_tags():
     """Every tags.db tag whose name ends in `-ids` (the dynasty-named
     realms the user wants done first)."""
@@ -635,6 +645,9 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("tag", nargs="*", help="tag(s) to render")
     ap.add_argument("--house", help="house/dynasty key override (one tag)")
+    ap.add_argument("--title", action="store_true",
+                    help="render each tag's own CK3 landed-title arms"
+                         " (ck3_title) instead of the ruler's house CoA")
     ap.add_argument("--all", action="store_true", help="all -ids dynasty tags")
     ap.add_argument("--dry", action="store_true",
                     help="print the CoA definition, no render")
@@ -642,7 +655,32 @@ if __name__ == "__main__":
                     help="CK3 save carrying generated CoAs for the"
                          " dynasties with no authored design")
     a = ap.parse_args()
-    if a.house or (a.dry and a.tag and not a.all):
+    if a.title and (a.house or a.all):
+        ap.error("--title picks the landed-title arms; drop --house/--all")
+    if a.title:
+        if not a.tag:
+            ap.error("--title needs at least one tag")
+        handles = _tag_titles()
+        done, misses = [], []
+        for tag in a.tag:
+            title = handles.get(tag)
+            if not title:
+                misses.append((tag, "no ck3_title in tags.db"))
+                continue
+            coa = find_house_coa(title)
+            if coa is None or not (coa["pattern"] or coa["emblems"]):
+                misses.append((tag, f"{title}: no authored CoA"))
+                continue
+            if a.dry:
+                dump_coa(coa, f"{tag} {title}")
+            else:
+                bake(compose(coa), tag)
+                print(f"{tag:4} {title:24}")
+            done.append((tag, title))
+        for tag, why in misses:
+            print("MISS", f"{tag:4}", why)
+        print(f"{len(done)} rendered, {len(misses)} misses")
+    elif a.house or (a.dry and a.tag and not a.all):
         # explicit source override / definition dump: single tag only
         if len(a.tag) != 1:
             ap.error("--house/--dry needs exactly one tag")
@@ -651,10 +689,7 @@ if __name__ == "__main__":
             sys.exit(f"no authored CK3 CoA for {a.house}")
         if not a.dry:
             bake(compose(coa), a.tag[0])
-        print("pattern:", coa["pattern"], "| colors:", coa["colors"])
-        for em in coa["emblems"]:
-            print("  emblem:", em["texture"], em["colors"],
-                  len(em["instances"]))
+        dump_coa(coa)
     elif a.all:
         done, misses = ruler_coa(save_path=a.save)
         print(f"{len(done)} rendered, {len(misses)} misses")

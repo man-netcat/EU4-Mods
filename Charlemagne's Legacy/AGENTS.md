@@ -54,6 +54,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 5. Flags: never clone placeholders — missing flags must stay visibly missing
    (validate only WARNS). See `tools/FLAG_NOTES.md` for palette and layout;
    render Illustrator SVGs with inkscape (cairosvg chokes), verify visually.
+   Two distinct paths, never mixed: a user-named charge SVG from
+   `/home/rick/Downloads/charges/` pasted on a flat tincture (placed by
+   hand, not through `coaflags.py`), or a CK3 CoA bake via
+   `tools/coaflags.py` (title/dynasty block, shader, tincture canon).
    Uncommitted `gfx/flags/*.tga` are the user's own work by default: never
    overwrite or delete a flag without permission.
 6. `python3 tools/build.py && python3 tools/validate.py` — both green.

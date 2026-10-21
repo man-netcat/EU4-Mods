@@ -46,6 +46,7 @@ country_decisions = {
 				tag = LOI
 				tag = LOT
 				tag = LVA
+				tag = MAI
 				tag = MHR
 				tag = MLK
 				tag = MOR
@@ -67,6 +68,7 @@ country_decisions = {
 				tag = SOR
 				tag = SRV
 				tag = STE
+				tag = THU
 				tag = TIM
 				tag = TNG
 				tag = TOU
@@ -324,6 +326,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = MAI }
+			change_country_color = {
+				color = { 178 145 87 }
+			}
+		}
+		if = {
 			limit = { tag = MHR }
 			change_country_color = {
 				color = { 53 191 176 }
@@ -447,6 +455,12 @@ country_decisions = {
 			limit = { tag = STE }
 			change_country_color = {
 				color = { 33 119 58 }
+			}
+		}
+		if = {
+			limit = { tag = THU }
+			change_country_color = {
+				color = { 66 126 157 }
 			}
 		}
 		if = {

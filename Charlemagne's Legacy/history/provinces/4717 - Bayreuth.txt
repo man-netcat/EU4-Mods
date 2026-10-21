@@ -1,6 +1,6 @@
-owner = BAV
-controller = BAV
-add_core = BAV
+owner = NRD
+controller = NRD
+add_core = NRD
 capital = "Bayreuth"
 culture = polabian
 religion = catholic
@@ -17,7 +17,7 @@ discovered_by = ottoman
 
 #copied from Ansbach but I think it is accurate
 867.1.1 = {
-	owner = BAV
-	controller = BAV
-	add_core = BAV
+	owner = NRD
+	controller = NRD
+	add_core = NRD
 }
