@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = norse
 religion = catholic
 capital = 97
+add_accepted_culture = dutch
 867.1.1 = {
 	monarch = {
 		name = "Hrörekr"

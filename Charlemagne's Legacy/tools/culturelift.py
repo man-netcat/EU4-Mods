@@ -39,7 +39,7 @@ CK3_TO_EU4 = {
     "cornish": "cornish", "irish": "irish", "gaelic": "irish",
     "pictish": "pictish", "cumbrian": "cumbrian", "scottish": "scottish",
     "anglo_saxon": "anglosaxon", "saxon": "saxon", "dutch": "dutch",
-    "frisian": "frisian", "bavarian": "bavarian", "swabian": "swabian",
+    "frisian": "dutch", "bavarian": "bavarian", "swabian": "swabian",
     "franconian": "franconian", "french": "frankish",
     "lombard": "lombard", "italian": "italian", "cisalpine": "cisalpine",
     "roman": "roman",
