@@ -24,6 +24,7 @@ country_decisions = {
 				tag = EGY
 				tag = EST
 				tag = FIN
+				tag = FLA
 				tag = FRA
 				tag = GAL
 				tag = GER
@@ -51,6 +52,7 @@ country_decisions = {
 				tag = NAP
 				tag = NAV
 				tag = NOV
+				tag = NRM
 				tag = OMA
 				tag = PAP
 				tag = PLT
@@ -183,6 +185,12 @@ country_decisions = {
 			limit = { tag = FIN }
 			change_country_color = {
 				color = { 182 134 100 }
+			}
+		}
+		if = {
+			limit = { tag = FLA }
+			change_country_color = {
+				color = { 43 141 172 }
 			}
 		}
 		if = {
@@ -345,6 +353,12 @@ country_decisions = {
 			limit = { tag = NOV }
 			change_country_color = {
 				color = { 97 126 37 }
+			}
+		}
+		if = {
+			limit = { tag = NRM }
+			change_country_color = {
+				color = { 131 138 116 }
 			}
 		}
 		if = {

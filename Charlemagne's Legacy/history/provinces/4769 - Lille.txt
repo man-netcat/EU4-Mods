@@ -1,8 +1,8 @@
 # 4769 - Lille, meant to represent Waals Vlaanderen. Principal cities: Lille, Douai, Orchies
 
-owner = FRA
-controller = FRA
-add_core = FRA
+owner = FLA
+controller = FLA
+add_core = FLA
 capital = "Lille"
 culture = wallonian
 religion = catholic
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = FLA
+	controller = FLA
+	add_core = FLA
 }

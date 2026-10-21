@@ -1,8 +1,8 @@
 # 87 Calais - Principal cities: Calais
 
-owner = FRA
-controller = FRA
-add_core = FRA
+owner = FLA
+controller = FLA
+add_core = FLA
 capital = "Calais"
 culture = wallonian
 religion = catholic
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = FLA
+	controller = FLA
+	add_core = FLA
 }

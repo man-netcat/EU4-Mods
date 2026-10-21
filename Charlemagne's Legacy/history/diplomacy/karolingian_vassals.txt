@@ -53,21 +53,13 @@ union = {
 	first = FRA
 	second = AQI
 }
-guarantee = {
+vassal = {
 	first = FRA
-	second = GMA
+	second = FLA
 }
-guarantee = {
+vassal = {
 	first = FRA
-	second = JYL
-}
-guarantee = {
-	first = FRA
-	second = PMS
-}
-guarantee = {
-	first = FRA
-	second = SJA
+	second = NRM
 }
 union = {
 	first = GER

@@ -1,8 +1,10 @@
 # 177 Maine - Principal cities: Le Mans, Laval
 
-owner = FRA
-controller = FRA
+owner = NRM
+controller = NRM
+add_core = PRO
 add_core = FRA
+add_core = NRM
 capital = "Le Mans"
 culture = frankish
 religion = catholic
@@ -20,7 +22,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = NRM
+	controller = NRM
+	add_core = NRM
 }

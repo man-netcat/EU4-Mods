@@ -19,7 +19,7 @@ country_decisions = {
 					tooltip = kar_form_hre_provinces_tooltip
 					kar_form_hre_provinces_trigger = yes
 				}
-				value = 258
+				value = 227
 			}
 		}
 
@@ -46,13 +46,6 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			austria_proper_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			bohemia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -115,13 +108,6 @@ country_decisions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			denmark_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			east_bavaria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -130,13 +116,6 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			emilia_romagna_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			erzgebirge_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -200,13 +179,6 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			inner_austria_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			jutland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -284,13 +256,6 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			massif_central_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			moravia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -402,27 +367,6 @@ country_decisions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			silesia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			skaneland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			slovakia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			south_saxony_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -480,13 +424,6 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			upper_swabia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			vastra_gotaland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
