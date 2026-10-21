@@ -1,8 +1,8 @@
 #4760 - Innbaiern
 
-owner = BAV
-controller = BAV
-add_core = BAV
+owner = SLZ
+controller = SLZ
+add_core = SLZ
 capital	= "Braunau am Inn"
 culture = bavarian
 religion = catholic
@@ -19,7 +19,7 @@ discovered_by = ottoman
 
 #Last of the Landshuter Wittelsbachs dies, Bavaria reunited
 867.1.1 = {
-	owner = BAV
-	controller = BAV
-	add_core = BAV
+	owner = SLZ
+	controller = SLZ
+	add_core = SLZ
 }

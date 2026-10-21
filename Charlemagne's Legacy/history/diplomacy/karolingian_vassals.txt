@@ -30,6 +30,10 @@ vassal = {
 	second = CST
 }
 vassal = {
+	first = BAV
+	second = SLZ
+}
+vassal = {
 	first = BUL
 	second = TEM
 }

@@ -5760,7 +5760,7 @@ default_republic = {
 prince_archbishoprics = {
 	rank = {
 		1 = BISHOPRIC
-		2 = ARCHBISHOPRIC
+		2 = ARCHDIOCESE
 		3 = PATRIARCHATE
 		4 = PATRIARCHATE
 		5 = HEGEMONY
@@ -5820,6 +5820,7 @@ prince_archbishoprics = {
 		government = theocracy
 		OR = {
 			tag = KOL
+			tag = SLZ
 			tag = TRI
 		}
 	}
