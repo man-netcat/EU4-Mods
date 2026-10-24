@@ -5753,6 +5753,27 @@ japanese_g = {
 			"Yoshiko 26" "Yoshiko 27" "Yoshiko 28" "Yoshiko 29" YUKI Yukiko
 		}
 	}
+	ryukyuan = {
+		dynasty_names = {
+			Agina Can Catan Cin Goya Gusicaa Gusican Haniji Ifa Iizu Iribaru Katcin Kunjan Mutubu Nacijin Nagu
+			Nakagusiku Nakazuni Sasici Tamagusiku Ufugaa Ufugusiku Ufusatu Urasii Wakugaa Yeeji Yuntanza
+		}
+		male_names = {
+			Amawari Bunii Cinfuku Ciruju Cuu Eeji Furi Gifun Gusamaru "Han anci" Haniji Hasii Idaru Iizu Kamiju
+			Kanamaru Kanimaci Kanisi Maci Maciju Maguji Maici Maikusa Makamadu Makatudaru Mamakaru Maniusi Manta
+			Masakai Masanru Mausi Mayamatu Meenu "Min RK" Ndaru Sattu "See i" Shunbajunci Shuntin Shutaru "Siru RK"
+			Sishoo Sitaa Taci Tafuci Tama Tamagusiku "Taru RK" Tarumui Teecuu Teehara Teesii Tuku Tukuju Tukutaru
+			Turaju Ufusatu Ukuharu Umiguru Umijira Umikami Umikana Umikani Umikanimaci Umimaci Uminabi Uminio Uminta
+			Umitaru Umitu Umituku Umitukuju Umitukutaru Uusu Yafusu Yeeji
+		}
+		female_names = {
+			Kamadu Kuncasa Maakadu Maduru Maguji Majini Makadu Makama "Makamadu 2" Makami Makatudaru Mamaci Maminaku
+			Manabi Manandaru Mandaru Manyuku Masiho Matamatu Mausi "Meenu 2" Sasukasa Ugiyaka Umiduru Umikami
+			Umikamitaru Umikana Umikani Umimaduru Umimajini Umimanandaru Umimausi Uminabi Umindaru Uminta Umitama
+			Umitu Umiutu Utumasu Utumi Ututaru
+		}
+	}
+
 	kyushuan = { #Kyushu culture
 		province = { local_has_samurai = yes }
 		primary = OTM
@@ -6318,6 +6339,24 @@ pacific = {
 			Salanieta Salaqawa Selai Sereana Tanna Tarlae Ulita Yasi
 		}
 	}
+	amis = {
+		dynasty_names = {
+			Seejiq Seediq Bunun Sakizaya Pinuyumayan Rukai Cou Saisiyat Yami Thao Kavalan Truku Hlalua Kanakanavu
+		}
+		male_names = {
+			"#AMIS" TAIWANESE INDIGENEOUS GROUP Afalian Ayal Icyang Kolas Lifok Mayaw Maysang Ngayaw Safulo Talukus
+			Yosifu "#ATAYAL" "GROUP..." Behuy Bu Buyung Hayung Iban Neban Nokan Payen Poqueing Qawil Sasan Taruu Temu
+			Ton Watan "#SEEJIQ" Dakis Piho Pihu "#PAIWAN" Balai Calivat Celalaq Cemelesai Djaikung Kuljelje Ljegeay
+			Sakinu Skulilu Tapiwulan Uliw Utjung "#BUNUN" Aliman Aziman Bukun Bukut Husluman Tahai Tulbus "#SAKIZAYA"
+			Daranse Kumud Nuwa Tiway
+		}
+		female_names = {
+			"#AMIS" TAIWANESE INDIGENEOUS GROUP Ado Ilid Kawlo Kolas Lisang Sawmah Usay "#ATAYAL" "GROUP..." Amuy Asun
+			Cisal Ciwas Ipay Pitay Qiway Rimuy Yoaqai Yokuy "#SEEJIQ" Bakan Rabay "#PAIWAN" Aljenljeng "#BUNUN" Dahu
+			Ival Lahu "#SAKIZAYA" Icep Lisin Sayun Siku
+		}
+	}
+
 	polynesian = {
 		dynasty_names = {
 			Aalona Ahulani Ainalani Akeakamai Alani Aluala Alealani Alohilani Anakalia Anuenue "'Ehukai" "'Ewalani" "Ha'aheo" Heleakala

@@ -63,6 +63,7 @@ country_decisions = {
 				tag = PRO
 				tag = PRU
 				tag = RUG
+				tag = RYU
 				tag = SCO
 				tag = SIL
 				tag = SLZ
@@ -429,6 +430,12 @@ country_decisions = {
 			limit = { tag = RUG }
 			change_country_color = {
 				color = { 51 59 76 }
+			}
+		}
+		if = {
+			limit = { tag = RYU }
+			change_country_color = {
+				color = { 90 138 133 }
 			}
 		}
 		if = {

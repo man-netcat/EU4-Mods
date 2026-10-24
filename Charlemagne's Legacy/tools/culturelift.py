@@ -153,7 +153,7 @@ CK3_TO_EU4 = {
     # second-wave fills (encountered at county level)
     "acehnese": "acehnese", "afghan": "khorasani", "ainu": "ainu",
     "asturleonese": "castillian", "bashkir": "bashkir", "bengali": "bengali",
-    "chuvash": "bulgarian", "emishi": "togoku", "japanese": "japanese",
+    "chuvash": "bulgarian", "emishi": "togoku", "japanese": "japanese", "ryukyuan": "ryukyuan", "amis": "amis",
     "khanty": "ostyaki", "komi": "bulgarian", "latgalian": "latvian",
     "mari": "bulgarian", "merya": "bulgarian", "meshchera": "bulgarian",
     "mogyer": "magyar", "mohe": "tungus", "mordvin": "bulgarian",
@@ -194,6 +194,18 @@ LIFT_SPECS = {
         "display": "Pecheneg",
         "file": "00_turkic.txt",
         "list": "name_list_pecheneg",
+    },
+    "ryukyuan": {
+        "anchor": "\tkyushuan = {",
+        "display": "Ryukyuan",
+        "file": "00_ryukyuan.txt",
+        "list": "name_list_ryukyuan",
+    },
+    "amis": {
+        "anchor": "\tpolynesian = {",
+        "display": "Amis",
+        "file": "00_malay.txt",
+        "list": "name_list_amis",
     },
 }
 
@@ -572,6 +584,8 @@ FAITH_TO_RELIGION = {
     "tengri_pagan": "tengri_pagan_reformed",
     # vanilla animism is the generic catch-all for the berber pagan
     "north_african_acham_pagan": "animism",
+    "kamuyism_pagan": "animism", "utaki": "animism", "hantuism": "animism",
+    "shamanism": "shamanism",
     # Buddhist families onto the EU4 keys
     "vinaya": "buddhism", "avatamsaka": "mahayana", "mantrayana": "vajrayana",
     # pundarika is CK3's Lotus-school Buddhism (the Heian court's faith)

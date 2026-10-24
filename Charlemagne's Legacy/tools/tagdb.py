@@ -490,7 +490,8 @@ def selfcheck() -> None:
             )
         fb = BY_FORMABLE[fcode]
         if fb.culture:
-            off = sorted({s.tag for s in sts if s.culture != fb.culture})
+            off = sorted({s.tag for s in sts
+                          if s.culture not in fb.culture.split()})
             if off:
                 raise ValueError(
                     f"formable {fcode}: {off} are not {fb.culture}"

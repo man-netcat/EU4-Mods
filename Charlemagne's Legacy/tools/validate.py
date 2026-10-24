@@ -706,7 +706,7 @@ def run() -> int:
         "ADU ALG ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN DAU EGY ENG EST FIN FRA GAL "
         "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MAI MLK MOR MZB NAP NAV NOR NOV PAP PLT POL POM PRU PRO ROM RUG SAR "
         "SIL SCA SCO SER SIC SLZ SMI SOR SRV STE SWE SWA THU TNG TRA TRP TUN VEN VOL WLS WOL NAJ HDR MHR OMA JAP "
-        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU".split()    )
+        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU".split()    )
 
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")
@@ -796,8 +796,8 @@ def run() -> int:
             )
         elif fb.culture:
             note(
-                f"primary_culture = {fb.culture}" in dec,
-                f"{key} is culture-gated on {fb.culture}",
+                all(f"primary_culture = {c}" in dec for c in fb.culture.split()),
+                f"{key} is culture-gated on {' or '.join(fb.culture.split())}",
             )
         else:
             note(
@@ -1237,6 +1237,34 @@ def run() -> int:
     for b in bad_glyph[:8]:
         print("        " + b)
 
+    print("\n== formables carry their loc ==")
+    allloc = ""
+    for root, _dirs, files in os.walk(LOC):
+        for fn in files:
+            if fn.endswith("_l_english.yml"):
+                allloc += open(os.path.join(root, fn),
+                               encoding="utf-8-sig").read() + "\n"
+
+    def has_loc(key):
+        return re.search(rf"(?m)^ {re.escape(key)}:\d* ", allloc) is not None
+
+    dkeys = sorted({t.decision for t in _REALMS if getattr(t, "decision", None)})
+    missing = [f"{k}{suf}" for k in dkeys for suf in ("_title", "", "_desc")
+               if not has_loc(f"{k}{suf}")]
+    note(not missing, "every formation decision has title, name and desc loc"
+         + (f" (missing: {', '.join(missing)})" if missing else ""))
+    gameloc = ""
+    gdir = os.path.join(GAME, "localisation")
+    for fn in os.listdir(gdir):
+        if fn.endswith("_l_english.yml"):
+            gameloc += open(os.path.join(gdir, fn),
+                            encoding="utf-8-sig").read() + "\n"
+    unnamed = [f"{t}{suf}" for t in sorted(FORMABLE_TAGS) for suf in ("", "_ADJ")
+               if not has_loc(f"{t}{suf}")
+               and not re.search(rf"(?m)^ {t}{suf}:\d* ", gameloc)]
+    note(not unnamed, "every formable tag has its name and adjective loc (ours or the base game's)"
+         + (f" (missing: {', '.join(unnamed)})" if unnamed else ""))
+
     print("\n== Karling dynasty, lifted from CK3 ==")
     dynasty, ktags = karling_realms()
     for t in ktags:
@@ -1494,12 +1522,13 @@ def run() -> int:
         ]
         if "culture" in _tabs:
             used_cultures |= {
-                r[0]
+                c  # formables.culture may list several cultures
                 for r in _s2.execute(
                     __import__("sqlalchemy").text(
                         f"SELECT DISTINCT culture FROM {_tbl} WHERE culture IS NOT NULL"
                     )
                 )
+                for c in r[0].split()
             }
     _s2.close()
     for fn in sorted(os.listdir(PDIR)):

@@ -205,7 +205,14 @@ def formation_decision(fcode, starters) -> str:
             )
             tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
     elif fb.culture:
-        tag_line = f"\t\t\tprimary_culture = {fb.culture}"
+        cultures = fb.culture.split()  # several = any of them may form it
+        if len(cultures) == 1:
+            tag_line = f"\t\t\tprimary_culture = {cultures[0]}"
+        else:
+            inner = "\n".join(
+                f"\t\t\t\tprimary_culture = {c}" for c in cultures
+            )
+            tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
     elif fb.exclusive and len(starters) > 1:
         branches = []
         for s in starters:

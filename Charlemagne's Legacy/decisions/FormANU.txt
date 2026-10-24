@@ -7,7 +7,10 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_aynumosir }
 			NOT = { tag = ANU }
 			NOT = { exists = ANU }
-			primary_culture = ainu
+			OR = {
+				primary_culture = ainu
+				primary_culture = nivkh
+			}
 			NOT = { government_rank = 3 }
 			OR = {
 				ai = no

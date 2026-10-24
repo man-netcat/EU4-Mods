@@ -4964,6 +4964,136 @@ nivkh_titles = {
 }
 
 
+ryukyuan_titles = {
+# CK3 ladders for RYU(r1)
+	rank = {
+		1 = RYUKYUAN_COUNTY  # county_tribal
+		2 = RYUKYUAN_DUCHY  # duchy_tribal
+		3 = RYUKYUAN_KINGDOM  # kingdom_tribal
+		4 = RYUKYUAN_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = RYUKYUAN_COUNT_MALE  # count_tribal_male
+		2 = RYUKYUAN_DUKE_MALE  # duke_tribal_male
+		3 = RYUKYUAN_KING_MALE  # king_tribal_male
+		4 = RYUKYUAN_EMPEROR_MALE  # emperor_tribal_male
+		5 = RYUKYUAN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = RYUKYUAN_COUNT_FEMALE  # count_tribal_female
+		2 = RYUKYUAN_DUKE_FEMALE  # duke_tribal_female
+		3 = RYUKYUAN_KING_FEMALE  # king_tribal_female
+		4 = RYUKYUAN_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = RYUKYUAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = RYUKYUAN_COUNT_MALE  # consort uses the ruler form
+		2 = RYUKYUAN_DUKE_MALE  # consort uses the ruler form
+		3 = RYUKYUAN_KING_MALE  # consort uses the ruler form
+		4 = RYUKYUAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = RYUKYUAN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = RYUKYUAN_COUNT_FEMALE  # count_tribal_female
+		2 = RYUKYUAN_DUKE_FEMALE  # duke_tribal_female
+		3 = RYUKYUAN_KING_FEMALE  # king_tribal_female
+		4 = RYUKYUAN_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = RYUKYUAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		primary_culture = ryukyuan
+	}
+}
+
+
+amis_titles = {
+# CK3 ladders for HOA(r1), SIR(r1), AMI(r1)
+	rank = {
+		1 = AMIS_COUNTY  # county_tribal
+		2 = AMIS_DUCHY  # duchy_tribal
+		3 = AMIS_KINGDOM  # kingdom_tribal
+		4 = AMIS_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = AMIS_COUNT_MALE  # bhupati
+		2 = AMIS_DUKE_MALE  # duke_tribal_male
+		3 = AMIS_KING_MALE  # king_tribal_male
+		4 = AMIS_EMPEROR_MALE  # emperor_tribal_male
+		5 = AMIS_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = AMIS_COUNT_FEMALE  # bhupati_female
+		2 = AMIS_DUKE_FEMALE  # duke_tribal_female
+		3 = AMIS_KING_FEMALE  # king_tribal_female
+		4 = AMIS_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = AMIS_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = AMIS_COUNT_MALE  # consort uses the ruler form
+		2 = AMIS_DUKE_MALE  # consort uses the ruler form
+		3 = AMIS_KING_MALE  # consort uses the ruler form
+		4 = AMIS_EMPEROR_MALE  # consort uses the ruler form
+		5 = AMIS_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = AMIS_COUNT_FEMALE  # bhupati_female
+		2 = AMIS_DUKE_FEMALE  # duke_tribal_female
+		3 = AMIS_KING_FEMALE  # king_tribal_female
+		4 = AMIS_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = AMIS_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		primary_culture = amis
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM
