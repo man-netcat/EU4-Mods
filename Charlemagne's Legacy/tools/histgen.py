@@ -58,6 +58,12 @@ def country_history(t) -> str:
         f"religion = {t.religion}",
         f"capital = {t.capital}",
     ]
+    # CK3 rite of the 867 ruler -> religious school (tools/rites.py)
+    from rites import school_for_tag, school_name
+
+    rite_school = school_for_tag(t)
+    if rite_school:
+        lines.append(f"religious_school = {school_name(rite_school)}")
     lines += [f"historical_rival = {r}" for r in t.rivals]
     lines += [f"historical_friend = {f}" for f in t.friends]
     if t.extra:

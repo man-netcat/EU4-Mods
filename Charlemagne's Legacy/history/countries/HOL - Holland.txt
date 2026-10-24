@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = norse
 religion = catholic
 capital = 97
+religious_school = carolingian_rite_school
 add_accepted_culture = dutch
 867.1.1 = {
 	monarch = {

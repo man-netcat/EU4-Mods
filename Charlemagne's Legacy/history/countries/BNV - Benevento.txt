@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = lombard
 religion = catholic
 capital = 4734
+religious_school = beneventan_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Adelchis"

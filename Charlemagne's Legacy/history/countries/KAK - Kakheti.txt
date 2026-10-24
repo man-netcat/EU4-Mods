@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = georgian
 religion = catholic
 capital = 2203
+religious_school = georgian_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Bagrat"

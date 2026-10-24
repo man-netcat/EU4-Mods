@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = andalusian
 religion = catholic
 capital = 4789
+religious_school = mozarabic_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Sabariquh"

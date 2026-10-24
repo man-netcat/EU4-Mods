@@ -7,6 +7,7 @@ import sys, time
 from tagdb import *  # noqa: F401,F403
 from eu4 import *  # noqa: F401,F403
 from ck3 import *  # noqa: F401,F403
+from rites import step_rites
 
 
 def main() -> int:
@@ -15,6 +16,7 @@ def main() -> int:
 
     phases = [
         ("check the Tag database", selfcheck),
+        ("write the Christian rite schools", step_rites),
         ("generate province files", step_provinces),
         ("generate country files", step_countries),
         ("generate the empire decision", step_hre),

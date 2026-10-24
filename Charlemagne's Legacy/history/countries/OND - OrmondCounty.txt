@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = irish
 religion = catholic
 capital = 4377
+religious_school = insular_celtic_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Dúnchad"

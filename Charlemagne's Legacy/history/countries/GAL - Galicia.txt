@@ -4,6 +4,7 @@ technology_group = western
 primary_culture = galician
 religion = catholic
 capital = 206
+religious_school = roman_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Hermenexildo"

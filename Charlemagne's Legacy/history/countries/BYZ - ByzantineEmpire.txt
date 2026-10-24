@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = greek
 religion = catholic
 capital = 151
+religious_school = byzantine_rite_school
 historical_rival = ARB
 historical_rival = BUL
 historical_rival = SAW
