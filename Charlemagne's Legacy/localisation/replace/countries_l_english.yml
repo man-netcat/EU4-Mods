@@ -573,6 +573,8 @@
  POG_ADJ:1 "$c_pogibi$"
  MSN:1 "Menas"
  MSN_ADJ:1 "$c_menas$"
+ ANU:1 "Aynumosir"
+ ANU_ADJ:1 "Aynumosir"
  HLR:1 "Karolingian Empire"
  HLR_ADJ:1 "Karolingian"
  HUN:1 "Hungary"

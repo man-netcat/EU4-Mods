@@ -442,13 +442,14 @@ def _dynasty_ids_tags():
 
 
 def _tag_titles():
-    """tag -> ck3_title for every tag in the DB (the save fallback
-    reaches any tag through its title entity)."""
+    """tag -> ck3_title for every tag and formable in the DB (the save
+    fallback reaches any tag through its title entity)."""
     from db import Session
     from sqlalchemy import text
     s = Session()
-    return dict(s.execute(
-        text("select tag, ck3_title from tags order by tag")).all())
+    return dict(s.execute(text(
+        "select tag, ck3_title from tags union "
+        "select tag, ck3_title from formables order by tag")).all())
 
 
 def _save_text(path):

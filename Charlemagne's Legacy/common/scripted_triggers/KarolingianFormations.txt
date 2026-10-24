@@ -373,6 +373,13 @@ kar_form_sicily_provinces_trigger = {
 	}
 }
 
+kar_form_aynumosir_provinces_trigger = {
+	OR = {
+		area = hokkaido_area
+		area = sakhalin_area
+	}
+}
+
 kar_form_finland_provinces_trigger = {
 	OR = {
 		area = bothnia_area
