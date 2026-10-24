@@ -57,6 +57,10 @@ vassal = {
 	first = BYZ
 	second = SYC
 }
+vassal = {
+	first = FRA
+	second = ANJ
+}
 union = {
 	first = FRA
 	second = AQI
@@ -68,6 +72,10 @@ vassal = {
 vassal = {
 	first = FRA
 	second = NRM
+}
+vassal = {
+	first = FRA
+	second = REI
 }
 vassal = {
 	first = GER

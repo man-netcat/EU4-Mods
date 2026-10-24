@@ -1,0 +1,19 @@
+government = theocracy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = frankish
+religion = catholic
+capital = 186
+867.1.1 = {
+	monarch = {
+		name = "Hincmar"
+		birth_date = 806.1.1
+		death_date = 882.12.21
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_ecclesiastical_government
+}

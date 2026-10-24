@@ -1,8 +1,8 @@
 # 186 Champagne - Principal cities: Reims
 
-owner = FRA
-controller = FRA
-add_core = FRA
+owner = REI
+controller = REI
+add_core = REI
 capital = "Reims"
 culture = frankish
 religion = catholic
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
+	owner = REI
+	controller = REI
+	add_core = REI
 }

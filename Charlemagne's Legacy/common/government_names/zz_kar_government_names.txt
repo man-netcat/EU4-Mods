@@ -5822,6 +5822,7 @@ prince_archbishoprics = {
 			tag = HAM
 			tag = KOL
 			tag = MAI
+			tag = REI
 			tag = SLZ
 			tag = TRI
 		}

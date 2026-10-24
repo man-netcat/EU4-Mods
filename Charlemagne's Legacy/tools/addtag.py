@@ -129,6 +129,8 @@ def main(argv):
     if a.to:
         datas = {pid: prov_data(pid) for pid in a.pids}
         for pid, (nm, cul, rel) in datas.items():
+            if s.get(ProvinceRow, pid) is not None:
+                continue  # existing rows keep the culture/religion in the DB
             if (cul is None and not a.culture) or (rel is None and not a.religion):
                 sys.exit(f"vanilla province {pid} has no culture/religion head "
                          "(uncolonized in 1444) - pass --culture/--religion")
