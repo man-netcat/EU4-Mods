@@ -1,2 +1,20 @@
 #1847 - Shiribeshi
 
+owner = IKR
+controller = IKR
+add_core = IKR
+capital = "Shiribeshi"
+culture = ainu
+religion = animism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+is_city = yes
+
+867.1.1 = {
+	owner = IKR
+	controller = IKR
+	add_core = IKR
+}

@@ -5337,58 +5337,420 @@ japanese_g = {
 	graphical_culture = asiangfx
 	country = { has_samurai = yes }
 	province = { local_has_samurai = yes }
-	togoku = { #Togoku / Eastern Japanese
+	togoku = { # Emishi
 		province = { local_has_samurai = yes }
 		primary = JAP
-		dynasty_names = { 
-			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa 
-			Kuni Nashimoto Takeda Yamashina
+		dynasty_names = {
+			Agita Fukae Hei Isawa Iwagu Kazuno Kimikobe Koreharu Michishima Momunofu Nisana Nisattai Nitoroshi Nushiro
+			Nutari Oga Okachi Orashibetsu Osatsu Sarugaeshi Shiwa Tamatsukuri Tamo "TO da" "TO tsu Isawa" Tokisara
+			Tokutan Tsumo Tsuwaribetu Ukame Urata Usori Waga
 		}
 		male_names = {
-			Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito 
-			Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu 
-			Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru 
-			Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu 
-			Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
+			Afuribe Ahaso Ahito Akeru Akeshi Aketo Anushiko Asamaro Atanamaro Atera Aterui "#" Akio Aohiru Arashima
+			Ashiyamamori Ayakasu Azamaro Azumahitomaro Dokki Ekimaro Erayu Etako Idemaro Ikako Ikokina Inarimushi
+			Isashiko Ikashima Ikusamaro Kakenabe Kamoi Kanaori Kanaya Kanemaro Katsumaro Kearui Kiumi "Ko oi" Kogane
+			Kohitsuji Komahiru Kuhaji Kunimasu Maho Mamaro Maiko Mamu Masu More Moshi Morokuri Nagako Nagiu
+			"O hafuribe" "O kuni" "O takamaru" "O takemaru" "O tate" Oga "Ohito 2" Oihito Okaho Okuie Onga Otoshiro
+			Oyashibe Ozukimaro Rasabe Sakamaru Sakatamaro Sanaguna Saniguna Satsuko Shiina "Shiko o" Shikona Shimako
+			Shiraso "Shiriko omaro" Sukunamaro Tachi "Takaki 2" Takamaru Takemaro Tamaki Tatsumaro Teshina Tohashiko
+			"Toshiko 3" Tsuhoro Tsuruki Ubasa Ukanu Ukuhau Unako Usomina Uhona Yamahito Yashiromaro Yasoshima
+			Yatsurina Yoshimaro
 		}
 		female_names = {
-			Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka 
-			Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru 
-			Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede 
-			Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto 
-			Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio 
-			Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi 
-			Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu 
-			Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa 
-			Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu 
-			Yuuka Yuuki Yuuko Yuuna Yuzuki
+			Akime Aneme Asame Chiyome Hirome Iime Ikeme Imame Iwame Kasame Kazume Kiyome Kunime Kurome Kushime Makime
+			Masume Matarime Menoko Michime Michitarime Momome Morime Morome Mushime Nagame Nakame Okame Otome
+			Otomushime Oyasu Rume Rushime Sadame Shimame Shiome Shirome Sugame Tadame Takakaime Takame Takarime Tojime
+			Tokome Torikaime Torime Toyome Tsugume Ujime Umakaime Umame Ushikaime Ushime Wakame Watame Yakame Yasume
+			Yoneko
 		}
 	}
-	japanese = { #Saigoku / Western Japanese
+	japanese = { # Yamato
 		province = { local_has_samurai = yes }
 		primary = MRI
-		dynasty_names = { 
-			Yamato Arisugawa Asaka Fushimi "Kan'in" Katsura Kaya Kitashirakawa 
-			Kuni Nashimoto Takeda Yamashina
+		dynasty_names = {
+			Abiru Adachi Aida Aihara AikO Akahori Akamatsu Akasaka Akasu Akata Akatsuka Akazawa Akiyama Amago
+			Amenomori Ano Anzai Asaka Asano Ashida Ashikaga Aso Atobe Awataguchi Chiba Chichibu "ChO sokabe" Date
+			Deura Doi Ebata Ebina Ema Fuchie Fujinami "FurugO ri" Furuya "GO do" GojO Gosho Hachisuka Haga Hakoda
+			Hamuro HanyU Hara Harada Hasuike Hatakeyama Hatano Hatta Hattori Hayami Hayashi Henmi Higuchi Hiki Hiraga
+			Hirako Hirata Hirosawa Hizume "HO in" "HO jO" Hokage Honda HonjO Horikawa Hoshina Hosokawa IchijO Iga Ii
+			Iida Iinuma Ijichi Ikeda Ikoma Ina Inage Inazawa Inomata Isa Ishibashi Ishii Ishikawa Isobe Isshiki
+			Itakura ItO Itoga Iwamatsu Iwata "JikO ji" "JimyO in" Jinbo Kagami Kagawa Kajiwara Kamachi Kamata Kamone
+			Kanazu Kanehara Kaneko Karita Kasai Kasuga Kasuya Katagiri Kataoka Kawabata Kawabe Kawagoe Kawasaki Kawazu
+			Kayane Kazusa Kida Kikkawa Kikuchi Kimotsuki Kira Kiso Kitabatake Kitahara Kiyotaki "KO no" "KO saka"
+			"KO sokabe" Kobayakawa Kodama Koga Kokubu KondO Konoe KudO Kuki Kumasaka Kunugi Kurita Kuroko Kutsuki Maki
+			Masunari Matano Matsudaira Matsura Matsuyama Migata Mikata Miki Mimura Minase Misawa Mitoya Miura Miyadera
+			Mochizuki Mogami Momonoi Murayama MutO Nagae Nagao Nakagawa "NakagO ri" NakajO Nakamikado Nakamura Nakano
+			Nakayama Namba Namekata Namezu Nanbu NanjO Narita Nasu Natsume Nemoto Nezu NijO Nikaido Niki Nitoda Nitta
+			Nomoto Nose Noyo "O ba" "O hara" "O i" "O inomikado" "O kawa" "O kubo" "O mi" "O miya" "O shikO chi"
+			"O suga" "O tawa" "O tera" "O tomo" "O uchi" "O zone" Obata Obu Ochi Oda Odagiri Ogasawara Ogata Ogawa
+			Ogura Okada Okazaki Omuro Onozaki Osada Owari Oyama Ozo Rokkaku RokujO Sagae SaitO Sakata Sanada SanjO
+			Sano Sasaki Satake SatO Satomi Seki Shiba Shibuya Shiga ShijO Shimada Shimazu "ShimokO be" ShingU Shioda
+			Shionoya Shioya Shiratori ShO "ShU in" SO "SO ma" Sogabe SogO Sugihara Sugime Sugimoto Suwabe Suzuki
+			Tachibana Tagawa Tagaya Taguchi Takakura Takatsukasa Takayama Take Takeda Takeishi Tamura "Tana JP"
+			Tashiro Taya TO "TO gO" Togashi Toida Tokiwa Tokuchi Tokuda Tokugawa Tokushuku Tomita Tomono Tomura Tosaki
+			Toshima Toyoda Tsuchimikado Tsuchimoto Tsuchiya Tsugiura Tsutsumi "Uji ie" Unno Urushima Usami Ushimaru
+			Wada Washizu Watanabe Watari Yabuki Yamada Yamaga Yamagata Yamaguchi Yamamoto Yamana Yamashina Yamauchi
+			Yashiro Yasu Yasuda Yasuoka Yasutomi Yato Yoda Yokoyama Yoshida "YU ki" Yuasa Yuri
 		}
 		male_names = {
-			Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito 
-			Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu 
-			Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru 
-			Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu 
-			Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
+			"###" AKI "Aki ie" Akichika Akifusa Akihiro Akikiyo Akikuni Akimasa Akimichi Akimitsu Akimori Akimoto
+			Akinaga Akinaka "Akinari 2" Akinobu Akinori "Akinori 2" Akisada Akishige Akisue Akisuke Akitada Akitaka
+			Akitoki Akitoshi Akitsuna Akitsune Akiyasu Akiyori Akiyoshi "Akiyoshi 2" Akiyuki Akizane "#" "Aki ie 2"
+			"Akichika 2" "Akihiro 2" "Akihiro 3" "Akimori 2" "Akina JP" Akinao "Akisada 3" "Akisada 4" "Akitoshi 3"
+			"Akitsuna 3" "Akitsune 2" "Akiyuki 2" Akihira Akikane Akikata Akira "Akikuni 2" "Akimoto 2" "Akinobu 2"
+			"Akisuke 2" "Akisuke 3" "Akitoshi 2" "Akitsuna 2" Akikage "Akimichi 2" Akitsugu "Akitsune 3" "Akiyori 2"
+			ARI "Ari ie" Ariakira "Ariakira 2" "Ariakira 3" Arichika Arifumi Arifusa Ariharu Arihiro Arikage Arikane
+			Arikata "Arikata 2" "Arikata 3" Arikazu Arimasa "Arimasa 3" Arimichi Arimitsu Arimori Arimoto "Arimoto 2"
+			Arimune "Arimune 2" Arinaga Arinao Arinari Arinobu "Arinobu 2" Arinori Arisada "Arisada 2" Arisato
+			Arishige Arisue Arisuke "Arisuke 2" "Arisuke 3" "Arisuke 4" "Arisuke 5" Aritada Aritaka Aritomo Aritoshi
+			"Aritoshi 2" Aritsugu Aritsuna Aritsune "Aritsune 2" Ariyasu Ariyo Ariyori Ariyoshi "Ariyoshi 3"
+			"Ariyoshi 4" "Ariyoshi 5" Ariyuki Arizane Arihira "Arimasa 2" Arioki "Ariyoshi 2" ATSU Atsuakira Atsufumi
+			Atsufusa Atsuhira "Atsuhira 2" Atsuie Atsukane Atsukata "Atsukata 2" Atsumichi "Atsumichi 2" Atsumitsu
+			Atsumori Atsumoto "Atsumoto 2" Atsumune Atsunaga Atsunobu Atsunori "Atsunori 2" Atsusada Atsusuke Atsutaka
+			Atsutada Atsutoshi "Atsutsune 2" Atsuyasu Atsuyoshi Atsuyuki Atsukuni Atsunaka Atsushige Atsutsune
+			"Atsuyuki 2" CHIKA "Chika akira" Chikafusa Chikaharu Chikahiro "Chikahiro 2" "Chikahiro 3" Chikaie
+			Chikakane "Chikakata 2" Chikakiyo Chikakuni Chikamasa "Chikamasa 2" Chikamichi Chikamitsu "Chikamitsu 2"
+			Chikamori "Chikamori 2" Chikamoto Chikamune "Chikamune 2" Chikanaga Chikanaka Chikanari "Chikanari 4"
+			Chikanobu "Chikanobu 3" Chikanori Chikasada "Chikashige 2" Chikasue Chikasuke "Chikasuke 2" Chikataka
+			"Chikataka 2" ChikatO Chikatsuna Chikatsune "Chikayori 2" Chikayoshi "Chikayoshi 2" "Chikayoshi 3"
+			"Chikayoshi 4" Chikazane "Chikamitsu 3" "Chikanari 2" "Chikanobu 2" Chikanushi "Chikasada 2" Chikashige
+			"Chikatsuna 2" Chikauji Chikayasu Chikayo Chikazumi "Chikafusa 2" "Chikaie 2" Chikatoki Chikayori FUMI
+			Fumiaki Fumikuni Fumimasa Fumimi Fumimine Fumimitsu "Fumimasa 2" Fumimori Fumimoto Fuminaga "Fuminaga 2"
+			Fuminao Fuminari Fuminori Fumio Fumisada Fumisuke Fumitoki Fumitoshi Fumiyama Fumiyoshi Fumiyuki Fumizane
+			FUSA "Fusa akira" Fusamori Fusanori "Fusanori 2" Fusao Fusasaki Fusaura Fusayo HARU Harukage Harukami
+			Harukaze Harumochi Harumitsu Harunari Haruo Harutsugu Haruyuki Haruzane Haruzumi HIDE Hidehira Hidehisa
+			Hidekiyo Hidemichi "Hidemichi 2" Hidemoto Hidesato Hidetaka Hidetake Hidetane HidetO "HidetO 2" Hideyasu
+			Hideyo Hideyoshi "Hideyoshi 2" HIRO Hiroe Hirofusa Hirohama Hirohira Hirokane Hirokata Hirokoto Hiromichi
+			Hiromori "Hiromori 2" Hiromoto "Hiromoto 2" Hiromune Hirona Hironaga Hironaka Hironari Hironiwa Hirosue
+			Hirosuke Hirotada "Hirotaka 2" Hirotoshi Hirotsugu Hirotsuna Hirotsune "Hirotsune 3" Hiroyo Hirozumi
+			"Hirozumi 2" Hirochika Hirokage "Hirokata 2" Hirokuni Hiromitsu "Hiromori 3" "Hiromoto 3" Hiromu Hironobu
+			Hirosada "Hirotada 2" Hirotaka "Hirotsune 2" Hiroyori Hiroyuki Hirozane HISA "Hisa akira" Hisafusa
+			Hisakiyo Hisakuni Hisahiro Hisamasa Hisamichi Hisamori Hisamune Hisamura Hisanaga Hisanaka Hisanao
+			Hisanori "Hisanori 2" Hisasada Hisatada HisatO Hisatoshi Hisatsune Hisasuke Hisauji Hisayuki Hisazane IE
+			Ieakira Iechika "Iechika 2" Iefusa Iehira "Iehira 2" Iehiro "Iehiro 2" Iekane Iekata Iekuni Iemasa Iemichi
+			Iemitsu Iemori Iemoto "Iemoto 2" "Iemoto 3" Iemune Ienaga Ienao Ienari "Ienari 2" "Ienari 3" Ienobu Ienori
+			Iesada "Iesada 2" Ieshige Iesue Iesuke Ietada Ietaka "Ietaka 2" IetO "IetO 2" Ietoki Ietomo Ietoshi
+			Ietsugu "Ietsugu 2" Ietsuna Ietsune Ietsura Ieyasu Ieyori "Ieyori 2" Ieyoshi Ieyuki Iezane "Ieyoshi 2"
+			KAGE Kageakira Kagechika Kagefusa Kagehide Kagehira Kagehiro Kagehisa Kageie Kagekado Kagekane Kagekazu
+			Kagekiyo Kagemasa "Kagemasa 2" Kagemichi "Kagemichi 2" Kagemitsu Kagemochi Kagemori Kagemune "Kagemune 2"
+			Kagemura Kagenaga Kagenari "Kagenari 2" "Kagenobu 2" Kagenori Kagesada Kageshige Kagesue Kagetaka KagetO
+			Kagetoki Kagetomo Kagetoshi Kagetsugu Kagetsuna Kagetsune Kagetsura Kageyasu Kageyori Kageyoshi Kageyuki
+			Kagezumi KANE Kaneakira Kanefuji Kanefumi Kanefusa Kanehira "Kanehira 2" "Kanehira 4" Kanehiro
+			"Kanehiro 2" Kaneie Kanekazu Kanekiyo Kanemasa Kanemasu Kanemichi Kanemitsu Kanemori Kanemoto Kanemune
+			Kanenaga "Kanenaga 2" Kanenaka Kanenari Kanenobu Kanenori "Kanenori 2" Kanesada Kaneshige Kanesue
+			"Kanesue 2" Kanesuke "Kanesuke 2" "Kanesuke 3" Kanetada Kanetaka "Kanetaka 2" "Kanetaka 3" KanetO
+			"KanetO 2" Kanetomo Kanetoshi Kanetsuna Kanetsune Kanetsura Kaneuji Kaneyasu "Kaneyasu 2" "Kaneyasu 3"
+			Kaneyori Kaneyoshi "Kaneyoshi 2" "Kaneyoshi 3" Kaneyuki "Kaneyuki 2" Kanezane Kanezumi "Kanehira 3"
+			"Kanetada 2" "Kanetada 3" "Kanenobu 2" KATSU Katsunaga Katsuyoshi Katsutada KAZU Kazunori KIN "Kin aki"
+			"Kin akira" "Kin hiro" "Kin hisa" "Kin ie" "Kin naga" "Kin naka" "Kin nari" "Kin nari 2" "Kin nobu"
+			"Kin nobu 2" "Kin nori" "Kin nori 2" "Kin yasu" "Kin yori" "Kin yoshi 2" "Kin yuki" "Kin chika" "Kin fusa"
+			"Kin hira" "Kin kado" "Kin kage" "Kin kane" "Kin kazu" "Kin kiyo" "Kin kuni" "Kin kuzu" "Kin masa"
+			"Kin michi" "Kin mitsu" "Kin mori" "Kin mori 2" "Kin moto" "Kin moto 2" "Kin mune" "Kin sada" "Kin sada 2"
+			"Kin sato" "Kin shige" "Kin sue" "Kin suke" "Kin suke 2" "Kin suke 3" "Kin suke 4" "Kin tada" "Kin taka"
+			"Kin tO" "Kin tO 2" "Kin toki" "Kin toshi" "Kin toshi 2" "Kin tsugu" "Kin tsuna" "Kin tsune" "Kin tsura"
+			"Kin yoshi" "Kin zane" "Kin zumi" KIYO Kiyoaki Kiyoakira "Kiyoakira 2" Kiyochika Kiyofusa Kiyoharu
+			Kiyohira "Kiyohira 2" Kiyoie Kiyokage Kiyokane Kiyokaze Kiyokimi Kiyokoto Kiyokuni Kiyomasa "Kiyomasa 2"
+			"Kiyomasa 3" Kiyomichi Kiyomitsu Kiyomizu Kiyomochi Kiyomori Kiyomoto "Kiyomoto 2" Kiyomune Kiyonaga
+			Kiyonaka Kiyonari Kiyonatsu Kiyonobu "Kiyonobu 2" Kiyonori Kiyosada "Kiyosada 2" Kiyoshi Kiyoshige Kiyosue
+			Kiyosuke Kiyotada "Kiyotada 2" Kiyotaka KiyotO Kiyotoki Kiyotomo Kiyotoshi "Kiyotoshi 2" Kiyotsuna
+			Kiyotsune "Kiyotsune 2" "Kiyotsune 3" Kiyotsura "Kiyotsura 2" Kiyoyasu Kiyoyoshi "Kiyoyoshi 2" Kiyoyuki
+			"Kiyoyuki 2" Kiyozane "Kiyozane 2" KORE Koreaki Korechika "Korechika 2" "Korefusa 3" Korehide Korehiko
+			"Korehira 4" "Korehira 5" Korehiro "Korehisa 2" Koreie Korekata "Korekata 2" Korekaze Korekiyo Korekuni
+			Koremasa Koremine Koremitsu "Koremitsu 2" "Koremochi 3" "Koremori 2" "Koremori 4" Koremoto Korenaga
+			Korenaka Korenao Korenari "Korenobu 4" Korenori "Korenori 2" "Koresada 2" "Koreshige 3" Koresue Koretaka
+			"Koretaka 2" "Koretaka 3" "KoretO 3" "Koretoki 2" Koretsuna Koretsune "Koretsune 2" "Koretsune 3" Koreyo
+			Koreyori Koreyoshi "Koreyoshi 3" "Koreyoshi 4" Koreyuki Korezumi "Koreakira 2" Korehira "Korehira 2"
+			"Korehiro 2" Korehisa Korekage Korekane "Korekata 3" "Korekiyo 2" "Koremasa 2" "Koremichi 2" Koremochi
+			"Koremochi 2" Koremori "Koremori 3" "Koremoto 2" "Koremoto 3" Koremune "Korenaka 2" Korenobu "Korenobu 2"
+			"Koresada 3" "Koreshige 2" "Koresuke 4" "Koretada 4" KoretO Koretoki Koretoshi "Koretoshi 2" Koretsugu
+			"Koretsuna 4" Koreyasu "Koreyori 2" "Koreyoshi 2" "Koreyuki 2" Korezane "Korezane 3" "Korechika 3"
+			"Korefusa 2" "Korehira 3" "Koreie 2" Koremichi "Koremochi 4" "Korenari 2" "Korenobu 3" Koresuke
+			"Koresuke 2" "Koresuke 3" "KoretO 2" Koretada "Koretada 2" "Koretsuna 2" "Koretsune 4" "Koreyuki 3"
+			"Korezane 2" Koreakira Korefusa Korekimi "Korenori 3" "Korenori 4" "Korenori 5" Koresada Koreshige
+			"Koretada 3" "Koretsuna 3" "Koretsune 5" "Koreyoshi 5" KUNI "Kuniakira 2" Kunifusa Kunihira "Kunihira 2"
+			Kunihiro Kunikane Kunikata Kunimasa Kunimasu Kunimichi "Kunimichi 2" Kunimitsu Kunimori "Kunimori 2"
+			Kunimoto "Kunimoto 2" Kunimune Kuninaga Kuninaka Kuninao Kuninari Kuninobu Kuninori "Kuninori 2" Kunisada
+			Kunishige Kunisuke "Kunisuke 2" Kunitada Kunitaka "Kunitaka 2" "Kunitaka 3" Kunitoshi Kunitsuna Kunitsune
+			Kuniyasu Kuniyoshi "Kuniyoshi 2" Kuniyori Kunizane Kunizumi Kuniakira "Kunimasa 2" "Kunimasa 3"
+			"Kunimichi 3" "Kunimitsu 2" "Kunimoto 3" "Kunitsune 2" MASA "Masa akira" Masafumi Masahira Masahiro
+			"Masahiro 2" Masaie Masakane Masakiyo Masami Masamichi "Masamichi 2" Masamine Masamitsu Masamochi Masamori
+			"Masamoto 6" Masanari Masanori "Masanori 2" "Masanori 7" Masashige "Masasue 2" Masatada Masataka
+			"Masataka 5" MasatO "Masatoki 2" Masatomo Masatsugu "Masatsugu 2" Masatsuna "Masatsuna 3" Masayo Masayori
+			Masayoshi "Masayoshi 4" Masayuki Masazane "Masa akira 4" Masachika "Masamitsu 3" "Masamochi 2"
+			"Masamori 2" Masamune "Masanaga 2" Masanaka "Masanari 3" Masanobu "Masanori 4" "Masanori 5" "Masanori 6"
+			Masasada "Masashige 3" "Masatada 2" "Masatada 4" "Masataka 2" "Masataka 3" Masatoshi Masatsune Masayasu
+			"Masayori 2" "Masayuki 3" "Masa akira 3" "Masafumi 3" Masafusa "Masahira 6" "Masaie 2" "Masakiyo 2"
+			"Masamitsu 2" Masamoto "Masamoto 4" "Masamoto 5" Masanaga "Masanari 2" "Masanori 3" "Masashige 2" Masakage
+			"Masatsugu 4" "Masatsuna 2" "Masatsune 4" "Masayoshi 2" "Masayuki 2" "Masakage 2" "Masamichi 3"
+			"Masamoto 2" "Masamoto 3" "Masamune 2" Masasue Masasuke Masatoki "Masatoshi 2" "Masatsugu 3" "Masayo 2"
+			Masazumi "Masahira 2" Masakado Masakuni Masatake Masatame "Masatsune 2" "Masayori 3" "Masa akira 2"
+			"Masakane 2" Masakata "Masatsuna 4" MICHI "Michi ie" Michichika Michifusa Michiharu Michihira
+			"Michikane 2" "Michikata 2" Michikazu Michikiyo Michikuni Michimasa Michimori Michimoto Michimune
+			Michinaga Michinao Michinari "Michinari 3" Michinobu "Michinobu 2" Michinori Michisada "Michisada 2"
+			"Michisada 4" Michishige Michisue Michisuke "Michisuke 2" "Michisuke 3" Michitada Michitane MichitO
+			"Michitoki 2" Michitomo "Michitomo 2" Michitoshi "Michitoshi 2" Michitsugu "Michitsuna 2" Michitsune
+			Michiuji Michiyori Michiyoshi "Michiyoshi 2" "Michi ie 2" Michiaki Michifumi "Michifusa 2" "Michihira 2"
+			Michikane Michikata Michikaze "Michimasa 2" "Michimori 2" "Michinaga 2" Michinaka "Michinari 2"
+			"Michinobu 3" "Michisada 3" Michitaka Michitoki "Michitsugu 2" Michitsuna "Michitsune 2" Michiyasu
+			"Michiyori 2" "Michiyoshi 3" "Michiyoshi 4" "Michiyoshi 5" "Michiyoshi 6" Michizane MITSU Mitsuaki
+			Mitsuakira "Mitsuakira 2" Mitsuari Mitsuchika Mitsufusa Mitsuhira "Mitsuhira 2" Mitsuhiro "Mitsuhiro 2"
+			Mitsuie Mitsukage "Mitsukage 2" Mitsukata Mitsukiyo Mitsukuni Mitsumasa "Mitsumasa 2" Mitsumori Mitsumoto
+			"Mitsumoto 2" Mitsumune "Mitsumune 2" Mitsunaga Mitsunari "Mitsunari 2" Mitsunobu "Mitsunobu 3" Mitsunori
+			"Mitsunori 2" Mitsusada Mitsusato Mitsushige Mitsusue Mitsusuke "Mitsusuke 2" "Mitsusuke 3" "Mitsusuke 4"
+			Mitsusune Mitsutada "Mitsutada 2" Mitsutaka "Mitsutaka 2" MitsutO Mitsutoki Mitsutomo Mitsutoshi
+			Mitsutsuna Mitsutsune Mitsuyasu Mitsuyo Mitsuyori Mitsuyoshi "Mitsuyoshi 2" Mitsuyuki Mitsuzaku Mitsuharu
+			"Mitsuie 2" "Mitsukage 3" "Mitsukuni 2" "Mitsumasa 3" "Mitsumori 2" Mitsunaka "Mitsunari 3" "Mitsunobu 2"
+			"Mitsushige 2" "Mitsusue 2" "Mitsusue 3" "Mitsutaka 4" "Mitsutsuna 2" "Mitsuyori 2" "Mitsuyoshi 3"
+			Mitsuzane MOCHI Mochifusa Mochihiro Mochimasa Mochinaga Mochinari Mochisuke Mochitada Mochitoki Mochitsuna
+			Mochitsune Mochiyasu Mochiyori Mochiyoshi Mochizane Mochimoto Mochimura Mochinori "Mochinori 2"
+			"Mochisuke 2" Mochiyuki "Mochimasa 2" Mochimasu "Mochimoto 2" "Mochiyuki 2" MORI Moriakira "Morichika 2"
+			"Mori ie" Morifusa "Morihira 2" Morihiro Morihisa Morikage Morikane Morikata "Morikata 2" Morikiyo
+			Morikuni Morimasa Morimichi "Morimichi 2" Morimitsu Morimoto "Morimoto 2" Morimune Morinaga Morinaka
+			Morinari Morinobu Morinori "Morinori 2" Morisada Morishige Morisue "Morisuke 2" Moritaka "Moritaka 2"
+			"Moritaka 3" Moritoshi Moritsugu Moritsuna Moritsune Moritsura Moriyasu "Moriyasu 2" Moriyori Moriyoshi
+			Morizane Morichika Morihira "Morikiyo 2" "Morimasa 2" "Morinaga 2" "Morisada 2" "Moritaka 4" Moritoki
+			"Moritoshi 2" "Moriyoshi 2" "Morizane 2" MORO Moroakira Morochika Morofumi Morofusa Moroharu Morohira
+			"Morohira 2" Morohiro Morohisa Moroie Morokane Morokata Morokiyo Morokuni Moromasa Moromichi Moromitsu
+			Moromochi Moromori Moromoto "Moromoto 2" Moronaga Moronaka Moronao Moronari "Moronari 3" Moronobu Moronori
+			Morosada Moroshige Morosue Morosuke Morotada "Morotada 2" Morotaka "Morotaka 2" MorotO "MorotO 2" Morotoki
+			Morotoshi Morotsugu Morotsuna Morotsune "Morotsune 2" Morouji Moroyasu Moroyo Moroyori Moroyoshi
+			"Moroyoshi 2" Moroyuki Morozane Morofuji "Morofusa 2" Morokazu "Morokiyo 2" "Moronari 2" "Morotaka 3"
+			"MorotO 3" MOTO Motoakira "Motoakira 2" "Motoakira 3" Motochika Motofusa Motoharu Motohira "Motohira 2"
+			Motohiro "Motohiro 2" Motoie Motokage Motokane Motokaze Motokazu Motokiyo "Motokiyo 2" Motokoto Motokuni
+			"Motokuni 2" Motomichi Motomitsu Motomori Motomune "Motomune 2" Motona Motonaga "Motonaga 3" Motonaka
+			Motonari "Motonari 2" "Motonari 3" Motonobu Motonori Motosada "Motosada 2" "Motosuke 2" Mototada Mototaka
+			"Mototaka 2" Mototoshi Mototsuna Mototsune "Motoyasu 3" "Motoyasu 4" Motoyo Motoyori Motoyoshi
+			"Motoyoshi 2" Motoyuki Motozane "Motoakira 4" "Motoharu 2" "Motohira 3" Motokata "Motomitsu 2"
+			"Motomune 3" "Motonaga 2" Motosuke "Mototada 2" "Mototada 3" MototO "Mototoshi 2" "Mototoshi 3" Motoyasu
+			"Motoyoshi 3" "Motozane 2" Motoari "Motomichi 2" "Motoyasu 2" MUNE Muneakira "Muneakira 2" Munechika
+			"Munechika 2" Munefusa Munehira Munehisa Muneie Munekage Munekane Munekata "Munekata 2" Munekiyo Munekuni
+			Munemasa "Munemasa 2" Munemichi Munemitsu Munemori Munemoto "Munemoto 3" Munemura Munenaga "Munenaga 2"
+			Munenaka Munenao Munenari Munenobu "Munenobu 2" Munenori "Munenori 2" "Munenori 3" Munesada "Munesada 3"
+			Muneshige "Muneshige 2" Munesue Munesuke "Munesuke 2" "Munesuke 3" Munetada "Munetada 2" Munetaka
+			"Munetaka 2" "Munetaka 3" MunetO "MunetO 2" Munetoki Munetoshi Munetsuna Munetsune Muneuji Muneyasu
+			"Muneyasu 2" "Muneyasu 3" Muneyori Muneyoshi "Muneyoshi 2" "Muneyoshi 3" "Muneyoshi 5" Muneyuki
+			"Muneyuki 2" "Muneyuki 3" Munezane "Munezane 2" "Munehira 2" "Munekata 3" "Munemitsu 2" "Munemoto 2"
+			"Munenao 2" "Munenari 2" "Munenobu 3" "MunetO 3" "Munetoki 2" "Munetoshi 2" "Munetsune 2" "Muneyori 2"
+			"Muneyoshi 4" "Munenaga 3" "Munenaka 2" "Munesada 2" NAGA "Naga akira" Nagachika Nagafusa Nagaie Nagakane
+			Nagakata Nagakiyo Nagakuni Nagamasa Nagamatsu Nagamichi Nagamitsu "Nagamitsu 2" Nagamochi Nagamori
+			"Nagamori 2" Nagamoto "Nagamoto 3" Nagamune "Nagamune 2" Naganari "Naganari 2" Naganobu "Naganobu 2"
+			"Naganori 2" Nagasue Nagasuke "Nagasuke 2" Nagatada Nagataka NagatO Nagatoki Nagatoshi Nagatsuna Nagatsune
+			Nagayasu Nagayori "Nagayori 2" Nagazane Nagahira "Nagakawa 2" Nagakazu "Nagakiyo 2" "Nagamichi 2"
+			"Nagamori 3" "Nagamoto 2" Naganao Naganori Nagasada "Nagasuke 3" Nagatsugu "Nagatsuna 2" "Nagatsune 2"
+			"Nagayasu 2" "Nagayasu 3" "Nagazane 2" "Nagamasa 2" "Naganori 3" Nagayuki NAKA "Naka akira" Nakachika
+			Nakafumi Nakafusa Nakahira Nakaie Nakakane Nakakata "Nakakata 2" Nakakiyo Nakakuni Nakamasa Nakamitsu
+			Nakamune "Nakamune 2" "Nakamune 3" Nakanao Nakanari Nakanobu "Nakanobu 2" Nakanori Nakashige Nakasuke
+			Nakataka NakatO "NakatO 2" Nakatoshi Nakatsuna Nakatsune Nakayasu Nakayori Nakazane "Nakamasa 2" Nakatada
+			"Nakatsune 2" NAO Naoie Naokage Naokata Naokatsu Naomasa Naomichi Naomoto "Naomoto 2" "Naomoto 3" Naomune
+			Naonori Naosada Naoshi Naotsune Naoyo Naozane Naomori NARI "Nari ie" Nariakira "Nariakira 2" Narichika
+			Narifusa Narihide Narihira "Narihira 3" Narikuni Narimasa "Narimasa 2" "Narimasa 3" Narimichi
+			"Narimichi 2" Narimitsu Narimoto Narimune Narinaga Narinao Narinobu Narisada "Narisada 2" Narisue
+			"Narisue 2" Narisuke Naritada "Naritada 3" Naritaka Naritane NaritO Naritoki Naritoshi "Naritoshi 4"
+			Naritsuna "Naritsuna 3" Naritsune Nariyasu "Nariyasu 2" "Nariyasu 3" Nariyo Nariyori Nariyoshi
+			"Nariyoshi 2" "Nariyoshi 4" Nariyuki "Narifusa 2" "Narihira 2" Narikane Narimori "Naritada 2" "NaritO 2"
+			"Naritoshi 2" "Naritoshi 3" "Naritsuna 2" "Naritsune 2" "Nariyoshi 3" "Nariakira 3" "Narikane 2"
+			"Narimitsu 2" NOBU Nobuchika Nobufusa Nobuharu Nobuhira "Nobuhira 2" Nobuhiro "Nobuhiro 2" Nobuie Nobukage
+			"Nobukage 2" Nobukane Nobukata Nobukiyo Nobukuni Nobumasa "Nobumasa 2" "Nobumasa 4" "Nobumasa 8" Nobumichi
+			"Nobumichi 2" Nobumitsu Nobumochi Nobumori Nobumoto Nobumune Nobunaga Nobunari Nobunori "Nobunori 2"
+			"Nobunori 3" "Nobunori 4" Nobusada Nobushige Nobusue Nobusuke Nobutada "Nobutada 4" Nobutaka "Nobutaka 2"
+			Nobutoki Nobutoshi Nobutsuna Nobutsune Nobutsura Nobuyori Nobuyoshi "Nobuyoshi 2" Nobuyuki Nobuzane
+			Nobuakira "Nobuchika 2" "Nobufusa 2" "Nobukata 2" "Nobukiyo 2" "Nobumasa 5" "Nobumasa 7" "Nobumoto 2"
+			"Nobumune 2" "Nobunori 5" "Nobushige 2" "Nobusuke 2" "Nobutada 2" "Nobutaka 3" "Nobutoki 2" "Nobutoshi 2"
+			Nobuyasu "Nobuyoshi 3" "Nobuzane 3" Nobuzumi "Nobumasa 6" "Nobumitsu 2" "Nobumoto 3" "Nobuyuki 2"
+			"Nobuzane 2" "Nobumasa 3" Nobumura "Nobutada 3" "##" NORI "Nori ie" Norifusa Norikane Norikazu Norikuni
+			Norimasa "Norimasa 2" "Norimasa 3" Norimitsu Norimoto "Norimoto 2" Norinaga "Norinaga 3" Norinobu
+			Norishige Norisue Noritada Noritaka "Noritaka 2" "NoritO 2" Noritoki Noritomo "Noritomo 2" Noritsuna
+			"Noritsuna 3" Noriyori "Noriyoshi 2" "Noriyoshi 3" Noriyuki Norizane Noriakira Norihiro Norikage Norikiyo
+			"Norimasa 4" Norimichi "Norimitsu 2" Norimura "Norinaga 2" Norisada "Norishige 2" "Norisue 2" "Noritaka 3"
+			"Noritaka 4" "Noritaka 5" NoritO "Noritomo 4" Noritsune "Noriyuki 2" "Norizane 2" "Norimichi 2" Norimori
+			Norinari "Norishige 3" "NoritO 3" "Noritada 2" "Noritsuna 2" "Noritsune 2" Noriyoshi "Noriakira 4"
+			"Norifusa 2" Norihira Norikata "Norisada 2" Norisuke "Noritomo 3" Noritoshi Norichika "Norimasa 5"
+			"Norimitsu 3" Norimochi "Norinaga 4" "Norisada 3" OKI Okifusa Okikata Okikuni Okimichi Okimoto Okinori
+			Okisada Okisuke Okitsugu Okiuji Okiyo Okiyuki "Okitsugu 2" SADA "Sada akira" "Sada atsu" Sadachika
+			"Sadachika 2" Sadafumi Sadahira "Sadahira 2" Sadahiro Sadakata Sadakazu Sadakiyo Sadamasa "Sadamasa 2"
+			"Sadamasa 4" Sadamichi Sadamiki Sadamitsu Sadamochi "Sadamochi 3" Sadamori "Sadamori 2" Sadamoto
+			"Sadamoto 2" "Sadamoto 3" "Sadamoto 4" Sadamu Sadamune "Sadamune 3" Sadanaga Sadanaka Sadanao Sadanari
+			Sadanori "Sadanori 2" "Sadanori 3" "Sadanari 4" "Sadanobu 2" "Sadanori 5" Sadanushi Sadasue "Sadasuke 2"
+			"Sadasuke 4" "Sadasuke 5" "Sadataka 3" Sadatane SadatO Sadatoki "Sadatoki 2" Sadatoshi Sadatsugu
+			"Sadatsugu 2" "Sadatsuna 2" Sadatsura Sadayasu Sadayo Sadayori Sadayoshi "Sadayoshi 5" Sadayuki
+			"Sadayuki 3" Sadazane Sadazumi "Sada ari" "Sadafumi 2" Sadafusa "Sadahira 3" Sadaie Sadakage Sadakane
+			"Sadakata 2" "Sadakiyo 2" Sadakuni "Sadamasa 3" "Sadamichi 2" "Sadamichi 3" "Sadamitsu 2" "Sadamune 2"
+			"Sadanaga 2" "Sadanaka 2" "Sadanari 2" Sadanobu "Sadanori 4" Sadashige "Sadashige 2" "Sadasue 2" Sadasuke
+			"Sadasuke 3" Sadatada Sadataka "Sadataka 2" "SadatO 2" "Sadatoki 3" "Sadatoshi 2" Sadatsuna Sadatsune
+			"Sadayasu 2" "Sadayori 2" "Sadayoshi 2" "Sadayoshi 3" "Sadayoshi 6" "Sadayuki 2" "Sadazane 2" SANE
+			Saneakira "Saneakira 2" Sanechika Sanefusa Saneharu Sanehide Sanehira "Sanehira 2" Sanehiro Saneie
+			Sanekage Sanekane Sanekata Sanekiyo Sanekuni Sanemasa "Sanemasa 2" Sanemichi Sanemitsu Sanemori Sanemoto
+			"Sanemoto 2" Sanemune Sanenaga Sanenari Sanenobu "Sanenobu 2" Sanenori "Sanenori 2" Sanesada Saneshige
+			Sanesue Sanesuke "Sanetada 2" Sanetaka "Sanetaka 2" SanetO "SanetO 3" Sanetoki Sanetomo Sanetoshi
+			Sanetsuna Sanetsune Sanetsura Saneyasu "Saneyasu 2" Saneyo Saneyori Saneyoshi Saneyuki "Saneyuki 2"
+			"Sanefusa 2" "Sanehira 3" "Sanekuni 2" "Sanemasa 3" "Sanenori 3" "Sanesada 2" SHIGE Shigeakira Shigechika
+			"Shigechika 2" Shigefumi Shigefusa Shigehide Shigehira "Shigehira 2" Shigehiro Shigeie Shigekane Shigekata
+			Shigekatsu Shigekazu Shigekiyo Shigekuni "Shigekuni 2" Shigemasa "Shigemasa 2" Shigemichi Shigemitsu
+			"Shigemitsu 2" Shigemochi Shigemori Shigemoto "Shigemoto 2" "Shigemoto 3" Shigemune Shigenaga Shigenaka
+			Shigenao Shigenari Shigenobu "Shigenobu 2" Shigenori "Shigenori 2" Shigesada "Shigesada 2" Shigesato
+			Shigeshi Shigesue Shigesuke "Shigesuke 2" Shigetada "Shigetada 2" Shigetaka "Shigetaka 2" Shigetane
+			ShigetO "ShigetO 2" Shigetoki Shigetomo "Shigetomo 2" "Shigetomo 3" Shigetoshi Shigetsugu "Shigetsugu 2"
+			Shigetsuna Shigetsune "Shigetsune 2" Shigeyori Shigeyoshi "Shigeyoshi 2" "Shigeyoshi 3" Shigeyuki
+			"Shigeyuki 3" Shigezane Shigeharu "Shigemochi 3" "Shigemoto 4" "Shigezane 2" "Shigehira 3" "Shigeie 2"
+			"Shigemochi 2" "Shigemori 2" "Shigetoki 2" "Shigeyuki 2" "Shigechika 3" "Shigemitsu 3" "Shigenari 2"
+			"Shigenori 3" Shigeyo SUE Suefusa Suehira Suehiro "Suehiro 2" Sueie Suekane Suekata Suekiyo Suekuni
+			Suemichi "Suemichi 2" Suemitsu Suemochi Suemori Suemune Suenaga Suenaka Suenao Suenari Suenobu Suenori
+			"Suenori 2" Suesada "Suesada 2" Sueshige Suetaka "Suetaka 2" "Suetaka 3" SuetO "SuetO 2" Suetoki Suetoshi
+			Suetsuna Suetsune Sueyori Sueyoshi Sueyuki "Suemochi 2" Suetsugu "Sueyuki 2" SUKE "Sukechika 3" Sukefusa
+			Sukehira Sukehiro Sukeie "Sukeie 3" Sukekane Sukekata "Sukekata 3" "Sukekiyo 4" Sukekuni Sukemichi
+			Sukemitsu "Sukemochi 2" Sukemori "Sukemoto 3" "Sukemoto 4" Sukemune Sukemura Sukenaga "Sukenaga 2"
+			Sukenaka Sukenao Sukenari "Sukenari 2" Sukenobu Sukenori Sukesada "Sukesada 2" Sukeshige Sukesue Suketada
+			Suketaka Suketoki "Suketsugu 5" Suketsuna Suketsune "Sukeyasu 4" Sukeyori "Sukeyori 3" Sukeyoshi
+			"Sukeyoshi 2" Sukeyuki "Sukeyuki 2" Sukezane Sukechika "Sukeie 2" "Sukekiyo 2" "Sukemitsu 2" Sukemochi
+			Sukemoto "Sukenaga 3" "Sukenari 3" "Sukenobu 3" "Suketaka 3" "Suketoki 2" Suketoshi Suketsugu
+			"Suketsuna 2" "Suketsune 2" Sukeyasu "Sukeyasu 2" "Sukeyori 4" "Sukeyoshi 4" "Sukeyuki 4" "Sukechika 2"
+			"Sukekane 2" "Sukekuni 4" Sukemasa "Sukemasa 4" "Sukemichi 2" "Sukenari 4" "Sukenori 3" "Sukesada 3"
+			"Suketada 3" "Suketada 4" "Suketaka 4" "SuketO 2" "Suketoki 4" "Suketsugu 4" "Suketsune 3" "Sukeyo 2"
+			"Sukekata 2" "Sukekuni 2" "Sukemasa 3" "Sukemoto 2" "Suketsugu 2" "Sukeyasu 3" "Sukeyuki 3" "Sukeakira 2"
+			"Sukekiyo 3" "Sukemune 2" "Sukenobu 2" "Suketada 5" "Suketsune 4" "Sukeyoshi 3" Sukeakira "Sukemasa 2"
+			"Suketada 2" "Suketaka 2" SuketO Sukeyo "Sukeakira 3" "Sukekuni 3" "Suketoki 3" "Sukeyori 2" "Sukehira 2"
+			"Sukemitsu 3" "Sukenori 2" "Suketsugu 3" SUMI Suminori Sumitomo Sumiyuki Sumiakira Sumikiyo TADA
+			"Tada akira" "Tada akira 3" "Tada ari" Tadachika Tadafumi Tadafusa Tadahira "Tadahira 2" Tadahiro Tadahisa
+			Tadaie Tadakane Tadakata "Tadakata 2" Tadakimi Tadakiyo Tadakuni Tadamasa "Tadamasa 2" "Tadamasa 3"
+			"Tadamasa 4" Tadamichi Tadamine Tadamitsu Tadamochi Tadamori Tadamoto "Tadamoto 2" "Tadamoto 4" Tadamune
+			"Tadamune 2" Tadanao Tadanari "Tadanari 2" Tadanobu "Tadanobu 2" "Tadanobu 4" Tadanori "Tadanori 2"
+			"Tadanori 3" "Tadanori 4" Tadanushi Tadasada Tadashige Tadasu "Tadasu 2" Tadasue Tadasuke "Tadasuke 2"
+			Tadataka "Tadataka 2" "Tadataka 3" TadatO "TadatO 2" "Tadatoki 2" Tadatomo Tadatoshi Tadatsuna Tadatsune
+			"Tadatsune 2" Tadayasu Tadayori "Tadayori 2" Tadayoshi "Tadayoshi 2" "Tadayoshi 3" "Tadayoshi 4" Tadayuki
+			"Tadayuki 2" Tadazane "Tada akira 2" "Tadafumi 2" "Tadafusa 2" "Tadanari 3" "Tadanobu 3" Tadatoki
+			"Tadakuni 2" "Tadamasa 5" "Tadamori 2" "Tadanari 4" "Tadatoki 3" "Tadatoshi 2" TAKA "Taka akira"
+			"Taka akira 2" Takafuji "Takafusa 2" "Takahira 2" "Takahisa 2" Takaie "Takaie 2" "Takakane 2" Takakaze
+			Takaki "Takakiyo 2" "Takamasa 2" "Takamasa 3" Takamatsu "Takamitsu 2" "Takamochi 2" "Takamochi 3"
+			"Takamoto 2" "Takamoto 3" "Takamune 2" "Takanaga 2" Takanari "Takanari 2" "Takanari 3" "Takanori 2"
+			"Takanori 4" "Takasada 2" "Takasada 4" Takashige Takasuke TakatO "Takatoshi 2" Takatsugu "Takatsuna 2"
+			"Takatsune 2" "Takayori 2" "Takayoshi 3" "Takayuki 2" "Takazane 2" "Taka akira 3" Takachika Takafusa
+			Takahira Takahisa "Takahira 4" "Takaie 3" Takakane Takakata Takakiyo Takakuni Takamasa Takamichi Takamitsu
+			Takamochi Takamori Takamoto Takamune Takanaga Takanaka Takanao Takanobu Takanori Takasada "Takashige 3"
+			Takasue "Takasuke 2" "Takasuke 3" Takatada Takatoki Takatoshi Takatsuna Takatsune "Takayasu 2" Takayori
+			Takayoshi "Takayoshi 2" Takayuki Takazane "Takachika 2" "Takakane 3" "Takakiyo 3" Takakoto "Takanobu 2"
+			"Takanori 3" "Takasada 3" "Takasue 2" "TakatO 2" Takayasu "Takayoshi 4" "Takachika 3" "Takakata 2"
+			"Takanao 2" "Takahira 3" "Takamitsu 3" "Takatada 2" "TakatO 3" TAKE Takehira Takemasa Takemichi Takemoto
+			"Takemoto 2" Takemune Takenori Takesada Taketada Taketoki Taketsuna Taketsune Takeyori TAME Tameaki
+			Tameakira Tameari Tamechika Tamefusa Tamehira "Tamehira 2" Tamehiro Tameie Tamekata Tamekiyo Tamekuni
+			Tamemasa "Tamemasa 2" Tamemichi Tamemitsu "Tamemitsu 2" Tamemori "Tamemori 2" Tamemoto "Tamemoto 2"
+			Tamemune Tamenaga "Tamenaga 2" Tamenaka Tamenao Tamenari "Tamenari 2" Tamenobu "Tamenobu 2" Tamenori
+			"Tamenori 2" "Tamenori 3" Tamesada Tameshige Tamesuke "Tamesuke 2" "Tamesuke 3" "Tamesuke 4" Tametada
+			"Tametada 2" Tametaka "Tametaka 2" TametO "TametO 2" Tametoki Tametomo "Tametomo 2" Tametoshi Tametsugu
+			Tametsuna Tametsune Tametsura Tameuji Tameyasu "Tameyasu 2" Tameyori Tameyoshi "Tameyoshi 2" Tameyuki
+			Tamezane TANE Tanehide Tanehira Tanehiro Tanekage Tanemasa Tanemichi Tanemitsu "Tanemitsu 2" Tanemori
+			Tanemoto Tanemune Tanenaga "Tanenari 2" Tanenobu Tanesada Taneshige Tanesue "Tanesue 2" Tanesuke Tanetaka
+			"Tanetaka 2" Tanetomo Taneyori Tanezumi Tanemasu Tanenao Tanetsugu Taneyasu TO "TO akira" "TO kane"
+			"TO kazu" "TO masa" "TO mitsu" "TO moto" "TO moto 2" "TO nari" "TO nori" "TO nori 2" "TO nori 3" "TO sada"
+			"TO shige" "TO tada" "TO tane" "TO tsune" "TO yasu" "TO yo" "TO yoshi" TOKI "Toki ie" Tokiakira
+			"Tokiakira 2" Tokichika Tokifumi Tokifusa Tokihide Tokihira "Tokihira 2" Tokihiro "Tokihiro 2" Tokikage
+			Tokikane Tokikata "Tokikata 2" Tokikazu Tokikiyo Tokikuni Tokimasa "Tokimasa 2" Tokimichi Tokimitsu
+			Tokimochi "Tokimochi 2" Tokimori Tokimoto "Tokimoto 2" Tokimune "Tokimune 2" Tokinaga Tokinaka Tokinari
+			"Tokinari 2" Tokinobu "Tokinobu 2" Tokinori Tokisada Tokishige Tokisue Tokisuke "Tokisuke 2" Tokitada
+			Tokitaka Tokitoshi Tokitsugu Tokitsuna Tokitsune Tokiyasu Tokiyori Tokizane "Tokimasa 3" "Tokinaka 2"
+			Tokinao TOMO Tomofusa Tomohide Tomokage Tomokata Tomomasa "Tomomasa 2" Tomomitsu Tomomune Tomonaga
+			Tomonobu "Tomonori 5" Tomoshige Tomosuke Tomosada "Tomotada 2" Tomotaka "Tomotoki 2" Tomotsuna Tomotsune
+			Tomouji Tomoyoshi Tomoyuki "Tomozane 3" "Tomoakira 2" "Tomoakira 3" Tomohisa "Tomoie 2" Tomoie
+			"Tomomasa 3" Tomomichi "Tomomitsu 2" Tomomori Tomomoto "Tomomune 2" Tomonao "Tomonobu 2" Tomonori
+			"Tomosuke 2" "Tomotsuna 3" Tomoyasu "Tomoyoshi 3" "Tomofusa 2" "Tomohira 2" Tomohiro "Tomokage 2" Tomokane
+			Tomokuni "Tomomoto 2" Tomonaka Tomonari "Tomonori 3" "Tomotsune 2" "Tomozane 2" Tomozumi Tomoakira
+			"Tomofusa 3" "Tomokuni 2" "Tomonari 2" "Tomonori 2" "Tomosada 2" "Tomoshige 2" Tomotada "Tomotsuna 2"
+			"Tomoyoshi 2" Tomozane Tomochika Tomohira "Tomonori 4" TOSHI Toshifumi "Toshi ie" Toshiakira Toshichika
+			Toshifusa Toshiharu Toshihide Toshihira Toshihiro Toshikage Toshikane Toshikata Toshikiyo "Toshimasa 2"
+			Toshimichi Toshimitsu Toshimori Toshimoto Toshimune Toshina Toshinaga "Toshinaga 2" Toshinao Toshinari
+			"Toshinari 2" "Toshinari 3" "Toshinari 4" "Toshinari 5" Toshinobu Toshinori "Toshinori 2" "Toshinori 3"
+			"Toshisada 4" Toshishige Toshisuke "Toshisuke 3" Toshitada Toshitaka Toshitane ToshitO Toshitomo
+			Toshitsuna Toshitsune "Toshitsune 2" Toshiyasu "Toshiyasu 2" Toshiyo Toshiyori Toshizane Toshimasa
+			"Toshimichi 2" "Toshisada 3" "Toshisuke 2" "Toshitada 2" Toshiyuki "Toshiakira 2" "Toshimitsu 2"
+			"Toshimoto 2" "Toshinori 4" Toshisada "ToshitO 2" "Toshiyo 2" TOYO Toyokado Toyomochi Toyomune Toyonari
+			Toyosuke Toyotane Toyotoshi Toyotsugu Toyoyoshi TSUGU Tsugukage Tsugumune Tsugunari Tsugunobu Tsugutada
+			TSUNE Tsuneakira "Tsuneakira 2" "Tsunechika 3" Tsunefusa Tsunehide Tsunehira "Tsunehira 2" "Tsunehira 3"
+			Tsunehiro Tsuneie Tsunekane Tsunekata Tsunekiyo Tsunekuni "Tsunekuni 2" Tsunemasa "Tsunemasa 4" Tsunemichi
+			"Tsunemichi 2" Tsunemitsu Tsunemori Tsunemoto "Tsunemoto 2" Tsunemune Tsunenaga Tsunenaka "Tsunenaga 5"
+			Tsunenao Tsunenari "Tsunenari 2" "Tsunenari 4" Tsunenobu Tsunenori Tsunesada Tsuneshige Tsunesue Tsunesuke
+			"Tsunesuke 3" Tsunetada Tsunetaka "Tsunetaka 2" TsunetO "TsunetO 2" Tsunetomo "Tsunetomo 2" Tsunetoshi
+			"Tsunetoshi 2" Tsuneyasu Tsuneyo "Tsuneyo 2" Tsuneyori Tsuneyoshi "Tsuneyoshi 3" Tsuneyuki Tsunezane
+			Tsuneaki "Tsuneakira 3" Tsunechika "Tsunechika 2" "Tsunefusa 2" Tsuneharu "Tsunehide 2" Tsunehisa
+			"Tsuneie 2" Tsunekage "Tsunekage 2" "Tsunekane 2" "Tsunekiyo 2" "Tsunemasa 2" "Tsunemasa 3" Tsunemasu
+			"Tsunemori 2" "Tsunemune 2" "Tsunenaga 2" "Tsunenaga 3" "Tsunenaka 3" "Tsunenao 2" "Tsunenari 3"
+			"Tsunenobu 2" "Tsunenori 2" "Tsunenori 5" "Tsuneshige 2" "Tsuneshige 3" Tsunetane "TsunetO 3" "TsunetO 4"
+			Tsunetoki "Tsunetomo 3" Tsunetsugu "Tsunetsugu 2" "Tsuneyasu 2" "Tsuneyasu 3" "Tsuneyoshi 2" Tsunezumi
+			"Tsunehira 4" "Tsunekage 3" "Tsunemune 3" "Tsunenaga 4" "Tsunenori 3" "Tsunenori 4" "Tsunesada 2"
+			"Tsunesuke 2" UJI Ujihira Ujihiro Ujikage Ujikatsu Ujikimi Ujimine Ujimune Ujinaga Ujinori Ujisuke Ujitaka
+			Ujiyoshi YASU "Yasuakira 2" Yasufusa "Yasuhira 2" "Yasuhira 3" "Yasuhiro 3" "Yasuie 2" Yasukage Yasukata
+			"Yasumasa 2" "Yasumitsu 2" Yasumori Yasumoto "Yasunari 2" "Yasunobu 2" "Yasunori 2" Yasusue Yasusuke
+			"Yasusuke 3" "Yasutada 2" "Yasutaka 3" Yasutsuna "Yasutsune 2" "Yasu uji" Yasuyori Yasuyoshi Yasuzane
+			Yasuakira Yasuchika Yasuharu Yasuhira "Yasuhira 5" Yasuie Yasukiyo Yasumasa Yasumichi Yasumitsu Yasumochi
+			"Yasumochi 2" "Yasumoto 2" Yasunaga "Yasunaga 2" Yasunaka Yasunari Yasunori Yasusada Yasushige Yasutada
+			"Yasutada 4" Yasutaka "Yasutaka 2" Yasutsune Yasuyuki "Yasuchika 2" "Yasuhira 4" "Yasuhiro 2" "Yasuhito 3"
+			"Yasuie 4" Yasukuni "Yasumoto 3" Yasumune "Yasusada 2" "Yasutada 3" YasutO Yasutsugu "Yasutsuna 4"
+			"Yasutsune 3" Yasuyo Yasuhide Yasuhiro "Yasuie 3" "Yasumune 2" "Yasunaka 2" Yasunobu "Yasunobu 3"
+			"Yasusuke 2" "Yasutaka 4" Yasutoshi "Yasutsuna 2" "Yasu uji 2" "Yasuyori 4" "Yasuchika 3" "Yasuyori 2"
+			YORI "Yori ie" Yoriaki Yoriakira Yorichika Yorifusa Yoriharu Yorihira "Yorihira 2" Yorihiro "Yorihiro 2"
+			Yorikage Yorikane Yorikata Yorikaze Yorikiyo Yorikuni Yorimasa Yorimichi Yorimitsu Yorimochi Yorimori
+			Yorimoto "Yorimoto 2" Yorimune Yorinaga Yorinaka Yorinari "Yorinari 2" Yorinobu "Yorinobu 2" Yorinori
+			"Yorinori 2" Yorisada "Yorisada 2" Yorisato Yorishige Yorisue Yorisuke "Yorisuke 2" "Yorisuke 3" Yoritada
+			Yoritaka "Yoritaka 2" Yoritane YoritO "YoritO 2" Yoritoki "Yoritoki 2" Yoritomo Yoritoshi "Yoritoshi 2"
+			Yoritsugu "Yoritsugu 2" "Yoritsugu 3" Yoritsuna Yoritsune "Yoritsune 2" Yoritsura Yoriuji "Yoriyasu 2"
+			Yoriyoshi Yoriyuki Yorizane Yorizumi "Yorizumi 2" YOSHI "Yoshi ie" Yoshiaki Yoshiakira Yoshichika
+			"Yoshichika 2" Yoshifusa Yoshiharu Yoshihide Yoshihira Yoshihiro "Yoshihiro 2" "Yoshihiro 5" Yoshihisa
+			Yoshikado Yoshikage "Yoshikage 2" "Yoshikage 4" Yoshikane Yoshikata "Yoshikata 2" Yoshikatsu Yoshikimi
+			Yoshikiyo Yoshikuni Yoshimasa "Yoshimasa 9" Yoshimichi Yoshimitsu Yoshimochi Yoshimori Yoshimoto
+			"Yoshimoto 2" "Yoshimoto 3" Yoshimune Yoshimura Yoshinaga Yoshinaka Yoshinao Yoshinari "Yoshinari 2"
+			Yoshinobu "Yoshinobu 2" Yoshinori Yoshisada "Yoshisada 2" "Yoshisada 4" Yoshishige Yoshisue Yoshisuke
+			"Yoshisuke 2" Yoshitada Yoshitaka "Yoshitaka 2" "Yoshitaka 3" Yoshitane YoshitO "YoshitO 2" Yoshitoki
+			"Yoshitoki 2" Yoshitomo Yoshitoshi Yoshitsugu "Yoshitsugu 2" Yoshitsuna Yoshitsune "Yoshitsune 2"
+			Yoshitsura Yoshiuji Yoshiyasu "Yoshiyori 4" Yoshizane Yoshizumi "Yoshizumi 2" "Yoshi ie 2" "Yoshiakira 2"
+			"Yoshichika 3" Yoshifumi "Yoshifusa 2" "Yoshiharu 2" "Yoshihiro 3" "Yoshihisa 2" "Yoshikado 2"
+			"Yoshikane 2" "Yoshikata 3" "Yoshimasa 2" "Yoshimasa 5" "Yoshimichi 2" "Yoshimichi 3" "Yoshimochi 2"
+			"Yoshimochi 3" "Yoshimoto 4" "Yoshimoto 7" "Yoshimune 2" "Yoshinari 3" "Yoshinobu 9" "Yoshinori 2"
+			"Yoshisada 3" "Yoshisue 2" "Yoshisuke 3" "Yoshitada 4" "Yoshitada 6" "Yoshitane 2" "YoshitO 4"
+			"Yoshitsugu 3" "Yoshitsuna 2" "Yoshitsune 3" "Yoshitsune 6" Yoshiyo Yoshiyori "Yoshiyori 2" Yoshiyuki
+			"Yoshizane 2" "Yoshiakira 6" Yoshiari "Yoshihiro 4" "Yoshikane 3" "Yoshikata 6" Yoshikazu "Yoshimasa 8"
+			"Yoshimichi 4" "Yoshimori 2" "Yoshimoto 6" "Yoshimoto 8" "Yoshimune 3" "Yoshinaga 2" "Yoshinao 2"
+			"Yoshinari 4" "Yoshinobu 3" "Yoshinobu 4" "Yoshishige 2" "Yoshisue 3" "Yoshitada 2" "Yoshitaka 4"
+			"YoshitO 5" "Yoshitoshi 2" "Yoshitsune 4" "Yoshiyasu 2" "Yoshiyori 3" "Yoshizane 3" "Yoshihisa 3"
+			"Yoshikata 4" "Yoshimasa 4" "Yoshimasa 7" "Yoshimitsu 2" "Yoshimochi 6" "Yoshimori 3" "Yoshinobu 7"
+			"Yoshinobu 8" "Yoshiyuki 3" "Yoshiyuki 4" "Yoshimune 5" "Yoshinori 4" Yoshisato "Yoshitada 3"
+			"Yoshitomo 2" "Yoshitsune 5" "Yoshiyuki 2" "Yoshifusa 3" "Yoshihira 2" "Yoshimasa 3" "Yoshimune 4"
+			"Yoshinari 5" "Yoshinobu 5" "Yoshitaka 5" "Yoshiakira 3" "Yoshimochi 4" "Yoshimochi 5" "Yoshinori 3"
+			"Yoshitada 5" "Yoshikage 3" "Yoshimasa 6" Yoshikaze "Yoshimitsu 3" "YoshitO 3" YUKI "Yuki ie" Yukiari
+			Yukichika Yukifumi Yukifusa Yukihira Yukihiro Yukikage Yukikata Yukikiyo Yukikuni Yukimasa "Yukimasa 2"
+			"Yukimasa 3" Yukimichi Yukimitsu Yukimori Yukimoto "Yukimoto 2" "Yukimoto 3" "Yukimoto 4" Yukimune
+			Yukimura Yukinaga Yukinaka Yukinao Yukinari "Yukinari 3" Yukinobu "Yukinobu 2" Yukinori Yukisada
+			"Yukisada 2" Yukishige Yukisuke "Yukisuke 2" Yukitada Yukitaka "Yukitaka 2" "Yukitaka 3" YukitO "YukitO 2"
+			Yukitoki Yukitoshi Yukitsuna Yukitsune "Yukitsune 2" Yukiyori Yukiyoshi Yukizane "Yukichika 2"
+			"Yukihiro 2" "Yukimichi 2" "Yukinaga 2" "Yukinari 2" Yukiuji
 		}
 		female_names = {
-			Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka 
-			Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru 
-			Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede 
-			Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto 
-			Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio 
-			Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi 
-			Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu 
-			Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa 
-			Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu 
-			Yuuka Yuuki Yuuko Yuuna Yuzuki
+			"###" AKE Akeko "#" AKI Akiko Akirakeiko "Akiko 2" "Akiko 3" "Akiko 4" "Akiko 5" "Akiko 6" "Akiko 7"
+			"Akiko 8" AMA Amaneiko ARI Ariko "Ariko 2" ASA Asako ATSU Atsuko "Atsuko 2" "Atsuko 3" "Atsuko 4"
+			"Atsuko 5" "Atsuko 6" A "Awa JP" CHIKA Chikako "Chikako 2" "Chikako 3" FUMI Fumiko "Fumiko 2" FUSA Fusako
+			"Fusako 2" HARU Haruko HIDE Hideko HIRA Hirako HIRO Hiroko "Hiroko 2" "Hiroko 3" "Hiroko 4" "Hiroko 5"
+			HISA Hisako IE Ieko ISA Isako KAGE Kageko "Kageko 2" KANE Kaneko "Kaneko 2" KAO Kaoruko "Kaoruko 2" KARA
+			Karako KATA Kataiko Katako "Katako 2" KAZU Kazuko "Kazuko 2" "Kazuko 3" "Kazuko 4" KIMI Kimiko "Kimiko 2"
+			"Kimiko 3" KIYO Kiyoko "Kiyoko 2" "Kiyoko 3" "Kiyoko 4" KORE Koreko "Koreko 2" "Koreko 3" KUSU Kusuko MAMI
+			Mamiko MARI Mariko MARU Maruko MASA Masako "Masako 2" "Masako 3" "Masako 4" "Masako 5" "Masako 6"
+			"Masako 7" "Masako 8" "Masako 9" "Masako 10" "Masako 11" "Masako 12" MATA Matako "Matako 2" MICHI Michiko
+			"Michiko 2" "Michiko 3" MI "Mi iko" Miko MITSU Mitsuko "Mitsuko 2" "Mitsuko 3" MORI Moriko "Moriko 2" MORO
+			Moroko "Moroko 2" MOTO Motoko "Motoko 2" "Motoko 3" "Motoko 4" MUNE Muneko "Muneko 2" "Muneko 3"
+			"Muneko 4" "Muneko 5" MUTSU Mutsuko NAGA Nagako "Nagako 2" "Nagako 3" "Nagako 5" NAGI Nagiko NAKA Nakako
+			"Nakako 2" NAO Naoko NARI Nariko "Nariko 2" "Nariko 3" "Nariko 4" "Nariko 5" "Nariko 6" "Nariko 7" NOBU
+			Nobuko "Nobuko 2" "Nobuko 3" "Nobuko 4" "Nobuko 5" "Nobuko 6" "Nobuko 7" "Nobuko 8" "Nobuko 9" "Nobuko 10"
+			"Nobuko 11" Nobukiko NORI Noriko "Noriko 2" "Noriko 3" "Noriko 4" "Noriko 5" "Noriko 6" "Noriko 7"
+			"Noriko 8" "Noriko 9" OKI Okiko "Okiko 2" SADA Sadako "Sadako 2" "Sadako 3" "Sadako 4" SANE Saneko
+			"Saneko 2" SATO Satoko "Satoko 2" "Satoko 3" SAWA Sawako SHIGE Shigeko "Shigeko 2" "Shigeko 3" "Shigeko 4"
+			"Shigeko 5" SHIME Shimeko SHIZU Shizuko SUE Sueko SUKE Sukeko "Sukeko 2" "Sukeko 3" "Sukeko 4" "Sukeko 5"
+			"Sukeko 6" "Sukeko 7" SUMI Sumiko TADA Tadako "Tadako 2" "Tadako 3" "Tadako 4" TAKA Takako "Takako 2"
+			"Takako 3" "Takako 4" "Takako 5" "Takako 6" "Takako 7" "Takako 8" "Takako 9" TAKE Takeko "Takeko 2"
+			"Takeko 3" "Takeko 4" TAMA Tamako "Tamako 2" TAME Tameko TANE Taneko "Taneko 2" "Taneko 3" TO "TO ko"
+			"TO ko 2" TOKI Tokiko TOMO Tomoko "Tomoko 2" "Tomoko 3" "Tomoko 4" "Tomoko 5" TOSHI Toshiko "Toshiko 2"
+			"Toshiko 3" TOYO Toyoko TSUGU Tsuguko "Tsuguko 2" TSUNA Tsunako TSUNE Tsuneko "Tsuneko 2" "Tsuneko 3" UJI
+			Ujiko YASU Yasuko "Yasuko 2" "Yasuko 3" "Yasuko 4" "Yasuko 5" "Yasuko 6" "Yasuko 7" "Yasuko 8" "Yasuko 9"
+			"Yasuko 10" "Yasuko 11" "Yasuko 12" "Yasuko 13" "Yasuko 14" YO "Yoko JP" YORI Yoriko YOSHI Yoshiko
+			"Yoshiko 2" "Yoshiko 3" "Yoshiko 4" "Yoshiko 5" "Yoshiko 6" "Yoshiko 7" "Yoshiko 8" "Yoshiko 9"
+			"Yoshiko 10" "Yoshiko 11" "Yoshiko 12" "Yoshiko 13" "Yoshiko 14" "Yoshiko 15" "Yoshiko 16" "Yoshiko 17"
+			"Yoshiko 18" "Yoshiko 19" "Yoshiko 20" "Yoshiko 21" "Yoshiko 22" "Yoshiko 23" "Yoshiko 24" "Yoshiko 25"
+			"Yoshiko 26" "Yoshiko 27" "Yoshiko 28" "Yoshiko 29" YUKI Yukiko
 		}
 	}
 	kyushuan = { #Kyushu culture

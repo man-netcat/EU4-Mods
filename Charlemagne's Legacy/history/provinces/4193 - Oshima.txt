@@ -1,2 +1,20 @@
 #4193 - Oshima
 
+owner = USK
+controller = USK
+add_core = USK
+capital = "Katsuyama"
+culture = ainu
+religion = animism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+is_city = yes
+
+867.1.1 = {
+	owner = USK
+	controller = USK
+	add_core = USK
+}

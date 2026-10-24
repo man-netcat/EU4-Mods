@@ -1,2 +1,20 @@
 #1033 - Sakhalin
 
+owner = KUS
+controller = KUS
+add_core = KUS
+capital = "Sakhalin"
+culture = nivkh
+religion = animism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+is_city = yes
+
+867.1.1 = {
+	owner = KUS
+	controller = KUS
+	add_core = KUS
+}

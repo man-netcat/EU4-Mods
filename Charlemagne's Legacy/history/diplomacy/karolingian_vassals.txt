@@ -125,155 +125,193 @@ vassal = {
 	first = ITA
 	second = UBG
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = AKI
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = AWA
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = BUN
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = BZN
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = CKZ
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = ECG
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = ECH
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = ETC
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = HIA
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = HIG
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = HIT
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = HRM
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = HYU
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = HZN
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = ISE
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = IWM
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = IYO
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = IZU
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = KAI
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = KII
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = KOZ
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = MKW
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = MNO
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = MUS
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = NUS
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = OWA
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = SAG
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = SET
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = SHI
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = SMS
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = STM
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = SUO
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = SUR
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = TAJ
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = TGO
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = TOS
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = TSU
 }
-vassal = {
+dependency = {
+	subject_type = daimyo_vassal
 	first = JAP
 	second = YMT
 }

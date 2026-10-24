@@ -2,9 +2,12 @@
 # fought over the basin, but no land changes hands in the deal itself -
 # the wargoal carries humiliate's peace table (gold and humiliate only),
 # and the settlement event allocates everything afterwards.
+# Magyars only, and only until the settlement (which also ends the MGY tag):
+# the preset 867 war bypasses prerequisites, this is for a renewed attempt.
 cb_magyar_migration = {
 	prerequisites = {
-		claim = FROM
+		tag = MGY
+		NOT = { has_country_flag = kar_magyar_settled }
 	}
 
 	war_goal = humiliate

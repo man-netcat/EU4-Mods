@@ -111,7 +111,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 
 ## Standing conventions
 
-- Provinces keep **vanilla culture** (standing rule, no exceptions). Religion is
+- Provinces keep **vanilla culture** (standing rule; the one user-granted
+  exception is Japan, where `japanese` (shown Yamato) and `togoku` (shown
+  Emishi) follow CK3's 867 county cultures: Mutsu, Rikuzen, Dewa and Ugo are
+  Emishi, the rest Yamato; Ainu stays its own culture). Religion is
   CK3's 867 distribution on an area basis (`tags`/`provinces` religion cols):
   Norse world + Dublin `norse_pagan_reformed`; Slavic lands `slavic`; Baltic
   lands `romuva`;   Finnic lands `suomenusko` — all three lifted from CK2

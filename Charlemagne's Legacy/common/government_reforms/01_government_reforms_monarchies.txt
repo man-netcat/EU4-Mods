@@ -258,6 +258,7 @@ shogunate = {
 	potential = {
 		NOT = { has_country_flag = formed_japan_flag }
 		OR = {
+			tag = JAP # the Kampaku regency of our Japan (Charlemagne's Legacy)
 			AND = {
 				capital_scope = {
 					province_id = 1020
@@ -280,7 +281,7 @@ shogunate = {
 		owns = 1020
 	}
 	legacy_equivalent = shogunate_legacy
-	fixed_rank = 2
+	# fixed_rank dropped: JAP's rank follows its CK3 title (Kampaku at the empire)
 	maintain_dynasty = yes
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
@@ -316,7 +317,7 @@ daimyo = {
 	}
 	replacement_on_independence_war = indep_daimyo
 	legacy_equivalent = daimyo_legacy
-	fixed_rank = 1
+	# fixed_rank dropped: Kuni sit at their held title's rank
 	maintain_dynasty = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0

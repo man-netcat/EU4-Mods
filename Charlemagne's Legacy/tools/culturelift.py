@@ -22,6 +22,9 @@ CULT_FILE = os.path.join(HERE, "..", "common", "cultures", "00_cultures.txt")
 CULT_LOC = os.path.join(
     HERE, "..", "localisation", "karolingian_cultures_l_english.yml"
 )
+CULT_LOC_REPLACE = os.path.join(
+    HERE, "..", "localisation", "replace", "karolingian_cultures_l_english.yml"
+)
 CK3_LISTS = os.path.join(
     ck3.GAME_CK3, "common", "culture", "name_lists"
 )
@@ -150,7 +153,7 @@ CK3_TO_EU4 = {
     # second-wave fills (encountered at county level)
     "acehnese": "acehnese", "afghan": "khorasani", "ainu": "ainu",
     "asturleonese": "castillian", "bashkir": "bashkir", "bengali": "bengali",
-    "chuvash": "bulgarian", "emishi": "ainu", "japanese": "japanese",
+    "chuvash": "bulgarian", "emishi": "togoku", "japanese": "japanese",
     "khanty": "ostyaki", "komi": "bulgarian", "latgalian": "latvian",
     "mari": "bulgarian", "merya": "bulgarian", "meshchera": "bulgarian",
     "mogyer": "magyar", "mohe": "tungus", "mordvin": "bulgarian",
@@ -405,6 +408,94 @@ def lift_culture(eu4key, session=None):
         f"{len(dyns)} dynasties, {len(males)}/{len(females)} names"
     )
     return True
+
+
+REPURPOSE_SPECS = {
+    # existing EU4 culture -> display name and the CK3 name list that
+    # replaces its vanilla names (vanilla's Saigoku and Togoku stand in
+    # for CK3's Yamato and Emishi; Ainu stays its own culture)
+    "japanese": {"display": "Yamato", "file": "00_japanese.txt",
+                 "list": "name_list_yamato", "comment": "Yamato"},
+    "togoku": {"display": "Emishi", "file": "00_japanese.txt",
+               "list": "name_list_emishi", "comment": "Emishi"},
+}
+
+
+def repurpose_culture(eu4key):
+    """Swap an existing culture's name lists for a CK3 culture's, keeping
+    its group, graphics and primary tag. Idempotent."""
+    spec = REPURPOSE_SPECS[eu4key]
+    block = _ck3_list(spec)
+
+    def names(*sections):
+        out = []
+        for t in _tokens(_section(block, *sections)):
+            tok = t[0] or t[1]
+            if tok.startswith("dynn_"):
+                tok = tok[len("dynn_"):]
+            c = _clean(tok)
+            if c:
+                out.append(c)
+        return list(dict.fromkeys(out))
+
+    dyns = names("cadet_dynasty_names", "dynasty_names")
+    males = names("male_names")
+    females = names("female_names")
+    if not (dyns and males and females):
+        sys.exit(f"short name list for {eu4key}: {len(dyns)}/{len(males)}/{len(females)}")
+
+    def q(tok):
+        return f'"{tok}"' if re.search(r"[^A-Za-z0-9_'-]", tok) else tok
+
+    def wrap(items):
+        lines, cur = [], "\t\t\t"
+        for tok in items:
+            tok = q(tok)
+            if len(cur) + len(tok) + 1 > 110:
+                lines.append(cur.rstrip())
+                cur = "\t\t\t"
+            cur += tok + " "
+        lines.append(cur.rstrip())
+        return "\n".join(lines)
+
+    raw = open(CULT_FILE, "rb").read().decode("cp1252")
+    crlf = "\r\n" in raw
+    text = raw.replace("\r\n", "\n")
+    m = re.search(r"(?m)^\t%s = \{[^\n]*\n" % re.escape(eu4key), text)
+    if not m:
+        sys.exit(f"culture {eu4key} not in the cultures file")
+    depth, k = 0, text.index("{", m.start())
+    start = k
+    while True:
+        if text[k] == "{":
+            depth += 1
+        elif text[k] == "}":
+            depth -= 1
+            if depth == 0:
+                break
+        k += 1
+    body = text[m.end():k]
+    for key, items in (("dynasty_names", dyns), ("male_names", males),
+                       ("female_names", females)):
+        body, n = re.subn(
+            r"(?s)\t\t%s = \{.*?\n\t\t\}" % key,
+            lambda _m, key=key, items=items:
+                f"\t\t{key} = {{\n{wrap(items)}\n\t\t}}", body, count=1)
+        if n != 1:
+            sys.exit(f"{eu4key}: no {key} block to replace")
+    head = re.sub(r"\{[^\n]*\n$", "{ # %s\n" % spec["comment"], m.group(0))
+    text = text[:m.start()] + head + body + text[k:]
+    open(CULT_FILE, "wb").write((text.replace("\n", "\r\n") if crlf else text).encode("cp1252"))
+
+    loc = open(CULT_LOC_REPLACE, encoding="utf-8-sig").read()
+    line = f' {eu4key}:0 "{spec["display"]}"'
+    if re.search(r"(?m)^ %s:\d* " % re.escape(eu4key), loc):
+        loc = re.sub(r"(?m)^ %s:\d* .*$" % re.escape(eu4key), line, loc)
+    else:
+        loc = loc.rstrip("\n") + "\n" + line + "\n"
+    open(CULT_LOC_REPLACE, "w", encoding="utf-8-sig", newline="").write(loc)
+    print(f"repurposed {eu4key} as {spec['display']}: "
+          f"{len(dyns)} dynasties, {len(males)}/{len(females)} names")
 
 
 def ensure_culture(ck3cult, session=None):

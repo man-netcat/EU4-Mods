@@ -1,2 +1,20 @@
 #1032 - Kurils
 
+owner = CPK
+controller = CPK
+add_core = CPK
+capital = "Kuril"
+culture = nivkh
+religion = animism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+is_city = yes
+
+867.1.1 = {
+	owner = CPK
+	controller = CPK
+	add_core = CPK
+}

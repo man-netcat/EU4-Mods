@@ -4834,6 +4834,136 @@ saxon_titles = {
 }
 
 
+ainu_titles = {
+# CK3 ladders for SOY(r1), CPK(r1), IKR(r1), USK(r1), KUS(r1), MSN(r1)
+	rank = {
+		1 = AINU_COUNTY  # county_ainu
+		2 = AINU_DUCHY  # duchy_ainu
+		3 = AINU_KINGDOM  # kingdom_ainu
+		4 = AINU_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = AINU_COUNT_MALE  # count_male_ainu
+		2 = AINU_DUKE_MALE  # duke_male_ainu
+		3 = AINU_KING_MALE  # king_male_ainu
+		4 = AINU_EMPEROR_MALE  # emperor_tribal_male
+		5 = AINU_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = AINU_COUNT_FEMALE  # count_female_ainu
+		2 = AINU_DUKE_FEMALE  # duke_female_ainu
+		3 = AINU_KING_FEMALE  # king_female_ainu
+		4 = AINU_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = AINU_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = AINU_COUNT_MALE  # consort uses the ruler form
+		2 = AINU_DUKE_MALE  # consort uses the ruler form
+		3 = AINU_KING_MALE  # consort uses the ruler form
+		4 = AINU_EMPEROR_MALE  # consort uses the ruler form
+		5 = AINU_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = AINU_COUNT_FEMALE  # count_female_ainu
+		2 = AINU_DUKE_FEMALE  # duke_female_ainu
+		3 = AINU_KING_FEMALE  # king_female_ainu
+		4 = AINU_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = AINU_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		primary_culture = ainu
+	}
+}
+
+
+nivkh_titles = {
+# CK3 ladders for POG(r1)
+	rank = {
+		1 = NIVKH_COUNTY  # county_tribal
+		2 = NIVKH_DUCHY  # duchy_tribal
+		3 = NIVKH_KINGDOM  # kingdom_tribal
+		4 = NIVKH_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = NIVKH_COUNT_MALE  # count_tribal_male
+		2 = NIVKH_DUKE_MALE  # duke_tribal_male
+		3 = NIVKH_KING_MALE  # king_tribal_male
+		4 = NIVKH_EMPEROR_MALE  # emperor_tribal_male
+		5 = NIVKH_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = NIVKH_COUNT_FEMALE  # count_tribal_female
+		2 = NIVKH_DUKE_FEMALE  # duke_tribal_female
+		3 = NIVKH_KING_FEMALE  # king_tribal_female
+		4 = NIVKH_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = NIVKH_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = NIVKH_COUNT_MALE  # consort uses the ruler form
+		2 = NIVKH_DUKE_MALE  # consort uses the ruler form
+		3 = NIVKH_KING_MALE  # consort uses the ruler form
+		4 = NIVKH_EMPEROR_MALE  # consort uses the ruler form
+		5 = NIVKH_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = NIVKH_COUNT_FEMALE  # count_tribal_female
+		2 = NIVKH_DUKE_FEMALE  # duke_tribal_female
+		3 = NIVKH_KING_FEMALE  # king_tribal_female
+		4 = NIVKH_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = NIVKH_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		primary_culture = nivkh
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM
