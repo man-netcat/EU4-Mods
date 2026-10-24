@@ -1702,41 +1702,12 @@ def run() -> int:
     print("\n== Christian rite schools (tools/rites.py) ==")
     import rites
 
-    rel = open(f"{MOD}/common/religions/00_religion.txt", encoding="cp1252").read()
-    loc = open(
-        f"{MOD}/localisation/replace/karolingian_rites_l_english.yml", encoding="utf-8"
-    ).read()
-    gfx_txt = open(f"{MOD}/interface/karolingian_rites.gfx").read()
-    mods_txt = open(f"{MOD}/common/static_modifiers/karolingian_rites.txt").read()
-    bad = []
-    for k in rites.KEYS:
-        s_, m_ = rites.school_name(k), rites.modifier_name(k)
-        for ok_, what in [
-            (f"\t\t{s_} = {{" in rel, "school block"),
-            (f"{s_}:0" in loc and f"{s_}_desc:0" in loc, "school loc"),
-            (f"{m_}:0" in loc and f"desc_{m_}:0" in loc, "scholar loc"),
-            (f"{m_} = {{" in mods_txt, "scholar modifier"),
-            (f"GFX_icon_christian_school_{k}" in gfx_txt, "sprite"),
-            (os.path.exists(f"{MOD}/gfx/interface/icon_christian_school_{k}.tga"), "icon"),
-        ]:
-            if not ok_:
-                bad.append(f"{k}: missing {what}")
-    note(not bad, f"every rite school is fully defined ({len(bad)} gaps)")
-    for b in bad[:8]:
-        print("        " + b)
-    used = Counter()
-    off = []
-    for fn in os.listdir(f"{MOD}/history/countries"):
-        txt = open(f"{MOD}/history/countries/{fn}", encoding="cp1252").read()
-        m = re.search(r"^religious_school = (\w+)", txt, re.M)
-        if not m or m.group(1) not in {rites.school_name(k) for k in rites.KEYS}:
-            continue
-        used[m.group(1)] += 1
-        r = re.search(r"^religion = (\w+)", txt, re.M)
-        if not r or r.group(1) not in rites.CHRISTIAN:
-            off.append(fn)
-    note(not off, f"rite schools only on Christian countries ({len(off)} off)")
-    print("        " + ", ".join(f"{k}={v}" for k, v in used.most_common()))
+    rite_err, rite_warn = rites.verify()
+    note(not rite_err, f"rite schools verified against CK3, vanilla and history ({len(rite_err)} problems)")
+    for e in rite_err:
+        print("        " + e)
+    for w in rite_warn:
+        warn(w)
 
     print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 

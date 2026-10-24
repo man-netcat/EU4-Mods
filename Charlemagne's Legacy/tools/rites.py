@@ -106,9 +106,10 @@ def rite_at(body):
     return r.group(1) if r else None
 
 
-def school_for_tag(t):
-    """The school a tag starts with, or None. Its CK3 title holder's rite at
-    867 decides; the tag's EU4 religion must sit in the christian group."""
+def holder_rite(t):
+    """The CK3 rite of the tag's 867 title holder (None when the tag cannot
+    hold a school). A holder with no rite of their own follows the faith's
+    867 main rite."""
     if t.religion not in CHRISTIAN or not t.ck3_title:
         return None
     from ck3 import (TITLES, load_chars, load_dynasties, load_houses,
@@ -122,8 +123,12 @@ def school_for_tag(t):
     body = chars.get(got.get("char", ""))
     if body is None:
         return None
-    # a holder with no rite of their own follows the faith's 867 main rite
-    return BY_RITE.get(rite_at(body) or MAIN_RITE)
+    return rite_at(body) or MAIN_RITE
+
+
+def school_for_tag(t):
+    """The school (table key) a tag starts with, or None."""
+    return BY_RITE.get(holder_rite(t))
 
 
 # ---- generated outputs ----------------------------------------------------
@@ -187,7 +192,7 @@ def _school_block(key, modifier):
 \t\t\t\t\tadm_power_cost = 50
 \t\t\t\t}}
 \t\t\t\tclear_christian_scholar_modifiers_effect = yes
-\t\t\t\tcustom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+\t\t\t\tcustom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 \t\t\t\tadd_country_modifier = {{ name = {scholar} duration = 7300 }}
 \t\t\t\tif = {{
 \t\t\t\t\tlimit = {{
@@ -268,29 +273,182 @@ def localisation():
         lines += [
             f' {s}:0 "{name}"',
             f' {s}_desc:0 "{desc}"',
-            f' {sc}:0 "{name} Scholars"',
-            f' desc_{sc}:0 "We are currently entertaining scholars of the {name} to further the theological discussion in our country."',
-            f' allows_every_time_invite_of_{s}:0 "Allows to invite a Scholar from the §Y{name}§! without diplomatic relations."',
+            f' {sc}:0 "{name} Clergy"',
+            f' desc_{sc}:0 "We are currently entertaining clergy of the {name} to further the liturgical and theological discussion in our country."',
+            f' allows_every_time_invite_of_{s}:0 "Allows to invite a Cleric of the §Y{name}§! without diplomatic relations."',
         ]
+    lines.append(
+        ' INVITE_CLERIC_COUNTRY_TEXT:0 "\\nInviting a Cleric of the §Y[From.GetReligiousSchool]§! will give us:"'
+    )
     return "\n".join(lines) + "\n"
 
 
 def placeholder_icons():
-    from PIL import Image, ImageDraw
-
     made = []
-    for k, _r, name, _d, _m, (r, g, b) in RITES:
+    for k, data in _placeholder_bytes().items():
         path = os.path.join(MOD, "gfx", "interface", f"icon_christian_school_{k}.tga")
         if os.path.exists(path):
             continue
         os.makedirs(os.path.dirname(path), exist_ok=True)
+        open(path, "wb").write(data)
+        made.append(path)
+    return made
+
+
+# ---- verification ----------------------------------------------------------
+
+_VANILLA_NEEDS = {
+    # name -> where vanilla defines it (so our generated script can lean on it)
+    "knows_of_scholar_country_capital_trigger": "common/scripted_triggers",
+    "hidden_progressive_opinion_for_scholar_trigger": "common/scripted_triggers",
+    "has_invited_scholar_recently": "common/event_modifiers",
+}
+
+
+def _vanilla_text(*subdirs):
+    from paths import EU4_GAME
+
+    out = []
+    for sub in subdirs:
+        base = os.path.join(EU4_GAME, sub)
+        for root, _d, files in os.walk(base):
+            for fn in files:
+                if fn.endswith((".txt", ".yml")):
+                    out.append(open(os.path.join(root, fn), encoding="utf-8", errors="replace").read())
+    return "\n".join(out)
+
+
+def ck3_rites():
+    """{rite: faith} for every rite CK3 defines."""
+    import glob
+
+    out = {}
+    for f in glob.glob(os.path.join(CK3_GAME, "common", "religion", "rite_types", "*.txt")):
+        text = open(f, encoding="utf-8-sig", errors="replace").read()
+        for m in re.finditer(r"^(\w+)\s*=\s*\{(.*?)^\}", text, re.M | re.S):
+            fm = re.search(r"^\s*faith\s*=\s*(\w+)", m.group(2), re.M)
+            out[m.group(1)] = fm.group(1) if fm else None
+    return out
+
+
+def verify(check_history=True):
+    """Check the rite schools against CK3, vanilla EU4 and our own outputs.
+    Returns (errors, warnings), two lists of strings."""
+    err, warn = [], []
+
+    # 1. the table against CK3
+    rites_in_ck3 = ck3_rites()
+    for key, rite, *_ in RITES:
+        if rite not in rites_in_ck3:
+            err.append(f"{key}: CK3 has no rite '{rite}' (renamed in a patch?)")
+    if len({r[0] for r in RITES}) != len(RITES) or len(BY_RITE) != len(RITES):
+        err.append("duplicate school key or CK3 rite in the table")
+
+    # 2. everything the generated script leans on exists in vanilla EU4
+    defs = _vanilla_text("common/scripted_triggers", "common/event_modifiers")
+    for name in _VANILLA_NEEDS:
+        if not re.search(rf"^{re.escape(name)}\s*=", defs, re.M):
+            err.append(f"vanilla has no '{name}' ({_VANILLA_NEEDS[name]})")
+    used = _vanilla_text("common")
+    for key, _r, _n, _d, mod, _c in RITES:
+        mkey = mod.split("=")[0].strip()
+        if not re.search(rf"^\s*{re.escape(mkey)}\s*=", used, re.M):
+            err.append(f"{key}: modifier '{mkey}' is not used anywhere in vanilla common/ (typo?)")
+    # no key collides with a vanilla definition
+    vloc = _vanilla_text("localisation")
+    for key in KEYS:
+        for k in (school_name(key), modifier_name(key)):
+            if re.search(rf"^\s*{re.escape(k)}:", vloc, re.M):
+                err.append(f"{k} is already a vanilla localisation key")
+
+    # 3. outputs are exactly what the table generates (nobody hand-edited them)
+    def same(path, want, label, enc="cp1252"):
+        try:
+            got = open(path, encoding=enc).read()
+        except FileNotFoundError:
+            err.append(f"{label} is missing - run tools/build.py")
+            return
+        if got.replace("\r\n", "\n") != want:
+            err.append(f"{label} differs from tools/rites.py output - never hand-edit it; rebuild")
+
+    rel = open(REL_FILE, encoding="cp1252").read()
+    m = re.search(re.escape(BEGIN) + r".*?" + re.escape(END), rel, re.S)
+    if not m:
+        err.append("00_religion.txt has no BEGIN/END RITES block - run tools/build.py")
+    elif m.group(0) != religion_block():
+        err.append("00_religion.txt rites block differs from tools/rites.py output; rebuild")
+    elif m.group(0).count("{") != m.group(0).count("}"):
+        err.append("00_religion.txt rites block has unbalanced braces")
+    same(os.path.join(MOD, "common", "static_modifiers", "karolingian_rites.txt"), static_modifiers(), "static_modifiers/karolingian_rites.txt")
+    same(os.path.join(MOD, "common", "scripted_effects", "karolingian_rites.txt"), scripted_effects(), "scripted_effects/karolingian_rites.txt")
+    same(os.path.join(MOD, "interface", "karolingian_rites.gfx"), gfx(), "interface/karolingian_rites.gfx")
+    same(os.path.join(MOD, "localisation", "replace", "karolingian_rites_l_english.yml"),
+         "\ufeff" + localisation(), "karolingian_rites_l_english.yml", enc="utf-8")
+
+    # 4. every school's pieces exist, and every loc key is there
+    loc = open(os.path.join(MOD, "localisation", "replace", "karolingian_rites_l_english.yml"),
+               encoding="utf-8").read() if os.path.exists(os.path.join(MOD, "localisation", "replace", "karolingian_rites_l_english.yml")) else ""
+    for key in KEYS:
+        s_, m_ = school_name(key), modifier_name(key)
+        for k in (s_, f"{s_}_desc", m_, f"desc_{m_}", f"allows_every_time_invite_of_{s_}"):
+            if f" {k}:0 " not in loc:
+                err.append(f"loc key {k} missing")
+        icon = os.path.join(MOD, "gfx", "interface", f"icon_christian_school_{key}.tga")
+        if not os.path.exists(icon):
+            err.append(f"{key}: icon {os.path.relpath(icon, MOD)} missing")
+    if " INVITE_CLERIC_COUNTRY_TEXT:0 " not in loc:
+        err.append("loc key INVITE_CLERIC_COUNTRY_TEXT missing")
+
+    # 5. placeholder icons still in place (warning: the real CK3 icons go in locally)
+    ph = _placeholder_bytes()
+    left = [k for k in KEYS
+            if os.path.exists(os.path.join(MOD, "gfx", "interface", f"icon_christian_school_{k}.tga"))
+            and open(os.path.join(MOD, "gfx", "interface", f"icon_christian_school_{k}.tga"), "rb").read() == ph[k]]
+    if left:
+        warn.append(f"{len(left)}/{len(KEYS)} icons are still generated placeholders: {', '.join(left)}")
+
+    # 6. every country starts with the school its CK3 ruler's rite gives it
+    if check_history:
+        import glob
+
+        from tagdb import TAGS
+
+        unmapped = {}
+        for t in TAGS:
+            want = school_for_tag(t)
+            rite = holder_rite(t)
+            files = glob.glob(os.path.join(MOD, "history", "countries", f"{t.tag} - *.txt"))
+            if not files:
+                continue  # tag has no history file of its own (vanilla reuse)
+            txt = open(files[0], encoding="cp1252").read()
+            m = re.search(r"^religious_school = (\w+_school)", txt, re.M)
+            have = m.group(1) if m else None
+            if have and not have.endswith("_rite_school") and have not in {school_name(k) for k in KEYS}:
+                continue  # an Islamic school or a hand-set one: not ours
+            if (want and school_name(want)) != have:
+                err.append(f"{t.tag}: history has {have}, CK3 rite {rite} wants {want and school_name(want)}")
+            if rite and want is None and t.religion in CHRISTIAN:
+                unmapped.setdefault(rite, []).append(t.tag)
+        for rite, tags in sorted(unmapped.items()):
+            warn.append(f"CK3 rite '{rite}' has no school in the table ({', '.join(tags)} start without one)")
+    return err, warn
+
+
+def _placeholder_bytes():
+    import io
+
+    from PIL import Image, ImageDraw
+
+    out = {}
+    for k, _r, name, _d, _m, (r, g, b) in RITES:
         im = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
         d = ImageDraw.Draw(im)
         d.ellipse((2, 2, 61, 61), fill=(r, g, b, 255), outline=(255, 255, 255, 255), width=3)
         d.text((24, 26), name[0], fill=(255, 255, 255, 255))
-        im.save(path)
-        made.append(path)
-    return made
+        buf = io.BytesIO()
+        im.save(buf, format="TGA")
+        out[k] = buf.getvalue()
+    return out
 
 
 def step_rites():
@@ -305,7 +463,12 @@ def step_rites():
     made = placeholder_icons()
     print(f"{len(RITES)} Christian rite schools written; "
           f"{len(made)} placeholder icons created (replace with CK3 icons locally)")
-    return 0
+    err, warn = verify(check_history=False)
+    for w in warn:
+        print("  WARN " + w)
+    for e in err:
+        print("  FAIL " + e)
+    return 1 if err else 0
 
 
 if __name__ == "__main__":

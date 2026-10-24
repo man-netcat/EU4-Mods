@@ -125,6 +125,11 @@ never those outputs. A country starts with the school of its 867 CK3 holder's
 `gfx/interface/icon_christian_school_<key>.tga` are generated PLACEHOLDERS
 only when missing: the real CK3 rite icons are dropped in locally under the
 same names and are then kept.
+`rites.verify()` (run by build and validate) checks the table against CK3's
+rite_types, every modifier/trigger against vanilla, that outputs match the
+generator, loc/icons exist, and that each country's history school equals its
+867 holder's rite. In-game text says "Rite" / "Clergy" / "Cleric"; the engine's
+shared school UI strings (also used by Islam) are left alone.
 
 ## Standing conventions
 

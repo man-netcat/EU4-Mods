@@ -64,7 +64,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = roman_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -128,7 +128,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = carolingian_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -192,7 +192,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = ambrosian_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -256,7 +256,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = beneventan_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -320,7 +320,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = mozarabic_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -384,7 +384,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = insular_celtic_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -448,7 +448,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = byzantine_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -512,7 +512,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = georgian_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -576,7 +576,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = slavic_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -640,7 +640,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = coptic_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -704,7 +704,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = antiochian_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -768,7 +768,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = ethiopian_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
@@ -832,7 +832,7 @@ christian = {
 					adm_power_cost = 50
 				}
 				clear_christian_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
 				add_country_modifier = { name = armenian_rite_scholar_modifier duration = 7300 }
 				if = {
 					limit = {
