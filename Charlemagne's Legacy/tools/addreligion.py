@@ -30,13 +30,14 @@ BOM kept), the registry to tools/tags.db.
 """
 import argparse
 import os
+from paths import CK3_GAME
 import re
 import sqlite3
 import struct
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
+CK3 = CK3_GAME
 MOD = os.path.join(HERE, "..")
 REL_FILE = os.path.join(MOD, "common", "religions", "00_religion.txt")
 LOC_FILE = os.path.join(MOD, "localisation", "replace",

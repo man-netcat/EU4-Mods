@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json, os, re, sys
+from paths import EU4_GAME, local_mod_path
 from collections import Counter
 from build import parse
 from db import core_deny_map
@@ -9,7 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 CACHE = HERE / "cache"
 
-GAME = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
+GAME = EU4_GAME
 MOD = str(HERE.parent)
 PDIR = os.path.join(MOD, "history", "provinces")
 COUNTRY_OUT = os.path.join(MOD, "history", "countries")
@@ -65,14 +66,14 @@ def run() -> int:
     fail.clear()
     print("== mod skeleton ==")
     for p in [
-        "/home/rick/.local/share/Paradox Interactive/Europa Universalis IV/mod/Charlemagne's Legacy.mod",
+        local_mod_path("/home/rick/.local/share/Paradox Interactive/Europa Universalis IV/mod/Charlemagne's Legacy.mod"),
         f"{MOD}/descriptor.mod",
         f"{MOD}/localisation/replace/countries_l_english.yml",
     ]:
         note(os.path.exists(p), f"exists {os.path.relpath(p, MOD)}")
 
     print("\n== country definitions ==")
-    GH = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV/history/countries"
+    GH = os.path.join(GAME, "history", "countries")
     base = {fn.split(" ")[0] for fn in os.listdir(GH) if fn.endswith(".txt")}
     note("LUS" not in base, "no invented LUS tag is in use (base game Lusatia is SOR)")
     mine = set()
@@ -1198,7 +1199,7 @@ def run() -> int:
         chr(c) for c in range(0xA0, 0x100)
     }
     vdir = os.path.join(
-        "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV",
+        GAME,
         "localisation")
     for fn in sorted(os.listdir(vdir)):
         if not fn.endswith("_l_english.yml"):

@@ -47,12 +47,13 @@ never carry over and are skipped.
 import argparse
 import glob
 import os
+from paths import CK3_GAME
 import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
+CK3 = CK3_GAME
 MOD = os.path.join(HERE, "..")
 ZZ = os.path.join(MOD, "common", "government_names",
                   "zz_kar_government_names.txt")
