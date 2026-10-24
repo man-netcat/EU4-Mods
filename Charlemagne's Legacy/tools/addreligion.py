@@ -125,12 +125,63 @@ def append_frames(icon_path):
     return icon
 
 
+def _nl():
+    """The newline style 00_religion.txt already uses (LF in this repo)."""
+    return "\r\n" if b"\r\n" in open(REL_FILE, "rb").read() else "\n"
+
+
+def _frame_rows(icon_path, frame):
+    from PIL import Image
+    small = Image.open(icon_path).convert("RGBA").resize((frame, frame), Image.LANCZOS)
+    rows = []
+    for y in range(frame):
+        line = bytearray()
+        for x in range(frame):
+            r, g, b, a = small.getpixel((x, y))
+            line += bytes((b, g, r, a))
+        rows.append(bytes(line))
+    return rows
+
+
+def replace_frame(icon_path, n):
+    """Overwrite 1-based frame n of every strip with the icon (the lift of an
+    existing religion; append_frames adds a new last frame instead)."""
+    for rel, frame in STRIPS:
+        path = os.path.join(MOD, rel)
+        h, w, head, body = read_dds(path)
+        assert h == frame and w % frame == 0 and 1 <= n <= w // frame, f"{rel}: frame {n} out of range"
+        rows = _frame_rows(icon_path, frame)
+        out = bytearray(body)
+        step, x0 = w * 4, (n - 1) * frame * 4
+        for i in range(h):
+            out[i * step + x0:i * step + x0 + frame * 4] = rows[i]
+        with open(path, "wb") as fh:
+            fh.write(head + bytes(out))
+
+
+def frame_matches(icon_path, n, tol=2.0):
+    """True if frame n of the first strip is (within tol) the icon."""
+    rel, frame = STRIPS[0]
+    h, w, head, body = read_dds(os.path.join(MOD, rel))
+    if not 1 <= n <= w // frame:
+        return False
+    rows = _frame_rows(icon_path, frame)
+    step, x0 = w * 4, (n - 1) * frame * 4
+    diff = n_px = 0
+    for i in range(h):
+        got = body[i * step + x0:i * step + x0 + frame * 4]
+        diff += sum(abs(a - b) for a, b in zip(got, rows[i]))
+        n_px += len(got)
+    return diff / n_px <= tol
+
+
 def block_range(t, key):
     m = re.search(r"(?m)^\t%s = \{.*?^\t\}(?=\n)" % re.escape(key), t, re.S)
     return m
 
 
 def patch_icon(key, icon):
+    nl = _nl()
     t = open(REL_FILE, encoding="cp1252").read().replace("\r\n", "\n")
     m = block_range(t, key)
     if not m:
@@ -145,12 +196,13 @@ def patch_icon(key, icon):
         return True
     t = t.replace(m.group(0), nb, 1)
     open(REL_FILE, "w", encoding="cp1252", newline="").write(
-        t.replace("\n", "\r\n"))
+        t.replace("\n", nl))
     print(f"  {key}: icon -> {icon}")
     return True
 
 
 def clone_block(key, src, group, after, color, sites, heretics):
+    nl = _nl()
     t = open(REL_FILE, encoding="cp1252").read().replace("\r\n", "\n")
     if block_range(t, key):
         print(f"  {key}: block already present - skipping clone")
@@ -176,7 +228,7 @@ def clone_block(key, src, group, after, color, sites, heretics):
             if not am:
                 sys.exit(f"--after {after}: sibling not found")
             pos = am.end()
-            block = block + "\n"
+            block = "\n\n" + block
         else:
             im = re.search(r"(?m)^\tharmonized_modifier = harmonized_%s\s*$"
                            % re.escape(group), t)
@@ -186,7 +238,7 @@ def clone_block(key, src, group, after, color, sites, heretics):
             block = block + "\n\n"
         t = t[:pos] + block + t[pos:]
     open(REL_FILE, "w", encoding="cp1252", newline="").write(
-        t.replace("\n", "\r\n"))
+        t.replace("\n", nl))
     print(f"  {key}: cloned from {src}"
           + (f" into {group}" if group else "") +
           (f" after {after}" if after else ""))

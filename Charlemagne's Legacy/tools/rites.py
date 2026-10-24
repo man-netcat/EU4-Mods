@@ -211,36 +211,13 @@ GROUP_OF_KEY = {r[1]: r[0] for r in RITES}
 MODIFIER_OF = {r[1]: r[5] for r in RITES}
 GROUPS = sorted({r[0] for r in RITES})
 
-# The EU4 religion(s) whose adherents follow each rite. A tag's religion must be
-# one of these for its ruler's rite (tags inherit their CK3 holder's religion
-# and rite); a religion the mod uses that appears in no set has no rites, and
-# verify() fails on it.
-RITE_RELIGIONS = {
-    "roman_rite": {"catholic"}, "carolingian_rite": {"catholic"},
-    "ambrosian_rite": {"catholic"}, "beneventan_rite": {"catholic"},
-    "mozarabic_rite": {"catholic"}, "insular_celtic_rite": {"catholic"},
-    "byzantine_rite": {"catholic", "orthodox"}, "georgian_rite": {"catholic", "orthodox"},
-    "slavic_rite": {"catholic", "orthodox"},
-    "coptic_rite": {"coptic"}, "antiochian_rite": {"coptic"}, "ethiopian_rite": {"coptic"},
-    "armenian_rite": {"apostolic"}, "nestorian_rite": {"nestorian"},
-    "bosnian_church_rite": {"krstjani"},
-    "slavic_pagan": {"slavic"}, "baltic_pagan": {"romuva"},
-    "finnish_pagan": {"suomenusko"}, "magyar_pagan": {"taltosist"},
-    "hanafi": {"sunni"}, "hanbali": {"sunni"}, "maliki": {"sunni"}, "shafii": {"sunni"},
-    "ismaili": {"shiite"}, "hafizi": {"shiite"}, "alawite": {"shiite"}, "alevi": {"shiite"},
-    "qarmatian": {"shiite"}, "nizari": {"shiite"}, "zaidi": {"shiite"}, "jafari": {"shiite"},
-    "ghulat": {"shiite"},
-    "ibadi": {"ibadi"}, "azariqa": {"ibadi"}, "najdat": {"ibadi"}, "sufri": {"ibadi"},
-    "vinaya": {"buddhism"}, "theravada": {"buddhism"},
-    "mahayana": {"mahayana"}, "pundarika": {"mahayana"}, "avatamsaka": {"mahayana"},
-    "lamaism": {"vajrayana"}, "mantrayana": {"vajrayana"},
-    "jingxue": {"confucianism"}, "daoxue": {"confucianism"},
-    "shaivism": {"hinduism"}, "vaishnavism": {"hinduism"},
-    "norse_pagan": {"norse_pagan_reformed"}, "tengri_pagan": {"tengri_pagan_reformed"},
-    "north_african_acham_pagan": {"animism"},
-    "khurmazta": {"khurmazdis"}, "mazdayasna": {"zoroastrian"},
-}
-assert set(RITE_RELIGIONS) == set(KEYS), "RITE_RELIGIONS and RITES differ"
+def rite_religions():
+    """{school stem: EU4 religion}: the religion lifting the CK3 faith the rite belongs to
+    (faiths.FAITH_RELIGION); a rite whose faith no religion lifts yet is left out."""
+    from faiths import rite_religion_map
+
+    m = rite_religion_map()
+    return {r[1]: m[r[2]] for r in RITES if r[2] in m}
 
 
 # ---- religion groups --------------------------------------------------------
@@ -593,17 +570,7 @@ def _vanilla_text(*subdirs):
     return "\n".join(out)
 
 
-def ck3_rites():
-    """{rite: faith} for every rite CK3 defines."""
-    import glob
-
-    out = {}
-    for f in glob.glob(os.path.join(CK3_GAME, "common", "religion", "rite_types", "*.txt")):
-        text = open(f, encoding="utf-8-sig", errors="replace").read()
-        for m in re.finditer(r"^(\w+)\s*=\s*\{(.*?)^\}", text, re.M | re.S):
-            fm = re.search(r"^\s*faith\s*=\s*(\w+)", m.group(2), re.M)
-            out[m.group(1)] = fm.group(1) if fm else None
-    return out
+from faiths import ck3_rites  # noqa: E402,F401
 
 
 def used_religions():
@@ -631,20 +598,28 @@ def verify(check_history=True):
     if len(set(KEYS)) != len(KEYS) or len(BY_RITE) != len(RITES):
         err.append("duplicate school key or CK3 rite in the table")
 
-    # 2. EVERY religion the mod uses has rites, in the group the religion sits in
+    # 2. EVERY religion the mod uses is a lifted CK3 faith with rites, in the group the religion sits in
     rel_text = open(REL_FILE, encoding="cp1252").read()
     groups = religion_groups(rel_text)
+    from faiths import FAITH_RELIGION, verify as verify_faiths
+
+    r_of = rite_religions()
     covered = {}
-    for key, rels in RITE_RELIGIONS.items():
-        for rel in rels:
-            covered.setdefault(rel, []).append(key)
-            if groups.get(rel) is None:
-                err.append(f"{key}: religion '{rel}' is in no group in 00_religion.txt")
-            elif groups[rel] != GROUP_OF_KEY[key]:
-                err.append(f"{key} is a {GROUP_OF_KEY[key]} rite but religion '{rel}' sits in group {groups[rel]}")
+    for key, rel in r_of.items():
+        covered.setdefault(rel, []).append(key)
+        if groups.get(rel) is None:
+            err.append(f"{key}: religion '{rel}' is in no group in 00_religion.txt")
+        elif groups[rel] != GROUP_OF_KEY[key]:
+            err.append(f"{key} is a {GROUP_OF_KEY[key]} rite but religion '{rel}' sits in group {groups[rel]}")
+    for r in RITES:
+        if r[1] not in r_of:
+            warn.append(f"rite '{r[2]}' (CK3 faith {rites_in_ck3.get(r[2])}) belongs to a faith no EU4 religion lifts yet - no tag or province may use it")
     for rel in used_religions():
         if rel not in covered:
             err.append(f"religion '{rel}' is used by the mod but has no rites - add them to tools/rites.py")
+    f_err, f_warn = verify_faiths(used_religions())
+    err += f_err
+    warn += f_warn
 
     # 3. everything the generated script leans on exists in vanilla EU4
     defs = _vanilla_text("common/scripted_triggers", "common/event_modifiers", "common/scripted_effects")
@@ -741,10 +716,10 @@ def verify(check_history=True):
             if key is None:
                 err.append(f"{t.tag}: ruler's CK3 rite '{rite}' has no school in tools/rites.py")
                 continue
-            if t.religion not in RITE_RELIGIONS[key]:
+            if r_of.get(key) != t.religion:
                 err.append(
-                    f"{t.tag}: religion '{t.religion}' but its 867 ruler follows the {rite} rite "
-                    f"({'/'.join(sorted(RITE_RELIGIONS[key]))}) - tags inherit their ruler's religion; fix tags.db"
+                    f"{t.tag}: religion '{t.religion}' but its 867 ruler follows the {rite} rite, "
+                    f"a CK3 faith lifted as '{r_of.get(key)}' - tags inherit their ruler's religion; fix tags.db"
                 )
                 continue
             files = glob.glob(os.path.join(MOD, "history", "countries", f"{t.tag} - *.txt"))

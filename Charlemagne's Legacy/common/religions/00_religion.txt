@@ -1238,7 +1238,7 @@ christian = {
 	
 	
 	catholic = {
-		color = { 204 204 0 }
+		color = { 255 153 0 }
 		icon = 1
 		allowed_conversion = {
 			reformed
@@ -3337,7 +3337,7 @@ muslim = {
 
 	
 	sunni = {
-		color = { 0 153 0 }
+		color = { 51 92 59 }
 		icon = 5
 		allowed_center_conversion = {
 			ibadi
@@ -3361,7 +3361,7 @@ muslim = {
 	}
 
 	shiite = {
-		color = { 0 204 0 }
+		color = { 77 186 23 }
 		icon = 6	
 		allowed_center_conversion = {
 			sunni
@@ -3385,7 +3385,7 @@ muslim = {
 	}
 	
 	ibadi = {
-		color = { 0 102 0 }
+		color = { 8 143 143 }
 		icon = 16	
 		allowed_center_conversion = {
 			sunni
@@ -4000,7 +4000,7 @@ eastern = {
 	# END RITES
 
 	buddhism = { #Theravada
-		color = { 204 76 0 }
+		color = { 204 102 0 }
 		icon = 24
 		allowed_conversion = {
 			vajrayana
@@ -4031,7 +4031,7 @@ eastern = {
 	}
 	
 	vajrayana = {
-		color = { 204 76 76 }
+		color = { 230 77 0 }
 		icon = 25
 		allowed_conversion = {
 			mahayana
@@ -4062,7 +4062,7 @@ eastern = {
 	}
 	
 	mahayana = {
-		color = { 204 76 127 }
+		color = { 204 77 51 }
 		icon = 23
 		allowed_conversion = {
 			vajrayana
@@ -4093,7 +4093,7 @@ eastern = {
 	}
 
 	confucianism = {
-		color = { 214 229 140 }
+		color = { 236 190 85 }
 		icon = 9
 		country = {
 			tolerance_heretic = 2
@@ -4300,6 +4300,69 @@ dharmic = {
 		
 		heretic = { BHAKTI }
 	}
+
+	shaivism = {
+		color = { 230 51 77 }
+		icon = 39
+		allowed_conversion = {
+			sikhism
+		}
+		country = {
+			tolerance_heathen = 1
+			tolerance_own = 1
+			brahmins_hindu_influence_modifier = 0.2
+		}
+		country_as_secondary = {
+			tolerance_heretic = 1
+			tolerance_heathen = 2
+		}
+		
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = hinduism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { BHAKTI }
+	}
+
+	vaishnavism = {
+		color = { 255 0 0 }
+		icon = 40
+		allowed_conversion = {
+			sikhism
+		}
+		country = {
+			tolerance_heathen = 1
+			tolerance_own = 1
+			brahmins_hindu_influence_modifier = 0.2
+		}
+		country_as_secondary = {
+			tolerance_heretic = 1
+			tolerance_heathen = 2
+		}
+		
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = hinduism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { BHAKTI }
+	}
+
 
 	sikhism = {
 		color = { 0 153 153 }
@@ -5137,6 +5200,24 @@ pagan = {
 		
 		heretic = { SNAKE_CLAN }
 	}
+
+	achamanism = {
+		color = { 217 102 51 }
+		icon = 41
+		country = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		heretic = { SNAKE_CLAN }
+	}
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
 		color = { 127 76 76 }
 		icon = 12
@@ -5247,7 +5328,7 @@ pagan = {
 	
 	norse_pagan_reformed = {
 		icon = 21
-		color = { 191 191 191 }
+		color = { 102 102 102 }
 		country = {
 			land_forcelimit_modifier = 0.10
 			naval_forcelimit_modifier = 0.10
@@ -5267,7 +5348,7 @@ pagan = {
 	
 	tengri_pagan_reformed = {
 		icon = 27
-		color = { 25 76 217 }
+		color = { 0 51 204 }
 		country = {
 			cav_to_inf_ratio = 0.25
 			global_regiment_cost = -0.2
@@ -5565,7 +5646,7 @@ zoroastrian_group = {
 	defender_of_faith = yes
 	zoroastrian = {
 		icon = 26
-		color = { 127 178 51 }
+		color = { 204 128 0 }
 		province = {
 			local_missionary_strength = -0.02
 		}
@@ -5600,7 +5681,7 @@ zoroastrian_group = {
 	
 	khurmazdis = {
 		icon = 38
-		color = { 127 178 51 }
+		color = { 204 153 26 }
 		province = {
 			local_missionary_strength = -0.02
 		}

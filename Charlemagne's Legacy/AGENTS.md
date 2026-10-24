@@ -140,6 +140,22 @@ The rule moved three tags onto their ruler's religion: KTN (Khitans) mahayana
 (avatamsaka rite), DNI (Kizilyedisan) taltosist (magyar_pagan), KSG (Kashyar)
 khurmazdis (khurmazta); the older "Khitan tengri" note below no longer holds for KTN.
 
+## Religions are CK3 faiths
+
+Every EU4 religion the mod uses lifts exactly one CK3 faith, and a tag's
+religion is the religion of the faith its 867 ruler's rite belongs to (rite ->
+faith via CK3's `rite_types`, faith -> religion via `FAITH_RELIGION` in
+`tools/faiths.py`; `culturelift.FAITH_TO_RELIGION` is derived from it - no
+approximations: Balhae's Vinaya rite is Mahayana, not Theravada). Name and map
+colour come from CK3's faith (`python3 tools/faiths.py` sets them and creates
+missing religions by cloning a block, e.g. shaivism/vaishnavism from hinduism
+and achamanism from animism, with a placeholder icon frame); the icons are the
+CK3 faith icons and need the CK3 install: run `python3 tools/faiths.py icons`
+locally (overwrites each religion's frame in the four strips). Validate fails on
+a used religion that is not a lifted faith, a wrong colour or name, a shared
+icon frame, a missing/blank icon, and lists placeholder icons by name. A faith
+nobody needs may stay unmapped (qarmatian); map it when a tag or province needs it.
+
 ## Standing conventions
 
 - Provinces keep **vanilla culture** (standing rule, no exceptions). Religion is
