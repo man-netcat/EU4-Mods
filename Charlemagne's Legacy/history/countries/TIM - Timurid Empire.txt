@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = levantine
 religion = ibadi
 capital = 446
+religious_school = azariqa_school
 867.1.1 = {
 	monarch = {
 		name = "Abd-al-Rahim"

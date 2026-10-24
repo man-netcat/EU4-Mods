@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = finnish
 religion = suomenusko
 capital = 27
+religious_school = finnish_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Ihala II"

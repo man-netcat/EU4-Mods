@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = andalusian
 religion = sunni
 capital = 163
+religious_school = maliki_school
 add_accepted_culture = lombard
 fixed_capital = 163 # Cannot move capital away from this province & no power cost to move to it
 867.1.1 = {

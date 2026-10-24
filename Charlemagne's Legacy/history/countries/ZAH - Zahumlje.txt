@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = serbian
 religion = slavic
 capital = 139
+religious_school = slavic_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Pavel"

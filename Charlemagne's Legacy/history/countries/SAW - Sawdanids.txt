@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = baranis
 religion = sunni
 capital = 1933
+religious_school = shafii_school
 historical_rival = BYZ
 historical_rival = ITA
 867.1.1 = {

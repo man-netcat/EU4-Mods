@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = levantine
 religion = sunni
 capital = 410
+religious_school = hanafi_school
 historical_rival = BYZ
 # The Abbasid Caliphate. Vanilla ARB is a formable tag with no land and no rank,
 # so this file exists only to promote it: government_rank = 3 makes it an Empire.

@@ -5,6 +5,7 @@ technology_group = chinese
 primary_culture = korean
 religion = mahayana
 capital = 2745
+religious_school = avatamsaka_school
 867.1.1 = {
 	monarch = {
 		name = "Eung-ryeom"

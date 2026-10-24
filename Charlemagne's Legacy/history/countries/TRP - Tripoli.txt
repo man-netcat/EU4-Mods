@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = butr
 religion = ibadi
 capital = 354
+religious_school = ibadi_school
 867.1.1 = {
 	monarch = {
 		name = "Zalghîn"

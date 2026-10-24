@@ -5,6 +5,7 @@ technology_group = indian
 primary_culture = kashmiri
 religion = hinduism
 capital = 508
+religious_school = vaishnavism_school
 867.1.1 = {
 	monarch = {
 		name = "Avantivarma"

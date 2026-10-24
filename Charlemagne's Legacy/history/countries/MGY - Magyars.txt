@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = magyar
 religion = taltosist
 capital = 283
+religious_school = magyar_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Álmos"

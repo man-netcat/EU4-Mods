@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = serbian
 religion = slavic
 capital = 138
+religious_school = slavic_pagan_school
 fixed_capital = 138 # Cannot move capital away from this province & no power cost to move to it
 
 #Grand Dukes of Duklija/Zeta

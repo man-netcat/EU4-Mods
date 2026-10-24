@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = persian
 religion = sunni
 capital = 435
+religious_school = shafii_school
 867.1.1 = {
 	monarch = {
 		name = "Ya'qub"

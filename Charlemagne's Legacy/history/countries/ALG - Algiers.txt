@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = maghrebi
 religion = ibadi
 capital = 338
+religious_school = ibadi_school
 867.1.1 = {
 	monarch = {
 		name = "Aflah"

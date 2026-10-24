@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = baranis
 religion = sunni
 capital = 335
+religious_school = maliki_school
 867.1.1 = {
 	monarch = {
 		name = "Sa'id II"

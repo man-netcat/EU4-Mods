@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = lithuanian
 religion = romuva
 capital = 40
+religious_school = baltic_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Pergrubrius"

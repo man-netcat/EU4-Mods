@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = estonian
 religion = suomenusko
 capital = 38
+religious_school = finnish_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Meelis"

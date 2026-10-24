@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = khwarezmian
 religion = sunni
 capital = 441
+religious_school = shafii_school
 867.1.1 = {
 	monarch = {
 		name = "Eraq"

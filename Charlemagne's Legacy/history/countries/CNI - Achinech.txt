@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = guanche
 religion = animism
 capital = 4565
+religious_school = north_african_acham_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Guanareme"

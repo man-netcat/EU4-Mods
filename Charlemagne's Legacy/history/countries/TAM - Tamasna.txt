@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = baranis
 religion = ibadi
 capital = 2470
+religious_school = najdat_school
 867.1.1 = {
 	monarch = {
 		name = "Yunus"

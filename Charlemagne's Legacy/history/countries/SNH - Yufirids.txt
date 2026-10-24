@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = yemeni_culture
 religion = sunni
 capital = 2346
+religious_school = shafii_school
 867.1.1 = {
 	monarch = {
 		name = "Yu'fir"

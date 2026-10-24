@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = butr
 religion = sunni
 capital = 1110
+religious_school = shafii_school
 867.1.1 = {
 	monarch = {
 		name = "Tiljad"
