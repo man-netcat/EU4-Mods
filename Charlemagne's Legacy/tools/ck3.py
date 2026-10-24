@@ -445,7 +445,7 @@ def heir_dynasty(text):
 
 
 def step_ck3(argv):
-    from eu4 import COUNTRY_OUT, VANILLA_CDIR
+    from eu4 import COUNTRY_OUT, VANILLA_CDIR, hist_name
 
     fix = "--fix" in argv
     titles, chars = load_titles(), load_chars()
@@ -473,7 +473,7 @@ def step_ck3(argv):
 
     for tag in sorted(TITLES):
         got = resolve(tag, titles, chars, dyns, houses)
-        path = COUNTRY_OUT / f"{tag}.txt"
+        path = COUNTRY_OUT / hist_name(BY_TAG[tag])
         if "error" in got:
             bad.append(f"{tag}: {got['error']}")
             continue

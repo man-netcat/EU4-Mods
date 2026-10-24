@@ -19,7 +19,7 @@ country_decisions = {
 					tooltip = kar_form_hre_provinces_tooltip
 					kar_form_hre_provinces_trigger = yes
 				}
-				value = 227
+				value = 226
 			}
 		}
 

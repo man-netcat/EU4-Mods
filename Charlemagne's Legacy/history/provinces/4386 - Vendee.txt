@@ -1,8 +1,8 @@
 # 4111 - Vendée
 
-owner = AQI
-controller = AQI
-add_core = AQI
+owner = MTA
+controller = MTA
+add_core = MTA
 capital = "Luçon"
 culture = occitain
 religion = catholic
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = AQI
-	controller = AQI
-	add_core = AQI
+	owner = MTA
+	controller = MTA
+	add_core = MTA
 }
