@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json, os, re, shutil
+from paths import EU4_GAME, local_mod_path
 from functools import lru_cache
 from pathlib import Path
 
@@ -41,7 +42,7 @@ from tagdb import (
 HERE = Path(__file__).resolve().parent
 CACHE = HERE / "cache"
 PROVDATA = CACHE / "provdata.json"
-GAME = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
+GAME = EU4_GAME
 MOD = HERE.parent
 VANILLA_HISTORY = Path(GAME) / "history"
 
@@ -1120,7 +1121,7 @@ def step_custom() -> None:
         print(f"wrote {cfile}")
 
         if t.flag_source or t.flag_from:
-            flag = t.flag_source or os.path.join(GAME, "gfx", "flags", f"{t.flag_from}.tga")
+            flag = local_mod_path(t.flag_source) if t.flag_source else os.path.join(GAME, "gfx", "flags", f"{t.flag_from}.tga")
             assert os.path.exists(flag), f"no flag for {t.tag} at {flag}"
             dest = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
             if os.path.exists(dest):

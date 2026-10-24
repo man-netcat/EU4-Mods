@@ -11,11 +11,12 @@ All colours snap to the WappenWiki tincture canon from FLAG_NOTES
 before rendering, so the flags match the family palette exactly.
 """
 import os, re, struct, sys
+from paths import CK3_GAME, PATRUM
 
-CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
+CK3 = CK3_GAME
 # Patrum Scuta carries the authored dynasty designs the user wants drawn;
 # base game blocks stay as fallback for dynasties it does not override.
-PS = "/home/rick/Paradox/Workshop/Crusader Kings III/Patrum Scuta"
+PS = PATRUM
 COA_DIRS = [
     os.path.join(PS, "common", "coat_of_arms", "coat_of_arms"),
     os.path.join(CK3, "common", "coat_of_arms", "coat_of_arms"),

@@ -18,6 +18,7 @@ Usage:
 import difflib
 import json
 import os
+from paths import EU4_GAME
 import re
 import sys
 import unicodedata
@@ -26,7 +27,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import ck3  # noqa: E402
 
-EU4 = "/mnt/data/SteamLibrary/steamapps/common/Europa Universalis IV"
+EU4 = EU4_GAME
 OUT = os.path.join(HERE, "provmap_candidates.json")
 RANK_OF = {"b": 0, "c": 1, "d": 2}
 RANK_NAME = {0: "barony", 1: "county", 2: "duchy"}

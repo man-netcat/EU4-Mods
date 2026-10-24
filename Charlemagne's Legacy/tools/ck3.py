@@ -3,11 +3,12 @@
 import json, os, pickle, re
 from functools import lru_cache
 from pathlib import Path
+from paths import CK3_GAME
 
 from enc import encname
 from tagdb import BY_TAG, CTRY_DATE, RULER_TITLES, TITLES, ck3_government
 
-GAME_CK3 = "/mnt/data/SteamLibrary/steamapps/common/Crusader Kings III/game"
+GAME_CK3 = CK3_GAME
 
 DATE = "867.1.1"
 
