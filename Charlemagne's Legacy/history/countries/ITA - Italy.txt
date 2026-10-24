@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = frankish
 religion = catholic
 capital = 4728
+religious_school = roman_rite_school
 historical_rival = SAW
 historical_friend = PAP
 867.1.1 = {

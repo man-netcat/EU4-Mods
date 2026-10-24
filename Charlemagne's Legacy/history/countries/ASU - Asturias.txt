@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = castillian
 religion = catholic
 capital = 207
+religious_school = roman_rite_school
 historical_rival = ADU
 historical_friend = PAP
 # ASU - Asturias.

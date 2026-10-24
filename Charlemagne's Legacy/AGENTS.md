@@ -109,6 +109,28 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   rank, CK3 title): if the request doesn't give them, ask first — never
   assume them.
 
+## Christian rites (religious schools)
+
+CK3's rites of `christian_faith` are EU4 religious schools of the `christian`
+group, the Islamic-schools mechanism. `tools/rites.py` holds the table (13
+rites: key, CK3 rite, name, desc, one modifier, placeholder colour) and
+`build.py` regenerates from it: the `religious_schools` block between the
+BEGIN/END RITES markers in `common/religions/00_religion.txt`,
+`common/static_modifiers/karolingian_rites.txt`,
+`common/scripted_effects/karolingian_rites.txt`, `interface/karolingian_rites.gfx`
+and `localisation/replace/karolingian_rites_l_english.yml` - edit the table,
+never those outputs. A country starts with the school of its 867 CK3 holder's
+`rite` (holders without one follow the faith's main rite, roman) via
+`religious_school = X_school` in country history. Icons
+`gfx/interface/icon_christian_school_<key>.tga` are generated PLACEHOLDERS
+only when missing: the real CK3 rite icons are dropped in locally under the
+same names and are then kept.
+`rites.verify()` (run by build and validate) checks the table against CK3's
+rite_types, every modifier/trigger against vanilla, that outputs match the
+generator, loc/icons exist, and that each country's history school equals its
+867 holder's rite. In-game text says "Rite" / "Clergy" / "Cleric"; the engine's
+shared school UI strings (also used by Islam) are left alone.
+
 ## Standing conventions
 
 - Provinces keep **vanilla culture** (standing rule; the one user-granted

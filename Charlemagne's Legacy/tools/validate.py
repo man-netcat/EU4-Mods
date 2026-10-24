@@ -1728,6 +1728,16 @@ def run() -> int:
     for b in missing[:8]:
         print("        " + b)
 
+    print("\n== Christian rite schools (tools/rites.py) ==")
+    import rites
+
+    rite_err, rite_warn = rites.verify()
+    note(not rite_err, f"rite schools verified against CK3, vanilla and history ({len(rite_err)} problems)")
+    for e in rite_err:
+        print("        " + e)
+    for w in rite_warn:
+        warn(w)
+
     print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 
     return 1 if fail else 0

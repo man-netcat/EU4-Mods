@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = bulgarian
 religion = catholic
 capital = 156
+religious_school = byzantine_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Zalan"

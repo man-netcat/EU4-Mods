@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = dutch
 religion = catholic
 capital = 44
+religious_school = carolingian_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Rimbert"

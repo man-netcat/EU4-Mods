@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = croatian
 religion = catholic
 capital = 1826
+religious_school = roman_rite_school
 historical_friend = PAP
 867.1.1 = {
 	monarch = {

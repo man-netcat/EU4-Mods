@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = greek
 religion = catholic
 capital = 136
+religious_school = byzantine_rite_school
 # Rank: a coastal duchy of city-states, nominally one realm. The full argument
 # lives on the Tag for DAL in tools/tagdb.py.
 

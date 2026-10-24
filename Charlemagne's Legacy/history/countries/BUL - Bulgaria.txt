@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = bulgarian
 religion = catholic
 capital = 150
+religious_school = byzantine_rite_school
 historical_rival = BYZ
 historical_friend = PAP
 # Rank: the First Bulgarian Empire under Boris is a kingdom by 867, a peer of
