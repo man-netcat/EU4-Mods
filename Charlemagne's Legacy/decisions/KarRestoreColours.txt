@@ -67,6 +67,7 @@ country_decisions = {
 				tag = SIL
 				tag = SLZ
 				tag = SOR
+				tag = SPL
 				tag = SRV
 				tag = STE
 				tag = SWA
@@ -79,6 +80,7 @@ country_decisions = {
 				tag = TRP
 				tag = TRS
 				tag = TUN
+				tag = TUS
 				tag = VEN
 				tag = WOL
 			}
@@ -454,6 +456,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = SPL }
+			change_country_color = {
+				color = { 169 26 5 }
+			}
+		}
+		if = {
 			limit = { tag = SRV }
 			change_country_color = {
 				color = { 98 206 253 }
@@ -523,6 +531,12 @@ country_decisions = {
 			limit = { tag = TUN }
 			change_country_color = {
 				color = { 146 134 57 }
+			}
+		}
+		if = {
+			limit = { tag = TUS }
+			change_country_color = {
+				color = { 84 96 136 }
 			}
 		}
 		if = {

@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = franconian
+religion = catholic
+capital = 111
+867.1.1 = {
+	monarch = {
+		name = "Unruoch II"
+		dynasty = "Unruoching"
+		birth_date = 840.1.1
+		death_date = 874.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Berengar"
+		monarch_name = "Berengar"
+		dynasty = "Unruoching"
+		birth_date = 841.1.1
+		death_date = 924.4.7
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

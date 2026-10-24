@@ -97,9 +97,25 @@ vassal = {
 	first = GER
 	second = WFR
 }
+vassal = {
+	first = ITA
+	second = FRL
+}
 union = {
 	first = ITA
 	second = PRO
+}
+vassal = {
+	first = ITA
+	second = SPL
+}
+vassal = {
+	first = ITA
+	second = TUS
+}
+vassal = {
+	first = ITA
+	second = UBG
 }
 union = {
 	first = LOT

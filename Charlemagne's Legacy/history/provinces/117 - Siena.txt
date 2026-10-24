@@ -1,8 +1,8 @@
 #117 - Siena
 
-owner = ITA
-controller = ITA
-add_core = ITA
+owner = TUS
+controller = TUS
+add_core = TUS
 capital = "Siena"
 culture = tuscan
 religion = catholic
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = ITA
-	controller = ITA
-	add_core = ITA
+	owner = TUS
+	controller = TUS
+	add_core = TUS
 }
