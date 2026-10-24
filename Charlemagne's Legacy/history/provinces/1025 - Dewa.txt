@@ -1,8 +1,8 @@
 #1025 - Dewa
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = NUS
+controller = NUS
+add_core = NUS
 capital = "Yamagata"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = NUS
+	controller = NUS
+	add_core = NUS
 }

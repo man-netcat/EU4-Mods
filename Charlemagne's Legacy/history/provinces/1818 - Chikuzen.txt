@@ -1,8 +1,8 @@
 #1818 - Chikuzen
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = CKZ
+controller = CKZ
+add_core = CKZ
 capital = "Hakata"
 culture = japanese
 religion = mahayana
@@ -21,7 +21,7 @@ extra_cost = 16
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = CKZ
+	controller = CKZ
+	add_core = CKZ
 }

@@ -1,8 +1,8 @@
 #1021 - Settsu
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = SET
+controller = SET
+add_core = SET
 capital = "Naniwa"
 culture = japanese
 religion = mahayana
@@ -18,7 +18,7 @@ extra_cost = 8
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = SET
+	controller = SET
+	add_core = SET
 }

@@ -125,6 +125,158 @@ vassal = {
 	first = ITA
 	second = UBG
 }
+vassal = {
+	first = JAP
+	second = AKI
+}
+vassal = {
+	first = JAP
+	second = AWA
+}
+vassal = {
+	first = JAP
+	second = BUN
+}
+vassal = {
+	first = JAP
+	second = BZN
+}
+vassal = {
+	first = JAP
+	second = CKZ
+}
+vassal = {
+	first = JAP
+	second = ECG
+}
+vassal = {
+	first = JAP
+	second = ECH
+}
+vassal = {
+	first = JAP
+	second = ETC
+}
+vassal = {
+	first = JAP
+	second = HIA
+}
+vassal = {
+	first = JAP
+	second = HIG
+}
+vassal = {
+	first = JAP
+	second = HIT
+}
+vassal = {
+	first = JAP
+	second = HRM
+}
+vassal = {
+	first = JAP
+	second = HYU
+}
+vassal = {
+	first = JAP
+	second = HZN
+}
+vassal = {
+	first = JAP
+	second = ISE
+}
+vassal = {
+	first = JAP
+	second = IWM
+}
+vassal = {
+	first = JAP
+	second = IYO
+}
+vassal = {
+	first = JAP
+	second = IZU
+}
+vassal = {
+	first = JAP
+	second = KAI
+}
+vassal = {
+	first = JAP
+	second = KII
+}
+vassal = {
+	first = JAP
+	second = KOZ
+}
+vassal = {
+	first = JAP
+	second = MKW
+}
+vassal = {
+	first = JAP
+	second = MNO
+}
+vassal = {
+	first = JAP
+	second = MUS
+}
+vassal = {
+	first = JAP
+	second = NUS
+}
+vassal = {
+	first = JAP
+	second = OWA
+}
+vassal = {
+	first = JAP
+	second = SAG
+}
+vassal = {
+	first = JAP
+	second = SET
+}
+vassal = {
+	first = JAP
+	second = SHI
+}
+vassal = {
+	first = JAP
+	second = SMS
+}
+vassal = {
+	first = JAP
+	second = STM
+}
+vassal = {
+	first = JAP
+	second = SUO
+}
+vassal = {
+	first = JAP
+	second = SUR
+}
+vassal = {
+	first = JAP
+	second = TAJ
+}
+vassal = {
+	first = JAP
+	second = TGO
+}
+vassal = {
+	first = JAP
+	second = TOS
+}
+vassal = {
+	first = JAP
+	second = TSU
+}
+vassal = {
+	first = JAP
+	second = YMT
+}
 union = {
 	first = LOT
 	second = DAU

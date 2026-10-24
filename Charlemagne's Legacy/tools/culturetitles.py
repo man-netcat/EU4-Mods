@@ -45,6 +45,7 @@ count as absent; contract-flagged rules (castellan and friends) can
 never carry over and are skipped.
 """
 import argparse
+import glob
 import os
 import re
 import sys
@@ -110,6 +111,11 @@ def gov_set(t, extra):
     describe: tribal is tribal; theocracy covers CK3's theocratic ids;
     muslim monarchies are clan (feudal gates stay in the sibling rules);
     the rest are feudal. --govs adds more (Roman heirs)."""
+    if (t.culture or "") == "japanese":
+        # every Japanese realm reads the Ritsuryo ladder (Kampaku, Kokushi,
+        # Kuni, Chiho), including the CK3 fiefs pinned to the feudal
+        # government (user decision)
+        return {"japan_administrative_government"} | extra
     g = ck3_gov_of(t)
     if g:
         return {g} | extra
@@ -210,11 +216,17 @@ def parse_rules(tier_of_title):
 
 def ck3_loc_map():
     out = {}
-    text = open(CULT_LOC, encoding="utf-8-sig").read().replace("\r\n", "\n")
-    for key, vers, val in LOC_RE.findall(text):
-        v = int(vers) if vers else 0
-        if key not in out or v >= out[key][0]:
-            out[key] = (v, val)
+    # the base file plus the DLC cultural-title files (TGP carries the
+    # Japanese Kampaku/Kokushi/Kuni/Chiho ladder)
+    files = [CULT_LOC] + sorted(glob.glob(os.path.join(
+        CK3, "localization", "english", "dlc", "*",
+        "*cultural_titles*_l_english.yml")))
+    for fn in files:
+        text = open(fn, encoding="utf-8-sig").read().replace("\r\n", "\n")
+        for key, vers, val in LOC_RE.findall(text):
+            v = int(vers) if vers else 0
+            if key not in out or v >= out[key][0]:
+                out[key] = (v, val)
     return {k: v[1] for k, v in out.items()}
 
 

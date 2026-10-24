@@ -1,8 +1,8 @@
 #1825 - Aki
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = AKI
+controller = AKI
+add_core = AKI
 capital = "Tomo"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = AKI
+	controller = AKI
+	add_core = AKI
 }

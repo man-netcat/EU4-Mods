@@ -1,8 +1,8 @@
 #1030 - Owari
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = OWA
+controller = OWA
+add_core = OWA
 capital = "Kiyosu"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = OWA
+	controller = OWA
+	add_core = OWA
 }

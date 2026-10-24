@@ -662,12 +662,23 @@ if __name__ == "__main__":
             ap.error("--title needs at least one tag")
         handles = _tag_titles()
         done, misses = [], []
+        save_db = None
         for tag in a.tag:
             title = handles.get(tag)
             if not title:
                 misses.append((tag, "no ck3_title in tags.db"))
                 continue
             coa = find_house_coa(title)
+            via = title
+            if (coa is None or not (coa["pattern"] or coa["emblems"])) \
+                    and a.save:
+                # no authored design: the save's title entity carries the
+                # CoA the engine generated for it
+                if save_db is None:
+                    save_db = load_save_database(a.save)
+                tidx = save_title_coa(a.save, title)
+                if tidx is not None and tidx in save_db:
+                    coa, via = save_db[tidx], f"{title} save#{tidx}"
             if coa is None or not (coa["pattern"] or coa["emblems"]):
                 misses.append((tag, f"{title}: no authored CoA"))
                 continue
@@ -675,7 +686,7 @@ if __name__ == "__main__":
                 dump_coa(coa, f"{tag} {title}")
             else:
                 bake(compose(coa), tag)
-                print(f"{tag:4} {title:24}")
+                print(f"{tag:4} {via:24}")
             done.append((tag, title))
         for tag, why in misses:
             print("MISS", f"{tag:4}", why)

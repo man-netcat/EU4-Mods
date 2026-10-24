@@ -1,8 +1,8 @@
 #1835 - Mino
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = MNO
+controller = MNO
+add_core = MNO
 capital = "Inabayama"
 culture = japanese
 religion = mahayana
@@ -17,7 +17,7 @@ discovered_by = chinese
 
 #1440.1.1 = { fort_15th = yes } # Inabayama (later Gifu) Castle, Estimation
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = MNO
+	controller = MNO
+	add_core = MNO
 }

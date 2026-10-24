@@ -1,8 +1,8 @@
 #4186 - Iyo
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = IYO
+controller = IYO
+add_core = IYO
 capital = "Yuzuki"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = IYO
+	controller = IYO
+	add_core = IYO
 }

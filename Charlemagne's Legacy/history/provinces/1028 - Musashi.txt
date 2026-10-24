@@ -1,8 +1,8 @@
 #1028 - Musashi
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = MUS
+controller = MUS
+add_core = MUS
 capital = "Kawagoe"
 culture = japanese
 religion = mahayana
@@ -18,7 +18,7 @@ extra_cost = 16
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = MUS
+	controller = MUS
+	add_core = MUS
 }

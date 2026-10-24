@@ -1,8 +1,8 @@
 #4180 - Hyuga
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = HYU
+controller = HYU
+add_core = HYU
 capital = "Obi"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = HYU
+	controller = HYU
+	add_core = HYU
 }

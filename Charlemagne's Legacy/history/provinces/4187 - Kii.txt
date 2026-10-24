@@ -1,8 +1,8 @@
 #4187 - Kii
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = KII
+controller = KII
+add_core = KII
 capital = "Wakayama"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = KII
+	controller = KII
+	add_core = KII
 }

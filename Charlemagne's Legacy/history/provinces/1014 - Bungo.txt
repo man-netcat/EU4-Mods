@@ -1,8 +1,8 @@
 #1014 - Bungo
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = BUN
+controller = BUN
+add_core = BUN
 capital = "Funai"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = BUN
+	controller = BUN
+	add_core = BUN
 }

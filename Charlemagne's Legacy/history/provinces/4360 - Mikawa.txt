@@ -1,8 +1,8 @@
 #4360 - Mikawa
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = MKW
+controller = MKW
+add_core = MKW
 capital = "Okazaki"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = MKW
+	controller = MKW
+	add_core = MKW
 }

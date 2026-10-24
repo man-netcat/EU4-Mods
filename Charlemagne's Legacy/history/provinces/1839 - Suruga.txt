@@ -1,8 +1,8 @@
 #1839 - Suruga
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = SUR
+controller = SUR
+add_core = SUR
 capital = "Sunpu"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = SUR
+	controller = SUR
+	add_core = SUR
 }

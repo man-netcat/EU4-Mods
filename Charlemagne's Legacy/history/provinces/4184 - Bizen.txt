@@ -1,8 +1,8 @@
 #4184 - Bizen
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = BZN
+controller = BZN
+add_core = BZN
 capital = "Okayama"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = BZN
+	controller = BZN
+	add_core = BZN
 }

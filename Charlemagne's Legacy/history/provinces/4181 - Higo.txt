@@ -1,8 +1,8 @@
 #4181 - Higo
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = HIG
+controller = HIG
+add_core = HIG
 capital = "Kumamoto"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = HIG
+	controller = HIG
+	add_core = HIG
 }

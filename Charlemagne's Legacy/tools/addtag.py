@@ -151,6 +151,8 @@ def main(argv):
 
     datas = {pid: prov_data(pid) for pid in a.pids}
     for pid, (_nm, cul, rel) in datas.items():
+        if s.get(ProvinceRow, pid) is not None:
+            continue  # existing rows keep the culture/religion in the DB
         if (cul is None and not a.culture) or (rel is None and not a.religion):
             sys.exit(f"vanilla province {pid} has no culture/religion head "
                      "(uncolonized in 1444) - pass --culture/--religion")
@@ -220,6 +222,10 @@ def main(argv):
     if capital not in a.pids:
         sys.exit("capital must be one of the provinces")
     datas = {pid: prov_data(pid) for pid in a.pids}
+    for pid, (nm, _cul, _rel) in list(datas.items()):
+        row = s.get(ProvinceRow, pid)
+        if row is not None:  # existing rows keep the DB culture/religion
+            datas[pid] = (nm, row.culture, row.religion)
     from culturelift import ruler_default, ruler_religion  # noqa: E402
 
     if a.culture:

@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = japanese
+religion = mahayana
+capital = 1018
+867.1.1 = {
+	monarch = {
+		name = "Mitori"
+		dynasty = "Miyako"
+		birth_date = 831.1.1
+		death_date = 883.7.10
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_japan_administrative_government
+}

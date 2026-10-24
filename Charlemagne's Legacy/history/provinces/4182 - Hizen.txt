@@ -1,8 +1,8 @@
 #4182 - Hizen
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = HZN
+controller = HZN
+add_core = HZN
 capital = "Nagasaki"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = HZN
+	controller = HZN
+	add_core = HZN
 }

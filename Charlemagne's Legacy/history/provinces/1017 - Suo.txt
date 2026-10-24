@@ -1,8 +1,8 @@
 #1017 - Suo
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = SUO
+controller = SUO
+add_core = SUO
 capital = "Yamaguchi"
 culture = japanese
 religion = mahayana
@@ -18,7 +18,7 @@ extra_cost = 8
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = SUO
+	controller = SUO
+	add_core = SUO
 }

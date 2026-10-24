@@ -1,8 +1,8 @@
 #1027 - Hitachi
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = HIT
+controller = HIT
+add_core = HIT
 capital = "Ota"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = HIT
+	controller = HIT
+	add_core = HIT
 }

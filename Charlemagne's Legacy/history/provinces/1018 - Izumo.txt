@@ -1,8 +1,8 @@
 #1018 - Izumo
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = IZU
+controller = IZU
+add_core = IZU
 capital = "Matsue"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = IZU
+	controller = IZU
+	add_core = IZU
 }

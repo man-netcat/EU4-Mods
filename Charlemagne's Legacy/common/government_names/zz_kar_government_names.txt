@@ -2222,69 +2222,7 @@ yemeni_culture_titles = {
 
 
 
-japanese_titles = {
-# CK3 ladders for JAP(r4)
-	rank = {
-		1 = JAPANESE_COUNTY  # county_feudal
-		2 = JAPANESE_DUCHY  # duchy_feudal
-		3 = JAPANESE_KINGDOM  # kingdom_feudal
-		4 = JAPANESE_EMPIRE  # empire_feudal
-		5 = HEGEMONY
-	}
 
-	ruler_male = {
-		1 = JAPANESE_COUNT_MALE  # count_feudal_male
-		2 = JAPANESE_DUKE_MALE  # duke_feudal_male
-		3 = JAPANESE_KING_MALE  # king_feudal_male
-		4 = JAPANESE_EMPEROR_MALE  # emperor_feudal_male
-		5 = JAPANESE_EMPEROR_MALE  # hegemon
-	}
-
-	ruler_female = {
-		1 = JAPANESE_COUNT_FEMALE  # count_feudal_female
-		2 = JAPANESE_DUKE_FEMALE  # duke_feudal_female
-		3 = JAPANESE_KING_FEMALE  # king_feudal_female
-		4 = JAPANESE_EMPEROR_FEMALE  # emperor_feudal_female
-		5 = JAPANESE_EMPEROR_FEMALE  # hegemon_female
-	}
-
-	consort_male = {
-		1 = JAPANESE_COUNT_MALE  # consort uses the ruler form
-		2 = JAPANESE_DUKE_MALE  # consort uses the ruler form
-		3 = JAPANESE_KING_MALE  # consort uses the ruler form
-		4 = JAPANESE_EMPEROR_MALE  # consort uses the ruler form
-		5 = JAPANESE_EMPEROR_MALE  # consort uses the ruler form
-	}
-
-	consort_female = {
-		1 = JAPANESE_COUNT_FEMALE  # count_feudal_female
-		2 = JAPANESE_DUKE_FEMALE  # duke_feudal_female
-		3 = JAPANESE_KING_FEMALE  # king_feudal_female
-		4 = JAPANESE_EMPEROR_FEMALE  # emperor_feudal_female
-		5 = JAPANESE_EMPEROR_FEMALE  # hegemon_female
-	}
-
-	heir_male = {
-		1 = HEIR
-		2 = HEIR
-		3 = HEIR
-		4 = HEIR
-		5 = HEIR
-	}
-
-	heir_female = {
-		1 = HEIR_fem
-		2 = HEIR_fem
-		3 = HEIR_fem
-		4 = HEIR_fem
-		5 = HEIR_fem
-	}
-
-	trigger = {
-		government = monarchy
-		primary_culture = japanese
-	}
-}
 
 
 
@@ -4628,6 +4566,270 @@ uyghur_titles = {
 	trigger = {
 		government = monarchy
 		primary_culture = uyghur
+	}
+}
+
+
+korean_sll_titles = {
+# lifted from CK3 flavorization for SLL: k_silla carries rule specials the shared korean_titles block cannot express; Islam heir = False
+	rank = {
+		1 = KOREAN_SLL_COUNTY  # county_administrative_korean
+		2 = KOREAN_SLL_DUCHY  # duchy_administrative_korean
+		3 = KOREAN_SLL_KINGDOM  # kingdom_celestial_chinese_protectorate_vassal
+		4 = KOREAN_SLL_EMPIRE  # empire_celestial_chinese_protectorate_vassal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KOREAN_SLL_COUNT_MALE  # count_administrative_male_korean
+		2 = KOREAN_SLL_DUKE_MALE  # duke_administrative_male_korean_military_governor
+		3 = KOREAN_SLL_KING_MALE  # king_celestial_male_chinese_civilian_governor
+		4 = KOREAN_SLL_EMPEROR_MALE  # emperor_male_korean
+		5 = KOREAN_SLL_HEGEMON_MALE  # hegemon_male_korean
+	}
+
+	ruler_female = {
+		1 = KOREAN_SLL_COUNT_FEMALE  # count_administrative_female_korean
+		2 = KOREAN_SLL_DUKE_FEMALE  # duke_administrative_female_korean_military_governor
+		3 = KOREAN_SLL_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = KOREAN_SLL_EMPEROR_FEMALE  # emperor_female_korean
+		5 = KOREAN_SLL_HEGEMON_FEMALE  # hegemon_female_korean
+	}
+
+	consort_male = {
+		1 = KOREAN_SLL_COUNT_MALE  # consort uses the ruler form
+		2 = KOREAN_SLL_DUKE_MALE  # consort uses the ruler form
+		3 = KOREAN_SLL_KING_MALE  # consort uses the ruler form
+		4 = KOREAN_SLL_EMPEROR_MALE  # consort uses the ruler form
+		5 = KOREAN_SLL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KOREAN_SLL_COUNT_FEMALE  # count_administrative_female_korean
+		2 = KOREAN_SLL_DUKE_FEMALE  # duke_administrative_female_korean_military_governor
+		3 = KOREAN_SLL_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = KOREAN_SLL_EMPEROR_FEMALE  # emperor_female_korean
+		5 = KOREAN_SLL_HEGEMON_FEMALE  # hegemon_female_korean
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = SLL
+	}
+}
+
+
+japanese_jap_titles = {
+# lifted from CK3 flavorization for JAP: e_japan carries rule specials the shared japanese_titles block cannot express; Islam heir = False
+	rank = {
+		1 = JAPANESE_JAP_COUNTY  # county_administrative_japanese
+		2 = JAPANESE_JAP_DUCHY  # duchy_administrative_japanese
+		3 = JAPANESE_JAP_KINGDOM  # kingdom_administrative_japanese
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = JAPANESE_JAP_COUNT_MALE  # count_administrative_male_japanese
+		2 = JAPANESE_JAP_DUKE_MALE  # duke_administrative_male_japanese
+		3 = JAPANESE_JAP_KING_MALE  # king_administrative_male_japanese
+		4 = JAPANESE_JAP_EMPEROR_MALE  # emperor_administrative_male_japanese
+		5 = JAPANESE_JAP_HEGEMON_MALE  # hegemon_male_japanese
+	}
+
+	ruler_female = {
+		1 = JAPANESE_JAP_COUNT_FEMALE  # count_administrative_female_japanese
+		2 = JAPANESE_JAP_DUKE_FEMALE  # duke_administrative_female_japanese
+		3 = JAPANESE_JAP_KING_FEMALE  # king_administrative_female_japanese
+		4 = JAPANESE_JAP_EMPEROR_FEMALE  # emperor_administrative_female_japanese
+		5 = JAPANESE_JAP_HEGEMON_FEMALE  # hegemon_female_japanese
+	}
+
+	consort_male = {
+		1 = JAPANESE_JAP_COUNT_MALE  # consort uses the ruler form
+		2 = JAPANESE_JAP_DUKE_MALE  # consort uses the ruler form
+		3 = JAPANESE_JAP_KING_MALE  # consort uses the ruler form
+		4 = JAPANESE_JAP_EMPEROR_MALE  # consort uses the ruler form
+		5 = JAPANESE_JAP_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = JAPANESE_JAP_COUNT_FEMALE  # count_administrative_female_japanese
+		2 = JAPANESE_JAP_DUKE_FEMALE  # duke_administrative_female_japanese
+		3 = JAPANESE_JAP_KING_FEMALE  # king_administrative_female_japanese
+		4 = JAPANESE_JAP_EMPEROR_FEMALE  # emperor_administrative_female_japanese
+		5 = JAPANESE_JAP_HEGEMON_FEMALE  # hegemon_female_japanese
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = JAP
+	}
+}
+
+
+japanese_titles = {
+# CK3 ladders for STM(r1), SUO(r1), BUN(r1), IZU(r1), HRM(r1), SET(r1), ECH(r1), ECG(r1), HIT(r1), MUS(r1), KAI(r1), OWA(r1), CKZ(r1), TOS(r1), AWA(r1), AKI(r1), TAJ(r1), YMT(r1), MNO(r1), ETC(r1), SUR(r1), KOZ(r1), HYU(r1), HIG(r1), HZN(r1), IWM(r1), BZN(r1), TGO(r1), IYO(r1), KII(r1), SHI(r1), SAG(r1), SMS(r1), ISE(r1), MKW(r1), TSU(r1), NUS(r2), HIA(r2) - japan_administrative/japan_feudal CK3 government
+	rank = {
+		1 = JAPANESE_COUNTY  # county_administrative_japanese
+		2 = JAPANESE_DUCHY  # duchy_administrative_japanese
+		3 = JAPANESE_KINGDOM  # kingdom_administrative_japanese
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = JAPANESE_COUNT_MALE  # count_administrative_male_japanese
+		2 = JAPANESE_DUKE_MALE  # duke_administrative_male_japanese
+		3 = JAPANESE_KING_MALE  # king_administrative_male_japanese
+		4 = JAPANESE_EMPEROR_MALE  # emperor
+		5 = JAPANESE_HEGEMON_MALE  # hegemon_male_japanese
+	}
+
+	ruler_female = {
+		1 = JAPANESE_COUNT_FEMALE  # count_administrative_female_japanese
+		2 = JAPANESE_DUKE_FEMALE  # duke_administrative_female_japanese
+		3 = JAPANESE_KING_FEMALE  # king_administrative_female_japanese
+		4 = JAPANESE_EMPEROR_FEMALE  # emperor_female
+		5 = JAPANESE_HEGEMON_FEMALE  # hegemon_female_japanese
+	}
+
+	consort_male = {
+		1 = JAPANESE_COUNT_MALE  # consort uses the ruler form
+		2 = JAPANESE_DUKE_MALE  # consort uses the ruler form
+		3 = JAPANESE_KING_MALE  # consort uses the ruler form
+		4 = JAPANESE_EMPEROR_MALE  # consort uses the ruler form
+		5 = JAPANESE_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = JAPANESE_COUNT_FEMALE  # count_administrative_female_japanese
+		2 = JAPANESE_DUKE_FEMALE  # duke_administrative_female_japanese
+		3 = JAPANESE_KING_FEMALE  # king_administrative_female_japanese
+		4 = JAPANESE_EMPEROR_FEMALE  # emperor_female
+		5 = JAPANESE_HEGEMON_FEMALE  # hegemon_female_japanese
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+			has_country_flag = kar_gov_japan_administrative_government
+			has_country_flag = kar_gov_japan_feudal_government
+		}
+		primary_culture = japanese
+	}
+}
+
+
+saxon_titles = {
+# CK3 ladders for AGR(r2)
+	rank = {
+		1 = SAXON_COUNTY  # county_feudal
+		2 = SAXON_DUCHY  # duchy_feudal
+		3 = SAXON_KINGDOM  # kingdom_feudal
+		4 = SAXON_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SAXON_COUNT_MALE  # count_feudal_male
+		2 = SAXON_DUKE_MALE  # duke_feudal_male
+		3 = SAXON_KING_MALE  # king_feudal_male
+		4 = SAXON_EMPEROR_MALE  # emperor_feudal_male_german
+		5 = SAXON_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SAXON_COUNT_FEMALE  # count_feudal_female
+		2 = SAXON_DUKE_FEMALE  # duke_feudal_female
+		3 = SAXON_KING_FEMALE  # king_feudal_female
+		4 = SAXON_EMPEROR_FEMALE  # emperor_feudal_female_german
+		5 = SAXON_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SAXON_COUNT_MALE  # consort uses the ruler form
+		2 = SAXON_DUKE_MALE  # consort uses the ruler form
+		3 = SAXON_KING_MALE  # consort uses the ruler form
+		4 = SAXON_EMPEROR_MALE  # consort uses the ruler form
+		5 = SAXON_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SAXON_COUNT_FEMALE  # count_feudal_female
+		2 = SAXON_DUKE_FEMALE  # duke_feudal_female
+		3 = SAXON_KING_FEMALE  # king_feudal_female
+		4 = SAXON_EMPEROR_FEMALE  # emperor_feudal_female_german
+		5 = SAXON_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = saxon
 	}
 }
 

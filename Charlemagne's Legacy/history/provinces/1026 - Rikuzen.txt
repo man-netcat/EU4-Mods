@@ -1,8 +1,8 @@
 #1026 - Mutsu
 
-owner = JAP
-controller = JAP
-add_core = JAP
+owner = HIA
+controller = HIA
+add_core = HIA
 capital = "Aizu"
 culture = japanese
 religion = mahayana
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = JAP
-	controller = JAP
-	add_core = JAP
+	owner = HIA
+	controller = HIA
+	add_core = HIA
 }
