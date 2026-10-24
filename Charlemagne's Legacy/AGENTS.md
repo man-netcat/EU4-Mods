@@ -151,7 +151,9 @@ colour come from CK3's faith (`python3 tools/faiths.py` sets them and creates
 missing religions by cloning a block, e.g. shaivism/vaishnavism from hinduism
 and achamanism from animism, with a placeholder icon frame); the icons are the
 CK3 faith icons and need the CK3 install: run `python3 tools/faiths.py icons`
-locally (overwrites each religion's frame in the four strips). Validate fails on
+locally (overwrites each religion's frame in the four strips and replaces the
+placeholder rite icons `gfx/interface/icon_rite_<key>.tga` with CK3's rite icons,
+resized to 64x64; a rite icon that is no placeholder is kept unless `--force`). Validate fails on
 a used religion that is not a lifted faith, a wrong colour or name, a shared
 icon frame, a missing/blank icon, and lists placeholder icons by name. A faith
 nobody needs may stay unmapped (qarmatian); map it when a tag or province needs it.

@@ -546,6 +546,69 @@ def strip_frame(path, frame_px, n):
     return frames, False
 
 
+# ---- CK3 rite icons (needs the CK3 install) ----------------------------------
+
+ICON_PX = 64
+
+
+def rite_icon_name(rite):
+    """CK3's icon name for a rite: its own `icon =`, else its faith's icon."""
+    import glob
+
+    from faiths import ck3_faith
+
+    for f in glob.glob(os.path.join(CK3_GAME, "common", "religion", "rite_types", "*.txt")):
+        text = open(f, encoding="utf-8-sig", errors="replace").read()
+        m = re.search(rf"^{re.escape(rite)}\s*=\s*\{{(.*?)^\}}", text, re.M | re.S)
+        if m:
+            im = re.search(r"^\s*icon\s*=\s*(\w+)", m.group(1), re.M)
+            if im:
+                return im.group(1)
+            fm = re.search(r"^\s*faith\s*=\s*(\w+)", m.group(1), re.M)
+            info = ck3_faith(fm.group(1)) if fm else None
+            return info["icon"] if info else None
+    return None
+
+
+def ck3_rite_icon_file(rite):
+    name = rite_icon_name(rite)
+    if not name:
+        return None
+    p = os.path.join(CK3_GAME, "gfx", "interface", "icons", "faith", name + ".dds")
+    return p if os.path.exists(p) else None
+
+
+def _ck3_icon_tga(src):
+    import io
+
+    from PIL import Image
+
+    im = Image.open(src).convert("RGBA").resize((ICON_PX, ICON_PX), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, format="TGA")
+    return buf.getvalue()
+
+
+def lift_icons(force=False):
+    """Replace the placeholder rite icons with CK3's (as 64x64 TGA). A rite icon
+    that is already something else (hand-placed) is kept unless force."""
+    ph = _placeholder_bytes()
+    done = kept = missing = 0
+    for r in RITES:
+        key, dest = r[1], icon_path(r[1])
+        src = ck3_rite_icon_file(r[2])
+        if src is None:
+            print(f"  {key}: CK3 icon for rite {r[2]} ({rite_icon_name(r[2])}) not found - skipped")
+            missing += 1
+            continue
+        if os.path.exists(dest) and open(dest, "rb").read() != ph[key] and not force:
+            kept += 1
+            continue
+        open(dest, "wb").write(_ck3_icon_tga(src))
+        done += 1
+    print(f"rite icons: {done} lifted from CK3, {kept} kept (not placeholders), {missing} not found")
+
+
 # ---- verification ----------------------------------------------------------
 
 _VANILLA_NEEDS = {
@@ -683,6 +746,15 @@ def verify(check_history=True):
     for g, keys in sorted(left.items()):
         warn.append(f"rite icons still placeholders ({g}): " + ", ".join(keys))
 
+    for r in RITES:
+        if not rite_icon_name(r[2]):
+            err.append(f"{r[1]}: CK3 names no icon for rite '{r[2]}' (nor for its faith)")
+    differ = [r[1] for r in RITES
+              if ck3_rite_icon_file(r[2]) and os.path.exists(icon_path(r[1]))
+              and open(icon_path(r[1]), "rb").read() != _ck3_icon_tga(ck3_rite_icon_file(r[2]))]
+    if differ:
+        warn.append("rite icons that differ from CK3's (hand-placed? run tools/faiths.py icons to lift): " + ", ".join(differ))
+
     # 5b. religion icons: every religion the mod uses has an icon frame in all four strips
     icons = religion_icons(rel_text)
     for rel in used_religions():
@@ -754,4 +826,9 @@ def step_rites():
 
 
 if __name__ == "__main__":
-    step_rites()
+    import sys
+
+    if sys.argv[1:2] == ["icons"]:
+        lift_icons(force="--force" in sys.argv)
+    else:
+        step_rites()

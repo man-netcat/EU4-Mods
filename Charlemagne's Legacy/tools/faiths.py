@@ -11,8 +11,9 @@ faith that no tag or province needs may stay unmapped.
 Usage (from the mod folder):
     python3 tools/faiths.py            # create missing religions, lift colours
                                        # and names (needs only the text files)
-    python3 tools/faiths.py icons      # copy the CK3 faith icons over the
-                                       # religion strips (needs the CK3 install)
+    python3 tools/faiths.py icons      # copy the CK3 faith icons over the religion
+                                       # strips and the CK3 rite icons over the
+                                       # rite placeholders (needs the CK3 install)
 validate runs faiths.verify(): faith mapped, colour and name equal CK3's,
 icons present, and by name which icons are still placeholders.
 """
@@ -113,7 +114,7 @@ def ck3_faith(faith):
             name = lm.group(1)
             break
     return {"name": name, "color": _rgb(col.group(1)) if col else None,
-            "icon": ic.group(1) if ic else None}
+            "icon": ic.group(1) if ic else faith}  # no icon = N: CK3 uses <faith>.dds
 
 
 def religion_of_faith():
@@ -235,6 +236,9 @@ def lift_icons():
         addreligion.replace_frame(src, int(icon.group(1)))
         done += 1
     print(f"{done} religion icons replaced with the CK3 faith icons")
+    import rites
+
+    rites.lift_icons(force="--force" in sys.argv)
 
 
 # ---- verification ------------------------------------------------------------
