@@ -181,6 +181,14 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = daoxue_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = shinto_scholar_modifier }
+		remove_country_modifier = shinto_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = shugendo_scholar_modifier }
+		remove_country_modifier = shugendo_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = shaivism_scholar_modifier }
 		remove_country_modifier = shaivism_scholar_modifier
 	}
@@ -199,6 +207,10 @@ clear_rite_scholar_modifiers_effect = {
 	if = {
 		limit = { has_country_modifier = north_african_acham_pagan_scholar_modifier }
 		remove_country_modifier = north_african_acham_pagan_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = utaki_scholar_modifier }
+		remove_country_modifier = utaki_scholar_modifier
 	}
 	if = {
 		limit = { has_country_modifier = khurmazta_scholar_modifier }

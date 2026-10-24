@@ -360,6 +360,22 @@ daoxue_scholar_modifier = {
 	production_efficiency = 0.05
 }
 
+shinto_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_morale = 0.05
+}
+
+shugendo_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.1
+}
+
 shaivism_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes
@@ -398,6 +414,14 @@ north_african_acham_pagan_scholar_modifier = {
 	is_scholar_modifier = yes
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	defensiveness = 0.1
+}
+
+utaki_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_unrest = -1
 }
 
 khurmazta_scholar_modifier = {

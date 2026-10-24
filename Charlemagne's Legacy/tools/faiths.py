@@ -54,6 +54,8 @@ FAITH_RELIGION = {
     "finnish_pagan": "suomenusko",
     "magyar_pagan": "taltosist",
     "north_african_acham_pagan": "achamanism",
+    "shinto_faith": "shinto",
+    "utaki": "utaki",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -64,6 +66,8 @@ NEW_RELIGIONS = {
                     "The worship of Vishnu and his avatars, carried by temple and pilgrimage across the subcontinent."),
     "achamanism": ("animism", "pagan", "animism",
                    "The old faith of the Berber and Guanche peoples of the Maghreb and the Atlantic islands, with its holy places and ancestral customs."),
+    "utaki": ("animism", "pagan", "achamanism",
+              "The faith of the Ryukyu islands and southern Kyushu, with its sacred groves, the utaki, where the noro priestesses commune with the kami."),
 }
 
 
@@ -113,6 +117,10 @@ def ck3_faith(faith):
         if lm:
             name = lm.group(1)
             break
+    if name:
+        from enc import encname
+
+        name = encname(name)  # the game drops strings with glyphs outside Latin-1 (Shintōism -> Shintoism)
     return {"name": name, "color": _rgb(col.group(1)) if col else None,
             "icon": ic.group(1) if ic else faith}  # no icon = N: CK3 uses <faith>.dds
 
@@ -189,7 +197,11 @@ def lift():
             if lifted_name(loc, key) is None:
                 loc = loc.rstrip("\n") + f'\n {key}:0 "{info["name"]}"\n {key}_desc:0 "The {info["name"]} faith."\n'
             else:
+                was = lifted_name(loc, key)
                 loc = re.sub(rf'(?m)^( {re.escape(key)}:\d* )"[^"]*"', lambda m: f'{m.group(1)}"{info["name"]}"', loc, count=1)
+                # a description that is only the generated "The <name> faith." follows the name
+                loc = loc.replace(f' {key}_desc:0 "The {was} faith."', f' {key}_desc:0 "The {info["name"]} faith."')
+                loc = loc.replace(f' {key}_desc:0 "The Shint\u014dism faith."', f' {key}_desc:0 "The {info["name"]} faith."')
             n_name += 1
     open(REL_FILE, "w", encoding="cp1252", newline="").write(text)
     open(LOC_FILE, "w", encoding="utf-8-sig", newline="").write(loc)

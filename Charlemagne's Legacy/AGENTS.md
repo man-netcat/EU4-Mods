@@ -158,6 +158,17 @@ a used religion that is not a lifted faith, a wrong colour or name, a shared
 icon frame, a missing/blank icon, and lists placeholder icons by name. A faith
 nobody needs may stay unmapped (qarmatian); map it when a tag or province needs it.
 
+## Province religions audited against CK3 counties
+
+`tools/provfaiths.py` pairs EU4 provinces with CK3 counties (curated, a region at
+a time - Japan so far) and validate fails when a paired province's religion is
+not the one lifting its county's faith (county capital barony `rite` in
+`history/provinces` -> faith -> `FAITH_RELIGION`). `python3 tools/provfaiths.py`
+prints the audit, `... apply` writes the expected religions to `tags.db`.
+Provinces it cannot pair with certainty (`UNMAPPED`) are listed, never guessed.
+The old `provmap.json` auto-matches were wrong for eight Japanese provinces
+(Kyoto, Awa, Aki, Mino, Kai, Okinawa, Dewa, Ugo) and are corrected there.
+
 ## Standing conventions
 
 - Provinces keep **vanilla culture** (standing rule, no exceptions). Religion is

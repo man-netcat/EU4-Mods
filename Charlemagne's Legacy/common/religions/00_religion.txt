@@ -3996,6 +3996,134 @@ eastern = {
 
 			production_efficiency = 0.05
 		}
+		shinto_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_shinto_school
+					has_country_flag = privilege_can_always_invite_shinto_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_shinto_school }
+						NOT = { has_country_flag = privilege_can_always_invite_shinto_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = shinto_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = shinto_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = shinto_scholar_modifier
+
+			picture = "GFX_icon_rite_shinto"
+
+			land_morale = 0.05
+		}
+		shugendo_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_shugendo_school
+					has_country_flag = privilege_can_always_invite_shugendo_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_shugendo_school }
+						NOT = { has_country_flag = privilege_can_always_invite_shugendo_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = shugendo_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = shugendo_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = shugendo_scholar_modifier
+
+			picture = "GFX_icon_rite_shugendo"
+
+			defensiveness = 0.1
+		}
 	}
 	# END RITES
 
@@ -4108,7 +4236,7 @@ eastern = {
 	}
 
 	shinto = {
-		color = { 204 0 0 }
+		color = { 188 0 45 }
 		icon = 10
 		country = {
 			land_morale = 0.1
@@ -5180,6 +5308,70 @@ pagan = {
 
 			defensiveness = 0.1
 		}
+		utaki_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_utaki_school
+					has_country_flag = privilege_can_always_invite_utaki_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_utaki_school }
+						NOT = { has_country_flag = privilege_can_always_invite_utaki_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = utaki_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = utaki_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = utaki_scholar_modifier
+
+			picture = "GFX_icon_rite_utaki"
+
+			global_unrest = -1
+		}
 	}
 	# END RITES
 
@@ -5204,6 +5396,24 @@ pagan = {
 	achamanism = {
 		color = { 217 102 51 }
 		icon = 41
+		country = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		heretic = { SNAKE_CLAN }
+	}
+
+	utaki = {
+		color = { 141 96 255 }
+		icon = 42
 		country = {
 			tolerance_own = 1
 			global_unrest = -1

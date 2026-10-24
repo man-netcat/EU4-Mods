@@ -226,6 +226,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_shinto"
+		texturefile = "gfx/interface/icon_rite_shinto.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_shugendo"
+		texturefile = "gfx/interface/icon_rite_shugendo.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_shaivism"
 		texturefile = "gfx/interface/icon_rite_shaivism.tga"
 	}
@@ -248,6 +258,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_icon_rite_north_african_acham_pagan"
 		texturefile = "gfx/interface/icon_rite_north_african_acham_pagan.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_utaki"
+		texturefile = "gfx/interface/icon_rite_utaki.tga"
 	}
 
 	spriteType = {

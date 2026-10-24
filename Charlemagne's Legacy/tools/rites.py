@@ -180,6 +180,12 @@ RITES = [
     ("eastern", "daoxue", "daoxue", "Daoxue Rite",
      "The learning of the Way, in which Confucian teaching is joined to the study of nature and the mind.",
      "production_efficiency = 0.05", (70, 130, 120)),
+    ("eastern", "shinto", "shinto", "Shinto Rite",
+     "The way of the kami, worshipped at shrines across the Japanese islands. Its priests keep the old purity and the rites of the harvest.",
+     "land_morale = 0.05", (188, 0, 45)),
+    ("eastern", "shugendo", "shugendo", "Shugendo Rite",
+     "The mountain asceticism of the yamabushi, which joins the worship of the kami to the practices of esoteric Buddhism. Its holy men walk the peaks and the roads.",
+     "defensiveness = 0.1", (120, 80, 160)),
     # ---- dharmic group
     ("dharmic", "shaivism", "shaivism", "Shaiva Rite",
      "The worship of Shiva, Lord of Yogis and of destruction and renewal. Its ascetics roam the roads and temples of the subcontinent.",
@@ -197,6 +203,9 @@ RITES = [
     ("pagan", "north_african_acham_pagan", "north_african_acham_pagan", "Acham Rite",
      "The old faith of the Berber peoples of the Maghreb, with its holy places and ancestral customs. It is strongest where the mountains are highest.",
      "defensiveness = 0.1", (190, 150, 90)),
+    ("pagan", "utaki", "utaki", "Utaki Rite",
+     "The faith of the Ryukyu islands and southern Kyushu, with its sacred groves, the utaki, where the noro priestesses commune with the kami.",
+     "global_unrest = -1", (141, 96, 255)),
     # ---- zoroastrian group
     ("zoroastrian_group", "khurmazta", "khurmazta", "Khurmazdi Rite",
      "The old royal Zoroastrianism of Khwarezm, to Khurmazt, lord of the fire altars of Khiva and Gurganj.",
