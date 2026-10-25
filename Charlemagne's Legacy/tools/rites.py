@@ -593,7 +593,7 @@ def strip_frame(path, frame_px, n):
 
 # ---- CK3 rite icons (needs the CK3 install) ----------------------------------
 
-ICON_PX = 64
+ICON_PX = 52  # vanilla school icons are 52 px, art about 46 of them
 
 
 def rite_icon_name(rite):
@@ -628,7 +628,9 @@ def _ck3_icon_tga(src):
 
     from PIL import Image
 
-    im = Image.open(src).convert("RGBA").resize((ICON_PX, ICON_PX), Image.LANCZOS)
+    import addreligion
+
+    im = addreligion.fit_icon(Image.open(src), ICON_PX)
     buf = io.BytesIO()
     im.save(buf, format="TGA")
     return buf.getvalue()

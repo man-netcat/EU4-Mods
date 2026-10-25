@@ -92,7 +92,7 @@ def append_frames(icon_path):
         head = bytearray(head)
         # resample the CK3 icon to this strip's frame size, then build
         # the frame's BGRA rows
-        small = src.resize((frame, frame), Image.LANCZOS)
+        small = fit_icon(src, frame)
         rows = []
         for y in range(frame):
             line = bytearray()
@@ -130,9 +130,32 @@ def _nl():
     return "\r\n" if b"\r\n" in open(REL_FILE, "rb").read() else "\n"
 
 
+# Vanilla's icons leave a margin: the art of the religion frames spans about
+# 53 of 64 px (26 of 32 in the small strips), the school icons about 46 of 52.
+# CK3's faith icons fill their square, so they are cropped to their art and
+# scaled to that same extent, centred, to sit at vanilla's scale.
+FIT_MAXDIM = {64: 53, 32: 26, 52: 46}
+
+
+def fit_icon(src, frame):
+    """The RGBA image `src` as a frame x frame icon at vanilla's scale."""
+    from PIL import Image
+    src = src.convert("RGBA")
+    box = src.getchannel("A").point(lambda a: 255 if a > 20 else 0).getbbox()
+    if box:
+        src = src.crop(box)
+    target = FIT_MAXDIM[frame]
+    k = target / max(src.size)
+    size = (max(1, round(src.width * k)), max(1, round(src.height * k)))
+    art = src.resize(size, Image.LANCZOS)
+    out = Image.new("RGBA", (frame, frame), (0, 0, 0, 0))
+    out.paste(art, ((frame - size[0]) // 2, (frame - size[1]) // 2), art)
+    return out
+
+
 def _frame_rows(icon_path, frame):
     from PIL import Image
-    small = Image.open(icon_path).convert("RGBA").resize((frame, frame), Image.LANCZOS)
+    small = fit_icon(Image.open(icon_path), frame)
     rows = []
     for y in range(frame):
         line = bytearray()

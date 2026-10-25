@@ -337,7 +337,7 @@ def _icon_matches(text, rel, src):
 
 
 if __name__ == "__main__":
-    if sys.argv[1:] == ["icons"]:
+    if sys.argv[1:2] == ["icons"]:
         lift_icons()
     else:
         lift()
