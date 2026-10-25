@@ -902,7 +902,10 @@ def run() -> int:
                 creq == land,
                 f"{key} capital trigger covers exactly the {len(land)} provinces",
             )
-        if fb.rank_required:
+        if fb.rank_required == -1:
+            note("government_rank" not in dec.split("allow = {")[0],
+                 f"{key} carries no rank gate (rank_required = -1)")
+        elif fb.rank_required:
             note(
                 f"government_rank = {fb.rank_required}" in dec,
                 f"{key} needs rank {fb.rank_required}",

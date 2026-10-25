@@ -8,7 +8,6 @@ country_decisions = {
 			NOT = { tag = ARM }
 			NOT = { exists = ARM }
 			primary_culture = armenian
-			NOT = { government_rank = 3 }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

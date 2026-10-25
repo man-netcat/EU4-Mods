@@ -322,7 +322,8 @@ The old `provmap.json` auto-matches were wrong for eight Japanese provinces
   ruler_title precedent; YED shares Almos's line with MGY, which is
   mechanically inert). HUN's sole starter MGY is kingdom-ranked, so the
   formable carries `rank_required = 3` (the Scandinavia kings-only pattern;
-  the generic non-kingdom gate would leave Hungary unformable). The AI
+  the generic non-kingdom gate would leave Hungary unformable). `rank_required = -1`
+  drops the rank gate entirely (ARM: its kingdom-ranked starter APR forms a kingdom). The AI
   forms through `magyar_settlement.2` (same file), which mirrors the
   decision's effect the moment its conditions hold; the player fires the
   decision by hand. Settling is one effect, not an MTTH event:

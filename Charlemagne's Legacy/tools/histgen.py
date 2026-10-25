@@ -179,7 +179,9 @@ def formation_decision(fcode, starters) -> str:
     if fb.home_capital:
         home_req = f"\n\t\t\t{key}_capital_trigger = yes"
     rank_req = ""
-    if fb.rank_required:
+    if fb.rank_required == -1:
+        rank_req = ""  # no rank gate: a kingdom-ranked starter may form a kingdom (ARM)
+    elif fb.rank_required:
         rank_req = f"\n\t\t\tgovernment_rank = {fb.rank_required}"
     elif fb.rank == 3:
         rank_req = "\n\t\t\tNOT = { government_rank = 3 }"
