@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = tungus
+religion = shamanism
+capital = 4216
+religious_school = shamanism_school
+867.1.1 = {
+	monarch = {
+		name = "Manduhe"
+		dynasty = "Yerenite"
+		birth_date = 842.8.21
+		death_date = 887.3.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

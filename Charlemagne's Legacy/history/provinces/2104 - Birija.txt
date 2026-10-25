@@ -1,4 +1,23 @@
 # 2104 - Birija
 
+owner = VAN
+controller = VAN
+add_core = VAN
+capital = "Niuman"
+culture = tungus
+religion = shamanism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = VAN
+	controller = VAN
+	add_core = VAN
+}

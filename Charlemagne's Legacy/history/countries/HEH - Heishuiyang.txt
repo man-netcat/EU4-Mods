@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = tungus
+religion = shamanism
+capital = 1050
+religious_school = shamanism_school
+867.1.1 = {
+	monarch = {
+		name = "Kunaha"
+		dynasty = "Edumuke"
+		birth_date = 851.12.11
+		death_date = 916.4.29
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

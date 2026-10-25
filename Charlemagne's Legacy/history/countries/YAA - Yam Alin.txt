@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = nivkh
+religion = shamanism
+capital = 2103
+religious_school = shamanism_school
+867.1.1 = {
+	monarch = {
+		name = "Memzgun"
+		dynasty = "Hivkhal"
+		birth_date = 834.1.19
+		death_date = 886.7.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

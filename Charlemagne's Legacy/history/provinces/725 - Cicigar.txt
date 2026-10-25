@@ -1,4 +1,23 @@
 #725 - Hinggan
 
+owner = RUZ
+controller = RUZ
+add_core = RUZ
+capital = "Cicigar"
+culture = mongol
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = naval_supplies
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = RUZ
+	controller = RUZ
+	add_core = RUZ
+}

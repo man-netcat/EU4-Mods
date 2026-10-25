@@ -1,4 +1,26 @@
 # 2189 - Tsetserleg
 
+owner = KGZ
+controller = KGZ
+add_core = KGZ
+capital = "Tsetserleg"
+culture = kirgiz
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = fur
+base_manpower = 2
+is_city = yes
+latent_trade_goods = {
+	coal
+}
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = KGZ
+	controller = KGZ
+	add_core = KGZ
+}

@@ -1,4 +1,23 @@
 #Tunhe
 
+owner = TIE
+controller = TIE
+add_core = TIE
+capital = "Tunhe"
+culture = manchu
+religion = shamanism
+hre = no
+base_tax = 1
+base_production = 2
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TIE
+	controller = TIE
+	add_core = TIE
+}

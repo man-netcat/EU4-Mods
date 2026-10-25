@@ -1,4 +1,23 @@
 # 4220 - Khiagt
 
+owner = KHL
+controller = KHL
+add_core = KHL
+capital = "Khiagt"
+culture = mongol
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = fur
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = KHL
+	controller = KHL
+	add_core = KHL
+}

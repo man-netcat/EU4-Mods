@@ -69,6 +69,7 @@ FAITH_RELIGION = {
     "waaqism_pagan": "waaqism",
     "kushitism_pagan": "kushitism",
     "kabarism": "kabarism",
+    "rabbinic_faith": "jewish",
     "siberian_pagan": "siberian",
 }
 

@@ -1,4 +1,21 @@
-#4671
+owner = YUY
+controller = YUY
+add_core = YUY
+capital = "Kalgan"
+culture = khitan
+religion = mahayana
+hre = no
+base_tax = 2
+base_production = 1
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
 
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = YUY
+	controller = YUY
+	add_core = YUY
+}

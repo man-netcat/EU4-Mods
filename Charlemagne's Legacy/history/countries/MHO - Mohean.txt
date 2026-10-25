@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = tungus
+religion = shamanism
+capital = 4215
+religious_school = shamanism_school
+867.1.1 = {
+	monarch = {
+		name = "Dili"
+		dynasty = "Heiite"
+		birth_date = 849.2.28
+		death_date = 902.11.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

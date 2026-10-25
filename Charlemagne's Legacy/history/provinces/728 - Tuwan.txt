@@ -1,4 +1,23 @@
 #728 - Tuwan
 
+owner = SUH
+controller = SUH
+add_core = SUH
+capital = "Tuwan"
+culture = mongol
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 1
+base_production = 2
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = SUH
+	controller = SUH
+	add_core = SUH
+}

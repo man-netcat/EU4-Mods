@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = tungus
+religion = shamanism
+capital = 1049
+religious_school = shamanism_school
+867.1.1 = {
+	monarch = {
+		name = "Mutalu"
+		dynasty = "Giahuna"
+		birth_date = 846.5.14
+		death_date = 898.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

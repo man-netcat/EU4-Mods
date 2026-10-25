@@ -1,4 +1,21 @@
-#4677
+owner = ONI
+controller = ONI
+add_core = ONI
+capital = "Noyon"
+culture = mongol
+religion = nestorian
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
 
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = ONI
+	controller = ONI
+	add_core = ONI
+}

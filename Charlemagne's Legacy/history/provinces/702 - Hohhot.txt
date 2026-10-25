@@ -1,4 +1,23 @@
 #702 - Ulanqab
 
+owner = TNG
+controller = TNG
+add_core = TNG
+capital = "Hohhot"
+culture = zhongyuan
+religion = mahayana
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = iron
+base_manpower = 4
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TNG
+	controller = TNG
+	add_core = TNG
+}

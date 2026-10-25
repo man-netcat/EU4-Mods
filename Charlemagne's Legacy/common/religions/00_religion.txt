@@ -6730,7 +6730,7 @@ jewish_group = {
 
 	jewish = {
 		icon = 20
-		color = { 0 156 231 }
+		color = { 26 179 255 }
 		country = {
 			tolerance_own = 2
 			advisor_pool = 1

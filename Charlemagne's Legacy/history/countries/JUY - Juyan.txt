@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = nomad_group
+primary_culture = uyghur
+religion = manichaean
+capital = 2191
+religious_school = manichean_school
+867.1.1 = {
+	monarch = {
+		name = "Bögü"
+		dynasty = "Yaghlakar"
+		birth_date = 828.1.1
+		death_date = 879.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qutlugh"
+		monarch_name = "Qutlugh"
+		dynasty = "Yaghlakar"
+		birth_date = 850.1.1
+		death_date = 882.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

@@ -1,4 +1,23 @@
 #4221 - Dundgovi
 
+owner = TAT
+controller = TAT
+add_core = TAT
+capital = "Dundgovi"
+culture = mongol
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TAT
+	controller = TAT
+	add_core = TAT
+}

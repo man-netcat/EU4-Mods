@@ -1,4 +1,23 @@
 #729 - Bohori
 
+owner = ANY
+controller = ANY
+add_core = ANY
+capital = "Bohori"
+culture = tungus
+religion = shamanism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = fish
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = ANY
+	controller = ANY
+	add_core = ANY
+}
