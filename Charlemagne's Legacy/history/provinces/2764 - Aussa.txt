@@ -1,6 +1,25 @@
 #2764 - Aussa
 
+owner = TAD
+controller = TAD
+add_core = TAD
+capital = "Aussa"
+culture = afar
+religion = waaqism
+hre = no
+base_tax = 2
+base_production = 1
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
+
+867.1.1 = {
+	owner = TAD
+	controller = TAD
+	add_core = TAD
+}

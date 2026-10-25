@@ -520,6 +520,30 @@ mingism_scholar_modifier = {
 	trade_efficiency = 0.05
 }
 
+waaqism_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_manpower_modifier = 0.1
+}
+
+haymanot_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.1
+}
+
+kushitism_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	hostile_attrition = 1
+}
+
 khurmazta_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes

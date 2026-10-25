@@ -1,6 +1,25 @@
 #2766 - Mendefera
 
+owner = ETH
+controller = ETH
+add_core = ETH
+capital = "Mendefera"
+culture = tigray
+religion = coptic
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
+
+867.1.1 = {
+	owner = ETH
+	controller = ETH
+	add_core = ETH
+}

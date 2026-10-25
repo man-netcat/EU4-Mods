@@ -65,6 +65,9 @@ FAITH_RELIGION = {
     "manichaean_faith": "manichaean",
     "moism": "moism",
     "dab_qhuas": "dab_qhuas",
+    "haymanot": "haymanot",
+    "waaqism_pagan": "waaqism",
+    "kushitism_pagan": "kushitism",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -93,6 +96,12 @@ NEW_RELIGIONS = {
               "The folk faith of the Zhuang and the peoples of the southern hills, led by its mo priests."),
     "dab_qhuas": ("animism", "pagan", "moism",
                   "The faith of the Hmong and the hill peoples of the south, in which the dab, the spirits of house and hill, are honoured."),
+    "haymanot": ("jewish", "jewish_group", "jewish",
+                 "The Judaism of the Beta Israel of the Ethiopian highlands, kept by their monks and smiths under the mountain kings."),
+    "waaqism": ("animism", "pagan", "dab_qhuas",
+                "The faith of the Cushitic peoples of the Horn, who honour Waaq, the sky god, and hold their assemblies under the sacred trees."),
+    "kushitism": ("animism", "pagan", "waaqism",
+                  "The ancient faith of the Kushite and Beja peoples of the Nile and the Red Sea hills, whose holy places lie at Aswan and Naqis."),
 }
 
 
@@ -115,6 +124,11 @@ def rite_religion_map():
 
 
 def _rgb(raw):
+    if raw.lstrip().startswith("hsv"):  # CK3 colours may be hsv { h s v }
+        import colorsys
+
+        h, sat, v = (float(n) for n in raw.replace("{", " ").replace("}", " ").split()[1:4])
+        return tuple(int(c * 255 + 0.5) for c in colorsys.hsv_to_rgb(h, sat, v))
     nums = raw.replace("{", " ").replace("}", " ").split()
     if any("." in n for n in nums):
         return tuple(int(float(n) * 255 + 0.5) for n in nums)
@@ -132,7 +146,7 @@ def ck3_faith(faith):
             break
     if blk is None:
         return None
-    col = re.search(r"color\s*=\s*(\{[^}]*\})", blk)
+    col = re.search(r"color\s*=\s*((?:hsv|rgb)?\s*\{[^}]*\})", blk)
     ic = re.search(r"icon\s*=\s*(\w+)", blk)
     name = None
     for f in glob.glob(os.path.join(CK3_GAME, "localization", "english", "**", "*.yml"), recursive=True):

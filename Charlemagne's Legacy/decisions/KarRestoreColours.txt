@@ -9,6 +9,7 @@ country_decisions = {
 				tag = ADU
 				tag = AFG
 				tag = ALG
+				tag = ALO
 				tag = ARB
 				tag = ARM
 				tag = ASU
@@ -23,6 +24,7 @@ country_decisions = {
 				tag = DAU
 				tag = EGY
 				tag = EST
+				tag = ETH
 				tag = FIN
 				tag = FLA
 				tag = FRA
@@ -48,6 +50,7 @@ country_decisions = {
 				tag = LOT
 				tag = LVA
 				tag = MAI
+				tag = MAK
 				tag = MHR
 				tag = MLK
 				tag = MOR
@@ -106,6 +109,12 @@ country_decisions = {
 			limit = { tag = ALG }
 			change_country_color = {
 				color = { 230 225 110 }
+			}
+		}
+		if = {
+			limit = { tag = ALO }
+			change_country_color = {
+				color = { 135 144 180 }
 			}
 		}
 		if = {
@@ -190,6 +199,12 @@ country_decisions = {
 			limit = { tag = EST }
 			change_country_color = {
 				color = { 248 125 125 }
+			}
+		}
+		if = {
+			limit = { tag = ETH }
+			change_country_color = {
+				color = { 56 120 191 }
 			}
 		}
 		if = {
@@ -340,6 +355,12 @@ country_decisions = {
 			limit = { tag = MAI }
 			change_country_color = {
 				color = { 178 145 87 }
+			}
+		}
+		if = {
+			limit = { tag = MAK }
+			change_country_color = {
+				color = { 184 80 52 }
 			}
 		}
 		if = {

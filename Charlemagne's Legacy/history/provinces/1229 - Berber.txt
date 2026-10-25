@@ -1,5 +1,33 @@
+owner = MAK
+controller = MAK
+add_core = MAK
+capital = "Berber"
+culture = beja
 #1229 - Berber
+culture = beja
+religion = coptic
+religion = coptic
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 2
+is_city = yes
+native_size = 50
+native_ferocity = 4
+native_hostileness = 9
 
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = MAK
+	controller = MAK
+	add_core = MAK
+}

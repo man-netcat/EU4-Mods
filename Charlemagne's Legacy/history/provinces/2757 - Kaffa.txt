@@ -1,4 +1,23 @@
 #2757 - Kaffa
 
+owner = DAO
+controller = DAO
+add_core = DAO
+capital = "Anderaccha"
+culture = sidamo
+religion = waaqism
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = gold
+base_manpower = 4
+is_city = yes
+
 discovered_by = east_african
 discovered_by = muslim
+
+867.1.1 = {
+	owner = DAO
+	controller = DAO
+	add_core = DAO
+}

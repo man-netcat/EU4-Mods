@@ -380,6 +380,14 @@ kar_form_aynumosir_provinces_trigger = {
 	}
 }
 
+kar_form_nubia_provinces_trigger = {
+	OR = {
+		area = dongola_area
+		area = sennar_area
+		area = upper_nubia_area
+	}
+}
+
 kar_form_finland_provinces_trigger = {
 	OR = {
 		area = bothnia_area

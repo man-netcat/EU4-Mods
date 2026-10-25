@@ -261,6 +261,18 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = mingism_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = waaqism_pagan_scholar_modifier }
+		remove_country_modifier = waaqism_pagan_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = haymanot_scholar_modifier }
+		remove_country_modifier = haymanot_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = kushitism_pagan_scholar_modifier }
+		remove_country_modifier = kushitism_pagan_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = khurmazta_scholar_modifier }
 		remove_country_modifier = khurmazta_scholar_modifier
 	}

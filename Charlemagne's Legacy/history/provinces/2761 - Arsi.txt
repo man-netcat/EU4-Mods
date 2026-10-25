@@ -1,6 +1,26 @@
 #2761 - Arsi
 
+owner = DAA
+controller = DAA
+add_core = DAA
+capital = "Assela"
+culture = amhara
+religion = waaqism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = coffee
+base_manpower = 2
+is_city = yes
+add_local_autonomy = 25
+
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
+
+867.1.1 = {
+	owner = DAA
+	controller = DAA
+	add_core = DAA
+}

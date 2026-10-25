@@ -1,6 +1,25 @@
 #2785 - El Buur
 
+owner = MRG
+controller = MRG
+add_core = MRG
+capital = "El Buur"
+culture = somali
+religion = waaqism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = iron
+base_manpower = 1
+is_city = yes
+
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = MRG
+	controller = MRG
+	add_core = MRG
+}

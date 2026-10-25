@@ -1,6 +1,26 @@
 #1213 - Shoa
 
+owner = SHW
+controller = SHW
+add_core = SHW
+capital = "Badeqe"
+culture = amhara
+religion = coptic
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 3
+is_city = yes
+add_local_autonomy = 10
+
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
+
+867.1.1 = {
+	owner = SHW
+	controller = SHW
+	add_core = SHW
+}

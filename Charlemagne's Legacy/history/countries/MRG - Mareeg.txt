@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = tribal_despotism
+government_rank = 1
+technology_group = east_african
+primary_culture = somali
+religion = waaqism
+capital = 2775
+religious_school = waaqism_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Karanle"
+		dynasty = "Hawiye"
+		birth_date = 828.1.1
+		death_date = 890.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

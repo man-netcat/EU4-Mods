@@ -1,3 +1,24 @@
 #1207 - Ogaden
 
+owner = GOD
+controller = GOD
+add_core = GOD
+capital = "Bale"
+culture = somali
+religion = waaqism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = incense
+base_manpower = 1
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
+
 discovered_by = east_african
+
+867.1.1 = {
+	owner = GOD
+	controller = GOD
+	add_core = GOD
+}

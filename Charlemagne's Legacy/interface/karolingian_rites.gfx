@@ -326,6 +326,21 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_waaqism_pagan"
+		texturefile = "gfx/interface/icon_rite_waaqism_pagan.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_haymanot"
+		texturefile = "gfx/interface/icon_rite_haymanot.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_kushitism_pagan"
+		texturefile = "gfx/interface/icon_rite_kushitism_pagan.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_khurmazta"
 		texturefile = "gfx/interface/icon_rite_khurmazta.tga"
 	}

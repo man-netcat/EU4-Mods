@@ -1,5 +1,25 @@
 #1225 - Butana
 
+owner = ALO
+controller = ALO
+add_core = ALO
+capital = "Al-Qadarif"
+culture = nubian
+religion = coptic
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = ivory
+base_manpower = 1
+is_city = yes
+add_local_autonomy = 50
+
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = ALO
+	controller = ALO
+	add_core = ALO
+}

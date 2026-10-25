@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = east_african
+primary_culture = beja
+religion = sunni
+capital = 2324
+religious_school = shafii_school
+867.1.1 = {
+	monarch = {
+		name = "Ali Baba"
+		dynasty = "Hadariba"
+		birth_date = 830.1.1
+		death_date = 876.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kanun"
+		monarch_name = "Kanun II"
+		dynasty = "Kanunid"
+		birth_date = 865.1.1
+		death_date = 920.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

@@ -1,6 +1,27 @@
 #1205 - Mogadishu
 
+owner = MOG
+controller = MOG
+add_core = MOG
+capital = "Maqdishu"
+culture = somali
+religion = sunni
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = ivory
+base_manpower = 2
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = MOG
+	controller = MOG
+	add_core = MOG
+}

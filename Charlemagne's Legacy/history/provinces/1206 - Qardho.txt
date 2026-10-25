@@ -1,6 +1,25 @@
 #1206 - Qardho
 
+owner = NUG
+controller = NUG
+add_core = NUG
+capital = "Qardho"
+culture = somali
+religion = waaqism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = incense
+base_manpower = 1
+is_city = yes
+
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = NUG
+	controller = NUG
+	add_core = NUG
+}

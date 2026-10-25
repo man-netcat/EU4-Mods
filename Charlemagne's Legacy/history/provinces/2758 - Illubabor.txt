@@ -1,4 +1,23 @@
 #2758 - Illubabor
 
+owner = DAO
+controller = DAO
+add_core = DAO
+capital = "Illubabor"
+culture = sidamo
+religion = waaqism
+hre = no
+base_tax = 2
+base_production = 3
+trade_goods = slaves
+base_manpower = 2
+is_city = yes
+
 discovered_by = east_african
 discovered_by = muslim
+
+867.1.1 = {
+	owner = DAO
+	controller = DAO
+	add_core = DAO
+}

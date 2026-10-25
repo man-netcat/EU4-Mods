@@ -93,6 +93,38 @@ PROVINCE_COUNTY.update({
     4319: "c_qus", 4320: "c_asyut", 4323: "c_farafra",
 })
 
+# Nubia: Makuria's and Alodia's counties (every county the two Coptic kings
+# hold is on the Coptic rite; Wadi el-Milk alone keeps the old Kushite faith).
+PROVINCE_COUNTY.update({
+    1234: "c_qasr_ibrim", 2322: "c_faras", 1228: "c_dongola", 1229: "c_atbara",
+    2797: "c_meroe", 2798: "c_alodia", 1222: "c_gezira", 2799: "c_sennar",
+    1217: "c_fazughli",
+})
+
+# The Horn of Africa: Abyssinia (k_abyssinia) and Adal (d_adal with the
+# kingdom of Adal's other duchies), matched by the Ethiopian, Harari and Somali
+# names the EU4 provinces carry; the Beja coast (Kushitism has no CK3 colour to
+# lift), the Sidamo/Welayta south and the Somali coast stay unmapped.
+PROVINCE_COUNTY.update({
+    1227: "c_tigre", 2767: "c_intarta", 2766: "c_serae", 2787: "c_serae",
+    2769: "c_lasta", 2768: "c_angot", 1214: "c_amhara", 2772: "c_dembiya",
+    2771: "c_semien", 1224: "c_begemder", 1223: "c_gojjam", 2770: "c_agaw_meder",
+    1213: "c_showa", 2791: "c_fetegar",
+    1211: "c_harar", 1212: "c_zaila", 1208: "c_dakkar", 1209: "c_berbera",
+    1215: "c_tadjoura", 1207: "c_fafan", 1210: "c_dawaro", 2761: "c_arusi",
+    2773: "c_sitti", 2764: "c_awssa", 2793: "c_fafan", 2792: "c_makhir", 2790: "c_makhir",
+    2786: "c_busaso", 2789: "c_mait",
+})
+
+# Horn of Africa, corrected: every province follows the county its holder's
+# realm names (the Somali clans, the Afar, Oromo and Sidamo counts, the
+# Muslim coast and the pagan highlands each hold their own).
+PROVINCE_COUNTY.update({
+    1205: "c_mogadishu", 1206: "c_barbacadle", 1207: "c_gode", 1208: "c_fafan", 1209: "c_berbera", 1210: "c_dawaro", 1211: "c_harar", 1212: "c_zaila", 1215: "c_tadjoura", 1218: "c_sidamo", 1232: "c_suakin", 2024: "c_nugaal", 2324: "c_aydhab", 2756: "c_welamo", 2757: "c_kaffa", 2758: "c_wellega", 2759: "c_wellega", 2760: "c_hadya", 2761: "c_arusi", 2762: "c_damot", 2763: "c_berta", 2764: "c_awssa", 2765: "c_edd", 2773: "c_sitti", 2775: "c_mareeg", 2776: "c_hiraab", 2778: "c_gode", 2779: "c_ganale", 2780: "c_hiraab", 2781: "c_luuq", 2782: "c_hiraab", 2783: "c_hobyo", 2784: "c_mudug", 2785: "c_mareeg", 2786: "c_busaso", 2788: "c_ras_hafun", 2789: "c_mait", 2790: "c_makhir", 2793: "c_fafan", 2795: "c_mareeg"
+})
+
+PROVINCE_COUNTY.update({1230: "c_massawa", 1226: "c_badi"})
+
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
 UNMAPPED = {}
 
