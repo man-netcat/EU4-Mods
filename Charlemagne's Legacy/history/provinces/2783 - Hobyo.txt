@@ -1,8 +1,8 @@
 #2783 - Hobyo
 
-owner = HOY
-controller = HOY
-add_core = HOY
+owner = HOO
+controller = HOO
+add_core = HOO
 capital = "Hobyo"
 culture = somali
 religion = waaqism
@@ -22,7 +22,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = HOY
-	controller = HOY
-	add_core = HOY
+	owner = HOO
+	controller = HOO
+	add_core = HOO
 }

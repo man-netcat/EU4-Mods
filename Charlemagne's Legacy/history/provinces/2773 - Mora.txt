@@ -1,11 +1,11 @@
 #2773 - Mora
 
-owner = DAA
-controller = DAA
-add_core = DAA
+owner = SHZ
+controller = SHZ
+add_core = SHZ
 capital = "Ali Sabieh"
 culture = harari
-religion = waaqism
+religion = sunni
 hre = no
 base_tax = 1
 base_production = 1
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = DAA
-	controller = DAA
-	add_core = DAA
+	owner = SHZ
+	controller = SHZ
+	add_core = SHZ
 }

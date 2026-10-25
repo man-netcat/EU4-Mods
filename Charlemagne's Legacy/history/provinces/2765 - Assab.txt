@@ -1,8 +1,8 @@
 #2765 - Assab
 
-owner = EDD
-controller = EDD
-add_core = EDD
+owner = UBR
+controller = UBR
+add_core = UBR
 capital = "Assab"
 culture = afar
 religion = sunni
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = EDD
-	controller = EDD
-	add_core = EDD
+	owner = UBR
+	controller = UBR
+	add_core = UBR
 }

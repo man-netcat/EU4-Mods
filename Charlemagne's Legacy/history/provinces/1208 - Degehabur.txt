@@ -1,8 +1,8 @@
 #1208 - Degehabur
 
-owner = BEB
-controller = BEB
-add_core = BEB
+owner = FAF
+controller = FAF
+add_core = FAF
 capital = "Degehabur"
 culture = somali
 religion = waaqism
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = BEB
-	controller = BEB
-	add_core = BEB
+	owner = FAF
+	controller = FAF
+	add_core = FAF
 }

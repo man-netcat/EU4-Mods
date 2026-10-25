@@ -57,6 +57,11 @@ vassal = {
 	first = BYZ
 	second = SYC
 }
+dependency = {
+	subject_type = tributary_state
+	first = EGY
+	second = MAK
+}
 vassal = {
 	first = FRA
 	second = ANJ

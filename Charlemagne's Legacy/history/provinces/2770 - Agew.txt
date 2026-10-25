@@ -1,8 +1,8 @@
 #2770 - Agew
 
-owner = GOJ
-controller = GOJ
-add_core = GOJ
+owner = GOA
+controller = GOA
+add_core = GOA
 capital = "Dangila"
 culture = amhara
 religion = haymanot
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = GOJ
-	controller = GOJ
-	add_core = GOJ
+	owner = GOA
+	controller = GOA
+	add_core = GOA
 }

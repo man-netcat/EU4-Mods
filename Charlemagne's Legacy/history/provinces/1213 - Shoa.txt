@@ -1,8 +1,8 @@
 #1213 - Shoa
 
-owner = SHW
-controller = SHW
-add_core = SHW
+owner = SOW
+controller = SOW
+add_core = SOW
 capital = "Badeqe"
 culture = amhara
 religion = coptic
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = SHW
-	controller = SHW
-	add_core = SHW
+	owner = SOW
+	controller = SOW
+	add_core = SOW
 }

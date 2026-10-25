@@ -1,8 +1,8 @@
 #2779 - Afder
 
-owner = AAL
-controller = AAL
-add_core = AAL
+owner = DWA
+controller = DWA
+add_core = DWA
 capital = "Afder"
 culture = somali
 religion = waaqism
@@ -18,7 +18,7 @@ native_hostileness = 9
 discovered_by = east_african
 
 867.1.1 = {
-	owner = AAL
-	controller = AAL
-	add_core = AAL
+	owner = DWA
+	controller = DWA
+	add_core = DWA
 }

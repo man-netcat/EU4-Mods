@@ -112,7 +112,7 @@ PROVINCE_COUNTY.update({
     1213: "c_showa", 2791: "c_fetegar",
     1211: "c_harar", 1212: "c_zaila", 1208: "c_dakkar", 1209: "c_berbera",
     1215: "c_tadjoura", 1207: "c_fafan", 1210: "c_dawaro", 2761: "c_arusi",
-    2773: "c_sitti", 2764: "c_awssa", 2793: "c_fafan", 2792: "c_makhir", 2790: "c_makhir",
+    2773: "c_dakkar", 2764: "c_awssa", 2793: "c_fafan", 2792: "c_makhir", 2790: "c_makhir",
     2786: "c_busaso", 2789: "c_mait",
 })
 
@@ -120,10 +120,12 @@ PROVINCE_COUNTY.update({
 # realm names (the Somali clans, the Afar, Oromo and Sidamo counts, the
 # Muslim coast and the pagan highlands each hold their own).
 PROVINCE_COUNTY.update({
-    1205: "c_mogadishu", 1206: "c_barbacadle", 1207: "c_gode", 1208: "c_fafan", 1209: "c_berbera", 1210: "c_dawaro", 1211: "c_harar", 1212: "c_zaila", 1215: "c_tadjoura", 1218: "c_sidamo", 1232: "c_suakin", 2024: "c_nugaal", 2324: "c_aydhab", 2756: "c_welamo", 2757: "c_kaffa", 2758: "c_wellega", 2759: "c_wellega", 2760: "c_hadya", 2761: "c_arusi", 2762: "c_damot", 2763: "c_berta", 2764: "c_awssa", 2765: "c_edd", 2773: "c_sitti", 2775: "c_mareeg", 2776: "c_hiraab", 2778: "c_gode", 2779: "c_ganale", 2780: "c_hiraab", 2781: "c_luuq", 2782: "c_hiraab", 2783: "c_hobyo", 2784: "c_mudug", 2785: "c_mareeg", 2786: "c_busaso", 2788: "c_ras_hafun", 2789: "c_mait", 2790: "c_makhir", 2793: "c_fafan", 2795: "c_mareeg"
+    1205: "c_mogadishu", 1206: "c_barbacadle", 1207: "c_gode", 1208: "c_fafan", 1209: "c_berbera", 1210: "c_dawaro", 1211: "c_harar", 1212: "c_zaila", 1215: "c_tadjoura", 1218: "c_sidamo", 1232: "c_suakin", 2024: "c_nugaal", 2324: "c_aydhab", 2756: "c_welamo", 2757: "c_kaffa", 2758: "c_wellega", 2759: "c_wellega", 2760: "c_hadya", 2761: "c_arusi", 2762: "c_damot", 2763: "c_berta", 2764: "c_awssa", 2765: "c_edd", 2773: "c_dakkar", 2775: "c_hiraab", 2776: "c_hiraab", 2778: "c_gode", 2779: "c_sitti", 2780: "c_hiraab", 2781: "c_luuq", 2782: "c_hiraab", 2783: "c_hobyo", 2784: "c_mudug", 2785: "c_mareeg", 2786: "c_busaso", 2788: "c_ras_hafun", 2789: "c_mait", 2790: "c_makhir", 2793: "c_fafan", 2795: "c_mareeg"
 })
 
 PROVINCE_COUNTY.update({1230: "c_massawa", 1226: "c_badi"})
+
+PROVINCE_COUNTY.update({4158: "c_innarya"})  # Janjiro: Lebna holds Ennarea
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
 UNMAPPED = {}

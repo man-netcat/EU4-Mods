@@ -1,8 +1,8 @@
 #1210 - Dawaro
 
-owner = DAA
-controller = DAA
-add_core = DAA
+owner = DWA
+controller = DWA
+add_core = DWA
 capital = "Gende Belo"
 culture = harari
 religion = waaqism
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = DAA
-	controller = DAA
-	add_core = DAA
+	owner = DWA
+	controller = DWA
+	add_core = DWA
 }

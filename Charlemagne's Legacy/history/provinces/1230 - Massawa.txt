@@ -1,8 +1,8 @@
 #1230 - Massawa
 
-owner = BZI
-controller = BZI
-add_core = BZI
+owner = BAZ
+controller = BAZ
+add_core = BAZ
 capital = "Mitsiwa"
 culture = tigray
 religion = kushitism
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = BZI
-	controller = BZI
-	add_core = BZI
+	owner = BAZ
+	controller = BAZ
+	add_core = BAZ
 }

@@ -1,8 +1,8 @@
 #2789 - Las Khorey
 
-owner = BUS
-controller = BUS
-add_core = BUS
+owner = MIT
+controller = MIT
+add_core = MIT
 capital = "Las Khorey"
 culture = somali
 religion = sunni
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BUS
-	controller = BUS
-	add_core = BUS
+	owner = MIT
+	controller = MIT
+	add_core = MIT
 }

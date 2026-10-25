@@ -98,6 +98,17 @@ def ck3_gov_of(t):
     return title_government(t.ck3_title)
 
 
+def independent_in_867(t):
+    """True when the tag's 867 title holder is a top liege in CK3 (his liege
+    chain ends at himself); tags with no holder count as sovereign."""
+    try:
+        import state867 as st
+        h = st.holder(t.ck3_title)
+        return h is None or st.sovereign(h)[0] == h
+    except Exception:
+        return True
+
+
 def gov_flag_of(t):
     """The CK3 government the `kar_gov_*` start flag names."""
     from tagdb import ck3_government
@@ -158,6 +169,10 @@ class Rule:
         self.contract_flags = lst(body, "subject_contract_obligation_flags")
         self.titled = lst(body, "titles")
         self.de_jure_liege = lst(body, "de_jure_liege")
+        # flavourization_rules: top_liege = yes/no, only_independent = yes
+        m = re.search(r"top_liege\s*=\s*(yes|no)", body)
+        self.top_liege = m.group(1) if m else None
+        self.only_independent = bool(re.search(r"only_independent\s*=\s*yes", body))
         if self.tier != "none":
             self.effective_tiers = {self.tier}
         elif self.titled:
@@ -316,7 +331,7 @@ def religion_of_eu4(eu4rel):
 
 
 def pick(rules, tier, rtype, gender, title, heritage, name_list, religion,
-         govs, locmap):
+         govs, locmap, indep=True):
     """CK3 semantics: rules sorted by priority then file order, first
     eligible wins. A rule with a narrower gate we cannot verify
     (contract flags, faiths, name lists) is never a guess."""
@@ -333,6 +348,13 @@ def pick(rules, tier, rtype, gender, title, heritage, name_list, religion,
         if gender and r.gender != gender:
             continue
         if r.governments and not (set(r.governments) & govs):
+            continue
+        # CK3 gates rules on being a top liege: `top_liege = no` rules (the
+        # Ethiopian Mesfin) are for vassals, `only_independent` rules (the
+        # Petty King) and `top_liege = yes` for sovereigns
+        if indep and (r.top_liege == "no"):
+            continue
+        if not indep and (r.top_liege == "yes" or r.only_independent):
             continue
         if r.heritages and heritage not in r.heritages:
             continue
@@ -647,15 +669,16 @@ def main(argv):
             except Exception:
                 religion = None
         islam = religion == "islam_religion"
+        indep = independent_in_867(t)
         picks = {}
         for rank, tier, fb, fbm, fbf in RANKS:
             picks[rank] = (
                 pick(rules, tier, "title", None, t.ck3_title, heritage,
-                     name_list, religion, govs, locmap),
+                     name_list, religion, govs, locmap, indep),
                 pick(rules, tier, "character", "male", t.ck3_title,
-                     heritage, name_list, religion, govs, locmap),
+                     heritage, name_list, religion, govs, locmap, indep),
                 pick(rules, tier, "character", "female", t.ck3_title,
-                     heritage, name_list, religion, govs, locmap),
+                     heritage, name_list, religion, govs, locmap, indep),
                 tier)
         plan.append({"key": key, "tag": t.tag, "rank": t.rank,
                      "title": t.ck3_title,

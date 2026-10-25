@@ -311,6 +311,59 @@ def run() -> int:
     for b in claimed[:8]:
         print("        " + str(b))
 
+    print("\n== the New World and Australia stay uncolonised ==")
+    # Unsupported by this mod: every land province of the American
+    # superregions and of Australia must stay empty - no owner, controller,
+    # core, population or database row, and no tag sitting there.
+    def _block(text, name):
+        m = re.search(r"(?m)^" + re.escape(name) + r"\s*=\s*\{", text)
+        if not m:
+            return ""
+        depth, k = 0, text.index("{", m.start())
+        for i in range(k, len(text)):
+            depth += {"{": 1, "}": -1}.get(text[i], 0)
+            if depth == 0:
+                return text[k + 1:i]
+        return ""
+
+    _map = lambda f: open(os.path.join(GAME, "map", f), encoding="utf-8", errors="replace").read()
+    _sup, _reg, _area = _map("superregion.txt"), _map("region.txt"), _map("area.txt")
+    _regions = {"australia_region"}
+    for sr in ("north_america_superregion", "south_america_superregion", "andes_superregion",
+               "central_america_superregion", "new_world_superregion"):
+        _regions |= set(re.findall(r"(\w+_region)\b", _block(_sup, sr)))
+    _newworld = set()
+    for rg in _regions:
+        for ar in re.findall(r"(\w+_area)\b", _block(_reg, rg)):
+            _newworld |= {int(x) for x in re.findall(r"\b(\d+)\b",
+                          re.sub(r"color\s*=\s*\{[^}]*\}", "", re.sub(r"#[^\n]*", "", _block(_area, ar))))}
+    _newworld -= set(sea_ids()) | set(lake_ids())
+    note(len(_newworld) > 500, f"{len(_newworld)} New World and Australian provinces identified")
+    _owned = sorted({p for _t, ps in build().items() for p in ps if p in _newworld})
+    note(not _owned, f"no tag owns New World or Australian land ({len(_owned)} problems)")
+    for b in _owned[:8]:
+        print("        " + str(b))
+    import sqlite3 as _sq
+    _db = _sq.connect(str(HERE / "tags.db"))
+    _rows = sorted(r[0] for r in _db.execute("select pid from provinces") if r[0] in _newworld)
+    _caps = sorted(r[0] for r in _db.execute("select tag from tags where capital in (%s)" % ",".join(map(str, _newworld))))
+    _db.close()
+    note(not _rows, f"no database province row in the New World or Australia ({len(_rows)} problems)")
+    for b in _rows[:8]:
+        print("        " + str(b))
+    note(not _caps, f"no tag has a New World or Australian capital ({len(_caps)} problems)")
+    _dirty = []
+    for p in sorted(_newworld):
+        if p not in files:
+            continue
+        sc, c0, ca = parse(files[p])
+        if c0 or ca or any(k in sc for k in ("owner", "controller", "culture", "religion",
+                                              "base_tax", "base_production", "base_manpower")):
+            _dirty.append(p)
+    note(not _dirty, f"New World and Australian province files carry no owner, core or population ({len(_dirty)} problems)")
+    for b in _dirty[:8]:
+        print("        " + str(b))
+
     vmiss = sorted(p for p in vanilla_prov_ids() if p not in files)
     note(not vmiss, f"every vanilla province has a file ({len(vmiss)} missing)")
     for b in vmiss[:8]:

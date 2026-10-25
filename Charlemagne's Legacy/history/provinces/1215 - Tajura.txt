@@ -1,8 +1,8 @@
 #1215 - Tajura
 
-owner = TAD
-controller = TAD
-add_core = TAD
+owner = HAQ
+controller = HAQ
+add_core = HAQ
 capital = "Tajura"
 culture = afar
 religion = sunni
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = TAD
-	controller = TAD
-	add_core = TAD
+	owner = HAQ
+	controller = HAQ
+	add_core = HAQ
 }

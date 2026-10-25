@@ -1,8 +1,8 @@
 #2785 - El Buur
 
-owner = MRG
-controller = MRG
-add_core = MRG
+owner = MEA
+controller = MEA
+add_core = MEA
 capital = "El Buur"
 culture = somali
 religion = waaqism
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = MRG
-	controller = MRG
-	add_core = MRG
+	owner = MEA
+	controller = MEA
+	add_core = MEA
 }

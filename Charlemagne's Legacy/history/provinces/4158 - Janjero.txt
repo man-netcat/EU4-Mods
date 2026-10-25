@@ -1,4 +1,23 @@
 #4158 - Janjero
 
+owner = DAT
+controller = DAT
+add_core = DAT
+capital = "Fofa"
+culture = sidamo
+religion = waaqism
+hre = no
+base_tax = 1
+base_production = 2
+trade_goods = slaves
+base_manpower = 1
+is_city = yes
+
 discovered_by = east_african
 discovered_by = muslim
+
+867.1.1 = {
+	owner = DAT
+	controller = DAT
+	add_core = DAT
+}

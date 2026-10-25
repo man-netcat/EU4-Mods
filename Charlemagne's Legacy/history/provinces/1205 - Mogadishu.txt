@@ -1,8 +1,8 @@
 #1205 - Mogadishu
 
-owner = MOG
-controller = MOG
-add_core = MOG
+owner = MOA
+controller = MOA
+add_core = MOA
 capital = "Maqdishu"
 culture = somali
 religion = sunni
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = MOG
-	controller = MOG
-	add_core = MOG
+	owner = MOA
+	controller = MOA
+	add_core = MOA
 }

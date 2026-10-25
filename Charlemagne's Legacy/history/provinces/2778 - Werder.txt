@@ -1,8 +1,8 @@
 #2778 - Werder
 
-owner = GOD
-controller = GOD
-add_core = GOD
+owner = GOE
+controller = GOE
+add_core = GOE
 capital = "Wardheer"
 culture = somali
 religion = waaqism
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = GOD
-	controller = GOD
-	add_core = GOD
+	owner = GOE
+	controller = GOE
+	add_core = GOE
 }

@@ -1,8 +1,8 @@
 #2324 - Halaib
 
-owner = NAQ
-controller = NAQ
-add_core = NAQ
+owner = NAI
+controller = NAI
+add_core = NAI
 capital = "Halaib"
 culture = beja
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = NAQ
-	controller = NAQ
-	add_core = NAQ
+	owner = NAI
+	controller = NAI
+	add_core = NAI
 }

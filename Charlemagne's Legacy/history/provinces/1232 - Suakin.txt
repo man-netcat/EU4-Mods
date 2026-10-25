@@ -1,8 +1,8 @@
 #1232 - Suakin
 
-owner = SUA
-controller = SUA
-add_core = SUA
+owner = SUI
+controller = SUI
+add_core = SUI
 capital = "Suakin"
 culture = beja
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = SUA
-	controller = SUA
-	add_core = SUA
+	owner = SUI
+	controller = SUI
+	add_core = SUI
 }

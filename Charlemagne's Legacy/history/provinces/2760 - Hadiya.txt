@@ -1,8 +1,8 @@
 #2760 - Hadiya
 
-owner = HAY
-controller = HAY
-add_core = HAY
+owner = SHK
+controller = SHK
+add_core = SHK
 capital = "Angacha"
 culture = sidamo
 religion = waaqism
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = HAY
-	controller = HAY
-	add_core = HAY
+	owner = SHK
+	controller = SHK
+	add_core = SHK
 }

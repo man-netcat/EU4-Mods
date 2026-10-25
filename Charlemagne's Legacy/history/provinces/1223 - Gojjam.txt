@@ -1,8 +1,8 @@
 #1223 - Gojjam
 
-owner = GOJ
-controller = GOJ
-add_core = GOJ
+owner = GOA
+controller = GOA
+add_core = GOA
 capital = "Debre Asbo"
 culture = amhara
 religion = coptic
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = GOJ
-	controller = GOJ
-	add_core = GOJ
+	owner = GOA
+	controller = GOA
+	add_core = GOA
 }

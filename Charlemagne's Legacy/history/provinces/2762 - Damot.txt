@@ -1,8 +1,8 @@
 #2762 - Damot
 
-owner = DAO
-controller = DAO
-add_core = DAO
+owner = DAT
+controller = DAT
+add_core = DAT
 capital = "Nekemte"
 culture = amhara
 religion = waaqism
@@ -18,7 +18,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = DAO
-	controller = DAO
-	add_core = DAO
+	owner = DAT
+	controller = DAT
+	add_core = DAT
 }

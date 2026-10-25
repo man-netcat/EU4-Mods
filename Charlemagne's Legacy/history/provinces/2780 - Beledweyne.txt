@@ -1,8 +1,8 @@
 #2780 - Beledweyne
 
-owner = MOG
-controller = MOG
-add_core = MOG
+owner = MOA
+controller = MOA
+add_core = MOA
 capital = "Qardho"
 culture = somali
 religion = waaqism
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = MOG
-	controller = MOG
-	add_core = MOG
+	owner = MOA
+	controller = MOA
+	add_core = MOA
 }

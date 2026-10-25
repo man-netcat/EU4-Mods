@@ -1,8 +1,8 @@
 #1207 - Ogaden
 
-owner = GOD
-controller = GOD
-add_core = GOD
+owner = GOE
+controller = GOE
+add_core = GOE
 capital = "Bale"
 culture = somali
 religion = waaqism
@@ -18,7 +18,7 @@ native_hostileness = 9
 discovered_by = east_african
 
 867.1.1 = {
-	owner = GOD
-	controller = GOD
-	add_core = GOD
+	owner = GOE
+	controller = GOE
+	add_core = GOE
 }

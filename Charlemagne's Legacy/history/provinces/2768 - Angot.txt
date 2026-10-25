@@ -1,8 +1,8 @@
 #2768 - Ashenge
 
-owner = AMH
-controller = AMH
-add_core = AMH
+owner = ANO
+controller = ANO
+add_core = ANO
 capital = "Manadeley"
 culture = afar
 religion = coptic
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = AMH
-	controller = AMH
-	add_core = AMH
+	owner = ANO
+	controller = ANO
+	add_core = ANO
 }
