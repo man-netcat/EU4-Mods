@@ -80,6 +80,19 @@ PROVINCE_COUNTY.update({
     726: "c_LIAO_shenyang", 731: "c_BAL_ilanshan", 2107: "c_BAL_ningzhou",
 })
 
+# Egypt: the governorates the EU4 provinces stand for (Coptic Egypt is the
+# Delta, the Nile valley and the oases of Kharga and Dakhla; the cities,
+# Cyrenaica, Sinai, the Red Sea desert and the western oases follow Sunni law).
+PROVINCE_COUNTY.update({
+    356: "c_barqa", 357: "c_derna", 358: "c_alexandria", 359: "c_fayyum",
+    360: "c_qus", 361: "c_cairo", 362: "c_al-buhaira", 363: "c_damietta",
+    365: "c_sinai", 1231: "c_aswan", 1233: "c_kharga", 2315: "c_farama",
+    2316: "c_al-gharbiya", 2317: "c_bahnasa", 2318: "c_bahriya",
+    2319: "c_ushmun", 2320: "c_jabal_quzlum", 2321: "c_qusayr", 2325: "c_alexandria",
+    2326: "c_sullum", 4316: "c_sharkiya", 4317: "c_al-buhaira", 4318: "c_cairo",
+    4319: "c_qus", 4320: "c_asyut", 4323: "c_farafra",
+})
+
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
 UNMAPPED = {}
 
