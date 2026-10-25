@@ -6134,26 +6134,26 @@ bedouin_arabic_sui_titles = {
 nubian_alo_titles = {
 # lifted from CK3 flavorization for ALO: d_sennar carries rule specials the shared nubian_titles block cannot express; Islam heir = False
 	rank = {
-		1 = COUNTY
-		2 = DUCHY
-		3 = KINGDOM
-		4 = EMPIRE
+		1 = NUBIAN_ALO_COUNTY  # county_tribal
+		2 = NUBIAN_ALO_DUCHY  # duchy_tribal
+		3 = NUBIAN_ALO_KINGDOM  # kingdom_tribal
+		4 = NUBIAN_ALO_EMPIRE  # empire_tribal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = NUBIAN_ALO_COUNT_MALE  # count
-		2 = NUBIAN_ALO_DUKE_MALE  # duke
-		3 = NUBIAN_ALO_KING_MALE  # king
-		4 = NUBIAN_ALO_EMPEROR_MALE  # emperor
+		1 = NUBIAN_ALO_COUNT_MALE  # count_tribal_male
+		2 = NUBIAN_ALO_DUKE_MALE  # duke_tribal_male
+		3 = NUBIAN_ALO_KING_MALE  # king_tribal_male
+		4 = NUBIAN_ALO_EMPEROR_MALE  # emperor_tribal_male
 		5 = NUBIAN_ALO_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = NUBIAN_ALO_COUNT_FEMALE  # count_female
-		2 = NUBIAN_ALO_DUKE_FEMALE  # duke_female
-		3 = NUBIAN_ALO_KING_FEMALE  # king_female
-		4 = NUBIAN_ALO_EMPEROR_FEMALE  # emperor_female
+		1 = NUBIAN_ALO_COUNT_FEMALE  # count_tribal_female
+		2 = NUBIAN_ALO_DUKE_FEMALE  # duke_tribal_female
+		3 = NUBIAN_ALO_KING_FEMALE  # king_tribal_female
+		4 = NUBIAN_ALO_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = NUBIAN_ALO_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -6166,10 +6166,10 @@ nubian_alo_titles = {
 	}
 
 	consort_female = {
-		1 = NUBIAN_ALO_COUNT_FEMALE  # count_female
-		2 = NUBIAN_ALO_DUKE_FEMALE  # duke_female
-		3 = NUBIAN_ALO_KING_FEMALE  # king_female
-		4 = NUBIAN_ALO_EMPEROR_FEMALE  # emperor_female
+		1 = NUBIAN_ALO_COUNT_FEMALE  # count_tribal_female
+		2 = NUBIAN_ALO_DUKE_FEMALE  # duke_tribal_female
+		3 = NUBIAN_ALO_KING_FEMALE  # king_tribal_female
+		4 = NUBIAN_ALO_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = NUBIAN_ALO_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -6273,17 +6273,17 @@ amhara_ano_titles = {
 	}
 
 	ruler_male = {
-		1 = AMHARA_ANO_COUNT_MALE  # count_feudal_male
+		1 = AMHARA_ANO_COUNT_MALE  # count_feudal_male_ethiopian
 		2 = AMHARA_ANO_DUKE_MALE  # duke_feudal_independent
-		3 = AMHARA_ANO_KING_MALE  # king_feudal_male
+		3 = AMHARA_ANO_KING_MALE  # king_feudal_male_ethiopian
 		4 = AMHARA_ANO_EMPEROR_MALE  # emperor_feudal_male_ethiopian
 		5 = AMHARA_ANO_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = AMHARA_ANO_COUNT_FEMALE  # count_feudal_female
+		1 = AMHARA_ANO_COUNT_FEMALE  # count_feudal_female_ethiopian
 		2 = AMHARA_ANO_DUKE_FEMALE  # duke_feudal_independent_female
-		3 = AMHARA_ANO_KING_FEMALE  # king_feudal_female
+		3 = AMHARA_ANO_KING_FEMALE  # king_feudal_female_ethiopian
 		4 = AMHARA_ANO_EMPEROR_FEMALE  # emperor_feudal_female_ethiopian
 		5 = AMHARA_ANO_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6297,9 +6297,9 @@ amhara_ano_titles = {
 	}
 
 	consort_female = {
-		1 = AMHARA_ANO_COUNT_FEMALE  # count_feudal_female
+		1 = AMHARA_ANO_COUNT_FEMALE  # count_feudal_female_ethiopian
 		2 = AMHARA_ANO_DUKE_FEMALE  # duke_feudal_independent_female
-		3 = AMHARA_ANO_KING_FEMALE  # king_feudal_female
+		3 = AMHARA_ANO_KING_FEMALE  # king_feudal_female_ethiopian
 		4 = AMHARA_ANO_EMPEROR_FEMALE  # emperor_feudal_female_ethiopian
 		5 = AMHARA_ANO_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6338,17 +6338,17 @@ amhara_eth_titles = {
 	}
 
 	ruler_male = {
-		1 = AMHARA_ETH_COUNT_MALE  # count_feudal_male
+		1 = AMHARA_ETH_COUNT_MALE  # count_feudal_male_ethiopian
 		2 = AMHARA_ETH_DUKE_MALE  # duke_feudal_independent
-		3 = AMHARA_ETH_KING_MALE  # king_feudal_male
+		3 = AMHARA_ETH_KING_MALE  # king_feudal_male_ethiopian
 		4 = AMHARA_ETH_EMPEROR_MALE  # emperor_feudal_male_ethiopian
 		5 = AMHARA_ETH_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = AMHARA_ETH_COUNT_FEMALE  # count_feudal_female
+		1 = AMHARA_ETH_COUNT_FEMALE  # count_feudal_female_ethiopian
 		2 = AMHARA_ETH_DUKE_FEMALE  # duke_feudal_independent_female
-		3 = AMHARA_ETH_KING_FEMALE  # king_feudal_female
+		3 = AMHARA_ETH_KING_FEMALE  # king_feudal_female_ethiopian
 		4 = AMHARA_ETH_EMPEROR_FEMALE  # emperor_feudal_female_ethiopian
 		5 = AMHARA_ETH_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6362,9 +6362,9 @@ amhara_eth_titles = {
 	}
 
 	consort_female = {
-		1 = AMHARA_ETH_COUNT_FEMALE  # count_feudal_female
+		1 = AMHARA_ETH_COUNT_FEMALE  # count_feudal_female_ethiopian
 		2 = AMHARA_ETH_DUKE_FEMALE  # duke_feudal_independent_female
-		3 = AMHARA_ETH_KING_FEMALE  # king_feudal_female
+		3 = AMHARA_ETH_KING_FEMALE  # king_feudal_female_ethiopian
 		4 = AMHARA_ETH_EMPEROR_FEMALE  # emperor_feudal_female_ethiopian
 		5 = AMHARA_ETH_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6403,17 +6403,17 @@ amhara_sow_titles = {
 	}
 
 	ruler_male = {
-		1 = AMHARA_SOW_COUNT_MALE  # count_feudal_male
+		1 = AMHARA_SOW_COUNT_MALE  # count_feudal_male_ethiopian
 		2 = AMHARA_SOW_DUKE_MALE  # duke_feudal_independent
-		3 = AMHARA_SOW_KING_MALE  # king_feudal_male
+		3 = AMHARA_SOW_KING_MALE  # king_feudal_male_ethiopian
 		4 = AMHARA_SOW_EMPEROR_MALE  # emperor_feudal_male_ethiopian
 		5 = AMHARA_SOW_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = AMHARA_SOW_COUNT_FEMALE  # count_feudal_female
+		1 = AMHARA_SOW_COUNT_FEMALE  # count_feudal_female_ethiopian
 		2 = AMHARA_SOW_DUKE_FEMALE  # duke_feudal_independent_female
-		3 = AMHARA_SOW_KING_FEMALE  # king_feudal_female
+		3 = AMHARA_SOW_KING_FEMALE  # king_feudal_female_ethiopian
 		4 = AMHARA_SOW_EMPEROR_FEMALE  # emperor_feudal_female_ethiopian
 		5 = AMHARA_SOW_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6427,9 +6427,9 @@ amhara_sow_titles = {
 	}
 
 	consort_female = {
-		1 = AMHARA_SOW_COUNT_FEMALE  # count_feudal_female
+		1 = AMHARA_SOW_COUNT_FEMALE  # count_feudal_female_ethiopian
 		2 = AMHARA_SOW_DUKE_FEMALE  # duke_feudal_independent_female
-		3 = AMHARA_SOW_KING_FEMALE  # king_feudal_female
+		3 = AMHARA_SOW_KING_FEMALE  # king_feudal_female_ethiopian
 		4 = AMHARA_SOW_EMPEROR_FEMALE  # emperor_feudal_female_ethiopian
 		5 = AMHARA_SOW_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6460,26 +6460,26 @@ amhara_sow_titles = {
 amhara_titles = {
 # CK3 ladders for DWA(r1), GOA(r2), SHK(r1), DAT(r2) - tribal CK3 government
 	rank = {
-		1 = COUNTY
-		2 = DUCHY
-		3 = KINGDOM
-		4 = EMPIRE
+		1 = AMHARA_COUNTY  # county_tribal
+		2 = AMHARA_DUCHY  # duchy_tribal
+		3 = AMHARA_KINGDOM  # kingdom_tribal
+		4 = AMHARA_EMPIRE  # empire_tribal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = AMHARA_COUNT_MALE  # count
-		2 = AMHARA_DUKE_MALE  # duke
-		3 = AMHARA_KING_MALE  # king
-		4 = AMHARA_EMPEROR_MALE  # emperor
+		1 = AMHARA_COUNT_MALE  # count_tribal_male
+		2 = AMHARA_DUKE_MALE  # duke_tribal_male
+		3 = AMHARA_KING_MALE  # king_tribal_male
+		4 = AMHARA_EMPEROR_MALE  # emperor_tribal_male
 		5 = AMHARA_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = AMHARA_COUNT_FEMALE  # count_female
-		2 = AMHARA_DUKE_FEMALE  # duke_female
-		3 = AMHARA_KING_FEMALE  # king_female
-		4 = AMHARA_EMPEROR_FEMALE  # emperor_female
+		1 = AMHARA_COUNT_FEMALE  # count_tribal_female
+		2 = AMHARA_DUKE_FEMALE  # duke_tribal_female
+		3 = AMHARA_KING_FEMALE  # king_tribal_female
+		4 = AMHARA_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = AMHARA_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -6492,10 +6492,10 @@ amhara_titles = {
 	}
 
 	consort_female = {
-		1 = AMHARA_COUNT_FEMALE  # count_female
-		2 = AMHARA_DUKE_FEMALE  # duke_female
-		3 = AMHARA_KING_FEMALE  # king_female
-		4 = AMHARA_EMPEROR_FEMALE  # emperor_female
+		1 = AMHARA_COUNT_FEMALE  # count_tribal_female
+		2 = AMHARA_DUKE_FEMALE  # duke_tribal_female
+		3 = AMHARA_KING_FEMALE  # king_tribal_female
+		4 = AMHARA_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = AMHARA_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -6534,17 +6534,17 @@ somali_goe_titles = {
 	}
 
 	ruler_male = {
-		1 = SOMALI_GOE_COUNT_MALE  # count_feudal_male
-		2 = SOMALI_GOE_DUKE_MALE  # duke_feudal_male
-		3 = SOMALI_GOE_KING_MALE  # king_feudal_male
+		1 = SOMALI_GOE_COUNT_MALE  # count_feudal_male_somalian_group
+		2 = SOMALI_GOE_DUKE_MALE  # duke_feudal_male_somalian_group
+		3 = SOMALI_GOE_KING_MALE  # king_feudal_male_somalian_group
 		4 = SOMALI_GOE_EMPEROR_MALE  # emperor_feudal_male_somalian_group
 		5 = SOMALI_GOE_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = SOMALI_GOE_COUNT_FEMALE  # count_feudal_female
-		2 = SOMALI_GOE_DUKE_FEMALE  # duke_feudal_female
-		3 = SOMALI_GOE_KING_FEMALE  # king_feudal_female
+		1 = SOMALI_GOE_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_GOE_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_GOE_KING_FEMALE  # king_feudal_female_somalian_group
 		4 = SOMALI_GOE_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = SOMALI_GOE_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6558,9 +6558,9 @@ somali_goe_titles = {
 	}
 
 	consort_female = {
-		1 = SOMALI_GOE_COUNT_FEMALE  # count_feudal_female
-		2 = SOMALI_GOE_DUKE_FEMALE  # duke_feudal_female
-		3 = SOMALI_GOE_KING_FEMALE  # king_feudal_female
+		1 = SOMALI_GOE_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_GOE_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_GOE_KING_FEMALE  # king_feudal_female_somalian_group
 		4 = SOMALI_GOE_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = SOMALI_GOE_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6599,17 +6599,17 @@ somali_moa_titles = {
 	}
 
 	ruler_male = {
-		1 = SOMALI_MOA_COUNT_MALE  # count_clan_male
-		2 = SOMALI_MOA_DUKE_MALE  # duke_clan_male
-		3 = SOMALI_MOA_KING_MALE  # king_clan_male
+		1 = SOMALI_MOA_COUNT_MALE  # count_feudal_male_somalian_group
+		2 = SOMALI_MOA_DUKE_MALE  # duke_feudal_male_somalian_group
+		3 = SOMALI_MOA_KING_MALE  # king_feudal_male_somalian_group
 		4 = SOMALI_MOA_EMPEROR_MALE  # emperor_feudal_male_somalian_group
 		5 = SOMALI_MOA_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = SOMALI_MOA_COUNT_FEMALE  # count_clan_female
-		2 = SOMALI_MOA_DUKE_FEMALE  # duke_clan_female
-		3 = SOMALI_MOA_KING_FEMALE  # king_clan_female
+		1 = SOMALI_MOA_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_MOA_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_MOA_KING_FEMALE  # king_feudal_female_somalian_group
 		4 = SOMALI_MOA_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = SOMALI_MOA_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6623,9 +6623,9 @@ somali_moa_titles = {
 	}
 
 	consort_female = {
-		1 = SOMALI_MOA_COUNT_FEMALE  # count_clan_female
-		2 = SOMALI_MOA_DUKE_FEMALE  # duke_clan_female
-		3 = SOMALI_MOA_KING_FEMALE  # king_clan_female
+		1 = SOMALI_MOA_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_MOA_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_MOA_KING_FEMALE  # king_feudal_female_somalian_group
 		4 = SOMALI_MOA_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = SOMALI_MOA_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6656,25 +6656,25 @@ somali_moa_titles = {
 somali_titles = {
 # CK3 ladders for BAA(r1), FAF(r1), MEA(r1), BAE(r1), HOO(r1), MUU(r1), MIT(r1), RAA(r1) - tribal CK3 government
 	rank = {
-		1 = COUNTY
-		2 = DUCHY
-		3 = KINGDOM
-		4 = EMPIRE
+		1 = SOMALI_COUNTY  # county_tribal
+		2 = SOMALI_DUCHY  # duchy_tribal
+		3 = SOMALI_KINGDOM  # kingdom_tribal
+		4 = SOMALI_EMPIRE  # empire_tribal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = SOMALI_COUNT_MALE  # count
-		2 = SOMALI_DUKE_MALE  # duke
-		3 = SOMALI_KING_MALE  # king
+		1 = SOMALI_COUNT_MALE  # count_feudal_male_somalian_group
+		2 = SOMALI_DUKE_MALE  # duke_feudal_male_somalian_group
+		3 = SOMALI_KING_MALE  # king_tribal_male_somalian_group
 		4 = SOMALI_EMPEROR_MALE  # emperor_feudal_male_somalian_group
 		5 = SOMALI_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = SOMALI_COUNT_FEMALE  # count_female
-		2 = SOMALI_DUKE_FEMALE  # duke_female
-		3 = SOMALI_KING_FEMALE  # king_female
+		1 = SOMALI_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_KING_FEMALE  # king_tribal_female_somalian_group
 		4 = SOMALI_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = SOMALI_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6688,9 +6688,9 @@ somali_titles = {
 	}
 
 	consort_female = {
-		1 = SOMALI_COUNT_FEMALE  # count_female
-		2 = SOMALI_DUKE_FEMALE  # duke_female
-		3 = SOMALI_KING_FEMALE  # king_female
+		1 = SOMALI_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_KING_FEMALE  # king_tribal_female_somalian_group
 		4 = SOMALI_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = SOMALI_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6722,25 +6722,25 @@ somali_titles = {
 afar_titles = {
 # CK3 ladders for HAQ(r1), UBR(r1)
 	rank = {
-		1 = COUNTY
-		2 = DUCHY
-		3 = KINGDOM
-		4 = EMPIRE
+		1 = AFAR_COUNTY  # county_tribal
+		2 = AFAR_DUCHY  # duchy_tribal
+		3 = AFAR_KINGDOM  # kingdom_tribal
+		4 = AFAR_EMPIRE  # empire_tribal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = AFAR_COUNT_MALE  # count
-		2 = AFAR_DUKE_MALE  # duke
-		3 = AFAR_KING_MALE  # king
+		1 = AFAR_COUNT_MALE  # count_feudal_male_somalian_group
+		2 = AFAR_DUKE_MALE  # duke_feudal_male_somalian_group
+		3 = AFAR_KING_MALE  # king_tribal_male_somalian_group
 		4 = AFAR_EMPEROR_MALE  # emperor_feudal_male_somalian_group
 		5 = AFAR_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = AFAR_COUNT_FEMALE  # count_female
-		2 = AFAR_DUKE_FEMALE  # duke_female
-		3 = AFAR_KING_FEMALE  # king_female
+		1 = AFAR_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = AFAR_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = AFAR_KING_FEMALE  # king_tribal_female_somalian_group
 		4 = AFAR_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = AFAR_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6754,9 +6754,9 @@ afar_titles = {
 	}
 
 	consort_female = {
-		1 = AFAR_COUNT_FEMALE  # count_female
-		2 = AFAR_DUKE_FEMALE  # duke_female
-		3 = AFAR_KING_FEMALE  # king_female
+		1 = AFAR_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = AFAR_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = AFAR_KING_FEMALE  # king_tribal_female_somalian_group
 		4 = AFAR_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
 		5 = AFAR_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6787,26 +6787,26 @@ afar_titles = {
 oromo_titles = {
 # CK3 ladders for SIM(r1), WEA(r1), WEE(r1)
 	rank = {
-		1 = COUNTY
-		2 = DUCHY
-		3 = KINGDOM
-		4 = EMPIRE
+		1 = OROMO_COUNTY  # county_tribal
+		2 = OROMO_DUCHY  # duchy_tribal
+		3 = OROMO_KINGDOM  # kingdom_tribal
+		4 = OROMO_EMPIRE  # empire_tribal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = OROMO_COUNT_MALE  # count
-		2 = OROMO_DUKE_MALE  # duke
-		3 = OROMO_KING_MALE  # king
-		4 = OROMO_EMPEROR_MALE  # emperor
+		1 = OROMO_COUNT_MALE  # count_tribal_male
+		2 = OROMO_DUKE_MALE  # duke_tribal_male
+		3 = OROMO_KING_MALE  # king_tribal_male
+		4 = OROMO_EMPEROR_MALE  # emperor_tribal_male
 		5 = OROMO_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = OROMO_COUNT_FEMALE  # count_female
-		2 = OROMO_DUKE_FEMALE  # duke_female
-		3 = OROMO_KING_FEMALE  # king_female
-		4 = OROMO_EMPEROR_FEMALE  # emperor_female
+		1 = OROMO_COUNT_FEMALE  # count_tribal_female
+		2 = OROMO_DUKE_FEMALE  # duke_tribal_female
+		3 = OROMO_KING_FEMALE  # king_tribal_female
+		4 = OROMO_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = OROMO_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -6819,10 +6819,10 @@ oromo_titles = {
 	}
 
 	consort_female = {
-		1 = OROMO_COUNT_FEMALE  # count_female
-		2 = OROMO_DUKE_FEMALE  # duke_female
-		3 = OROMO_KING_FEMALE  # king_female
-		4 = OROMO_EMPEROR_FEMALE  # emperor_female
+		1 = OROMO_COUNT_FEMALE  # count_tribal_female
+		2 = OROMO_DUKE_FEMALE  # duke_tribal_female
+		3 = OROMO_KING_FEMALE  # king_tribal_female
+		4 = OROMO_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = OROMO_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -6852,25 +6852,25 @@ oromo_titles = {
 beja_titles = {
 # CK3 ladders for BAZ(r2), NAI(r2)
 	rank = {
-		1 = COUNTY
-		2 = DUCHY
-		3 = KINGDOM
-		4 = EMPIRE
+		1 = BEJA_COUNTY  # county_tribal
+		2 = BEJA_DUCHY  # duchy_tribal
+		3 = BEJA_KINGDOM  # kingdom_tribal
+		4 = BEJA_EMPIRE  # empire_tribal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEJA_COUNT_MALE  # count
-		2 = BEJA_DUKE_MALE  # duke
-		3 = BEJA_KING_MALE  # king
+		1 = BEJA_COUNT_MALE  # count_feudal_male_beja
+		2 = BEJA_DUKE_MALE  # duke_feudal_male_beja
+		3 = BEJA_KING_MALE  # king_feudal_male_beja
 		4 = BEJA_EMPEROR_MALE  # emperor_feudal_male_beja
 		5 = BEJA_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEJA_COUNT_FEMALE  # count_female
-		2 = BEJA_DUKE_FEMALE  # duke_female
-		3 = BEJA_KING_FEMALE  # king_female
+		1 = BEJA_COUNT_FEMALE  # count_feudal_female_beja
+		2 = BEJA_DUKE_FEMALE  # duke_feudal_female_beja
+		3 = BEJA_KING_FEMALE  # king_feudal_female_beja
 		4 = BEJA_EMPEROR_FEMALE  # emperor_feudal_female_beja
 		5 = BEJA_HEGEMON_FEMALE  # hegemon_female
 	}
@@ -6884,9 +6884,9 @@ beja_titles = {
 	}
 
 	consort_female = {
-		1 = BEJA_COUNT_FEMALE  # count_female
-		2 = BEJA_DUKE_FEMALE  # duke_female
-		3 = BEJA_KING_FEMALE  # king_female
+		1 = BEJA_COUNT_FEMALE  # count_feudal_female_beja
+		2 = BEJA_DUKE_FEMALE  # duke_feudal_female_beja
+		3 = BEJA_KING_FEMALE  # king_feudal_female_beja
 		4 = BEJA_EMPEROR_FEMALE  # emperor_feudal_female_beja
 		5 = BEJA_HEGEMON_FEMALE  # hegemon_female
 	}

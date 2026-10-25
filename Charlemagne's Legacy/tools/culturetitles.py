@@ -338,7 +338,9 @@ def pick(rules, tier, rtype, gender, title, heritage, name_list, religion,
     # CK3 only replaces an eligible rule with a STRICTLY higher priority
     # (_flavourization.info), so equal priorities keep the earlier rule -
     # the culture-specific rows above the defaults.
-    for r in sorted(rules.values(), key=lambda r: (-r.priority, r.order)):
+    # a sovereign's `only_independent` rule beats an equal-priority general one
+    for r in sorted(rules.values(), key=lambda r: (
+            -r.priority, not (indep and r.only_independent), r.order)):
         if r.type != rtype:
             continue
         if r.special not in (None, "holder"):
@@ -349,11 +351,9 @@ def pick(rules, tier, rtype, gender, title, heritage, name_list, religion,
             continue
         if r.governments and not (set(r.governments) & govs):
             continue
-        # CK3 gates rules on being a top liege: `top_liege = no` rules (the
-        # Ethiopian Mesfin) are for vassals, `only_independent` rules (the
-        # Petty King) and `top_liege = yes` for sovereigns
-        if indep and (r.top_liege == "no"):
-            continue
+        # `only_independent` rules (the Petty King) and `top_liege = yes`
+        # are for sovereigns only; `top_liege = no` does not exclude one
+        # (an independent tribal duke is still a High Chieftain)
         if not indep and (r.top_liege == "yes" or r.only_independent):
             continue
         if r.heritages and heritage not in r.heritages:
