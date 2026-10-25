@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = levantine
 religion = sunni
 capital = 225
+religious_school = maliki_school
 historical_rival = ASU
 # Rank 2 matches what vanilla's andalusian_nation decision forces, so forming
 # ADU in game and starting from this state end up identical.

@@ -5,6 +5,7 @@ technology_group = chinese
 primary_culture = japanese
 religion = mahayana
 capital = 1020
+religious_school = pundarika_school
 867.1.1 = {
 	monarch = {
 		name = "Yoshifusa"

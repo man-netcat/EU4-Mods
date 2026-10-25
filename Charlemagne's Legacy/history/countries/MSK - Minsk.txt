@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = russian
 religion = slavic
 capital = 276
+religious_school = slavic_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Ruslan II"

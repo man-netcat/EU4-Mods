@@ -1738,6 +1738,16 @@ def run() -> int:
     for w in rite_warn:
         warn(w)
 
+    print("\n== province religions track CK3's counties (tools/provfaiths.py) ==")
+    import provfaiths
+
+    pf_err, pf_warn = provfaiths.verify()
+    note(not pf_err, f"audited province religions match CK3 ({len(pf_err)} off, {len(provfaiths.PROVINCE_COUNTY)} audited)")
+    for e in pf_err[:20]:
+        print("        " + e)
+    for w in pf_warn:
+        warn(w)
+
     print("\n" + ("ALL CHECKS PASSED" if not fail else f"{len(fail)} FAILURES"))
 
     return 1 if fail else 0

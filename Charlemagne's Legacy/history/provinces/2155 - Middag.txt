@@ -5,8 +5,8 @@ capital = "Middag"
 culture = polynesian
 # 2155 - Middag
 culture = polynesian
-religion = animism
-religion = animism
+religion = hantuism
+religion = hantuism
 hre = no
 hre = no
 base_tax = 1

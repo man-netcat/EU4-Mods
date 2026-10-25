@@ -5,8 +5,8 @@ capital = "Sakam"
 culture = polynesian
 #738 - Taiwan
 culture = polynesian
-religion = animism
-religion = animism
+religion = hantuism
+religion = hantuism
 hre = no
 hre = no
 base_tax = 1

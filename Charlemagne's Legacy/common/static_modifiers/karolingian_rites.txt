@@ -103,3 +103,371 @@ armenian_rite_scholar_modifier = {
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	global_trade_power = 0.05
 }
+
+nestorian_rite_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	dip_tech_cost_modifier = -0.05
+}
+
+bosnian_church_rite_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	improve_relation_modifier = 0.25
+}
+
+slavic_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_manpower_modifier = 0.05
+}
+
+baltic_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.1
+}
+
+finnish_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	discipline = 0.025
+}
+
+magyar_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	cavalry_power = 0.05
+}
+
+hanafi_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	adm_tech_cost_modifier = -0.05
+}
+
+hanbali_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	stability_cost_modifier = -0.1
+}
+
+maliki_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_tax_modifier = 0.05
+}
+
+shafii_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	trade_efficiency = 0.05
+}
+
+ismaili_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	dip_tech_cost_modifier = -0.05
+}
+
+hafizi_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	legitimacy = 0.5
+}
+
+alawite_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.1
+}
+
+alevi_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_unrest = -1
+}
+
+qarmatian_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_morale = 0.05
+}
+
+nizari_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	discipline = 0.025
+}
+
+zaidi_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	infantry_power = 0.05
+}
+
+jafari_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	production_efficiency = 0.05
+}
+
+ghulat_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	cavalry_power = 0.05
+}
+
+ibadi_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	diplomatic_reputation = 1
+}
+
+azariqa_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_morale = 0.05
+}
+
+najdat_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_manpower_modifier = 0.05
+}
+
+sufri_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	improve_relation_modifier = 0.25
+}
+
+vinaya_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	stability_cost_modifier = -0.1
+}
+
+theravada_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	adm_tech_cost_modifier = -0.05
+}
+
+mahayana_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_unrest = -1
+}
+
+pundarika_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	diplomatic_reputation = 1
+}
+
+yogacara_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	idea_cost = -0.025
+}
+
+avatamsaka_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	production_efficiency = 0.05
+}
+
+lamaism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_tax_modifier = 0.05
+}
+
+mantrayana_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	discipline = 0.025
+}
+
+jingxue_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	adm_tech_cost_modifier = -0.05
+}
+
+daoxue_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	production_efficiency = 0.05
+}
+
+shinto_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_morale = 0.05
+}
+
+shugendo_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.1
+}
+
+shaivism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_morale = 0.05
+}
+
+vaishnavism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_trade_power = 0.05
+}
+
+norse_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	naval_morale = 0.1
+}
+
+tengri_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	cavalry_power = 0.05
+}
+
+north_african_acham_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.1
+}
+
+utaki_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_unrest = -1
+}
+
+kamuyism_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	hostile_attrition = 1
+}
+
+hantuism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_manpower_modifier = 0.1
+}
+
+shamanism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	prestige = 1
+}
+
+khurmazta_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	stability_cost_modifier = -0.1
+}
+
+mazdayasna_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	legitimacy = 0.5
+}

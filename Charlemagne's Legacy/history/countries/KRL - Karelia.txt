@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = karelian
 religion = suomenusko
 capital = 309
+religious_school = finnish_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Tuure"

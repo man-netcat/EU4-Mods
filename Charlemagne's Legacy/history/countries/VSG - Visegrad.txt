@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = avar
 religion = tengri_pagan_reformed
 capital = 153
+religious_school = tengri_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Baghatur"

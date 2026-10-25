@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = al_misr_arabic
 religion = sunni
 capital = 361
+religious_school = shafii_school
 # Egypt. Vanilla EGY is a formable nation: it owns nothing at 1444, has no dated
 # blocks and therefore no ruler, because the Mamluks (the vanilla tag MAM) hold
 # Egypt's 26 provinces. This scenario folds the Mamluks into Egypt - every

@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = polish
 religion = slavic
 capital = 262
+religious_school = slavic_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Krak III"

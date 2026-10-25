@@ -5,6 +5,7 @@ technology_group = chinese
 primary_culture = japanese
 religion = vajrayana
 capital = 1028
+religious_school = mantrayana_school
 867.1.1 = {
 	monarch = {
 		name = "Harunari"

@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = baranis
 religion = ibadi
 capital = 351
+religious_school = ibadi_school
 867.1.1 = {
 	monarch = {
 		name = "Berkan"

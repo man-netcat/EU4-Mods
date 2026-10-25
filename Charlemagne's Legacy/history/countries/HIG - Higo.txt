@@ -5,6 +5,7 @@ technology_group = chinese
 primary_culture = japanese
 religion = vajrayana
 capital = 4181
+religious_school = mantrayana_school
 867.1.1 = {
 	monarch = {
 		name = "Yasusada"

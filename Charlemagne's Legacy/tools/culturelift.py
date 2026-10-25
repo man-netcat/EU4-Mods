@@ -552,49 +552,13 @@ if __name__ == "__main__":
     sys.exit(selftest())
 
 
-# CK3 faith at 867 -> our EU4 religion key. The Christian map collapses
-# to the standing two-key church (rites stay in communion; 867 has no
-# splits), Islam loses the madhab shading (EU4 keeps sunni/ibadi/shiite),
-# and the pagan keys carry over per the religion build-up notes.
-FAITH_TO_RELIGION = {
-    # one western church: Roman, Carolingian, Beneventan, Insular
-    # Celtic, Mozarabic rites alike
-    "roman_rite": "catholic",
-    "carolingian_christianity": "catholic",
-    "beneventan_rite": "catholic",
-    "insular_celtic": "catholic",
-    "mozarabic_church": "catholic",
-    "byzantine_rite": "catholic",
-    "georgian_rite": "catholic",
-    "armenian_rite": "apostolic",
-    # Church of the East (Nestorian) is its own lifted faith, never in
-    # Chalcedonian communion.
-    "nestorian": "nestorian",
-    # legal-school shading within Sunni (EU4 has no madhab keys)
-    "maliki": "sunni", "hanafi": "sunni", "shafii": "sunni",
-    "ibadi": "ibadi",
-    # third Ibadi-family seceder school after najdat/sufri
-    "najdat": "ibadi", "sufri": "ibadi", "azariqa": "ibadi", "zayidi": "shiite",
-    # pagans: the lifted keys keep their standing diet
-    "norse_pagan": "norse_pagan_reformed",
-    "slavic_pagan": "slavic",
-    "baltic_pagan": "romuva",
-    "finnish_pagan": "suomenusko",
-    "magyar_pagan": "taltosist",
-    "tengri_pagan": "tengri_pagan_reformed",
-    # vanilla animism is the generic catch-all for the berber pagan
-    "north_african_acham_pagan": "animism",
-    "kamuyism_pagan": "animism", "utaki": "animism", "hantuism": "animism",
-    "shamanism": "shamanism",
-    # Buddhist families onto the EU4 keys
-    "vinaya": "buddhism", "avatamsaka": "mahayana", "mantrayana": "vajrayana",
-    # pundarika is CK3's Lotus-school Buddhism (the Heian court's faith)
-    "pundarika": "mahayana",
-    # the plain Mahayana key itself (the Buddhist Ghurids of 867) and
-    # the Shaiva milieus of the Kabul Shahi
-    "mahayana": "mahayana",
-    "shaivism": "hinduism",
-}
+# CK3 rite at 867 -> our EU4 religion key: through the CK3 faith the rite
+# belongs to (rite_types), lifted by exactly one EU4 religion (see
+# faiths.FAITH_RELIGION). No approximations: a tag never gets a religion that
+# is a different CK3 faith than its ruler's.
+from faiths import rite_religion_map  # noqa: E402
+
+FAITH_TO_RELIGION = rite_religion_map()
 
 
 def ruler_default(title, session=None):

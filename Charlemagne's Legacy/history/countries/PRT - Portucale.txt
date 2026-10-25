@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = andalusian
 religion = sunni
 capital = 231
+religious_school = maliki_school
 867.1.1 = {
 	monarch = {
 		name = "Sa'dun"

@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = bedouin_arabic
 religion = ibadi
 capital = 398
+religious_school = ibadi_school
 867.1.1 = {
 	monarch = {
 		name = "as-Salt"

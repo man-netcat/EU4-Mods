@@ -5,6 +5,7 @@ technology_group = eastern
 primary_culture = lithuanian
 religion = romuva
 capital = 272
+religious_school = baltic_pagan_school
 historical_friend = POL
 add_accepted_culture = byelorussian
 add_accepted_culture = ruthenian

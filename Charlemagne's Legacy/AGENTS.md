@@ -109,27 +109,65 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   rank, CK3 title): if the request doesn't give them, ask first — never
   assume them.
 
-## Christian rites (religious schools)
+## Rites (religious schools)
 
-CK3's rites of `christian_faith` are EU4 religious schools of the `christian`
-group, the Islamic-schools mechanism. `tools/rites.py` holds the table (13
-rites: key, CK3 rite, name, desc, one modifier, placeholder colour) and
-`build.py` regenerates from it: the `religious_schools` block between the
-BEGIN/END RITES markers in `common/religions/00_religion.txt`,
-`common/static_modifiers/karolingian_rites.txt`,
+CK3's rites are EU4 religious schools in every religion group the mod uses
+(christian, muslim, eastern, dharmic, pagan, zoroastrian_group - 52 rites).
+The Islamic rites REPLACE the base game's Islamic schools (same keys for
+hanafi/hanbali/maliki/shafii/ismaili/jafari/zaidi, so vanilla scripts keep
+working). `tools/rites.py` holds the tables (RITES: group, key, CK3 rite,
+name, desc, one modifier, placeholder colour; RITE_RELIGIONS: which EU4
+religion follows each rite) and `build.py` regenerates from it: one
+`religious_schools` block per group between BEGIN/END RITES markers in
+`common/religions/00_religion.txt`, `common/static_modifiers/karolingian_rites.txt`,
 `common/scripted_effects/karolingian_rites.txt`, `interface/karolingian_rites.gfx`
-and `localisation/replace/karolingian_rites_l_english.yml` - edit the table,
-never those outputs. A country starts with the school of its 867 CK3 holder's
-`rite` (holders without one follow the faith's main rite, roman) via
-`religious_school = X_school` in country history. Icons
-`gfx/interface/icon_christian_school_<key>.tga` are generated PLACEHOLDERS
-only when missing: the real CK3 rite icons are dropped in locally under the
-same names and are then kept.
-`rites.verify()` (run by build and validate) checks the table against CK3's
-rite_types, every modifier/trigger against vanilla, that outputs match the
-generator, loc/icons exist, and that each country's history school equals its
-867 holder's rite. In-game text says "Rite" / "Clergy" / "Cleric"; the engine's
-shared school UI strings (also used by Islam) are left alone.
+and `localisation/replace/karolingian_rites_l_english.yml` - edit the tables,
+never those outputs.
+
+Tags inherit their 867 CK3 holder's religion AND rite: a country starts with
+the school of its holder's `rite` (`religious_school = X_school` in country
+history), and validate fails when the tag's EU4 religion is not one of the
+rite's religions (fix `tags.db`, never add a fallback or exception). Validate
+also fails when a religion the mod uses (tags or provinces) has no rites, when
+a ruler has no rite / a rite without a school, when an output was hand-edited,
+or when a religion icon is missing, out of range or blank in the four strips.
+Rite icons `gfx/interface/icon_rite_<key>.tga` are generated PLACEHOLDERS only
+when missing (validate lists them by name as warnings): drop the real CK3 rite
+icons in under the same names and they are kept; a missing file fails.
+In-game text says "Rite" / "Clergy" / "Cleric"; the engine's shared school UI
+strings (also used by Islam) are left alone.
+The rule moved three tags onto their ruler's religion: KTN (Khitans) mahayana
+(avatamsaka rite), DNI (Kizilyedisan) taltosist (magyar_pagan), KSG (Kashyar)
+khurmazdis (khurmazta); the older "Khitan tengri" note below no longer holds for KTN.
+
+## Religions are CK3 faiths
+
+Every EU4 religion the mod uses lifts exactly one CK3 faith, and a tag's
+religion is the religion of the faith its 867 ruler's rite belongs to (rite ->
+faith via CK3's `rite_types`, faith -> religion via `FAITH_RELIGION` in
+`tools/faiths.py`; `culturelift.FAITH_TO_RELIGION` is derived from it - no
+approximations: Balhae's Vinaya rite is Mahayana, not Theravada). Name and map
+colour come from CK3's faith (`python3 tools/faiths.py` sets them and creates
+missing religions by cloning a block, e.g. shaivism/vaishnavism from hinduism
+and achamanism from animism, with a placeholder icon frame); the icons are the
+CK3 faith icons and need the CK3 install: run `python3 tools/faiths.py icons`
+locally (overwrites each religion's frame in the four strips and replaces the
+placeholder rite icons `gfx/interface/icon_rite_<key>.tga` with CK3's rite icons,
+resized to 64x64; a rite icon that is no placeholder is kept unless `--force`). Validate fails on
+a used religion that is not a lifted faith, a wrong colour or name, a shared
+icon frame, a missing/blank icon, and lists placeholder icons by name. A faith
+nobody needs may stay unmapped (qarmatian); map it when a tag or province needs it.
+
+## Province religions audited against CK3 counties
+
+`tools/provfaiths.py` pairs EU4 provinces with CK3 counties (curated, a region at
+a time - Japan so far) and validate fails when a paired province's religion is
+not the one lifting its county's faith (county capital barony `rite` in
+`history/provinces` -> faith -> `FAITH_RELIGION`). `python3 tools/provfaiths.py`
+prints the audit, `... apply` writes the expected religions to `tags.db`.
+Provinces it cannot pair with certainty (`UNMAPPED`) are listed, never guessed.
+The old `provmap.json` auto-matches were wrong for eight Japanese provinces
+(Kyoto, Awa, Aki, Mino, Kai, Okinawa, Dewa, Ugo) and are corrected there.
 
 ## Standing conventions
 

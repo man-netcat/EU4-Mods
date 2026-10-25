@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = norse
 religion = norse_pagan_reformed
 capital = 20
+religious_school = norse_pagan_school
 867.1.1 = {
 	monarch = {
 		name = "Rögnvaldr"

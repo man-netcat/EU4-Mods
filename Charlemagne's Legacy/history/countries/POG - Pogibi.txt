@@ -5,6 +5,7 @@ technology_group = chinese
 primary_culture = nivkh
 religion = shamanism
 capital = 4658
+religious_school = shamanism_school
 867.1.1 = {
 	monarch = {
 		name = "Changin"

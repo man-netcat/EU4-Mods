@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = italian
 religion = catholic
 capital = 4731
+religious_school = roman_rite_school
 867.1.1 = {
 	monarch = {
 		name = "Lambert"

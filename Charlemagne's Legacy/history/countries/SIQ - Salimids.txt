@@ -5,6 +5,7 @@ technology_group = muslim
 primary_culture = maghrebi
 religion = sunni
 capital = 125
+religious_school = shafii_school
 867.1.1 = {
 	monarch = {
 		name = "Khafaja"

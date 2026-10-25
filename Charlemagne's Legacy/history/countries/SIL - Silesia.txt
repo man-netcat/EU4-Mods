@@ -5,6 +5,7 @@ technology_group = western
 primary_culture = polish
 religion = slavic
 capital = 264
+religious_school = slavic_pagan_school
 # Dukes of Olawa/Lubin
 867.1.1 = {
 	monarch = {

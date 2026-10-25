@@ -62,8 +62,9 @@ def country_history(t) -> str:
     from rites import school_for_tag, school_name
 
     rite_school = school_for_tag(t)
-    if rite_school:
-        lines.append(f"religious_school = {school_name(rite_school)}")
+    if not rite_school:
+        raise SystemExit(f"{t.tag}: its 867 ruler's CK3 rite has no school in tools/rites.py")
+    lines.append(f"religious_school = {school_name(rite_school)}")
     lines += [f"historical_rival = {r}" for r in t.rivals]
     lines += [f"historical_friend = {f}" for f in t.friends]
     if t.extra:

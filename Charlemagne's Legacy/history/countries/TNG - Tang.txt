@@ -5,6 +5,7 @@ technology_group = chinese
 primary_culture = zhongyuan
 religion = vajrayana
 capital = 700
+religious_school = mantrayana_school
 867.1.1 = {
 	monarch = {
 		name = "Cui"
