@@ -1,8 +1,8 @@
 #423 - Kartli
 
-owner = ARM
-controller = ARM
-add_core = ARM
+owner = APR
+controller = APR
+add_core = APR
 capital = "T'bilisi"
 culture = georgian
 religion = catholic
@@ -22,7 +22,7 @@ discovered_by = western
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ARM
-	controller = ARM
-	add_core = ARM
+	owner = APR
+	controller = APR
+	add_core = APR
 }

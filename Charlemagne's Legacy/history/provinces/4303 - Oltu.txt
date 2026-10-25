@@ -2,7 +2,6 @@
 
 owner = TAO
 controller = TAO
-add_core = ARM
 add_core = TAO
 capital = "Oltu"
 culture = georgian

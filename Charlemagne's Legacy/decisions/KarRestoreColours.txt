@@ -11,7 +11,6 @@ country_decisions = {
 				tag = ALG
 				tag = ALO
 				tag = ARB
-				tag = ARM
 				tag = ASU
 				tag = BAV
 				tag = BRI
@@ -121,12 +120,6 @@ country_decisions = {
 			limit = { tag = ARB }
 			change_country_color = {
 				color = { 76 141 58 }
-			}
-		}
-		if = {
-			limit = { tag = ARM }
-			change_country_color = {
-				color = { 145 30 75 }
 			}
 		}
 		if = {

@@ -246,6 +246,23 @@ kar_form_denmark_provinces_trigger = {
 	}
 }
 
+kar_form_armenia_provinces_trigger = {
+	OR = {
+		area = armenia_area
+		province_id = 331 #erzurum
+		province_id = 2204 #kars
+		province_id = 2206 #urmia
+		province_id = 2303 #malatya
+		province_id = 2305 #erzincan
+		province_id = 2306 #mush
+		province_id = 2307 #van
+		province_id = 4295 #hisn kayfa
+		province_id = 4296 #bitlis
+		province_id = 4303 #oltu
+		province_id = 4304 #khoy
+	}
+}
+
 kar_form_galicia_volhynia_provinces_trigger = {
 	OR = {
 		area = red_ruthenia_area

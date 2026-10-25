@@ -40,14 +40,19 @@ SOURCES = {
     "VLD": "Vladimir Ancient",
     # Leliwa: the Tarnowski arms (CK3 c_tarnowska is a gold crescent and star on blue)
     "TRN": "Leliwa",
+    # Hethumid (the user's charges folder, a WappenWiki SVG): the Hethumid lion, red with
+    # a blue crown on gold, for the Armenian Principalities
+    "APR": "Hethumid",
 }
+CHARGES = Path("/home/rick/Paradox/heraldry/charges")
 # Arms whose bordure follows the shield outline: keep the charge only (fractions of the render)
 INNER = {"JAM": (0.15, 0.14, 0.85, 0.75)}
 SHIELD_RE = re.compile(r"<(polygon|path)\b[^>]*?(?:/>|>\s*</\1>)", re.S)
 
 
 def build(tag, title, size=256, height=218, inner=None):
-    s = (MIRROR / f"{title}.svg").read_text(errors="replace")
+    src_dir = MIRROR if (MIRROR / f"{title}.svg").exists() else CHARGES
+    s = (src_dir / f"{title}.svg").read_text(errors="replace")
     s = re.sub(r"<!DOCTYPE.*?\]>", "", s, flags=re.S)
     s = re.sub(r"&ns_[a-z_]+;", "", s)
     s = re.sub(r"<foreignObject.*?</foreignObject>", "", s, flags=re.S)

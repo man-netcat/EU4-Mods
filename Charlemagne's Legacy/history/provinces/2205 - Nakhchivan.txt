@@ -2,7 +2,6 @@
 
 owner = SNK
 controller = SNK
-add_core = ARM
 add_core = SNK
 capital = "Nakhchevani"
 culture = armenian
