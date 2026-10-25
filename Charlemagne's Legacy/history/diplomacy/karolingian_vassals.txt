@@ -23,6 +23,11 @@ vassal = {
 dependency = {
 	subject_type = tributary_state
 	first = ARB
+	second = APR
+}
+dependency = {
+	subject_type = tributary_state
+	first = ARB
 	second = EGY
 }
 vassal = {

@@ -1117,6 +1117,71 @@ georgian_titles = {
 }
 
 
+armenian_APR_titles = {
+# k_armenian_principality: CK3's title_prince/title_principality rules (a tributary
+# of the Abbasids is never top_liege), so rank 3 reads Principality / Prince / Princess
+	rank = {
+		1 = ARMENIAN_COUNTY  # county_feudal
+		2 = ARMENIAN_DUCHY  # duchy_feudal_prince_always
+		3 = ARMENIAN_DUCHY  # kingdom_feudal
+		4 = ARMENIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ARMENIAN_COUNT_MALE  # count_feudal_male
+		2 = ARMENIAN_DUKE_MALE  # duke_feudal_male_prince_always
+		3 = ARMENIAN_DUKE_MALE  # prince / princess
+		4 = ARMENIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = ARMENIAN_EMPEROR_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ARMENIAN_COUNT_FEMALE  # count_feudal_female
+		2 = ARMENIAN_DUKE_FEMALE  # duke_feudal_female_prince_always
+		3 = ARMENIAN_DUKE_FEMALE  # prince / princess
+		4 = ARMENIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ARMENIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ARMENIAN_COUNT_MALE  # consort uses the ruler form
+		2 = ARMENIAN_DUKE_MALE  # consort uses the ruler form
+		3 = ARMENIAN_DUKE_MALE  # prince / princess
+		4 = ARMENIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = ARMENIAN_EMPEROR_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ARMENIAN_COUNT_FEMALE  # count_feudal_female
+		2 = ARMENIAN_DUKE_FEMALE  # duke_feudal_female_prince_always
+		3 = ARMENIAN_DUKE_FEMALE  # prince / princess
+		4 = ARMENIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ARMENIAN_EMPEROR_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = APR
+	}
+}
+
 armenian_titles = {
 # CK3 ladders for MLK(r1), TAO(r2), SNK(r1)
 	rank = {

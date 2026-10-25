@@ -1319,6 +1319,12 @@ def run() -> int:
     note(not unnamed, "every formable tag has its name and adjective loc (ours or the base game's)"
          + (f" (missing: {', '.join(unnamed)})" if unnamed else ""))
 
+    unnamed_landed = [f"{t}{suf}" for t in sorted(TAGS) for suf in ("", "_ADJ")
+                      if not has_loc(f"{t}{suf}")
+                      and not re.search(rf"(?m)^ {t}{suf}:\d* ", gameloc)]
+    note(not unnamed_landed, "every landed tag has its name and adjective loc (ours or the base game's)"
+         + (f" (missing: {', '.join(unnamed_landed)})" if unnamed_landed else ""))
+
     print("\n== Karling dynasty, lifted from CK3 ==")
     dynasty, ktags = karling_realms()
     for t in ktags:
