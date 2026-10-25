@@ -1,0 +1,7 @@
+graphical_culture = easterngfx
+
+color = { 204  152  140 }
+
+revolutionary_colors = { 5  0  10 }
+
+historical_score = 250

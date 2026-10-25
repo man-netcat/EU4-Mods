@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = kirgiz
+religion = tengri_pagan_reformed
+capital = 1068
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Seitek"
+		dynasty = "Karakar"
+		birth_date = 835.3.12
+		death_date = 892.7.11
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Togli"
+		monarch_name = "Togli"
+		dynasty = "Karakar"
+		birth_date = 856.8.20
+		death_date = 915.1.15
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_nomad_government
+}

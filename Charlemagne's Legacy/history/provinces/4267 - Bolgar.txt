@@ -1,6 +1,25 @@
 #1081 - Simbirsk
 
+owner = KHZ
+controller = KHZ
+add_core = KHZ
+capital = "Bolgar"
+culture = bulgarian
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = iron
+base_manpower = 2
+is_city = yes
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = nomad_group
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = KHZ
+	controller = KHZ
+	add_core = KHZ
+}

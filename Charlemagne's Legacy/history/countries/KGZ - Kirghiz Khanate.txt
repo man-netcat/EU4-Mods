@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 4
+technology_group = muslim
+primary_culture = kirgiz
+religion = tengri_pagan_reformed
+capital = 480
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Uzur"
+		dynasty = "Are"
+		birth_date = 808.4.3
+		death_date = 871.8.19
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Zhyrgal"
+		monarch_name = "Zhyrgal"
+		dynasty = "Are"
+		birth_date = 830.10.3
+		death_date = 889.5.2
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_nomad_government
+}

@@ -1,5 +1,25 @@
 #314 - Vologda
 
+owner = VGD
+controller = VGD
+add_core = NOV # Novgorodian claims
+add_core = VGD
+capital = "Vologda"
+culture = karelian
+religion = suomenusko
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = iron
+base_manpower = 2
+is_city = yes
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = VGD
+	controller = VGD
+	add_core = VGD
+}

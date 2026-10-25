@@ -1,4 +1,23 @@
 #713 - Kuruk Tag
 
+owner = DZG
+controller = DZG
+add_core = DZG
+capital = "Bechbaliq"
+culture = uyghur
+religion = manichaean
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = salt
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = DZG
+	controller = DZG
+	add_core = DZG
+}

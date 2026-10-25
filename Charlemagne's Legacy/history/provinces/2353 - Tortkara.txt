@@ -1,5 +1,24 @@
 # 2353 - Tortkara
 
+owner = TUM
+controller = TUM
+add_core = TUM
+capital = "Tortkara"
+culture = khazak
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = naval_supplies
+base_manpower = 1
+is_city = yes
+
 discovered_by = nomad_group
 discovered_by = ottoman
 discovered_by = muslim
+
+867.1.1 = {
+	owner = TUM
+	controller = TUM
+	add_core = TUM
+}

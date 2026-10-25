@@ -1,3 +1,23 @@
 # 4690 - Ishim
 
+owner = ISM
+controller = ISM
+add_core = ISM
+capital = "Ishim"
+culture = ostyaki
+religion = siberian
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+is_city = yes
+revolt_risk = 15
+
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = ISM
+	controller = ISM
+	add_core = ISM
+}

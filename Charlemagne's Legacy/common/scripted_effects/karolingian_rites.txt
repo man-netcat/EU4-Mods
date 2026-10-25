@@ -269,6 +269,14 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = haymanot_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = kabarism_scholar_modifier }
+		remove_country_modifier = kabarism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = siberian_pagan_scholar_modifier }
+		remove_country_modifier = siberian_pagan_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = kushitism_pagan_scholar_modifier }
 		remove_country_modifier = kushitism_pagan_scholar_modifier
 	}

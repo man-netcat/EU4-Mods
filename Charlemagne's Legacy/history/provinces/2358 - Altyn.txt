@@ -1,5 +1,24 @@
 # 2358 - Altyn
 
+owner = JIL
+controller = JIL
+add_core = JIL
+capital = "Altyn"
+culture = khazak
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = nomad_group
 discovered_by = ottoman
 discovered_by = muslim
+
+867.1.1 = {
+	owner = JIL
+	controller = JIL
+	add_core = JIL
+}

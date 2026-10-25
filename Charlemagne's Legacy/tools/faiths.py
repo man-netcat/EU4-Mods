@@ -68,6 +68,8 @@ FAITH_RELIGION = {
     "haymanot": "haymanot",
     "waaqism_pagan": "waaqism",
     "kushitism_pagan": "kushitism",
+    "kabarism": "kabarism",
+    "siberian_pagan": "siberian",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -100,6 +102,10 @@ NEW_RELIGIONS = {
                  "The Judaism of the Beta Israel of the Ethiopian highlands, kept by their monks and smiths under the mountain kings."),
     "waaqism": ("animism", "pagan", "dab_qhuas",
                 "The faith of the Cushitic peoples of the Horn, who honour Waaq, the sky god, and hold their assemblies under the sacred trees."),
+    "kabarism": ("jewish", "jewish_group", "haymanot",
+                 "The Judaism of the Khazar khagans and their court at Itil, carried along the steppe roads by Radhanite merchants."),
+    "siberian": ("animism", "pagan", "kushitism",
+                 "The shamanism of the Komi, Khanty and the peoples of the northern forests, who honour the spirits of the river, the bear and the sacred groves of the Urals."),
     "kushitism": ("animism", "pagan", "waaqism",
                   "The ancient faith of the Kushite and Beja peoples of the Nile and the Red Sea hills, whose holy places lie at Aswan and Naqis."),
 }

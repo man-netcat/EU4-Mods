@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = karelian
+religion = suomenusko
+capital = 1755
+religious_school = finnish_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Ulljoi"
+		dynasty = "Ustyi"
+		birth_date = 848.3.19
+		death_date = 912.6.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = mordvin
+religion = suomenusko
+capital = 306
+religious_school = finnish_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Alyok"
+		dynasty = "Alyokid"
+		birth_date = 840.1.2
+		death_date = 900.1.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

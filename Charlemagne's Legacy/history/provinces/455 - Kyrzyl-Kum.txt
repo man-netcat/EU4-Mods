@@ -1,8 +1,9 @@
 #455 - Kyrzyl-Kum
 
-owner = TRS
-controller = TRS
+owner = AFR
+controller = AFR
 add_core = TRS
+add_core = AFR
 capital = "Kyzyl Kum"
 culture = khazak
 religion = sunni
@@ -18,7 +19,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = TRS
-	controller = TRS
-	add_core = TRS
+	owner = AFR
+	controller = AFR
+	add_core = AFR
 }

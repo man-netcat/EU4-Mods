@@ -1,4 +1,21 @@
-#4682
+owner = KGZ
+controller = KGZ
+add_core = KGZ
+capital = "Monkhkhairkhan"
+culture = kirgiz
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 1
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
 
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = KGZ
+	controller = KGZ
+	add_core = KGZ
+}

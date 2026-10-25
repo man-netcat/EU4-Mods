@@ -43,6 +43,8 @@ SOURCES = {
     # Hethumid (the user's charges folder, a WappenWiki SVG): the Hethumid lion, red with
     # a blue crown on gold, for the Armenian Principalities
     "APR": "Hethumid",
+    # Karelia: the arms of the Karelian realm (two arms with swords under a crown, on gules)
+    "KRL": "Karelia",
 }
 CHARGES = Path("/home/rick/Paradox/heraldry/charges")
 # Arms whose bordure follows the shield outline: keep the charge only (fractions of the render)

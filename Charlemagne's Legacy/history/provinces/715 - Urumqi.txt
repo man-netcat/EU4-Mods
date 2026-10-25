@@ -1,4 +1,23 @@
 #715 - Urumqi
 
+owner = DZG
+controller = DZG
+add_core = DZG
+capital = "Urumqi"
+culture = uyghur
+religion = manichaean
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = DZG
+	controller = DZG
+	add_core = DZG
+}

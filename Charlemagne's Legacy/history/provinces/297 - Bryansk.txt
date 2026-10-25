@@ -1,5 +1,25 @@
 #297 - Bryansk
 
+owner = KHZ
+controller = KHZ
+add_core = KHZ
+capital = "Bryansk"
+culture = russian
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+add_local_autonomy = 50
+
 discovered_by = western
 discovered_by = eastern
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = KHZ
+	controller = KHZ
+	add_core = KHZ
+}

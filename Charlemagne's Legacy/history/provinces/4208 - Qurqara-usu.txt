@@ -1,6 +1,25 @@
 #4208 - Qurqara-usu
 
+owner = EBN
+controller = EBN
+add_core = EBN
+capital = "Balikul"
+culture = uzbehk
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = EBN
+	controller = EBN
+	add_core = EBN
+}

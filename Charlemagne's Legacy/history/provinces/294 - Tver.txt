@@ -1,5 +1,24 @@
 #294 - Tver
 
+owner = YRS
+controller = YRS
+add_core = YRS
+capital = "Tver"
+culture = merya
+religion = suomenusko
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = grain
+base_manpower = 3
+is_city = yes
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = YRS
+	controller = YRS
+	add_core = YRS
+}

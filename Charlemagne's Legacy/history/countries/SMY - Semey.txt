@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = khazak
+religion = tengri_pagan_reformed
+capital = 478
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Tugor"
+		dynasty = "Imäk"
+		birth_date = 819.2.20
+		death_date = 876.6.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Tugor"
+		monarch_name = "Tugor II"
+		dynasty = "Imäk"
+		birth_date = 843.1.9
+		death_date = 880.10.2
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_nomad_government
+}

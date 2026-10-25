@@ -1,5 +1,25 @@
 #1970 - Syghnak
 
+owner = OGZ
+controller = OGZ
+add_core = TRS
+add_core = OGZ
+capital = "Syghnak"
+culture = turkmeni
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = OGZ
+	controller = OGZ
+	add_core = OGZ
+}

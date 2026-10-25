@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = bashkir
+religion = tengri_pagan_reformed
+capital = 2444
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Goleda"
+		birth_date = 824.11.4
+		death_date = 878.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_herder_government
+}

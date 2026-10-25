@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = ostyaki
+religion = siberian
+capital = 1074
+religious_school = siberian_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Ovtay"
+		dynasty = "Bardaki"
+		birth_date = 833.12.3
+		death_date = 896.3.12
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Kezhay"
+		monarch_name = "Kezhay"
+		dynasty = "Bardaki"
+		birth_date = 865.9.5
+		death_date = 922.10.4
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

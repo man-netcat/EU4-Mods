@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = khazak
+religion = tengri_pagan_reformed
+capital = 2118
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Törtogul"
+		dynasty = "Alakolyuk"
+		birth_date = 825.1.16
+		death_date = 882.6.23
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Togli"
+		monarch_name = "Togli"
+		dynasty = "Alakolyuk"
+		birth_date = 848.11.2
+		death_date = 884.5.13
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_nomad_government
+}

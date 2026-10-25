@@ -1,5 +1,24 @@
 #4248 - Kashin
 
+owner = YRS
+controller = YRS
+add_core = YRS
+capital = "Kashin"
+culture = merya
+religion = suomenusko
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = YRS
+	controller = YRS
+	add_core = YRS
+}

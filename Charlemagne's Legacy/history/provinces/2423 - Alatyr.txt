@@ -1,5 +1,24 @@
 #2423 - Alatyr
 
+owner = KHZ
+controller = KHZ
+add_core = KHZ
+capital = "Alatyr"
+culture = bulgarian
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+
 discovered_by = western
 discovered_by = eastern
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = KHZ
+	controller = KHZ
+	add_core = KHZ
+}

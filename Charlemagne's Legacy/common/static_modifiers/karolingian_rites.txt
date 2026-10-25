@@ -536,6 +536,22 @@ haymanot_scholar_modifier = {
 	defensiveness = 0.1
 }
 
+kabarism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_trade_power = 0.05
+}
+
+siberian_pagan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	hostile_attrition = 1
+}
+
 kushitism_pagan_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes

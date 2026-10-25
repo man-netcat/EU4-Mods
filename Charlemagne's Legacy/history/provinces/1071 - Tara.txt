@@ -1,3 +1,23 @@
 #1071 - Tara
 
+owner = TRQ
+controller = TRQ
+add_core = TRQ
+capital = "Tara"
+culture = ostyaki
+religion = siberian
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = fur
+base_manpower = 2
+is_city = yes
+revolt_risk = 15
+
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TRQ
+	controller = TRQ
+	add_core = TRQ
+}

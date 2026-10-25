@@ -2616,6 +2616,70 @@ polish_titles = {
 }
 
 
+khazar_KHZ_titles = {
+# Khazaria: the khagan's empire, Turkic heritage -> CK3's altaic-group empire ladder (Khagan / Khaganate)
+	rank = {
+		1 = TURKMENI_COUNTY  # county_nomad_turkish
+		2 = TURKMENI_DUCHY  # duchy_nomad_turkish
+		3 = TURKMENI_KINGDOM  # duchy_independent_nomad_turkish
+		4 = TURKMENI_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = TURKMENI_COUNT_MALE  # count_nomad_male_turkish
+		2 = TURKMENI_DUKE_MALE  # duke_nomad_male_turkish
+		3 = TURKMENI_KING_MALE  # duke_independent_nomad_male_turkish
+		4 = TURKMENI_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = TURKMENI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = TURKMENI_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = TURKMENI_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = TURKMENI_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = TURKMENI_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = TURKMENI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = TURKMENI_COUNT_MALE  # consort uses the ruler form
+		2 = TURKMENI_DUKE_MALE  # consort uses the ruler form
+		3 = TURKMENI_KING_MALE  # consort uses the ruler form
+		4 = TURKMENI_EMPEROR_MALE  # consort uses the ruler form
+		5 = TURKMENI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = TURKMENI_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = TURKMENI_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = TURKMENI_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = TURKMENI_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = TURKMENI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = KHZ
+	}
+}
+
 bulgarian_titles = {
 # CK3 ladders for BUL(r3), TRA(r2), MOZ(r1), VLD(r1)
 	rank = {
@@ -6975,6 +7039,657 @@ beja_titles = {
 	trigger = {
 		government = tribal
 		primary_culture = beja
+	}
+}
+
+
+turkmeni_titles = {
+# CK3 ladders for OGZ(r3)
+	rank = {
+		1 = TURKMENI_COUNTY  # county_nomad_turkish
+		2 = TURKMENI_DUCHY  # duchy_nomad_turkish
+		3 = TURKMENI_KINGDOM  # duchy_independent_nomad_turkish
+		4 = TURKMENI_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = TURKMENI_COUNT_MALE  # count_nomad_male_turkish
+		2 = TURKMENI_DUKE_MALE  # duke_nomad_male_turkish
+		3 = TURKMENI_KING_MALE  # duke_independent_nomad_male_turkish
+		4 = TURKMENI_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = TURKMENI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = TURKMENI_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = TURKMENI_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = TURKMENI_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = TURKMENI_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = TURKMENI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = TURKMENI_COUNT_MALE  # consort uses the ruler form
+		2 = TURKMENI_DUKE_MALE  # consort uses the ruler form
+		3 = TURKMENI_KING_MALE  # consort uses the ruler form
+		4 = TURKMENI_EMPEROR_MALE  # consort uses the ruler form
+		5 = TURKMENI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = TURKMENI_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = TURKMENI_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = TURKMENI_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = TURKMENI_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = TURKMENI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = turkmeni
+	}
+}
+
+
+khazak_titles = {
+# CK3 ladders for QYZ(r1)
+	rank = {
+		1 = KHAZAK_COUNTY  # county_nomad_turkish
+		2 = KHAZAK_DUCHY  # duchy_nomad_turkish
+		3 = KHAZAK_KINGDOM  # duchy_independent_nomad_turkish
+		4 = KHAZAK_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KHAZAK_COUNT_MALE  # count_nomad_male_turkish
+		2 = KHAZAK_DUKE_MALE  # duke_nomad_male_turkish
+		3 = KHAZAK_KING_MALE  # duke_independent_nomad_male_turkish
+		4 = KHAZAK_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = KHAZAK_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = KHAZAK_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = KHAZAK_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = KHAZAK_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = KHAZAK_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = KHAZAK_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = KHAZAK_COUNT_MALE  # consort uses the ruler form
+		2 = KHAZAK_DUKE_MALE  # consort uses the ruler form
+		3 = KHAZAK_KING_MALE  # consort uses the ruler form
+		4 = KHAZAK_EMPEROR_MALE  # consort uses the ruler form
+		5 = KHAZAK_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KHAZAK_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = KHAZAK_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = KHAZAK_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = KHAZAK_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = KHAZAK_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = khazak
+	}
+}
+
+
+merya_titles = {
+# CK3 ladders for YRS(r1)
+	rank = {
+		1 = MERYA_COUNTY  # county_tribal
+		2 = MERYA_DUCHY  # duchy_tribal
+		3 = MERYA_KINGDOM  # kingdom_tribal
+		4 = MERYA_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = MERYA_COUNT_MALE  # count_tribal_male
+		2 = MERYA_DUKE_MALE  # duke_tribal_male
+		3 = MERYA_KING_MALE  # king_tribal_male
+		4 = MERYA_EMPEROR_MALE  # emperor_tribal_male
+		5 = MERYA_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = MERYA_COUNT_FEMALE  # count_tribal_female
+		2 = MERYA_DUKE_FEMALE  # duke_tribal_female
+		3 = MERYA_KING_FEMALE  # king_tribal_female
+		4 = MERYA_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = MERYA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = MERYA_COUNT_MALE  # consort uses the ruler form
+		2 = MERYA_DUKE_MALE  # consort uses the ruler form
+		3 = MERYA_KING_MALE  # consort uses the ruler form
+		4 = MERYA_EMPEROR_MALE  # consort uses the ruler form
+		5 = MERYA_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = MERYA_COUNT_FEMALE  # count_tribal_female
+		2 = MERYA_DUKE_FEMALE  # duke_tribal_female
+		3 = MERYA_KING_FEMALE  # king_tribal_female
+		4 = MERYA_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = MERYA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = merya
+	}
+}
+
+
+mari_titles = {
+# CK3 ladders for OBR(r1)
+	rank = {
+		1 = MARI_COUNTY  # county_tribal
+		2 = MARI_DUCHY  # duchy_tribal
+		3 = MARI_KINGDOM  # kingdom_tribal
+		4 = MARI_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = MARI_COUNT_MALE  # count_tribal_male
+		2 = MARI_DUKE_MALE  # duke_tribal_male
+		3 = MARI_KING_MALE  # king_tribal_male
+		4 = MARI_EMPEROR_MALE  # emperor_tribal_male
+		5 = MARI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = MARI_COUNT_FEMALE  # count_tribal_female
+		2 = MARI_DUKE_FEMALE  # duke_tribal_female
+		3 = MARI_KING_FEMALE  # king_tribal_female
+		4 = MARI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = MARI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = MARI_COUNT_MALE  # consort uses the ruler form
+		2 = MARI_DUKE_MALE  # consort uses the ruler form
+		3 = MARI_KING_MALE  # consort uses the ruler form
+		4 = MARI_EMPEROR_MALE  # consort uses the ruler form
+		5 = MARI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = MARI_COUNT_FEMALE  # count_tribal_female
+		2 = MARI_DUKE_FEMALE  # duke_tribal_female
+		3 = MARI_KING_FEMALE  # king_tribal_female
+		4 = MARI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = MARI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = mari
+	}
+}
+
+
+mordvin_titles = {
+# CK3 ladders for CHB(r1)
+	rank = {
+		1 = MORDVIN_COUNTY  # county_tribal
+		2 = MORDVIN_DUCHY  # duchy_tribal
+		3 = MORDVIN_KINGDOM  # kingdom_tribal
+		4 = MORDVIN_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = MORDVIN_COUNT_MALE  # count_tribal_male
+		2 = MORDVIN_DUKE_MALE  # duke_tribal_male
+		3 = MORDVIN_KING_MALE  # king_tribal_male
+		4 = MORDVIN_EMPEROR_MALE  # emperor_tribal_male
+		5 = MORDVIN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = MORDVIN_COUNT_FEMALE  # count_tribal_female
+		2 = MORDVIN_DUKE_FEMALE  # duke_tribal_female
+		3 = MORDVIN_KING_FEMALE  # king_tribal_female
+		4 = MORDVIN_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = MORDVIN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = MORDVIN_COUNT_MALE  # consort uses the ruler form
+		2 = MORDVIN_DUKE_MALE  # consort uses the ruler form
+		3 = MORDVIN_KING_MALE  # consort uses the ruler form
+		4 = MORDVIN_EMPEROR_MALE  # consort uses the ruler form
+		5 = MORDVIN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = MORDVIN_COUNT_FEMALE  # count_tribal_female
+		2 = MORDVIN_DUKE_FEMALE  # duke_tribal_female
+		3 = MORDVIN_KING_FEMALE  # king_tribal_female
+		4 = MORDVIN_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = MORDVIN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = mordvin
+	}
+}
+
+
+komi_titles = {
+# CK3 ladders for UDM(r2)
+	rank = {
+		1 = KOMI_COUNTY  # county_tribal
+		2 = KOMI_DUCHY  # duchy_tribal
+		3 = KOMI_KINGDOM  # kingdom_tribal
+		4 = KOMI_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KOMI_COUNT_MALE  # count_tribal_male
+		2 = KOMI_DUKE_MALE  # duke_tribal_male
+		3 = KOMI_KING_MALE  # king_tribal_male
+		4 = KOMI_EMPEROR_MALE  # emperor_tribal_male
+		5 = KOMI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = KOMI_COUNT_FEMALE  # count_tribal_female
+		2 = KOMI_DUKE_FEMALE  # duke_tribal_female
+		3 = KOMI_KING_FEMALE  # king_tribal_female
+		4 = KOMI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = KOMI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = KOMI_COUNT_MALE  # consort uses the ruler form
+		2 = KOMI_DUKE_MALE  # consort uses the ruler form
+		3 = KOMI_KING_MALE  # consort uses the ruler form
+		4 = KOMI_EMPEROR_MALE  # consort uses the ruler form
+		5 = KOMI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KOMI_COUNT_FEMALE  # count_tribal_female
+		2 = KOMI_DUKE_FEMALE  # duke_tribal_female
+		3 = KOMI_KING_FEMALE  # king_tribal_female
+		4 = KOMI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = KOMI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = komi
+	}
+}
+
+
+bashkir_titles = {
+# CK3 ladders for UIS(r1)
+	rank = {
+		1 = BASHKIR_COUNTY  # county_herder
+		2 = DUCHY
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BASHKIR_COUNT_MALE  # count_herder_male
+		2 = BASHKIR_DUKE_MALE  # duke
+		3 = BASHKIR_KING_MALE  # king
+		4 = BASHKIR_EMPEROR_MALE  # emperor
+		5 = BASHKIR_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BASHKIR_COUNT_FEMALE  # count_herder_female
+		2 = BASHKIR_DUKE_FEMALE  # duke_female
+		3 = BASHKIR_KING_FEMALE  # king_female
+		4 = BASHKIR_EMPEROR_FEMALE  # emperor_female
+		5 = BASHKIR_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BASHKIR_COUNT_MALE  # consort uses the ruler form
+		2 = BASHKIR_DUKE_MALE  # consort uses the ruler form
+		3 = BASHKIR_KING_MALE  # consort uses the ruler form
+		4 = BASHKIR_EMPEROR_MALE  # consort uses the ruler form
+		5 = BASHKIR_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BASHKIR_COUNT_FEMALE  # count_herder_female
+		2 = BASHKIR_DUKE_FEMALE  # duke_female
+		3 = BASHKIR_KING_FEMALE  # king_female
+		4 = BASHKIR_EMPEROR_FEMALE  # emperor_female
+		5 = BASHKIR_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = bashkir
+	}
+}
+
+
+uzbehk_titles = {
+# CK3 ladders for ZHT(r3)
+	rank = {
+		1 = UZBEHK_COUNTY  # county_nomad_turkish
+		2 = UZBEHK_DUCHY  # duchy_nomad_turkish
+		3 = UZBEHK_KINGDOM  # duchy_independent_nomad_turkish
+		4 = UZBEHK_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = UZBEHK_COUNT_MALE  # count_nomad_male_turkish
+		2 = UZBEHK_DUKE_MALE  # duke_nomad_male_turkish
+		3 = UZBEHK_KING_MALE  # duke_independent_nomad_male_turkish
+		4 = UZBEHK_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = UZBEHK_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = UZBEHK_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = UZBEHK_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = UZBEHK_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = UZBEHK_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = UZBEHK_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = UZBEHK_COUNT_MALE  # consort uses the ruler form
+		2 = UZBEHK_DUKE_MALE  # consort uses the ruler form
+		3 = UZBEHK_KING_MALE  # consort uses the ruler form
+		4 = UZBEHK_EMPEROR_MALE  # consort uses the ruler form
+		5 = UZBEHK_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = UZBEHK_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = UZBEHK_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = UZBEHK_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = UZBEHK_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = UZBEHK_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = uzbehk
+	}
+}
+
+
+kirgiz_titles = {
+# CK3 ladders for KGZ(r4)
+	rank = {
+		1 = KIRGIZ_COUNTY  # county_nomad_turkish
+		2 = KIRGIZ_DUCHY  # duchy_nomad_turkish
+		3 = KIRGIZ_KINGDOM  # duchy_independent_nomad_turkish
+		4 = KIRGIZ_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KIRGIZ_COUNT_MALE  # count_nomad_male_turkish
+		2 = KIRGIZ_DUKE_MALE  # duke_nomad_male_turkish
+		3 = KIRGIZ_KING_MALE  # duke_independent_nomad_male_turkish
+		4 = KIRGIZ_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = KIRGIZ_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = KIRGIZ_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = KIRGIZ_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = KIRGIZ_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = KIRGIZ_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = KIRGIZ_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = KIRGIZ_COUNT_MALE  # consort uses the ruler form
+		2 = KIRGIZ_DUKE_MALE  # consort uses the ruler form
+		3 = KIRGIZ_KING_MALE  # consort uses the ruler form
+		4 = KIRGIZ_EMPEROR_MALE  # consort uses the ruler form
+		5 = KIRGIZ_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KIRGIZ_COUNT_FEMALE  # count_nomad_female_turkish
+		2 = KIRGIZ_DUKE_FEMALE  # duke_nomad_female_turkish
+		3 = KIRGIZ_KING_FEMALE  # duke_independent_nomad_female_turkish
+		4 = KIRGIZ_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = KIRGIZ_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = kirgiz
+	}
+}
+
+
+ostyaki_titles = {
+# CK3 ladders for TRQ(r1) - tribal CK3 government
+	rank = {
+		1 = OSTYAKI_COUNTY  # county_tribal
+		2 = OSTYAKI_DUCHY  # duchy_tribal
+		3 = OSTYAKI_KINGDOM  # kingdom_tribal
+		4 = OSTYAKI_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = OSTYAKI_COUNT_MALE  # count_tribal_male
+		2 = OSTYAKI_DUKE_MALE  # duke_tribal_male
+		3 = OSTYAKI_KING_MALE  # king_tribal_male
+		4 = OSTYAKI_EMPEROR_MALE  # emperor_tribal_male
+		5 = OSTYAKI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = OSTYAKI_COUNT_FEMALE  # count_tribal_female
+		2 = OSTYAKI_DUKE_FEMALE  # duke_tribal_female
+		3 = OSTYAKI_KING_FEMALE  # king_tribal_female
+		4 = OSTYAKI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = OSTYAKI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = OSTYAKI_COUNT_MALE  # consort uses the ruler form
+		2 = OSTYAKI_DUKE_MALE  # consort uses the ruler form
+		3 = OSTYAKI_KING_MALE  # consort uses the ruler form
+		4 = OSTYAKI_EMPEROR_MALE  # consort uses the ruler form
+		5 = OSTYAKI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = OSTYAKI_COUNT_FEMALE  # count_tribal_female
+		2 = OSTYAKI_DUKE_FEMALE  # duke_tribal_female
+		3 = OSTYAKI_KING_FEMALE  # king_tribal_female
+		4 = OSTYAKI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = OSTYAKI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_tribal_government
+		primary_culture = ostyaki
 	}
 }
 

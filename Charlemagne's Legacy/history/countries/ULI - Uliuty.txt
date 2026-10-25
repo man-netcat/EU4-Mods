@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = khazak
+religion = tengri_pagan_reformed
+capital = 2354
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Ituk"
+		birth_date = 832.7.15
+		death_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_herder_government
+}

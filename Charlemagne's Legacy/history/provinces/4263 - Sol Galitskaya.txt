@@ -1,5 +1,24 @@
 #4263 - Sol Galitskaya
 
+owner = OBR
+controller = OBR
+add_core = OBR
+capital = "Sol Galitskaya"
+culture = mari
+religion = suomenusko
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = OBR
+	controller = OBR
+	add_core = OBR
+}

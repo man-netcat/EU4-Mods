@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = eastern
+primary_culture = ostyaki
+religion = siberian
+capital = 2427
+religious_school = siberian_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Syrka"
+		dynasty = "Kondair"
+		birth_date = 817.5.13
+		death_date = 869.8.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Viryay"
+		monarch_name = "Viryay"
+		dynasty = "Kondair"
+		birth_date = 846.9.19
+		death_date = 911.4.26
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

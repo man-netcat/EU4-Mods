@@ -1,4 +1,32 @@
+owner = TMN
+controller = TMN
+add_core = TMN
 #1078 - Middle Urals
+capital = "Neromkar"
+culture = ostyaki
+culture = ostyaki
+religion = siberian
+religion = siberian #Sami Shamanism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_hostileness = 2
+native_size = 40
+native_ferocity = 3
 
 discovered_by = eastern
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TMN
+	controller = TMN
+	add_core = TMN
+}

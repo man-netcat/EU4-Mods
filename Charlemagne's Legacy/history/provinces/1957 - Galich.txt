@@ -1,5 +1,24 @@
 #Galich
 
+owner = MRC
+controller = MRC
+add_core = MRC
+capital = "Galich"
+culture = mari
+religion = suomenusko
+hre = no
+base_tax = 4
+base_production = 5 #Huge Salt Mine
+trade_goods = salt
+base_manpower = 2
+is_city = yes
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = MRC
+	controller = MRC
+	add_core = MRC
+}

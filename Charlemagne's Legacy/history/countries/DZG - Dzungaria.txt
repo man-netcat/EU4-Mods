@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = uyghur
+religion = manichaean
+capital = 712
+religious_school = manichean_school
+867.1.1 = {
+	monarch = {
+		name = "Bokut"
+		dynasty = "Bilgä"
+		birth_date = 839.6.5
+		death_date = 874.12.13
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Borç"
+		monarch_name = "Borç"
+		dynasty = "Bilgä"
+		birth_date = 840.8.30
+		death_date = 892.7.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

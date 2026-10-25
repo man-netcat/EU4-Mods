@@ -1,5 +1,26 @@
 #306 - Nijni-Novgorod
 
+owner = CHB
+controller = CHB
+add_core = CHB
+capital = "Nizhny Novgorod"
+culture = mordvin
+religion = suomenusko
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = copper
+base_manpower = 3
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = CHB
+	controller = CHB
+	add_core = CHB
+}

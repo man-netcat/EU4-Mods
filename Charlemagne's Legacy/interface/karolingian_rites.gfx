@@ -336,6 +336,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_kabarism"
+		texturefile = "gfx/interface/icon_rite_kabarism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_siberian_pagan"
+		texturefile = "gfx/interface/icon_rite_siberian_pagan.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_kushitism_pagan"
 		texturefile = "gfx/interface/icon_rite_kushitism_pagan.tga"
 	}
