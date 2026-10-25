@@ -36,6 +36,10 @@ SOURCES = {
     "JYL": "Hvide (af Jylland)",
     # De Tonsberg: family of Tonsberg, a loose fit for Vestfold
     "VFD": "De Tonsberg",
+    # Vladimir Ancient: the Vladimir-Suzdal lion (CK3 c_vladimir is a gold lion on red)
+    "VLD": "Vladimir Ancient",
+    # Leliwa: the Tarnowski arms (CK3 c_tarnowska is a gold crescent and star on blue)
+    "TRN": "Leliwa",
 }
 # Arms whose bordure follows the shield outline: keep the charge only (fractions of the render)
 INNER = {"JAM": (0.15, 0.14, 0.85, 0.75)}
@@ -167,6 +171,13 @@ ARMORIA_FLAGS = {
     "VSV": ("griffinRampant", RED, GOLD, GOLD, GOLD),      # c_vastvag: gold griffin on red
     "OLA": ("stagPassant", BLACK, GOLD, RED, GOLD),        # c_olavinlinna: gold elk, red antlers, on sable
     "OUL": ("salmon", WHITE, BLUE, BLUE, BLUE),            # c_oulu: blue fish on white
+    "UNG": ("bearRampant", GOLD, RED, RED, GOLD),          # d_ungvar: red bear on gold
+    "UKI": ("bearRampant", WHITE, BLACK, BLACK, WHITE),    # c_berlin: black bear on white
+    "CRV": ("bearPassant", WHITE, BLACK, BLACK, WHITE),    # c_cherven: black bear on white
+    "MOZ": ("bearPassant", WHITE, RED, RED, WHITE),        # c_mozhaysk: red bear on white
+    "SPW": ("bullPassant", WHITE, RED, RED, WHITE),        # c_spreewald: red bull on white
+    "GLL": ("cock", WHITE, BLACK, RED, WHITE),             # c_gallura: black cock, red comb, on white
+    "CAG": ("horsePassant", WHITE, BLACK, BLACK, BLACK),   # c_cagliari: black horse on white
 }
 
 
@@ -193,7 +204,8 @@ def armoria(tag, size=256, height=218):
 
 # CK3 bakes whose emblem sits off-centre in the title arms; re-centred on the ink bbox
 # after `coaflags.py --title` (re-run `python3 tools/wwflags.py center` after re-baking them).
-RECENTER = ["ANG", "HJL", "NES", "NYL", "TAO", "SNK"]
+RECENTER = ["ANG", "HJL", "NES", "NYL", "TAO", "SNK", "ZAH", "KRJ", "BES", "PIN", "BAB", "YTV", "TVR",
+            "MSK", "VOD", "CED", "KRG", "KIL", "ROU", "KTK", "AAR", "YED", "FUE", "KLG", "SOC", "KSG"]
 
 
 def recenter(tag, size=256):

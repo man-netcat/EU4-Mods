@@ -64,6 +64,8 @@ _SEMANTIC = {
     "brown": "brunatre", "brunatre": "brunatre",
     "brunatre_dark": "senois",
     "carnation": "carnation",
+    # PS writes d_minsk's knight as hsv {0.0 0.0 0.60}: a neutral steel grey
+    "hsv": "cendree",
 }
 
 
