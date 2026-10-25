@@ -1,5 +1,24 @@
 #660 - Xishuan Banna
 
+owner = CHN
+controller = CHN
+add_core = CHN
+capital = "Sibsongbanna"
+culture = shan
+religion = satsana_phi
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = tea
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = CHN
+	controller = CHN
+	add_core = CHN
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = shan
+religion = satsana_phi
+capital = 660
+religious_school = satsana_phi_school
+867.1.1 = {
+	monarch = {
+		name = "Kirati"
+		dynasty = "Phrankot"
+		birth_date = 831.10.22
+		death_date = 881.4.7
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

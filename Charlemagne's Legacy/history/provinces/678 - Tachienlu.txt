@@ -1,5 +1,24 @@
 #678 - Kham
 
+owner = LIA
+controller = LIA
+add_core = LIA
+capital = "Tachienlu"
+culture = tibetan
+religion = vajrayana
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = tea
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = LIA
+	controller = LIA
+	add_core = LIA
+}

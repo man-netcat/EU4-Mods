@@ -1,4 +1,24 @@
 # 2136 - Xuanhua
 
+owner = TNG
+controller = TNG
+#fort_15th = yes #the Nine Garrisons
+add_core = TNG
+capital = "Xuanhua"
+culture = zhongyuan
+religion = mahayana
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TNG
+	controller = TNG
+	add_core = TNG
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = nomad_group
+primary_culture = buryat
+religion = siberian
+capital = 1062
+religious_school = siberian_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Sambuu"
+		dynasty = "Abazaj"
+		birth_date = 844.1.18
+		death_date = 891.9.13
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_nomad_government
+}

@@ -1,5 +1,24 @@
 #4514 - Sakya
 
+owner = SAY
+controller = SAY
+add_core = SAY
+capital = "Sakya"
+culture = tibetan
+religion = bon
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = SAY
+	controller = SAY
+	add_core = SAY
+}

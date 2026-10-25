@@ -1,5 +1,24 @@
 # 2132 - Markam
 
+owner = BOY
+controller = BOY
+add_core = BOY
+capital = "Markam"
+culture = tibetan
+religion = bon
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
 discovered_by = indian
+
+867.1.1 = {
+	owner = BOY
+	controller = BOY
+	add_core = BOY
+}

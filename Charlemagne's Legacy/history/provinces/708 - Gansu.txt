@@ -1,4 +1,23 @@
 #708 - Gansu
 
+owner = HEX
+controller = HEX
+add_core = HEX
+capital = "Zhangye"
+culture = xibei
+religion = mahayana
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = HEX
+	controller = HEX
+	add_core = HEX
+}

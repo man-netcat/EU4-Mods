@@ -1,5 +1,24 @@
 # 2134 - Rebgong
 
+owner = TUY
+controller = TUY
+add_core = TUY
+capital = "Rebgong"
+culture = tibetan
+religion = vajrayana
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = TUY
+	controller = TUY
+	add_core = TUY
+}

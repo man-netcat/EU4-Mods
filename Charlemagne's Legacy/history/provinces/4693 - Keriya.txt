@@ -1,4 +1,23 @@
 # 4693 - Keriya
 
+owner = KHN
+controller = KHN
+add_core = KHN
+capital = "Keriya"
+culture = uyghur
+religion = mahayana
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = wool
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = KHN
+	controller = KHN
+	add_core = KHN
+}

@@ -1,5 +1,25 @@
 #661 - Dali
 
+owner = DLA
+controller = DLA
+add_core = DLA
+capital = "Dali"
+culture = bai
+religion = vajrayana
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = tea
+base_manpower = 3
+is_city = yes
+center_of_trade = 1
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = DLA
+	controller = DLA
+	add_core = DLA
+}

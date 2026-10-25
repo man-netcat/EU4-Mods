@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = chinese
+primary_culture = bai
+religion = mahayana
+capital = 662
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Shìlóng"
+		dynasty = "Méng"
+		birth_date = 844.1.1
+		death_date = 877.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_meritocratic_government
+}

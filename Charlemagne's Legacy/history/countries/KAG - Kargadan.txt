@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = komi
+religion = siberian
+capital = 1964
+religious_school = siberian_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Kuaz"
+		dynasty = "Palniks"
+		birth_date = 839.1.2
+		death_date = 888.1.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

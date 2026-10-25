@@ -1,5 +1,24 @@
 # 2166 - Dehong
 
+owner = DLA
+controller = DLA
+add_core = DLA
+capital = "Dehong"
+culture = bai
+religion = vajrayana
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = tropical_wood
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
 discovered_by = indian
+
+867.1.1 = {
+	owner = DLA
+	controller = DLA
+	add_core = DLA
+}

@@ -71,6 +71,10 @@ FAITH_RELIGION = {
     "kabarism": "kabarism",
     "rabbinic_faith": "jewish",
     "siberian_pagan": "siberian",
+    "bon_faith": "bon",
+    "kiratism": "kiratism",
+    "bimoism": "bimoism",
+    "satsana_phi": "satsana_phi",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -105,6 +109,14 @@ NEW_RELIGIONS = {
                 "The faith of the Cushitic peoples of the Horn, who honour Waaq, the sky god, and hold their assemblies under the sacred trees."),
     "kabarism": ("jewish", "jewish_group", "haymanot",
                  "The Judaism of the Khazar khagans and their court at Itil, carried along the steppe roads by Radhanite merchants."),
+    "bon": ("animism", "pagan", "siberian",
+            "The old religion of Tibet, older than the Buddha's teaching, whose priests make offerings to the mountain gods and the spirits of the high plateau."),
+    "kiratism": ("animism", "pagan", "bon",
+                 "The Mundhum of the Kirati peoples of the eastern Himalayan foothills, who honour their ancestors and the spirits of the hills and rivers."),
+    "bimoism": ("animism", "pagan", "kiratism",
+                "The faith of the Yi peoples of the south-western mountains, led by their bimo priests, keepers of the ancestral scriptures."),
+    "satsana_phi": ("animism", "pagan", "bimoism",
+                    "The spirit faith of the Tai peoples, in which the phi, the spirits of house, field and village, are placated by the elders."),
     "siberian": ("animism", "pagan", "kushitism",
                  "The shamanism of the Komi, Khanty and the peoples of the northern forests, who honour the spirits of the river, the bear and the sacred groves of the Urals."),
     "kushitism": ("animism", "pagan", "waaqism",

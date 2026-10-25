@@ -1,2 +1,29 @@
+owner = BUA
+controller = BUA
+add_core = BUA
+capital = "Kansk"
+culture = buryat
 #2443 - Kansk
+culture = buryat
+religion = siberian
+religion = siberian
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
 
+867.1.1 = {
+	owner = BUA
+	controller = BUA
+	add_core = BUA
+}

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = sindhi
+religion = sunni
+capital = 2231
+religious_school = shafii_school
+867.1.1 = {
+	monarch = {
+		name = "Umar"
+		dynasty = "Habbari"
+		birth_date = 821.1.1
+		death_date = 884.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Abdullah"
+		monarch_name = "Abdullah"
+		dynasty = "Habbari"
+		birth_date = 842.10.2
+		death_date = 914.5.10
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_clan_government
+}

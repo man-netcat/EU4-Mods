@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = uyghur
+religion = mahayana
+capital = 2124
+religious_school = avatamsaka_school
+867.1.1 = {
+	monarch = {
+		name = "Vikarma II"
+		dynasty = "Vijaya"
+		birth_date = 847.1.1
+		death_date = 877.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Simha"
+		monarch_name = "Simha III"
+		dynasty = "Vijaya"
+		birth_date = 863.1.1
+		death_date = 885.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

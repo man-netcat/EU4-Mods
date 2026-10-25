@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = chinese
+primary_culture = tibetan
+religion = vajrayana
+capital = 2134
+religious_school = lamaism_school
+867.1.1 = {
+	monarch = {
+		name = "Namchö"
+		dynasty = "Azha"
+		birth_date = 820.1.1
+		death_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Balpo"
+		monarch_name = "Balpo"
+		dynasty = "Azha"
+		birth_date = 840.1.1
+		death_date = 900.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

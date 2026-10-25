@@ -8084,6 +8084,333 @@ manchu_titles = {
 }
 
 
+buryat_titles = {
+# CK3 ladders for VII(r1) - herder CK3 government
+	rank = {
+		1 = BURYAT_COUNTY  # county_herder
+		2 = DUCHY
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BURYAT_COUNT_MALE  # count_herder_male
+		2 = BURYAT_DUKE_MALE  # duke
+		3 = BURYAT_KING_MALE  # king
+		4 = BURYAT_EMPEROR_MALE  # emperor
+		5 = BURYAT_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BURYAT_COUNT_FEMALE  # count_herder_female
+		2 = BURYAT_DUKE_FEMALE  # duke_female
+		3 = BURYAT_KING_FEMALE  # king_female
+		4 = BURYAT_EMPEROR_FEMALE  # emperor_female
+		5 = BURYAT_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BURYAT_COUNT_MALE  # consort uses the ruler form
+		2 = BURYAT_DUKE_MALE  # consort uses the ruler form
+		3 = BURYAT_KING_MALE  # consort uses the ruler form
+		4 = BURYAT_EMPEROR_MALE  # consort uses the ruler form
+		5 = BURYAT_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BURYAT_COUNT_FEMALE  # count_herder_female
+		2 = BURYAT_DUKE_FEMALE  # duke_female
+		3 = BURYAT_KING_FEMALE  # king_female
+		4 = BURYAT_EMPEROR_FEMALE  # emperor_female
+		5 = BURYAT_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_herder_government
+		primary_culture = buryat
+	}
+}
+
+
+sindhi_titles = {
+# CK3 ladders for SIN(r3) - islam realms (Shahzade)
+	rank = {
+		1 = SINDHI_COUNTY  # county_feudal_dravidian_group
+		2 = SINDHI_DUCHY  # duchy_feudal_muslim_dravidian_group
+		3 = SINDHI_KINGDOM  # kingdom_feudal_muslim_dravidian_group
+		4 = SINDHI_EMPIRE  # empire_feudal_muslim_dravidian_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SINDHI_COUNT_MALE  # count_feudal_male_muslim_dravidian_group
+		2 = SINDHI_DUKE_MALE  # duke_feudal_muslim_male_dravidian_group
+		3 = SINDHI_KING_MALE  # king_feudal_muslim_male_dravidian_group
+		4 = SINDHI_EMPEROR_MALE  # emperor_feudal_muslim_male_dravidian_group
+		5 = SINDHI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SINDHI_COUNT_FEMALE  # count_feudal_female_muslim_dravidian_group
+		2 = SINDHI_DUKE_FEMALE  # duke_feudal_muslim_female_dravidian_group
+		3 = SINDHI_KING_FEMALE  # king_feudal_muslim_female_dravidian_group
+		4 = SINDHI_EMPEROR_FEMALE  # emperor_feudal_muslim_female_dravidian_group
+		5 = SINDHI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SINDHI_COUNT_MALE  # consort uses the ruler form
+		2 = SINDHI_DUKE_MALE  # consort uses the ruler form
+		3 = SINDHI_KING_MALE  # consort uses the ruler form
+		4 = SINDHI_EMPEROR_MALE  # consort uses the ruler form
+		5 = SINDHI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SINDHI_COUNT_FEMALE  # count_feudal_female_muslim_dravidian_group
+		2 = SINDHI_DUKE_FEMALE  # duke_feudal_muslim_female_dravidian_group
+		3 = SINDHI_KING_FEMALE  # king_feudal_muslim_female_dravidian_group
+		4 = SINDHI_EMPEROR_FEMALE  # emperor_feudal_muslim_female_dravidian_group
+		5 = SINDHI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = sindhi
+	}
+}
+
+
+nepali_titles = {
+# CK3 ladders for LIM(r2)
+	rank = {
+		1 = NEPALI_COUNTY  # county_feudal_dravidian_group
+		2 = NEPALI_DUCHY  # duchy_feudal_dravidian_group
+		3 = NEPALI_KINGDOM  # kingdom_feudal
+		4 = NEPALI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = NEPALI_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = NEPALI_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = NEPALI_KING_MALE  # king_feudal_male_dravidian_group
+		4 = NEPALI_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = NEPALI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = NEPALI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = NEPALI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = NEPALI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = NEPALI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = NEPALI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = NEPALI_COUNT_MALE  # consort uses the ruler form
+		2 = NEPALI_DUKE_MALE  # consort uses the ruler form
+		3 = NEPALI_KING_MALE  # consort uses the ruler form
+		4 = NEPALI_EMPEROR_MALE  # consort uses the ruler form
+		5 = NEPALI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = NEPALI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = NEPALI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = NEPALI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = NEPALI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = NEPALI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = nepali
+	}
+}
+
+
+bai_titles = {
+# CK3 ladders for DLA(r3) - meritocratic CK3 government
+	rank = {
+		1 = BAI_COUNTY  # county_administrative
+		2 = BAI_DUCHY  # duchy_celestial_chinese_independent
+		3 = BAI_KINGDOM  # kingdom_celestial_chinese_protectorate_vassal
+		4 = BAI_EMPIRE  # empire_celestial_chinese_protectorate_vassal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BAI_COUNT_MALE  # count_administrative_male
+		2 = BAI_DUKE_MALE  # duke_male_chinese_independent
+		3 = BAI_KING_MALE  # king_celestial_male_chinese_civilian_governor
+		4 = BAI_EMPEROR_MALE  # emperor_male_chinese_independent
+		5 = BAI_HEGEMON_MALE  # hegemon_male_chinese
+	}
+
+	ruler_female = {
+		1 = BAI_COUNT_FEMALE  # count_administrative_female
+		2 = BAI_DUKE_FEMALE  # duke_female_chinese_independent
+		3 = BAI_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = BAI_EMPEROR_FEMALE  # emperor_female_chinese_independent
+		5 = BAI_HEGEMON_FEMALE  # hegemon_female_chinese
+	}
+
+	consort_male = {
+		1 = BAI_COUNT_MALE  # consort uses the ruler form
+		2 = BAI_DUKE_MALE  # consort uses the ruler form
+		3 = BAI_KING_MALE  # consort uses the ruler form
+		4 = BAI_EMPEROR_MALE  # consort uses the ruler form
+		5 = BAI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BAI_COUNT_FEMALE  # count_administrative_female
+		2 = BAI_DUKE_FEMALE  # duke_female_chinese_independent
+		3 = BAI_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = BAI_EMPEROR_FEMALE  # emperor_female_chinese_independent
+		5 = BAI_HEGEMON_FEMALE  # hegemon_female_chinese
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_meritocratic_government
+		primary_culture = bai
+	}
+}
+
+
+yi_titles = {
+# CK3 ladders for SHE(r2)
+	rank = {
+		1 = YI_COUNTY  # county_tribal
+		2 = YI_DUCHY  # duchy_tribal
+		3 = YI_KINGDOM  # kingdom_tribal
+		4 = YI_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = YI_COUNT_MALE  # count_tribal_male
+		2 = YI_DUKE_MALE  # duke_tribal_male
+		3 = YI_KING_MALE  # king_male_chinese
+		4 = YI_EMPEROR_MALE  # emperor_tribal_male
+		5 = YI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = YI_COUNT_FEMALE  # count_tribal_female
+		2 = YI_DUKE_FEMALE  # duke_tribal_female
+		3 = YI_KING_FEMALE  # king_female_chinese
+		4 = YI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = YI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = YI_COUNT_MALE  # consort uses the ruler form
+		2 = YI_DUKE_MALE  # consort uses the ruler form
+		3 = YI_KING_MALE  # consort uses the ruler form
+		4 = YI_EMPEROR_MALE  # consort uses the ruler form
+		5 = YI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = YI_COUNT_FEMALE  # count_tribal_female
+		2 = YI_DUKE_FEMALE  # duke_tribal_female
+		3 = YI_KING_FEMALE  # king_female_chinese
+		4 = YI_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = YI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		primary_culture = yi
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = ostyaki
+religion = siberian
+capital = 1073
+religious_school = siberian_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Azeg"
+		dynasty = "Kazymid"
+		birth_date = 823.2.13
+		death_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sektev"
+		monarch_name = "Sektev"
+		dynasty = "Kazymid"
+		birth_date = 850.9.26
+		death_date = 906.12.24
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

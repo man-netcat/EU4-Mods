@@ -341,6 +341,26 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_old_bon"
+		texturefile = "gfx/interface/icon_rite_old_bon.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_kiratism"
+		texturefile = "gfx/interface/icon_rite_kiratism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_bimoism"
+		texturefile = "gfx/interface/icon_rite_bimoism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_satsana_phi"
+		texturefile = "gfx/interface/icon_rite_satsana_phi.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_siberian_pagan"
 		texturefile = "gfx/interface/icon_rite_siberian_pagan.tga"
 	}

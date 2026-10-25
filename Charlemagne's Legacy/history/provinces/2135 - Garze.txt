@@ -1,5 +1,24 @@
 # 2135 - Garze
 
+owner = CAH
+controller = CAH
+add_core = CAH
+capital = "Garze"
+culture = tibetan
+religion = bon
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = CAH
+	controller = CAH
+	add_core = CAH
+}

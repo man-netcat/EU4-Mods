@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = chinese
+primary_culture = nepali
+religion = kiratism
+capital = 4482
+religious_school = kiratism_school
+867.1.1 = {
+	monarch = {
+		name = "Mabo Hang"
+		dynasty = "Lasahang"
+		birth_date = 828.1.1
+		death_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Muda Hang"
+		monarch_name = "Muda Hang"
+		dynasty = "Lasahang"
+		birth_date = 845.1.1
+		death_date = 884.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

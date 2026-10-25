@@ -273,6 +273,22 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = kabarism_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = old_bon_scholar_modifier }
+		remove_country_modifier = old_bon_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = kiratism_scholar_modifier }
+		remove_country_modifier = kiratism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = bimoism_scholar_modifier }
+		remove_country_modifier = bimoism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = satsana_phi_scholar_modifier }
+		remove_country_modifier = satsana_phi_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = siberian_pagan_scholar_modifier }
 		remove_country_modifier = siberian_pagan_scholar_modifier
 	}

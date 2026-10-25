@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = chinese
+primary_culture = tibetan
+religion = bon
+capital = 2133
+religious_school = old_bon_school
+867.1.1 = {
+	monarch = {
+		name = "Pelgyi Blama"
+		dynasty = "Gar"
+		birth_date = 845.1.1
+		death_date = 907.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

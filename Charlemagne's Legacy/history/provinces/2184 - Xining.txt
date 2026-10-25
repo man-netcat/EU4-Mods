@@ -1,4 +1,23 @@
 # 2184 - Xining
 
+owner = XIN
+controller = XIN
+add_core = XIN
+capital = "Xining"
+culture = xibei
+religion = vajrayana
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = salt
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = XIN
+	controller = XIN
+	add_core = XIN
+}

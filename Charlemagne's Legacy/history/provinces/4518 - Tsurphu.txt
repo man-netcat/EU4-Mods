@@ -1,5 +1,24 @@
-#4518 - Tsurphu 
+#4518 - Tsurphu
+
+owner = NGM
+controller = NGM
+add_core = NGM
+capital = "Tsurphu"
+culture = tibetan
+religion = bon
+hre = no
+base_tax = 2
+base_production = 1
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = NGM
+	controller = NGM
+	add_core = NGM
+}

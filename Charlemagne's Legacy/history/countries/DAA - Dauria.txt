@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = nomad_group
+primary_culture = buryat
+religion = tengri_pagan_reformed
+capital = 1060
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Galsan"
+		dynasty = "Barga"
+		birth_date = 825.1.4
+		death_date = 880.10.23
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Geleg"
+		monarch_name = "Geleg"
+		dynasty = "Barga"
+		female = yes
+		birth_date = 853.3.29
+		death_date = 906.5.11
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_nomad_government
+}

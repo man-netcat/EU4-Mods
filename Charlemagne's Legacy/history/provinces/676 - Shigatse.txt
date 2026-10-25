@@ -1,5 +1,24 @@
 #676 - U-Tsang
 
+owner = XIG
+controller = XIG
+add_core = XIG
+capital = "Shigatse"
+culture = tibetan
+religion = bon
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = incense
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = XIG
+	controller = XIG
+	add_core = XIG
+}

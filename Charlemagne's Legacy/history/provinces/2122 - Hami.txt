@@ -1,4 +1,23 @@
 # 2122 - Hami
 
+owner = HEX
+controller = HEX
+add_core = HEX
+capital = "Hami"
+culture = xibei
+religion = manichaean
+hre = no
+base_tax = 3
+base_production = 2
+trade_goods = grain
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = HEX
+	controller = HEX
+	add_core = HEX
+}
