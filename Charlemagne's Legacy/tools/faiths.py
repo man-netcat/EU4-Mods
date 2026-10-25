@@ -59,6 +59,12 @@ FAITH_RELIGION = {
     "kamuyism_pagan": "kamuyism",
     "hantuism": "hantuism",
     "shamanism": "shamanism",
+    "shangqing_faith": "shangqing",
+    "zhengyi": "zhengyi",
+    "maitreya_faith": "maitreya",
+    "manichaean_faith": "manichaean",
+    "moism": "moism",
+    "dab_qhuas": "dab_qhuas",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -75,6 +81,18 @@ NEW_RELIGIONS = {
                  "The faith of the Ainu and the peoples of Hokkaido and Sakhalin, who honour the kamuy, the spirits dwelling in animals, mountains and tools."),
     "hantuism": ("animism", "pagan", "kamuyism",
                  "The faith of the Austronesian peoples of Taiwan, where the hantu, the ancestral spirits, watch over the village and the hunt."),
+    "shangqing": ("confucianism", "eastern", "shinto",
+                  "The Highest Clarity tradition of the Daoists, with its revelations of the immortals and the scripture of the Mao Mountain."),
+    "zhengyi": ("confucianism", "eastern", "shangqing",
+                "The Way of Orthodox Unity, descended from the Celestial Masters, whose priests heal the sick and keep the registers of the spirits."),
+    "maitreya": ("confucianism", "eastern", "zhengyi",
+                 "The hope of the coming Buddha Maitreya, kept by the lay societies of the Chinese plains."),
+    "manichaean": ("zoroastrian", "zoroastrian_group", "khurmazdis",
+                   "The dualist faith of Mani, spread along the Silk Road and kept in the Uyghur lands and the ports of the south."),
+    "moism": ("animism", "pagan", "hantuism",
+              "The folk faith of the Zhuang and the peoples of the southern hills, led by its mo priests."),
+    "dab_qhuas": ("animism", "pagan", "moism",
+                  "The faith of the Hmong and the hill peoples of the south, in which the dab, the spirits of house and hill, are honoured."),
 }
 
 

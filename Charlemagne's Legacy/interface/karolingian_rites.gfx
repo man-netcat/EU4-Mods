@@ -286,6 +286,46 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_shangqing"
+		texturefile = "gfx/interface/icon_rite_shangqing.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_quanzhen"
+		texturefile = "gfx/interface/icon_rite_quanzhen.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_zhengyi"
+		texturefile = "gfx/interface/icon_rite_zhengyi.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_maitreya"
+		texturefile = "gfx/interface/icon_rite_maitreya.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_moism"
+		texturefile = "gfx/interface/icon_rite_moism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_dab_qhuas"
+		texturefile = "gfx/interface/icon_rite_dab_qhuas.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_manichean"
+		texturefile = "gfx/interface/icon_rite_manichean.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_mingism"
+		texturefile = "gfx/interface/icon_rite_mingism.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_khurmazta"
 		texturefile = "gfx/interface/icon_rite_khurmazta.tga"
 	}

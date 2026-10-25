@@ -41,14 +41,47 @@ PROVINCE_COUNTY = {
     4651: "c_tsushima",
 }
 
+# East Asia (China, Korea, Manchuria) and the Japanese gaps: EU4 province ->
+# CK3 county by the prefecture each EU4 name stands for (EU4 uses Wade-Giles,
+# Cantonese and Korean forms where CK3 has pinyin Tang names). Provinces whose
+# prefecture has no certain county stay out and are reported, never guessed.
+PROVINCE_COUNTY.update({
+    # Japan: Tohoku, Hokkaido, Sakhalin (the counties of the Ainu realms)
+    1026: "c_korehari", 4131: "c_isawa", 1031: "c_soya", 1032: "c_chupka",
+    1847: "c_iskar", 1852: "c_menas", 4193: "c_uskes", 1033: "c_kusunkotan",
+    4658: "c_pogibi", 738: "c_siraya", 2154: "c_hoanya", 2155: "c_amis",
+    # North China
+    687: "c_dengzhou_1", 688: "c_bianzhou", 689: "c_xingyuan", 690: "c_qingzhou",
+    691: "c_qizhou", 692: "c_huaizhou", 693: "c_taiyuan", 694: "c_pingyang",
+    695: "c_hejian", 696: "c_yizhou_1", 697: "c_datong_2", 698: "c_lingzhou",
+    700: "c_jingzhao", 703: "c_lzj_chengde", 1816: "c_youzhou", 1836: "c_henan",
+    1838: "c_lujiang", 2137: "c_weizhou", 2139: "c_laizhou", 2140: "c_yanzhou",
+    2141: "c_xuzhou_1", 2143: "c_haozhou", 2144: "c_yingzhou", 2175: "c_caizhou",
+    2176: "c_songzhou", 2179: "c_yan_an", 2180: "c_qinzhou_1", 2181: "c_jingzhou",
+    4195: "c_zhenzhou", 4196: "c_haizhou", 4198: "c_fengxiang",
+    # South China
+    665: "c_duanzhou", 666: "c_jiangling", 667: "c_guangzhou_1", 668: "c_dongguan",
+    669: "c_fuzhou_1", 670: "c_qianzhou", 671: "c_tanzhou", 672: "c_langzhou",
+    681: "c_xiazhou_1", 682: "c_ezhou", 683: "c_hongzhou", 684: "c_hangzhou",
+    685: "c_yangzhou", 686: "c_shuzhou", 1821: "c_jiangning", 1822: "c_suzhou_2",
+    1824: "c_wenzhou_2", 1829: "c_quanzhou", 1833: "c_jizhou_3", 1840: "c_guizhou_1",
+    2145: "c_runzhou", 2146: "c_xuanzhou", 2147: "c_shezhou", 2148: "c_yuezhou",
+    2149: "c_mingzhou_1", 2150: "c_wuzhou", 2151: "c_raozhou", 2152: "c_jian_an",
+    2153: "c_tingzhou", 2156: "c_chaozhou", 2157: "c_huizhou_1", 2158: "c_shaozhou_1",
+    2159: "c_leizhou", 2160: "c_yazhou", 2161: "c_lianzhou_1", 2162: "c_wuzhou_1",
+    2163: "c_liuzhou", 2164: "c_yongzhou_1", 2171: "c_xiangyang", 2173: "c_chenzhou_1",
+    2174: "c_hengzhou", 4197: "c_huangzhou",
+    # Korea
+    733: "c_hwangju", 734: "c_wonju", 735: "c_yangju", 736: "c_sangju",
+    737: "c_jeonju", 1013: "c_cheongju", 1845: "c_seogyeong", 2694: "c_myeongju",
+    2741: "c_tamna", 2745: "c_gyeongju", 4227: "c_jinju", 4228: "c_naju",
+    4229: "c_chungju", 4230: "c_dangseong", 4231: "c_haeju",
+    # Manchuria
+    726: "c_LIAO_shenyang", 731: "c_BAL_ilanshan", 2107: "c_BAL_ningzhou",
+})
+
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
-UNMAPPED = {
-    1026: "Mutsu (Tohoku: candidates c_korehari kamuyism, c_iwase/c_isawa/c_iwaki mahayana)",
-    4131: "Nanbu (Tohoku: candidates c_isawa mahayana, c_tsugaru kamuyism)",
-    1031: "Kamikawa (Hokkaido, unowned)", 1032: "Kurils (Hokkaido, unowned)",
-    1847: "Shiribeshi (Hokkaido, unowned)", 1852: "Tokachi (Hokkaido, unowned)",
-    4193: "Oshima (Hokkaido, unowned)",
-}
+UNMAPPED = {}
 
 _cache = {}
 

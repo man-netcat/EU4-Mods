@@ -229,6 +229,38 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = shamanism_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = shangqing_scholar_modifier }
+		remove_country_modifier = shangqing_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = quanzhen_scholar_modifier }
+		remove_country_modifier = quanzhen_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = zhengyi_scholar_modifier }
+		remove_country_modifier = zhengyi_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = maitreya_scholar_modifier }
+		remove_country_modifier = maitreya_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = moism_scholar_modifier }
+		remove_country_modifier = moism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = dab_qhuas_scholar_modifier }
+		remove_country_modifier = dab_qhuas_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = manichean_scholar_modifier }
+		remove_country_modifier = manichean_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = mingism_scholar_modifier }
+		remove_country_modifier = mingism_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = khurmazta_scholar_modifier }
 		remove_country_modifier = khurmazta_scholar_modifier
 	}
