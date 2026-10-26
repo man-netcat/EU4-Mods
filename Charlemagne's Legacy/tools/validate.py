@@ -1816,6 +1816,11 @@ def run() -> int:
         warn("tags not shown under CK3's cultural name for their holder's culture (python3 tools/culturalnames.py apply TAG): "
              + "; ".join(f"{t} {have!r} -> {want!r}" for t, _ti, want, have in cn_drift))
 
+    ppl = culturalnames.people_drift([(t.tag, t.ck3_title, t.rank) for t in _tagrows if t.ck3_title])
+    note(not ppl, f"steppe counties carry their people's name ({len(ppl)} missing)")
+    for tg_, have, want in ppl[:20]:
+        print(f"        {tg_}: {have!r} should be {want!r} (python3 tools/culturalnames.py peoples)")
+
     print("\n== province religions track CK3's counties (tools/provfaiths.py) ==")
     import provfaiths
 

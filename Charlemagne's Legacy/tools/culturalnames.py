@@ -10,6 +10,12 @@ some cn_ names; the adjective then equals the name, as CK3's own `$cn_x$` does.
 
     python3 tools/culturalnames.py              # list tags that do not show it
     python3 tools/culturalnames.py apply TAG..  # write the cultural name and adjective
+    python3 tools/culturalnames.py peoples      # list / write the "<place> <people>" names
+
+Steppe peoples: a county or duchy held by a ruler of one of the Turkic steppe
+cultures below is "<place> <people>" (Quriltay Oghuz, Akmola Kimek, Targyl
+Kipchak, Tumar Cuman), the people's name being CK3's own culture name. The
+people's realm itself (Oghuz il, the Kirghiz Khanate) keeps its title name.
 """
 import glob
 import os
@@ -24,6 +30,9 @@ from paths import CK3_GAME  # noqa: E402
 MOD = os.path.join(HERE, "..")
 LOC = os.path.join(MOD, "localisation", "replace", "countries_l_english.yml")
 _blocks = {}
+
+# CK3 holder cultures whose counties and duchies carry the people's name
+PEOPLES = ("turkish", "pecheneg", "cuman", "kipchak", "kimek", "karluk", "kirghiz", "bashkir", "bolghar")
 
 
 def _title_blocks():
@@ -110,8 +119,56 @@ def apply(tags):
     open(LOC, "w", encoding="utf-8-sig", newline="").write(loc)
 
 
+def people_suffix(title, rank):
+    """The people a county/duchy tag is named after ("Oghuz" for CK3's turkish culture), else None."""
+    import ck3
+    import culturelift as cl
+
+    if rank is None or rank > 2:
+        return None
+    _h, cc = cl.holder_culture(title)
+    return ck3.loc(cc) if cc in PEOPLES else None
+
+
+def people_drift(rows):
+    """[(tag, shown name, wanted name)] for (tag, title, rank) rows missing their people suffix."""
+    from enc import encname
+
+    loc = open(LOC, encoding="utf-8-sig").read()
+    out = []
+    for tag, title, rank in rows:
+        suf = people_suffix(title, rank)
+        have = shown(tag, loc)[0]
+        if suf and have is not None and not have.endswith(" " + encname(suf)):
+            out.append((tag, have, f"{have} {encname(suf)}"))
+    return out
+
+
+def apply_peoples(tags=None):
+    from enc import encname
+
+    con = sqlite3.connect(os.path.join(HERE, "tags.db"))
+    loc = open(LOC, encoding="utf-8-sig").read()
+    for tag, title, rank in con.execute("select tag, ck3_title, rank from tags"):
+        if tags and tag not in tags:
+            continue
+        suf = people_suffix(title, rank)
+        if not suf:
+            continue
+        suf = encname(suf)
+        name, adj = shown(tag, loc)
+        if name is None or name.endswith(" " + suf):
+            continue
+        for key, val in ((tag, f"{name} {suf}"), (tag + "_ADJ", f"{adj} {suf}")):
+            loc = re.sub(rf'(?m)^( {re.escape(key)}:\d* )"[^"]*"', lambda m: f'{m.group(1)}"{val}"', loc, count=1)
+        print(f"  {tag}: {name} -> {name} {suf} / {adj} {suf}")
+    open(LOC, "w", encoding="utf-8-sig", newline="").write(loc)
+
+
 if __name__ == "__main__":
-    if sys.argv[1:2] == ["apply"]:
+    if sys.argv[1:2] == ["peoples"]:
+        apply_peoples()
+    elif sys.argv[1:2] == ["apply"]:
         apply(sys.argv[2:])
     else:
         con = sqlite3.connect(os.path.join(HERE, "tags.db"))
