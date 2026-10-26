@@ -1,3 +1,22 @@
 #1135 - Yatenga
 
+owner = WGD
+controller = WGD
+add_core = WGD
+capital = "Gursi"
+culture = mossi
+religion = siguism #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 2
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = WGD
+	controller = WGD
+	add_core = WGD
+}

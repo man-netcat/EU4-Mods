@@ -1,3 +1,26 @@
 # No previous file for Gwiriko
 
+owner = LOB
+controller = LOB
+add_core = LOB
+capital = "Say"
+culture = dyola
+religion = siguism #Fetishism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
+add_local_autonomy = 25
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = LOB
+	controller = LOB
+	add_core = LOB
+}

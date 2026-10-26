@@ -1,3 +1,24 @@
 # No previous file for Kantor
 
+owner = WUI
+controller = WUI
+add_core = KBU #Subjet province within the empire
+add_core = WUI
+capital = "Sutuco"
+culture = senegambian
+religion = roog_sene #Fetishism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = ivory
+base_manpower = 1
+is_city = yes
+add_local_autonomy = 50
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = WUI
+	controller = WUI
+	add_core = WUI
+}

@@ -1,3 +1,23 @@
-#2259
+owner = KRI
+controller = KRI
+add_core = KRI
+capital = "Sah"
+culture = bambara
+religion = bidaism #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
 
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = KRI
+	controller = KRI
+	add_core = KRI
+}

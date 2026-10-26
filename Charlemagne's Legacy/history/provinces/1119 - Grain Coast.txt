@@ -1,2 +1,29 @@
+owner = BAS
+controller = BAS
+add_core = BAS
+capital = "Mesurado"
+culture = dyola
 #1119 - Grain Coast
+culture = dyola
+religion = akom
+religion = akom #Fetishism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown #Malaguetta Pepper dominant in early eras
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 50
+native_ferocity = 4
+native_hostileness = 9
 
+867.1.1 = {
+	owner = BAS
+	controller = BAS
+	add_core = BAS
+}

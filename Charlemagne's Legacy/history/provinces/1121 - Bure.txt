@@ -1,3 +1,22 @@
 #1121 - Bure
 
+owner = MNN
+controller = MNN
+add_core = MNN
+capital = "Kurussa"
+culture = mali
+religion = siguism #Fetishism
+hre = no
+base_tax = 6
+base_production = 6
+trade_goods = gold
+base_manpower = 2
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = MNN
+	controller = MNN
+	add_core = MNN
+}

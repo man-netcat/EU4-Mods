@@ -1,3 +1,24 @@
 #1157 - Borno
 
+owner = KNM
+controller = KNM
+add_core = KNM
+capital = "Gatiga"
+culture = kanuri
+religion = bori
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = KNM
+	controller = KNM
+	add_core = KNM
+}

@@ -1,0 +1,22 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = sub_saharan
+primary_culture = hausa
+religion = bori
+capital = 2279
+religious_school = bori_school
+867.1.1 = {
+	monarch = {
+		name = "Daurama"
+		dynasty = "Daura"
+		female = yes
+		birth_date = 842.1.1
+		death_date = 910.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

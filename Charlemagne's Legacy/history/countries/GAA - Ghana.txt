@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = sub_saharan
+primary_culture = soninke
+religion = bidaism
+capital = 2245
+religious_school = bidaism_school
+867.1.1 = {
+	monarch = {
+		name = "Zoumana"
+		dynasty = "Cisse"
+		birth_date = 830.1.1
+		death_date = 898.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

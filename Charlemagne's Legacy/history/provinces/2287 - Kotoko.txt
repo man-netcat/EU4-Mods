@@ -1,3 +1,22 @@
 # No previous file for Kotoko
 
+owner = KOO
+controller = KOO
+add_core = KOO
+capital = "Kotoko"
+culture = kanuri
+religion = bori
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = KOO
+	controller = KOO
+	add_core = KOO
+}

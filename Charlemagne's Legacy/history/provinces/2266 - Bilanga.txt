@@ -1,3 +1,22 @@
 # No previous file for Bilanga
 
+owner = UPP
+controller = UPP
+add_core = UPP
+capital = "Bilanga"
+culture = mossi
+religion = bidaism #Fetishism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = UPP
+	controller = UPP
+	add_core = UPP
+}

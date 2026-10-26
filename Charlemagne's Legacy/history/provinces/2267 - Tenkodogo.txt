@@ -1,3 +1,25 @@
 # No previous file for Tenkodogo
 
+owner = MAP
+controller = MAP
+add_core = MAP
+capital = "Tenkodogo"
+culture = mossi
+religion = orisa #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 1
+is_city = yes
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = MAP
+	controller = MAP
+	add_core = MAP
+}

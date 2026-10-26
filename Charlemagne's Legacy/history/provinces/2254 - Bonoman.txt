@@ -1,3 +1,20 @@
-#2254
+owner = BNO
+controller = BNO
+add_core = BNO
+capital = "Bono Manso"
+culture = aka
+religion = akom #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = tropical_wood
+base_manpower = 1
+is_city = yes
 
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = BNO
+	controller = BNO
+	add_core = BNO
+}

@@ -1,3 +1,28 @@
 #1147 - Benin
 
+owner = IFE
+controller = IFE
+add_core = IFE
+capital = "Oredo"
+culture = yorumba
+religion = orisa #Fetishism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = ivory #note - Benin not major slaving center until rise of Lagos trade in 1750s
+base_manpower = 3
+is_city = yes
+center_of_trade = 1
+extra_cost = 18
+add_permanent_province_modifier = {
+	name = niger_estuary_modifier
+	duration = -1
+}
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = IFE
+	controller = IFE
+	add_core = IFE
+}

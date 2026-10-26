@@ -1,3 +1,24 @@
 #1123 - Segu
 
+owner = BIN
+controller = BIN
+add_core = BIN
+capital = "Kirina"
+culture = bambara
+religion = bidaism #Fetishism
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+native_ferocity = 4
+native_hostileness = 9
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = BIN
+	controller = BIN
+	add_core = BIN
+}

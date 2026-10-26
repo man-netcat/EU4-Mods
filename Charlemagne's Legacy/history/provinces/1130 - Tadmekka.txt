@@ -1,3 +1,22 @@
 #1130 - Tadimekket
 
+owner = TAD
+controller = TAD
+add_core = TAD
+capital = "Tadmekka al-Suq"
+culture = tuareg
+religion = ibadi
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = wool
+base_manpower = 1
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = TAD
+	controller = TAD
+	add_core = TAD
+}

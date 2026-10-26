@@ -1,3 +1,24 @@
 #1158 - Kanem
 
+owner = KNM
+controller = KNM
+add_core = KNM
+capital = "Ngala"
+culture = kanuri
+religion = bori
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = paper #Producer of paper and exporter of Qurans throughout the Islamic world.
+base_manpower = 2
+is_city = yes
+center_of_trade = 1
+extra_cost = 8
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = KNM
+	controller = KNM
+	add_core = KNM
+}

@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = sub_saharan
+primary_culture = butr
+religion = siguism
+capital = 1130
+religious_school = siguism_school
+867.1.1 = {
+	monarch = {
+		name = "Seghada"
+		dynasty = "Tanmak"
+		birth_date = 851.1.1
+		death_date = 908.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

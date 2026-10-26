@@ -339,6 +339,49 @@ PROVINCE_COUNTY.update({
     635: "c_IDO_sonba_i", 2695: "c_IDO_wehale", 2696: "c_IDO_barat_daya", 2725: "c_aru",
 })
 
+# The Sahel and West Africa (Darfur and Kordofan to Senegambia and the Guinea coast), by name where CK3
+# has the place (Kano, Oyo, Gao, Jenne, Kong, Futa Jalon ...) and else by the county of the same
+# river, oasis or people (Zamfara is Sokoto's country, Gwiriko the Dyula of Bobo, the Aoukar is Wagadu).
+PROVINCE_COUNTY.update({
+    # Darfur, Kordofan and the Nile-side of Sudan
+    774: "c_masalit", 1219: "c_kordofan", 2801: "c_el_fasher", 2802: "c_dar_al-said",
+    2932: "c_east_darfur", 1216: "c_south_kordofan", 1221: "c_south_kordofan", 2800: "c_gezira",
+    # Lake Chad: Kanem, Bagirmi and Bornu
+    1158: "c_kanem", 1159: "c_baguirmi", 2286: "c_kera", 2287: "c_kotoko", 2288: "c_kotoko",
+    1157: "c_bornu", 1160: "c_wandala", 2282: "c_munio", 2283: "c_kagha", 2284: "c_yau",
+    # the central Sahara and the Air
+    1156: "c_tahoua", 2272: "c_air", 2273: "c_tahoua", 2274: "c_air", 2276: "c_takkeda",
+    1127: "c_tessalit", 1128: "c_walata", 1129: "c_tessalit", 1130: "c_tadmekka",
+    2271: "c_tadmekka", 2275: "c_bilma", 2277: "c_bilma", 2475: "c_djado",
+    # the Niger bend, Songhay and the Dendi
+    1142: "c_dendi", 2268: "c_dyamare", 2269: "c_zarma", 2270: "c_zarma", 1132: "c_tirakka",
+    1133: "c_gao", 2260: "c_mema", 2262: "c_kouga", 2264: "c_gondo",
+    # Ghana, Tekrur and Senegambia
+    2243: "c_tichitt", 2245: "c_awkar", 2246: "c_awkar", 2247: "c_hodh", 1115: "c_dhraina",
+    2237: "c_takrur", 2240: "c_galam", 2244: "c_tagant", 1112: "c_dhraina", 1113: "c_kayor",
+    1116: "c_jolof", 2239: "c_saalum", 1111: "c_dhraina", 1096: "c_baol", 1114: "c_kaabu",
+    1117: "c_futa_jalon", 2238: "c_wuli", 1118: "c_temne", 1119: "c_bassa", 2241: "c_geba",
+    2242: "c_kasa",
+    # Mali, the Jenne country and the Dyula states
+    1120: "c_bambuk", 1121: "c_bure", 1124: "c_sikasso", 2248: "c_dakajalan", 1123: "c_bindugu",
+    1131: "c_massina", 2249: "c_sibi_mali", 2250: "c_bindugu", 1134: "c_jenne", 2259: "c_kurmina",
+    2261: "c_dodugu", 2263: "c_bandiagara", 1122: "c_worodugu", 1125: "c_kong", 2252: "c_lobi",
+    2253: "c_dyulaso",
+    # the Volta basin: the Mossi, Gurma, Dagomba and the Akan
+    1135: "c_yatenga", 1136: "c_gurma", 1137: "c_wagadugu", 2265: "c_oudalan",
+    2266: "c_upper_gurma", 2292: "c_po", 2295: "c_pendjari", 2256: "c_dagomba",
+    2267: "c_kuisugu", 2255: "c_bonduku", 1138: "c_kumasi", 2254: "c_bono",
+    2257: "c_adanse", 1139: "c_fante", 2258: "c_fante", 1126: "c_dabou",
+    # Hausaland and the middle Niger
+    1155: "c_kano", 2280: "c_rano", 2281: "c_rano", 1148: "c_gobir", 1149: "c_katsina",
+    2279: "c_daura", 1150: "c_sokoto", 1154: "c_zaria", 2278: "c_kebbi", 2293: "c_yauri",
+    1144: "c_oyo", 1145: "c_nupe", 1146: "c_ife", 1152: "c_igala", 1153: "c_kwararafa",
+    1161: "c_bauchi", 1162: "c_kwararafa", 1249: "c_garoua", 2285: "c_diamare",
+    # Borgu, Yorubaland, the Bight of Benin and the Niger delta
+    1143: "c_nikki", 1140: "c_abomey", 2291: "c_ketu", 1141: "c_ifonyin", 1147: "c_benin",
+    2289: "c_owu", 2290: "c_ijebu", 2294: "c_edo", 1151: "c_ijaw", 1163: "c_ibibo",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.

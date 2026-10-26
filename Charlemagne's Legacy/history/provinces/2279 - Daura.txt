@@ -1,3 +1,25 @@
 # No previous file for Daura
 
+owner = DUA
+controller = DUA
+add_core = DUA
+capital = "Daura"
+culture = hausa
+religion = bori
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = dyes
+base_manpower = 1
+is_city = yes
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = DUA
+	controller = DUA
+	add_core = DUA
+}

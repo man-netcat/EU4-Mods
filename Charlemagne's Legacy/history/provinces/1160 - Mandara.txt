@@ -1,3 +1,22 @@
 #1160 - Mandara
 
+owner = WAN
+controller = WAN
+add_core = WAN
+capital = "Wandala"
+culture = kanuri
+religion = bori #Fetishism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = tropical_wood
+base_manpower = 1
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = WAN
+	controller = WAN
+	add_core = WAN
+}

@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = sub_saharan
+primary_culture = butr
+religion = siguism
+capital = 2276
+religious_school = siguism_school
+867.1.1 = {
+	monarch = {
+		name = "Isli"
+		dynasty = "Kel Wi"
+		birth_date = 800.1.1
+		death_date = 870.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Agdun"
+		monarch_name = "Agdun"
+		dynasty = "Kel Wi"
+		birth_date = 850.1.1
+		death_date = 920.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

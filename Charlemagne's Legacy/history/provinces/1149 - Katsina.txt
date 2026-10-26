@@ -1,3 +1,24 @@
 #1149 - Katsina
 
+owner = DUA
+controller = DUA
+add_core = DUA
+capital = "Katsina"
+culture = hausa
+religion = bori
+hre = no
+base_tax = 6
+base_production = 6
+trade_goods = cloth
+base_manpower = 3
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = DUA
+	controller = DUA
+	add_core = DUA
+}

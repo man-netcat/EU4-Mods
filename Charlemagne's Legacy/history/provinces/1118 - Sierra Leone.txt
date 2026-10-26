@@ -1,3 +1,31 @@
+owner = TEE
+controller = TEE
+add_core = TEE
+capital = "Sherbro"
+culture = dyola
 #1118 - Sierra Leone
+culture = dyola
+religion = roog_sene
+religion = roog_sene #Fetishism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 70
+native_ferocity = 4
+native_hostileness = 9
 
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = TEE
+	controller = TEE
+	add_core = TEE
+}

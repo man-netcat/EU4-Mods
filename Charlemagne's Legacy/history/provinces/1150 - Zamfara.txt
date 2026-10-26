@@ -1,3 +1,22 @@
 #1150 - Zamfara
 
+owner = KEB
+controller = KEB
+add_core = KEB
+capital = "Dutsi"
+culture = hausa
+religion = bori #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = KEB
+	controller = KEB
+	add_core = KEB
+}

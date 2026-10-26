@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = sub_saharan
+primary_culture = fon
+religion = akom
+capital = 1139
+religious_school = akom_school
+867.1.1 = {
+	monarch = {
+		name = "Badu"
+		dynasty = "Fante"
+		birth_date = 841.1.1
+		death_date = 896.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

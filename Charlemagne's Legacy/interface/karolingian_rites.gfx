@@ -326,6 +326,36 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_roog_sene"
+		texturefile = "gfx/interface/icon_rite_roog_sene.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_siguism"
+		texturefile = "gfx/interface/icon_rite_siguism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_akom"
+		texturefile = "gfx/interface/icon_rite_akom.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_bidaism"
+		texturefile = "gfx/interface/icon_rite_bidaism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_orisa"
+		texturefile = "gfx/interface/icon_rite_orisa.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_bori"
+		texturefile = "gfx/interface/icon_rite_bori.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_melieism"
 		texturefile = "gfx/interface/icon_rite_melieism.tga"
 	}

@@ -1,3 +1,23 @@
 #1117 - Futa Jallon
 
+owner = FUT
+controller = FUT
+add_core = KBU #Subject province within the empire
+add_core = FUT
+capital = "Timbo"
+culture = fulani
+religion = siguism #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = ivory
+base_manpower = 3
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = FUT
+	controller = FUT
+	add_core = FUT
+}

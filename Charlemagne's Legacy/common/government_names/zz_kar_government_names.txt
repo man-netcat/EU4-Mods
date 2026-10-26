@@ -9785,6 +9785,138 @@ mongol_tribal_titles = {
 }
 
 
+butr_tribal_titles = {
+# CK3 ladders for TAD(r1), TDA(r1) - tribal CK3 government (tribal); butr_titles is gated on another government
+	rank = {
+		1 = BUTR_TRIBAL_COUNTY  # county_tribal_berber_group
+		2 = BUTR_TRIBAL_DUCHY  # duchy_feudal_berber_group
+		3 = BUTR_TRIBAL_KINGDOM  # kingdom_feudal_berber_group
+		4 = BUTR_TRIBAL_EMPIRE  # empire_feudal_berber_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BUTR_TRIBAL_COUNT_MALE  # count_tribal_male_berber_group
+		2 = BUTR_TRIBAL_DUKE_MALE  # duke_feudal_male_berber_group
+		3 = BUTR_TRIBAL_KING_MALE  # king_feudal_male_berber_group
+		4 = BUTR_TRIBAL_EMPEROR_MALE  # emperor_feudal_male_berber_group
+		5 = BUTR_TRIBAL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BUTR_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = BUTR_TRIBAL_DUKE_FEMALE  # duke_feudal_female_berber_group
+		3 = BUTR_TRIBAL_KING_FEMALE  # king_feudal_female_berber_group
+		4 = BUTR_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_berber_group
+		5 = BUTR_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BUTR_TRIBAL_COUNT_MALE  # consort uses the ruler form
+		2 = BUTR_TRIBAL_DUKE_MALE  # consort uses the ruler form
+		3 = BUTR_TRIBAL_KING_MALE  # consort uses the ruler form
+		4 = BUTR_TRIBAL_EMPEROR_MALE  # consort uses the ruler form
+		5 = BUTR_TRIBAL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BUTR_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = BUTR_TRIBAL_DUKE_FEMALE  # duke_feudal_female_berber_group
+		3 = BUTR_TRIBAL_KING_FEMALE  # king_feudal_female_berber_group
+		4 = BUTR_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_berber_group
+		5 = BUTR_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		has_country_flag = kar_gov_tribal_government
+		primary_culture = butr
+	}
+}
+
+
+levantine_tribal_titles = {
+# CK3 ladders for KAN(r2) - tribal CK3 government (tribal); levantine_titles is gated on another government
+	rank = {
+		1 = LEVANTINE_TRIBAL_COUNTY  # county_tribal
+		2 = LEVANTINE_TRIBAL_DUCHY  # duchy_tribal
+		3 = LEVANTINE_TRIBAL_KINGDOM  # kingdom_feudal_arabic_group
+		4 = LEVANTINE_TRIBAL_EMPIRE  # empire_feudal_arabic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = LEVANTINE_TRIBAL_COUNT_MALE  # count_tribal_male
+		2 = LEVANTINE_TRIBAL_DUKE_MALE  # duke_tribal_male
+		3 = LEVANTINE_TRIBAL_KING_MALE  # king_feudal_male_arabic_group
+		4 = LEVANTINE_TRIBAL_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = LEVANTINE_TRIBAL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = LEVANTINE_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = LEVANTINE_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = LEVANTINE_TRIBAL_KING_FEMALE  # king_feudal_female_arabic_group
+		4 = LEVANTINE_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = LEVANTINE_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = LEVANTINE_TRIBAL_COUNT_MALE  # consort uses the ruler form
+		2 = LEVANTINE_TRIBAL_DUKE_MALE  # consort uses the ruler form
+		3 = LEVANTINE_TRIBAL_KING_MALE  # consort uses the ruler form
+		4 = LEVANTINE_TRIBAL_EMPEROR_MALE  # consort uses the ruler form
+		5 = LEVANTINE_TRIBAL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = LEVANTINE_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = LEVANTINE_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = LEVANTINE_TRIBAL_KING_FEMALE  # king_feudal_female_arabic_group
+		4 = LEVANTINE_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = LEVANTINE_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		has_country_flag = kar_gov_tribal_government
+		primary_culture = levantine
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

@@ -1,3 +1,26 @@
 #1137 - Wagadugi
+#Senior of the Mossi Kingdoms centered here
+
+owner = WGD
+controller = WGD
+add_core = WGD
+capital = "Wagadugu"
+culture = mossi #mossi
+religion = siguism #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 3
+is_city = yes
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
 
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = WGD
+	controller = WGD
+	add_core = WGD
+}

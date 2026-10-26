@@ -1,3 +1,23 @@
 #1146 - Ife
 
+owner = IFE
+controller = IFE
+add_core = IFE
+capital = "Ife Ile"
+culture = yorumba
+religion = orisa #Fetishism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = glass #Ife Glass Beads
+base_manpower = 2
+is_city = yes
+add_province_triggered_modifier = city_of_401_deities
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = IFE
+	controller = IFE
+	add_core = IFE
+}

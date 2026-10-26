@@ -86,6 +86,12 @@ FAITH_RELIGION = {
     "tolotang": "tolotang",
     "aluk": "aluk",
     "dayawism": "dayawism",
+    "west_african_roog_pagan": "roog_sene",
+    "west_african_pagan": "siguism",
+    "akom_pagan": "akom",
+    "west_african_bidu_pagan": "bidaism",
+    "west_african_orisha_pagan": "orisa",
+    "west_african_bori_pagan": "bori",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -154,6 +160,18 @@ NEW_RELIGIONS = {
                "The Aluk To Dolo of the Toraja highlands, whose ancestral cult, funeral feasts and tongkonan houses bind the living to the dead."),
     "dayawism": ("animism", "pagan", "aluk",
                "The faith of the peoples of the Philippines, who honour the anito, the spirits of ancestors and nature, through the babaylan and the datu."),
+    "roog_sene": ("animism", "pagan", "dayawism",
+               "The faith of the Serer, who honour Roog Sene, the creator, and keep the pangool, the ancestral spirits of the saltane priests."),
+    "siguism": ("animism", "pagan", "roog_sene",
+               "The faith of the Mande peoples, whose smiths and hunters keep the komo and the boli, the powers of the earth and the ancestors."),
+    "akom": ("animism", "pagan", "siguism",
+               "The Akom of the Akan, in which the okomfo priests commune with the abosom, the lesser gods, under the high god Nyame."),
+    "bidaism": ("animism", "pagan", "akom",
+               "The faith of the Soninke and the peoples of the old Wagadu, who keep the cult of Bida, the serpent of the well, for the rains and the gold."),
+    "orisa": ("animism", "pagan", "bidaism",
+               "The faith of the Yoruba, Edo and Fon, who honour Olodumare and the orisa, the divine powers whose shrines and festivals order the life of the towns."),
+    "bori": ("animism", "pagan", "orisa",
+               "The Bori of the Hausa and the peoples of the central Sudan, the possession cult of the iskoki, the spirits that ride their devotees."),
 }
 
 

@@ -1,3 +1,22 @@
 # No previous file for Haayre
 
+owner = SEO
+controller = SEO
+add_core = SEO
+capital = "Douentza"
+culture = bozo
+religion = siguism #Fetishism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = ivory
+base_manpower = 1
+is_city = yes
+
 discovered_by = sub_saharan
+
+867.1.1 = {
+	owner = SEO
+	controller = SEO
+	add_core = SEO
+}
