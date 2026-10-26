@@ -25,6 +25,7 @@ sys.path.insert(0, HERE)
 
 REGIONS = {
     "seasia": ["burma_region", "indo_china_region"],
+    "china": ["@TNG", 701, 702, 709, 2183, 2747, 4223, 4670],
     "india": ["hindusthan_region", "bengal_region", "west_india_region", "deccan_region", "coromandel_region"],
 }
 
@@ -35,6 +36,13 @@ def region_pids(names):
     areas, regions = eu4.load_areas(), eu4.load_region_areas()
     out = set()
     for r in names:
+        if isinstance(r, str) and r.startswith("@"):  # every province the tag owns now
+            con = sqlite3.connect(os.path.join(HERE, "tags.db"))
+            out.update(p for (p,) in con.execute("select pid from tag_provinces where tag=?", (r[1:],)))
+            continue
+        if isinstance(r, int):
+            out.add(r)
+            continue
         for a in regions[r]:
             out.update(areas.get(a, []))
     return out
@@ -96,7 +104,7 @@ def plan(pids):
     return out
 
 
-def apply(pids):
+def apply(pids, region=None):
     import addtag
     import db
     import eu4
@@ -133,7 +141,7 @@ def apply(pids):
             continue
         code = free_code(pl["name"], taken)
         taken.add(code)
-        tech = "indian"
+        tech = "chinese" if region == "china" else "indian"
         args = [code, pl["title"], *map(str, pl["provs"]), "--tech", tech, "--gov", pl["gov"],
                 "--capital", str(pl["capital"]), "--take"]
         # a country file named like a vanilla one would merge with it: name it apart
@@ -155,7 +163,7 @@ if __name__ == "__main__":
     reg = sys.argv[1] if len(sys.argv) > 1 else "india"
     pids = region_pids(REGIONS[reg])
     if sys.argv[2:3] == ["apply"]:
-        apply(pids)
+        apply(pids, reg)
     else:
         for pl in sorted(plan(pids), key=lambda p: -len(p["provs"])):
             print(f"{pl['tag'] or '(new)':6} {pl['title']:18} {pl['name']:18} {len(pl['provs']):2} provs cap {pl['capital']} gov {pl['gov']}")

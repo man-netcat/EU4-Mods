@@ -9587,6 +9587,72 @@ burmese_titles = {
 }
 
 
+zhongyuan_tribal_titles = {
+# CK3 ladders for WUL(r2) - tribal CK3 government (tribal); zhongyuan_titles is gated on another government
+	rank = {
+		1 = ZHONGYUAN_TRIBAL_COUNTY  # county_tribal
+		2 = ZHONGYUAN_TRIBAL_DUCHY  # duchy_tribal
+		3 = ZHONGYUAN_TRIBAL_KINGDOM  # kingdom_tribal
+		4 = ZHONGYUAN_TRIBAL_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ZHONGYUAN_TRIBAL_COUNT_MALE  # count_tribal_male
+		2 = ZHONGYUAN_TRIBAL_DUKE_MALE  # duke_tribal_male
+		3 = ZHONGYUAN_TRIBAL_KING_MALE  # king_male_chinese
+		4 = ZHONGYUAN_TRIBAL_EMPEROR_MALE  # emperor_tribal_male
+		5 = ZHONGYUAN_TRIBAL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ZHONGYUAN_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = ZHONGYUAN_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = ZHONGYUAN_TRIBAL_KING_FEMALE  # king_female_chinese
+		4 = ZHONGYUAN_TRIBAL_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = ZHONGYUAN_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ZHONGYUAN_TRIBAL_COUNT_MALE  # consort uses the ruler form
+		2 = ZHONGYUAN_TRIBAL_DUKE_MALE  # consort uses the ruler form
+		3 = ZHONGYUAN_TRIBAL_KING_MALE  # consort uses the ruler form
+		4 = ZHONGYUAN_TRIBAL_EMPEROR_MALE  # consort uses the ruler form
+		5 = ZHONGYUAN_TRIBAL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ZHONGYUAN_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = ZHONGYUAN_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = ZHONGYUAN_TRIBAL_KING_FEMALE  # king_female_chinese
+		4 = ZHONGYUAN_TRIBAL_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = ZHONGYUAN_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		has_country_flag = kar_gov_tribal_government
+		primary_culture = zhongyuan
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

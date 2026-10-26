@@ -79,6 +79,8 @@ FAITH_RELIGION = {
     "shakta_faith": "shaktism",
     "smartism": "smartism",
     "sedism": "sedism",
+    "melieism": "melieism",
+    "rrmeaism": "rrmeaism",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -133,6 +135,10 @@ NEW_RELIGIONS = {
                  "The tradition of the smriti and of Advaita, which honours five deities as aspects of one and is kept by learned Brahmins."),
     "sedism": ("animism", "pagan", "satsana_phi",
                "The faith of the Meitei of Manipur, who honour Sanamahi and the lai, the spirits of the land, at the lairembi shrines."),
+    "melieism": ("animism", "pagan", "sedism",
+                 "The ancestral faith of the Qiangic and Tangut peoples of the north-western marches, whose shamans read the stars and keep the rites of their forefathers."),
+    "rrmeaism": ("animism", "pagan", "melieism",
+                 "The mountain faith of the Qiang of the upper Min valley, a religion of the sacred peaks and the white stones kept by their priests."),
 }
 
 

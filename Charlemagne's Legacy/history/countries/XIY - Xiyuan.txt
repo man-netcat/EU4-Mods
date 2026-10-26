@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = chinese
+primary_culture = zhuang
+religion = moism
+capital = 616
+religious_school = moism_school
+867.1.1 = {
+	monarch = {
+		name = "Kamon"
+		dynasty = "Nóng"
+		birth_date = 829.1.1
+		death_date = 883.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

@@ -480,6 +480,22 @@ ari_rite_scholar_modifier = {
 	global_missionary_strength = 0.01
 }
 
+melieism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	diplomatic_reputation = 1
+}
+
+rrmeaism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	infantry_power = 0.05
+}
+
 sedism_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes

@@ -1,11 +1,11 @@
 #709 - Alxa
 
-owner = TNG
-controller = TNG
-add_core = TNG
+owner = ZHE
+controller = ZHE
+add_core = ZHE
 capital = "Alxa"
 culture = zhongyuan
-religion = vajrayana
+religion = tengri_pagan_reformed
 hre = no
 base_tax = 1
 base_production = 1
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = TNG
-	controller = TNG
-	add_core = TNG
+	owner = ZHE
+	controller = ZHE
+	add_core = ZHE
 }

@@ -301,6 +301,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_melieism"
+		texturefile = "gfx/interface/icon_rite_melieism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_rrmeaism"
+		texturefile = "gfx/interface/icon_rite_rrmeaism.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_sedism"
 		texturefile = "gfx/interface/icon_rite_sedism.tga"
 	}

@@ -266,6 +266,21 @@ PROVINCE_COUNTY.update({
     4446: "c_suvarnapura",  # Kalahandi: south of Patna-Garjat and Sonpur
     4470: "c_jharkand",     # Soumelpur (Chota Nagpur): between Jharkand and Mahurbanj
 })
+# China: the provinces of the Tang realm the first pass left unpaired or paired wrongly, by
+# name (Jingzhou is Jiangling, Bozhou is Bochuan, Hetao the Wuyuan of Yanzhou) and then by
+# the nearest Tang-era prefecture; the tribal and Tai polities of the south-west and the
+# Onggud of the Langshan keep their own states (Lingyun is Guile's Tianzhou region, Cao Bang
+# the Nong of Xiyuan, Guiyang the Xie of Zangke).
+PROVINCE_COUNTY.update({
+    666: "c_danzhou_1", 2172: "c_jiangling", 616: "c_siyuan", 664: "c_guile",
+    673: "c_shizhou_1", 674: "c_yingzhou_4", 4199: "c_sizhou", 2168: "c_bochuan",
+    679: "c_chengdu", 680: "c_yuzhou_2", 4211: "c_tongchuan", 2169: "c_jianzhou_1",
+    4212: "c_jiazhou", 4213: "c_luzhou_2", 2142: "c_chuzhou_2", 2138: "c_zichuan",
+    2136: "c_huaian", 4194: "c_pinzhou", 2177: "c_xinzhou", 2178: "c_longde",
+    2183: "c_hezhou_2", 701: "c_xiazhou", 702: "c_shengzhou", 709: "c_alxa",
+    4223: "c_wuyuan", 2747: "c_langshan", 4670: "c_keyimen",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.

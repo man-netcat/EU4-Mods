@@ -1,11 +1,11 @@
 #674 - Guiyang
 
-owner = TNG
-controller = TNG
-add_core = TNG
+owner = ZAE
+controller = ZAE
+add_core = ZAE
 capital = "Guiyang"
 culture = yi
-religion = confucianism
+religion = dab_qhuas
 hre = no
 base_tax = 3
 base_production = 3
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = TNG
-	controller = TNG
-	add_core = TNG
+	owner = ZAE
+	controller = ZAE
+	add_core = ZAE
 }
