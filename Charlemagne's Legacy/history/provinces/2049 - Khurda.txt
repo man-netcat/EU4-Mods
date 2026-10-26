@@ -1,8 +1,8 @@
 #2103 - Khurda (Orissa Tributary States)
 
-owner = TOI
-controller = TOI
-add_core = TOI
+owner = ORI
+controller = ORI
+add_core = ORI
 capital = "Khurda"
 culture = garjati
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = TOI
-	controller = TOI
-	add_core = TOI
+	owner = ORI
+	controller = ORI
+	add_core = ORI
 }

@@ -1,8 +1,8 @@
 #550 - Mahakoshal
 
-owner = DHA
-controller = DHA
-add_core = DHA
+owner = GDW
+controller = GDW
+add_core = GDW
 capital = "Garha"
 culture = gondi
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = DHA
-	controller = DHA
-	add_core = DHA
+	owner = GDW
+	controller = GDW
+	add_core = GDW
 }

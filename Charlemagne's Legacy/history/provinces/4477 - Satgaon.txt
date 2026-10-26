@@ -1,8 +1,8 @@
 #4477 - Satgaon
 
-owner = BEL
-controller = BEL
-add_core = BEL
+owner = BNG
+controller = BNG
+add_core = BNG
 capital = "Satgaon"
 culture = bengali
 religion = buddhism
@@ -22,7 +22,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = BEL
-	controller = BEL
-	add_core = BEL
+	owner = BNG
+	controller = BNG
+	add_core = BNG
 }

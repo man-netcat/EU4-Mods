@@ -1,8 +1,8 @@
 #4445 - Kanker
 
-owner = CAK
-controller = CAK
-add_core = CAK
+owner = BST
+controller = BST
+add_core = BST
 capital = "Kanker"
 culture = gondi
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = CAK
-	controller = CAK
-	add_core = CAK
+	owner = BST
+	controller = BST
+	add_core = BST
 }

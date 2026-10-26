@@ -2,6 +2,7 @@
 
 owner = KTA
 controller = KTA
+add_core = YOR
 add_core = KTA
 capital = "Adavani"
 culture = telegu

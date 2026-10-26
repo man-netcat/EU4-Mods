@@ -1,8 +1,8 @@
 #2042 - Koch Hajo
 
-owner = KMA
-controller = KMA
-add_core = KMA
+owner = ASS
+controller = ASS
+add_core = ASS
 capital = "Gauhauti"
 culture = assamese
 religion = vajrayana
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = KMA
-	controller = KMA
-	add_core = KMA
+	owner = ASS
+	controller = ASS
+	add_core = ASS
 }

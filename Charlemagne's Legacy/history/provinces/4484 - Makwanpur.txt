@@ -1,8 +1,8 @@
 #4484 - Makwanpur
 
-owner = BEL
-controller = BEL
-add_core = BEL
+owner = BNG
+controller = BNG
+add_core = BNG
 capital = "Makwanpur"
 culture = nepali
 religion = vajrayana
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = BEL
-	controller = BEL
-	add_core = BEL
+	owner = BNG
+	controller = BNG
+	add_core = BNG
 }

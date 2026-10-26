@@ -1,8 +1,8 @@
 #4458 - Narbada
 
-owner = DHA
-controller = DHA
-add_core = DHA
+owner = GDW
+controller = GDW
+add_core = GDW
 capital = "Chauragar"
 culture = gondi
 religion = jainism
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = DHA
-	controller = DHA
-	add_core = DHA
+	owner = GDW
+	controller = GDW
+	add_core = GDW
 }

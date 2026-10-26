@@ -1,8 +1,8 @@
 #4452 - Ratanpur
 
-owner = RAT
-controller = RAT
-add_core = RAT
+owner = RTT
+controller = RTT
+add_core = RTT
 capital = "Ratanpur"
 culture = gondi
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = RAT
-	controller = RAT
-	add_core = RAT
+	owner = RTT
+	controller = RTT
+	add_core = RTT
 }

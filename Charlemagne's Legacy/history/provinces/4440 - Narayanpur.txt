@@ -1,8 +1,8 @@
 #4440 - Narayanpur
 
-owner = KMA
-controller = KMA
-add_core = KMA
+owner = ASS
+controller = ASS
+add_core = ASS
 capital = "Narayanpur"
 culture = assamese
 religion = buddhism
@@ -18,7 +18,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = KMA
-	controller = KMA
-	add_core = KMA
+	owner = ASS
+	controller = ASS
+	add_core = ASS
 }

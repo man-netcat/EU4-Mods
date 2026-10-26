@@ -11,11 +11,15 @@ country_decisions = {
 				tag = ALG
 				tag = ALO
 				tag = ARB
+				tag = ASS
 				tag = ASU
 				tag = BAV
+				tag = BNG
 				tag = BRI
+				tag = BST
 				tag = BUL
 				tag = BYZ
+				tag = CEY
 				tag = CRN
 				tag = CRO
 				tag = CRT
@@ -28,6 +32,7 @@ country_decisions = {
 				tag = FLA
 				tag = FRA
 				tag = GAL
+				tag = GDW
 				tag = GER
 				tag = GMA
 				tag = GOT
@@ -38,8 +43,10 @@ country_decisions = {
 				tag = HSA
 				tag = ITA
 				tag = JAP
+				tag = KGR
 				tag = KHO
 				tag = KIE
+				tag = KMN
 				tag = KOL
 				tag = KRA
 				tag = KRL
@@ -48,24 +55,31 @@ country_decisions = {
 				tag = LOI
 				tag = LOT
 				tag = LVA
+				tag = MAD
 				tag = MAI
 				tag = MAK
 				tag = MHR
+				tag = MLB
 				tag = MLK
 				tag = MOR
+				tag = MUL
 				tag = MZB
 				tag = NAJ
 				tag = NAP
 				tag = NAV
 				tag = NOV
+				tag = NPL
 				tag = NRM
 				tag = OMA
+				tag = ORI
 				tag = PAP
 				tag = PLT
 				tag = PRO
 				tag = PRU
+				tag = RTT
 				tag = RUG
 				tag = RYU
+				tag = SBP
 				tag = SCO
 				tag = SIL
 				tag = SLZ
@@ -77,6 +91,7 @@ country_decisions = {
 				tag = THU
 				tag = TIM
 				tag = TNG
+				tag = TNJ
 				tag = TOU
 				tag = TRA
 				tag = TRI
@@ -86,6 +101,7 @@ country_decisions = {
 				tag = TUS
 				tag = VEN
 				tag = WOL
+				tag = YOR
 			}
 		}
 		allow = {
@@ -123,6 +139,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = ASS }
+			change_country_color = {
+				color = { 163 5 77 }
+			}
+		}
+		if = {
 			limit = { tag = ASU }
 			change_country_color = {
 				color = { 104 173 230 }
@@ -135,9 +157,21 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = BNG }
+			change_country_color = {
+				color = { 36 109 194 }
+			}
+		}
+		if = {
 			limit = { tag = BRI }
 			change_country_color = {
 				color = { 118 99 151 }
+			}
+		}
+		if = {
+			limit = { tag = BST }
+			change_country_color = {
+				color = { 21 50 212 }
 			}
 		}
 		if = {
@@ -150,6 +184,12 @@ country_decisions = {
 			limit = { tag = BYZ }
 			change_country_color = {
 				color = { 149 45 102 }
+			}
+		}
+		if = {
+			limit = { tag = CEY }
+			change_country_color = {
+				color = { 60 123 65 }
 			}
 		}
 		if = {
@@ -225,6 +265,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = GDW }
+			change_country_color = {
+				color = { 224 146 113 }
+			}
+		}
+		if = {
 			limit = { tag = GER }
 			change_country_color = {
 				color = { 75 130 135 }
@@ -285,6 +331,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = KGR }
+			change_country_color = {
+				color = { 29 124 255 }
+			}
+		}
+		if = {
 			limit = { tag = KHO }
 			change_country_color = {
 				color = { 130 168 224 }
@@ -294,6 +346,12 @@ country_decisions = {
 			limit = { tag = KIE }
 			change_country_color = {
 				color = { 81 123 210 }
+			}
+		}
+		if = {
+			limit = { tag = KMN }
+			change_country_color = {
+				color = { 135 219 135 }
 			}
 		}
 		if = {
@@ -345,6 +403,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = MAD }
+			change_country_color = {
+				color = { 233 88 88 }
+			}
+		}
+		if = {
 			limit = { tag = MAI }
 			change_country_color = {
 				color = { 178 145 87 }
@@ -363,6 +427,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = MLB }
+			change_country_color = {
+				color = { 149 191 117 }
+			}
+		}
+		if = {
 			limit = { tag = MLK }
 			change_country_color = {
 				color = { 117 167 117 }
@@ -372,6 +442,12 @@ country_decisions = {
 			limit = { tag = MOR }
 			change_country_color = {
 				color = { 191 110 62 }
+			}
+		}
+		if = {
+			limit = { tag = MUL }
+			change_country_color = {
+				color = { 95 139 214 }
 			}
 		}
 		if = {
@@ -405,6 +481,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = NPL }
+			change_country_color = {
+				color = { 215 12 64 }
+			}
+		}
+		if = {
 			limit = { tag = NRM }
 			change_country_color = {
 				color = { 131 138 116 }
@@ -414,6 +496,12 @@ country_decisions = {
 			limit = { tag = OMA }
 			change_country_color = {
 				color = { 98 134 153 }
+			}
+		}
+		if = {
+			limit = { tag = ORI }
+			change_country_color = {
+				color = { 210 106 47 }
 			}
 		}
 		if = {
@@ -441,6 +529,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = RTT }
+			change_country_color = {
+				color = { 66 126 118 }
+			}
+		}
+		if = {
 			limit = { tag = RUG }
 			change_country_color = {
 				color = { 51 59 76 }
@@ -450,6 +544,12 @@ country_decisions = {
 			limit = { tag = RYU }
 			change_country_color = {
 				color = { 90 138 133 }
+			}
+		}
+		if = {
+			limit = { tag = SBP }
+			change_country_color = {
+				color = { 116 207 75 }
 			}
 		}
 		if = {
@@ -519,6 +619,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = TNJ }
+			change_country_color = {
+				color = { 203 32 82 }
+			}
+		}
+		if = {
 			limit = { tag = TOU }
 			change_country_color = {
 				color = { 127 170 146 }
@@ -570,6 +676,12 @@ country_decisions = {
 			limit = { tag = WOL }
 			change_country_color = {
 				color = { 235 178 18 }
+			}
+		}
+		if = {
+			limit = { tag = YOR }
+			change_country_color = {
+				color = { 47 132 124 }
 			}
 		}
 		}

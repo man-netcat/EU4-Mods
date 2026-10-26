@@ -1,8 +1,8 @@
 #2043 - Balasore
 
-owner = TOI
-controller = TOI
-add_core = TOI
+owner = ORI
+controller = ORI
+add_core = ORI
 capital = "Balasore"
 culture = oriya
 religion = mahayana
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = TOI
-	controller = TOI
-	add_core = TOI
+	owner = ORI
+	controller = ORI
+	add_core = ORI
 }

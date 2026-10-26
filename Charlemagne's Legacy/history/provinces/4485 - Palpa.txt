@@ -1,8 +1,8 @@
 #4485 - Palpa
 
-owner = KUM
-controller = KUM
-add_core = KUM
+owner = KMN
+controller = KMN
+add_core = KMN
 capital = "Palpa"
 culture = nepali
 religion = mahayana
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = KUM
-	controller = KUM
-	add_core = KUM
+	owner = KMN
+	controller = KMN
+	add_core = KMN
 }

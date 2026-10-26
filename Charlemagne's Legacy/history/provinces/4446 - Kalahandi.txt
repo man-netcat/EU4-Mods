@@ -1,8 +1,8 @@
 #4446 - Kalahandi
 
-owner = DAK
-controller = DAK
-add_core = DAK
+owner = SBP
+controller = SBP
+add_core = SBP
 capital = "Kalahandi"
 culture = garjati
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = DAK
-	controller = DAK
-	add_core = DAK
+	owner = SBP
+	controller = SBP
+	add_core = SBP
 }

@@ -1,8 +1,8 @@
 #506 - Multan
 
-owner = MLN
-controller = MLN
-add_core = MLN
+owner = MUL
+controller = MUL
+add_core = MUL
 capital = "Multan"
 culture = panjabi
 religion = vaishnavism
@@ -22,7 +22,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = MLN
-	controller = MLN
-	add_core = MLN
+	owner = MUL
+	controller = MUL
+	add_core = MUL
 }

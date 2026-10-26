@@ -1,8 +1,8 @@
 #4414 - Salem
 
-owner = PAU
-controller = PAU
-add_core = PAU
+owner = MAD
+controller = MAD
+add_core = MAD
 capital = "Salem"
 culture = tamil
 religion = jainism
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = PAU
-	controller = PAU
-	add_core = PAU
+	owner = MAD
+	controller = MAD
+	add_core = MAD
 }

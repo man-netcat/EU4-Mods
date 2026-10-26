@@ -1,8 +1,8 @@
 #2075 - Doaba
 
-owner = TIA
-controller = TIA
-add_core = TIA
+owner = KGR
+controller = KGR
+add_core = KGR
 capital = "Jalandhar"
 culture = panjabi
 religion = vajrayana
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = TIA
-	controller = TIA
-	add_core = TIA
+	owner = KGR
+	controller = KGR
+	add_core = KGR
 }

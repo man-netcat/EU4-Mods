@@ -1,8 +1,8 @@
 #557 - Katmandu
 
-owner = NEP
-controller = NEP
-add_core = NEP
+owner = NPL
+controller = NPL
+add_core = NPL
 capital = "Kathmandu"
 culture = nepali
 religion = shaivism
@@ -22,7 +22,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = NEP
-	controller = NEP
-	add_core = NEP
+	owner = NPL
+	controller = NPL
+	add_core = NPL
 }

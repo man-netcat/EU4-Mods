@@ -1,8 +1,8 @@
 #2100 - Vanni
 
-owner = LAA
-controller = LAA
-add_core = LAA
+owner = CEY
+controller = CEY
+add_core = CEY
 capital = "Yapapatuna"
 culture = tamil
 religion = buddhism
@@ -20,7 +20,7 @@ discovered_by = chinese
 discovered_by = east_african
 
 867.1.1 = {
-	owner = LAA
-	controller = LAA
-	add_core = LAA
+	owner = CEY
+	controller = CEY
+	add_core = CEY
 }

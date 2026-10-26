@@ -1,8 +1,8 @@
 #1947 - Gingee
 
-owner = COU
-controller = COU
-add_core = COU
+owner = TNJ
+controller = TNJ
+add_core = TNJ
 capital = "Gingee"
 culture = tamil
 religion = jainism
@@ -21,7 +21,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = COU
-	controller = COU
-	add_core = COU
+	owner = TNJ
+	controller = TNJ
+	add_core = TNJ
 }

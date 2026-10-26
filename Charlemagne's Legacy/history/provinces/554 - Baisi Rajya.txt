@@ -1,8 +1,8 @@
 #554 - Baisi Rajya
 
-owner = KUM
-controller = KUM
-add_core = KUM
+owner = KMN
+controller = KMN
+add_core = KMN
 capital = "Jumbla"
 culture = nepali
 religion = shaivism
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = KUM
-	controller = KUM
-	add_core = KUM
+	owner = KMN
+	controller = KMN
+	add_core = KMN
 }

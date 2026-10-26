@@ -1,8 +1,8 @@
 #2079 - Dera Ghazi Khan
 
-owner = MLN
-controller = MLN
-add_core = MLN
+owner = MUL
+controller = MUL
+add_core = MUL
 capital = "Dera Ghazi Khan"
 culture = panjabi
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = MLN
-	controller = MLN
-	add_core = MLN
+	owner = MUL
+	controller = MUL
+	add_core = MUL
 }

@@ -1,8 +1,9 @@
 #2098 - Surguja
 
-owner = DHA
-controller = DHA
-add_core = DHA
+owner = GDW
+controller = GDW
+add_core = RTT
+add_core = GDW
 capital = "Surguja"
 culture = jharkhandi
 religion = vaishnavism
@@ -20,7 +21,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = DHA
-	controller = DHA
-	add_core = DHA
+	owner = GDW
+	controller = GDW
+	add_core = GDW
 }

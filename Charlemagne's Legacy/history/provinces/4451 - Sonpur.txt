@@ -1,8 +1,8 @@
 #4451 - Sonpur
 
-owner = DAK
-controller = DAK
-add_core = DAK
+owner = SBP
+controller = SBP
+add_core = SBP
 capital = "Sonpur"
 culture = garjati
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = DAK
-	controller = DAK
-	add_core = DAK
+	owner = SBP
+	controller = SBP
+	add_core = SBP
 }

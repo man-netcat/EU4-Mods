@@ -1,8 +1,8 @@
 #558 - Patna
 
-owner = BEL
-controller = BEL
-add_core = BEL
+owner = BNG
+controller = BNG
+add_core = BNG
 capital = "Patna"
 culture = bihari
 religion = vajrayana
@@ -24,7 +24,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = BEL
-	controller = BEL
-	add_core = BEL
+	owner = BNG
+	controller = BNG
+	add_core = BNG
 }

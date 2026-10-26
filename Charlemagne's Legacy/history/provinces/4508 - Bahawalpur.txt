@@ -1,8 +1,8 @@
 #4508 - Bahawalpur
 
-owner = MLN
-controller = MLN
-add_core = MLN
+owner = MUL
+controller = MUL
+add_core = MUL
 capital = "Bahawalpur"
 culture = panjabi
 religion = vaishnavism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = MLN
-	controller = MLN
-	add_core = MLN
+	owner = MUL
+	controller = MUL
+	add_core = MUL
 }

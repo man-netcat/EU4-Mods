@@ -9321,7 +9321,7 @@ panjabi_mln_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = MLN
+		tag = MUL
 	}
 }
 

@@ -1,8 +1,8 @@
 # 4471 - Bishnupur
 
-owner = BEL
-controller = BEL
-add_core = BEL
+owner = BNG
+controller = BNG
+add_core = BNG
 capital = "Bishnupur"
 culture = bengali
 religion = buddhism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = BEL
-	controller = BEL
-	add_core = BEL
+	owner = BNG
+	controller = BNG
+	add_core = BNG
 }

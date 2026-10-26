@@ -1,8 +1,8 @@
 #2084 - Konaseema
 
-owner = VEI
-controller = VEI
-add_core = VEI
+owner = YOR
+controller = YOR
+add_core = YOR
 capital = "Rajahmundry"
 culture = telegu
 religion = shaivism
@@ -25,7 +25,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = VEI
-	controller = VEI
-	add_core = VEI
+	owner = YOR
+	controller = YOR
+	add_core = YOR
 }

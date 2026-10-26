@@ -1,8 +1,8 @@
 #2050 - Chanda
 
-owner = RAT
-controller = RAT
-add_core = RAT
+owner = RTT
+controller = RTT
+add_core = RTT
 capital = "Ballarsah"
 culture = gondi
 religion = jainism
@@ -20,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = RAT
-	controller = RAT
-	add_core = RAT
+	owner = RTT
+	controller = RTT
+	add_core = RTT
 }

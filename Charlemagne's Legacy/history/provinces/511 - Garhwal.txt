@@ -1,8 +1,8 @@
 #511 - Garhwal
 
-owner = KUM
-controller = KUM
-add_core = KUM
+owner = KMN
+controller = KMN
+add_core = KMN
 capital = "Devalgarh"
 culture = pahari
 religion = shaivism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = KUM
-	controller = KUM
-	add_core = KUM
+	owner = KMN
+	controller = KMN
+	add_core = KMN
 }

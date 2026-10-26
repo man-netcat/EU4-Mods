@@ -1,8 +1,8 @@
 #2101 - Tirunelveli
 
-owner = PAU
-controller = PAU
-add_core = PAU
+owner = MAD
+controller = MAD
+add_core = MAD
 capital = "Tirunelveli"
 culture = tamil
 religion = shaktism
@@ -21,7 +21,7 @@ discovered_by = chinese
 discovered_by = east_african
 
 867.1.1 = {
-	owner = PAU
-	controller = PAU
-	add_core = PAU
+	owner = MAD
+	controller = MAD
+	add_core = MAD
 }

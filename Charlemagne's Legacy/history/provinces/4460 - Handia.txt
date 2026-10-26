@@ -1,8 +1,8 @@
 #4460 - Handia
 
-owner = DHA
-controller = DHA
-add_core = DHA
+owner = GDW
+controller = GDW
+add_core = GDW
 capital = "Handia"
 culture = malvi
 religion = jainism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = DHA
-	controller = DHA
-	add_core = DHA
+	owner = GDW
+	controller = GDW
+	add_core = GDW
 }

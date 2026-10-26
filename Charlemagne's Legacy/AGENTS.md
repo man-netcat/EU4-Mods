@@ -182,6 +182,10 @@ provinces; the four with no county of that name go to the nearest province's cou
 from their names, the tag religion and culture follow the ruler, province religions
 follow the CK3 county's faith. Afterwards: `culturetitles.py TAGS` for the title
 ladders, `culturalnames.py apply TAGS`, build, validate.
+A state that is a base-game country keeps that country's code: `tools/retag.py NEW VANILLA`
+moves a tag (every table, the loc pair, tag-gated title blocks, VANILLA_REUSE) onto the
+vanilla tag (BEL -> BNG, Bengal); it refuses a tag that has a flag, since flags are
+yours to rename. Delete the old code's generated history/common country files after.
 
 ## Standing conventions
 

@@ -1,8 +1,8 @@
 #2082 - Raipur
 
-owner = RAT
-controller = RAT
-add_core = RAT
+owner = RTT
+controller = RTT
+add_core = RTT
 capital = "Raipur"
 culture = gondi
 religion = vaishnavism
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = RAT
-	controller = RAT
-	add_core = RAT
+	owner = RTT
+	controller = RTT
+	add_core = RTT
 }

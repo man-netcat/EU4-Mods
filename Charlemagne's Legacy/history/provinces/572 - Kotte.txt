@@ -1,8 +1,8 @@
 #572 - Kotte
 
-owner = LAA
-controller = LAA
-add_core = LAA
+owner = CEY
+controller = CEY
+add_core = CEY
 capital = "Kotte"
 culture = sinhala
 religion = buddhism
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = chinese
 
 867.1.1 = {
-	owner = LAA
-	controller = LAA
-	add_core = LAA
+	owner = CEY
+	controller = CEY
+	add_core = CEY
 }
