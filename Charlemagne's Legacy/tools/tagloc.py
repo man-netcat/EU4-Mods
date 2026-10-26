@@ -1,30 +1,26 @@
 #!/usr/bin/env python3
-"""Tag names and adjectives, lifted from CK3 at build time.
+"""Tag names and adjectives, derived from CK3 at build time.
 
-Nothing of CK3's text is stored in the repo: every tag's name and adjective is
-read from CK3's localisation on each build and written to
-localisation/replace/countries_l_english.yml. How a tag is named is one of
+Nothing of CK3's text is stored in the repo and nothing is hand-chosen: the
+name a tag shows is the name CK3 shows for its title at 867.1.1, derived by:
 
-  ck3      the title's name for its 867 holder's culture (culturalnames), else
-           the plain title name; steppe counties and duchies take their people
-           as a suffix ("Quriltay Oghuz"). Scripted `$key$` references resolve.
-  dynasty  the realm is named for its 867 ruler's dynasty ("Samanids" /
-           "Samanid"), the dynasty being CK3's own
-  key      CK3's loc key named in tag_names (WEST_FRANCIA, NEUSTRIA: CK3's names for
-           historical realms that no landed title carries); `adj` its adjective key
-           (default <key>_adj)
-  custom   our own wording (tag_names.name / adj), for realms CK3 has no name
-           for in this sense ("Great Tang", "West Francia"). Own text, no CK3 data.
-  vanilla  the base game's loc stays (nothing written)
+  1. the title's history: the latest dated `name = KEY` / `set_title_name = KEY`
+     at or before the start (k_france is WEST_FRANCIA, d_normandy NEUSTRIA,
+     h_china dynn_title_tang), the name being CK3's loc for KEY and its
+     adjective KEY_adj;
+  2. else the title's cultural name for its 867 holder's culture (landed_titles
+     `name_list_<list> = cn_x`, see culturalnames);
+  3. else the title's own loc (`<title>`, `<title>_adj`).
 
-The mode lives in tags.db (table tag_names; tags without a row are `ck3`).
-Everything is folded to what EU4's font renders (enc.fold_loc).
+The adjective falls back to the name when CK3 gives none; scripted `$key$`
+references are resolved; counties and duchies of the steppe peoples take the
+people as a suffix ("Quriltay Oghuz"); the result is folded to what EU4's
+font renders (enc.fold_loc).
 
     python3 tools/tagloc.py            # compare the written loc with what CK3 gives
     python3 tools/tagloc.py write      # rewrite the tag lines of the loc file
-    python3 tools/tagloc.py seed       # one-off: classify the current loc into modes
+    python3 tools/tagloc.py TAG...     # explain how these tags are named
 """
-import difflib
 import os
 import re
 import sqlite3
@@ -34,14 +30,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 DB = os.path.join(HERE, "tags.db")
-SCHEMA = ("create table if not exists tag_names ("
-          "tag text primary key references tags(tag), mode text not null, name text, adj text)")
-
-
-def _db():
-    con = sqlite3.connect(DB)
-    con.execute(SCHEMA)
-    return con
+_hist = {}
 
 
 def _resolve(s, depth=0):
@@ -59,16 +48,74 @@ def _resolve(s, depth=0):
     return None if "\0" in out else out
 
 
+def _blocks(text, start=0):
+    """[(index of '{' + 1, index of matching '}')] of the top-level blocks at brace depth 0 from `start`."""
+    out, d, i = [], 0, start
+    while i < len(text):
+        c = text[i]
+        if c == "{":
+            if d == 0:
+                b = i + 1
+            d += 1
+        elif c == "}":
+            d -= 1
+            if d == 0:
+                out.append((b, i))
+        i += 1
+    return out
+
+
+def history_name(title):
+    """The loc key a title's history names it by at the start date, or None."""
+    import rites
+
+    if not _hist:
+        import glob
+        from paths import CK3_GAME
+
+        for f in sorted(glob.glob(os.path.join(CK3_GAME, "history", "titles", "*.txt"))):
+            text = open(f, encoding="utf-8-sig", errors="replace").read()
+            text = re.sub(r"#[^\n]*", "", text)
+            for m in re.finditer(r"(?m)^([ckdeh]_[\w\-]+)\s*=\s*\{", text):
+                # the title's block: from its brace to the matching one
+                d, j = 1, m.end()
+                while j < len(text) and d:
+                    d += (text[j] == "{") - (text[j] == "}")
+                    j += 1
+                body = text[m.end():j - 1]
+                best = None
+                for dm in re.finditer(r"(?m)^\t(\d+\.\d+\.\d+)\s*=\s*\{", body):
+                    key = rites._date_key(dm.group(1))
+                    if key > rites.START:
+                        continue
+                    k = dm.end()
+                    d2 = 1
+                    while k < len(body) and d2:
+                        d2 += (body[k] == "{") - (body[k] == "}")
+                        k += 1
+                    blk = body[dm.end():k - 1]
+                    names = re.findall(r'(?m)^\t\t(?:name|set_title_name)\s*=\s*"?([\w\-]+)"?', blk)
+                    names += re.findall(r'(?m)^\t\t\t(?:set_title_name)\s*=\s*"?([\w\-]+)"?', blk)
+                    if names and (best is None or key >= best[0]):
+                        best = (key, names[-1])
+                if best:
+                    _hist[m.group(1)] = best[1]
+    return _hist.get(title)
+
+
 def title_names(title, rank):
-    """(name, adjective) of mode `ck3`, folded; None when CK3 has no name."""
+    """(name, adjective) CK3 shows for the title at the start, folded; None when CK3 has no name."""
     import ck3
     import culturalnames as cn
     from enc import fold_loc
 
-    name, adj = cn.cultural_name(title)
-    if not name:
-        name = ck3.loc(title)
-        adj = ck3.loc(title + "_adj")
+    key = history_name(title)
+    if key and ck3.loc(key):
+        name, adj = ck3.loc(key), ck3.loc(key + "_adj")
+    else:
+        name, adj = cn.cultural_name(title)
+        if not name:
+            name, adj = ck3.loc(title), ck3.loc(title + "_adj")
     name = _resolve(name)
     if not name:
         return None
@@ -80,48 +127,9 @@ def title_names(title, rank):
     return name, adj
 
 
-def dynasty_names(dynasty):
-    from enc import fold_loc
-
-    d = fold_loc(dynasty)
-    return (d + "s" if d.lower().endswith("id") else d), d
-
-
-def dynasty_of(tag, _ctx=[]):
-    import ck3
-
-    if not _ctx:
-        _ctx.append((ck3.load_titles(), ck3.load_chars(), ck3.load_dynasties(), ck3.load_houses()))
-    try:
-        return ck3.resolve(tag, *_ctx[0]).get("dynasty")
-    except Exception:
-        return None
-
-
-def names_of(tag, title, rank, row):
-    """(name, adjective) a tag shows, or None when the base game's loc stays."""
-    mode = row[0] if row else "ck3"
-    if mode == "vanilla":
-        return None
-    if mode == "custom":
-        return row[1], row[2] or row[1]
-    if mode == "key":
-        import ck3
-        from enc import fold_loc
-
-        name = _resolve(ck3.loc(row[1]))
-        adj = _resolve(ck3.loc(row[2] or row[1] + "_adj")) or name
-        return (fold_loc(name), fold_loc(adj)) if name else None
-    if mode == "dynasty":
-        d = dynasty_of(tag, )
-        return dynasty_names(d) if d else None
-    return title_names(title, rank)
-
-
 def wanted():
-    con = _db()
-    rows = {t: (m, n, a) for t, m, n, a in con.execute("select tag, mode, name, adj from tag_names")}
-    return {tag: names_of(tag, title, rank, rows.get(tag))
+    con = sqlite3.connect(DB)
+    return {tag: title_names(title, rank)
             for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq")}
 
 
@@ -169,53 +177,15 @@ def step_tagloc():
     return 0
 
 
-def seed():
-    """Classify the loc as it stands: ck3 where it is CK3's, dynasty where it names the dynasty,
-    else our own wording kept as `custom`. Prints the custom ones for review."""
-    import culturalnames as cn
-    from enc import _slug
-
-    con = _db()
-    loc = open(_loc_path(), encoding="utf-8-sig").read()
-    vanilla = _vanilla_tags()
-    con.execute("delete from tag_names")
-    custom = []
-    for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq").fetchall():
-        have = cn.shown(tag, loc)
-        if have[0] is None:
-            if tag in vanilla:
-                con.execute("insert into tag_names values (?,?,?,?)", (tag, "vanilla", None, None))
-            continue
-        want = title_names(title, rank)
-        if want and want[0] == have[0]:
-            continue
-        d = dynasty_of(tag)
-        if d:
-            dn = dynasty_names(d)
-            if difflib.SequenceMatcher(None, _slug(have[0]).lower(), _slug(dn[0]).lower()).ratio() >= 0.8:
-                con.execute("insert into tag_names values (?,?,?,?)", (tag, "dynasty", None, None))
-                continue
-        con.execute("insert into tag_names values (?,?,?,?)", (tag, "custom", have[0], have[1]))
-        custom.append((tag, title, have, want))
-    con.commit()
-    for c in custom:
-        print("  custom", *c)
-    print(len(custom), "custom")
-
-
-def _vanilla_tags():
-    from paths import EU4_GAME
-
-    p = os.path.join(EU4_GAME, "common", "country_tags", "00_countries.txt")
-    return set(re.findall(r"(?m)^([A-Z][A-Z0-9]{2})\s*=", open(p, encoding="cp1252", errors="replace").read()))
-
-
 if __name__ == "__main__":
-    a = sys.argv[1:2]
+    a = sys.argv[1:]
     if a == ["write"]:
         print("rewritten" if write() else "unchanged")
-    elif a == ["seed"]:
-        seed()
+    elif a:
+        con = sqlite3.connect(DB)
+        for tag in a:
+            title, rank = con.execute("select ck3_title, rank from tags where tag=?", (tag,)).fetchone()
+            print(tag, title, "history key:", history_name(title), "->", title_names(title, rank))
     else:
         d = drift()
         for t, have, want in d:

@@ -437,14 +437,15 @@ install is present if a flag file equals one of the base game's.
   (`...10{magyar_swap}`, value starting in `\n`): a conditional on its own
   template line emits a blank line when empty.
 
-## Tag names are lifted at build time (`tools/tagloc.py`)
+## Tag names are derived from CK3 at build time (`tools/tagloc.py`)
 
-No CK3 text is baked into the repo: the build step "lift tag names from CK3"
-writes every tag's name and adjective into `countries_l_english.yml` from CK3's
-localisation (cultural name for the 867 holder's culture, else the title name;
-steppe people suffix; `$key$` references resolved; folded to EU4's font).
-Never hand-edit those lines. A tag's mode is a row in `tags.db` `tag_names`
-(none = `ck3`): `dynasty` (named for the 867 ruler's dynasty), `custom` (our own
-wording in `name`/`adj`, for "Great Tang", "West Francia" and the like) or
-`vanilla` (base-game loc stays). `python3 tools/tagloc.py` shows stale lines;
-validate fails on any.
+No CK3 text is stored and no name is hand-chosen: the build step "lift tag
+names from CK3" writes every tag's name and adjective into
+`countries_l_english.yml` as CK3 shows the title at 867.1.1 - (1) the latest
+dated `name =` / `set_title_name =` in `history/titles` (WEST_FRANCIA,
+NEUSTRIA, NAME_NANZHAO, dynn_title_tang), else (2) the cultural name for the
+867 holder's culture (landed_titles `name_list_*`), else (3) the title's own
+loc; `$key$` resolved, steppe people suffix, folded to EU4's font. Never
+hand-edit those lines and keep no per-tag overrides (to change a name, fix the
+derivation). `python3 tools/tagloc.py [TAG..]` explains a name; validate fails
+on a stale line.
