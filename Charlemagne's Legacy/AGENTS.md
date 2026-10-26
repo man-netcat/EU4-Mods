@@ -451,3 +451,17 @@ choices are the `STYLE` table (Great Tang, The Papacy, Balhae). Never hand-edit
 the loc lines. `python3 tools/tagloc.py [TAG..]` explains a name; validate
 fails on a stale line. The dynasty rule is inferred (CK3's culture gate for
 dynasty-named realms is engine code): fix the rule, not single tags.
+
+## Regions lifted by name inference
+
+`tools/liftstates.py` has one entry per lifted region (`china`, `maritime`, `westafrica`,
+`eastside`, `seasia`, `india`); each needs its provinces in `provfaiths.PROVINCE_COUNTY`.
+After `apply`: `python3 tools/retag.py suggest SEQ` lists tags whose name is a free
+base-game tag (then `retag.py OLD NEW ...`, which also takes the vanilla tech group and
+removes the old code's history), `python3 tools/synctags.py apply` moves every tag onto its
+ruler's culture and faith, `python3 tools/provfaiths.py apply` fixes province religions,
+`python3 tools/culturetitles.py TAG..` adds the title ladders validate asks for, and a CK3
+faith with no EU4 religion is added through `faiths.FAITH_RELIGION` / `NEW_RELIGIONS` and a
+`rites.RITES` row. Provinces in places CK3 does not cover (Madagascar, Mozambique and the
+Zambezi, South Africa, Kongo, the Great Lakes, Cameroon and Gabon, Yakutia to Kamchatka) stay
+unowned, like the New World and Australia.
