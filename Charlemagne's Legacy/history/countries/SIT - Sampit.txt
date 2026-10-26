@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = bornean
+religion = kaharingan
+capital = 2708
+religious_school = kaharingan_school
+867.1.1 = {
+	monarch = {
+		name = "Mawang"
+		dynasty = "Seruyanyah"
+		birth_date = 824.10.21
+		death_date = 879.10.4
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

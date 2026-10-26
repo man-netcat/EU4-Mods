@@ -480,6 +480,46 @@ ari_rite_scholar_modifier = {
 	global_missionary_strength = 0.01
 }
 
+bilikuism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_forcelimit_modifier = 0.05
+}
+
+kaharingan_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_manpower_modifier = 0.05
+}
+
+tolotang_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	prestige = 0.5
+}
+
+aluk_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	cavalry_power = 0.05
+}
+
+dayawism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	naval_morale = 0.05
+}
+
 melieism_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes

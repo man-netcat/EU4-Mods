@@ -1,6 +1,25 @@
 #2686 - Bintan
 
+owner = RIA
+controller = RIA
+add_core = RIA
+capital = "Tanjungpinaung"
+culture = malayan
+religion = mahayana
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = naval_supplies
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = RIA
+	controller = RIA
+	add_core = RIA
+}

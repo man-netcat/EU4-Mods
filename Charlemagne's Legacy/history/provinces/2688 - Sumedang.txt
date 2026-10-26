@@ -1,6 +1,23 @@
-#2688
+owner = GAH
+controller = GAH
+add_core = GAH
+capital = "Sumedang"
+culture = sundanese
+religion = shaivism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = spices
+base_manpower = 2
+is_city = yes
 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = GAH
+	controller = GAH
+	add_core = GAH
+}

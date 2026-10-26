@@ -1,6 +1,33 @@
-#4800
+owner = BNJ
+controller = BNJ
+add_core = BNJ
+capital = "Paser"
+culture = bornean
+culture = bornean
+religion = kaharingan
+religion = kaharingan
+hre = no
+hre = no
+base_tax = 1
+base_tax = 3
+base_production = 1
+base_production = 3
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 2
+is_city = yes
+native_size = 40
+native_ferocity = 8
+native_hostileness = 5
 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = BNJ
+	controller = BNJ
+	add_core = BNJ
+}

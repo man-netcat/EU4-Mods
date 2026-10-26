@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = sulawesi
+religion = tolotang
+capital = 2716
+religious_school = tolotang_school
+867.1.1 = {
+	monarch = {
+		name = "Tungga"
+		dynasty = "Tiworo"
+		birth_date = 825.1.1
+		death_date = 877.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

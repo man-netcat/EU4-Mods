@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 4
+technology_group = chinese
+primary_culture = javanese
+religion = mahayana
+capital = 622
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Balaputradewa"
+		dynasty = "Sailendra"
+		birth_date = 806.1.1
+		death_date = 868.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

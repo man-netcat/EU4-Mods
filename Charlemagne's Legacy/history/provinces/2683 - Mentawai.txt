@@ -1,6 +1,34 @@
+owner = MET
+controller = MET
+add_core = MET
+capital = "Mentawai"
+culture = sumatran
 #2683 - Mentawai
+culture = sumatran
+religion = bilikuism
+religion = bilikuism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 5
+native_ferocity = 2
+native_hostileness = 2
 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = MET
+	controller = MET
+	add_core = MET
+}

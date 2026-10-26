@@ -1,6 +1,25 @@
 #638 - Kutai
 
+owner = KUT
+controller = KUT
+add_core = KUT
+capital = "Kutai"
+culture = bornean
+religion = shaivism
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = fish
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = KUT
+	controller = KUT
+	add_core = KUT
+}

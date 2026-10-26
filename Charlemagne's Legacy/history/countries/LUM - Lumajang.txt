@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = javanese
+religion = shaivism
+capital = 627
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Jebang"
+		dynasty = "Bukitpasir"
+		birth_date = 839.5.15
+		death_date = 886.2.19
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

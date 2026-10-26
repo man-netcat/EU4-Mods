@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = filipino
+religion = vajrayana
+capital = 4355
+religious_school = vajrayana_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Madalum"
+		dynasty = "Kalag"
+		birth_date = 833.6.6
+		death_date = 879.4.12
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

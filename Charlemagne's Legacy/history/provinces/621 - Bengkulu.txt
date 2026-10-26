@@ -1,6 +1,37 @@
+owner = BNU
+controller = BNU
+add_core = BNU
+capital = "Bengkulu"
+culture = sumatran
+culture = sumatran
+religion = hantuism
+religion = hantuism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 3
+base_production = 1
+base_production = 3
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 2
+is_city = yes
 #621 - Bengkulu
+latent_trade_goods = {
+	coal
+}
+native_size = 20
+native_ferocity = 7
+native_hostileness = 5
 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = BNU
+	controller = BNU
+	add_core = BNU
+}

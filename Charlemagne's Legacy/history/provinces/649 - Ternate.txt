@@ -1,3 +1,22 @@
 #649 - Ternate
 
+owner = TER
+controller = TER
+add_core = TER
+capital = "Ternate"
+culture = moluccan
+religion = tolotang
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = cloves
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = TER
+	controller = TER
+	add_core = TER
+}

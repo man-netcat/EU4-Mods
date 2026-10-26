@@ -1,2 +1,29 @@
+owner = SRN
+controller = SRN
+add_core = SRN
+capital = "Lae"
+culture = papuan
 #2720 - Lae
+culture = papuan
+religion = tolotang
+religion = tolotang
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 40
+native_ferocity = 6
+native_hostileness = 4
 
+867.1.1 = {
+	owner = SRN
+	controller = SRN
+	add_core = SRN
+}

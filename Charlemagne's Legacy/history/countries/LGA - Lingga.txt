@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = malayan
+religion = mahayana
+capital = 659
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Tombiruo"
+		dynasty = "Binta"
+		birth_date = 847.1.12
+		death_date = 901.11.13
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

@@ -1,6 +1,25 @@
 #593 - Nakhon Si Thammarat
 
+owner = TMA
+controller = TMA
+add_core = TMA
+capital = "Nakhon Si Thammarat"
+culture = central_thai
+religion = shaivism
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = tropical_wood
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = TMA
+	controller = TMA
+	add_core = TMA
+}

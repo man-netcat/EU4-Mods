@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = chinese
+primary_culture = javanese
+religion = vaishnavism
+capital = 626
+religious_school = vaishnavism_school
+867.1.1 = {
+	monarch = {
+		name = "Lokapala"
+		dynasty = "Sanjaya"
+		birth_date = 827.1.1
+		death_date = 885.2.17
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

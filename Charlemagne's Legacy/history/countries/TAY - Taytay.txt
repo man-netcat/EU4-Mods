@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = filipino
+religion = dayawism
+capital = 4356
+religious_school = dayawism_school
+867.1.1 = {
+	monarch = {
+		name = "Malambing"
+		dynasty = "Tulopulo"
+		birth_date = 826.4.18
+		death_date = 879.1.3
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

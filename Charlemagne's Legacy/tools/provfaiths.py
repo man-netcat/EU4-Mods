@@ -281,6 +281,64 @@ PROVINCE_COUNTY.update({
     4223: "c_wuyuan", 2747: "c_langshan", 4670: "c_keyimen",
 })
 
+# Maritime South-East Asia (Malaya, Indonesia, the Philippines and the Moluccas), by name where
+# CK3 has the place (Johor, Kedah, Brunei, Banjar, Bali, Gorontalo, Ternate, Tondo ...) and else by
+# the county of the same coast or river basin: EU4 splits the islands into more provinces than
+# CK3 has counties, so several provinces share a county.
+PROVINCE_COUNTY.update({
+    # Sumatra
+    617: "c_SUM_lambri", 2673: "c_SUM_perlak", 2674: "c_SUM_perlak", 2685: "c_SUM_perlak",
+    4809: "c_SUM_panai", 618: "c_SUM_panai", 620: "c_SUM_pekanbaru", 2675: "c_SUM_rokan",
+    4810: "c_SUM_panai", 621: "c_SUM_bengkulu", 622: "c_SUM_palembang", 623: "c_SUM_lampung",
+    2678: "c_SUM_bangka-belitung", 2679: "c_SUM_bangka-belitung", 659: "c_SUM_lingga",
+    2676: "c_SUM_indragiri", 2677: "c_SUM_jambi", 4816: "c_SUM_indragiri", 619: "c_SUM_panai",
+    2682: "c_SUM_minangkabau", 2684: "c_nias", 4811: "c_SUM_barus", 2680: "c_SUM_bengkulu",
+    2681: "c_SUM_minangkabau", 2683: "c_mentawai", 4817: "c_SUM_minangkabau",
+    4818: "c_SUM_riak_nan_berbedur",
+    # the Malay peninsula and the Isthmus of Kra
+    593: "c_THAI_tambralinga", 2390: "c_THAI_tambralinga", 2391: "c_THAI_takua_pa",
+    598: "c_MAL_pahang", 599: "c_MAL_kelantan", 2393: "c_MAL_gelanggi", 4814: "c_MAL_semantan",
+    597: "c_MAL_johor", 2686: "c_riau", 4815: "c_MAL_johor", 594: "c_MAL_patani",
+    2394: "c_MAL_kedah", 4812: "c_MAL_gangganegara", 4813: "c_MAL_kedah",
+    595: "c_MAL_gangganegara", 596: "c_MAL_johor", 2392: "c_MAL_gangganegara",
+    591: "c_THAI_tenasserim", 2404: "c_THAI_tenasserim", 592: "c_THAI_phetchaburi",
+    2387: "c_THAI_phetchaburi", 4835: "c_THAI_phetchaburi",
+    574: "c_andamans", 1248: "c_maldives", 1101: "c_maldives", 1998: "c_JAV_sunda", 1999: "c_JAV_sunda",
+    # Borneo
+    638: "c_BOR_martapura", 2710: "c_BOR_berau", 2711: "c_BOR_kutai_utara", 2712: "c_BOR_martapura",
+    4799: "c_BOR_kutai_utara", 636: "c_BOR_brunei", 2704: "c_BOR_rajang", 2705: "c_BOR_iban",
+    4805: "c_BOR_rajang", 4806: "c_BOR_iban", 640: "c_BOR_sukadana", 2706: "c_BOR_sukadana",
+    4802: "c_BOR_sukadana", 4803: "c_BOR_sintang", 4804: "c_BOR_santubong", 639: "c_BOR_banjar",
+    2707: "c_BOR_taiao", 2708: "c_BOR_sampit", 4800: "c_BOR_banjar", 4801: "c_BOR_banjar",
+    637: "c_BOR_kudat", 2703: "c_BOR_lahad_datu", 2709: "c_BOR_berau",
+    # Java and the Lesser Sundas
+    627: "c_JAV_lumajang", 2691: "c_JAV_janggala", 4794: "c_JAV_janggala", 626: "c_JAV_mataram",
+    2689: "c_JAV_kalingga", 2690: "c_JAV_mataram", 4792: "c_JAV_kalingga", 625: "c_JAV_galuh",
+    2688: "c_JAV_cimanuk", 4791: "c_JAV_cimanuk", 631: "c_IDO_bali", 632: "c_IDO_lombok_and_sumbawa",
+    634: "c_IDO_humba", 2693: "c_IDO_lombok_and_sumbawa", 628: "c_JAV_janggala",
+    629: "c_JAV_kalingga", 2692: "c_JAV_madura", 4793: "c_JAV_mataram", 624: "c_JAV_sunda",
+    630: "c_JAV_sunda", 2687: "c_JAV_sunda", 4790: "c_JAV_sunda",
+    # Sulawesi and the Moluccas
+    645: "c_SuMa_buru-sula", 646: "c_SuMa_seram", 647: "c_SuMa_seram", 2717: "c_SuMa_buru-sula",
+    643: "c_SuMa_mori", 644: "c_SuMa_wenang", 2713: "c_SuMa_gorontalo", 2714: "c_SuMa_banawa",
+    4845: "c_SuMa_sampaga", 642: "c_SuMa_konawe", 2715: "c_SuMa_luwu", 2716: "c_SuMa_butun",
+    4796: "c_SuMa_moronene", 641: "c_SuMa_siang", 4795: "c_SuMa_ajatappareng",
+    4797: "c_SuMa_ajatappareng", 4798: "c_SuMa_ajatappareng", 648: "c_SuMa_bacan",
+    649: "c_SuMa_ternate", 650: "c_SuMa_tidore",
+    # the Philippines
+    657: "c_PHI_samtoy", 658: "c_PHI_cagayan_valley", 2698: "c_PHI_pangasinan", 4348: "c_PHI_igorot",
+    656: "c_PHI_tondo", 2697: "c_PHI_tondo", 2699: "c_PHI_ibalong", 4349: "c_PHI_kalilayan",
+    4350: "c_PHI_ma-i", 2701: "c_PHI_mandaya", 2702: "c_PHI_butuan", 4355: "c_PHI_calagan",
+    652: "c_PHI_maguindanao", 653: "c_PHI_lanao", 4354: "c_PHI_zamboanga", 654: "c_PHI_samar",
+    2700: "c_PHI_panay", 4351: "c_PHI_buglas", 4352: "c_PHI_bool_and_cebu", 4353: "c_PHI_tandaya",
+    651: "c_PHI_sulu", 655: "c_PHI_south_palawan", 4356: "c_PHI_taytay",
+    # New Guinea and the eastern islands
+    1237: "c_papua_selatan", 2719: "c_sran", 2720: "c_sran", 2721: "c_papua_selatan",
+    2722: "c_papua_selatan", 1245: "c_kepala_burung", 2718: "c_kepala_burung",
+    2723: "c_papua_selatan", 2724: "c_papua_selatan", 633: "c_IDO_galiyao",
+    635: "c_IDO_sonba_i", 2695: "c_IDO_wehale", 2696: "c_IDO_barat_daya", 2725: "c_aru",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.

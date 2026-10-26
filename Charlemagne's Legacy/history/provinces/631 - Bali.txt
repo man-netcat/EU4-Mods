@@ -1,6 +1,25 @@
 #631 - Bali
 
+owner = BLI
+controller = BLI
+add_core = BLI
+capital = "Gianyar"
+culture = nusa_tenggara
+religion = shaivism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = cloth
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = BLI
+	controller = BLI
+	add_core = BLI
+}

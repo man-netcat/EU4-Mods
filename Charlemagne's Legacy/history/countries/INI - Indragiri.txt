@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = malayan
+religion = mahayana
+capital = 2676
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Harta"
+		dynasty = "Indrair"
+		birth_date = 831.12.5
+		death_date = 874.6.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

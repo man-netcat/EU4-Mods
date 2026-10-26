@@ -1,3 +1,24 @@
 #656 - Manila
 
+owner = TDO
+controller = TDO
+add_core = TDO
+capital = "Manila"
+culture = filipino
+religion = shaivism #Mixed with Islam
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = chinaware #Imported via Tondo, exported to the Archipelago from Manila.
+base_manpower = 2
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = TDO
+	controller = TDO
+	add_core = TDO
+}

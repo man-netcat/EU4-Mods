@@ -1,3 +1,22 @@
 #4351 - Buglas
 
+owner = BUS
+controller = BUS
+add_core = BUS
+capital = "Silay"
+culture = filipino
+religion = dayawism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = sugar
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = BUS
+	controller = BUS
+	add_core = BUS
+}

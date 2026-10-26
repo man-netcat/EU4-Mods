@@ -1,6 +1,27 @@
 #596 - Malacca
 
+owner = GEI
+controller = GEI
+add_core = GEI
+capital = "Malacca"
+culture = malayan
+religion = mahayana
+hre = no
+base_tax = 7
+base_production = 7
+trade_goods = spices
+base_manpower = 3
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = GEI
+	controller = GEI
+	add_core = GEI
+}

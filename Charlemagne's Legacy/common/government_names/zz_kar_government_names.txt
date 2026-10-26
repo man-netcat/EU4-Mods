@@ -9653,6 +9653,138 @@ zhongyuan_tribal_titles = {
 }
 
 
+yi_meritocratic_titles = {
+# CK3 ladders for DLA(r3) - meritocratic CK3 government (monarchy); yi_titles is gated on another government
+	rank = {
+		1 = YI_MERITOCRATIC_COUNTY  # county_administrative
+		2 = YI_MERITOCRATIC_DUCHY  # duchy_celestial_chinese_independent
+		3 = YI_MERITOCRATIC_KINGDOM  # kingdom_celestial_chinese_protectorate_vassal
+		4 = YI_MERITOCRATIC_EMPIRE  # empire_celestial_chinese_protectorate_vassal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = YI_MERITOCRATIC_COUNT_MALE  # count_administrative_male
+		2 = YI_MERITOCRATIC_DUKE_MALE  # duke_male_chinese_independent
+		3 = YI_MERITOCRATIC_KING_MALE  # king_celestial_male_chinese_civilian_governor
+		4 = YI_MERITOCRATIC_EMPEROR_MALE  # emperor_male_chinese_independent
+		5 = YI_MERITOCRATIC_HEGEMON_MALE  # hegemon_male_chinese
+	}
+
+	ruler_female = {
+		1 = YI_MERITOCRATIC_COUNT_FEMALE  # count_administrative_female
+		2 = YI_MERITOCRATIC_DUKE_FEMALE  # duke_female_chinese_independent
+		3 = YI_MERITOCRATIC_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = YI_MERITOCRATIC_EMPEROR_FEMALE  # emperor_female_chinese_independent
+		5 = YI_MERITOCRATIC_HEGEMON_FEMALE  # hegemon_female_chinese
+	}
+
+	consort_male = {
+		1 = YI_MERITOCRATIC_COUNT_MALE  # consort uses the ruler form
+		2 = YI_MERITOCRATIC_DUKE_MALE  # consort uses the ruler form
+		3 = YI_MERITOCRATIC_KING_MALE  # consort uses the ruler form
+		4 = YI_MERITOCRATIC_EMPEROR_MALE  # consort uses the ruler form
+		5 = YI_MERITOCRATIC_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = YI_MERITOCRATIC_COUNT_FEMALE  # count_administrative_female
+		2 = YI_MERITOCRATIC_DUKE_FEMALE  # duke_female_chinese_independent
+		3 = YI_MERITOCRATIC_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = YI_MERITOCRATIC_EMPEROR_FEMALE  # emperor_female_chinese_independent
+		5 = YI_MERITOCRATIC_HEGEMON_FEMALE  # hegemon_female_chinese
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_meritocratic_government
+		primary_culture = yi
+	}
+}
+
+
+mongol_tribal_titles = {
+# CK3 ladders for WUL(r2) - tribal CK3 government (tribal); mongol_titles is gated on another government
+	rank = {
+		1 = MONGOL_TRIBAL_COUNTY  # county_tribal
+		2 = MONGOL_TRIBAL_DUCHY  # duchy_tribal
+		3 = MONGOL_TRIBAL_KINGDOM  # kingdom_feudal_altaic_group
+		4 = MONGOL_TRIBAL_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = MONGOL_TRIBAL_COUNT_MALE  # count_tribal_male
+		2 = MONGOL_TRIBAL_DUKE_MALE  # duke_tribal_male
+		3 = MONGOL_TRIBAL_KING_MALE  # king_feudal_male_altaic_group
+		4 = MONGOL_TRIBAL_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = MONGOL_TRIBAL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = MONGOL_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = MONGOL_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = MONGOL_TRIBAL_KING_FEMALE  # king_feudal_female_altaic_group
+		4 = MONGOL_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = MONGOL_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = MONGOL_TRIBAL_COUNT_MALE  # consort uses the ruler form
+		2 = MONGOL_TRIBAL_DUKE_MALE  # consort uses the ruler form
+		3 = MONGOL_TRIBAL_KING_MALE  # consort uses the ruler form
+		4 = MONGOL_TRIBAL_EMPEROR_MALE  # consort uses the ruler form
+		5 = MONGOL_TRIBAL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = MONGOL_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = MONGOL_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = MONGOL_TRIBAL_KING_FEMALE  # king_feudal_female_altaic_group
+		4 = MONGOL_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = MONGOL_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		has_country_flag = kar_gov_tribal_government
+		primary_culture = mongol
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

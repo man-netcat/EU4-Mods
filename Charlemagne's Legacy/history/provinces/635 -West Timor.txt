@@ -1,2 +1,29 @@
+owner = SOI
+controller = SOI
+add_core = SOI
+capital = "Lifau"
+culture = nusa_tenggara
 #635 - West Timor
+culture = nusa_tenggara
+religion = hantuism
+religion = hantuism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 3
+base_production = 1
+base_production = 3
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 3
+is_city = yes
+native_size = 10
+native_ferocity = 1
+native_hostileness = 2
 
+867.1.1 = {
+	owner = SOI
+	controller = SOI
+	add_core = SOI
+}

@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = aboriginal_tech
+primary_culture = papuan
+religion = tolotang
+capital = 1245
+religious_school = tolotang_school
+867.1.1 = {
+	monarch = {
+		name = "Anugrah"
+		birth_date = 833.8.19
+		death_date = 883.1.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

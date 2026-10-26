@@ -1,2 +1,29 @@
+owner = SRN
+controller = SRN
+add_core = SRN
+capital = "Madang"
+culture = papuan
 #2719 - Madang
+culture = papuan
+religion = tolotang
+religion = tolotang
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 40
+native_ferocity = 5
+native_hostileness = 6
 
+867.1.1 = {
+	owner = SRN
+	controller = SRN
+	add_core = SRN
+}

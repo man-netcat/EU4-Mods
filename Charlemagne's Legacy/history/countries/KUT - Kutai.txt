@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = chinese
+primary_culture = bornean
+religion = shaivism
+capital = 638
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Indra Warmandewa"
+		dynasty = "Segara"
+		birth_date = 826.1.1
+		death_date = 879.1.1
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

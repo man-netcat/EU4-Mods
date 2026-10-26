@@ -1,6 +1,25 @@
 #595 - Perak
 
+owner = GAN
+controller = GAN
+add_core = GAN
+capital = "Perak"
+culture = malayan
+religion = shaivism
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = copper
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = GAN
+	controller = GAN
+	add_core = GAN
+}

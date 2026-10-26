@@ -106,8 +106,8 @@ CK3_TO_EU4 = {
     "thai": "central_thai", "burmese": "burmese", "mon": "mon",
     "shan": "shan", "kachin": "kachin", "chin": "chin", "karen": "karen",
     "arakanese": "arakanese", "pyu": "burmese",
-    "malay": "malay", "senoi": "malay", "nakkavaram": "malay",
-    "javanese": "javanese", "sundanese": "javanese",
+    "malay": "malayan", "senoi": "malayan", "nakkavaram": "malayan",
+    "javanese": "javanese", "sundanese": "sundanese",
     "tagalog": "filipino", "cham": "cham",
     "papuan": "papuan", "melanesian": "melanesian",
     "polynesian": "polynesian", "aboriginal": "aboriginal",
@@ -160,6 +160,12 @@ CK3_TO_EU4 = {
     "muroma": "bulgarian", "nivkh": "nivkh", "shiwei": "mongol",
     "soninke": "soninke", "vepsian": "karelian", "welayta": "oromo",
     "yemeni": "yemeni_culture",
+    # Maritime South-East Asia, the Tai and Hmong-Mien peoples, the Onggud: the base game's
+    # nearest culture (EU4 has one culture for the Dayaks, one for the Moluccans, ...)
+    "dayak": "bornean", "bugis": "sulawesi", "toraja": "sulawesi", "maluku": "moluccan",
+    "bisayan": "filipino", "iloko": "filipino", "tai": "northern_thai", "khmu": "lao",
+    "bouxcuengh": "zhuang", "hmong": "miao", "yi": "yi", "lhomon": "tibetan",
+    "yughur": "uyghur", "ongud": "mongol",
 }
 
 LIFT_SPECS = {

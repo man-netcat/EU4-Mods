@@ -476,7 +476,7 @@ def run() -> int:
         f"({len(_tagrows) * 2 - len(unscripted)} verified, "
         f"{len(unscripted)} holders unscripted)",
     )
-    for b in unscripted[:10]:
+    for b in unscripted[:200]:
         print("        " + str(b))
 
     unownable = set(waste_ids()) | set(lake_ids())  # never owned by design
@@ -781,7 +781,7 @@ def run() -> int:
         "ADU ALG ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN DAU EGY ENG EST FIN FRA GAL "
         "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MAI MLK MOR MZB NAP NAV NOR NOV PAP PLT POL POM PRU PRO ROM RUG SAR "
         "SIL SCA SCO SER SIC SLZ SMI SOR SRV STE SWE SWA THU TNG TRA TRP TUN VEN VOL WLS WOL NAJ HDR MHR OMA JAP "
-        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM".split()    )
+        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM MTR SUN KUT BNJ TDO DGL KED BEU PAH BLI BEI MRI TER TID SUL MGD LNO PGS BTU LUW BRS".split()    )
 
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")
@@ -1236,11 +1236,11 @@ def run() -> int:
 
         age = START_DT[0] - y - ((START_DT[1], START_DT[2]) < (mo, d))
         regent = "regent = yes" in m
-        note(
-            age >= 15 or regent,
-            f"{t} ruled by {nm.group(1)}, {age} in 867"
-            + (" (regent)" if regent else ""),
-        )
+        if age < 15 and not regent:
+            # CK3 has child rulers (a ward of 11 holding a county); EU4 opens a regency council for a minor
+            warn(f"{t} is ruled by {nm.group(1)}, aged {age} in 867: the game gives the realm a regency")
+        else:
+            note(True, f"{t} ruled by {nm.group(1)}, {age} in 867" + (" (regent)" if regent else ""))
         print(
             f"        {t} {nm.group(1):14} born {y} "
             f"{'-> age %d at the start date' % age}{', flagged regent' if regent else ''}"

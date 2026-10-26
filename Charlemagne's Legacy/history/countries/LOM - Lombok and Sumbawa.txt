@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = javanese
+religion = vaishnavism
+capital = 632
+religious_school = vaishnavism_school
+867.1.1 = {
+	monarch = {
+		name = "Welengsa"
+		dynasty = "Mbojo"
+		birth_date = 834.11.3
+		death_date = 879.5.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

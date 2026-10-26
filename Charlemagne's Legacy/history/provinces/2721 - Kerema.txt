@@ -1,2 +1,29 @@
+owner = PPN
+controller = PPN
+add_core = PPN
+capital = "Kerema"
+culture = papuan
 #2721 - Kerema
+culture = papuan
+religion = tolotang
+religion = tolotang
+hre = no
+hre = no
+base_tax = 1
+base_tax = 1
+base_production = 1
+base_production = 1
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 60
+native_ferocity = 4
+native_hostileness = 8
 
+867.1.1 = {
+	owner = PPN
+	controller = PPN
+	add_core = PPN
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = filipino
+religion = dayawism
+capital = 652
+religious_school = dayawism_school
+867.1.1 = {
+	monarch = {
+		name = "Parang"
+		dynasty = "Katutua"
+		birth_date = 839.12.11
+		death_date = 896.10.18
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

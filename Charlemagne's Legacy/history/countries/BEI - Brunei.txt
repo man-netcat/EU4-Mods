@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = bornean
+religion = shaivism
+capital = 636
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Indradewa"
+		dynasty = "Bolei"
+		birth_date = 825.3.28
+		death_date = 879.7.11
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

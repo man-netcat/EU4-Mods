@@ -1,6 +1,25 @@
 #2704 - Sibu
 
+owner = RAJ
+controller = RAJ
+add_core = RAJ
+capital = "Sibu"
+culture = bornean
+religion = kaharingan
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = spices
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = RAJ
+	controller = RAJ
+	add_core = RAJ
+}

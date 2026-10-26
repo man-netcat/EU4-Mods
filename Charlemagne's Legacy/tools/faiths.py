@@ -81,6 +81,11 @@ FAITH_RELIGION = {
     "sedism": "sedism",
     "melieism": "melieism",
     "rrmeaism": "rrmeaism",
+    "bilikuism": "bilikuism",
+    "kaharingan": "kaharingan",
+    "tolotang": "tolotang",
+    "aluk": "aluk",
+    "dayawism": "dayawism",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -139,6 +144,16 @@ NEW_RELIGIONS = {
                  "The ancestral faith of the Qiangic and Tangut peoples of the north-western marches, whose shamans read the stars and keep the rites of their forefathers."),
     "rrmeaism": ("animism", "pagan", "melieism",
                  "The mountain faith of the Qiang of the upper Min valley, a religion of the sacred peaks and the white stones kept by their priests."),
+    "bilikuism": ("animism", "pagan", "melieism",
+               "The faith of the Nias and Mentawai islanders and the peoples of the Andamans, who keep the ancestral megalithic cults of their villages."),
+    "kaharingan": ("animism", "pagan", "bilikuism",
+               "The faith of the Dayak peoples of Borneo, who honour Ranying and the spirits of river and forest, and keep the secondary funeral of the tiwah."),
+    "tolotang": ("animism", "pagan", "kaharingan",
+               "The faith of the Bugis and Makassar peoples and the peoples of eastern Indonesia, who revere Dewata Seuwae and the bissu priests."),
+    "aluk": ("animism", "pagan", "tolotang",
+               "The Aluk To Dolo of the Toraja highlands, whose ancestral cult, funeral feasts and tongkonan houses bind the living to the dead."),
+    "dayawism": ("animism", "pagan", "aluk",
+               "The faith of the peoples of the Philippines, who honour the anito, the spirits of ancestors and nature, through the babaylan and the datu."),
 }
 
 

@@ -1,3 +1,24 @@
 #2700 - Panay
 
+owner = PAY
+controller = PAY
+add_core = PAY
+capital = "Panay"
+culture = filipino
+religion = dayawism
+hre = no
+base_tax = 3
+base_production = 4
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+center_of_trade = 1
+extra_cost = 8
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = PAY
+	controller = PAY
+	add_core = PAY
+}

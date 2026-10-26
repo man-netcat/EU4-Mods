@@ -26,8 +26,14 @@ sys.path.insert(0, HERE)
 REGIONS = {
     "seasia": ["burma_region", "indo_china_region"],
     "china": ["@TNG", 701, 702, 709, 2183, 2747, 4223, 4670],
+    "maritime": ["malaya_region", "indonesia_region", "moluccas_region"],
     "india": ["hindusthan_region", "bengal_region", "west_india_region", "deccan_region", "coromandel_region"],
 }
+
+
+# technology group of the tags a region creates (vanilla gives the Indonesian realms `chinese`)
+TECH = {"china": "chinese", "maritime": "chinese"}
+TECH_OF_PID = {pid: "aboriginal_tech" for pid in (1237, 2719, 2720, 2721, 2722, 1245, 2718, 2723, 2724)}
 
 
 def region_pids(names):
@@ -82,6 +88,16 @@ def free_code(name, taken):
     for c in cands:
         if len(c) == 3 and c not in taken:
             return c
+    import itertools
+
+    # every in-order triple of the name's letters, then its first letter with any two others
+    for c in ("".join(t) for t in itertools.combinations(letters, 3)):
+        if c not in taken:
+            return c
+    alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    for c in (letters[:1] + a + b for a in alpha for b in alpha):
+        if len(letters) and c not in taken:
+            return c
     raise SystemExit(f"no free tag code for {name}")
 
 
@@ -127,11 +143,17 @@ def apply(pids, region=None):
             txt = open(src, encoding="cp1252", errors="replace").read()
             cul = re.search(r"^culture\s*=\s*(\w+)", txt, re.M)
             rel = pf.expected(pid)[0]
-            if not cul or not rel:
-                raise SystemExit(f"province {pid} {nm}: no vanilla culture or no CK3 religion")
-            if s.get(Culture, cul.group(1)) is None:
-                s.add(Culture(name=cul.group(1)))
-            s.add(Province(pid=pid, name=nm, culture=cul.group(1), religion=rel, fort=False))
+            culture = cul.group(1) if cul else None
+            if not culture:  # unowned land in vanilla: the culture of the county's 867 holder
+                import culturelift as cl
+
+                _h, cc = cl.holder_culture(pf.PROVINCE_COUNTY[pid])
+                culture = cl.ensure_culture(cc, s) if cc else None
+            if not culture or not rel:
+                raise SystemExit(f"province {pid} {nm}: no culture or no CK3 religion")
+            if s.get(Culture, culture) is None:
+                s.add(Culture(name=culture))
+            s.add(Province(pid=pid, name=nm, culture=culture, religion=rel, fort=False))
     s.commit()
     s.close()
     for pl in sorted(plans, key=lambda p: -len(p["provs"])):
@@ -141,7 +163,7 @@ def apply(pids, region=None):
             continue
         code = free_code(pl["name"], taken)
         taken.add(code)
-        tech = "chinese" if region == "china" else "indian"
+        tech = TECH_OF_PID.get(pl["capital"]) or TECH.get(region, "indian")
         args = [code, pl["title"], *map(str, pl["provs"]), "--tech", tech, "--gov", pl["gov"],
                 "--capital", str(pl["capital"]), "--take"]
         # a country file named like a vanilla one would merge with it: name it apart

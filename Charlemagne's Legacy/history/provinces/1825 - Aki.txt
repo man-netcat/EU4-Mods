@@ -2,6 +2,7 @@
 
 owner = AKI
 controller = AKI
+add_core = MRI
 add_core = AKI
 capital = "Tomo"
 culture = japanese

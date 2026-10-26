@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = moluccan
+religion = tolotang
+capital = 646
+religious_school = tolotang_school
+867.1.1 = {
+	monarch = {
+		name = "Sating"
+		dynasty = "Pala"
+		birth_date = 833.1.1
+		death_date = 889.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

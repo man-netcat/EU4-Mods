@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = filipino
+religion = dayawism
+capital = 2700
+religious_school = dayawism_school
+867.1.1 = {
+	monarch = {
+		name = "Lapu"
+		dynasty = "Madyaas"
+		birth_date = 842.3.17
+		death_date = 890.6.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

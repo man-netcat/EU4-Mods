@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = malayan
+religion = vajrayana
+capital = 2675
+religious_school = vajrayana_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Embun"
+		dynasty = "Rokanoran"
+		birth_date = 814.2.20
+		death_date = 871.1.17
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

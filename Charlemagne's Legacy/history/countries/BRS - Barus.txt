@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = acehnese
+religion = vajrayana
+capital = 4811
+religious_school = vajrayana_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Purnama"
+		dynasty = "Barusai"
+		birth_date = 841.7.16
+		death_date = 892.4.22
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

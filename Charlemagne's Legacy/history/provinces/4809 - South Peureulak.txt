@@ -1,6 +1,23 @@
-#4809
+owner = PAI
+controller = PAI
+add_core = PAI
+capital = "Langkat"
+culture = acehnese
+religion = vajrayana
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = spices
+base_manpower = 3
+is_city = yes
 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = PAI
+	controller = PAI
+	add_core = PAI
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = filipino
+religion = vajrayana
+capital = 4350
+religious_school = vajrayana_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Tanashiri"
+		dynasty = "Mait"
+		birth_date = 835.9.10
+		death_date = 889.1.23
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

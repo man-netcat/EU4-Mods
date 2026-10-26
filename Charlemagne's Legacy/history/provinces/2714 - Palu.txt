@@ -1,6 +1,36 @@
+owner = BNA
+controller = BNA
+add_core = BNA
+capital = "Palu"
+culture = sulawesi
 #2714 - Palu
+culture = sulawesi
+religion = kaharingan
+religion = kaharingan
+hre = no
+hre = no
+base_tax = 1
+base_tax = 3
+base_production = 1
+base_production = 3
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 2
+is_city = yes
+center_of_trade = 1
+native_size = 60
+native_ferocity = 2
+native_hostileness = 9
+extra_cost = 8
 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = BNA
+	controller = BNA
+	add_core = BNA
+}

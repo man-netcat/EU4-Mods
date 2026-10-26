@@ -1,6 +1,27 @@
 #641 - Makassar
 
+owner = SNG
+controller = SNG
+add_core = SNG
+capital = "Makassar"
+culture = sulawesi
+religion = tolotang
+hre = no
+base_tax = 5
+base_production = 6
+trade_goods = spices
+base_manpower = 3
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = SNG
+	controller = SNG
+	add_core = SNG
+}

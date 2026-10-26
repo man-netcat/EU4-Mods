@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = bornean
+religion = mahayana
+capital = 4804
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Cendera"
+		dynasty = "Sarawak"
+		birth_date = 836.8.24
+		death_date = 889.1.22
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

@@ -1,3 +1,22 @@
 #4349 - Laguna
 
+owner = KLI
+controller = KLI
+add_core = KLI
+capital = "Laguna"
+culture = filipino
+religion = shaivism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = KLI
+	controller = KLI
+	add_core = KLI
+}

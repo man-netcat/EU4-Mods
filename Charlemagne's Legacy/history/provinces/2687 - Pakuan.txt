@@ -1,6 +1,25 @@
 #2687 - Pakuan
 
+owner = SUN
+controller = SUN
+add_core = SUN
+capital = "Pakuan"
+culture = sundanese
+religion = shaivism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = grain
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = SUN
+	controller = SUN
+	add_core = SUN
+}

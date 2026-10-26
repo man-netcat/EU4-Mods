@@ -1,6 +1,25 @@
 #627 - Blambangan
 
+owner = LUM
+controller = LUM
+add_core = LUM
+capital = "Blambangan"
+culture = javanese
+religion = shaivism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = cotton
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = LUM
+	controller = LUM
+	add_core = LUM
+}

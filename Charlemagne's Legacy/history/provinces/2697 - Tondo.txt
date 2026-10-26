@@ -1,3 +1,22 @@
 #2697 - Tondo
 
+owner = TDO
+controller = TDO
+add_core = TDO
+capital = "Tondo"
+culture = filipino
+religion = shaivism
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = spices
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = TDO
+	controller = TDO
+	add_core = TDO
+}

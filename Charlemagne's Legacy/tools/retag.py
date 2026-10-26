@@ -10,6 +10,7 @@ overwritten), and the tag takes over the base
 game's country file name (the build then replaces the vanilla definition and
 history under their own file names).
 """
+import glob
 import os
 import re
 import sqlite3
@@ -62,13 +63,49 @@ def retag(con, old, new, vfiles):
     k = v.rindex('"', i, j)
     v = v[:k] + f" {new}" + v[k:]
     open(VALIDATE, "w", encoding="utf-8", newline="").write(v)
+    # reused tags carry the base game's technology group
+    hist = glob.glob(os.path.join(os.environ.get("EU4_GAME") or "", "history", "countries", f"{new} - *.txt"))
+    if hist:
+        m = re.search(r"(?m)^technology_group\s*=\s*(\w+)", open(hist[0], encoding="cp1252", errors="replace").read())
+        if m:
+            con.execute("update tags set technology_group=? where tag=?", (m.group(1), new))
+    # the generated files of the old code are stale now (the build does not purge them)
+    old_file = con.execute("select country_file from tags where tag=?", (old,)).fetchone()
+    for f in glob.glob(os.path.join(MOD, "history", "countries", f"{old} - *.txt")):
+        os.remove(f)
     print(f"  {old} -> {new} ({vfiles[new]})")
+
+
+def suggest(min_seq):
+    """(OLD, NEW) for tags from `min_seq` on whose name is a free base-game tag's name."""
+    import eu4
+
+    vfiles = eu4.load_vanilla_countries()
+    names = {}
+    for f in glob.glob(os.path.join(os.environ["EU4_GAME"], "localisation", "*_l_english.yml")):
+        for m in re.finditer(r'(?m)^ ([A-Z][A-Z0-9]{2}):\d* "([^"]+)"', open(f, encoding="utf-8-sig", errors="replace").read()):
+            names.setdefault(m.group(2).lower(), m.group(1))
+    con = sqlite3.connect(os.path.join(HERE, "tags.db"))
+    used = {r[0] for r in con.execute("select tag from tags")}
+    out = []
+    import tagloc
+
+    for tag, title, rank in con.execute("select tag, ck3_title, rank from tags where seq >= ? order by seq", (min_seq,)):
+        got = tagloc.title_names(title, rank, tag)
+        v = names.get(got[0].lower()) if got else None
+        if v and v in vfiles and v not in used:
+            out.append((tag, v))
+            used.add(v)
+    return out
 
 
 if __name__ == "__main__":
     import eu4
 
     args = sys.argv[1:]
+    if args[:1] == ["suggest"]:
+        print(" ".join(f"{o} {n}" for o, n in suggest(int(args[1]))))
+        sys.exit(0)
     if not args or len(args) % 2:
         sys.exit(__doc__)
     vfiles = {t: fn for t, (fn, _x) in eu4.load_vanilla_countries().items()}

@@ -1,3 +1,22 @@
 #652 - Maguindanao
 
+owner = MGD
+controller = MGD
+add_core = MGD
+capital = "Maguindanao"
+culture = filipino
+religion = dayawism
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = spices
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
+
+867.1.1 = {
+	owner = MGD
+	controller = MGD
+	add_core = MGD
+}

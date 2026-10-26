@@ -1,6 +1,25 @@
 #2387 - Phetchaburi
 
+owner = PHI
+controller = PHI
+add_core = PHI
+capital = "Phetchaburi"
+culture = central_thai
+religion = mahayana
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = tropical_wood
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = PHI
+	controller = PHI
+	add_core = PHI
+}

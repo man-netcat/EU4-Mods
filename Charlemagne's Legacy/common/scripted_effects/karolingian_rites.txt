@@ -241,6 +241,26 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = ari_rite_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = bilikuism_scholar_modifier }
+		remove_country_modifier = bilikuism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = kaharingan_scholar_modifier }
+		remove_country_modifier = kaharingan_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = tolotang_scholar_modifier }
+		remove_country_modifier = tolotang_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = aluk_scholar_modifier }
+		remove_country_modifier = aluk_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = dayawism_scholar_modifier }
+		remove_country_modifier = dayawism_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = melieism_scholar_modifier }
 		remove_country_modifier = melieism_scholar_modifier
 	}

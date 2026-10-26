@@ -301,6 +301,31 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_bilikuism"
+		texturefile = "gfx/interface/icon_rite_bilikuism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_kaharingan"
+		texturefile = "gfx/interface/icon_rite_kaharingan.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_tolotang"
+		texturefile = "gfx/interface/icon_rite_tolotang.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_aluk"
+		texturefile = "gfx/interface/icon_rite_aluk.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_dayawism"
+		texturefile = "gfx/interface/icon_rite_dayawism.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_melieism"
 		texturefile = "gfx/interface/icon_rite_melieism.tga"
 	}
