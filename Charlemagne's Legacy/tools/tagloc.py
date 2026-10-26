@@ -4,6 +4,13 @@
 Nothing of CK3's text is stored in the repo and nothing is hand-chosen: the
 name a tag shows is the name CK3 shows for its title at 867.1.1, derived by:
 
+  0. dynasty-named realms (CK3's `dynasty_named_realms`: "Abbasid", "Samanid"):
+     a duchy or higher whose 867 ruler is of Arabic, Berber or Iranian heritage
+     is named for his dynasty, unless the title opts out
+     (`can_be_named_after_dynasty = no`) or its government does not name realms
+     after dynasties (`dynasty_named_realms`: feudal, clan and mandala do,
+     tribal does not; a title whose history pins no government takes the default). CK3's own form is the dynasty's name
+     ("Abbasid"); we show the plural "Abbasids" for a dynasty ending in -id;
   1. the title's history: the latest dated `name = KEY` / `set_title_name = KEY`
      at or before the start (k_france is WEST_FRANCIA, d_normandy NEUSTRIA,
      h_china dynn_title_tang), the name being CK3's loc for KEY and its
@@ -19,6 +26,9 @@ font renders (enc.fold_loc).
 
     python3 tools/tagloc.py            # compare the written loc with what CK3 gives
     python3 tools/tagloc.py write      # rewrite the tag lines of the loc file
+Style preferences (STYLE below) are the only per-tag choices: Great Tang, The
+Papacy, Balhae. Everything else follows from CK3.
+
     python3 tools/tagloc.py TAG...     # explain how these tags are named
 """
 import os
@@ -103,12 +113,80 @@ def history_name(title):
     return _hist.get(title)
 
 
-def title_names(title, rank):
-    """(name, adjective) CK3 shows for the title at the start, folded; None when CK3 has no name."""
+# our wording where we prefer it to CK3's: tag -> ("prefix", text) or ("key", CK3 loc key)
+STYLE = {"TNG": ("prefix", "Great "), "PAP": ("prefix", "The "), "BHE": ("key", "cn_balhae")}
+DYNASTY_HERITAGES = ("heritage_arabic", "heritage_berber", "heritage_iranian")
+
+
+def named_realm_governments():
+    """The governments with `dynasty_named_realms = yes`."""
+    import glob
+    from paths import CK3_GAME
+
+    out = set()
+    for f in glob.glob(os.path.join(CK3_GAME, "common", "governments", "*.txt")):
+        text = open(f, encoding="utf-8-sig", errors="replace").read()
+        for m in re.finditer(r"(?m)^(\w+)\s*=\s*\{(.*?)^\}", text, re.S):
+            if re.search(r"dynasty_named_realms\s*=\s*yes", m.group(2)):
+                out.add(m.group(1))
+    return out
+
+
+def dynasty_realm(tag, title, rank):
+    """(name, adjective) when the realm is named for its 867 ruler's dynasty, else None."""
+    import ck3
+    import culturalnames as cn
+    import culturelift as cl
+    import culturetitles as ct
+    from enc import fold_loc
+
+    if rank is None or rank < 2 or rank > 4:
+        return None
+    if re.search(r"can_be_named_after_dynasty\s*=\s*no", cn._title_blocks().get(title, "")):
+        return None
+    gov = ck3.title_government(title)
+    if gov and gov not in named_realm_governments():
+        return None
+    _h, cc = cl.holder_culture(title)
+    if not cc or ct.culture_info(cc)[0] not in DYNASTY_HERITAGES:
+        return None
+    if not _ctx:
+        _ctx.append((ck3.load_titles(), ck3.load_chars(), ck3.load_dynasties(), ck3.load_houses()))
+    try:
+        dyn = ck3.resolve(tag, *_ctx[0]).get("dynasty")
+    except Exception:
+        dyn = None
+    if not dyn:
+        return None
+    d = fold_loc(dyn)
+    return (d + "s" if d.lower().endswith("id") else d), d
+
+
+_ctx = []
+
+
+def title_names(title, rank, tag=None):
+    """(name, adjective) the tag shows at the start, folded; None when CK3 has no name."""
+    got = _title_names(title, rank, tag)
+    st = STYLE.get(tag)
+    if got and st and st[0] == "prefix":
+        got = (st[1] + got[0], got[1])
+    return got
+
+
+def _title_names(title, rank, tag):
     import ck3
     import culturalnames as cn
     from enc import fold_loc
 
+    st = STYLE.get(tag)
+    if st and st[0] == "key":
+        name = _resolve(ck3.loc(st[1]))
+        adj = _resolve(ck3.loc(st[1] + "_adj")) or name
+        return (fold_loc(name), fold_loc(adj)) if name else None
+    dn = dynasty_realm(tag, title, rank) if tag else None
+    if dn:
+        return dn
     key = history_name(title)
     if key and ck3.loc(key):
         name, adj = ck3.loc(key), ck3.loc(key + "_adj")
@@ -129,7 +207,7 @@ def title_names(title, rank):
 
 def wanted():
     con = sqlite3.connect(DB)
-    return {tag: title_names(title, rank)
+    return {tag: title_names(title, rank, tag)
             for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq")}
 
 
@@ -185,7 +263,7 @@ if __name__ == "__main__":
         con = sqlite3.connect(DB)
         for tag in a:
             title, rank = con.execute("select ck3_title, rank from tags where tag=?", (tag,)).fetchone()
-            print(tag, title, "history key:", history_name(title), "->", title_names(title, rank))
+            print(tag, title, "history key:", history_name(title), "->", title_names(title, rank, tag))
     else:
         d = drift()
         for t, have, want in d:

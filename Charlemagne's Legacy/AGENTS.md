@@ -439,13 +439,15 @@ install is present if a flag file equals one of the base game's.
 
 ## Tag names are derived from CK3 at build time (`tools/tagloc.py`)
 
-No CK3 text is stored and no name is hand-chosen: the build step "lift tag
-names from CK3" writes every tag's name and adjective into
-`countries_l_english.yml` as CK3 shows the title at 867.1.1 - (1) the latest
-dated `name =` / `set_title_name =` in `history/titles` (WEST_FRANCIA,
-NEUSTRIA, NAME_NANZHAO, dynn_title_tang), else (2) the cultural name for the
-867 holder's culture (landed_titles `name_list_*`), else (3) the title's own
-loc; `$key$` resolved, steppe people suffix, folded to EU4's font. Never
-hand-edit those lines and keep no per-tag overrides (to change a name, fix the
-derivation). `python3 tools/tagloc.py [TAG..]` explains a name; validate fails
-on a stale line.
+No CK3 text is stored: the build step "lift tag names from CK3" writes every
+tag's name and adjective into `countries_l_english.yml` as CK3 shows the title
+at 867.1.1. Order: (0) dynasty-named realms (duchy or higher, holder of
+Arabic/Berber/Iranian heritage, government with `dynasty_named_realms = yes`,
+title not opted out: "Abbasids", "Samanids"); (1) the latest dated `name =` /
+`set_title_name =` in `history/titles` (WEST_FRANCIA, NEUSTRIA, dynn_title_tang);
+(2) the cultural name for the holder's culture; (3) the title's own loc.
+`$key$` resolved, steppe people suffix, folded to EU4's font. The only per-tag
+choices are the `STYLE` table (Great Tang, The Papacy, Balhae). Never hand-edit
+the loc lines. `python3 tools/tagloc.py [TAG..]` explains a name; validate
+fails on a stale line. The dynasty rule is inferred (CK3's culture gate for
+dynasty-named realms is engine code): fix the rule, not single tags.
