@@ -53,7 +53,7 @@ TINCTURES = {
 _SEMANTIC = {
     "white": "argent", "silver": "argent",
     "black": "sable", "black_mid": "cendree",       # PS: lighter black
-    "blue": "azure", "blue_light": "bleu_celeste",
+    "blue": "azure", "azure": "azure", "blue_light": "bleu_celeste",
     "red": "gules", "red_light": "gules", "red_mid": "gules",
     "red_dark": "sanguine",
     "yellow": "or", "yellow_light": "or", "yellow_mid": "or",
@@ -64,6 +64,12 @@ _SEMANTIC = {
     "brown": "brunatre", "brunatre": "brunatre",
     "brunatre_dark": "senois",
     "carnation": "carnation",
+    # PS/CK3 shade variants of the base tinctures (same heraldic colour)
+    "blue_dark": "azure", "blue_mid": "azure", "green_dark": "vert", "green_mid": "vert",
+    "purple_dark": "purpure", "purple_light": "purpure", "orange_dark": "orange",
+    "orange_light": "orange", "brown_light": "brunatre", "brown_mid": "brunatre",
+    "grey_light": "cendree", "grey_mid": "cendree", "black_light": "sable",
+    "white_dark": "argent", "pink": "gules",
     # PS writes d_minsk's knight as hsv {0.0 0.0 0.60}: a neutral steel grey
     "hsv": "cendree",
 }
