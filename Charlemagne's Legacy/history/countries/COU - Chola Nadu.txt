@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = indian
+primary_culture = tamil
+religion = shaivism
+capital = 540
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Vicayâlaya"
+		dynasty = "Chola"
+		birth_date = 827.1.1
+		death_date = 871.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Atitta"
+		monarch_name = "Atitta"
+		dynasty = "Chola"
+		birth_date = 850.1.1
+		death_date = 907.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

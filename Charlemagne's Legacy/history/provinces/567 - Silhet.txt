@@ -1,5 +1,24 @@
 #567 - Sylhet
 
+owner = BEL
+controller = BEL
+add_core = BEL
+capital = "Sylhet"
+culture = bengali
+religion = buddhism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = cotton
+base_manpower = 2
+is_city = yes
+
 discovered_by = indian
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = BEL
+	controller = BEL
+	add_core = BEL
+}

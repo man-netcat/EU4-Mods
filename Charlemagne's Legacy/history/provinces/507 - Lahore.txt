@@ -1,7 +1,29 @@
 #507 - Lahore
 
+owner = KOS
+controller = KOS
+add_core = KOS
+capital = "Lahore"
+culture = panjabi
+religion = vaishnavism
+hre = no
+base_tax = 10
+base_production = 10
+trade_goods = silk
+base_manpower = 3
+is_city = yes
+center_of_trade = 2
+#Data Durbar Complex
 discovered_by = indian
+extra_cost = 16
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = nomad_group
 discovered_by = chinese
+
+867.1.1 = {
+	owner = KOS
+	controller = KOS
+	add_core = KOS
+}

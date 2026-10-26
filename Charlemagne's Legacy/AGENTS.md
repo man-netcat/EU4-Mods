@@ -169,6 +169,20 @@ Provinces it cannot pair with certainty (`UNMAPPED`) are listed, never guessed.
 The old `provmap.json` auto-matches were wrong for eight Japanese provinces
 (Kyoto, Awa, Aki, Mino, Kai, Okinawa, Dewa, Ugo) and are corrected there.
 
+## Lifting a region's 867 states
+
+`tools/liftstates.py REGION [apply]` turns a region into tags: every EU4 province in
+`provfaiths.PROVINCE_COUNTY` goes to the state its CK3 county belongs to at 867 -
+the holder's `liege =` chain followed to the top, the top liege (the sovereign)
+receiving the province with all its vassals folded in; independent counts and
+dukes are states of their own, and so are tributaries (`tributary_of`, which is no
+`liege =`; their suzerain is only a relationship). `state867.py` does the grouping.
+The province pairing is name inference, a curated table per region (India: 251
+provinces; Manidurg, Soumelpur and Kalahandi stay unmapped). New tags get codes
+from their names, the tag religion and culture follow the ruler, province religions
+follow the CK3 county's faith. Afterwards: `culturetitles.py TAGS` for the title
+ladders, `culturalnames.py apply TAGS`, build, validate.
+
 ## Standing conventions
 
 - Provinces keep **vanilla culture** (standing rule; the one user-granted

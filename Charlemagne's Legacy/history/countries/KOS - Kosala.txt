@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = indian
+primary_culture = kanauji
+religion = vaishnavism
+capital = 4497
+religious_school = vaishnavism_school
+867.1.1 = {
+	monarch = {
+		name = "Bhoja"
+		dynasty = "Pratihara"
+		birth_date = 816.4.13
+		death_date = 885.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Mahendrapala"
+		monarch_name = "Mahendrapala"
+		dynasty = "Pratihara"
+		birth_date = 841.8.13
+		death_date = 910.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

@@ -1,7 +1,26 @@
 #2090 - Gutti
 
+owner = KTA
+controller = KTA
+add_core = KTA
+capital = "Gutti"
+culture = telegu
+religion = shaivism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = iron
+base_manpower = 2
+is_city = yes
+
 discovered_by = indian
 discovered_by = nomad_group
-discovered_by = muslim 
+discovered_by = muslim
 discovered_by = ottoman
 discovered_by = chinese
+
+867.1.1 = {
+	owner = KTA
+	controller = KTA
+	add_core = KTA
+}

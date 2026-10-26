@@ -1,7 +1,26 @@
 #505 - Sehwan
 
+owner = SIN
+controller = SIN
+add_core = SIN
+capital = "Sehwan"
+culture = sindhi
+religion = smartism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = silk #Silk cloth, fine calicoes, painted cloth
+base_manpower = 2
+is_city = yes
+
 discovered_by = indian
-discovered_by = muslim 
+discovered_by = muslim
 discovered_by = ottoman
 discovered_by = nomad_group
 discovered_by = chinese
+
+867.1.1 = {
+	owner = SIN
+	controller = SIN
+	add_core = SIN
+}

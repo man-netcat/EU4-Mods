@@ -8741,6 +8741,852 @@ buryat_nomad_titles = {
 }
 
 
+kanauji_titles = {
+# CK3 ladders for KOS(r3), KUA(r1)
+	rank = {
+		1 = KANAUJI_COUNTY  # county_feudal_dravidian_group
+		2 = KANAUJI_DUCHY  # duchy_feudal_dravidian_group
+		3 = KANAUJI_KINGDOM  # kingdom_feudal
+		4 = KANAUJI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KANAUJI_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = KANAUJI_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = KANAUJI_KING_MALE  # king_feudal_male_dravidian_group
+		4 = KANAUJI_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = KANAUJI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = KANAUJI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = KANAUJI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = KANAUJI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = KANAUJI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = KANAUJI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = KANAUJI_COUNT_MALE  # consort uses the ruler form
+		2 = KANAUJI_DUKE_MALE  # consort uses the ruler form
+		3 = KANAUJI_KING_MALE  # consort uses the ruler form
+		4 = KANAUJI_EMPEROR_MALE  # consort uses the ruler form
+		5 = KANAUJI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KANAUJI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = KANAUJI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = KANAUJI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = KANAUJI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = KANAUJI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = kanauji
+	}
+}
+
+
+kannada_titles = {
+# CK3 ladders for KTA(r3), PEA(r1)
+	rank = {
+		1 = KANNADA_COUNTY  # county_feudal_dravidian_group
+		2 = KANNADA_DUCHY  # duchy_feudal_dravidian_group
+		3 = KANNADA_KINGDOM  # kingdom_feudal
+		4 = KANNADA_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KANNADA_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = KANNADA_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = KANNADA_KING_MALE  # king_feudal_male_dravidian_group
+		4 = KANNADA_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = KANNADA_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = KANNADA_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = KANNADA_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = KANNADA_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = KANNADA_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = KANNADA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = KANNADA_COUNT_MALE  # consort uses the ruler form
+		2 = KANNADA_DUKE_MALE  # consort uses the ruler form
+		3 = KANNADA_KING_MALE  # consort uses the ruler form
+		4 = KANNADA_EMPEROR_MALE  # consort uses the ruler form
+		5 = KANNADA_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KANNADA_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = KANNADA_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = KANNADA_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = KANNADA_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = KANNADA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = kannada
+	}
+}
+
+
+bengali_titles = {
+# CK3 ladders for BEL(r3), VAA(r2)
+	rank = {
+		1 = BENGALI_COUNTY  # county_feudal_dravidian_group
+		2 = BENGALI_DUCHY  # duchy_feudal_dravidian_group
+		3 = BENGALI_KINGDOM  # kingdom_feudal
+		4 = BENGALI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BENGALI_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = BENGALI_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = BENGALI_KING_MALE  # king_feudal_male_dravidian_group
+		4 = BENGALI_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = BENGALI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BENGALI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = BENGALI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = BENGALI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = BENGALI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = BENGALI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BENGALI_COUNT_MALE  # consort uses the ruler form
+		2 = BENGALI_DUKE_MALE  # consort uses the ruler form
+		3 = BENGALI_KING_MALE  # consort uses the ruler form
+		4 = BENGALI_EMPEROR_MALE  # consort uses the ruler form
+		5 = BENGALI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BENGALI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = BENGALI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = BENGALI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = BENGALI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = BENGALI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = bengali
+	}
+}
+
+
+tamil_titles = {
+# CK3 ladders for PAK(r2), CEU(r2), PAU(r2), COU(r2)
+	rank = {
+		1 = TAMIL_COUNTY  # county_feudal_dravidian_group
+		2 = TAMIL_DUCHY  # duchy_feudal_dravidian_group
+		3 = TAMIL_KINGDOM  # kingdom_feudal
+		4 = TAMIL_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = TAMIL_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = TAMIL_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = TAMIL_KING_MALE  # king_feudal_male_dravidian_group
+		4 = TAMIL_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = TAMIL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = TAMIL_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = TAMIL_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = TAMIL_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = TAMIL_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = TAMIL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = TAMIL_COUNT_MALE  # consort uses the ruler form
+		2 = TAMIL_DUKE_MALE  # consort uses the ruler form
+		3 = TAMIL_KING_MALE  # consort uses the ruler form
+		4 = TAMIL_EMPEROR_MALE  # consort uses the ruler form
+		5 = TAMIL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = TAMIL_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = TAMIL_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = TAMIL_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = TAMIL_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = TAMIL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = tamil
+	}
+}
+
+
+assamese_titles = {
+# CK3 ladders for KMA(r3)
+	rank = {
+		1 = ASSAMESE_COUNTY  # county_feudal_dravidian_group
+		2 = ASSAMESE_DUCHY  # duchy_feudal_dravidian_group
+		3 = ASSAMESE_KINGDOM  # kingdom_feudal
+		4 = ASSAMESE_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ASSAMESE_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = ASSAMESE_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = ASSAMESE_KING_MALE  # king_feudal_male_dravidian_group
+		4 = ASSAMESE_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = ASSAMESE_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ASSAMESE_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = ASSAMESE_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = ASSAMESE_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = ASSAMESE_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = ASSAMESE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ASSAMESE_COUNT_MALE  # consort uses the ruler form
+		2 = ASSAMESE_DUKE_MALE  # consort uses the ruler form
+		3 = ASSAMESE_KING_MALE  # consort uses the ruler form
+		4 = ASSAMESE_EMPEROR_MALE  # consort uses the ruler form
+		5 = ASSAMESE_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ASSAMESE_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = ASSAMESE_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = ASSAMESE_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = ASSAMESE_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = ASSAMESE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = assamese
+	}
+}
+
+
+oriya_titles = {
+# CK3 ladders for TOI(r2), DAK(r2), CAK(r1), KLA(r2)
+	rank = {
+		1 = ORIYA_COUNTY  # county_feudal_dravidian_group
+		2 = ORIYA_DUCHY  # duchy_feudal_dravidian_group
+		3 = ORIYA_KINGDOM  # kingdom_feudal
+		4 = ORIYA_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ORIYA_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = ORIYA_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = ORIYA_KING_MALE  # king_feudal_male_dravidian_group
+		4 = ORIYA_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = ORIYA_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ORIYA_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = ORIYA_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = ORIYA_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = ORIYA_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = ORIYA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ORIYA_COUNT_MALE  # consort uses the ruler form
+		2 = ORIYA_DUKE_MALE  # consort uses the ruler form
+		3 = ORIYA_KING_MALE  # consort uses the ruler form
+		4 = ORIYA_EMPEROR_MALE  # consort uses the ruler form
+		5 = ORIYA_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ORIYA_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = ORIYA_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = ORIYA_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = ORIYA_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = ORIYA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = oriya
+	}
+}
+
+
+malvi_titles = {
+# CK3 ladders for DHA(r2)
+	rank = {
+		1 = MALVI_COUNTY  # county_feudal_dravidian_group
+		2 = MALVI_DUCHY  # duchy_feudal_dravidian_group
+		3 = MALVI_KINGDOM  # kingdom_feudal
+		4 = MALVI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = MALVI_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = MALVI_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = MALVI_KING_MALE  # king_feudal_male_dravidian_group
+		4 = MALVI_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = MALVI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = MALVI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = MALVI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = MALVI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = MALVI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = MALVI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = MALVI_COUNT_MALE  # consort uses the ruler form
+		2 = MALVI_DUKE_MALE  # consort uses the ruler form
+		3 = MALVI_KING_MALE  # consort uses the ruler form
+		4 = MALVI_EMPEROR_MALE  # consort uses the ruler form
+		5 = MALVI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = MALVI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = MALVI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = MALVI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = MALVI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = MALVI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = malvi
+	}
+}
+
+
+sinhala_titles = {
+# CK3 ladders for LAA(r3)
+	rank = {
+		1 = SINHALA_COUNTY  # county_feudal_dravidian_group
+		2 = SINHALA_DUCHY  # duchy_feudal_dravidian_group
+		3 = SINHALA_KINGDOM  # kingdom_feudal
+		4 = SINHALA_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SINHALA_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = SINHALA_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = SINHALA_KING_MALE  # king_feudal_male_dravidian_group
+		4 = SINHALA_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = SINHALA_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SINHALA_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = SINHALA_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = SINHALA_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = SINHALA_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = SINHALA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SINHALA_COUNT_MALE  # consort uses the ruler form
+		2 = SINHALA_DUKE_MALE  # consort uses the ruler form
+		3 = SINHALA_KING_MALE  # consort uses the ruler form
+		4 = SINHALA_EMPEROR_MALE  # consort uses the ruler form
+		5 = SINHALA_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SINHALA_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = SINHALA_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = SINHALA_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = SINHALA_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = SINHALA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = sinhala
+	}
+}
+
+
+panjabi_mln_titles = {
+# lifted from CK3 flavorization for MLN: d_multan carries rule specials the shared panjabi_titles block cannot express; Islam heir = True
+	rank = {
+		1 = PANJABI_MLN_COUNTY  # county_feudal_dravidian_group
+		2 = PANJABI_MLN_DUCHY  # duchy_feudal_muslim_dravidian_group
+		3 = PANJABI_MLN_KINGDOM  # kingdom_feudal_muslim_dravidian_group
+		4 = PANJABI_MLN_EMPIRE  # empire_feudal_muslim_dravidian_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = PANJABI_MLN_COUNT_MALE  # count_feudal_male_muslim_dravidian_group
+		2 = PANJABI_MLN_DUKE_MALE  # duke_feudal_muslim_male_dravidian_group
+		3 = PANJABI_MLN_KING_MALE  # king_feudal_muslim_male_dravidian_group
+		4 = PANJABI_MLN_EMPEROR_MALE  # emperor_feudal_muslim_male_dravidian_group
+		5 = PANJABI_MLN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = PANJABI_MLN_COUNT_FEMALE  # count_feudal_female_muslim_dravidian_group
+		2 = PANJABI_MLN_DUKE_FEMALE  # duke_feudal_muslim_female_dravidian_group
+		3 = PANJABI_MLN_KING_FEMALE  # king_feudal_muslim_female_dravidian_group
+		4 = PANJABI_MLN_EMPEROR_FEMALE  # emperor_feudal_muslim_female_dravidian_group
+		5 = PANJABI_MLN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = PANJABI_MLN_COUNT_MALE  # consort uses the ruler form
+		2 = PANJABI_MLN_DUKE_MALE  # consort uses the ruler form
+		3 = PANJABI_MLN_KING_MALE  # consort uses the ruler form
+		4 = PANJABI_MLN_EMPEROR_MALE  # consort uses the ruler form
+		5 = PANJABI_MLN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = PANJABI_MLN_COUNT_FEMALE  # count_feudal_female_muslim_dravidian_group
+		2 = PANJABI_MLN_DUKE_FEMALE  # duke_feudal_muslim_female_dravidian_group
+		3 = PANJABI_MLN_KING_FEMALE  # king_feudal_muslim_female_dravidian_group
+		4 = PANJABI_MLN_EMPEROR_FEMALE  # emperor_feudal_muslim_female_dravidian_group
+		5 = PANJABI_MLN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		tag = MLN
+	}
+}
+
+
+panjabi_titles = {
+# CK3 ladders for TIA(r1), DIP(r1), BEA(r1) - feudal CK3 government
+	rank = {
+		1 = PANJABI_COUNTY  # county_feudal_dravidian_group
+		2 = PANJABI_DUCHY  # duchy_feudal_dravidian_group
+		3 = PANJABI_KINGDOM  # kingdom_feudal
+		4 = PANJABI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = PANJABI_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = PANJABI_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = PANJABI_KING_MALE  # king_feudal_male_dravidian_group
+		4 = PANJABI_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = PANJABI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = PANJABI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = PANJABI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = PANJABI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = PANJABI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = PANJABI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = PANJABI_COUNT_MALE  # consort uses the ruler form
+		2 = PANJABI_DUKE_MALE  # consort uses the ruler form
+		3 = PANJABI_KING_MALE  # consort uses the ruler form
+		4 = PANJABI_EMPEROR_MALE  # consort uses the ruler form
+		5 = PANJABI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = PANJABI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = PANJABI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = PANJABI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = PANJABI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = PANJABI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_feudal_government
+		primary_culture = panjabi
+	}
+}
+
+
+gondi_titles = {
+# CK3 ladders for RAT(r2)
+	rank = {
+		1 = GONDI_COUNTY  # county_feudal_dravidian_group
+		2 = GONDI_DUCHY  # duchy_feudal_dravidian_group
+		3 = GONDI_KINGDOM  # kingdom_feudal
+		4 = GONDI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = GONDI_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = GONDI_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = GONDI_KING_MALE  # king_feudal_male_dravidian_group
+		4 = GONDI_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = GONDI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = GONDI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = GONDI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = GONDI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = GONDI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = GONDI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = GONDI_COUNT_MALE  # consort uses the ruler form
+		2 = GONDI_DUKE_MALE  # consort uses the ruler form
+		3 = GONDI_KING_MALE  # consort uses the ruler form
+		4 = GONDI_EMPEROR_MALE  # consort uses the ruler form
+		5 = GONDI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = GONDI_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = GONDI_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = GONDI_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = GONDI_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = GONDI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = gondi
+	}
+}
+
+
+telegu_titles = {
+# CK3 ladders for VEI(r2)
+	rank = {
+		1 = TELEGU_COUNTY  # county_feudal_dravidian_group
+		2 = TELEGU_DUCHY  # duchy_feudal_dravidian_group
+		3 = TELEGU_KINGDOM  # kingdom_feudal
+		4 = TELEGU_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = TELEGU_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = TELEGU_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = TELEGU_KING_MALE  # king_feudal_male_dravidian_group
+		4 = TELEGU_EMPEROR_MALE  # emperor_feudal_male_dravidian_group
+		5 = TELEGU_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = TELEGU_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = TELEGU_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = TELEGU_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = TELEGU_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = TELEGU_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = TELEGU_COUNT_MALE  # consort uses the ruler form
+		2 = TELEGU_DUKE_MALE  # consort uses the ruler form
+		3 = TELEGU_KING_MALE  # consort uses the ruler form
+		4 = TELEGU_EMPEROR_MALE  # consort uses the ruler form
+		5 = TELEGU_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = TELEGU_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = TELEGU_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = TELEGU_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = TELEGU_EMPEROR_FEMALE  # emperor_feudal_female_dravidian_group
+		5 = TELEGU_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = telegu
+	}
+}
+
+
+burmese_titles = {
+# CK3 ladders for MNR(r1)
+	rank = {
+		1 = BURMESE_COUNTY  # county_feudal_dravidian_group
+		2 = BURMESE_DUCHY  # duchy_feudal_dravidian_group
+		3 = BURMESE_KINGDOM  # kingdom_feudal
+		4 = BURMESE_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BURMESE_COUNT_MALE  # count_feudal_male_dravidian_group
+		2 = BURMESE_DUKE_MALE  # duke_feudal_male_dravidian_group
+		3 = BURMESE_KING_MALE  # king_feudal_male_dravidian_group
+		4 = BURMESE_EMPEROR_MALE  # emperor_feudal_male
+		5 = BURMESE_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BURMESE_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = BURMESE_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = BURMESE_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = BURMESE_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = BURMESE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BURMESE_COUNT_MALE  # consort uses the ruler form
+		2 = BURMESE_DUKE_MALE  # consort uses the ruler form
+		3 = BURMESE_KING_MALE  # consort uses the ruler form
+		4 = BURMESE_EMPEROR_MALE  # consort uses the ruler form
+		5 = BURMESE_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BURMESE_COUNT_FEMALE  # count_feudal_female_dravidian_group
+		2 = BURMESE_DUKE_FEMALE  # duke_feudal_female_dravidian_group
+		3 = BURMESE_KING_FEMALE  # king_feudal_female_dravidian_group
+		4 = BURMESE_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = BURMESE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = burmese
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

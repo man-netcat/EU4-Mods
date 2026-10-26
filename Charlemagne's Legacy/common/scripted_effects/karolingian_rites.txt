@@ -201,6 +201,46 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = vaishnavism_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = digambara_scholar_modifier }
+		remove_country_modifier = digambara_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = svetambara_scholar_modifier }
+		remove_country_modifier = svetambara_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = yapaniya_scholar_modifier }
+		remove_country_modifier = yapaniya_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = kalikula_shaktism_scholar_modifier }
+		remove_country_modifier = kalikula_shaktism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = srikula_shaktism_scholar_modifier }
+		remove_country_modifier = srikula_shaktism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = smartism_scholar_modifier }
+		remove_country_modifier = smartism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = krishnaism_scholar_modifier }
+		remove_country_modifier = krishnaism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = advaitism_scholar_modifier }
+		remove_country_modifier = advaitism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = vajrayana_rite_scholar_modifier }
+		remove_country_modifier = vajrayana_rite_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = sedism_scholar_modifier }
+		remove_country_modifier = sedism_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = norse_pagan_scholar_modifier }
 		remove_country_modifier = norse_pagan_scholar_modifier
 	}

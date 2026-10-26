@@ -106,9 +106,15 @@ def liege_holder(title):
 
 
 def titles_of(h):
-    if h not in _held:
-        _held[h] = [k for k in _T if k[:2] in ("c_", "d_", "k_", "e_", "h_") and holder(k) == h]
-    return _held[h]
+    """The landed titles above barony a character holds at 867 (indexed once)."""
+    if not _held:
+        for k in _T:
+            if k[:2] in ("c_", "d_", "k_", "e_", "h_"):
+                holder_ = holder(k)
+                if holder_:
+                    _held.setdefault(holder_, []).append(k)
+        _held.setdefault(None, [])
+    return _held.get(h, [])
 
 
 def primary(h):

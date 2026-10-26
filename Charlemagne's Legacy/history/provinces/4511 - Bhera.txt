@@ -1,7 +1,27 @@
 #4511 - Bhera
 
+owner = BEA
+controller = BEA
+add_core = BEA
+capital = "Bhera"
+culture = panjabi
+religion = vaishnavism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = salt
+base_manpower = 1
+is_city = yes
+add_local_autonomy = 50 #Kokhars
+
 discovered_by = indian
-discovered_by = muslim 
+discovered_by = muslim
 discovered_by = ottoman
 discovered_by = nomad_group
 discovered_by = chinese
+
+867.1.1 = {
+	owner = BEA
+	controller = BEA
+	add_core = BEA
+}

@@ -1,7 +1,26 @@
 #2050 - Chanda
 
+owner = RAT
+controller = RAT
+add_core = RAT
+capital = "Ballarsah"
+culture = gondi
+religion = jainism
+hre = no
+base_tax = 2
+base_production = 1
+trade_goods = tropical_wood
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = nomad_group
-discovered_by = muslim 
+discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = RAT
+	controller = RAT
+	add_core = RAT
+}

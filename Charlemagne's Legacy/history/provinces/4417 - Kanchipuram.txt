@@ -1,7 +1,27 @@
 #4417 - Kanchipuram
 
+owner = PAK
+controller = PAK
+add_core = PAK
+capital = "Kanchipuram"
+culture = tamil
+religion = jainism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = cloth
+base_manpower = 1
+is_city = yes
+add_local_autonomy = 50
+
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = chinese
+
+867.1.1 = {
+	owner = PAK
+	controller = PAK
+	add_core = PAK
+}

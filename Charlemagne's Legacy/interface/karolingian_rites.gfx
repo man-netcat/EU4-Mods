@@ -251,6 +251,56 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_digambara"
+		texturefile = "gfx/interface/icon_rite_digambara.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_svetambara"
+		texturefile = "gfx/interface/icon_rite_svetambara.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_yapaniya"
+		texturefile = "gfx/interface/icon_rite_yapaniya.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_kalikula_shaktism"
+		texturefile = "gfx/interface/icon_rite_kalikula_shaktism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_srikula_shaktism"
+		texturefile = "gfx/interface/icon_rite_srikula_shaktism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_smartism"
+		texturefile = "gfx/interface/icon_rite_smartism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_krishnaism"
+		texturefile = "gfx/interface/icon_rite_krishnaism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_advaitism"
+		texturefile = "gfx/interface/icon_rite_advaitism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_vajrayana_rite"
+		texturefile = "gfx/interface/icon_rite_vajrayana_rite.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_sedism"
+		texturefile = "gfx/interface/icon_rite_sedism.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_norse_pagan"
 		texturefile = "gfx/interface/icon_rite_norse_pagan.tga"
 	}

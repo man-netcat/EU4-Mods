@@ -1,11 +1,11 @@
 #2077 - Margalla
 
-owner = KSH
-controller = KSH
-add_core = KSH
+owner = KOS
+controller = KOS
+add_core = KOS
 capital = "Rawalpindi"
 culture = panjabi
-religion = vaishnavism
+religion = vajrayana
 hre = no
 base_tax = 3
 base_production = 3
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = KSH
-	controller = KSH
-	add_core = KSH
+	owner = KOS
+	controller = KOS
+	add_core = KOS
 }

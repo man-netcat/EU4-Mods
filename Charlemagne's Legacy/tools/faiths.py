@@ -75,6 +75,10 @@ FAITH_RELIGION = {
     "kiratism": "kiratism",
     "bimoism": "bimoism",
     "satsana_phi": "satsana_phi",
+    "jain_faith": "jainism",
+    "shakta_faith": "shaktism",
+    "smartism": "smartism",
+    "sedism": "sedism",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -121,6 +125,14 @@ NEW_RELIGIONS = {
                  "The shamanism of the Komi, Khanty and the peoples of the northern forests, who honour the spirits of the river, the bear and the sacred groves of the Urals."),
     "kushitism": ("animism", "pagan", "waaqism",
                   "The ancient faith of the Kushite and Beja peoples of the Nile and the Red Sea hills, whose holy places lie at Aswan and Naqis."),
+    "jainism": ("hinduism", "dharmic", "vaishnavism",
+                "The path of the Tirthankaras and of ahimsa, kept by monks and lay merchants in the cities and courts of western and southern India."),
+    "shaktism": ("hinduism", "dharmic", "jainism",
+                 "The worship of the Goddess in her many forms, with its temples and its tantric masters across Bengal, Kashmir and the south."),
+    "smartism": ("hinduism", "dharmic", "shaktism",
+                 "The tradition of the smriti and of Advaita, which honours five deities as aspects of one and is kept by learned Brahmins."),
+    "sedism": ("animism", "pagan", "satsana_phi",
+               "The faith of the Meitei of Manipur, who honour Sanamahi and the lai, the spirits of the land, at the lairembi shrines."),
 }
 
 

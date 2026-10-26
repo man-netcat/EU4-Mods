@@ -127,6 +127,102 @@ PROVINCE_COUNTY.update({1230: "c_massawa", 1226: "c_badi"})
 
 PROVINCE_COUNTY.update({4158: "c_innarya"})  # Janjiro: Lebna holds Ennarea
 
+
+# India (Hindusthan, West India, Bengal, the Deccan, Coromandel and Lanka): EU4
+# province -> CK3 county by name inference. EU4 uses Mughal-era names where CK3
+# has the Sanskrit ones (Ujjain = Ujjayini, Kota = Medapata for Mewar), so each
+# pair is a name or a barony of the same name (CK3 files Etawah, Sirhind,
+# Gorakhpur, Chaul ... under the county written here), else the county that
+# holds the old capital the EU4 province is named for. Provinces whose county is
+# not certain stay in UNMAPPED.
+PROVINCE_COUNTY.update({
+    # Sindh and the Punjab
+    503: "c_kutch", 504: "c_debul", 505: "c_siwistan", 2088: "c_sonda", 4503: "c_mansura",
+    4504: "c_mansura", 4505: "c_aror", 2072: "c_bhakkar", 506: "c_multan", 2079: "c_kafirkot",
+    2086: "c_uch", 4508: "c_uch", 4509: "c_karor", 507: "c_lahur", 4510: "c_shorkot",
+    4511: "c_bhera", 4513: "c_dipalpur", 2075: "c_trigarta", 509: "c_kangra",
+    2076: "c_sakala", 4449: "c_sakala", 2077: "c_gurjaratra", 2078: "c_bannu",
+    # Kashmir and the Himalaya
+    508: "c_kasmira", 2074: "c_leh", 4521: "c_skardu", 2073: "c_skardu",
+    511: "c_garwhal", 4493: "c_garwhal", 2069: "c_kumaon", 4492: "c_doti", 554: "c_jumla",
+    4491: "c_dang", 4485: "c_lumbini", 2070: "c_kaski", 557: "c_kathmandu",
+    4484: "c_simaramapura", 4483: "c_yangwarok", 2071: "c_ilam",
+    # Delhi, the Doab, Rajasthan east of the Aravallis
+    522: "c_delhi", 510: "c_sthanisvara", 4411: "c_sthanisvara", 2062: "c_sthanisvara",
+    2060: "c_hastinapura", 2065: "c_tribandapura", 4463: "c_sarasvati",
+    4498: "c_sambhal", 4499: "c_vodamayutja", 2061: "c_katehar", 4497: "c_kanyakubja",
+    2063: "c_kanyakubja", 524: "c_kanyakubja", 4496: "c_asni", 556: "c_prayaga",
+    523: "c_lakhnau", 4494: "c_naimisa", 2094: "c_naimisa", 4495: "c_ayodhya",
+    2055: "c_sravasti", 555: "c_jaunpur", 2095: "c_varanasi", 4490: "c_chunar",
+    525: "c_gwalior", 528: "c_kota", 4464: "c_kota", 4465: "c_ranthambore",
+    4500: "c_sripatha", 519: "c_vairata", 520: "c_vairata", 2064: "c_sakarai",
+    # Bundelkhand, Baghelkhand and Malwa
+    740: "c_chanderi", 2059: "c_kalpi", 559: "c_mahoba", 4466: "c_mahoba",
+    4467: "c_kalanjara", 4459: "c_damoh", 2097: "c_gurgi", 4468: "c_bandhugadha",
+    2098: "c_kiranapura", 4461: "c_ujjayini", 2057: "c_vidisa", 2093: "c_dasapura",
+    526: "c_dhara", 2056: "c_dadhipadra", 527: "c_burhanpur", 4434: "c_burhanpur",
+    4453: "c_thalner",
+    # Rajasthan west of the Aravallis, Marwar and Mewar
+    512: "c_vikramapura", 2066: "c_nagauda", 4502: "c_nagauda", 4507: "c_reni",
+    513: "c_ludrava", 514: "c_mandavyapura", 2067: "c_godwad", 4506: "c_satyapura",
+    518: "c_chitrakut", 2058: "c_medapata", 2087: "c_ajayameru", 4501: "c_medapata",
+    4462: "c_mohadavasaka",
+    # Gujarat
+    2053: "c_sarasvata_mandala", 4480: "c_mohadavasaka", 2054: "c_khetaka",
+    4457: "c_khetaka", 516: "c_vadodara", 517: "c_navasarika", 4512: "c_navasarika",
+    4430: "c_daman", 2051: "c_valabhi", 4456: "c_dhamalpur", 521: "c_dhamalpur",
+    2052: "c_dvaraka", 515: "c_bhumilka", 4454: "c_bhumilka", 4455: "c_somnath",
+    # Bihar, Nepal Terai, Bengal and Assam
+    558: "c_magadha", 4469: "c_rothas", 4472: "c_mudgagiri", 2044: "c_mudgagiri",
+    2047: "c_mithila", 4489: "c_mithila", 4487: "c_kusinagara", 4488: "c_simaramapura",
+    560: "c_jharkand", 2096: "c_damin_i_koh", 563: "c_gauda", 4479: "c_pundravardhana",
+    2045: "c_pundravardhana", 4486: "c_pundravardhana", 4478: "c_madhupur",
+    564: "c_bikrampur", 4474: "c_bikrampur", 4475: "c_bikrampur", 561: "c_candradvipa",
+    2039: "c_candradvipa", 4473: "c_samatata", 2081: "c_radha", 4476: "c_nabadwipa",
+    4477: "c_saptagrama", 2038: "c_midnapore", 4471: "c_mallabhum",
+    562: "c_kamatapur", 2042: "c_kamarupanagara", 566: "c_haruppeswara",
+    571: "c_haruppeswara", 4440: "c_haruppeswara", 2040: "c_kundina", 567: "c_srihatta",
+    573: "c_dimapur", 570: "c_dimapur", 2041: "c_manipur", 2091: "c_karmanta",
+    # Orissa, Chhattisgarh and Gondwana
+    552: "c_kataka", 2043: "c_viraja", 2049: "c_khinjali_mandala", 4441: "c_puri",
+    4450: "c_khijjingakota", 553: "c_sambalpur", 4451: "c_suvarnapura",
+    4447: "c_suvarnapura", 2082: "c_rayapura", 4452: "c_ratanpur", 547: "c_cakrakuta",
+    4445: "c_cakrakuta", 4448: "c_swetaka_mandala", 2048: "c_khinjali_mandala",
+    550: "c_tripuri", 551: "c_tripuri", 2092: "c_ramagiri", 4458: "c_chauragarh",
+    4460: "c_chauragarh",
+    # Maharashtra, Berar and the Konkan
+    529: "c_surparaka", 2089: "c_surparaka", 530: "c_panaji", 4429: "c_panaji",
+    2030: "c_kanara", 531: "c_kanara", 4427: "c_kanara", 544: "c_trikuta",
+    4433: "c_trikuta", 2036: "c_trikuta", 545: "c_devagiri", 4437: "c_mulaka",
+    4432: "c_kondana", 2034: "c_kondana", 1946: "c_karahataka", 4431: "c_kolhapur",
+    4435: "c_naldurg", 569: "c_taradavadi", 546: "c_ramagiri", 548: "c_acalapura",
+    2050: "c_canda", 4442: "c_vatsagulma", 4443: "c_vatsagulma", 4438: "c_ashmaka",
+    2028: "c_mahur",
+    # Karnataka, Telingana, Andhra and the Tamil country
+    2035: "c_kalyani", 1948: "c_kalyani", 2029: "c_alupa", 4413: "c_alupa",
+    2032: "c_banavasi", 532: "c_idatarainadu", 4428: "c_idatarainadu",
+    2033: "c_vaijayanti", 533: "c_srirangapatna", 4421: "c_talakad", 2031: "c_muluvagil",
+    4422: "c_parivi", 4426: "c_uchangidurga", 4423: "c_gutti", 4424: "c_gutti",
+    541: "c_adoni", 1949: "c_candragiri", 2090: "c_renandu", 542: "c_racakonda",
+    4436: "c_racakonda", 4439: "c_katukuru", 2037: "c_orangallu", 543: "c_nallamala",
+    4425: "c_nallamala", 4419: "c_nallamala", 2083: "c_vengipura", 2084: "c_mosala",
+    549: "c_vizagipatam", 2080: "c_kalinganagar", 4418: "c_nellore", 4420: "c_candragiri",
+    534: "c_eranad", 535: "c_kerala", 537: "c_venadu", 4410: "c_venadu",
+    536: "c_madurai", 2101: "c_madurai", 538: "c_kongu", 4414: "c_kongu",
+    4412: "c_uraiyur", 2085: "c_tagadur", 2026: "c_cholamandalam", 4415: "c_cholamandalam",
+    4416: "c_cholamandalam", 540: "c_cholamandalam", 1947: "c_tiruvannamalai",
+    2027: "c_candragiri", 539: "c_kanchipuram", 4417: "c_kanchipuram",
+    # Lanka
+    572: "c_kotte", 4408: "c_kotte", 2099: "c_kandy", 2100: "c_phiti", 4409: "c_trincomalee",
+    4407: "c_rohana",
+})
+
+# Provinces with no certain CK3 county yet (India): reported, never guessed.
+UNMAPPED_INDIA = {
+    4444: "Manidurg (Telingana: no county of that name; Medak/Mahbubnagar unclear)",
+    4470: "Soumelpur (Chota Nagpur: not a name CK3 carries)",
+    4446: "Kalahandi (Orissa/Chhattisgarh border: no county certain)",
+}
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
 UNMAPPED = {}
 
@@ -173,7 +269,15 @@ def county_rite(county):
         r = prov_rite.get(bprov[b])
         if r:
             return r
-    return None
+    # no barony carries a rite (CK3 leaves some holdingless counties bare): the
+    # county holder's own rite at 867 stands in
+    import ck3
+    import rites
+    import state867
+
+    h = state867.holder(county)
+    body = ck3.load_chars().get(h) if h else None
+    return rites.rite_at(body) if body else None
 
 
 def expected(pid):

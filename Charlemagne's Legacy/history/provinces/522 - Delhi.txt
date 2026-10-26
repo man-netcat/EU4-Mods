@@ -1,7 +1,28 @@
 #522 - Delhi
 
+owner = KOS
+controller = KOS
+add_core = KOS
+capital = "Delhi"
+culture = kanauji
+religion = vajrayana
+hre = no
+base_tax = 9
+base_production = 9
+trade_goods = silk
+base_manpower = 4
+is_city = yes	#Still Recovering after sack by Timur
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = indian
 discovered_by = nomad_group
-discovered_by = muslim 
+discovered_by = muslim
 discovered_by = ottoman
 discovered_by = chinese
+
+867.1.1 = {
+	owner = KOS
+	controller = KOS
+	add_core = KOS
+}

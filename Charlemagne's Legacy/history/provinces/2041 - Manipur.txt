@@ -1,5 +1,24 @@
 #2041 - Manipur
 
+owner = MNR
+controller = MNR
+add_core = MNR
+capital = "Imphal"
+culture = chin
+religion = sedism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = cloth
+base_manpower = 1
+is_city = yes
+
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = chinese
+
+867.1.1 = {
+	owner = MNR
+	controller = MNR
+	add_core = MNR
+}

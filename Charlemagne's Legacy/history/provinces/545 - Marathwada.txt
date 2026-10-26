@@ -1,7 +1,28 @@
 #545 - Marathwada
 
+owner = KTA
+controller = KTA
+add_core = KTA
+capital = "Daulatabad"
+culture = marathi
+religion = jainism
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = paper
+base_manpower = 1
+is_city = yes
+center_of_trade = 2
+extra_cost = 16
+
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = chinese
+
+867.1.1 = {
+	owner = KTA
+	controller = KTA
+	add_core = KTA
+}

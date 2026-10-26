@@ -4188,6 +4188,70 @@ eastern = {
 
 			defensiveness = 0.1
 		}
+		vajrayana_rite_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_vajrayana_rite_school
+					has_country_flag = privilege_can_always_invite_vajrayana_rite_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_vajrayana_rite_school }
+						NOT = { has_country_flag = privilege_can_always_invite_vajrayana_rite_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = vajrayana_rite_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = vajrayana_rite_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = vajrayana_rite_scholar_modifier
+
+			picture = "GFX_icon_rite_vajrayana_rite"
+
+			global_missionary_strength = 0.01
+		}
 		shangqing_school = {
 			potential_invite_scholar = {
 				OR = {
@@ -4760,6 +4824,518 @@ dharmic = {
 
 			global_trade_power = 0.05
 		}
+		digambara_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_digambara_school
+					has_country_flag = privilege_can_always_invite_digambara_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_digambara_school }
+						NOT = { has_country_flag = privilege_can_always_invite_digambara_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = digambara_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = digambara_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = digambara_scholar_modifier
+
+			picture = "GFX_icon_rite_digambara"
+
+			global_tax_modifier = 0.05
+		}
+		svetambara_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_svetambara_school
+					has_country_flag = privilege_can_always_invite_svetambara_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_svetambara_school }
+						NOT = { has_country_flag = privilege_can_always_invite_svetambara_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = svetambara_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = svetambara_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = svetambara_scholar_modifier
+
+			picture = "GFX_icon_rite_svetambara"
+
+			trade_efficiency = 0.05
+		}
+		yapaniya_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_yapaniya_school
+					has_country_flag = privilege_can_always_invite_yapaniya_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_yapaniya_school }
+						NOT = { has_country_flag = privilege_can_always_invite_yapaniya_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = yapaniya_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = yapaniya_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = yapaniya_scholar_modifier
+
+			picture = "GFX_icon_rite_yapaniya"
+
+			stability_cost_modifier = -0.1
+		}
+		kalikula_shaktism_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_kalikula_shaktism_school
+					has_country_flag = privilege_can_always_invite_kalikula_shaktism_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_kalikula_shaktism_school }
+						NOT = { has_country_flag = privilege_can_always_invite_kalikula_shaktism_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = kalikula_shaktism_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = kalikula_shaktism_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = kalikula_shaktism_scholar_modifier
+
+			picture = "GFX_icon_rite_kalikula_shaktism"
+
+			land_morale = 0.05
+		}
+		srikula_shaktism_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_srikula_shaktism_school
+					has_country_flag = privilege_can_always_invite_srikula_shaktism_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_srikula_shaktism_school }
+						NOT = { has_country_flag = privilege_can_always_invite_srikula_shaktism_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = srikula_shaktism_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = srikula_shaktism_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = srikula_shaktism_scholar_modifier
+
+			picture = "GFX_icon_rite_srikula_shaktism"
+
+			legitimacy = 0.5
+		}
+		smartism_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_smartism_school
+					has_country_flag = privilege_can_always_invite_smartism_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_smartism_school }
+						NOT = { has_country_flag = privilege_can_always_invite_smartism_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = smartism_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = smartism_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = smartism_scholar_modifier
+
+			picture = "GFX_icon_rite_smartism"
+
+			adm_tech_cost_modifier = -0.05
+		}
+		krishnaism_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_krishnaism_school
+					has_country_flag = privilege_can_always_invite_krishnaism_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_krishnaism_school }
+						NOT = { has_country_flag = privilege_can_always_invite_krishnaism_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = krishnaism_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = krishnaism_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = krishnaism_scholar_modifier
+
+			picture = "GFX_icon_rite_krishnaism"
+
+			improve_relation_modifier = 0.25
+		}
+		advaitism_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_advaitism_school
+					has_country_flag = privilege_can_always_invite_advaitism_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_advaitism_school }
+						NOT = { has_country_flag = privilege_can_always_invite_advaitism_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = advaitism_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = advaitism_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = advaitism_scholar_modifier
+
+			picture = "GFX_icon_rite_advaitism"
+
+			dip_tech_cost_modifier = -0.05
+		}
 	}
 	# END RITES
 
@@ -4828,6 +5404,99 @@ dharmic = {
 	vaishnavism = {
 		color = { 255 0 0 }
 		icon = 40
+		allowed_conversion = {
+			sikhism
+		}
+		country = {
+			tolerance_heathen = 1
+			tolerance_own = 1
+			brahmins_hindu_influence_modifier = 0.2
+		}
+		country_as_secondary = {
+			tolerance_heretic = 1
+			tolerance_heathen = 2
+		}
+		
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = hinduism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { BHAKTI }
+	}
+
+	jainism = {
+		color = { 255 255 102 }
+		icon = 60
+		allowed_conversion = {
+			sikhism
+		}
+		country = {
+			tolerance_heathen = 1
+			tolerance_own = 1
+			brahmins_hindu_influence_modifier = 0.2
+		}
+		country_as_secondary = {
+			tolerance_heretic = 1
+			tolerance_heathen = 2
+		}
+		
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = hinduism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { BHAKTI }
+	}
+
+	shaktism = {
+		color = { 179 128 0 }
+		icon = 61
+		allowed_conversion = {
+			sikhism
+		}
+		country = {
+			tolerance_heathen = 1
+			tolerance_own = 1
+			brahmins_hindu_influence_modifier = 0.2
+		}
+		country_as_secondary = {
+			tolerance_heretic = 1
+			tolerance_heathen = 2
+		}
+		
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = hinduism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { BHAKTI }
+	}
+
+	smartism = {
+		color = { 255 77 77 }
+		icon = 62
 		allowed_conversion = {
 			sikhism
 		}
@@ -5481,6 +6150,70 @@ pagan = {
 
 	# BEGIN RITES (generated by tools/rites.py - edit the table there)
 	religious_schools = {
+		sedism_school = {
+			potential_invite_scholar = {
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_sedism_school
+					has_country_flag = privilege_can_always_invite_sedism_school
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_sedism_school }
+						NOT = { has_country_flag = privilege_can_always_invite_sedism_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = sedism_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that sends the scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
+				clear_rite_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_CLERIC_COUNTRY_TEXT
+				add_country_modifier = { name = sedism_scholar_modifier duration = 7300 }
+				if = {
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
+			}
+
+			invite_scholar_modifier_display = sedism_scholar_modifier
+
+			picture = "GFX_icon_rite_sedism"
+
+			defensiveness = 0.1
+		}
 		norse_pagan_school = {
 			potential_invite_scholar = {
 				OR = {
@@ -6745,6 +7478,24 @@ pagan = {
 	satsana_phi = {
 		color = { 71 32 70 }
 		icon = 59
+		country = {
+			tolerance_own = 1
+			global_unrest = -1
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		
+		heretic = { SNAKE_CLAN }
+	}
+
+	sedism = {
+		color = { 51 191 156 }
+		icon = 63
 		country = {
 			tolerance_own = 1
 			global_unrest = -1

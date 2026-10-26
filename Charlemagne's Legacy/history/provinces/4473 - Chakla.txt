@@ -1,5 +1,24 @@
 #4473 - Chakla #Tripuran Plains Region
 
+owner = VAA
+controller = VAA
+add_core = VAA
+capital = "Chakla"
+culture = chin
+religion = buddhism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = tropical_wood
+base_manpower = 1
+is_city = yes
+
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = chinese
+
+867.1.1 = {
+	owner = VAA
+	controller = VAA
+	add_core = VAA
+}
