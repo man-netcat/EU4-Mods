@@ -1,6 +1,6 @@
 ﻿l_english:
  FRA:1 "West Francia"
- FRA_ADJ:1 "West Frankish"
+ FRA_ADJ:1 "West Francian"
  LOT:1 "Lotharingia"
  LOT_ADJ:1 "Lotharingian"
  GER:1 "East Francia"
@@ -168,7 +168,7 @@
  TNG:1 "Great Tang"
  TNG_ADJ:1 "Tang"
  BHE:1 "Balhae"
- BHE_ADJ:1 "Balhaean"
+ BHE_ADJ:1 "Balhae"
  SLL:1 "Silla"
  SLL_ADJ:1 "Silla"
  KTN:1 "The Khitans"

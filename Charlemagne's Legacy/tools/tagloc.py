@@ -10,6 +10,9 @@ localisation/replace/countries_l_english.yml. How a tag is named is one of
            as a suffix ("Quriltay Oghuz"). Scripted `$key$` references resolve.
   dynasty  the realm is named for its 867 ruler's dynasty ("Samanids" /
            "Samanid"), the dynasty being CK3's own
+  key      CK3's loc key named in tag_names (WEST_FRANCIA, NEUSTRIA: CK3's names for
+           historical realms that no landed title carries); `adj` its adjective key
+           (default <key>_adj)
   custom   our own wording (tag_names.name / adj), for realms CK3 has no name
            for in this sense ("Great Tang", "West Francia"). Own text, no CK3 data.
   vanilla  the base game's loc stays (nothing written)
@@ -102,6 +105,13 @@ def names_of(tag, title, rank, row):
         return None
     if mode == "custom":
         return row[1], row[2] or row[1]
+    if mode == "key":
+        import ck3
+        from enc import fold_loc
+
+        name = _resolve(ck3.loc(row[1]))
+        adj = _resolve(ck3.loc(row[2] or row[1] + "_adj")) or name
+        return (fold_loc(name), fold_loc(adj)) if name else None
     if mode == "dynasty":
         d = dynasty_of(tag, )
         return dynasty_names(d) if d else None
