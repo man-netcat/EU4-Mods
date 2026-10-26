@@ -7564,7 +7564,7 @@ komi_titles = {
 bashkir_titles = {
 # CK3 ladders for UIS(r1)
 	rank = {
-		1 = BASHKIR_COUNTY  # county_herder
+		1 = COUNTY  # county_herder (CK3: capital terrain name, no EU4 form)
 		2 = DUCHY
 		3 = KINGDOM
 		4 = EMPIRE
@@ -8087,7 +8087,7 @@ manchu_titles = {
 buryat_titles = {
 # CK3 ladders for VII(r1) - herder CK3 government
 	rank = {
-		1 = BURYAT_COUNTY  # county_herder
+		1 = COUNTY  # county_herder (CK3: capital terrain name, no EU4 form)
 		2 = DUCHY
 		3 = KINGDOM
 		4 = EMPIRE
@@ -8407,6 +8407,336 @@ yi_titles = {
 	trigger = {
 		government = tribal
 		primary_culture = yi
+	}
+}
+
+
+ostyaki_nomad_titles = {
+# CK3 ladders for KZZ(r1) - nomad CK3 government (monarchy); ostyaki_titles is gated on another government
+	rank = {
+		1 = OSTYAKI_NOMAD_COUNTY  # county_tribal
+		2 = OSTYAKI_NOMAD_DUCHY  # duchy_tribal
+		3 = OSTYAKI_NOMAD_KINGDOM  # kingdom_tribal
+		4 = OSTYAKI_NOMAD_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = OSTYAKI_NOMAD_COUNT_MALE  # count_tribal_male
+		2 = OSTYAKI_NOMAD_DUKE_MALE  # duke_tribal_male
+		3 = OSTYAKI_NOMAD_KING_MALE  # king_tribal_male
+		4 = OSTYAKI_NOMAD_EMPEROR_MALE  # emperor_tribal_male
+		5 = OSTYAKI_NOMAD_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = OSTYAKI_NOMAD_COUNT_FEMALE  # count_tribal_female
+		2 = OSTYAKI_NOMAD_DUKE_FEMALE  # duke_tribal_female
+		3 = OSTYAKI_NOMAD_KING_FEMALE  # king_tribal_female
+		4 = OSTYAKI_NOMAD_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = OSTYAKI_NOMAD_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = OSTYAKI_NOMAD_COUNT_MALE  # consort uses the ruler form
+		2 = OSTYAKI_NOMAD_DUKE_MALE  # consort uses the ruler form
+		3 = OSTYAKI_NOMAD_KING_MALE  # consort uses the ruler form
+		4 = OSTYAKI_NOMAD_EMPEROR_MALE  # consort uses the ruler form
+		5 = OSTYAKI_NOMAD_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = OSTYAKI_NOMAD_COUNT_FEMALE  # count_tribal_female
+		2 = OSTYAKI_NOMAD_DUKE_FEMALE  # duke_tribal_female
+		3 = OSTYAKI_NOMAD_KING_FEMALE  # king_tribal_female
+		4 = OSTYAKI_NOMAD_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = OSTYAKI_NOMAD_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_nomad_government
+		primary_culture = ostyaki
+	}
+}
+
+
+mongol_herder_titles = {
+# CK3 ladders for KHL(r1), ABG(r1), KHE(r1), AKH(r1), LUO(r1), HEL(r1), PUU(r1), KHT(r1), KIZ(r1) - herder CK3 government (monarchy); mongol_titles is gated on another government
+	rank = {
+		1 = COUNTY  # county_herder (CK3: capital terrain name, no EU4 form)
+		2 = DUCHY
+		3 = KINGDOM
+		4 = EMPIRE
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = MONGOL_HERDER_COUNT_MALE  # count_herder_male
+		2 = MONGOL_HERDER_DUKE_MALE  # duke
+		3 = MONGOL_HERDER_KING_MALE  # king
+		4 = MONGOL_HERDER_EMPEROR_MALE  # emperor
+		5 = MONGOL_HERDER_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = MONGOL_HERDER_COUNT_FEMALE  # count_herder_female
+		2 = MONGOL_HERDER_DUKE_FEMALE  # duke_female
+		3 = MONGOL_HERDER_KING_FEMALE  # king_female
+		4 = MONGOL_HERDER_EMPEROR_FEMALE  # emperor_female
+		5 = MONGOL_HERDER_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = MONGOL_HERDER_COUNT_MALE  # consort uses the ruler form
+		2 = MONGOL_HERDER_DUKE_MALE  # consort uses the ruler form
+		3 = MONGOL_HERDER_KING_MALE  # consort uses the ruler form
+		4 = MONGOL_HERDER_EMPEROR_MALE  # consort uses the ruler form
+		5 = MONGOL_HERDER_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = MONGOL_HERDER_COUNT_FEMALE  # count_herder_female
+		2 = MONGOL_HERDER_DUKE_FEMALE  # duke_female
+		3 = MONGOL_HERDER_KING_FEMALE  # king_female
+		4 = MONGOL_HERDER_EMPEROR_FEMALE  # emperor_female
+		5 = MONGOL_HERDER_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_herder_government
+		primary_culture = mongol
+	}
+}
+
+
+uyghur_tribal_titles = {
+# CK3 ladders for JUY(r2) - tribal CK3 government (tribal); uyghur_titles is gated on another government
+	rank = {
+		1 = UYGHUR_TRIBAL_COUNTY  # county_tribal
+		2 = UYGHUR_TRIBAL_DUCHY  # duchy_tribal
+		3 = UYGHUR_TRIBAL_KINGDOM  # kingdom_feudal_altaic_group
+		4 = UYGHUR_TRIBAL_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = UYGHUR_TRIBAL_COUNT_MALE  # count_tribal_male
+		2 = UYGHUR_TRIBAL_DUKE_MALE  # duke_tribal_male
+		3 = UYGHUR_TRIBAL_KING_MALE  # king_feudal_male_uyghur
+		4 = UYGHUR_TRIBAL_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = UYGHUR_TRIBAL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = UYGHUR_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = UYGHUR_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = UYGHUR_TRIBAL_KING_FEMALE  # king_feudal_female_altaic_group
+		4 = UYGHUR_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = UYGHUR_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = UYGHUR_TRIBAL_COUNT_MALE  # consort uses the ruler form
+		2 = UYGHUR_TRIBAL_DUKE_MALE  # consort uses the ruler form
+		3 = UYGHUR_TRIBAL_KING_MALE  # consort uses the ruler form
+		4 = UYGHUR_TRIBAL_EMPEROR_MALE  # consort uses the ruler form
+		5 = UYGHUR_TRIBAL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = UYGHUR_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = UYGHUR_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = UYGHUR_TRIBAL_KING_FEMALE  # king_feudal_female_altaic_group
+		4 = UYGHUR_TRIBAL_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = UYGHUR_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		has_country_flag = kar_gov_tribal_government
+		primary_culture = uyghur
+	}
+}
+
+
+tungus_tribal_titles = {
+# CK3 ladders for ANY(r2), BOL(r1), YER(r1), MHO(r1) - tribal CK3 government (tribal); tungus_titles is gated on another government
+	rank = {
+		1 = TUNGUS_TRIBAL_COUNTY  # county_tribal
+		2 = TUNGUS_TRIBAL_DUCHY  # duchy_tribal
+		3 = TUNGUS_TRIBAL_KINGDOM  # kingdom_tribal
+		4 = TUNGUS_TRIBAL_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = TUNGUS_TRIBAL_COUNT_MALE  # count_tribal_male
+		2 = TUNGUS_TRIBAL_DUKE_MALE  # duke_tribal_male
+		3 = TUNGUS_TRIBAL_KING_MALE  # king_tribal_male
+		4 = TUNGUS_TRIBAL_EMPEROR_MALE  # emperor_tribal_male
+		5 = TUNGUS_TRIBAL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = TUNGUS_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = TUNGUS_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = TUNGUS_TRIBAL_KING_FEMALE  # king_tribal_female
+		4 = TUNGUS_TRIBAL_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = TUNGUS_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = TUNGUS_TRIBAL_COUNT_MALE  # consort uses the ruler form
+		2 = TUNGUS_TRIBAL_DUKE_MALE  # consort uses the ruler form
+		3 = TUNGUS_TRIBAL_KING_MALE  # consort uses the ruler form
+		4 = TUNGUS_TRIBAL_EMPEROR_MALE  # consort uses the ruler form
+		5 = TUNGUS_TRIBAL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = TUNGUS_TRIBAL_COUNT_FEMALE  # count_tribal_female
+		2 = TUNGUS_TRIBAL_DUKE_FEMALE  # duke_tribal_female
+		3 = TUNGUS_TRIBAL_KING_FEMALE  # king_tribal_female
+		4 = TUNGUS_TRIBAL_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = TUNGUS_TRIBAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		has_country_flag = kar_gov_tribal_government
+		primary_culture = tungus
+	}
+}
+
+
+buryat_nomad_titles = {
+# CK3 ladders for DAA(r2), EUL(r1), TUL(r1), KOT(r1), BUA(r1) - nomad CK3 government (monarchy); buryat_titles is gated on another government
+	rank = {
+		1 = BURYAT_NOMAD_COUNTY  # county_tribal
+		2 = BURYAT_NOMAD_DUCHY  # duchy_tribal
+		3 = BURYAT_NOMAD_KINGDOM  # kingdom_feudal_altaic_group
+		4 = BURYAT_NOMAD_EMPIRE  # empire_feudal_altaic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BURYAT_NOMAD_COUNT_MALE  # count_tribal_male
+		2 = BURYAT_NOMAD_DUKE_MALE  # duke_tribal_male
+		3 = BURYAT_NOMAD_KING_MALE  # king_feudal_male_altaic_group
+		4 = BURYAT_NOMAD_EMPEROR_MALE  # emperor_feudal_male_altaic_group
+		5 = BURYAT_NOMAD_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BURYAT_NOMAD_COUNT_FEMALE  # count_tribal_female
+		2 = BURYAT_NOMAD_DUKE_FEMALE  # duke_tribal_female
+		3 = BURYAT_NOMAD_KING_FEMALE  # king_feudal_female_altaic_group
+		4 = BURYAT_NOMAD_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = BURYAT_NOMAD_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BURYAT_NOMAD_COUNT_MALE  # consort uses the ruler form
+		2 = BURYAT_NOMAD_DUKE_MALE  # consort uses the ruler form
+		3 = BURYAT_NOMAD_KING_MALE  # consort uses the ruler form
+		4 = BURYAT_NOMAD_EMPEROR_MALE  # consort uses the ruler form
+		5 = BURYAT_NOMAD_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BURYAT_NOMAD_COUNT_FEMALE  # count_tribal_female
+		2 = BURYAT_NOMAD_DUKE_FEMALE  # duke_tribal_female
+		3 = BURYAT_NOMAD_KING_FEMALE  # king_feudal_female_altaic_group
+		4 = BURYAT_NOMAD_EMPEROR_FEMALE  # emperor_feudal_female_altaic_group
+		5 = BURYAT_NOMAD_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_nomad_government
+		primary_culture = buryat
 	}
 }
 

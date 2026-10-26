@@ -1800,6 +1800,15 @@ def run() -> int:
     for w in rite_warn:
         warn(w)
 
+    print("\n== tags reach their culture's title ladder (tools/govnames.py) ==")
+    import govnames
+
+    gn_miss = govnames.misses([(t.tag, t.culture) for t in _tagrows])
+    note(not gn_miss, f"every tag passes the gate of its culture's government_names block ({len(gn_miss)} fall through)")
+    for t, c, b in gn_miss[:20]:
+        print(f"        {t}: culture {c} has a dedicated block but the tag lands on {b} "
+              f"(run tools/culturetitles.py {t} to add a block gated on its government)")
+
     print("\n== province religions track CK3's counties (tools/provfaiths.py) ==")
     import provfaiths
 

@@ -257,7 +257,11 @@ def resolve(locmap, key):
         val = locmap.get(m.group(1))
         if val is None:
             return None
-    return None if "[SelectLocalization" in val else val
+    # CK3 scripted loc ([SelectLocalization, [Character.GetCapitalLocation.GetTerrain...])
+    # has no EU4 form: count it as absent so the vanilla key stands in
+    if "[SelectLocalization" in val or re.search(r"\[(?:Character|Title|Root|Scope)\.", val):
+        return None
+    return val
 
 
 def culture_info(culture):
@@ -413,6 +417,20 @@ def trigger_of(body):
     return ""
 
 
+def gate_of(body):
+    """(EU4 governments, kar_gov_* flags) a block's trigger insists on."""
+    trig = trigger_of(body)
+    return (set(re.findall(r"(?m)^\s*government\s*=\s*(\w+)", trig)),
+            set(re.findall(r"has_country_flag\s*=\s*(kar_gov_[a-z_0-9]+)", trig)))
+
+
+def gate_matches(gate, p):
+    """True when a planned tag passes the block's government/flag gate."""
+    govs, flags = gate
+    return ((not govs or p["gov"] in govs)
+            and (not flags or f"kar_gov_{p['ck3_gov']}" in flags))
+
+
 def coverage_index(blocks):
     """(tags, cultures, groups) -> [(block, government flag)] entries.
     A block whose trigger names a CK3-government flag only covers tags
@@ -483,7 +501,7 @@ def identity(picks):
 
 
 def body_of(key, suffixed, tags, picks, islam, reg, governments,
-            ck3_govs=()):
+            ck3_govs=(), variant=None):
     """Block body + fresh loc keys (outcome: dict KEY -> value).
     suffixed = tag code for a tag-specific block, None for the shared
     culture block. ck3_govs gates a shared block on the members' CK3
@@ -491,6 +509,8 @@ def body_of(key, suffixed, tags, picks, islam, reg, governments,
     up = key.upper()
     if suffixed:
         up = f"{up}_{suffixed}"
+    if variant:
+        up = f"{up}_{variant.upper()}"  # a government variant of the culture block
     keys = {}
     lines = ["\trank = {"]
     for rank, tier, fb, fbm, fbf in RANKS:
@@ -737,8 +757,36 @@ def main(argv):
         if common:
             name = f"{key}_titles"
             if name in blocks:
-                print(f"  {key:<18} block exists   {name} "
-                      f"({len(common)} tags)")
+                # The shared block is gated on the government(s) of the tags it
+                # was written for. Tags of the same culture under another CK3
+                # government (Mongol herder vs nomad, Buryat nomad vs herder, a
+                # tribal Tungus next to a feudal one) fall through its trigger
+                # to a generic block, so they get a block gated on their own.
+                gate = gate_of(blocks[name])
+                have = [p for p in common if gate_matches(gate, p)]
+                todo = [p for p in common if not gate_matches(gate, p)]
+                if have:
+                    print(f"  {key:<18} block exists   {name} "
+                          f"({len(have)} tags)")
+                byvar = {}
+                for p in todo:
+                    byvar.setdefault((p["gov"], p["ck3_gov"]), []).append(p)
+                for (gv, cg), ps in sorted(byvar.items()):
+                    short = cg.replace("_government", "")
+                    vname = f"{key}_{short}_titles"
+                    if vname in blocks:
+                        print(f"  {key:<18} block exists   {vname} "
+                              f"({len(ps)} tags)")
+                        continue
+                    ladders = ", ".join(f"{p['tag']}(r{p['rank']})" for p in ps)
+                    head = (f"# CK3 ladders for {ladders} - {short} CK3 government "
+                            f"({gv}); {name} is gated on another government")
+                    body, keys = body_of(key, None, [p["tag"] for p in ps],
+                                         ps[0]["picks"], ps[0]["islam"]
+                                         and len({p["islam"] for p in ps}) == 1,
+                                         ps[0]["reg"], {gv}, {cg}, variant=short)
+                    inserts.append((vname, head, body, keys, ps[0]))
+                    print(f"  {key:<18} government block {vname} ({ladders})")
                 continue
             ladders = ", ".join(f"{p['tag']}(r{p['rank']})" for p in common)
             mixed = len(culture_govs.get(key, ())) > 1
@@ -814,8 +862,10 @@ def main(argv):
     insert = "\n\n".join(f"{name} = {{\n{head}\n{body}\n}}\n"
                          for name, head, body, _, _ in inserts)
     zz = zz.replace(marker, insert + "\n\n" + marker, 1)
+    # keep the file's own newline style (LF in this repo)
+    crlf = b"\r\n" in open(ZZ, "rb").read()
     open(ZZ, "w", encoding="cp1252", newline="").write(
-        zz.replace("\n", "\r\n"))
+        zz.replace("\n", "\r\n") if crlf else zz)
     print(f"  zz: {len(inserts)} blocks inserted before muslim_monarchy")
 
     if fresh:
