@@ -1,4 +1,24 @@
 #4256 - Solvychegodsk
 
+owner = UST
+controller = UST
+add_core = UST
+capital = "Solvychegodsk"
+culture = novgorodian
+religion = suomenusko
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+is_city = yes
+add_local_autonomy = 50
+
 discovered_by = eastern
 discovered_by = western
+
+867.1.1 = {
+	owner = UST
+	controller = UST
+	add_core = UST
+}

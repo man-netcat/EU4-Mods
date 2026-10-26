@@ -285,6 +285,10 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = bori_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = ngaiism_scholar_modifier }
+		remove_country_modifier = ngaiism_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = melieism_scholar_modifier }
 		remove_country_modifier = melieism_scholar_modifier
 	}

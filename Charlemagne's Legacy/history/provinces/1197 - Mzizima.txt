@@ -1,7 +1,26 @@
 #1197 - Mzizima
 
+owner = ZAR
+controller = ZAR
+add_core = ZAR
+capital = "Mzizima"
+culture = swahili
+religion = ibadi #Fetishism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = gems #Pearls - a general export of the Swahili coast
+base_manpower = 1
+is_city = yes
+
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = central_african
 discovered_by = east_african
+
+867.1.1 = {
+	owner = ZAR
+	controller = ZAR
+	add_core = ZAR
+}

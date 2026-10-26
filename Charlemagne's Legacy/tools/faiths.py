@@ -92,6 +92,7 @@ FAITH_RELIGION = {
     "west_african_bidu_pagan": "bidaism",
     "west_african_orisha_pagan": "orisa",
     "west_african_bori_pagan": "bori",
+    "ngaiism_pagan": "ngaiism",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -172,6 +173,8 @@ NEW_RELIGIONS = {
                "The faith of the Yoruba, Edo and Fon, who honour Olodumare and the orisa, the divine powers whose shrines and festivals order the life of the towns."),
     "bori": ("animism", "pagan", "orisa",
                "The Bori of the Hausa and the peoples of the central Sudan, the possession cult of the iskoki, the spirits that ride their devotees."),
+    "ngaiism": ("animism", "pagan", "bori",
+               "The faith of the Kikuyu, Maasai and the peoples of the Kenyan highlands, who pray to Ngai on the slopes of Kirinyaga, the mountain of brightness."),
 }
 
 

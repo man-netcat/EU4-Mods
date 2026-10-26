@@ -568,6 +568,14 @@ bori_scholar_modifier = {
 	global_missionary_strength = 0.01
 }
 
+ngaiism_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	cavalry_power = 0.05
+}
+
 melieism_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes

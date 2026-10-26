@@ -9917,6 +9917,72 @@ levantine_tribal_titles = {
 }
 
 
+somali_feudal_titles = {
+# CK3 ladders for EWA(r1) - feudal CK3 government (monarchy); somali_titles is gated on another government
+	rank = {
+		1 = SOMALI_FEUDAL_COUNTY  # county_feudal
+		2 = SOMALI_FEUDAL_DUCHY  # duchy_feudal
+		3 = SOMALI_FEUDAL_KINGDOM  # kingdom_feudal
+		4 = SOMALI_FEUDAL_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SOMALI_FEUDAL_COUNT_MALE  # count_feudal_male_somalian_group
+		2 = SOMALI_FEUDAL_DUKE_MALE  # duke_feudal_male_somalian_group
+		3 = SOMALI_FEUDAL_KING_MALE  # king_feudal_male_somalian_group
+		4 = SOMALI_FEUDAL_EMPEROR_MALE  # emperor_feudal_male_somalian_group
+		5 = SOMALI_FEUDAL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SOMALI_FEUDAL_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_FEUDAL_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_FEUDAL_KING_FEMALE  # king_feudal_female_somalian_group
+		4 = SOMALI_FEUDAL_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
+		5 = SOMALI_FEUDAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SOMALI_FEUDAL_COUNT_MALE  # consort uses the ruler form
+		2 = SOMALI_FEUDAL_DUKE_MALE  # consort uses the ruler form
+		3 = SOMALI_FEUDAL_KING_MALE  # consort uses the ruler form
+		4 = SOMALI_FEUDAL_EMPEROR_MALE  # consort uses the ruler form
+		5 = SOMALI_FEUDAL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SOMALI_FEUDAL_COUNT_FEMALE  # count_feudal_female_somalian_group
+		2 = SOMALI_FEUDAL_DUKE_FEMALE  # duke_feudal_female_somalian_group
+		3 = SOMALI_FEUDAL_KING_FEMALE  # king_feudal_female_somalian_group
+		4 = SOMALI_FEUDAL_EMPEROR_FEMALE  # emperor_feudal_female_somalian_group
+		5 = SOMALI_FEUDAL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_feudal_government
+		primary_culture = somali
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

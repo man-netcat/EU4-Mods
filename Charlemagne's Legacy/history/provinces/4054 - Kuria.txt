@@ -1,3 +1,31 @@
+owner = KLO
+controller = KLO
+add_core = KLO
+capital = "Kuria"
+culture = masaba
 #4054 - Kikuyu
+culture = masaba
+religion = ngaiism
+religion = ngaiism #Fetishism
+hre = no
+hre = no
+base_tax = 1
+base_tax = 2
+base_production = 1
+base_production = 2
+trade_goods = fur
+trade_goods = unknown
+base_manpower = 1
+base_manpower = 1
+is_city = yes
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
 
 discovered_by = central_african
+
+867.1.1 = {
+	owner = KLO
+	controller = KLO
+	add_core = KLO
+}

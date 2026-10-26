@@ -1,7 +1,28 @@
 #2796 - Pate
 
+owner = PTE
+controller = PTE
+add_core = PTE
+capital = "Siyu"
+culture = swahili
+religion = ibadi
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = cloth
+base_manpower = 2
+is_city = yes
+center_of_trade = 1
+extra_cost = 8
+
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = central_african
+
+867.1.1 = {
+	owner = PTE
+	controller = PTE
+	add_core = PTE
+}

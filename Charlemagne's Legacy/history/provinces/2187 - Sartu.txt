@@ -1,4 +1,23 @@
 # 2187 - Sartu
 
+owner = HEI
+controller = HEI
+add_core = HEI
+capital = "Sartu"
+culture = chahar
+religion = tengri_pagan_reformed
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = nomad_group
+
+867.1.1 = {
+	owner = HEI
+	controller = HEI
+	add_core = HEI
+}

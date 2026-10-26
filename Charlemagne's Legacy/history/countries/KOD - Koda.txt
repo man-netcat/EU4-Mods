@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = ostyaki
+religion = siberian
+capital = 1070
+religious_school = siberian_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Deryab"
+		dynasty = "Kodaar"
+		birth_date = 838.5.14
+		death_date = 885.11.28
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Biur"
+		monarch_name = "Biur"
+		dynasty = "Kodaar"
+		birth_date = 864.1.16
+		death_date = 916.1.13
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

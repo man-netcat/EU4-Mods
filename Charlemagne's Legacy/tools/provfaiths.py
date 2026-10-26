@@ -382,6 +382,21 @@ PROVINCE_COUNTY.update({
     2289: "c_owu", 2290: "c_ijebu", 2294: "c_edo", 1151: "c_ijaw", 1163: "c_ibibo",
 })
 
+# The Swahili coast and the Jubba, west Siberia and the last Mongolian, Horn and Russian provinces,
+# by name (Lamu, Pate, Zanzibar, Tanga, Mombasa, Malindi, Taveta, Yeniseysk, Chuna, Komi is Perm) and
+# otherwise by the county of the same river, coast or people.
+PROVINCE_COUNTY.update({
+    1204: "c_lamu", 2774: "c_jilib", 2796: "c_pate", 1196: "c_mrima", 1197: "c_mrima",
+    1198: "c_mrima", 1199: "c_mrima", 1201: "c_zanzibar", 1200: "c_tanga", 1202: "c_mombasa",
+    1203: "c_malindi", 2777: "c_jubba", 4051: "c_ewaso_ngiro", 4052: "c_el_waak",
+    1273: "c_taveta", 1925: "c_mto_tana", 4053: "c_marsabit", 4054: "c_kilimanjaro",
+    4060: "c_kirinyaga", 4055: "c_tanga", 4058: "c_mrima", 2794: "c_mareeg",
+    1067: "c_narim", 1070: "c_koda", 2430: "c_yenisei", 1061: "c_yenisei", 2431: "c_yenisei",
+    2436: "c_chuna", 1069: "c_sosva", 1072: "c_kazym", 2445: "c_kazym",
+    2117: "c_sharga", 2187: "c_SW_zhongcheziguo", 4202: "c_SW_dongcheziguo",
+    4674: "c_SW_hulunbuir", 4256: "c_ustyug", 1780: "c_perm",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.

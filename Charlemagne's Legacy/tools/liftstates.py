@@ -28,12 +28,13 @@ REGIONS = {
     "china": ["@TNG", 701, 702, 709, 2183, 2747, 4223, 4670],
     "maritime": ["malaya_region", "indonesia_region", "moluccas_region"],
     "westafrica": ["sahel_region", "niger_region", "guinea_region"],
+    "eastside": ["east_africa_region", "central_africa_region", "west_siberia_region", "mongolia_region", "horn_of_africa_region", "russia_region", "ural_region"],
     "india": ["hindusthan_region", "bengal_region", "west_india_region", "deccan_region", "coromandel_region"],
 }
 
 
 # technology group of the tags a region creates (vanilla gives the Indonesian realms `chinese`)
-TECH = {"china": "chinese", "maritime": "chinese", "westafrica": "sub_saharan"}
+TECH = {"china": "chinese", "maritime": "chinese", "westafrica": "sub_saharan", "eastside": "east_african"}
 TECH_OF_PID = {pid: "aboriginal_tech" for pid in (1237, 2719, 2720, 2721, 2722, 1245, 2718, 2723, 2724)}
 
 

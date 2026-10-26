@@ -79,9 +79,11 @@ country_decisions = {
 				tag = MAD
 				tag = MAI
 				tag = MAK
+				tag = MBA
 				tag = MGD
 				tag = MHR
 				tag = MLB
+				tag = MLI
 				tag = MLK
 				tag = MOR
 				tag = MRI
@@ -104,6 +106,7 @@ country_decisions = {
 				tag = PLT
 				tag = PRO
 				tag = PRU
+				tag = PTE
 				tag = RTT
 				tag = RUG
 				tag = RYU
@@ -583,6 +586,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = MBA }
+			change_country_color = {
+				color = { 169 54 54 }
+			}
+		}
+		if = {
 			limit = { tag = MGD }
 			change_country_color = {
 				color = { 119 32 29 }
@@ -598,6 +607,12 @@ country_decisions = {
 			limit = { tag = MLB }
 			change_country_color = {
 				color = { 149 191 117 }
+			}
+		}
+		if = {
+			limit = { tag = MLI }
+			change_country_color = {
+				color = { 153 210 135 }
 			}
 		}
 		if = {
@@ -730,6 +745,12 @@ country_decisions = {
 			limit = { tag = PRU }
 			change_country_color = {
 				color = { 0 49 83 }
+			}
+		}
+		if = {
+			limit = { tag = PTE }
+			change_country_color = {
+				color = { 104 111 208 }
 			}
 		}
 		if = {

@@ -356,6 +356,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_ngaiism"
+		texturefile = "gfx/interface/icon_rite_ngaiism.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_melieism"
 		texturefile = "gfx/interface/icon_rite_melieism.tga"
 	}
