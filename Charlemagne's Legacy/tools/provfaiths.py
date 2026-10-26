@@ -217,12 +217,16 @@ PROVINCE_COUNTY.update({
     4407: "c_rohana",
 })
 
-# Provinces with no certain CK3 county yet (India): reported, never guessed.
-UNMAPPED_INDIA = {
-    4444: "Manidurg (Telingana: no county of that name; Medak/Mahbubnagar unclear)",
-    4470: "Soumelpur (Chota Nagpur: not a name CK3 carries)",
-    4446: "Kalahandi (Orissa/Chhattisgarh border: no county certain)",
-}
+# No county carries these names: each takes the county of the nearest province
+# of the same area (user rule - no province may stay uncolonized).
+PROVINCE_COUNTY.update({
+    2046: "c_suvarnagram",  # Nasirabad (Mymensingh): beside Dacca/Haibatnagar
+    4444: "c_racakonda",    # Manidurg (Medak): Golconda is the nearest province
+    4446: "c_suvarnapura",  # Kalahandi: south of Patna-Garjat and Sonpur
+    4470: "c_jharkand",     # Soumelpur (Chota Nagpur): between Jharkand and Mahurbanj
+})
+UNMAPPED_INDIA = {}
+
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
 UNMAPPED = {}
 

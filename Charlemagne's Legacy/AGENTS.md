@@ -178,7 +178,7 @@ receiving the province with all its vassals folded in; independent counts and
 dukes are states of their own, and so are tributaries (`tributary_of`, which is no
 `liege =`; their suzerain is only a relationship). `state867.py` does the grouping.
 The province pairing is name inference, a curated table per region (India: 251
-provinces; Manidurg, Soumelpur and Kalahandi stay unmapped). New tags get codes
+provinces; the four with no county of that name go to the nearest province's county - no province stays uncolonized). New tags get codes
 from their names, the tag religion and culture follow the ruler, province religions
 follow the CK3 county's faith. Afterwards: `culturetitles.py TAGS` for the title
 ladders, `culturalnames.py apply TAGS`, build, validate.
