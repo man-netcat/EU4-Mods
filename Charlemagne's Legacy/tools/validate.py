@@ -804,12 +804,14 @@ def run() -> int:
     print("\n== custom tags registered ==")
 
     cdata = json.load(open(str(CACHE / "provdata.json")))
-    for t in _REALMS:
-        if t.tag in vcountries:
-            continue
-        flag = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
-        if not os.path.exists(flag):
-            warn(f"{t.tag} has no flag yet")
+    # every tag - vanilla-reused and formable included - ships its own flag in the mod;
+    # the base game's flags are never a fallback
+    noflag = sorted(
+        t for t in {x.tag for x in _REALMS} | set(FORMABLE_TAGS)
+        if not os.path.exists(os.path.join(MOD, "gfx", "flags", f"{t}.tga"))
+    )
+    note(not noflag, "every tag has its own flag in the mod (vanilla flags never count)"
+         + (f" (missing: {', '.join(noflag)})" if noflag else ""))
 
     done = set()
     from eu4 import VANILLA_FORMATION_FILES  # noqa: E402
