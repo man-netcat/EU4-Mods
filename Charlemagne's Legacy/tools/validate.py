@@ -1809,6 +1809,13 @@ def run() -> int:
         print(f"        {t}: culture {c} has a dedicated block but the tag lands on {b} "
               f"(run tools/culturetitles.py {t} to add a block gated on its government)")
 
+    import culturalnames
+
+    cn_drift = culturalnames.drifting([(t.tag, t.ck3_title) for t in _tagrows if t.ck3_title])
+    if cn_drift:
+        warn("tags not shown under CK3's cultural name for their holder's culture (python3 tools/culturalnames.py apply TAG): "
+             + "; ".join(f"{t} {have!r} -> {want!r}" for t, _ti, want, have in cn_drift))
+
     print("\n== province religions track CK3's counties (tools/provfaiths.py) ==")
     import provfaiths
 
