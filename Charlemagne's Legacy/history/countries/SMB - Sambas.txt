@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = malayan
+religion = mahayana
+capital = 640
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Indri"
+		dynasty = "Wijaya"
+		female = yes
+		birth_date = 828.4.8
+		death_date = 886.2.21
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

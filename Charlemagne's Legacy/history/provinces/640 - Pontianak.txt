@@ -1,12 +1,12 @@
-owner = TAA
-controller = TAA
-add_core = TAA
+owner = SMB
+controller = SMB
+add_core = SMB
 capital = "Pontianak"
 culture = bornean
 #640 - Pontianak
 culture = bornean
-religion = shaivism
-religion = shaivism
+religion = mahayana
+religion = mahayana
 hre = no
 hre = no
 base_tax = 1
@@ -28,7 +28,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = TAA
-	controller = TAA
-	add_core = TAA
+	owner = SMB
+	controller = SMB
+	add_core = SMB
 }

@@ -1,8 +1,8 @@
 #2740 - Jeju
 
-owner = SLL
-controller = SLL
-add_core = SLL
+owner = AMN
+controller = AMN
+add_core = AMN
 capital = "Jeju"
 culture = korean
 religion = mahayana
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = SLL
-	controller = SLL
-	add_core = SLL
+	owner = AMN
+	controller = AMN
+	add_core = AMN
 }

@@ -1,6 +1,6 @@
-owner = BNJ
-controller = BNJ
-add_core = BNJ
+owner = TAG
+controller = TAG
+add_core = TAG
 capital = "Batulican"
 culture = bornean
 culture = bornean
@@ -27,7 +27,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BNJ
-	controller = BNJ
-	add_core = BNJ
+	owner = TAG
+	controller = TAG
+	add_core = TAG
 }

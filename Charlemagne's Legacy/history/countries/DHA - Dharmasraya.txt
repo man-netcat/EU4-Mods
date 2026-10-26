@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = malayan
+religion = mahayana
+capital = 4816
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Balaputra"
+		dynasty = "Batanghari"
+		birth_date = 834.4.11
+		death_date = 883.5.28
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

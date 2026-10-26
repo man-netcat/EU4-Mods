@@ -1,8 +1,8 @@
 #731 - Ilan Hala
 
-owner = BHE
-controller = BHE
-add_core = BHE
+owner = HUI
+controller = HUI
+add_core = HUI
 capital = "Ilan Hala"
 culture = manchu
 religion = shamanism
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BHE
-	controller = BHE
-	add_core = BHE
+	owner = HUI
+	controller = HUI
+	add_core = HUI
 }

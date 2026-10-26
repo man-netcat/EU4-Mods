@@ -114,6 +114,7 @@ country_decisions = {
 				tag = SCO
 				tag = SIL
 				tag = SLZ
+				tag = SMB
 				tag = SND
 				tag = SOR
 				tag = SPL
@@ -793,6 +794,12 @@ country_decisions = {
 			limit = { tag = SLZ }
 			change_country_color = {
 				color = { 129 109 9 }
+			}
+		}
+		if = {
+			limit = { tag = SMB }
+			change_country_color = {
+				color = { 255 89 4 }
 			}
 		}
 		if = {

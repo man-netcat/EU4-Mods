@@ -1,8 +1,8 @@
 #2320 - Ras Gharib
 
-owner = EGY
-controller = EGY
-add_core = EGY
+owner = EDE
+controller = EDE
+add_core = EDE
 capital = "Ras Gharib"
 culture = al_misr_arabic
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = EGY
-	controller = EGY
-	add_core = EGY
+	owner = EDE
+	controller = EDE
+	add_core = EDE
 }

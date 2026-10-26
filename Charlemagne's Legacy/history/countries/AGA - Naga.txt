@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = sub_saharan
+primary_culture = nubian
+religion = coptic
+capital = 2800
+religious_school = coptic_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Christophoros"
+		dynasty = "Hadaatar"
+		birth_date = 828.1.1
+		death_date = 882.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

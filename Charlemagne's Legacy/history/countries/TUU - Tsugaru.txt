@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = togoku
+religion = kamuyism
+capital = 4131
+religious_school = kamuyism_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Kuniharu"
+		dynasty = "Abe"
+		birth_date = 810.1.1
+		death_date = 883.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

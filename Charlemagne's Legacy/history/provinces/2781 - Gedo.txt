@@ -1,8 +1,8 @@
 #2781 - Gedo
 
-owner = BAE
-controller = BAE
-add_core = BAE
+owner = BAY
+controller = BAY
+add_core = BAY
 capital = "Luuq"
 culture = somali
 religion = waaqism
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BAE
-	controller = BAE
-	add_core = BAE
+	owner = BAY
+	controller = BAY
+	add_core = BAY
 }

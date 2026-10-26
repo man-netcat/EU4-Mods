@@ -576,6 +576,14 @@ ngaiism_scholar_modifier = {
 	cavalry_power = 0.05
 }
 
+mu_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	naval_morale = 0.05
+}
+
 melieism_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes

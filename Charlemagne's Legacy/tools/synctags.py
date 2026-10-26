@@ -38,6 +38,18 @@ def main(apply):
                 con.execute("insert or ignore into cultures(name) values (?)", (ch["culture"],))
             for k, v in ch.items():
                 con.execute(f"update tags set {k}=? where tag=?", (v, tag))
+    # a tag that gave a province away may have lost its capital: move it to a province it still holds,
+    # preferring the one CK3's capital county pairs with
+    import provfaiths as pf
+
+    for tag, title, cap in con.execute("select tag, ck3_title, capital from tags").fetchall():
+        own = [p for (p,) in con.execute("select pid from tag_provinces where tag=?", (tag,))]
+        if not own or cap in own:
+            continue
+        pick = next((p for p in own if pf.PROVINCE_COUNTY.get(p) == title), min(own))
+        print(f"{tag}: capital {cap} is gone -> {pick}")
+        if apply:
+            con.execute("update tags set capital=? where tag=?", (pick, tag))
     con.commit()
     print(n, "tags" + (" updated" if apply else " drift"))
 

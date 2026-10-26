@@ -1,11 +1,11 @@
 #Northern Mutsu
 
-owner = HIA
-controller = HIA
-add_core = HIA
+owner = TUU
+controller = TUU
+add_core = TUU
 capital = "Sannohe"
 culture = togoku
-religion = mahayana
+religion = kamuyism
 hre = no
 base_tax = 3
 base_production = 3
@@ -16,7 +16,7 @@ is_city = yes
 discovered_by = chinese
 
 867.1.1 = {
-	owner = HIA
-	controller = HIA
-	add_core = HIA
+	owner = TUU
+	controller = TUU
+	add_core = TUU
 }

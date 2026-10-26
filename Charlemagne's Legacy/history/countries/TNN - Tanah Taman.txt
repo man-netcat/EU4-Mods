@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = bornean
+religion = kaharingan
+capital = 4806
+religious_school = kaharingan_school
+867.1.1 = {
+	monarch = {
+		name = "Biat"
+		dynasty = "Kapuadyah"
+		birth_date = 828.5.13
+		death_date = 889.5.20
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = panjabi
+religion = vaishnavism
+capital = 2078
+religious_school = vaishnavism_school
+867.1.1 = {
+	monarch = {
+		name = "Khushal"
+		dynasty = "Nagra"
+		birth_date = 834.1.1
+		death_date = 888.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

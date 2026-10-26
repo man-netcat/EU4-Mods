@@ -1,11 +1,11 @@
 #2078 - Bannu
 
-owner = AFG
-controller = AFG
-add_core = AFG
+owner = NNA
+controller = NNA
+add_core = NNA
 capital = "Bannu"
 culture = panjabi
-religion = vajrayana
+religion = vaishnavism
 hre = no
 base_tax = 2
 base_production = 2
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = AFG
-	controller = AFG
-	add_core = AFG
+	owner = NNA
+	controller = NNA
+	add_core = NNA
 }

@@ -1,6 +1,6 @@
-owner = ALO
-controller = ALO
-add_core = ALO
+owner = AGA
+controller = AGA
+add_core = AGA
 capital = "Kosti"
 culture = nubian
 #2800 - Kosti
@@ -23,7 +23,7 @@ native_ferocity = 4
 native_hostileness = 9
 
 867.1.1 = {
-	owner = ALO
-	controller = ALO
-	add_core = ALO
+	owner = AGA
+	controller = AGA
+	add_core = AGA
 }

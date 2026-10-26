@@ -1,13 +1,13 @@
-owner = FAN
-controller = FAN
-add_core = FAN
+owner = EWE
+controller = EWE
+add_core = EWE
 capital = "Accra"
 culture = aka
 #1139 - Gold Coast
 #Eastern part thereof, mostly Accra and Osu Castle
 culture = aka
-religion = akom
-religion = akom #Fetishism
+religion = orisa
+religion = orisa #Fetishism
 hre = no
 hre = no
 base_tax = 1
@@ -28,7 +28,7 @@ extra_cost = 8
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = FAN
-	controller = FAN
-	add_core = FAN
+	owner = EWE
+	controller = EWE
+	add_core = EWE
 }

@@ -1,6 +1,6 @@
-owner = KEP
-controller = KEP
-add_core = KEP
+owner = RJT
+controller = RJT
+add_core = RJT
 capital = "Fak-Fak"
 culture = papuan
 #2718 - Fak-Fak
@@ -24,7 +24,7 @@ native_hostileness = 9
 
  # Don Jorge de Mneses
 867.1.1 = {
-	owner = KEP
-	controller = KEP
-	add_core = KEP
+	owner = RJT
+	controller = RJT
+	add_core = RJT
 }

@@ -1,9 +1,9 @@
-owner = IBA
-controller = IBA
-add_core = IBA
+owner = TNN
+controller = TNN
+add_core = TNN
 capital = "Kapit"
 culture = bornean
-religion = mahayana
+religion = kaharingan
 hre = no
 base_tax = 1
 base_production = 1
@@ -17,7 +17,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = IBA
-	controller = IBA
-	add_core = IBA
+	owner = TNN
+	controller = TNN
+	add_core = TNN
 }

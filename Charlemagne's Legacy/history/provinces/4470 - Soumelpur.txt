@@ -1,8 +1,8 @@
 #4470 - Soumelpur
 
-owner = BNG
-controller = BNG
-add_core = BNG
+owner = MUD
+controller = MUD
+add_core = MUD
 capital = "Soumelpur"
 culture = jharkhandi
 religion = mahayana
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = chinese
 
 867.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	owner = MUD
+	controller = MUD
+	add_core = MUD
 }

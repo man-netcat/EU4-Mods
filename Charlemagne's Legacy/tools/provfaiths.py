@@ -397,6 +397,18 @@ PROVINCE_COUNTY.update({
     4674: "c_SW_hulunbuir", 4256: "c_ustyug", 1780: "c_perm",
 })
 
+# Independent CK3 states that had no province because a neighbour took several: one of the
+# neighbour's spare provinces goes to each (Sambas, Tanah Taman, Tabalung, Raja Ampat, Baydhabo,
+# Lag Dera, Naga, Munda, Nandana, Tsugaru, Tamna ...), where the EU4 province lies in or beside
+# the county. Smaller states with no province of their own are lost, as the map is coarser.
+PROVINCE_COUNTY.update({
+    640: "c_BOR_sambas", 4806: "c_BOR_tanah_taman", 4801: "c_BOR_tabalung",
+    2718: "c_SuMa_raja_ampat", 4816: "c_SUM_dharmasraya", 2679: "c_SUM_east_sumatra",
+    591: "c_thanbyuzayat", 2385: "c_muang_fa_daet", 2373: "c_ma_linh", 2781: "c_baydhabo",
+    4052: "c_lag_dera", 2801: "c_dar-al-rih", 2800: "c_naga", 1139: "c_ewe",
+    2257: "c_wassa", 4470: "c_munda", 2078: "c_nandana", 4131: "c_tsugaru",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
