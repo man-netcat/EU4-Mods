@@ -147,7 +147,7 @@ def _parse_title_governments(files):
             date = (0, 0, 0)
             gov = None
             for line in body.split("\n"):
-                dm = re.match(r"^\s*(\d{1,3})\.(\d{1,2})\.(\d{1,2})\s*=",
+                dm = re.match(r"^\s*(\d{1,4})\.(\d{1,2})\.(\d{1,2})\s*=",
                               line)
                 if dm:
                     date = tuple(int(x) for x in dm.groups())
@@ -200,7 +200,7 @@ def _parse_dynasty_files(files):
 
 # Bump whenever a parser in this file changes: caches are keyed on source
 # mtimes, so parser edits alone would otherwise serve stale pickles.
-_CACHE_VERSION = 7
+_CACHE_VERSION = 8
 
 
 _CK3_COLORS_CACHE = Path(__file__).resolve().parent / "cache" / "ck3_colors.json"
