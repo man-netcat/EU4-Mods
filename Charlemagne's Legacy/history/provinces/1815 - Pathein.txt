@@ -1,6 +1,30 @@
 #1815 - Pathein
 
+owner = HNA
+controller = HNA
+add_core = HNA
+capital = "Pathein"
+culture = mon
+religion = buddhism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+extra_cost = 5
+add_permanent_province_modifier = {
+	name = irrawaddy_estuary_modifier
+	duration = -1
+}
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = HNA
+	controller = HNA
+	add_core = HNA
+}

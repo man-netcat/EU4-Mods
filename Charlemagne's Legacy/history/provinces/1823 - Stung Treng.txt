@@ -1,4 +1,23 @@
 #1823 - Stung Treng
 
+owner = STU
+controller = STU
+add_core = STU
+capital = "Stung Treng"
+culture = khmer
+religion = shaivism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = STU
+	controller = STU
+	add_core = STU
+}

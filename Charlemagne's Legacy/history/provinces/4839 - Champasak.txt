@@ -1,4 +1,21 @@
-#4839
+owner = UBO
+controller = UBO
+add_core = UBO
+capital = "Champasak"
+culture = lao
+religion = shaivism
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = tea
+base_manpower = 3
+is_city = yes
 
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = UBO
+	controller = UBO
+	add_core = UBO
+}

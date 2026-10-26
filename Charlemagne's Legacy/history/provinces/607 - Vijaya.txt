@@ -1,6 +1,27 @@
 #607 - Vijaya
 
+owner = VIA
+controller = VIA
+add_core = VIA
+capital = "Vijaya"
+culture = cham
+religion = shaivism
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = tropical_wood
+base_manpower = 2
+is_city = yes
+center_of_trade = 1
+extra_cost = 8
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = VIA
+	controller = VIA
+	add_core = VIA
+}

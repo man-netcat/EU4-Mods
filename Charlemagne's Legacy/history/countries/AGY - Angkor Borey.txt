@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = indian
+primary_culture = khmer
+religion = shaivism
+capital = 604
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Ansadeva"
+		dynasty = "Jalayita"
+		birth_date = 831.11.20
+		death_date = 888.5.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

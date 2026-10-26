@@ -1,4 +1,23 @@
 #4395 - Yamethin
 
+owner = PAG
+controller = PAG
+add_core = PAG
+capital = "Yamethin"
+culture = burmese
+religion = vajrayana
+hre = no
+base_tax = 2
+base_production = 3
+trade_goods = ivory
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = PAG
+	controller = PAG
+	add_core = PAG
+}

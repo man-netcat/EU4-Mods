@@ -1,6 +1,25 @@
 #2377- Teuk Khmao
 
+owner = AGY
+controller = AGY
+add_core = AGY
+capital = "Oc Eo"
+culture = khmer
+religion = shaivism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = fish
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = AGY
+	controller = AGY
+	add_core = AGY
+}

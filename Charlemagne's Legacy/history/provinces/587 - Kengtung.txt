@@ -1,4 +1,23 @@
 #587 - Kengtung
 
+owner = HAA
+controller = HAA
+add_core = HAA
+capital = "Kengtung"
+culture = shan
+religion = satsana_phi
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = tropical_wood
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = HAA
+	controller = HAA
+	add_core = HAA
+}

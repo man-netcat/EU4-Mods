@@ -1,4 +1,23 @@
 #583 - Hsenwi
 
+owner = HSE
+controller = HSE
+add_core = HSE
+capital = "Hsenwi"
+culture = shan
+religion = satsana_phi
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = tropical_wood
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = HSE
+	controller = HSE
+	add_core = HSE
+}

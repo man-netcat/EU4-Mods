@@ -1,4 +1,23 @@
 #1823 - Stung Treng
 
+owner = BOT
+controller = BOT
+add_core = BOT
+capital = "Kampot"
+culture = khmer
+religion = shaivism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = grain
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = BOT
+	controller = BOT
+	add_core = BOT
+}

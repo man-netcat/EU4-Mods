@@ -1,4 +1,25 @@
 #614 - Vientiane
 
+owner = VIN
+controller = VIN
+add_core = VIN
+capital = "Vientiane"
+culture = lao
+religion = mahayana
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = grain
+base_manpower = 4
+is_city = yes
+center_of_trade = 1
+extra_cost = 8
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = VIN
+	controller = VIN
+	add_core = VIN
+}

@@ -1,4 +1,21 @@
-#4838
+owner = MUK
+controller = MUK
+add_core = MUK
+capital = "Sip Et"
+culture = lao
+religion = shaivism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = ivory
+base_manpower = 1
+is_city = yes
 
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = MUK
+	controller = MUK
+	add_core = MUK
+}

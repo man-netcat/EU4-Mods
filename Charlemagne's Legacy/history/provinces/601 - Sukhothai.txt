@@ -1,4 +1,23 @@
 #601 - Sukhothai
 
+owner = SUK
+controller = SUK
+add_core = SUK
+capital = "Sukhothai"
+culture = central_thai
+religion = mahayana
+hre = no
+base_tax = 6
+base_production = 6
+trade_goods = chinaware
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = SUK
+	controller = SUK
+	add_core = SUK
+}

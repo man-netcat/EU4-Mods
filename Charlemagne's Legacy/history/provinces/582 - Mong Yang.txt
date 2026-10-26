@@ -1,4 +1,23 @@
 #582 - Mong Yang
 
+owner = DLA
+controller = DLA
+add_core = DLA
+capital = "Mong Yang"
+culture = shan
+religion = satsana_phi
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = copper
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = DLA
+	controller = DLA
+	add_core = DLA
+}

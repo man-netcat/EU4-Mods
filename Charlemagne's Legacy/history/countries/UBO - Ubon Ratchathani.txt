@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = khmer
+religion = shaivism
+capital = 4839
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Manidevi"
+		dynasty = "Pitamparna"
+		female = yes
+		birth_date = 848.6.10
+		death_date = 935.12.10
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

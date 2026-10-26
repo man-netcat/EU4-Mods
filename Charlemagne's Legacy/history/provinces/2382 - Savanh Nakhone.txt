@@ -1,4 +1,23 @@
 #2382 - Savanh Nakhone
 
+owner = SNN
+controller = SNN
+add_core = SNN
+capital = "Luang Namtha"
+culture = lao
+religion = shaivism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = copper
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = SNN
+	controller = SNN
+	add_core = SNN
+}

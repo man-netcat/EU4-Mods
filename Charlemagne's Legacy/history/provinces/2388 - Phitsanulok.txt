@@ -1,4 +1,23 @@
 #2388 - Phitsanulok
 
+owner = PHE
+controller = PHE
+add_core = PHE
+capital = "Phitsanulok"
+culture = central_thai
+religion = mahayana
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = livestock
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = PHE
+	controller = PHE
+	add_core = PHE
+}

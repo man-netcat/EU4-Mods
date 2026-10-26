@@ -1,4 +1,23 @@
 #2389 - Phra Bang
 
+owner = CAK
+controller = CAK
+add_core = CAK
+capital = "Phra Bang"
+culture = central_thai
+religion = mahayana
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = tropical_wood
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = CAK
+	controller = CAK
+	add_core = CAK
+}

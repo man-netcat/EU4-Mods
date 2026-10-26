@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = burmese
+religion = vajrayana
+capital = 4393
+religious_school = ari_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Thihanu"
+		dynasty = "Thihanu"
+		birth_date = 830.1.1
+		death_date = 900.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

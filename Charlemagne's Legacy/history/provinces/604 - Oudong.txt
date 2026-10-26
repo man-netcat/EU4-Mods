@@ -1,4 +1,23 @@
 #604 - Oudong
 
+owner = AGY
+controller = AGY
+add_core = AGY
+capital = "Oudong"
+culture = khmer
+religion = shaivism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = incense
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = AGY
+	controller = AGY
+	add_core = AGY
+}

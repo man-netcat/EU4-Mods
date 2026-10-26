@@ -1,6 +1,25 @@
 #590 - Moulmein
 
+owner = RMA
+controller = RMA
+add_core = RMA
+capital = "Martaban"
+culture = mon
+religion = buddhism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = sugar
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+867.1.1 = {
+	owner = RMA
+	controller = RMA
+	add_core = RMA
+}

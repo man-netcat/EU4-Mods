@@ -1,4 +1,27 @@
 #589 - Chiang Mai
 
+owner = HAA
+controller = HAA
+add_core = HAA
+capital = "Chiang Mai"
+culture = northern_thai
+religion = mahayana
+hre = no
+base_tax = 7
+base_production = 5
+trade_goods = ivory
+base_manpower = 5
+is_city = yes
+add_permanent_province_modifier = {
+	name = emerald_buddha
+	duration = -1
+}
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = HAA
+	controller = HAA
+	add_core = HAA
+}

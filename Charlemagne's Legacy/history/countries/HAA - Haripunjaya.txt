@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = indian
+primary_culture = mon
+religion = mahayana
+capital = 589
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Padumaraja"
+		dynasty = "Haripunjaya"
+		birth_date = 830.1.1
+		death_date = 886.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

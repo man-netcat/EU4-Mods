@@ -1,4 +1,23 @@
 #580 - Kale
 
+owner = HNN
+controller = HNN
+add_core = HNN
+capital = "Kale"
+culture = chin
+religion = vajrayana
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = ivory
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = HNN
+	controller = HNN
+	add_core = HNN
+}

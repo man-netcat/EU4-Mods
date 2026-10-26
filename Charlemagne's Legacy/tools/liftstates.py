@@ -24,6 +24,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 REGIONS = {
+    "seasia": ["burma_region", "indo_china_region"],
     "india": ["hindusthan_region", "bengal_region", "west_india_region", "deccan_region", "coromandel_region"],
 }
 

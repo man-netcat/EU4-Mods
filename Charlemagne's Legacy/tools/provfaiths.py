@@ -217,6 +217,47 @@ PROVINCE_COUNTY.update({
     4407: "c_rohana",
 })
 
+# Burma and Indo-China, by name inference like India: each EU4 province is paired with the CK3
+# county of the same name or the county holding the barony it is named for (Moulmein is
+# Mawlamyine in Thaton, Ayutthaya sits in Nakhon Pathom, Savanh Nakhone is Mouang Camphon
+# in Sanasomboon); the rest take the county of the nearest named province of their area.
+PROVINCE_COUNTY.update({
+    # Kachin, upper and central Burma, the Chindwin
+    582: "c_myitkyina", 2395: "c_putao", 2396: "c_monyin", 4404: "c_momauk", 4405: "c_takon",
+    581: "c_sagaing", 584: "c_kyaukse", 2399: "c_pagan", 585: "c_toungoo", 4394: "c_minbu",
+    4395: "c_yamethin", 4396: "c_sriksetra", 580: "c_kale", 2397: "c_kale", 2398: "c_kale",
+    4393: "c_hanlan",
+    # Lower Burma and Arakan
+    586: "c_pegu", 590: "c_thaton", 2403: "c_thaton", 1815: "c_kusumi", 4399: "c_dagon",
+    568: "c_ramu", 579: "c_vaisali", 2402: "c_sandoway",
+    # the Shan hills and Karenni
+    583: "c_hsenwi", 2400: "c_hsenwi", 588: "c_mongnai", 4398: "c_mongnai", 4397: "c_nyaungshwe",
+    4406: "c_nyaungshwe", 587: "c_moeng_laem", 2401: "c_mae_hong_son",
+    # Vietnam and the Red River
+    610: "c_simhapura", 2373: "c_simhapura", 1016: "c_nghe_an", 4821: "c_nghe_an",
+    613: "c_thang_long", 616: "c_lam_tay", 2372: "c_hai_dong", 4819: "c_nam_dinh",
+    4820: "c_quoc_oai",
+    # Laos
+    615: "c_luang_prabang", 4837: "c_luang_prabang", 1844: "c_vien_chan", 2371: "c_quoc_oai",
+    2381: "c_chiang_khaeng", 614: "c_vien_chan", 611: "c_salo_tai", 2384: "c_ku_kaeo",
+    2385: "c_ku_kaeo", 2382: "c_sanasomboon", 4840: "c_sanasomboon", 608: "c_stung_treng",
+    4838: "c_mukdahan", 4839: "c_ubon_ratchathani",
+    # Siam
+    600: "c_nakhon_pathom", 4831: "c_nakhon_pathom", 603: "c_mueang_phra_rot",
+    4830: "c_mueang_phra_rot", 4832: "c_lop_buri", 4836: "c_lop_buri", 4834: "c_khu_bua",
+    601: "c_sukhothai", 2388: "c_phetchabun", 4833: "c_phetchabun", 2389: "c_chakangrao",
+    589: "c_haripunjaya", 4841: "c_haripunjaya", 602: "c_ngoenyang", 1817: "c_nan_asia",
+    4842: "c_lampang", 612: "c_dong_si_mahosot", 2383: "c_dong_si_mahosot", 2386: "c_canasha",
+    # Cambodia and the Mekong
+    604: "c_angkor_borey", 2380: "c_angkor_borey", 2379: "c_pursat", 4825: "c_pursat",
+    4826: "c_botum_sakor", 609: "c_angkor", 1823: "c_stung_treng", 2378: "c_kracheh_nokor",
+    4827: "c_sambhupura", 4828: "c_prea_vihear", 605: "c_baigaur", 2376: "c_kracheh_nokor",
+    2377: "c_ca_mau", 4829: "c_vyadhapura",
+    # Champa and the highlands
+    606: "c_panduranga", 607: "c_vijaya", 1022: "c_indrapura", 4822: "c_indrapura",
+    2374: "c_kauthara", 2375: "c_ratanakiri", 4823: "c_pleiku", 4824: "c_pleiku",
+})
+
 # No county carries these names: each takes the county of the nearest province
 # of the same area (user rule - no province may stay uncolonized).
 PROVINCE_COUNTY.update({

@@ -1,4 +1,23 @@
 #2378 - Kratie
 
+owner = KHM
+controller = KHM
+add_core = KHM
+capital = "Kratie"
+culture = khmer
+religion = vaishnavism
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = grain
+base_manpower = 1
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = KHM
+	controller = KHM
+	add_core = KHM
+}

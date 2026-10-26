@@ -1,4 +1,23 @@
 #581 - Sagaing
 
+owner = AVA
+controller = AVA
+add_core = AVA
+capital = "Sagaing"
+culture = burmese
+religion = vajrayana
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = cotton
+base_manpower = 4
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = AVA
+	controller = AVA
+	add_core = AVA
+}

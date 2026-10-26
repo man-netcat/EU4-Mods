@@ -1,4 +1,23 @@
 #1817 - Nan
 
+owner = HAA
+controller = HAA
+add_core = HAA
+capital = "Lamphun"
+culture = northern_thai
+religion = mahayana
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = grain
+base_manpower = 3
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = HAA
+	controller = HAA
+	add_core = HAA
+}

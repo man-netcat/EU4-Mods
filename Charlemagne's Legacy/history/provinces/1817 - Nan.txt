@@ -1,4 +1,23 @@
 #1817 - Nan
 
+owner = NAN
+controller = NAN
+add_core = NAN
+capital = "Nan"
+culture = northern_thai
+religion = satsana_phi
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = ivory
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = NAN
+	controller = NAN
+	add_core = NAN
+}

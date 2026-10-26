@@ -237,6 +237,10 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = vajrayana_rite_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = ari_rite_scholar_modifier }
+		remove_country_modifier = ari_rite_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = sedism_scholar_modifier }
 		remove_country_modifier = sedism_scholar_modifier
 	}

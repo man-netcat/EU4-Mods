@@ -1,4 +1,21 @@
-#4825
+owner = PUR
+controller = PUR
+add_core = PUR
+capital = "Pursat"
+culture = khmer
+religion = vaishnavism
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = grain
+base_manpower = 2
+is_city = yes
 
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = PUR
+	controller = PUR
+	add_core = PUR
+}

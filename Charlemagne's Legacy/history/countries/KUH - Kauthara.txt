@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = cham
+religion = shaivism
+capital = 2374
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Maha Saya"
+		birth_date = 820.3.4
+		death_date = 873.12.16
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

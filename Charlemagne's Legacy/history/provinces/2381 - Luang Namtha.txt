@@ -1,4 +1,23 @@
 #2381 - Luang Namtha
 
+owner = MUA
+controller = MUA
+add_core = MUA
+capital = "Luang Namtha"
+culture = lao
+religion = satsana_phi
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = tea
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = MUA
+	controller = MUA
+	add_core = MUA
+}

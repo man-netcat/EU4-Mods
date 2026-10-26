@@ -1,4 +1,23 @@
 #2396 - Mong Kawng
 
+owner = DLA
+controller = DLA
+add_core = DLA
+capital = "Mong Kawng"
+culture = kachin
+religion = satsana_phi
+hre = no
+base_tax = 2
+base_production = 3
+trade_goods = gems
+base_manpower = 2
+is_city = yes
+
 discovered_by = chinese
 discovered_by = indian
+
+867.1.1 = {
+	owner = DLA
+	controller = DLA
+	add_core = DLA
+}

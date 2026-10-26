@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = mon
+religion = mahayana
+capital = 603
+religious_school = mahayana_school
+867.1.1 = {
+	monarch = {
+		name = "Udinna"
+		dynasty = "Phanlunattha"
+		birth_date = 816.2.17
+		death_date = 872.12.28
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}
