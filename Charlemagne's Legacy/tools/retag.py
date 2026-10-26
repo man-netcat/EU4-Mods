@@ -26,7 +26,7 @@ TABLES = [("tags", "tag"), ("tag_areas", "tag"), ("tag_provinces", "tag"), ("tag
           ("tag_suppress", "tag"), ("diplomacy", "liege"), ("diplomacy", "subject"),
           ("formables", "tag"), ("formable_renames", "tag"), ("core_deny", "holder"),
           ("core_deny", "owner"), ("rivalries", "tag"), ("friendships", "tag"),
-          ("wars", "goal_tag"), ("war_sides", "tag"), ("seed_cores", "tag")]
+          ("wars", "goal_tag"), ("war_sides", "tag"), ("seed_cores", "tag"), ("tag_names", "tag")]
 
 
 def retag(con, old, new, vfiles):

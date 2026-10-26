@@ -95,3 +95,14 @@ def encname(s: str) -> str:
     if not _encodable(out):
         out = "".join(c for c in out if _encodable(c)) or _slug(s)
     return out
+
+
+# letters beyond cp1252 that EU4's font draws (proved by names live in game)
+RENDERED_EXTRA = "ęŁł"
+
+
+def fold_loc(s):
+    """encname for display strings, keeping the letters the font draws beyond Latin-1."""
+    if s is None:
+        return None
+    return "".join(c if c in RENDERED_EXTRA else encname(c) for c in s).strip() or encname(s)

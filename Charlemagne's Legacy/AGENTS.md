@@ -436,3 +436,15 @@ install is present if a flag file equals one of the base game's.
   before. Conditional generated blocks must anchor mid-line
   (`...10{magyar_swap}`, value starting in `\n`): a conditional on its own
   template line emits a blank line when empty.
+
+## Tag names are lifted at build time (`tools/tagloc.py`)
+
+No CK3 text is baked into the repo: the build step "lift tag names from CK3"
+writes every tag's name and adjective into `countries_l_english.yml` from CK3's
+localisation (cultural name for the 867 holder's culture, else the title name;
+steppe people suffix; `$key$` references resolved; folded to EU4's font).
+Never hand-edit those lines. A tag's mode is a row in `tags.db` `tag_names`
+(none = `ck3`): `dynasty` (named for the 867 ruler's dynasty), `custom` (our own
+wording in `name`/`adj`, for "Great Tang", "West Francia" and the like) or
+`vanilla` (base-game loc stays). `python3 tools/tagloc.py` shows stale lines;
+validate fails on any.

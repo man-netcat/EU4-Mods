@@ -1831,11 +1831,12 @@ def run() -> int:
               f"(run tools/culturetitles.py {t} to add a block gated on its government)")
 
     import culturalnames
+    import tagloc
 
-    cn_drift = culturalnames.drifting([(t.tag, t.ck3_title) for t in _tagrows if t.ck3_title])
-    if cn_drift:
-        warn("tags not shown under CK3's cultural name for their holder's culture (python3 tools/culturalnames.py apply TAG): "
-             + "; ".join(f"{t} {have!r} -> {want!r}" for t, _ti, want, have in cn_drift))
+    tl_drift = tagloc.drift()
+    note(not tl_drift, f"every tag's name and adjective is what tools/tagloc.py lifts from CK3 ({len(tl_drift)} stale - run the build)")
+    for t, have, want in tl_drift[:20]:
+        print(f"        {t}: {have} but CK3 gives {want}")
 
     ppl = culturalnames.people_drift([(t.tag, t.ck3_title, t.rank) for t in _tagrows if t.ck3_title])
     note(not ppl, f"steppe counties carry their people's name ({len(ppl)} missing)")
