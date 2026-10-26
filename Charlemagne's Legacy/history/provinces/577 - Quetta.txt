@@ -1,8 +1,8 @@
 #577 - Quetta
 
-owner = SIN
-controller = SIN
-add_core = SIN
+owner = SND
+controller = SND
+add_core = SND
 capital = "Quetta"
 culture = sindhi
 religion = sunni
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = SIN
-	controller = SIN
-	add_core = SIN
+	owner = SND
+	controller = SND
+	add_core = SND
 }

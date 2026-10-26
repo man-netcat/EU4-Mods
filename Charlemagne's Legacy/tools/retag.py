@@ -5,7 +5,8 @@
 
 NEW must be a base-game tag the mod does not use yet; OLD a tags.db tag. Every
 table that names the tag, the localisation pair, the tag-gated title blocks and
-the VANILLA_REUSE guard in validate.py follow, and the tag takes over the base
+the VANILLA_REUSE guard in validate.py follow (a flag file is renamed, never
+overwritten), and the tag takes over the base
 game's country file name (the build then replaces the vanilla definition and
 history under their own file names).
 """
@@ -49,7 +50,11 @@ def retag(con, old, new, vfiles):
     open(ZZ, "w", encoding="cp1252", newline="").write(zz)
     flag = os.path.join(MOD, "gfx", "flags", f"{old}.tga")
     if os.path.exists(flag):
-        sys.exit(f"{old} has a flag ({flag}): rename it by hand, flags are yours")
+        target = os.path.join(MOD, "gfx", "flags", f"{new}.tga")
+        if os.path.exists(target):
+            sys.exit(f"{new}.tga exists already: not overwriting a flag")
+        os.rename(flag, target)  # the flag moves with its tag, unchanged
+        print(f"  flag {old}.tga -> {new}.tga")
     v = open(VALIDATE, encoding="utf-8").read()
     # append to the reuse list: the last string of the frozenset
     i = v.index("VANILLA_REUSE = frozenset(")
