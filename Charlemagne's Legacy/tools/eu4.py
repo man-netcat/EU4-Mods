@@ -1120,8 +1120,13 @@ def step_custom() -> None:
         write_out(cfile, country_definition(t))
         print(f"wrote {cfile}")
 
-        if t.flag_source or t.flag_from:
-            flag = local_mod_path(t.flag_source) if t.flag_source else os.path.join(GAME, "gfx", "flags", f"{t.flag_from}.tga")
+        if t.flag_from:
+            raise SystemExit(f"{t.tag}: flag_from {t.flag_from} - base-game flags are never reused; "
+                             "give the tag its own flag (or leave it visibly missing)")
+        if t.flag_source:
+            flag = local_mod_path(t.flag_source)
+            assert not os.path.abspath(flag).startswith(os.path.abspath(GAME)), \
+                f"{t.tag}: flag_source {flag} is inside the base game - vanilla flags are never reused"
             assert os.path.exists(flag), f"no flag for {t.tag} at {flag}"
             dest = os.path.join(MOD, "gfx", "flags", f"{t.tag}.tga")
             if os.path.exists(dest):

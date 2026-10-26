@@ -187,6 +187,11 @@ moves a tag (every table, the loc pair, tag-gated title blocks, VANILLA_REUSE) o
 vanilla tag (BEL -> BNG, Bengal); it renames the tag's flag file with it (and refuses only if the
 target flag already exists). Delete the old code's generated history/common country files after.
 
+Base-game flags are never reused, in any situation: `gfx/flags` is replace_path'd, a tag
+that takes a vanilla code (BNG, SND ...) has no flag until it gets its own, `flag_from` (copy
+a vanilla flag) is gone from the build and validate fails on it, and validate fails where the
+install is present if a flag file equals one of the base game's.
+
 ## Standing conventions
 
 - Provinces keep **vanilla culture** (standing rule; the one user-granted

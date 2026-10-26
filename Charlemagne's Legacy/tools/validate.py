@@ -382,6 +382,27 @@ def run() -> int:
     for b in vtags[:8]:
         print("        " + str(b))
 
+    print("\n== no base-game flag is reused ==")
+    # Vanilla flags never carry over: gfx/flags is replace_path'd, a reused code
+    # (BNG, SND ...) stays visibly flagless until it has its own flag, and no
+    # flag file may equal one of the base game's (checked where the install has them).
+    import hashlib as _hl
+    from tagdb import TAGS as _tg0
+    vflag_dir = os.path.join(GAME, "gfx", "flags")
+    from_vanilla = [t_.tag for t_ in _tg0 if t_.flag_from]
+    note(not from_vanilla, f"no tag takes its flag from the base game ({len(from_vanilla)} do)")
+    if os.path.isdir(vflag_dir):
+        vsum = {}
+        for fn in os.listdir(vflag_dir):
+            if fn.lower().endswith(".tga"):
+                vsum.setdefault(_hl.md5(open(os.path.join(vflag_dir, fn), "rb").read()).hexdigest(), fn)
+        dup = [fn for fn in sorted(os.listdir(os.path.join(MOD, "gfx", "flags")))
+               if fn.lower().endswith(".tga")
+               and _hl.md5(open(os.path.join(MOD, "gfx", "flags", fn), "rb").read()).hexdigest() in vsum]
+        note(not dup, f"no flag file equals a base-game flag ({len(dup)} do)")
+        for fn in dup[:20]:
+            print(f"        {fn} is byte-identical to the base game's")
+
     print("\n== reuse tags keep vanilla tech ==")
     # A tag whose code exists in the base game carries the same tech group
     # vanilla gives it - anything else hides its neighbours (the Arabia
