@@ -142,11 +142,11 @@ khurmazdis (khurmazta); the older "Khitan tengri" note below no longer holds for
 
 ## Religions are CK3 faiths
 
-Every EU4 religion the mod uses lifts exactly one CK3 faith, and a tag's
-religion is the religion of the faith its 867 ruler's rite belongs to (rite ->
-faith via CK3's `rite_types`, faith -> religion via `FAITH_RELIGION` in
-`tools/faiths.py`; `culturelift.FAITH_TO_RELIGION` is derived from it - no
-approximations: Balhae's Vinaya rite is Mahayana, not Theravada). Name and map
+A religion IS a CK3 faith under CK3's own key (`christian_faith`, `sunni`, `norse_pagan`); there is no
+CK3->EU4 table. `common/religions/00_religion.txt` is written by `tools/religions.py`: one block per faith
+tags.db names, each copying the mechanics of a base-game block (`religions.TEMPLATE`, `EDITS`), in the group
+CK3's religion family gives. A tag's religion is the faith its 867 ruler's rite belongs to (rite -> faith via
+CK3's `rite_types`; `culturelift.FAITH_TO_RELIGION` is derived) - no approximations: Balhae's Vinaya rite is Mahayana, not Theravada). Name and map
 colour come from CK3's faith (`python3 tools/faiths.py` sets them and creates
 missing religions by cloning a block, e.g. shaivism/vaishnavism from hinduism
 and achamanism from animism, with a placeholder icon frame); the icons are the
@@ -162,8 +162,8 @@ nobody needs may stay unmapped (qarmatian); map it when a tag or province needs 
 
 `tools/provfaiths.py` pairs EU4 provinces with CK3 counties (curated, a region at
 a time - Japan so far) and validate fails when a paired province's religion is
-not the one lifting its county's faith (county capital barony `rite` in
-`history/provinces` -> faith -> `FAITH_RELIGION`). `python3 tools/provfaiths.py`
+not its county's faith (county capital barony `rite` in
+`history/provinces` -> faith). `python3 tools/provfaiths.py`
 prints the audit, `... apply` writes the expected religions to `tags.db`.
 Provinces it cannot pair with certainty (`UNMAPPED`) are listed, never guessed.
 The old `provmap.json` auto-matches were wrong for eight Japanese provinces
@@ -194,14 +194,11 @@ install is present if a flag file equals one of the base game's.
 
 ## Standing conventions
 
-- Provinces keep **vanilla culture** (standing rule; the one user-granted
-  exception is Japan, where `japanese` (shown Yamato) and `togoku` (shown
-  Emishi) follow CK3's 867 county cultures: Mutsu, Rikuzen, Dewa and Ugo are
-  Emishi, the rest Yamato; Ainu stays its own culture). Religion is
-  CK3's 867 distribution on an area basis (`tags`/`provinces` religion cols):
-  Norse world + Dublin `norse_pagan_reformed`; Slavic lands `slavic`; Baltic
-  lands `romuva`;   Finnic lands `suomenusko` — all three lifted from CK2
-  (867 unreformed names/colours/icons; descs are ours). They live in
+- Provinces follow CK3: every owned province is paired with a CK3 county (`provfaiths.PROVINCE_COUNTY`)
+  and takes that county's CK3 culture and faith (as they are); the Azores, which CK3 lacks, keep their own.
+  Japan's `japanese` (shown Yamato) and `togoku` (shown Emishi) cultures follow the same rule. The
+  `norse_pagan_reformed`, `slavic`, `romuva` and `suomenusko` religions are lifted from CK2/CK3
+  faiths (867 unreformed names/colours/icons; descs are ours). They live in
   `common/religions/00_religion.txt`, a full vanilla copy with the three
   appended to the pagan group (Norse-clone mechanics, small thematic
   country bonus, no personal deities). Engine file-override is by exact
@@ -461,7 +458,7 @@ base-game tag (then `retag.py OLD NEW ...`, which also takes the vanilla tech gr
 removes the old code's history), `python3 tools/synctags.py apply` moves every tag onto its
 ruler's culture and faith, `python3 tools/provfaiths.py apply` fixes province religions,
 `python3 tools/culturetitles.py TAG..` adds the title ladders validate asks for, and a CK3
-faith with no EU4 religion is added through `faiths.FAITH_RELIGION` / `NEW_RELIGIONS` and a
+faith the file lacks is added through a `religions.TEMPLATE` entry and a
 `rites.RITES` row. Provinces in places CK3 does not cover (Madagascar, Mozambique and the
 Zambezi, South Africa, Kongo, the Great Lakes, Cameroon and Gabon, Yakutia to Kamchatka) stay
 unowned, like the New World and Australia.
@@ -544,3 +541,48 @@ generated output.
 `.github/workflows/charlemagnes-legacy.yml` runs two jobs: **validate** (build, validate, and fail if
 the committed files differ from the build output) and **self-contained** (the script-only check). Both
 need a `REFERENCE_REPO_TOKEN` repository secret with read access to `man-netcat/eu4-ck3-reference`.
+
+## The upload package
+
+`python3 tools/build.py --release [--zip] [--out DIR]` (or `tools/release.py`) writes `../dist/<mod>/`
+(+ `.zip`, + a `.mod` launcher) holding only the script and the mod's own files: `tools/`, the hand-
+authored events, disasters, decisions, loc and common files, `descriptor.mod` (no machine path, no flag
+replacement) and an `INSTALL.md`. Everything the build writes, every image under `gfx/`, and any
+file that is an edited copy of a base-game file is left out. The release fails if a base-game file's
+bytes appear in the package, or an edited base-game copy is not produced by the build. Installers run
+`python3 tools/build.py` once with their own EU4 and CK3 and get the rest. Base-game files the mod edits
+(`defines.lua`, the monarchy reforms, subject types) are `tools/vanillapatch.py` edits applied to the
+game's own copy; the hand-written government-title blocks and their loc are `tools/data/`, and the CK3
+title ladders are lifted on top of them every build (`culturetitles.step_government_names`). CI builds
+the package as an artifact.
+
+### Province pairing for the whole Old World
+
+All 2,247 owned provinces except the Azores are paired with a CK3 county in `provfaiths.PROVINCE_COUNTY`:
+region tables from the earlier lifts, a block of exact name matches (EU4 name = a CK3 county or barony
+name, unique, in the de jure kingdom of its EU4 area), and hand-paired blocks per region for the EU4
+names CK3 does not use. The pairing is by place, so several EU4 provinces may share one county.
+`provfaiths.py apply` writes each province's religion and culture from the county; validate fails when
+a paired province differs, or when an owned province is unpaired. Faiths CK3 has and EU4 lacked are
+lifted as new religions (Mazdakism, Khurramism, Afridunism, Zunism) with their rite schools; the
+rabbinic Judaism rites were added for the Khazar counties.
+
+### Culture and religion groups
+
+Culture groups are EU4's own (vanilla scripts name them), kept where they match CK3 and fixed where they
+do not: `cultures.HERITAGE_GROUPS` lists the groups each CK3 heritage may sit in, and validate fails for a
+culture outside them (`cultures.heritage_misfits()`). East Slavic is back as its own group (Russian,
+Novgorodian, Ryazanian, ...; Romanian alone stays Carpathian), Goths are Germanic, Slovien and Carantanian
+West Slavic, Pictish Brythonic, Hebrew and Aramaic Semitic, Bashkir and Buryat Altaic, Gondi Dravidian.
+Religion groups follow CK3's religion family: `faiths.CK3_RELIGION_GROUP` maps each CK3 religion to a
+group, every other pagan-family religion is `pagan`, and validate fails when a lifted religion sits
+elsewhere (`faiths.group_misfits()`). The Baltic, Finnic, Slavic and Magyar faiths and Shinto therefore
+sit in the pagan group (Shinto is moved out of eastern by `religions.MOVE_RELIGIONS`), and their rite
+schools with them.
+
+### Which cultures the file keeps
+
+A culture IS a CK3 culture under CK3's own key; there is no map. `tools/cultures.py` writes one entry per
+culture `tags.db` names (provinces, tags, formables, renames), grouped by CK3 heritage, with CK3's name
+list and loc. Every base-game culture is dropped, so vanilla scripts naming one log errors until we
+replace them. Validate fails on a culture that is not a CK3 culture.

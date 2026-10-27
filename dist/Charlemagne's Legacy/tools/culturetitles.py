@@ -16,9 +16,9 @@ to d_khorezm - an invented string nowhere.
 
 Coverage (every tags.db tag MUST have a ck3_title; the ruler_title
 lane is deprecated): the run reads each tag's explicit tier (rank),
-ck3_title, CK3 culture -> our key via culturelift.CK3_TO_EU4, and the
+ck3_title, CK3 culture (our culture key is the same), and the
 ruler's CK3 faith resolved through the rite -> faith -> religion chain
-(holder_faith, falling back to the FAITH_TO_RELIGION inversion of
+(holder_faith, falling back to the CK3 religion of
 tags.religion). Tags an already-written block covers (a trigger naming
 the tag, the culture key, or our culture's group; the default_* /
 muslim / hre_county defaults never count) are left alone - deliberate
@@ -86,7 +86,7 @@ RANKS = [
 ]
 DEFAULT_GOVS = ""  # --govs optional add (administrative_government for Roman heirs)
 
-MUSLIM_EU4 = {"sunni", "ibadi", "shiite"}
+MUSLIM_EU4 = {"sunni", "kharijite", "shia"}
 
 
 def ck3_gov_of(t):
@@ -282,25 +282,10 @@ def culture_info(culture):
 
 
 def resolve_culture(culture, title):
-    """tags.db culture column -> (CK3 culture id, our EU4 trigger key).
-
-    addtag stores the 867 holder's CK3 culture after lifting it, so rows
-    may hold either a CK3 id (khwarezmian) or the lifted EU4 key
-    (al_misr_arabic). The lift map normalises direction; collisions
-    (baranis/butr -> berber, coptic/egyptian -> al_misr_arabic, ...)
-    resolve to the 867 title holder's own CK3 culture.
-    """
-    from culturelift import CK3_TO_EU4, holder_culture
+    """tags.db culture column -> (CK3 culture id, our culture key): the same key, since the
+    culture is the CK3 culture. None when CK3 has no heritage for it."""
     if culture_info(culture)[0]:
-        return culture, CK3_TO_EU4.get(culture, culture)
-    cands = sorted(k for k, v in CK3_TO_EU4.items() if v == culture)
-    if len(cands) > 1:
-        hc = holder_culture(title)[1]
-        if hc in cands:
-            return hc, culture
-        return None, None
-    if len(cands) == 1:
-        return cands[0], culture
+        return culture, culture
     return None, None
 
 
@@ -323,15 +308,9 @@ def religion_of(faith):
     return None
 
 
-def religion_of_eu4(eu4rel):
-    """EU4 religion -> CK3 religion, via FAITH_TO_RELIGION inversion."""
-    from culturelift import FAITH_TO_RELIGION
-    for faith in sorted(f for f, eu in FAITH_TO_RELIGION.items()
-                        if eu == eu4rel):
-        r = religion_of(faith)
-        if r:
-            return r
-    return None
+def religion_of_eu4(faith):
+    """A religion (a CK3 faith, by its own key) -> its CK3 religion id."""
+    return religion_of(faith)
 
 
 def pick(rules, tier, rtype, gender, title, heritage, name_list, religion,
@@ -618,7 +597,7 @@ def main(argv):
                     help="print the plan, write nothing")
     a = ap.parse_args(argv)
 
-    from culturelift import holder_faith, CK3_TO_EU4
+    from culturelift import holder_faith
 
     blocks = zz_blocks()
     tagcov, cultcov, groupcov = coverage_index(blocks)
@@ -632,8 +611,6 @@ def main(argv):
         rck, rkey = resolve_culture(r.culture, r.ruler_title or r.ck3_title)
         if rkey is None:
             continue
-        if rkey != r.culture:
-            rkey = CK3_TO_EU4.get(rck, rkey)
         rgov = gov_flag_of(r)
         if rgov:
             culture_govs.setdefault(rkey, set()).add(rgov)
@@ -660,8 +637,6 @@ def main(argv):
                            f"culture {t.culture}: no CK3 id resolves it "
                            f"(map has no source for this key)"))
             continue
-        if key != t.culture:
-            key = CK3_TO_EU4.get(ck3cult, key)
         reg = key in ours
         gov = gov_flag_of(t)
         gov_flag = f"kar_gov_{gov}"
