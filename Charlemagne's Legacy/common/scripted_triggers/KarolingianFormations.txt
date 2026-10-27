@@ -405,6 +405,17 @@ kar_form_nubia_provinces_trigger = {
 	}
 }
 
+kar_form_tibet_provinces_trigger = {
+	OR = {
+		area = amdo_area
+		area = bhutan_area
+		area = kham_area
+		area = ngari_area
+		area = tsang_area
+		area = utsang_area
+	}
+}
+
 kar_form_finland_provinces_trigger = {
 	OR = {
 		area = bothnia_area

@@ -891,6 +891,7 @@ VANILLA_FORMATION_FILES = {
     "MiscCountryFormations.txt": ["icelandic_nation"],
     "HRE_FormableNations.txt": ["pomerania_nation"],
     "ScandinavianNation.txt": ["scandinavian_nation"],
+    "TibetanNation.txt": ["tibetan_nation"],
     "RestoreRomanEmpire.txt": ["restore_roman_empire"],
 }
 
