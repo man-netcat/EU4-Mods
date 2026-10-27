@@ -205,10 +205,18 @@ def _title_names(title, rank, tag):
     return name, adj
 
 
+# formables named from CK3 as well (the base game's own loc covers the rest)
+LIFT_FORMABLES = ("TIB", "UTS", "KAM", "AMD")
+
+
 def wanted():
     con = sqlite3.connect(DB)
-    return {tag: title_names(title, rank, tag)
-            for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq")}
+    out = {tag: title_names(title, rank, tag)
+           for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq")}
+    for tag, title, rank in con.execute("select tag, ck3_title, rank from formables"):
+        if tag in LIFT_FORMABLES:
+            out[tag] = title_names(title, rank, tag)
+    return out
 
 
 def _loc_path():

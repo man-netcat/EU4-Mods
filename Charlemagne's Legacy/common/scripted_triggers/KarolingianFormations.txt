@@ -405,6 +405,12 @@ kar_form_nubia_provinces_trigger = {
 	}
 }
 
+kar_form_tsang_provinces_trigger = {
+	OR = {
+		area = utsang_area
+	}
+}
+
 kar_form_tibet_provinces_trigger = {
 	OR = {
 		area = amdo_area
@@ -413,6 +419,18 @@ kar_form_tibet_provinces_trigger = {
 		area = ngari_area
 		area = tsang_area
 		area = utsang_area
+	}
+}
+
+kar_form_amdo_provinces_trigger = {
+	OR = {
+		area = amdo_area
+	}
+}
+
+kar_form_kham_provinces_trigger = {
+	OR = {
+		area = kham_area
 	}
 }
 
