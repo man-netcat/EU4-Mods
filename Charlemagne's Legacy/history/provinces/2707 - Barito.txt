@@ -2,9 +2,9 @@ owner = TIA
 controller = TIA
 add_core = TIA
 capital = "Barito"
-culture = bornean
+culture = dayak
 #2707 - Barito
-culture = bornean
+culture = dayak
 religion = kaharingan
 religion = kaharingan
 hre = no

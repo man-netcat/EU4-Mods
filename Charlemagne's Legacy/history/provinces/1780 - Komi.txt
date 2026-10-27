@@ -5,8 +5,8 @@ capital = "Yarensk"
 culture = komi
 #1780 - Komi
 culture = komi
-religion = siberian
-religion = siberian #Sami Shamanism
+religion = siberian_pagan
+religion = siberian_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1

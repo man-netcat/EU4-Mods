@@ -3,7 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 2
 technology_group = western
 primary_culture = polish
-religion = slavic
+religion = slavic_pagan
 capital = 264
 religious_school = slavic_pagan_school
 # Dukes of Olawa/Lubin

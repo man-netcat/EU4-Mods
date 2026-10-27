@@ -3,8 +3,8 @@
 owner = BHE
 controller = BHE
 add_core = BHE
-culture = korean
-religion = mahayana
+culture = balhae
+religion = mahayana_faith
 hre = no
 base_tax = 1
 base_production = 1

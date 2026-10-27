@@ -2,9 +2,9 @@ owner = BNJ
 controller = BNJ
 add_core = BNJ
 capital = "Banjar"
-culture = bornean
+culture = dayak
 #639 - Banjar
-culture = bornean
+culture = dayak
 religion = kaharingan
 religion = kaharingan
 hre = no

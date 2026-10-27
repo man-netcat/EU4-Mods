@@ -2,11 +2,11 @@ owner = TKR
 controller = TKR
 add_core = TKR
 capital = "Tekrur"
-culture = fulani
+culture = pulaar
 # No previous file for Tekrur
-culture = fulani
-religion = roog_sene
-religion = roog_sene #Fetishism
+culture = pulaar
+religion = west_african_roog_pagan
+religion = west_african_roog_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

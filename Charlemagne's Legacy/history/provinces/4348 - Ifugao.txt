@@ -2,9 +2,9 @@ owner = IGO
 controller = IGO
 add_core = IGO
 capital = "Ifugao"
-culture = filipino
+culture = iloko
 #4348 - Ifugao
-culture = filipino
+culture = iloko
 religion = dayawism
 religion = dayawism
 hre = no

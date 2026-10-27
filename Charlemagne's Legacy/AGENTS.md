@@ -142,11 +142,11 @@ khurmazdis (khurmazta); the older "Khitan tengri" note below no longer holds for
 
 ## Religions are CK3 faiths
 
-Every EU4 religion the mod uses lifts exactly one CK3 faith, and a tag's
-religion is the religion of the faith its 867 ruler's rite belongs to (rite ->
-faith via CK3's `rite_types`, faith -> religion via `FAITH_RELIGION` in
-`tools/faiths.py`; `culturelift.FAITH_TO_RELIGION` is derived from it - no
-approximations: Balhae's Vinaya rite is Mahayana, not Theravada). Name and map
+A religion IS a CK3 faith under CK3's own key (`christian_faith`, `sunni`, `norse_pagan`); there is no
+CK3->EU4 table. `common/religions/00_religion.txt` is written by `tools/religions.py`: one block per faith
+tags.db names, each copying the mechanics of a base-game block (`religions.TEMPLATE`, `EDITS`), in the group
+CK3's religion family gives. A tag's religion is the faith its 867 ruler's rite belongs to (rite -> faith via
+CK3's `rite_types`; `culturelift.FAITH_TO_RELIGION` is derived) - no approximations: Balhae's Vinaya rite is Mahayana, not Theravada). Name and map
 colour come from CK3's faith (`python3 tools/faiths.py` sets them and creates
 missing religions by cloning a block, e.g. shaivism/vaishnavism from hinduism
 and achamanism from animism, with a placeholder icon frame); the icons are the
@@ -162,8 +162,8 @@ nobody needs may stay unmapped (qarmatian); map it when a tag or province needs 
 
 `tools/provfaiths.py` pairs EU4 provinces with CK3 counties (curated, a region at
 a time - Japan so far) and validate fails when a paired province's religion is
-not the one lifting its county's faith (county capital barony `rite` in
-`history/provinces` -> faith -> `FAITH_RELIGION`). `python3 tools/provfaiths.py`
+not its county's faith (county capital barony `rite` in
+`history/provinces` -> faith). `python3 tools/provfaiths.py`
 prints the audit, `... apply` writes the expected religions to `tags.db`.
 Provinces it cannot pair with certainty (`UNMAPPED`) are listed, never guessed.
 The old `provmap.json` auto-matches were wrong for eight Japanese provinces
@@ -195,7 +195,7 @@ install is present if a flag file equals one of the base game's.
 ## Standing conventions
 
 - Provinces follow CK3: every owned province is paired with a CK3 county (`provfaiths.PROVINCE_COUNTY`)
-  and takes that county's culture (via `CK3_TO_EU4`) and faith; the Azores, which CK3 lacks, keep their own.
+  and takes that county's CK3 culture and faith (as they are); the Azores, which CK3 lacks, keep their own.
   Japan's `japanese` (shown Yamato) and `togoku` (shown Emishi) cultures follow the same rule. The
   `norse_pagan_reformed`, `slavic`, `romuva` and `suomenusko` religions are lifted from CK2/CK3
   faiths (867 unreformed names/colours/icons; descs are ours). They live in
@@ -458,7 +458,7 @@ base-game tag (then `retag.py OLD NEW ...`, which also takes the vanilla tech gr
 removes the old code's history), `python3 tools/synctags.py apply` moves every tag onto its
 ruler's culture and faith, `python3 tools/provfaiths.py apply` fixes province religions,
 `python3 tools/culturetitles.py TAG..` adds the title ladders validate asks for, and a CK3
-faith with no EU4 religion is added through `faiths.FAITH_RELIGION` / `NEW_RELIGIONS` and a
+faith the file lacks is added through a `religions.TEMPLATE` entry and a
 `rites.RITES` row. Provinces in places CK3 does not cover (Madagascar, Mozambique and the
 Zambezi, South Africa, Kongo, the Great Lakes, Cameroon and Gabon, Yakutia to Kamchatka) stay
 unowned, like the New World and Australia.
@@ -582,8 +582,7 @@ schools with them.
 
 ### Which cultures the file keeps
 
-`cultures.needed()`: the EU4 keys `cultmap.CK3_TO_EU4` maps CK3 cultures to, the lifted ones (`LIFTS`) and
-every culture `tags.db` names (provinces, tags, formables, renames). Every other vanilla culture is
-dropped, and a group left with none goes too (331 -> about 200 cultures). To bring one back, map a CK3
-culture to it in `tools/cultmap.py` or use it in the database. Validate warns about CK3 cultures the mod
-meets with no EU4 culture, and about EU4 cultures in use that no CK3 culture maps to.
+A culture IS a CK3 culture under CK3's own key; there is no map. `tools/cultures.py` writes one entry per
+culture `tags.db` names (provinces, tags, formables, renames), grouped by CK3 heritage, with CK3's name
+list and loc. Every base-game culture is dropped, so vanilla scripts naming one log errors until we
+replace them. Validate fails on a culture that is not a CK3 culture.

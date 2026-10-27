@@ -2,11 +2,11 @@ owner = SOV
 controller = SOV
 add_core = SOV
 capital = "Sörgüt"
-culture = ostyaki
+culture = khanty
 #1069 - Surgut
-culture = ostyaki
-religion = siberian
-religion = siberian #Sami Shamanism
+culture = khanty
+religion = siberian_pagan
+religion = siberian_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1

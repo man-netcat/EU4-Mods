@@ -2,9 +2,9 @@ owner = RJT
 controller = RJT
 add_core = RJT
 capital = "Fak-Fak"
-culture = moluccan
+culture = maluku
 #2718 - Fak-Fak
-culture = moluccan
+culture = maluku
 religion = tolotang
 religion = tolotang
 hre = no

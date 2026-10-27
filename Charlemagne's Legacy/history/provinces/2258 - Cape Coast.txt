@@ -2,11 +2,11 @@ owner = FAN
 controller = FAN
 add_core = FAN
 capital = "Axim"
-culture = fon
+culture = akan
 #Represents forts in western Ghana, from Axim to Elmina, mostly Elmina
-culture = fon
-religion = akom
-religion = akom #Fetishism
+culture = akan
+religion = akom_pagan
+religion = akom_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

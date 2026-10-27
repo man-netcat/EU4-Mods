@@ -2,9 +2,9 @@ owner = WEG
 controller = WEG
 add_core = WEG
 capital = "Manado"
-culture = sulawesi
+culture = toraja
 #644 - Manado
-culture = sulawesi
+culture = toraja
 religion = kaharingan
 religion = kaharingan
 hre = no

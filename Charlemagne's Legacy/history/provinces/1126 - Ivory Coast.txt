@@ -2,11 +2,11 @@ owner = DAB
 controller = DAB
 add_core = DAB
 capital = "Assinie"
-culture = fon
+culture = kru
 #1126 - Ivory Coast
-culture = fon
-religion = akom
-religion = akom #Fetishism
+culture = kru
+religion = akom_pagan
+religion = akom_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

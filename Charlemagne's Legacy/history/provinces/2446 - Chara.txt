@@ -5,8 +5,8 @@ capital = "Chara"
 culture = buryat
 #2446 - Chara
 culture = buryat
-religion = tengri_pagan_reformed
-religion = tengri_pagan_reformed
+religion = tengri_pagan
+religion = tengri_pagan
 hre = no
 hre = no
 base_tax = 1

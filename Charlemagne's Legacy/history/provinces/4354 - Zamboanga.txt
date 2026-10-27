@@ -2,9 +2,9 @@ owner = ZAA
 controller = ZAA
 add_core = ZAA
 capital = "Zamboanga"
-culture = filipino
+culture = bisayan
 #4354 - Zamboanga
-culture = filipino
+culture = bisayan
 religion = dayawism
 religion = dayawism
 hre = no

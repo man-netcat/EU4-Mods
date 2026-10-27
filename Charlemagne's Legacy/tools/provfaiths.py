@@ -4,7 +4,7 @@
 A province's religion is the religion lifting the CK3 faith of the county it
 corresponds to: the county's capital barony carries a `rite` in CK3's
 history/provinces, the rite belongs to a faith (rite_types), and
-faiths.FAITH_RELIGION says which EU4 religion lifts that faith. The EU4
+the faith is the province's religion, under CK3's own key. The EU4
 province -> CK3 county pairing is a curated table (PROVINCE_COUNTY), one region
 at a time; provinces in the table are verified, the rest are not.
 
@@ -877,10 +877,8 @@ def county_culture(county):
 def expected_culture(pid):
     """(EU4 culture key, CK3 culture) for a table province; the key is None when CK3's
     culture has no EU4 key (the province keeps what it has)."""
-    from culturelift import CK3_TO_EU4
-
     cc = county_culture(PROVINCE_COUNTY[pid])
-    return (CK3_TO_EU4.get(cc) if cc else None), cc
+    return cc, cc
 
 
 # Provinces CK3 has no county for (the Azores are not in CK3's world): left as they are.
@@ -889,11 +887,11 @@ NO_COUNTY = {367: "The Azores"}
 
 def expected(pid):
     """(EU4 religion, CK3 rite, CK3 faith) for a table province, else Nones."""
-    from faiths import FAITH_RELIGION, ck3_rites
+    from faiths import ck3_rites, known_faiths
 
     rite = county_rite(PROVINCE_COUNTY[pid])
     faith = ck3_rites().get(rite)
-    return FAITH_RELIGION.get(faith), rite, faith
+    return (faith if faith in known_faiths() else None), rite, faith
 
 
 def db_cultures():

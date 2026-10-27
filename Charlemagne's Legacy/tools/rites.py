@@ -383,8 +383,8 @@ MODIFIER_OF = {r[1]: r[5] for r in RITES}
 GROUPS = sorted({r[0] for r in RITES})
 
 def rite_religions():
-    """{school stem: EU4 religion}: the religion lifting the CK3 faith the rite belongs to
-    (faiths.FAITH_RELIGION); a rite whose faith no religion lifts yet is left out."""
+    """{school stem: religion}: the CK3 faith the rite belongs to (its own key); a rite whose faith
+    the mod has no religion block for (religions.TEMPLATE) is left out."""
     from faiths import rite_religion_map
 
     m = rite_religion_map()
@@ -842,7 +842,7 @@ def verify(check_history=True):
     # 2. EVERY religion the mod uses is a lifted CK3 faith with rites, in the group the religion sits in
     rel_text = open(REL_FILE, encoding="cp1252").read()
     groups = religion_groups(rel_text)
-    from faiths import FAITH_RELIGION, verify as verify_faiths
+    from faiths import verify as verify_faiths
 
     r_of = rite_religions()
     covered = {}

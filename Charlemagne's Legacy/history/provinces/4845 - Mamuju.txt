@@ -2,9 +2,9 @@ owner = SAA
 controller = SAA
 add_core = SAA
 capital = "Mamuju"
-culture = sulawesi
+culture = bugis
 #644 - Manado
-culture = sulawesi
+culture = bugis
 religion = aluk
 religion = aluk
 hre = no

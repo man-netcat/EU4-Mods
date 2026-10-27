@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_tibet }
 			NOT = { tag = TIB }
 			NOT = { exists = TIB }
-			primary_culture = tibetan
+			culture_group = tibetan
 			government_rank = 3
 			OR = {
 				ai = no

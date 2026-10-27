@@ -2,9 +2,9 @@ owner = MRI
 controller = MRI
 add_core = MRI
 capital = "Poso"
-culture = sulawesi
+culture = toraja
 #643 - Poso
-culture = sulawesi
+culture = toraja
 religion = aluk
 religion = aluk
 hre = no

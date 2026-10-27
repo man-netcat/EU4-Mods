@@ -5,8 +5,8 @@ capital = "Kosti"
 culture = nubian
 #2800 - Kosti
 culture = nubian
-religion = coptic
-religion = coptic #Fetishism
+religion = miaphysitism
+religion = miaphysitism #Fetishism
 hre = no
 hre = no
 base_tax = 1

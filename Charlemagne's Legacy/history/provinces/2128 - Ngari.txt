@@ -3,8 +3,8 @@
 owner = GUG
 controller = GUG
 add_core = GUG
-culture = tibetan
-religion = bon
+culture = zhangzhung
+religion = bon_faith
 hre = no
 base_tax = 1
 base_production = 1

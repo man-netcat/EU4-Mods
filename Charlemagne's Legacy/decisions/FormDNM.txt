@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_dai_viet }
 			NOT = { tag = DNM }
 			NOT = { exists = DNM }
-			primary_culture = vietnamese
+			primary_culture = viet
 			government_rank = 3
 			OR = {
 				ai = no

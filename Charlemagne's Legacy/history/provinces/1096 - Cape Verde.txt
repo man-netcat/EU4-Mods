@@ -3,8 +3,8 @@ controller = BAO
 add_core = BAO
 #1096 - Cape Verde
 capital = "Cape Verde"
-culture = fulani
-religion = roog_sene
+culture = wolof
+religion = west_african_roog_pagan
 hre = no
 hre = no
 base_tax = 1

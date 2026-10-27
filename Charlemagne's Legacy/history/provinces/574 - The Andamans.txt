@@ -2,9 +2,9 @@ owner = HAS
 controller = HAS
 add_core = HAS
 capital = "The Andamans"
-culture = malayan
+culture = nakkavaram
 #574 - The Andamans (and Nicobars)
-culture = malayan #closest we can get without making a new culture
+culture = nakkavaram #closest we can get without making a new culture
 religion = bilikuism
 religion = bilikuism
 hre = no

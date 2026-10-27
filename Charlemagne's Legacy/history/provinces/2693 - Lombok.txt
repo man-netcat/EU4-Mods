@@ -5,8 +5,8 @@ capital = "Lombok"
 culture = javanese
 #2693 - Lombok
 culture = javanese
-religion = vaishnavism
-religion = vaishnavism
+religion = vaishnava_faith
+religion = vaishnava_faith
 hre = no
 hre = no
 base_tax = 1

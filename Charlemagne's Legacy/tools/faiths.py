@@ -3,10 +3,9 @@
 
 Every religion the mod uses is the lift of exactly one CK3 faith: its name,
 map colour and icon come from CK3, and a tag's religion is the religion of
-the faith its 867 ruler's rite belongs to (rite -> CK3 faith -> EU4 religion;
-CK3 groups rites under faiths in common/religion/rite_types). FAITH_RELIGION
-below is the one table that says which EU4 religion lifts which faith; a
-faith that no tag or province needs may stay unmapped.
+the faith its 867 ruler's rite belongs to (rite -> CK3 faith, which is the religion's own key;
+CK3 groups rites under faiths in common/religion/rite_types). religions.TEMPLATE
+says which base-game block a faith copies the mechanics of.
 
 Usage (from the mod folder):
     python3 tools/faiths.py            # rewrite the religions file, its loc and the
@@ -29,170 +28,6 @@ MOD = os.path.join(HERE, "..")
 REL_FILE = os.path.join(MOD, "common", "religions", "00_religion.txt")
 LOC_FILE = os.path.join(MOD, "localisation", "replace", "karolingian_religion_l_english.yml")
 
-# CK3 faith -> the EU4 religion that lifts it.
-FAITH_RELIGION = {
-    "christian_faith": "catholic",
-    "armenian_apostolic": "apostolic",
-    "miaphysitism": "coptic",
-    "nestorian": "nestorian",
-    "bosnian_church": "krstjani",
-    "sunni": "sunni",
-    "shia": "shiite",
-    "kharijite": "ibadi",
-    "mahayana_faith": "mahayana",
-    "theravada_faith": "buddhism",
-    "vajrayana_faith": "vajrayana",
-    "confucian_faith": "confucianism",
-    "shaiva_faith": "shaivism",
-    "vaishnava_faith": "vaishnavism",
-    "mazdayasna": "zoroastrian",
-    "khurmazta": "khurmazdis",
-    "norse_pagan": "norse_pagan_reformed",
-    "tengri_pagan": "tengri_pagan_reformed",
-    "slavic_pagan": "slavic",
-    "baltic_pagan": "romuva",
-    "finnish_pagan": "suomenusko",
-    "magyar_pagan": "taltosist",
-    "north_african_acham_pagan": "achamanism",
-    "shinto_faith": "shinto",
-    "utaki": "utaki",
-    "kamuyism_pagan": "kamuyism",
-    "hantuism": "hantuism",
-    "shamanism": "shamanism",
-    "shangqing_faith": "shangqing",
-    "zhengyi": "zhengyi",
-    "maitreya_faith": "maitreya",
-    "manichaean_faith": "manichaean",
-    "moism": "moism",
-    "dab_qhuas": "dab_qhuas",
-    "haymanot": "haymanot",
-    "waaqism_pagan": "waaqism",
-    "kushitism_pagan": "kushitism",
-    "kabarism": "kabarism",
-    "rabbinic_faith": "jewish",
-    "siberian_pagan": "siberian",
-    "bon_faith": "bon",
-    "kiratism": "kiratism",
-    "bimoism": "bimoism",
-    "satsana_phi": "satsana_phi",
-    "jain_faith": "jainism",
-    "shakta_faith": "shaktism",
-    "smartism": "smartism",
-    "sedism": "sedism",
-    "melieism": "melieism",
-    "rrmeaism": "rrmeaism",
-    "bilikuism": "bilikuism",
-    "kaharingan": "kaharingan",
-    "tolotang": "tolotang",
-    "aluk": "aluk",
-    "dayawism": "dayawism",
-    "west_african_roog_pagan": "roog_sene",
-    "west_african_pagan": "siguism",
-    "akom_pagan": "akom",
-    "west_african_bidu_pagan": "bidaism",
-    "west_african_orisha_pagan": "orisa",
-    "west_african_bori_pagan": "bori",
-    "ngaiism_pagan": "ngaiism",
-    "mu": "mu",
-    "mazdakism": "mazdakism",
-    "khurramism": "khurramism",
-    "afridunism": "afridunism",
-    "zun_pagan": "zunism",
-}
-
-# Religions this module creates (cloned block, group, sibling to sit after, description)
-NEW_RELIGIONS = {
-    "shaivism": ("hinduism", "dharmic", "hinduism",
-                 "The worship of Shiva, Lord of Yogis and of destruction and renewal, with its ascetics and temples across the subcontinent."),
-    "vaishnavism": ("hinduism", "dharmic", "shaivism",
-                    "The worship of Vishnu and his avatars, carried by temple and pilgrimage across the subcontinent."),
-    "achamanism": ("animism", "pagan", "animism",
-                   "The old faith of the Berber and Guanche peoples of the Maghreb and the Atlantic islands, with its holy places and ancestral customs."),
-    "utaki": ("animism", "pagan", "achamanism",
-              "The faith of the Ryukyu islands and southern Kyushu, with its sacred groves, the utaki, where the noro priestesses commune with the kami."),
-    "kamuyism": ("animism", "pagan", "utaki",
-                 "The faith of the Ainu and the peoples of Hokkaido and Sakhalin, who honour the kamuy, the spirits dwelling in animals, mountains and tools."),
-    "hantuism": ("animism", "pagan", "kamuyism",
-                 "The faith of the Austronesian peoples of Taiwan, where the hantu, the ancestral spirits, watch over the village and the hunt."),
-    "shangqing": ("confucianism", "eastern", "shinto",
-                  "The Highest Clarity tradition of the Daoists, with its revelations of the immortals and the scripture of the Mao Mountain."),
-    "zhengyi": ("confucianism", "eastern", "shangqing",
-                "The Way of Orthodox Unity, descended from the Celestial Masters, whose priests heal the sick and keep the registers of the spirits."),
-    "maitreya": ("confucianism", "eastern", "zhengyi",
-                 "The hope of the coming Buddha Maitreya, kept by the lay societies of the Chinese plains."),
-    "manichaean": ("zoroastrian", "zoroastrian_group", "khurmazdis",
-                   "The dualist faith of Mani, spread along the Silk Road and kept in the Uyghur lands and the ports of the south."),
-    "moism": ("animism", "pagan", "hantuism",
-              "The folk faith of the Zhuang and the peoples of the southern hills, led by its mo priests."),
-    "dab_qhuas": ("animism", "pagan", "moism",
-                  "The faith of the Hmong and the hill peoples of the south, in which the dab, the spirits of house and hill, are honoured."),
-    "haymanot": ("jewish", "jewish_group", "jewish",
-                 "The Judaism of the Beta Israel of the Ethiopian highlands, kept by their monks and smiths under the mountain kings."),
-    "waaqism": ("animism", "pagan", "dab_qhuas",
-                "The faith of the Cushitic peoples of the Horn, who honour Waaq, the sky god, and hold their assemblies under the sacred trees."),
-    "kabarism": ("jewish", "jewish_group", "haymanot",
-                 "The Judaism of the Khazar khagans and their court at Itil, carried along the steppe roads by Radhanite merchants."),
-    "bon": ("animism", "pagan", "siberian",
-            "The old religion of Tibet, older than the Buddha's teaching, whose priests make offerings to the mountain gods and the spirits of the high plateau."),
-    "kiratism": ("animism", "pagan", "bon",
-                 "The Mundhum of the Kirati peoples of the eastern Himalayan foothills, who honour their ancestors and the spirits of the hills and rivers."),
-    "bimoism": ("animism", "pagan", "kiratism",
-                "The faith of the Yi peoples of the south-western mountains, led by their bimo priests, keepers of the ancestral scriptures."),
-    "satsana_phi": ("animism", "pagan", "bimoism",
-                    "The spirit faith of the Tai peoples, in which the phi, the spirits of house, field and village, are placated by the elders."),
-    "siberian": ("animism", "pagan", "kushitism",
-                 "The shamanism of the Komi, Khanty and the peoples of the northern forests, who honour the spirits of the river, the bear and the sacred groves of the Urals."),
-    "kushitism": ("animism", "pagan", "waaqism",
-                  "The ancient faith of the Kushite and Beja peoples of the Nile and the Red Sea hills, whose holy places lie at Aswan and Naqis."),
-    "jainism": ("hinduism", "dharmic", "vaishnavism",
-                "The path of the Tirthankaras and of ahimsa, kept by monks and lay merchants in the cities and courts of western and southern India."),
-    "shaktism": ("hinduism", "dharmic", "jainism",
-                 "The worship of the Goddess in her many forms, with its temples and its tantric masters across Bengal, Kashmir and the south."),
-    "smartism": ("hinduism", "dharmic", "shaktism",
-                 "The tradition of the smriti and of Advaita, which honours five deities as aspects of one and is kept by learned Brahmins."),
-    "sedism": ("animism", "pagan", "satsana_phi",
-               "The faith of the Meitei of Manipur, who honour Sanamahi and the lai, the spirits of the land, at the lairembi shrines."),
-    "melieism": ("animism", "pagan", "sedism",
-                 "The ancestral faith of the Qiangic and Tangut peoples of the north-western marches, whose shamans read the stars and keep the rites of their forefathers."),
-    "rrmeaism": ("animism", "pagan", "melieism",
-                 "The mountain faith of the Qiang of the upper Min valley, a religion of the sacred peaks and the white stones kept by their priests."),
-    "bilikuism": ("animism", "pagan", "melieism",
-               "The faith of the Nias and Mentawai islanders and the peoples of the Andamans, who keep the ancestral megalithic cults of their villages."),
-    "kaharingan": ("animism", "pagan", "bilikuism",
-               "The faith of the Dayak peoples of Borneo, who honour Ranying and the spirits of river and forest, and keep the secondary funeral of the tiwah."),
-    "tolotang": ("animism", "pagan", "kaharingan",
-               "The faith of the Bugis and Makassar peoples and the peoples of eastern Indonesia, who revere Dewata Seuwae and the bissu priests."),
-    "aluk": ("animism", "pagan", "tolotang",
-               "The Aluk To Dolo of the Toraja highlands, whose ancestral cult, funeral feasts and tongkonan houses bind the living to the dead."),
-    "dayawism": ("animism", "pagan", "aluk",
-               "The faith of the peoples of the Philippines, who honour the anito, the spirits of ancestors and nature, through the babaylan and the datu."),
-    "roog_sene": ("animism", "pagan", "dayawism",
-               "The faith of the Serer, who honour Roog Sene, the creator, and keep the pangool, the ancestral spirits of the saltane priests."),
-    "siguism": ("animism", "pagan", "roog_sene",
-               "The faith of the Mande peoples, whose smiths and hunters keep the komo and the boli, the powers of the earth and the ancestors."),
-    "akom": ("animism", "pagan", "siguism",
-               "The Akom of the Akan, in which the okomfo priests commune with the abosom, the lesser gods, under the high god Nyame."),
-    "bidaism": ("animism", "pagan", "akom",
-               "The faith of the Soninke and the peoples of the old Wagadu, who keep the cult of Bida, the serpent of the well, for the rains and the gold."),
-    "orisa": ("animism", "pagan", "bidaism",
-               "The faith of the Yoruba, Edo and Fon, who honour Olodumare and the orisa, the divine powers whose shrines and festivals order the life of the towns."),
-    "bori": ("animism", "pagan", "orisa",
-               "The Bori of the Hausa and the peoples of the central Sudan, the possession cult of the iskoki, the spirits that ride their devotees."),
-    "ngaiism": ("animism", "pagan", "bori",
-               "The faith of the Kikuyu, Maasai and the peoples of the Kenyan highlands, who pray to Ngai on the slopes of Kirinyaga, the mountain of brightness."),
-    "mu": ("animism", "pagan", "ngaiism",
-               "The shamanic faith of Jeju and the Korean peninsula, in which the mudang, the shamans, honour the spirits of mountain, sea and ancestors through the gut."),
-    "mazdakism": ("zoroastrian", "zoroastrian_group", "manichaean",
-                  "The communal creed of Mazdak, who preached the sharing of goods and was put down by Khosrow; his followers still hide in the hills of Khuzestan."),
-    "khurramism": ("zoroastrian", "zoroastrian_group", "mazdakism",
-                   "The Khurramites, the joyous, heirs of Mazdak and of Babak, a faith of the hill peoples of Azerbaijan, Gilan and Khorasan who rose against the caliphs."),
-    "afridunism": ("zoroastrian", "zoroastrian_group", "khurramism",
-                   "The folk religion of the Daylamites and the Caspian shore, which honours the hero Afridun and keeps the old Iranian customs of the forest and the hills."),
-    "zunism": ("animism", "pagan", "rrmeaism",
-               "The sun faith of the Zun, the god-kings of Zabulistan and Sistan, whose temple at Zamindawar and whose idol drew pilgrims from all India."),
-}
-
-
 # ---- CK3 data ---------------------------------------------------------------
 
 def ck3_rites():
@@ -206,9 +41,17 @@ def ck3_rites():
     return out
 
 
+def known_faiths():
+    """The CK3 faiths the mod can use: the ones religions.TEMPLATE knows a block for."""
+    import religions
+
+    return set(religions.TEMPLATE)
+
+
 def rite_religion_map():
     """{CK3 rite: EU4 religion} through the rite's faith (rites of unmapped faiths are left out)."""
-    return {r: FAITH_RELIGION[f] for r, f in ck3_rites().items() if f in FAITH_RELIGION}
+    known = known_faiths()
+    return {r: f for r, f in ck3_rites().items() if f in known}
 
 
 def _rgb(raw):
@@ -300,15 +143,16 @@ def group_misfits():
     """[(religion, group in the file, group CK3's family says)]"""
     have = religion_groups(_read(REL_FILE))
     out = []
-    for faith, key in FAITH_RELIGION.items():
-        want = expected_group(faith)
-        if want and have.get(key) != want:
-            out.append((key, have.get(key), want))
+    for key, group in have.items():
+        if key in known_faiths():
+            want = expected_group(key)
+            if want and group != want:
+                out.append((key, group, want))
     return out
 
 
 def religion_of_faith():
-    return {r: f for f, r in FAITH_RELIGION.items()}
+    return {f: f for f in known_faiths()}
 
 
 # ---- the 00_religion.txt side ----------------------------------------------
@@ -375,7 +219,8 @@ def lift_icons():
 
     text = _read(REL_FILE)
     done = 0
-    for faith, key in FAITH_RELIGION.items():
+    for faith in sorted(known_faiths()):
+        key = faith
         sp = block_span(text, key)
         if sp is None:
             continue
@@ -407,7 +252,7 @@ def verify(used):
     for rel in used:
         faith = by_rel.get(rel)
         if faith is None:
-            err.append(f"religion '{rel}' is not lifted from a CK3 faith - map it in FAITH_RELIGION (tools/faiths.py) or replace it")
+            err.append(f"religion '{rel}' is not a CK3 faith the mod has a block for (religions.TEMPLATE)")
             continue
         info = ck3_faith(faith)
         if info is None or info["color"] is None:

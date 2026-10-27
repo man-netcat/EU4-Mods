@@ -5,8 +5,8 @@ capital = "Sumbawa"
 culture = javanese
 #632 - Sumbawa
 culture = javanese
-religion = vaishnavism
-religion = vaishnavism
+religion = vaishnava_faith
+religion = vaishnava_faith
 hre = no
 hre = no
 base_tax = 1

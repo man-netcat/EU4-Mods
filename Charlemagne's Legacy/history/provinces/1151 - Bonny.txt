@@ -2,11 +2,11 @@ owner = IGB
 controller = IGB
 add_core = IGB
 capital = "Bonny"
-culture = yorumba
+culture = igbo
 #1151 - Bonny
-culture = yorumba
-religion = orisa
-religion = orisa #Fetishism
+culture = igbo
+religion = west_african_orisha_pagan
+religion = west_african_orisha_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

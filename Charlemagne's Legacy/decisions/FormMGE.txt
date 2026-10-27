@@ -10,6 +10,8 @@ country_decisions = {
 			OR = {
 				primary_culture = mongol
 				primary_culture = naiman
+				primary_culture = ongud
+				primary_culture = shiwei
 			}
 			government_rank = 3
 			OR = {

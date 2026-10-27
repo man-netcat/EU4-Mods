@@ -4,10 +4,10 @@ add_core = SIG
 add_core = SIG
 #Lapland, the far north wastelands.
 capital = "Jokkmokk"
-culture = sapmi
-culture = sapmi
-religion = suomenusko
-religion = suomenusko
+culture = sami
+culture = sami
+religion = finnish_pagan
+religion = finnish_pagan
 hre = no
 hre = no
 base_tax = 1

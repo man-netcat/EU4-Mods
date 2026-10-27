@@ -3,11 +3,11 @@ controller = ASH
 add_core = ASH
 add_core = ASH
 capital = "Akyem Kotoko"
-culture = fon
+culture = akan
 #1138 - Kumasi
-culture = fon
-religion = akom
-religion = akom #Fetishism
+culture = akan
+religion = akom_pagan
+religion = akom_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

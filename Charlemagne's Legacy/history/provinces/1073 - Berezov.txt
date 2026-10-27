@@ -2,11 +2,11 @@ owner = KAY
 controller = KAY
 add_core = KAY
 capital = "Berezov"
-culture = ostyaki
+culture = khanty
 #1073 - Berezov
-culture = ostyaki
-religion = siberian
-religion = siberian #Sami Shamanism
+culture = khanty
+religion = siberian_pagan
+religion = siberian_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1

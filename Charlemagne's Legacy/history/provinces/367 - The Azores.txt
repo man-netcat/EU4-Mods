@@ -2,9 +2,9 @@ owner = ADU
 controller = ADU
 add_core = ADU
 capital = "The Azores"
-culture = guanche
+culture = guanches
 #367 - The Azores
-culture = guanche
+culture = guanches
 religion = sunni
 religion = sunni
 hre = no

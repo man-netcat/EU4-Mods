@@ -30,9 +30,8 @@ from build import (
 
 # this mod's 867 culture/religion expectations, checked against the files
 # the build writes
-CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
 CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310, 124, 125, 4736, 4737}
-MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
+MUSLIM_RELIGIONS_867 = ("sunni", "shia", "kharijite")
 from build import effective  # noqa: E402
 
 CAPS = CAPITAL
@@ -437,7 +436,7 @@ def run() -> int:
     # ruler calls stand even on foreign land (Norse tags on Slavic
     # ground), and provinces keep their vanilla culture regardless.
     # Holders with unscripted CK3 data slip out (counted, not verified).
-    from culturelift import holder_culture, holder_faith, CK3_TO_EU4, FAITH_TO_RELIGION  # noqa: E402
+    from culturelift import holder_culture, holder_faith, FAITH_TO_RELIGION  # noqa: E402
     cult_drift, rel_drift, unscripted = [], [], []
     for t in _tagrows:
         if not t.ck3_title:
@@ -448,7 +447,7 @@ def run() -> int:
         for ttl in lanes:
             _h, cculture = holder_culture(ttl)
             _h2, faith = holder_faith(ttl)
-            ecus.append(CK3_TO_EU4.get(cculture) if cculture else None)
+            ecus.append(cculture or None)
             erels.append(FAITH_TO_RELIGION.get(faith) if faith else None)
             if ttl == t.ck3_title:
                 c0, f0 = cculture, faith
@@ -1394,8 +1393,7 @@ def run() -> int:
                 f"- generator probably crashed mid-write",
             )
 
-    gone = set(CULTURE_GONE_867)
-    stale_culture, stale_religion = [], []
+    stale_religion = []
     for fn in sorted(os.listdir(PDIR)):
         if not fn.endswith(".txt"):
             continue
@@ -1409,17 +1407,10 @@ def run() -> int:
         ).read()
         m = re.search(r"^\s*culture\s*=\s*(\w+)", text, re.M)
         culture = m.group(1) if m else None
-        if culture in gone:
-            stale_culture.append(f"{pid} {fn} ({culture})")
         if culture == "greek" and pid not in CONQUERED_BY_THE_ARABS:
             for rel in re.findall(r"^\s*religion\s*=\s*(\w+)", text, re.M):
                 if rel in MUSLIM_RELIGIONS_867:
                     stale_religion.append(f"{pid} {fn} ({rel})")
-    note(
-        not stale_culture,
-        "no mod-written province keeps a culture that postdates 867"
-        + ("" if not stale_culture else f": {', '.join(stale_culture)}"),
-    )
     note(
         not stale_religion,
         "every Greek province outside the Arab conquest is orthodox"
@@ -1859,18 +1850,6 @@ def run() -> int:
     for tg_, have, want in ppl[:20]:
         print(f"        {tg_}: {have!r} should be {want!r} (python3 tools/culturalnames.py peoples)")
 
-    print("\n== cultures without a CK3 source (tools/cultmap.py) ==")
-    import cultures as _cultures
-
-    met, orphans = _cultures.unmapped_report()
-    if met:
-        warn("CK3 cultures with no EU4 culture (their counties and tags keep the culture they had): "
-             + ", ".join(f"{c} ({n})" for c, n in sorted(met.items(), key=lambda x: -x[1])))
-    if orphans:
-        warn("EU4 cultures in use that no CK3 culture maps to: " + ", ".join(orphans))
-    if not met and not orphans:
-        note(True, "every culture in use has a CK3 source")
-
     print("\n== religion groups follow CK3's religions (tools/faiths.py) ==")
     import faiths as _faiths
 
@@ -1879,13 +1858,18 @@ def run() -> int:
     for k, have, want in gm[:12]:
         print(f"        {k} is in {have} but CK3 files it under {want}")
 
-    print("\n== culture groups follow CK3 heritages (tools/cultures.py) ==")
+    print("\n== cultures and religions are CK3's (tools/cultures.py, tools/religions.py) ==")
     import cultures as _cultures
+    import religions as _religions
 
-    misfit = _cultures.heritage_misfits()
-    note(not misfit, f"every culture sits in a group its CK3 heritage allows ({len(misfit)} off)")
-    for c, g, h in misfit[:12]:
-        print(f"        {c} is in {g} but its CK3 heritage is {h}")
+    not_ck3 = sorted(c for c in _cultures.used_in_db() if _cultures.group_of(c) is None)
+    note(not not_ck3, f"every culture in use is a CK3 culture ({len(not_ck3)} are not)")
+    for c in not_ck3[:12]:
+        print(f"        {c}")
+    no_block = sorted(f for f in _religions.used_faiths() if f not in _religions.TEMPLATE)
+    note(not no_block, f"every religion in use is a CK3 faith the file has a block for ({len(no_block)} lack one)")
+    for f in no_block[:12]:
+        print(f"        {f}")
 
     print("\n== province religions track CK3's counties (tools/provfaiths.py) ==")
     import provfaiths

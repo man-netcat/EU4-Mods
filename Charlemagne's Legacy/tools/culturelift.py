@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """Ruler-culture pipeline: every tag takes its 867 holder's CK3 culture.
 
-Maps the holder culture to our EU4 key (CK3_TO_EU4) and lifts the culture
-(entry + CK3 names + loc + DB row, Pictish precedent) when we don't have
-the key yet (tools/cultures.py writes the cultures file from the base game and
-CK3; a new key needs a LIFTS entry there); anything else resolves to None and the caller
-falls back to the vanilla province culture.
+Takes the holder culture as it is (the EU4 culture IS the CK3 culture) and adds the DB row when we don't have
+the key yet (tools/cultures.py writes the cultures file from CK3's cultures, so
+the culture is its CK3 key).
 """
 
 import os
@@ -20,7 +18,6 @@ from models import Culture as CultureRow  # noqa: E402
 
 CULT_FILE = os.path.join(HERE, "..", "common", "cultures", "00_cultures.txt")
 
-from cultmap import CK3_TO_EU4  # noqa: E402,F401
 
 _WALK_KEYS = ("father", "real_father", "mother")
 _WALK_DEPTH = 3
@@ -112,37 +109,29 @@ def have_culture(eu4key):
 
 
 def ensure_culture(ck3cult, session=None):
-    """EU4 key for a CK3 culture: repair the DB row when the key exists,
-    lift the whole culture when it doesn't (needs a tools/cultures.py LIFTS entry),
-    else None so the caller falls back to the land culture. Pass the
-    caller's session when one already holds the database: a second
-    connection deadlocks against an uncommitted write (the addtag
-    --take-then-lift crash)."""
-    eu4key = CK3_TO_EU4.get(ck3cult) if ck3cult else None
-    if eu4key is None:
-        return None
-    if not file_has(eu4key):
-        print(f"  {ck3cult} -> {eu4key}: not in tools/cultures.py LIFTS, keeping land culture")
+    """The culture key of a CK3 culture, which is its own: the EU4 culture IS the CK3 culture. Repairs the
+    DB lookup row; None when CK3 has no such culture."""
+    import cultures
+
+    if not ck3cult or cultures.group_of(ck3cult) is None:
         return None
     s = session or db.session()
-    s.merge(CultureRow(name=eu4key))
+    s.merge(CultureRow(name=ck3cult))
     if session is None:
         s.commit()
         s.close()
-    return eu4key
+    return ck3cult
 
 
 def selftest():
-    """Every mapped value must exist in our cultures file (direct check:
-    substring key lists lie, e.g. catalan contains alan)."""
-    text = open(CULT_FILE, encoding="cp1252", errors="replace").read()
-    bad = sorted(
-        {v for v in CK3_TO_EU4.values() if not re.search(r"(?m)^[ \t]*%s = \{" % v, text)}
-    )
+    """Every culture the database names must be a CK3 culture."""
+    import cultures
+
+    bad = sorted(c for c in cultures.used_in_db() if cultures.group_of(c) is None)
     if bad:
-        print("UNDEFINED EU4 KEYS:", bad)
+        print("NOT CK3 CULTURES:", bad)
         return 1
-    print(f"map OK ({len(set(CK3_TO_EU4.values()))} keys defined)")
+    print(f"cultures OK ({len(cultures.used_in_db())} in use)")
     return 0
 
 
@@ -150,31 +139,27 @@ if __name__ == "__main__":
     sys.exit(selftest())
 
 
-# CK3 rite at 867 -> our EU4 religion key: through the CK3 faith the rite
-# belongs to (rite_types), lifted by exactly one EU4 religion (see
-# faiths.FAITH_RELIGION). No approximations: a tag never gets a religion that
-# is a different CK3 faith than its ruler's.
+# CK3 rite at 867 -> our religion key: the CK3 faith the rite belongs to (rite_types),
+# which is the religion's own key.
 from faiths import rite_religion_map  # noqa: E402
 
 FAITH_TO_RELIGION = rite_religion_map()
 
 
 def ruler_default(title, session=None):
-    """EU4 culture for a new tag from its title's 867 holder (None to
-    fall back to the vanilla province culture)."""
+    """The culture of a new tag: its title's 867 holder's CK3 culture."""
     holder, cc = holder_culture(title)
     if not cc:
         print(f"  no holder culture for {title}, keeping land culture")
         return None
-    eu4key = ensure_culture(cc, session)
-    if eu4key:
-        print(f"  {title}: holder {holder} is {cc} -> {eu4key}")
-    return eu4key
+    key = ensure_culture(cc, session)
+    if key:
+        print(f"  {title}: holder {holder} is {cc}")
+    return key
 
 
 def ruler_religion(title):
-    """EU4 religion for a new tag from its title's 867 holder's faith
-    (None to fall back to the vanilla province religion)."""
+    """The religion of a new tag: the CK3 faith of its title's 867 holder."""
     _holder, faith = holder_faith(title)
     if not faith:
         return None

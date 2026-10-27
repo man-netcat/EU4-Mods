@@ -2,9 +2,9 @@ owner = BRL
 controller = BRL
 add_core = BRL
 capital = "Buru"
-culture = moluccan
+culture = maluku
 #645 - Buru
-culture = moluccan
+culture = maluku
 religion = tolotang
 religion = tolotang
 hre = no

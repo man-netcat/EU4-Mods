@@ -5,8 +5,8 @@ capital = "Galam"
 culture = soninke
 # No previous file for Galam
 culture = soninke
-religion = bidaism
-religion = bidaism #Fetishism
+religion = west_african_bidu_pagan
+religion = west_african_bidu_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

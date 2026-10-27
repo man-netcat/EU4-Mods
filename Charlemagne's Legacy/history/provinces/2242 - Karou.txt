@@ -2,11 +2,11 @@ owner = KSA
 controller = KSA
 add_core = KSA
 capital = "Karou"
-culture = mali
+culture = mel
 # No previous file for Karou
-culture = mali
-religion = roog_sene
-religion = roog_sene #Fetishism
+culture = mel
+religion = west_african_roog_pagan
+religion = west_african_roog_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

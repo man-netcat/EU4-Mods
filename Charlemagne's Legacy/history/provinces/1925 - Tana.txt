@@ -1,11 +1,11 @@
 owner = MTO
 controller = MTO
 add_core = MTO
-culture = swahili
+culture = east_bantu
 #1925 - Taveta
-culture = swahili #thagiicu
-religion = ngaiism
-religion = ngaiism #Fetishism
+culture = east_bantu #thagiicu
+religion = ngaiism_pagan
+religion = ngaiism_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

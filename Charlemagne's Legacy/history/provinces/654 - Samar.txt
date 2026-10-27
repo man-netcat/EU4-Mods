@@ -2,9 +2,9 @@ owner = SMR
 controller = SMR
 add_core = SMR
 capital = "Samar"
-culture = filipino
+culture = bisayan
 #654 - Samar
-culture = filipino
+culture = bisayan
 religion = dayawism
 religion = dayawism
 hre = no

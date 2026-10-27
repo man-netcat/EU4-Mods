@@ -5,8 +5,8 @@ capital = "Irkutsk"
 culture = buryat
 #1060 - Irkutsk
 culture = buryat
-religion = siberian
-religion = siberian
+religion = siberian_pagan
+religion = siberian_pagan
 hre = no
 hre = no
 base_tax = 1

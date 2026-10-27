@@ -3,11 +3,11 @@ controller = DRH
 add_core = DRH
 add_core = DRH
 capital = "Medowa"
-culture = tunjur
+culture = daju
 #2801 - Medwa
-culture = tunjur
-religion = kushitism
-religion = kushitism #Fetishism
+culture = daju
+religion = kushitism_pagan
+religion = kushitism_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

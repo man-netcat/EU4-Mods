@@ -2,9 +2,9 @@ owner = STO
 controller = STO
 add_core = STO
 capital = "Ilocos"
-culture = filipino
+culture = iloko
 #2697 - Ilocos
-culture = filipino
+culture = iloko
 religion = dayawism
 religion = dayawism
 hre = no

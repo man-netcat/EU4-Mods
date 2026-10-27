@@ -2,11 +2,11 @@ owner = BAG
 controller = BAG
 add_core = BAG
 capital = "Bangka"
-culture = malayan
+culture = malay
 #2678 - Bangka
-culture = malayan
-religion = mahayana
-religion = mahayana
+culture = malay
+religion = mahayana_faith
+religion = mahayana_faith
 hre = no
 hre = no
 base_tax = 1

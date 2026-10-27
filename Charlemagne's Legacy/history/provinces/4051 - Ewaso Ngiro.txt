@@ -5,8 +5,8 @@ capital = "Ewaso Ngiro"
 culture = somali
 #4051 - Ewaso Ngiro
 culture = somali
-religion = waaqism
-religion = waaqism
+religion = waaqism_pagan
+religion = waaqism_pagan
 hre = no
 hre = no
 base_tax = 1

@@ -2,11 +2,11 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Imakia"
-culture = tibetan
+culture = laktan
 #4687 - Imakia
-culture = tibetan
-religion = tengri_pagan_reformed
-religion = tengri_pagan_reformed
+culture = laktan
+religion = tengri_pagan
+religion = tengri_pagan
 hre = no
 hre = no
 base_tax = 1

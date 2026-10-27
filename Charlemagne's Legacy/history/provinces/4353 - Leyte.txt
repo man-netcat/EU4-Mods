@@ -2,9 +2,9 @@ owner = TNA
 controller = TNA
 add_core = TNA
 capital = "Leyte"
-culture = filipino
+culture = bisayan
 #4353 - Leyte
-culture = filipino
+culture = bisayan
 religion = dayawism
 religion = dayawism
 hre = no

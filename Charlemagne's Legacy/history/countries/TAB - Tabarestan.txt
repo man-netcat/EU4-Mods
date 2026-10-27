@@ -2,8 +2,8 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 2
 technology_group = muslim
-primary_culture = bedouin_arabic
-religion = shiite
+primary_culture = bedouin
+religion = shia
 capital = 426
 religious_school = zaidi_school
 867.1.1 = {
@@ -28,5 +28,5 @@ religious_school = zaidi_school
 		mil = 1
 	}
 
-	set_country_flag = kar_gov_clan_government
+	set_country_flag = kar_gov_feudal_government
 }

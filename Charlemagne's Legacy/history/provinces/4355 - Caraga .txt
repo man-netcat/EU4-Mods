@@ -2,11 +2,11 @@ owner = CLN
 controller = CLN
 add_core = CLN
 capital = "Caraga"
-culture = filipino
+culture = bisayan
 #4355 - Caraga
-culture = filipino
-religion = vajrayana
-religion = vajrayana
+culture = bisayan
+religion = vajrayana_faith
+religion = vajrayana_faith
 hre = no
 hre = no
 base_tax = 1

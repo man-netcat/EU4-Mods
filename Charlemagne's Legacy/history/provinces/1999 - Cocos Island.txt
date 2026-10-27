@@ -4,7 +4,7 @@ add_core = SUN
 #1999 - Cocos Island
 capital = "West Island"
 culture = javanese
-religion = shaivism
+religion = shaiva_faith
 hre = no
 hre = no
 base_tax = 1

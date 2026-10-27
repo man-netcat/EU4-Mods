@@ -2,9 +2,9 @@ owner = MND
 controller = MND
 add_core = MND
 capital = "Tagloc"
-culture = filipino
+culture = bisayan
 #2701 - Tagloc
-culture = filipino
+culture = bisayan
 religion = dayawism
 religion = dayawism
 hre = no

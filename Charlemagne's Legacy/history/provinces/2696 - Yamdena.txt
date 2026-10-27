@@ -2,9 +2,9 @@ owner = BYA
 controller = BYA
 add_core = BYA
 capital = "Yamdena"
-culture = moluccan
+culture = maluku
 #2696 - Yamdena
-culture = moluccan
+culture = maluku
 religion = hantuism
 religion = hantuism
 hre = no

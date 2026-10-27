@@ -4,7 +4,7 @@
     python3 tools/synctags.py        # list the drift
     python3 tools/synctags.py apply  # write culture and religion into tags.db
 
-A culture the lift maps (culturelift.CK3_TO_EU4) is created when the mod lacks it.
+The culture and religion are CK3's own keys.
 """
 import os
 import sqlite3
@@ -21,7 +21,7 @@ def main(apply):
     n = 0
     for tag, title, cul, rel in con.execute("select tag, ck3_title, culture, religion from tags order by seq").fetchall():
         _h, cc = cl.holder_culture(title)
-        want_c = cl.CK3_TO_EU4.get(cc) if cc else None
+        want_c = cc
         _h, faith = cl.holder_faith(title)
         want_r = cl.FAITH_TO_RELIGION.get(faith) if faith else None
         ch = {}

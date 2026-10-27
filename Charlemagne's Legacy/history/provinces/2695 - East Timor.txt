@@ -2,9 +2,9 @@ owner = WEH
 controller = WEH
 add_core = WEH
 capital = "Timor"
-culture = moluccan
+culture = maluku
 #2695 - East Timor
-culture = moluccan
+culture = maluku
 religion = hantuism
 religion = hantuism
 hre = no

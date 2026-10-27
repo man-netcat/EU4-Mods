@@ -5,8 +5,8 @@ capital = "Berber"
 culture = nubian
 #1229 - Berber
 culture = nubian
-religion = coptic
-religion = coptic
+religion = miaphysitism
+religion = miaphysitism
 hre = no
 hre = no
 base_tax = 1

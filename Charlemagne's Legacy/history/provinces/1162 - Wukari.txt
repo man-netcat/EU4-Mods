@@ -5,8 +5,8 @@ capital = "Wukari"
 culture = hausa
 #1162 - Wukari
 culture = hausa
-religion = bori
-religion = bori #Fetishism
+religion = west_african_bori_pagan
+religion = west_african_bori_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

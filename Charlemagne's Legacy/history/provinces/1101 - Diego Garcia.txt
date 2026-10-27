@@ -4,7 +4,7 @@ add_core = DGL
 #1101 - Diego Garcia
 capital = "Diego Garcia"
 culture = sinhala
-religion = buddhism
+religion = theravada_faith
 hre = no
 hre = no
 base_tax = 1
