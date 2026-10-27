@@ -151,6 +151,7 @@ def empire_core():
 #: in the homeland), so its land lives here instead of the database.
 CUSTOM_TRIGGERS = {
     "kar_form_finland": ("finland_area", "bothnia_area"),
+    "kar_form_ue": ("tsang_area",),
 }
 
 

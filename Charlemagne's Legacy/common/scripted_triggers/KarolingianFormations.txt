@@ -465,6 +465,12 @@ kar_form_finland_provinces_trigger = {
 	}
 }
 
+kar_form_ue_provinces_trigger = {
+	OR = {
+		area = tsang_area
+	}
+}
+
 kar_form_denmark_capital_trigger = {
 	capital_scope = {
 	OR = {
@@ -502,6 +508,14 @@ kar_form_finland_capital_trigger = {
 	OR = {
 		area = bothnia_area
 		area = finland_area
+	}
+	}
+}
+
+kar_form_ue_capital_trigger = {
+	capital_scope = {
+	OR = {
+		area = tsang_area
 	}
 	}
 }
