@@ -1,4 +1,4 @@
-# Flag conventions (copied from Historical European Tags/tools/FLAG_NOTES.md)
+# Flag conventions
 
 ## Sourcing
 
