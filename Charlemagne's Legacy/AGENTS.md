@@ -579,3 +579,11 @@ group, every other pagan-family religion is `pagan`, and validate fails when a l
 elsewhere (`faiths.group_misfits()`). The Baltic, Finnic, Slavic and Magyar faiths and Shinto therefore
 sit in the pagan group (Shinto is moved out of eastern by `religions.MOVE_RELIGIONS`), and their rite
 schools with them.
+
+### Which cultures the file keeps
+
+`cultures.needed()`: the EU4 keys `cultmap.CK3_TO_EU4` maps CK3 cultures to, the lifted ones (`LIFTS`) and
+every culture `tags.db` names (provinces, tags, formables, renames). Every other vanilla culture is
+dropped, and a group left with none goes too (331 -> about 200 cultures). To bring one back, map a CK3
+culture to it in `tools/cultmap.py` or use it in the database. Validate warns about CK3 cultures the mod
+meets with no EU4 culture, and about EU4 cultures in use that no CK3 culture maps to.

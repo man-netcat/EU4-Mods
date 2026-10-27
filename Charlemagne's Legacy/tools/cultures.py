@@ -27,6 +27,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from paths import CK3_GAME, EU4_GAME  # noqa: E402
+from cultmap import CK3_TO_EU4  # noqa: E402
 
 MOD = os.path.join(HERE, "..")
 OUT = os.path.join(MOD, "common", "cultures", "00_cultures.txt")
@@ -41,22 +42,10 @@ NOT_CULTURES = NAMES + ("country", "province")
 
 # ---- the plan ----------------------------------------------------------------
 
-# the New World and the Slavic group whose cultures went elsewhere
-REMOVE_GROUPS = (
-    "andean_group", "apachean", "araucanian", "aridoamerican", "caddoan", "carribean",
-    "central_algonquian", "central_american", "chibchan",
-    "eastern_algonquian", "eskaleut", "iroquoian", "je", "je_tupi", "maranon", "mataco",
-    "maya", "muskogean", "na_dene", "otomanguean", "penutian", "plains_algonquian",
-    "siouan", "sonoran",
-)
-# peoples that come after 867 and the "lost cultures" of antiquity
-REMOVE_CULTURES = (
-    "lower_saxon", "flemish", "frisian", "english", "american", "maltese", "mexican",
-    "platinean", "portugese", "burgundian", "wallonian", "quebecois", "slovene",
-    "hungarian", "maori", "astrakhani", "kazani", "mishary", "nogaybak", "atlantean",
-    "spartan", "athenian", "old_egyptian", "jan_mayenese", "phoenician", "babylonian",
-    "etrurian", "parthian", "scythian",
-)
+# Which vanilla cultures stay is not a list: the file keeps the cultures the mod uses (the EU4
+# keys CK3 cultures map to, the ones lifted below, and every culture a province, tag or formable
+# of tags.db names) and drops the rest, with any group left empty. Put a culture back by mapping
+# a CK3 culture to it (cultmap.py) or using it in tags.db.
 # culture -> group it joins
 MOVES = {
     "pommeranian": "west_slavic", "prussian": "baltic", "hessian": "frankish",
@@ -309,6 +298,31 @@ def culture_heritage(eu4key):
     return collections.Counter(_heritage[c] for c in cands).most_common(1)[0][0]
 
 
+def unmapped_report():
+    """(CK3 cultures the mod meets but maps to no EU4 culture, EU4 cultures the mod uses that no
+    CK3 culture maps to and that are not lifted). The first: {ck3 culture: how many paired counties
+    and tags have it}; the second: sorted keys."""
+    import collections
+    import sqlite3
+
+    import culturelift
+    import provfaiths
+
+    met = collections.Counter()
+    for pid, county in provfaiths.PROVINCE_COUNTY.items():
+        cc = provfaiths.county_culture(county)
+        if cc and cc not in CK3_TO_EU4:
+            met[cc] += 1
+    con = sqlite3.connect(os.path.join(HERE, "tags.db"))
+    for tag, title, ruler in con.execute("select tag, ck3_title, ruler_title from tags"):
+        cc = culturelift.holder_culture(ruler or title)[1]
+        if cc and cc not in CK3_TO_EU4:
+            met[cc] += 1
+    con.close()
+    mapped = set(CK3_TO_EU4.values()) | set(LIFTS)
+    return dict(met), sorted(used_in_db() - mapped)
+
+
 def heritage_misfits():
     """[(culture, group, heritage)] for cultures sitting in a group their CK3 heritage does not allow."""
     pre, groups = parse_groups(_read(OUT))
@@ -411,6 +425,24 @@ def _is_culture(name, kind):
     return kind == "block" and name not in NOT_CULTURES
 
 
+def used_in_db():
+    """Cultures the tag database names: provinces, tags, formables and formable renames."""
+    import sqlite3
+
+    con = sqlite3.connect(os.path.join(HERE, "tags.db"))
+    used = set()
+    for q in ("select culture from provinces", "select culture from tags",
+              "select culture from formables", "select culture from formable_renames"):
+        for (c,) in con.execute(q):
+            used |= set((c or "").split())
+    con.close()
+    return used
+
+
+def needed():
+    return set(CK3_TO_EU4.values()) | set(LIFTS) | used_in_db()
+
+
 def build_text():
     pre, groups = parse_groups(_read(VANILLA))
     by_name = {g[0]: g for g in groups}
@@ -419,14 +451,8 @@ def build_text():
         for name, kind, lines in g[2]:
             if _is_culture(name, kind):
                 taken[name] = lines
-    removed = set(REMOVE_CULTURES) | set(LIFTS)
-    # a removed group's name lists follow its cultures
-    heirs = {}
-    for gname in REMOVE_GROUPS:
-        dests = [MOVES[c] for c, k, _ in by_name[gname][2]
-                 if _is_culture(c, k) and c in MOVES]
-        if dests:
-            heirs[max(set(dests), key=dests.count)] = gname
+    keep = needed()
+    removed = (set(taken) - keep) | set(LIFTS)
 
     adds = {}  # group -> culture blocks to append
     for c, dest in MOVES.items():
@@ -442,6 +468,7 @@ def build_text():
         name, head, items, closing = g
         res = [head]
         moved_out = set(MOVES) | removed
+        n = 0
         for iname, kind, lines in items:
             if kind == "tail":
                 continue
@@ -450,20 +477,16 @@ def build_text():
                     continue
                 if iname in REPURPOSE:
                     lines = repurposed(lines, REPURPOSE[iname])
+                n += 1
             res += lines
-        if name in heirs:
-            for iname, kind, lines in by_name[heirs[name]][2]:
-                if kind == "block" and iname in NAMES:
-                    res += lines
         for blk in adds.get(name, []):
             res += [""] + blk
+            n += 1
         res.append(closing)
-        return res
+        return res if n else None  # a group with no culture left is dropped
 
     emitted = set()
     for g in groups:
-        if g[0] in REMOVE_GROUPS:
-            continue
         for ng, (gfx, before) in NEW_GROUPS.items():
             if before == g[0] and ng not in emitted:
                 out += [f"{ng} = {{", f"\tgraphical_culture = {gfx}"]
@@ -471,7 +494,9 @@ def build_text():
                     out += [""] + blk
                 out += ["}", ""]
                 emitted.add(ng)
-        out += emit(g) + [""]
+        lines = emit(g)
+        if lines:
+            out += lines + [""]
     text = "\n".join(out).rstrip("\n") + "\n"
     return text
 

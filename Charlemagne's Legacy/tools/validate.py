@@ -1859,6 +1859,18 @@ def run() -> int:
     for tg_, have, want in ppl[:20]:
         print(f"        {tg_}: {have!r} should be {want!r} (python3 tools/culturalnames.py peoples)")
 
+    print("\n== cultures without a CK3 source (tools/cultmap.py) ==")
+    import cultures as _cultures
+
+    met, orphans = _cultures.unmapped_report()
+    if met:
+        warn("CK3 cultures with no EU4 culture (their counties and tags keep the culture they had): "
+             + ", ".join(f"{c} ({n})" for c, n in sorted(met.items(), key=lambda x: -x[1])))
+    if orphans:
+        warn("EU4 cultures in use that no CK3 culture maps to: " + ", ".join(orphans))
+    if not met and not orphans:
+        note(True, "every culture in use has a CK3 source")
+
     print("\n== religion groups follow CK3's religions (tools/faiths.py) ==")
     import faiths as _faiths
 
