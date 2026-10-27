@@ -201,7 +201,7 @@ def _title_names(title, rank, tag):
     name, adj = fold_loc(name), fold_loc(adj)
     suf = cn.people_suffix(title, rank)
     if suf:
-        name, adj = f"{name} {fold_loc(suf)}", f"{adj} {fold_loc(suf)}"
+        name, adj = f"{name} {fold_loc(cn.plural_people(suf))}", f"{adj} {fold_loc(suf)}"
     return name, adj
 
 

@@ -13,8 +13,9 @@ some cn_ names; the adjective then equals the name, as CK3's own `$cn_x$` does.
     python3 tools/culturalnames.py peoples      # list / write the "<place> <people>" names
 
 Steppe peoples: a county or duchy held by a ruler of one of the Turkic steppe
-cultures below is "<place> <people>" (Quriltay Oghuz, Akmola Kimek, Targyl
-Kipchak, Tumar Cuman), the people's name being CK3's own culture name. The
+cultures below is "<place> <people>" (Quriltay Oghuz, Akmola Kimeks, Targyl
+Kipchaks, Tumar Cumans), the people's name being CK3's own culture name in the
+plural (Oghuz and Kirghiz are invariant); the adjective keeps the singular. The
 people's realm itself (Oghuz il, the Kirghiz Khanate) keeps its title name.
 """
 import glob
@@ -119,6 +120,14 @@ def apply(tags):
     open(LOC, "w", encoding="utf-8-sig", newline="").write(loc)
 
 
+INVARIANT_PEOPLES = ("Oghuz", "Kirghiz")
+
+
+def plural_people(suf):
+    """The people in the plural for the realm's name (Tumar Cumans); the adjective stays singular."""
+    return suf if suf in INVARIANT_PEOPLES or suf.endswith("s") else suf + "s"
+
+
 def people_suffix(title, rank):
     """The people a county/duchy tag is named after ("Oghuz" for CK3's turkish culture), else None."""
     import ck3
@@ -139,8 +148,8 @@ def people_drift(rows):
     for tag, title, rank in rows:
         suf = people_suffix(title, rank)
         have = shown(tag, loc)[0]
-        if suf and have is not None and not have.endswith(" " + encname(suf)):
-            out.append((tag, have, f"{have} {encname(suf)}"))
+        if suf and have is not None and not have.endswith(" " + encname(plural_people(suf))):
+            out.append((tag, have, f"{have} {encname(plural_people(suf))}"))
     return out
 
 
@@ -155,13 +164,13 @@ def apply_peoples(tags=None):
         suf = people_suffix(title, rank)
         if not suf:
             continue
-        suf = encname(suf)
+        suf, pl = encname(suf), encname(plural_people(suf))
         name, adj = shown(tag, loc)
-        if name is None or name.endswith(" " + suf):
+        if name is None or name.endswith(" " + pl):
             continue
-        for key, val in ((tag, f"{name} {suf}"), (tag + "_ADJ", f"{adj} {suf}")):
+        for key, val in ((tag, f"{name} {pl}"), (tag + "_ADJ", f"{adj} {suf}")):
             loc = re.sub(rf'(?m)^( {re.escape(key)}:\d* )"[^"]*"', lambda m: f'{m.group(1)}"{val}"', loc, count=1)
-        print(f"  {tag}: {name} -> {name} {suf} / {adj} {suf}")
+        print(f"  {tag}: {name} -> {name} {pl} / {adj} {suf}")
     open(LOC, "w", encoding="utf-8-sig", newline="").write(loc)
 
 
