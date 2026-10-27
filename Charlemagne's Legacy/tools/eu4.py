@@ -1572,6 +1572,7 @@ def step_probe():
         "area_of": area_of,
         "region_of_area": region_of_area,
     }
+    os.makedirs(os.path.dirname(str(PROVDATA)), exist_ok=True)
     with open(str(PROVDATA), "w") as f:
         json.dump(data, f)
 
