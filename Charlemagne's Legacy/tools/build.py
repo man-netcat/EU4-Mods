@@ -7,6 +7,9 @@ import sys, time
 import cultures  # noqa: E402  (the cultures file must exist before tagdb reads it)
 
 cultures.ensure()
+import religions  # noqa: E402
+
+religions.ensure()
 
 from tagdb import *  # noqa: F401,F403
 from eu4 import *  # noqa: F401,F403

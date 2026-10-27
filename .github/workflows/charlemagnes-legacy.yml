@@ -52,8 +52,6 @@ jobs:
   self-contained:
     name: Rebuild from tools/ alone (the script-only rule)
     runs-on: ubuntu-latest
-    # Reports until every hand-kept input is lifted; make it required afterwards.
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
         with:

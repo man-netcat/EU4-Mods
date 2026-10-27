@@ -9,8 +9,8 @@ below is the one table that says which EU4 religion lifts which faith; a
 faith that no tag or province needs may stay unmapped.
 
 Usage (from the mod folder):
-    python3 tools/faiths.py            # create missing religions, lift colours
-                                       # and names (needs only the text files)
+    python3 tools/faiths.py            # rewrite the religions file, its loc and the
+                                       # interface sprites (tools/religions.py)
     python3 tools/faiths.py icons      # copy the CK3 faith icons over the religion
                                        # strips and the CK3 rite icons over the
                                        # rite placeholders (needs the CK3 install)
@@ -280,49 +280,6 @@ def lifted_name(text, key):
     return m.group(1) if m else None
 
 
-def lift():
-    """Create the missing religions, then set colour and name of every mapped
-    religion to its CK3 faith's. Idempotent."""
-    import addreligion
-
-    for key, (src, group, after, desc) in NEW_RELIGIONS.items():
-        text = _read(REL_FILE)
-        if block_span(text, key):
-            continue
-        faith = religion_of_faith()[key]
-        info = ck3_faith(faith)
-        placeholder = _placeholder_icon(key)
-        addreligion.main([key, "--clone", src, "--into", group, "--after", after,
-                          "--name", info["name"], "--desc", desc,
-                          "--color", *map(str, info["color"]), "--faith", placeholder])
-    text = _read(REL_FILE)
-    loc = open(LOC_FILE, encoding="utf-8-sig").read()
-    n_col = n_name = 0
-    for faith, key in FAITH_RELIGION.items():
-        info = ck3_faith(faith)
-        sp = block_span(text, key)
-        if sp is None:
-            continue  # religion not in the mod's file (verify reports it if used)
-        blk = text[sp[0]:sp[1]]
-        new = re.sub(r"(?m)^(\t\tcolor\s*=\s*)\{[^}]*\}", r"\g<1>{ %d %d %d }" % info["color"], blk, count=1)
-        if new != blk:
-            text = text[:sp[0]] + new + text[sp[1]:]
-            n_col += 1
-        if info["name"] and lifted_name(loc, key) != info["name"]:
-            if lifted_name(loc, key) is None:
-                loc = loc.rstrip("\n") + f'\n {key}:0 "{info["name"]}"\n {key}_desc:0 "The {info["name"]} faith."\n'
-            else:
-                was = lifted_name(loc, key)
-                loc = re.sub(rf'(?m)^( {re.escape(key)}:\d* )"[^"]*"', lambda m: f'{m.group(1)}"{info["name"]}"', loc, count=1)
-                # a description that is only the generated "The <name> faith." follows the name
-                loc = loc.replace(f' {key}_desc:0 "The {was} faith."', f' {key}_desc:0 "The {info["name"]} faith."')
-                loc = loc.replace(f' {key}_desc:0 "The Shint\u014dism faith."', f' {key}_desc:0 "The {info["name"]} faith."')
-            n_name += 1
-    open(REL_FILE, "w", encoding="cp1252", newline="").write(text)
-    open(LOC_FILE, "w", encoding="utf-8-sig", newline="").write(loc)
-    print(f"religions lifted from CK3: {n_col} colours, {n_name} names changed")
-
-
 def _placeholder_icon(key):
     from PIL import Image, ImageDraw
 
@@ -378,6 +335,8 @@ def verify(used):
     loc = open(LOC_FILE, encoding="utf-8-sig").read()
     by_rel = religion_of_faith()
     placeholder, unverified = [], []
+    strips = os.path.join(MOD, "gfx", "interface", "icon_religion.dds")
+    have_strips = os.path.exists(strips)  # the strips are images: made locally, not by the text build
     for rel in used:
         faith = by_rel.get(rel)
         if faith is None:
@@ -396,6 +355,8 @@ def verify(used):
         if lifted_name(loc, rel) != info["name"]:
             err.append(f"religion '{rel}': name {lifted_name(loc, rel)!r} is not CK3 {faith}'s {info['name']!r} - run tools/faiths.py")
         src = ck3_icon_file(faith)
+        if not have_strips:
+            continue
         if _icon_matches(text, rel, _placeholder_icon(rel)):
             placeholder.append(rel)  # still the generated stand-in frame
         elif src is None:
@@ -411,6 +372,8 @@ def verify(used):
     for n, rels in sorted(seen.items()):
         if len(rels) > 1:
             err.append(f"religions {', '.join(rels)} share icon frame {n} - each lifted faith needs its own frame")
+    if not have_strips:
+        warn.append("religion icon strips are not built here (gfx/interface/icon_religion.dds is missing): icons not checked")
     if placeholder:
         warn.append("religion icons that are placeholders or not CK3's yet (run tools/faiths.py icons locally): " + ", ".join(placeholder))
     if unverified:
@@ -430,4 +393,6 @@ if __name__ == "__main__":
     if sys.argv[1:2] == ["icons"]:
         lift_icons()
     else:
-        lift()
+        import religions
+
+        religions.write()

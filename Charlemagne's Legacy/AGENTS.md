@@ -527,30 +527,20 @@ that owns Hue (2373) is named Dai Nam through the vanilla EU4 key DAI_NAM (the N
 
 ## The script-only rule and CI
 
-The repository should ship the script and CK3-independent data; everything that comes from CK3 or
-EU4 is lifted by `tools/build.py`. `python3 tools/selfcontained.py` copies `tools/` and
-`descriptor.mod` into an empty folder and builds + validates there. It fails today at
-`common/cultures/00_cultures.txt`, the first hand-kept input (the build reads it and the culture lift
-edits it in place; it differs from vanilla in ~130 changed and ~130 removed cultures plus 29 added).
-The other hand-kept inputs the build reads are `localisation/replace/countries_l_english.yml` and
-`karolingian_religion_l_english.yml`, and the faith/rite icons in `gfx/interface`. Lifting those is
-the next step; then untrack the generated output.
+The repository ships the script and CK3-independent data; everything that comes from CK3 or EU4 is
+lifted by `tools/build.py`. `python3 tools/selfcontained.py` copies only `tools/` and `descriptor.mod`
+into an empty folder, builds there, checks every generated text file equals the repository's, then lays
+the hand-authored files (events, loc, ...) over the build and runs the validator. It must end
+`SELF-CONTAINED`. Lifted by the build now: tag names (`tagloc.py`, the whole
+`replace/countries_l_english.yml`), the cultures file and its loc (`cultures.py`), the religions file, its
+loc and the interface sprite frame counts (`religions.py`, with `rites.py` for the schools).
+
+Still images made only by a local run, with CK3 and EU4 installed (the text build and CI skip them):
+the religion icon strips (`gfx/interface/*religion*.dds`), the government-rank strip, the rite icons
+(placeholders until `python3 tools/faiths.py icons`) and the flags (`gfx/flags`, the user's own).
+Generating the strips from EU4's strips and CK3's faith icons is the next step; then untrack the
+generated output.
 
 `.github/workflows/charlemagnes-legacy.yml` runs two jobs: **validate** (build, validate, and fail if
-the committed files differ from the build output) and **self-contained** (the script-only check,
-non-blocking until it passes). Both need a `REFERENCE_REPO_TOKEN` repository secret with read access
-to `man-netcat/eu4-ck3-reference`.
-
-### Cultures file (lifted)
-
-`common/cultures/00_cultures.txt` and the two `karolingian_cultures_l_english.yml` files are written by
-`tools/cultures.py` (called before tagdb reads the file, and by `build.py`): EU4's own file, minus the
-groups and cultures in `REMOVE_GROUPS`/`REMOVE_CULTURES`, with `MOVES` between groups, new groups
-(`brythonic`, `frankish`) and `LIFTS` (EU4 key -> group, CK3 culture, optional primary tag). A lifted
-culture takes the name list its CK3 culture names, and its loc is CK3's text. `REPURPOSE` swaps a
-vanilla culture's names for another CK3 culture's (Yamato, Emishi). To add a culture, add a `LIFTS`
-row and a `CK3_TO_EU4` mapping; never edit the file by hand. Visible changes from the hand-kept file:
-Levantine shows as CK3's Mashriqi, Komi as Permian, Magyar as Hungarian, and the Gallo-Roman /
-German / Greco-Roman group labels are gone (EU4's own labels return). Name lists of Baranis, Slovien,
-Khwarezmian, Frankish and others are now CK3's own (the old hand-kept ones differed), and the old
-file's mojibake in non-ASCII names is gone.
+the committed files differ from the build output) and **self-contained** (the script-only check). Both
+need a `REFERENCE_REPO_TOKEN` repository secret with read access to `man-netcat/eu4-ck3-reference`.

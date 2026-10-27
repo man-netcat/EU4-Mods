@@ -2108,9 +2108,6 @@ christian = {
 		}
 	}
 
-	# Church of the East - never in Chalcedonian communion, so it stands
-	# outside the closed Latin-rite set (catholic + krstjani). Name, colour
-	# and icon lifted from CK3's nestorian faith.
 	nestorian = {
 	
 		flags_with_emblem_percentage = 20
@@ -2150,11 +2147,6 @@ christian = {
 			will_of_the_martyrs
 		}
 	}
-
-	
-	harmonized_modifier = harmonized_christian
-	
-	crusade_name = CRUSADE
 
 	romuva = {
 		icon = 30
@@ -2202,8 +2194,8 @@ christian = {
 	}
 
 	krstjani = {
-		icon = 33
 		color = { 153 117 134 }
+		icon = 33
 		country = {
 			tolerance_own = 1
 		}
@@ -2230,6 +2222,10 @@ christian = {
 			local_missionary_strength = 0.02
 		}
 	}
+	
+	harmonized_modifier = harmonized_christian
+	
+	crusade_name = CRUSADE
 }
 
 muslim = {
@@ -5652,7 +5648,6 @@ dharmic = {
 		
 		heretic = { BHAKTI }
 	}
-
 
 	sikhism = {
 		color = { 0 153 153 }
@@ -9827,7 +9822,7 @@ zoroastrian_group = {
 		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
-	
+
 	khurmazdis = {
 		icon = 38
 		color = { 204 153 26 }
@@ -9859,8 +9854,8 @@ zoroastrian_group = {
 			blessing_manthras
 			blessing_dakhma
 		}
-
-		heretic = { MAZDAKI MANICHEAN }
+		
+		heretic = { MAZDAKI MANICHEAN }	
 	}
 
 	manichaean = {
@@ -9897,6 +9892,7 @@ zoroastrian_group = {
 		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
+	
 	harmonized_modifier = harmonized_zoroastrian_group
 	
 	crusade_name = HOLY_WAR

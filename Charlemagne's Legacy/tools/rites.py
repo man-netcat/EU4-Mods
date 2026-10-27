@@ -547,8 +547,8 @@ def religion_block(group):
     return f"{BEGIN}\treligious_schools = {{\n{body}\t}}\n{END}"
 
 
-def patch_religion_file():
-    text = open(REL_FILE, encoding="cp1252").read()
+def patch_text(text):
+    """The religions file with every group's generated religious_schools block."""
     for group in GROUPS:
         gm = re.search(rf"^{group}\s*=\s*\{{", text, re.M)
         assert gm, f"religion group {group} not found in 00_religion.txt"
@@ -565,7 +565,12 @@ def patch_religion_file():
         assert m, f"{group}: flag_emblem_index_range not found in 00_religion.txt"
         body = body[: m.end()] + "\n" + religion_block(group) + body[m.end():]
         text = text[:start] + body + text[end:]
-    open(REL_FILE, "w", encoding="cp1252", newline="").write(text)
+    return text
+
+
+def patch_religion_file():
+    text = open(REL_FILE, encoding="cp1252").read()
+    open(REL_FILE, "w", encoding="cp1252", newline="").write(patch_text(text))
 
 
 def static_modifiers():
@@ -912,6 +917,7 @@ def verify(check_history=True):
 
     # 5b. religion icons: every religion the mod uses has an icon frame in all four strips
     icons = religion_icons(rel_text)
+    absent = set()  # strips are images, made locally (tools/faiths.py icons), not by the text build
     for rel in used_religions():
         n = icons.get(rel)
         if n is None:
@@ -920,13 +926,16 @@ def verify(check_history=True):
         for strip, px in RELIGION_STRIPS:
             path = os.path.join(MOD, strip)
             if not os.path.exists(path):
-                err.append(f"religion icon strip {strip} is missing")
+                absent.add(strip)
                 continue
             frames, visible = strip_frame(path, px, n)
             if n > frames:
                 err.append(f"religion '{rel}': icon {n} is outside {os.path.basename(strip)} ({frames} frames)")
             elif not visible:
                 err.append(f"religion '{rel}': icon {n} is blank in {os.path.basename(strip)}")
+
+    if absent:
+        warn.append("religion icon strips not built here: " + ", ".join(sorted(absent)))
 
     # 6. every tag follows its ruler: religion and rite agree, and history carries the school
     if check_history:
