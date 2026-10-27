@@ -5,8 +5,8 @@ capital = "Funchal"
 culture = guanche
 #368 - Madeira
 culture = guanche
-religion = sunni
-religion = sunni
+religion = achamanism
+religion = achamanism
 hre = no
 hre = no
 base_tax = 1

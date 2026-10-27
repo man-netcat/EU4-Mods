@@ -2,9 +2,9 @@ owner = BAG
 controller = BAG
 add_core = BAG
 capital = "Bangka"
-culture = sumatran
+culture = malayan
 #2678 - Bangka
-culture = sumatran
+culture = malayan
 religion = mahayana
 religion = mahayana
 hre = no

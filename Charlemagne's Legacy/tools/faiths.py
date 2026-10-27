@@ -94,6 +94,10 @@ FAITH_RELIGION = {
     "west_african_bori_pagan": "bori",
     "ngaiism_pagan": "ngaiism",
     "mu": "mu",
+    "mazdakism": "mazdakism",
+    "khurramism": "khurramism",
+    "afridunism": "afridunism",
+    "zun_pagan": "zunism",
 }
 
 # Religions this module creates (cloned block, group, sibling to sit after, description)
@@ -178,6 +182,14 @@ NEW_RELIGIONS = {
                "The faith of the Kikuyu, Maasai and the peoples of the Kenyan highlands, who pray to Ngai on the slopes of Kirinyaga, the mountain of brightness."),
     "mu": ("animism", "pagan", "ngaiism",
                "The shamanic faith of Jeju and the Korean peninsula, in which the mudang, the shamans, honour the spirits of mountain, sea and ancestors through the gut."),
+    "mazdakism": ("zoroastrian", "zoroastrian_group", "manichaean",
+                  "The communal creed of Mazdak, who preached the sharing of goods and was put down by Khosrow; his followers still hide in the hills of Khuzestan."),
+    "khurramism": ("zoroastrian", "zoroastrian_group", "mazdakism",
+                   "The Khurramites, the joyous, heirs of Mazdak and of Babak, a faith of the hill peoples of Azerbaijan, Gilan and Khorasan who rose against the caliphs."),
+    "afridunism": ("zoroastrian", "zoroastrian_group", "khurramism",
+                   "The folk religion of the Daylamites and the Caspian shore, which honours the hero Afridun and keeps the old Iranian customs of the forest and the hills."),
+    "zunism": ("animism", "pagan", "rrmeaism",
+               "The sun faith of the Zun, the god-kings of Zabulistan and Sistan, whose temple at Zamindawar and whose idol drew pilgrims from all India."),
 }
 
 

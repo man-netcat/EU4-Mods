@@ -2,9 +2,9 @@ owner = KLO
 controller = KLO
 add_core = KLO
 capital = "Kuria"
-culture = masaba
+culture = swahili
 #4054 - Kikuyu
-culture = masaba
+culture = swahili
 religion = ngaiism
 religion = ngaiism #Fetishism
 hre = no

@@ -2,9 +2,9 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Novoselovo"
-culture = tungus
+culture = kirgiz
 #1061 - Yeniseysk
-culture = tungus
+culture = kirgiz
 religion = tengri_pagan_reformed
 religion = tengri_pagan_reformed
 hre = no

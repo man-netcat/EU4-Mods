@@ -2,9 +2,9 @@ owner = MAK
 controller = MAK
 add_core = MAK
 capital = "Berber"
-culture = beja
+culture = nubian
 #1229 - Berber
-culture = beja
+culture = nubian
 religion = coptic
 religion = coptic
 hre = no

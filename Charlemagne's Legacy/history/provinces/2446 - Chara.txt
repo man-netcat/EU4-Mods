@@ -2,9 +2,9 @@ owner = HEE
 controller = HEE
 add_core = HEE
 capital = "Chara"
-culture = mongol
+culture = buryat
 #2446 - Chara
-culture = mongol
+culture = buryat
 religion = tengri_pagan_reformed
 religion = tengri_pagan_reformed
 hre = no

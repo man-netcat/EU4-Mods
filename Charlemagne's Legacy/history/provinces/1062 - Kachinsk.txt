@@ -2,9 +2,9 @@ owner = EUL
 controller = EUL
 add_core = EUL
 capital = "Angara"
-culture = buryat
+culture = kirgiz
 #1062 - Kachinsk
-culture = buryat
+culture = kirgiz
 religion = siberian
 religion = siberian
 hre = no

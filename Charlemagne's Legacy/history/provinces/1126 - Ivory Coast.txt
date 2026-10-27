@@ -2,9 +2,9 @@ owner = DAB
 controller = DAB
 add_core = DAB
 capital = "Assinie"
-culture = aka
+culture = fon
 #1126 - Ivory Coast
-culture = aka
+culture = fon
 religion = akom
 religion = akom #Fetishism
 hre = no

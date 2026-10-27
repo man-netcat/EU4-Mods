@@ -2,9 +2,9 @@ owner = PRM
 controller = PRM
 add_core = PRM
 capital = "Yarensk"
-culture = samoyed
+culture = komi
 #1780 - Komi
-culture = samoyed
+culture = komi
 religion = siberian
 religion = siberian #Sami Shamanism
 hre = no

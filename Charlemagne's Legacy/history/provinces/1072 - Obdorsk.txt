@@ -2,9 +2,9 @@ owner = KAY
 controller = KAY
 add_core = KAY
 capital = "Obdorsk"
-culture = samoyed
+culture = ostyaki
 #1072 - Obdorsk
-culture = samoyed
+culture = ostyaki
 religion = siberian
 religion = siberian #Sami Shamanism
 hre = no

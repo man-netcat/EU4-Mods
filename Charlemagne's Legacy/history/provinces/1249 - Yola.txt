@@ -2,9 +2,9 @@ owner = GAR
 controller = GAR
 add_core = GAR
 capital = "Kwararafa"
-culture = jukun
+culture = kanuri
 #1249 - Yola
-culture = jukun
+culture = kanuri
 religion = bori
 religion = bori #Fetishism
 hre = no

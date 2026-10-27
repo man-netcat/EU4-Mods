@@ -2,9 +2,9 @@ owner = TKR
 controller = TKR
 add_core = TKR
 capital = "Arguin"
-culture = berber
+culture = fulani
 #1111 - Arguin
-culture = berber
+culture = fulani
 religion = roog_sene
 religion = roog_sene
 hre = no

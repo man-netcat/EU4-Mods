@@ -2,9 +2,9 @@ owner = AMI
 controller = AMI
 add_core = AMI
 capital = "Middag"
-culture = polynesian
+culture = amis
 # 2155 - Middag
-culture = polynesian
+culture = amis
 religion = hantuism
 religion = hantuism
 hre = no

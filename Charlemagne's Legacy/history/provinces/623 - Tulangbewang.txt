@@ -2,9 +2,9 @@ owner = LMG
 controller = LMG
 add_core = LMG
 capital = "Tulangbewang"
-culture = sumatran
+culture = malayan
 #623 - Tulangbewang
-culture = sumatran
+culture = malayan
 religion = shaivism
 religion = shaivism
 hre = no

@@ -450,6 +450,330 @@ PROVINCE_COUNTY.update({
     4689: "c_omsk", 4687: "c_pavlodar", 4686: "c_kainsk",
 })
 
+# Old World provinces paired with the CK3 county or barony of the same name (exact
+# name, unique in CK3, and in the de jure kingdom of the other provinces of its EU4
+# area): Europe, the Middle East, Central Asia and the rest of the Old World that no
+# earlier region table covered. Provinces whose names differ are paired by hand below.
+PROVINCE_COUNTY.update({
+    1: "c_upland", 2: "c_ostergotland", 3: "c_more", 9: "c_halsingland", 12: "c_sjaelland",
+    13: "c_slesvig", 14: "c_fyn", 25: "c_gutland", 26: "c_halland", 27: "c_finland",
+    28: "c_nyland", 30: "c_viborg", 38: "c_vidzeme", 40: "c_memel", 42: "c_wormditt",
+    44: "c_hamburg", 45: "c_lubeck", 46: "c_rostock", 47: "c_rugen", 50: "c_berlin",
+    51: "c_ruppin", 52: "c_magdeburg", 53: "c_luneburg", 54: "c_stade", 55: "c_oldenburg",
+    56: "c_osnabruck", 57: "c_brunswick", 59: "c_wittenberg", 61: "c_dresden", 62: "c_mersenburg",
+    65: "c_munchen", 66: "c_bamberg", 67: "c_nurnberg", 68: "c_kempten", 69: "c_dortmund",
+    70: "c_wurttemberg", 71: "c_ansbach", 72: "c_breisgau", 74: "c_baden", 76: "c_salzburg",
+    77: "c_speyer", 78: "c_mainz", 79: "c_wurzburg", 80: "c_trier", 82: "c_lippe", 83: "c_nassau",
+    84: "c_bergh", 86: "c_munster", 87: "c_guines", 90: "c_brugge", 91: "c_hainaut",
+    92: "c_brabant", 93: "c_liege", 95: "c_antwerpen", 96: "c_zeeland", 97: "c_holland",
+    98: "c_nedersticht", 101: "c_genoa", 102: "c_nice", 105: "c_parma", 106: "c_modena",
+    107: "c_brescia", 108: "c_verona", 109: "c_mantua", 110: "c_trent", 111: "c_friuli",
+    112: "c_venezia", 113: "c_ferrara", 114: "c_ravenna", 115: "c_pisa", 116: "c_firenze",
+    117: "c_siena", 118: "c_roma", 119: "c_ancona", 120: "c_abruzzi", 121: "c_napoli",
+    122: "c_apulia", 124: "c_messina", 125: "c_palermo", 126: "c_malta", 127: "c_logudoro",
+    128: "c_karnten", 133: "c_linz", 134: "c_vienna", 135: "c_sopron", 136: "c_cetina",
+    137: "c_ragusa", 141: "c_beograd", 142: "c_buthrotum", 146: "c_attica", 148: "c_thessalonika",
+    150: "c_lower_dniepr", 151: "c_byzantion", 153: "c_visegrad", 154: "c_hont", 155: "c_bekes",
+    156: "c_temes", 157: "c_bihar", 162: "c_zemplen", 164: "c_naxos", 165: "c_bern",
+    166: "c_zurich", 168: "c_bayeux", 173: "c_labourd", 174: "c_bordeaux", 175: "c_armagnac",
+    176: "c_bearn", 177: "c_maine", 178: "c_anjou", 179: "c_berry", 181: "c_rethel",
+    183: "c_ile_de_france", 185: "c_brie_francaise", 186: "c_reims", 188: "c_metz",
+    190: "c_bourbon", 191: "c_nevers", 194: "c_perigord", 195: "c_limousin", 196: "c_toulouse",
+    198: "c_rouergue", 199: "c_auvergne", 200: "c_montpellier", 201: "c_provence",
+    202: "c_venaissin", 205: "c_savoie", 209: "c_viscaya", 210: "c_navarra", 211: "c_huesca",
+    212: "c_girona", 213: "c_barcelona", 214: "c_zaragoza", 215: "c_valladolid",
+    216: "c_salamanca", 217: "c_madrid", 218: "c_badajoz", 219: "c_toledo", 220: "c_valencia",
+    221: "c_murcia", 222: "c_almeria", 223: "c_granada", 224: "c_sevilla", 225: "c_cordoba",
+    227: "c_lisboa", 228: "c_castelo_branco", 229: "c_beja", 231: "c_porto", 232: "c_braganza",
+    233: "c_cornwall", 234: "c_hampton", 236: "c_middlesex", 237: "c_oxfordshire", 238: "c_essex",
+    239: "c_gloucestershire", 240: "c_shropshire", 243: "c_lincolnshire", 244: "c_lancashire",
+    245: "c_north_riding", 246: "c_northumberland", 248: "c_lothian", 249: "c_ayrshire",
+    251: "c_mearns", 252: "c_inverness", 253: "c_outer_hebrides", 254: "c_poznanska",
+    255: "c_kaliska", 257: "c_czerska", 258: "c_sieradzka", 259: "c_sandomierska",
+    260: "c_lubelska", 262: "c_krakowska", 263: "c_ratibor", 264: "c_breslau", 265: "c_brno",
+    266: "c_praha", 267: "c_plzen", 268: "c_suceava", 270: "c_trakai", 274: "c_pskov",
+    275: "c_polotsk", 276: "c_minsk", 277: "c_french_leon", 278: "c_pinsk", 285: "c_kaffa",
+    287: "c_tmutarakan", 289: "c_chernigov", 290: "c_hradyzk", 293: "c_smolensk", 294: "c_tver",
+    295: "c_moskva", 298: "c_kursk", 299: "c_voronezh", 300: "c_tula", 301: "c_ryazan",
+    302: "c_tambov", 304: "c_penza", 305: "c_perm", 307: "c_vladimir", 308: "c_yaroslavl",
+    310: "c_novgorod", 312: "c_beloozero", 314: "c_vologda", 327: "c_cilicia", 330: "c_trebizond",
+    332: "c_marash", 333: "c_mallorca", 334: "c_tangiers", 335: "c_melilla", 336: "c_tlemcen",
+    337: "c_orania", 339: "c_bejaia", 340: "c_constantine", 341: "c_tunis", 342: "c_gharb",
+    347: "c_ifni", 349: "c_figuig", 351: "c_biskra", 353: "c_gabes", 368: "c_madeira",
+    369: "c_orkney", 370: "c_vestisland", 374: "c_leinster", 377: "c_aleppo", 379: "c_jerusalem",
+    382: "c_damascus", 383: "c_tabuk", 384: "c_medina", 385: "c_mecca", 386: "c_asir",
+    388: "c_mandab", 389: "c_mahra", 391: "c_najran", 392: "c_al-arid", 394: "c_qatif",
+    397: "c_tiberias", 399: "c_batina", 400: "c_muscat", 402: "c_mahra", 403: "c_nizwa",
+    408: "c_basra", 409: "c_karbala", 410: "c_baghdad", 411: "c_mosul", 412: "c_ahvaz",
+    414: "c_hamadan", 415: "c_kirkuk", 416: "c_tabriz", 419: "c_hayk", 420: "c_aran",
+    421: "c_shirvan", 423: "c_tbilisi", 424: "c_ardabil", 426: "c_amol", 429: "c_isfahan",
+    433: "c_yazd", 435: "c_zaranj", 436: "c_qain", 439: "c_mangyshlak", 441: "c_khiva",
+    442: "c_bukhara", 445: "c_merv", 446: "c_herat", 450: "c_balkh", 451: "c_kabul",
+    452: "c_badakhshan", 454: "c_samarkand", 459: "c_taraz", 461: "c_almaty", 462: "c_odishi",
+    464: "c_astrakhan", 468: "c_azov", 469: "c_saqsin", 565: "c_paro", 576: "c_kalat",
+    662: "c_dali", 677: "c_lhasa", 707: "c_yumen", 708: "c_ganzhou", 739: "c_kashgar",
+    771: "c_vitebsk", 1055: "c_baigaluuls", 1068: "c_tomsk", 1071: "c_tara", 1074: "c_sibir",
+    1075: "c_tyumen", 1076: "c_kurgan", 1077: "c_ural", 1078: "c_man", 1080: "c_pelym",
+    1081: "c_ashli", 1082: "c_kazan", 1083: "c_martyuba", 1099: "c_socotra", 1110: "c_agadir",
+    1318: "c_spis", 1742: "c_frankfurt", 1743: "c_cambray", 1744: "c_antwerpen", 1746: "c_burgos",
+    1747: "c_caceres", 1748: "c_andujar", 1749: "c_cadiz", 1750: "c_alicante", 1751: "c_ceuta",
+    1753: "c_manturovo", 1755: "c_ustyug", 1758: "c_hannover", 1759: "c_brandenburg",
+    1760: "c_koblenz", 1762: "c_kassel", 1764: "c_burgas", 1768: "c_lienz", 1772: "c_poszony",
+    1774: "c_treviso", 1826: "c_lika", 1827: "c_rashka", 1828: "c_donjikraji", 1842: "c_narva",
+    1849: "c_hama", 1851: "c_coimbra", 1853: "c_ohrid", 1856: "c_abkhazia", 1859: "c_torun",
+    1860: "c_norfolk", 1861: "c_derby", 1862: "c_cremona", 1863: "c_graz", 1864: "c_somogy",
+    1866: "c_namur", 1867: "c_breisgau", 1868: "c_augsburg", 1869: "c_zurich", 1872: "c_ulm",
+    1873: "c_grisons", 1874: "c_bremen", 1876: "c_frankfurt", 1878: "c_aachen", 1879: "c_alencon",
+    1880: "c_sundgau", 1882: "c_annaba", 1930: "c_aland", 1933: "c_bari", 1935: "c_zemigalians",
+    1937: "c_grodno", 1938: "c_lomzynska", 1940: "c_belz", 1941: "c_turov", 1942: "c_zhytomyr",
+    1945: "c_novgorod_seversky", 1951: "c_hunyad", 1953: "c_szabolcs", 1955: "c_kholmogory",
+    1956: "c_suzdal", 1958: "c_kargopol", 1959: "c_valdai", 1961: "c_novgorod", 1965: "c_samar_VB",
+    1978: "c_shetland", 1981: "c_bornholm", 1982: "c_blekinge", 2068: "c_siwistan",
+    2118: "c_kokpekty", 2119: "c_chuguchak", 2124: "c_yarkand", 2128: "c_tsaparang",
+    2130: "c_nyingchi", 2131: "c_qamdo", 2132: "c_markam", 2133: "c_dege", 2134: "c_rebgong",
+    2135: "c_garze", 2182: "c_liangzhou", 2184: "c_xining", 2192: "c_karashar", 2196: "c_guria",
+    2203: "c_kakheti", 2204: "c_vanand", 2208: "c_terek_pass", 2209: "c_ilam", 2212: "c_zanjan",
+    2213: "c_qom", 2215: "c_qazwin", 2218: "c_shiraz", 2220: "c_bam", 2235: "c_sabzevar",
+    2309: "c_sinjar", 2312: "c_wasit", 2313: "c_antiocheia", 2314: "c_rahba", 2327: "c_maan",
+    2328: "c_khaybar", 2329: "c_yanbu", 2338: "c_samman", 2339: "c_yabrin", 2348: "c_chios",
+    2362: "c_gurganj", 2364: "c_quriltay", 2412: "c_tumar", 2416: "c_besinada", 2418: "c_ukek",
+    2423: "c_cheboksary", 2424: "c_peremyshl", 2450: "c_ghadames", 2453: "c_sfax",
+    2454: "c_kairwan", 2458: "c_hodna", 2460: "c_saoura", 2466: "c_draa", 2467: "c_meknes",
+    2468: "c_tadla", 2746: "c_vidin", 2749: "c_tikhvin", 2751: "c_cuenca", 2752: "c_sogn",
+    2753: "c_carcassonne", 2755: "c_soria", 2954: "c_djerba", 2955: "c_ingolstadt",
+    2957: "c_regensburg", 2959: "c_tarnowska", 2965: "c_vogtland", 2967: "c_hewes",
+    2971: "c_minden", 2972: "c_paderborn", 2973: "c_tecklenburg", 2976: "c_orvieto",
+    2977: "c_urbino", 2978: "c_arezzo", 2979: "c_novara", 2980: "c_lucca", 2983: "c_salerno",
+    2984: "c_cosenza", 2986: "c_cagliari", 2987: "c_urgell", 2988: "c_tarragona", 2990: "c_teruel",
+    2994: "c_wolgast", 2996: "c_mecklenburg", 2998: "c_buzau", 2999: "c_hormuz", 3001: "c_skopje",
+    3002: "c_rama", 3003: "c_euboea", 4110: "c_sutherland", 4111: "c_saintonge", 4112: "c_quercy",
+    4115: "c_korosten", 4116: "c_phrygia", 4118: "c_desmond", 4119: "c_mayo", 4120: "c_dublin",
+    4121: "c_ulster", 4122: "c_shenkursk", 4125: "c_hewes", 4126: "c_bacs", 4130: "c_somerset",
+    4141: "c_ditmarschen", 4142: "c_aarhus", 4147: "c_yaroslavl", 4148: "c_luki",
+    4149: "c_vorbasse", 4150: "c_beja", 4151: "c_inari", 4152: "c_kainuu", 4164: "c_dal",
+    4165: "c_skane", 4171: "c_shahre-babak", 4175: "c_arbanon", 4176: "c_branicevo",
+    4207: "c_kara_khoja", 4236: "c_trenscen", 4237: "c_olomouc", 4243: "c_toropets",
+    4244: "c_starodub", 4245: "c_smolensk", 4248: "c_tver", 4250: "c_yaroslavl", 4252: "c_moskva",
+    4254: "c_starodub", 4255: "c_tula", 4259: "c_velsk", 4260: "c_valdai", 4262: "c_totma",
+    4268: "c_al_aqabah", 4269: "c_wajh", 4272: "c_al_jawf", 4277: "c_taif", 4279: "c_zabid",
+    4286: "c_muscat", 4292: "c_upper_khabur", 4297: "c_homs", 4301: "c_kartli", 4305: "c_shaki",
+    4325: "c_sarakhs", 4326: "c_nishapur", 4327: "c_jabal_kufs", 4332: "c_irahistan",
+    4334: "c_tun", 4339: "c_rasht", 4343: "c_chaghaniyan", 4362: "c_annandale", 4363: "c_argyll",
+    4364: "c_inner_hebrides", 4368: "c_north_riding", 4370: "c_cambridgeshire", 4371: "c_sussex",
+    4372: "c_warwickshire", 4373: "c_devon", 4374: "c_dorset", 4375: "c_cheshire",
+    4376: "c_leicestershire", 4377: "c_ormond", 4378: "c_desmond", 4380: "c_ailech",
+    4381: "c_oversticht", 4382: "c_groningen", 4384: "c_rennes", 4387: "c_angouleme",
+    4388: "c_chartres", 4389: "c_tourraine", 4390: "c_troyes", 4481: "c_punakha",
+    4515: "c_gyirong", 4516: "c_purang", 4519: "c_damxung", 4520: "c_rutog", 4524: "c_dobrzynska",
+    4525: "c_gostyninska", 4526: "c_gnieznienska", 4527: "c_sandomierska", 4528: "c_kujawy",
+    4529: "c_iasi", 4531: "c_giurgiu", 4532: "c_severin", 4533: "c_wielunska", 4536: "c_grodno",
+    4543: "c_kursk", 4546: "c_malaga", 4548: "c_niebla", 4550: "c_castellon", 4551: "c_avila",
+    4552: "c_burgos", 4553: "c_zamora", 4554: "c_astorga", 4555: "c_tui", 4556: "c_aveiro",
+    4559: "c_menorca", 4560: "c_iviza", 4564: "c_tamasna", 4566: "c_kairwan", 4567: "c_germa",
+    4690: "c_ishim", 4692: "c_turgay", 4693: "c_keriya", 4694: "c_foix", 4695: "c_carcassonne",
+    4696: "c_provence", 4697: "c_la_marche", 4698: "c_cephalonia", 4699: "c_nicopolis",
+    4700: "c_lesbos", 4701: "c_korinthos", 4708: "c_rothenburg", 4709: "c_passau",
+    4710: "c_ravensburg", 4712: "c_sankt_gallen", 4716: "c_coburg", 4717: "c_leuchtenburg",
+    4719: "c_geneva", 4720: "c_geneva", 4723: "c_opole", 4727: "c_cuneo", 4728: "c_pavia",
+    4730: "c_bologna", 4731: "c_spoleto", 4732: "c_tivoli", 4735: "c_arborea", 4736: "c_palermo",
+    4737: "c_agrigento", 4738: "c_aquileia", 4739: "c_brescia", 4740: "c_como",
+    4741: "c_mersenburg", 4742: "c_gottingen", 4745: "c_rugen", 4746: "c_landsberg",
+    4748: "c_brandenburg", 4749: "c_landsberg", 4750: "c_arbanon", 4751: "c_kranj",
+    4752: "c_gacka", 4753: "c_zadar", 4754: "c_pomorje", 4755: "c_podrinje", 4764: "c_dole",
+    4765: "c_sundgau", 4766: "c_bar", 4767: "c_saarbrucken", 4769: "c_lille", 4771: "c_bremen",
+    4772: "c_luneburg", 4774: "c_fulda", 4776: "c_blois", 4777: "c_forez", 4780: "c_ohrid",
+    4788: "c_plasencia", 4789: "c_cuellar",
+})
+
+# Scandinavia and Finland: the EU4 province names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    4: "c_dalabergslagen", 5: "c_varmland", 6: "c_skane", 7: "c_skara", 8: "c_dalarna",
+    11: "c_angermanland", 15: "c_ringkobing", 16: "c_raniriki", 18: "c_pite", 19: "c_pedersore",
+    29: "c_tavasts", 31: "c_olavinlinna", 315: "c_karasjohka", 371: "c_nordrland", 1777: "c_ter",
+    1979: "c_faereyar", 1983: "c_lolland_falster", 1984: "c_aalborg", 1985: "c_narke",
+    4113: "c_oulu", 4114: "c_julevadno", 4123: "c_messukyla", 4163: "c_vastergotland",
+    4166: "c_finnveden",
+})
+
+# Baltic, Poland and the Low Countries: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    35: "c_osel", 36: "c_reval", 37: "c_vidzeme", 39: "c_grobin", 41: "c_konigsberg",
+    43: "c_danzig", 94: "c_luxembourg", 99: "c_guelders", 100: "c_westfriesland", 256: "c_plocka",
+    261: "c_halych", 271: "c_raseiniai", 272: "c_kernave", 273: "c_jersika", 767: "c_allenstein",
+    770: "c_braslau", 1834: "c_dorpat", 1841: "c_malbork", 1865: "c_brugge",
+    1931: "c_ostfriesland", 1936: "c_trakai", 1939: "c_leczycka", 2958: "c_osterode",
+    2960: "c_sacz", 2961: "c_lviv", 2963: "c_krajna", 2966: "c_legnica", 2974: "c_maastricht",
+    2997: "c_danzig", 4238: "c_legnica", 4241: "c_talava", 4383: "c_holland", 4523: "c_kujawy",
+    4534: "c_siauliai", 4535: "c_kernave", 4541: "c_lviv", 4770: "c_brabant",
+})
+
+# France, Iberia and the British Isles: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    88: "c_boulogne", 89: "c_amiens", 167: "c_eu", 169: "c_penthievre", 170: "c_cornouaille",
+    171: "c_vannes", 172: "c_nantes", 180: "c_poitiers", 182: "c_vermandois", 184: "c_orleans",
+    187: "c_vaucouleurs", 189: "c_nancy", 192: "c_dijon", 193: "c_besancon", 197: "c_rossello",
+    203: "c_lyon", 204: "c_viennois", 206: "c_santiago", 207: "c_asturias_de_oviedo",
+    208: "c_leon", 226: "c_algeciras", 230: "c_faro", 235: "c_kent", 241: "c_glamorgan",
+    242: "c_caernarfonshire", 247: "c_cumberland", 250: "c_strathearn", 372: "c_oriel",
+    373: "c_athlone", 375: "c_thomond", 376: "c_connacht", 1745: "c_asturias_de_santillana",
+    1877: "c_chalon", 2754: "c_calatrava", 2991: "c_provence", 4361: "c_dunbar",
+    4365: "c_isle_of_man", 4366: "c_maldwyn", 4367: "c_east_riding", 4369: "c_carmarthenshire",
+    4379: "c_ossory", 4385: "c_avranches", 4386: "c_montaigu", 4391: "c_viviers",
+    4392: "c_auxerre", 4547: "c_alcaraz", 4549: "c_valencia", 4557: "c_lleida",
+    4558: "c_monterrei", 4785: "c_west_riding", 4787: "c_lisboa",
+})
+
+# The German lands, Austria, Bohemia and Switzerland: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    48: "c_cammin", 49: "c_soldin", 58: "c_dessau", 60: "c_cottbus", 63: "c_gleichenstein",
+    64: "c_frontenhausen", 73: "c_innsbruck", 75: "c_strassburg", 81: "c_marburg", 85: "c_cologne",
+    129: "c_ljubljana", 130: "c_pula", 132: "c_liebnitz", 1757: "c_parsberg",
+    1761: "c_kaiserslautern", 1763: "c_cottbus", 1769: "c_gorz", 1770: "c_vienna", 1771: "c_zatec",
+    1775: "c_slesvig", 1857: "c_dannenberg", 1858: "c_stettin", 1870: "c_sankt_gallen",
+    1871: "c_aosta", 2956: "c_hohenau", 2964: "c_stendal", 2968: "c_doudleby", 2969: "c_soldin",
+    2970: "c_hradec", 2975: "c_cleves", 2993: "c_prenzlau", 2995: "c_slupsk",
+    4707: "c_falkenstein", 4711: "c_nordlingen", 4713: "c_zollern", 4714: "c_baden",
+    4715: "c_hohenlohe", 4718: "c_erbach", 4721: "c_neuchatel", 4722: "c_grisons",
+    4724: "c_caslav", 4725: "c_jihlava", 4726: "c_opava", 4743: "c_orlamunde", 4744: "c_osterland",
+    4747: "c_pila", 4758: "c_brixen", 4759: "c_villach", 4760: "c_passau", 4761: "c_linz",
+    4762: "c_sankt_polten", 4768: "c_cologne", 4773: "c_hildesheim", 4775: "c_osnabruck",
+    4778: "c_gorlitz", 4786: "c_havelberg",
+})
+
+# Italy, the Balkans and the Carpathians: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    103: "c_canavese", 104: "c_lombardia", 123: "c_reggio_calabria", 131: "c_zagorje",
+    138: "c_duklja", 139: "c_zachlumia", 140: "c_vhrbosna", 143: "c_avlonas", 144: "c_epeiros",
+    145: "c_laconia", 147: "c_thessalonika", 149: "c_adrianopolis", 152: "c_zagorje",
+    158: "c_szekelyfold", 159: "c_dorostorum", 160: "c_craiova", 161: "c_campulung",
+    163: "c_chandax", 1247: "c_bastia", 1756: "c_cetatea_alba", 1765: "c_naissus",
+    1766: "c_hvosno", 1767: "c_pozega", 1773: "c_achaia", 1831: "c_travunia", 1875: "c_turin",
+    1934: "c_rossano", 1952: "c_marmaros", 1954: "c_csanad", 2405: "c_tigheci",
+    2750: "c_philippopolis", 2981: "c_monferrato", 2982: "c_siracusa", 2985: "c_foggia",
+    2992: "c_tortona", 3000: "c_naissus", 4127: "c_torda", 4128: "c_fogaras", 4173: "c_szerem",
+    4174: "c_dyrrachion", 4239: "c_beograd", 4240: "c_feher", 4530: "c_barlad", 4702: "c_serres",
+    4703: "c_velbazhd", 4704: "c_turnovo", 4705: "c_mosynopolis", 4706: "c_constanta",
+    4729: "c_padua", 4733: "c_benevento", 4734: "c_benevento", 4756: "c_zagorje", 4757: "c_macva",
+    4779: "c_kalliopolis",
+})
+
+# Anatolia, the Caucasus, the Pontic steppe and Ruthenia: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    269: "c_volkovysk", 279: "c_volodymyr", 280: "c_kiev", 281: "c_terebovl", 282: "c_odessa",
+    283: "c_khortytsia", 284: "c_perekop", 286: "c_tana", 288: "c_millerovo", 291: "c_oskol",
+    292: "c_orsha", 297: "c_karachev", 316: "c_bithynia", 317: "c_prusa", 318: "c_caria",
+    319: "c_caria", 320: "c_rhodos", 321: "c_nicosia", 322: "c_pacatiana", 323: "c_lycaonia",
+    324: "c_isauria", 325: "c_pompeiopolis", 326: "c_galatia", 328: "c_sinope", 329: "c_sebasteia",
+    331: "c_theodosiopolis", 418: "c_mesopotamia", 422: "c_odishi", 425: "c_derbent",
+    463: "c_zichia", 466: "c_astrakhanka", 467: "c_balachev", 1846: "c_euchaita",
+    1848: "c_pisidia", 1943: "c_ushytsia", 1944: "c_korsun", 1971: "c_petrovsk", 1974: "c_kherson",
+    2195: "c_zichia", 2197: "c_cabardinia", 2198: "c_samiran", 2199: "c_anket", 2201: "c_maghas",
+    2202: "c_khachen", 2205: "c_suenik", 2296: "c_abydos", 2297: "c_lydia", 2298: "c_pamphylia",
+    2299: "c_honorias", 2300: "c_charsianon", 2301: "c_kaisereia", 2302: "c_seleucia",
+    2303: "c_melitene", 2304: "c_helenopontus", 2305: "c_satala", 2306: "c_turuberan",
+    2307: "c_vaspurakan", 2308: "c_edessa", 2406: "c_kherson", 2407: "c_pereyaslavl",
+    2408: "c_khopyor", 2409: "c_bakhmut", 2410: "c_kalos_limen", 2411: "c_oleshye", 2413: "c_tana",
+    2414: "c_tana", 2417: "c_maghas", 2447: "c_kerch", 2962: "c_peresopnytsia", 4242: "c_orsha",
+    4246: "c_roslavl", 4247: "c_chornobyl", 4295: "c_mesopotamia", 4296: "c_apahunik",
+    4299: "c_shirvan", 4302: "c_bagrewand", 4303: "c_tao", 4306: "c_khumar", 4307: "c_cappadocia",
+    4308: "c_chonae", 4309: "c_ionia", 4310: "c_sebasteia", 4311: "c_philomelium",
+    4312: "c_galatia_salutaris", 4313: "c_hadrianopolis", 4314: "c_lower_galatia", 4315: "c_zela",
+    4340: "c_talish", 4537: "c_novogrudok", 4538: "c_cherven", 4539: "c_zaslavl",
+    4540: "c_ushytsia", 4542: "c_romen", 4544: "c_babruysk", 4545: "c_slutsk",
+})
+
+# Russia, the Urals and Siberia: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    33: "c_vodi", 34: "c_vyangi", 296: "c_kozelsk", 303: "c_saratov", 306: "c_nizhny_novgorod",
+    311: "c_rusa", 313: "c_povenets", 473: "c_karatayak", 475: "c_belebey", 479: "c_petropavolsk",
+    1056: "c_kotokel", 1057: "c_ulan_ude", 1058: "c_chikoy", 1059: "c_bratsk", 1060: "c_irkutsk",
+    1062: "c_krasnoyarsk", 1063: "c_tagul", 1073: "c_kharam-vosh", 1079: "c_kolyn", 1752: "c_tver",
+    1754: "c_novosil", 1776: "c_povenets", 1778: "c_murom", 1957: "c_plyos", 1960: "c_sebezh",
+    1962: "c_kargadan", 1963: "c_kumych", 1964: "c_sebur", 1966: "c_kumertau", 1972: "c_glazov",
+    2354: "c_tobol", 2357: "c_bardak", 2369: "c_dolgujar", 2415: "c_kozlov", 2419: "c_atkarsk",
+    2420: "c_salavat", 2421: "c_cykma", 2422: "c_cykma", 2427: "c_tabary", 2428: "c_konda_ob",
+    2429: "c_ob", 2433: "c_vasyugan", 2441: "c_belebey", 2442: "c_lena", 2443: "c_kansk",
+    2444: "c_bugurslan", 2446: "c_muya", 4117: "c_tver", 4129: "c_lysva", 4249: "c_tver",
+    4251: "c_mozhaysk", 4253: "c_vladimir", 4257: "c_kevrola", 4258: "c_onega_BJA",
+    4261: "c_bezichi", 4263: "c_lyubim", 4264: "c_mamadych", 4265: "c_elabuga", 4266: "c_votkinsk",
+    4267: "c_bolghar", 4691: "c_laia",
+})
+
+# Persia, Khorasan and Central Asia: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    413: "c_luristan", 417: "c_gilan", 427: "c_damghan", 428: "c_rayy", 431: "c_sif-i-umara",
+    432: "c_kirman", 434: "c_nih", 437: "c_terekli", 438: "c_kara-mugai", 440: "c_aralkizil",
+    443: "c_qyzylustyurt", 444: "c_kalif", 447: "c_rukhaj", 448: "c_ghazna", 449: "c_ghur",
+    453: "c_nakhshab", 455: "c_aral_karakum", 456: "c_shavgar", 457: "c_chah", 458: "c_ferghana",
+    460: "c_uzgend", 465: "c_itil", 470: "c_uzen", 471: "c_jambalar", 472: "c_jitikul",
+    474: "c_yaitsk", 476: "c_astana", 477: "c_torangy_kul", 478: "c_kabtag", 575: "c_panjgur",
+    577: "c_sibi", 578: "c_bannu", 710: "c_khotan", 711: "c_charkliq", 712: "c_aksu",
+    1967: "c_khojand", 1968: "c_khuttal", 1969: "c_cherik", 1970: "c_sighnaq",
+    1973: "c_zamakhshar", 2121: "c_kucha", 2123: "c_charkliq", 2125: "c_uchkul", 2126: "c_suyab",
+    2127: "c_karghalik", 2206: "c_urmiya", 2207: "c_maragha", 2210: "c_kermanshah",
+    2211: "c_hulwan", 2214: "c_gurgan", 2216: "c_damghan", 2217: "c_behabad", 2221: "c_tus",
+    2222: "c_ardestan", 2224: "c_farah", 2225: "c_bamian", 2226: "c_purushapura",
+    2227: "c_west-tokharestan", 2228: "c_guzgan", 2229: "c_bost", 2230: "c_zamindawar",
+    2231: "c_turan", 2232: "c_kiz", 2233: "c_bampur", 2234: "c_kirman", 2236: "c_juwain",
+    2349: "c_churuk", 2350: "c_marvarrud", 2351: "c_shchuchinsk", 2352: "c_otrar",
+    2353: "c_ulytau", 2356: "c_sutkend", 2358: "c_ulytau", 2359: "c_astana",
+    2360: "c_kara_asirgan", 2361: "c_mushun", 2363: "c_jend", 2365: "c_atyrau", 2366: "c_basagha",
+    2367: "c_qyzylyaitsk", 2368: "c_balashagun", 2370: "c_kath", 4209: "c_maralbeshi",
+    4210: "c_karghalik", 4289: "c_tustar", 4290: "c_dawraq", 4293: "c_irbil", 4294: "c_hulwan",
+    4300: "c_maragha", 4304: "c_urmiya", 4324: "c_badghis", 4329: "c_darabjerd",
+    4330: "c_darabjerd", 4331: "c_istakhr", 4335: "c_ardestan", 4336: "c_tus", 4337: "c_rayy",
+    4338: "c_zanjan", 4341: "c_mazandaran", 4342: "c_ramhurmuz", 4344: "c_kishsh",
+    4345: "c_sirjan", 4685: "c_kaerji",
+})
+
+# Arabia, the Maghreb, the Levant and Egypt: EU4 names that differ from CK3's, paired by place.
+PROVINCE_COUNTY.update({
+    338: "c_algier", 343: "c_fes", 344: "c_marrakesh", 345: "c_asfi", 346: "c_ziz", 348: "c_sous",
+    350: "c_bilizma", 352: "c_qashtiliya", 354: "c_tripolitana", 355: "c_syrte", 364: "c_ghazza",
+    366: "c_canarias", 378: "c_tripoli", 380: "c_kerak", 381: "c_irbid",
+    387: "c_tihamat-al-yamani", 390: "c_sanaa", 393: "c_hail", 395: "c_uqayr", 396: "c_al-hasa",
+    398: "c_julfar", 401: "c_dhofar", 404: "c_dhafra", 405: "c_palmyra", 406: "c_iskaf",
+    407: "c_raqqa", 1854: "c_jaffa", 1855: "c_beirut", 2310: "c_takrit", 2311: "c_qadisiya",
+    2323: "c_kalabsha", 2330: "c_harrat_rahat", 2331: "c_tihama", 2332: "c_aqiq",
+    2333: "c_al-hasa", 2335: "c_yamama", 2336: "c_falaj", 2337: "c_qasim", 2340: "c_uqayr",
+    2341: "c_duqm", 2342: "c_duqm", 2343: "c_hadramawt", 2344: "c_jawf-al-yamani", 2345: "c_wabar",
+    2346: "c_tihama", 2347: "c_al-hasa", 2448: "c_murzuk", 2449: "c_waddan", 2451: "c_tripolitana",
+    2452: "c_jafara", 2455: "c_medjerda", 2456: "c_souf", 2457: "c_ghardaia", 2459: "c_ashir",
+    2461: "c_tanas", 2462: "c_tanas", 2463: "c_tahert", 2464: "c_tudgha", 2465: "c_wajda",
+    2469: "c_asfi", 2470: "c_sous", 2472: "c_wargla", 2473: "c_mahdiya", 2474: "c_ghat",
+    4270: "c_sirhan", 4271: "c_hauran", 4273: "c_qasim", 4274: "c_subay", 4275: "c_yamama",
+    4278: "c_tihama", 4280: "c_taizz", 4281: "c_al-asa", 4282: "c_tihama", 4283: "c_hadramawt",
+    4284: "c_dhofar", 4285: "c_az-dhahira", 4287: "c_falaj", 4288: "c_ubulla", 4291: "c_samarra",
+    4298: "c_aintab", 4561: "c_fes", 4562: "c_hunyan", 4563: "c_fes", 4565: "c_canarias",
+    4568: "c_tinmallal",
+})
+
+# Mongolia, Tibet, Dzungaria, Nubia and the remaining Old World provinces with no CK3 namesake: paired by place.
+PROVINCE_COUNTY.update({
+    10: "c_jamtfir", 17: "c_vingulmork", 20: "c_trandheim", 21: "c_vastvag", 22: "c_hedmork",
+    23: "c_hordalandi", 24: "c_agdeside", 32: "c_kakisalmi", 309: "c_onega", 430: "c_mandestan",
+    660: "c_chiang_rung", 661: "c_dali", 663: "c_weiyuan", 675: "c_qianzhou_1", 676: "c_xigaze",
+    678: "c_lhagang", 699: "c_lanzhou_1", 705: "c_gyegumdo", 706: "c_madoi", 713: "c_beshbalik",
+    715: "c_jimsar", 717: "c_EM_kizilkhentii", 720: "c_gobi_dorngovi", 721: "c_EM_tsetsen",
+    722: "c_em_gobidada", 723: "c_em_dadaels", 725: "c_em_akhulun", 1220: "c_abwab",
+    1225: "c_kassala", 2114: "c_gobi_ulaan_nuur", 2115: "c_em_karakopi", 2116: "c_ulaanbaatar",
+    2120: "c_ghulja", 2122: "c_chamil", 2165: "c_puzhou", 2166: "c_shanchan", 2167: "c_jianchuan",
+    2170: "c_sungqu", 2191: "c_heihe", 2219: "c_lar", 2223: "c_lar", 2748: "c_jianchang_1",
+    2989: "c_najera", 4033: "c_gumuz", 4124: "c_viipuri", 4143: "c_vingulmork", 4144: "c_telemark",
+    4145: "c_nedenes", 4203: "c_em_khartereg", 4204: "c_minzhou", 4205: "c_nagchu",
+    4206: "c_barkul", 4208: "c_burgasutai", 4218: "c_em_kherulendada", 4219: "c_gobi_abga",
+    4220: "c_naushki", 4221: "c_gobi_ulaan_govi", 4482: "c_chungthang", 4514: "c_sagya",
+    4517: "c_zetang", 4518: "c_lhunzhub", 4665: "c_em_dutulun", 4666: "c_EM_yujuelu",
+    4667: "c_EM_ononum", 4669: "c_gobi_sonkhot", 4671: "c_gobi_abakhai", 4672: "c_em_hepung",
+    4673: "c_gobi_ongi_gol", 4675: "c_em_zhen", 4676: "c_tengger", 4677: "c_gobi_maominggan",
+    4678: "c_karabalgasun",
+})
+
+# The last Old World provinces: the Tugur coast and the Liaoning shore.
+PROVINCE_COUNTY.update({
+    704: "c_LIAO_jinzhou", 1047: "c_eman_tugur",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
@@ -509,6 +833,60 @@ def county_rite(county):
     return rites.rite_at(body) if body else None
 
 
+def _province_cultures():
+    """{CK3 province id: culture at 867} from CK3's history/provinces (the latest dated
+    entry up to 867, else the undated one)."""
+    if "pc" in _cache:
+        return _cache["pc"]
+    pc = {}
+    hroot = os.path.join(CK3_GAME, "history", "provinces")
+    for f in os.listdir(hroot):
+        t = open(os.path.join(hroot, f), encoding="utf-8-sig", errors="replace").read()
+        for m in re.finditer(r"(?m)^(\d+)\s*=\s*\{(.*?)^\}", t, re.S):
+            body, best = m.group(2), None
+            c0 = re.search(r"(?m)^\s*culture\s*=\s*(\w+)", body)
+            if c0:
+                best = c0.group(1)
+            for d in re.finditer(r"(?m)^\s*(\d+)\.\d+\.\d+\s*=\s*\{(.*?)^\s*\}", body, re.S):
+                if int(d.group(1)) <= 867:
+                    cc = re.search(r"culture\s*=\s*(\w+)", d.group(2))
+                    if cc:
+                        best = cc.group(1)
+            if best:
+                pc[int(m.group(1))] = best
+    _cache["pc"] = pc
+    return pc
+
+
+def county_culture(county):
+    """The CK3 culture of a county at 867: its first barony that carries one, else the
+    county holder's own culture."""
+    cnty, bprov, _rite = _county_data()
+    pc = _province_cultures()
+    for b in cnty.get(county, []):
+        c = pc.get(bprov[b])
+        if c:
+            return c
+    import culturelift
+    import state867
+
+    h = state867.holder(county)
+    return culturelift.holder_culture(county)[1] if h else None
+
+
+def expected_culture(pid):
+    """(EU4 culture key, CK3 culture) for a table province; the key is None when CK3's
+    culture has no EU4 key (the province keeps what it has)."""
+    from culturelift import CK3_TO_EU4
+
+    cc = county_culture(PROVINCE_COUNTY[pid])
+    return (CK3_TO_EU4.get(cc) if cc else None), cc
+
+
+# Provinces CK3 has no county for (the Azores are not in CK3's world): left as they are.
+NO_COUNTY = {367: "The Azores"}
+
+
 def expected(pid):
     """(EU4 religion, CK3 rite, CK3 faith) for a table province, else Nones."""
     from faiths import FAITH_RELIGION, ck3_rites
@@ -516,6 +894,13 @@ def expected(pid):
     rite = county_rite(PROVINCE_COUNTY[pid])
     faith = ck3_rites().get(rite)
     return FAITH_RELIGION.get(faith), rite, faith
+
+
+def db_cultures():
+    c = sqlite3.connect(DB)
+    out = {p: r for p, r in c.execute("select pid, culture from provinces")}
+    c.close()
+    return out
 
 
 def db_religions():
@@ -537,6 +922,18 @@ def verify():
             err.append(f"province {pid}: CK3 county {county} follows the {rite} rite (faith {faith}), which no EU4 religion lifts")
         elif have.get(pid) != rel:
             err.append(f"province {pid}: religion '{have.get(pid)}' but CK3 county {county} follows {rite} ({faith}) -> '{rel}'")
+    con = sqlite3.connect(DB)
+    owned = {r[0] for r in con.execute("select distinct pid from tag_provinces")}
+    con.close()
+    unpaired = sorted(p for p in owned if p not in PROVINCE_COUNTY and p not in NO_COUNTY)
+    if unpaired:
+        err.append(f"{len(unpaired)} owned provinces are paired with no CK3 county (their culture and religion are not "
+                   f"CK3's): {unpaired[:15]}")
+    have_c = db_cultures()
+    for pid, county in sorted(PROVINCE_COUNTY.items()):
+        key, cc = expected_culture(pid)
+        if key and have_c.get(pid) != key:
+            err.append(f"province {pid}: culture '{have_c.get(pid)}' but CK3 county {county} is {cc} -> '{key}'")
     if UNMAPPED:
         warn.append("Japanese provinces not yet matched to a CK3 county (religion not audited): "
                     + "; ".join(f"{p} {n}" for p, n in sorted(UNMAPPED.items())))
@@ -550,9 +947,14 @@ def apply():
         rel = expected(pid)[0]
         if rel and c.execute("update provinces set religion=? where pid=? and religion is not ?", (rel, pid, rel)).rowcount:
             n += 1
+    k = 0
+    for pid in PROVINCE_COUNTY:
+        key = expected_culture(pid)[0]
+        if key and c.execute("update provinces set culture=? where pid=? and culture is not ?", (key, pid, key)).rowcount:
+            k += 1
     c.commit()
     c.close()
-    print(f"{n} province religions rewritten in tags.db")
+    print(f"{n} province religions and {k} province cultures rewritten in tags.db")
 
 
 if __name__ == "__main__":

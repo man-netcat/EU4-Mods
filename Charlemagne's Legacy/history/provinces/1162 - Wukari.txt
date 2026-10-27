@@ -2,9 +2,9 @@ owner = KWA
 controller = KWA
 add_core = KWA
 capital = "Wukari"
-culture = jukun
+culture = hausa
 #1162 - Wukari
-culture = jukun
+culture = hausa
 religion = bori
 religion = bori #Fetishism
 hre = no

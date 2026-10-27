@@ -2,9 +2,9 @@ owner = NRI
 controller = NRI
 add_core = NRI
 capital = "Turukhan"
-culture = samoyed
+culture = kirgiz
 #1067 - Narym
-culture = samoyed
+culture = kirgiz
 religion = tengri_pagan_reformed
 religion = tengri_pagan_reformed #Sami Shamanism
 hre = no

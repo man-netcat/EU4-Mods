@@ -2,9 +2,9 @@ owner = GAO
 controller = GAO
 add_core = GAO
 capital = "Flores"
-culture = nusa_tenggara
+culture = moluccan
 #633 - Flores
-culture = nusa_tenggara
+culture = moluccan
 religion = hantuism
 religion = hantuism
 hre = no

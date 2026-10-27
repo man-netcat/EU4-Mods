@@ -2,9 +2,9 @@ owner = KIR
 controller = KIR
 add_core = KIR
 capital = "Kikuyu"
-culture = bantu
+culture = swahili
 #4060 - Kikuyu
-culture = bantu #thagiicu
+culture = swahili #thagiicu
 religion = ngaiism
 religion = ngaiism #Fetishism
 hre = no

@@ -5,8 +5,8 @@ capital = "Kirenga"
 culture = buryat
 #1055 - Verkne-Angarsky
 culture = buryat
-religion = tengri_pagan_reformed
-religion = tengri_pagan_reformed
+religion = siberian
+religion = siberian
 hre = no
 hre = no
 base_tax = 1

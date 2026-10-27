@@ -2,9 +2,9 @@ owner = HUM
 controller = HUM
 add_core = HUM
 capital = "Sumba"
-culture = nusa_tenggara
+culture = moluccan
 #634 - Sumba
-culture = nusa_tenggara
+culture = moluccan
 religion = hantuism
 religion = hantuism
 hre = no

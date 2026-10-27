@@ -124,6 +124,10 @@ ICON_ORDER = (
     "bori",
     "ngaiism",
     "mu",
+    "mazdakism",
+    "khurramism",
+    "afridunism",
+    "zunism",
 )
 
 # interface sprites whose frame counts the mod changes besides the religion strips

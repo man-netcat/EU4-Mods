@@ -2,9 +2,9 @@ owner = LOM
 controller = LOM
 add_core = LOM
 capital = "Lombok"
-culture = nusa_tenggara
+culture = javanese
 #2693 - Lombok
-culture = nusa_tenggara
+culture = javanese
 religion = vaishnavism
 religion = vaishnavism
 hre = no

@@ -2,9 +2,9 @@ owner = BDU
 controller = BDU
 add_core = BDU
 capital = "Galam"
-culture = fulani
+culture = soninke
 # No previous file for Galam
-culture = fulani
+culture = soninke
 religion = bidaism
 religion = bidaism #Fetishism
 hre = no

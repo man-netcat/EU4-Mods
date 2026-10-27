@@ -2,9 +2,9 @@ owner = KWA
 controller = KWA
 add_core = KWA
 capital = "Bauchi"
-culture = jukun
+culture = hausa
 #1161 - Bauchi
-culture = jukun
+culture = hausa
 religion = bori
 religion = bori #Fetishism
 hre = no

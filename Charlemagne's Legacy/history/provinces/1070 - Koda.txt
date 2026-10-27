@@ -2,9 +2,9 @@ owner = KOD
 controller = KOD
 add_core = KOD
 capital = "Narim"
-culture = samoyed
+culture = ostyaki
 #1070 - Koda
-culture = samoyed
+culture = ostyaki
 religion = siberian
 religion = siberian #Sami Shamanism
 hre = no

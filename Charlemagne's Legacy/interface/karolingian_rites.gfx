@@ -511,6 +511,36 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_mazdakism"
+		texturefile = "gfx/interface/icon_rite_mazdakism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_khurramism"
+		texturefile = "gfx/interface/icon_rite_khurramism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_afridunism"
+		texturefile = "gfx/interface/icon_rite_afridunism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_zun_pagan"
+		texturefile = "gfx/interface/icon_rite_zun_pagan.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_rabbinism"
+		texturefile = "gfx/interface/icon_rite_rabbinism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_merkabah"
+		texturefile = "gfx/interface/icon_rite_merkabah.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_mazdayasna"
 		texturefile = "gfx/interface/icon_rite_mazdayasna.tga"
 	}

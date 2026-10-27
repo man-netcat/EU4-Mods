@@ -2,9 +2,9 @@ owner = GAA
 controller = GAA
 add_core = GAA
 capital = "Kiffa"
-culture = fulani
+culture = soninke
 # No previous file for Tagant
-culture = fulani
+culture = soninke
 religion = bidaism
 religion = bidaism #Fetishism
 hre = no

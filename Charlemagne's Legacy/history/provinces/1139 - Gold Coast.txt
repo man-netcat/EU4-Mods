@@ -2,10 +2,10 @@ owner = EWE
 controller = EWE
 add_core = EWE
 capital = "Accra"
-culture = aka
+culture = fon
 #1139 - Gold Coast
 #Eastern part thereof, mostly Accra and Osu Castle
-culture = aka
+culture = fon
 religion = orisa
 religion = orisa #Fetishism
 hre = no

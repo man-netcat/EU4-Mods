@@ -2,9 +2,9 @@ owner = MRT
 controller = MRT
 add_core = MRT
 capital = "Turkana"
-culture = acholi
+culture = oromo
 #4053 - Turkana
-culture = acholi
+culture = oromo
 religion = waaqism
 religion = waaqism #Fetishism
 hre = no

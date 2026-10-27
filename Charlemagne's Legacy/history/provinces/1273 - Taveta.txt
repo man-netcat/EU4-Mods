@@ -1,9 +1,9 @@
 owner = TAV
 controller = TAV
 add_core = TAV
-culture = bantu
+culture = swahili
 #1273 - Taveta
-culture = bantu #thagiicu
+culture = swahili #thagiicu
 religion = ngaiism
 religion = ngaiism #Fetishism
 hre = no

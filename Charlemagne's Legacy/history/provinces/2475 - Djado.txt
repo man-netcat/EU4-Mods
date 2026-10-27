@@ -2,9 +2,9 @@ owner = GHT
 controller = GHT
 add_core = GHT
 capital = "Djado"
-culture = tuareg
+culture = tunjur
 # - Djado
-culture = tuareg
+culture = tunjur
 religion = bori
 religion = bori
 hre = no

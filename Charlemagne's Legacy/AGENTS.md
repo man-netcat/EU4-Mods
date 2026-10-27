@@ -194,14 +194,11 @@ install is present if a flag file equals one of the base game's.
 
 ## Standing conventions
 
-- Provinces keep **vanilla culture** (standing rule; the one user-granted
-  exception is Japan, where `japanese` (shown Yamato) and `togoku` (shown
-  Emishi) follow CK3's 867 county cultures: Mutsu, Rikuzen, Dewa and Ugo are
-  Emishi, the rest Yamato; Ainu stays its own culture). Religion is
-  CK3's 867 distribution on an area basis (`tags`/`provinces` religion cols):
-  Norse world + Dublin `norse_pagan_reformed`; Slavic lands `slavic`; Baltic
-  lands `romuva`;   Finnic lands `suomenusko` — all three lifted from CK2
-  (867 unreformed names/colours/icons; descs are ours). They live in
+- Provinces follow CK3: every owned province is paired with a CK3 county (`provfaiths.PROVINCE_COUNTY`)
+  and takes that county's culture (via `CK3_TO_EU4`) and faith; the Azores, which CK3 lacks, keep their own.
+  Japan's `japanese` (shown Yamato) and `togoku` (shown Emishi) cultures follow the same rule. The
+  `norse_pagan_reformed`, `slavic`, `romuva` and `suomenusko` religions are lifted from CK2/CK3
+  faiths (867 unreformed names/colours/icons; descs are ours). They live in
   `common/religions/00_religion.txt`, a full vanilla copy with the three
   appended to the pagan group (Norse-clone mechanics, small thematic
   country bonus, no personal deities). Engine file-override is by exact
@@ -558,3 +555,14 @@ bytes appear in the package, or an edited base-game copy is not produced by the 
 game's own copy; the hand-written government-title blocks and their loc are `tools/data/`, and the CK3
 title ladders are lifted on top of them every build (`culturetitles.step_government_names`). CI builds
 the package as an artifact.
+
+### Province pairing for the whole Old World
+
+All 2,247 owned provinces except the Azores are paired with a CK3 county in `provfaiths.PROVINCE_COUNTY`:
+region tables from the earlier lifts, a block of exact name matches (EU4 name = a CK3 county or barony
+name, unique, in the de jure kingdom of its EU4 area), and hand-paired blocks per region for the EU4
+names CK3 does not use. The pairing is by place, so several EU4 provinces may share one county.
+`provfaiths.py apply` writes each province's religion and culture from the county; validate fails when
+a paired province differs, or when an owned province is unpaired. Faiths CK3 has and EU4 lacked are
+lifted as new religions (Mazdakism, Khurramism, Afridunism, Zunism) with their rite schools; the
+rabbinic Judaism rites were added for the Khazar counties.

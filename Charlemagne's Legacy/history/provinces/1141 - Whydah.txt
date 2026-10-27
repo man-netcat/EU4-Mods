@@ -2,9 +2,9 @@ owner = IFE
 controller = IFE
 add_core = IFE
 capital = "Whydah"
-culture = fon
+culture = yorumba
 #1141 - Whydah
-culture = fon
+culture = yorumba
 religion = orisa
 religion = orisa #Fetishism
 hre = no

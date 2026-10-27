@@ -2,9 +2,9 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Pegaya Orda"
-culture = kirgiz
+culture = ostyaki
 #480 - Kulunda
-culture = kirgiz
+culture = ostyaki
 religion = siberian
 religion = siberian
 hre = no

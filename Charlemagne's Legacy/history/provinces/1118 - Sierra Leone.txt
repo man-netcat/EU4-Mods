@@ -2,9 +2,9 @@ owner = TEE
 controller = TEE
 add_core = TEE
 capital = "Sherbro"
-culture = dyola
+culture = mali
 #1118 - Sierra Leone
-culture = dyola
+culture = mali
 religion = roog_sene
 religion = roog_sene #Fetishism
 hre = no

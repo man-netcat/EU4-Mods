@@ -2,9 +2,9 @@ owner = EAA
 controller = EAA
 add_core = EAA
 capital = "Belitung"
-culture = sumatran
+culture = malayan
 #2679 - Belitung
-culture = sumatran
+culture = malayan
 religion = hantuism
 religion = hantuism
 hre = no

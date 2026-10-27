@@ -2,9 +2,9 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Barnaul"
-culture = kirgiz
+culture = ostyaki
 #2434 - Barnaul
-culture = kirgiz
+culture = ostyaki
 religion = siberian
 religion = siberian
 hre = no
