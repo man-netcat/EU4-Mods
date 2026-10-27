@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_lhomon }
 			NOT = { tag = BHU }
 			NOT = { exists = BHU }
-			primary_culture = tibetan
+			tag = PAO
 			NOT = { government_rank = 3 }
 			OR = {
 				ai = no

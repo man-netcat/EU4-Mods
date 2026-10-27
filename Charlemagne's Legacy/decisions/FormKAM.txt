@@ -7,7 +7,13 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_kham }
 			NOT = { tag = KAM }
 			NOT = { exists = KAM }
-			primary_culture = tibetan
+			OR = {
+				tag = LIA
+				tag = QAM
+				tag = BOY
+				tag = DEG
+				tag = DEQ
+			}
 			NOT = { government_rank = 3 }
 			OR = {
 				ai = no
