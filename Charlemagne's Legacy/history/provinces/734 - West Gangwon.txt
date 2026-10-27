@@ -1,8 +1,8 @@
 #734 - Wonju
 
-owner = KOR
-controller = KOR
-add_core = KOR
+owner = SLL
+controller = SLL
+add_core = SLL
 capital = "Wonju"
 culture = korean
 religion = mahayana
@@ -18,7 +18,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = KOR
-	controller = KOR
-	add_core = KOR
+	owner = SLL
+	controller = SLL
+	add_core = SLL
 }

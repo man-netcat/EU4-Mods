@@ -1,0 +1,123 @@
+# The fall of Silla (CK3: Hubaekje 892, Taebong 901, Goryeo 918, the surrender of 935).
+# fall_of_silla.2 and .3 release the dormant Hubaekje and Taebong tags from the provinces
+# Silla holds in their lands (the Dutch revolt pattern: cores, `release`, independence war).
+namespace = fall_of_silla
+
+country_event = {
+	id = fall_of_silla.1
+	title = fall_of_silla.1.t
+	desc = fall_of_silla.1.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_silla.1.a
+		set_country_flag = had_fall_of_silla
+	}
+}
+
+# Hubaekje: the south-west under Gyeon Hwon
+country_event = {
+	id = fall_of_silla.2
+	title = fall_of_silla.2.t
+	desc = fall_of_silla.2.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = HUB }
+		is_free_or_tributary_trigger = yes
+		is_year = 892
+		OR = {
+			owns = 737
+			owns = 4228
+			owns = 4229
+			owns = 1013
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			737 = { limit = { owned_by = ROOT } add_core = HUB }
+			4228 = { limit = { owned_by = ROOT } add_core = HUB }
+			4229 = { limit = { owned_by = ROOT } add_core = HUB }
+			1013 = { limit = { owned_by = ROOT } add_core = HUB }
+			release = HUB
+		}
+	}
+
+	option = {
+		name = fall_of_silla.2.a
+		HUB = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+# Taebong: the north-west and Gangwon under Gung Ye, whose throne Wang Geon takes
+country_event = {
+	id = fall_of_silla.3
+	title = fall_of_silla.3.t
+	desc = fall_of_silla.3.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = TAE }
+		is_free_or_tributary_trigger = yes
+		is_year = 901
+		OR = {
+			owns = 733
+			owns = 735
+			owns = 4230
+			owns = 4231
+			owns = 734
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			733 = { limit = { owned_by = ROOT } add_core = TAE }
+			735 = { limit = { owned_by = ROOT } add_core = TAE }
+			4230 = { limit = { owned_by = ROOT } add_core = TAE }
+			4231 = { limit = { owned_by = ROOT } add_core = TAE }
+			734 = { limit = { owned_by = ROOT } add_core = TAE }
+			release = TAE
+		}
+	}
+
+	option = {
+		name = fall_of_silla.3.a
+		TAE = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_silla.4
+	title = fall_of_silla.4.t
+	desc = fall_of_silla.4.d
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_silla.4.a
+		set_country_flag = had_fall_of_silla
+	}
+}

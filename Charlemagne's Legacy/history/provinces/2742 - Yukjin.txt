@@ -2,7 +2,6 @@
 
 owner = BHE
 controller = BHE
-#add_core = MJZ
 add_core = BHE
 capital = "Gyeongwon"
 culture = manchu
@@ -13,10 +12,11 @@ base_production = 1
 trade_goods = naval_supplies
 base_manpower = 1
 is_city = yes
+#add_core = MJZ
+discovered_by = chinese
 add_local_autonomy = 60
 add_nationalism = 15
 
-discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {

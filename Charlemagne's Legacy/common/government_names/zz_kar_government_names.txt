@@ -4819,7 +4819,7 @@ korean_sll_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = KOR
+		tag = SLL
 	}
 }
 

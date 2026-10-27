@@ -79,7 +79,6 @@ country_decisions = {
 				tag = KMN
 				tag = KNG
 				tag = KOL
-				tag = KOR
 				tag = KRA
 				tag = KRL
 				tag = KRY
@@ -620,12 +619,6 @@ country_decisions = {
 			limit = { tag = KOL }
 			change_country_color = {
 				color = { 84 124 48 }
-			}
-		}
-		if = {
-			limit = { tag = KOR }
-			change_country_color = {
-				color = { 26 53 177 }
 			}
 		}
 		if = {

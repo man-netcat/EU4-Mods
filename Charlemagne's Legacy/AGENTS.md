@@ -465,3 +465,13 @@ faith with no EU4 religion is added through `faiths.FAITH_RELIGION` / `NEW_RELIG
 `rites.RITES` row. Provinces in places CK3 does not cover (Madagascar, Mozambique and the
 Zambezi, South Africa, Kongo, the Great Lakes, Cameroon and Gabon, Yakutia to Kamchatka) stay
 unowned, like the New World and Australia.
+
+## Korea: Silla, its breakaways and Goryeo
+
+KOR is the Goryeo formable (`e_goryeo`, shown as "Goryeo" via the `cn_goryeo` style key, rank 4,
+75% of the Korea region, kingdom rank required). Silla is SLL (`k_silla`). The dormant tags HUB
+(Hubaekje, `k_baekje`, ruler through `c_sangju`, the Gyeon seat) and TAE (Taebong, `k_goguryeo`,
+ruler through `d_gaeseong`, the Wang seat) are the formable's starters. The disaster
+`common/disasters/FallOfSilla.txt` starts for SLL in 892; `events/FallOfSilla.txt` releases HUB
+(892) and TAE (901) from the provinces Silla holds in their lands and starts an independence war
+each (the Dutch-revolt pattern). Unplayed in-game: check error.log after the first run.

@@ -493,6 +493,16 @@ kar_form_lhomon_provinces_trigger = {
 	}
 }
 
+kar_form_korea_provinces_trigger = {
+	OR = {
+		area = eastern_korea_area
+		area = hamgyeong_area
+		area = pyongan_area
+		area = south_korea_area
+		area = western_korea_area
+	}
+}
+
 kar_form_finland_provinces_trigger = {
 	OR = {
 		area = bothnia_area
