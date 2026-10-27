@@ -299,6 +299,16 @@ kar_form_pomerania_provinces_trigger = {
 	}
 }
 
+kar_form_khitan_provinces_trigger = {
+	OR = {
+		area = chahar_area
+		area = inner_mongolia_area
+		area = liaoning_area
+		area = xilin_gol_area
+		province_id = 703 #chengde
+	}
+}
+
 kar_form_sweden_provinces_trigger = {
 	OR = {
 		area = gotaland_area
@@ -410,6 +420,16 @@ kar_form_nubia_provinces_trigger = {
 		area = dongola_area
 		area = sennar_area
 		area = upper_nubia_area
+	}
+}
+
+kar_form_liao_provinces_trigger = {
+	OR = {
+		area = chahar_area
+		area = inner_mongolia_area
+		area = liaoning_area
+		area = xilin_gol_area
+		province_id = 703 #chengde
 	}
 }
 

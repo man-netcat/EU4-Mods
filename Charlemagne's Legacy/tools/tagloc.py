@@ -206,7 +206,7 @@ def _title_names(title, rank, tag):
 
 
 # formables named from CK3 as well (the base game's own loc covers the rest)
-LIFT_FORMABLES = ("TIB", "UTS", "KAM", "AMD", "BHU", "LDK", "GRO")
+LIFT_FORMABLES = ("TIB", "UTS", "KAM", "AMD", "BHU", "LDK", "GRO", "KIN", "LIO")
 
 
 def wanted():
