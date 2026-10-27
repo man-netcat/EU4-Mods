@@ -1,12 +1,12 @@
 #2216 - Semnan
 
-owner = ZYD
-controller = ZYD
+owner = TAB
+controller = TAB
 add_core = KHO
-add_core = ZYD
+add_core = TAB
 capital = "Semnan"
 culture = persian
-religion = sunni
+religion = mazdayasna
 hre = no
 base_tax = 2
 base_production = 2
@@ -20,7 +20,7 @@ discovered_by = indian
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ZYD
-	controller = ZYD
-	add_core = ZYD
+	owner = TAB
+	controller = TAB
+	add_core = TAB
 }

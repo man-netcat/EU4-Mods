@@ -151,6 +151,7 @@ def empire_core():
 #: in the homeland), so its land lives here instead of the database.
 CUSTOM_TRIGGERS = {
     "kar_form_finland": ("finland_area", "bothnia_area"),
+    "kar_form_ue": ("tsang_area",),
 }
 
 
@@ -891,6 +892,7 @@ VANILLA_FORMATION_FILES = {
     "MiscCountryFormations.txt": ["icelandic_nation"],
     "HRE_FormableNations.txt": ["pomerania_nation"],
     "ScandinavianNation.txt": ["scandinavian_nation"],
+    "TibetanNation.txt": ["tibetan_nation"],
     "RestoreRomanEmpire.txt": ["restore_roman_empire"],
 }
 
@@ -1570,6 +1572,7 @@ def step_probe():
         "area_of": area_of,
         "region_of_area": region_of_area,
     }
+    os.makedirs(os.path.dirname(str(PROVDATA)), exist_ok=True)
     with open(str(PROVDATA), "w") as f:
         json.dump(data, f)
 

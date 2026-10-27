@@ -1,11 +1,11 @@
 #2074 - Ladakh
 
-owner = GUE
-controller = GUE
-add_core = GUE
+owner = GUG
+controller = GUG
+add_core = GUG
 capital = "Leh"
-culture = tibetan
-religion = vajrayana
+culture = kashmiri
+religion = vajrayana_faith
 hre = no
 base_tax = 1
 base_production = 1
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 867.1.1 = {
-	owner = GUE
-	controller = GUE
-	add_core = GUE
+	owner = GUG
+	controller = GUG
+	add_core = GUG
 }

@@ -2,11 +2,11 @@ owner = BAS
 controller = BAS
 add_core = BAS
 capital = "Mesurado"
-culture = dyola
+culture = kru
 #1119 - Grain Coast
-culture = dyola
-religion = akom
-religion = akom #Fetishism
+culture = kru
+religion = akom_pagan
+religion = akom_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

@@ -2,9 +2,9 @@ owner = IBG
 controller = IBG
 add_core = IBG
 capital = "Bikol"
-culture = filipino
+culture = tagalog
 #2699 - Bikol
-culture = filipino
+culture = tagalog
 religion = dayawism
 religion = dayawism
 hre = no

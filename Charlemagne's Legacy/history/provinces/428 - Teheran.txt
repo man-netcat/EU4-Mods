@@ -1,11 +1,11 @@
 #428 - Rey
 
-owner = ZYD
-controller = ZYD
-add_core = ZYD
+owner = TAB
+controller = TAB
+add_core = TAB
 capital = "Teheran"
 culture = persian
-religion = shiite
+religion = mazdayasna
 hre = no
 base_tax = 5
 base_production = 5
@@ -21,7 +21,7 @@ discovered_by = nomad_group
 discovered_by = indian
 
 867.1.1 = {
-	owner = ZYD
-	controller = ZYD
-	add_core = ZYD
+	owner = TAB
+	controller = TAB
+	add_core = TAB
 }

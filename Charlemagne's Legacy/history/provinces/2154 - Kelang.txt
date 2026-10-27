@@ -2,9 +2,9 @@ owner = HOA
 controller = HOA
 add_core = HOA
 capital = "Kelang"
-culture = polynesian
+culture = amis
 # 2154 - Kelang
-culture = polynesian
+culture = amis
 religion = hantuism
 religion = hantuism
 hre = no

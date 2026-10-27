@@ -1,11 +1,11 @@
 #2422 - Veda-Suvar
 
-owner = KZN
-controller = KZN
-add_core = KZN
+owner = KAZ
+controller = KAZ
+add_core = KAZ
 capital = "Veda-Suvar"
 culture = mari
-religion = suomenusko
+religion = finnish_pagan
 hre = no
 base_tax = 3
 base_production = 3
@@ -19,7 +19,7 @@ discovered_by = nomad_group
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = KZN
-	controller = KZN
-	add_core = KZN
+	owner = KAZ
+	controller = KAZ
+	add_core = KAZ
 }

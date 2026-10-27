@@ -1,11 +1,11 @@
 #4378 - Lands of the Mac Carthys
 
-owner = DES
-controller = DES
-add_core = DES
+owner = DMS
+controller = DMS
+add_core = DMS
 capital = "Killarney"
 culture = irish
-religion = catholic
+religion = christian_faith
 hre = no
 base_tax = 2
 base_production = 1
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = DES
-	controller = DES
-	add_core = DES
+	owner = DMS
+	controller = DMS
+	add_core = DMS
 }

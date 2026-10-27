@@ -2,11 +2,11 @@ owner = MRT
 controller = MRT
 add_core = MRT
 capital = "Turkana"
-culture = acholi
+culture = welayta
 #4053 - Turkana
-culture = acholi
-religion = waaqism
-religion = waaqism #Fetishism
+culture = welayta
+religion = waaqism_pagan
+religion = waaqism_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

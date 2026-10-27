@@ -181,6 +181,10 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = jingxue_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = dhyana_scholar_modifier }
+		remove_country_modifier = dhyana_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = daoxue_scholar_modifier }
 		remove_country_modifier = daoxue_scholar_modifier
 	}
@@ -403,6 +407,30 @@ clear_rite_scholar_modifiers_effect = {
 	if = {
 		limit = { has_country_modifier = khurmazta_scholar_modifier }
 		remove_country_modifier = khurmazta_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = mazdakism_scholar_modifier }
+		remove_country_modifier = mazdakism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = khurramism_scholar_modifier }
+		remove_country_modifier = khurramism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = afridunism_scholar_modifier }
+		remove_country_modifier = afridunism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = zun_pagan_scholar_modifier }
+		remove_country_modifier = zun_pagan_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = rabbinism_scholar_modifier }
+		remove_country_modifier = rabbinism_scholar_modifier
+	}
+	if = {
+		limit = { has_country_modifier = merkabah_scholar_modifier }
+		remove_country_modifier = merkabah_scholar_modifier
 	}
 	if = {
 		limit = { has_country_modifier = mazdayasna_scholar_modifier }

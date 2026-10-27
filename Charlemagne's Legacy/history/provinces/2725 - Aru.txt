@@ -2,9 +2,9 @@ owner = ARU
 controller = ARU
 add_core = ARU
 capital = "Aru"
-culture = moluccan
+culture = papuan
 #2725 - Aru
-culture = moluccan
+culture = papuan
 religion = tolotang
 religion = tolotang
 hre = no

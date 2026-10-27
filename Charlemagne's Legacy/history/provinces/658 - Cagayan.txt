@@ -2,9 +2,9 @@ owner = CGY
 controller = CGY
 add_core = CGY
 capital = "Cagayan"
-culture = filipino
+culture = iloko
 #658 - Cagayan
-culture = filipino
+culture = iloko
 religion = dayawism
 religion = dayawism
 hre = no

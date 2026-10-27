@@ -2,11 +2,11 @@ owner = IBI
 controller = IBI
 add_core = IBI
 capital = "Calabar"
-culture = sawabantu
+culture = igbo
 #1163 - Calabar
-culture = sawabantu
-religion = orisa
-religion = orisa #Fetishism
+culture = igbo
+religion = west_african_orisha_pagan
+religion = west_african_orisha_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

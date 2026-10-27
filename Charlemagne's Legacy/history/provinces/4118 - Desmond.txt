@@ -1,11 +1,11 @@
 #4118 - Earldom of Desmond
 
-owner = DES
-controller = DES
-add_core = DES
+owner = DMS
+controller = DMS
+add_core = DMS
 capital = "Cork"
 culture = irish
-religion = catholic
+religion = christian_faith
 hre = no
 base_tax = 2
 base_production = 3
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = DES
-	controller = DES
-	add_core = DES
+	owner = DMS
+	controller = DMS
+	add_core = DMS
 }

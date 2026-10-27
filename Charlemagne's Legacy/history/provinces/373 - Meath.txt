@@ -2,11 +2,12 @@
 
 owner = LOI
 controller = LOI
+add_core = MTH
 add_core = LOI
 add_core = DUB
 capital = "Dublin"
-culture = norse
-religion = norse_pagan_reformed
+culture = irish
+religion = christian_faith
 hre = no
 base_tax = 3
 base_production = 3

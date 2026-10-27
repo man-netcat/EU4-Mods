@@ -1,11 +1,11 @@
 #375 - Munster
 
-owner = THO
-controller = THO
-add_core = THO
+owner = MNS
+controller = MNS
+add_core = MNS
 capital = "Limerick"
 culture = irish
-religion = catholic
+religion = christian_faith
 hre = no
 base_tax = 3
 base_production = 3
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = THO
-	controller = THO
-	add_core = THO
+	owner = MNS
+	controller = MNS
+	add_core = MNS
 }

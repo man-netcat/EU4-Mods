@@ -1,11 +1,11 @@
 #2756 - Welayta
 
-owner = WEA
-controller = WEA
-add_core = WEA
+owner = WLY
+controller = WLY
+add_core = WLY
 capital = "Bonga"
-culture = sidamo
-religion = waaqism
+culture = welayta
+religion = waaqism_pagan
 hre = no
 base_tax = 2
 base_production = 2
@@ -18,7 +18,7 @@ discovered_by = east_african
 discovered_by = muslim
 
 867.1.1 = {
-	owner = WEA
-	controller = WEA
-	add_core = WEA
+	owner = WLY
+	controller = WLY
+	add_core = WLY
 }

@@ -2,11 +2,11 @@ owner = TAD
 controller = TAD
 add_core = TAD
 capital = "Tawat"
-culture = tuareg
+culture = butr
 #1127 - Tuat
-culture = tuareg
-religion = ibadi
-religion = ibadi
+culture = butr
+religion = kharijite
+religion = kharijite
 hre = no
 hre = no
 base_tax = 1

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = malay
+religion = hantuism
+capital = 2681
+religious_school = hantuism_school
+867.1.1 = {
+	monarch = {
+		name = "Megat"
+		dynasty = "Pantaisubur"
+		birth_date = 836.5.11
+		death_date = 884.1.13
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_wanua_government
+}

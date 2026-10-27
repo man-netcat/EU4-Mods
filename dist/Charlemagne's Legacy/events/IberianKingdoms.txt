@@ -1,0 +1,109 @@
+# Iberian kingdoms: Leon and Portugal choose their crowns, and Galicia
+# can break from whoever holds it (the 910 partition). No MTTH emergence,
+# no rebels: land conditions plus a player/AI choice, one effect each.
+namespace = iberian_kingdoms
+
+# Leon crowns itself: Asturias holding Leon moves the seat and takes the
+# lion banner (Alfonso's line rules on either side of the change).
+country_event = {
+	id = kar_leon.1
+	title = kar_leon_1_title
+	desc = kar_leon_1_desc
+	picture = THRONE_ROOM_eventPicture
+
+	trigger = {
+		tag = ASU
+		NOT = { exists = LON }
+		is_free_or_tributary_trigger = yes
+		owns = 208
+		owns = 207
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = kar_leon_1_a
+		ai_chance = { factor = 100 }
+		set_capital = 208
+		change_tag = LON
+	}
+	option = {
+		name = kar_leon_1_b
+		ai_chance = { factor = 0 }
+		add_prestige = 5
+	}
+}
+
+# Portugal crowns itself: Portucale holding Porto and Lisboa takes the
+# quinas (whatever Burtughal has done with the south, the county is done
+# answering to anyone).
+country_event = {
+	id = kar_portugal.1
+	title = kar_portugal_1_title
+	desc = kar_portugal_1_desc
+	picture = THRONE_ROOM_eventPicture
+
+	trigger = {
+		tag = PRT
+		NOT = { exists = POR }
+		is_free_or_tributary_trigger = yes
+		owns = 231
+		owns = 227
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = kar_portugal_1_a
+		ai_chance = { factor = 100 }
+		set_capital = 227
+		change_tag = POR
+		hidden_effect = {
+			set_government_rank = 3
+		}
+	}
+	option = {
+		name = kar_portugal_1_b
+		ai_chance = { factor = 0 }
+		add_prestige = 5
+	}
+}
+
+# Galicia breaks away: whoever holds Galicia proper lets it go under its
+# own count (Hermenegildo's line is waiting in Tui with seeded cores).
+country_event = {
+	id = kar_galicia.1
+	title = kar_galicia_1_title
+	desc = kar_galicia_1_desc
+	picture = THRONE_ROOM_eventPicture
+
+	trigger = {
+		OR = {
+			tag = ASU
+			tag = LON
+		}
+		NOT = { exists = GAL }
+		is_free_or_tributary_trigger = yes
+		owns = 206
+		owns = 4554
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = kar_galicia_1_a
+		ai_chance = { factor = 100 }
+		release = GAL
+	}
+	option = {
+		name = kar_galicia_1_b
+		ai_chance = { factor = 0 }
+		add_prestige = 5
+	}
+}

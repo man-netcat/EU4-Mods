@@ -1,11 +1,11 @@
 #4121 - Ulster
 
-owner = ULA
-controller = ULA
-add_core = ULA
+owner = ULS
+controller = ULS
+add_core = ULS
 capital = "Carrickfergus"
 culture = irish
-religion = catholic
+religion = christian_faith
 hre = no
 base_tax = 3
 base_production = 3
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = ULA
-	controller = ULA
-	add_core = ULA
+	owner = ULS
+	controller = ULS
+	add_core = ULS
 }

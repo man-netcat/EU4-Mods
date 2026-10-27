@@ -1,11 +1,11 @@
 #1213 - Shoa
 
-owner = SOW
-controller = SOW
-add_core = SOW
+owner = SOA
+controller = SOA
+add_core = SOA
 capital = "Badeqe"
-culture = amhara
-religion = coptic
+culture = ethiopian
+religion = miaphysitism
 hre = no
 base_tax = 3
 base_production = 3
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = SOW
-	controller = SOW
-	add_core = SOW
+	owner = SOA
+	controller = SOA
+	add_core = SOA
 }

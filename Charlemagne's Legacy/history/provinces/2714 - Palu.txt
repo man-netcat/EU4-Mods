@@ -2,9 +2,9 @@ owner = BNA
 controller = BNA
 add_core = BNA
 capital = "Palu"
-culture = sulawesi
+culture = toraja
 #2714 - Palu
-culture = sulawesi
+culture = toraja
 religion = kaharingan
 religion = kaharingan
 hre = no

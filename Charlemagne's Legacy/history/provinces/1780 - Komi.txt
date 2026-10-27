@@ -1,12 +1,12 @@
-owner = PRX
-controller = PRX
-add_core = PRX
+owner = PRM
+controller = PRM
+add_core = PRM
 capital = "Yarensk"
-culture = samoyed
+culture = komi
 #1780 - Komi
-culture = samoyed
-religion = siberian
-religion = siberian #Sami Shamanism
+culture = komi
+religion = siberian_pagan
+religion = siberian_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1
@@ -25,7 +25,7 @@ native_hostileness = 3
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = PRX
-	controller = PRX
-	add_core = PRX
+	owner = PRM
+	controller = PRM
+	add_core = PRM
 }

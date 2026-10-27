@@ -2,10 +2,11 @@
 
 owner = XIG
 controller = XIG
+add_core = PHA
 add_core = XIG
 capital = "Shigatse"
-culture = tibetan
-religion = bon
+culture = bodpa
+religion = bon_faith
 hre = no
 base_tax = 2
 base_production = 2

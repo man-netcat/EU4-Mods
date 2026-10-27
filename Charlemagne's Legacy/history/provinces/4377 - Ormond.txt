@@ -1,11 +1,11 @@
 #4377 - Ormond
 
-owner = OND
-controller = OND
-add_core = OND
+owner = ORD
+controller = ORD
+add_core = ORD
 capital = "Kilkenny"
 culture = irish
-religion = catholic
+religion = christian_faith
 hre = no
 base_tax = 3
 base_production = 3
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = OND
-	controller = OND
-	add_core = OND
+	owner = ORD
+	controller = ORD
+	add_core = ORD
 }

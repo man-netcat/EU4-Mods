@@ -3,7 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = east_african
 primary_culture = swahili
-religion = ibadi
+religion = kharijite
 capital = 1203
 religious_school = ibadi_school
 867.1.1 = {
@@ -17,5 +17,5 @@ religious_school = ibadi_school
 		mil = 2
 	}
 
-	set_country_flag = kar_gov_clan_government
+	set_country_flag = kar_gov_feudal_government
 }

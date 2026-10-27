@@ -3,10 +3,10 @@ controller = SOV
 add_core = SOV
 #1080 - North Urals
 capital = "Pelym"
-culture = ostyaki
-culture = ostyaki
-religion = siberian
-religion = siberian #Sami Shamanism
+culture = khanty
+culture = khanty
+religion = siberian_pagan
+religion = siberian_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1

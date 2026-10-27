@@ -2,11 +2,11 @@ owner = LRA
 controller = LRA
 add_core = LRA
 capital = "Dawa"
-culture = somali
+culture = welayta
 #4052 - Dawa
-culture = somali
-religion = waaqism
-religion = waaqism
+culture = welayta
+religion = waaqism_pagan
+religion = waaqism_pagan
 hre = no
 hre = no
 base_tax = 1

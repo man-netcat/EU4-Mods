@@ -2,11 +2,11 @@ owner = KRN
 controller = KRN
 add_core = KRN
 capital = "Al-Ubayyid"
-culture = nubian
+culture = daju
 #1221 - Kordofan
-culture = nubian
-religion = kushitism
-religion = kushitism #Fetishism
+culture = daju
+religion = kushitism_pagan
+religion = kushitism_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

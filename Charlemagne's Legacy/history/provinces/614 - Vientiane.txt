@@ -1,11 +1,11 @@
 #614 - Vientiane
 
-owner = VIN
-controller = VIN
-add_core = VIN
+owner = VIE
+controller = VIE
+add_core = VIE
 capital = "Vientiane"
-culture = lao
-religion = mahayana
+culture = khmu
+religion = mahayana_faith
 hre = no
 base_tax = 5
 base_production = 5
@@ -19,7 +19,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = VIN
-	controller = VIN
-	add_core = VIN
+	owner = VIE
+	controller = VIE
+	add_core = VIE
 }

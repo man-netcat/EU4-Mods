@@ -2,11 +2,11 @@ owner = KAY
 controller = KAY
 add_core = KAY
 capital = "As"
-culture = ostyaki
+culture = khanty
 # 4691 - As
-culture = ostyaki
-religion = siberian
-religion = siberian
+culture = khanty
+religion = siberian_pagan
+religion = siberian_pagan
 hre = no
 hre = no
 base_tax = 1

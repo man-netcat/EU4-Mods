@@ -2,6 +2,7 @@
 
 owner = TIN
 controller = TIN
+add_core = TFL
 add_core = TIN
 capital = "Ouarzazate"
 culture = butr

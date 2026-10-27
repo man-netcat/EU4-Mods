@@ -2,10 +2,11 @@
 
 owner = SAY
 controller = SAY
+add_core = PHA
 add_core = SAY
 capital = "Gyirong"
-culture = tibetan
-religion = bon
+culture = tsangpa
+religion = bon_faith
 hre = no
 base_tax = 1
 base_production = 2

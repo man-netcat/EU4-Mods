@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = chinese
+primary_culture = bodpa
+religion = vajrayana_faith
+capital = 2128
+religious_school = lamaism_school
+867.1.1 = {
+	monarch = {
+		name = "Namdé Ösung"
+		dynasty = "Pugyel"
+		birth_date = 840.1.1
+		death_date = 905.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Pelkhortsen"
+		monarch_name = "Pelkhortsen"
+		dynasty = "Pugyel"
+		birth_date = 856.1.1
+		death_date = 910.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

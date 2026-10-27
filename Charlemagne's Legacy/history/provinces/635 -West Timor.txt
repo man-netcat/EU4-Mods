@@ -2,9 +2,9 @@ owner = SOI
 controller = SOI
 add_core = SOI
 capital = "Lifau"
-culture = nusa_tenggara
+culture = maluku
 #635 - West Timor
-culture = nusa_tenggara
+culture = maluku
 religion = hantuism
 religion = hantuism
 hre = no

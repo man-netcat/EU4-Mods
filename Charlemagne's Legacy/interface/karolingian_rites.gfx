@@ -226,6 +226,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_dhyana"
+		texturefile = "gfx/interface/icon_rite_dhyana.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_daoxue"
 		texturefile = "gfx/interface/icon_rite_daoxue.tga"
 	}
@@ -503,6 +508,36 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_icon_rite_khurmazta"
 		texturefile = "gfx/interface/icon_rite_khurmazta.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_mazdakism"
+		texturefile = "gfx/interface/icon_rite_mazdakism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_khurramism"
+		texturefile = "gfx/interface/icon_rite_khurramism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_afridunism"
+		texturefile = "gfx/interface/icon_rite_afridunism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_zun_pagan"
+		texturefile = "gfx/interface/icon_rite_zun_pagan.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_rabbinism"
+		texturefile = "gfx/interface/icon_rite_rabbinism.tga"
+	}
+
+	spriteType = {
+		name = "GFX_icon_rite_merkabah"
+		texturefile = "gfx/interface/icon_rite_merkabah.tga"
 	}
 
 	spriteType = {

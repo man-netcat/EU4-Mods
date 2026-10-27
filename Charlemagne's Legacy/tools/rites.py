@@ -88,16 +88,16 @@ RITES = [
     ("christian", "bosnian_church_rite", "bosnian_church", "Bosnian Rite",
      "The Church of Bosnia, forgotten by Rome and Constantinople alike. Its simple, unstructured worship leaves its people free to deal with all sides.",
      "improve_relation_modifier = 0.25", (150, 150, 110)),
-    ("christian", "slavic_pagan", "slavic_pagan", "Slovianska Pravda Rite",
+    ("pagan", "slavic_pagan", "slavic_pagan", "Slovianska Pravda Rite",
      "The old faith of the Slavs, with Perun and Veles worshipped in groves and on hilltops. Its warrior bands are the heart of every tribe.",
      "global_manpower_modifier = 0.05", (200, 60, 40)),
-    ("christian", "baltic_pagan", "baltic_pagan", "Baltic Rite",
+    ("pagan", "baltic_pagan", "baltic_pagan", "Baltic Rite",
      "The faith of Dievas, Perkunas and Gabija, kept beneath the sacred oaks. Its holy places are the best defence the Baltic tribes have.",
      "defensiveness = 0.1", (153, 102, 77)),
-    ("christian", "finnish_pagan", "finnish_pagan", "Finnic Rite",
+    ("pagan", "finnish_pagan", "finnish_pagan", "Finnic Rite",
      "The faith of Ukko, Tapio and the spirits of forest and water, led by the tietaja in the wilds of the north. Its hunters are quick and hard to catch.",
      "discipline = 0.025", (80, 130, 150)),
-    ("christian", "magyar_pagan", "magyar_pagan", "Taltos Rite",
+    ("pagan", "magyar_pagan", "magyar_pagan", "Taltos Rite",
      "The shamanic faith of the Magyars, led by the taltos who speak to the spirits of sky and steppe. Its riders are the terror of the plains.",
      "cavalry_power = 0.05", (190, 120, 60)),
     # ---- muslim group (replaces the base game's Islamic schools)
@@ -180,13 +180,16 @@ RITES = [
     ("eastern", "jingxue", "jingxue", "Jingxue Rite",
      "The classical Confucian learning of the commentaries, which trains the officials who run the empire.",
      "adm_tech_cost_modifier = -0.05", (90, 90, 170)),
+    ("eastern", "dhyana", "dhyana", "Dhyana Rite",
+     "The meditation school, called Chan in China and Thien in Vietnam, which seeks enlightenment through the discipline of the mind rather than the study of texts.",
+     "discipline = 0.025", (170, 37, 28)),
     ("eastern", "daoxue", "daoxue", "Daoxue Rite",
      "The learning of the Way, in which Confucian teaching is joined to the study of nature and the mind.",
      "production_efficiency = 0.05", (70, 130, 120)),
-    ("eastern", "shinto", "shinto", "Shinto Rite",
+    ("pagan", "shinto", "shinto", "Shinto Rite",
      "The way of the kami, worshipped at shrines across the Japanese islands. Its priests keep the old purity and the rites of the harvest.",
      "land_morale = 0.05", (188, 0, 45)),
-    ("eastern", "shugendo", "shugendo", "Shugendo Rite",
+    ("pagan", "shugendo", "shugendo", "Shugendo Rite",
      "The mountain asceticism of the yamabushi, which joins the worship of the kami to the practices of esoteric Buddhism. Its holy men walk the peaks and the roads.",
      "defensiveness = 0.1", (120, 80, 160)),
     # ---- dharmic group
@@ -351,6 +354,24 @@ RITES = [
     ("zoroastrian_group", "khurmazta", "khurmazta", "Khurmazdi Rite",
      "The old royal Zoroastrianism of Khwarezm, to Khurmazt, lord of the fire altars of Khiva and Gurganj.",
      "stability_cost_modifier = -0.1", (230, 120, 40)),
+    ("zoroastrian_group", "mazdakism", "mazdakism", "Mazdakite Rite",
+     "The communal creed of Mazdak, which holds the world's goods in common and keeps its meetings in the hills.",
+     "global_tax_modifier = 0.05", (200, 90, 90)),
+    ("zoroastrian_group", "khurramism", "khurramism", "Khurramite Rite",
+     "The joyous faith of the hill peoples of Azerbaijan and Khorasan, heirs of Mazdak and Babak and stubborn against every caliph.",
+     "land_morale = 0.05", (210, 140, 60)),
+    ("zoroastrian_group", "afridunism", "afridunism", "Afridun Rite",
+     "The folk religion of Daylam and the Caspian shore, which honours the hero Afridun and the old customs of the forest.",
+     "defensiveness = 0.05", (120, 170, 100)),
+    ("pagan", "zun_pagan", "zun_pagan", "Zun Rite",
+     "The sun worship of the Zun of Zabulistan, whose idol and temple drew pilgrims from the whole of India.",
+     "cavalry_power = 0.05", (230, 190, 60)),
+    ("jewish_group", "rabbinism", "rabbinism", "Rabbinic Rite",
+     "The Judaism of the rabbis and the Talmud, kept in the academies of Babylon and the communities of the Diaspora.",
+     "tolerance_own = 1", (26, 179, 255)),
+    ("jewish_group", "merkabah", "merkabah", "Merkabah Rite",
+     "The mystical Judaism of the chariot and the heavenly halls, kept by the ascetics of the old academies.",
+     "technology_cost = -0.05", (128, 26, 179)),
     ("zoroastrian_group", "mazdayasna", "mazdayasna", "Mazdayasna Rite",
      "The orthodox worship of Ahura Mazda, kept by the mobeds in the fire temples of Persia and beyond.",
      "legitimacy = 0.5", (240, 200, 90)),
@@ -362,8 +383,8 @@ MODIFIER_OF = {r[1]: r[5] for r in RITES}
 GROUPS = sorted({r[0] for r in RITES})
 
 def rite_religions():
-    """{school stem: EU4 religion}: the religion lifting the CK3 faith the rite belongs to
-    (faiths.FAITH_RELIGION); a rite whose faith no religion lifts yet is left out."""
+    """{school stem: religion}: the CK3 faith the rite belongs to (its own key); a rite whose faith
+    the mod has no religion block for (religions.TEMPLATE) is left out."""
     from faiths import rite_religion_map
 
     m = rite_religion_map()
@@ -544,8 +565,8 @@ def religion_block(group):
     return f"{BEGIN}\treligious_schools = {{\n{body}\t}}\n{END}"
 
 
-def patch_religion_file():
-    text = open(REL_FILE, encoding="cp1252").read()
+def patch_text(text):
+    """The religions file with every group's generated religious_schools block."""
     for group in GROUPS:
         gm = re.search(rf"^{group}\s*=\s*\{{", text, re.M)
         assert gm, f"religion group {group} not found in 00_religion.txt"
@@ -562,7 +583,12 @@ def patch_religion_file():
         assert m, f"{group}: flag_emblem_index_range not found in 00_religion.txt"
         body = body[: m.end()] + "\n" + religion_block(group) + body[m.end():]
         text = text[:start] + body + text[end:]
-    open(REL_FILE, "w", encoding="cp1252", newline="").write(text)
+    return text
+
+
+def patch_religion_file():
+    text = open(REL_FILE, encoding="cp1252").read()
+    open(REL_FILE, "w", encoding="cp1252", newline="").write(patch_text(text))
 
 
 def static_modifiers():
@@ -816,7 +842,7 @@ def verify(check_history=True):
     # 2. EVERY religion the mod uses is a lifted CK3 faith with rites, in the group the religion sits in
     rel_text = open(REL_FILE, encoding="cp1252").read()
     groups = religion_groups(rel_text)
-    from faiths import FAITH_RELIGION, verify as verify_faiths
+    from faiths import verify as verify_faiths
 
     r_of = rite_religions()
     covered = {}
@@ -909,6 +935,7 @@ def verify(check_history=True):
 
     # 5b. religion icons: every religion the mod uses has an icon frame in all four strips
     icons = religion_icons(rel_text)
+    absent = set()  # strips are images, made locally (tools/faiths.py icons), not by the text build
     for rel in used_religions():
         n = icons.get(rel)
         if n is None:
@@ -917,13 +944,16 @@ def verify(check_history=True):
         for strip, px in RELIGION_STRIPS:
             path = os.path.join(MOD, strip)
             if not os.path.exists(path):
-                err.append(f"religion icon strip {strip} is missing")
+                absent.add(strip)
                 continue
             frames, visible = strip_frame(path, px, n)
             if n > frames:
                 err.append(f"religion '{rel}': icon {n} is outside {os.path.basename(strip)} ({frames} frames)")
             elif not visible:
                 err.append(f"religion '{rel}': icon {n} is blank in {os.path.basename(strip)}")
+
+    if absent:
+        warn.append("religion icon strips not built here: " + ", ".join(sorted(absent)))
 
     # 6. every tag follows its ruler: religion and rite agree, and history carries the school
     if check_history:

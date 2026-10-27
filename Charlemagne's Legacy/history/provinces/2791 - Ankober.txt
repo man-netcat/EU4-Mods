@@ -1,11 +1,11 @@
 #2791 - Ankober
 
-owner = SOW
-controller = SOW
-add_core = SOW
+owner = SOA
+controller = SOA
+add_core = SOA
 capital = "Ankober"
-culture = amhara
-religion = coptic
+culture = ethiopian
+religion = miaphysitism
 hre = no
 base_tax = 1
 base_production = 1
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = SOW
-	controller = SOW
-	add_core = SOW
+	owner = SOA
+	controller = SOA
+	add_core = SOA
 }

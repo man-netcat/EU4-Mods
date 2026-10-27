@@ -3,7 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = muslim
 primary_culture = levantine
-religion = ibadi
+religion = kharijite
 capital = 446
 religious_school = azariqa_school
 867.1.1 = {
@@ -17,5 +17,5 @@ religious_school = azariqa_school
 		mil = 4
 	}
 
-	set_country_flag = kar_gov_clan_government
+	set_country_flag = kar_gov_feudal_government
 }

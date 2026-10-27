@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = nomad_group
+primary_culture = uriankhai
+religion = tengri_pagan
+capital = 716
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Kizil-ool"
+		dynasty = "Tuva"
+		birth_date = 848.8.19
+		death_date = 935.6.22
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Sary-ool"
+		monarch_name = "Sary-ool"
+		dynasty = "Tuva"
+		birth_date = 843.11.17
+		death_date = 876.3.21
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

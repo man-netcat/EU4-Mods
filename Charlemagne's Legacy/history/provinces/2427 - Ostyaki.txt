@@ -2,10 +2,11 @@
 
 owner = KNA
 controller = KNA
+add_core = SIB
 add_core = KNA
 capital = "Beloyarskiy"
-culture = ostyaki
-religion = siberian
+culture = khanty
+religion = siberian_pagan
 hre = no
 base_tax = 3
 base_production = 3

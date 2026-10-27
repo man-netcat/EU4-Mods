@@ -8,9 +8,9 @@ country_decisions = {
 			NOT = { tag = GBR }
 			NOT = { exists = GBR }
 			OR = {
-				culture_group = british
+				culture_group = west_germanic
 				culture_group = brythonic
-				culture_group = gaelic
+				culture_group = goidelic
 			}
 			government_rank = 3
 			OR = {

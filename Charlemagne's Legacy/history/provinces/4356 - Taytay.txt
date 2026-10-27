@@ -2,9 +2,9 @@ owner = TAY
 controller = TAY
 add_core = TAY
 capital = "Taytay"
-culture = filipino
+culture = bisayan
 #4356 - Taytay
-culture = filipino
+culture = bisayan
 religion = dayawism
 religion = dayawism
 hre = no

@@ -2,9 +2,10 @@
 
 owner = ZIY
 controller = ZIY
+add_core = YEM
 add_core = ZIY
 capital = "Aden"
-culture = yemeni_culture
+culture = yemeni
 religion = sunni
 hre = no
 base_tax = 4

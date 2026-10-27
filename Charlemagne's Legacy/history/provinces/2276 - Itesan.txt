@@ -1,11 +1,11 @@
 # 2276 - Itesan
 
-owner = TDA
-controller = TDA
-add_core = TDA
+owner = AIR
+controller = AIR
+add_core = AIR
 capital = "Tahut"
-culture = tuareg
-religion = bori
+culture = zaghawa
+religion = west_african_bori_pagan
 hre = no
 base_tax = 1
 base_production = 1
@@ -19,7 +19,7 @@ native_hostileness = 9
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = TDA
-	controller = TDA
-	add_core = TDA
+	owner = AIR
+	controller = AIR
+	add_core = AIR
 }

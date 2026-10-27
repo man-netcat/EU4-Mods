@@ -1,0 +1,263 @@
+# The fall of Balhae (CK3: the throne vacated in 926; by 1066 Jurchen tribes hold the Balhae counties).
+# fall_of_balhae.2-.7 release one dormant Jurchen tribe each from the provinces Balhae holds in its
+# lands (the Dutch revolt pattern: cores, `release`, independence war). Fired by the disaster.
+namespace = fall_of_balhae
+
+country_event = {
+	id = fall_of_balhae.1
+	title = fall_of_balhae.1.t
+	desc = fall_of_balhae.1.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_balhae.1.a
+		set_country_flag = had_fall_of_balhae
+	}
+}
+
+country_event = {
+	id = fall_of_balhae.2
+	title = fall_of_balhae.2.t
+	desc = fall_of_balhae.2.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = WNN }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 2188
+			owns = 4217
+			owns = 4654
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			2188 = { limit = { owned_by = ROOT } add_core = WNN }
+			4217 = { limit = { owned_by = ROOT } add_core = WNN }
+			4654 = { limit = { owned_by = ROOT } add_core = WNN }
+			release = WNN
+		}
+	}
+
+	option = {
+		name = fall_of_balhae.2.a
+		WNN = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_balhae.3
+	title = fall_of_balhae.3.t
+	desc = fall_of_balhae.3.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = JIA }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 2111
+			owns = 4655
+			owns = 1850
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			2111 = { limit = { owned_by = ROOT } add_core = JIA }
+			4655 = { limit = { owned_by = ROOT } add_core = JIA }
+			1850 = { limit = { owned_by = ROOT } add_core = JIA }
+			release = JIA
+		}
+	}
+
+	option = {
+		name = fall_of_balhae.3.a
+		JIA = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_balhae.4
+	title = fall_of_balhae.4.t
+	desc = fall_of_balhae.4.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = TNO }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 2108
+			owns = 4201
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			2108 = { limit = { owned_by = ROOT } add_core = TNO }
+			4201 = { limit = { owned_by = ROOT } add_core = TNO }
+			release = TNO
+		}
+	}
+
+	option = {
+		name = fall_of_balhae.4.a
+		TNO = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_balhae.5
+	title = fall_of_balhae.5.t
+	desc = fall_of_balhae.5.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = NIP }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 4653
+			owns = 4661
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			4653 = { limit = { owned_by = ROOT } add_core = NIP }
+			4661 = { limit = { owned_by = ROOT } add_core = NIP }
+			release = NIP
+		}
+	}
+
+	option = {
+		name = fall_of_balhae.5.a
+		NIP = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_balhae.6
+	title = fall_of_balhae.6.t
+	desc = fall_of_balhae.6.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = ADI }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 730
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			730 = { limit = { owned_by = ROOT } add_core = ADI }
+			release = ADI
+		}
+	}
+
+	option = {
+		name = fall_of_balhae.6.a
+		ADI = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_balhae.7
+	title = fall_of_balhae.7.t
+	desc = fall_of_balhae.7.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = HEN }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 732
+			owns = 2742
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			732 = { limit = { owned_by = ROOT } add_core = HEN }
+			2742 = { limit = { owned_by = ROOT } add_core = HEN }
+			release = HEN
+		}
+	}
+
+	option = {
+		name = fall_of_balhae.7.a
+		HEN = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_balhae.8
+	title = fall_of_balhae.8.t
+	desc = fall_of_balhae.8.d
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_balhae.8.a
+		set_country_flag = had_fall_of_balhae
+	}
+}

@@ -2,9 +2,9 @@ owner = SIR
 controller = SIR
 add_core = SIR
 capital = "Sakam"
-culture = polynesian
+culture = amis
 #738 - Taiwan
-culture = polynesian
+culture = amis
 religion = hantuism
 religion = hantuism
 hre = no

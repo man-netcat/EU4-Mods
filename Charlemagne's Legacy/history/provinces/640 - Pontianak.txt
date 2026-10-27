@@ -2,11 +2,11 @@ owner = SMB
 controller = SMB
 add_core = SMB
 capital = "Pontianak"
-culture = bornean
+culture = malay
 #640 - Pontianak
-culture = bornean
-religion = mahayana
-religion = mahayana
+culture = malay
+religion = mahayana_faith
+religion = mahayana_faith
 hre = no
 hre = no
 base_tax = 1

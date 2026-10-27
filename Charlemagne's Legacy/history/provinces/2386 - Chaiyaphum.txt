@@ -2,10 +2,11 @@
 
 owner = DON
 controller = DON
+add_core = VIE
 add_core = DON
 capital = "Chaiyaphum"
 culture = khmer
-religion = vaishnavism
+religion = vaishnava_faith
 hre = no
 base_tax = 2
 base_production = 2

@@ -2,12 +2,12 @@ owner = EWE
 controller = EWE
 add_core = EWE
 capital = "Accra"
-culture = aka
+culture = ewe
 #1139 - Gold Coast
 #Eastern part thereof, mostly Accra and Osu Castle
-culture = aka
-religion = orisa
-religion = orisa #Fetishism
+culture = ewe
+religion = west_african_orisha_pagan
+religion = west_african_orisha_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

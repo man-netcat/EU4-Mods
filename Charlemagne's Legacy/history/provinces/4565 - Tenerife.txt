@@ -3,10 +3,10 @@ controller = CNI
 add_core = CNI
 #tenerife
 capital = "Tenerife"
-culture = guanche
-culture = guanche
-religion = achamanism
-religion = achamanism
+culture = guanches
+culture = guanches
+religion = north_african_acham_pagan
+religion = north_african_acham_pagan
 hre = no
 hre = no
 base_tax = 1

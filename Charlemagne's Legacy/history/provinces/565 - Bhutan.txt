@@ -3,8 +3,8 @@
 owner = PAO
 controller = PAO
 add_core = PAO
-culture = tibetan
-religion = vajrayana
+culture = lhomon
+religion = vajrayana_faith
 hre = no
 base_tax = 2
 base_production = 2

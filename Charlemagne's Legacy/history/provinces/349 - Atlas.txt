@@ -2,10 +2,11 @@
 
 owner = ALG
 controller = ALG
+add_core = TFL
 add_core = ALG
 capital = "Figuig"
 culture = butr
-religion = ibadi
+religion = kharijite
 hre = no
 base_tax = 2
 base_production = 2

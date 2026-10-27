@@ -1,11 +1,11 @@
 #4281 - Dhamar
 
-owner = SNH
-controller = SNH
-add_core = SNH
+owner = YEM
+controller = YEM
+add_core = YEM
 capital = "Dhamar"
-culture = yemeni_culture
-religion = shiite
+culture = bedouin
+religion = sunni
 hre = no
 base_tax = 4
 base_production = 4
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = east_african
 
 867.1.1 = {
-	owner = SNH
-	controller = SNH
-	add_core = SNH
+	owner = YEM
+	controller = YEM
+	add_core = YEM
 }

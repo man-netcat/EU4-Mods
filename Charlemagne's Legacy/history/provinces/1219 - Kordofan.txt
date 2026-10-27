@@ -3,11 +3,11 @@ controller = KRN
 add_core = KRN
 add_core = KRN
 capital = "Al-Fashir"
-culture = tunjur
+culture = daju
 #1219 - Darfur
-culture = tunjur
-religion = coptic
-religion = coptic #Fetishism
+culture = daju
+religion = miaphysitism
+religion = miaphysitism #Fetishism
 hre = no
 hre = no
 base_tax = 1

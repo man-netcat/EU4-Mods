@@ -1,11 +1,11 @@
 #1158 - Kanem
 
-owner = KNM
-controller = KNM
-add_core = KNM
+owner = KBO
+controller = KBO
+add_core = KBO
 capital = "Ngala"
 culture = kanuri
-religion = bori
+religion = west_african_bori_pagan
 hre = no
 base_tax = 3
 base_production = 3
@@ -18,7 +18,7 @@ extra_cost = 8
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = KNM
-	controller = KNM
-	add_core = KNM
+	owner = KBO
+	controller = KBO
+	add_core = KBO
 }

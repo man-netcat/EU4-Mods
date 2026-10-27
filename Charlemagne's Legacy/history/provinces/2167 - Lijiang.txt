@@ -2,10 +2,11 @@
 
 owner = DEQ
 controller = DEQ
+add_core = CDL
 add_core = DEQ
 capital = "Lijiang"
 culture = bai
-religion = vajrayana
+religion = vajrayana_faith
 hre = no
 base_tax = 1
 base_production = 1

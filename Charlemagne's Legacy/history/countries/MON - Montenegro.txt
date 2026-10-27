@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = serbian
+religion = slavic_pagan
+capital = 138
+religious_school = slavic_pagan_school
+fixed_capital = 138 # Cannot move capital away from this province & no power cost to move to it
+
+#Grand Dukes of Duklija/Zeta
+867.1.1 = {
+	monarch = {
+		name = "Miroslav"
+		birth_date = 840.11.2
+		death_date = 913.4.9
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

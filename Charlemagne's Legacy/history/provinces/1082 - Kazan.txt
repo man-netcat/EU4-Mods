@@ -1,11 +1,11 @@
 #1082 - Kazan
 
-owner = KZN
-controller = KZN
-add_core = KZN
+owner = KAZ
+controller = KAZ
+add_core = KAZ
 capital = "Kazan"
 culture = mari
-religion = suomenusko
+religion = finnish_pagan
 hre = no
 base_tax = 6
 base_production = 6
@@ -22,7 +22,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = KZN
-	controller = KZN
-	add_core = KZN
+	owner = KAZ
+	controller = KAZ
+	add_core = KAZ
 }

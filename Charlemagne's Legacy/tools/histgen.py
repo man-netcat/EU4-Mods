@@ -189,9 +189,11 @@ def formation_decision(fcode, starters) -> str:
     rename = ""
     if fb.renames:
         ordered = sorted(
-            ((t, f"tag = {t}", n) for c, t, n in fb.renames if t)
+            ((t, f"tag = {t}", n) for c, t, n, p in fb.renames if t)
         ) + sorted(
-            ((c, f"primary_culture = {c}", n) for c, t, n in fb.renames if c)
+            ((p, f"owns = {p}", n) for c, t, n, p in fb.renames if p)
+        ) + sorted(
+            ((c, f"primary_culture = {c}", n) for c, t, n, p in fb.renames if c)
         )
         parts = []
         for _key, trig, name in ordered:

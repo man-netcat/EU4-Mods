@@ -2,11 +2,11 @@ owner = TAA
 controller = TAA
 add_core = TAA
 capital = "Katapang"
-culture = bornean
+culture = malay
 #2706 - Katapang
-culture = bornean
-religion = shaivism
-religion = shaivism
+culture = malay
+religion = shaiva_faith
+religion = shaiva_faith
 hre = no
 hre = no
 base_tax = 1

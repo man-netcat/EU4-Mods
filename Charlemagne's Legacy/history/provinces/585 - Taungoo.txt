@@ -1,11 +1,11 @@
 #585 - Toungoo
 
-owner = SRI
-controller = SRI
-add_core = SRI
+owner = BPR
+controller = BPR
+add_core = BPR
 capital = "Toungoo"
 culture = burmese
-religion = mahayana
+religion = mahayana_faith
 hre = no
 base_tax = 5
 base_production = 5
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = SRI
-	controller = SRI
-	add_core = SRI
+	owner = BPR
+	controller = BPR
+	add_core = BPR
 }

@@ -2,9 +2,9 @@ owner = BAC
 controller = BAC
 add_core = BAC
 capital = "Halmahera"
-culture = moluccan
+culture = maluku
 #648 - Halmahera
-culture = moluccan
+culture = maluku
 religion = tolotang
 religion = tolotang
 hre = no

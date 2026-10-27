@@ -2,10 +2,11 @@
 
 owner = NGM
 controller = NGM
+add_core = PHA
 add_core = NGM
 capital = "Tsurphu"
-culture = tibetan
-religion = bon
+culture = bodpa
+religion = bon_faith
 hre = no
 base_tax = 2
 base_production = 1

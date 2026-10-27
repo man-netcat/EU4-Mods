@@ -114,7 +114,7 @@ def history_name(title):
 
 
 # our wording where we prefer it to CK3's: tag -> ("prefix", text) or ("key", CK3 loc key)
-STYLE = {"TNG": ("prefix", "Great "), "PAP": ("prefix", "The "), "BHE": ("key", "cn_balhae")}
+STYLE = {"TNG": ("prefix", "Great "), "JIN": ("prefix", "Great "), "KOR": ("key", "cn_goryeo"), "PAP": ("prefix", "The "), "BHE": ("key", "cn_balhae")}
 DYNASTY_HERITAGES = ("heritage_arabic", "heritage_berber", "heritage_iranian")
 
 
@@ -205,10 +205,18 @@ def _title_names(title, rank, tag):
     return name, adj
 
 
+# formables named from CK3 as well (the base game's own loc covers the rest)
+LIFT_FORMABLES = ("TIB", "UTS", "KAM", "AMD", "BHU", "LDK", "GRO", "KIN", "LIO", "JIN", "KOR", "OTU", "GOI", "BRT", "ANA", "MGE", "DNM")
+
+
 def wanted():
     con = sqlite3.connect(DB)
-    return {tag: title_names(title, rank, tag)
-            for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq")}
+    out = {tag: title_names(title, rank, tag)
+           for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq")}
+    for tag, title, rank in con.execute("select tag, ck3_title, rank from formables"):
+        if tag in LIFT_FORMABLES:
+            out[tag] = title_names(title, rank, tag)
+    return out
 
 
 def _loc_path():
@@ -217,26 +225,31 @@ def _loc_path():
     return cn.LOC
 
 
-def write():
-    path = _loc_path()
-    loc = open(path, encoding="utf-8-sig", newline="").read()
-    nl = "\r\n" if "\r\n" in loc else "\n"
-    lines = loc.split(nl)
-    for tag, got in wanted().items():
+def loc_text():
+    """The whole replace/countries_l_english.yml: every tag's name and adjective, from
+    CK3 where the title gives one, else from the tag's own table row."""
+    con = sqlite3.connect(DB)
+    names = dict(wanted())
+    for tag, name, adj in con.execute("select tag, name, adj from formables order by tag"):
+        if names.get(tag) is None:
+            names[tag] = (name, adj)
+    lines = ["l_english:"]
+    for tag, got in names.items():
         if got is None:
             continue
-        for key, val in ((tag, got[0]), (tag + "_ADJ", got[1])):
-            for i, ln in enumerate(lines):
-                if ln.startswith(f" {key}:"):
-                    lines[i] = re.sub(r'"[^"]*"$', lambda m: f'"{val}"', ln)
-                    break
-            else:
-                anchor = lines.index(' HLR:1 "Karolingian Empire"')
-                lines.insert(anchor, f' {key}:1 "{val}"')
-    new = nl.join(lines)
-    if new != loc:
+        lines.append(f' {tag}:1 "{got[0]}"')
+        lines.append(f' {tag}_ADJ:1 "{got[1]}"')
+    return "\n".join(lines) + "\n"
+
+
+def write():
+    path = _loc_path()
+    new = loc_text()
+    old = open(path, encoding="utf-8-sig", newline="").read() if os.path.exists(path) else None
+    if new != old:
+        os.makedirs(os.path.dirname(path), exist_ok=True)
         open(path, "w", encoding="utf-8-sig", newline="").write(new)
-    return new != loc
+    return new != old
 
 
 def drift():

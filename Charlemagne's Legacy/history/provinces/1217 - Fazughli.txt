@@ -5,8 +5,8 @@ capital = "Alays"
 culture = nubian
 #1217 - Fazughli
 culture = nubian #Shilluk
-religion = coptic
-religion = coptic #Fetishism
+religion = miaphysitism
+religion = miaphysitism #Fetishism
 hre = no
 hre = no
 base_tax = 1

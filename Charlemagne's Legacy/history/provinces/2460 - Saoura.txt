@@ -1,11 +1,11 @@
 # - Saoura
 
-owner = SIJ
-controller = SIJ
-add_core = SIJ
+owner = TFL
+controller = TFL
+add_core = TFL
 capital = "Oulad Mhedi"
 culture = butr
-religion = ibadi
+religion = kharijite
 hre = no
 base_tax = 1
 base_production = 1
@@ -20,7 +20,7 @@ discovered_by = western
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = SIJ
-	controller = SIJ
-	add_core = SIJ
+	owner = TFL
+	controller = TFL
+	add_core = TFL
 }

@@ -1,11 +1,11 @@
 #661 - Dali
 
-owner = DLA
-controller = DLA
-add_core = DLA
+owner = CDL
+controller = CDL
+add_core = CDL
 capital = "Dali"
 culture = bai
-religion = vajrayana
+religion = vajrayana_faith
 hre = no
 base_tax = 3
 base_production = 3
@@ -19,7 +19,7 @@ discovered_by = indian
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = DLA
-	controller = DLA
-	add_core = DLA
+	owner = CDL
+	controller = CDL
+	add_core = CDL
 }

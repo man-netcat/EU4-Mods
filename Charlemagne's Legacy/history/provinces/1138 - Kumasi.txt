@@ -1,13 +1,13 @@
-owner = KUM
-controller = KUM
-add_core = KUM
-add_core = KUM
+owner = ASH
+controller = ASH
+add_core = ASH
+add_core = ASH
 capital = "Akyem Kotoko"
-culture = aka
+culture = akan
 #1138 - Kumasi
-culture = aka
-religion = akom
-religion = akom #Fetishism
+culture = akan
+religion = akom_pagan
+religion = akom_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1
@@ -26,7 +26,7 @@ native_hostileness = 9
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = KUM
-	controller = KUM
-	add_core = KUM
+	owner = ASH
+	controller = ASH
+	add_core = ASH
 }

@@ -2,9 +2,9 @@ owner = SEM
 controller = SEM
 add_core = SEM
 capital = "Ambon"
-culture = moluccan
+culture = maluku
 #646 - Ambon
-culture = moluccan
+culture = maluku
 religion = tolotang
 religion = tolotang
 hre = no

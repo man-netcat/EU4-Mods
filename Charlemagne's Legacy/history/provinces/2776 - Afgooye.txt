@@ -1,11 +1,11 @@
 #2776 - Afgooye
 
-owner = MOA
-controller = MOA
-add_core = MOA
+owner = MDI
+controller = MDI
+add_core = MDI
 capital = "Afgooye"
 culture = somali
-religion = waaqism
+religion = waaqism_pagan
 hre = no
 base_tax = 1
 base_production = 1
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = MOA
-	controller = MOA
-	add_core = MOA
+	owner = MDI
+	controller = MDI
+	add_core = MDI
 }

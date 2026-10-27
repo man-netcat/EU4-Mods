@@ -2,9 +2,10 @@
 
 owner = ZAE
 controller = ZAE
+add_core = CDL
 add_core = ZAE
 capital = "Guiyang"
-culture = yi
+culture = hmong
 religion = dab_qhuas
 hre = no
 base_tax = 3

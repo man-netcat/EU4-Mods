@@ -1,11 +1,11 @@
 #1136 - Gurma
 
-owner = LOW
-controller = LOW
-add_core = LOW
+owner = GUR
+controller = GUR
+add_core = GUR
 capital = "Bilanga"
-culture = mossi #mossi
-religion = siguism #Fetishism
+culture = gur #mossi
+religion = west_african_pagan #Fetishism
 hre = no
 base_tax = 1
 base_production = 1
@@ -19,7 +19,7 @@ native_hostileness = 9
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = LOW
-	controller = LOW
-	add_core = LOW
+	owner = GUR
+	controller = GUR
+	add_core = GUR
 }

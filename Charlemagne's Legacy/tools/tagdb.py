@@ -126,7 +126,7 @@ class ReleasableTag(Tag):
 #: Dublin sleeps until rebels or a manual release wake it (cores seeded via
 #: seed_cores). Listed here so validate exempts them from the
 #: landed checks, and selfcheck fails any unlisted landless tag.
-DORMANT = frozenset({"YED", "ODS", "DNI", "DUB", "GAL"})
+DORMANT = frozenset({"YED", "ODS", "DNI", "DUB", "GAL", "HUB", "TAE", "WNN", "JIA", "TNO", "NIP", "ADI", "HEN", "NIN", "TUV", "SIB", "OVO", "ARI", "DAI"})
 
 
 #: CK3 title prefixes -> the government rank they imply. The declared
@@ -255,7 +255,7 @@ def _load() -> tuple[
         frenames = _grouped(
             s.query(FormableRename).order_by(FormableRename.culture, FormableRename.tag),
             "formable",
-            lambda r: (r.culture, r.tag, r.name),
+            lambda r: (r.culture, r.tag, r.name, r.province),
         )
         formables = [
             FormableTag(
@@ -381,6 +381,8 @@ def culture_groups() -> dict[str, list[str]]:
     cultures file: the single source of truth, read once per process."""
     global _GROUPS
     if not _GROUPS:
+        import cultures  # noqa: E402
+        cultures.ensure()  # the file is lifted from the base game and CK3, never kept
         path = os.path.join(
             os.path.dirname(DB_PATH),
             "..",
@@ -506,11 +508,11 @@ def selfcheck() -> None:
                     f"formable {fcode}: {off} are in none of "
                     f"{sorted(fb.culture_group)}"
                 )
-        for culture, stag, name in fb.renames:
-            if bool(culture) == bool(stag) or not name:
+        for culture, stag, name, prov in fb.renames:
+            if bool(culture) + bool(stag) + bool(prov) != 1 or not name:
                 raise ValueError(
                     f"formable {fcode}: a rename sets exactly one of "
-                    "culture/tag, plus a name"
+                    "culture/tag/province, plus a name"
                 )
             if stag and stag not in {s.tag for s in sts}:
                 raise ValueError(

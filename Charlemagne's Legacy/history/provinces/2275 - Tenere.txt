@@ -1,11 +1,11 @@
 # 2275 - Tenere
 
-owner = KNM
-controller = KNM
-add_core = KNM
+owner = KBO
+controller = KBO
+add_core = KBO
 capital = "Aghram"
-culture = tuareg
-religion = bori
+culture = zaghawa
+religion = west_african_bori_pagan
 hre = no
 base_tax = 1
 base_production = 1
@@ -19,7 +19,7 @@ native_hostileness = 9
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = KNM
-	controller = KNM
-	add_core = KNM
+	owner = KBO
+	controller = KBO
+	add_core = KBO
 }

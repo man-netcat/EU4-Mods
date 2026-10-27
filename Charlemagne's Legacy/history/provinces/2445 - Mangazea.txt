@@ -2,11 +2,11 @@ owner = KAY
 controller = KAY
 add_core = KAY
 capital = "Mangazea"
-culture = samoyed
+culture = khanty
 #2445 - Mangazea
-culture = samoyed
-religion = siberian
-religion = siberian #Sami Shamanism
+culture = khanty
+religion = siberian_pagan
+religion = siberian_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1

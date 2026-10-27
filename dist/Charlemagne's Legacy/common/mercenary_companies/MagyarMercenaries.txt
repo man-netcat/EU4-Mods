@@ -1,0 +1,20 @@
+# The Magyar horse-archer company: MGY-only swords for hire (tag-gated),
+# all-cavalry, full strength on hiring like every mercenary company. Rate
+# follows the vanilla scale (0.1 ~= 1 regiment per 10 dev): 0.5 fills about
+# eight regiments from MGY's dev, inside the 12-cavalry cap. Bonus and rate
+# are first-pass numbers for the balance pass; the 500-ducat on_startup
+# chest is sized to actually hire it.
+merc_magyar_horse = {
+	regiments_per_development = 0.5
+	home_province = 283 # Zaporozhia
+	cavalry_weight = 1.0
+	cavalry_cap = 12
+	sprites = { easterngfx_sprite_pack }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		tag = MGY
+	}
+	modifier = {
+		cavalry_power = 0.1
+	}
+}

@@ -2,11 +2,11 @@ owner = FUE
 controller = FUE
 add_core = FUE
 capital = "Las Palmas"
-culture = guanche
+culture = guanches
 #366 - The Canarias
-culture = guanche
-religion = achamanism
-religion = achamanism
+culture = guanches
+religion = north_african_acham_pagan
+religion = north_african_acham_pagan
 hre = no
 hre = no
 base_tax = 1

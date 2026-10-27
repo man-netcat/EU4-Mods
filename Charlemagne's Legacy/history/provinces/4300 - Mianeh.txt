@@ -1,11 +1,11 @@
 #2212 - Mianeh
 
-owner = ZYD
-controller = ZYD
-add_core = ZYD
+owner = TAB
+controller = TAB
+add_core = TAB
 capital = "Mianeh"
-culture = azerbaijani
-religion = sunni
+culture = kurdish
+religion = khurramism
 hre = no
 base_tax = 2
 base_production = 2
@@ -19,7 +19,7 @@ discovered_by = nomad_group
 discovered_by = indian
 
 867.1.1 = {
-	owner = ZYD
-	controller = ZYD
-	add_core = ZYD
+	owner = TAB
+	controller = TAB
+	add_core = TAB
 }

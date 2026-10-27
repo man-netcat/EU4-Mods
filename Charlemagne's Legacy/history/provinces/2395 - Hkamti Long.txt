@@ -1,8 +1,8 @@
 #2395 - Hkamti Long
 
-owner = DLA
-controller = DLA
-add_core = DLA
+owner = CDL
+controller = CDL
+add_core = CDL
 capital = "Hkamti Long"
 culture = kachin
 religion = satsana_phi
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = DLA
-	controller = DLA
-	add_core = DLA
+	owner = CDL
+	controller = CDL
+	add_core = CDL
 }

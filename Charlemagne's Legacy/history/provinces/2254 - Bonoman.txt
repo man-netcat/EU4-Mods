@@ -1,9 +1,9 @@
-owner = BNO
-controller = BNO
-add_core = BNO
+owner = BON
+controller = BON
+add_core = BON
 capital = "Bono Manso"
-culture = aka
-religion = akom #Fetishism
+culture = akan
+religion = akom_pagan #Fetishism
 hre = no
 base_tax = 3
 base_production = 3
@@ -14,7 +14,7 @@ is_city = yes
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = BNO
-	controller = BNO
-	add_core = BNO
+	owner = BON
+	controller = BON
+	add_core = BON
 }

@@ -5,8 +5,8 @@ capital = "Zigua"
 culture = swahili
 #4058 - Zigua
 culture = swahili
-religion = ibadi
-religion = ibadi #Fetishism
+religion = kharijite
+religion = kharijite #Fetishism
 hre = no
 hre = no
 base_tax = 1

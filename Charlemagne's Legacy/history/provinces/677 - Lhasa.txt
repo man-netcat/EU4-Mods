@@ -1,11 +1,11 @@
 #677 - Qamdo
 
-owner = UAA
-controller = UAA
-add_core = UAA
+owner = PHA
+controller = PHA
+add_core = PHA
 capital = "Lhasa"
-culture = tibetan
-religion = bon
+culture = bodpa
+religion = bon_faith
 hre = no
 base_tax = 2 			#haven't reduced this, it's already quite dirty poor
 base_production = 2		#haven't reduced this, it's already quite dirty poor
@@ -21,7 +21,7 @@ discovered_by = nomad_group
 discovered_by = indian
 
 867.1.1 = {
-	owner = UAA
-	controller = UAA
-	add_core = UAA
+	owner = PHA
+	controller = PHA
+	add_core = PHA
 }

@@ -2,10 +2,11 @@
 
 owner = TRQ
 controller = TRQ
+add_core = SIB
 add_core = TRQ
 capital = "Tara"
-culture = ostyaki
-religion = siberian
+culture = khanty
+religion = siberian_pagan
 hre = no
 base_tax = 2
 base_production = 2

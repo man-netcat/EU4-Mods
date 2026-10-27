@@ -2,11 +2,11 @@ owner = TGA
 controller = TGA
 add_core = TGA
 capital = "Shambaa"
-culture = swahili
+culture = east_bantu
 #4055 - Shamba
-culture = swahili
-religion = ngaiism
-religion = ngaiism #Fetishism
+culture = east_bantu
+religion = ngaiism_pagan
+religion = ngaiism_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

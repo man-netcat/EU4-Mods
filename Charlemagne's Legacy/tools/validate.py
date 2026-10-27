@@ -30,9 +30,8 @@ from build import (
 
 # this mod's 867 culture/religion expectations, checked against the files
 # the build writes
-CULTURE_GONE_867 = {"turkish": "greek", "pontic_greek": "greek"}
 CONQUERED_BY_THE_ARABS = {327, 332, 2303, 4298, 4310, 124, 125, 4736, 4737}
-MUSLIM_RELIGIONS_867 = ("sunni", "shiite")
+MUSLIM_RELIGIONS_867 = ("sunni", "shia", "kharijite")
 from build import effective  # noqa: E402
 
 CAPS = CAPITAL
@@ -437,27 +436,33 @@ def run() -> int:
     # ruler calls stand even on foreign land (Norse tags on Slavic
     # ground), and provinces keep their vanilla culture regardless.
     # Holders with unscripted CK3 data slip out (counted, not verified).
-    from culturelift import holder_culture, holder_faith, CK3_TO_EU4, FAITH_TO_RELIGION  # noqa: E402
+    from culturelift import holder_culture, holder_faith, FAITH_TO_RELIGION  # noqa: E402
     cult_drift, rel_drift, unscripted = [], [], []
     for t in _tagrows:
         if not t.ck3_title:
             continue
-        _h, cculture = holder_culture(t.ck3_title)
-        ecu = CK3_TO_EU4.get(cculture) if cculture else None
-        if not cculture:
+        # a tag follows the holder of its title, or of its ruler_title when it has one
+        lanes = [t.ck3_title] + ([t.ruler_title] if t.ruler_title else [])
+        ecus, erels = [], []
+        for ttl in lanes:
+            _h, cculture = holder_culture(ttl)
+            _h2, faith = holder_faith(ttl)
+            ecus.append(cculture or None)
+            erels.append(FAITH_TO_RELIGION.get(faith) if faith else None)
+            if ttl == t.ck3_title:
+                c0, f0 = cculture, faith
+        if not c0:
             unscripted.append(f"{t.tag} (no ruler culture)")
-        elif not ecu:
-            unscripted.append(f"{t.tag} (ruler culture {cculture} unmapped)")
-        elif ecu != t.culture:
-            cult_drift.append(f"{t.tag}: db {t.culture}, ruler {ecu}")
-        _h2, faith = holder_faith(t.ck3_title)
-        erel = FAITH_TO_RELIGION.get(faith) if faith else None
-        if not faith:
+        elif not ecus[0]:
+            unscripted.append(f"{t.tag} (ruler culture {c0} unmapped)")
+        elif t.culture not in ecus:
+            cult_drift.append(f"{t.tag}: db {t.culture}, ruler {ecus[0]}")
+        if not f0:
             unscripted.append(f"{t.tag} (no ruler faith)")
-        elif not erel:
-            unscripted.append(f"{t.tag} (faith {faith} unmapped)")
-        elif erel != t.religion:
-            rel_drift.append(f"{t.tag}: db {t.religion}, ruler {erel}")
+        elif not erels[0]:
+            unscripted.append(f"{t.tag} (faith {f0} unmapped)")
+        elif t.religion not in erels:
+            rel_drift.append(f"{t.tag}: db {t.religion}, ruler {erels[0]}")
     note(
         not cult_drift,
         f"tag cultures track the ruler ({len(cult_drift)} drifting)",
@@ -781,7 +786,7 @@ def run() -> int:
         "ADU ALG ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN DAU EGY ENG EST FIN FRA GAL "
         "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MAI MLK MOR MZB NAP NAV NOR NOV PAP PLT POL POM PRU PRO ROM RUG SAR "
         "SIL SCA SCO SER SIC SLZ SMI SOR SRV STE SWE SWA THU TNG TRA TRP TUN VEN VOL WLS WOL NAJ HDR MHR OMA JAP "
-        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM MTR SUN KUT BNJ TDO DGL KED BEU PAH BLI BEI MRI TER TID SUL MGD LNO PGS BTU LUW BRS KAN WGD KBU JOL KNG NUP MBA MLI PTE SMB".split()    )
+        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM MTR SUN KUT BNJ TDO DGL KED BEU PAH BLI BEI MRI TER TID SUL MGD LNO PGS BTU LUW BRS KAN WGD KBU JOL KNG NUP MBA MLI PTE SMB MNS ULS MTH DMS ORD LEI KRY MDI DAM HOB KAZ PRM GUG PHA CDL PGR LIG VIE LUA BPR TAB YEM TFL MON HRZ KBO AIR ASH SON BON GUR ADA WLY SOA PAT TIB UTS KAM BHU LDK JIN SLL KOR BRT MGE SIB DAI".split()    )
 
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")
@@ -938,8 +943,9 @@ def run() -> int:
                 "NOT = { government_rank = 3 }" in dec,
                 f"{key} needs a non-kingdom firer",
             )
-        for culture, stag, name in fb.renames:
-            trig = f"tag = {stag}" if stag else f"primary_culture = {culture}"
+        for culture, stag, name, prov in fb.renames:
+            trig = (f"tag = {stag}" if stag else f"owns = {prov}" if prov
+                    else f"primary_culture = {culture}")
             note(
                 trig in dec and f"override_country_name = {name}" in dec,
                 f"{key} renames to {name} for {trig}",
@@ -1389,8 +1395,7 @@ def run() -> int:
                 f"- generator probably crashed mid-write",
             )
 
-    gone = set(CULTURE_GONE_867)
-    stale_culture, stale_religion = [], []
+    stale_religion = []
     for fn in sorted(os.listdir(PDIR)):
         if not fn.endswith(".txt"):
             continue
@@ -1404,17 +1409,10 @@ def run() -> int:
         ).read()
         m = re.search(r"^\s*culture\s*=\s*(\w+)", text, re.M)
         culture = m.group(1) if m else None
-        if culture in gone:
-            stale_culture.append(f"{pid} {fn} ({culture})")
         if culture == "greek" and pid not in CONQUERED_BY_THE_ARABS:
             for rel in re.findall(r"^\s*religion\s*=\s*(\w+)", text, re.M):
                 if rel in MUSLIM_RELIGIONS_867:
                     stale_religion.append(f"{pid} {fn} ({rel})")
-    note(
-        not stale_culture,
-        "no mod-written province keeps a culture that postdates 867"
-        + ("" if not stale_culture else f": {', '.join(stale_culture)}"),
-    )
     note(
         not stale_religion,
         "every Greek province outside the Arab conquest is orthodox"
@@ -1443,6 +1441,7 @@ def run() -> int:
         "provinceview.gfx": ["GFX_province_view_religion"],
     }
     gfx_bad = []
+    missing_strips = set()
     for fn, want in REL_SPRITES.items():
         vtext = open(
             os.path.join(GAME, "interface", fn), encoding="utf-8", errors="replace"
@@ -1464,7 +1463,9 @@ def run() -> int:
             rel = re.split(r"[\\/]+", m.group(1))[-1]
             full = os.path.join(MOD, "gfx", "interface", rel)
             if not os.path.exists(full):
-                gfx_bad.append(f"{fn} {spr} target missing: {rel}")
+                # the strips are images, made by a local `faiths.py icons` run; a package
+                # built from the text alone has none
+                missing_strips.add(rel)
                 continue
             with open(full, "rb") as fh:
                 head = fh.read(24)
@@ -1479,6 +1480,8 @@ def run() -> int:
             if not f or int(f.group(1)) != max_icon:
                 gfx_bad.append(f"{fn} {spr} frames != {max_icon}")
     note(not gfx_bad, f"religion icon overrides intact ({len(gfx_bad)} bad)")
+    if missing_strips:
+        warn("religion icon strips not built here: " + ", ".join(sorted(missing_strips)))
     for b in gfx_bad[:8]:
         print("        " + b)
 
@@ -1497,16 +1500,20 @@ def run() -> int:
     f = re.search(
         r'name = "GFX_government_rank_strip".*?noOfFrames = (\d+)', mgfx, re.S
     )
-    if not f or int(f.group(1)) != 5:
-        rank_bad.append("GFX_government_rank_strip frames != 5 (county..hegemony)")
+    want = 5 if os.path.exists(os.path.join(MOD, "gfx", "interface", "government_rank_strip.dds")) else 3
+    if not f or int(f.group(1)) != want:
+        rank_bad.append(f"GFX_government_rank_strip frames != {want} (county..hegemony)")
     dds = os.path.join(MOD, "gfx", "interface", "government_rank_strip.dds")
-    with open(dds, "rb") as fh:
-        head = fh.read(24)
-    import struct as _st2
+    if os.path.exists(dds):
+        with open(dds, "rb") as fh:
+            head = fh.read(24)
+        import struct as _st2
 
-    w = _st2.unpack("<I", head[16:20])[0] if head[:4] == b"DDS " else 0
-    if w != 200:
-        rank_bad.append(f"government_rank_strip width {w} != 5x40 frames")
+        w = _st2.unpack("<I", head[16:20])[0] if head[:4] == b"DDS " else 0
+        if w != 200:
+            rank_bad.append(f"government_rank_strip width {w} != 5x40 frames")
+    else:
+        warn("government_rank_strip.dds not built here (an image: made locally); ranks keep the base game's 3 icons")
     note(not rank_bad, f"rank strip intact ({len(rank_bad)} bad)")
     for b in rank_bad[:8]:
         print("        " + b)
@@ -1844,6 +1851,27 @@ def run() -> int:
     note(not ppl, f"steppe counties carry their people's name ({len(ppl)} missing)")
     for tg_, have, want in ppl[:20]:
         print(f"        {tg_}: {have!r} should be {want!r} (python3 tools/culturalnames.py peoples)")
+
+    print("\n== religion groups follow CK3's religions (tools/faiths.py) ==")
+    import faiths as _faiths
+
+    gm = _faiths.group_misfits()
+    note(not gm, f"every lifted religion sits in the group of its CK3 religion ({len(gm)} off)")
+    for k, have, want in gm[:12]:
+        print(f"        {k} is in {have} but CK3 files it under {want}")
+
+    print("\n== cultures and religions are CK3's (tools/cultures.py, tools/religions.py) ==")
+    import cultures as _cultures
+    import religions as _religions
+
+    not_ck3 = sorted(c for c in _cultures.used_in_db() if _cultures.group_of(c) is None)
+    note(not not_ck3, f"every culture in use is a CK3 culture ({len(not_ck3)} are not)")
+    for c in not_ck3[:12]:
+        print(f"        {c}")
+    no_block = sorted(f for f in _religions.used_faiths() if f not in _religions.TEMPLATE)
+    note(not no_block, f"every religion in use is a CK3 faith the file has a block for ({len(no_block)} lack one)")
+    for f in no_block[:12]:
+        print(f"        {f}")
 
     print("\n== province religions track CK3's counties (tools/provfaiths.py) ==")
     import provfaiths

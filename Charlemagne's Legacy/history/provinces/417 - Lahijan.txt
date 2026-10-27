@@ -1,11 +1,11 @@
 #417 - Lahijan
 
-owner = GIL
-controller = GIL
-add_core = GIL
+owner = KRY
+controller = KRY
+add_core = KRY
 capital = "Lahijan"
-culture = mazandarani
-religion = shiite
+culture = daylamite
+religion = afridunism
 hre = no
 base_tax = 5
 base_production = 5
@@ -23,7 +23,7 @@ discovered_by = indian
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = GIL
-	controller = GIL
-	add_core = GIL
+	owner = KRY
+	controller = KRY
+	add_core = KRY
 }

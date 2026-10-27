@@ -1,11 +1,11 @@
 #426 - Amol
 
-owner = ZYD
-controller = ZYD
-add_core = ZYD
+owner = TAB
+controller = TAB
+add_core = TAB
 capital = "Amol"
-culture = mazandarani
-religion = shiite
+culture = sogdian
+religion = khurmazta
 hre = no
 base_tax = 4
 base_production = 4
@@ -20,7 +20,7 @@ discovered_by = indian
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ZYD
-	controller = ZYD
-	add_core = ZYD
+	owner = TAB
+	controller = TAB
+	add_core = TAB
 }

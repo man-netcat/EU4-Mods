@@ -1,8 +1,8 @@
 #4404 - Minsin
 
-owner = DLA
-controller = DLA
-add_core = DLA
+owner = CDL
+controller = CDL
+add_core = CDL
 capital = "Minsin"
 culture = kachin
 religion = satsana_phi
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = DLA
-	controller = DLA
-	add_core = DLA
+	owner = CDL
+	controller = CDL
+	add_core = CDL
 }

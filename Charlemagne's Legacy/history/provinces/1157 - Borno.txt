@@ -1,11 +1,11 @@
 #1157 - Borno
 
-owner = KNM
-controller = KNM
-add_core = KNM
+owner = KBO
+controller = KBO
+add_core = KBO
 capital = "Gatiga"
-culture = kanuri
-religion = bori
+culture = sao
+religion = west_african_bori_pagan
 hre = no
 base_tax = 4
 base_production = 4
@@ -18,7 +18,7 @@ extra_cost = 16
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = KNM
-	controller = KNM
-	add_core = KNM
+	owner = KBO
+	controller = KBO
+	add_core = KBO
 }

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = malay
+religion = shaiva_faith
+capital = 593
+religious_school = shaivism_school
+867.1.1 = {
+	monarch = {
+		name = "Krisna"
+		dynasty = "Sujita"
+		birth_date = 838.4.23
+		death_date = 899.5.18
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_mandala_government
+}

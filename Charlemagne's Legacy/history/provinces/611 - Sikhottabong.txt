@@ -2,10 +2,11 @@
 
 owner = SAI
 controller = SAI
+add_core = VIE
 add_core = SAI
 capital = "Sikhottabong"
-culture = lao
-religion = shaivism
+culture = khmu
+religion = shaiva_faith
 hre = no
 base_tax = 2
 base_production = 2

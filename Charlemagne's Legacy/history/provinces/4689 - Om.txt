@@ -2,10 +2,11 @@
 
 owner = KGZ
 controller = KGZ
+add_core = SIB
 add_core = KGZ
 capital = "Om"
-culture = kirgiz
-religion = tengri_pagan_reformed
+culture = laktan
+religion = tengri_pagan
 hre = no
 base_tax = 2
 base_production = 3

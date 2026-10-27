@@ -2,9 +2,9 @@ owner = MET
 controller = MET
 add_core = MET
 capital = "Mentawai"
-culture = sumatran
+culture = nakkavaram
 #2683 - Mentawai
-culture = sumatran
+culture = nakkavaram
 religion = bilikuism
 religion = bilikuism
 hre = no

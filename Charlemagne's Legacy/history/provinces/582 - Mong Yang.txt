@@ -1,10 +1,10 @@
 #582 - Mong Yang
 
-owner = DLA
-controller = DLA
-add_core = DLA
+owner = CDL
+controller = CDL
+add_core = CDL
 capital = "Mong Yang"
-culture = shan
+culture = kachin
 religion = satsana_phi
 hre = no
 base_tax = 3
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = DLA
-	controller = DLA
-	add_core = DLA
+	owner = CDL
+	controller = CDL
+	add_core = CDL
 }

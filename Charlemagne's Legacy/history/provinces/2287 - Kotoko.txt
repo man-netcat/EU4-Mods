@@ -2,10 +2,11 @@
 
 owner = KOO
 controller = KOO
+add_core = KBO
 add_core = KOO
 capital = "Kotoko"
-culture = kanuri
-religion = bori
+culture = sao
+religion = west_african_bori_pagan
 hre = no
 base_tax = 3
 base_production = 3

@@ -2,10 +2,11 @@
 
 owner = ZIY
 controller = ZIY
+add_core = YEM
 add_core = ZIY
 capital = "Beihan"
-culture = yemeni_culture
-religion = shiite
+culture = bedouin
+religion = sunni
 hre = no
 base_tax = 2
 base_production = 2

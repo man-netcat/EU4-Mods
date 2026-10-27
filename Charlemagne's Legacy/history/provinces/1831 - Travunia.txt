@@ -1,11 +1,11 @@
 #1831 - Travunia # now Herzegovina
 
-owner = ZAH
-controller = ZAH
-add_core = ZAH
+owner = HRZ
+controller = HRZ
+add_core = HRZ
 capital = "Herceg Novi"
 culture = serbian
-religion = slavic
+religion = slavic_pagan
 hre = no
 base_tax = 2
 base_production = 3
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = ZAH
-	controller = ZAH
-	add_core = ZAH
+	owner = HRZ
+	controller = HRZ
+	add_core = HRZ
 }

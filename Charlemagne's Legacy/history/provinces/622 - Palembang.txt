@@ -2,11 +2,11 @@ owner = SRA
 controller = SRA
 add_core = SRA
 capital = "Palembang"
-culture = sumatran
+culture = malay
 #622 - Palembang
-culture = sumatran
-religion = mahayana
-religion = mahayana
+culture = malay
+religion = mahayana_faith
+religion = mahayana_faith
 hre = no
 hre = no
 base_tax = 1

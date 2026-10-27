@@ -2,9 +2,9 @@ owner = NIA
 controller = NIA
 add_core = NIA
 capital = "Nias"
-culture = sumatran
+culture = nakkavaram
 #2684 - Nias
-culture = sumatran
+culture = nakkavaram
 religion = bilikuism
 religion = bilikuism
 hre = no

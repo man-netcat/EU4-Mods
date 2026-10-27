@@ -2,11 +2,11 @@ owner = KRN
 controller = KRN
 add_core = KRN
 capital = "Takala"
-culture = nubian
+culture = daju
 #1216 - Tegali
-culture = nubian #Shilluk
-religion = kushitism
-religion = kushitism #Fetishism
+culture = daju #Shilluk
+religion = kushitism_pagan
+religion = kushitism_pagan #Fetishism
 hre = no
 hre = no
 base_tax = 1

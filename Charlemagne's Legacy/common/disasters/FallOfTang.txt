@@ -1,0 +1,74 @@
+# The fall of Tang: Huang Chao's rebellion (874-884) and the warlords of the circuits break the
+# empire; CK3 ends the Tang line in 907 and holds the throne empty until Song (960). The
+# successors CK3 holds in 1066 leave the empire: Dai Viet (k_viet, the Jinghai circuit, which
+# is its own kingdom from 938), Hexi, and the Sixteen Prefectures that go to the Khitan.
+fall_of_tang = {
+	ended_by_country_breaking_to_rebels = no
+
+	potential = {
+		tag = TNG
+		NOT = { has_country_flag = had_fall_of_tang }
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+	}
+
+	can_start = {
+		is_year = 874
+		has_any_disaster = no
+	}
+
+	can_stop = {
+		has_any_disaster = yes
+	}
+
+	progress = {
+		modifier = {
+			factor = 2
+			tag = TNG
+		}
+		modifier = {
+			factor = 3
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 3
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 4
+			is_year = 900
+		}
+	}
+
+	can_end = {
+		OR = {
+			is_year = 960
+			AND = {
+				exists = DAI
+				OR = {
+					exists = LIO
+					exists = KIN
+					NOT = { owns = 697 }
+				}
+				NOT = { owns = 698 }
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 2
+		stability_cost_modifier = 0.25
+	}
+
+	on_start = fall_of_tang.1
+	on_end = fall_of_tang.5
+
+	on_monthly = {
+		random_events = {
+			240 = 0
+			12 = fall_of_tang.2
+			12 = fall_of_tang.3
+			12 = fall_of_tang.4
+		}
+	}
+}

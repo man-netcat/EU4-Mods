@@ -2,11 +2,11 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Troitskiy"
-culture = samoyed
+culture = kirghiz
 #2430 - Baykha
-culture = samoyed
-religion = tengri_pagan_reformed
-religion = tengri_pagan_reformed #Sami Shamanism
+culture = kirghiz
+religion = tengri_pagan
+religion = tengri_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1

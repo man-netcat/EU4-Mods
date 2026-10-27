@@ -3,10 +3,10 @@ controller = TMN
 add_core = TMN
 #1078 - Middle Urals
 capital = "Neromkar"
-culture = ostyaki
-culture = ostyaki
-religion = siberian
-religion = siberian #Sami Shamanism
+culture = kru
+culture = kru
+religion = akom_pagan
+religion = akom_pagan #Sami Shamanism
 hre = no
 hre = no
 base_tax = 1

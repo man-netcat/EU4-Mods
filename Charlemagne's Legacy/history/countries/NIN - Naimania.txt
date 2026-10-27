@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = nomad_group
+primary_culture = naiman
+religion = tengri_pagan
+capital = 2117
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Qatarqa"
+		dynasty = "Güchügüd"
+		birth_date = 827.1.20
+		death_date = 884.5.12
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Qorisu Dayir"
+		monarch_name = "Qorisu Dayir"
+		dynasty = "Güchügüd"
+		birth_date = 850.2.6
+		death_date = 896.8.11
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

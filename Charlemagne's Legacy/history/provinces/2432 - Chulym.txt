@@ -2,11 +2,11 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Igarka"
-culture = kirgiz
+culture = kirghiz
 #2432 - Chulym
-culture = kirgiz
-religion = siberian
-religion = siberian
+culture = kirghiz
+religion = tengri_pagan
+religion = tengri_pagan
 hre = no
 hre = no
 base_tax = 1

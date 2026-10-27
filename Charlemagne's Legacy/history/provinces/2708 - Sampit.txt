@@ -2,9 +2,9 @@ owner = SIT
 controller = SIT
 add_core = SIT
 capital = "Sampit"
-culture = bornean
+culture = dayak
 #2708 - Sampit
-culture = bornean
+culture = dayak
 religion = kaharingan
 religion = kaharingan
 hre = no

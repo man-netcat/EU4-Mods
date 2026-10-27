@@ -2,9 +2,9 @@ owner = SUL
 controller = SUL
 add_core = SUL
 capital = "Jolo"
-culture = filipino
+culture = bisayan
 #651 - Sulu
-culture = filipino
+culture = bisayan
 religion = dayawism
 religion = dayawism
 hre = no

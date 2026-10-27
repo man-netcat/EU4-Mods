@@ -299,6 +299,16 @@ kar_form_pomerania_provinces_trigger = {
 	}
 }
 
+kar_form_khitan_provinces_trigger = {
+	OR = {
+		area = chahar_area
+		area = inner_mongolia_area
+		area = liaoning_area
+		area = xilin_gol_area
+		province_id = 703 #chengde
+	}
+}
+
 kar_form_sweden_provinces_trigger = {
 	OR = {
 		area = gotaland_area
@@ -390,6 +400,14 @@ kar_form_sicily_provinces_trigger = {
 	}
 }
 
+kar_form_maryul_provinces_trigger = {
+	OR = {
+		province_id = 2073 #baltistan
+		province_id = 2074 #ladakh
+		province_id = 4521 #skardu
+	}
+}
+
 kar_form_aynumosir_provinces_trigger = {
 	OR = {
 		area = hokkaido_area
@@ -405,10 +423,169 @@ kar_form_nubia_provinces_trigger = {
 	}
 }
 
+kar_form_otuken_provinces_trigger = {
+	OR = {
+		province_id = 717 #kherlen
+		province_id = 1056 #barguzinsky
+		province_id = 1057 #udinsky
+		province_id = 4220 #khiagt
+	}
+}
+
+kar_form_gobi_provinces_trigger = {
+	OR = {
+		province_id = 720 #dorno govi
+		province_id = 721 #setsen
+		province_id = 2114 #ereen
+		province_id = 2116 #ih huree
+		province_id = 4221 #dundgovi
+		province_id = 4666 #south hulunbur
+		province_id = 4667 #north setsen
+		province_id = 4669 #east dornogovi
+		province_id = 4677 #east govi
+		province_id = 4678 #east qaraqorum
+	}
+}
+
+kar_form_liao_provinces_trigger = {
+	OR = {
+		area = chahar_area
+		area = inner_mongolia_area
+		area = liaoning_area
+		area = xilin_gol_area
+		province_id = 703 #chengde
+	}
+}
+
+kar_form_mongol_empire_provinces_trigger = {
+	OR = {
+		area = irkutsk_area
+		area = outer_mongolia_area
+		province_id = 720 #dorno govi
+		province_id = 1055 #verkne-angarsky
+		province_id = 1056 #barguzinsky
+		province_id = 1057 #udinsky
+		province_id = 1059 #bratsk
+		province_id = 2114 #ereen
+		province_id = 4221 #dundgovi
+		province_id = 4666 #south hulunbur
+		province_id = 4667 #north setsen
+		province_id = 4669 #east dornogovi
+		province_id = 4677 #east govi
+		province_id = 4678 #east qaraqorum
+	}
+}
+
+kar_form_jin_provinces_trigger = {
+	OR = {
+		area = central_heilongjiang_area
+		area = central_jilin_area
+		area = east_heilongjiang_area
+		area = furdan_area
+		area = heilongjiang_area
+		area = ilan_hala_area
+		area = jilin_area
+		area = liaoning_area
+		area = ningguta_area
+		area = sakhalin_area
+	}
+}
+
+kar_form_buryatia_provinces_trigger = {
+	OR = {
+		province_id = 1055 #verkne-angarsky
+		province_id = 1059 #bratsk
+		province_id = 1060 #irkutsk
+		province_id = 2442 #ust-kut
+	}
+}
+
+kar_form_angara_provinces_trigger = {
+	OR = {
+		province_id = 1062 #kachinsk
+		province_id = 1063 #sayan
+		province_id = 2443 #kan
+	}
+}
+
+kar_form_tsang_provinces_trigger = {
+	OR = {
+		area = utsang_area
+	}
+}
+
+kar_form_tibet_provinces_trigger = {
+	OR = {
+		area = amdo_area
+		area = bhutan_area
+		area = kham_area
+		area = ngari_area
+		area = tsang_area
+		area = utsang_area
+	}
+}
+
+kar_form_amdo_provinces_trigger = {
+	OR = {
+		area = amdo_area
+	}
+}
+
+kar_form_kham_provinces_trigger = {
+	OR = {
+		province_id = 678 #tachienlu
+		province_id = 2131 #qamdo
+		province_id = 2132 #markam
+		province_id = 2133 #dege
+	}
+}
+
+kar_form_gyalrong_provinces_trigger = {
+	OR = {
+		province_id = 2135 #garze
+		province_id = 2170 #songqu
+	}
+}
+
+kar_form_lhomon_provinces_trigger = {
+	OR = {
+		area = bhutan_area
+	}
+}
+
+kar_form_korea_provinces_trigger = {
+	OR = {
+		area = eastern_korea_area
+		area = hamgyeong_area
+		area = pyongan_area
+		area = south_korea_area
+		area = western_korea_area
+	}
+}
+
+kar_form_dai_viet_provinces_trigger = {
+	OR = {
+		province_id = 610 #thanh hoa
+		province_id = 613 #dong kinh
+		province_id = 1016 #ha tinh
+		province_id = 2371 #song la
+		province_id = 2372 #hai phong
+		province_id = 4819 #son nam
+		province_id = 4820 #minh quang
+		province_id = 4821 #nghe an
+	}
+}
+
 kar_form_finland_provinces_trigger = {
 	OR = {
 		area = bothnia_area
 		area = finland_area
+	}
+}
+
+kar_form_ue_provinces_trigger = {
+	OR = {
+		area = tsang_area
 	}
 }
 
@@ -449,6 +626,14 @@ kar_form_finland_capital_trigger = {
 	OR = {
 		area = bothnia_area
 		area = finland_area
+	}
+	}
+}
+
+kar_form_ue_capital_trigger = {
+	capital_scope = {
+	OR = {
+		area = tsang_area
 	}
 	}
 }

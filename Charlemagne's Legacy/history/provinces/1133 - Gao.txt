@@ -1,11 +1,11 @@
 #1133 - Gao
 
-owner = KAW
-controller = KAW
-add_core = KAW
+owner = SON
+controller = SON
+add_core = SON
 capital = "Gao"
-culture = songhai
-religion = bidaism
+culture = gaw
+religion = west_african_bidu_pagan
 hre = no
 base_tax = 7
 base_production = 7
@@ -18,7 +18,7 @@ extra_cost = 8
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = KAW
-	controller = KAW
-	add_core = KAW
+	owner = SON
+	controller = SON
+	add_core = SON
 }

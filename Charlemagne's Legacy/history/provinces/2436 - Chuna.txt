@@ -2,11 +2,11 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Chunskaya"
-culture = tungus
+culture = buryat
 #2436 - Chunskaya
-culture = tungus
-religion = siberian
-religion = siberian
+culture = buryat
+religion = siberian_pagan
+religion = siberian_pagan
 hre = no
 hre = no
 base_tax = 1

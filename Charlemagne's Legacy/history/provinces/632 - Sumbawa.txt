@@ -2,11 +2,11 @@ owner = LOM
 controller = LOM
 add_core = LOM
 capital = "Sumbawa"
-culture = nusa_tenggara
+culture = javanese
 #632 - Sumbawa
-culture = nusa_tenggara
-religion = vaishnavism
-religion = vaishnavism
+culture = javanese
+religion = vaishnava_faith
+religion = vaishnava_faith
 hre = no
 hre = no
 base_tax = 1

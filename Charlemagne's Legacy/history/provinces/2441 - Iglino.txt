@@ -2,10 +2,11 @@
 
 owner = SBK
 controller = SBK
+add_core = SIB
 add_core = SBK
 capital = "Iglino"
-culture = bashkir
-religion = tengri_pagan_reformed
+culture = bolghar
+religion = tengri_pagan
 hre = no
 base_tax = 3
 base_production = 3

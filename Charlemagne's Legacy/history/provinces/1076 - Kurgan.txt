@@ -2,10 +2,11 @@
 
 owner = KZZ
 controller = KZZ
+add_core = SIB
 add_core = KZZ
 capital = "Kurgan"
-culture = ostyaki
-religion = siberian
+culture = bashkir
+religion = tengri_pagan
 hre = no
 base_tax = 3
 base_production = 3

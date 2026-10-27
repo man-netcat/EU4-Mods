@@ -1,0 +1,51 @@
+# The Later Three Kingdoms: from 892 (CK3's Hubaekje) Silla's own provinces
+# break away under Gyeon Hwon and Gung Ye / Wang Geon, until the peninsula is
+# united under Goryeo (KOR) or the Silla crown is surrendered in 935.
+fall_of_silla = {
+	ended_by_country_breaking_to_rebels = no
+
+	potential = {
+		tag = SLL
+		NOT = { has_country_flag = had_fall_of_silla }
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+	}
+
+	can_start = {
+		is_year = 892
+		has_any_disaster = no
+	}
+
+	can_stop = {
+		has_any_disaster = yes
+	}
+
+	progress = {
+		modifier = {
+			factor = 100
+			tag = SLL
+		}
+	}
+
+	can_end = {
+		OR = {
+			exists = KOR
+			is_year = 937
+		}
+	}
+
+	modifier = {
+		global_unrest = 2
+		stability_cost_modifier = 0.25
+	}
+
+	on_start = fall_of_silla.1
+	on_end = fall_of_silla.4
+
+	on_monthly = {
+		events = {
+			fall_of_silla.2
+			fall_of_silla.3
+		}
+	}
+}

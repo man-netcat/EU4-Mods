@@ -2,10 +2,11 @@
 
 owner = ISM
 controller = ISM
+add_core = SIB
 add_core = ISM
 capital = "Chimgi-Tura"
-culture = ostyaki
-religion = siberian
+culture = khanty
+religion = siberian_pagan
 hre = no
 base_tax = 4
 base_production = 4

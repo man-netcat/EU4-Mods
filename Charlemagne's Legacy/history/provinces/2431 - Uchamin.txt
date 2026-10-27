@@ -2,11 +2,11 @@ owner = KGZ
 controller = KGZ
 add_core = KGZ
 capital = "Uchaminskiy"
-culture = tungus
+culture = kirghiz
 #2431 - Uchamin
-culture = tungus
-religion = tengri_pagan_reformed
-religion = tengri_pagan_reformed
+culture = kirghiz
+religion = tengri_pagan
+religion = tengri_pagan
 hre = no
 hre = no
 base_tax = 1
