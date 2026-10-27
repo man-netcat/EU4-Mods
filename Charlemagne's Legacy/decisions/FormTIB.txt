@@ -8,6 +8,7 @@ country_decisions = {
 			NOT = { tag = TIB }
 			NOT = { exists = TIB }
 			primary_culture = tibetan
+			government_rank = 3
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
