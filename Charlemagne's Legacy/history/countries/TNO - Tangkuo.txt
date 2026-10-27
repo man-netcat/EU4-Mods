@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = korean
+religion = mahayana
+capital = 4201
+religious_school = vinaya_school
+867.1.1 = {
+	monarch = {
+		name = "Nam-yong"
+		dynasty = "Dongseong"
+		birth_date = 825.1.1
+		death_date = 883.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_meritocratic_government
+}

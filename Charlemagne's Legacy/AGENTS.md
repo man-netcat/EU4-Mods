@@ -475,3 +475,13 @@ ruler through `d_gaeseong`, the Wang seat) are the formable's starters. The disa
 `common/disasters/FallOfSilla.txt` starts for SLL in 892; `events/FallOfSilla.txt` releases HUB
 (892) and TAE (901) from the provinces Silla holds in their lands and starts an independence war
 each (the Dutch-revolt pattern). Unplayed in-game: check error.log after the first run.
+
+## Balhae and the Jurchen tribes
+
+`common/disasters/FallOfBalhae.txt` starts for BHE from 926 (faster with instability, war or a Khitan
+empire) and `events/FallOfBalhae.txt` releases six dormant Jurchen tribes (WNN Wanyan, JIA Jiagu, TNO
+Tangkuo, NIP Nipanggu, ADI Adian, HEN Helandian: CK3's 1066 holders of the Balhae counties) from the
+provinces Balhae holds in their lands, each with an independence war. They are DORMANT and are, with
+TIE and HUI, the listed starters of the JIN (Great Jin) formable. Their culture follows the 867 holder
+of their seat (Korean/Mohe), not Jurchen, so JIN gates on its starters, not on the Manchu culture.
+Balhae's Korean-side provinces are paired in `provfaiths.py` (Taeju, West Amnok, Namhae, Fengzhou).

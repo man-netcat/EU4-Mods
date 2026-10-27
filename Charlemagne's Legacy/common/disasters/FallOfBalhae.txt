@@ -1,0 +1,78 @@
+# The fall of Balhae: from 926 (CK3's last king, In'seon, vacates the throne) the Khitan wars and the
+# tribes of the forests break the kingdom up. Each Jurchen tribe CK3 holds the old Balhae counties
+# for in 1066 is released from the provinces Balhae holds in its lands (events/FallOfBalhae.txt).
+fall_of_balhae = {
+	ended_by_country_breaking_to_rebels = no
+
+	potential = {
+		tag = BHE
+		NOT = { has_country_flag = had_fall_of_balhae }
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+	}
+
+	can_start = {
+		is_year = 926
+		has_any_disaster = no
+	}
+
+	can_stop = {
+		has_any_disaster = yes
+	}
+
+	progress = {
+		modifier = {
+			factor = 2
+			tag = BHE
+		}
+		modifier = {
+			factor = 3
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 3
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				exists = LIO
+				exists = KIN
+			}
+		}
+	}
+
+	can_end = {
+		OR = {
+			is_year = 960
+			AND = {
+				exists = WNN
+				exists = JIA
+				exists = TNO
+				exists = NIP
+				exists = ADI
+				exists = HEN
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 2
+		stability_cost_modifier = 0.25
+	}
+
+	on_start = fall_of_balhae.1
+	on_end = fall_of_balhae.8
+
+	on_monthly = {
+		random_events = {
+			240 = 0
+			12 = fall_of_balhae.2
+			12 = fall_of_balhae.3
+			12 = fall_of_balhae.4
+			12 = fall_of_balhae.5
+			12 = fall_of_balhae.6
+			12 = fall_of_balhae.7
+		}
+	}
+}

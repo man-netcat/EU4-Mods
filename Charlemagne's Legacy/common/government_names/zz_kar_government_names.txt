@@ -10049,6 +10049,72 @@ nubian_tribal_titles = {
 }
 
 
+korean_meritocratic_titles = {
+# CK3 ladders for JIA(r1), TNO(r1), NIP(r1), ADI(r1), HEN(r1) - meritocratic CK3 government (tribal); korean_titles is gated on another government
+	rank = {
+		1 = KOREAN_MERITOCRATIC_COUNTY  # county_celestial_chinese_vassal
+		2 = KOREAN_MERITOCRATIC_DUCHY  # duchy_celestial_chinese_vassal
+		3 = KOREAN_MERITOCRATIC_KINGDOM  # kingdom_celestial_chinese_protectorate_vassal
+		4 = KOREAN_MERITOCRATIC_EMPIRE  # empire_celestial_chinese_protectorate_vassal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = KOREAN_MERITOCRATIC_COUNT_MALE  # count_celestial_male_chinese_governor
+		2 = KOREAN_MERITOCRATIC_DUKE_MALE  # duke_celestial_male_chinese_governor
+		3 = KOREAN_MERITOCRATIC_KING_MALE  # king_celestial_male_chinese_civilian_governor
+		4 = KOREAN_MERITOCRATIC_EMPEROR_MALE  # emperor_celestial_male_chinese_civilian_governor
+		5 = KOREAN_MERITOCRATIC_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = KOREAN_MERITOCRATIC_COUNT_FEMALE  # count_celestial_female_chinese_governess
+		2 = KOREAN_MERITOCRATIC_DUKE_FEMALE  # duke_celestial_female_chinese_governess
+		3 = KOREAN_MERITOCRATIC_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = KOREAN_MERITOCRATIC_EMPEROR_FEMALE  # emperor_celestial_female_chinese_civilian_governess
+		5 = KOREAN_MERITOCRATIC_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = KOREAN_MERITOCRATIC_COUNT_MALE  # consort uses the ruler form
+		2 = KOREAN_MERITOCRATIC_DUKE_MALE  # consort uses the ruler form
+		3 = KOREAN_MERITOCRATIC_KING_MALE  # consort uses the ruler form
+		4 = KOREAN_MERITOCRATIC_EMPEROR_MALE  # consort uses the ruler form
+		5 = KOREAN_MERITOCRATIC_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = KOREAN_MERITOCRATIC_COUNT_FEMALE  # count_celestial_female_chinese_governess
+		2 = KOREAN_MERITOCRATIC_DUKE_FEMALE  # duke_celestial_female_chinese_governess
+		3 = KOREAN_MERITOCRATIC_KING_FEMALE  # king_celestial_female_chinese_civilian_governess
+		4 = KOREAN_MERITOCRATIC_EMPEROR_FEMALE  # emperor_celestial_female_chinese_civilian_governess
+		5 = KOREAN_MERITOCRATIC_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = tribal
+		has_country_flag = kar_gov_meritocratic_government
+		primary_culture = korean
+	}
+}
+
+
 muslim_monarchy = {
 	rank = {
 		1 = SHEIKHDOM

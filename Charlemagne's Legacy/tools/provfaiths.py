@@ -429,6 +429,14 @@ PROVINCE_COUNTY.update({
     4652: "c_LIAO_diezhou",
 })
 
+# Balhae's Korean side, by Balhae's own prefectures: Nyeongbyeon and Taecheon (Taeju), Ganggye on the
+# upper Yalu (West Amnok), Hamhung is Balhae's Nanhai, Kyongwon the Fengzhou/Longyuan country, and
+# Boduna the Boduo clan's seat at Makhil. Yaran joins Shilimian in the Sokju (Chenzhou) country.
+PROVINCE_COUNTY.update({
+    2744: "c_taeju", 4232: "c_BAL_west_amnok", 732: "c_BAL_namhae", 2742: "c_BAL_fengzhou",
+    2743: "c_BAL_northyongwon", 2109: "c_BAL_west_makhil", 1850: "c_BAL_sokju",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.

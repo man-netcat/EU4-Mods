@@ -31,12 +31,13 @@ REGIONS = {
     "eastside": ["east_africa_region", "central_africa_region", "west_siberia_region", "mongolia_region", "horn_of_africa_region", "russia_region", "ural_region"],
     "rebalance": [640, 4806, 4801, 2718, 4816, 2679, 591, 2385, 2373, 2781, 4052, 2801, 2800, 1139, 2257, 4470, 2078, 4131, 2741, 703, 731, 2107, 2320],
     "manchuria": ["manchuria_region", 4674, 2187, 4202],
+    "balhaekorea": [2744, 4232, 732, 2742, 2743, 2109, 1850],
     "india": ["hindusthan_region", "bengal_region", "west_india_region", "deccan_region", "coromandel_region"],
 }
 
 
 # technology group of the tags a region creates (vanilla gives the Indonesian realms `chinese`)
-TECH = {"china": "chinese", "maritime": "chinese", "westafrica": "sub_saharan", "eastside": "east_african", "rebalance": "chinese", "manchuria": "chinese"}
+TECH = {"china": "chinese", "maritime": "chinese", "westafrica": "sub_saharan", "eastside": "east_african", "rebalance": "chinese", "manchuria": "chinese", "balhaekorea": "chinese"}
 TECH_OF_PID = {pid: "aboriginal_tech" for pid in (1237, 2719, 2720, 2721, 2722, 1245, 2718, 2723, 2724)}
 TECH_OF_PID.update({2078: "indian", 4470: "indian", 1139: "sub_saharan", 2257: "sub_saharan",
                     2800: "sub_saharan", 2801: "sub_saharan", 2781: "east_african", 4052: "east_african"})

@@ -7,7 +7,16 @@ country_decisions = {
 			NOT = { has_country_flag = kar_form_jin }
 			NOT = { tag = JIN }
 			NOT = { exists = JIN }
-			primary_culture = manchu
+			OR = {
+				tag = TIE
+				tag = HUI
+				tag = WNN
+				tag = JIA
+				tag = TNO
+				tag = NIP
+				tag = ADI
+				tag = HEN
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
