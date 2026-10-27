@@ -524,3 +524,19 @@ DNM is the Dai Viet empire formable (`e_viet`, rank 4, Vietnamese culture, kingd
 only starter. A formable rename can now key on a province (`formable_renames.province`): a former
 that owns Hue (2373) is named Dai Nam through the vanilla EU4 key DAI_NAM (the Nguyen empire of
 1839, which joined the Red River to the south); the other renames key on tag or culture.
+
+## The script-only rule and CI
+
+The repository should ship the script and CK3-independent data; everything that comes from CK3 or
+EU4 is lifted by `tools/build.py`. `python3 tools/selfcontained.py` copies `tools/` and
+`descriptor.mod` into an empty folder and builds + validates there. It fails today at
+`common/cultures/00_cultures.txt`, the first hand-kept input (the build reads it and the culture lift
+edits it in place; it differs from vanilla in ~130 changed and ~130 removed cultures plus 29 added).
+The other hand-kept inputs the build reads are `localisation/replace/countries_l_english.yml` and
+`karolingian_religion_l_english.yml`, and the faith/rite icons in `gfx/interface`. Lifting those is
+the next step; then untrack the generated output.
+
+`.github/workflows/charlemagnes-legacy.yml` runs two jobs: **validate** (build, validate, and fail if
+the committed files differ from the build output) and **self-contained** (the script-only check,
+non-blocking until it passes). Both need a `REFERENCE_REPO_TOKEN` repository secret with read access
+to `man-netcat/eu4-ck3-reference`.
