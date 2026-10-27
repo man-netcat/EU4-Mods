@@ -11313,24 +11313,24 @@ default_theocracy = {
 default_tribal = {
 	rank = {
 		1 = CHIEFDOM
-		2 = TRIBAL_KINGDOM
-		3 = TRIBAL_EMPIRE
+		2 = HIGH_CHIEFDOM
+		3 = TRIBAL_KINGDOM
 		4 = TRIBAL_EMPIRE
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = CHIEF
-		2 = KING
-		3 = EMPEROR
+		1 = CHIEFTAIN
+		2 = HIGH_CHIEFTAIN
+		3 = KING
 		4 = EMPEROR
 		5 = EMPEROR
 	}
 
 	ruler_female = {
 		1 = CHIEFTESS
-		2 = QUEEN
-		3 = EMPRESS
+		2 = HIGH_CHIEFESS
+		3 = QUEEN
 		4 = EMPRESS
 		5 = EMPRESS
 	}
@@ -11345,8 +11345,8 @@ default_tribal = {
 
 	consort_female = {
 		1 = CONSORT
-		2 = QUEEN_CONSORT
-		3 = EMPRESS_CONSORT
+		2 = CONSORT
+		3 = QUEEN_CONSORT
 		4 = EMPRESS_CONSORT
 		5 = EMPRESS_CONSORT
 	}
