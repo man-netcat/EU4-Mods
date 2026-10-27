@@ -148,6 +148,7 @@ class FormableRename(Base):
     culture = Column(String, primary_key=True)
     tag = Column(String, primary_key=True)
     name = Column(String, nullable=False)
+    province = Column(Integer, nullable=False, default=0)  # when the former owns it
 
 
 class TagSuppress(Base):

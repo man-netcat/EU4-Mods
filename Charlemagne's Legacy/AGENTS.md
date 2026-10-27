@@ -518,3 +518,9 @@ that exists. DAI is Vietnamese/Mahayana through `ruler_title c_hai_dong` (Khuc T
 `ck3_title` or its `ruler_title` holder. New Dhyana rite (Mahayana school) in rites.py. CK3 has no
 Ten Kingdoms and no Song tag (the Tang line ends 907, Song starts 960); a Song rename is not built.
 Unplayed in-game: check error.log after the first run.
+
+DNM is the Dai Viet empire formable (`e_viet`, rank 4, Vietnamese culture, kingdom rank required,
+75% of the 8 provinces 613 1016 2371 2372 4819 4820 4821 610, capital Thang Long owned); DAI is its
+only starter. A formable rename can now key on a province (`formable_renames.province`): a former
+that owns Hue (2373) is named Dai Nam through the vanilla EU4 key DAI_NAM (the Nguyen empire of
+1839, which joined the Red River to the south); the other renames key on tag or culture.

@@ -255,7 +255,7 @@ def _load() -> tuple[
         frenames = _grouped(
             s.query(FormableRename).order_by(FormableRename.culture, FormableRename.tag),
             "formable",
-            lambda r: (r.culture, r.tag, r.name),
+            lambda r: (r.culture, r.tag, r.name, r.province),
         )
         formables = [
             FormableTag(
@@ -506,11 +506,11 @@ def selfcheck() -> None:
                     f"formable {fcode}: {off} are in none of "
                     f"{sorted(fb.culture_group)}"
                 )
-        for culture, stag, name in fb.renames:
-            if bool(culture) == bool(stag) or not name:
+        for culture, stag, name, prov in fb.renames:
+            if bool(culture) + bool(stag) + bool(prov) != 1 or not name:
                 raise ValueError(
                     f"formable {fcode}: a rename sets exactly one of "
-                    "culture/tag, plus a name"
+                    "culture/tag/province, plus a name"
                 )
             if stag and stag not in {s.tag for s in sts}:
                 raise ValueError(

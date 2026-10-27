@@ -563,6 +563,19 @@ kar_form_korea_provinces_trigger = {
 	}
 }
 
+kar_form_dai_viet_provinces_trigger = {
+	OR = {
+		province_id = 610 #thanh hoa
+		province_id = 613 #dong kinh
+		province_id = 1016 #ha tinh
+		province_id = 2371 #song la
+		province_id = 2372 #hai phong
+		province_id = 4819 #son nam
+		province_id = 4820 #minh quang
+		province_id = 4821 #nghe an
+	}
+}
+
 kar_form_finland_provinces_trigger = {
 	OR = {
 		area = bothnia_area

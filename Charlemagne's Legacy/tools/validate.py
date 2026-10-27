@@ -942,8 +942,9 @@ def run() -> int:
                 "NOT = { government_rank = 3 }" in dec,
                 f"{key} needs a non-kingdom firer",
             )
-        for culture, stag, name in fb.renames:
-            trig = f"tag = {stag}" if stag else f"primary_culture = {culture}"
+        for culture, stag, name, prov in fb.renames:
+            trig = (f"tag = {stag}" if stag else f"owns = {prov}" if prov
+                    else f"primary_culture = {culture}")
             note(
                 trig in dec and f"override_country_name = {name}" in dec,
                 f"{key} renames to {name} for {trig}",
