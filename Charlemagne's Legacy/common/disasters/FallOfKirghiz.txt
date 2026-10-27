@@ -49,6 +49,8 @@ fall_of_kirghiz = {
 				exists = NIN
 				exists = TUV
 				exists = SIB
+				exists = OVO
+				exists = ARI
 			}
 		}
 	}
@@ -68,6 +70,8 @@ fall_of_kirghiz = {
 			12 = fall_of_kirghiz.3
 			12 = fall_of_kirghiz.4
 			12 = fall_of_kirghiz.5
+			12 = fall_of_kirghiz.7
+			12 = fall_of_kirghiz.8
 		}
 	}
 }

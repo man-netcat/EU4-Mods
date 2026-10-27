@@ -501,5 +501,6 @@ the Mongol Empire) is planned, not built.
 KGZ is CK3's `e_kirghiz_khanate` (held from 840; the title is vacated on 925.1.2), so its 30 provinces
 from the Ob to Uliastai are right. `common/disasters/FallOfKirghiz.txt` starts for KGZ from 925
 (faster with a Khitan empire, instability or war); `events/FallOfKirghiz.txt` releases the dormant
-NIN (Naimania, 12 provinces; a starter of the Mongol Empire), TUV (Tuva) and SIB (Sibir, vanilla tag)
+NIN (Naimania, Naiman culture; a starter of the Mongol Empire, which Naiman may form), OVO
+(Övörkhangai, Kerait), ARI (Arkhangai, Mongol), TUV (Tuva) and SIB (Sibir, vanilla tag)
 and cedes the Dzungarian counties to DZG; the Kirghiz keep Khakassia and the Ob country.

@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = nomad_group
+primary_culture = mongol
+religion = tengri_pagan_reformed
+capital = 2189
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Jebe"
+		dynasty = "Ganbold"
+		birth_date = 841.8.27
+		death_date = 900.6.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

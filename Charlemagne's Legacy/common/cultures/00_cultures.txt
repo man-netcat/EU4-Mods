@@ -4645,6 +4645,46 @@ altaic = {
 			"Jalair" "Sartuul" "Olkhunut" "Khatagin" "Iljigin" "Tsookhor" "Qarakhanid"
 		}
 	}
+	naiman = {
+		dynasty_names = {
+			Naiman "GU chU gU d" Betegin Buku Karakalpaks Baqi Dorben Qataqin Hatarin "U lO gU r" Arghak "ChU reg"
+			"U U mO rU g" Khorinik "MO ntek" Bulagun Onoreg Choren "QU lagU" Tairag Bonreg "DO O gO ir" "EgU ir"
+			Ijigiak Jamanig
+		}
+		male_names = {
+			Altan "Arin Taiz" "Bukha Timur" Buyimur Buyuruk Ciriac Daaritai "Erke kara" Elkutur Gur "Ilqa Sangun"
+			Inanch Jagambu Jakha Jamuqa Javanqad Kereyidei Ketbugha Kitbuqa Koksegu Korchi Kuchluk Kuchuguden Kulbur
+			Kurchakus Marguz Qatarqa Qorisubachi "Qorisu Dayir" Quchar Qurdjaquz Saryk Taibuka "Tai Timur" Tayan
+			Togrul "Toqto a" Tooril "Yula Mangus"
+		}
+		female_names = {
+			Aigiarn Al-Alta Alan Altani Borte Botokhui Bulughan Chabi Chagur Chakha "Chaur Baqi" Checheyigen Chotan
+			Conchaka Dokez Doregene Doquz Ebegei Goland Gurbesu Hogelun Holuikhan Ibakha Khadagan Khatun Khogaghchin
+			Khojin Khorijin Khugurchin Khulan Khutulan Khutulun Kokachin Mandukhai Mongoljin Nomolun Oghul Orbei
+			Orqina Sokhatai Sorkhaghatani Tekine Temulun "TO regene" "Ussun Kulan" Yesugun Yesui Hoelun
+		}
+	}
+
+	kerait = {
+		dynasty_names = {
+			Kerait Jirkin Konkant Sukait Tumaut Albat Khonkoid Kirkh Dunghaid "TU men TU begU n" Dongoid Ubchikh
+			Jirgin Ongchijid "SU U gaad" Moronig Khalakh Tajurin Altarusig Kuldurugid Kuchorig Bukhatad Gurdugusid
+			Esorig "NO O gemir"
+		}
+		male_names = {
+			Altan "Arin Taiz" "Bukha Timur" Buyimur Buyuruk Ciriac Daaritai "Erke kara" Elkutur Gur "Ilqa Sangun"
+			Inanch Jagambu Jakha "Jakha Gambhu" Jamuqa Javanqad Kereyidei Ketbugha Kitbuqa Koksegu Korchi Kuchluk
+			Kuchuguden Kulbur Kurchakus Marguz Oghuul Qatarqa Qorisubachi "Qorisu Dayir" Quchar Qurdjaquz Saryk
+			Taibuka "Tai Timur" Tayan Togrul "Toqto a" Tooril "Yula Mangus"
+		}
+		female_names = {
+			Aigiarn Al-Alta Alan Altani Borte Botokhui Bulughan Chabi Chagur Chakha "Chaur Baqi" Checheyigen Chotan
+			Conchaka Dokez Doregene Doquz Ebegei Goland Gurbesu Hogelun Holuikhan Ibakha Khadagan Khatun Khogaghchin
+			Khojin Khorijin Khugurchin Khulan Khutulan Khutulun Kokachin Mandukhai Mongoljin Nomolun Oghul Orbei
+			Orqina Sokhatai Sorkhaghatani Tekine Temulun "TO regene" "Ussun Kulan" Yesugun Yesui Hoelun
+		}
+	}
+
 	chahar = { # now korchin
 		primary = KRC
 		male_names = {
