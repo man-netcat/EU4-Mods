@@ -1,0 +1,324 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from ck3 import ck3_block, load_title_colors
+from enc import encname
+from tagdb import BY_FORMABLE, ck3_government, rank_of, required_count
+
+HERE = Path(__file__).resolve().parent
+PROVDATA = HERE / "cache" / "provdata.json"
+
+T = "\t"
+
+_PROVDATA = None
+
+
+def _pd():
+    global _PROVDATA
+    if _PROVDATA is None:
+        _PROVDATA = json.load(open(str(PROVDATA)))
+    return _PROVDATA
+
+
+def area_claim_lines(areas) -> list[str]:
+    """One add_permanent_claim block per area (skipping land already cored
+    or claimed): the Reconquista pattern, shared by formation decisions
+    and the HRE restoration."""
+    return [
+        f"{T*3}{a} = {{\n"
+        f"{T*4}limit = {{\n"
+        f"{T*5}NOT = {{ is_core = ROOT }}\n"
+        f"{T*5}NOT = {{ is_permanent_claim = ROOT }}\n"
+        f"{T*4}}}\n"
+        f"{T*4}add_permanent_claim = ROOT\n"
+        f"{T*3}}}"
+        for a in areas
+    ]
+
+
+def ruler_block_for(t) -> str:
+    if t.ck3_title:
+        return ck3_block(t.tag)
+    raise SystemExit(
+        f"{t.tag}: no ck3_title - give it one, " f"so its 867 ruler is lifted from CK3"
+    )
+
+
+def country_history(t) -> str:
+    lines = [f"government = {t.government}"]
+    lines += [f"add_government_reform = {r}" for r in t.reforms]
+    lines.append(f"government_rank = {rank_of(t)}")
+    lines += [
+        f"technology_group = {t.technology_group}",
+        f"primary_culture = {t.culture}",
+        f"religion = {t.religion}",
+        f"capital = {t.capital}",
+    ]
+    # CK3 rite of the 867 ruler -> religious school (tools/rites.py)
+    from rites import school_for_tag, school_name
+
+    rite_school = school_for_tag(t)
+    if not rite_school:
+        raise SystemExit(f"{t.tag}: its 867 ruler's CK3 rite has no school in tools/rites.py")
+    lines.append(f"religious_school = {school_name(rite_school)}")
+    lines += [f"historical_rival = {r}" for r in t.rivals]
+    lines += [f"historical_friend = {f}" for f in t.friends]
+    if t.extra:
+        lines.append(t.extra.rstrip("\n"))
+    rb = ruler_block_for(t)
+    if t.tag == "MGY":
+        # Starting general for the migration war (TEU precedent): Kurszan
+        # rides from day one. Placed after the monarch block, which the
+        # ruler-sync regexes anchor on; MGY's Arpad heirship is asserted so
+        # a CK3 data change fails the build loudly instead of misplacing it.
+        assert rb.count("\n\their = {") == 1
+        rb = rb.replace(
+            "\n\their = {",
+            '\n\tleader = { name = "Kurszán" type = general fire = 1 shock = 6 manuever = 3 siege = 0 death_date = 904.1.1 }\n\their = {',
+            1,
+        )
+    # CK3 government at 867, carried into EU4 as a start flag so
+    # government_names can gate on it (Greek feudal Napoli = County/Count,
+    # Greek administrative Syracusa = Tourma).
+    assert rb.endswith("}\n")
+    rb = rb[:-2] + f"\n\tset_country_flag = kar_gov_{ck3_government(t)}\n}}\n"
+    lines.append(rb)
+    return "\n".join(lines) + "\n"
+
+
+def lifted_color(t):
+    """The CK3 map colour of the title behind the tag; falls back to the
+    tag's own declared colour when CK3 has no colour for that title."""
+    if t.ck3_title:
+        got = load_title_colors().get(t.ck3_title)
+        if got:
+            return got
+    return t.color
+
+
+def country_definition(t) -> str:
+    graphical = "easterngfx" if t.technology_group == "eastern" else "westerngfx"
+    r, g, b = lifted_color(t)
+    rc = t.revolutionary_colors
+    parts = [
+        f"graphical_culture = {graphical}",
+        "",
+        f"color = {{ {r}  {g}  {b} }}",
+        "",
+        f"revolutionary_colors = {{ {rc[0]}  {rc[1]}  {rc[2]} }}",
+        "",
+        f"historical_score = {t.historical_score}",
+    ]
+    if t.historical_units:
+        parts += (
+            ["", "historical_units = {"]
+            + [f"{T}{u}" for u in t.historical_units]
+            + ["}"]
+        )
+    if t.monarch_names:
+        parts += [""] + ["monarch_names = {"]
+        parts += [
+            f'{T}"{encname(name)}" = {weight}' for name, weight in t.monarch_names
+        ]
+        parts += ["}"]
+    if t.leader_names:
+        parts += (
+            ["", "leader_names = {"] + [f"{T}{ln}" for ln in t.leader_names] + ["}"]
+        )
+    if t.ship_names:
+        parts += ["", "ship_names = {"] + [f"{T}{sn}" for sn in t.ship_names] + ["}"]
+    return "\n".join(parts) + "\n"
+
+
+def requirement_provinces(fcode) -> list[int]:
+    """Province ids a formable requires: its areas expanded via provdata
+    plus its explicit provinces."""
+    data = _pd()
+    fb = BY_FORMABLE[fcode]
+    return sorted(
+        {int(p) for a in fb.areas for p in data["areas"].get(a, ())}
+        | set(fb.provinces)
+    )
+
+
+def formation_decision(fcode, starters) -> str:
+    """One shared decision per formable; every starter that can fire it is
+    listed in the potential (a single starter keeps the old single-tag line
+    so its file stays byte-identical)."""
+    fb = BY_FORMABLE[fcode]
+    key = starters[0].decision
+    required = requirement_provinces(fcode)
+    want = required_count(len(required), fb.percent)
+    cap_req = ""
+    if fb.own_capital:
+        cap_req = "\n\t\t\towns = " + str(fb.capital)
+    # Own-capital formables crown in their capital (Somalia/Hausa precedent):
+    # the firer already holds it (see cap_req), so this only moves the seat.
+    cap_move = ""
+    if fb.own_capital:
+        cap_move = "\n\t\t\tset_capital = " + str(fb.capital)
+    # HUN alone settles immediately: invoke the one settlement effect at
+    # the end of FormHUN (the effect below reaches it the same way, so
+    # every path converges on one implementation). HUN also carries the
+    # migration tooltip below (the only bespoke formable tooltip besides
+    # HLR's own), and sheds the horse-lords reform for feudalism.
+    settle_call = ""
+    settle_tip = ""
+    magyar_swap = ""
+    if fcode == "HUN":
+        magyar_swap = ("\n\t\t\tif = {\n\t\t\t\tlimit = { has_reform = magyar_horse_lords_reform }\n"
+            "\t\t\t\tremove_government_reform = magyar_horse_lords_reform\n\t\t\t}\n"
+            "\t\t\tadd_government_reform = feudalism_reform")
+        settle_call = "\n\t\t\tkar_magyar_settlement_effect = yes"
+        settle_tip = "\n\t\t\tcustom_tooltip = kar_form_hungary_migration_tooltip"
+    home_req = ""
+    if fb.home_capital:
+        home_req = f"\n\t\t\t{key}_capital_trigger = yes"
+    rank_req = ""
+    if fb.rank_required == -1:
+        rank_req = ""  # no rank gate: a kingdom-ranked starter may form a kingdom (ARM)
+    elif fb.rank_required:
+        rank_req = f"\n\t\t\tgovernment_rank = {fb.rank_required}"
+    elif fb.rank == 3:
+        rank_req = "\n\t\t\tNOT = { government_rank = 3 }"
+    claims = "\n".join(area_claim_lines(fb.areas))
+    rename = ""
+    if fb.renames:
+        ordered = sorted(
+            ((t, f"tag = {t}", n) for c, t, n, p in fb.renames if t)
+        ) + sorted(
+            ((p, f"owns = {p}", n) for c, t, n, p in fb.renames if p)
+        ) + sorted(
+            ((c, f"primary_culture = {c}", n) for c, t, n, p in fb.renames if c)
+        )
+        parts = []
+        for _key, trig, name in ordered:
+            kw = "if" if not parts else "else_if"
+            parts.append(
+                f"{T*3}{kw} = {{\n"
+                f"{T*4}limit = {{\n"
+                f"{T*5}{trig}\n"
+                f"{T*4}}}\n"
+                f"{T*4}override_country_name = {name}\n"
+                f"{T*3}}}"
+            )
+        rename = "\n" + "\n".join(parts)
+    if fb.culture_group:
+        if len(fb.culture_group) == 1:
+            tag_line = f"\t\t\tculture_group = {fb.culture_group[0]}"
+        else:
+            inner = "\n".join(
+                f"\t\t\t\tculture_group = {g}" for g in fb.culture_group
+            )
+            tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
+    elif fb.culture:
+        cultures = fb.culture.split()  # several = any of them may form it
+        if len(cultures) == 1:
+            tag_line = f"\t\t\tprimary_culture = {cultures[0]}"
+        else:
+            inner = "\n".join(
+                f"\t\t\t\tprimary_culture = {c}" for c in cultures
+            )
+            tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
+    elif fb.exclusive and len(starters) > 1:
+        branches = []
+        for s in starters:
+            others = "\n".join(
+                f"\t\t\t\tNOT = {{ exists = {o.tag} }}" for o in starters if o != s
+            )
+            branches.append(
+                f"\t\t\tAND = {{\n\t\t\t\ttag = {s.tag}\n{others}\n\t\t\t}}"
+            )
+        tag_line = "\t\t\tOR = {\n" + "\n".join(branches) + "\n\t\t\t}"
+    elif len(starters) == 1:
+        tag_line = f"\t\t\ttag = {starters[0].tag}"
+    else:
+        inner = "\n".join(f"\t\t\t\ttag = {s.tag}" for s in starters)
+        tag_line = f"\t\t\tOR = {{\n{inner}\n\t\t\t}}"
+    return f"""country_decisions = {{
+\t{key} = {{
+\t\tmajor = yes
+
+\t\tpotential = {{
+\t\t\tnormal_or_historical_nations = yes
+\t\t\tNOT = {{ has_country_flag = {key} }}
+\t\t\tNOT = {{ tag = {fcode} }}
+\t\t\tNOT = {{ exists = {fcode} }}
+{tag_line}{home_req}{rank_req}
+\t\t\tOR = {{
+\t\t\t\tai = no
+\t\t\t\tis_playing_custom_nation = no
+\t\t\t}}
+\t\t\tOR = {{
+\t\t\t\tis_free_or_tributary_trigger = yes
+\t\t\t\tai = no
+\t\t\t}}
+\t\t}}
+
+\t\tprovinces_to_highlight = {{
+\t\t\t{key}_provinces_trigger = yes
+\t\t\tNOT = {{ country_or_non_sovereign_subject_holds = ROOT }}
+\t\t}}
+
+\t\tallow = {{
+\t\t\tnum_of_owned_provinces_with = {{
+\t\t\t\tvalue = {want}
+\t\t\t\t{key}_provinces_trigger = yes
+\t\t\t}}{cap_req}
+\t\t\tis_at_war = no
+\t\t\tis_free_or_tributary_trigger = yes
+\t\t}}
+
+\t\teffect = {{{settle_tip}
+\t\t\tchange_tag = {fcode}
+\t\t\ton_change_tag_effect = yes
+\t\t\tchange_government_to_monarchy = yes{cap_move}
+\t\t\tset_country_flag = {key}
+\t\t\thidden_effect = {{
+\t\t\t\tset_government_rank = {fb.rank}
+\t\t\t}}
+\t\t\tadd_prestige = 25
+\t\t\tadd_legitimacy = 10{magyar_swap}
+{claims}{rename}{settle_call}
+\t\t}}
+\t}}
+}}
+"""
+
+
+def formation_trigger_block(name, pids) -> str:
+    return (
+        f"{name} = {{\n{T}OR = {{\n"
+        + "\n".join(_trigger_land_lines(pids))
+        + f"\n{T}}}\n}}"
+    )
+
+
+def formation_capital_trigger_block(name, pids) -> str:
+    """Homeland-capital check for home_capital formables: the firing tag's
+    capital must sit inside the requirement land."""
+    return (
+        f"{name} = {{\n{T}capital_scope = {{\n{T}OR = {{\n"
+        + "\n".join(_trigger_land_lines(pids))
+        + f"\n{T}}}\n{T}}}\n}}"
+    )
+
+
+def _trigger_land_lines(pids) -> list[str]:
+    data = _pd()
+    want = set(pids)
+    used: set = set()
+    lines = []
+    for a in sorted(data["areas"]):
+        aps = {int(x) for x in data["areas"][a]}
+        if aps and aps <= want:
+            lines.append(f"{T*2}area = {a}")
+            used |= aps
+    for p in sorted(want - used):
+        nm = data["provs"].get(str(p), {}).get("name")
+        lines.append(f"{T*2}province_id = {p}" + (f" #{nm.lower()}" if nm else ""))
+    return lines

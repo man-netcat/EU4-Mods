@@ -1,0 +1,15 @@
+bookmark =
+{
+	name = "THE_CALIPHATE_NAME"
+	desc = "THE_CALIPHATE_DESC"
+	date = 867.1.1
+
+	center = 410
+
+	country = ARB
+	country = BYZ
+	country = EGY
+	country = SAF
+	country = TUN
+	country = MRW
+}

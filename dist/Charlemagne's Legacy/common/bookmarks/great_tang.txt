@@ -1,0 +1,14 @@
+bookmark =
+{
+	name = "GREAT_TANG_NAME"
+	desc = "GREAT_TANG_DESC"
+	date = 867.1.1
+
+	center = 700
+
+	country = TNG
+	country = KTN
+	country = JAP
+	country = SLL
+	country = BHE
+}

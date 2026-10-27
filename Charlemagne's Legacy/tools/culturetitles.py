@@ -629,7 +629,7 @@ def main(argv):
     for r in all_tags([]):
         if not r.ck3_title:
             continue
-        rck, rkey = resolve_culture(r.culture, r.ck3_title)
+        rck, rkey = resolve_culture(r.culture, r.ruler_title or r.ck3_title)
         if rkey is None:
             continue
         if rkey != r.culture:
@@ -654,7 +654,7 @@ def main(argv):
         if t.ck3_title not in tier_of_title:
             broken.append((t.tag, f"unknown CK3 title {t.ck3_title}"))
             continue
-        ck3cult, key = resolve_culture(t.culture, t.ck3_title)
+        ck3cult, key = resolve_culture(t.culture, t.ruler_title or t.ck3_title)
         if key is None:
             broken.append((t.tag,
                            f"culture {t.culture}: no CK3 id resolves it "
@@ -878,6 +878,20 @@ def main(argv):
     if broken:
         print("  NOTE: broken tags above left uncovered - fix and re-run")
     return 0
+
+
+DATA = os.path.join(HERE, "data")
+
+
+def step_government_names():
+    """Build step: the hand-written blocks and their loc (tools/data) are the base; every
+    other tag's title ladder is lifted from CK3 on top, as `culturetitles.py` does."""
+    import shutil
+
+    for src, dst in (("government_names_hand.txt", ZZ), ("title_names_hand.yml", TITLE_LOC)):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copyfile(os.path.join(DATA, src), dst)
+    return main([])
 
 
 def read_utf8(path):

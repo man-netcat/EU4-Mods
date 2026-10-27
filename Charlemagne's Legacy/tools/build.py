@@ -16,16 +16,24 @@ from eu4 import *  # noqa: F401,F403
 from ck3 import *  # noqa: F401,F403
 from rites import step_rites
 from tagloc import step_tagloc
+from vanillapatch import step_vanilla_patches
+from culturetitles import step_government_names
 
 
 def main() -> int:
+    if "--release" in sys.argv:
+        import release
+
+        return release.main([a for a in sys.argv[1:] if a != "--release"])
     started = time.time()
     print(f"Charlemagne's Legacy - full build\n{'=' * 60}")
 
     phases = [
+        ("patch base-game files", step_vanilla_patches),
         ("check the Tag database", selfcheck),
         ("write the Christian rite schools", step_rites),
         ("lift tag names from CK3", step_tagloc),
+        ("lift government titles from CK3", step_government_names),
         ("generate province files", step_provinces),
         ("generate country files", step_countries),
         ("generate the empire decision", step_hre),

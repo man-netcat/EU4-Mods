@@ -1,0 +1,18 @@
+bookmark =
+{
+	name = "KAROLINGIANS_NAME"
+	desc = "KAROLINGIANS_DESC"
+	date = 867.1.1
+	default = yes
+
+	center = 183
+
+	country = FRA
+	country = GER
+	country = LOT
+	country = BAV
+	country = ITA
+	country = PAP
+	country = ADU
+	country = AQI
+}

@@ -70,3 +70,31 @@ jobs:
       - run: pip install -r "Charlemagne's Legacy/tools/requirements.txt"
       - working-directory: Charlemagne's Legacy
         run: python3 tools/selfcontained.py
+
+  package:
+    name: Build the upload package (no game material)
+    runs-on: ubuntu-latest
+    needs: [validate]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            Charlemagne's Legacy
+          sparse-checkout-cone-mode: true
+      - uses: actions/checkout@v4
+        with:
+          repository: man-netcat/eu4-ck3-reference
+          token: ${{ secrets.REFERENCE_REPO_TOKEN }}
+          path: eu4-ck3-reference
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r "Charlemagne's Legacy/tools/requirements.txt"
+      - name: Package (fails if anything of the games would ship)
+        working-directory: Charlemagne's Legacy
+        run: python3 tools/build.py --release --zip --out "${{ github.workspace }}/dist/Charlemagne's Legacy"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: charlemagnes-legacy-package
+          path: dist/*.zip

@@ -52,27 +52,38 @@ def differing(mod):
     return bad
 
 
-def main() -> int:
-    keep = "--keep" in sys.argv
+def scratch_build(images=False):
+    """Build the mod in an empty folder from tools/ alone. Returns (scratch, mod, returncode).
+    images=True first lays the real mod's gfx/ images in: they are made by a local run (with
+    CK3 and EU4 installed), and the interface sprites follow the strips that exist."""
     scratch = tempfile.mkdtemp(prefix="cl_selfcontained_")
     mod = os.path.join(scratch, "mod")
     os.makedirs(mod)
     shutil.copytree(HERE, os.path.join(mod, "tools"),
                     ignore=shutil.ignore_patterns("__pycache__", "cache"))
     shutil.copy(os.path.join(MOD, "descriptor.mod"), mod)
+    if images and os.path.isdir(os.path.join(MOD, "gfx")):
+        shutil.copytree(os.path.join(MOD, "gfx"), os.path.join(mod, "gfx"))
     launcher = os.path.join(os.path.dirname(MOD), os.path.basename(MOD) + ".mod")
     if os.path.exists(launcher):  # the .mod file sits next to the folder; validate checks it
         shutil.copy(launcher, scratch)
-    os.environ["EU4_MODS_DIR"] = scratch
+    env = dict(os.environ, EU4_MODS_DIR=scratch)
     print(f"== build.py in an empty mod folder ({mod})", flush=True)
-    r = subprocess.run([sys.executable, os.path.join("tools", "build.py")], cwd=mod)
-    if r.returncode:
+    r = subprocess.run([sys.executable, os.path.join("tools", "build.py")], cwd=mod, env=env)
+    return scratch, mod, r.returncode
+
+
+def main() -> int:
+    keep = "--keep" in sys.argv
+    scratch, mod, rc = scratch_build(images=True)
+    if rc:
         print("FAILED: build.py needs files the script does not lift", file=sys.stderr)
-        return r.returncode
+        return rc
     bad = differing(mod)
     n = overlay_authored(mod)
     print(f"== validate.py with {n} hand-authored files laid over the build", flush=True)
-    r = subprocess.run([sys.executable, os.path.join("tools", "validate.py")], cwd=mod)
+    r = subprocess.run([sys.executable, os.path.join("tools", "validate.py")], cwd=mod,
+                       env=dict(os.environ, EU4_MODS_DIR=scratch))
     rc = r.returncode
     if rc:
         print("FAILED: validate.py", file=sys.stderr)

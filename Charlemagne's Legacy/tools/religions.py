@@ -128,12 +128,9 @@ ICON_ORDER = (
 
 # interface sprites whose frame counts the mod changes besides the religion strips
 SPRITE_FRAMES = {
-    "countrydiplomacyview.gfx": {"GFX_government_rank_strip": 5},
     "provinceview.gfx": {"GFX_resource_icon": 34, "GFX_resource_icon_small": 34,
                          "GFX_resource_icon_transparent": 34},
 }
-RELIGION_SPRITES = ("GFX_icon_religion", "GFX_country_icon_religion", "GFX_icon_religion_small",
-                    "GFX_province_view_religion", "GFX_religion_icon_strip")
 INTERFACE_FILES = ("countryview.gfx", "ledger.gfx", "provinceview.gfx", "countrydiplomacyview.gfx")
 
 
@@ -228,14 +225,42 @@ def religion_loc(text):
     return "\n".join(lines) + "\n"
 
 
+def strip_frames(name, px):
+    """Frames of an image strip the mod ships (width / frame size), or None when the
+    image is not there (images are made by a local run, not by the text build)."""
+    import struct
+
+    path = os.path.join(MOD, "gfx", "interface", name)
+    if not os.path.exists(path):
+        return None
+    with open(path, "rb") as fh:
+        head = fh.read(24)
+    return struct.unpack("<I", head[16:20])[0] // px if head[:4] == b"DDS " else None
+
+
+# sprite -> (strip file, frame size): the sprites that follow a strip of ours
+STRIP_SPRITES = {
+    "GFX_icon_religion": ("icon_religion.dds", 64),
+    "GFX_country_icon_religion": ("country_icon_religion.dds", 64),
+    "GFX_religion_icon_strip": ("icon_religion.dds", 64),
+    "GFX_icon_religion_small": ("icon_religion_small.dds", 32),
+    "GFX_province_view_religion": ("province_view_religion.dds", 32),
+    "GFX_government_rank_strip": ("government_rank_strip.dds", 40),
+}
+
+
 def interface_texts():
-    base = vanilla_frames()
-    frames = base + len(ICON_ORDER)
+    """The interface files: the base game's, with the frame count of each sprite that
+    uses one of our strips set to that strip's frames (left alone where the image is
+    absent, as in a package built from the text alone), and the other fixed counts."""
     out = {}
     for fn in INTERFACE_FILES:
         t = _read(os.path.join(VANILLA_INTERFACE, fn))
-        for name in RELIGION_SPRITES:
-            t = re.sub(r'(name = "%s"[^{}]*?noOfFrames\s*=\s*)%d\b' % (name, base), lambda m: m.group(1) + str(frames), t)
+        for name, (strip, px) in STRIP_SPRITES.items():
+            n = strip_frames(strip, px)
+            if n:
+                t = re.sub(r'(name = "%s"[^{}]*?noOfFrames\s*=\s*)\d+' % re.escape(name),
+                           lambda m: m.group(1) + str(n), t)
         for name, n in SPRITE_FRAMES.get(fn, {}).items():
             t = re.sub(r'(name = "%s"[^{}]*?noOfFrames\s*=\s*)\d+' % re.escape(name), lambda m: m.group(1) + str(n), t)
         out[os.path.join(INTERFACE, fn)] = t

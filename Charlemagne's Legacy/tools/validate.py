@@ -1448,6 +1448,7 @@ def run() -> int:
         "provinceview.gfx": ["GFX_province_view_religion"],
     }
     gfx_bad = []
+    missing_strips = set()
     for fn, want in REL_SPRITES.items():
         vtext = open(
             os.path.join(GAME, "interface", fn), encoding="utf-8", errors="replace"
@@ -1469,7 +1470,9 @@ def run() -> int:
             rel = re.split(r"[\\/]+", m.group(1))[-1]
             full = os.path.join(MOD, "gfx", "interface", rel)
             if not os.path.exists(full):
-                gfx_bad.append(f"{fn} {spr} target missing: {rel}")
+                # the strips are images, made by a local `faiths.py icons` run; a package
+                # built from the text alone has none
+                missing_strips.add(rel)
                 continue
             with open(full, "rb") as fh:
                 head = fh.read(24)
@@ -1484,6 +1487,8 @@ def run() -> int:
             if not f or int(f.group(1)) != max_icon:
                 gfx_bad.append(f"{fn} {spr} frames != {max_icon}")
     note(not gfx_bad, f"religion icon overrides intact ({len(gfx_bad)} bad)")
+    if missing_strips:
+        warn("religion icon strips not built here: " + ", ".join(sorted(missing_strips)))
     for b in gfx_bad[:8]:
         print("        " + b)
 
@@ -1502,16 +1507,20 @@ def run() -> int:
     f = re.search(
         r'name = "GFX_government_rank_strip".*?noOfFrames = (\d+)', mgfx, re.S
     )
-    if not f or int(f.group(1)) != 5:
-        rank_bad.append("GFX_government_rank_strip frames != 5 (county..hegemony)")
+    want = 5 if os.path.exists(os.path.join(MOD, "gfx", "interface", "government_rank_strip.dds")) else 3
+    if not f or int(f.group(1)) != want:
+        rank_bad.append(f"GFX_government_rank_strip frames != {want} (county..hegemony)")
     dds = os.path.join(MOD, "gfx", "interface", "government_rank_strip.dds")
-    with open(dds, "rb") as fh:
-        head = fh.read(24)
-    import struct as _st2
+    if os.path.exists(dds):
+        with open(dds, "rb") as fh:
+            head = fh.read(24)
+        import struct as _st2
 
-    w = _st2.unpack("<I", head[16:20])[0] if head[:4] == b"DDS " else 0
-    if w != 200:
-        rank_bad.append(f"government_rank_strip width {w} != 5x40 frames")
+        w = _st2.unpack("<I", head[16:20])[0] if head[:4] == b"DDS " else 0
+        if w != 200:
+            rank_bad.append(f"government_rank_strip width {w} != 5x40 frames")
+    else:
+        warn("government_rank_strip.dds not built here (an image: made locally); ranks keep the base game's 3 icons")
     note(not rank_bad, f"rank strip intact ({len(rank_bad)} bad)")
     for b in rank_bad[:8]:
         print("        " + b)

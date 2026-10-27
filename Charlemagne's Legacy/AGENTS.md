@@ -544,3 +544,17 @@ generated output.
 `.github/workflows/charlemagnes-legacy.yml` runs two jobs: **validate** (build, validate, and fail if
 the committed files differ from the build output) and **self-contained** (the script-only check). Both
 need a `REFERENCE_REPO_TOKEN` repository secret with read access to `man-netcat/eu4-ck3-reference`.
+
+## The upload package
+
+`python3 tools/build.py --release [--zip] [--out DIR]` (or `tools/release.py`) writes `../dist/<mod>/`
+(+ `.zip`, + a `.mod` launcher) holding only the script and the mod's own files: `tools/`, the hand-
+authored events, disasters, decisions, loc and common files, `descriptor.mod` (no machine path, no flag
+replacement) and an `INSTALL.md`. Everything the build writes, every image under `gfx/`, and any
+file that is an edited copy of a base-game file is left out. The release fails if a base-game file's
+bytes appear in the package, or an edited base-game copy is not produced by the build. Installers run
+`python3 tools/build.py` once with their own EU4 and CK3 and get the rest. Base-game files the mod edits
+(`defines.lua`, the monarchy reforms, subject types) are `tools/vanillapatch.py` edits applied to the
+game's own copy; the hand-written government-title blocks and their loc are `tools/data/`, and the CK3
+title ladders are lifted on top of them every build (`culturetitles.step_government_names`). CI builds
+the package as an artifact.
