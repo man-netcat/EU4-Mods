@@ -390,6 +390,14 @@ kar_form_sicily_provinces_trigger = {
 	}
 }
 
+kar_form_maryul_provinces_trigger = {
+	OR = {
+		province_id = 2073 #baltistan
+		province_id = 2074 #ladakh
+		province_id = 4521 #skardu
+	}
+}
+
 kar_form_aynumosir_provinces_trigger = {
 	OR = {
 		area = hokkaido_area
@@ -430,7 +438,23 @@ kar_form_amdo_provinces_trigger = {
 
 kar_form_kham_provinces_trigger = {
 	OR = {
-		area = kham_area
+		province_id = 678 #tachienlu
+		province_id = 2131 #qamdo
+		province_id = 2132 #markam
+		province_id = 2133 #dege
+	}
+}
+
+kar_form_gyalrong_provinces_trigger = {
+	OR = {
+		province_id = 2135 #garze
+		province_id = 2170 #songqu
+	}
+}
+
+kar_form_lhomon_provinces_trigger = {
+	OR = {
+		area = bhutan_area
 	}
 }
 

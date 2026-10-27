@@ -26,7 +26,7 @@ country_decisions = {
 
 		allow = {
 			num_of_owned_provinces_with = {
-				value = 5
+				value = 4
 				kar_form_kham_provinces_trigger = yes
 			}
 			is_at_war = no
@@ -43,13 +43,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			add_legitimacy = 10
-			kham_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+
 		}
 	}
 }
