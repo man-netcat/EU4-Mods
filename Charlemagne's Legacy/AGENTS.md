@@ -485,3 +485,13 @@ provinces Balhae holds in their lands, each with an independence war. They are D
 TIE and HUI, the listed starters of the JIN (Great Jin) formable. Their culture follows the 867 holder
 of their seat (Korean/Mohe), not Jurchen, so JIN gates on its starters, not on the Manchu culture.
 Balhae's Korean-side provinces are paired in `provfaiths.py` (Taeju, West Amnok, Namhae, Fengzhou).
+
+## Mongolia: kingdoms and the Mongol Empire
+
+The e_mongolia kingdoms with several tags are formables over their own tags' provinces (listed
+starters, below kingdom rank): OTU Ötüken (Onon, Khaldun, Khiltsaiz, Kizilkhentii), GOI Gobi
+(Wuguguo, Tataria, Abga, Ongi, Dadaels, Kherulendada, Akhulun), BRT Buryatia (vanilla tag; Vitim,
+Dauria, Kotera, Chuya), ANA Angara (Eülge, Tulun, Bura). Tuva has no tag; Khakassia is the Kirghiz
+Khanate. MGE (e_mongol_empire, vanilla tag) unites them: Mongol culture, kingdom rank, 75% of their
+21 provinces, started by the Shiwei Mongol tags. A Great Yuan formable (e_great_yuan, by a split from
+the Mongol Empire) is planned, not built.

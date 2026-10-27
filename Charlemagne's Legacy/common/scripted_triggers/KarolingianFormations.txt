@@ -423,6 +423,30 @@ kar_form_nubia_provinces_trigger = {
 	}
 }
 
+kar_form_otuken_provinces_trigger = {
+	OR = {
+		province_id = 717 #kherlen
+		province_id = 1056 #barguzinsky
+		province_id = 1057 #udinsky
+		province_id = 4220 #khiagt
+	}
+}
+
+kar_form_gobi_provinces_trigger = {
+	OR = {
+		province_id = 720 #dorno govi
+		province_id = 721 #setsen
+		province_id = 2114 #ereen
+		province_id = 2116 #ih huree
+		province_id = 4221 #dundgovi
+		province_id = 4666 #south hulunbur
+		province_id = 4667 #north setsen
+		province_id = 4669 #east dornogovi
+		province_id = 4677 #east govi
+		province_id = 4678 #east qaraqorum
+	}
+}
+
 kar_form_liao_provinces_trigger = {
 	OR = {
 		area = chahar_area
@@ -430,6 +454,25 @@ kar_form_liao_provinces_trigger = {
 		area = liaoning_area
 		area = xilin_gol_area
 		province_id = 703 #chengde
+	}
+}
+
+kar_form_mongol_empire_provinces_trigger = {
+	OR = {
+		area = irkutsk_area
+		area = outer_mongolia_area
+		province_id = 720 #dorno govi
+		province_id = 1055 #verkne-angarsky
+		province_id = 1056 #barguzinsky
+		province_id = 1057 #udinsky
+		province_id = 1059 #bratsk
+		province_id = 2114 #ereen
+		province_id = 4221 #dundgovi
+		province_id = 4666 #south hulunbur
+		province_id = 4667 #north setsen
+		province_id = 4669 #east dornogovi
+		province_id = 4677 #east govi
+		province_id = 4678 #east qaraqorum
 	}
 }
 
@@ -445,6 +488,23 @@ kar_form_jin_provinces_trigger = {
 		area = liaoning_area
 		area = ningguta_area
 		area = sakhalin_area
+	}
+}
+
+kar_form_buryatia_provinces_trigger = {
+	OR = {
+		province_id = 1055 #verkne-angarsky
+		province_id = 1059 #bratsk
+		province_id = 1060 #irkutsk
+		province_id = 2442 #ust-kut
+	}
+}
+
+kar_form_angara_provinces_trigger = {
+	OR = {
+		province_id = 1062 #kachinsk
+		province_id = 1063 #sayan
+		province_id = 2443 #kan
 	}
 }
 
