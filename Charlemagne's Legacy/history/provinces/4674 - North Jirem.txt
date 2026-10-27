@@ -1,6 +1,6 @@
-owner = HUL
-controller = HUL
-add_core = HUL
+owner = LIN
+controller = LIN
+add_core = LIN
 capital = "Korchin"
 culture = chahar
 religion = tengri_pagan_reformed
@@ -15,7 +15,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = HUL
-	controller = HUL
-	add_core = HUL
+	owner = LIN
+	controller = LIN
+	add_core = LIN
 }

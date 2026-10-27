@@ -455,7 +455,7 @@ dynasty-named realms is engine code): fix the rule, not single tags.
 ## Regions lifted by name inference
 
 `tools/liftstates.py` has one entry per lifted region (`china`, `maritime`, `westafrica`,
-`eastside`, `seasia`, `india`); each needs its provinces in `provfaiths.PROVINCE_COUNTY`.
+`eastside`, `manchuria`, `seasia`, `india`); each needs its provinces in `provfaiths.PROVINCE_COUNTY`.
 After `apply`: `python3 tools/retag.py suggest SEQ` lists tags whose name is a free
 base-game tag (then `retag.py OLD NEW ...`, which also takes the vanilla tech group and
 removes the old code's history), `python3 tools/synctags.py apply` moves every tag onto its

@@ -1,8 +1,8 @@
 #724 - Hulunbuir
 
-owner = LIN
-controller = LIN
-add_core = LIN
+owner = HUL
+controller = HUL
+add_core = HUL
 capital = "Hulunbuir"
 culture = mongol
 religion = tengri_pagan_reformed
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = LIN
-	controller = LIN
-	add_core = LIN
+	owner = HUL
+	controller = HUL
+	add_core = HUL
 }

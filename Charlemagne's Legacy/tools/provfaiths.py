@@ -409,6 +409,26 @@ PROVINCE_COUNTY.update({
     2257: "c_wassa", 4470: "c_munda", 2078: "c_nandana", 4131: "c_tsugaru",
 })
 
+# Manchuria, by name where CK3 has the place (Hulunbuir, Birija, Jixi, Ningguta's Ningzhou,
+# Shenyang) and otherwise by the county of the same river or valley: the Amur and Shiwei counties
+# follow the tag that already held each province, Balhae's own counties are paired by their Chinese,
+# Manchu or Korean names (Huncun is Longyuan, Hulan the Huligai, Girin Changchun, Hetu Ala Xiande).
+PROVINCE_COUNTY.update({
+    724: "c_SW_hulunbuir", 1053: "c_SW_hongxingan", 2102: "c_SW_heilonghean", 4664: "c_SW_damoguo", 4674: "c_SW_lingxiguo",
+    727: "c_SW_suihua", 728: "c_SW_suihua", 2185: "c_SW_puyuzhou", 1048: "c_eman_tudali",
+    1049: "c_eman_turma", 1050: "c_eman_heishuiyang", 2103: "c_eman_yam_alin",
+    2104: "c_eman_birija", 2105: "c_eman_boli", 4214: "c_eman_molihewen", 4215: "c_eman_mohean",
+    4216: "c_eman_yerenhe", 4659: "c_eman_urehokto", 4662: "c_eman_nimen", 4660: "c_BAL_delizhen",
+    729: "c_BAL_ningzhou",
+    730: "c_BAL_changchun", 2110: "c_BAL_fuzhou", 2111: "c_BAL_west_hyeondeok",
+    4201: "c_BAL_east_hyeondeok", 2188: "c_BAL_makhil", 4217: "c_BAL_west_makhil",
+    4200: "c_BAL_huligai", 4663: "c_BAL_jixi", 2108: "c_BAL_southyongwon",
+    4653: "c_BAL_northyongwon", 4654: "c_BAL_yongcheon", 4661: "c_BAL_dongju",
+    1850: "c_BAL_namhae", 2106: "c_BAL_east_jangryeong", 2186: "c_BAL_west_jangryeong",
+    4655: "c_BAL_sokju", 4656: "c_BAL_xinzhou", 2112: "c_LIAO_yinzhou", 2113: "c_LIAO_zhenzhou",
+    4652: "c_LIAO_diezhou",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.
