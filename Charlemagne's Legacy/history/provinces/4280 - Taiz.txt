@@ -1,8 +1,8 @@
 #4280 - Taiz
 
-owner = SNH
-controller = SNH
-add_core = SNH
+owner = YEM
+controller = YEM
+add_core = YEM
 capital = "Taiz"
 culture = yemeni_culture
 religion = shiite
@@ -22,7 +22,7 @@ discovered_by = east_african
 
 #1454.1.1 - End of the Rasulids
 867.1.1 = {
-	owner = SNH
-	controller = SNH
-	add_core = SNH
+	owner = YEM
+	controller = YEM
+	add_core = YEM
 }

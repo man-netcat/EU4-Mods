@@ -2,6 +2,7 @@
 
 owner = MEA
 controller = MEA
+add_core = HOB
 add_core = MEA
 capital = "Mareeg"
 culture = somali

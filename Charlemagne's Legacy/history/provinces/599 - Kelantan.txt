@@ -1,8 +1,8 @@
 #599 - Kelantan
 
-owner = LAA
-controller = LAA
-add_core = LAA
+owner = PAT
+controller = PAT
+add_core = PAT
 capital = "Kelantan"
 culture = malayan
 religion = shaivism
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = LAA
-	controller = LAA
-	add_core = LAA
+	owner = PAT
+	controller = PAT
+	add_core = PAT
 }

@@ -1,8 +1,8 @@
 #305 - Perm
 
-owner = PRX
-controller = PRX
-add_core = PRX
+owner = PRM
+controller = PRM
+add_core = PRM
 capital = "Yagoshiha"
 culture = komi
 religion = tengri_pagan_reformed #Sami Shamanism
@@ -18,7 +18,7 @@ discovered_by = western
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = PRX
-	controller = PRX
-	add_core = PRX
+	owner = PRM
+	controller = PRM
+	add_core = PRM
 }

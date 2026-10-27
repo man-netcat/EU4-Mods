@@ -2,6 +2,7 @@
 
 owner = ZAE
 controller = ZAE
+add_core = CDL
 add_core = ZAE
 capital = "Guiyang"
 culture = yi

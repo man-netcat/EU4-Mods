@@ -1,8 +1,8 @@
 #1844 - Xiankhouang
 
-owner = VIN
-controller = VIN
-add_core = VIN
+owner = VIE
+controller = VIE
+add_core = VIE
 capital = "Muang Khoun"
 culture = lao
 religion = mahayana
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = VIN
-	controller = VIN
-	add_core = VIN
+	owner = VIE
+	controller = VIE
+	add_core = VIE
 }

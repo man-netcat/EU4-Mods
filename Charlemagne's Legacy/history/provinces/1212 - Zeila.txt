@@ -1,8 +1,8 @@
 #1212 - Zeila
 
-owner = SHZ
-controller = SHZ
-add_core = SHZ
+owner = ADA
+controller = ADA
+add_core = ADA
 capital = "Zayla"
 culture = somali # issa
 religion = sunni
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = SHZ
-	controller = SHZ
-	add_core = SHZ
+	owner = ADA
+	controller = ADA
+	add_core = ADA
 }

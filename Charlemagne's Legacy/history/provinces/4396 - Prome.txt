@@ -1,8 +1,8 @@
 #4396 - Prome
 
-owner = SRI
-controller = SRI
-add_core = SRI
+owner = BPR
+controller = BPR
+add_core = BPR
 capital = "Prome"
 culture = burmese
 religion = vajrayana
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = SRI
-	controller = SRI
-	add_core = SRI
+	owner = BPR
+	controller = BPR
+	add_core = BPR
 }

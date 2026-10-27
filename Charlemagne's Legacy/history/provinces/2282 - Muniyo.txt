@@ -1,8 +1,8 @@
 # No previous file for Muniyo
 
-owner = KNM
-controller = KNM
-add_core = KNM
+owner = KBO
+controller = KBO
+add_core = KBO
 capital = "Muniyo"
 culture = kanuri
 religion = bori
@@ -19,7 +19,7 @@ native_hostileness = 9
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = KNM
-	controller = KNM
-	add_core = KNM
+	owner = KBO
+	controller = KBO
+	add_core = KBO
 }

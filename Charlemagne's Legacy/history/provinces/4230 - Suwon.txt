@@ -1,8 +1,8 @@
 #4230 - Suwon
 
-owner = SLL
-controller = SLL
-add_core = SLL
+owner = KOR
+controller = KOR
+add_core = KOR
 capital = "Suwon"
 culture = korean
 religion = mahayana
@@ -17,7 +17,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = SLL
-	controller = SLL
-	add_core = SLL
+	owner = KOR
+	controller = KOR
+	add_core = KOR
 }

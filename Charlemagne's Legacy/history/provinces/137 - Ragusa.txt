@@ -1,9 +1,9 @@
 #137 - Ragusa
 
-owner = ZAH
-controller = ZAH
+owner = HRZ
+controller = HRZ
 add_core = DAL
-add_core = ZAH
+add_core = HRZ
 capital = "Ragusa"
 culture = dalmatian
 religion = slavic
@@ -22,7 +22,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = ZAH
-	controller = ZAH
-	add_core = ZAH
+	owner = HRZ
+	controller = HRZ
+	add_core = HRZ
 }

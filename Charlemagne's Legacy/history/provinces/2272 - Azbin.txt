@@ -1,8 +1,8 @@
 # No previous file for Azbin
 
-owner = TDA
-controller = TDA
-add_core = TDA
+owner = AIR
+controller = AIR
+add_core = AIR
 capital = "In Gall"
 culture = tuareg
 religion = bori
@@ -19,7 +19,7 @@ native_hostileness = 9
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = TDA
-	controller = TDA
-	add_core = TDA
+	owner = AIR
+	controller = AIR
+	add_core = AIR
 }

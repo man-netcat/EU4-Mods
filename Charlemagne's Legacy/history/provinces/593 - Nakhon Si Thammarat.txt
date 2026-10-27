@@ -1,8 +1,8 @@
 #593 - Nakhon Si Thammarat
 
-owner = TMA
-controller = TMA
-add_core = TMA
+owner = LIG
+controller = LIG
+add_core = LIG
 capital = "Nakhon Si Thammarat"
 culture = central_thai
 religion = shaivism
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = TMA
-	controller = TMA
-	add_core = TMA
+	owner = LIG
+	controller = LIG
+	add_core = LIG
 }

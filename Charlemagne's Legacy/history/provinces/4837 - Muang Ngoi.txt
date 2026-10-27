@@ -1,6 +1,6 @@
-owner = MUA
-controller = MUA
-add_core = MUA
+owner = LUA
+controller = LUA
+add_core = LUA
 capital = "Muang Ngoi"
 culture = lao
 religion = satsana_phi
@@ -15,7 +15,7 @@ discovered_by = chinese
 discovered_by = indian
 
 867.1.1 = {
-	owner = MUA
-	controller = MUA
-	add_core = MUA
+	owner = LUA
+	controller = LUA
+	add_core = LUA
 }

@@ -1,8 +1,8 @@
 #2763 - Asosa
 
-owner = DAT
-controller = DAT
-add_core = DAT
+owner = DAM
+controller = DAM
+add_core = DAM
 capital = "Assosa"
 culture = amhara
 religion = waaqism
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = indian
 
 867.1.1 = {
-	owner = DAT
-	controller = DAT
-	add_core = DAT
+	owner = DAM
+	controller = DAM
+	add_core = DAM
 }

@@ -1,8 +1,8 @@
 #4158 - Janjero
 
-owner = DAT
-controller = DAT
-add_core = DAT
+owner = DAM
+controller = DAM
+add_core = DAM
 capital = "Fofa"
 culture = sidamo
 religion = waaqism
@@ -17,7 +17,7 @@ discovered_by = east_african
 discovered_by = muslim
 
 867.1.1 = {
-	owner = DAT
-	controller = DAT
-	add_core = DAT
+	owner = DAM
+	controller = DAM
+	add_core = DAM
 }

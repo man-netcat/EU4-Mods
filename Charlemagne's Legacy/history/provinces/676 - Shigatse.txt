@@ -2,6 +2,7 @@
 
 owner = XIG
 controller = XIG
+add_core = PHA
 add_core = XIG
 capital = "Shigatse"
 culture = tibetan

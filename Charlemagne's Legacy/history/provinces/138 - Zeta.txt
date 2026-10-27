@@ -1,8 +1,8 @@
 #138 - Zeta
 
-owner = DUK
-controller = DUK
-add_core = DUK
+owner = MON
+controller = MON
+add_core = MON
 capital = "Zabljak"
 culture = serbian
 religion = slavic
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = DUK
-	controller = DUK
-	add_core = DUK
+	owner = MON
+	controller = MON
+	add_core = MON
 }

@@ -1,8 +1,8 @@
 #139 - Hum
 
-owner = ZAH
-controller = ZAH
-add_core = ZAH
+owner = HRZ
+controller = HRZ
+add_core = HRZ
 capital = "Mostar"	# Unofficial capital of Herzegovina
 culture = serbian
 religion = slavic
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = ZAH
-	controller = ZAH
-	add_core = ZAH
+	owner = HRZ
+	controller = HRZ
+	add_core = HRZ
 }

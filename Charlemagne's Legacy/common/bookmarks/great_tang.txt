@@ -9,6 +9,6 @@ bookmark =
 	country = TNG
 	country = KTN
 	country = JAP
-	country = SLL
+	country = KOR
 	country = BHE
 }

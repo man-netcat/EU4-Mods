@@ -1,8 +1,8 @@
 #4380 - Donegal
 
-owner = MID
-controller = MID
-add_core = MID
+owner = MTH
+controller = MTH
+add_core = MTH
 capital = "Donegal"
 culture = irish
 religion = catholic
@@ -19,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = MID
-	controller = MID
-	add_core = MID
+	owner = MTH
+	controller = MTH
+	add_core = MTH
 }

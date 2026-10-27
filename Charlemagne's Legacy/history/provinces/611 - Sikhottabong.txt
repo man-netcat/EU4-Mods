@@ -2,6 +2,7 @@
 
 owner = SAI
 controller = SAI
+add_core = VIE
 add_core = SAI
 capital = "Sikhottabong"
 culture = lao

@@ -1,8 +1,8 @@
 #2682 - Pariaman
 
-owner = MIU
-controller = MIU
-add_core = MIU
+owner = PGR
+controller = PGR
+add_core = PGR
 capital = "Pariaman"
 culture = sumatran
 religion = mahayana
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = MIU
-	controller = MIU
-	add_core = MIU
+	owner = PGR
+	controller = PGR
+	add_core = PGR
 }

@@ -1,8 +1,8 @@
 # 2166 - Dehong
 
-owner = DLA
-controller = DLA
-add_core = DLA
+owner = CDL
+controller = CDL
+add_core = CDL
 capital = "Dehong"
 culture = bai
 religion = vajrayana
@@ -18,7 +18,7 @@ discovered_by = nomad_group
 discovered_by = indian
 
 867.1.1 = {
-	owner = DLA
-	controller = DLA
-	add_core = DLA
+	owner = CDL
+	controller = CDL
+	add_core = CDL
 }

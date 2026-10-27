@@ -2,6 +2,7 @@
 
 owner = TNG
 controller = TNG
+add_core = LUA
 add_core = TNG
 capital = "Song La"
 culture = lao

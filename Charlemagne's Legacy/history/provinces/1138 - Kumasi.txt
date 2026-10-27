@@ -1,7 +1,7 @@
-owner = KUM
-controller = KUM
-add_core = KUM
-add_core = KUM
+owner = ASH
+controller = ASH
+add_core = ASH
+add_core = ASH
 capital = "Akyem Kotoko"
 culture = aka
 #1138 - Kumasi
@@ -26,7 +26,7 @@ native_hostileness = 9
 discovered_by = sub_saharan
 
 867.1.1 = {
-	owner = KUM
-	controller = KUM
-	add_core = KUM
+	owner = ASH
+	controller = ASH
+	add_core = ASH
 }
