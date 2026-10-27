@@ -433,6 +433,21 @@ kar_form_liao_provinces_trigger = {
 	}
 }
 
+kar_form_jin_provinces_trigger = {
+	OR = {
+		area = central_heilongjiang_area
+		area = central_jilin_area
+		area = east_heilongjiang_area
+		area = furdan_area
+		area = heilongjiang_area
+		area = ilan_hala_area
+		area = jilin_area
+		area = liaoning_area
+		area = ningguta_area
+		area = sakhalin_area
+	}
+}
+
 kar_form_tsang_provinces_trigger = {
 	OR = {
 		area = utsang_area

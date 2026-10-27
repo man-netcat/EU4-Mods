@@ -114,7 +114,7 @@ def history_name(title):
 
 
 # our wording where we prefer it to CK3's: tag -> ("prefix", text) or ("key", CK3 loc key)
-STYLE = {"TNG": ("prefix", "Great "), "PAP": ("prefix", "The "), "BHE": ("key", "cn_balhae")}
+STYLE = {"TNG": ("prefix", "Great "), "JIN": ("prefix", "Great "), "PAP": ("prefix", "The "), "BHE": ("key", "cn_balhae")}
 DYNASTY_HERITAGES = ("heritage_arabic", "heritage_berber", "heritage_iranian")
 
 
@@ -206,7 +206,7 @@ def _title_names(title, rank, tag):
 
 
 # formables named from CK3 as well (the base game's own loc covers the rest)
-LIFT_FORMABLES = ("TIB", "UTS", "KAM", "AMD", "BHU", "LDK", "GRO", "KIN", "LIO")
+LIFT_FORMABLES = ("TIB", "UTS", "KAM", "AMD", "BHU", "LDK", "GRO", "KIN", "LIO", "JIN")
 
 
 def wanted():
