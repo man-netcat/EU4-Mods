@@ -2,6 +2,7 @@
 
 owner = BRD
 controller = BRD
+add_core = SIB
 add_core = BRD
 capital = "Qashliq"
 culture = ostyaki

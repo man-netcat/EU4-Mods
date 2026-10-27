@@ -2,6 +2,7 @@
 
 owner = NRI
 controller = NRI
+add_core = SIB
 add_core = NRI
 capital = "Variegansk"
 culture = kirgiz

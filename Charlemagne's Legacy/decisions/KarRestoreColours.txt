@@ -139,6 +139,7 @@ country_decisions = {
 				tag = RYU
 				tag = SBP
 				tag = SCO
+				tag = SIB
 				tag = SIL
 				tag = SLZ
 				tag = SMB
@@ -979,6 +980,12 @@ country_decisions = {
 			limit = { tag = SCO }
 			change_country_color = {
 				color = { 199 175 12 }
+			}
+		}
+		if = {
+			limit = { tag = SIB }
+			change_country_color = {
+				color = { 139 138 160 }
 			}
 		}
 		if = {

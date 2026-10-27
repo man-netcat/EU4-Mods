@@ -1,0 +1,203 @@
+# The fall of the Kirghiz Khaganate (CK3: the Khitan conquest, the title vacated on 925.1.2). Released by
+# the disaster: the Naiman west of Mongolia, the Tuvans and the Sibir steppe become independent
+# (cores, `release`, independence war - the Dutch revolt pattern); the Dzungarian counties pass to
+# the existing Dzungaria.
+namespace = fall_of_kirghiz
+
+country_event = {
+	id = fall_of_kirghiz.1
+	title = fall_of_kirghiz.1.t
+	desc = fall_of_kirghiz.1.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_kirghiz.1.a
+		set_country_flag = had_fall_of_kirghiz
+	}
+}
+
+country_event = {
+	id = fall_of_kirghiz.2
+	title = fall_of_kirghiz.2.t
+	desc = fall_of_kirghiz.2.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = NIN }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 719
+			owns = 2117
+			owns = 2189
+			owns = 2190
+			owns = 2193
+			owns = 4668
+			owns = 4679
+			owns = 4680
+			owns = 718
+			owns = 4681
+			owns = 4682
+			owns = 4222
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			719 = { limit = { owned_by = ROOT } add_core = NIN }
+			2117 = { limit = { owned_by = ROOT } add_core = NIN }
+			2189 = { limit = { owned_by = ROOT } add_core = NIN }
+			2190 = { limit = { owned_by = ROOT } add_core = NIN }
+			2193 = { limit = { owned_by = ROOT } add_core = NIN }
+			4668 = { limit = { owned_by = ROOT } add_core = NIN }
+			4679 = { limit = { owned_by = ROOT } add_core = NIN }
+			4680 = { limit = { owned_by = ROOT } add_core = NIN }
+			718 = { limit = { owned_by = ROOT } add_core = NIN }
+			4681 = { limit = { owned_by = ROOT } add_core = NIN }
+			4682 = { limit = { owned_by = ROOT } add_core = NIN }
+			4222 = { limit = { owned_by = ROOT } add_core = NIN }
+			release = NIN
+		}
+	}
+
+	option = {
+		name = fall_of_kirghiz.2.a
+		NIN = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_kirghiz.3
+	title = fall_of_kirghiz.3.t
+	desc = fall_of_kirghiz.3.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = TUV }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 716
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			716 = { limit = { owned_by = ROOT } add_core = TUV }
+			release = TUV
+		}
+	}
+
+	option = {
+		name = fall_of_kirghiz.3.a
+		TUV = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_kirghiz.4
+	title = fall_of_kirghiz.4.t
+	desc = fall_of_kirghiz.4.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = SIB }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 4689
+			owns = 4687
+			owns = 4686
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			4689 = { limit = { owned_by = ROOT } add_core = SIB }
+			4687 = { limit = { owned_by = ROOT } add_core = SIB }
+			4686 = { limit = { owned_by = ROOT } add_core = SIB }
+			release = SIB
+		}
+	}
+
+	option = {
+		name = fall_of_kirghiz.4.a
+		SIB = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fall_of_kirghiz.5
+	title = fall_of_kirghiz.5.t
+	desc = fall_of_kirghiz.5.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		exists = DZG
+		is_free_or_tributary_trigger = yes
+		OR = {
+			owns = 714
+			owns = 4683
+			owns = 4684
+			owns = 2355
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			714 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
+			4683 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
+			4684 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
+			2355 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
+		}
+	}
+
+	option = {
+		name = fall_of_kirghiz.5.a
+	}
+}
+
+country_event = {
+	id = fall_of_kirghiz.6
+	title = fall_of_kirghiz.6.t
+	desc = fall_of_kirghiz.6.d
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_kirghiz.6.a
+		set_country_flag = had_fall_of_kirghiz
+	}
+}

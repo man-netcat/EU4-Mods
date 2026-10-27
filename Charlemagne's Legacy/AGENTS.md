@@ -495,3 +495,11 @@ Dauria, Kotera, Chuya), ANA Angara (Eülge, Tulun, Bura). Tuva has no tag; Khaka
 Khanate. MGE (e_mongol_empire, vanilla tag) unites them: Mongol culture, kingdom rank, 75% of their
 21 provinces, started by the Shiwei Mongol tags. A Great Yuan formable (e_great_yuan, by a split from
 the Mongol Empire) is planned, not built.
+
+## The Kirghiz Khaganate
+
+KGZ is CK3's `e_kirghiz_khanate` (held from 840; the title is vacated on 925.1.2), so its 30 provinces
+from the Ob to Uliastai are right. `common/disasters/FallOfKirghiz.txt` starts for KGZ from 925
+(faster with a Khitan empire, instability or war); `events/FallOfKirghiz.txt` releases the dormant
+NIN (Naimania, 12 provinces; a starter of the Mongol Empire), TUV (Tuva) and SIB (Sibir, vanilla tag)
+and cedes the Dzungarian counties to DZG; the Kirghiz keep Khakassia and the Ob country.

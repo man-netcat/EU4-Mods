@@ -2,6 +2,7 @@
 
 owner = KZZ
 controller = KZZ
+add_core = SIB
 add_core = KZZ
 capital = "Kurgan"
 culture = ostyaki

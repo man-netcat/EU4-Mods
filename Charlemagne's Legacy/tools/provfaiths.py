@@ -437,6 +437,19 @@ PROVINCE_COUNTY.update({
     2743: "c_BAL_northyongwon", 2109: "c_BAL_west_makhil", 1850: "c_BAL_sokju",
 })
 
+# The Kirghiz Khaganate's 30 provinces, by name where CK3 has the place (Kulunda, Tomsk, Yenisei, Uliastai,
+# Karakorum, Chulym, Barnaul, Om, Khar Us for Kobdo, Narym) and else by the nearest county of the same
+# river or range; the Naiman west, Tuva, Dzungaria and Sibir parts are the lands the fall of the Khaganate frees.
+PROVINCE_COUNTY.update({
+    480: "c_kulunda", 1064: "c_tomsk", 1061: "c_yenisei", 1065: "c_kuzbas", 1066: "c_terektai",
+    2430: "c_kiia", 2431: "c_taskyl", 2432: "c_chulym", 2434: "c_barnaul", 4688: "c_sartlan",
+    2436: "c_chuna", 719: "c_uliastai", 2117: "c_sharga", 2189: "c_tarvagatai", 2190:
+    "c_karakorum", 2193: "c_ongi", 4668: "c_telmen", 4679: "c_tomorbulag", 4680: "c_zarman", 718:
+    "c_khar_us", 4681: "c_tsambagarau", 4682: "c_ikh_bogd", 4222: "c_ulaangom", 716:
+    "c_central_tannu", 714: "c_tengerge", 4683: "c_burqin", 4684: "c_altay", 2355: "c_narym_DZU",
+    4689: "c_omsk", 4687: "c_pavlodar", 4686: "c_kainsk",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.

@@ -5,8 +5,8 @@ capital = "Tomsk"
 culture = kirgiz
 #1064 - Tomsk
 culture = kirgiz
-religion = siberian
-religion = siberian
+religion = tengri_pagan_reformed
+religion = tengri_pagan_reformed
 hre = no
 hre = no
 base_tax = 1

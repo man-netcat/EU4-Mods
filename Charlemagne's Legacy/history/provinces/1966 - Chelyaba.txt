@@ -2,6 +2,7 @@
 
 owner = JIT
 controller = JIT
+add_core = SIB
 add_core = JIT
 capital = "Chelyaba"
 culture = pecheneg

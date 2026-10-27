@@ -2,6 +2,7 @@
 
 owner = VSY
 controller = VSY
+add_core = SIB
 add_core = VSY
 capital = "Vah"
 culture = ostyaki

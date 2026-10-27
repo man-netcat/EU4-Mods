@@ -126,7 +126,7 @@ class ReleasableTag(Tag):
 #: Dublin sleeps until rebels or a manual release wake it (cores seeded via
 #: seed_cores). Listed here so validate exempts them from the
 #: landed checks, and selfcheck fails any unlisted landless tag.
-DORMANT = frozenset({"YED", "ODS", "DNI", "DUB", "GAL", "HUB", "TAE", "WNN", "JIA", "TNO", "NIP", "ADI", "HEN"})
+DORMANT = frozenset({"YED", "ODS", "DNI", "DUB", "GAL", "HUB", "TAE", "WNN", "JIA", "TNO", "NIP", "ADI", "HEN", "NIN", "TUV", "SIB"})
 
 
 #: CK3 title prefixes -> the government rank they imply. The declared
