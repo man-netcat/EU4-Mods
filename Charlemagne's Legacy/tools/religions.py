@@ -59,18 +59,22 @@ EXTRAS = {
         ("heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }", "heretic = { MESSALIANS }"),
         ("holy_sites = { 358 1227 2313 1234 419 }", "holy_sites = { 379 410 2313 537 2218 }"),
     ), "The Church of the East, severed from the communion of the empire since Ephesus, kept by the Patriarch of Baghdad and carried east along the Silk Road by merchant missionaries."),
-    "romuva": ("dreamtime", "christian", "nestorian", _dreamtime("defensiveness = 0.15"), "The old Baltic faith of Dievas, Perkunas and Gabija, kept beneath the sacred oaks."),
-    "suomenusko": ("dreamtime", "christian", "romuva", _dreamtime("hostile_attrition = 1"), "The old Finnish faith of Ukko, Tapio and the spirits of forest and water."),
-    "slavic": ("dreamtime", "christian", "suomenusko", _dreamtime("land_forcelimit_modifier = 0.10"), "The faith of Perun and Veles, of the old gods worshipped in groves and on hilltops."),
-    "krstjani": ("animism", "christian", "slavic", (
+    "romuva": ("dreamtime", "pagan", "zunism", _dreamtime("defensiveness = 0.15"), "The old Baltic faith of Dievas, Perkunas and Gabija, kept beneath the sacred oaks."),
+    "suomenusko": ("dreamtime", "pagan", "romuva", _dreamtime("hostile_attrition = 1"), "The old Finnish faith of Ukko, Tapio and the spirits of forest and water."),
+    "slavic": ("dreamtime", "pagan", "suomenusko", _dreamtime("land_forcelimit_modifier = 0.10"), "The faith of Perun and Veles, of the old gods worshipped in groves and on hilltops."),
+    "krstjani": ("animism", "christian", "nestorian", (
         ("\t\t\tglobal_unrest = -1\n", ""),
         ("\t\t\ttolerance_own = 2\n\t\t\tloot_amount = 0.25\n",
          "\t\t\tmerc_maintenance_modifier = -0.1\n\t\t\tgalley_power = 0.2\n"),
         ("\t\t\n\t\theretic = { SNAKE_CLAN }\n", ""),
     ), "Long forgotten by Catholic and Orthodox alike, the Krstjani of the Bosnian highlands are more permissive than their better-known compatriots, but lack formal structure."),
-    "taltosist": ("dreamtime", "christian", "krstjani", _dreamtime("cavalry_power = 0.10"), "The old Magyar faith of the táltos, seers who ride between sky and steppe."),
+    "taltosist": ("dreamtime", "pagan", "slavic", _dreamtime("cavalry_power = 0.10"), "The old Magyar faith of the táltos, seers who ride between sky and steppe."),
     "khurmazdis": ("zoroastrian", "zoroastrian_group", "zoroastrian", (), "The old royal Zoroastrianism of Khwarezm: to Khurmazt, lord of the fire altars of Khiva and Gurganj, worshipped by the Afrigids and their people."),
 }
+
+# vanilla religions that CK3 files under another family: religion -> (group, listed after).
+# CK3's Shinto is a pagan-family religion, EU4's file has it under eastern.
+MOVE_RELIGIONS = {"shinto": ("pagan", "shamanism")}
 
 # the religions that take a frame of their own on the icon strips, after vanilla's
 # (coptic keeps its vanilla block but gets a new frame)
@@ -198,6 +202,12 @@ def religion_text():
                 progressed = True
         if not progressed:
             raise SystemExit(f"religions: cannot place {sorted(pending)} (their sibling is missing)")
+    for key, (group, after) in MOVE_RELIGIONS.items():
+        m = block_range(text, key)
+        block = m.group(0)
+        text = text[:m.start()] + text[m.end():]
+        am = block_range(text, after)
+        text = text[:am.end()] + "\n\n" + block + text[am.end():]
     for faith, key in faiths.FAITH_RELIGION.items():
         info = faiths.ck3_faith(faith)
         if block_range(text, key) and info and info["color"]:

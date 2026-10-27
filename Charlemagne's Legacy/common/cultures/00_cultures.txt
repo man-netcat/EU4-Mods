@@ -327,6 +327,43 @@ germanic = {
 		#Hannoveran
 		"von Schack" "von Fabrice" "von Hardenberg" "von Welf" "von Schauenburg" "von Holstein-Gottorp" "Askanier" "von Oldenburg"
 	}
+
+	goths = {
+		primary = FEO
+		dynasty_names = { 
+			"of Gothia"
+		}
+		male_names = {
+			Alexios Ioannes Manuel David Basileios Skantarios Andronikos Michael Georgios Aineias 
+			Aristoteles Bartholomaios Chrysanthos Diogenes Dionysos Eirenaios Elpidios Gregorios Hektor 
+			Iason Iosephos Kastor Kreon Matthaios Nestor Nikolaos Nikomedes Orestes Palaemon Pavlos 
+			Pelagios Alexandros
+			Philemon Philippos Prokopios Stefanos Theodoros Timotheos Ambrosios Petros Herakles Hermes 
+			Hippolytos Hypatios Iakobos Jacob Ignatios Ignatius Innokentios Ioannes John Ioannikios 
+			Iordanes Ioseph Joseph Isaakios Isaias Isidoros Ioulianos Julian Ioustinianos Justinian 
+			Ioustinos Justin Kaisarios Caesar
+			Kallinikos Kallistos Komitas Konstantinos Constantine Konstantios Constantius Konstas Constans 
+			Kosmas Cosmas Kyriakos Kyrillos Cyril Kyros Laurentios Laurence Lazaros Leon Leo Leontios 
+			Leontius Loukas Makarios Manuel Markos Marcus
+			Matthaios Matthew Maurikios Maximos Maximus Megistos Magnus Meletios Methodios Michael Michael 
+			Narses Neophytos Nikephoros Niketas Nikodemos Nikolaos Nicholas Niphon Orestes Pamphilios 
+			Pankratios Pantoleon Paschalis
+			Pavlos Paul Pelagios Pelagius Petros Peter Philaretos Philippos Philip Philotheos Phokas 
+			Photios Polykarpos Porphyrios Prokopios Procopius Pyrros Raphail Romanos Roman Sabas Samuel 
+			Samuel Serapion Sebastianos Sebastian Sergios Sergius Stephanos Stephen
+			Staurakios Symeon Simon Symmachos Symmachus Theocharistos Theodoros Theodore Theodosios 
+			Theodosios Theodotos Theodat Theodoulos Theoktistos Theophanes Theophilos Theophylaktos Thomas 
+			Thomas Tiberios Tiberius Traianos Trajan
+			Timotheos Tryphon Valerios Valerius Zacharias Zenobios Zenon
+		}
+		female_names = {
+			Agape Photine Sotiria Leontia Margarita Margaret Maria Maria Markia Marcia Martha Martha Melissa Melisende Nikarete 
+			Nikoletta Nonna Parthena Pavlina Paulina Pelagia Petronia Petronia Philippa Philippa Phyllis 
+			Pulcheria Pulcheria Rhodanthe Romane Romylia Sergia Sergia Sibylla Sibylla
+			Simonis Sophia Sophia Stephania Stephania Thekla Theochariste Theodora Theodora Theodosia 
+			Theodosia Theognosia Theoktiste Theophano Thomais Valeria Valeria Viviana Viviana Xene Zenobia 
+		}
+	}
 }
 
 scandinavian = { #Nordic
@@ -727,6 +764,25 @@ brythonic = {
 			Rhiannon Rhonwen Sannant Sara Senena Sibyl Sioned Siwan "SiA n" Susanna Tangwystl Tegla Ysbail Ystradwel
 		}
 	}
+
+	pictish = {
+		dynasty_names = {
+			Todd "Mac Uerb" Hen Bili Circinn Ce Fotla Fib Fidach Miathi Des Fergusa "Dun Nechtain" "Mac Beli"
+			"Mac Boanta" "Mac Oengusa" Cait Fortriu
+		}
+		male_names = {
+			Achiuir Aethon Aenbecan Allan Allcallorred Allisander Aniel Ardle Auust Bili Bran Breth Bridei Briog
+			Broichan Brude Caltram Canu Canuall Canan Caradaig Caruorst Castant Castantin Ciniod Crup Dabuut
+			Deocillimon Deoord Domelch Drest Drosten Eddarrnonn Elpin Enuidaig Erpin Galam Ganant Garalt Gede Gest
+			Gigurum Girom Idual Iduallon Iestan Iuan Irb Lutrin Mael Maelchon Manath Mordeleg Morleo Murtolic Naiton
+			Ninian Pedric Pedur Paul Pidarnoin Ru Ruatirch Rubert Rudri Telurg Telurgan Taran Tarla Uipoig Uist Uuochu
+			Uoret Unen Unuist Urguist Usuullt Uthoil Uudrost Uuen Uuid Uuirp Uuredach Uuroid
+		}
+		female_names = {
+			Addiena Abrella Allust Arnemetia Brethoc Bride Bronuen Caitrion Cristin Durilia Elaine Elen Eua Madru
+			Maelmurie Mairi Margrud Maud Mor Morag Morien Muriel Neulina Sara Siunod Uen Uluen Uuena Uunis Uusbail
+		}
+	}
 }
 
 british	= {
@@ -800,25 +856,6 @@ british	= {
 			Wulfgyth Wulfhild Wulfrun Wulfthryth Wulfwaru Wulfwynn Wynnflæd Wærburg Æbba Ælfflæd Ælfgifu Ælfgyth Ælflæda_Ælflæda Ælfrida
 			Ælfswith Ælfthryth Ælfwynn Æthelburg Æthelflæd Æthelgifu Æthelhild Æthelræda_Æthelreda Æthelswith Æthelthryth
 			Æthelburh Seaxburh Wihtburh
-		}
-	}
-
-	pictish = {
-		dynasty_names = {
-			Todd "Mac Uerb" Hen Bili Circinn Ce Fotla Fib Fidach Miathi Des Fergusa "Dun Nechtain" "Mac Beli"
-			"Mac Boanta" "Mac Oengusa" Cait Fortriu
-		}
-		male_names = {
-			Achiuir Aethon Aenbecan Allan Allcallorred Allisander Aniel Ardle Auust Bili Bran Breth Bridei Briog
-			Broichan Brude Caltram Canu Canuall Canan Caradaig Caruorst Castant Castantin Ciniod Crup Dabuut
-			Deocillimon Deoord Domelch Drest Drosten Eddarrnonn Elpin Enuidaig Erpin Galam Ganant Garalt Gede Gest
-			Gigurum Girom Idual Iduallon Iestan Iuan Irb Lutrin Mael Maelchon Manath Mordeleg Morleo Murtolic Naiton
-			Ninian Pedric Pedur Paul Pidarnoin Ru Ruatirch Rubert Rudri Telurg Telurgan Taran Tarla Uipoig Uist Uuochu
-			Uoret Unen Unuist Urguist Usuullt Uthoil Uudrost Uuen Uuid Uuirp Uuredach Uuroid
-		}
-		female_names = {
-			Addiena Abrella Allust Arnemetia Brethoc Bride Bronuen Caitrion Cristin Durilia Elaine Elen Eua Madru
-			Maelmurie Mairi Margrud Maud Mor Morag Morien Muriel Neulina Sara Siunod Uen Uluen Uuena Uunis Uusbail
 		}
 	}
 }
@@ -1126,43 +1163,6 @@ latin = {
 		"Sommaripa" "Borgia" "Orseolo" "Antelminelli" "Beccaria" "de Bonacolsi"
 		"Loredano" "di Malaspina" "Malipiero" "Maggi" "Mocenigo" "Pico di Mirandola" "della Rocca" "Rossi"
 		"di San Bonifazio" "de Sanseverino" "Zoagli" "Egidio"
-	}
-
-	goths = {
-		primary = FEO
-		dynasty_names = { 
-			"of Gothia"
-		}
-		male_names = {
-			Alexios Ioannes Manuel David Basileios Skantarios Andronikos Michael Georgios Aineias 
-			Aristoteles Bartholomaios Chrysanthos Diogenes Dionysos Eirenaios Elpidios Gregorios Hektor 
-			Iason Iosephos Kastor Kreon Matthaios Nestor Nikolaos Nikomedes Orestes Palaemon Pavlos 
-			Pelagios Alexandros
-			Philemon Philippos Prokopios Stefanos Theodoros Timotheos Ambrosios Petros Herakles Hermes 
-			Hippolytos Hypatios Iakobos Jacob Ignatios Ignatius Innokentios Ioannes John Ioannikios 
-			Iordanes Ioseph Joseph Isaakios Isaias Isidoros Ioulianos Julian Ioustinianos Justinian 
-			Ioustinos Justin Kaisarios Caesar
-			Kallinikos Kallistos Komitas Konstantinos Constantine Konstantios Constantius Konstas Constans 
-			Kosmas Cosmas Kyriakos Kyrillos Cyril Kyros Laurentios Laurence Lazaros Leon Leo Leontios 
-			Leontius Loukas Makarios Manuel Markos Marcus
-			Matthaios Matthew Maurikios Maximos Maximus Megistos Magnus Meletios Methodios Michael Michael 
-			Narses Neophytos Nikephoros Niketas Nikodemos Nikolaos Nicholas Niphon Orestes Pamphilios 
-			Pankratios Pantoleon Paschalis
-			Pavlos Paul Pelagios Pelagius Petros Peter Philaretos Philippos Philip Philotheos Phokas 
-			Photios Polykarpos Porphyrios Prokopios Procopius Pyrros Raphail Romanos Roman Sabas Samuel 
-			Samuel Serapion Sebastianos Sebastian Sergios Sergius Stephanos Stephen
-			Staurakios Symeon Simon Symmachos Symmachus Theocharistos Theodoros Theodore Theodosios 
-			Theodosios Theodotos Theodat Theodoulos Theoktistos Theophanes Theophilos Theophylaktos Thomas 
-			Thomas Tiberios Tiberius Traianos Trajan
-			Timotheos Tryphon Valerios Valerius Zacharias Zenobios Zenon
-		}
-		female_names = {
-			Agape Photine Sotiria Leontia Margarita Margaret Maria Maria Markia Marcia Martha Martha Melissa Melisende Nikarete 
-			Nikoletta Nonna Parthena Pavlina Paulina Pelagia Petronia Petronia Philippa Philippa Phyllis 
-			Pulcheria Pulcheria Rhodanthe Romane Romylia Sergia Sergia Sibylla Sibylla
-			Simonis Sophia Sophia Stephania Stephania Thekla Theochariste Theodora Theodora Theodosia 
-			Theodosia Theognosia Theoktiste Theophano Thomais Valeria Valeria Viviana Viviana Xene Zenobia 
-		}
 	}
 
 	cisalpine = {
@@ -2250,70 +2250,6 @@ south_slavic = {
 	dynasty_names = { 
 		"Trpimirovic" "Svetoslavic" "Kosovic" "Kresimirovic" "Zrinski" "Domagojevic" "Hrvatinic" "Kotromanic" "Brankovic" "Lazarevic" "Ibrahimovic"
 	}
-
-	carantanian = {
-		dynasty_names = {
-			Furlan Golob Korosec Kos Krajnc Kirzman Medved Mlakar Potocnik Jelen Kragel Orel Vran Senica Grabec Cuk
-			Sova Volk Volcic Lisjak Jazbec Zajc Kosuta Petelin Macek Phorjec Bohorec Karavankec Gorjancic Rogic
-			Prekmurjec Goricko Halozec Kozjakec Kozjansko Dravec Mura Raba Dravinja Krka Sava Idrija Bohinjec Soca
-			Vipavec Planinec Hribovec Panterec Creniv Rdeciv Modriv Beliv Rumeniv Zeleniv
-		}
-		male_names = {
-			Bedoslav Bogdan Bogomir Borislav Borut Branimir Budislav Ceh Cerno Cestimir Cheitmar Chezil Cholo Cuk
-			Dalibor Dobroslav Domicjan Domislav Drago Dragomir Dragoslav Etgar Gojimir Gojmir Golob Golomir Gorazd
-			Grabec Hoten Hotimir Hraber Hrvat Inko Ivko Izeslav Izbor Jans Jaroslav Jazbec Jelen Jurk Kadalhoh
-			Kajtimar Kazimir Kos Kosuta Kragel Kuono Lastigoj Lenart Lisjak Liuzo Ljuban Ljubotin Ljudevit Lupa Macek
-			Majoran Malej Maligoj Medved Mesko Milan Milislav Milivoj Milobrat Miran Miroslav Mojmir Mistislav Nadovid
-			Negomir Nezko Nikola Obren Omisl Orel Petanko Petelin Plas Plasl Predoslav Pribic Pribimir Pribislav
-			Prodan Radan Radigoj Radomir Radovan Ratzo Ruodo Samo Sebimir Semil Semislav Senica Sigo Sizo Slavko
-			Sobodin Sova Srecan Stanislav Stanko Stojan Stojko Stojmir Svetko Svetomir Svetoslav Svobodin Tihomir
-			Tomislav Trebin Trebimir Uncat Unislav Vecerin Venceslav Venko Vetko Vladan Valhun Valtunk Valuk Vidojko
-			Vitan Vitomir Vladimir Vladislav Vladko Vojnomir Volcic Vran Vratislav Walto Wezil Zajc Zdebor Zdeslav
-			Zlatko Zlatoslav Ztoimar Zverko
-		}
-		female_names = {
-			Alena Anna Antonia Barbora Belica Berta Blagica Bogdana Bogumila Boguslava Bojana Brajna Bratrica Bratina
-			Ctislava Danica Darja Deva Dejana Dobrava Dobromila Dobroslava Domaslava Dominika Dorota Doubravka Draga
-			Dragica Dragoslava Eva Gertruda Godeslava Gostinja Govica Gradislava Granislava Guta Hana Hedvika Helena
-			Hodka Irena Iva Ivana Jagoda Jana Janja Jaroslava Jasna Jelena Jelenka Jitka Johanka Judita Justina
-			Kazimira Kalina Kosana Ladana Lazica Lepa Lilijana Ljubica Ljubonega Ljuboslava Ljubota Ljuta Ljutica
-			Ludmila Magdalena Maja Malina Malinka Manidraga Maria Mica Mila Milena Miljana Mira Mirjana Mislena Neda
-			Nedeljka Negota Novica Odola Olga Pacemira Pavica Pavla Perchta Petra Petrissa Predobra Pribina Pribislava
-			Pribislavka Prodana Rada Radana Radka Radojka Rajka Radonja Rejna Richeza Richsa Romana Sava Semika Skonka
-			Slava Smiljana Sobemisla Stana Stanila Stanislava Stanka Stislava Stojana Stojna Svatava Svetoslava Tunca
-			Tunza Vilana Viola Vladislava Vlasta Vojslava Zdenka Zlatkoka Zleslava Zorana Zorka Zverinja Zverica
-			Zverka Zvezdana
-		}
-	}
-
-	slovien = {
-		primary = CLI
-
-		dynasty_names = {
-			"KopC iansky" Jasenovsky Detvansky Majcichovsky Tekovsky KubInsky "MikulC icky" Pohansky Ducovsky
-			"DevI nsky" Ostrihomsky Kocelid ModrE "HradiS tEE" Velehradsky Veligradsky Vidensky Rastislavid Braslavid
-			Blatnohradsky Beckovsky "ZemplI nsky" "TematI nsky" Kostolansky Bratislavsky Tunavsky "BudI nsky"
-		}
-		male_names = {
-			Bohodar Boleslav "BlahomI r" Blahoslav Bohumil "BoZ idar" "BoromI r" Bohuslav "BudimI r" BohuS Bratislav
-			Budivoj "BystrI k" Ctiboh Ctibor "C estmI r" Dalibor Dobromil Dobroslav "DrahomI r" Drahoslav "DuS an"
-			Gorazd Horislav Hrdoslav Hromislav Hviezdoslav ChrabroS "ChvalimI r" Igor Ivan Jaromil "JaromI r" Jaropluk
-			Jaroslav "KazimI r" Kocel Krasomil Ladislav "LadomI r" Levoslav "LubomI r" LuboS Ludomil "LudovI t"
-			Krasislav Milan Miloslav Miroslav MiloS Miloboj "MojmI r" Mstislav "MU droslav" Nitrabor Oleg "OstromI r"
-			Ostrivoj Polan Pravoslav Predslav "PrelimI r" Pribina Prisnec Prokop Radislav "RadomI r" Radoslav Radovan
-			Raslav Rastislav Ruslav SiloS Slavoj "SlavomI r" Sokol Spitihnev Stanislav Svatoboj Svatopluk Svatoslav
-			"SvetozA r" Svorad Stastko Tichomil "TichomI r" Tvrdomil Vavrinec "VelemI r" Viacslav Vieroslav Vitemir
-			Vladan Vladimil "VladimI r" Vlastibor Vlastislav Vojmil Vojtech Vratislav Vratko "VyS ebor" Zdravoslav
-			Zdravomil Zemislav Zobor Zubrivoj "ZvonimI r" "ZelimI r"
-		}
-		female_names = {
-			"BlahomI ra" "BlaZ ena" Bohdana Bohumila BoZZena Bratromila Ctislava Dobrohneva Dobromila Drzislava
-			"DuS ana" Horislava Jarmila "JaromI ra" Jaroslava Kostislava Kveta Kvetoslava "KrA snoroda" Lada Ladina
-			Lesana Lubica "MilomI ra" Miloslava Mislava Miroslava Pravomila Pravdomila Rodana "SlA vka" Slavena
-			"SlavomI ra" Svatoslava "SvetluS a" Svietlana Viera Vlasta Vlastimila "VolimI ra" Vratislava "VyS emI ra"
-			Zbislava Zlata Zivana "Z ivoslava"
-		}
-	}
 }
 
 west_slavic = {
@@ -2521,6 +2457,41 @@ west_slavic = {
 		}
 	}
 
+	carantanian = {
+		dynasty_names = {
+			Furlan Golob Korosec Kos Krajnc Kirzman Medved Mlakar Potocnik Jelen Kragel Orel Vran Senica Grabec Cuk
+			Sova Volk Volcic Lisjak Jazbec Zajc Kosuta Petelin Macek Phorjec Bohorec Karavankec Gorjancic Rogic
+			Prekmurjec Goricko Halozec Kozjakec Kozjansko Dravec Mura Raba Dravinja Krka Sava Idrija Bohinjec Soca
+			Vipavec Planinec Hribovec Panterec Creniv Rdeciv Modriv Beliv Rumeniv Zeleniv
+		}
+		male_names = {
+			Bedoslav Bogdan Bogomir Borislav Borut Branimir Budislav Ceh Cerno Cestimir Cheitmar Chezil Cholo Cuk
+			Dalibor Dobroslav Domicjan Domislav Drago Dragomir Dragoslav Etgar Gojimir Gojmir Golob Golomir Gorazd
+			Grabec Hoten Hotimir Hraber Hrvat Inko Ivko Izeslav Izbor Jans Jaroslav Jazbec Jelen Jurk Kadalhoh
+			Kajtimar Kazimir Kos Kosuta Kragel Kuono Lastigoj Lenart Lisjak Liuzo Ljuban Ljubotin Ljudevit Lupa Macek
+			Majoran Malej Maligoj Medved Mesko Milan Milislav Milivoj Milobrat Miran Miroslav Mojmir Mistislav Nadovid
+			Negomir Nezko Nikola Obren Omisl Orel Petanko Petelin Plas Plasl Predoslav Pribic Pribimir Pribislav
+			Prodan Radan Radigoj Radomir Radovan Ratzo Ruodo Samo Sebimir Semil Semislav Senica Sigo Sizo Slavko
+			Sobodin Sova Srecan Stanislav Stanko Stojan Stojko Stojmir Svetko Svetomir Svetoslav Svobodin Tihomir
+			Tomislav Trebin Trebimir Uncat Unislav Vecerin Venceslav Venko Vetko Vladan Valhun Valtunk Valuk Vidojko
+			Vitan Vitomir Vladimir Vladislav Vladko Vojnomir Volcic Vran Vratislav Walto Wezil Zajc Zdebor Zdeslav
+			Zlatko Zlatoslav Ztoimar Zverko
+		}
+		female_names = {
+			Alena Anna Antonia Barbora Belica Berta Blagica Bogdana Bogumila Boguslava Bojana Brajna Bratrica Bratina
+			Ctislava Danica Darja Deva Dejana Dobrava Dobromila Dobroslava Domaslava Dominika Dorota Doubravka Draga
+			Dragica Dragoslava Eva Gertruda Godeslava Gostinja Govica Gradislava Granislava Guta Hana Hedvika Helena
+			Hodka Irena Iva Ivana Jagoda Jana Janja Jaroslava Jasna Jelena Jelenka Jitka Johanka Judita Justina
+			Kazimira Kalina Kosana Ladana Lazica Lepa Lilijana Ljubica Ljubonega Ljuboslava Ljubota Ljuta Ljutica
+			Ludmila Magdalena Maja Malina Malinka Manidraga Maria Mica Mila Milena Miljana Mira Mirjana Mislena Neda
+			Nedeljka Negota Novica Odola Olga Pacemira Pavica Pavla Perchta Petra Petrissa Predobra Pribina Pribislava
+			Pribislavka Prodana Rada Radana Radka Radojka Rajka Radonja Rejna Richeza Richsa Romana Sava Semika Skonka
+			Slava Smiljana Sobemisla Stana Stanila Stanislava Stanka Stislava Stojana Stojna Svatava Svetoslava Tunca
+			Tunza Vilana Viola Vladislava Vlasta Vojslava Zdenka Zlatkoka Zleslava Zorana Zorka Zverinja Zverica
+			Zverka Zvezdana
+		}
+	}
+
 	polabian = {
 		primary = LUT
 
@@ -2548,6 +2519,35 @@ west_slavic = {
 			Marcelina Maria Martyna Mateja Matylda Milena Miroslava Pechna "RO za" Radomila Radomira Radoslava Raina
 			Regelinda Rycheza Salomea "S miechna" Stanislava Stefana "SvE tlana" "UrS ula" "VA clava" "VE ra"
 			Vladislava Woislava "ZdeN ka" Zofia Zvinislava
+		}
+	}
+
+	slovien = {
+		primary = CLI
+
+		dynasty_names = {
+			"KopC iansky" Jasenovsky Detvansky Majcichovsky Tekovsky KubInsky "MikulC icky" Pohansky Ducovsky
+			"DevI nsky" Ostrihomsky Kocelid ModrE "HradiS tEE" Velehradsky Veligradsky Vidensky Rastislavid Braslavid
+			Blatnohradsky Beckovsky "ZemplI nsky" "TematI nsky" Kostolansky Bratislavsky Tunavsky "BudI nsky"
+		}
+		male_names = {
+			Bohodar Boleslav "BlahomI r" Blahoslav Bohumil "BoZ idar" "BoromI r" Bohuslav "BudimI r" BohuS Bratislav
+			Budivoj "BystrI k" Ctiboh Ctibor "C estmI r" Dalibor Dobromil Dobroslav "DrahomI r" Drahoslav "DuS an"
+			Gorazd Horislav Hrdoslav Hromislav Hviezdoslav ChrabroS "ChvalimI r" Igor Ivan Jaromil "JaromI r" Jaropluk
+			Jaroslav "KazimI r" Kocel Krasomil Ladislav "LadomI r" Levoslav "LubomI r" LuboS Ludomil "LudovI t"
+			Krasislav Milan Miloslav Miroslav MiloS Miloboj "MojmI r" Mstislav "MU droslav" Nitrabor Oleg "OstromI r"
+			Ostrivoj Polan Pravoslav Predslav "PrelimI r" Pribina Prisnec Prokop Radislav "RadomI r" Radoslav Radovan
+			Raslav Rastislav Ruslav SiloS Slavoj "SlavomI r" Sokol Spitihnev Stanislav Svatoboj Svatopluk Svatoslav
+			"SvetozA r" Svorad Stastko Tichomil "TichomI r" Tvrdomil Vavrinec "VelemI r" Viacslav Vieroslav Vitemir
+			Vladan Vladimil "VladimI r" Vlastibor Vlastislav Vojmil Vojtech Vratislav Vratko "VyS ebor" Zdravoslav
+			Zdravomil Zemislav Zobor Zubrivoj "ZvonimI r" "ZelimI r"
+		}
+		female_names = {
+			"BlahomI ra" "BlaZ ena" Bohdana Bohumila BoZZena Bratromila Ctislava Dobrohneva Dobromila Drzislava
+			"DuS ana" Horislava Jarmila "JaromI ra" Jaroslava Kostislava Kveta Kvetoslava "KrA snoroda" Lada Ladina
+			Lesana Lubica "MilomI ra" Miloslava Mislava Miroslava Pravomila Pravdomila Rodana "SlA vka" Slavena
+			"SlavomI ra" Svatoslava "SvetluS a" Svietlana Viera Vlasta Vlastimila "VolimI ra" Vratislava "VyS emI ra"
+			Zbislava Zlata Zivana "Z ivoslava"
 		}
 	}
 }
@@ -2653,33 +2653,10 @@ carpathian = {
 			Tereza Teresa Vasilica Violeta Yolanda Voica Zina
 		}
 	}
-	
-	dynasty_names = {
-		Rurikovich Godunov Shuisky Romanov Sheremetev Golitsyn Naryshkin Khilkov Gorchakov
-		Belosselsky Chelyadnin Potyomkin Poloch Izbor Tversky Lukisky Pleskov Toropetsky Dukhovsky
-		Koroviev Woland Tyvertsky Buzhansky Slutsky Pinesky Zhytomyrsky Vynnytsky Polan Ulich Drevl 
-		Lyubech Roslavsky Turov
-	}
-	male_names = {
-		# ILMENIAN / SEVERIAN / VOLHYNIAN
-		Briachislav Bretislaus Demid Dobrynia Fedot Theodat Gleb Igor Iliya Iziaslav Lev Leo Mitrofan 
-		Mstislav Mstislav Svetozar
-		Nikita Putiata Rodislav Rogvolod Rostislav Ruslan Stanislav Stanislav Sudislav 
-		Sviatopolk Svatopluk Sviatoslav Terentiy Trifon Viacheslav Vladimir Vladimir 
-		Vladislav Voislav Volodar Vseslav Vladislav
-		Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yeremey Yevstafiy
-	}
-	female_names = {
-		# ILMENIAN / SEVERIAN / VOLHYNIAN
-		Boleslava Darya Dobrava Dobronega Dobroslava Yefimia Euphemia Yefrosinia Euphrosyne Fevronia 
-		Gorislava Gradislava Gremislava
-		Liubava Liudmila Malfrida Malusha Maria Maria Marina Olena Helen Olga Pereyaslava Praskovya 
-		Prebrana Predslava Praxida
-		Premyslava Pribislava Rogneda Rostislava Sbyslava Sviatoslava Tatyana Ulita Ulyana Varvara 
-		Veleslava Verkhoslava Vasilisa
-		Vseslava Viacheslava Yaroslava Zabava Zvenislava
-	}
+}
 
+east_slavic = {
+	graphical_culture = easterngfx
 	novgorodian = { #Novgorodian and most North Russian dialects.
 		primary = NOV
 		male_names = {
@@ -2720,7 +2697,6 @@ carpathian = {
 			Demidov Lopukhin Tolstoy "Lobanov-Rostovsky" Menshikov Obolensky
 		}
 	}
-
 	ryazanian = { #Southern Russian Dialects
 		primary = RYA
 		male_names = {
@@ -2761,7 +2737,6 @@ carpathian = {
 			Demidov Lopukhin Tolstoy "Lobanov-Rostovsky" Menshikov Obolensky
 		}
 	}
-
 	byelorussian = {
 		primary = PLT
 		male_names = {
@@ -2774,7 +2749,6 @@ carpathian = {
 			Gavriila Larisa Aleksandra Alla Bronislava Svetlana Yuliya Yaroslava Vladislava Lyudmila Nadejda Rostislava
 		}
 	}
-
 	ruthenian = {
 		primary = KIE
 		male_names = {
@@ -2787,6 +2761,32 @@ carpathian = {
 		female_names = {
 			Gavriila Larisa Aleksandra Alla Bronislava Svetlana Yuliya Yaroslava Vladislava Lyudmila Nadejda Rostislava
 		}
+	}
+	
+	dynasty_names = {
+		Rurikovich Godunov Shuisky Romanov Sheremetev Golitsyn Naryshkin Khilkov Gorchakov
+		Belosselsky Chelyadnin Potyomkin Poloch Izbor Tversky Lukisky Pleskov Toropetsky Dukhovsky
+		Koroviev Woland Tyvertsky Buzhansky Slutsky Pinesky Zhytomyrsky Vynnytsky Polan Ulich Drevl 
+		Lyubech Roslavsky Turov
+	}
+	male_names = {
+		# ILMENIAN / SEVERIAN / VOLHYNIAN
+		Briachislav Bretislaus Demid Dobrynia Fedot Theodat Gleb Igor Iliya Iziaslav Lev Leo Mitrofan 
+		Mstislav Mstislav Svetozar
+		Nikita Putiata Rodislav Rogvolod Rostislav Ruslan Stanislav Stanislav Sudislav 
+		Sviatopolk Svatopluk Sviatoslav Terentiy Trifon Viacheslav Vladimir Vladimir 
+		Vladislav Voislav Volodar Vseslav Vladislav
+		Vsevolod Vyshata Vysheslav Yaropolk Yaroslav Jaroslav Yefimiy Yelisey Yeremey Yevstafiy
+	}
+	female_names = {
+		# ILMENIAN / SEVERIAN / VOLHYNIAN
+		Boleslava Darya Dobrava Dobronega Dobroslava Yefimia Euphemia Yefrosinia Euphrosyne Fevronia 
+		Gorislava Gradislava Gremislava
+		Liubava Liudmila Malfrida Malusha Maria Maria Marina Olena Helen Olga Pereyaslava Praskovya 
+		Prebrana Predslava Praxida
+		Premyslava Pribislava Rogneda Rostislava Sbyslava Sviatoslava Tatyana Ulita Ulyana Varvara 
+		Veleslava Verkhoslava Vasilisa
+		Vseslava Viacheslava Yaroslava Zabava Zvenislava
 	}
 
 	russian = {
@@ -4196,6 +4196,39 @@ turko_semitic = { #Levantine
 		Sirhan Taimur Tawfiq Umaya Wahid Yahya Yahya Ya'qub Jacob Yasar Youkhanna John Zahir
 	}
 
+	hebrew = { #EU Rome
+		dynasty_names = {
+			Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
+			Oferid Omrid Pinchasid Raananid Shemidid Yairid
+		}
+		male_names = {
+			Abiatar Ahijah Akabon Alon Amit Amram Ananelus Ananias Aretas Aristobulus Azrikam Barak Baruch Belshazar Costobarus Deror Dori 
+			Eiran Eleazar Erotimus Ezra Hadasa Herod Hillel Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hodaviah Honio Meir Nahum 
+			Nathan Nehemiah Nikanor Nir Obadiah  Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Nogah Shamgar Shammai 
+			Shaul Shemaiah Shemida Silas Simeon Sosa Talmon Tarfon Tovia Yair Yochanan Zadok
+		}
+		female_names = {
+			Adena Adi Adva Ahuva Alexandra Aliza Alte Arieh Asher Basia Boaz Chanah Cypros Danya Dara Dina Doris Dov Dvora Elisheva Esther 
+			Galia Galit Leah Liat Liora Machla Mariamne Marni Maya Meital Menahem Milka Naamah Nahal Nava Nissa Orah Orit Osher Rachel Raisa 
+			Rivka Salampsio Sarah Shayna Tamar Tirtza Yael Yocheved
+		}
+	}
+
+	aramaic = { #EU Rome
+		dynasty_names = {
+			Abbarid Adonibaalid Ahiromid Baalhannid Baalid Barcid Bostarid Chelbesid Eshbaalid Eugorid Hannid Hiramid Magoid Mattanid Metallid 
+			Milkiramid Philosirid
+		}
+		male_names = {
+			Abbar Abdmelqart Adonibaal Agbal Ahirom Azimilik Baal Baalhanno Bodashtart Bodmelqart Bomilcar Bostar Boulomenus Carthalo Chelbes 
+			Eshbaal Eugoras Germelqart Hamilcar Hannibal Hanno Hasdrubal Himilco Hiram Mago Maharbal Mattan Metallo Milkherem Milkiram 
+			Paltibaal Philosir
+		}
+		female_names = {
+			Abdosir Arishat Astarte Batnoam Dido Shayna Sophonisba Tamar
+		}
+	}
+
 	levantine = {
 		dynasty_names = {
 			Nasrid Muayyadid Isavid Shukrid Yaruqid Qaimid Alaid Zahirid Jamalid Izzid Bahaid Shihabid Jalalid Yaminid
@@ -5100,6 +5133,42 @@ altaic = {
 		Kirghiz
 		# CKII - KHANTY
 		"Sibirid" "Narima" "Mansi" "Khantys"
+	}
+
+	bashkir = {
+		primary = BSH
+		dynasty_names = {
+			Balna Salmiianov Ravna Taiborey Vylka Kanin Maimbava Arinin Aven Tsoy
+		}
+		male_names = {
+			"Abdul-Karim" "Abdul-Latif" "Abdul-Rahman" "Abdullah" "Agalak" "Ahmad" "Ak Köbek" "Ali Beg" "Arab Shah" 
+			"Arslan" "Baraq" "Bek Bulat" "Bolaq" "Cherkes" "Chokra" "Daniyal" "Darwish" "Darwish Ali" "Devlet Berdi" 
+			"Edigu" "Hajji Muhammad" "Husayn" "Ibak" "Ibrahim" "Ilham" "Ishim" "Jabbar Berdi" "Jalal al-Din" "Jan Ali" 
+			"Janay" "Jani Beg" "Jumaduq" "Karim Berdi" "Kebek" "Khalil" "Khaqan Beg" "Küchük Muhammad" "Kuchum" 
+			"Mahmud" "Mahmudak" "Mamai" "Mamuk" "Mansur" "Muhammad" "Murtaza" "Mustafa Ali" "Nogai" "Pulad" "Pulad Timur" "Qadir Berdi" "Qasim" "Sain Bulat" "Satilghan" "Sayid Ahmad" "Sayid Burhan" "Sayid Mahmud" 
+			"Shadi Beg" "Shah Ali" "Shaikh Ahmad" "Shaikh Awliar" "Shaikh Haidar" "Shiban" "Taibugha" "Timur" 
+			"Timur Qutlugh" "Toqtamish" "Ulugh Muhammad" "Urus" "Urus Muhammad" "Yadigar Muhammad" "Yamghurchi"
+		}
+		female_names = {
+			"Fatima" "Ibtisam" "Jalila" "Janan" "Layla" "Sakina" "Sharifa" Ibtisam Jalila Janan Layla Sakina Sharifa Acenith 
+			Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima
+		}
+	}
+
+	buryat = {
+		primary = BRT
+		dynasty_names = {
+			Badarhan "Chagatay" "Edigüid" "Giray" "Borjigin" "Shaybanid" "Janid" "Mangit"
+		}
+		male_names = {
+			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan Darayisung 
+			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke Mulan 
+			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun Tümen 
+			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi
+		}
+		female_names = {
+			Temülen Börte Mandukhai Samar Zaufishan 
+		}
 	}
 
 	avar = {
@@ -7868,10 +7937,7 @@ dravidian = {
 			Rudramadevi Srimahadevi Tundaka "Bashirunissa" "Umda" "Samiya" "Dawudunissa"
 		}
 	}
-}
 
-central_indic = {
-	graphical_culture = indiangfx
 
 	gondi = {
 		primary = GDW
@@ -7886,6 +7952,10 @@ central_indic = {
 			"Durgavati" "Hirai" "Ratna Kuvar"
 		}
 	}
+}
+
+central_indic = {
+	graphical_culture = indiangfx
 	garjati = {
 		primary = GRJ
 		dynasty_names = {
@@ -8958,21 +9028,6 @@ evenks = {
 			Naryiaana Aiyyna Kydaana Tuskulaana Khaarchaana Temülen Börte Mandukhai Samar Zaufishan 
 		}
 	}
-	buryat = {
-		primary = BRT
-		dynasty_names = {
-			Badarhan "Chagatay" "Edigüid" "Giray" "Borjigin" "Shaybanid" "Janid" "Mangit"
-		}
-		male_names = {
-			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan Darayisung 
-			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke Mulan 
-			Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun Tümen 
-			Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi
-		}
-		female_names = {
-			Temülen Börte Mandukhai Samar Zaufishan 
-		}
-	}
 	tungus = {
 		dynasty_names = {
 			Bulagat Ekhirit Khongodor
@@ -9064,25 +9119,6 @@ kamchatkan_g = {
 
 tartar	= {
 	graphical_culture = muslimgfx
-	bashkir = {
-		primary = BSH
-		dynasty_names = {
-			Balna Salmiianov Ravna Taiborey Vylka Kanin Maimbava Arinin Aven Tsoy
-		}
-		male_names = {
-			"Abdul-Karim" "Abdul-Latif" "Abdul-Rahman" "Abdullah" "Agalak" "Ahmad" "Ak Köbek" "Ali Beg" "Arab Shah" 
-			"Arslan" "Baraq" "Bek Bulat" "Bolaq" "Cherkes" "Chokra" "Daniyal" "Darwish" "Darwish Ali" "Devlet Berdi" 
-			"Edigu" "Hajji Muhammad" "Husayn" "Ibak" "Ibrahim" "Ilham" "Ishim" "Jabbar Berdi" "Jalal al-Din" "Jan Ali" 
-			"Janay" "Jani Beg" "Jumaduq" "Karim Berdi" "Kebek" "Khalil" "Khaqan Beg" "Küchük Muhammad" "Kuchum" 
-			"Mahmud" "Mahmudak" "Mamai" "Mamuk" "Mansur" "Muhammad" "Murtaza" "Mustafa Ali" "Nogai" "Pulad" "Pulad Timur" "Qadir Berdi" "Qasim" "Sain Bulat" "Satilghan" "Sayid Ahmad" "Sayid Burhan" "Sayid Mahmud" 
-			"Shadi Beg" "Shah Ali" "Shaikh Ahmad" "Shaikh Awliar" "Shaikh Haidar" "Shiban" "Taibugha" "Timur" 
-			"Timur Qutlugh" "Toqtamish" "Ulugh Muhammad" "Urus" "Urus Muhammad" "Yadigar Muhammad" "Yamghurchi"
-		}
-		female_names = {
-			"Fatima" "Ibtisam" "Jalila" "Janan" "Layla" "Sakina" "Sharifa" Ibtisam Jalila Janan Layla Sakina Sharifa Acenith 
-			Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima
-		}
-	}
 	crimean = {
 		primary = CRI
 		dynasty_names = {
@@ -9185,37 +9221,6 @@ lost_cultures_group = {
 			"Porse" "Glysing" "Banner" "Thott" "Ulfstand" "Grøn" "Daa"
 			"Reventlow" "Juul" "Ulfeldt" "Bang" 
 			Alfredsson Andersson Assarsson Batra Billgren Broman Ekberg Glans Gjedde Glenmark Hansson Jansson Ibrahimovic Järegård Kulle Larsson Lohmander Lundberg Malmkvist Malmsjö Melander Möller Nordqvist Nordström Ohlmarks Persson Poppe Ranelid Sundström Troell Wester Olsson
-		}
-	}
-	aramaic = { #EU Rome
-		dynasty_names = {
-			Abbarid Adonibaalid Ahiromid Baalhannid Baalid Barcid Bostarid Chelbesid Eshbaalid Eugorid Hannid Hiramid Magoid Mattanid Metallid 
-			Milkiramid Philosirid
-		}
-		male_names = {
-			Abbar Abdmelqart Adonibaal Agbal Ahirom Azimilik Baal Baalhanno Bodashtart Bodmelqart Bomilcar Bostar Boulomenus Carthalo Chelbes 
-			Eshbaal Eugoras Germelqart Hamilcar Hannibal Hanno Hasdrubal Himilco Hiram Mago Maharbal Mattan Metallo Milkherem Milkiram 
-			Paltibaal Philosir
-		}
-		female_names = {
-			Abdosir Arishat Astarte Batnoam Dido Shayna Sophonisba Tamar
-		}
-	}
-	hebrew = { #EU Rome
-		dynasty_names = {
-			Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
-			Oferid Omrid Pinchasid Raananid Shemidid Yairid
-		}
-		male_names = {
-			Abiatar Ahijah Akabon Alon Amit Amram Ananelus Ananias Aretas Aristobulus Azrikam Barak Baruch Belshazar Costobarus Deror Dori 
-			Eiran Eleazar Erotimus Ezra Hadasa Herod Hillel Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hodaviah Honio Meir Nahum 
-			Nathan Nehemiah Nikanor Nir Obadiah  Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Nogah Shamgar Shammai 
-			Shaul Shemaiah Shemida Silas Simeon Sosa Talmon Tarfon Tovia Yair Yochanan Zadok
-		}
-		female_names = {
-			Adena Adi Adva Ahuva Alexandra Aliza Alte Arieh Asher Basia Boaz Chanah Cypros Danya Dara Dina Doris Dov Dvora Elisheva Esther 
-			Galia Galit Leah Liat Liora Machla Mariamne Marni Maya Meital Menahem Milka Naamah Nahal Nava Nissa Orah Orit Osher Rachel Raisa 
-			Rivka Salampsio Sarah Shayna Tamar Tirtza Yael Yocheved
 		}
 	}
 }

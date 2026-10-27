@@ -44,7 +44,7 @@ NOT_CULTURES = NAMES + ("country", "province")
 # the New World and the Slavic group whose cultures went elsewhere
 REMOVE_GROUPS = (
     "andean_group", "apachean", "araucanian", "aridoamerican", "caddoan", "carribean",
-    "central_algonquian", "central_american", "chibchan", "east_slavic",
+    "central_algonquian", "central_american", "chibchan",
     "eastern_algonquian", "eskaleut", "iroquoian", "je", "je_tupi", "maranon", "mataco",
     "maya", "muskogean", "na_dene", "otomanguean", "penutian", "plains_algonquian",
     "siouan", "sonoran",
@@ -62,9 +62,11 @@ MOVES = {
     "pommeranian": "west_slavic", "prussian": "baltic", "hessian": "frankish",
     "franconian": "frankish", "dutch": "frankish", "finnish": "finno_ugric",
     "sapmi": "finno_ugric", "karelian": "finno_ugric", "welsh": "brythonic",
-    "cornish": "brythonic", "breton": "brythonic", "russian": "carpathian",
-    "novgorodian": "carpathian", "ryazanian": "carpathian", "byelorussian": "carpathian",
-    "ruthenian": "carpathian", "estonian": "finno_ugric", "goths": "latin",
+    "cornish": "brythonic", "breton": "brythonic",
+    "estonian": "finno_ugric", "goths": "germanic",
+    # peoples whose CK3 heritage is not their vanilla group's
+    "hebrew": "turko_semitic", "aramaic": "turko_semitic", "bashkir": "altaic",
+    "buryat": "altaic", "gondi": "dravidian",
     "roman": "latin", "anglosaxon": "british", "livonian": "baltic",
 }
 # new group -> (graphical culture, the group it is listed before)
@@ -80,7 +82,7 @@ LIFTS = {
     "baranis": ("maghrebi", "baranis", None),
     "bjarmian": ("finno_ugric", "samoyed", None),
     "butr": ("maghrebi", "butr", None),
-    "carantanian": ("south_slavic", "carantanian", None),
+    "carantanian": ("west_slavic", "carantanian", None),
     "cisalpine": ("latin", "cisalpine", None),
     "cumbrian": ("brythonic", "cumbrian", None),
     "frankish": ("frankish", "frankish", "FRA"),
@@ -99,14 +101,14 @@ LIFTS = {
     "mordvin": ("finno_ugric", "mordvin", None),
     "naiman": ("altaic", "naiman", None),
     "pecheneg": ("altaic", "pecheneg", None),
-    "pictish": ("british", "pictish", None),
+    "pictish": ("brythonic", "pictish", None),
     "polabian": ("west_slavic", "polabian", "LUT"),
-    "slovien": ("south_slavic", "slovien", "CLI"),
+    "slovien": ("west_slavic", "slovien", "CLI"),
     "amis": ("pacific", "amis", None),
     "ryukyuan": ("japanese_g", "ryukyuan", None),
     # vanilla cultures whose block is replaced outright
     "roman": ("latin", "roman", None),
-    "russian": ("carpathian", "russian", None),
+    "russian": ("east_slavic", "russian", None),
 }
 # vanilla culture -> CK3 culture whose name list replaces its names (group, graphics
 # and primary tag stay: EU4's Saigoku and Togoku stand in for CK3's Yamato and Emishi)
@@ -119,6 +121,42 @@ RENAME_FROM_CK3 = {
 # a group is shown under CK3's name for it
 GROUP_NAME_FROM_CK3 = {"frankish": "frankish_group", "brythonic": "brythonic_group",
                        "byzantine": "byzantine_group"}
+
+
+# CK3 heritage -> the EU4 groups a culture of that heritage may sit in (validate fails otherwise).
+# EU4's groups are looser than CK3's heritages (Turks and Mongols share altaic, Arabs and Hebrews
+# turko_semitic, Franks and Rhinelanders frankish); this lists what each heritage may share with.
+HERITAGE_GROUPS = {
+    "heritage_west_germanic": ("british", "germanic", "frankish"),
+    "heritage_central_germanic": ("germanic", "frankish"),
+    "heritage_north_germanic": ("scandinavian",),
+    "heritage_gothic": ("germanic",),
+    "heritage_frankish": ("frankish", "french"),
+    "heritage_latin": ("latin",),
+    "heritage_iberian": ("iberian",),
+    "heritage_brythonic": ("brythonic",),
+    "heritage_goidelic": ("gaelic",),
+    "heritage_baltic": ("baltic",),
+    "heritage_balto_finnic": ("finno_ugric",),
+    "heritage_volga_finnic": ("finno_ugric",),
+    "heritage_ugro_permian": ("finno_ugric",),
+    "heritage_magyar": ("finno_ugric",),
+    "heritage_west_slavic": ("west_slavic",),
+    "heritage_south_slavic": ("south_slavic",),
+    "heritage_east_slavic": ("east_slavic",),
+    "heritage_vlach": ("carpathian",),
+    "heritage_byzantine": ("byzantine",),
+    "heritage_arabic": ("turko_semitic", "maghrebi"),
+    "heritage_israelite": ("turko_semitic",),
+    "heritage_syriac": ("turko_semitic",),
+    "heritage_berber": ("maghrebi",),
+    "heritage_iranian": ("iranian", "caucasian"),
+    "heritage_turkic": ("altaic",),
+    "heritage_mongolic": ("altaic",),
+    "heritage_tungusic": ("evenks",),
+    "heritage_dravidian": ("dravidian",),
+    "heritage_indo_aryan": ("eastern_aryan", "hindusthani", "western_aryan"),
+}
 
 
 # ---- text plumbing ----------------------------------------------------------
@@ -244,6 +282,45 @@ def _clean(tok):
     except UnicodeEncodeError:
         return None
     return tok or None
+
+
+_heritage = {}
+
+
+def culture_heritage(eu4key):
+    """The CK3 heritage of an EU4 culture: that of the CK3 culture of the same name, else the
+    commonest among the CK3 cultures mapped to it. None when CK3 gives it none."""
+    import collections
+
+    import culturelift
+
+    if not _heritage:
+        for fn in sorted(os.listdir(CK3_CULTURES)):
+            text = open(os.path.join(CK3_CULTURES, fn), encoding="utf-8-sig", errors="replace").read()
+            for m in re.finditer(r"(?m)^(\w+)\s*=\s*\{(.*?)^\}", text, re.S):
+                h = re.search(r"heritage\s*=\s*(\w+)", m.group(2))
+                if h:
+                    _heritage[m.group(1)] = h.group(1)
+    cands = [k for k, v in culturelift.CK3_TO_EU4.items() if v == eu4key and k in _heritage]
+    if not cands:
+        return None
+    if eu4key in cands:
+        return _heritage[eu4key]
+    return collections.Counter(_heritage[c] for c in cands).most_common(1)[0][0]
+
+
+def heritage_misfits():
+    """[(culture, group, heritage)] for cultures sitting in a group their CK3 heritage does not allow."""
+    pre, groups = parse_groups(_read(OUT))
+    out = []
+    for gname, _head, items, _close in groups:
+        for iname, kind, _lines in items:
+            if _is_culture(iname, kind):
+                h = culture_heritage(iname)
+                ok = HERITAGE_GROUPS.get(h)
+                if ok and gname not in ok:
+                    out.append((iname, gname, h))
+    return out
 
 
 def ck3_names(ck3cult):

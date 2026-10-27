@@ -252,6 +252,61 @@ def ck3_faith(faith):
             "icon": ic.group(1) if ic else faith}  # no icon = N: CK3 uses <faith>.dds
 
 
+# CK3 religion -> EU4 religion group. Every other religion of the pagan family (rf_pagan) is `pagan`.
+CK3_RELIGION_GROUP = {
+    "christianity_religion": "christian",
+    "islam_religion": "muslim",
+    "judaism_religion": "jewish_group",
+    "dualism_religion": "zoroastrian_group",
+    "zoroastrianism_religion": "zoroastrian_group",
+    "hinduism_religion": "dharmic",
+    "jainism_religion": "dharmic",
+    "buddhism_religion": "eastern",
+    "confucianism_religion": "eastern",
+    "taoism_religion": "eastern",
+}
+
+
+def ck3_religion_of(faith):
+    """The CK3 religion a faith belongs to (faith_types `religion = ...`), or None."""
+    for f in glob.glob(os.path.join(CK3_GAME, "common", "religion", "faith_types", "*.txt")):
+        t = open(f, encoding="utf-8-sig", errors="replace").read()
+        m = re.search(rf"^{faith} = \{{(.*?)^\}}", t, re.M | re.S)
+        if m:
+            r = re.search(r"religion\s*=\s*(\w+)", m.group(1))
+            return r.group(1) if r else None
+    return None
+
+
+def expected_group(faith):
+    rel = ck3_religion_of(faith)
+    return CK3_RELIGION_GROUP.get(rel, "pagan" if rel else None)
+
+
+def religion_groups(text):
+    """{religion: group} of the generated religions file."""
+    out, cur = {}, None
+    for ln in text.split("\n"):
+        m = re.match(r"^(\w+) = \{", ln)
+        if m:
+            cur = m.group(1)
+        m = re.match(r"^\t(\w+) = \{", ln)
+        if m and cur:
+            out[m.group(1)] = cur
+    return out
+
+
+def group_misfits():
+    """[(religion, group in the file, group CK3's family says)]"""
+    have = religion_groups(_read(REL_FILE))
+    out = []
+    for faith, key in FAITH_RELIGION.items():
+        want = expected_group(faith)
+        if want and have.get(key) != want:
+            out.append((key, have.get(key), want))
+    return out
+
+
 def religion_of_faith():
     return {r: f for f, r in FAITH_RELIGION.items()}
 

@@ -1859,6 +1859,22 @@ def run() -> int:
     for tg_, have, want in ppl[:20]:
         print(f"        {tg_}: {have!r} should be {want!r} (python3 tools/culturalnames.py peoples)")
 
+    print("\n== religion groups follow CK3's religions (tools/faiths.py) ==")
+    import faiths as _faiths
+
+    gm = _faiths.group_misfits()
+    note(not gm, f"every lifted religion sits in the group of its CK3 religion ({len(gm)} off)")
+    for k, have, want in gm[:12]:
+        print(f"        {k} is in {have} but CK3 files it under {want}")
+
+    print("\n== culture groups follow CK3 heritages (tools/cultures.py) ==")
+    import cultures as _cultures
+
+    misfit = _cultures.heritage_misfits()
+    note(not misfit, f"every culture sits in a group its CK3 heritage allows ({len(misfit)} off)")
+    for c, g, h in misfit[:12]:
+        print(f"        {c} is in {g} but its CK3 heritage is {h}")
+
     print("\n== province religions track CK3's counties (tools/provfaiths.py) ==")
     import provfaiths
 

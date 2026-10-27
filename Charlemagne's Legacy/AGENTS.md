@@ -566,3 +566,16 @@ names CK3 does not use. The pairing is by place, so several EU4 provinces may sh
 a paired province differs, or when an owned province is unpaired. Faiths CK3 has and EU4 lacked are
 lifted as new religions (Mazdakism, Khurramism, Afridunism, Zunism) with their rite schools; the
 rabbinic Judaism rites were added for the Khazar counties.
+
+### Culture and religion groups
+
+Culture groups are EU4's own (vanilla scripts name them), kept where they match CK3 and fixed where they
+do not: `cultures.HERITAGE_GROUPS` lists the groups each CK3 heritage may sit in, and validate fails for a
+culture outside them (`cultures.heritage_misfits()`). East Slavic is back as its own group (Russian,
+Novgorodian, Ryazanian, ...; Romanian alone stays Carpathian), Goths are Germanic, Slovien and Carantanian
+West Slavic, Pictish Brythonic, Hebrew and Aramaic Semitic, Bashkir and Buryat Altaic, Gondi Dravidian.
+Religion groups follow CK3's religion family: `faiths.CK3_RELIGION_GROUP` maps each CK3 religion to a
+group, every other pagan-family religion is `pagan`, and validate fails when a lifted religion sits
+elsewhere (`faiths.group_misfits()`). The Baltic, Finnic, Slavic and Magyar faiths and Shinto therefore
+sit in the pagan group (Shinto is moved out of eastern by `religions.MOVE_RELIGIONS`), and their rite
+schools with them.
