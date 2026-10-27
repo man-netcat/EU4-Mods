@@ -3,8 +3,8 @@
 
 Maps the holder culture to our EU4 key (CK3_TO_EU4) and lifts the culture
 (entry + CK3 names + loc + DB row, Pictish precedent) when we don't have
-the key yet. Only cultures in LIFT_SPECS can be lifted (a new key needs a
-human-picked group anchor); anything else resolves to None and the caller
+the key yet (tools/cultures.py writes the cultures file from the base game and
+CK3; a new key needs a LIFTS entry there); anything else resolves to None and the caller
 falls back to the vanilla province culture.
 """
 
@@ -19,15 +19,6 @@ import db  # noqa: E402
 from models import Culture as CultureRow  # noqa: E402
 
 CULT_FILE = os.path.join(HERE, "..", "common", "cultures", "00_cultures.txt")
-CULT_LOC = os.path.join(
-    HERE, "..", "localisation", "karolingian_cultures_l_english.yml"
-)
-CULT_LOC_REPLACE = os.path.join(
-    HERE, "..", "localisation", "replace", "karolingian_cultures_l_english.yml"
-)
-CK3_LISTS = os.path.join(
-    ck3.GAME_CK3, "common", "culture", "name_lists"
-)
 
 CK3_TO_EU4 = {
     # CK3 867 county/holder culture -> our EU4 key. Every value must exist
@@ -168,95 +159,6 @@ CK3_TO_EU4 = {
     "yughur": "uyghur", "ongud": "mongol",
 }
 
-LIFT_SPECS = {
-    # eu4 key -> group anchor (entry goes right before it), display name,
-    # CK3 name-list file and list key.
-    "russian": {
-        "anchor": "\truthenian = {",
-        "display": "Russian",
-        "file": "00_east_slavic.txt",
-        "list": "name_list_russian",
-    },
-    "levantine": {
-        "anchor": "\tal_misr_arabic = {",
-        "display": "Levantine",
-        "file": "00_arabic.txt",
-        "list": "name_list_levantine",
-    },
-    "andalusian": {
-        "anchor": "\tandalucian = {",
-        "display": "Andalusian",
-        "file": "00_arabic.txt",
-        "list": "name_list_andalusian",
-    },
-    "roman": {
-        "anchor": "\titalian = {",
-        "display": "Roman",
-        "file": "00_latin.txt",
-        "list": "name_list_roman",
-    },
-    "pecheneg": {
-        "anchor": "\tturkmeni = {",
-        "display": "Pecheneg",
-        "file": "00_turkic.txt",
-        "list": "name_list_pecheneg",
-    },
-    "ryukyuan": {
-        "anchor": "\tkyushuan = {",
-        "display": "Ryukyuan",
-        "file": "00_ryukyuan.txt",
-        "list": "name_list_ryukyuan",
-    },
-    "naiman": {
-        "anchor": "\tchahar = {",
-        "display": "Naiman",
-        "file": "00_mongolic.txt",
-        "list": "name_list_naiman",
-    },
-    "kerait": {
-        "anchor": "\tchahar = {",
-        "display": "Kerait",
-        "file": "00_mongolic.txt",
-        "list": "name_list_kerait",
-    },
-    "amis": {
-        "anchor": "\tpolynesian = {",
-        "display": "Amis",
-        "file": "00_malay.txt",
-        "list": "name_list_amis",
-    },
-    "mari": {
-        "anchor": "\tbjarmian = {",
-        "display": "Mari",
-        "file": "00_volga_finnic.txt",
-        "list": "name_list_mari",
-    },
-    "mordvin": {
-        "anchor": "\tbjarmian = {",
-        "display": "Mordvin",
-        "file": "00_volga_finnic.txt",
-        "list": "name_list_mordvin",
-    },
-    "merya": {
-        "anchor": "\tbjarmian = {",
-        "display": "Merya",
-        "file": "00_volga_finnic.txt",
-        "list": "name_list_merya",
-    },
-    "meshchera": {
-        "anchor": "\tbjarmian = {",
-        "display": "Meshchera",
-        "file": "00_volga_finnic.txt",
-        "list": "name_list_meshchera",
-    },
-    "komi": {
-        "anchor": "\tbjarmian = {",
-        "display": "Komi",
-        "file": "00_ugro_permian.txt",
-        "list": "name_list_komi",
-    },
-}
-
 _WALK_KEYS = ("father", "real_father", "mother")
 _WALK_DEPTH = 3
 
@@ -328,6 +230,8 @@ def holder_faith(title):
 
 
 def file_has(eu4key):
+    import cultures
+    cultures.ensure()
     try:
         text = open(CULT_FILE, encoding="cp1252", errors="replace").read()
     except FileNotFoundError:
@@ -344,223 +248,9 @@ def have_culture(eu4key):
     return found
 
 
-def _ck3_list(spec):
-    text = open(
-        os.path.join(CK3_LISTS, spec["file"]), encoding="utf-8", errors="replace"
-    ).read()
-    i = text.find(spec["list"])
-    if i < 0:
-        sys.exit(f"no {spec['list']} in {spec['file']}")
-    j = text.find("{", i)
-    depth, k = 0, j
-    while True:
-        if text[k] == "{":
-            depth += 1
-        elif text[k] == "}":
-            depth -= 1
-            if depth == 0:
-                break
-        k += 1
-    return text[j + 1 : k]
-
-
-def _section(block, *names):
-    for nm in names:
-        i = block.find(nm)
-        if i < 0:
-            continue
-        j = block.find("{", i)
-        depth, k = 0, j
-        while True:
-            if block[k] == "{":
-                depth += 1
-            elif block[k] == "}":
-                depth -= 1
-                if depth == 0:
-                    break
-            k += 1
-        return block[j + 1 : k]
-    return ""
-
-
-def _tokens(text):
-    return re.findall(r'"([^"]+)"|(\S+)', text)
-
-
-def _clean(tok):
-    tok = tok.replace("_", " ")
-    tok = re.sub(r"\s+", " ", tok).strip()
-    try:
-        tok.encode("cp1252")
-    except UnicodeEncodeError:
-        return None
-    return tok or None
-
-
-def lift_culture(eu4key, session=None):
-    """Insert a missing culture from its CK3 name list. Returns True."""
-    spec = LIFT_SPECS[eu4key]
-    block = _ck3_list(spec)
-    dyns = []
-    for raw, bare in _tokens(_section(block, "cadet_dynasty_names", "dynasty_names")):
-        tok = raw or bare
-        if not tok.startswith("dynn_"):
-            continue
-        clean = _clean(tok[len("dynn_") :])
-        if clean:
-            dyns.append(clean)
-    males = [
-        c
-        for t in _tokens(_section(block, "male_names"))
-        for c in [_clean(t[0] or t[1])]
-        if c
-    ]
-    females = [
-        c
-        for t in _tokens(_section(block, "female_names"))
-        for c in [_clean(t[0] or t[1])]
-        if c
-    ]
-    if not (dyns and males and females):
-        sys.exit(f"short name list for {eu4key}: {len(dyns)}/{len(males)}/{len(females)}")
-
-    def q(tok):
-        return f'"{tok}"' if re.search(r"[^A-Za-z0-9_'-]", tok) else tok
-
-    def wrap(items):
-        lines, cur = [], "\t\t\t"
-        for tok in dict.fromkeys(items):
-            tok = q(tok)
-            if len(cur) + len(tok) + 1 > 110:
-                lines.append(cur.rstrip())
-                cur = "\t\t\t"
-            cur += tok + " "
-        lines.append(cur.rstrip())
-        return "\n".join(lines)
-
-    entry = (
-        f"\t{eu4key} = {{\n"
-        f"\t\tdynasty_names = {{\n{wrap(dyns)}\n\t\t}}\n"
-        f"\t\tmale_names = {{\n{wrap(males)}\n\t\t}}\n"
-        f"\t\tfemale_names = {{\n{wrap(females)}\n\t\t}}\n"
-        f"\t}}\n"
-    )
-    text = open(CULT_FILE, encoding="cp1252").read()
-    if spec["anchor"] not in text:
-        sys.exit(f"anchor {spec['anchor']!r} not found in cultures file")
-    text = text.replace(spec["anchor"], entry + "\n" + spec["anchor"], 1)
-    open(CULT_FILE, "w", encoding="cp1252", errors="replace").write(text)
-
-    loc = open(CULT_LOC, encoding="utf-8-sig").read()
-    if f"\n {eu4key}:" not in loc:
-        if not loc.endswith("\n"):
-            loc += "\n"
-        loc += f' {eu4key}:0 "{spec["display"]}"\n'
-        open(CULT_LOC, "w", encoding="utf-8-sig", newline="").write(loc)
-
-    s = session or db.session()
-    s.merge(CultureRow(name=eu4key))
-    if session is None:
-        s.commit()
-        s.close()
-    print(
-        f"lifted {eu4key} ({spec['display']}): "
-        f"{len(dyns)} dynasties, {len(males)}/{len(females)} names"
-    )
-    return True
-
-
-REPURPOSE_SPECS = {
-    # existing EU4 culture -> display name and the CK3 name list that
-    # replaces its vanilla names (vanilla's Saigoku and Togoku stand in
-    # for CK3's Yamato and Emishi; Ainu stays its own culture)
-    "japanese": {"display": "Yamato", "file": "00_japanese.txt",
-                 "list": "name_list_yamato", "comment": "Yamato"},
-    "togoku": {"display": "Emishi", "file": "00_japanese.txt",
-               "list": "name_list_emishi", "comment": "Emishi"},
-}
-
-
-def repurpose_culture(eu4key):
-    """Swap an existing culture's name lists for a CK3 culture's, keeping
-    its group, graphics and primary tag. Idempotent."""
-    spec = REPURPOSE_SPECS[eu4key]
-    block = _ck3_list(spec)
-
-    def names(*sections):
-        out = []
-        for t in _tokens(_section(block, *sections)):
-            tok = t[0] or t[1]
-            if tok.startswith("dynn_"):
-                tok = tok[len("dynn_"):]
-            c = _clean(tok)
-            if c:
-                out.append(c)
-        return list(dict.fromkeys(out))
-
-    dyns = names("cadet_dynasty_names", "dynasty_names")
-    males = names("male_names")
-    females = names("female_names")
-    if not (dyns and males and females):
-        sys.exit(f"short name list for {eu4key}: {len(dyns)}/{len(males)}/{len(females)}")
-
-    def q(tok):
-        return f'"{tok}"' if re.search(r"[^A-Za-z0-9_'-]", tok) else tok
-
-    def wrap(items):
-        lines, cur = [], "\t\t\t"
-        for tok in items:
-            tok = q(tok)
-            if len(cur) + len(tok) + 1 > 110:
-                lines.append(cur.rstrip())
-                cur = "\t\t\t"
-            cur += tok + " "
-        lines.append(cur.rstrip())
-        return "\n".join(lines)
-
-    raw = open(CULT_FILE, "rb").read().decode("cp1252")
-    crlf = "\r\n" in raw
-    text = raw.replace("\r\n", "\n")
-    m = re.search(r"(?m)^\t%s = \{[^\n]*\n" % re.escape(eu4key), text)
-    if not m:
-        sys.exit(f"culture {eu4key} not in the cultures file")
-    depth, k = 0, text.index("{", m.start())
-    start = k
-    while True:
-        if text[k] == "{":
-            depth += 1
-        elif text[k] == "}":
-            depth -= 1
-            if depth == 0:
-                break
-        k += 1
-    body = text[m.end():k]
-    for key, items in (("dynasty_names", dyns), ("male_names", males),
-                       ("female_names", females)):
-        body, n = re.subn(
-            r"(?s)\t\t%s = \{.*?\n\t\t\}" % key,
-            lambda _m, key=key, items=items:
-                f"\t\t{key} = {{\n{wrap(items)}\n\t\t}}", body, count=1)
-        if n != 1:
-            sys.exit(f"{eu4key}: no {key} block to replace")
-    head = re.sub(r"\{[^\n]*\n$", "{ # %s\n" % spec["comment"], m.group(0))
-    text = text[:m.start()] + head + body + text[k:]
-    open(CULT_FILE, "wb").write((text.replace("\n", "\r\n") if crlf else text).encode("cp1252"))
-
-    loc = open(CULT_LOC_REPLACE, encoding="utf-8-sig").read()
-    line = f' {eu4key}:0 "{spec["display"]}"'
-    if re.search(r"(?m)^ %s:\d* " % re.escape(eu4key), loc):
-        loc = re.sub(r"(?m)^ %s:\d* .*$" % re.escape(eu4key), line, loc)
-    else:
-        loc = loc.rstrip("\n") + "\n" + line + "\n"
-    open(CULT_LOC_REPLACE, "w", encoding="utf-8-sig", newline="").write(loc)
-    print(f"repurposed {eu4key} as {spec['display']}: "
-          f"{len(dyns)} dynasties, {len(males)}/{len(females)} names")
-
-
 def ensure_culture(ck3cult, session=None):
     """EU4 key for a CK3 culture: repair the DB row when the key exists,
-    lift the whole culture when it doesn't (needs a LIFT_SPECS entry),
+    lift the whole culture when it doesn't (needs a tools/cultures.py LIFTS entry),
     else None so the caller falls back to the land culture. Pass the
     caller's session when one already holds the database: a second
     connection deadlocks against an uncommitted write (the addtag
@@ -569,16 +259,13 @@ def ensure_culture(ck3cult, session=None):
     if eu4key is None:
         return None
     if not file_has(eu4key):
-        if eu4key not in LIFT_SPECS:
-            print(f"  {ck3cult} -> {eu4key}: no lift spec, keeping land culture")
-            return None
-        lift_culture(eu4key, session)
-    else:
-        s = session or db.session()
-        s.merge(CultureRow(name=eu4key))
-        if session is None:
-            s.commit()
-            s.close()
+        print(f"  {ck3cult} -> {eu4key}: not in tools/cultures.py LIFTS, keeping land culture")
+        return None
+    s = session or db.session()
+    s.merge(CultureRow(name=eu4key))
+    if session is None:
+        s.commit()
+        s.close()
     return eu4key
 
 

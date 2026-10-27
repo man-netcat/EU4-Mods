@@ -540,3 +540,17 @@ the next step; then untrack the generated output.
 the committed files differ from the build output) and **self-contained** (the script-only check,
 non-blocking until it passes). Both need a `REFERENCE_REPO_TOKEN` repository secret with read access
 to `man-netcat/eu4-ck3-reference`.
+
+### Cultures file (lifted)
+
+`common/cultures/00_cultures.txt` and the two `karolingian_cultures_l_english.yml` files are written by
+`tools/cultures.py` (called before tagdb reads the file, and by `build.py`): EU4's own file, minus the
+groups and cultures in `REMOVE_GROUPS`/`REMOVE_CULTURES`, with `MOVES` between groups, new groups
+(`brythonic`, `frankish`) and `LIFTS` (EU4 key -> group, CK3 culture, optional primary tag). A lifted
+culture takes the name list its CK3 culture names, and its loc is CK3's text. `REPURPOSE` swaps a
+vanilla culture's names for another CK3 culture's (Yamato, Emishi). To add a culture, add a `LIFTS`
+row and a `CK3_TO_EU4` mapping; never edit the file by hand. Visible changes from the hand-kept file:
+Levantine shows as CK3's Mashriqi, Komi as Permian, Magyar as Hungarian, and the Gallo-Roman /
+German / Greco-Roman group labels are gone (EU4's own labels return). Name lists of Baranis, Slovien,
+Khwarezmian, Frankish and others are now CK3's own (the old hand-kept ones differed), and the old
+file's mojibake in non-ASCII names is gone.

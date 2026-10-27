@@ -381,6 +381,8 @@ def culture_groups() -> dict[str, list[str]]:
     cultures file: the single source of truth, read once per process."""
     global _GROUPS
     if not _GROUPS:
+        import cultures  # noqa: E402
+        cultures.ensure()  # the file is lifted from the base game and CK3, never kept
         path = os.path.join(
             os.path.dirname(DB_PATH),
             "..",
