@@ -1,0 +1,185 @@
+# The fall of Tang (CK3: the Tang line ends 907, Dai Viet is independent from 938, the Sixteen
+# Prefectures go to the Khitan in 936). fall_of_tang.2 releases the dormant Dai Viet tag (the
+# Dutch revolt pattern: cores, `release`, independence war); .3 and .4 cede counties to tags
+# that already exist, as the fall of the Kirghiz does for Dzungaria.
+namespace = fall_of_tang
+
+country_event = {
+	id = fall_of_tang.1
+	title = fall_of_tang.1.t
+	desc = fall_of_tang.1.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_tang.1.a
+		set_country_flag = had_fall_of_tang
+	}
+}
+
+# Dai Viet: the Jinghai circuit, whose Khuc governors rule it as their own
+country_event = {
+	id = fall_of_tang.2
+	title = fall_of_tang.2.t
+	desc = fall_of_tang.2.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = DAI }
+		is_free_or_tributary_trigger = yes
+		is_year = 907
+		OR = {
+			owns = 613
+			owns = 1016
+			owns = 2371
+			owns = 2372
+			owns = 4819
+			owns = 4820
+			owns = 4821
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			613 = { limit = { owned_by = ROOT } add_core = DAI }
+			1016 = { limit = { owned_by = ROOT } add_core = DAI }
+			2371 = { limit = { owned_by = ROOT } add_core = DAI }
+			2372 = { limit = { owned_by = ROOT } add_core = DAI }
+			4819 = { limit = { owned_by = ROOT } add_core = DAI }
+			4820 = { limit = { owned_by = ROOT } add_core = DAI }
+			4821 = { limit = { owned_by = ROOT } add_core = DAI }
+			release = DAI
+		}
+	}
+
+	option = {
+		name = fall_of_tang.2.a
+		DAI = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+
+# Hexi: the Guiyi circuit of the Gansu corridor passes to its own lords
+country_event = {
+	id = fall_of_tang.3
+	title = fall_of_tang.3.t
+	desc = fall_of_tang.3.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		exists = HEX
+		is_free_or_tributary_trigger = yes
+		is_year = 907
+		OR = {
+			owns = 698
+			owns = 701
+			owns = 4223
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			698 = { limit = { owned_by = ROOT } add_core = HEX cede_province = HEX }
+			701 = { limit = { owned_by = ROOT } add_core = HEX cede_province = HEX }
+			4223 = { limit = { owned_by = ROOT } add_core = HEX cede_province = HEX }
+		}
+	}
+
+	option = {
+		name = fall_of_tang.3.a
+	}
+}
+
+# The Sixteen Prefectures: the Khitan take the northern passes. The first Khitan tag in play
+# (the great empire, the kingdom, then the duchy) receives them.
+country_event = {
+	id = fall_of_tang.4
+	title = fall_of_tang.4.t
+	desc = fall_of_tang.4.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		is_free_or_tributary_trigger = yes
+		is_year = 936
+		OR = {
+			exists = LIO
+			exists = KIN
+			exists = KTN
+		}
+		OR = {
+			owns = 696
+			owns = 697
+			owns = 702
+			owns = 1816
+			owns = 2136
+			owns = 4194
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { exists = LIO }
+				696 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
+				697 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
+				702 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
+				1816 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
+				2136 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
+				4194 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
+			}
+			else_if = {
+				limit = { exists = KIN }
+				696 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
+				697 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
+				702 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
+				1816 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
+				2136 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
+				4194 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
+			}
+			else = {
+				696 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
+				697 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
+				702 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
+				1816 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
+				2136 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
+				4194 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
+			}
+		}
+	}
+
+	option = {
+		name = fall_of_tang.4.a
+	}
+}
+
+country_event = {
+	id = fall_of_tang.5
+	title = fall_of_tang.5.t
+	desc = fall_of_tang.5.d
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = fall_of_tang.5.a
+		set_country_flag = had_fall_of_tang
+	}
+}

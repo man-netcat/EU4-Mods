@@ -360,6 +360,14 @@ jingxue_scholar_modifier = {
 	adm_tech_cost_modifier = -0.05
 }
 
+dhyana_scholar_modifier = {
+	religion_sub_modifier = yes
+	religion = yes
+	is_scholar_modifier = yes
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	discipline = 0.025
+}
+
 daoxue_scholar_modifier = {
 	religion_sub_modifier = yes
 	religion = yes

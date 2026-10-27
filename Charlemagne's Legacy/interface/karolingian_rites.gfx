@@ -226,6 +226,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_icon_rite_dhyana"
+		texturefile = "gfx/interface/icon_rite_dhyana.tga"
+	}
+
+	spriteType = {
 		name = "GFX_icon_rite_daoxue"
 		texturefile = "gfx/interface/icon_rite_daoxue.tga"
 	}

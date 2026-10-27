@@ -102,7 +102,7 @@ CK3_TO_EU4 = {
     "uriankhai": "mongol", "tatar": "siberian",
     "uyghur": "uyghur", "tangut": "tibetan",
     "tibetan_group": "tibetan",
-    "vietnamese": "vietnamese", "khmer": "khmer", "lao": "lao",
+    "viet": "vietnamese", "vietnamese": "vietnamese", "khmer": "khmer", "lao": "lao",
     "thai": "central_thai", "burmese": "burmese", "mon": "mon",
     "shan": "shan", "kachin": "kachin", "chin": "chin", "karen": "karen",
     "arakanese": "arakanese", "pyu": "burmese",

@@ -504,3 +504,17 @@ from the Ob to Uliastai are right. `common/disasters/FallOfKirghiz.txt` starts f
 NIN (Naimania, Naiman culture; a starter of the Mongol Empire, which Naiman may form), OVO
 (Övörkhangai, Kerait), ARI (Arkhangai, Mongol), TUV (Tuva) and SIB (Sibir, vanilla tag)
 and cedes the Dzungarian counties to DZG; the Kirghiz keep Khakassia and the Ob country.
+
+## The fall of Tang and Dai Viet
+
+TNG (`h_china`) holds Vietnam, the Gansu corridor and the Yan passes at 867; CK3's 1066 holders
+(`state867` run at 1066.9.15) say what leaves. `common/disasters/FallOfTang.txt` starts for TNG from
+874 (faster with instability, war or after 900) and `events/FallOfTang.txt` does three things:
+releases the dormant DAI (Dai Viet, vanilla tag, `k_viet`, 7 provinces) in 907 with an independence
+war; cedes Hexi's three counties (698, 701, 4223) to HEX in 907; cedes the Sixteen Prefectures and the
+Khitan administration counties (696, 697, 702, 1816, 2136, 4194) in 936 to the first of LIO, KIN, KTN
+that exists. DAI is Vietnamese/Mahayana through `ruler_title c_hai_dong` (Khuc Thua Du holds it at 867;
+`k_viet` itself is a Han governor); the validator accepts a tag whose culture/faith follows either its
+`ck3_title` or its `ruler_title` holder. New Dhyana rite (Mahayana school) in rites.py. CK3 has no
+Ten Kingdoms and no Song tag (the Tang line ends 907, Song starts 960); a Song rename is not built.
+Unplayed in-game: check error.log after the first run.

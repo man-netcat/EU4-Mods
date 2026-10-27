@@ -442,22 +442,28 @@ def run() -> int:
     for t in _tagrows:
         if not t.ck3_title:
             continue
-        _h, cculture = holder_culture(t.ck3_title)
-        ecu = CK3_TO_EU4.get(cculture) if cculture else None
-        if not cculture:
+        # a tag follows the holder of its title, or of its ruler_title when it has one
+        lanes = [t.ck3_title] + ([t.ruler_title] if t.ruler_title else [])
+        ecus, erels = [], []
+        for ttl in lanes:
+            _h, cculture = holder_culture(ttl)
+            _h2, faith = holder_faith(ttl)
+            ecus.append(CK3_TO_EU4.get(cculture) if cculture else None)
+            erels.append(FAITH_TO_RELIGION.get(faith) if faith else None)
+            if ttl == t.ck3_title:
+                c0, f0 = cculture, faith
+        if not c0:
             unscripted.append(f"{t.tag} (no ruler culture)")
-        elif not ecu:
-            unscripted.append(f"{t.tag} (ruler culture {cculture} unmapped)")
-        elif ecu != t.culture:
-            cult_drift.append(f"{t.tag}: db {t.culture}, ruler {ecu}")
-        _h2, faith = holder_faith(t.ck3_title)
-        erel = FAITH_TO_RELIGION.get(faith) if faith else None
-        if not faith:
+        elif not ecus[0]:
+            unscripted.append(f"{t.tag} (ruler culture {c0} unmapped)")
+        elif t.culture not in ecus:
+            cult_drift.append(f"{t.tag}: db {t.culture}, ruler {ecus[0]}")
+        if not f0:
             unscripted.append(f"{t.tag} (no ruler faith)")
-        elif not erel:
-            unscripted.append(f"{t.tag} (faith {faith} unmapped)")
-        elif erel != t.religion:
-            rel_drift.append(f"{t.tag}: db {t.religion}, ruler {erel}")
+        elif not erels[0]:
+            unscripted.append(f"{t.tag} (faith {f0} unmapped)")
+        elif t.religion not in erels:
+            rel_drift.append(f"{t.tag}: db {t.religion}, ruler {erels[0]}")
     note(
         not cult_drift,
         f"tag cultures track the ruler ({len(cult_drift)} drifting)",
@@ -781,7 +787,7 @@ def run() -> int:
         "ADU ALG ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN DAU EGY ENG EST FIN FRA GAL "
         "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MAI MLK MOR MZB NAP NAV NOR NOV PAP PLT POL POM PRU PRO ROM RUG SAR "
         "SIL SCA SCO SER SIC SLZ SMI SOR SRV STE SWE SWA THU TNG TRA TRP TUN VEN VOL WLS WOL NAJ HDR MHR OMA JAP "
-        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM MTR SUN KUT BNJ TDO DGL KED BEU PAH BLI BEI MRI TER TID SUL MGD LNO PGS BTU LUW BRS KAN WGD KBU JOL KNG NUP MBA MLI PTE SMB MNS ULS MTH DMS ORD LEI KRY MDI DAM HOB KAZ PRM GUG PHA CDL PGR LIG VIE LUA BPR TAB YEM TFL MON HRZ KBO AIR ASH SON BON GUR ADA WLY SOA PAT TIB UTS KAM BHU LDK JIN SLL KOR BRT MGE SIB".split()    )
+        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM MTR SUN KUT BNJ TDO DGL KED BEU PAH BLI BEI MRI TER TID SUL MGD LNO PGS BTU LUW BRS KAN WGD KBU JOL KNG NUP MBA MLI PTE SMB MNS ULS MTH DMS ORD LEI KRY MDI DAM HOB KAZ PRM GUG PHA CDL PGR LIG VIE LUA BPR TAB YEM TFL MON HRZ KBO AIR ASH SON BON GUR ADA WLY SOA PAT TIB UTS KAM BHU LDK JIN SLL KOR BRT MGE SIB DAI".split()    )
 
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")

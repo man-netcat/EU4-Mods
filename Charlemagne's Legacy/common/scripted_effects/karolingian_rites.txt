@@ -181,6 +181,10 @@ clear_rite_scholar_modifiers_effect = {
 		remove_country_modifier = jingxue_scholar_modifier
 	}
 	if = {
+		limit = { has_country_modifier = dhyana_scholar_modifier }
+		remove_country_modifier = dhyana_scholar_modifier
+	}
+	if = {
 		limit = { has_country_modifier = daoxue_scholar_modifier }
 		remove_country_modifier = daoxue_scholar_modifier
 	}

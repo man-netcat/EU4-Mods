@@ -38,6 +38,7 @@ country_decisions = {
 				tag = CRN
 				tag = CRO
 				tag = CRT
+				tag = DAI
 				tag = DAL
 				tag = DAM
 				tag = DAU
@@ -374,6 +375,12 @@ country_decisions = {
 			limit = { tag = CRT }
 			change_country_color = {
 				color = { 138 110 130 }
+			}
+		}
+		if = {
+			limit = { tag = DAI }
+			change_country_color = {
+				color = { 136 117 90 }
 			}
 		}
 		if = {
