@@ -7,7 +7,7 @@ primary_culture = wallonian
 capital = 93	# Liège
 
 monarch = {
-	name = "Adolf III"
+	name = "Adolph III"
 	dynasty = "der Mark"
 	birth_date = 1288.8.1
 	adm = 3

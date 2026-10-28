@@ -20,7 +20,6 @@ heir = {
 	female = yes
 	dynasty = "Wittelsbach"
 	birth_date = 1329.9.26
-	death_date = 1389.9.26
 	claim = 95
 	adm = 3
 	dip = 3

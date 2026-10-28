@@ -7,7 +7,7 @@ religion = catholic
 capital = 1763	# Oberlausitz
 
 monarch = {
-	name = "Louis"
+	name = "Ludwig"
 	dynasty = "Wittelsbach"
 	birth_date = 1315.5.1
 	adm = 2

@@ -12,7 +12,7 @@ capital = 12 #Sjaelland
 government_rank = 2
 
 monarch = {
-	name = "Waldemar"
+	name = "Valdemar"
 	dynasty = "Estrid"
 	birth_date = 1320.1.1
 	adm = 5

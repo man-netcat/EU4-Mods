@@ -20,7 +20,6 @@ heir = {
 	name = "Jani Beg"
 	dynasty = "Borjigin"
 	birth_date = 1297.1.1
-	death_date = 1357.1.1
 	claim = 95
 	adm = 3
 	dip = 3

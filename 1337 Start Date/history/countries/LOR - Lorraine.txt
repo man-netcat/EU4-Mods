@@ -7,7 +7,7 @@ technology_group = western
 capital = 189	# Nancy
 
 monarch = {
-	name = "Ralph I"
+	name = "Raoul I"
 	dynasty = "Alsace"
 	birth_date = 1320.1.1
 	adm = 3

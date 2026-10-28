@@ -20,10 +20,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Turan Shah"
+	name = "Turan Sah"
 	dynasty = "Deramku"
 	birth_date = 1305.1.1
-	death_date = 1365.1.1
 	claim = 95
 	adm = 3
 	dip = 3

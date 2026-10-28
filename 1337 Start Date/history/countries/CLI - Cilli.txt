@@ -7,7 +7,7 @@ primary_culture = slovene
 capital = 4751 # Cilli
 
 monarch = {
-	name = "Frederick I"
+	name = "Friderik I"
 	dynasty = "Celjski"
 	birth_date = 1300.1.1
 	adm = 4
@@ -15,10 +15,9 @@ monarch = {
 	mil = 4
 }
 heir = {
-	name = "Ulrick"
+	name = "Ulrik"
 	dynasty = "Celjski"
 	birth_date = 1331.1.1
-	death_date = 1391.1.1
 	claim = 95
 	adm = 1
 	dip = 1

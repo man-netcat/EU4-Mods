@@ -9,7 +9,8 @@ capital = 274	# Pskov
 fixed_capital = 274 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Alexander I"
+	name = "Oleksandru I"
+	dynasty = "Rurikovich"
 	birth_date = 1301.10.7
 	adm = 3
 	dip = 3

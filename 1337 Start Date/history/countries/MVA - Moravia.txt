@@ -7,17 +7,18 @@ capital = 4237 # Olomouc
 technology_group = western
 
 monarch = {
-	name = "Charles I"
+	name = "Karel I"
+	dynasty = "Lucembursko"
 	birth_date = 1316.5.22
 	adm = 5
 	dip = 5
 	mil = 5
 }
 heir = {
-	name = "Margaret"
+	name = "Markéta"
 	female = yes
+	dynasty = "Lucembursko"
 	birth_date = 1335.5.24
-	death_date = 1395.5.24
 	claim = 95
 	adm = 3
 	dip = 3

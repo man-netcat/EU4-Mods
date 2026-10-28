@@ -15,7 +15,7 @@ national_focus = DIP
 government_rank = 2
 
 monarch = {
-	name = "Philip VI"
+	name = "Philippe VI"
 	dynasty = "Valois"
 	birth_date = 1293.11.17
 	adm = 3
@@ -23,10 +23,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Johan"
+	name = "Jehan"
 	dynasty = "Valois"
 	birth_date = 1319.4.26
-	death_date = 1379.4.26
 	claim = 95
 	adm = 3
 	dip = 3

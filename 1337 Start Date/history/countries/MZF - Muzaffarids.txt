@@ -15,10 +15,9 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "Shah Shoja"
+	name = "Sah Soja'"
 	dynasty = "Muzaffarid"
 	birth_date = 1333.3.10
-	death_date = 1393.3.10
 	claim = 95
 	adm = 3
 	dip = 3

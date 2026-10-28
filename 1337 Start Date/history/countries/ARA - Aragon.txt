@@ -11,7 +11,7 @@ add_army_professionalism = 0.05
 government_rank = 2
 
 monarch = {
-	name = "Peter IV"
+	name = "Pere IV"
 	dynasty = "Aragon"
 	birth_date = 1319.9.5
 	adm = 4

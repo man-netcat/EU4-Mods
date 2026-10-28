@@ -8,7 +8,7 @@ capital = 58	# Dessau
 fixed_capital = 58 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Albert II"
+	name = "Albrecht II"
 	dynasty = "Askanier"
 	birth_date = 1310.1.1
 	adm = 3

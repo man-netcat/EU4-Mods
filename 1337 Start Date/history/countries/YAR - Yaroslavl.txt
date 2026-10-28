@@ -10,7 +10,8 @@ fixed_capital = 308 # Cannot move capital away from this province & no power cos
 #Princes (Lvov, a rurikid dynasty)
 
 monarch = {
-	name = "Basil I"
+	name = "Vasiliy I"
+	dynasty = "Rurikovich"
 	birth_date = 1311.1.1
 	adm = 3
 	dip = 3

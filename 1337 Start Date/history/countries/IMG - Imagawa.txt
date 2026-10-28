@@ -18,7 +18,6 @@ heir = {
 	name = "Noriuji"
 	dynasty = "Imagawa"
 	birth_date = 1316.1.1
-	death_date = 1376.1.1
 	claim = 95
 	adm = 3
 	dip = 3

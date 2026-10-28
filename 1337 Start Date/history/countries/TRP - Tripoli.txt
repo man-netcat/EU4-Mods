@@ -11,7 +11,7 @@ religious_school = maliki_school
 #Based in Djerba
 
 monarch = {
-	name = "Muhammad I"
+	name = "Muhemmed I"
 	dynasty = "Thabit"
 	birth_date = 1293.1.1
 	adm = 3
@@ -22,7 +22,6 @@ heir = {
 	name = "Thabit"
 	dynasty = "Thabit"
 	birth_date = 1322.1.1
-	death_date = 1382.1.1
 	claim = 95
 	adm = 3
 	dip = 3

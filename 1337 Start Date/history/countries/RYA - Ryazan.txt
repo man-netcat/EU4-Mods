@@ -8,7 +8,8 @@ capital = 301	# Ryazan
 fixed_capital = 301 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Johan II"
+	name = "Ivan II"
+	dynasty = "Rurikovich"
 	birth_date = 1300.1.1
 	adm = 3
 	dip = 3
@@ -16,8 +17,8 @@ monarch = {
 }
 heir = {
 	name = "Oleg"
+	dynasty = "Rurikovich"
 	birth_date = 1327.1.1
-	death_date = 1387.1.1
 	claim = 95
 	adm = 3
 	dip = 3

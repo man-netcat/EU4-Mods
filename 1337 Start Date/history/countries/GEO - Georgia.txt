@@ -11,7 +11,7 @@ add_historical_friend = TRE
 government_rank = 2
 
 monarch = {
-	name = "George V"
+	name = "Giorgi V"
 	dynasty = "Bagrationi"
 	birth_date = 1286.1.1
 	adm = 5
@@ -19,10 +19,9 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "David"
+	name = "Davit"
 	dynasty = "Bagrationi"
 	birth_date = 1310.1.1
-	death_date = 1370.1.1
 	claim = 95
 	adm = 3
 	dip = 3

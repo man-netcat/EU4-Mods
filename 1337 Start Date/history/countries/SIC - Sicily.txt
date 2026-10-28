@@ -11,7 +11,7 @@ capital = 125	# Palermo
 government_rank = 2
 
 monarch = {
-	name = "Frederick III"
+	name = "Frederic III"
 	dynasty = "Aragon"
 	birth_date = 1272.12.13
 	adm = 3
@@ -19,10 +19,9 @@ monarch = {
 	mil = 4
 }
 heir = {
-	name = "Peter"
+	name = "Pere"
 	dynasty = "Aragon"
 	birth_date = 1305.7.24
-	death_date = 1365.7.24
 	claim = 95
 	adm = 3
 	dip = 3

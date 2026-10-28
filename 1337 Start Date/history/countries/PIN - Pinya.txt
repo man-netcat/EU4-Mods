@@ -18,7 +18,6 @@ heir = {
 	name = "Sithu Min Oo"
 	dynasty = "Myinsaing"
 	birth_date = 1317.1.1
-	death_date = 1377.1.1
 	claim = 95
 	adm = 1
 	dip = 3

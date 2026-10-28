@@ -7,7 +7,7 @@ religion = catholic
 capital = 1743
 
 monarch = {
-	name = "William II"
+	name = "Guillaume II"
 	birth_date = 1294.1.1
 	adm = 2
 	dip = 4

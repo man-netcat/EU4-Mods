@@ -9,7 +9,7 @@ fixed_capital = 118  # Cannot move capital away from this province & no power co
 add_army_professionalism = 0.05
 
 monarch = {
-	name = "James XII"
+	name = "Benedict XII"
 	birth_date = 1285.1.1
 	adm = 3
 	dip = 3

@@ -20,7 +20,6 @@ heir = {
 	name = "Edward"
 	dynasty = "Plantagenet"
 	birth_date = 1330.6.15
-	death_date = 1390.6.15
 	claim = 95
 	adm = 3
 	dip = 4

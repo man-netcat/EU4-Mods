@@ -7,7 +7,7 @@ capital = 175	# Bayonne
 fixed_capital = 175 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Johan I"
+	name = "Joan I"
 	dynasty = "Armagnac"
 	birth_date = 1306.1.1
 	adm = 2
@@ -15,10 +15,9 @@ monarch = {
 	mil = 4
 }
 heir = {
-	name = "Johan"
+	name = "Joan"
 	dynasty = "Armagnac"
 	birth_date = 1333.1.1
-	death_date = 1393.1.1
 	claim = 95
 	adm = 0
 	dip = 0

@@ -18,7 +18,6 @@ heir = {
 	name = "Tokiuji"
 	dynasty = "Yamana"
 	birth_date = 1303.1.1
-	death_date = 1363.1.1
 	claim = 95
 	adm = 3
 	dip = 3

@@ -10,7 +10,7 @@ religion = catholic
 capital = 64	# Landshut
 
 monarch = {
-	name = "Henrik XIV"
+	name = "Heinrich XIV"
 	dynasty = "Wittelsbach"
 	birth_date = 1305.9.29
 	adm = 3
@@ -18,10 +18,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Johan"
+	name = "Johann"
 	dynasty = "Wittelsbach"
 	birth_date = 1329.11.29
-	death_date = 1389.11.29
 	claim = 95
 	adm = 3
 	dip = 3

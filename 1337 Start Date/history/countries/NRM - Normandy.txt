@@ -7,7 +7,7 @@ religion = catholic
 capital = 4385	# Caen
 
 monarch = {
-	name = "Johan II"
+	name = "Jehan II"
 	dynasty = "Valois"
 	birth_date = 1319.4.26
 	adm = 3

@@ -10,15 +10,16 @@ religious_school = hanafi_school
 
 monarch = {
 	name = "Yakub"
+	dynasty = "Germiyanids"
 	birth_date = 1258.1.1
 	adm = 3
 	dip = 3
 	mil = 3
 }
 heir = {
-	name = "Muhammad"
+	name = "Mehmed"
+	dynasty = "Germiyanids"
 	birth_date = 1301.1.1
-	death_date = 1361.1.1
 	claim = 95
 	adm = 3
 	dip = 3

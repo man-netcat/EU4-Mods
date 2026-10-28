@@ -18,7 +18,6 @@ heir = {
 	name = "Norimasa"
 	dynasty = "Uesugi"
 	birth_date = 1330.1.1
-	death_date = 1390.1.1
 	claim = 95
 	adm = 3
 	dip = 3

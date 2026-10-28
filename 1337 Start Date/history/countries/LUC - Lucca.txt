@@ -9,7 +9,7 @@ capital = 2980 # Lucca
 add_army_professionalism = 0.05
 
 monarch = {
-	name = "Mastin"
+	name = "Mastino"
 	dynasty = "della Scala"
 	birth_date = 1308.1.1
 	adm = 3
@@ -17,10 +17,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Albert"
+	name = "Alberto"
 	dynasty = "della Scala"
 	birth_date = 1306.1.1
-	death_date = 1366.1.1
 	claim = 95
 	adm = 3
 	dip = 3

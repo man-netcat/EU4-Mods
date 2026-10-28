@@ -16,10 +16,9 @@ monarch = {
 	mil = 4
 }
 heir = {
-	name = "Arnold William"
+	name = "Arnald Guilhèm"
 	dynasty = "Foix"
 	birth_date = 1330.1.1
-	death_date = 1390.1.1
 	claim = 95
 	adm = 1
 	dip = 1

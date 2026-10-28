@@ -11,7 +11,8 @@ fixed_capital = 80 # Cannot move capital away from this province & no power cost
 government_rank = 1
 
 monarch = {
-	name = "Baldwin I"
+	name = "Baudouin I"
+	dynasty = "Luxembourg"
 	birth_date = 1285.1.1
 	adm = 4
 	dip = 5

@@ -7,7 +7,8 @@ religion = catholic
 capital = 4379	# Offaly
 
 monarch = {
-	name = "Murtagh"
+	name = "Muirchertach"
+	dynasty = "Failge"
 	birth_date = 1315.1.1
 	adm = 3
 	dip = 3

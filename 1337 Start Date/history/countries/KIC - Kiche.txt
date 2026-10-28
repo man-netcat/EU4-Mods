@@ -6,7 +6,7 @@ technology_group = mesoamerican
 capital = 4587
 
 monarch = {
-	name = "K'okaib'"
+	name = "Kokaib"
 	dynasty = "Ah K'iche'"
 	birth_date = 1298.1.1
 	adm = 3

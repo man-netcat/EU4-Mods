@@ -10,6 +10,7 @@ capital = 407
 
 monarch = {
 	name = "Hajji Taghay"
+	dynasty = "Sutayid Dynasty"
 	birth_date = 1288.1.1
 	adm = 3
 	dip = 3
@@ -17,8 +18,8 @@ monarch = {
 }
 heir = {
 	name = "Ibrahim Sah"
+	dynasty = "Sutayid Dynasty"
 	birth_date = 1319.1.1
-	death_date = 1379.1.1
 	claim = 95
 	adm = 3
 	dip = 3

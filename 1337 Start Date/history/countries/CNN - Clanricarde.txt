@@ -10,7 +10,7 @@ capital = 376	# Galway
 #House Burke / De Burgh
 
 monarch = {
-	name = "William"
+	name = "Ulick"
 	dynasty = "Burgh"
 	birth_date = 1305.1.1
 	adm = 3
@@ -21,7 +21,6 @@ heir = {
 	name = "Richard"
 	dynasty = "Burgh"
 	birth_date = 1330.1.1
-	death_date = 1390.1.1
 	claim = 95
 	adm = 3
 	dip = 3

@@ -15,11 +15,10 @@ monarch = {
 	mil = 2
 }
 heir = {
-	name = "Joanna"
+	name = "Giovanne"
 	female = yes
 	dynasty = "Anjou"
 	birth_date = 1328.1.1
-	death_date = 1388.1.1
 	claim = 95
 	adm = 3
 	dip = 3

@@ -9,7 +9,7 @@ religion = sunni
 capital = 408
 
 monarch = {
-	name = "Moses"
+	name = "Musa"
 	dynasty = "Borjigin"
 	birth_date = 1300.1.1
 	adm = 3

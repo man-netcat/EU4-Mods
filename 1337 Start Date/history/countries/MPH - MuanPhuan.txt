@@ -20,7 +20,6 @@ heir = {
 	name = "Phi Fa"
 	dynasty = "Kun Lo"
 	birth_date = 1295.1.1
-	death_date = 1355.1.1
 	claim = 95
 	adm = 3
 	dip = 3

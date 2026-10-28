@@ -16,7 +16,7 @@ religious_school = maliki_school
 government_rank = 2
 
 monarch = {
-	name = "Abu al-Hasan Ali I"
+	name = "Abu Al Hasan Ali I"
 	dynasty = "Marinid"
 	birth_date = 1297.1.1
 	adm = 2
@@ -24,10 +24,9 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "Abd al-Wahid"
+	name = "Abd Al-Wahid"
 	dynasty = "Marinid"
 	birth_date = 1315.1.1
-	death_date = 1375.1.1
 	claim = 95
 	adm = 3
 	dip = 3

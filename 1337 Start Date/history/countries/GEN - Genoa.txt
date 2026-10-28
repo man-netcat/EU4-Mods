@@ -21,7 +21,6 @@ heir = {
 	name = "Napoleon"
 	dynasty = "Spinola"
 	birth_date = 1313.1.1
-	death_date = 1373.1.1
 	claim = 95
 	adm = 3
 	dip = 3

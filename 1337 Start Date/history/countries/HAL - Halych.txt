@@ -7,7 +7,7 @@ religion = orthodox
 capital = 261
 
 monarch = {
-	name = "Boleslav II"
+	name = "George II"
 	dynasty = "Piast"
 	birth_date = 1305.1.1
 	adm = 3

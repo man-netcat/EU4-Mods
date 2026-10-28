@@ -7,7 +7,7 @@ religion = catholic
 capital = 4774
 
 monarch = {
-	name = "Henrik VI"
+	name = "Heinrich VI"
 	dynasty = "$Hohenberg$"
 	birth_date = 1277.1.1
 	adm = 2

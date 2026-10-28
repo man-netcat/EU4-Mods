@@ -18,7 +18,6 @@ heir = {
 	name = "Otto"
 	dynasty = "Welf"
 	birth_date = 1320.1.1
-	death_date = 1380.1.1
 	claim = 95
 	adm = 2
 	dip = 3

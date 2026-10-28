@@ -10,16 +10,17 @@ fixed_capital = 71 # Cannot move capital away from this province & no power cost
 # Margraves
 
 monarch = {
-	name = "Johan II"
+	name = "Johann II"
+	dynasty = "Hohenzollern Dynasty"
 	birth_date = 1309.1.1
 	adm = 5
 	dip = 5
 	mil = 2
 }
 heir = {
-	name = "Frederick"
+	name = "Friedrich"
+	dynasty = "Hohenzollern Dynasty"
 	birth_date = 1333.3.3
-	death_date = 1393.3.3
 	claim = 95
 	adm = 0
 	dip = 0

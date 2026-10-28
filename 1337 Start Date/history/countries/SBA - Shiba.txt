@@ -18,7 +18,6 @@ heir = {
 	name = "Ienaga"
 	dynasty = "Shiba"
 	birth_date = 1321.1.1
-	death_date = 1381.1.1
 	claim = 95
 	adm = 3
 	dip = 3

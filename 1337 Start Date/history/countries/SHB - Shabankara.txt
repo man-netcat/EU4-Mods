@@ -7,7 +7,7 @@ religion = sunni
 capital = 4329
 
 monarch = {
-	name = "Artaxerxes"
+	name = "Ardasir"
 	dynasty = "Fadlawayhid"
 	birth_date = 1285.1.1
 	adm = 3

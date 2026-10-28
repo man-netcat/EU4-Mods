@@ -8,7 +8,8 @@ capital = 293	# Smolensk
 fixed_capital = 293 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Johan I"
+	name = "Ivan I"
+	dynasty = "Rurikovich"
 	birth_date = 1283.1.1
 	adm = 3
 	dip = 3

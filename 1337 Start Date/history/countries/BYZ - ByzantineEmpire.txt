@@ -10,7 +10,7 @@ capital = 151 # Constantinople
 fixed_capital = 151 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Andronikos III"
+	name = "Andrónikos III"
 	dynasty = "Palaiologos"
 	birth_date = 1297.3.25
 	adm = 2
@@ -18,10 +18,9 @@ monarch = {
 	mil = 2
 }
 heir = {
-	name = "Johan"
+	name = "Ioánnis"
 	dynasty = "Palaiologos"
 	birth_date = 1332.6.18
-	death_date = 1392.6.18
 	claim = 95
 	adm = 0
 	dip = 0

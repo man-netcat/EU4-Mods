@@ -11,7 +11,7 @@ capital = 1228	# Daw
 government_rank = 2
 
 monarch = {
-	name = "al-Amir Abi"
+	name = "Al Amir Abi"
 	dynasty = "Abdallah Kanz el-Dawla"
 	birth_date = 1310.1.1
 	adm = 2

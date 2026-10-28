@@ -9,7 +9,7 @@ capital = 116 # Firenze
 add_army_professionalism = 0.05
 
 monarch = {
-	name = "James"
+	name = "Giacomo"
 	dynasty = "Gabrielli"
 	birth_date = 1295.1.1
 	adm = 4
@@ -20,7 +20,6 @@ heir = {
 	name = "Cante"
 	dynasty = "Gabrielli"
 	birth_date = 1325.1.1
-	death_date = 1385.1.1
 	claim = 95
 	adm = 3
 	dip = 3

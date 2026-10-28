@@ -18,7 +18,6 @@ heir = {
 	name = "Akiie"
 	dynasty = "Kitabatake"
 	birth_date = 1318.4.3
-	death_date = 1378.4.3
 	claim = 95
 	adm = 3
 	dip = 3

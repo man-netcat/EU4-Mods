@@ -7,16 +7,17 @@ religion = catholic
 capital = 4380	# Donegal
 
 monarch = {
-	name = "Connor"
+	name = "Conchobar"
+	dynasty = "Domhnall"
 	birth_date = 1303.1.1
 	adm = 3
 	dip = 3
 	mil = 3
 }
 heir = {
-	name = "Angus"
+	name = "Aonghus"
+	dynasty = "Domhnall"
 	birth_date = 1328.1.1
-	death_date = 1388.1.1
 	claim = 95
 	adm = 3
 	dip = 3

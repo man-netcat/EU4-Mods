@@ -22,7 +22,6 @@ heir = {
 	name = "Tariacuri"
 	dynasty = "Uanacaze"
 	birth_date = 1336.8.1
-	death_date = 1396.8.1
 	claim = 95
 	adm = 2
 	dip = 5

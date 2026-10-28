@@ -10,6 +10,7 @@ capital = 410
 
 monarch = {
 	name = "Hasan"
+	dynasty = "Jalayirid Dynasty"
 	birth_date = 1281.1.1
 	adm = 3
 	dip = 3

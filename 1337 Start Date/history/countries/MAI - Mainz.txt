@@ -10,7 +10,7 @@ fixed_capital = 78 # Cannot move capital away from this province & no power cost
 government_rank = 1
 
 monarch = {
-	name = "Henrik"
+	name = "Heinrich"
 	birth_date = 1295.1.1
 	adm = 3
 	dip = 3

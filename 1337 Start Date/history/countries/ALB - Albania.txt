@@ -10,7 +10,7 @@ capital = 4174 # Lezhe
 # The League of Lezhe
 
 monarch = {
-	name = "Charles"
+	name = "Carle"
 	dynasty = "Anjou"
 	birth_date = 1323.1.1
 	adm = 2

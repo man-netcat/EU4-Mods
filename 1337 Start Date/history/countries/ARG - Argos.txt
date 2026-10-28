@@ -6,7 +6,7 @@ primary_culture = cosmopolitan_french
 religion = catholic
 
 monarch = {
-	name = "Walter"
+	name = "Gaucher"
 	dynasty = "Brienne"
 	birth_date = 1312.1.1
 	adm = 3

@@ -8,7 +8,7 @@ capital = 192	# Dijon
 add_army_professionalism = 0.1
 
 monarch = {
-	name = "Otto IV"
+	name = "Othon IV"
 	dynasty = "Burgundy"
 	birth_date = 1295.1.1
 	adm = 2
@@ -16,10 +16,9 @@ monarch = {
 	mil = 2
 }
 heir = {
-	name = "Philip"
+	name = "Philippe"
 	dynasty = "Burgundy"
 	birth_date = 1323.11.10
-	death_date = 1383.11.10
 	claim = 95
 	adm = 3
 	dip = 3

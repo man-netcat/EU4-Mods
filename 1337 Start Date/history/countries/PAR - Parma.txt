@@ -8,7 +8,7 @@ capital = 105	# Parma
 fixed_capital = 105 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Albert"
+	name = "Alberto"
 	dynasty = "della Scala"
 	birth_date = 1306.1.1
 	adm = 3

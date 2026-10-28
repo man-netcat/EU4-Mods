@@ -9,6 +9,7 @@ fixed_capital = 289 # Cannot move capital away from this province & no power cos
 
 monarch = {
 	name = "Gleb I"
+	dynasty = "Rurikovich"
 	birth_date = 1300.1.1
 	adm = 3
 	dip = 5

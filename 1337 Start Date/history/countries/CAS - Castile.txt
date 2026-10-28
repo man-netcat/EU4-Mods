@@ -17,7 +17,7 @@ add_army_professionalism = 0.1
 government_rank = 2
 
 monarch = {
-	name = "Alphonse XI"
+	name = "Alfonso XI"
 	dynasty = "Castile"
 	birth_date = 1311.8.13
 	adm = 4
@@ -25,10 +25,9 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "Peter"
+	name = "Pedro"
 	dynasty = "Castile"
 	birth_date = 1334.8.30
-	death_date = 1394.8.30
 	claim = 95
 	adm = 0
 	dip = 0

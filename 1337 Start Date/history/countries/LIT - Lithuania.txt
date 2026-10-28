@@ -20,7 +20,6 @@ heir = {
 	name = "Algirdas"
 	dynasty = "Gediminid"
 	birth_date = 1296.1.1
-	death_date = 1356.1.1
 	claim = 95
 	adm = 3
 	dip = 3

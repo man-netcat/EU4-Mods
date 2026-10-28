@@ -21,7 +21,6 @@ heir = {
 	name = "Nippean Bat"
 	dynasty = "Trâsâk Ph'aem"
 	birth_date = 1298.1.1
-	death_date = 1358.1.1
 	claim = 95
 	adm = 1
 	dip = 2

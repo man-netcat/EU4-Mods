@@ -26,7 +26,6 @@ heir = {
 	female = yes
 	dynasty = "Baranzi"
 	birth_date = 1302.1.1
-	death_date = 1362.1.1
 	claim = 95
 	adm = 3
 	dip = 3

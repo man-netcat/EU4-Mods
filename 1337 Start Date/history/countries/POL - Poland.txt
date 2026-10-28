@@ -12,7 +12,7 @@ add_truce_with = HUN
 government_rank = 2
 
 monarch = {
-	name = "Casimir III"
+	name = "Kazimierz III"
 	dynasty = "Piast"
 	birth_date = 1310.4.30
 	adm = 5
@@ -20,11 +20,10 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "Elizabeth"
+	name = "Elzbieta"
 	female = yes
 	dynasty = "Piast"
 	birth_date = 1326.1.1
-	death_date = 1386.1.1
 	claim = 95
 	adm = 3
 	dip = 3

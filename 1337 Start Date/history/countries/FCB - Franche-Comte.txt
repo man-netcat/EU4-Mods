@@ -8,7 +8,7 @@ religion = catholic
 capital = 193
 
 monarch = {
-	name = "Joanna III"
+	name = "Jeanne III"
 	female = yes
 	dynasty = "Capet"
 	birth_date = 1308.5.1
@@ -18,7 +18,7 @@ monarch = {
 }
 queen = {
 	country = BUR
-	name = "Otto"
+	name = "Othon"
 	dynasty = "Burgundy"
 	birth_date = 1295.1.1
 	adm = 2

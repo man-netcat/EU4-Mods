@@ -7,16 +7,17 @@ religion = orthodox
 capital = 1753
 
 monarch = {
-	name = "Johan I"
+	name = "Ivan I"
+	dynasty = "Rurikovich"
 	birth_date = 1288.11.21
 	adm = 4
 	dip = 6
 	mil = 4
 }
 heir = {
-	name = "Simeon"
+	name = "Semyon"
+	dynasty = "Rurikovich"
 	birth_date = 1317.9.7
-	death_date = 1377.9.7
 	claim = 95
 	adm = 3
 	dip = 3

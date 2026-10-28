@@ -7,7 +7,7 @@ technology_group = western
 capital = 187	# Verdun
 
 monarch = {
-	name = "Henrik IV"
+	name = "Henri IV"
 	dynasty = "$Bar$"
 	birth_date = 1315.1.1
 	adm = 3

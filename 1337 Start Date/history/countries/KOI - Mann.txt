@@ -19,7 +19,6 @@ heir = {
 	name = "William"
 	dynasty = "Montagu"
 	birth_date = 1328.1.1
-	death_date = 1388.1.1
 	claim = 95
 	adm = 3
 	dip = 3

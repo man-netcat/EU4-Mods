@@ -10,7 +10,7 @@ capital = 842	# Petén
 government_rank = 1
 
 monarch = {
-	name = "Kan Ek'"
+	name = "Kan Ek"
 	dynasty = "Ah Itzá"
 	birth_date = 1300.1.1
 	adm = 3

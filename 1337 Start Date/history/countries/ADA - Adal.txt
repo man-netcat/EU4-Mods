@@ -10,7 +10,7 @@ religious_school = shafii_school
 add_historical_rival = ETH
 
 monarch = {
-	name = "Ma'at Layla"
+	name = "Maat Layla"
 	dynasty = "Siyara"
 	birth_date = 1300.1.1
 	adm = 4

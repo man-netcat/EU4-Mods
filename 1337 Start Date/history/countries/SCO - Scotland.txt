@@ -21,7 +21,7 @@ monarch = {
 }
 queen = {
 	country = FRA
-	name = "Joanna"
+	name = "Joan"
 	dynasty = "Plantagenet"
 	birth_date = 1321.7.5
 	female = yes

@@ -7,7 +7,7 @@ technology_group = western
 capital = 1775	# Kiel
 
 monarch = {
-	name = "Gerard III"
+	name = "Gerhard III"
 	dynasty = "Schauenburg"
 	birth_date = 1292.1.1
 	adm = 3
@@ -18,7 +18,6 @@ heir = {
 	name = "Henrik"
 	dynasty = "Schauenburg"
 	birth_date = 1317.1.1
-	death_date = 1377.1.1
 	claim = 95
 	adm = 3
 	dip = 3

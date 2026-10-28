@@ -10,7 +10,7 @@ capital = 134 # Wien
 national_focus = ADM
 
 monarch = {
-	name = "Albert II"
+	name = "Albrecht II"
 	dynasty = "Habsburg"
 	birth_date = 1298.12.12
 	adm = 5

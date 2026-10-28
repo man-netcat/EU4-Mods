@@ -7,7 +7,8 @@ religion = coptic
 capital = 327
 
 monarch = {
-	name = "Leon IV"
+	name = "Levon IV"
+	dynasty = "Hetumid Dynasty"
 	birth_date = 1309.1.1
 	adm = 3
 	dip = 3

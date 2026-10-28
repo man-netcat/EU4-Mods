@@ -9,7 +9,7 @@ religion = catholic
 capital = 4748	# Berlin
 
 monarch = {
-	name = "Louis I"
+	name = "Ludwig I"
 	dynasty = "Wittelsbach"
 	birth_date = 1315.5.1
 	adm = 2

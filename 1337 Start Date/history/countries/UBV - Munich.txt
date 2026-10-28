@@ -12,7 +12,7 @@ religion = catholic
 capital = 65	# München!
 
 monarch = {
-	name = "Louis IV"
+	name = "Ludwig IV"
 	dynasty = "Wittelsbach"
 	birth_date = 1282.4.1
 	adm = 4
@@ -20,10 +20,9 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "Louis"
+	name = "Ludwig"
 	dynasty = "Wittelsbach"
 	birth_date = 1315.5.1
-	death_date = 1375.5.1
 	claim = 95
 	adm = 2
 	dip = 3

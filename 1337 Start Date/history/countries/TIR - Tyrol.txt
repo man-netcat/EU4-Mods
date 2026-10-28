@@ -7,7 +7,7 @@ primary_culture = austrian
 capital = 4758	# Innsbruck
 
 monarch = {
-	name = "Margaret I"
+	name = "Margarete I"
 	female = yes
 	dynasty = "Görz"
 	birth_date = 1318.1.1
@@ -17,7 +17,8 @@ monarch = {
 }
 queen = {
 	country = TIR
-	name = "Johan Henrik"
+	name = "Jan Jindrich"
+	dynasty = "Lucembursko"
 	birth_date = 1322.2.12
 	adm = 3
 	dip = 3

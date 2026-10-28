@@ -356,7 +356,7 @@ def ruler_text(tag, b, gov, table, stats):
     """monarch / heir / queen blocks for an EU5 country block `b` (empty when EU5 leaves the ruler random)."""
     rid, hid = chars.country_rulers(b) if b else (None, None)
     ch = chars.characters().get(rid) if rid else None
-    mb = chars.block(rid, ch, chars.ruler_regnal(rid, b)) if ch and b else None
+    mb = chars.block(rid, ch, *chars.ruler_regnal(rid, b)) if ch and b else None
     if not mb:
         return "", False
     out = "\nmonarch = {\n" + mb + "\n}\n"

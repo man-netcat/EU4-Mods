@@ -9,7 +9,7 @@ capital = 372	# Carrickfergus
 # Kings of Tír Eógain
 
 monarch = {
-	name = "Hugo III"
+	name = "Aodh III"
 	dynasty = "Neill"
 	birth_date = 1310.1.1
 	adm = 3
@@ -20,7 +20,6 @@ heir = {
 	name = "Brian"
 	dynasty = "Neill"
 	birth_date = 1328.1.1
-	death_date = 1388.1.1
 	claim = 95
 	adm = 3
 	dip = 3
@@ -28,7 +27,8 @@ heir = {
 }
 queen = {
 	country = TYR
-	name = "Bridget"
+	name = "Brighid"
+	dynasty = "Domhnall"
 	birth_date = 1310.1.1
 	female = yes
 	adm = 3

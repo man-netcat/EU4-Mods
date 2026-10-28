@@ -8,7 +8,7 @@ capital = 4541	# Volhynia
 government_rank = 2
 
 monarch = {
-	name = "Boleslav II"
+	name = "George II"
 	dynasty = "Piast"
 	birth_date = 1305.1.1
 	adm = 3

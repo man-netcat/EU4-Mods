@@ -19,7 +19,6 @@ heir = {
 	name = "Charles"
 	dynasty = "Valois"
 	birth_date = 1337.2.1
-	death_date = 1397.2.1
 	claim = 95
 	adm = 0
 	dip = 0

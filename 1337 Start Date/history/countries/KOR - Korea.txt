@@ -10,7 +10,7 @@ capital = 735	# Hanseong
 government_rank = 2
 
 monarch = {
-	name = "Man I"
+	name = "Chungsuk I"
 	dynasty = "Wang"
 	birth_date = 1294.7.30
 	adm = 1
@@ -21,7 +21,6 @@ heir = {
 	name = "Chunghye"
 	dynasty = "Wang"
 	birth_date = 1315.2.22
-	death_date = 1375.2.22
 	claim = 95
 	adm = 2
 	dip = 1

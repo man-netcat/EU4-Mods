@@ -8,7 +8,7 @@ primary_culture = dutch
 capital = 92
 
 monarch = {
-	name = "Johan III"
+	name = "Jan III"
 	dynasty = "Reginar"
 	birth_date = 1300.11.1
 	adm = 3
@@ -16,10 +16,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Henrik"
+	name = "Hendrik"
 	dynasty = "Reginar"
 	birth_date = 1330.1.1
-	death_date = 1390.1.1
 	claim = 95
 	adm = 3
 	dip = 3

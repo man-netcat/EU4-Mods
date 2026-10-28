@@ -9,15 +9,16 @@ religious_school = hanafi_school
 
 monarch = {
 	name = "Karaca"
+	dynasty = "Dulkadirids"
 	birth_date = 1290.1.1
 	adm = 3
 	dip = 3
 	mil = 3
 }
 heir = {
-	name = "Khalil"
+	name = "Halil"
+	dynasty = "Dulkadirids"
 	birth_date = 1321.1.1
-	death_date = 1381.1.1
 	claim = 95
 	adm = 3
 	dip = 3

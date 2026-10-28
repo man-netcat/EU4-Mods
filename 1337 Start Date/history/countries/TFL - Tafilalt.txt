@@ -10,7 +10,7 @@ fixed_capital = 346 # Cannot move capital away from this province & no power cos
 religious_school = maliki_school
 
 monarch = {
-	name = "Omar I"
+	name = "Umer I"
 	dynasty = "Marinid"
 	birth_date = 1295.1.1
 	adm = 1

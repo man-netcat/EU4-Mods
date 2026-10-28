@@ -11,7 +11,7 @@ fixed_capital = 98 # Cannot move capital away from this province & no power cost
 #Prince Bishops of Utrecht
 
 monarch = {
-	name = "Johan III"
+	name = "Jan III"
 	dynasty = "von Diest"
 	birth_date = 1295.1.1
 	adm = 3

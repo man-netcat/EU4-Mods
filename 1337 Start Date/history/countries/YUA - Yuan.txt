@@ -7,7 +7,7 @@ primary_culture = khalkha
 capital = 2148
 
 monarch = {
-	name = "Togon Temür"
+	name = "Togon Temur"
 	dynasty = "Borjigin"
 	birth_date = 1320.5.25
 	adm = 3

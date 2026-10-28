@@ -9,7 +9,8 @@ capital = 375	# Cork
 # Kings of Thomond
 
 monarch = {
-	name = "Murtagh"
+	name = "Muirchertach"
+	dynasty = "Brian"
 	birth_date = 1285.1.1
 	adm = 3
 	dip = 3
@@ -17,8 +18,8 @@ monarch = {
 }
 heir = {
 	name = "Brian"
+	dynasty = "Brian"
 	birth_date = 1310.1.1
-	death_date = 1370.1.1
 	claim = 95
 	adm = 3
 	dip = 3

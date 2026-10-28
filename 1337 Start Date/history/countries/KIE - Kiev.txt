@@ -9,7 +9,8 @@ capital = 280	# Kiev
 fixed_capital = 280 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Theodore I"
+	name = "Fedir I"
+	dynasty = "Rurikovich"
 	birth_date = 1310.1.1
 	adm = 3
 	dip = 3

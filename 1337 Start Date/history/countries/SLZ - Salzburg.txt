@@ -8,7 +8,7 @@ capital = 76	# Salzburg
 fixed_capital = 76 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Frederick"
+	name = "Friedrich"
 	birth_date = 1275.1.1
 	adm = 3
 	dip = 3

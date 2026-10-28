@@ -10,6 +10,7 @@ capital = 4459	# Garha
 
 monarch = {
 	name = "Vasudev"
+	dynasty = "Raj Gond Dynasty"
 	birth_date = 1300.1.1
 	adm = 3
 	dip = 3

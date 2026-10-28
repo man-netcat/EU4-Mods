@@ -9,7 +9,7 @@ fixed_capital = 2972 # Cannot move capital away from this province & no power co
 government_rank = 1
 
 monarch = {
-	name = "Bernard"
+	name = "$name_bernard$"
 	dynasty = "Lippe"
 	birth_date = 1277.1.1
 	adm = 3

@@ -9,15 +9,16 @@ capital = 1848
 
 monarch = {
 	name = "Kizhir"
+	dynasty = "Hamidids"
 	birth_date = 1307.1.1
 	adm = 3
 	dip = 3
 	mil = 3
 }
 heir = {
-	name = "Abraham"
+	name = "Ibrahim"
+	dynasty = "Hamidids"
 	birth_date = 1334.1.1
-	death_date = 1394.1.1
 	claim = 95
 	adm = 3
 	dip = 3

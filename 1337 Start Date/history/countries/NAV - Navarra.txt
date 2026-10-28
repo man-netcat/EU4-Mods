@@ -10,7 +10,7 @@ capital = 210	# Pamplona
 government_rank = 2
 
 monarch = {
-	name = "Joanna II"
+	name = "Jeanne II"
 	female = yes
 	dynasty = "Capet"
 	birth_date = 1312.1.28
@@ -20,7 +20,7 @@ monarch = {
 }
 queen = {
 	country = NAV
-	name = "Philip"
+	name = "Philippe"
 	dynasty = "Évreux"
 	birth_date = 1306.3.27
 	adm = 5

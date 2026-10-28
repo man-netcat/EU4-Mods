@@ -14,7 +14,7 @@ add_army_professionalism = 0.05
 government_rank = 1
 
 monarch = {
-	name = "Francis"
+	name = "Francesco"
 	dynasty = "Dandolo"
 	birth_date = 1258.1.1
 	adm = 2
@@ -22,10 +22,9 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "Lazarus"
+	name = "Lazzaro"
 	dynasty = "Dandolo"
 	birth_date = 1300.1.1
-	death_date = 1360.1.1
 	claim = 95
 	adm = 3
 	dip = 3

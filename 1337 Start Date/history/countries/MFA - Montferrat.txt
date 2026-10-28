@@ -10,7 +10,7 @@ add_army_professionalism = 0.05
 #Palaiologos Dynasty
 
 monarch = {
-	name = "Theodore I"
+	name = "Teodor I"
 	dynasty = "Palaiologos"
 	birth_date = 1290.1.1
 	adm = 4
@@ -18,10 +18,9 @@ monarch = {
 	mil = 2
 }
 heir = {
-	name = "Johan"
+	name = "Gioan"
 	dynasty = "Palaiologos"
 	birth_date = 1321.2.5
-	death_date = 1381.2.5
 	claim = 95
 	adm = 3
 	dip = 4

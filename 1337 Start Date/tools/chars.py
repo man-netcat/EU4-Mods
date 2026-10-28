@@ -58,26 +58,93 @@ def stat(c, k):
         return 3
 
 
-def _name_piece(piece):
+@lru_cache(None)
+def dialect_languages():
+    """{dialect: language} from EU5's languages files (a culture speaks a dialect or a language)."""
+    out = {}
+    for f in sorted((EU5_GAME / "in_game/common/languages").glob("*.txt")):
+        for lang, body in parse(f.read_text(encoding="utf-8-sig")):
+            if not isinstance(body, list):
+                continue
+            stack = [body]
+            while stack:
+                for k, v in stack.pop():
+                    if isinstance(v, list):
+                        if k and k.endswith("_dialect"):
+                            out[k] = lang
+                        stack.append(v)
+    return out
+
+
+@lru_cache(None)
+def culture_languages():
+    """{culture: (dialect or None, language)} from EU5's culture files."""
+    out = {}
+    dl = dialect_languages()
+    for f in sorted((EU5_GAME / "in_game/common/cultures").glob("*.txt")):
+        for cul, body in parse(f.read_text(encoding="utf-8-sig")):
+            lang = get(body, "language") if isinstance(body, list) else None
+            if lang:
+                out[cul] = (lang, dl[lang]) if lang in dl else (None, lang)
+    return out
+
+
+def loc_name(key, culture):
+    """EU5 name key -> text, in the form the character's culture uses (`name_john` is Johan, Ivan, Jean ...):
+    key.<dialect>, key.<language>, then the plain key."""
     n = names()
+    dialect, lang = culture_languages().get(culture, (None, None))
+    for suffix in (dialect, lang):
+        if suffix and f"{key}.{suffix}" in n:
+            return n[f"{key}.{suffix}"]
+    return n.get(key) or key.replace("name_", "").replace("_", " ").title()
+
+
+def _name_piece(piece, culture=None):
     key = piece if piece.startswith("name_") else "name_" + piece
-    return n.get(key) or n.get(piece) or piece.replace("name_", "").replace("_", " ").title()
+    return loc_name(key, culture)
 
 
-def first_name(c):
-    """The character's name, or None when EU5 leaves it to the game to generate (`random`)."""
-    fn = get(c, "first_name")
-    key = get(fn, "name") if isinstance(fn, list) else fn
+def first_name(c, key=None):
+    """The character's name (or the given regnal name key), or None when EU5 leaves it to the game (`random`)."""
+    if key is None:
+        fn = get(c, "first_name")
+        key = get(fn, "name") if isinstance(fn, list) else fn
     if not key or key == "random":
         return None
-    if key in names():
-        return names()[key]
-    return " ".join(_name_piece(p) for p in key.split("."))
+    cul = get(c, "culture")
+    return " ".join(_name_piece(p, cul) for p in key.split("."))
+
+
+@lru_cache(None)
+def dynasties():
+    """{dynasty: (name key, type)} from EU5's 04_dynasties."""
+    out = {}
+    r = parse((EU5_SETUP / "04_dynasties.txt").read_text(encoding="utf-8-sig"))
+    for top, body in r:
+        if isinstance(body, list):
+            for k, b in body:
+                if isinstance(b, list):
+                    nm = get(b, "name")
+                    key = get(nm, "name") if isinstance(nm, list) else nm
+                    out[k] = (key, get(b, "dynasty_name_type"))
+    return out
 
 
 def dynasty_name(c):
+    """The dynasty's name: its own loc when EU5 has one (valois_dynasty), a patronymic from the key
+    (rurikovich_dynasty), else the name key in the character's language."""
     d = get(c, "dynasty")
-    return names().get(d) if d else None
+    if not d:
+        return None
+    if d in names():
+        return names()[d]
+    key, kind = dynasties().get(d, (None, None))
+    if kind == "patronym" and d.endswith("_dynasty"):
+        return d[:-len("_dynasty")].replace("_", " ").title()
+    if key:
+        return loc_name(key if key.startswith("name_") else "name_" + key, get(c, "culture"))
+    return None
 
 
 def ascii_name(s):
@@ -85,9 +152,10 @@ def ascii_name(s):
     return unicodedata.normalize("NFKC", s)
 
 
-def block(cid, c, regnal=None, heir=False, indent="\t"):
+def block(cid, c, regnal=None, regnal_name=None, heir=False, indent="\t"):
     """EU4 monarch/heir body text."""
-    name = first_name(c)
+    # a throne name (Benedict XII) is the conventional English form, not the form of the ruler's own culture
+    name = names().get(regnal_name) if regnal_name and names().get(regnal_name) else first_name(c, regnal_name)
     if name is None:
         return None
     if regnal:
@@ -103,21 +171,22 @@ def block(cid, c, regnal=None, heir=False, indent="\t"):
         lines.append(f'dynasty = "{latin1(dyn)}"')
     lines.append("birth_date = %d.%d.%d" % b)
     if heir:
-        lines.append("death_date = %d.%d.%d" % (b[0] + 60, b[1], b[2]))
         lines.append("claim = 95")
     lines += [f"adm = {stat(c, 'adm')}", f"dip = {stat(c, 'dip')}", f"mil = {stat(c, 'mil')}"]
     return "\n".join(indent + l for l in lines)
 
 
 def ruler_regnal(cid, tag_block):
+    """(regnal number, regnal name key) of the ruler's open term; either may be None."""
     g = get(tag_block, "government") or []
     for rt in reversed(getall(g, "ruler_term")):
         if isinstance(rt, list) and get(rt, "character") == cid and get(rt, "end_date") is None:
             try:
-                return int(get(rt, "regnal_number"))
+                num = int(get(rt, "regnal_number"))
             except (TypeError, ValueError):
-                return None
-    return None
+                num = None
+            return num, get(rt, "regnal_name")
+    return None, None
 
 
 def country_rulers(b):

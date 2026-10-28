@@ -7,7 +7,8 @@ religion = orthodox
 capital = 1957
 
 monarch = {
-	name = "Johan I"
+	name = "Ivan I"
+	dynasty = "Rurikovich"
 	birth_date = 1293.1.1
 	adm = 3
 	dip = 3

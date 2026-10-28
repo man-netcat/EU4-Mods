@@ -7,7 +7,7 @@ technology_group = western
 capital = 84 # Berg
 
 monarch = {
-	name = "Adolf I"
+	name = "Adolph I"
 	dynasty = "Limbourg"
 	birth_date = 1288.1.1
 	adm = 3

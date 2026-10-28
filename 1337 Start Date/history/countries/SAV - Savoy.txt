@@ -9,7 +9,7 @@ capital = 205 # Chambery
 add_army_professionalism = 0.05
 
 monarch = {
-	name = "Haimo II"
+	name = "Èmon II"
 	dynasty = "Savoy"
 	birth_date = 1291.12.15
 	adm = 2
@@ -17,10 +17,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Amadeus"
+	name = "Amèdê"
 	dynasty = "Savoy"
 	birth_date = 1334.1.4
-	death_date = 1394.1.4
 	claim = 95
 	adm = 0
 	dip = 0

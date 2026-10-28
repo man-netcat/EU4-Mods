@@ -7,7 +7,7 @@ technology_group = western
 capital = 171
 
 monarch = {
-	name = "Johan III"
+	name = "Yann III"
 	dynasty = "Dreux"
 	birth_date = 1286.3.8
 	adm = 2

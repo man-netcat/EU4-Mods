@@ -9,7 +9,7 @@ technology_group = western
 capital = 1762	# Kassel
 
 monarch = {
-	name = "Henrik II"
+	name = "Heinrich II"
 	dynasty = "Hessen"
 	birth_date = 1302.1.1
 	adm = 3
@@ -20,7 +20,6 @@ heir = {
 	name = "Otto"
 	dynasty = "Hessen"
 	birth_date = 1322.1.1
-	death_date = 1382.1.1
 	claim = 95
 	adm = 3
 	dip = 3

@@ -8,7 +8,8 @@ capital = 4147 # Moskva
 fixed_capital = 4147 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Andrew"
+	name = "Andrei"
+	dynasty = "Rurikovich"
 	birth_date = 1328.1.1
 	adm = 3
 	dip = 3

@@ -18,7 +18,7 @@ if = {
 government_rank = 3
 
 monarch = {
-	name = "Basil I"
+	name = "Basíleios I"
 	dynasty = "Komnenos"
 	birth_date = 1302.1.1
 	adm = 3
@@ -29,7 +29,6 @@ heir = {
 	name = "Alexis"
 	dynasty = "Komnenos"
 	birth_date = 1327.1.1
-	death_date = 1387.1.1
 	claim = 95
 	adm = 3
 	dip = 3

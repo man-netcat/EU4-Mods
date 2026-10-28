@@ -18,7 +18,6 @@ heir = {
 	name = "James"
 	dynasty = "Butler"
 	birth_date = 1331.10.4
-	death_date = 1391.10.4
 	claim = 95
 	adm = 3
 	dip = 3

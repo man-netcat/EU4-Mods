@@ -8,7 +8,7 @@ capital = 4699
 fixed_capital = 4699 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Theodore"
+	name = "Theódoros"
 	dynasty = "Synadenos"
 	birth_date = 1277.1.1
 	adm = 2
@@ -16,11 +16,10 @@ monarch = {
 	mil = 2
 }
 heir = {
-	name = "Anna"
+	name = "Ánna"
 	female = yes
 	dynasty = "Synadenos"
 	birth_date = 1306.1.1
-	death_date = 1366.1.1
 	claim = 95
 	adm = 3
 	dip = 3
@@ -28,7 +27,7 @@ heir = {
 }
 queen = {
 	country = EPI
-	name = "Eudokia"
+	name = "Eudokía"
 	birth_date = 1289.1.1
 	female = yes
 	adm = 3

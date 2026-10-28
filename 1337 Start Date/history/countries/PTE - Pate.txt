@@ -18,7 +18,7 @@ religious_school = shafii_school
 government_rank = 2
 
 monarch = {
-	name = "Omar I"
+	name = "'Umar I"
 	dynasty = "Nabahani"
 	birth_date = 1295.6.1
 	adm = 3

@@ -6,7 +6,7 @@ primary_culture = franconian
 religion = catholic
 
 monarch = {
-	name = "Henrik III"
+	name = "Heinrich III"
 	dynasty = "Plauen"
 	birth_date = 1284.1.1
 	adm = 3

@@ -16,10 +16,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Beg"
+	name = "Beka"
 	dynasty = "Jaqeli"
 	birth_date = 1332.1.1
-	death_date = 1392.1.1
 	claim = 95
 	adm = 3
 	dip = 3

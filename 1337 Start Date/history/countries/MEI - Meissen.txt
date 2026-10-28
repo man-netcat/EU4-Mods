@@ -9,7 +9,7 @@ capital = 61	# Meissen
 fixed_capital = 61 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Frederick II"
+	name = "Friedrich II"
 	dynasty = "Wettin"
 	birth_date = 1290.1.1
 	adm = 3
@@ -17,10 +17,9 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Frederick"
+	name = "Friedrich"
 	dynasty = "Wettin"
 	birth_date = 1332.12.14
-	death_date = 1392.12.14
 	claim = 95
 	adm = 3
 	dip = 3

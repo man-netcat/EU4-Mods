@@ -11,7 +11,7 @@ fixed_capital = 164 # Cannot move capital away from this province & no power cos
 # Dukes of Naxos
 
 monarch = {
-	name = "Nicholas I"
+	name = "Nicolò I"
 	dynasty = "Sanudo"
 	birth_date = 1297.1.1
 	adm = 3
@@ -20,7 +20,7 @@ monarch = {
 }
 queen = {
 	country = NAX
-	name = "Joanna"
+	name = "Jeanne"
 	dynasty = "Brienne"
 	birth_date = 1292.1.1
 	female = yes

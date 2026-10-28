@@ -7,7 +7,7 @@ religion = catholic
 capital = 1880
 
 monarch = {
-	name = "Joanna I"
+	name = "Johanna I"
 	female = yes
 	dynasty = "Scarponnois"
 	birth_date = 1308.1.1
@@ -17,7 +17,7 @@ monarch = {
 }
 queen = {
 	country = HAB
-	name = "Albert"
+	name = "Albrecht"
 	dynasty = "Habsburg"
 	birth_date = 1298.12.12
 	adm = 5

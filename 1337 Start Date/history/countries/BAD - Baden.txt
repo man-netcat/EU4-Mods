@@ -7,7 +7,7 @@ technology_group = western
 capital = 74	# Durlach
 
 monarch = {
-	name = "Herman IX"
+	name = "Hermann IX"
 	dynasty = "Baden"
 	birth_date = 1305.1.1
 	adm = 3

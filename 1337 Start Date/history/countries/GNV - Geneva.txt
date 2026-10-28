@@ -8,7 +8,7 @@ capital = 4719
 add_army_professionalism = 0.1
 
 monarch = {
-	name = "Amadeus III"
+	name = "Amadèu III"
 	dynasty = "Genève"
 	birth_date = 1311.3.29
 	adm = 4
@@ -16,10 +16,9 @@ monarch = {
 	mil = 2
 }
 heir = {
-	name = "Amadeus"
+	name = "Amadèu"
 	dynasty = "Genève"
 	birth_date = 1330.1.4
-	death_date = 1390.1.4
 	claim = 95
 	adm = 3
 	dip = 2
