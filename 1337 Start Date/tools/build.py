@@ -925,6 +925,9 @@ def main():
     stats["institutions"] = step_institutions()
     stats["rivals"] = step_rivals(table)
     stats["bookmark"] = step_bookmark(table)
+    import flags
+    stats["flags"] = flags.write(MOD / "gfx/flags", {r["eu4"]: eu5info.color_of(t5) or (100, 100, 100)
+                                                       for t5, r in table.items() if r["new"]})
     print(dict(stats))
 
 

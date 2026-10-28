@@ -154,6 +154,14 @@ def main():
             if f" {k}:0 " not in own_loc:
                 errs.append(f"ideas {name}: missing loc {k}")
     print(f"  {n_sets} national idea sets checked against {len(mods)} base-game modifiers")
+    # colours in range, a flag for every tag the mod adds
+    for f in (MOD / "common/countries").glob("*.txt"):
+        c = re.search(r"color = \{ (\d+) (\d+) (\d+) \}", f.read_text(encoding="latin-1"))
+        if not c or any(int(x) > 255 for x in c.groups()):
+            errs.append(f"{f.name}: colour missing or above 255")
+    for m in re.finditer(r"^([A-Z0-9]{3})\s*=", (MOD / "common/country_tags/1337_tags.txt").read_text(encoding="latin-1"), re.M):
+        if not (MOD / "gfx/flags" / f"{m[1]}.tga").exists():
+            errs.append(f"{m[1]}: no flag")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

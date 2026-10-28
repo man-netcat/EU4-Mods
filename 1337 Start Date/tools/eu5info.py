@@ -108,7 +108,7 @@ def color_of(tag):
     d = country_defs().get(tag)
     c = d and d["color"]
     if isinstance(c, tuple):
-        return c
+        return tuple(max(0, min(255, int(v))) for v in c)
     # named colour: re-read raw
     for f in sorted(glob.glob(str(EU5_GAME / "in_game/setup/countries/*.txt"))):
         text = open(f, encoding="utf-8-sig").read()
@@ -116,7 +116,7 @@ def color_of(tag):
         if m:
             mn = re.search(r"^\s*color\s*=\s*(\w+)\s*$", m[1], re.M)
             if mn and mn[1] in named_rgb():
-                return named_rgb()[mn[1]]
+                return tuple(max(0, min(255, int(v))) for v in named_rgb()[mn[1]])
     return None
 
 
