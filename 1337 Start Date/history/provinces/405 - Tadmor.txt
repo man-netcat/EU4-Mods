@@ -1,5 +1,9 @@
 #405 - Tadmor
 
+owner = MAM
+controller = MAM
+add_core = MAM
+is_city = yes
 culture = bedouin_arabic
 religion = sunni
 capital = "Tadmuriyah"

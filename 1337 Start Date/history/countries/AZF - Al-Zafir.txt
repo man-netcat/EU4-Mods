@@ -1,6 +1,6 @@
 government = tribal
 add_government_reform = tribal_despotism
 government_rank = 1
-technology_group = western
+technology_group = muslim
 primary_culture = bedouin_arabic
 religion = sunni

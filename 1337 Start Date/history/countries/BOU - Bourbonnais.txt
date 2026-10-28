@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = cosmopolitan_french
 religion = catholic
 technology_group = western
-capital = 1103	# Bourges
+capital = 190	# Bourges
 fixed_capital = 190 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {

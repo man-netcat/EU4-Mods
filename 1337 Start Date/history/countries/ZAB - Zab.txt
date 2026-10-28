@@ -1,10 +1,10 @@
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
-technology_group = muslim
+technology_group = western
 primary_culture = berber
 religion = sunni
-capital = 351
+capital = 4169
 
 monarch = {
 	name = "Ahmed I"

@@ -1,7 +1,7 @@
 #1191 - Tete
 
 culture = shona
-religion = shamanism
+religion = animism
 capital = "Tete"
 base_manpower = 1
 trade_goods = ivory

@@ -1,3 +1,7 @@
+owner = KOL
+controller = KOL
+add_core = KOL
+is_city = yes
 capital = "Wiesbaden"
 trade_goods = copper
 hre = yes

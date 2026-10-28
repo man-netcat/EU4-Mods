@@ -1,12 +1,12 @@
 #225 - Córdoba
 
-owner = HRB
-controller = HRB
-add_core = AZF
-add_core = HRB
+owner = CAS
+controller = CAS
+add_core = CAS
+add_core = CRD
 is_city = yes
-culture = hejazi_culture
-religion = sunni
+culture = castillian
+religion = catholic
 hre = no
 base_tax = 4 
 base_production = 4

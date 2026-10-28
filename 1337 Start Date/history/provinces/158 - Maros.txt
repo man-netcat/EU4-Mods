@@ -1,12 +1,11 @@
 #158 - Maros
 
-owner = HRB
-controller = HRB
-add_core = AZF
-add_core = HRB
+owner = HUN
+controller = HUN
+add_core = HUN
 is_city = yes
-culture = hejazi_culture #Szeklers
-religion = sunni
+culture = transylvanian #Szeklers
+religion = catholic
 capital = "Targu Mures"
 trade_goods = wool
 hre = no

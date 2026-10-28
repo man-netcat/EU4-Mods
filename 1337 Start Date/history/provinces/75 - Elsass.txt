@@ -1,5 +1,9 @@
 # 75 Elsass - Principal cities: Strasbourg
 
+owner = STR
+controller = STR
+add_core = STR
+is_city = yes
 capital = "Straﬂburg"
 culture = swabian
 religion = catholic

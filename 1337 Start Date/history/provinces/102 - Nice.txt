@@ -1,10 +1,10 @@
 #102 - Nice
 
-owner = SAV
-controller = SAV
-add_core = SAV
+owner = PRO
+controller = PRO
+add_core = PRO
 is_city = yes
-culture = ligurian
+culture = occitain
 religion = catholic
 hre = yes
 base_tax = 4 

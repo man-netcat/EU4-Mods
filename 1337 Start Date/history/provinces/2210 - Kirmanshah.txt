@@ -1,6 +1,11 @@
 #2210 - Kirmanshah
 
-culture = luri
+owner = KLR
+controller = KLR
+add_core = KLR
+add_core = RKL
+is_city = yes
+culture = kurdish
 religion = sunni
 capital = "Kirmanshah"
 trade_goods = cloth

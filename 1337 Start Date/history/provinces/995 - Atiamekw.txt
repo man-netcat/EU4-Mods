@@ -1,6 +1,6 @@
 #995 - Atiamekw
 
-culture = innu
+culture = laurentian
 religion = totemism
 capital = "Tadoussac"
 trade_goods = unknown

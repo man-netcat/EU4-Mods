@@ -5,7 +5,7 @@ technology_group = western
 religion = catholic
 primary_culture = flemish
 
-capital = 4770
+capital = 92
 
 monarch = {
 	name = "Johan III"

@@ -1,7 +1,11 @@
 #2225 - Bamyan
 
+owner = QUN
+controller = QUN
+add_core = QUN
+is_city = yes
 culture = afghani
-religion = shiite
+religion = sunni
 capital = "Bamyan"
 trade_goods = dyes
 hre = no

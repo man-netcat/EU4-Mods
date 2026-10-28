@@ -1,7 +1,7 @@
 #1187 - Sena
 
 culture = shona
-religion = shamanism
+religion = animism
 capital = "Sena"
 base_manpower = 2
 trade_goods = ivory

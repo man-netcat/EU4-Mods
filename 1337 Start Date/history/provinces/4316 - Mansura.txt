@@ -1,10 +1,10 @@
 #4316 - Mansura
 
-owner = SMA
-controller = SMA
-add_core = SMA
+owner = MAM
+controller = MAM
+add_core = MAM
 is_city = yes
-culture = sindhi
+culture = al_misr_arabic
 religion = sunni
 capital = "Mansura"
 trade_goods = grain

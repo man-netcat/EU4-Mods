@@ -1,5 +1,9 @@
 #1221 - Kordofan
 
+owner = DAJ
+controller = DAJ
+add_core = DAJ
+is_city = yes
 culture = nubian
 religion = shamanism #Fetishism
 capital = "Al-Ubayyid"

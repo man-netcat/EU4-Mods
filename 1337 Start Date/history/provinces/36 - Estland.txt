@@ -1,5 +1,9 @@
 #Estland, incl. Reval, Hapsal, Weissenstein, Wesenberg and Pernau.
 
+owner = DAN
+controller = DAN
+add_core = DAN
+is_city = yes
 culture = estonian
 religion = catholic
 hre = no

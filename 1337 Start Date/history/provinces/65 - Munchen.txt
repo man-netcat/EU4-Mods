@@ -1,7 +1,7 @@
 # 65 - München
-owner = UBV
-controller = UBV
-add_core = UBV
+owner = LBV
+controller = LBV
+add_core = LBV
 is_city = yes
 culture = bavarian
 religion = catholic

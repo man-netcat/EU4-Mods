@@ -1,10 +1,10 @@
 #Bohuslän, contains Marstrand, Uddevalla, Strömstad.
 
-owner = CRO
-controller = CRO
-add_core = CRO
+owner = SWE
+controller = SWE
+add_core = SWE
 is_city = yes
-culture = croatian
+culture = swedish
 religion = catholic
 hre = no
 base_tax = 2 

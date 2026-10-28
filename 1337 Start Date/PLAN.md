@@ -90,7 +90,7 @@ generated output. Playtest is by the owner; paste `error.log` back.
 
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
-1. Province mapping: 2493/3357 land provinces by name/hierarchy; ~860 unmapped keep their vanilla owner only if
+1. Province mapping: 2622/3357 land provinces by name/hierarchy (fixed `eu4_geo` reading area colours as provinces, plus ~70 hand aliases for Europe and the Near East); ~735 unmapped keep their vanilla owner only if
    that tag is in the 1337 table (plus `VANILLA_PROXY` in build.py: Ming->Yuan etc.), else are unowned.
    Hand aliases go in `tools/data/aliases.json`; review `data/loc2prov_unmatched.json`.
 2. Tags are matched by name + `ALIASES` in tagmap.py; ~384 are new tags with generated codes (no flags yet).

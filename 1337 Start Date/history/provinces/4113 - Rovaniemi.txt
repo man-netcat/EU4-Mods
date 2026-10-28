@@ -1,6 +1,6 @@
 #Finnish Lappland - Rovaniemi
 
-culture = swedish #Probably also a large Sami population.
+culture = finnish #Probably also a large Sami population.
 religion = finnish_pagan
 hre = no
 base_tax = 1 

@@ -1,9 +1,5 @@
 #1103 - Bourbon
 
-owner = BOU
-controller = BOU
-add_core = BOU
-is_city = yes
 capital = "Bourbon"
 trade_goods = unknown
 hre = no

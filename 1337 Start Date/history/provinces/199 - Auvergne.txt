@@ -1,16 +1,17 @@
 # 199 Auvergne - Principal cities: Clermont-Ferrand
 
-owner = DLH
-controller = DLH
-add_core = DLH
+owner = FRA
+controller = FRA
+add_core = AQN
+add_core = FRA
 is_city = yes
 latent_trade_goods = {
 	coal
 }
 
 capital = "Clermont"
-culture = avadhi
-religion = hinduism
+culture = occitain
+religion = catholic
 hre = no
 base_tax = 4
 base_production = 4

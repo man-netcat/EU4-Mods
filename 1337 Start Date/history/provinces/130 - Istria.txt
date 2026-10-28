@@ -1,15 +1,16 @@
 #130 - Istria
 
-owner = VEN
-controller = VEN
-add_core = VEN
+owner = HAB
+controller = HAB
+add_core = CAA
+add_core = HAB
 is_city = yes
-culture = dalmatian
+culture = slovene
 religion = catholic
 capital = "Pula"
 trade_goods = salt #Accounted for 1/4 of the total Salt imports of Venice
 #trade_goods = naval_supplies #Major Shipbuilding Centre
-hre = no
+hre = yes
 base_tax = 2 
 base_production = 3
 base_manpower = 3

@@ -1,12 +1,13 @@
 # 4738 - Trieste
 
-owner = TTE
-controller = TTE
-add_core = TTE
+owner = HAB
+controller = HAB
+add_core = CAA
+add_core = HAB
 is_city = yes
-culture = venetian 
+culture = slovene 
 religion = catholic 
-hre = no
+hre = yes
 base_tax = 4
 base_production = 3
 trade_goods = fish

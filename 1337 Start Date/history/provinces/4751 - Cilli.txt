@@ -1,4 +1,9 @@
 # 4751 - Cilli
+owner = HAB
+controller = HAB
+add_core = CAA
+add_core = HAB
+is_city = yes
 culture = slovene
 religion = catholic
 base_tax = 3

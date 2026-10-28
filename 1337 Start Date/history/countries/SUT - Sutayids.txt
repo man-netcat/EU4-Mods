@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = muslim
 primary_culture = khalkha
 religion = sunni
-capital = 418
+capital = 407
 
 monarch = {
 	name = "Hajji Taghay"

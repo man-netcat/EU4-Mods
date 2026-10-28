@@ -1,8 +1,9 @@
 #2330 - Ma'din Sulaym
 
-owner = MDA
-controller = MDA
-add_core = MDA
+owner = HRB
+controller = HRB
+add_core = AZF
+add_core = HRB
 is_city = yes
 culture = hejazi_culture
 religion = sunni

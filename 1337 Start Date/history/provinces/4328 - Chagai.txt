@@ -1,9 +1,4 @@
 #4328 - Chagai
-owner = KHN
-controller = KHN
-add_core = KHN
-is_city = yes
-hre = no
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian

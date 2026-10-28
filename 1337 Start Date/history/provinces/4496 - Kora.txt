@@ -1,5 +1,9 @@
 #4496 - Kora
 
+owner = DLH
+controller = DLH
+add_core = DLH
+is_city = yes
 culture = avadhi
 religion = hinduism
 capital = "Kora"

@@ -1,5 +1,9 @@
 #56 - Osnabrück
 
+owner = OSN
+controller = OSN
+add_core = OSN
+is_city = yes
 culture = hannoverian
 religion = catholic
 capital = "Osnabrück"

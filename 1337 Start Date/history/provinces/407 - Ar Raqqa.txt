@@ -1,8 +1,8 @@
 #407 - Ar-Raqqah
 
-owner = MAM
-controller = MAM
-add_core = MAM
+owner = SUT
+controller = SUT
+add_core = SUT
 is_city = yes
 culture = al_suryah_arabic
 religion = sunni

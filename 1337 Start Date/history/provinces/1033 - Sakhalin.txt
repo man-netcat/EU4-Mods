@@ -1,7 +1,11 @@
 #1033 - Sakhalin
 
-culture = ainu
-religion = animism
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = nivkh
+religion = tengri_pagan_reformed
 capital = "Sakhalin"
 trade_goods = fish
 hre = no

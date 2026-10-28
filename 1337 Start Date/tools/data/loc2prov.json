@@ -22,6 +22,24 @@
 "kalmar"
 ]
 },
+"4": {
+"tier": "alias",
+"locations": [
+"avesta",
+"falun",
+"floda",
+"grange",
+"hedemora",
+"idre",
+"leksand",
+"malung",
+"mora",
+"orsa",
+"siljan",
+"soderbarke",
+"stora_tuna"
+]
+},
 "5": {
 "tier": "node",
 "locations": [
@@ -63,38 +81,25 @@
 "tier": "area-fallback",
 "locations": [
 "arboga",
-"avesta",
 "enkoping",
-"falun",
-"floda",
 "gefle",
-"grange",
 "grythyttan",
 "hamrange",
 "heby",
-"hedemora",
 "hedesunda",
 "hjalmaren_lake",
-"idre",
 "kastelholm",
 "kolmarden",
-"leksand",
 "linde",
 "malaren",
-"malung",
-"mora",
 "nora",
 "norrtalje",
 "nykoping",
 "ockelbo",
 "oppunda",
-"orsa",
 "sala",
-"siljan",
 "skinskatteberg",
-"soderbarke",
 "sodertalje",
-"stora_tuna",
 "strangnas",
 "tierp",
 "uppsala",
@@ -192,17 +197,18 @@
 "16": {
 "tier": "area-node",
 "locations": [
-"brac",
-"dinaric_alps1",
-"dubrovnik",
-"knin",
-"lastovo_island_wasteland",
-"makarska",
-"metkovic",
-"novigrad",
-"sibenik",
-"sinj",
-"slano"
+"allingsas",
+"bogesund",
+"ekholm",
+"falkoping",
+"hjo",
+"lidkoping",
+"lodose",
+"skara",
+"skene",
+"tiveden",
+"utlandet",
+"vartofta"
 ]
 },
 "17": {
@@ -213,30 +219,178 @@
 "ski"
 ]
 },
-"22": {
+"18": {
 "tier": "area-node",
 "locations": [
-"buda",
-"cakovec",
-"esztergom",
-"gyor",
-"kapuvar",
-"komarom",
-"kormend",
-"lake_neusiedl",
-"magyarovar",
-"mohacs",
-"nagykanizsa",
-"olsnica",
-"pecs",
-"siklos",
-"simontornya",
-"szombathely",
-"tata",
-"tolna",
-"vasvar",
-"zalaegerszeg",
-"zalavar"
+"abisko",
+"akkajaur",
+"akkajaure",
+"anundsjo",
+"arjeplog",
+"arvidsjaur",
+"asele",
+"enare_trask",
+"enontakis",
+"gellivaara",
+"grundsunda",
+"harnosand",
+"ivalo",
+"juckasjarvi",
+"kajana",
+"kasivarren",
+"kemijarvi",
+"korpilombo",
+"korvala",
+"kuhmo",
+"kuusamo",
+"kvikkjock",
+"lapland_taiga1",
+"lycksele",
+"mourionska",
+"muojarvi",
+"nikkaluokta",
+"north_skanderna",
+"nunnanen",
+"ortrask",
+"oulujarvi",
+"paltamo",
+"porjus",
+"ramsele",
+"raunala",
+"salla",
+"sarek",
+"savukoski",
+"silbojock",
+"sjalevad",
+"socksjock",
+"sodankyla",
+"solatunum",
+"sorsele",
+"sotkamo",
+"stensele",
+"storavan",
+"suomussalmi",
+"tarna",
+"torne_trask",
+"uddjaur",
+"utsjoki",
+"vastenjaure",
+"volgsjo",
+"yli_kitka"
+]
+},
+"19": {
+"tier": "alias",
+"locations": [
+"brahestad",
+"karleby",
+"kaustby",
+"koppo",
+"korsholm",
+"kuivaniemi",
+"lappo",
+"pedersore",
+"posio",
+"pudasjarvi",
+"ranua",
+"siikalatva",
+"simo",
+"storkyro",
+"taivalkoski",
+"uleaborg",
+"utajarvi",
+"vora"
+]
+},
+"20": {
+"tier": "alias",
+"locations": [
+"alvdal",
+"holtalen",
+"levanger",
+"lierne",
+"meraker",
+"namdal",
+"nidaros",
+"oppdal",
+"orkdal",
+"orland",
+"roros",
+"skaun",
+"snasa",
+"steinkjer",
+"stjordal",
+"storen"
+]
+},
+"21": {
+"tier": "alias",
+"locations": [
+"alstahaug",
+"bindals_fjord",
+"birndal",
+"bodo",
+"gildeskal",
+"hamaroy",
+"hattfjelldal",
+"langenes",
+"lofotr",
+"nordfjord_sea",
+"norwegian_sea14",
+"norwegian_sea16",
+"ofoti",
+"rana",
+"skanderna",
+"steigen",
+"tingvoll_fjord",
+"trondheim_fjord"
+]
+},
+"22": {
+"tier": "area-fallback",
+"locations": [
+"amli",
+"amot",
+"bragernes",
+"elverum",
+"flekkefjord",
+"flesberg",
+"glommadal",
+"grenland",
+"hallingdal",
+"hamar",
+"haugalandet",
+"hedmarksvidda",
+"hornborg",
+"imsdalen",
+"jaeren",
+"konghalla",
+"kongsberg",
+"kongsvinger",
+"lillehammer",
+"lindesnes",
+"mjosa",
+"norway_wasteland_a",
+"norway_wasteland_b",
+"numedal",
+"oddernes",
+"otredal",
+"otta",
+"oyestad",
+"ringerike",
+"ryfylke",
+"sande",
+"sigdal",
+"sirudal",
+"sondeled",
+"stromstad",
+"suledal",
+"tonsberg",
+"trysil",
+"tynset",
+"uddevalla",
+"valdres",
+"vardal"
 ]
 },
 "23": {
@@ -342,16 +496,123 @@
 "yes"
 ]
 },
+"32": {
+"tier": "alias",
+"locations": [
+"hoytiainen",
+"ilomantsi",
+"joensuu",
+"juuka",
+"koitere",
+"konevets",
+"korela",
+"kurkijoki",
+"lake_ladoga",
+"lake_orivesi",
+"lake_otradnoye",
+"lake_suoyarvi",
+"lieksa",
+"loimola",
+"mohko",
+"nurmes",
+"pielinen",
+"salmi",
+"sordavala",
+"suojarvi",
+"vartsila",
+"viinijarvi",
+"yanis_jarvi"
+]
+},
 "33": {
 "tier": "key/display",
 "locations": [
 "neva"
 ]
 },
+"35": {
+"tier": "alias",
+"locations": [
+"kuressaare"
+]
+},
+"36": {
+"tier": "area-node",
+"locations": [
+"padise",
+"paide",
+"rakvere",
+"rapla",
+"tallinn",
+"toolse",
+"vasknarva"
+]
+},
+"37": {
+"tier": "area-fallback",
+"locations": [
+"aizkraukle",
+"aluksne",
+"cesis",
+"daugavpils",
+"gulbene",
+"hapsal",
+"kaina",
+"karksi",
+"koknese",
+"lake_vorts",
+"lihula",
+"limbazi",
+"parnu",
+"poltsamaa",
+"rauna",
+"saarde",
+"salaspils",
+"selpils",
+"sigulda",
+"st_martin",
+"straupe",
+"suure_jaani",
+"tartu",
+"valjala",
+"valka",
+"valmiera",
+"vastseliina",
+"viljandi",
+"vonnu"
+]
+},
 "38": {
 "tier": "key/display",
 "locations": [
 "riga"
+]
+},
+"39": {
+"tier": "alias",
+"locations": [
+"dundaga",
+"durbe",
+"grobina",
+"kandava",
+"kuldiga",
+"not_eligible_for_dynamic_country_name",
+"piltene",
+"saldus",
+"ventspils",
+"yes"
+]
+},
+"40": {
+"tier": "alias",
+"locations": [
+"memel"
+]
+},
+"41": {
+"tier": "key/display",
+"locations": [
+"konigsberg"
 ]
 },
 "42": {
@@ -399,6 +660,12 @@
 "stralsund"
 ]
 },
+"48": {
+"tier": "alias",
+"locations": [
+"kolobrzeg"
+]
+},
 "49": {
 "tier": "node",
 "locations": [
@@ -413,6 +680,12 @@
 "tier": "key/display",
 "locations": [
 "berlin"
+]
+},
+"51": {
+"tier": "key/display",
+"locations": [
+"ruppin"
 ]
 },
 "52": {
@@ -439,6 +712,12 @@
 "oldenburg"
 ]
 },
+"56": {
+"tier": "key/display",
+"locations": [
+"osnabruck"
+]
+},
 "57": {
 "tier": "key/display",
 "locations": [
@@ -446,13 +725,9 @@
 ]
 },
 "59": {
-"tier": "area-node",
+"tier": "key/display",
 "locations": [
-"asni",
-"kara",
-"korra",
-"prayag",
-"shankargah"
+"wittenberg"
 ]
 },
 "60": {
@@ -483,6 +758,45 @@
 "tier": "key/display",
 "locations": [
 "landshut"
+]
+},
+"65": {
+"tier": "area-fallback",
+"locations": [
+"amberg",
+"andechs",
+"bavaria_regen",
+"burghausen",
+"burglengenfeld",
+"cham",
+"ebersberg",
+"eggenfelden",
+"erding",
+"friedberg",
+"garmisch",
+"grafenau",
+"griesbach",
+"indersdorf",
+"kelheim",
+"lake_chiemsee",
+"lake_starnberg",
+"landau",
+"landsberg",
+"laufen",
+"leuchtenberg",
+"mallersdorf",
+"miesbach",
+"muhldorf",
+"munich",
+"neuburg_an_der_donau",
+"pfaffenhofen",
+"roding",
+"rottenburg",
+"schongau",
+"tolz",
+"traunstein",
+"wasserburg",
+"weilheim"
 ]
 },
 "66": {
@@ -552,6 +866,12 @@
 "ansbach"
 ]
 },
+"72": {
+"tier": "alias",
+"locations": [
+"freiburg"
+]
+},
 "73": {
 "tier": "node",
 "locations": [
@@ -587,6 +907,28 @@
 "venediger_group",
 "villandro",
 "zell_am_ziller"
+]
+},
+"74": {
+"tier": "key/display",
+"locations": [
+"baden"
+]
+},
+"75": {
+"tier": "alias",
+"locations": [
+"belfort",
+"benfeld",
+"colmar",
+"ensisheim",
+"ferrette",
+"haguenau",
+"lichtenberg",
+"mulhouse",
+"murbach",
+"strasbourg",
+"zabern"
 ]
 },
 "76": {
@@ -665,6 +1007,42 @@
 "rietberg",
 "soest",
 "warburg"
+]
+},
+"83": {
+"tier": "area-fallback",
+"locations": [
+"ahrweiler",
+"altenkirchen",
+"bergheim",
+"birkenfeld",
+"bitburg",
+"bonn",
+"castellaun",
+"coblenz",
+"cochem",
+"daun",
+"dusseldorf",
+"geldern",
+"gummersbach",
+"kreuznach",
+"lichtenberg_veldenz",
+"mayen",
+"meisenheim",
+"merzig",
+"monchengladbach",
+"mors",
+"neuss",
+"prum",
+"remscheid",
+"saarbrucken",
+"saarburg",
+"schleiden",
+"siegburg",
+"simmern",
+"solingen",
+"wied",
+"wittlich"
 ]
 },
 "84": {
@@ -757,12 +1135,9 @@
 ]
 },
 "92": {
-"tier": "area-node",
+"tier": "key/display",
 "locations": [
-"al_furaish",
-"al_hegrieah",
-"as_suwaydirah",
-"khalis_medina"
+"brussels"
 ]
 },
 "93": {
@@ -795,6 +1170,28 @@
 "tier": "key/display",
 "locations": [
 "breda"
+]
+},
+"96": {
+"tier": "area-node",
+"locations": [
+"alkmaar",
+"amersfoort",
+"apeldoorn",
+"arnhem",
+"doetinchem",
+"dordrecht",
+"geertruidenberg",
+"haarlemmermeer",
+"harderwijk",
+"hoorn",
+"leiden",
+"middelburg",
+"nijmegen",
+"rotterdam",
+"the_hague",
+"tiel",
+"zutphen"
 ]
 },
 "97": {
@@ -861,6 +1258,15 @@
 "tier": "key/display",
 "locations": [
 "genoa"
+]
+},
+"102": {
+"tier": "alias",
+"locations": [
+"grasse",
+"maritime_alps1",
+"nice",
+"puget_theniers"
 ]
 },
 "103": {
@@ -1049,6 +1455,12 @@
 "vasto"
 ]
 },
+"121": {
+"tier": "alias",
+"locations": [
+"naples"
+]
+},
 "122": {
 "tier": "node",
 "locations": [
@@ -1070,6 +1482,30 @@
 "rotondo",
 "sansevero",
 "taranto"
+]
+},
+"123": {
+"tier": "alias",
+"locations": [
+"cassano",
+"castrovillari",
+"catanzaro",
+"cosenza",
+"cotrone",
+"gerace",
+"gulf_catania",
+"gulf_noto",
+"gulf_squillace",
+"monteleone",
+"nicastro",
+"palmi",
+"paola",
+"reggiocal",
+"rossano",
+"scalea",
+"southern_apennines",
+"spartivento_cape",
+"strait_messina"
 ]
 },
 "124": {
@@ -1096,19 +1532,84 @@
 "sassari"
 ]
 },
-"130": {
-"tier": "node",
+"128": {
+"tier": "alias",
 "locations": [
-"buzet",
-"pazin",
-"pola",
-"rovinj"
+"feldkirchen",
+"friesach",
+"klagenfurt",
+"st_veit",
+"volkermarkt",
+"wolfsberg"
+]
+},
+"129": {
+"tier": "area-node",
+"locations": [
+"bled",
+"gorizia",
+"ilirska_bistrica",
+"julian_alps",
+"kocevje",
+"kranj",
+"ljubljana",
+"metlika",
+"novo_mesto",
+"postojna",
+"skofja_loka",
+"tolmin",
+"trieste"
+]
+},
+"130": {
+"tier": "area-node",
+"locations": [
+"bled",
+"gorizia",
+"ilirska_bistrica",
+"julian_alps",
+"kocevje",
+"kranj",
+"ljubljana",
+"metlika",
+"novo_mesto",
+"postojna",
+"skofja_loka",
+"tolmin",
+"trieste"
 ]
 },
 "131": {
 "tier": "key/display",
 "locations": [
 "zagreb"
+]
+},
+"132": {
+"tier": "alias",
+"locations": [
+"celje",
+"feldbach",
+"furstenfeld",
+"graz",
+"judenburg",
+"kapfenberg",
+"lasko",
+"leibnitz",
+"leoben",
+"liezen",
+"maribor",
+"murau",
+"murzzuschlag",
+"pitten",
+"ptuj",
+"rottenmann",
+"schladming",
+"slovenj_gradec",
+"tauern_range2",
+"voitsberg",
+"weiz",
+"wiener_neustadt"
 ]
 },
 "133": {
@@ -1140,31 +1641,19 @@
 "locations": [
 "brac",
 "buzet",
-"crikvenica",
 "dinaric_alps1",
-"dinaric_alps9",
 "dubrovnik",
-"kaseg",
 "knin",
-"krk",
 "lastovo_island_wasteland",
 "makarska",
 "metkovic",
-"not_eligible_for_dynamic_country_name",
 "novigrad",
-"otocac",
-"pag",
 "pazin",
 "pola",
-"rijeka",
 "rovinj",
-"senj",
 "sibenik",
 "sinj",
-"slano",
-"split",
-"yes",
-"zadar"
+"slano"
 ]
 },
 "138": {
@@ -1387,6 +1876,16 @@
 "thessaloniki"
 ]
 },
+"149": {
+"tier": "alias",
+"locations": [
+"ahtopol",
+"edirne",
+"kirklareli",
+"kiyikoy",
+"luleburgaz"
+]
+},
 "150": {
 "tier": "key/display",
 "locations": [
@@ -1397,6 +1896,17 @@
 "tier": "key/display",
 "locations": [
 "constantinople"
+]
+},
+"152": {
+"tier": "alias",
+"locations": [
+"bjelovar",
+"koprivnica",
+"kutina",
+"pakrac",
+"vaska",
+"virovitica"
 ]
 },
 "153": {
@@ -1411,19 +1921,33 @@
 "hont"
 ]
 },
+"155": {
+"tier": "alias",
+"locations": [
+"bekes"
+]
+},
+"156": {
+"tier": "alias",
+"locations": [
+"timisoara"
+]
+},
 "157": {
 "tier": "key/display",
 "locations": [
 "bihar"
 ]
 },
-"158": {
-"tier": "area-node",
+"159": {
+"tier": "alias",
 "locations": [
-"al_furaish",
-"al_hegrieah",
-"as_suwaydirah",
-"khalis_medina"
+"drastar",
+"kaliakra",
+"karvuna",
+"kladentsi",
+"pangalia",
+"tutrakan"
 ]
 },
 "160": {
@@ -1524,6 +2048,18 @@
 "zimnicea"
 ]
 },
+"162": {
+"tier": "alias",
+"locations": [
+"beregovo",
+"humenne",
+"mukachevo",
+"satoraljaujhely",
+"uzhorod",
+"velikyi_bereznyi",
+"zemplin"
+]
+},
 "163": {
 "tier": "node",
 "locations": [
@@ -1586,30 +2122,41 @@
 "caen"
 ]
 },
-"171": {
+"169": {
 "tier": "area-node",
 "locations": [
-"buda",
-"cakovec",
-"esztergom",
-"gyor",
-"kapuvar",
-"komarom",
-"kormend",
-"lake_neusiedl",
-"magyarovar",
-"mohacs",
-"nagykanizsa",
-"olsnica",
-"pecs",
-"siklos",
-"simontornya",
-"szombathely",
-"tata",
-"tolna",
-"vasvar",
-"zalaegerszeg",
-"zalavar"
+"brest",
+"carhaix",
+"chateaulin",
+"chatelaudren",
+"dol",
+"fougeres",
+"josselin",
+"le_faou",
+"monfort_sur_meu",
+"ploermel",
+"quimper",
+"quimperle",
+"rohan",
+"saint_brieuc",
+"saint_malo",
+"st_pol_de_leon",
+"treguier",
+"vitre"
+]
+},
+"170": {
+"tier": "alias",
+"locations": [
+"finisterre"
+]
+},
+"171": {
+"tier": "node",
+"locations": [
+"hennebont",
+"redon",
+"vannes"
 ]
 },
 "172": {
@@ -1636,14 +2183,9 @@
 "mont_de_marsan",
 "muret",
 "north_eastern_pyrenees1",
-"north_western_pyrenees",
-"oloron",
-"orthez",
-"pau",
 "saint_gaudens",
 "saint_jean_pied_de_port",
 "saint_lizier",
-"tarbes",
 "tartas",
 "tosse"
 ]
@@ -1664,6 +2206,30 @@
 "nogaro",
 "not_eligible_for_dynamic_country_name",
 "yes"
+]
+},
+"176": {
+"tier": "alias",
+"locations": [
+"north_western_pyrenees",
+"oloron",
+"orthez",
+"pau",
+"tarbes"
+]
+},
+"177": {
+"tier": "alias",
+"locations": [
+"beaumont_au_maine",
+"chateau_du_loir",
+"laval",
+"le_mans",
+"mayenne",
+"sable",
+"sainte_suzanne",
+"st_calais",
+"villaines"
 ]
 },
 "178": {
@@ -1692,6 +2258,20 @@
 "st_calais",
 "villaines",
 "yes"
+]
+},
+"179": {
+"tier": "alias",
+"locations": [
+"bourges",
+"boussac",
+"chateauroux",
+"gien",
+"issoudun",
+"lignieres",
+"sancerre",
+"sancoins",
+"vierzon"
 ]
 },
 "180": {
@@ -1856,6 +2436,27 @@
 "louhans"
 ]
 },
+"193": {
+"tier": "alias",
+"locations": [
+"baume",
+"besancon",
+"dole",
+"gray",
+"luxeuil",
+"montbeliard",
+"montbozon",
+"not_eligible_for_dynamic_country_name",
+"orgelet",
+"ornans",
+"poligny",
+"pontarlier",
+"saint_claude",
+"salins_les_bains",
+"vesoul",
+"yes"
+]
+},
 "194": {
 "tier": "key/display",
 "locations": [
@@ -1901,7 +2502,6 @@
 "castellon_ampurias",
 "cervera",
 "flix",
-"girona",
 "lagoon_of_salses",
 "manresa",
 "montblanc",
@@ -1931,13 +2531,32 @@
 ]
 },
 "199": {
-"tier": "area-node",
+"tier": "node",
 "locations": [
-"asni",
-"kara",
-"korra",
-"prayag",
-"shankargah"
+"allegre",
+"aurillac",
+"bourbon",
+"brioude",
+"chambon",
+"clermont",
+"dore_mountains",
+"herment",
+"huriel",
+"jaligny",
+"mauriac",
+"molins",
+"montaigut",
+"montlucon",
+"not_eligible_for_dynamic_country_name",
+"riom",
+"saint_flour",
+"st_gerand",
+"thiers",
+"tour_auvergne",
+"vic_le_comte",
+"vichy",
+"vodable",
+"yes"
 ]
 },
 "200": {
@@ -2088,6 +2707,14 @@
 "leon"
 ]
 },
+"209": {
+"tier": "alias",
+"locations": [
+"bilbao",
+"durango",
+"valmaseda"
+]
+},
 "210": {
 "tier": "node",
 "locations": [
@@ -2120,13 +2747,9 @@
 ]
 },
 "212": {
-"tier": "area-node",
+"tier": "key/display",
 "locations": [
-"asni",
-"kara",
-"korra",
-"prayag",
-"shankargah"
+"girona"
 ]
 },
 "213": {
@@ -2157,6 +2780,12 @@
 "tier": "key/display",
 "locations": [
 "madrid"
+]
+},
+"218": {
+"tier": "key/display",
+"locations": [
+"badajoz"
 ]
 },
 "219": {
@@ -2196,12 +2825,9 @@
 ]
 },
 "225": {
-"tier": "area-node",
+"tier": "key/display",
 "locations": [
-"al_furaish",
-"al_hegrieah",
-"as_suwaydirah",
-"khalis_medina"
+"cordoba"
 ]
 },
 "226": {
@@ -2235,6 +2861,25 @@
 "vila_vicosa"
 ]
 },
+"228": {
+"tier": "alias",
+"locations": [
+"besteiros",
+"castelo_branco",
+"covilha",
+"estrela_mountains",
+"guarda",
+"idanha",
+"lamego",
+"meda",
+"pinhel",
+"proenca_nova",
+"sabugal",
+"seia",
+"trancoso",
+"viseu"
+]
+},
 "229": {
 "tier": "key/display",
 "locations": [
@@ -2254,37 +2899,9 @@
 ]
 },
 "231": {
-"tier": "area-node",
+"tier": "key/display",
 "locations": [
-"agsu",
-"aresh",
-"baciravan",
-"baku",
-"barda",
-"beylagan",
-"bilasuvar",
-"derbent",
-"gardman",
-"germi",
-"goychay",
-"javad",
-"lake_agh_gol",
-"lake_sarisu",
-"lemberan",
-"lesser_caucasus_mountains6",
-"mahmudabad",
-"maraza",
-"mughan",
-"niyazabad",
-"qabala",
-"qobustan",
-"quba",
-"salyan",
-"shabran",
-"shamkir",
-"varsan",
-"vartashen",
-"zardab"
+"porto"
 ]
 },
 "232": {
@@ -2346,6 +2963,12 @@
 "hedingham",
 "prittlewell",
 "walden"
+]
+},
+"239": {
+"tier": "key/display",
+"locations": [
+"gloucester"
 ]
 },
 "240": {
@@ -3413,6 +4036,12 @@
 "yaroslavl"
 ]
 },
+"309": {
+"tier": "alias",
+"locations": [
+"olonets"
+]
+},
 "310": {
 "tier": "key/display",
 "locations": [
@@ -3508,6 +4137,34 @@
 "lake_iznik"
 ]
 },
+"318": {
+"tier": "area-node",
+"locations": [
+"alasehir",
+"balat",
+"birgi",
+"cine",
+"guzelhisar",
+"lake_bafa",
+"milas",
+"nazilli",
+"tire"
+]
+},
+"319": {
+"tier": "area-node",
+"locations": [
+"alasehir",
+"balat",
+"birgi",
+"cine",
+"guzelhisar",
+"lake_bafa",
+"milas",
+"nazilli",
+"tire"
+]
+},
 "320": {
 "tier": "node",
 "locations": [
@@ -3555,17 +4212,13 @@
 "cankiri",
 "celtik",
 "cerkes",
-"cubuk",
 "cumra",
 "eregli_kar",
 "erenler_mountains",
 "eskil",
 "hatunsaray",
-"haymana",
 "ilgin",
 "insuyu",
-"kalecik",
-"karakecili",
 "karapinar",
 "kaymaz",
 "kibrus",
@@ -3587,7 +4240,6 @@
 "mihaliccik",
 "obruk",
 "pirloganda",
-"polatli",
 "sabanozu",
 "sarkikaraagac",
 "seydisehir",
@@ -3679,12 +4331,9 @@
 "bejaad",
 "bzou",
 "debdou",
-"east_high_atlas",
-"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
-"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -3693,7 +4342,6 @@
 "larache",
 "lower_rif",
 "marrakesh",
-"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -3722,7 +4370,6 @@
 "tinmel",
 "tizgane",
 "volubilis",
-"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -3790,12 +4437,9 @@
 "bejaad",
 "bzou",
 "debdou",
-"east_high_atlas",
-"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
-"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -3804,7 +4448,6 @@
 "larache",
 "lower_rif",
 "marrakesh",
-"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -3833,7 +4476,6 @@
 "tinmel",
 "tizgane",
 "volubilis",
-"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -3861,12 +4503,9 @@
 "bejaad",
 "bzou",
 "debdou",
-"east_high_atlas",
-"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
-"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -3875,7 +4514,6 @@
 "larache",
 "lower_rif",
 "marrakesh",
-"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -3904,7 +4542,6 @@
 "tinmel",
 "tizgane",
 "volubilis",
-"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -3926,12 +4563,9 @@
 "bejaad",
 "bzou",
 "debdou",
-"east_high_atlas",
-"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
-"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -3940,7 +4574,6 @@
 "larache",
 "lower_rif",
 "marrakesh",
-"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -3969,7 +4602,6 @@
 "tinmel",
 "tizgane",
 "volubilis",
-"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -4138,12 +4770,17 @@
 "qena"
 ]
 },
+"361": {
+"tier": "key/display",
+"locations": [
+"cairo"
+]
+},
 "362": {
 "tier": "area-fallback",
 "locations": [
 "al_mima",
 "bilbeis",
-"cairo",
 "connector_egypt11",
 "connector_egypt17",
 "dakahla",
@@ -4170,7 +4807,6 @@
 "rashid",
 "sallum",
 "samanoud",
-"suez",
 "tidah",
 "tinnis",
 "ushmum_tannah",
@@ -4187,6 +4823,26 @@
 "tier": "key/display",
 "locations": [
 "gaza"
+]
+},
+"365": {
+"tier": "node",
+"locations": [
+"connector_egypt14",
+"connector_egypt15",
+"el_arish",
+"el_jundi",
+"el_tor",
+"faran",
+"lake_bardawil",
+"nekhel",
+"northern_sinai_desert1",
+"northern_sinai_desert2",
+"nuweiba",
+"qatya",
+"saint_katrine",
+"sinai_desert",
+"warrada"
 ]
 },
 "366": {
@@ -4338,23 +4994,33 @@
 "370": {
 "tier": "area-node",
 "locations": [
+"altafjord",
+"anavik",
 "arnar_fjord",
+"arsuk",
 "bear_island",
 "blonduos",
 "borgarnes",
+"brattahlid",
 "cape_wrath",
 "denmark_strait",
 "denmark_strait1",
 "denmark_strait2",
 "denmark_strait4",
 "denmark_strait7",
+"dyrnes",
+"eggers_o",
 "egilsstadir",
+"einarsfjord",
+"eiriksfjord",
 "eyjafjallajokull",
 "fair_isle_gap",
 "faroe_islands1",
 "faxa_bay",
 "fontur_point",
+"gardr",
 "glettinga_point",
+"godthab",
 "greenland_coast10",
 "greenland_coast11",
 "greenland_coast12",
@@ -4370,21 +5036,30 @@
 "greenland_high_sea8",
 "greenland_high_sea9",
 "greenland_sea3",
+"gronnedal",
+"herjolfsnes",
 "hofsjokull",
 "holar",
 "holmur",
 "husavik",
+"hvalsey",
 "hvamstangi",
 "hvolsvollur",
 "icelandic_highlands",
 "iluileq_coast",
 "isa_fjord",
 "isafjordur",
+"ivituut",
 "jan_mayen",
 "kangaamiut_coast",
+"kangeq",
+"kapisillit",
 "keflavik",
+"ketilsfjord",
 "kirkjubaejar",
 "langjokull",
+"lundey",
+"lysufjord",
 "neria_coast",
 "north_eastern_atlantic15",
 "north_eastern_atlantic16",
@@ -4404,12 +5079,15 @@
 "olavsvik",
 "paamiut_coast",
 "pentland_firth",
+"petursvik",
 "prins_christianssund_coast",
 "qaqortoq_coast",
 "reikjavik",
 "reydarfjordur",
+"sandnes",
 "selfoss",
 "seydisfjordur",
+"siglufjord",
 "skaga_fjord",
 "skalholt",
 "stokks_point",
@@ -4418,6 +5096,7 @@
 "thingvellir",
 "torshavn",
 "torshofn",
+"vatnahverfi",
 "vattnajokull",
 "vestmanna_islands",
 "vopnafjordur"
@@ -4723,6 +5402,63 @@
 "zinjibar"
 ]
 },
+"390": {
+"tier": "area-fallback",
+"locations": [
+"ahwar",
+"al_bayda_yemen",
+"al_ghulayfiqah",
+"al_khuraybah",
+"al_luhayyah",
+"al_mandab",
+"al_mukalla",
+"al_mukha",
+"al_qara",
+"al_shihr",
+"arrayda",
+"as_salafiyah",
+"as_salif",
+"azzan",
+"balhaf",
+"baraqish",
+"bayhan",
+"birali",
+"dha_sohis",
+"dhafar",
+"habban",
+"hajar",
+"haraz_mountains3",
+"haraz_mountains4",
+"harib",
+"hays",
+"hudaida",
+"huraydah",
+"hutayb",
+"ibb",
+"juban",
+"jurrah",
+"kamaran_islands_wasteland",
+"kawkaban",
+"khayrij",
+"lawdar",
+"markha",
+"mawza",
+"mikhlaf_al_hubishiyah",
+"mudhaykirah",
+"musaymir",
+"nisab",
+"radaa",
+"rakhyah",
+"rub_al_khali2",
+"sayun",
+"shabwa",
+"shibam",
+"shuqra",
+"taizz",
+"tarim",
+"yahr"
+]
+},
 "391": {
 "tier": "key/display",
 "locations": [
@@ -4909,10 +5645,130 @@
 "liwa_lampung"
 ]
 },
+"405": {
+"tier": "area-fallback",
+"locations": [
+"acre",
+"afrin",
+"al_bab",
+"al_quwayrah",
+"amman",
+"antilebanon_mountains1",
+"antilebanon_mountains2",
+"antilebanon_mountains3",
+"arak",
+"arsuz",
+"artah",
+"baalbek",
+"baniyas",
+"beersheba",
+"beirut",
+"bosra",
+"burraq",
+"dabiq",
+"dara",
+"dead_sea",
+"deir_ez_zor",
+"deir_qamar",
+"dluk",
+"hebron",
+"huwwarin",
+"idlib",
+"irbid",
+"ithriya",
+"jabbul",
+"jableh",
+"jaffa",
+"jayrud",
+"kafartab",
+"khanaser",
+"kilis",
+"lake_amik",
+"lake_jabbul",
+"latakia",
+"lebanon_mountains",
+"madaba",
+"majdal",
+"manbij",
+"marrat",
+"maskanah",
+"masyaf",
+"mountain_druze",
+"nabek",
+"nawa",
+"qaryatayn",
+"qastal",
+"qusayr",
+"qutayfah",
+"safed",
+"salamiyya",
+"salkhad",
+"sea_galilee",
+"shoubak",
+"sughar",
+"sukhnah",
+"tabqah",
+"tadmur",
+"tartus",
+"taybah",
+"trapessac",
+"zardana"
+]
+},
 "406": {
 "tier": "key/display",
 "locations": [
 "haditha"
+]
+},
+"407": {
+"tier": "area-fallback",
+"locations": [
+"abu_kemal",
+"al_sinn",
+"anah",
+"araban",
+"balad",
+"bara_iraq",
+"barqaid",
+"birecik",
+"busayrah",
+"cermik",
+"cizre",
+"diyarbekir",
+"duhok",
+"dunaysir",
+"east_taurus_3",
+"egil",
+"ergani",
+"eruh",
+"harran",
+"hasakah",
+"hasankeyf",
+"hazro",
+"heni",
+"jabar",
+"jazair",
+"karacadag",
+"kozluk",
+"kulp",
+"madinat_far",
+"makisin",
+"mayyafariqin",
+"midyat",
+"nusaybin",
+"qayyarah",
+"raqqa",
+"ras_ayn",
+"sason",
+"savur",
+"siirt",
+"sirnak",
+"siverek",
+"suruc",
+"tal_afar",
+"tunanir",
+"viransehir"
 ]
 },
 "408": {
@@ -4987,15 +5843,12 @@
 "baskale",
 "bayburt",
 "bingol",
-"bitlis",
 "catak",
 "cemisgezek",
 "east_taurus_4",
 "east_taurus_5",
 "east_taurus_7",
 "ercis",
-"erzincan",
-"erzurum",
 "genc",
 "hakkari",
 "harput",
@@ -5008,7 +5861,6 @@
 "karagol_mountains",
 "karakilise",
 "karasu_aras_mountains",
-"kars",
 "kars_mountains_2",
 "kars_mountains_3",
 "keban",
@@ -5023,7 +5875,6 @@
 "mercan_mountains_2",
 "mescit_mountains",
 "mus",
-"not_eligible_for_dynamic_country_name",
 "otlukbeli_mountains",
 "palu",
 "pertek",
@@ -5037,9 +5888,7 @@
 "tekman",
 "tercan",
 "tutak",
-"van",
 "varto",
-"yes",
 "zakho"
 ]
 },
@@ -5142,6 +5991,7 @@
 "locations": [
 "al_mamtir",
 "aliabad_katul",
+"astara",
 "astarabad",
 "bandar_e_anzali",
 "bastam",
@@ -5198,7 +6048,6 @@
 "al_tiz",
 "awaran",
 "bampur",
-"bandar_e_jask",
 "bannajbur",
 "bashagard",
 "bazman",
@@ -5206,6 +6055,7 @@
 "besima",
 "bih",
 "buleda",
+"chagai",
 "dalgan",
 "espakeh",
 "fahrej",
@@ -5374,6 +6224,23 @@
 "ust_yurt_plateau2"
 ]
 },
+"444": {
+"tier": "area-node",
+"locations": [
+"barkdiz",
+"karakum_desert3",
+"karakum_desert4",
+"karakum_desert5",
+"karakum_desert6",
+"pandjih"
+]
+},
+"445": {
+"tier": "key/display",
+"locations": [
+"merv"
+]
+},
 "446": {
 "tier": "key/display",
 "locations": [
@@ -5402,6 +6269,62 @@
 "tier": "key/display",
 "locations": [
 "kabul"
+]
+},
+"452": {
+"tier": "node",
+"locations": [
+"aiwanj",
+"araska",
+"basand",
+"daroot_korgon",
+"darzanji",
+"denov",
+"farkhor",
+"fayzabad",
+"gharm",
+"gunt",
+"hindu_kush2",
+"hindu_kush3",
+"hindu_kush4",
+"hindu_kush5",
+"hindu_kush6",
+"hindu_kush7",
+"hissar",
+"hulbuk",
+"ishkashim",
+"jurm",
+"karakol",
+"karakul_lake",
+"kham_bahar",
+"kulob",
+"muksu",
+"munk",
+"murghab",
+"oksu",
+"pamir3",
+"pamir4",
+"pamir5",
+"pamir6",
+"pamir7",
+"pamir8",
+"qalai_khumb",
+"qila_panjeh",
+"qubodijon",
+"ragh",
+"roshtqala",
+"sangvor",
+"sar_sang",
+"sarhad",
+"shighnan",
+"shiveh",
+"shuman",
+"termez",
+"vakhs",
+"vamar",
+"vanch",
+"wesgird",
+"zebak"
 ]
 },
 "453": {
@@ -5525,6 +6448,92 @@
 "kokand"
 ]
 },
+"459": {
+"tier": "area-fallback",
+"locations": [
+"akkesene",
+"akkol_lake",
+"aksumbe",
+"alakol_lake",
+"almaliq",
+"aspara",
+"ayagoz",
+"baba_ata",
+"balasagun",
+"balkhash_lake",
+"balruq",
+"balykchy",
+"barskoon",
+"bilikol_lake",
+"borohoro2",
+"boyauli",
+"charyn",
+"chundzha",
+"dahra_sasykkol",
+"dungene",
+"dzhul",
+"dzhulsub",
+"emin",
+"gulja",
+"gulshara",
+"harandzuvan",
+"ilanbalyk",
+"ilibalyk",
+"issyk_kul_lake",
+"karakastek",
+"karamergen",
+"kargaly",
+"kayalyk",
+"kegen",
+"khantau",
+"koktal",
+"koktuma",
+"koshkarkol_lake",
+"kulan",
+"kurty",
+"kysmyci",
+"kyzylkorgan",
+"lavar",
+"lepsy",
+"merki",
+"moiynkum_desert",
+"narat",
+"nilka",
+"nurlykent",
+"nuzket",
+"ran",
+"sagabuyen",
+"san_tash",
+"sargau",
+"sarvaslyk",
+"saryesik_atyrau_desert",
+"sasykkol_lake",
+"saudakent",
+"shavgar",
+"shelek",
+"shengeldy",
+"sholakkorgan",
+"soltobe",
+"sorbulaq_lake",
+"sretenskoe",
+"talkhir",
+"tamdy",
+"tansyk",
+"targabatay",
+"targabatay_mountains",
+"tasty",
+"tasuktul",
+"taukum_desert",
+"tekabket",
+"tekeli",
+"tokkuztara",
+"tolekskoe",
+"toli",
+"wusun",
+"yangi",
+"zherkorgan"
+]
+},
 "460": {
 "tier": "area-fallback",
 "locations": [
@@ -5642,6 +6651,12 @@
 "zemukh",
 "zhaushikumtobe",
 "zomin"
+]
+},
+"461": {
+"tier": "key/display",
+"locations": [
+"almaty"
 ]
 },
 "462": {
@@ -6452,6 +7467,55 @@
 "vellore"
 ]
 },
+"540": {
+"tier": "area-fallback",
+"locations": [
+"adams_bridge",
+"aruppukkottai",
+"batlagundu",
+"bhavani",
+"biligiriranga",
+"coimbatore",
+"denkanikottai",
+"devakottai",
+"dharapuram",
+"dharmapuri",
+"erode",
+"jagadevipalayam",
+"jayankondam",
+"kallakurichi",
+"kambam",
+"karaikal",
+"karur",
+"kayal",
+"kayattar",
+"krishnagiri",
+"nagapattinam",
+"nilgiri",
+"palani",
+"palni_hills",
+"pandalam_hills",
+"pattukkottai",
+"pennadam",
+"pennagaram",
+"perambalur",
+"puddokothai",
+"ramesvaram",
+"sankaranayinarkoil",
+"satyamanagalam",
+"sendamangalam",
+"srirangam",
+"tenkasi",
+"thanjavur",
+"thondi",
+"thoothukudi",
+"tiruccirapalli",
+"tirukoilur",
+"tiruppur",
+"vembar",
+"virudhunagar"
+]
+},
 "541": {
 "tier": "key/display",
 "locations": [
@@ -7111,9 +8175,74 @@
 ]
 },
 "578": {
-"tier": "key/display",
+"tier": "area-fallback",
 "locations": [
-"roh"
+"adraskan",
+"alishang",
+"anardara",
+"arghestan",
+"azab",
+"baghran",
+"bahramchah",
+"banader",
+"bost",
+"chak",
+"chaman",
+"chehl_dokhtaran",
+"dasht_khash",
+"dasht_margoh",
+"dasht_registan",
+"dasht_tarakun",
+"deh_kundi",
+"delaram",
+"deychopan",
+"doroh",
+"dowzdab",
+"farah",
+"firuzkuh_afghanistan",
+"gandamak",
+"gardez",
+"garmsir",
+"gereshk",
+"ghazni",
+"hamun_gowd_zerah",
+"hamun_pushak",
+"hamun_saberi",
+"jalalabad",
+"kabul",
+"kajran",
+"kandahar",
+"khanashin",
+"khash_sistan",
+"khaysar",
+"kohi_safi",
+"lash_joveyn",
+"logar",
+"maiwand",
+"maruf",
+"muqur",
+"musa_qala",
+"nawah",
+"nehbandan",
+"pangvay",
+"paropamisus_mountains2",
+"paropamisus_mountains3",
+"paropamisus_mountains5",
+"paropamisus_mountains6",
+"qala_fateh",
+"qalat_ghilji",
+"qarnin",
+"rudbar_sistan",
+"sarbisheh",
+"shahr_sabz",
+"shindand",
+"shusef",
+"tarinkot",
+"tora_bora_mountains",
+"wazakhwa",
+"zabol",
+"zaranj",
+"zarghun_shahr"
 ]
 },
 "579": {
@@ -7389,7 +8518,6 @@
 "mueng_thung_yai",
 "or_keo",
 "peam",
-"phnom_penh",
 "phnom_santuk",
 "phsar_dek",
 "pouthi_loeu",
@@ -7399,7 +8527,6 @@
 "prasat_pram_lovet",
 "preah_khan_kompong_svay",
 "preah_ko",
-"prey_nokor",
 "rong_damrel",
 "sampheak_borak",
 "sandan",
@@ -7410,6 +8537,12 @@
 "tonle_sap_lake",
 "tuol_ta_mouk",
 "vyadhapura"
+]
+},
+"605": {
+"tier": "key/display",
+"locations": [
+"prey_nokor"
 ]
 },
 "606": {
@@ -8970,6 +10103,12 @@
 "sao_tome"
 ]
 },
+"767": {
+"tier": "alias",
+"locations": [
+"szczytno"
+]
+},
 "769": {
 "tier": "key/display",
 "locations": [
@@ -9004,6 +10143,7 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
+"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -10762,8 +11902,6 @@
 "corani",
 "coree",
 "croatan",
-"cumberland_mountains_2",
-"cumberland_mountains_3",
 "dawhee",
 "eswawpuddenah",
 "gowtano",
@@ -11079,7 +12217,6 @@
 "963": {
 "tier": "area-fallback",
 "locations": [
-"adirondacks",
 "ahna_wate",
 "ahouenro",
 "canadaigua",
@@ -11436,6 +12573,7 @@
 "ahwendoe",
 "amqui",
 "andawaohie",
+"anticosti",
 "aunona",
 "betsiamites",
 "caopacho",
@@ -11447,6 +12585,7 @@
 "chicoutimi",
 "coacoachou",
 "essipit",
+"etchemin",
 "gaspe",
 "itomamo",
 "kakouna",
@@ -11463,6 +12602,7 @@
 "laurentian_massif",
 "magpie_massif",
 "manapakuaniskau",
+"manicouagan",
 "manicouagan_depression",
 "manicouagan_plateau",
 "manouane",
@@ -11474,6 +12614,7 @@
 "mecatina",
 "mecatina_hills",
 "metabetchouane",
+"mingan",
 "mistecapiu",
 "mitis",
 "molsemtekw",
@@ -11484,6 +12625,7 @@
 "nipissis",
 "nipisso",
 "northern_notre_dame_mountains",
+"not_eligible_for_dynamic_country_name",
 "notiskuan",
 "onatchiway",
 "ondaonnentakwi",
@@ -11502,6 +12644,7 @@
 "sainte_marguerite_plateau",
 "sartigan",
 "shipshaw",
+"stadacona",
 "tadoussac",
 "taoondewake",
 "temiscouata",
@@ -11512,7 +12655,8 @@
 "upuahpukau",
 "valin_mountains",
 "wachilmezi",
-"wolastoq"
+"wolastoq",
+"yes"
 ]
 },
 "996": {
@@ -12360,6 +13504,19 @@
 "yuufutsu"
 ]
 },
+"1033": {
+"tier": "alias",
+"locations": [
+"boluohe",
+"guohuo",
+"idy_sakhalin",
+"kushunkotan",
+"nanghaer",
+"nayoro",
+"porokotan",
+"wuliehe"
+]
+},
 "1034": {
 "tier": "node",
 "locations": [
@@ -12659,6 +13816,51 @@
 "gizhiga"
 ]
 },
+"1043": {
+"tier": "alias",
+"locations": [
+"agayakan",
+"aimchan",
+"arka",
+"atargan",
+"atka",
+"ayan",
+"bakhapcha",
+"brokhovo",
+"chalbukhan",
+"eldikan",
+"enken",
+"hakandya_uppland",
+"ketanda",
+"kolyma_highlands",
+"kuydusun",
+"kyubeme",
+"madaun",
+"magadan",
+"magadan_range",
+"moi_urusta",
+"ogonok",
+"oimiakon",
+"okam",
+"okam_range",
+"omchak",
+"omchug",
+"palatka",
+"razvika",
+"takhtoyamsk",
+"tauisk",
+"tenut",
+"tumul",
+"ul_ya",
+"ushki",
+"ust_ynykchan",
+"yamsk",
+"yamsk_range1",
+"yamsk_range2",
+"yamsk_range3",
+"yugorenok"
+]
+},
 "1044": {
 "tier": "key/display",
 "locations": [
@@ -12714,6 +13916,51 @@
 "mayya"
 ]
 },
+"1047": {
+"tier": "area-fallback",
+"locations": [
+"agayakan",
+"aimchan",
+"arka",
+"atargan",
+"atka",
+"ayan",
+"bakhapcha",
+"brokhovo",
+"chalbukhan",
+"eldikan",
+"enken",
+"hakandya_uppland",
+"ketanda",
+"kolyma_highlands",
+"kuydusun",
+"kyubeme",
+"madaun",
+"magadan",
+"magadan_range",
+"moi_urusta",
+"ogonok",
+"oimiakon",
+"okam",
+"okam_range",
+"omchak",
+"omchug",
+"palatka",
+"razvika",
+"takhtoyamsk",
+"tauisk",
+"tenut",
+"tumul",
+"ul_ya",
+"ushki",
+"ust_ynykchan",
+"yamsk",
+"yamsk_range1",
+"yamsk_range2",
+"yamsk_range3",
+"yugorenok"
+]
+},
 "1050": {
 "tier": "key/display",
 "locations": [
@@ -12724,6 +13971,51 @@
 "tier": "key/display",
 "locations": [
 "aldan"
+]
+},
+"1052": {
+"tier": "area-fallback",
+"locations": [
+"agayakan",
+"aimchan",
+"arka",
+"atargan",
+"atka",
+"ayan",
+"bakhapcha",
+"brokhovo",
+"chalbukhan",
+"eldikan",
+"enken",
+"hakandya_uppland",
+"ketanda",
+"kolyma_highlands",
+"kuydusun",
+"kyubeme",
+"madaun",
+"magadan",
+"magadan_range",
+"moi_urusta",
+"ogonok",
+"oimiakon",
+"okam",
+"okam_range",
+"omchak",
+"omchug",
+"palatka",
+"razvika",
+"takhtoyamsk",
+"tauisk",
+"tenut",
+"tumul",
+"ul_ya",
+"ushki",
+"ust_ynykchan",
+"yamsk",
+"yamsk_range1",
+"yamsk_range2",
+"yamsk_range3",
+"yugorenok"
 ]
 },
 "1054": {
@@ -13035,6 +14327,7 @@
 "morki",
 "mozhga",
 "nagorsk",
+"nenets",
 "nikolsky",
 "nizhny_tagil",
 "nizhnyaya_salda",
@@ -13591,12 +14884,6 @@
 "mauritius"
 ]
 },
-"1103": {
-"tier": "key/display",
-"locations": [
-"bourbon"
-]
-},
 "1104": {
 "tier": "area-node",
 "locations": [
@@ -13619,12 +14906,10 @@
 "ketilsfjord",
 "lundey",
 "lysufjord",
-"not_eligible_for_dynamic_country_name",
 "petursvik",
 "sandnes",
 "siglufjord",
-"vatnahverfi",
-"yes"
+"vatnahverfi"
 ]
 },
 "1105": {
@@ -13649,12 +14934,10 @@
 "ketilsfjord",
 "lundey",
 "lysufjord",
-"not_eligible_for_dynamic_country_name",
 "petursvik",
 "sandnes",
 "siglufjord",
-"vatnahverfi",
-"yes"
+"vatnahverfi"
 ]
 },
 "1106": {
@@ -13764,20 +15047,14 @@
 "tier": "area-node",
 "locations": [
 "abengourou",
-"accra",
 "ado_ekiti",
 "afikpo",
 "agnam_civol",
-"ajase",
-"akropong",
 "akure",
 "akwatia",
 "albreda",
 "amaigbo",
-"anecho",
-"anomansah",
 "apollonia",
-"ardra",
 "arochukwu",
 "assinie",
 "atakpame",
@@ -13813,7 +15090,6 @@
 "boundiali",
 "brass",
 "bunce_island",
-"cabo_corso",
 "cabo_formoso",
 "cacheu",
 "cape_debundsha",
@@ -13869,7 +15145,6 @@
 "gbepleu",
 "geba_estuary",
 "geregia",
-"glexwe",
 "goaso",
 "golere",
 "grand_bassam",
@@ -13878,7 +15153,6 @@
 "guinea_gulf",
 "guinean_jungle",
 "hemang",
-"hulagan",
 "igbo_ukwu",
 "ikere",
 "ikom",
@@ -13897,7 +15171,6 @@
 "katiola",
 "katsina_ala",
 "kerouane",
-"keta",
 "kibi",
 "kintampo",
 "kissidougou",
@@ -13908,7 +15181,6 @@
 "koro",
 "korup_jungle",
 "kouande",
-"kpalime",
 "kuje",
 "kumawu",
 "kumba",
@@ -13920,7 +15192,6 @@
 "macenta",
 "mahin",
 "mandiana",
-"mankessim",
 "mano",
 "marsassoum",
 "mboune",
@@ -13943,7 +15214,6 @@
 "north_eastern_atlantic90",
 "north_eastern_atlantic91",
 "north_eastern_atlantic92",
-"notse",
 "nsukka",
 "nyong",
 "odienne",
@@ -14002,7 +15272,6 @@
 "sorokogne",
 "sutuko",
 "tabou",
-"tado",
 "tankular",
 "techiman",
 "timbo",
@@ -14021,7 +15290,6 @@
 "walalde",
 "wanar",
 "west_niger_mouth",
-"winneba",
 "yagala",
 "yawri_bay",
 "yeji",
@@ -14175,6 +15443,16 @@
 "gao"
 ]
 },
+"1134": {
+"tier": "alias",
+"locations": [
+"bai",
+"djenne",
+"kanibonzon",
+"san",
+"sanekuy"
+]
+},
 "1135": {
 "tier": "key/display",
 "locations": [
@@ -14221,6 +15499,28 @@
 "tier": "key/display",
 "locations": [
 "kumasi"
+]
+},
+"1139": {
+"tier": "alias",
+"locations": [
+"abomey",
+"accra",
+"ajase",
+"akropong",
+"anecho",
+"anomansah",
+"ardra",
+"cabo_corso",
+"glexwe",
+"hulagan",
+"keta",
+"ketu",
+"kpalime",
+"mankessim",
+"notse",
+"tado",
+"winneba"
 ]
 },
 "1140": {
@@ -15776,10 +17076,35 @@
 "sofala"
 ]
 },
+"1187": {
+"tier": "key/display",
+"locations": [
+"sena"
+]
+},
 "1188": {
 "tier": "key/display",
 "locations": [
 "massapa"
+]
+},
+"1190": {
+"tier": "alias",
+"locations": [
+"ancuase",
+"kaphirintiwa",
+"massanza",
+"muchena",
+"tembue",
+"zumbo"
+]
+},
+"1191": {
+"tier": "alias",
+"locations": [
+"chikowa",
+"mutota",
+"tete"
 ]
 },
 "1192": {
@@ -15869,6 +17194,12 @@
 "lamu"
 ]
 },
+"1205": {
+"tier": "alias",
+"locations": [
+"mogadishu"
+]
+},
 "1206": {
 "tier": "key/display",
 "locations": [
@@ -15941,6 +17272,35 @@
 "wej"
 ]
 },
+"1216": {
+"tier": "area-fallback",
+"locations": [
+"ain_farah",
+"barah",
+"dilling",
+"ed_daein",
+"el_obeid",
+"kabsoru",
+"kadugli",
+"kebkabiya",
+"kosa",
+"kujunung",
+"malha",
+"masa_sud",
+"mornei",
+"nuba_sud",
+"nyala",
+"shakka",
+"taweisha",
+"teqali",
+"towing",
+"uri",
+"wadi_el_melik",
+"wara",
+"waylula",
+"zankor"
+]
+},
 "1217": {
 "tier": "key/display",
 "locations": [
@@ -15997,6 +17357,12 @@
 "korti",
 "omdurman",
 "shemkhiya"
+]
+},
+"1221": {
+"tier": "key/display",
+"locations": [
+"el_obeid"
 ]
 },
 "1222": {
@@ -17313,17 +18679,14 @@
 "balassagyarmat",
 "banska_bystrica",
 "bardejov",
-"beregovo",
 "gemer",
 "gonc",
-"humenne",
 "kosice",
 "kremnica",
 "krupina",
 "levoca",
 "liptovsky_mikulas",
 "lubica",
-"mukachevo",
 "nograd",
 "oravsky_podzamok",
 "podmuran",
@@ -17332,15 +18695,11 @@
 "rimavska_sobota",
 "roznava",
 "salgotarjan",
-"satoraljaujhely",
 "stary_tekov",
 "turciansky_svaty_martin",
 "turna",
-"uzhorod",
-"velikyi_bereznyi",
 "western_carpathians1",
 "western_carpathians2",
-"zemplin",
 "zilina",
 "zvolen"
 ]
@@ -17375,6 +18734,16 @@
 "ribemont",
 "saint_omer",
 "saint_pol"
+]
+},
+"1744": {
+"tier": "alias",
+"locations": [
+"antwerp",
+"bergen_zoom",
+"breda",
+"mechelen",
+"turnhout"
 ]
 },
 "1745": {
@@ -17748,6 +19117,37 @@
 "lienz"
 ]
 },
+"1769": {
+"tier": "area-node",
+"locations": [
+"bled",
+"gorizia",
+"ilirska_bistrica",
+"julian_alps",
+"kocevje",
+"kranj",
+"ljubljana",
+"metlika",
+"novo_mesto",
+"postojna",
+"skofja_loka",
+"tolmin",
+"trieste"
+]
+},
+"1770": {
+"tier": "alias",
+"locations": [
+"ganserndorf",
+"hollabrunn",
+"horn",
+"korneuburg",
+"krems",
+"mistelbach",
+"waidhofen_an_der_thaya",
+"zwettl"
+]
+},
 "1771": {
 "tier": "area-node",
 "locations": [
@@ -17807,38 +19207,97 @@
 ]
 },
 "1776": {
-"tier": "area-node",
+"tier": "node",
 "locations": [
-"andomsky_pogost",
-"chelmuzhi",
-"iksa",
-"konyovo",
-"lake_kenozero_ark",
-"lake_kozhozero",
-"lake_lacha",
-"lake_lyokshmozero",
-"lake_sumozero",
-"lake_vodlozero",
-"luda",
-"maloshuyka",
-"malye_oserki",
-"navolok",
-"nyonoksa",
-"priluky",
-"pudoga",
-"russian_wastelands_1",
-"shalakusha",
-"shalskii",
-"sheleksa",
-"solovetsky",
-"sumsky_posad",
-"unezhma",
-"vershinino",
-"vodlozero",
-"volosovskaya",
-"vygozero",
-"vytegra",
-"yemetsk"
+"hoytiainen",
+"ilomantsi",
+"joensuu",
+"juuka",
+"jyskyjarvi",
+"karelia_taiga1",
+"karelia_taiga2",
+"karhumagi",
+"kem",
+"keret",
+"kiestinki",
+"kinerma",
+"kizhi",
+"koitere",
+"kondpoga",
+"konevets",
+"korela",
+"kovda",
+"kriitina",
+"kurkijoki",
+"lake_bolshoye_rovkulskoye",
+"lake_engozero",
+"lake_gimoly",
+"lake_kamennoye",
+"lake_kenozero",
+"lake_konchozero",
+"lake_kovdozero",
+"lake_kukkureozero",
+"lake_ladoga",
+"lake_leksozero",
+"lake_lindozero",
+"lake_lizhmozero",
+"lake_lokhtyarvi",
+"lake_maslozero",
+"lake_notozero",
+"lake_nyuk",
+"lake_onega",
+"lake_orivesi",
+"lake_otradnoye",
+"lake_palvozero",
+"lake_pyaozero",
+"lake_sandal",
+"lake_seletsy",
+"lake_shotozero",
+"lake_sredneye_kuyto",
+"lake_suoyarvi",
+"lake_syamozero",
+"lake_tishkeozero",
+"lake_topozero",
+"lake_tulos",
+"lake_tungudskoye",
+"lake_vedlozero",
+"lake_verkhneye_kuyto",
+"lake_vygozero",
+"lake_yelmozero",
+"lake_zegoserskoje",
+"lieksa",
+"lindjarvi",
+"loimola",
+"mohko",
+"nadvoitsy",
+"not_eligible_for_dynamic_country_name",
+"nurmes",
+"olonets",
+"ontajarvi",
+"ostrechiny",
+"paanajarvi",
+"pielinen",
+"pieninka",
+"pryazha",
+"puatane",
+"repola",
+"rukajarvi",
+"saarijoki",
+"salmi",
+"sellinkyla",
+"semcojarvi",
+"shuya_karelia",
+"shyoltozero",
+"sordavala",
+"suikujarvi",
+"suojarvi",
+"tunkuo",
+"uhtuo",
+"vartsila",
+"vazhiny",
+"viinijarvi",
+"yanis_jarvi",
+"yes"
 ]
 },
 "1777": {
@@ -17953,6 +19412,7 @@
 "morki",
 "mozhga",
 "nagorsk",
+"nenets",
 "nikolsky",
 "nizhny_tagil",
 "nizhnyaya_salda",
@@ -18129,6 +19589,26 @@
 "antananarivo"
 ]
 },
+"1794": {
+"tier": "alias",
+"locations": [
+"abalessa",
+"abalessa_djanet_corridor",
+"ain_abalessa_corridor",
+"connector_libya1",
+"connector_libya8",
+"djanet",
+"djanet_ghadames_corridor",
+"ghadames",
+"ghadames_ouargla_corridor",
+"in_amenas",
+"sinawin",
+"tademait_plateau1",
+"tozeur_ghadames_corridor",
+"west_grand_erg_oriental1",
+"west_grand_erg_oriental2"
+]
+},
 "1800": {
 "tier": "node",
 "locations": [
@@ -18168,40 +19648,216 @@
 "zinjanja"
 ]
 },
-"1804": {
+"1805": {
 "tier": "node",
 "locations": [
-"altafjord",
-"anavik",
-"arsuk",
-"brattahlid",
-"dyrnes",
-"eggers_o",
-"einarsfjord",
-"eiriksfjord",
-"gardr",
-"godthab",
-"gronnedal",
-"herjolfsnes",
-"hvalsey",
-"ivituut",
-"kangeq",
-"kapisillit",
-"ketilsfjord",
-"lundey",
-"lysufjord",
+"aguanish",
+"ahwendoe",
+"amqui",
+"andawaohie",
+"anticosti",
+"aunona",
+"betsiamites",
+"caopacho",
+"capotigamau",
+"cascapedia",
+"causapscal",
+"chic_choc_mountains",
+"chicchoc",
+"chicoutimi",
+"coacoachou",
+"essipit",
+"etchemin",
+"gaspe",
+"itomamo",
+"kakouna",
+"kamitsisit",
+"kamouraska",
+"kapuameut",
+"kegaska",
+"kikonteku",
+"kitchesatsiou",
+"kouate",
+"lake_manicouagan",
+"lake_mouchalagane",
+"lake_pipmuacan",
+"laurentian_massif",
+"magpie_massif",
+"manapakuaniskau",
+"manicouagan",
+"manicouagan_depression",
+"manicouagan_plateau",
+"manouane",
+"manouanis",
+"manouanis_massif",
+"marsoui",
+"matane",
+"matapedia",
+"mecatina",
+"mecatina_hills",
+"metabetchouane",
+"mingan",
+"mistecapiu",
+"mitis",
+"molsemtekw",
+"mouchalagane",
+"napetipi",
+"natashquan",
+"natigostec",
+"nipissis",
+"nipisso",
+"northern_notre_dame_mountains",
 "not_eligible_for_dynamic_country_name",
-"petursvik",
-"sandnes",
-"siglufjord",
-"vatnahverfi",
+"notiskuan",
+"onatchiway",
+"ondaonnentakwi",
+"onkobagag",
+"ontaretse",
+"opocopa",
+"ouiauirabugu",
+"outapimiskou",
+"paspebiac",
+"pessamit",
+"pewjeg",
+"pigou",
+"piletisipuk",
+"pipmuacan",
+"rimouski",
+"sainte_marguerite_plateau",
+"sartigan",
+"shipshaw",
+"stadacona",
+"tadoussac",
+"taoondewake",
+"temiscouata",
+"tetepisca",
+"toulnustouc",
+"uanaman",
+"uashat",
+"upuahpukau",
+"valin_mountains",
+"wachilmezi",
+"wolastoq",
 "yes"
+]
+},
+"1808": {
+"tier": "node",
+"locations": [
+"agai_ticutta",
+"akamba",
+"amargosa",
+"arock",
+"atsa_kudok_wa",
+"bannock_range",
+"bear_river_e",
+"bear_river_w",
+"boa_ogoi",
+"buenaventura",
+"cui_yui_ticutta",
+"cumumba",
+"dembimbosaage",
+"fish_lake",
+"gidi_tika",
+"havasu",
+"hazelton",
+"humbokado",
+"inyo_mountains",
+"ivanpah",
+"jefferson",
+"juntura",
+"kaibab",
+"kaiparowit",
+"kamu_ticutta",
+"kawich",
+"king_hill",
+"koa_aga_itoka",
+"koop_ticutta",
+"koosharem",
+"kupadokado",
+"kutsipiuti",
+"kuyatikka",
+"kuzedika",
+"lemhi",
+"mahaguatikka",
+"makuhadokado",
+"malheur",
+"moadokado",
+"moapa",
+"morgan",
+"newe_wasteland",
+"nuchiu_range",
+"nuwuvi_desert",
+"nuwuvi_wasteland",
+"nyssa",
+"pagayuat",
+"pah_rimpi",
+"pahva_nits",
+"panati",
+"panina_ticutta",
+"parrusit",
+"payette",
+"pierruiat",
+"pio_gwut",
+"pohogwe",
+"pohoko_ikkatee",
+"powalu",
+"quitchupah",
+"randolph",
+"reno",
+"richfield",
+"sahpeech",
+"salt_lake",
+"sawawaktodo",
+"sebit",
+"seneca",
+"seuhubeogoi",
+"shohopanaiti",
+"so_so_goiw",
+"tagotoka",
+"tanalelti",
+"timbisha",
+"tipanuk",
+"tipatikka",
+"toedokado",
+"tooele",
+"toompahnahwach",
+"toponisw",
+"tosa_konoki",
+"tovusidokado",
+"toyabe",
+"tsaiduka",
+"tsitsiadi",
+"tsogwiyuyugi",
+"tubatulabam",
+"tumpisa",
+"uinkaret",
+"unkagarit",
+"wadadokado",
+"waitikka",
+"wapi",
+"waradika",
+"watatikka",
+"winnemucca",
+"yahandeka",
+"yakwahnim_paa",
+"yam_pah_pa",
+"yambadika",
+"yoov_we_teuh",
+"yoowetum",
+"yuttahih"
 ]
 },
 "1809": {
 "tier": "key/display",
 "locations": [
 "so_taeo_o"
+]
+},
+"1810": {
+"tier": "key/display",
+"locations": [
+"alaska"
 ]
 },
 "1813": {
@@ -18475,21 +20131,17 @@
 "grudziadz",
 "gumbinnen",
 "insterburg",
-"konigsberg",
 "kwidzyn",
 "labiau",
 "lake_mamry",
 "lake_sniardwy",
 "lubawa",
 "malbork",
-"memel",
 "morag",
 "nibork",
 "nowe",
-"ostroda",
 "ragnit",
 "swiecie",
-"szczytno",
 "tilsit",
 "wegorzewo",
 "wehlau",
@@ -18733,6 +20385,12 @@
 "frankfurt"
 ]
 },
+"1877": {
+"tier": "alias",
+"locations": [
+"charolles"
+]
+},
 "1878": {
 "tier": "key/display",
 "locations": [
@@ -18755,6 +20413,7 @@
 "ferrette",
 "haguenau",
 "lichtenberg",
+"mulhouse",
 "murbach",
 "strasbourg",
 "zabern"
@@ -19234,6 +20893,35 @@
 "zambesia_katongo"
 ]
 },
+"1930": {
+"tier": "area-fallback",
+"locations": [
+"arboga",
+"enkoping",
+"gefle",
+"grythyttan",
+"hamrange",
+"heby",
+"hedesunda",
+"hjalmaren_lake",
+"kastelholm",
+"kolmarden",
+"linde",
+"malaren",
+"nora",
+"norrtalje",
+"nykoping",
+"ockelbo",
+"oppunda",
+"sala",
+"skinskatteberg",
+"sodertalje",
+"strangnas",
+"tierp",
+"uppsala",
+"vasteras"
+]
+},
 "1931": {
 "tier": "area-fallback",
 "locations": [
@@ -19262,6 +20950,27 @@
 "tier": "key/display",
 "locations": [
 "bari"
+]
+},
+"1934": {
+"tier": "alias",
+"locations": [
+"acerenza",
+"lagonegro",
+"matera",
+"melfi",
+"montepeloso",
+"potenza",
+"santarcangelo"
+]
+},
+"1935": {
+"tier": "alias",
+"locations": [
+"bauska",
+"dobele",
+"jelgava",
+"tukums"
 ]
 },
 "1936": {
@@ -19418,6 +21127,12 @@
 "sutnga"
 ]
 },
+"1951": {
+"tier": "alias",
+"locations": [
+"hunedoara"
+]
+},
 "1952": {
 "tier": "node",
 "locations": [
@@ -19442,7 +21157,6 @@
 "abrahamtelke",
 "baia_mare",
 "beius",
-"bekes",
 "borsod",
 "carei",
 "cheresig",
@@ -19632,23 +21346,33 @@
 "1979": {
 "tier": "area-node",
 "locations": [
+"altafjord",
+"anavik",
 "arnar_fjord",
+"arsuk",
 "bear_island",
 "blonduos",
 "borgarnes",
+"brattahlid",
 "cape_wrath",
 "denmark_strait",
 "denmark_strait1",
 "denmark_strait2",
 "denmark_strait4",
 "denmark_strait7",
+"dyrnes",
+"eggers_o",
 "egilsstadir",
+"einarsfjord",
+"eiriksfjord",
 "eyjafjallajokull",
 "fair_isle_gap",
 "faroe_islands1",
 "faxa_bay",
 "fontur_point",
+"gardr",
 "glettinga_point",
+"godthab",
 "greenland_coast10",
 "greenland_coast11",
 "greenland_coast12",
@@ -19664,21 +21388,30 @@
 "greenland_high_sea8",
 "greenland_high_sea9",
 "greenland_sea3",
+"gronnedal",
+"herjolfsnes",
 "hofsjokull",
 "holar",
 "holmur",
 "husavik",
+"hvalsey",
 "hvamstangi",
 "hvolsvollur",
 "icelandic_highlands",
 "iluileq_coast",
 "isa_fjord",
 "isafjordur",
+"ivituut",
 "jan_mayen",
 "kangaamiut_coast",
+"kangeq",
+"kapisillit",
 "keflavik",
+"ketilsfjord",
 "kirkjubaejar",
 "langjokull",
+"lundey",
+"lysufjord",
 "neria_coast",
 "north_eastern_atlantic15",
 "north_eastern_atlantic16",
@@ -19698,12 +21431,15 @@
 "olavsvik",
 "paamiut_coast",
 "pentland_firth",
+"petursvik",
 "prins_christianssund_coast",
 "qaqortoq_coast",
 "reikjavik",
 "reydarfjordur",
+"sandnes",
 "selfoss",
 "seydisfjordur",
+"siglufjord",
 "skaga_fjord",
 "skalholt",
 "stokks_point",
@@ -19712,6 +21448,7 @@
 "thingvellir",
 "torshavn",
 "torshofn",
+"vatnahverfi",
 "vattnajokull",
 "vestmanna_islands",
 "vopnafjordur"
@@ -21291,6 +23028,7 @@
 "narhat",
 "rajgir",
 "rajmahal",
+"roh",
 "saharsa",
 "samastipur",
 "siraha",
@@ -21535,7 +23273,6 @@
 "al_tiz",
 "awaran",
 "bampur",
-"bandar_e_jask",
 "bannajbur",
 "bashagard",
 "bazman",
@@ -21543,6 +23280,7 @@
 "besima",
 "bih",
 "buleda",
+"chagai",
 "dalgan",
 "espakeh",
 "fahrej",
@@ -22286,6 +24024,98 @@
 "tier": "key/display",
 "locations": [
 "yarkand"
+]
+},
+"2125": {
+"tier": "alias",
+"locations": [
+"kochkor"
+]
+},
+"2126": {
+"tier": "area-fallback",
+"locations": [
+"akkesene",
+"akkol_lake",
+"aksumbe",
+"alakol_lake",
+"almaliq",
+"aspara",
+"ayagoz",
+"baba_ata",
+"balasagun",
+"balkhash_lake",
+"balruq",
+"balykchy",
+"barskoon",
+"bilikol_lake",
+"borohoro2",
+"boyauli",
+"charyn",
+"chundzha",
+"dahra_sasykkol",
+"dungene",
+"dzhul",
+"dzhulsub",
+"emin",
+"gulja",
+"gulshara",
+"harandzuvan",
+"ilanbalyk",
+"ilibalyk",
+"issyk_kul_lake",
+"karakastek",
+"karamergen",
+"kargaly",
+"kayalyk",
+"kegen",
+"khantau",
+"koktal",
+"koktuma",
+"koshkarkol_lake",
+"kulan",
+"kurty",
+"kysmyci",
+"kyzylkorgan",
+"lavar",
+"lepsy",
+"merki",
+"moiynkum_desert",
+"narat",
+"nilka",
+"nurlykent",
+"nuzket",
+"ran",
+"sagabuyen",
+"san_tash",
+"sargau",
+"sarvaslyk",
+"saryesik_atyrau_desert",
+"sasykkol_lake",
+"saudakent",
+"shavgar",
+"shelek",
+"shengeldy",
+"sholakkorgan",
+"soltobe",
+"sorbulaq_lake",
+"sretenskoe",
+"talkhir",
+"tamdy",
+"tansyk",
+"targabatay",
+"targabatay_mountains",
+"tasty",
+"tasuktul",
+"taukum_desert",
+"tekabket",
+"tekeli",
+"tokkuztara",
+"tolekskoe",
+"toli",
+"wusun",
+"yangi",
+"zherkorgan"
 ]
 },
 "2127": {
@@ -23500,67 +25330,93 @@
 "2177": {
 "tier": "area-node",
 "locations": [
-"baishui",
-"baoji",
-"chengcheng",
-"chunhua",
-"foping",
-"fucheng",
-"fufeng",
-"fuping_xian",
-"goupingguan",
-"guochuan",
-"hancheng",
-"hanyin",
-"heyang_xian",
-"huayin",
-"huayuan",
-"huazhou",
-"huxian",
-"jingyang",
-"jingzhao",
-"lantian",
-"liangquan",
-"lintong",
-"linyou",
-"liquan",
-"liuba",
-"longan",
-"longzhou_fengxiang",
-"luonan",
-"meixian",
-"ningshan",
-"pingli",
-"pucheng",
-"qianyang",
-"qianyou",
-"qianzhou",
-"qinlingshan4",
-"qinlingshan5",
-"qinlingshan7",
-"qishan",
-"sanshui_binzhou",
-"sanyao",
-"sanyuan",
-"shangluo",
-"shangnan",
-"shangzhou",
-"shanyang",
-"shiquan",
-"tongguan_tongchuan",
-"tongzhou",
-"weinan",
-"xianning_xian",
-"xianyang",
-"xicheng",
-"xinping",
-"xixiang",
-"xunyang",
-"yangyuan",
-"yongshou",
-"zhenan",
-"zhouzhi",
-"ziyang_xingan"
+"baode",
+"daizhou",
+"daning",
+"dinghu",
+"dingxiang",
+"duanshi",
+"fangshan_lishi",
+"fenxi",
+"fushan",
+"gaoping",
+"guozhou",
+"hedong",
+"hejin",
+"hequ",
+"heshun",
+"hongtong",
+"huguan",
+"huoyi",
+"jiangxian",
+"jiexiu",
+"jincheng_zezhou",
+"jingle",
+"jishan",
+"jishi_anze",
+"jizhou",
+"kehu",
+"kelan",
+"leping_pingding",
+"liaoshan",
+"licheng_luan",
+"linfen",
+"lingchuan_zezhou",
+"lingshi",
+"linjin",
+"linxian",
+"lishi",
+"loufan",
+"lucheng_luan",
+"ninghua",
+"ningxiang_shizhou",
+"piantouguan",
+"pingding",
+"pinglu",
+"pingyao",
+"puxian",
+"qingyang_luan",
+"qinshui",
+"qinyuan",
+"quwo",
+"ruicheng",
+"shangdang",
+"shilou",
+"shouyang",
+"taigu",
+"taihangshan4",
+"taihangshan5",
+"taihangshan6",
+"taihangshan7",
+"taihangshan8",
+"taiping_jiangzhou",
+"taizhou",
+"tongdi",
+"tunliu",
+"wanquan",
+"wenquan",
+"wenxi",
+"wuxiang",
+"wuzhou",
+"xiangning",
+"xiangyuan",
+"xiaoyi",
+"xiaxian",
+"xichuan_xizhou",
+"xiexian",
+"xihe",
+"xingxian",
+"xiurong",
+"yangcheng",
+"yicheng_pingyang",
+"yonghe",
+"yuanqu",
+"yuci",
+"yueyang_anze",
+"yushe",
+"yuzhou",
+"zhangzi",
+"zhengping"
 ]
 },
 "2178": {
@@ -23879,6 +25735,17 @@
 "ilam"
 ]
 },
+"2210": {
+"tier": "alias",
+"locations": [
+"badreh",
+"darrehshahr",
+"harunabad",
+"holeylan",
+"kamyaran",
+"kermanshah"
+]
+},
 "2212": {
 "tier": "key/display",
 "locations": [
@@ -24009,6 +25876,21 @@
 "wazakhwa",
 "zabol",
 "zarghun_shahr"
+]
+},
+"2225": {
+"tier": "alias",
+"locations": [
+"andarab",
+"bagram",
+"bamyan",
+"charikar",
+"hindu_kush1",
+"istalif",
+"kahmard",
+"panjshir",
+"paropamisus_mountains4",
+"yakawlang"
 ]
 },
 "2226": {
@@ -24180,7 +26062,6 @@
 "al_tiz",
 "awaran",
 "bampur",
-"bandar_e_jask",
 "bannajbur",
 "bashagard",
 "bazman",
@@ -24188,6 +26069,7 @@
 "besima",
 "bih",
 "buleda",
+"chagai",
 "dalgan",
 "espakeh",
 "fahrej",
@@ -24291,20 +26173,14 @@
 "tier": "area-node",
 "locations": [
 "abengourou",
-"accra",
 "ado_ekiti",
 "afikpo",
 "agnam_civol",
-"ajase",
-"akropong",
 "akure",
 "akwatia",
 "albreda",
 "amaigbo",
-"anecho",
-"anomansah",
 "apollonia",
-"ardra",
 "arochukwu",
 "assinie",
 "atakpame",
@@ -24340,7 +26216,6 @@
 "boundiali",
 "brass",
 "bunce_island",
-"cabo_corso",
 "cabo_formoso",
 "cacheu",
 "cape_debundsha",
@@ -24396,7 +26271,6 @@
 "gbepleu",
 "geba_estuary",
 "geregia",
-"glexwe",
 "goaso",
 "golere",
 "grand_bassam",
@@ -24405,7 +26279,6 @@
 "guinea_gulf",
 "guinean_jungle",
 "hemang",
-"hulagan",
 "igbo_ukwu",
 "ikere",
 "ikom",
@@ -24424,7 +26297,6 @@
 "katiola",
 "katsina_ala",
 "kerouane",
-"keta",
 "kibi",
 "kintampo",
 "kissidougou",
@@ -24435,7 +26307,6 @@
 "koro",
 "korup_jungle",
 "kouande",
-"kpalime",
 "kuje",
 "kumawu",
 "kumba",
@@ -24447,7 +26318,6 @@
 "macenta",
 "mahin",
 "mandiana",
-"mankessim",
 "mano",
 "marsassoum",
 "mboune",
@@ -24470,7 +26340,6 @@
 "north_eastern_atlantic90",
 "north_eastern_atlantic91",
 "north_eastern_atlantic92",
-"notse",
 "nsukka",
 "nyong",
 "odienne",
@@ -24529,7 +26398,6 @@
 "sorokogne",
 "sutuko",
 "tabou",
-"tado",
 "tankular",
 "techiman",
 "timbo",
@@ -24548,7 +26416,6 @@
 "walalde",
 "wanar",
 "west_niger_mouth",
-"winneba",
 "yagala",
 "yawri_bay",
 "yeji",
@@ -24560,20 +26427,14 @@
 "tier": "area-node",
 "locations": [
 "abengourou",
-"accra",
 "ado_ekiti",
 "afikpo",
 "agnam_civol",
-"ajase",
-"akropong",
 "akure",
 "akwatia",
 "albreda",
 "amaigbo",
-"anecho",
-"anomansah",
 "apollonia",
-"ardra",
 "arochukwu",
 "assinie",
 "atakpame",
@@ -24609,7 +26470,6 @@
 "boundiali",
 "brass",
 "bunce_island",
-"cabo_corso",
 "cabo_formoso",
 "cacheu",
 "cape_debundsha",
@@ -24665,7 +26525,6 @@
 "gbepleu",
 "geba_estuary",
 "geregia",
-"glexwe",
 "goaso",
 "golere",
 "grand_bassam",
@@ -24674,7 +26533,6 @@
 "guinea_gulf",
 "guinean_jungle",
 "hemang",
-"hulagan",
 "igbo_ukwu",
 "ikere",
 "ikom",
@@ -24693,7 +26551,6 @@
 "katiola",
 "katsina_ala",
 "kerouane",
-"keta",
 "kibi",
 "kintampo",
 "kissidougou",
@@ -24704,7 +26561,6 @@
 "koro",
 "korup_jungle",
 "kouande",
-"kpalime",
 "kuje",
 "kumawu",
 "kumba",
@@ -24716,7 +26572,6 @@
 "macenta",
 "mahin",
 "mandiana",
-"mankessim",
 "mano",
 "marsassoum",
 "mboune",
@@ -24739,7 +26594,6 @@
 "north_eastern_atlantic90",
 "north_eastern_atlantic91",
 "north_eastern_atlantic92",
-"notse",
 "nsukka",
 "nyong",
 "odienne",
@@ -24798,7 +26652,6 @@
 "sorokogne",
 "sutuko",
 "tabou",
-"tado",
 "tankular",
 "techiman",
 "timbo",
@@ -24817,7 +26670,6 @@
 "walalde",
 "wanar",
 "west_niger_mouth",
-"winneba",
 "yagala",
 "yawri_bay",
 "yeji",
@@ -25399,6 +27251,20 @@
 "manisa"
 ]
 },
+"2298": {
+"tier": "area-node",
+"locations": [
+"alasehir",
+"balat",
+"birgi",
+"cine",
+"guzelhisar",
+"lake_bafa",
+"milas",
+"nazilli",
+"tire"
+]
+},
 "2299": {
 "tier": "key/display",
 "locations": [
@@ -25464,15 +27330,12 @@
 "baskale",
 "bayburt",
 "bingol",
-"bitlis",
 "catak",
 "cemisgezek",
 "east_taurus_4",
 "east_taurus_5",
 "east_taurus_7",
 "ercis",
-"erzincan",
-"erzurum",
 "genc",
 "hakkari",
 "harput",
@@ -25485,7 +27348,6 @@
 "karagol_mountains",
 "karakilise",
 "karasu_aras_mountains",
-"kars",
 "kars_mountains_2",
 "kars_mountains_3",
 "keban",
@@ -25500,7 +27362,6 @@
 "mercan_mountains_2",
 "mescit_mountains",
 "mus",
-"not_eligible_for_dynamic_country_name",
 "otlukbeli_mountains",
 "palu",
 "pertek",
@@ -25514,9 +27375,7 @@
 "tekman",
 "tercan",
 "tutak",
-"van",
 "varto",
-"yes",
 "zakho"
 ]
 },
@@ -25573,10 +27432,59 @@
 "rahba"
 ]
 },
+"2315": {
+"tier": "key/display",
+"locations": [
+"suez"
+]
+},
 "2317": {
 "tier": "key/display",
 "locations": [
 "minya"
+]
+},
+"2318": {
+"tier": "area-fallback",
+"locations": [
+"akhmim",
+"ashmunayn",
+"asyut",
+"bahariyya",
+"baris",
+"beni_suef",
+"calansho_sand_sea",
+"connector_egypt1",
+"connector_egypt10",
+"connector_egypt12",
+"connector_egypt16",
+"connector_egypt2",
+"connector_egypt3",
+"connector_egypt4",
+"connector_egypt6",
+"connector_egypt7",
+"connector_egypt8",
+"connector_egypt9",
+"connector_libya14",
+"connector_libya16",
+"connector_libya7",
+"eastern_desert",
+"edfu",
+"el_bahnasa",
+"el_balyana",
+"el_buwit",
+"el_qasr",
+"great_sand_sea",
+"hiw",
+"kom_ombo",
+"lake_el_rayan",
+"lake_qarun",
+"north_western_desert",
+"qus",
+"sharuna",
+"siwa",
+"tahna",
+"western_desert"
 ]
 },
 "2319": {
@@ -25585,12 +27493,17 @@
 "manfalut"
 ]
 },
+"2320": {
+"tier": "key/display",
+"locations": [
+"ras_gharib"
+]
+},
 "2324": {
 "tier": "area-node",
 "locations": [
 "el_qoseir",
 "north_eastern_desert",
-"ras_gharib",
 "safaga",
 "saint_anthony",
 "saint_paul_anchorite"
@@ -25638,6 +27551,15 @@
 "tier": "key/display",
 "locations": [
 "yanbu"
+]
+},
+"2330": {
+"tier": "area-node",
+"locations": [
+"al_furaish",
+"al_hegrieah",
+"as_suwaydirah",
+"khalis_medina"
 ]
 },
 "2331": {
@@ -25882,6 +27804,12 @@
 "kizilsu"
 ]
 },
+"2350": {
+"tier": "key/display",
+"locations": [
+"konjikala"
+]
+},
 "2356": {
 "tier": "key/display",
 "locations": [
@@ -25952,6 +27880,92 @@
 "zhympity"
 ]
 },
+"2368": {
+"tier": "area-fallback",
+"locations": [
+"akkesene",
+"akkol_lake",
+"aksumbe",
+"alakol_lake",
+"almaliq",
+"aspara",
+"ayagoz",
+"baba_ata",
+"balasagun",
+"balkhash_lake",
+"balruq",
+"balykchy",
+"barskoon",
+"bilikol_lake",
+"borohoro2",
+"boyauli",
+"charyn",
+"chundzha",
+"dahra_sasykkol",
+"dungene",
+"dzhul",
+"dzhulsub",
+"emin",
+"gulja",
+"gulshara",
+"harandzuvan",
+"ilanbalyk",
+"ilibalyk",
+"issyk_kul_lake",
+"karakastek",
+"karamergen",
+"kargaly",
+"kayalyk",
+"kegen",
+"khantau",
+"koktal",
+"koktuma",
+"koshkarkol_lake",
+"kulan",
+"kurty",
+"kysmyci",
+"kyzylkorgan",
+"lavar",
+"lepsy",
+"merki",
+"moiynkum_desert",
+"narat",
+"nilka",
+"nurlykent",
+"nuzket",
+"ran",
+"sagabuyen",
+"san_tash",
+"sargau",
+"sarvaslyk",
+"saryesik_atyrau_desert",
+"sasykkol_lake",
+"saudakent",
+"shavgar",
+"shelek",
+"shengeldy",
+"sholakkorgan",
+"soltobe",
+"sorbulaq_lake",
+"sretenskoe",
+"talkhir",
+"tamdy",
+"tansyk",
+"targabatay",
+"targabatay_mountains",
+"tasty",
+"tasuktul",
+"taukum_desert",
+"tekabket",
+"tekeli",
+"tokkuztara",
+"tolekskoe",
+"toli",
+"wusun",
+"yangi",
+"zherkorgan"
+]
+},
 "2370": {
 "tier": "area-node",
 "locations": [
@@ -25980,6 +27994,92 @@
 "kauthara"
 ]
 },
+"2376": {
+"tier": "area-fallback",
+"locations": [
+"angkor_borei",
+"angkor_knong",
+"banlung",
+"banon",
+"beng_mealea",
+"chhmuoh_thmei",
+"doh_kromum",
+"ishanapura",
+"kampong_roessei",
+"kampong_saom",
+"koh_ker",
+"koh_kong",
+"kracheh",
+"kramuon_sa",
+"longvek",
+"lumphat",
+"mueng_thung_yai",
+"or_keo",
+"peam",
+"phnom_santuk",
+"phsar_dek",
+"pouthi_loeu",
+"prasat_andet",
+"prasat_don_an",
+"prasat_don_kau",
+"prasat_pram_lovet",
+"preah_khan_kompong_svay",
+"preah_ko",
+"rong_damrel",
+"sampheak_borak",
+"sandan",
+"srey_sarchhor",
+"srok_khleang",
+"tboung_khmum",
+"toek_khmau",
+"tonle_sap_lake",
+"tuol_ta_mouk",
+"vyadhapura"
+]
+},
+"2377": {
+"tier": "area-fallback",
+"locations": [
+"angkor_borei",
+"angkor_knong",
+"banlung",
+"banon",
+"beng_mealea",
+"chhmuoh_thmei",
+"doh_kromum",
+"ishanapura",
+"kampong_roessei",
+"kampong_saom",
+"koh_ker",
+"koh_kong",
+"kracheh",
+"kramuon_sa",
+"longvek",
+"lumphat",
+"mueng_thung_yai",
+"or_keo",
+"peam",
+"phnom_santuk",
+"phsar_dek",
+"pouthi_loeu",
+"prasat_andet",
+"prasat_don_an",
+"prasat_don_kau",
+"prasat_pram_lovet",
+"preah_khan_kompong_svay",
+"preah_ko",
+"rong_damrel",
+"sampheak_borak",
+"sandan",
+"srey_sarchhor",
+"srok_khleang",
+"tboung_khmum",
+"toek_khmau",
+"tonle_sap_lake",
+"tuol_ta_mouk",
+"vyadhapura"
+]
+},
 "2378": {
 "tier": "area-node",
 "locations": [
@@ -25993,6 +28093,12 @@
 "tier": "key/display",
 "locations": [
 "battambang"
+]
+},
+"2380": {
+"tier": "key/display",
+"locations": [
+"phnom_penh"
 ]
 },
 "2382": {
@@ -26701,12 +28807,6 @@
 "zvenyhorod"
 ]
 },
-"2425": {
-"tier": "key/display",
-"locations": [
-"nenets"
-]
-},
 "2427": {
 "tier": "area-node",
 "locations": [
@@ -26807,6 +28907,7 @@
 "morki",
 "mozhga",
 "nagorsk",
+"nenets",
 "nikolsky",
 "nizhny_tagil",
 "nizhnyaya_salda",
@@ -27213,6 +29314,7 @@
 "morki",
 "mozhga",
 "nagorsk",
+"nenets",
 "nikolsky",
 "nizhny_tagil",
 "nizhnyaya_salda",
@@ -28909,9 +31011,6 @@
 "cheroenhaka",
 "chesapeake",
 "chiswell",
-"cumberland_mountains_5",
-"cumberland_mountains_6",
-"cumberland_mountains_8",
 "kallamuckee",
 "kiskiack",
 "mahock",
@@ -29502,6 +31601,7 @@
 "ahwendoe",
 "amqui",
 "andawaohie",
+"anticosti",
 "aunona",
 "betsiamites",
 "caopacho",
@@ -29513,6 +31613,7 @@
 "chicoutimi",
 "coacoachou",
 "essipit",
+"etchemin",
 "gaspe",
 "itomamo",
 "kakouna",
@@ -29529,6 +31630,7 @@
 "laurentian_massif",
 "magpie_massif",
 "manapakuaniskau",
+"manicouagan",
 "manicouagan_depression",
 "manicouagan_plateau",
 "manouane",
@@ -29540,6 +31642,7 @@
 "mecatina",
 "mecatina_hills",
 "metabetchouane",
+"mingan",
 "mistecapiu",
 "mitis",
 "molsemtekw",
@@ -29550,6 +31653,7 @@
 "nipissis",
 "nipisso",
 "northern_notre_dame_mountains",
+"not_eligible_for_dynamic_country_name",
 "notiskuan",
 "onatchiway",
 "ondaonnentakwi",
@@ -29568,6 +31672,7 @@
 "sainte_marguerite_plateau",
 "sartigan",
 "shipshaw",
+"stadacona",
 "tadoussac",
 "taoondewake",
 "temiscouata",
@@ -29578,7 +31683,8 @@
 "upuahpukau",
 "valin_mountains",
 "wachilmezi",
-"wolastoq"
+"wolastoq",
+"yes"
 ]
 },
 "2583": {
@@ -31773,13 +33879,18 @@
 "kismayo"
 ]
 },
+"2775": {
+"tier": "key/display",
+"locations": [
+"merca"
+]
+},
 "2776": {
 "tier": "area-fallback",
 "locations": [
 "afmadow",
 "awrtable",
 "baidoa",
-"barawa",
 "buale",
 "buur_hakaba",
 "buur_heybe",
@@ -31796,10 +33907,7 @@
 "luuq",
 "mareeg",
 "maxaas",
-"merca",
-"mogadishu",
-"qoryooley",
-"warsheikh"
+"qoryooley"
 ]
 },
 "2777": {
@@ -31820,7 +33928,6 @@
 "afmadow",
 "awrtable",
 "baidoa",
-"barawa",
 "buale",
 "buur_hakaba",
 "buur_heybe",
@@ -31837,9 +33944,12 @@
 "luuq",
 "mareeg",
 "maxaas",
-"merca",
-"mogadishu",
-"qoryooley",
+"qoryooley"
+]
+},
+"2782": {
+"tier": "key/display",
+"locations": [
 "warsheikh"
 ]
 },
@@ -31937,6 +34047,37 @@
 "hargeisa"
 ]
 },
+"2794": {
+"tier": "key/display",
+"locations": [
+"barawa"
+]
+},
+"2795": {
+"tier": "area-fallback",
+"locations": [
+"afmadow",
+"awrtable",
+"baidoa",
+"buale",
+"buur_hakaba",
+"buur_heybe",
+"ceeldheer",
+"dusmareb",
+"el_hamurre",
+"garacad",
+"garbahare",
+"haranka",
+"harardhere",
+"hudur",
+"jilib",
+"jowhar",
+"luuq",
+"mareeg",
+"maxaas",
+"qoryooley"
+]
+},
 "2796": {
 "tier": "key/display",
 "locations": [
@@ -31984,6 +34125,12 @@
 "sennar"
 ]
 },
+"2800": {
+"tier": "key/display",
+"locations": [
+"waylula"
+]
+},
 "2801": {
 "tier": "area-node",
 "locations": [
@@ -31994,6 +34141,7 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
+"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -32013,6 +34161,7 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
+"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -33457,6 +35606,7 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
+"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -34353,6 +36503,12 @@
 "regensburg"
 ]
 },
+"2958": {
+"tier": "alias",
+"locations": [
+"ostroda"
+]
+},
 "2959": {
 "tier": "key/display",
 "locations": [
@@ -34568,6 +36724,16 @@
 "budejovice"
 ]
 },
+"2969": {
+"tier": "area-node",
+"locations": [
+"chojna",
+"gorzow",
+"santok",
+"soltyn",
+"torzym"
+]
+},
 "2970": {
 "tier": "node",
 "locations": [
@@ -34733,6 +36899,31 @@
 "tarragona"
 ]
 },
+"2989": {
+"tier": "area-fallback",
+"locations": [
+"anana",
+"bilbao",
+"durango",
+"elizondo",
+"estella",
+"laguardia",
+"not_eligible_for_dynamic_country_name",
+"olite",
+"onate",
+"pamplona",
+"roncesvalles",
+"salvatierra",
+"san_sebastian",
+"sanguesa",
+"tolosa",
+"tudela",
+"valmaseda",
+"viana",
+"vitoria",
+"yes"
+]
+},
 "2990": {
 "tier": "key/display",
 "locations": [
@@ -34871,6 +37062,27 @@
 "nzwani"
 ]
 },
+"4021": {
+"tier": "area-fallback",
+"locations": [
+"ambovontany",
+"andevoranto",
+"andranosoa",
+"antalaha",
+"bemanevika",
+"fahambahy",
+"fenoarivo_east",
+"fort_dauphin",
+"mahaela",
+"manahoro",
+"manambato",
+"sandrakatsy",
+"talaky",
+"tintingue",
+"toamasina",
+"tsiveri"
+]
+},
 "4022": {
 "tier": "node",
 "locations": [
@@ -34894,6 +37106,30 @@
 "bengoala",
 "manditsara",
 "tsaratanana"
+]
+},
+"4024": {
+"tier": "key/display",
+"locations": [
+"maroantsetra"
+]
+},
+"4025": {
+"tier": "key/display",
+"locations": [
+"vatomandry"
+]
+},
+"4026": {
+"tier": "node",
+"locations": [
+"ikongo",
+"manabondro",
+"masindrano",
+"not_eligible_for_dynamic_country_name",
+"rasanga",
+"vohipeno",
+"yes"
 ]
 },
 "4027": {
@@ -35251,6 +37487,12 @@
 "soyo"
 ]
 },
+"4086": {
+"tier": "key/display",
+"locations": [
+"nunu"
+]
+},
 "4090": {
 "tier": "key/display",
 "locations": [
@@ -35466,17 +37708,11 @@
 "hvittis",
 "ikalis",
 "jaskis",
-"karleby",
-"kaustby",
-"koppo",
-"korsholm",
 "kymi_fi",
 "kyyrola",
-"lappo",
 "nasisalki",
 "nystad",
 "orivesi",
-"pedersore",
 "poytis",
 "puruvesi",
 "pyhajarvi",
@@ -35485,12 +37721,104 @@
 "sastamala",
 "sastmola",
 "sauvo",
-"storkyro",
 "valkeasaari",
 "veckelax",
 "vederlax",
-"villmanstrand",
-"vora"
+"villmanstrand"
+]
+},
+"4124": {
+"tier": "node",
+"locations": [
+"hoytiainen",
+"ilomantsi",
+"joensuu",
+"juuka",
+"jyskyjarvi",
+"karelia_taiga1",
+"karelia_taiga2",
+"karhumagi",
+"kem",
+"keret",
+"kiestinki",
+"kinerma",
+"kizhi",
+"koitere",
+"kondpoga",
+"konevets",
+"korela",
+"kovda",
+"kriitina",
+"kurkijoki",
+"lake_bolshoye_rovkulskoye",
+"lake_engozero",
+"lake_gimoly",
+"lake_kamennoye",
+"lake_kenozero",
+"lake_konchozero",
+"lake_kovdozero",
+"lake_kukkureozero",
+"lake_ladoga",
+"lake_leksozero",
+"lake_lindozero",
+"lake_lizhmozero",
+"lake_lokhtyarvi",
+"lake_maslozero",
+"lake_notozero",
+"lake_nyuk",
+"lake_onega",
+"lake_orivesi",
+"lake_otradnoye",
+"lake_palvozero",
+"lake_pyaozero",
+"lake_sandal",
+"lake_seletsy",
+"lake_shotozero",
+"lake_sredneye_kuyto",
+"lake_suoyarvi",
+"lake_syamozero",
+"lake_tishkeozero",
+"lake_topozero",
+"lake_tulos",
+"lake_tungudskoye",
+"lake_vedlozero",
+"lake_verkhneye_kuyto",
+"lake_vygozero",
+"lake_yelmozero",
+"lake_zegoserskoje",
+"lieksa",
+"lindjarvi",
+"loimola",
+"mohko",
+"nadvoitsy",
+"not_eligible_for_dynamic_country_name",
+"nurmes",
+"olonets",
+"ontajarvi",
+"ostrechiny",
+"paanajarvi",
+"pielinen",
+"pieninka",
+"pryazha",
+"puatane",
+"repola",
+"rukajarvi",
+"saarijoki",
+"salmi",
+"sellinkyla",
+"semcojarvi",
+"shuya_karelia",
+"shyoltozero",
+"sordavala",
+"suikujarvi",
+"suojarvi",
+"tunkuo",
+"uhtuo",
+"vartsila",
+"vazhiny",
+"viinijarvi",
+"yanis_jarvi",
+"yes"
 ]
 },
 "4125": {
@@ -35593,19 +37921,32 @@
 "aarhus"
 ]
 },
+"4143": {
+"tier": "alias",
+"locations": [
+"borg",
+"halden",
+"moss",
+"trogstad"
+]
+},
+"4144": {
+"tier": "alias",
+"locations": [
+"skien"
+]
+},
 "4145": {
 "tier": "area-fallback",
 "locations": [
 "amli",
 "amot",
-"borg",
 "bragernes",
 "elverum",
 "flekkefjord",
 "flesberg",
 "glommadal",
 "grenland",
-"halden",
 "hallingdal",
 "hamar",
 "haugalandet",
@@ -35619,7 +37960,6 @@
 "lillehammer",
 "lindesnes",
 "mjosa",
-"moss",
 "norway_wasteland_a",
 "norway_wasteland_b",
 "numedal",
@@ -35632,12 +37972,10 @@
 "sande",
 "sigdal",
 "sirudal",
-"skien",
 "sondeled",
 "stromstad",
 "suledal",
 "tonsberg",
-"trogstad",
 "trysil",
 "tynset",
 "uddevalla",
@@ -35723,6 +38061,102 @@
 "enare"
 ]
 },
+"4152": {
+"tier": "area-fallback",
+"locations": [
+"abisko",
+"akkajaur",
+"akkajaure",
+"alfta",
+"alvsby",
+"anundsjo",
+"arjeplog",
+"arvidsjaur",
+"asele",
+"bodebyn",
+"brahestad",
+"branna",
+"bygdea",
+"byske",
+"enare",
+"enare_trask",
+"enontakis",
+"gellivaara",
+"gratesk",
+"grundsunda",
+"harnosand",
+"havero",
+"hienatiemi",
+"hogdal",
+"hudiksvall",
+"ivalo",
+"jokkmokk",
+"juckasjarvi",
+"kajana",
+"kasivarren",
+"kemijarvi",
+"kiemi",
+"kittila",
+"korpilombo",
+"korvala",
+"kuhmo",
+"kuivaniemi",
+"kuusamo",
+"kvikkjock",
+"lapland_taiga1",
+"lulea",
+"lycksele",
+"mourionska",
+"muojarvi",
+"nikkaluokta",
+"north_skanderna",
+"nunnanen",
+"ortrask",
+"oulujarvi",
+"pajala",
+"paltamo",
+"pitea",
+"porjus",
+"posio",
+"pudasjarvi",
+"ramsele",
+"ranea",
+"ranua",
+"raunala",
+"rovaniemi",
+"salla",
+"sarek",
+"savukoski",
+"selanger",
+"siikalatva",
+"silbojock",
+"simo",
+"sjalevad",
+"skelleftea",
+"socksjock",
+"sodankyla",
+"soderala",
+"solatunum",
+"sorsele",
+"sotkamo",
+"stensele",
+"storavan",
+"suomussalmi",
+"taivalkoski",
+"tarna",
+"torne_trask",
+"tornea",
+"uddjaur",
+"uleaborg",
+"umea",
+"utajarvi",
+"utsjoki",
+"vastenjaure",
+"vindeln",
+"volgsjo",
+"yli_kitka"
+]
+},
 "4163": {
 "tier": "area-node",
 "locations": [
@@ -35777,6 +38211,40 @@
 "vaxjo",
 "vetlanda",
 "waestbo"
+]
+},
+"4167": {
+"tier": "key/display",
+"locations": [
+"east_high_atlas",
+"eastern_high_atlas1",
+"eastern_high_atlas2",
+"high_atlas1",
+"high_atlas2",
+"middle_high_atlas",
+"western_high_atlas1",
+"western_high_atlas2"
+]
+},
+"4168": {
+"tier": "key/display",
+"locations": [
+"high_atlas2"
+]
+},
+"4169": {
+"tier": "node",
+"locations": [
+"bades",
+"bades_mountain1",
+"bades_mountain2",
+"bir_el_alter",
+"biskra",
+"chott_melrhir",
+"madila",
+"sbiba_mountain",
+"sidi_okba",
+"tolga"
 ]
 },
 "4171": {
@@ -35849,74 +38317,6 @@
 "tier": "key/display",
 "locations": [
 "branicevo"
-]
-},
-"4179": {
-"tier": "node",
-"locations": [
-"adakli",
-"ahlat",
-"aladag_mountains",
-"amadiya",
-"bahcesaray",
-"bargiri",
-"baskale",
-"bayburt",
-"bingol",
-"bitlis",
-"catak",
-"cemisgezek",
-"east_taurus_4",
-"east_taurus_5",
-"east_taurus_7",
-"ercis",
-"erzincan",
-"erzurum",
-"genc",
-"hakkari",
-"harput",
-"hasankale",
-"hinis",
-"hizan",
-"hosap",
-"ilic",
-"kagizman",
-"karagol_mountains",
-"karakilise",
-"karasu_aras_mountains",
-"kars",
-"kars_mountains_2",
-"kars_mountains_3",
-"keban",
-"kelkit",
-"kemah",
-"kose_mountains_2",
-"kuzucan",
-"lake_hazar",
-"lake_van",
-"malazgirt",
-"mercan_mountains_1",
-"mercan_mountains_2",
-"mescit_mountains",
-"mus",
-"not_eligible_for_dynamic_country_name",
-"otlukbeli_mountains",
-"palu",
-"pertek",
-"sebinkarahisar",
-"semdinli",
-"siran",
-"sivrice",
-"suphan_mountains",
-"surmali",
-"tatvan",
-"tekman",
-"tercan",
-"tutak",
-"van",
-"varto",
-"yes",
-"zakho"
 ]
 },
 "4180": {
@@ -36501,44 +38901,31 @@
 "locations": [
 "aizkraukle",
 "aluksne",
-"bauska",
 "cesis",
 "daugavpils",
-"dobele",
-"dundaga",
-"durbe",
-"grobina",
 "gulbene",
 "hapsal",
-"jelgava",
 "kaina",
-"kandava",
 "karksi",
 "koknese",
-"kuldiga",
-"kuressaare",
 "lake_vorts",
 "lihula",
 "limbazi",
 "parnu",
-"piltene",
 "poltsamaa",
 "rauna",
 "saarde",
 "salaspils",
-"saldus",
 "selpils",
 "sigulda",
 "st_martin",
 "straupe",
 "suure_jaani",
 "tartu",
-"tukums",
 "valjala",
 "valka",
 "valmiera",
 "vastseliina",
-"ventspils",
 "viljandi",
 "vonnu"
 ]
@@ -37193,15 +39580,12 @@
 "baskale",
 "bayburt",
 "bingol",
-"bitlis",
 "catak",
 "cemisgezek",
 "east_taurus_4",
 "east_taurus_5",
 "east_taurus_7",
 "ercis",
-"erzincan",
-"erzurum",
 "genc",
 "hakkari",
 "harput",
@@ -37214,7 +39598,6 @@
 "karagol_mountains",
 "karakilise",
 "karasu_aras_mountains",
-"kars",
 "kars_mountains_2",
 "kars_mountains_3",
 "keban",
@@ -37229,7 +39612,6 @@
 "mercan_mountains_2",
 "mescit_mountains",
 "mus",
-"not_eligible_for_dynamic_country_name",
 "otlukbeli_mountains",
 "palu",
 "pertek",
@@ -37243,9 +39625,7 @@
 "tekman",
 "tercan",
 "tutak",
-"van",
 "varto",
-"yes",
 "zakho"
 ]
 },
@@ -37427,6 +39807,16 @@
 "sultanonu"
 ]
 },
+"4313": {
+"tier": "area-node",
+"locations": [
+"cubuk",
+"haymana",
+"kalecik",
+"karakecili",
+"polatli"
+]
+},
 "4314": {
 "tier": "key/display",
 "locations": [
@@ -37437,12 +39827,6 @@
 "tier": "key/display",
 "locations": [
 "tokat"
-]
-},
-"4316": {
-"tier": "key/display",
-"locations": [
-"mansura"
 ]
 },
 "4318": {
@@ -37493,12 +39877,17 @@
 "lake_el_rayan",
 "lake_qarun",
 "north_western_desert",
-"qasr_farafra",
 "qus",
 "sharuna",
 "siwa",
 "tahna",
 "western_desert"
+]
+},
+"4323": {
+"tier": "alias",
+"locations": [
+"qasr_farafra"
 ]
 },
 "4324": {
@@ -37525,10 +39914,10 @@
 "nishapur"
 ]
 },
-"4328": {
-"tier": "key/display",
+"4327": {
+"tier": "alias",
 "locations": [
-"chagai"
+"bandar_e_jask"
 ]
 },
 "4329": {
@@ -37584,6 +39973,7 @@
 "locations": [
 "al_mamtir",
 "aliabad_katul",
+"astara",
 "astarabad",
 "bandar_e_anzali",
 "bastam",
@@ -37634,9 +40024,37 @@
 ]
 },
 "4340": {
-"tier": "key/display",
+"tier": "area-node",
 "locations": [
-"astara"
+"agsu",
+"aresh",
+"baciravan",
+"baku",
+"barda",
+"beylagan",
+"bilasuvar",
+"derbent",
+"gardman",
+"germi",
+"goychay",
+"javad",
+"lake_agh_gol",
+"lake_sarisu",
+"lemberan",
+"lesser_caucasus_mountains6",
+"mahmudabad",
+"maraza",
+"mughan",
+"niyazabad",
+"qabala",
+"qobustan",
+"quba",
+"salyan",
+"shabran",
+"shamkir",
+"varsan",
+"vartashen",
+"zardab"
 ]
 },
 "4341": {
@@ -37717,6 +40135,7 @@
 "karakol",
 "karakul_lake",
 "kham_bahar",
+"kulob",
 "muksu",
 "munk",
 "murghab",
@@ -37738,6 +40157,7 @@
 "shighnan",
 "shiveh",
 "shuman",
+"termez",
 "vakhs",
 "vamar",
 "vanch",
@@ -39750,6 +42170,7 @@
 "narhat",
 "rajgir",
 "rajmahal",
+"roh",
 "saharsa",
 "samastipur",
 "siraha",
@@ -39780,6 +42201,7 @@
 "narhat",
 "rajgir",
 "rajmahal",
+"roh",
 "saharsa",
 "samastipur",
 "siraha",
@@ -39904,6 +42326,16 @@
 "sultanpur_uttar_pradesh",
 "tulsipur",
 "unnao"
+]
+},
+"4496": {
+"tier": "area-node",
+"locations": [
+"asni",
+"kara",
+"korra",
+"prayag",
+"shankargah"
 ]
 },
 "4497": {
@@ -40738,6 +43170,17 @@
 "pontevedra"
 ]
 },
+"4556": {
+"tier": "alias",
+"locations": [
+"chao_de_couce",
+"coimbra",
+"esgueira",
+"feira",
+"figueira",
+"leiria"
+]
+},
 "4557": {
 "tier": "key/display",
 "locations": [
@@ -40981,6 +43424,19 @@
 "tier": "key/display",
 "locations": [
 "demnate"
+]
+},
+"4569": {
+"tier": "key/display",
+"locations": [
+"east_high_atlas",
+"eastern_high_atlas1",
+"eastern_high_atlas2",
+"high_atlas1",
+"high_atlas2",
+"middle_high_atlas",
+"western_high_atlas1",
+"western_high_atlas2"
 ]
 },
 "4571": {
@@ -41874,51 +44330,33 @@
 "tier": "area-node",
 "locations": [
 "archar",
-"babadag",
 "balkan_mountains1",
 "balkan_mountains2",
 "balkan_mountains4",
 "balkan_mountains5",
 "balkan_mountains6",
 "bozhenitsa",
-"cernavoda",
-"cherven",
-"constanta",
 "dobrolak",
-"drastar",
 "dupnitsa",
-"enisala",
 "gigen",
-"harsova",
 "hotalich",
-"isaccea",
-"kaliakra",
-"karvuna",
-"kladentsi",
 "kozelj",
 "ktenia",
 "kutlovitsa",
 "lom",
 "lovech",
-"lyaskovets",
-"nikopol",
 "oryahovo",
 "ovech",
-"pangalia",
 "pirot",
 "pleven",
 "razgrad",
-"ruse",
 "samokov",
 "shumen",
 "sredets",
 "svoge",
 "svrljig",
 "targoviste_BUL",
-"tryavna",
 "tsaribrod",
-"tulcea",
-"tutrakan",
 "varna",
 "velbuzd",
 "veliki_preslav",
@@ -41927,10 +44365,20 @@
 "zemlungrad"
 ]
 },
+"4704": {
+"tier": "alias",
+"locations": [
+"cherven",
+"lyaskovets",
+"nikopol",
+"ruse",
+"tarnovo",
+"tryavna"
+]
+},
 "4705": {
 "tier": "area-node",
 "locations": [
-"ahtopol",
 "anhialo",
 "aytos",
 "beden",
@@ -41940,20 +44388,16 @@
 "constantia_bul",
 "corlu",
 "demotica",
-"edirne",
 "elhovo",
 "enez",
 "haskovo",
 "hayrabolu",
 "hiambouli",
 "kesan",
-"kirklareli",
-"kiyikoy",
 "komotini",
 "kostenets",
 "kran",
 "lardeja",
-"luleburgaz",
 "malgara",
 "ormenio",
 "perperek",
@@ -41973,6 +44417,18 @@
 "ustra",
 "vize",
 "xanthia"
+]
+},
+"4706": {
+"tier": "alias",
+"locations": [
+"babadag",
+"cernavoda",
+"constanta",
+"enisala",
+"harsova",
+"isaccea",
+"tulcea"
 ]
 },
 "4707": {
@@ -42255,8 +44711,20 @@
 ]
 },
 "4738": {
-"tier": "key/display",
+"tier": "area-node",
 "locations": [
+"bled",
+"gorizia",
+"ilirska_bistrica",
+"julian_alps",
+"kocevje",
+"kranj",
+"ljubljana",
+"metlika",
+"novo_mesto",
+"postojna",
+"skofja_loka",
+"tolmin",
 "trieste"
 ]
 },
@@ -42302,6 +44770,42 @@
 "rugen"
 ]
 },
+"4746": {
+"tier": "area-fallback",
+"locations": [
+"anklam",
+"bialogard",
+"bobolice",
+"choszczno",
+"demmin",
+"drawsko",
+"goleniow",
+"grimmen",
+"gryfia_gora",
+"gryfow",
+"kamien",
+"koszalin",
+"nowogard",
+"nowoszczecin",
+"pyrzyce",
+"resko",
+"ribnitz",
+"swidwin",
+"swinousjcie",
+"szadzko",
+"ueckermunde"
+]
+},
+"4747": {
+"tier": "area-node",
+"locations": [
+"chojna",
+"gorzow",
+"santok",
+"soltyn",
+"torzym"
+]
+},
 "4748": {
 "tier": "key/display",
 "locations": [
@@ -42332,6 +44836,24 @@
 "tier": "key/display",
 "locations": [
 "kruje"
+]
+},
+"4751": {
+"tier": "area-node",
+"locations": [
+"bled",
+"gorizia",
+"ilirska_bistrica",
+"julian_alps",
+"kocevje",
+"kranj",
+"ljubljana",
+"metlika",
+"novo_mesto",
+"postojna",
+"skofja_loka",
+"tolmin",
+"trieste"
 ]
 },
 "4752": {
@@ -42432,6 +44954,19 @@
 "zell_am_ziller"
 ]
 },
+"4759": {
+"tier": "alias",
+"locations": [
+"dolomite_alps3",
+"hermagor",
+"lienz",
+"spittal",
+"steinfeld",
+"tauern_range1",
+"villach",
+"winklern"
+]
+},
 "4761": {
 "tier": "node",
 "locations": [
@@ -42483,17 +45018,12 @@
 "4770": {
 "tier": "area-fallback",
 "locations": [
-"antwerp",
-"bergen_zoom",
-"brussels",
 "cuijk",
 "eindhoven",
 "helmond",
 "hertogenbosch",
 "leuven",
-"mechelen",
-"nivelles",
-"turnhout"
+"nivelles"
 ]
 },
 "4771": {
@@ -42533,6 +45063,41 @@
 "tier": "key/display",
 "locations": [
 "blois"
+]
+},
+"4777": {
+"tier": "area-node",
+"locations": [
+"allegre",
+"aurillac",
+"bourbon",
+"brioude",
+"chambon",
+"clermont",
+"dore_mountains",
+"herment",
+"huriel",
+"jaligny",
+"mauriac",
+"molins",
+"montaigut",
+"montlucon",
+"not_eligible_for_dynamic_country_name",
+"riom",
+"saint_flour",
+"st_gerand",
+"thiers",
+"tour_auvergne",
+"vic_le_comte",
+"vichy",
+"vodable",
+"yes"
+]
+},
+"4778": {
+"tier": "alias",
+"locations": [
+"gorlitz"
 ]
 },
 "4779": {
@@ -42977,7 +45542,6 @@
 "mueng_thung_yai",
 "or_keo",
 "peam",
-"phnom_penh",
 "phnom_santuk",
 "phsar_dek",
 "pouthi_loeu",
@@ -42987,7 +45551,6 @@
 "prasat_pram_lovet",
 "preah_khan_kompong_svay",
 "preah_ko",
-"prey_nokor",
 "rong_damrel",
 "sampheak_borak",
 "sandan",
@@ -43013,6 +45576,49 @@
 "tier": "key/display",
 "locations": [
 "preah_vihear"
+]
+},
+"4829": {
+"tier": "area-fallback",
+"locations": [
+"angkor_borei",
+"angkor_knong",
+"banlung",
+"banon",
+"beng_mealea",
+"chhmuoh_thmei",
+"doh_kromum",
+"ishanapura",
+"kampong_roessei",
+"kampong_saom",
+"koh_ker",
+"koh_kong",
+"kracheh",
+"kramuon_sa",
+"longvek",
+"lumphat",
+"mueng_thung_yai",
+"or_keo",
+"peam",
+"phnom_santuk",
+"phsar_dek",
+"pouthi_loeu",
+"prasat_andet",
+"prasat_don_an",
+"prasat_don_kau",
+"prasat_pram_lovet",
+"preah_khan_kompong_svay",
+"preah_ko",
+"rong_damrel",
+"sampheak_borak",
+"sandan",
+"srey_sarchhor",
+"srok_khleang",
+"tboung_khmum",
+"toek_khmau",
+"tonle_sap_lake",
+"tuol_ta_mouk",
+"vyadhapura"
 ]
 },
 "4830": {
@@ -44058,9 +46664,6 @@
 "cheroenhaka",
 "chesapeake",
 "chiswell",
-"cumberland_mountains_5",
-"cumberland_mountains_6",
-"cumberland_mountains_8",
 "kallamuckee",
 "kiskiack",
 "mahock",
@@ -44727,6 +47330,38 @@
 "tier": "key/display",
 "locations": [
 "pacaha"
+]
+},
+"4924": {
+"tier": "key/display",
+"locations": [
+"laurentian_massif"
+]
+},
+"4926": {
+"tier": "key/display",
+"locations": [
+"adirondacks"
+]
+},
+"4931": {
+"tier": "key/display",
+"locations": [
+"cumberland_mountains",
+"cumberland_mountains_2",
+"cumberland_mountains_3",
+"cumberland_mountains_4",
+"cumberland_mountains_5",
+"cumberland_mountains_6",
+"cumberland_mountains_7",
+"cumberland_mountains_8",
+"cumberland_mountains_9"
+]
+},
+"4932": {
+"tier": "key/display",
+"locations": [
+"great_smokies"
 ]
 },
 "4934": {

@@ -1,5 +1,9 @@
 #Kurland, center at Goldingen
 
+owner = LVA
+controller = LVA
+add_core = LVA
+is_city = yes
 culture = latvian
 religion = catholic
 hre = no

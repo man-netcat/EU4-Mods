@@ -1,8 +1,9 @@
 owner = BYZ
 controller = BYZ
+add_core = BUL
 add_core = BYZ
 is_city = yes
-culture = greek
+culture = bulgarian
 religion = orthodox
 capital = "Gumulcine"
 trade_goods = livestock

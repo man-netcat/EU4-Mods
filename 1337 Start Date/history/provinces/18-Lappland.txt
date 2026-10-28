@@ -1,8 +1,12 @@
 #Ume, Åsele, Piteå Lappmarks
 
+owner = SWE
+controller = SWE
+add_core = SWE
+is_city = yes
 capital = "Arvidsjaur"
 culture = sapmi
-religion = catholic
+religion = shamanism
 hre = no
 base_tax = 1 
 base_production = 1

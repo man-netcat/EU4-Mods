@@ -1,11 +1,11 @@
 # 171 - Vannetais
 
-owner = HUN
-controller = HUN
-add_core = HUN
+owner = BRI
+controller = BRI
+add_core = BRI
 is_city = yes
 capital = "Vannes"
-culture = hungarian
+culture = breton
 religion = catholic
 hre = no
 base_tax = 3

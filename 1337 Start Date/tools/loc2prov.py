@@ -80,6 +80,7 @@ def land_provinces():
 def eu4_geo():
     ta = re.sub(r"#.*", "", (EU4_GAME / "map/area.txt").read_text(encoding="latin-1"))
     area = {}
+    ta = re.sub(r"color\s*=\s*\{[^}]*\}", "", ta)  # an area's map colour is not a province list
     for m in re.finditer(r"^(\w+)\s*=\s*\{([^}]*)\}", ta, re.M):
         for p in re.findall(r"\b\d+\b", m[2]):
             area[int(p)] = m[1]

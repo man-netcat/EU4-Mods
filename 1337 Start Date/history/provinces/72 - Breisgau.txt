@@ -1,8 +1,8 @@
 #72 - Breisgau
 
-owner = HAB
-controller = HAB
-add_core = HAB
+owner = FBG
+controller = FBG
+add_core = FBG
 is_city = yes
 culture = swabian
 religion = catholic

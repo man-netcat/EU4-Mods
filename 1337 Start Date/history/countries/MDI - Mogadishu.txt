@@ -1,6 +1,6 @@
 government = tribal
 add_government_reform = tribal_kingdom
-government_rank = 1
+government_rank = 2
 technology_group = east_african
 unit_type = sub_saharan
 religion = sunni
@@ -8,6 +8,15 @@ primary_culture = somali
 capital = 1205 #Mogadishu
 fixed_capital = 1205 # Cannot move capital away from this province & no power cost to move to it
 religious_school = shafii_school
+
+monarch = {
+	name = "Abu Bakr"
+	dynasty = "Umar"
+	birth_date = 1293.1.1
+	adm = 3
+	dip = 5
+	mil = 2
+}
 
 1480.1.1 = {
 	monarch = {

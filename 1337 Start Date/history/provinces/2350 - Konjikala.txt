@@ -1,5 +1,9 @@
 # 2350 - Konjikala
 
+owner = GRG
+controller = GRG
+add_core = GRG
+is_city = yes
 culture = turkmeni
 religion = sunni
 capital = "Konjikala"

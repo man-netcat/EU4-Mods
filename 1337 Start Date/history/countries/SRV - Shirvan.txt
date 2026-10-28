@@ -3,7 +3,7 @@ add_government_reform = iqta
 primary_culture = azerbaijani
 technology_group = muslim
 religion = sunni
-capital = 231
+capital = 4340
 
 monarch = {
 	name = "Keyqobad I"

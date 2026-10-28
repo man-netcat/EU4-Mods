@@ -3,13 +3,14 @@
 owner = HUN
 controller = HUN
 add_core = HUN
+add_core = TRA
 is_city = yes
 latent_trade_goods = {
 	coal
 }
 
 culture = transylvanian
-religion = orthodox
+religion = catholic
 capital = "Alba Iulia"
 trade_goods = iron
 hre = no

@@ -1,6 +1,10 @@
 #452 - Badakhshan
 
-culture = afghani
+owner = SLD
+controller = SLD
+add_core = SLD
+is_city = yes
+culture = uzbehk
 religion = sunni
 capital = "Munjan"
 trade_goods = gems #Rubies, Saphires

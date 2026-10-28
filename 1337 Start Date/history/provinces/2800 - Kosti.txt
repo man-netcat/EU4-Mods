@@ -1,7 +1,11 @@
 #2800 - Kosti
 
+owner = ALO
+controller = ALO
+add_core = ALO
+is_city = yes
 culture = nubian
-religion = shamanism #Fetishism
+religion = coptic #Fetishism
 capital = "Kosti"
 native_size = 50
 native_ferocity = 4

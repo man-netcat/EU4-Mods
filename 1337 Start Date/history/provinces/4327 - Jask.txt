@@ -1,6 +1,10 @@
 #4327 - Jask
 
-culture = gulf_arabic
+owner = JSK
+controller = JSK
+add_core = JSK
+is_city = yes
+culture = baluchi
 religion = sunni
 capital = "Jask"
 trade_goods = fish

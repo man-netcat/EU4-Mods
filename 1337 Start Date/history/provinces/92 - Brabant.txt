@@ -1,14 +1,13 @@
 # 92 Brabant - Principal cities: Brussel & Mechelen
 
-owner = HRB
-controller = HRB
-add_core = AZF
-add_core = HRB
+owner = BRB
+controller = BRB
+add_core = BRB
 is_city = yes
 capital = "Brussel"
-culture = hejazi_culture
-religion = sunni
-hre = no
+culture = flemish
+religion = catholic
+hre = yes
 base_tax = 7
 base_production = 7
 trade_goods = cloth

@@ -1,10 +1,11 @@
 #4759 - Oberkärnten
 
-owner = HAB
-controller = HAB
-add_core = HAB
+owner = GOR
+controller = GOR
+add_core = CRH
+add_core = GOR
 is_city = yes
-culture	= austrian
+culture = austrian
 religion = catholic
 base_tax = 3
 base_production = 3

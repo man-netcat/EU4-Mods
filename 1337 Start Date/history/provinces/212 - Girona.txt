@@ -1,11 +1,12 @@
 #212 - Girona
 
-owner = DLH
-controller = DLH
-add_core = DLH
+owner = ARA
+controller = ARA
+add_core = ARA
+add_core = CAT
 is_city = yes
-culture = avadhi
-religion = hinduism
+culture = catalan
+religion = catholic
 hre = no
 base_tax = 3 
 base_production = 3

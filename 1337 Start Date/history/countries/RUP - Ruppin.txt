@@ -5,3 +5,22 @@ technology_group = western
 primary_culture = saxon
 religion = catholic
 capital = 51	# Ruppin
+
+monarch = {
+	name = "Ulrick II"
+	dynasty = "Lindow-Ruppin"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Albert"
+	dynasty = "Lindow-Ruppin"
+	birth_date = 1330.1.1
+	death_date = 1390.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

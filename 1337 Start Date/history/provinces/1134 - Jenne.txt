@@ -1,5 +1,10 @@
 #1134 - Jenne
 
+owner = BMR
+controller = BMR
+add_core = BMR
+add_core = TMB
+is_city = yes
 culture = bozo
 base_manpower = 3
 religion = shamanism #Fetishism

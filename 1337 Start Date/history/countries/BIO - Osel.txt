@@ -1,0 +1,24 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = catholic
+capital = 35
+
+monarch = {
+	name = "James II"
+	birth_date = 1295.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1337.3.1 = {
+	add_truce_with = CZK
+	add_truce_with = INO
+	add_truce_with = LCZ
+	add_truce_with = PLK
+	add_truce_with = POL
+	add_truce_with = RAW
+}

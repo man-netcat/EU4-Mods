@@ -17,6 +17,7 @@ vassal = { first = NOR second = GRL start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = NOR second = ORK start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = TEU second = LVA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = LVA second = RIG start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = LVA second = BIO start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = DAN second = SLV start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = DAN second = UBV start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = DAN second = BRA start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -63,12 +64,12 @@ vassal = { first = FRA second = NEV start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = FRA second = RET start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = FRA second = NRB start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = FLA second = NAM start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = FOI second = BEA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = BOU second = MRC start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = NAP second = ACH start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ACH second = NAX start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ACH second = CEA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ACH second = PAB start_date = 1337.4.1 end_date = 1836.12.31 }
-vassal = { first = VEN second = TTE start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = VEN second = CRT start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = SAV second = GNV start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = SAV second = PIE start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -122,8 +123,8 @@ vassal = { first = GRM second = SRU start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = GRM second = AYA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = JAL second = DML start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = JAL second = ERE start_date = 1337.4.1 end_date = 1836.12.31 }
-vassal = { first = JAL second = IHB start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = JAL second = KKL start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = JAL second = KLR start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = JAL second = SUT start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = JAL second = SYY start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAM second = DUL start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -140,6 +141,7 @@ vassal = { first = GRG second = MZN start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = GRG second = QOA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GRG second = SBZ start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GRG second = SFR start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = KRT second = MRV start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = HLG second = GRG start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = KRT second = GRG start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GEO second = AAI start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -148,6 +150,7 @@ vassal = { first = GEO second = SKI start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = GEO second = SME start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GLH second = TRK start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ORM second = FAL start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = ORM second = JSK start_date = 1337.4.1 end_date = 1836.12.31 }
 tributary = { first = ETH second = IFA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ETH second = HDY start_date = 1337.4.1 end_date = 1836.12.31 }
 tributary = { first = IFA second = WAR start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -157,6 +160,7 @@ tributary = { first = ZAN second = VOH start_date = 1337.4.1 end_date = 1836.12.
 tributary = { first = ZAN second = NYM start_date = 1337.4.1 end_date = 1836.12.31 }
 tributary = { first = ZAN second = MOZ start_date = 1337.4.1 end_date = 1836.12.31 }
 tributary = { first = ZAN second = ZZB start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = MAL second = BMR start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAL second = GHA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAL second = JOL start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAL second = KBU start_date = 1337.4.1 end_date = 1836.12.31 }

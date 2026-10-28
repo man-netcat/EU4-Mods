@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = plutocratic_reform
+government_rank = 1
+technology_group = east_african
+primary_culture = madagasque
+religion = sunni
+capital = 4026

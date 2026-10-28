@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = gascon
+religion = catholic
+capital = 176
+
+monarch = {
+	name = "Gaston IX"
+	dynasty = "Foix"
+	birth_date = 1308.1.1
+	adm = 2
+	dip = 3
+	mil = 4
+}
+heir = {
+	name = "Arnold.William"
+	dynasty = "Foix"
+	birth_date = 1330.1.1
+	death_date = 1390.1.1
+	claim = 95
+	adm = 1
+	dip = 1
+	mil = 1
+}

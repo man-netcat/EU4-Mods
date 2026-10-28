@@ -1,8 +1,8 @@
 #51 - Ruppin
 
-owner = BRA
-controller = BRA
-add_core = BRA
+owner = RUP
+controller = RUP
+add_core = RUP
 is_city = yes
 culture = saxon
 religion = catholic

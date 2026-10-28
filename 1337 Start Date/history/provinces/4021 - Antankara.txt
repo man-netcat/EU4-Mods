@@ -1,5 +1,9 @@
 #4021 - Antankara
 
+owner = ABV
+controller = ABV
+add_core = ABV
+is_city = yes
 culture = madagasque #Malagasy
 religion = shamanism #Fetishism
 capital = "Ambilobe"

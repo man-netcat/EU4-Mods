@@ -1,8 +1,8 @@
 # 4746 - Stargard
 
-owner = STE
-controller = STE
-add_core = STE
+owner = WOL
+controller = WOL
+add_core = WOL
 is_city = yes
 culture = pommeranian
 religion = catholic

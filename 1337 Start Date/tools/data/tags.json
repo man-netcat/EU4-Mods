@@ -9,6 +9,11 @@
 "name": "Alastani",
 "new": true
 },
+"ABV": {
+"eu4": "ABV",
+"name": "Ambovontany",
+"new": true
+},
 "ACH": {
 "eu4": "ACH",
 "name": "Achaea",
@@ -294,6 +299,11 @@
 "name": "Bijaya",
 "new": true
 },
+"BIO": {
+"eu4": "BIO",
+"name": "Ösel",
+"new": true
+},
 "BIT": {
 "eu4": "BTL",
 "name": "Bitlis",
@@ -327,6 +337,11 @@
 "BMB": {
 "eu4": "BMB",
 "name": "Bambao",
+"new": true
+},
+"BMR": {
+"eu4": "BMR",
+"name": "Bambara",
 "new": true
 },
 "BND": {
@@ -414,6 +429,11 @@
 "name": "Bern",
 "new": true
 },
+"BRR": {
+"eu4": "BEA",
+"name": "Béarn",
+"new": true
+},
 "BRS": {
 "eu4": "BRC",
 "name": "Brescia",
@@ -497,6 +517,11 @@
 "CAG": {
 "eu4": "CAG",
 "name": "Cagliari",
+"new": true
+},
+"CAR": {
+"eu4": "CAA",
+"name": "Carniola",
 "new": true
 },
 "CAS": {
@@ -622,6 +647,11 @@
 "COI": {
 "eu4": "YOD",
 "name": "Yodzo Coo",
+"new": true
+},
+"CRD": {
+"eu4": "CRD",
+"name": "Córdoba",
 "new": true
 },
 "CRH": {
@@ -1004,6 +1034,11 @@
 "name": "Galicia",
 "new": false
 },
+"GLE": {
+"eu4": "GLE",
+"name": "Geledi",
+"new": false
+},
 "GLH": {
 "eu4": "GLH",
 "name": "Jochi",
@@ -1279,11 +1314,6 @@
 "name": "Ife",
 "new": true
 },
-"IHB": {
-"eu4": "IHB",
-"name": "Ispahbad",
-"new": true
-},
 "IJB": {
 "eu4": "IJB",
 "name": "Ijebu",
@@ -1397,6 +1427,11 @@
 "JRW": {
 "eu4": "JRW",
 "name": "Jarwanids",
+"new": true
+},
+"JSK": {
+"eu4": "JSK",
+"name": "Jāsk",
 "new": true
 },
 "JSL": {
@@ -1549,9 +1584,19 @@
 "name": "Kolomna",
 "new": true
 },
+"KLR": {
+"eu4": "KLR",
+"name": "Kalhor",
+"new": true
+},
 "KMA": {
 "eu4": "KMA",
 "name": "Kamata",
+"new": true
+},
+"KMM": {
+"eu4": "KMM",
+"name": "Cammin",
 "new": true
 },
 "KMN": {
@@ -1854,6 +1899,11 @@
 "name": "Mombassa",
 "new": false
 },
+"MBD": {
+"eu4": "MBD",
+"name": "Manabondro",
+"new": true
+},
 "MBZ": {
 "eu4": "MBZ",
 "name": "Bregenz",
@@ -1862,6 +1912,11 @@
 "MDA": {
 "eu4": "MDA",
 "name": "Medina",
+"new": false
+},
+"MDI": {
+"eu4": "MDI",
+"name": "Mogadishu",
 "new": false
 },
 "MDY": {
@@ -2057,6 +2112,11 @@
 "MRM": {
 "eu4": "MRM",
 "name": "Murom",
+"new": true
+},
+"MRV": {
+"eu4": "MRV",
+"name": "Merv",
 "new": true
 },
 "MSN": {
@@ -2302,6 +2362,11 @@
 "ORM": {
 "eu4": "ORM",
 "name": "Ormus",
+"new": false
+},
+"OSN": {
+"eu4": "OSN",
+"name": "Osnabrück",
 "new": false
 },
 "OTC": {
@@ -2569,6 +2634,11 @@
 "name": "Riga",
 "new": false
 },
+"RKL": {
+"eu4": "RKL",
+"name": "Rankali",
+"new": true
+},
 "RKS": {
 "eu4": "RKS",
 "name": "Raksel",
@@ -2588,6 +2658,11 @@
 "eu4": "RST",
 "name": "Rostock",
 "new": true
+},
+"RUP": {
+"eu4": "RUP",
+"name": "Ruppin",
+"new": false
 },
 "RVB": {
 "eu4": "RVB",
@@ -2899,6 +2974,11 @@
 "name": "Slavonia",
 "new": true
 },
+"SWB": {
+"eu4": "SWB",
+"name": "Saxe-Wittenberg",
+"new": true
+},
 "SWE": {
 "eu4": "SWE",
 "name": "Sweden",
@@ -3192,11 +3272,6 @@
 "TTC": {
 "eu4": "TTC",
 "name": "Tamtoc",
-"new": true
-},
-"TTE": {
-"eu4": "TTE",
-"name": "Trieste",
 "new": true
 },
 "TUN": {

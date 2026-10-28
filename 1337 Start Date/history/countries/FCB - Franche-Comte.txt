@@ -2,9 +2,9 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = western
-primary_culture = cosmopolitan_french
+primary_culture = burgundian
 religion = catholic
-capital = 4764
+capital = 193
 
 monarch = {
 	name = "Joanna III"

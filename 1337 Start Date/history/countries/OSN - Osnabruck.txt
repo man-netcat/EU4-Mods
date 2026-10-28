@@ -6,3 +6,12 @@ religion = catholic
 technology_group = western
 capital = 56	# Osnabruck
 fixed_capital = 56 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "Godfrey"
+	dynasty = "Arnsberg"
+	birth_date = 1285.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

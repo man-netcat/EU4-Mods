@@ -1,10 +1,10 @@
 # 4747 - Dramburg
 
-owner = TEU
-controller = TEU
-add_core = TEU
+owner = BRA
+controller = BRA
+add_core = BRA
 is_city = yes
-culture = pommeranian
+culture = saxon
 religion = catholic
 hre = yes
 base_tax = 2

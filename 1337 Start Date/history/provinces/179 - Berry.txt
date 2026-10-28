@@ -1,5 +1,10 @@
 # 179 Berry
 
+owner = FRA
+controller = FRA
+add_core = AQN
+add_core = FRA
+is_city = yes
 capital = "Bourges"
 culture = cosmopolitan_french
 religion = catholic

@@ -1,5 +1,9 @@
 #4026 - Antemoro
 
+owner = MBD
+controller = MBD
+add_core = MBD
+is_city = yes
 culture = madagasque
 religion = sunni
 capital = "Vohipeno"

@@ -1,11 +1,11 @@
 #578 - Roh
 
-owner = DLH
-controller = DLH
-add_core = DLH
+owner = QUN
+controller = QUN
+add_core = QUN
 is_city = yes
-culture = jharkhandi
-religion = hinduism
+culture = afghani
+religion = sunni
 capital = "Peshawar"
 trade_goods = livestock
 hre = no

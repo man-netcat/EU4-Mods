@@ -1,5 +1,10 @@
 #1205 - Mogadishu
 
+owner = MDI
+controller = MDI
+add_core = GLE
+add_core = MDI
+is_city = yes
 culture = somali
 religion = sunni
 capital = "Maqdishu"

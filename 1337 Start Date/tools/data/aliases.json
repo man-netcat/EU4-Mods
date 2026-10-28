@@ -1,3 +1,225 @@
-{"_comment": "EU4 province id -> EU5 location keys or node names (hand-resolved; name matching failed)",
- "12": ["zealand_province"], "14": ["funen_province"], "40": ["memel"], "85": ["cologne"],
- "207": ["east_asturias_province", "west_asturias_province"], "309": ["olonets"], "2975": ["kleve"]}
+{
+"_comment": "EU4 province id -> EU5 location keys or node names (hand-resolved; name matching failed)",
+"12": [
+"zealand_province"
+],
+"14": [
+"funen_province"
+],
+"40": [
+"memel"
+],
+"85": [
+"cologne"
+],
+"207": [
+"east_asturias_province",
+"west_asturias_province"
+],
+"309": [
+"olonets"
+],
+"2975": [
+"kleve"
+],
+"123": [
+"calabria_citra_province",
+"calabria_ultra_province",
+"calabria_coast_province"
+],
+"121": [
+"naples"
+],
+"128": [
+"lower_carinthia_province"
+],
+"4759": [
+"upper_carinthia_province"
+],
+"132": [
+"upper_styria_province",
+"middle_styria_province",
+"lower_styria_province",
+"eastern_styria_province"
+],
+"129": [
+"lower_carniola_province",
+"upper_carniola_province"
+],
+"1770": [
+"ober_dem_manhartsberg_province",
+"unter_dem_manhartsberg_province"
+],
+"177": [
+"lower_maine_province",
+"upper_maine_province"
+],
+"179": [
+"lower_berry_province",
+"upper_berry_province"
+],
+"1877": [
+"charolles"
+],
+"1744": [
+"antwerp_province"
+],
+"176": [
+"bearn_bigorre_province"
+],
+"193": [
+"franche_comte_area"
+],
+"75": [
+"alsace_area"
+],
+"72": [
+"freiburg"
+],
+"170": [
+"finisterre"
+],
+"102": [
+"nice_province"
+],
+"209": [
+"biscay_province"
+],
+"228": [
+"beira_alta_province",
+"beira_baixa_province"
+],
+"4556": [
+"beira_litoral_province"
+],
+"1934": [
+"basilicata_province"
+],
+"19": [
+"norra_osterbotten_province",
+"sodra_osterbotten_province"
+],
+"20": [
+"nor_trondelag_province",
+"sor_trondelag_province"
+],
+"21": [
+"nordland_province",
+"nordland_coast_province"
+],
+"4143": [
+"ostfold_province"
+],
+"4144": [
+"skien"
+],
+"4": [
+"dalarna_province"
+],
+"48": [
+"kolobrzeg"
+],
+"39": [
+"courland_province"
+],
+"1935": [
+"semigalia_province"
+],
+"35": [
+"kuressaare"
+],
+"2958": [
+"ostroda"
+],
+"767": [
+"szczytno"
+],
+"4778": [
+"gorlitz"
+],
+"1769": [
+"gorizia_province"
+],
+"32": [
+"korela_province"
+],
+"4704": [
+"tarnovo_province"
+],
+"4706": [
+"north_dobruja_province"
+],
+"159": [
+"south_dobruja_province"
+],
+"152": [
+"bjelovar_province"
+],
+"156": [
+"timisoara"
+],
+"1951": [
+"hunedoara"
+],
+"162": [
+"zemplen_province"
+],
+"155": [
+"bekes"
+],
+"149": [
+"edirne_province"
+],
+"2210": [
+"kermanshah_province"
+],
+"4327": [
+"bandar_e_jask"
+],
+"1234": [
+"qasr_ibrim"
+],
+"4323": [
+"qasr_farafra"
+],
+"1205": [
+"mogadishu"
+],
+"1134": [
+"djenne_province"
+],
+"1139": [
+"gold_coast_area"
+],
+"1190": [
+"zumbo_province"
+],
+"1191": [
+"tete_province"
+],
+"1799": [
+"malawi_area"
+],
+"1173": [
+"damara_province"
+],
+"1065": [
+"kuznetsk_province"
+],
+"2125": [
+"kochkor"
+],
+"2225": [
+"bamyan_province"
+],
+"1033": [
+"northern_sakhalin_province",
+"southern_sakhalin_province"
+],
+"1043": [
+"okhotsk_coast_area"
+],
+"1794": [
+"central_sahara"
+]
+}

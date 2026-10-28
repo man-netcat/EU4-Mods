@@ -1,6 +1,10 @@
 #444 - Charjuy
 
-culture = uzbehk
+owner = KRT
+controller = KRT
+add_core = KRT
+is_city = yes
+culture = afghani
 religion = sunni
 capital = "Charjuy"
 trade_goods = livestock

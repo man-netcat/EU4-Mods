@@ -1,12 +1,11 @@
 #231 - Porto
 
-owner = SRV
-controller = SRV
-add_core = JAL
-add_core = SRV
+owner = POR
+controller = POR
+add_core = POR
 is_city = yes
-culture = azerbaijani
-religion = sunni
+culture = portugese
+religion = catholic
 capital = "Porto"
 trade_goods = wine
 hre = no

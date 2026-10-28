@@ -1,0 +1,16 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+technology_group = western
+primary_culture = pommeranian
+religion = catholic
+capital = 48
+
+monarch = {
+	name = "Johan"
+	dynasty = "Askanier"
+	birth_date = 1318.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

@@ -1,11 +1,12 @@
 #4340 - Astara
 
-owner = IHB
-controller = IHB
-add_core = IHB
+owner = SRV
+controller = SRV
+add_core = JAL
+add_core = SRV
 is_city = yes
 culture = azerbaijani
-religion = shiite
+religion = sunni
 capital = "Astara"
 trade_goods = fish
 hre = no

@@ -1,8 +1,8 @@
 # 193 Franche-Comté - Principal cities: Besançon
 
-owner = BUR
-controller = BUR
-add_core = BUR
+owner = FCB
+controller = FCB
+add_core = FCB
 is_city = yes
 capital = "Besançon"
 culture = burgundian

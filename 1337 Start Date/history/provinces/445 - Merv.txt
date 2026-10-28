@@ -1,6 +1,10 @@
 #445 - Marv
 
-culture = turkmeni
+owner = MRV
+controller = MRV
+add_core = MRV
+is_city = yes
+culture = afghani
 religion = sunni
 capital = "Merv"
 trade_goods = cotton

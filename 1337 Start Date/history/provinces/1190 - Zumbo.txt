@@ -1,7 +1,7 @@
 #1190 - Zumbo
 
-culture = shona
-religion = shamanism
+culture = nyasa
+religion = animism
 capital = "Chikova"
 trade_goods = ivory
 hre = no

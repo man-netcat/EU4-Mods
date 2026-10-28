@@ -1,6 +1,6 @@
-owner = TUR
-controller = TUR
-add_core = TUR
+owner = BUL
+controller = BUL
+add_core = BUL
 is_city = yes
 culture = bulgarian
 religion = orthodox

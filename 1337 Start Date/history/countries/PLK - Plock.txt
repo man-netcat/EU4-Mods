@@ -7,6 +7,7 @@ religion = catholic
 capital = 256
 
 1337.3.1 = {
+	add_truce_with = BIO
 	add_truce_with = BOH
 	add_truce_with = ERM
 	add_truce_with = LVA

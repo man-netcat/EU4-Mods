@@ -2,7 +2,7 @@ government = tribal
 add_government_reform = tribal_despotism
 government_rank = 1
 technology_group = muslim
-primary_culture = beja
+primary_culture = bedouin_arabic
 religion = shiite
 capital = 1231
 

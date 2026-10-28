@@ -1,10 +1,5 @@
 #4179 - Armenian Highland (incl Mount Ararat)
 
-owner = SUT
-controller = SUT
-add_core = SUT
-is_city = yes
-hre = no
 discovered_by = east_african
 discovered_by = western
 discovered_by = muslim

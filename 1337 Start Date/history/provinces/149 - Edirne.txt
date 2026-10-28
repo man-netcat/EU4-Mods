@@ -1,8 +1,8 @@
 #149 - Edirne
 
-owner = TUR
-controller = TUR
-add_core = TUR
+owner = BYZ
+controller = BYZ
+add_core = BYZ
 is_city = yes
 culture = greek
 religion = orthodox

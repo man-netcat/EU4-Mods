@@ -3,8 +3,9 @@
 owner = HAB
 controller = HAB
 add_core = HAB
+add_core = STY
 is_city = yes
-culture = austrian
+culture = bavarian
 religion = catholic
 base_tax = 4
 base_production = 4

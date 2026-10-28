@@ -1,5 +1,6 @@
 owner = FRA
 controller = FRA
+add_core = AQN
 add_core = FRA
 is_city = yes
 capital = "Montbrison"

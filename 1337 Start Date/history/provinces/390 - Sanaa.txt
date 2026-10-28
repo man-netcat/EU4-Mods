@@ -1,5 +1,9 @@
 #390 - Sana'a
 
+owner = YEM
+controller = YEM
+add_core = YEM
+is_city = yes
 culture = yemeni_culture
 religion = shiite
 capital = "Sana'a"
