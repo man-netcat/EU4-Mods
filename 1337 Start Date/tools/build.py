@@ -430,7 +430,7 @@ EMP = [None]
 
 def main():
     table, _ = build_table()
-    json.dump(table, open(DATA / "tags.json", "w"), indent=0, ensure_ascii=False)
+    json.dump(table, open(DATA / "tags.json", "w"), indent=0, ensure_ascii=False, sort_keys=True)
     po = province_owners()
     crm = json.load(open(DATA / "cr_map.json"))
     cmap, rmap = crm["culture"], crm["religion"]
