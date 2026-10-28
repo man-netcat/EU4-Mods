@@ -3,7 +3,7 @@
 culture = berber
 religion = animism
 capital = "Funchal"
-trade_goods = unknown
+trade_goods = sugar
 hre = no
 base_tax = 4 
 base_production = 4

@@ -5,4 +5,4 @@ technology_group = nomad_group
 primary_culture = oirats
 add_accepted_culture = khalkha
 religion = tengri_pagan_reformed
-capital = 2190
+capital = 2117

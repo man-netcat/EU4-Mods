@@ -1,9 +1,9 @@
 # 4678 - Qaraqorum
 
-owner = OGE
-controller = OGE
+owner = KHB
+controller = KHB
 add_core = CRS
-add_core = OGE
+add_core = KHB
 is_city = yes
 culture = khalkha
 religion = tengri_pagan_reformed

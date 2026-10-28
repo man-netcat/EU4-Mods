@@ -1,9 +1,13 @@
 #329 - Sivas
 
-culture = turkish
-religion = shiite
+owner = ERE
+controller = ERE
+add_core = ERE
+is_city = yes
+culture = armenian
+religion = coptic
 capital = "Sivas"
-trade_goods = livestock
+trade_goods = silk
 hre = no
 base_tax = 3
 base_production = 3

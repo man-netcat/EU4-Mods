@@ -1,11 +1,11 @@
 government = tribal
 add_government_reform = steppe_horde
 government_rank = 2
-technology_group = chinese
+technology_group = nomad_group
 primary_culture = khalkha
 add_accepted_culture = chahar
 religion = tengri_pagan_reformed
-capital = 690
+capital = 4665
 
 monarch = {
 	name = "Munanzi I"

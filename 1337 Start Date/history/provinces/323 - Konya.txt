@@ -1,13 +1,17 @@
 #323 - Konya
 
+owner = KAR
+controller = KAR
+add_core = KAR
+is_city = yes
 culture = turkish
 religion = sunni
 capital = "Konya"
-trade_goods = salt
+trade_goods = silk
 hre = no
 base_tax = 3
 base_production = 3
-base_manpower = 3
+base_manpower = 2
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

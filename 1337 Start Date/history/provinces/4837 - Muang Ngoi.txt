@@ -1,5 +1,6 @@
-owner = DAI
-controller = DAI
+owner = CBK
+controller = CBK
+add_core = CBK
 add_core = DAI
 is_city = yes
 culture = lao

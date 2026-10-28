@@ -107,8 +107,8 @@ def eu4_continents():
 
 
 # EU4 continent -> the EU5 continents its provinces may be matched to (EU5 files Anatolia and Arabia under asia, the
-# Caucasus and the steppe under europe, Egypt under africa)
-CONTINENT_OK = {"europe": {"europe"}, "asia": {"asia", "europe"}, "africa": {"africa", "asia"},
+# Caucasus and the steppe under europe, Egypt under africa; EU4 files Anatolia under europe)
+CONTINENT_OK = {"europe": {"europe", "asia"}, "asia": {"asia", "europe"}, "africa": {"africa", "asia"},
                 "north_america": {"america"}, "south_america": {"america"}, "new_world": {"america"},
                 "oceania": {"oceania", "asia"}}
 

@@ -1,8 +1,8 @@
 #540 - Coromandel 
 
-owner = HSL
-controller = HSL
-add_core = HSL
+owner = MAC
+controller = MAC
+add_core = MAC
 is_city = yes
 culture = tamil
 religion = hinduism

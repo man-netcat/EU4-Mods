@@ -1,11 +1,11 @@
 government = monarchy
 add_government_reform = beylik_government
 government_rank = 1
-primary_culture = uzbehk
+primary_culture = turkish
 add_accepted_culture = armenian
 religion = sunni
 technology_group = ottoman
-capital = 330	# Sivas
+capital = 329	# Sivas
 religious_school = hanafi_school
 
 monarch = {

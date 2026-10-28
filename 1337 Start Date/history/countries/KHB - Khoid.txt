@@ -1,0 +1,8 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+technology_group = nomad_group
+primary_culture = oirats
+add_accepted_culture = khalkha
+religion = tengri_pagan_reformed
+capital = 4678

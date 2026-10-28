@@ -2,9 +2,10 @@ government = monarchy
 add_government_reform = beylik_government
 government_rank = 1
 primary_culture = turkish
+add_accepted_culture = pontic_greek
 religion = sunni
 technology_group = ottoman
-capital = 328	# Sinop
+capital = 325	# Sinop
 religious_school = hanafi_school
 
 monarch = {

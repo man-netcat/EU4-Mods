@@ -1,8 +1,8 @@
 #4270 - Azraq
 
-owner = MAM
-controller = MAM
-add_core = MAM
+owner = AMR
+controller = AMR
+add_core = AMR
 is_city = yes
 culture = al_suryah_arabic
 religion = sunni

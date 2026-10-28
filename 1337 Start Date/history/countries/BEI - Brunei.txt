@@ -1,11 +1,11 @@
 government = monarchy
 add_government_reform = mandala_reform
 primary_culture = malayan
-add_accepted_culture = bornean
 add_accepted_culture = filipino
+add_accepted_culture = bornean
 religion = hinduism
 technology_group = chinese
-capital = 652	# Brunei Town
+capital = 636	# Brunei Town
 religious_school = shafii_school
 
 

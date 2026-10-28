@@ -1,5 +1,9 @@
 #4222 - Ulaangom
 
+owner = CRS
+controller = CRS
+add_core = CRS
+is_city = yes
 culture = oirats
 religion = tengri_pagan_reformed
 capital = "Ulaangom"

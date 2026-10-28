@@ -1,7 +1,12 @@
 #2298 - Tekke
 
-culture = turkish
-religion = sunni
+owner = AYD
+controller = AYD
+add_core = AYD
+add_core = BYZ
+is_city = yes
+culture = greek
+religion = orthodox
 capital = "Adalia"
 trade_goods = cotton
 hre = no

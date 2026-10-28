@@ -35,6 +35,41 @@ ABV_ideas = {
 	}
 }
 
+AMR_ideas = {
+	start = {
+		manpower_recovery_speed = 0.15
+		idea_cost = -0.1
+	}
+	bonus = {
+		land_morale = 0.1
+	}
+	trigger = {
+		tag = AMR
+	}
+	free = yes
+	AMR_idea_1 = {
+		advisor_cost = -0.1
+	}
+	AMR_idea_2 = {
+		artillery_power = 0.1
+	}
+	AMR_idea_3 = {
+		stability_cost_modifier = -0.1
+	}
+	AMR_idea_4 = {
+		fort_maintenance_modifier = -0.15
+	}
+	AMR_idea_5 = {
+		hostile_attrition = 1.0
+	}
+	AMR_idea_6 = {
+		development_cost = -0.1
+	}
+	AMR_idea_7 = {
+		production_efficiency = 0.1
+	}
+}
+
 AQN_ideas = {
 	start = {
 		inflation_reduction = 0.1
@@ -229,19 +264,54 @@ BMR_ideas = {
 		land_forcelimit_modifier = 0.2
 	}
 	BMR_idea_3 = {
-		artillery_power = 0.1
-	}
-	BMR_idea_4 = {
 		production_efficiency = 0.1
 	}
-	BMR_idea_5 = {
-		defensiveness = 0.2
-	}
-	BMR_idea_6 = {
+	BMR_idea_4 = {
 		global_trade_goods_size_modifier = 0.1
 	}
-	BMR_idea_7 = {
+	BMR_idea_5 = {
 		development_cost = -0.1
+	}
+	BMR_idea_6 = {
+		artillery_power = 0.1
+	}
+	BMR_idea_7 = {
+		defensiveness = 0.2
+	}
+}
+
+BNL_ideas = {
+	start = {
+		cavalry_power = 0.125
+		discipline = 0.05
+	}
+	bonus = {
+		manpower_recovery_speed = 0.15
+	}
+	trigger = {
+		tag = BNL
+	}
+	free = yes
+	BNL_idea_1 = {
+		hostile_attrition = 1.0
+	}
+	BNL_idea_2 = {
+		fort_maintenance_modifier = -0.15
+	}
+	BNL_idea_3 = {
+		garrison_size = 0.2
+	}
+	BNL_idea_4 = {
+		devotion = 1.0
+	}
+	BNL_idea_5 = {
+		global_missionary_strength = 0.02
+	}
+	BNL_idea_6 = {
+		tolerance_own = 2.0
+	}
+	BNL_idea_7 = {
+		trade_steering = 0.2
 	}
 }
 
@@ -305,13 +375,13 @@ CAA_ideas = {
 		global_tax_modifier = 0.1
 	}
 	CAA_idea_5 = {
-		defensiveness = 0.2
-	}
-	CAA_idea_6 = {
 		production_efficiency = 0.1
 	}
+	CAA_idea_6 = {
+		development_cost = -0.1
+	}
 	CAA_idea_7 = {
-		fort_maintenance_modifier = -0.15
+		defensiveness = 0.2
 	}
 }
 
@@ -375,13 +445,13 @@ CRS_ideas = {
 		horde_unity = 1.0
 	}
 	CRS_idea_5 = {
-		devotion = 1.0
+		production_efficiency = 0.1
 	}
 	CRS_idea_6 = {
-		tolerance_own = 2.0
+		global_tax_modifier = 0.1
 	}
 	CRS_idea_7 = {
-		global_missionary_strength = 0.02
+		global_trade_goods_size_modifier = 0.1
 	}
 }
 
@@ -451,7 +521,7 @@ DBD_ideas = {
 		global_manpower_modifier = 0.15
 	}
 	DBD_idea_7 = {
-		naval_forcelimit_modifier = 0.25
+		fort_maintenance_modifier = -0.15
 	}
 }
 
@@ -1082,6 +1152,41 @@ KET_ideas = {
 	}
 	KET_idea_7 = {
 		defensiveness = 0.2
+	}
+}
+
+KHB_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.2
+		infantry_power = 0.1
+	}
+	bonus = {
+		global_manpower_modifier = 0.2
+	}
+	trigger = {
+		tag = KHB
+	}
+	free = yes
+	KHB_idea_1 = {
+		garrison_size = 0.2
+	}
+	KHB_idea_2 = {
+		defensiveness = 0.2
+	}
+	KHB_idea_3 = {
+		fort_maintenance_modifier = -0.15
+	}
+	KHB_idea_4 = {
+		horde_unity = 1.0
+	}
+	KHB_idea_5 = {
+		global_missionary_strength = 0.02
+	}
+	KHB_idea_6 = {
+		devotion = 1.0
+	}
+	KHB_idea_7 = {
+		tolerance_heathen = 2.0
 	}
 }
 

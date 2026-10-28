@@ -1,12 +1,16 @@
 #389 - Mukalla
 
+owner = YEM
+controller = YEM
+add_core = YEM
+is_city = yes
 culture = yemeni_culture
 religion = sunni
 capital = "Al Mukalla"
 trade_goods = incense
 hre = no
 base_tax = 1
-base_production = 2
+base_production = 3
 base_manpower = 2
 #add_core = MUK
 discovered_by = muslim

@@ -1,5 +1,9 @@
 #2343 - Kathiri
 
+owner = YEM
+controller = YEM
+add_core = YEM
+is_city = yes
 culture = yemeni_culture
 religion = sunni
 capital = "Say'un"

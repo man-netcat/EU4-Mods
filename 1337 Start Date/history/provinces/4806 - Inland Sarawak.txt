@@ -1,6 +1,6 @@
-owner = BEI
-controller = BEI
-add_core = BEI
+owner = MNU
+controller = MNU
+add_core = MNU
 is_city = yes
 culture = bornean
 religion = sunni

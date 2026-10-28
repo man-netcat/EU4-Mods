@@ -1,5 +1,9 @@
 #4283 - Shihr
 
+owner = YEM
+controller = YEM
+add_core = YEM
+is_city = yes
 culture = yemeni_culture
 religion = sunni
 capital = "As Shihr"

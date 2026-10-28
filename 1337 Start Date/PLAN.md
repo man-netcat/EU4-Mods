@@ -206,7 +206,7 @@ set-ups are removed; heirs carry no invented death dates.
 
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
-1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is
+1. Province mapping: 3050/3272 land provinces (wasteland excluded) by name, `tools/fuzzy_aliases.py` (spelling variants, 73), ~280 hand aliases and area pools, all kept to the right continent; 222 unmatched, nearly all Americas and Kazakh/Mongol steppe sub-provinces EU5 has no name for (they keep a base-game owner only if that tag is in the 1337 table, else unowned); ~735 unmapped keep their vanilla owner only if that tag is
    in the 1337 table (plus `VANILLA_PROXY` in build.py), else are unowned. Hand aliases: `tools/data/aliases.json`;
    review `data/loc2prov_unmatched.json`.
 2. The new tags' flags are plain heraldic placeholders; EU5's coats of arms are not renderable from text.

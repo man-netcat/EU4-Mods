@@ -1,5 +1,9 @@
 #324 - Karaman
 
+owner = KAR
+controller = KAR
+add_core = KAR
+is_city = yes
 culture = turkish
 religion = sunni
 capital = "Karaman"

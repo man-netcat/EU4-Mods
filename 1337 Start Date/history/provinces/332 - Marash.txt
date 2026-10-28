@@ -1,12 +1,16 @@
 #332 - Marash
 
-culture = turkish
-religion = sunni
+owner = DUL
+controller = DUL
+add_core = DUL
+is_city = yes
+culture = al_suryah_arabic
+religion = coptic
 capital = "Maras"
 trade_goods = wool
 hre = no
-base_tax = 2
-base_production = 2
+base_tax = 3
+base_production = 3
 base_manpower = 2
 discovered_by = western
 discovered_by = eastern

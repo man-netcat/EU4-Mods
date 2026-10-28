@@ -1,5 +1,9 @@
 #4348 - Ifugao
 
+owner = CAA
+controller = CAA
+add_core = CAA
+is_city = yes
 culture = filipino
 religion = animism
 capital = "Ifugao"

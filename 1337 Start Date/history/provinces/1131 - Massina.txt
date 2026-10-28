@@ -1,13 +1,18 @@
 #1131 - Massina
 
-culture = bambara
+owner = BMR
+controller = BMR
+add_core = BMR
+add_core = TMB
+is_city = yes
+culture = dyola
 base_manpower = 1
-religion = shamanism #Fetishism
+religion = sunni #Fetishism
 capital = "Macina"
 trade_goods = grain
 hre = no
 base_tax = 4 
-base_production = 4
+base_production = 3
 native_ferocity = 4
 native_hostileness = 9
 discovered_by = sub_saharan

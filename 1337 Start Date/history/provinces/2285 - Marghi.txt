@@ -1,5 +1,9 @@
 # No previous file for Marghi
 
+owner = KBO
+controller = KBO
+add_core = KBO
+is_city = yes
 culture = kanuri 
 religion = shamanism #Fetishism
 capital = "Marghi"

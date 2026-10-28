@@ -1,5 +1,9 @@
 #4172 - Jawf
 
+owner = AMR
+controller = AMR
+add_core = AMR
+is_city = yes
 culture = bedouin_arabic
 religion = sunni
 capital = "Karah"

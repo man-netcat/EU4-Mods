@@ -4,4 +4,4 @@ government_rank = 1
 technology_group = chinese
 primary_culture = lao
 religion = buddhism
-capital = 2371
+capital = 4837

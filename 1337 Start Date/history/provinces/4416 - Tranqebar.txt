@@ -1,8 +1,8 @@
 #4416 - Tranqebar 
 
-owner = VIJ
-controller = VIJ
-add_core = VIJ
+owner = HSL
+controller = HSL
+add_core = HSL
 is_city = yes
 culture = tamil
 religion = hinduism

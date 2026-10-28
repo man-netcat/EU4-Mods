@@ -1,7 +1,13 @@
 #319 - Mentese
 
-culture = turkish
-religion = sunni
+owner = MEN
+controller = MEN
+add_core = AYD
+add_core = BYZ
+add_core = MEN
+is_city = yes
+culture = greek
+religion = orthodox
 capital = "Mughla"
 trade_goods = salt
 hre = no

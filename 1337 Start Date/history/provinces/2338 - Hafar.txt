@@ -1,5 +1,9 @@
 #2338 - Hafar
 
+owner = HUT
+controller = HUT
+add_core = HUT
+is_city = yes
 culture = bedouin_arabic
 religion = sunni
 capital = "Hafar"

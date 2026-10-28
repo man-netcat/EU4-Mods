@@ -5,13 +5,13 @@ controller = YUA
 add_core = YUA
 is_city = yes
 culture = chimin
-religion = confucianism
+religion = buddhism
 capital = "Kingchow"
-trade_goods = tropical_wood
+trade_goods = grain
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 5 
+base_production = 5
+base_manpower = 5
 
 
 

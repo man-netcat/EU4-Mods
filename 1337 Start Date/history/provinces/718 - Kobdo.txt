@@ -1,13 +1,17 @@
 #718 - Govi Altay
 
+owner = CRS
+controller = CRS
+add_core = CRS
+is_city = yes
 culture = oirats
 religion = tengri_pagan_reformed
 capital = "Kobdo"
-trade_goods = cloth
+trade_goods = gold
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 2
+base_tax = 4 
+base_production = 3
+base_manpower = 3
 
 
 

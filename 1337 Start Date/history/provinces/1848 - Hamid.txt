@@ -1,13 +1,17 @@
 #1848 - Hamid
 
-culture = turkish
-religion = sunni
+owner = HMD
+controller = HMD
+add_core = HMD
+is_city = yes
+culture = greek
+religion = orthodox
 capital = "Burdur"
-trade_goods = grain
+trade_goods = wool
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 2
+base_tax = 5
+base_production = 4
+base_manpower = 3
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

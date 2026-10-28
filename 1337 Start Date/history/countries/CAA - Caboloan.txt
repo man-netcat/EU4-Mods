@@ -5,4 +5,4 @@ technology_group = chinese
 primary_culture = sumatran
 add_accepted_culture = filipino
 religion = mahayana
-capital = 2699
+capital = 657

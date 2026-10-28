@@ -4,7 +4,7 @@ primary_culture = vietnamese
 add_accepted_culture = lao
 religion = mahayana
 technology_group = chinese
-capital = 615	# Hanoi
+capital = 613	# Hanoi
 
 # Tran Dynasty, Later Le Dynasty, Mac Dynasty and Tay Son Dynasty
 

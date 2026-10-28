@@ -1,15 +1,16 @@
 #2026 - Tanjore 
 
-owner = VIJ
-controller = VIJ
-add_core = VIJ
+owner = MAC
+controller = MAC
+add_core = MAC
+add_core = PAA
 is_city = yes
 culture = tamil
 religion = hinduism
 capital = "Thanjavur"
-trade_goods = cloth
+trade_goods = grain
 hre = no
-base_tax = 4
+base_tax = 5
 base_production = 4
 base_manpower = 2
 add_brahmins_or_church_effect = yes

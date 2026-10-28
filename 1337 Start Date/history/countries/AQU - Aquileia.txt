@@ -2,6 +2,7 @@ government = theocracy
 add_government_reform = leading_clergy_reform
 primary_culture = venetian
 add_accepted_culture = slovene
+add_accepted_culture = croatian
 religion = catholic
 technology_group = western
 capital = 111	# Friuli

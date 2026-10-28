@@ -5,13 +5,13 @@ controller = YUA
 add_core = KOR
 add_core = YUA
 is_city = yes
-culture = hubei
+culture = jianghuai
 religion = confucianism
 capital = "Andong"
 trade_goods = livestock
 hre = no
 base_tax = 5 
-base_production = 5
+base_production = 4
 base_manpower = 2
 
 

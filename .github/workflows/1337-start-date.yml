@@ -43,7 +43,7 @@ jobs:
           python-version: "3.12"
       - name: Mapping inputs (province matching, culture and religion tables)
         working-directory: 1337 Start Date/tools
-        run: python3 loc2prov.py && python3 tables.py
+        run: python3 fuzzy_aliases.py && python3 loc2prov.py && python3 tables.py
       - name: Build
         working-directory: 1337 Start Date/tools
         run: python3 build.py

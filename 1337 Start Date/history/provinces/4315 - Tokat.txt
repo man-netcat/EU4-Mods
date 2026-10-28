@@ -1,5 +1,9 @@
 #1846 - Amasya
 
+owner = ERE
+controller = ERE
+add_core = ERE
+is_city = yes
 culture = turkish
 religion = sunni
 capital = "Tokat"

@@ -1,15 +1,15 @@
 #Upper Oka Basin
 
-owner = KCH
-controller = KCH
-add_core = KCH
+owner = NSL
+controller = NSL
+add_core = NSL
 is_city = yes
 culture = ryazanian
 religion = orthodox
 hre = no
 base_tax = 6
 base_production = 5
-trade_goods = wool 
+trade_goods = grain 
 base_manpower = 5
 capital = "Odayev"
 discovered_by = western

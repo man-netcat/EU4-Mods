@@ -4,13 +4,13 @@ owner = YUA
 controller = YUA
 add_core = YUA
 is_city = yes
-culture = sichuanese
+culture = jianghuai
 religion = confucianism
 capital = "Yangzhou"
-trade_goods = grain
+trade_goods = fish
 hre = no
-base_tax = 6 
-base_production = 6
+base_tax = 7 
+base_production = 7
 base_manpower = 1
 
 

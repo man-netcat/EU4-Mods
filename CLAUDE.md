@@ -23,7 +23,7 @@ EU4 mod starting 1337.4.1, generated from EU5's 1337 setup. **Read `1337 Start D
 
 ```bash
 cd "1337 Start Date/tools"
-python3 loc2prov.py && python3 tables.py   # only after changing mapping inputs (data/aliases.json ...)
+python3 fuzzy_aliases.py && python3 loc2prov.py && python3 tables.py   # only after changing mapping inputs (data/aliases.json ...)
 python3 build.py && python3 validate.py    # must end with ALL CHECKS PASSED
 ```
 Stdlib only. Output is deterministic (same result from the local installs and from the reference clone). CI
