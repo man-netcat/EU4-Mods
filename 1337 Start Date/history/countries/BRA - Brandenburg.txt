@@ -2,7 +2,6 @@ historical_friend = DAN
 government = monarchy
 add_government_reform = margraviate_reform
 government_rank = 1
-elector = yes
 technology_group = western
 primary_culture = saxon
 religion = catholic
@@ -16,6 +15,8 @@ monarch = {
 	dip = 3
 	mil = 4
 }
+
+elector = yes
 
 1470.2.10 = {
 	monarch = {

@@ -2,7 +2,6 @@ government = theocracy
 add_government_reform = leading_clergy_reform
 primary_culture = hessian
 religion = catholic
-elector = yes
 technology_group = western
 capital = 78	# Mainz
 fixed_capital = 78 # Cannot move capital away from this province & no power cost to move to it
@@ -17,6 +16,8 @@ monarch = {
 	dip = 3
 	mil = 3
 }
+
+elector = yes
 
 1459.5.5 = {
 	monarch = {

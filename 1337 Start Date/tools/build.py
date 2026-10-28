@@ -99,11 +99,18 @@ def clean_dated(blocks, own_only=True):
 
 
 def hre_members(table):
+    """(members, emperor, electors) as EU4 tags, from EU5's Holy Roman Empire organisation."""
     from paths import EU5_SETUP
     t = (EU5_SETUP / "15_international_organizations.txt").read_text(encoding="utf-8-sig")
     m = re.search(r"type\s*=\s*hre\b.*?members\s*=\s*\{([^}]*)\}.*?leader\s*=\s*(\w+)", t, re.S)
     mem = set(m[1].split())
-    return {table[x]["eu4"] for x in mem if x in table}, table.get(m[2], {}).get("eu4")
+    electors = set()
+    for key in ("elector", "archbishop_elector"):
+        e = re.search(key + r"\s*=\s*\{([^}]*)\}", t[m.start():])
+        if e:
+            electors |= set(re.sub(r"#[^\n]*", "", e[1]).split())
+    return ({table[x]["eu4"] for x in mem if x in table}, table.get(m[2], {}).get("eu4"),
+            {table[x]["eu4"] for x in electors if x in table})
 
 
 def development_targets(land, cr_vote, lp):
@@ -369,6 +376,9 @@ def ruler_text(tag, b, gov, table, stats):
     if qb:
         out += "queen = {\n" + qb + "\n}\n"
         stats["queens"] += 1
+        origin = re.search(r"country = (\w+)", qb)[1]
+        if origin != tag:
+            MARRIAGES.add(tuple(sorted((tag, origin))))
     return out, True
 
 
@@ -414,7 +424,7 @@ def step_countries(table, po, cmap, rmap, stats):
         if van:
             text = van.read_text(encoding="latin-1")
             base, blocks = split_blocks(text)
-            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|add_accepted_culture|historical_rival|historical_friend|change_estate_land_share|set_estate_privilege|add_estate_loyalty|add_estate_loyalty_modifier)\s*=")
+            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|elector|add_accepted_culture|historical_rival|historical_friend|change_estate_land_share|set_estate_privilege|add_estate_loyalty|add_estate_loyalty_modifier)\s*=")
             if cap:
                 base = re.sub(r"(?m)^capital\s*=\s*\d+", f"capital = {cap}", base)
             if cul:
@@ -462,6 +472,8 @@ def step_countries(table, po, cmap, rmap, stats):
         text, got = ruler_text(tag, b, i.get("gov"), table, stats)
         body += text
         stats["rulers" if got else "no_ruler"] += 1
+        if tag in ELECTORS:
+            body += "\nelector = yes\n"
         if tag == EMP[0] and "emperor = yes" not in body:
             body += "\nemperor = yes\n"
         res = body + "\n" + "".join(kept)
@@ -491,7 +503,7 @@ def step_dormant(table, stats):
         if f.name[:3] in used:
             continue
         base, blocks = split_blocks(f.read_text(encoding="latin-1"))
-        base = strip_depth0(base, r"\s*(?:monarch|heir|queen)\s*=")
+        base = strip_depth0(base, r"\s*(?:monarch|heir|queen|elector)\s*=")
         res = base.rstrip() + "\n"
         if f.name[:3] in lent:
             text, got = ruler_text(f.name[:3], lent[f.name[:3]], None, table, stats)
@@ -501,6 +513,30 @@ def step_dormant(table, stats):
         (out / f.name).write_bytes(res.rstrip().encode("latin-1", "replace") + b"\n")
         n += 1
     return n
+
+
+def step_bookmark(table):
+    """common/bookmarks/1337_start.txt: the playable roster is the tags with the most development at the start (the
+    base game's bookmarks likewise list the great and mid powers), centred on the emperor-less west like the base
+    game's, with the weakest-start large tags as the easy picks."""
+    dev, held = Counter(), Counter()
+    for f in (MOD / "history/provinces").iterdir():
+        top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
+        m = re.search(r"(?m)^owner = (\w+)", top)
+        if m:
+            held[m[1]] += 1
+            dev[m[1]] += sum(int(x) for x in re.findall(r"(?m)^base_(?:tax|production|manpower)\s*=\s*(\d+)", top))
+    names = {r["eu4"]: r["name"] for r in table.values()}
+    subjects = set(re.findall(r"(?:vassal|dependency|union) = \{ first = \w+ second = (\w+)",
+                              (MOD / "history/diplomacy/1337_diplomacy.txt").read_text(encoding="latin-1")))
+    ranked = [t for t, _ in dev.most_common() if t in names and t not in subjects][:30]
+    ranked += [t for t in ("BYZ", "TUR", "VEN", "GEN", "TEU", "MOS", "NOV", "GOL", "HSA", "PAP") if t in names and held[t] and t not in ranked and t not in subjects]
+    easy = [t for t in ("FRA", "ENG", "CAS", "HAB", "POL", "HUN") if t in ranked][:3] or ranked[:3]
+    lines = ["bookmark =", "{", '\tname = "START_1337_NAME"', '\tdesc = "START_1337_DESC"', "\tdate = 1337.4.1",
+             "\tdefault = yes", "\tcenter = 236", ""]
+    lines += [f"\tcountry = {t}" for t in ranked] + [""] + [f"\teasy_country = {t}" for t in easy] + ["}"]
+    (MOD / "common/bookmarks/1337_start.txt").write_text("\n".join(lines) + "\n")
+    return {"playable": len(ranked)}
 
 
 def step_institutions():
@@ -701,6 +737,11 @@ def step_diplomacy(table):
                 subjects[j4] = s4
                 out.append(f"union = {{ first = {s4} second = {j4} {sd} }}")
                 n["union"] += 1
+    # royal marriages: a ruler whose consort is another country's (lifted queen origin)
+    for x, y in sorted(MARRIAGES):
+        if held[x] and held[y] and subjects.get(x) != y and subjects.get(y) != x:
+            out.append(f"royal_marriage = {{ first = {x} second = {y} {sd} }}")
+            n["royal_marriage"] += 1
     # the Celestial Empire: EU5's China organisation names its leader and its celestial governors (tributaries)
     org = (EU5_SETUP / "15_international_organizations.txt").read_text(encoding="utf-8-sig")
     m = re.search(r"leader\s*=\s*(\w+)\s*celestial_governor\s*=\s*\{([^}]*)\}", org)
@@ -857,6 +898,8 @@ def step_rivals(table):
 
 
 EMP = [None]
+ELECTORS = set()
+MARRIAGES = set()  # (tag, tag) royal marriages: a ruler's consort comes from another country
 
 
 def main():
@@ -866,7 +909,8 @@ def main():
     crm = json.load(open(DATA / "cr_map.json"))
     cmap, rmap = crm["culture"], crm["religion"]
     stats = Counter()
-    hre, emperor = hre_members(table)
+    hre, emperor, electors = hre_members(table)
+    ELECTORS.update(electors)
     stats["hre_members"] = len(hre)
     step_provinces(table, po, cmap, rmap, stats, hre)
     stats["emperor"] = emperor
@@ -880,6 +924,7 @@ def main():
     stats["wars"] = step_wars(table)
     stats["institutions"] = step_institutions()
     stats["rivals"] = step_rivals(table)
+    stats["bookmark"] = step_bookmark(table)
     print(dict(stats))
 
 

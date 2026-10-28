@@ -5,7 +5,6 @@ government = monarchy
 add_government_reform = bohemian_elective_kingdom_reform
 primary_culture = czech
 religion = catholic
-elector = yes
 capital = 266 # Praha
 technology_group = western
 add_army_professionalism = 0.1
@@ -30,6 +29,8 @@ heir = {
 	dip = 5
 	mil = 5
 }
+
+elector = yes
 
 1457.11.24 = {
 	monarch = {

@@ -127,3 +127,5 @@ union = { first = MOS second = NZH start_date = 1337.4.1 end_date = 1836.12.31 }
 union = { first = MOS second = VLR start_date = 1337.4.1 end_date = 1836.12.31 }
 union = { first = NAP second = PRO start_date = 1337.4.1 end_date = 1836.12.31 }
 union = { first = SWE second = NOR start_date = 1337.4.1 end_date = 1836.12.31 }
+royal_marriage = { first = BUR second = FCB start_date = 1337.4.1 end_date = 1836.12.31 }
+royal_marriage = { first = FRA second = SCO start_date = 1337.4.1 end_date = 1836.12.31 }

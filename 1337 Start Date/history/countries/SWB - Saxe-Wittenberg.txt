@@ -24,3 +24,5 @@ heir = {
 	dip = 3
 	mil = 3
 }
+
+elector = yes
