@@ -3,11 +3,6 @@
 
 
 
-owner = GHD
-controller = GHD
-add_core = GHD
-is_city = yes
-hre = no
 discovered_by = MAL
 discovered_by = SOF
 discovered_by = ASH

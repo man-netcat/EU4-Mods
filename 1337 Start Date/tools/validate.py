@@ -201,6 +201,57 @@ def main():
         c = re.search(r"(?m)^capital\s*=\s*(\d+)", f.read_text(encoding="latin-1"))
         if c and f.name[:3] in capital_owner.values() and capital_owner.get(int(c[1])) != f.name[:3]:
             errs.append(f"{f.name}: capital {c[1]} is not an own province")
+    # provinces: an owned province has development, a known trade good, a controller and its owner as a core
+    def _top(path):
+        return re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", path.read_text(encoding="latin-1"))[0]
+
+    goods = set(re.findall(r"(?m)^(\w+) = \{", (EU4_GAME / "common/tradegoods/00_tradegoods.txt").read_text(encoding="latin-1"))) | {"unknown"}
+    for f in (MOD / "history/provinces").iterdir():
+        top = _top(f)
+        o = re.search(r"(?m)^owner = (\w+)", top)
+        g = re.search(r"(?m)^trade_goods = (\w+)", top)
+        if g and g[1] not in goods:
+            errs.append(f"{f.name}: unknown trade good {g[1]}")
+        if o:
+            if not all(re.search(rf"(?m)^{k} = [1-9]", top) for k in ("base_tax", "base_production", "base_manpower")):
+                errs.append(f"{f.name}: owned but has no development (wasteland?)")
+            if not re.search(r"(?m)^controller = ", top):
+                errs.append(f"{f.name}: owned without a controller")
+            if not re.search(rf"(?m)^add_core = {o[1]}\b", top):
+                errs.append(f"{f.name}: the owner {o[1]} is not a core holder")
+    # text: braces balance in every text file, localisation lines are well formed and keys unique, no characters
+    # Windows-1252 cannot show left as '?' in the names of history files
+    seen = {}
+    for f in (MOD / "localisation").rglob("*.yml"):
+        for i, line in enumerate(f.read_text(encoding="utf-8-sig").split("\n"), 1):
+            if line.strip() and not line.startswith("l_english") and not re.match(r'^ ([\w.\-]+):\d* ".*"\s*$', line):
+                errs.append(f"{f.name}:{i}: malformed localisation line")
+            k = re.match(r"^ ([\w.\-]+):", line)
+            if k and k[1] in seen and seen[k[1]] != f.name:
+                errs.append(f"localisation key {k[1]} in both {seen[k[1]]} and {f.name}")
+            elif k:
+                seen[k[1]] = f.name
+    for f in list((MOD / "history").rglob("*.txt")) + list((MOD / "common").rglob("*.txt")) + list((MOD / "interface").rglob("*.gui")):
+        t = re.sub(r'"[^"\n]*"', '""', re.sub(r"#[^\n]*", "", f.read_text(encoding="latin-1")))
+        if t.count("{") != t.count("}"):
+            errs.append(f"{f.relative_to(MOD)}: unbalanced braces")
+        if re.search(r'"[^"\n]*\?[^"\n]*"', f.read_text(encoding="latin-1")) and "history/" in str(f):
+            errs.append(f"{f.relative_to(MOD)}: a name lost characters to '?'")
+    # wars use real casus belli and war goals
+    cbs = set(re.findall(r"(?m)^(\w+) = \{", (EU4_GAME / "common/cb_types/00_cb_types.txt").read_text(encoding="latin-1")))
+    wgs = set(re.findall(r"(?m)^(\w+) = \{", (EU4_GAME / "common/wargoal_types/00_wargoal_types.txt").read_text(encoding="latin-1")))
+    for f in (MOD / "history/wars").glob("*.txt"):
+        t = f.read_text(encoding="latin-1")
+        for k in re.findall(r"casus_belli = (\w+)", t):
+            if k not in cbs:
+                errs.append(f"{f.name}: unknown casus belli {k}")
+        for k in re.findall(r"(?m)^\s*type = (\w+)", t):
+            if k not in wgs:
+                errs.append(f"{f.name}: unknown war goal {k}")
+    # a new tag's common/countries file must not replace a base-game tag's (same file name)
+    for f in (MOD / "common/countries").glob("*.txt"):
+        if (EU4_GAME / "common/countries" / f.name).exists():
+            errs.append(f"common/countries/{f.name} replaces a base-game country file")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

@@ -9,7 +9,7 @@ capital = 2297	# Saruhan
 
 monarch = {
 	name = "Saruhan"
-	dynasty = "Saruhano?ullar?"
+	dynasty = "Saruhanogullar"
 	birth_date = 1273.1.1
 	adm = 3
 	dip = 3
@@ -17,7 +17,7 @@ monarch = {
 }
 heir = {
 	name = "Salomon"
-	dynasty = "Saruhano?ullar?"
+	dynasty = "Saruhanogullar"
 	birth_date = 1304.1.1
 	death_date = 1364.1.1
 	claim = 95

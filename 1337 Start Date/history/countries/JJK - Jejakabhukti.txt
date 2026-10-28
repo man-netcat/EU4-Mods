@@ -7,7 +7,7 @@ religion = hinduism
 capital = 4467
 
 monarch = {
-	name = "V?ravarman II"
+	name = "Viravarman II"
 	dynasty = "Chandela"
 	birth_date = 1280.1.1
 	adm = 3

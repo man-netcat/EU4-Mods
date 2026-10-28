@@ -8,7 +8,7 @@ capital = 1819	# Tosa
 
 monarch = {
 	name = "Nobuyoshi I"
-	dynasty = "Ch?sokabe"
+	dynasty = "Chosokabe"
 	birth_date = 1305.1.1
 	adm = 3
 	dip = 3
@@ -16,7 +16,7 @@ monarch = {
 }
 heir = {
 	name = "Kaneyoshi"
-	dynasty = "Ch?sokabe"
+	dynasty = "Chosokabe"
 	birth_date = 1325.1.1
 	death_date = 1385.1.1
 	claim = 95

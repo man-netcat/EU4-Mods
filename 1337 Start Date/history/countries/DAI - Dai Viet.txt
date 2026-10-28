@@ -11,8 +11,8 @@ capital = 1016	# Hanoi
 government_rank = 2
 
 monarch = {
-	name = "V??ng I"
-	dynasty = "Tr?n"
+	name = "Vuong I"
+	dynasty = "Tran"
 	birth_date = 1319.5.17
 	adm = 4
 	dip = 4

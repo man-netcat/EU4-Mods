@@ -8,7 +8,7 @@ capital = 4182	# Hizen
 
 monarch = {
 	name = "Yorihisa I"
-	dynasty = "Sh?ni"
+	dynasty = "Shoni"
 	birth_date = 1294.1.1
 	adm = 3
 	dip = 3
@@ -16,7 +16,7 @@ monarch = {
 }
 heir = {
 	name = "Tadasuke"
-	dynasty = "Sh?ni"
+	dynasty = "Shoni"
 	birth_date = 1320.1.1
 	death_date = 1380.1.1
 	claim = 95

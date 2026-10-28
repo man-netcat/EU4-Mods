@@ -3895,9 +3895,12 @@
 "bejaad",
 "bzou",
 "debdou",
+"east_high_atlas",
+"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
+"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -3906,6 +3909,7 @@
 "larache",
 "lower_rif",
 "marrakesh",
+"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -3934,6 +3938,7 @@
 "tinmel",
 "tizgane",
 "volubilis",
+"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -4001,9 +4006,12 @@
 "bejaad",
 "bzou",
 "debdou",
+"east_high_atlas",
+"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
+"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -4012,6 +4020,7 @@
 "larache",
 "lower_rif",
 "marrakesh",
+"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -4040,6 +4049,7 @@
 "tinmel",
 "tizgane",
 "volubilis",
+"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -4067,9 +4077,12 @@
 "bejaad",
 "bzou",
 "debdou",
+"east_high_atlas",
+"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
+"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -4078,6 +4091,7 @@
 "larache",
 "lower_rif",
 "marrakesh",
+"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -4106,6 +4120,7 @@
 "tinmel",
 "tizgane",
 "volubilis",
+"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -4127,9 +4142,12 @@
 "bejaad",
 "bzou",
 "debdou",
+"east_high_atlas",
+"eastern_high_atlas2",
 "ghassasa",
 "guercif",
 "hanimmei",
+"high_atlas1",
 "kalaat_sraghna",
 "khenifra",
 "ksar_el_kebir",
@@ -4138,6 +4156,7 @@
 "larache",
 "lower_rif",
 "marrakesh",
+"middle_high_atlas",
 "midelt",
 "mrirah",
 "naffis",
@@ -4166,6 +4185,7 @@
 "tinmel",
 "tizgane",
 "volubilis",
+"western_high_atlas1",
 "western_rif"
 ]
 },
@@ -8977,6 +8997,8 @@
 "hengduanshan7",
 "hengduanshan8",
 "hengduanshan9",
+"himalaya20",
+"himalaya21",
 "jomda",
 "karma_densa",
 "katok",
@@ -9328,6 +9350,11 @@
 "jurhen_ui",
 "jyekundo",
 "khana",
+"kunlun",
+"kunlun4",
+"kunlun5",
+"kunlun6",
+"kunlun7",
 "lab",
 "lab_lake",
 "lebxewudan_lake",
@@ -9685,7 +9712,6 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
-"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -11438,6 +11464,8 @@
 "corani",
 "coree",
 "croatan",
+"cumberland_mountains_2",
+"cumberland_mountains_3",
 "dawhee",
 "eswawpuddenah",
 "gowtano",
@@ -11747,6 +11775,7 @@
 "963": {
 "tier": "area-fallback",
 "locations": [
+"adirondacks",
 "ahna_wate",
 "ahouenro",
 "canadaigua",
@@ -12101,7 +12130,6 @@
 "ahwendoe",
 "amqui",
 "andawaohie",
-"anticosti",
 "aunona",
 "betsiamites",
 "caopacho",
@@ -12113,7 +12141,6 @@
 "chicoutimi",
 "coacoachou",
 "essipit",
-"etchemin",
 "gaspe",
 "itomamo",
 "kakouna",
@@ -12130,7 +12157,6 @@
 "laurentian_massif",
 "magpie_massif",
 "manapakuaniskau",
-"manicouagan",
 "manicouagan_depression",
 "manicouagan_plateau",
 "manouane",
@@ -12142,7 +12168,6 @@
 "mecatina",
 "mecatina_hills",
 "metabetchouane",
-"mingan",
 "mistecapiu",
 "mitis",
 "molsemtekw",
@@ -12153,7 +12178,6 @@
 "nipissis",
 "nipisso",
 "northern_notre_dame_mountains",
-"not_eligible_for_dynamic_country_name",
 "notiskuan",
 "onatchiway",
 "ondaonnentakwi",
@@ -12172,7 +12196,6 @@
 "sainte_marguerite_plateau",
 "sartigan",
 "shipshaw",
-"stadacona",
 "tadoussac",
 "taoondewake",
 "temiscouata",
@@ -12183,8 +12206,7 @@
 "upuahpukau",
 "valin_mountains",
 "wachilmezi",
-"wolastoq",
-"yes"
+"wolastoq"
 ]
 },
 "996": {
@@ -18933,86 +18955,10 @@
 "zlatoust"
 ]
 },
-"1784": {
-"tier": "key/display",
-"locations": [
-"tian_shan1",
-"tian_shan2",
-"tian_shan3",
-"tian_shan4",
-"tian_shan5"
-]
-},
-"1785": {
-"tier": "key/display",
-"locations": [
-"karakoram1",
-"karakoram2",
-"karakoram3",
-"karakoram4"
-]
-},
-"1786": {
-"tier": "key/display",
-"locations": [
-"taklamakan1",
-"taklamakan2",
-"taklamakan3",
-"taklamakan4",
-"taklamakan5"
-]
-},
-"1787": {
-"tier": "key/display",
-"locations": [
-"himalaya1",
-"himalaya10",
-"himalaya11",
-"himalaya12",
-"himalaya13",
-"himalaya14",
-"himalaya15",
-"himalaya16",
-"himalaya17",
-"himalaya18",
-"himalaya19",
-"himalaya2",
-"himalaya20",
-"himalaya21",
-"himalaya22",
-"himalaya23",
-"himalaya3",
-"himalaya5",
-"himalaya6",
-"himalaya7",
-"himalaya8",
-"himalaya9"
-]
-},
 "1792": {
 "tier": "key/display",
 "locations": [
 "antananarivo"
-]
-},
-"1794": {
-"tier": "alias",
-"locations": [
-"abalessa",
-"abalessa_djanet_corridor",
-"ain_abalessa_corridor",
-"connector_libya1",
-"connector_libya8",
-"djanet",
-"djanet_ghadames_corridor",
-"ghadames",
-"ghadames_ouargla_corridor",
-"in_amenas",
-"sinawin",
-"tademait_plateau1",
-"tozeur_ghadames_corridor",
-"west_grand_erg_oriental1",
-"west_grand_erg_oriental2"
 ]
 },
 "1800": {
@@ -19052,214 +18998,10 @@
 "zinjanja"
 ]
 },
-"1805": {
-"tier": "node",
-"locations": [
-"aguanish",
-"ahwendoe",
-"amqui",
-"andawaohie",
-"anticosti",
-"aunona",
-"betsiamites",
-"caopacho",
-"capotigamau",
-"cascapedia",
-"causapscal",
-"chic_choc_mountains",
-"chicchoc",
-"chicoutimi",
-"coacoachou",
-"essipit",
-"etchemin",
-"gaspe",
-"itomamo",
-"kakouna",
-"kamitsisit",
-"kamouraska",
-"kapuameut",
-"kegaska",
-"kikonteku",
-"kitchesatsiou",
-"kouate",
-"lake_manicouagan",
-"lake_mouchalagane",
-"lake_pipmuacan",
-"laurentian_massif",
-"magpie_massif",
-"manapakuaniskau",
-"manicouagan",
-"manicouagan_depression",
-"manicouagan_plateau",
-"manouane",
-"manouanis",
-"manouanis_massif",
-"marsoui",
-"matane",
-"matapedia",
-"mecatina",
-"mecatina_hills",
-"metabetchouane",
-"mingan",
-"mistecapiu",
-"mitis",
-"molsemtekw",
-"mouchalagane",
-"napetipi",
-"natashquan",
-"natigostec",
-"nipissis",
-"nipisso",
-"northern_notre_dame_mountains",
-"notiskuan",
-"onatchiway",
-"ondaonnentakwi",
-"onkobagag",
-"ontaretse",
-"opocopa",
-"ouiauirabugu",
-"outapimiskou",
-"paspebiac",
-"pessamit",
-"pewjeg",
-"pigou",
-"piletisipuk",
-"pipmuacan",
-"rimouski",
-"sainte_marguerite_plateau",
-"sartigan",
-"shipshaw",
-"stadacona",
-"tadoussac",
-"taoondewake",
-"temiscouata",
-"tetepisca",
-"toulnustouc",
-"uanaman",
-"uashat",
-"upuahpukau",
-"valin_mountains",
-"wachilmezi",
-"wolastoq"
-]
-},
-"1808": {
-"tier": "node",
-"locations": [
-"agai_ticutta",
-"akamba",
-"amargosa",
-"arock",
-"atsa_kudok_wa",
-"bannock_range",
-"bear_river_e",
-"bear_river_w",
-"boa_ogoi",
-"buenaventura",
-"cui_yui_ticutta",
-"cumumba",
-"dembimbosaage",
-"fish_lake",
-"gidi_tika",
-"havasu",
-"hazelton",
-"humbokado",
-"inyo_mountains",
-"ivanpah",
-"jefferson",
-"juntura",
-"kaibab",
-"kaiparowit",
-"kamu_ticutta",
-"kawich",
-"king_hill",
-"koa_aga_itoka",
-"koop_ticutta",
-"koosharem",
-"kupadokado",
-"kutsipiuti",
-"kuyatikka",
-"kuzedika",
-"lemhi",
-"mahaguatikka",
-"makuhadokado",
-"malheur",
-"moadokado",
-"moapa",
-"morgan",
-"newe_wasteland",
-"nuchiu_range",
-"nuwuvi_desert",
-"nuwuvi_wasteland",
-"nyssa",
-"pagayuat",
-"pah_rimpi",
-"pahva_nits",
-"panati",
-"panina_ticutta",
-"parrusit",
-"payette",
-"pierruiat",
-"pio_gwut",
-"pohogwe",
-"pohoko_ikkatee",
-"powalu",
-"quitchupah",
-"randolph",
-"reno",
-"richfield",
-"sahpeech",
-"salt_lake",
-"sawawaktodo",
-"sebit",
-"seneca",
-"seuhubeogoi",
-"shohopanaiti",
-"so_so_goiw",
-"tagotoka",
-"tanalelti",
-"timbisha",
-"tipanuk",
-"tipatikka",
-"toedokado",
-"tooele",
-"toompahnahwach",
-"toponisw",
-"tosa_konoki",
-"tovusidokado",
-"toyabe",
-"tsaiduka",
-"tsitsiadi",
-"tsogwiyuyugi",
-"tubatulabam",
-"tumpisa",
-"uinkaret",
-"unkagarit",
-"wadadokado",
-"waitikka",
-"wapi",
-"waradika",
-"watatikka",
-"winnemucca",
-"yahandeka",
-"yakwahnim_paa",
-"yam_pah_pa",
-"yambadika",
-"yoov_we_teuh",
-"yoowetum",
-"yuttahih"
-]
-},
 "1809": {
 "tier": "key/display",
 "locations": [
 "so_taeo_o"
-]
-},
-"1810": {
-"tier": "key/display",
-"locations": [
-"alaska"
 ]
 },
 "1813": {
@@ -20490,19 +20232,6 @@
 "tier": "key/display",
 "locations": [
 "penukonda"
-]
-},
-"1950": {
-"tier": "node",
-"locations": [
-"chisobibra",
-"dura",
-"jaintiapur",
-"lyngngam",
-"nabagram",
-"ruga",
-"sohra",
-"sutnga"
 ]
 },
 "1951": {
@@ -22941,6 +22670,14 @@
 "sangni",
 "shahpur",
 "sillanwali",
+"suleiman_range_1",
+"suleiman_range_2",
+"suleiman_range_3",
+"suleiman_range_5",
+"suleiman_range_6",
+"suleiman_range_7",
+"suleiman_range_8",
+"suleiman_range_9",
 "sultanwind",
 "sunam",
 "talwandi",
@@ -23512,6 +23249,9 @@
 "jingyu",
 "jingyu_lake",
 "karakax",
+"karakoram1",
+"karakoram2",
+"karakoram4",
 "karasahr",
 "kargilik",
 "khotan",
@@ -23523,6 +23263,12 @@
 "kumtag3",
 "kumtura",
 "kumux",
+"kunlun1",
+"kunlun10",
+"kunlun2",
+"kunlun3",
+"kunlun8",
+"kunlun9",
 "kurla",
 "kuruktag",
 "lake_aqqikkol",
@@ -23547,7 +23293,17 @@
 "sanju",
 "sarikol",
 "shayar",
+"taklamakan1",
+"taklamakan2",
+"taklamakan3",
+"taklamakan4",
+"taklamakan5",
 "tatrang",
+"tian_shan1",
+"tian_shan2",
+"tian_shan3",
+"tian_shan4",
+"tian_shan5",
 "tikenliq",
 "tokkuzak",
 "uqturpan",
@@ -23565,12 +23321,6 @@
 "tsaparang"
 ]
 },
-"2129": {
-"tier": "key/display",
-"locations": [
-"changtang"
-]
-},
 "2130": {
 "tier": "area-node",
 "locations": [
@@ -23585,6 +23335,8 @@
 "gonpatsi",
 "gyama",
 "gyamda",
+"himalaya18",
+"himalaya19",
 "lake_puma_yumco",
 "lho_taklung",
 "lhodrak",
@@ -23637,6 +23389,8 @@
 "hengduanshan7",
 "hengduanshan8",
 "hengduanshan9",
+"himalaya20",
+"himalaya21",
 "jomda",
 "karma_densa",
 "katok",
@@ -23727,6 +23481,8 @@
 "hengduanshan7",
 "hengduanshan8",
 "hengduanshan9",
+"himalaya20",
+"himalaya21",
 "jomda",
 "karma_densa",
 "katok",
@@ -23817,6 +23573,8 @@
 "hengduanshan7",
 "hengduanshan8",
 "hengduanshan9",
+"himalaya20",
+"himalaya21",
 "jomda",
 "karma_densa",
 "katok",
@@ -23916,6 +23674,11 @@
 "jurhen_ui",
 "jyekundo",
 "khana",
+"kunlun",
+"kunlun4",
+"kunlun5",
+"kunlun6",
+"kunlun7",
 "lab",
 "lab_lake",
 "lebxewudan_lake",
@@ -23985,6 +23748,8 @@
 "hengduanshan7",
 "hengduanshan8",
 "hengduanshan9",
+"himalaya20",
+"himalaya21",
 "jomda",
 "karma_densa",
 "katok",
@@ -24900,22 +24665,6 @@
 "tongwancheng"
 ]
 },
-"2194": {
-"tier": "key/display",
-"locations": [
-"kunlun",
-"kunlun1",
-"kunlun10",
-"kunlun2",
-"kunlun3",
-"kunlun4",
-"kunlun5",
-"kunlun6",
-"kunlun7",
-"kunlun8",
-"kunlun9"
-]
-},
 "2196": {
 "tier": "area-node",
 "locations": [
@@ -24967,19 +24716,6 @@
 "tier": "key/display",
 "locations": [
 "tarki"
-]
-},
-"2200": {
-"tier": "key/display",
-"locations": [
-"suleiman_range_1",
-"suleiman_range_2",
-"suleiman_range_3",
-"suleiman_range_5",
-"suleiman_range_6",
-"suleiman_range_7",
-"suleiman_range_8",
-"suleiman_range_9"
 ]
 },
 "2201": {
@@ -30401,6 +30137,9 @@
 "cheroenhaka",
 "chesapeake",
 "chiswell",
+"cumberland_mountains_5",
+"cumberland_mountains_6",
+"cumberland_mountains_8",
 "kallamuckee",
 "kiskiack",
 "mahock",
@@ -30991,7 +30730,6 @@
 "ahwendoe",
 "amqui",
 "andawaohie",
-"anticosti",
 "aunona",
 "betsiamites",
 "caopacho",
@@ -31003,7 +30741,6 @@
 "chicoutimi",
 "coacoachou",
 "essipit",
-"etchemin",
 "gaspe",
 "itomamo",
 "kakouna",
@@ -31020,7 +30757,6 @@
 "laurentian_massif",
 "magpie_massif",
 "manapakuaniskau",
-"manicouagan",
 "manicouagan_depression",
 "manicouagan_plateau",
 "manouane",
@@ -31032,7 +30768,6 @@
 "mecatina",
 "mecatina_hills",
 "metabetchouane",
-"mingan",
 "mistecapiu",
 "mitis",
 "molsemtekw",
@@ -31043,7 +30778,6 @@
 "nipissis",
 "nipisso",
 "northern_notre_dame_mountains",
-"not_eligible_for_dynamic_country_name",
 "notiskuan",
 "onatchiway",
 "ondaonnentakwi",
@@ -31062,7 +30796,6 @@
 "sainte_marguerite_plateau",
 "sartigan",
 "shipshaw",
-"stadacona",
 "tadoussac",
 "taoondewake",
 "temiscouata",
@@ -31073,8 +30806,7 @@
 "upuahpukau",
 "valin_mountains",
 "wachilmezi",
-"wolastoq",
-"yes"
+"wolastoq"
 ]
 },
 "2583": {
@@ -33524,7 +33256,6 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
-"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -33544,7 +33275,6 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
-"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -34989,7 +34719,6 @@
 "connector_libya8",
 "djanet",
 "djanet_ghadames_corridor",
-"ghadames",
 "ghadames_ouargla_corridor",
 "in_amenas",
 "sinawin",
@@ -37544,40 +37273,6 @@
 "waestbo"
 ]
 },
-"4167": {
-"tier": "key/display",
-"locations": [
-"east_high_atlas",
-"eastern_high_atlas1",
-"eastern_high_atlas2",
-"high_atlas1",
-"high_atlas2",
-"middle_high_atlas",
-"western_high_atlas1",
-"western_high_atlas2"
-]
-},
-"4168": {
-"tier": "key/display",
-"locations": [
-"high_atlas2"
-]
-},
-"4169": {
-"tier": "node",
-"locations": [
-"bades",
-"bades_mountain1",
-"bades_mountain2",
-"bir_el_alter",
-"biskra",
-"chott_melrhir",
-"madila",
-"sbiba_mountain",
-"sidi_okba",
-"tolga"
-]
-},
 "4171": {
 "tier": "area-node",
 "locations": [
@@ -37886,6 +37581,8 @@
 "gonpatsi",
 "gyama",
 "gyamda",
+"himalaya18",
+"himalaya19",
 "lake_puma_yumco",
 "lho_taklung",
 "lhodrak",
@@ -37989,6 +37686,9 @@
 "jingyu",
 "jingyu_lake",
 "karakax",
+"karakoram1",
+"karakoram2",
+"karakoram4",
 "karasahr",
 "kargilik",
 "khotan",
@@ -38000,6 +37700,12 @@
 "kumtag3",
 "kumtura",
 "kumux",
+"kunlun1",
+"kunlun10",
+"kunlun2",
+"kunlun3",
+"kunlun8",
+"kunlun9",
 "kurla",
 "kuruktag",
 "lake_aqqikkol",
@@ -38024,7 +37730,17 @@
 "sanju",
 "sarikol",
 "shayar",
+"taklamakan1",
+"taklamakan2",
+"taklamakan3",
+"taklamakan4",
+"taklamakan5",
 "tatrang",
+"tian_shan1",
+"tian_shan2",
+"tian_shan3",
+"tian_shan4",
+"tian_shan5",
 "tikenliq",
 "tokkuzak",
 "uqturpan",
@@ -40074,13 +39790,6 @@
 "dagon"
 ]
 },
-"4400": {
-"tier": "key/display",
-"locations": [
-"naga_hills1",
-"naga_hills2"
-]
-},
 "4404": {
 "tier": "key/display",
 "locations": [
@@ -41809,6 +41518,14 @@
 "sangni",
 "shahpur",
 "sillanwali",
+"suleiman_range_1",
+"suleiman_range_2",
+"suleiman_range_3",
+"suleiman_range_5",
+"suleiman_range_6",
+"suleiman_range_7",
+"suleiman_range_8",
+"suleiman_range_9",
 "sultanwind",
 "sunam",
 "talwandi",
@@ -41862,6 +41579,11 @@
 "gangdise5",
 "gonga_chode",
 "gyantse",
+"himalaya11",
+"himalaya12",
+"himalaya13",
+"himalaya15",
+"himalaya16",
 "jonang",
 "lake_paiku",
 "lhadrak",
@@ -41908,6 +41630,8 @@
 "gonpatsi",
 "gyama",
 "gyamda",
+"himalaya18",
+"himalaya19",
 "lake_puma_yumco",
 "lho_taklung",
 "lhodrak",
@@ -41948,6 +41672,17 @@
 "gyanema",
 "gyesar_lake",
 "hanle",
+"himalaya1",
+"himalaya10",
+"himalaya14",
+"himalaya2",
+"himalaya3",
+"himalaya5",
+"himalaya6",
+"himalaya7",
+"himalaya8",
+"himalaya9",
+"karakoram3",
 "kargil",
 "karpokhar",
 "khaplu",
@@ -42716,19 +42451,6 @@
 "tier": "key/display",
 "locations": [
 "demnate"
-]
-},
-"4569": {
-"tier": "key/display",
-"locations": [
-"east_high_atlas",
-"eastern_high_atlas1",
-"eastern_high_atlas2",
-"high_atlas1",
-"high_atlas2",
-"middle_high_atlas",
-"western_high_atlas1",
-"western_high_atlas2"
 ]
 },
 "4571": {
@@ -45855,6 +45577,9 @@
 "cheroenhaka",
 "chesapeake",
 "chiswell",
+"cumberland_mountains_5",
+"cumberland_mountains_6",
+"cumberland_mountains_8",
 "kallamuckee",
 "kiskiack",
 "mahock",
@@ -46521,38 +46246,6 @@
 "tier": "key/display",
 "locations": [
 "pacaha"
-]
-},
-"4924": {
-"tier": "key/display",
-"locations": [
-"laurentian_massif"
-]
-},
-"4926": {
-"tier": "key/display",
-"locations": [
-"adirondacks"
-]
-},
-"4931": {
-"tier": "key/display",
-"locations": [
-"cumberland_mountains",
-"cumberland_mountains_2",
-"cumberland_mountains_3",
-"cumberland_mountains_4",
-"cumberland_mountains_5",
-"cumberland_mountains_6",
-"cumberland_mountains_7",
-"cumberland_mountains_8",
-"cumberland_mountains_9"
-]
-},
-"4932": {
-"tier": "key/display",
-"locations": [
-"great_smokies"
 ]
 },
 "4934": {

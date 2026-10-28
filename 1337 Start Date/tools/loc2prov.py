@@ -74,6 +74,10 @@ def land_provinces():
             continue
         for m in re.finditer(key + r"\s*=\s*\{([^}]*)\}", t):
             bad |= {int(x) for x in re.findall(r"\d+", m[1])}
+    # wasteland is listed in map/climate.txt as `impassable`
+    climate = re.sub(r"#.*", "", (EU4_GAME / "map/climate.txt").read_text(encoding="latin-1"))
+    m = re.search(r"impassable\s*=\s*\{([^}]*)\}", climate)
+    bad |= {int(x) for x in re.findall(r"\d+", m[1])} if m else set()
     return {p for p in eu4_provinces() if p not in bad}
 
 

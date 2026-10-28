@@ -8,7 +8,7 @@ capital = 1997 #Oahu
 
 monarch = {
 	name = "Nawele I"
-	dynasty = "M?weke"
+	dynasty = "Maweke"
 	birth_date = 1270.1.1
 	adm = 3
 	dip = 3

@@ -24,14 +24,7 @@ VANILLA_PROXY = {"MNG": "YUA", "KHA": "YUA", "KRC": "YUA", "NHX": "YUA", "SOL": 
 DATED = re.compile(r"^(\d{1,4})\.(\d{1,2})\.(\d{1,2})\s*=\s*\{", re.M)
 
 
-def ascii_(s):
-    s = s.translate(str.maketrans({"ł": "l", "Ł": "L", "đ": "d", "Đ": "D", "ə": "e", "ʻ": "'", "’": "'", "ʼ": "'"}))
-    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
-
-
-def latin1(s):
-    """keep Latin-1 letters, flatten everything else"""
-    return "".join(c if ord(c) < 256 else (ascii_(c) or "") for c in s)
+from textfold import ascii_, latin1  # noqa: E402
 
 
 def split_blocks(text):
@@ -716,6 +709,8 @@ def step_tags(table):
         tag, nm = r["eu4"], latin1(r["name"])
         fn = f"{tag} - {ascii_(nm)}.txt".replace("/", "-")
         cname = f"{ascii_(nm)}".replace("/", "-").replace(":", "")
+        if (EU4_GAME / "common/countries" / f"{cname}.txt").exists():
+            cname += f" {tag}"  # a base-game tag owns that file name: ours must not replace it
         col = eu5info.color_of(tag5) or (100, 100, 100)
         cd = eu5info.country_defs().get(tag5, {})
         c4 = json.load(open(DATA / "cr_map.json"))["culture"].get(cd.get("culture"))

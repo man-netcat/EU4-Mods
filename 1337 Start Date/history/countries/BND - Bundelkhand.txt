@@ -9,7 +9,7 @@ capital = 4446
 #Bundela Rajas of Orchha & Mahoba
 
 monarch = {
-	name = "P?thv?r?j"
+	name = "Prthviraj"
 	dynasty = "Bundela"
 	birth_date = 1300.1.1
 	adm = 3

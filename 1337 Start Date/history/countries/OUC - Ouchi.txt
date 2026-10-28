@@ -8,7 +8,7 @@ capital = 1017	# Suo
 
 monarch = {
 	name = "Hiroyuki I"
-	dynasty = "?uchi"
+	dynasty = "Ouchi"
 	birth_date = 1305.1.1
 	adm = 3
 	dip = 3
@@ -16,7 +16,7 @@ monarch = {
 }
 heir = {
 	name = "Hiroyo"
-	dynasty = "?uchi"
+	dynasty = "Ouchi"
 	birth_date = 1326.1.1
 	death_date = 1386.1.1
 	claim = 95

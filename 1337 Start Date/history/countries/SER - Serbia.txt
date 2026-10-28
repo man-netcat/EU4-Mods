@@ -11,7 +11,7 @@ government_rank = 2
 
 monarch = {
 	name = "Stefan Urosh IV"
-	dynasty = "Nemanji?"
+	dynasty = "Nemanjic"
 	birth_date = 1312.1.1
 	adm = 5
 	dip = 4
@@ -19,7 +19,7 @@ monarch = {
 }
 heir = {
 	name = "Stefan Urosh"
-	dynasty = "Nemanji?"
+	dynasty = "Nemanjic"
 	birth_date = 1336.1.1
 	death_date = 1396.1.1
 	claim = 95

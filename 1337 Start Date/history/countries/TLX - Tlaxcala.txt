@@ -11,7 +11,7 @@ fixed_capital = 850 # Cannot move capital away from this province & no power cos
 
 monarch = {
 	name = "Culhuatecuhtli"
-	dynasty = "Tlaxcall?n"
+	dynasty = "Tlaxcallan"
 	birth_date = 1286.1.1
 	adm = 2
 	dip = 3

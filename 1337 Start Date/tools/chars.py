@@ -1,6 +1,8 @@
 """EU5 1337 characters -> EU4 monarch/heir blocks."""
 import re
 from functools import lru_cache
+
+from textfold import latin1
 from pdx import parse, get, getall
 from paths import EU5_SETUP, EU5_GAME
 from loc2prov import yml
@@ -93,12 +95,12 @@ def block(cid, c, regnal=None, heir=False, indent="\t"):
     b = date(get(c, "birth_date"))
     if b is None:
         return None
-    lines = [f'name = "{name}"']
+    lines = [f'name = "{latin1(name)}"']
     if get(c, "female") == "yes":
         lines.append("female = yes")
     dyn = dynasty_name(c)
     if dyn:
-        lines.append(f'dynasty = "{dyn}"')
+        lines.append(f'dynasty = "{latin1(dyn)}"')
     lines.append("birth_date = %d.%d.%d" % b)
     if heir:
         lines.append("death_date = %d.%d.%d" % (b[0] + 60, b[1], b[2]))
@@ -152,10 +154,10 @@ def queen_block(cid, own_tag, tag_of=lambda t: None, indent="\t"):
     b = date(get(sc, "birth_date"))
     if name is None or b is None:
         return None
-    lines = [f"country = {tag_of(get(sc, 'tag')) or own_tag}", f'name = "{name}"']
+    lines = [f"country = {tag_of(get(sc, 'tag')) or own_tag}", f'name = "{latin1(name)}"']
     dyn = dynasty_name(sc)
     if dyn:
-        lines.append(f'dynasty = "{dyn}"')
+        lines.append(f'dynasty = "{latin1(dyn)}"')
     lines.append("birth_date = %d.%d.%d" % b)
     if get(sc, "female") == "yes":
         lines.append("female = yes")

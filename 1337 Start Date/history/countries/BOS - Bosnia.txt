@@ -10,7 +10,7 @@ government_rank = 1
 
 monarch = {
 	name = "Stefan II"
-	dynasty = "Kotromani?"
+	dynasty = "Kotromanic"
 	birth_date = 1292.1.1
 	adm = 2
 	dip = 3
@@ -19,7 +19,7 @@ monarch = {
 heir = {
 	name = "Catherine"
 	female = yes
-	dynasty = "Kotromani?"
+	dynasty = "Kotromanic"
 	birth_date = 1336.1.1
 	death_date = 1396.1.1
 	claim = 95

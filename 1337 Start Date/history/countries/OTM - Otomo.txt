@@ -8,7 +8,7 @@ capital = 1014	# Bungo
 
 monarch = {
 	name = "Ujiyasu I"
-	dynasty = "?tomo"
+	dynasty = "Otomo"
 	birth_date = 1321.1.1
 	adm = 3
 	dip = 3

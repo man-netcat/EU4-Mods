@@ -188,13 +188,6 @@
 ]
 ],
 [
-1173,
-[
-"Damaraland",
-"Namibia"
-]
-],
-[
 1175,
 [
 "Lesser Namaqualand"
@@ -301,144 +294,6 @@
 158,
 [
 "Maros"
-]
-],
-[
-1779,
-[
-"Rub al Khali",
-"Rub' al Khali"
-]
-],
-[
-1781,
-[
-"Western Siberia"
-]
-],
-[
-1782,
-[
-"Central Siberia"
-]
-],
-[
-1783,
-[
-"Eastern Siberia"
-]
-],
-[
-1788,
-[
-"Arunachal"
-]
-],
-[
-1789,
-[
-"Papua"
-]
-],
-[
-1790,
-[
-"Outback",
-"Western Australia"
-]
-],
-[
-1791,
-[
-"Outback",
-"Central Australia"
-]
-],
-[
-1793,
-[
-"El Djouf"
-]
-],
-[
-1795,
-[
-"East Sahara"
-]
-],
-[
-1797,
-[
-"Northern Congo Basin"
-]
-],
-[
-1798,
-[
-"Uganda",
-"Imatong"
-]
-],
-[
-1799,
-[
-"Malawi",
-"Urgoma"
-]
-],
-[
-1801,
-[
-"Kalahari"
-]
-],
-[
-1802,
-[
-"Western Amazonas"
-]
-],
-[
-1803,
-[
-"Eastern Amazonas"
-]
-],
-[
-1804,
-[
-"Greenland"
-]
-],
-[
-1806,
-[
-"Weagamow"
-]
-],
-[
-1807,
-[
-"Baffin"
-]
-],
-[
-1811,
-[
-"Nunavut"
-]
-],
-[
-1812,
-[
-"Northwest Terretories",
-"Northwest Territories"
-]
-],
-[
-1814,
-[
-"Columbia"
 ]
 ],
 [
@@ -849,13 +704,6 @@
 ]
 ],
 [
-2251,
-[
-"Bagoe",
-"Guinea"
-]
-],
-[
 2254,
 [
 "Bonoman"
@@ -933,12 +781,6 @@
 [
 "Sahra an Nubyah",
 "Sahra an N\u00fcbyah"
-]
-],
-[
-2334,
-[
-"Badiyat ash Sham"
 ]
 ],
 [
@@ -1078,19 +920,6 @@
 2421,
 [
 "Juketau"
-]
-],
-[
-2425,
-[
-"Naryan-Mar",
-"Nenets"
-]
-],
-[
-2426,
-[
-"Yamal"
 ]
 ],
 [
@@ -1297,12 +1126,6 @@
 [
 "Tsilhoqotin",
 "Tsilhoqot'in"
-]
-],
-[
-2608,
-[
-"Rocky Mountains"
 ]
 ],
 [
@@ -1608,12 +1431,6 @@
 2738,
 [
 "Te Tau Ihu"
-]
-],
-[
-2740,
-[
-"Borneo"
 ]
 ],
 [
@@ -2121,12 +1938,6 @@
 ]
 ],
 [
-2936,
-[
-"Guyana"
-]
-],
-[
 2938,
 [
 "Oiapoque"
@@ -2520,109 +2331,10 @@
 ]
 ],
 [
-4146,
-[
-"Jotenheimen",
-"Langfjella"
-]
-],
-[
-4153,
-[
-"The Skands",
-"The Scandes"
-]
-],
-[
-4154,
-[
-"The Pyrenees"
-]
-],
-[
-4155,
-[
-"The Carpathians"
-]
-],
-[
-4156,
-[
-"The Caucasus"
-]
-],
-[
-4157,
-[
-"The Alps"
-]
-],
-[
 4158,
 [
 "Janjero",
 "Janjiro"
-]
-],
-[
-4159,
-[
-"The Alps2",
-"The Alps"
-]
-],
-[
-4160,
-[
-"The Alps3",
-"The Alps"
-]
-],
-[
-4161,
-[
-"The Alps4",
-"The Alps"
-]
-],
-[
-4162,
-[
-"The Alps5",
-"The Alps"
-]
-],
-[
-4170,
-[
-"Zagros"
-]
-],
-[
-4172,
-[
-"Zagros2",
-"Zagros"
-]
-],
-[
-4177,
-[
-"Elburz",
-"Alborz"
-]
-],
-[
-4178,
-[
-"Pontic Mountains"
-]
-],
-[
-4179,
-[
-"Armenian Highlands",
-"Hakkari Mountains"
 ]
 ],
 [
@@ -2708,13 +2420,6 @@
 ]
 ],
 [
-4276,
-[
-"Tubaiq",
-"Jabal Tubaiq"
-]
-],
-[
 4280,
 [
 "Taiz"
@@ -2778,24 +2483,6 @@
 ]
 ],
 [
-4321,
-[
-"Egyptian Desert"
-]
-],
-[
-4322,
-[
-"Egyptian Desert"
-]
-],
-[
-4328,
-[
-"Chagai"
-]
-],
-[
 4348,
 [
 "Ifugao"
@@ -2817,25 +2504,6 @@
 4393,
 [
 "Tabayin"
-]
-],
-[
-4401,
-[
-"Arakan Mountains"
-]
-],
-[
-4402,
-[
-"Gaoligong Mountains"
-]
-],
-[
-4403,
-[
-"Shan Highlands",
-"Hengduan Mountains"
 ]
 ],
 [
@@ -2923,12 +2591,6 @@
 [
 "Baruch",
 "Bharuch"
-]
-],
-[
-4522,
-[
-"Aqenganggyai"
 ]
 ],
 [
@@ -3184,12 +2846,6 @@
 4656,
 [
 "Wolanhe"
-]
-],
-[
-4657,
-[
-"Changbai Mountains"
 ]
 ],
 [
@@ -3495,18 +3151,6 @@
 ]
 ],
 [
-4807,
-[
-"North Borneo"
-]
-],
-[
-4808,
-[
-"Sumatra"
-]
-],
-[
 481,
 [
 "Bermuda"
@@ -3546,18 +3190,6 @@
 4837,
 [
 "Muang Ngoi"
-]
-],
-[
-4843,
-[
-"Annamite Mountains"
-]
-],
-[
-4844,
-[
-"Dawna Hills"
 ]
 ],
 [
@@ -3667,42 +3299,6 @@
 4920,
 [
 "Wadopabina"
-]
-],
-[
-4925,
-[
-"White Mountains"
-]
-],
-[
-4927,
-[
-"Blue Mountains"
-]
-],
-[
-4928,
-[
-"Allegheny Front"
-]
-],
-[
-4929,
-[
-"Appalachians"
-]
-],
-[
-4930,
-[
-"Alleghenies"
-]
-],
-[
-4933,
-[
-"Blue Ridge"
 ]
 ],
 [

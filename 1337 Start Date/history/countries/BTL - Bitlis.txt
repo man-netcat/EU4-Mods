@@ -9,7 +9,7 @@ capital = 4296 # Bitlis
 religious_school = shafii_school
 
 monarch = {
-	name = "Dia' al-D?n"
+	name = "Dia' al-Din"
 	dynasty = "Ruzagi"
 	birth_date = 1300.1.1
 	adm = 3

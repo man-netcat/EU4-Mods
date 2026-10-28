@@ -8,7 +8,7 @@ capital = 385	# Jiddah
 religious_school = shafii_school
 
 monarch = {
-	name = "Asad al-D?n I"
+	name = "Asad al-Din I"
 	dynasty = "Qatadid"
 	birth_date = 1275.1.1
 	adm = 2
@@ -16,7 +16,7 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "'Izz al-D?n"
+	name = "'Izz al-Din"
 	dynasty = "Qatadid"
 	birth_date = 1307.1.1
 	death_date = 1367.1.1

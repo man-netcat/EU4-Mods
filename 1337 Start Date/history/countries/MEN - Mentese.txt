@@ -10,7 +10,7 @@ religious_school = hanafi_school
 
 monarch = {
 	name = "Orkhan"
-	dynasty = "Mente?e"
+	dynasty = "Mentese"
 	birth_date = 1286.1.1
 	adm = 3
 	dip = 3
@@ -18,7 +18,7 @@ monarch = {
 }
 heir = {
 	name = "Abraham"
-	dynasty = "Mente?e"
+	dynasty = "Mentese"
 	birth_date = 1310.1.1
 	death_date = 1370.1.1
 	claim = 95
