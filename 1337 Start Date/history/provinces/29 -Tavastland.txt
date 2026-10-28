@@ -15,6 +15,7 @@ capital = "Tavastehus"
 #fort_15th = yes
 discovered_by = western
 discovered_by = eastern
+fort_15th = yes
 
 1527.6.1 = { religion = protestant}
 1600.1.1 = { trade_goods = naval_supplies }

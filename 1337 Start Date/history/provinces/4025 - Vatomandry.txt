@@ -3,7 +3,7 @@
 culture = madagasque
 religion = shamanism #Fetishism
 capital = "Vatomandry"
-trade_goods = slaves
+trade_goods = fish
 hre = no
 base_tax = 2 
 base_production = 1

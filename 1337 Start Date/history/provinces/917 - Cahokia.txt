@@ -19,6 +19,7 @@ native_hostileness = 0
 
 
 discovered_by = north_american
+center_of_trade = 1
 
 1670.1.1 = { discovered_by = FRA } # Robert Cavelier de La Salle
 1680.1.1 = { 	

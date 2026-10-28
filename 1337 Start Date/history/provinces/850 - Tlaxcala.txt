@@ -7,13 +7,12 @@ is_city = yes
 culture = totonac
 religion = nahuatl
 capital = "Tlaxcala"
-trade_goods = sugar
+trade_goods = cocoa
 hre = no 
 base_tax = 10 
 base_production = 10
 base_manpower = 2
 discovered_by = mesoamerican
-fort_15th = yes
 
 1519.1.1 = { discovered_by = SPA } # Hernán Cortés
 1525.1.1 = { religion = catholic } #Dominican friars arrive, but Tlaxcala largely retain its own government under Spanish rule & protection (protectorate in-game)

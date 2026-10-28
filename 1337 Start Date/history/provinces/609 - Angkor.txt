@@ -7,7 +7,7 @@ is_city = yes
 culture = khmer
 religion = buddhism
 capital = "Angkor"
-trade_goods = tropical_wood
+trade_goods = grain
 hre = no
 base_tax = 4
 base_production = 3
@@ -19,6 +19,8 @@ discovered_by = chinese
 discovered_by = indian
 
 # Devastated by AYU
+fort_15th = yes
+center_of_trade = 1
 
 1500.1.1 = { religion = buddhism }
 1535.1.1 = { discovered_by = POR }

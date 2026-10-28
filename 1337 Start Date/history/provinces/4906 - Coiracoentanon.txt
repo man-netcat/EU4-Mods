@@ -3,7 +3,7 @@
 culture = illini
 religion = totemism
 capital = "Coiracoentanon"
-trade_goods = unknown
+trade_goods = grain
 hre = no
 base_tax = 1
 base_production = 1

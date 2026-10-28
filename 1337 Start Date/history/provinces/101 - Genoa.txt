@@ -9,9 +9,8 @@ religion = catholic
 hre = yes
 base_tax = 5 
 base_production = 5
-trade_goods = paper
+trade_goods = silk
 base_manpower = 3
-fort_15th = yes
 capital = "Genova"
 discovered_by = western
 discovered_by = eastern
@@ -19,6 +18,8 @@ discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 24
 center_of_trade = 3
+fort_15th = yes
+shipyard = yes
 
 1477.3.20 = { revolt = { type = revolutionary_rebels size = 2 }  }
 1477.4.28 = { revolt = {}  }

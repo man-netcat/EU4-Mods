@@ -9,15 +9,15 @@ religion = catholic
 hre = no
 base_tax = 3 
 base_production = 3
-trade_goods = fur
+trade_goods = livestock
 base_manpower = 2
 capital = "Viborg"
-fort_15th = yes
 
 
 
 discovered_by = western
 discovered_by = eastern
+fort_15th = yes
 
 1527.6.1 = { religion = protestant}
 1550.1.1 = { trade_goods = naval_supplies } #Estimated Date

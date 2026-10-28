@@ -3,7 +3,7 @@
 culture = mbundu
 religion = animism #Fetishism
 capital = "Nsoyo"
-trade_goods = grain
+trade_goods = ivory
 hre = no
 base_tax = 3 
 base_production = 2

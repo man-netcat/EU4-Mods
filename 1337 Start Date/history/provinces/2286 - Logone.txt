@@ -3,7 +3,7 @@
 culture = kanuri 
 religion = shamanism #Fetishism
 capital = "Logone"
-trade_goods = ivory
+trade_goods = grain
 hre = no
 base_tax = 6 
 base_production = 5

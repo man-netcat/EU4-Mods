@@ -9,9 +9,8 @@ religion = catholic
 hre = yes
 base_tax = 4
 base_production = 4
-trade_goods = naval_supplies
+trade_goods = fish
 base_manpower = 1
-fort_15th = yes
 capital = "Lübeck"
 discovered_by = eastern
 discovered_by = western
@@ -19,6 +18,8 @@ discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 16
 center_of_trade = 2
+fort_15th = yes
+shipyard = yes
 
 1531.1.1 = { religion = protestant }
 1550.1.1 = { base_tax = 7 

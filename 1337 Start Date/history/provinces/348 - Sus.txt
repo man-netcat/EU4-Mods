@@ -7,7 +7,7 @@ is_city = yes
 culture = moroccan
 religion = sunni
 capital = "Taroudant"
-trade_goods = sugar
+trade_goods = gold
 hre = no
 base_tax = 8 
 base_production = 7
@@ -18,6 +18,7 @@ base_manpower = 3
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
+fort_15th = yes
 
 1465.1.1 = { unrest = 5 } #Marinid Sultan killed by mob. Mohammed ibn Ali Amrani-Joutey (Idrisid) proclaims himself Sultan. Unrest in the entire country. 
 1472.1.1 = {   unrest = 0 } #Wattasids take control over Fez, nominal ruler over much of Morocco.

@@ -3,7 +3,7 @@
 culture = aimara
 religion = inti
 capital = "Camana"
-trade_goods = unknown
+trade_goods = cotton
 hre = no
 base_tax = 3 
 base_production = 3

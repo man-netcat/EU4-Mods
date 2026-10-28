@@ -3,7 +3,7 @@
 culture = yorumba
 religion = animism #Fetishism
 capital = "Fernando Po"
-trade_goods = unknown
+trade_goods = fish
 hre = no
 base_tax = 3 
 base_production = 2

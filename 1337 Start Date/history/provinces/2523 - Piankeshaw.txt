@@ -3,7 +3,7 @@
 culture = miami
 religion = totemism
 capital = "Piankeshaw"
-trade_goods = unknown
+trade_goods = grain
 hre = no
 base_tax = 3 
 base_production = 2

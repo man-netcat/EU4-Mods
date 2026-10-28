@@ -7,7 +7,7 @@ is_city = yes
 culture = japanese
 religion = shinto
 capital = "Okayama"
-trade_goods = iron
+trade_goods = fish
 hre = no
 base_tax = 5
 base_manpower = 3
@@ -17,5 +17,6 @@ discovered_by = MCH
 discovered_by = KHA
 discovered_by = OIR
 discovered_by = QNG
+fort_15th = yes
 
 1542.1.1 = { discovered_by = POR }

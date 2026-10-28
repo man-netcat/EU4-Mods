@@ -7,12 +7,11 @@ is_city = yes
 culture = panjabi
 religion = hinduism
 capital = "Lahore"
-trade_goods = silk
+trade_goods = cotton
 hre = no
 base_tax = 5
 base_production = 5
 base_manpower = 2
-fort_15th = yes #Lahore Fort
 #Data Durbar Complex
 discovered_by = indian
 discovered_by = muslim

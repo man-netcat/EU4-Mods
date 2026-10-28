@@ -1,7 +1,7 @@
 culture = luba
 religion = animism #Fetishism
 capital = "Kazembe Luapula"
-trade_goods = copper
+trade_goods = naval_supplies
 hre = no
 base_tax = 2
 base_production = 1

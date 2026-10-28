@@ -3,7 +3,7 @@
 culture = salish
 religion = totemism
 capital = "Salish"
-trade_goods = fur
+trade_goods = fish
 hre = no
 base_tax = 1 
 base_production = 1

@@ -3,7 +3,7 @@
 culture = arawak
 religion = animism
 capital = "Puerto Rico"
-trade_goods = unknown 
+trade_goods = spices 
 hre = no
 base_tax = 2
 base_production = 2

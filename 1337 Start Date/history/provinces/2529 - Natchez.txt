@@ -3,7 +3,7 @@
 culture = natchez
 religion = totemism
 capital = "Natchez"
-trade_goods = cotton
+trade_goods = naval_supplies
 hre = no
 base_tax = 1
 base_production = 1

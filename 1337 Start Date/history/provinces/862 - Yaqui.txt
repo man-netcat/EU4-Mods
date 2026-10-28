@@ -3,7 +3,7 @@
 culture = arawak
 religion = animism
 capital = "Yaqui" 
-trade_goods = unknown 
+trade_goods = tobacco 
 hre = no 
 base_tax = 1 
 base_production = 1 

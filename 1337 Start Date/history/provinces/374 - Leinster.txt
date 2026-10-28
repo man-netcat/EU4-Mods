@@ -18,6 +18,8 @@ discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
+fort_15th = yes
+center_of_trade = 1
 
 1642.1.1 = { revolt = { type = nationalist_rebels size = 0 }  }
 1642.6.7 = {

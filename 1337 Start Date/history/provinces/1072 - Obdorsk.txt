@@ -3,7 +3,7 @@
 culture = ostyaki
 religion = tengri_pagan_reformed #Sami Shamanism
 capital = "Obdorsk"
-trade_goods = unknown
+trade_goods = fur
 hre = no
 base_tax = 1 
 base_production = 1

@@ -3,7 +3,7 @@
 culture = huron
 religion = totemism
 capital = "Tahontaenrat"
-trade_goods = tobacco #nearby Petuns were called the Tobacco indians
+trade_goods = grain #nearby Petuns were called the Tobacco indians
 hre = no
 base_tax = 1
 base_production = 1

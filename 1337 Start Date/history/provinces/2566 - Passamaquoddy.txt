@@ -3,7 +3,7 @@
 culture = maliseet
 religion = totemism
 capital = "Passamaquoddy"
-trade_goods = unknown
+trade_goods = glass
 hre = no
 base_tax = 1
 base_production = 1

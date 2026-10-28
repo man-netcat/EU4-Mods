@@ -7,7 +7,7 @@ is_city = yes
 culture = togoku
 religion = shinto
 capital = "Sakura"
-trade_goods = fish
+trade_goods = grain
 hre = no
 base_tax = 5
 base_manpower = 5
@@ -18,5 +18,7 @@ discovered_by = KHA
 discovered_by = OIR
 discovered_by = QNG
 discovered_by = ANU
+fort_15th = yes
+shipyard = yes
 
 1542.1.1 = { discovered_by = POR }

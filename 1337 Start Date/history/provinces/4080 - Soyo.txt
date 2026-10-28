@@ -1,7 +1,7 @@
 culture = kongolese
 religion = animism #Fetishism
 capital = "Soyo"
-trade_goods = slaves
+trade_goods = grain
 hre = no
 base_tax = 2
 base_production = 2

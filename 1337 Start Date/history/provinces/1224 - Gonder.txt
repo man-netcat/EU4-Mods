@@ -9,7 +9,7 @@ culture = amhara
 religion = coptic
 capital = "Gondar"
 base_manpower = 1
-trade_goods = grain
+trade_goods = cotton
 hre = no
 base_tax = 3
 base_production = 2
@@ -20,6 +20,7 @@ discovered_by = ottoman
 discovered_by = indian
 extra_cost = 16
 center_of_trade = 2
+fort_15th = yes
 
 1475.1.1 = { unrest = 5 } #Repression against the Falasha by Baeda Maryam
 1476.1.1 = { unrest = 0 }

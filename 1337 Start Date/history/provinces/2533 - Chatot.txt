@@ -3,7 +3,7 @@
 culture = creek
 religion = totemism
 capital = "Chatot"
-trade_goods = unknown
+trade_goods = cotton
 hre = no
 base_tax = 1 
 base_production = 1

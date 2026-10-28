@@ -3,7 +3,7 @@
 culture = yamasee
 religion = totemism
 capital = "Hitchiti"
-trade_goods = cotton
+trade_goods = grain
 hre = no
 base_tax = 1 
 base_production = 1

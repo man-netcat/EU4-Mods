@@ -7,7 +7,7 @@ is_city = yes
 culture = japanese
 religion = shinto
 capital = "Tomo"
-trade_goods = grain
+trade_goods = fish
 hre = no
 base_tax = 4
 base_manpower = 3
@@ -17,6 +17,7 @@ discovered_by = MCH
 discovered_by = KHA
 discovered_by = OIR
 discovered_by = QNG
+fort_15th = yes
 
 1525.1.1 = { fort_15th = yes } # Yoshida Koriyama Castle, the capital of the Mori clan
 1525.1.1 = { capital = "Koriyama" }

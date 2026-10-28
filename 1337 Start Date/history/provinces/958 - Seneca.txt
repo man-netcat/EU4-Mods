@@ -3,7 +3,7 @@
 culture = iroquois
 religion = totemism
 capital = "Seneca"
-trade_goods = fur
+trade_goods = naval_supplies
 hre = no
 base_tax = 1
 base_production = 1

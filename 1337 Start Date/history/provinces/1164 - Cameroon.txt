@@ -3,7 +3,7 @@
 culture = sawabantu
 religion = animism #Fetishism
 capital = "Cameroon"
-trade_goods = unknown
+trade_goods = fish
 hre = no
 base_tax = 4 
 base_production = 3

@@ -152,6 +152,79 @@ def scale_development(base, total):
     return base
 
 
+# EU5 raw material -> (EU4 trade good, weight). Rare goods weigh more so a single silk or gem location wins over
+# several wheat ones; lumber and game are everywhere and weigh less. Materials with no EU4 good are absent
+# (a province with only those keeps its vanilla trade good).
+GOODS = {}
+for _good, _w, _raws in (
+    ("grain", 0.8, "wheat millet legumes rice maize potato fruit olives"),
+    ("livestock", 1, "livestock horses camels"), ("fish", 1, "fish"), ("wool", 1.5, "wool"),
+    ("fur", 2, "fur"), ("fur", 0.5, "wild_game"), ("naval_supplies", 0.5, "lumber"),
+    ("cloth", 1.5, "fiber_crops"), ("cotton", 2, "cotton"), ("silk", 4, "silk"), ("wine", 2, "wine"),
+    ("salt", 2, "salt"), ("iron", 2, "iron"), ("copper", 2, "copper tin lead"), ("coal", 2, "coal"),
+    ("gold", 4, "goods_gold silver"), ("gems", 3, "gems pearls amber"), ("ivory", 4, "ivory elephants"),
+    ("dyes", 3, "dyes alum"), ("tea", 4, "tea"), ("coffee", 4, "coffee"), ("cocoa", 4, "cocoa"),
+    ("sugar", 3, "sugar"), ("tobacco", 3, "tobacco"), ("spices", 4, "pepper chili saffron"),
+    ("cloves", 4, "cloves"), ("incense", 4, "incense"), ("glass", 1.5, "sand"),
+):
+    for _r in _raws.split():
+        GOODS[_r] = (_good, _w)
+FORT_BUILDINGS = {"castle", "city_walls", "yamashiro", "order_stronghold", "nobility_fortifications", "dun_fort",
+                  "qalat_al_mashwar", "theodosian_walls", "the_bock_fortifications"}
+SHIP_BUILDINGS = {"wharf", "dock", "clan_shipyards", "hanseatic_shipwright_guild", "venetian_arsenal",
+                  "barcelona_royal_shipyard", "royal_atarazanas_seville", "galley_barracks", "porto_pisano"}
+
+
+def eu5_economy():
+    """-> (raw material per EU5 location, locations with a fort building, with a shipyard, market towns)."""
+    from paths import EU5_GAME, EU5_SETUP
+    raw = {}
+    for m in re.finditer(r"(?m)^(\w+)\s*=\s*\{[^}\n]*?raw_material\s*=\s*(\w+)",
+                         (EU5_GAME / "in_game/map_data/location_templates.txt").read_text(encoding="utf-8-sig")):
+        raw[m[1]] = m[2]
+    forts, ships = set(), set()
+    t = (EU5_SETUP / "07_cities_and_buildings.txt").read_text(encoding="utf-8-sig")
+    for m in re.finditer(r"(?m)^\s*(\w+)\s*=\s*\{[^}\n]*?location\s*=\s*(\w+)", t):
+        if m[1] in FORT_BUILDINGS:
+            forts.add(m[2])
+        elif m[1] in SHIP_BUILDINGS:
+            ships.add(m[2])
+    markets = set(re.findall(r"(?m)^\s*add_market\s*=\s*(\w+)", (EU5_SETUP / "03_markets.txt").read_text(encoding="utf-8-sig")))
+    return raw, forts, ships, markets
+
+
+def economy_targets(land, cr_vote):
+    """EU4 province -> {trade_good, fort, shipyard, market} from the EU5 locations matched to it by name (not
+    the shared area pools, which would repeat one answer over several provinces)."""
+    raw, forts, ships, markets = eu5_economy()
+    pools = Counter(tuple(sorted(v["locations"])) for v in cr_vote.values())
+    out = {}
+    for pid in land:
+        v = cr_vote.get(str(pid))
+        if not v or v["tier"] in ("area-fallback", "area-node") or pools[tuple(sorted(v["locations"]))] > 1:
+            continue
+        locs = v["locations"]
+        score = Counter()
+        for l in locs:
+            if l in raw and raw[l] in GOODS:
+                good, w = GOODS[raw[l]]
+                score[good] += w
+        out[pid] = dict(good=max(score, key=lambda g: (score[g], g)) if score else None,
+                        fort=any(l in forts for l in locs), ship=any(l in ships for l in locs),
+                        market=any(l in markets for l in locs))
+    return out
+
+
+def apply_economy(base, e):
+    if e["good"]:
+        base = re.sub(r"(?m)^trade_goods\s*=\s*\w+", f"trade_goods = {e['good']}", base, count=1)
+    base = re.sub(r"(?m)^(fort_1[5-8]th|shipyard)\s*=\s*\w+[^\n]*\n", "", base)
+    add = (["fort_15th = yes"] if e["fort"] else []) + (["shipyard = yes"] if e["ship"] else [])
+    if e["market"] and not re.search(r"(?m)^center_of_trade\s*=", base):
+        add.append("center_of_trade = 1")
+    return base.rstrip("\n") + "\n" + "\n".join(add) + ("\n" if add else "")
+
+
 def step_provinces(table, po, cmap, rmap, stats, hre_members=None):
     reused_codes = {r["eu4"] for r in table.values()}
     out = MOD / "history/provinces"
@@ -163,6 +236,8 @@ def step_provinces(table, po, cmap, rmap, stats, hre_members=None):
     lp = location_pops()
     dev = development_targets(land, cr_vote, lp)
     stats["developed"] = len(dev)
+    econ = economy_targets(land, cr_vote)
+    stats["economy"] = len(econ)
     for f in sorted((VAN / "provinces").iterdir()):
         m = re.match(r"(\d+)", f.name)
         pid = int(m[1])
@@ -186,6 +261,8 @@ def step_provinces(table, po, cmap, rmap, stats, hre_members=None):
                 stats["unowned"] += 1
             if pid in dev:
                 base = scale_development(base, dev[pid])
+            if pid in econ:
+                base = apply_economy(base, econ[pid])
             if info["tier"] != "area-fallback":
                 cul, rel = Counter(), Counter()
                 for l in cr_vote[str(pid)]["locations"]:

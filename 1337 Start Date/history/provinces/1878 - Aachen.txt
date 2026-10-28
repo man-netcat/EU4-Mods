@@ -10,7 +10,7 @@ latent_trade_goods = {
 
 culture = hessian
 religion = catholic
-trade_goods = grain
+trade_goods = copper
 capital = "Aachen"
 base_tax = 3
 base_production = 3

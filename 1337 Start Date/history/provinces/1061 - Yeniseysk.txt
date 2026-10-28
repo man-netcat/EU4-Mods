@@ -3,7 +3,7 @@
 culture = tungus
 religion = tengri_pagan_reformed
 capital = "Novoselovo"
-trade_goods = unknown
+trade_goods = fur
 hre = no
 base_tax = 1 
 base_production = 1

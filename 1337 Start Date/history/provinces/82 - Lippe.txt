@@ -10,7 +10,7 @@ latent_trade_goods = {
 
 culture = hannoverian
 religion = catholic
-trade_goods = wool
+trade_goods = grain
 capital = "Arnsberg"
 base_tax = 6 
 base_production = 5

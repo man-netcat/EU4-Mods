@@ -1,6 +1,6 @@
 culture = bemba
 religion = animism #Fetishism
-trade_goods = unknown
+trade_goods = livestock
 capital = "Kaonde"
 hre = no
 base_tax = 1 

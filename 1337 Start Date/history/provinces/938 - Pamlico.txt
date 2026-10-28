@@ -3,7 +3,7 @@
 culture = powhatan
 religion = totemism
 capital = "Pamlico"
-trade_goods = unknown
+trade_goods = fish
 hre = no
 base_tax = 1
 base_production = 1

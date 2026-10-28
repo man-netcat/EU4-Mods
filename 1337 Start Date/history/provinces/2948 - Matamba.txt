@@ -3,7 +3,7 @@
 culture = mbundu
 religion = animism #Fetishism
 capital = "Matamba"
-trade_goods = slaves
+trade_goods = ivory
 hre = no
 base_tax = 1 
 base_production = 1

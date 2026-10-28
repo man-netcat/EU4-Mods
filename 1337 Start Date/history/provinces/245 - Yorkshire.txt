@@ -10,7 +10,7 @@ religion = catholic
 hre = no
 base_tax = 3
 base_production = 2
-trade_goods = cloth
+trade_goods = grain
 base_manpower = 2
 capital = "York"
 discovered_by = western
@@ -19,6 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 extra_cost = 8
 center_of_trade = 1
+fort_15th = yes
 
 1453.1.1 = { unrest = 5 } # Start of the War of the Roses
 1459.9.23 = { unrest = 0 revolt = { type = pretender_rebels size = 3 leader = "Edward of York" }  } # The Battle of Blore Heath

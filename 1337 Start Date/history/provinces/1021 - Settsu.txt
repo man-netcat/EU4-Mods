@@ -7,7 +7,7 @@ is_city = yes
 culture = japanese
 religion = shinto
 capital = "Naniwa"
-trade_goods = chinaware
+trade_goods = tea
 hre = no
 base_tax = 6
 base_manpower = 3
@@ -19,6 +19,7 @@ discovered_by = OIR
 discovered_by = QNG
 extra_cost = 8
 center_of_trade = 1
+fort_15th = yes
 
 1478.1.1 = { capital = "Sakai" }
 1542.1.1 = { discovered_by = POR }

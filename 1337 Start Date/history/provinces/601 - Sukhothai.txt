@@ -7,17 +7,17 @@ is_city = yes
 culture = central_thai
 religion = buddhism
 capital = "Sukhothai"
-trade_goods = chinaware
+trade_goods = grain
 hre = no
 base_tax = 4
 base_production = 4
 base_manpower = 2
-fort_15th = yes
 
 
 
 discovered_by = chinese
 discovered_by = indian
+fort_15th = yes
 
 1535.1.1 = { discovered_by = POR }
 1767.4.1 = { unrest = 7 } # The fall of Ayutthaya

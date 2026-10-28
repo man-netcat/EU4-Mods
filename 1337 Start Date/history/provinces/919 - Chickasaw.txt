@@ -3,7 +3,7 @@
 culture = chickasaw
 religion = totemism
 capital = "Chickasaw"
-trade_goods = grain
+trade_goods = tobacco
 hre = no
 base_tax = 3 
 base_production = 3

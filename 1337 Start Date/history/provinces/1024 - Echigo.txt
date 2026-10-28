@@ -7,7 +7,7 @@ is_city = yes
 culture = togoku
 religion = shinto
 capital = "Naoetsu"
-trade_goods = grain
+trade_goods = gold
 hre = no
 base_tax = 5 
 base_production = 5
@@ -21,6 +21,8 @@ discovered_by = KHA
 discovered_by = OIR
 discovered_by = QNG
 discovered_by = ANU
+fort_15th = yes
+shipyard = yes
 
 1507.7.1 = { fort_15th = yes } # Kasugayama Castle, the capital of the Nagao(Uesugi) clan
 1542.1.1 = { discovered_by = POR }

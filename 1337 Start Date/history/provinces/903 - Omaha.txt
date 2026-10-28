@@ -3,7 +3,7 @@
 culture = pawnee #Old plains people
 religion = totemism
 capital = "Omaha"
-trade_goods = unknown
+trade_goods = cloth
 hre = no
 base_tax = 1 
 base_production = 1

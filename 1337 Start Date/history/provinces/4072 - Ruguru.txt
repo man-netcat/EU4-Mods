@@ -2,7 +2,7 @@
 
 culture = kulin #Ha
 religion = animism #Fetishism
-trade_goods = salt
+trade_goods = grain
 capital = "Ruguru"
 hre = no
 base_tax = 2

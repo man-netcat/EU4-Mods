@@ -3,7 +3,7 @@
 culture = arawak
 religion = animism
 capital = "Magua"
-trade_goods = unknown
+trade_goods = tobacco
 hre = no
 base_tax = 3
 base_production = 1

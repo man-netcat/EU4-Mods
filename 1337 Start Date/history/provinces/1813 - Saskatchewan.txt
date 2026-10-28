@@ -3,7 +3,7 @@
 culture = plains_cree
 religion = totemism
 capital = "Saskatchewan"
-trade_goods = unknown
+trade_goods = naval_supplies
 hre = no
 base_tax = 1 
 base_production = 1

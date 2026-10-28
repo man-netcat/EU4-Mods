@@ -3,7 +3,7 @@
 culture = pawnee #Old plains people
 religion = totemism
 capital = "Jicarilla"
-trade_goods = unknown
+trade_goods = naval_supplies
 hre = no
 base_tax = 1 
 base_production = 1

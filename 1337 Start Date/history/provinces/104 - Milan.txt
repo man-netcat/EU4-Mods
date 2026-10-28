@@ -9,9 +9,8 @@ religion = catholic
 hre = yes
 base_tax = 5
 base_production = 4
-trade_goods = cloth
+trade_goods = grain
 base_manpower = 4
-fort_15th = yes #Sforza Castle
 capital = "Milano"
 discovered_by = western
 discovered_by = eastern
@@ -19,6 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 16
 center_of_trade = 2
+fort_15th = yes
 
 1495.1.1 = { hre = no }
 1583.1.1 = { fort_15th = no fort_16th = yes }

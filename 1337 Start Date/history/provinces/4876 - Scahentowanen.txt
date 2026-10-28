@@ -3,7 +3,7 @@
 culture = susquehannock
 religion = totemism
 capital = "Scahentowanen"
-trade_goods = unknown
+trade_goods = coal
 hre = no
 base_tax = 1
 base_production = 1

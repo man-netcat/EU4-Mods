@@ -4,7 +4,7 @@
 culture = nakota
 religion = totemism
 capital = "Sihabi"
-trade_goods = unknown
+trade_goods = grain
 hre = no
 base_tax = 1
 base_production = 1

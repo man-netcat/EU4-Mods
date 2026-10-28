@@ -10,15 +10,15 @@ culture = flemish
 religion = catholic
 base_tax = 6 
 base_production = 5
-trade_goods = glass
+trade_goods = wool
 base_manpower = 2
-fort_15th = yes
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 16
 center_of_trade = 2
+fort_15th = yes
 
 1572.1.1 = { religion = reformed }
 1585.8.27 = {  unrest = 5 religion = catholic } # Alessandro Farnese captures Antwerp after a 14-month long siege

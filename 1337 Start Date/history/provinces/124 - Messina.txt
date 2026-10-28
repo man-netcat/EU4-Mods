@@ -10,9 +10,8 @@ religion = catholic
 hre = no 
 base_tax = 4 
 base_production = 3
-trade_goods = fish
+trade_goods = dyes
 base_manpower = 3
-fort_15th = yes #Numerous forts, Castello Maniace and Castello di Milazzo being the prominent.
 capital = "Messina"
 
 

@@ -3,7 +3,7 @@
 culture = yakut
 religion = tengri_pagan_reformed
 capital = "Ust-Kut"
-trade_goods = unknown
+trade_goods = fur
 hre = no
 base_tax = 1 
 base_production = 1

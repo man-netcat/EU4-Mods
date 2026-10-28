@@ -3,7 +3,7 @@
 culture = yorumba 
 religion = shamanism #Fetishism
 capital = "Warri"
-trade_goods = slaves
+trade_goods = naval_supplies
 hre = no
 base_tax = 3 
 base_production = 3

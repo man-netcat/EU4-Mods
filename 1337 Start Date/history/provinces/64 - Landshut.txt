@@ -8,9 +8,8 @@ culture = bavarian
 religion = catholic
 base_tax = 3
 base_production = 3
-trade_goods = salt
+trade_goods = grain
 base_manpower = 1
-fort_15th = yes #Trausnitz Castle
 capital	= "Landshut" 
 hre = yes
 
@@ -23,6 +22,7 @@ discovered_by = ottoman
 
 
 #Last of the Landshuter Wittelsbachs dies, Bavaria reunited
+fort_15th = yes
 
 1743.1.1 = { base_tax = 4 base_production = 4 } # Economic crisis as effect of the Austrian succession war (e.g. Straubing bancrupt)
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

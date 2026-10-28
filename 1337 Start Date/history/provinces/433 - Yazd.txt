@@ -7,7 +7,7 @@ is_city = yes
 culture = persian
 religion = sunni
 capital = "Yazd"
-trade_goods = paper
+trade_goods = silk
 hre = no
 base_tax = 2 
 base_production = 2
@@ -18,6 +18,7 @@ discovered_by = indian
 discovered_by = nomad_group
 extra_cost = 8
 center_of_trade = 1
+fort_15th = yes
 
 1458.9.1 = { revolt = { type = pretender_rebels size = 0 name = "Hasan Ali's Faction" leader = "Hasan Ali" }  } # Civil war in Qara Quyunlu
 1458.12.1 = { revolt = {}  }

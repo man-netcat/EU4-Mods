@@ -3,7 +3,7 @@
 culture = mescalero
 religion = totemism
 capital = "Mescalero" 
-trade_goods = wool
+trade_goods = fur
 hre = no 
 base_tax = 1
 base_production = 1 

@@ -3,7 +3,7 @@
 culture = pequot
 religion = totemism
 capital = "Quinnipiac"
-trade_goods = unknown
+trade_goods = naval_supplies
 hre = no
 base_tax = 2 
 base_production = 1

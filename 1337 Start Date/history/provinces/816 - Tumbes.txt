@@ -3,7 +3,7 @@
 culture = chimuan
 religion = inti
 capital = "Tumbes"
-trade_goods = grain
+trade_goods = fish
 hre = no
 base_tax = 3 
 base_production = 3
@@ -14,8 +14,6 @@ base_manpower = 1
 discovered_by = south_american
 discovered_by = andean
 discovered_by = CHM
-
-fort_15th = yes
 
 1528.1.1 = { discovered_by = SPA } # Francisco Pizarro
 1532.1.1 = {

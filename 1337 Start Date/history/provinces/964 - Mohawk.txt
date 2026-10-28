@@ -7,7 +7,7 @@ is_city = yes
 culture = iroquois
 religion = totemism
 capital = "Mohawk"
-trade_goods = fur
+trade_goods = grain
 hre = no
 base_tax = 2 
 base_production = 2
@@ -19,6 +19,7 @@ native_hostileness = 3
 
 
 discovered_by = north_american
+center_of_trade = 1
 
 1615.1.1 = { discovered_by = FRA } # Samuel de Champlain
 1629.1.1 = { discovered_by = ENG }

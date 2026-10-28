@@ -3,7 +3,7 @@
 culture = madagasque
 religion = shamanism #Fetishism
 capital = "Morondava"
-trade_goods = slaves
+trade_goods = cotton
 hre = no
 base_tax = 3
 base_production = 3

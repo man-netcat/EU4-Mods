@@ -3,7 +3,7 @@
 culture = catawba
 religion = totemism
 capital = "Cheraw"
-trade_goods = tobacco
+trade_goods = grain
 hre = no
 base_tax = 2 
 base_production = 1

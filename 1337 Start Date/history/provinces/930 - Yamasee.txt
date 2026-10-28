@@ -3,7 +3,7 @@
 culture = creek
 religion = totemism
 capital = "Yamasee"
-trade_goods = cotton
+trade_goods = naval_supplies
 hre = no
 base_tax = 2 
 base_production = 1

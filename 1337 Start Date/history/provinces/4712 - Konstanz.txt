@@ -9,7 +9,7 @@ hre = yes
 base_tax = 3 
 base_production = 3
 base_manpower = 1
-trade_goods = cloth
+trade_goods = wine
 center_of_trade = 1
 
 discovered_by = eastern

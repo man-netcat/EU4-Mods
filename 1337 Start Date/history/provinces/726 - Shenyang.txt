@@ -7,12 +7,11 @@ is_city = yes
 culture = manchu
 religion = tengri_pagan_reformed
 capital = "Shenyang"
-trade_goods = gems #Youyan Jade
+trade_goods = grain #Youyan Jade
 hre = no
 base_tax = 4 
 base_production = 4
 base_manpower = 1
-fort_15th = yes #the Nine Garrisons
 
 
 discovered_by = chinese

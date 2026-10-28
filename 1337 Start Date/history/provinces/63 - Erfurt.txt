@@ -7,7 +7,7 @@ is_city = yes
 culture = saxon
 religion = catholic
 capital = "Erfurt"
-trade_goods = dyes #Woad, also a center for glassmaking
+trade_goods = cloth #Woad, also a center for glassmaking
 hre = yes
 base_tax = 3
 base_production = 3
@@ -16,7 +16,6 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-fort_15th = yes
 center_of_trade = 1
 
 1531.1.1 = { religion = protestant }

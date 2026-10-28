@@ -3,7 +3,7 @@
 culture = purepecha
 religion = nahuatl
 capital = "Acambaro"
-trade_goods = wool
+trade_goods = naval_supplies
 hre = no
 base_tax = 4
 base_production = 4

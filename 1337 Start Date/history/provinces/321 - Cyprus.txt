@@ -7,12 +7,11 @@ is_city = yes
 culture = greek
 religion = orthodox
 capital = "Nicosia"
-trade_goods = wine
+trade_goods = silk
 hre = no
 base_tax = 5 
 base_production = 5
 base_manpower = 3
-fort_15th = yes
 
 
 

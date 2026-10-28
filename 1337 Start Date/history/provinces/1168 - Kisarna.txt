@@ -3,7 +3,7 @@
 culture = kongolese
 religion = animism #Fetishism
 capital = "Lovata"
-trade_goods = slaves
+trade_goods = ivory
 hre = no
 base_tax = 3 
 base_production = 3

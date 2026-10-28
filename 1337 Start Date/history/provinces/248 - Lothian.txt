@@ -10,7 +10,7 @@ religion = catholic
 hre = no
 base_tax = 3
 base_production = 3
-trade_goods = cloth
+trade_goods = grain
 base_manpower = 2
 capital = "Edinburgh"
 discovered_by = western
@@ -19,5 +19,6 @@ discovered_by = ottoman
 discovered_by = eastern
 extra_cost = 16
 center_of_trade = 2
+fort_15th = yes
 
 1560.8.1 = { religion = reformed reformation_center = reformed }

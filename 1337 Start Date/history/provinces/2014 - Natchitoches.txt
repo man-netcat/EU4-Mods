@@ -3,7 +3,7 @@
 culture = caddo
 religion = totemism
 capital = "Natchitoches"
-trade_goods = unknown
+trade_goods = grain
 hre = no
 base_tax = 2
 base_production = 1

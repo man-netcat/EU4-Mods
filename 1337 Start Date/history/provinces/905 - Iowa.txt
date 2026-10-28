@@ -3,7 +3,7 @@
 culture = pawnee
 religion = totemism
 capital = "Iowa"
-trade_goods = unknown
+trade_goods = fur
 hre = no
 base_tax = 1
 base_production = 1

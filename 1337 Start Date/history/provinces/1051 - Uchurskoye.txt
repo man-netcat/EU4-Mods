@@ -3,7 +3,7 @@
 culture = yakut
 religion = tengri_pagan_reformed
 capital = "Aldan"
-trade_goods = unknown
+trade_goods = gold
 hre = no
 base_tax = 1 
 base_production = 1

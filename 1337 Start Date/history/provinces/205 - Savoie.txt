@@ -9,10 +9,9 @@ religion = catholic
 hre = yes
 base_tax = 3
 base_production = 3
-trade_goods = cloth
+trade_goods = wine
 base_manpower = 2
 capital = "Chambéry"
-fort_15th = yes
 
 
 

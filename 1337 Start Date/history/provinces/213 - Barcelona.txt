@@ -10,7 +10,7 @@ religion = catholic
 hre = no
 base_tax = 4 
 base_production = 3
-trade_goods = glass 
+trade_goods = fish 
 base_manpower = 2
 capital = "Barcelona" 
 discovered_by = western
@@ -19,6 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
+shipyard = yes
 
 1412.6.29 = { revolt = { type = pretender_rebels size = 0 }  } # Jaime d'Urgell Uprising
 1413.1.1 = { revolt = {}  }

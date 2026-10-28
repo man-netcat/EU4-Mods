@@ -11,13 +11,12 @@ religion = catholic
 hre = no
 base_tax = 3 
 base_production = 3
-trade_goods = fish
+trade_goods = grain
 base_manpower = 1
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-fort_15th = yes
 extra_cost = 8
 center_of_trade = 1
 

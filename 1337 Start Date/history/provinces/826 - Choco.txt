@@ -3,7 +3,7 @@
 culture = guajiro
 religion = animism
 capital = "Choco"
-trade_goods = unknown
+trade_goods = spices
 hre = no
 base_tax = 1 
 base_production = 1

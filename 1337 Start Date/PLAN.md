@@ -19,7 +19,11 @@ historically wrong, we correct it (log each correction in `tools/corrections.md`
 - Vanilla tags without an EU5 1337 counterpart stay as dormant files (pre-1444.11.11 entries dropped).
 - Development: `development_targets` ranks the name-matched provinces by EU5 pop and hands them the sorted vanilla
   totals (floor: half the vanilla total), keeping each province's tax/production/manpower proportions. First pass,
-  not playtested. Trade goods, buildings, institutions, estates, ideas/mission trees are still vanilla.
+  not playtested. Institutions, estates, ideas/mission trees are still vanilla.
+- Economy (`economy_targets`): trade goods from the EU5 raw material of a province's name-matched locations (weighted,
+  rare goods heavier; `GOODS`), `fort_15th` from EU5 castles/walls/strongholds, `shipyard` from wharves/docks/arsenals,
+  `center_of_trade = 1` on EU5 market towns lacking one. Provinces on shared location pools keep vanilla values.
+  EU4's own history sets almost no other buildings, so there is nothing else to port.
 
 ## Progress on step 1 (loc2prov, no map geometry - the owner vetoed pixel/coordinate mapping)
 

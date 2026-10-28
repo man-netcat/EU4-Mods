@@ -15,14 +15,14 @@ religion = catholic
 hre = no
 base_tax = 4
 base_production = 4
-trade_goods = wool
+trade_goods = coal
 base_manpower = 3
 capital = "Newcastle"
-fort_15th = yes
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
+fort_15th = yes
 
 1453.1.1 = { unrest = 5 } # Start of the War of the Roses
 1461.6.1 = { revolt = { type = revolutionary_rebels size = 0 } unrest = 2  } # Lancastrian Holdouts after Coronation of Edward IV

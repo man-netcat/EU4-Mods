@@ -7,11 +7,10 @@ is_city = yes
 capital = "Heidelberg"
 culture = hessian
 religion = catholic
-trade_goods = wine
+trade_goods = grain
 base_tax = 3
 base_production = 2
 base_manpower = 2
-fort_15th = yes
 hre = yes
 
 

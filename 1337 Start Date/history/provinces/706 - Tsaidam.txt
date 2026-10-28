@@ -3,7 +3,7 @@
 culture = oirats
 religion = vajrayana
 capital = "Tsaidam"
-trade_goods = salt
+trade_goods = fur
 hre = no
 base_tax = 1 
 base_production = 1

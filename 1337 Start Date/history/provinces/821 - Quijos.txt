@@ -9,7 +9,7 @@ discovered_by = andean
 
 religion = animism
 capital = "Baeza"
-trade_goods = unknown
+trade_goods = livestock
 hre = no
 base_tax = 1 
 base_production = 1

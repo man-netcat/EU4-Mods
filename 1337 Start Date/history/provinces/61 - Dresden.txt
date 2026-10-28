@@ -7,18 +7,18 @@ is_city = yes
 culture = saxon
 religion = catholic
 capital = "Meissen"
-trade_goods = iron
+trade_goods = wine
 hre = yes
 base_tax = 3
 base_production = 3
 base_manpower = 1
-fort_15th = yes
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
+fort_15th = yes
 
 1423.1.6 = {     capital = "Dresden" } # Incorporated into Saxony
 1464.1.1 = { capital = "Dresden" }

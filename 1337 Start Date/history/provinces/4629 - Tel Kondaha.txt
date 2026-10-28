@@ -3,7 +3,7 @@
 culture = lipan
 religion = totemism
 capital = "Tel Kondaha" 
-trade_goods = unknown 
+trade_goods = naval_supplies 
 hre = no 
 base_tax = 1
 base_production = 1 

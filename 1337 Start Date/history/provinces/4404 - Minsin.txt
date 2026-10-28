@@ -3,7 +3,7 @@
 culture = kachin
 religion = animism
 capital = "Minsin"
-trade_goods = grain
+trade_goods = naval_supplies
 hre = no
 base_tax = 2
 base_production = 2
