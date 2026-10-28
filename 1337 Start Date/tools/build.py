@@ -513,8 +513,19 @@ def step_tags(table):
         d.mkdir(parents=True)
     tagfile, loc = [], ["l_english:"]
     info = eu5info.info()
+    import tagmap
+    base_names, base_adjs = tagmap.eu4_names(), {}
+    for f in sorted((EU4_GAME / "localisation").glob("*_l_english.yml")):
+        for m in re.finditer(r'^\s*([A-Z0-9]{3})_ADJ:\d*\s+"(.*)"', f.read_text(encoding="utf-8-sig"), re.M):
+            base_adjs[m[1]] = m[2]
+    replace = ["l_english:"]
     for tag5, r in sorted(table.items(), key=lambda kv: kv[1]["eu4"]):
         if not r["new"]:
+            # a base-game tag takes the name and adjective EU5 gives its state, replacing the base game's
+            nm = latin1(r["name"])
+            adj = latin1(eu5info.display(tag5 + "_ADJ", nm))
+            if nm != base_names.get(r["eu4"]) or adj != base_adjs.get(r["eu4"]):
+                replace += [f' {r["eu4"]}:0 "{nm}"', f' {r["eu4"]}_ADJ:0 "{adj}"']
             continue
         tag, nm = r["eu4"], latin1(r["name"])
         fn = f"{tag} - {ascii_(nm)}.txt".replace("/", "-")
@@ -531,6 +542,10 @@ def step_tags(table):
     (ctags / "1337_tags.txt").write_bytes(("\n".join(tagfile) + "\n").encode("latin-1"))
     p = MOD / "localisation/1337_countries_l_english.yml"
     p.write_text("﻿" + "\n".join(loc) + "\n", encoding="utf-8")
+    r = MOD / "localisation/replace"
+    shutil.rmtree(r, ignore_errors=True)
+    r.mkdir(parents=True)
+    (r / "1337_countries_l_english.yml").write_text("﻿" + "\n".join(replace) + "\n", encoding="utf-8")
 
 
 # EU5 subject type -> (history/diplomacy key, EU4 subject type). Vassal-like EU5 types are all EU4 vassals; royal

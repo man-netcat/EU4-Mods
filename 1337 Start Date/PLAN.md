@@ -126,6 +126,12 @@ Hainaut-Holland, Moscow-Novgorod/Nizhny/Kostroma/Vladimir, Hungary-Croatia, Bohe
 Sweden-Norway). Base-game relations that were running before 1337 and involve such tags are shipped removed
 (`drop_base_game_relations_at_start`, e.g. the 1299 Hainaut-Holland alliance), lifted from the base game by the build.
 
+## Names
+
+New tags: `localisation/1337_countries_l_english.yml`. Base-game tags the mod reuses take EU5's name and adjective for their
+state through `localisation/replace/1337_countries_l_english.yml` (only where it differs from the base game's), as in
+Charlemagne's Legacy; both files are written by `step_tags`.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy (fixed `eu4_geo` reading area colours as provinces, plus ~70 hand aliases for Europe and the Near East); ~735 unmapped keep their vanilla owner only if
