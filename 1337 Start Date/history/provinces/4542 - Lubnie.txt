@@ -1,8 +1,8 @@
 #4542 - Lubnie
 
-owner = LIT
-controller = LIT
-add_core = LIT
+owner = KIE
+controller = KIE
+add_core = KIE
 is_city = yes
 culture = ruthenian
 religion = orthodox

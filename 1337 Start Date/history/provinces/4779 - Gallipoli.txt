@@ -1,15 +1,15 @@
-owner = NAP
-controller = NAP
-add_core = NAP
+owner = BYZ
+controller = BYZ
+add_core = BYZ
 is_city = yes
-culture = sicilian
+culture = greek
 religion = orthodox
 capital = "Gallipoli"
 trade_goods = salt
 hre = no
-base_tax = 3
+base_tax = 2
 base_production = 1
-base_manpower = 4
+base_manpower = 3
 
 
 discovered_by = western

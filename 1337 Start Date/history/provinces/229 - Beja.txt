@@ -1,17 +1,17 @@
 #229 - Baixo Alentejo
 
-owner = TUN
-controller = TUN
-add_core = TUN
+owner = POR
+controller = POR
+add_core = POR
 is_city = yes
-culture = tunisian
-religion = sunni
+culture = portugese
+religion = catholic
 capital = "Beja"
 trade_goods = grain
 hre = no
-base_tax = 3
+base_tax = 2
 base_production = 2
-base_manpower = 2
+base_manpower = 1
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman

@@ -1,8 +1,8 @@
 #571 - Darrang
 
-owner = AHO
-controller = AHO
-add_core = AHO
+owner = KMA
+controller = KMA
+add_core = KMA
 is_city = yes
 culture = assamese
 religion = buddhism

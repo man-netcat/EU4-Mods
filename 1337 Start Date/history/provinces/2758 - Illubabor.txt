@@ -1,9 +1,5 @@
 #2758 - Illubabor
 
-owner = ENA
-controller = ENA
-add_core = ENA
-is_city = yes
 culture = sidamo
 religion = coptic
 capital = "Illubabor"

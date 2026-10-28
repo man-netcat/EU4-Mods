@@ -9,6 +9,7 @@ war_goal = {
 1337.3.1 = {
 	add_attacker = VEN
 	add_attacker = CRT
+	add_attacker = RAG
 	add_attacker = LAN
 	add_attacker = MLO
 	add_attacker = FER

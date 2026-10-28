@@ -2,13 +2,12 @@
 
 owner = MAM
 controller = MAM
-add_core = IFA
 add_core = MAM
 is_city = yes
 culture = hejazi_culture
 religion = sunni
 capital = "Al-Ula"
-trade_goods = incense
+trade_goods = grain
 hre = no
 base_tax = 2 
 base_production = 2

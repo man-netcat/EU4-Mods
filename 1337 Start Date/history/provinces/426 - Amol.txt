@@ -2,7 +2,6 @@
 
 owner = GRG
 controller = GRG
-add_core = CHG
 add_core = GRG
 is_city = yes
 culture = mazandarani
@@ -10,7 +9,7 @@ religion = shiite
 capital = "Amol"
 trade_goods = silk
 hre = no
-base_tax = 3
+base_tax = 2
 base_production = 2
 base_manpower = 1
 discovered_by = eastern

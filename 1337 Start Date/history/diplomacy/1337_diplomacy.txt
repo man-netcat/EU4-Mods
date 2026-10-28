@@ -36,6 +36,7 @@ vassal = { first = FRA second = NEV start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = NAP second = ACH start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ACH second = NAX start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = VEN second = CRT start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = VEN second = RAG start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = SAV second = GNV start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = VRN second = PDV start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = VRN second = PAR start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -51,6 +52,7 @@ vassal = { first = TFL second = TAT start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = TUN second = GBS start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = TUN second = BIA subject_type = "appanage" start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = TUN second = TGT start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = TUN second = TRP start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = TUN second = GHD subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = TUN second = MZB subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = MOR second = TUN start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -81,7 +83,6 @@ vassal = { first = GEO second = ARM start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = GEO second = SME start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GLH second = TRK start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = ETH second = IFA subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
-dependency = { first = ETH second = ENA subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ETH second = HDY start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = IFA second = WAR subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = ZAN second = MLI subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }

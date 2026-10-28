@@ -759,11 +759,6 @@
 "name": "England",
 "new": false
 },
-"ENN": {
-"eu4": "ENA",
-"name": "Ennarea",
-"new": false
-},
 "EPI": {
 "eu4": "EPI",
 "name": "Epirus",
@@ -1239,11 +1234,6 @@
 "name": "Junagarh",
 "new": false
 },
-"JNT": {
-"eu4": "JNT",
-"name": "Jaintia",
-"new": true
-},
 "JOL": {
 "eu4": "JOL",
 "name": "Jolof",
@@ -1488,11 +1478,6 @@
 "eu4": "KSH",
 "name": "Kashmir",
 "new": false
-},
-"KSW": {
-"eu4": "KSW",
-"name": "Kishtwar",
-"new": true
 },
 "KTG": {
 "eu4": "KTG",
@@ -2024,11 +2009,6 @@
 "name": "Normandy",
 "new": false
 },
-"NSL": {
-"eu4": "NSL",
-"name": "Novosil",
-"new": true
-},
 "NSR": {
 "eu4": "NSR",
 "name": "Nan Sarunai",
@@ -2293,6 +2273,11 @@
 "eu4": "QUN",
 "name": "Qara'unas",
 "new": true
+},
+"RAG": {
+"eu4": "RAG",
+"name": "Ragusa",
+"new": false
 },
 "RAV": {
 "eu4": "RAV",
@@ -2829,6 +2814,11 @@
 "name": "Tarki",
 "new": true
 },
+"TRP": {
+"eu4": "TRP",
+"name": "Tripoli",
+"new": false
+},
 "TRS": {
 "eu4": "TAA",
 "name": "Tarusa",
@@ -3057,6 +3047,11 @@
 "YAR": {
 "eu4": "YAR",
 "name": "Yaroslavl",
+"new": false
+},
+"YAS": {
+"eu4": "YAS",
+"name": "Yas",
 "new": false
 },
 "YAT": {

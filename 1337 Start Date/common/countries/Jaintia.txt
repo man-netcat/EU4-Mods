@@ -1,3 +1,0 @@
-graphical_culture = southeastasiangfx
-
-color = { 60 160 45 }

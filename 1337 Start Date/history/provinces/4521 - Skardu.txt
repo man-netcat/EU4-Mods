@@ -1,9 +1,8 @@
 #4521 - Skardu
 
-owner = KSW
-controller = KSW
+owner = KSH
+controller = KSH
 add_core = KSH
-add_core = KSW
 is_city = yes
 culture = kashmiri
 religion = hinduism

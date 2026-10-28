@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = eastern
 primary_culture = ryazanian
 religion = orthodox
-capital = 300
+capital = 4116
 
 monarch = {
 	name = "Panteleimon I"

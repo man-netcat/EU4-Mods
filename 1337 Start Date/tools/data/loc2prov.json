@@ -433,8 +433,7 @@
 "27": {
 "tier": "key/display",
 "locations": [
-"abo",
-"sahel_corridor19"
+"abo"
 ]
 },
 "28": {
@@ -459,13 +458,11 @@
 "jyvaskyla",
 "laukas",
 "lohja",
-"not_eligible_for_dynamic_country_name",
 "paijanne",
 "saarijarvi",
 "sysma",
 "tavastehus",
-"viitasaari",
-"yes"
+"viitasaari"
 ]
 },
 "30": {
@@ -486,14 +483,12 @@
 "kuopio",
 "kyyvesi",
 "mikkeli",
-"not_eligible_for_dynamic_country_name",
 "olofsborg",
 "pihlajavesi",
 "puula",
 "rautavaara",
 "ristiina",
-"savonranta",
-"yes"
+"savonranta"
 ]
 },
 "32": {
@@ -573,13 +568,9 @@
 "st_martin",
 "straupe",
 "suure_jaani",
-"tartu",
 "valjala",
-"valka",
 "valmiera",
-"vastseliina",
-"viljandi",
-"vonnu"
+"viljandi"
 ]
 },
 "38": {
@@ -596,11 +587,9 @@
 "grobina",
 "kandava",
 "kuldiga",
-"not_eligible_for_dynamic_country_name",
 "piltene",
 "saldus",
-"ventspils",
-"yes"
+"ventspils"
 ]
 },
 "40": {
@@ -620,9 +609,7 @@
 "locations": [
 "frombork",
 "lidzbark",
-"not_eligible_for_dynamic_country_name",
-"olsztyn",
-"yes"
+"olsztyn"
 ]
 },
 "43": {
@@ -984,9 +971,7 @@
 "enghien",
 "maubeuge",
 "mons",
-"not_eligible_for_dynamic_country_name",
-"valenciennes",
-"yes"
+"valenciennes"
 ]
 },
 "92": {
@@ -1165,12 +1150,10 @@
 "locations": [
 "florence",
 "mangona",
-"not_eligible_for_dynamic_country_name",
 "pistoia",
 "poggibonsi",
 "prato",
-"sanlorenzo",
-"yes"
+"sanlorenzo"
 ]
 },
 "117": {
@@ -1266,9 +1249,6 @@
 "cosenza",
 "cotrone",
 "gerace",
-"gulf_catania",
-"gulf_noto",
-"gulf_squillace",
 "monteleone",
 "nicastro",
 "palmi",
@@ -1276,9 +1256,7 @@
 "reggiocal",
 "rossano",
 "scalea",
-"southern_apennines",
-"spartivento_cape",
-"strait_messina"
+"southern_apennines"
 ]
 },
 "124": {
@@ -1410,23 +1388,9 @@
 ]
 },
 "137": {
-"tier": "area-fallback",
+"tier": "alias",
 "locations": [
-"brac",
-"buzet",
-"dinaric_alps1",
-"dubrovnik",
-"knin",
-"lastovo_island_wasteland",
-"makarska",
-"metkovic",
-"novigrad",
-"pazin",
-"pola",
-"rovinj",
-"sibenik",
-"sinj",
-"slano"
+"dubrovnik"
 ]
 },
 "138": {
@@ -1436,10 +1400,8 @@
 "gradina",
 "kotor",
 "lake_skadar",
-"not_eligible_for_dynamic_country_name",
 "onogost",
-"podgorica",
-"yes"
+"podgorica"
 ]
 },
 "139": {
@@ -1506,7 +1468,6 @@
 "livno",
 "mostar",
 "nevesinje",
-"not_eligible_for_dynamic_country_name",
 "olovo",
 "pljevlja",
 "soko_grad",
@@ -1518,7 +1479,6 @@
 "trebinje",
 "ustikolina",
 "vrhbosna",
-"yes",
 "zenica"
 ]
 },
@@ -1537,54 +1497,29 @@
 "143": {
 "tier": "area-node",
 "locations": [
-"argyrokastro",
-"avlonya",
 "ballsh",
 "berat",
-"butrint",
 "debar",
 "devol",
 "dukagjini",
 "elbasan",
 "has",
 "kavaje",
-"kleisoura_epirus",
 "koman",
-"konitsa",
 "lezha",
-"pindus_mountains6",
 "shkoder",
 "tirana"
 ]
 },
 "144": {
-"tier": "area-node",
+"tier": "alias",
 "locations": [
-"angelokastron",
-"atalanti",
-"bodonitsa",
-"gravia",
-"ioannina",
-"karpenisi",
-"lake_kopais",
-"lake_trichonida",
-"leukas",
-"livadeia",
-"loidoriki",
-"megara",
-"nafpaktos",
-"neopatras",
-"parga",
-"pindus_mountains11",
-"pindus_mountains12",
-"pindus_mountains7",
-"preveza",
-"pyli",
-"salona",
-"thebes",
-"vonitsa",
-"zakynthos",
-"zetounion"
+"argyrokastro",
+"avlonya",
+"butrint",
+"kleisoura_epirus",
+"konitsa",
+"pindus_mountains6"
 ]
 },
 "145": {
@@ -1608,7 +1543,6 @@
 "monemvasia",
 "mystras",
 "nafplio",
-"not_eligible_for_dynamic_country_name",
 "oitylo",
 "patras",
 "peloponnesian_mountains1",
@@ -1617,8 +1551,7 @@
 "tripolitsa",
 "veligosti",
 "vostitsa",
-"xylokastro",
-"yes"
+"xylokastro"
 ]
 },
 "146": {
@@ -1636,11 +1569,9 @@
 "karditsa",
 "larissa",
 "mount_olympos",
-"not_eligible_for_dynamic_country_name",
 "stomio",
 "trikala",
-"tyrnavos",
-"yes"
+"tyrnavos"
 ]
 },
 "148": {
@@ -1943,9 +1874,7 @@
 "lectoure",
 "lisle_jourdain",
 "mirande",
-"nogaro",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"nogaro"
 ]
 },
 "176": {
@@ -1989,15 +1918,13 @@
 "loudun",
 "mayenne",
 "mortagne",
-"not_eligible_for_dynamic_country_name",
 "passavant",
 "sable",
 "sainte_suzanne",
 "saumur",
 "senonches",
 "st_calais",
-"villaines",
-"yes"
+"villaines"
 ]
 },
 "179": {
@@ -2033,7 +1960,6 @@
 "montendre",
 "montmorillon",
 "niort",
-"not_eligible_for_dynamic_country_name",
 "oleron",
 "parthenay",
 "poitiers",
@@ -2042,8 +1968,7 @@
 "saintes",
 "st_jean_dangely",
 "talmont",
-"thouars",
-"yes"
+"thouars"
 ]
 },
 "181": {
@@ -2087,7 +2012,6 @@
 "lignieres",
 "loches",
 "montargis",
-"not_eligible_for_dynamic_country_name",
 "orleans",
 "romorantin",
 "sancerre",
@@ -2097,8 +2021,7 @@
 "tours",
 "vendome",
 "vierzon",
-"vitry_aux_loges",
-"yes"
+"vitry_aux_loges"
 ]
 },
 "185": {
@@ -2175,15 +2098,13 @@
 "luxeuil",
 "montbeliard",
 "montbozon",
-"not_eligible_for_dynamic_country_name",
 "orgelet",
 "ornans",
 "poligny",
 "pontarlier",
 "saint_claude",
 "salins_les_bains",
-"vesoul",
-"yes"
+"vesoul"
 ]
 },
 "194": {
@@ -2204,7 +2125,6 @@
 "gueret",
 "limoges",
 "nontron",
-"not_eligible_for_dynamic_country_name",
 "rochechouart",
 "segur",
 "st_leonard",
@@ -2212,8 +2132,7 @@
 "tulle",
 "turenne",
 "ussel",
-"ventadour",
-"yes"
+"ventadour"
 ]
 },
 "196": {
@@ -2223,29 +2142,9 @@
 ]
 },
 "197": {
-"tier": "area-node",
+"tier": "alias",
 "locations": [
-"berga",
-"besalu",
-"cardona",
-"castellon_ampurias",
-"cervera",
-"flix",
-"lagoon_of_salses",
-"manresa",
-"montblanc",
-"perpignan",
-"prades",
-"puigcerda",
-"ripoll",
-"sant_feliu",
-"sitges",
-"south_eastern_pyrenees",
-"tarrega",
-"terrassa",
-"tortosa",
-"vic",
-"villafranca_del_penedes"
+"perpignan"
 ]
 },
 "198": {
@@ -2276,7 +2175,6 @@
 "molins",
 "montaigut",
 "montlucon",
-"not_eligible_for_dynamic_country_name",
 "riom",
 "saint_flour",
 "st_gerand",
@@ -2284,8 +2182,7 @@
 "tour_auvergne",
 "vic_le_comte",
 "vichy",
-"vodable",
-"yes"
+"vodable"
 ]
 },
 "200": {
@@ -2315,13 +2212,11 @@
 "maritime_alps1",
 "marseille",
 "nice",
-"not_eligible_for_dynamic_country_name",
 "orange",
 "puget_theniers",
 "sisteron",
 "tarascon",
-"toulon",
-"yes"
+"toulon"
 ]
 },
 "202": {
@@ -2361,12 +2256,10 @@
 "grenoble",
 "la_mure",
 "la_tour_du_pin",
-"not_eligible_for_dynamic_country_name",
 "pragelato",
 "romans",
 "saint_marceilin",
-"vienne",
-"yes"
+"vienne"
 ]
 },
 "205": {
@@ -2391,7 +2284,6 @@
 "monforte_de_lemos",
 "monterrey",
 "navia_de_suarna",
-"not_eligible_for_dynamic_country_name",
 "noya",
 "ourense",
 "pontevedra",
@@ -2401,8 +2293,7 @@
 "tuy",
 "viana_bolo",
 "villalba",
-"vivero",
-"yes"
+"vivero"
 ]
 },
 "207": {
@@ -2442,7 +2333,6 @@
 "elizondo",
 "estella",
 "laguardia",
-"not_eligible_for_dynamic_country_name",
 "olite",
 "onate",
 "pamplona",
@@ -2454,8 +2344,7 @@
 "tudela",
 "valmaseda",
 "viana",
-"vitoria",
-"yes"
+"vitoria"
 ]
 },
 "211": {
@@ -2555,28 +2444,9 @@
 ]
 },
 "227": {
-"tier": "area-fallback",
+"tier": "alias",
 "locations": [
-"alcacer_do_sal",
-"alcobaca",
-"alvalade",
-"alvito",
-"avis",
-"elvas",
-"estremoz",
-"lisbon",
-"mertola",
-"montemor",
-"moura",
-"odemira",
-"ourique",
-"portalegre",
-"portel",
-"serpa",
-"setubal",
-"sines",
-"torres_vedras",
-"vila_vicosa"
+"lisbon"
 ]
 },
 "228": {
@@ -2599,10 +2469,9 @@
 ]
 },
 "229": {
-"tier": "key/display",
+"tier": "alias",
 "locations": [
-"beja",
-"beja_TUN"
+"beja"
 ]
 },
 "230": {
@@ -2610,10 +2479,8 @@
 "locations": [
 "faro",
 "lagos",
-"not_eligible_for_dynamic_country_name",
 "silves",
-"tavira",
-"yes"
+"tavira"
 ]
 },
 "231": {
@@ -2633,10 +2500,8 @@
 "locations": [
 "bodmin",
 "launceston",
-"not_eligible_for_dynamic_country_name",
 "scilly_isles",
-"truro",
-"yes"
+"truro"
 ]
 },
 "234": {
@@ -2703,9 +2568,7 @@
 "monmouth",
 "neath",
 "newport",
-"not_eligible_for_dynamic_country_name",
-"swansea",
-"yes"
+"swansea"
 ]
 },
 "242": {
@@ -2717,10 +2580,8 @@
 "denbigh",
 "flint",
 "harlech",
-"not_eligible_for_dynamic_country_name",
 "penllyn",
-"snowdon",
-"yes"
+"snowdon"
 ]
 },
 "243": {
@@ -2754,9 +2615,7 @@
 "billingham",
 "hexham",
 "morpeth",
-"newcastle",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"newcastle"
 ]
 },
 "247": {
@@ -3113,7 +2972,6 @@
 "kraziai",
 "mazeikiai",
 "medininkai",
-"not_eligible_for_dynamic_country_name",
 "palanga",
 "panemune",
 "papile",
@@ -3124,7 +2982,6 @@
 "skuodas",
 "taurage",
 "tendziogala",
-"yes",
 "zagare"
 ]
 },
@@ -3158,7 +3015,6 @@
 "merkine",
 "miory",
 "myadzyel",
-"not_eligible_for_dynamic_country_name",
 "onushkis",
 "panevezys",
 "pasvalys",
@@ -3175,8 +3031,7 @@
 "vileyka",
 "vilkaviskis",
 "vilkmerge",
-"vilnius",
-"yes"
+"vilnius"
 ]
 },
 "273": {
@@ -3245,7 +3100,6 @@
 "liuboml",
 "lutsk",
 "melnytsya",
-"not_eligible_for_dynamic_country_name",
 "novohrad_volynskyi",
 "ostroh",
 "peremyl",
@@ -3261,7 +3115,6 @@
 "ugrovesk",
 "volodymyr",
 "volodymyrets",
-"yes",
 "zbarazh"
 ]
 },
@@ -3366,6 +3219,15 @@
 "vithold_hammami"
 ]
 },
+"283": {
+"tier": "alias",
+"locations": [
+"hryshyne",
+"kichkas",
+"pavlohrad",
+"rozdory"
+]
+},
 "284": {
 "tier": "node",
 "locations": [
@@ -3377,7 +3239,6 @@
 "kezlev",
 "lake_sasyk_syvash",
 "lusta",
-"not_eligible_for_dynamic_country_name",
 "or_qapi",
 "qarasuvbazar",
 "qirq_yer",
@@ -3387,8 +3248,7 @@
 "syvash_lagoon",
 "syvash_sand_bar",
 "theodoro",
-"vosporo",
-"yes"
+"vosporo"
 ]
 },
 "285": {
@@ -3900,9 +3760,7 @@
 "limassol",
 "morphou",
 "nicosia_cyp",
-"not_eligible_for_dynamic_country_name",
-"paphos",
-"yes"
+"paphos"
 ]
 },
 "322": {
@@ -4025,10 +3883,8 @@
 "ciudadela_de_menorca",
 "ibiza",
 "manacor",
-"not_eligible_for_dynamic_country_name",
 "palma",
-"pollensa",
-"yes"
+"pollensa"
 ]
 },
 "334": {
@@ -4357,7 +4213,6 @@
 "igiliz",
 "ksar_es_souk",
 "massa_MOR",
-"not_eligible_for_dynamic_country_name",
 "noul_lamta",
 "ouarzazate",
 "sijilmasa",
@@ -4375,8 +4230,7 @@
 "tissint",
 "tiznit",
 "tizounine",
-"todgha",
-"yes"
+"todgha"
 ]
 },
 "349": {
@@ -4412,8 +4266,7 @@
 "354": {
 "tier": "key/display",
 "locations": [
-"tripoli",
-"tripoli_syria"
+"tripoli"
 ]
 },
 "355": {
@@ -4834,9 +4687,7 @@
 "dungannon",
 "enniskillen",
 "lough_erne",
-"not_eligible_for_dynamic_country_name",
-"strabane",
-"yes"
+"strabane"
 ]
 },
 "373": {
@@ -4848,10 +4699,8 @@
 "longford",
 "mullingar",
 "navan",
-"not_eligible_for_dynamic_country_name",
 "trim",
-"tullamore",
-"yes"
+"tullamore"
 ]
 },
 "374": {
@@ -4876,13 +4725,11 @@
 "naas",
 "navan",
 "new_ross",
-"not_eligible_for_dynamic_country_name",
 "trim",
 "tullamore",
 "wexford",
 "wicklow",
-"wicklow_mountains",
-"yes"
+"wicklow_mountains"
 ]
 },
 "375": {
@@ -4914,12 +4761,10 @@
 "lough_derg",
 "lough_mask",
 "lough_ree",
-"not_eligible_for_dynamic_country_name",
 "roscommon",
 "skreen",
 "sligo",
-"tuam",
-"yes"
+"tuam"
 ]
 },
 "377": {
@@ -4995,6 +4840,7 @@
 "tartus",
 "taybah",
 "trapessac",
+"tripoli_syria",
 "zardana"
 ]
 },
@@ -5077,6 +4923,7 @@
 "tartus",
 "taybah",
 "trapessac",
+"tripoli_syria",
 "zardana"
 ]
 },
@@ -5359,8 +5206,7 @@
 "404": {
 "tier": "key/display",
 "locations": [
-"liwa",
-"liwa_lampung"
+"liwa"
 ]
 },
 "405": {
@@ -5430,6 +5276,7 @@
 "tartus",
 "taybah",
 "trapessac",
+"tripoli_syria",
 "zardana"
 ]
 },
@@ -5625,8 +5472,7 @@
 "421": {
 "tier": "key/display",
 "locations": [
-"shirvan",
-"shirvan_iran"
+"shirvan"
 ]
 },
 "422": {
@@ -5636,14 +5482,12 @@
 "greater_caucasus_mountains3",
 "kutaisi",
 "lentekhi",
-"not_eligible_for_dynamic_country_name",
 "shorapani",
 "skande",
 "tsageri",
 "tsesi",
 "ushguli",
-"vartsikhe",
-"yes"
+"vartsikhe"
 ]
 },
 "423": {
@@ -5694,8 +5538,7 @@
 "426": {
 "tier": "key/display",
 "locations": [
-"amol",
-"amol_turkmenabad"
+"amol"
 ]
 },
 "427": {
@@ -6054,6 +5897,7 @@
 "alat",
 "almalik_chach",
 "altyntobe",
+"amol_turkmenabad",
 "andijan",
 "arslanbob",
 "arsubaniket",
@@ -6135,6 +5979,14 @@
 "sighnaq",
 "song_kul_lake",
 "sutkent",
+"tian_shan11",
+"tian_shan12",
+"tian_shan13",
+"tian_shan14",
+"tian_shan15",
+"tian_shan7",
+"tian_shan8",
+"tian_shan9",
 "tim_samarkand",
 "tuzkan_lake",
 "ura_tyube",
@@ -6244,6 +6096,8 @@
 "taukum_desert",
 "tekabket",
 "tekeli",
+"tian_shan10",
+"tian_shan6",
 "tokkuztara",
 "tolekskoe",
 "toli",
@@ -6587,9 +6441,7 @@
 "guama",
 "guaraca",
 "guaynabo",
-"guaynia",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"guaynia"
 ]
 },
 "493": {
@@ -6758,9 +6610,7 @@
 "kapilkot",
 "lakhiyarvira",
 "lakhpat",
-"little_rann_of_kutch",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"little_rann_of_kutch"
 ]
 },
 "504": {
@@ -6797,7 +6647,6 @@
 "kupwara",
 "marwah",
 "nanga_parbat",
-"not_eligible_for_dynamic_country_name",
 "pangi_range",
 "pir_panjal_range",
 "pir_panjal_range_2",
@@ -6810,8 +6659,7 @@
 "sharda",
 "srinagar",
 "udabhanda",
-"wular_lake",
-"yes"
+"wular_lake"
 ]
 },
 "509": {
@@ -6824,14 +6672,12 @@
 "nagarkot",
 "naggar",
 "nahan",
-"not_eligible_for_dynamic_country_name",
 "nurpur",
 "palampur",
 "pathankot",
 "sarahan",
 "soonpur",
-"suket",
-"yes"
+"suket"
 ]
 },
 "510": {
@@ -6849,11 +6695,9 @@
 "gangadvara",
 "hanol",
 "kalsi",
-"not_eligible_for_dynamic_country_name",
 "srinagar_garhwal",
 "thalisain",
-"uttarkashi",
-"yes"
+"uttarkashi"
 ]
 },
 "512": {
@@ -6887,11 +6731,9 @@
 "kiradu",
 "kurki",
 "mandore",
-"not_eligible_for_dynamic_country_name",
 "osian",
 "pali",
-"phalvardhika",
-"yes"
+"phalvardhika"
 ]
 },
 "515": {
@@ -7017,9 +6859,7 @@
 "gagraun",
 "kota",
 "mangrol",
-"not_eligible_for_dynamic_country_name",
-"shahabad",
-"yes"
+"shahabad"
 ]
 },
 "529": {
@@ -7584,8 +7424,7 @@
 "558": {
 "tier": "key/display",
 "locations": [
-"patna",
-"patna_us"
+"patna"
 ]
 },
 "559": {
@@ -7791,13 +7630,11 @@
 "nabagram",
 "namrup",
 "noadihang",
-"not_eligible_for_dynamic_country_name",
 "rowta",
 "ruga",
 "sohra",
 "sutnga",
 "tezpur",
-"yes",
 "ziro"
 ]
 },
@@ -8403,6 +8240,7 @@
 "kalianda",
 "krui",
 "lampung",
+"liwa_lampung",
 "palas_pasemah",
 "sukadana_lampung"
 ]
@@ -8484,10 +8322,8 @@
 "julah",
 "lombok",
 "melara",
-"not_eligible_for_dynamic_country_name",
 "samprangan",
-"sasak",
-"yes"
+"sasak"
 ]
 },
 "632": {
@@ -8911,7 +8747,6 @@
 "nandian",
 "ningfan",
 "nixi",
-"not_eligible_for_dynamic_country_name",
 "nushan",
 "pangyang",
 "qingshuilangshan",
@@ -8929,7 +8764,6 @@
 "xueshan_yunnan",
 "yangbei",
 "yaozhou",
-"yes",
 "yinshaluo",
 "yongchang_yongchang",
 "yongning_baisheng",
@@ -10667,7 +10501,6 @@
 "ixtacamaxtitlan",
 "mizantla",
 "nauhtlan",
-"not_eligible_for_dynamic_country_name",
 "ocotelolco",
 "pantepec",
 "papantla",
@@ -10691,7 +10524,6 @@
 "xalacinco",
 "xalapa",
 "xicotepec",
-"yes",
 "zacatlan"
 ]
 },
@@ -10755,7 +10587,6 @@
 "guaxaban",
 "huaxtla",
 "nochistlan",
-"not_eligible_for_dynamic_country_name",
 "sauzas",
 "tepecan",
 "teulinchan",
@@ -10764,7 +10595,6 @@
 "xochipillan",
 "xochitepec",
 "yamanquex",
-"yes",
 "yuac",
 "zain"
 ]
@@ -11559,11 +11389,9 @@
 "tier": "node",
 "locations": [
 "canoochee",
-"not_eligible_for_dynamic_country_name",
 "ossabaw",
 "sapelo",
-"tybee",
-"yes"
+"tybee"
 ]
 },
 "930": {
@@ -11692,9 +11520,7 @@
 "kineepikwameekwa",
 "kociihsasiipi",
 "micewehudehik",
-"not_eligible_for_dynamic_country_name",
-"tippecanoe",
-"yes"
+"tippecanoe"
 ]
 },
 "944": {
@@ -11829,9 +11655,7 @@
 "monahassanugh",
 "monasukapanough",
 "mowhemencho",
-"not_eligible_for_dynamic_country_name",
-"rassawek",
-"yes"
+"rassawek"
 ]
 },
 "950": {
@@ -11915,11 +11739,9 @@
 "assorodus",
 "caguya_lake",
 "gahato",
-"not_eligible_for_dynamic_country_name",
 "seneca_lake",
 "skaneateles_lake",
-"skaniatares",
-"yes"
+"skaniatares"
 ]
 },
 "961": {
@@ -12234,10 +12056,8 @@
 "lake_saint_pierre",
 "matawin",
 "mekinac",
-"not_eligible_for_dynamic_country_name",
 "shawinigan",
-"yamachiche",
-"yes"
+"yamachiche"
 ]
 },
 "992": {
@@ -12600,10 +12420,8 @@
 "malartic_lake",
 "matagami_depression",
 "megiscane",
-"not_eligible_for_dynamic_country_name",
 "obaska",
-"wasakin",
-"yes"
+"wasakin"
 ]
 },
 "1004": {
@@ -15253,9 +15071,7 @@
 "agbonle",
 "bussa",
 "kaiama",
-"nikki",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"nikki"
 ]
 },
 "1144": {
@@ -15265,12 +15081,10 @@
 "ikoyi",
 "irawo",
 "kisi",
-"not_eligible_for_dynamic_country_name",
 "ogbomosho",
 "oyo_ile",
 "saki",
-"tede",
-"yes"
+"tede"
 ]
 },
 "1145": {
@@ -15281,10 +15095,8 @@
 "lokoja",
 "minna",
 "mokwa",
-"not_eligible_for_dynamic_country_name",
 "nupeko",
-"tada",
-"yes"
+"tada"
 ]
 },
 "1146": {
@@ -15305,9 +15117,7 @@
 "alkalawa",
 "birni_lalle",
 "birni_nkonni",
-"maradi",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"maradi"
 ]
 },
 "1149": {
@@ -15323,9 +15133,7 @@
 "dutsi",
 "funtua",
 "gusau",
-"not_eligible_for_dynamic_country_name",
-"talata_mafara",
-"yes"
+"talata_mafara"
 ]
 },
 "1151": {
@@ -15450,7 +15258,6 @@
 "ngousa",
 "nguigmi",
 "njimi",
-"not_eligible_for_dynamic_country_name",
 "ounianga",
 "qatrun",
 "rabyanah",
@@ -15466,7 +15273,6 @@
 "seguedine",
 "sherda",
 "tekro",
-"yes",
 "zouar"
 ]
 },
@@ -15485,9 +15291,7 @@
 "keraoua",
 "maroua",
 "mora_cam",
-"not_eligible_for_dynamic_country_name",
-"pouss",
-"yes"
+"pouss"
 ]
 },
 "1161": {
@@ -16750,7 +16554,6 @@
 "nkankezi",
 "north_hlanganu",
 "north_manica_highlands",
-"not_eligible_for_dynamic_country_name",
 "nwalungu",
 "nyangu",
 "nyarinde",
@@ -16773,7 +16576,6 @@
 "tsindi",
 "west_shangana",
 "xai_xai",
-"yes",
 "zavora_point",
 "zembe",
 "zinjanja",
@@ -16840,10 +16642,8 @@
 "maneva",
 "miandrivazo",
 "nosy_ampela",
-"not_eligible_for_dynamic_country_name",
 "rezoky",
-"tsimanandrafozana",
-"yes"
+"tsimanandrafozana"
 ]
 },
 "1194": {
@@ -16955,9 +16755,7 @@
 "locations": [
 "barara",
 "central_east_ethiopian_mountains",
-"not_eligible_for_dynamic_country_name",
 "sharka",
-"yes",
 "ziqwala"
 ]
 },
@@ -17120,9 +16918,7 @@
 "debra_warq",
 "dima",
 "enjebara",
-"ethiopian_mountains",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"ethiopian_mountains"
 ]
 },
 "1224": {
@@ -17626,6 +17422,7 @@
 "ranongga",
 "rao",
 "rapoisi_jungle",
+"rawa_papua",
 "redscar_bay",
 "reef_atoll",
 "remarkable_point",
@@ -18138,6 +17935,7 @@
 "ranongga",
 "rao",
 "rapoisi_jungle",
+"rawa_papua",
 "redscar_bay",
 "reef_atoll",
 "remarkable_point",
@@ -18729,7 +18527,6 @@
 "karlovac",
 "koprivnica",
 "kutina",
-"not_eligible_for_dynamic_country_name",
 "osijek",
 "pakrac",
 "petrinja",
@@ -18742,7 +18539,6 @@
 "vaska",
 "virovitica",
 "vukovar",
-"yes",
 "zagreb"
 ]
 },
@@ -18810,10 +18606,8 @@
 "locations": [
 "chalandritsa",
 "kalavryta",
-"not_eligible_for_dynamic_country_name",
 "patras",
-"vostitsa",
-"yes"
+"vostitsa"
 ]
 },
 "1774": {
@@ -18831,15 +18625,13 @@
 "kiel",
 "lauenburg",
 "lubeck",
-"not_eligible_for_dynamic_country_name",
 "pinneberg",
 "plon",
 "ratzeburg",
 "rendsburg",
 "segeberg",
 "steinburg",
-"stormarn",
-"yes"
+"stormarn"
 ]
 },
 "1776": {
@@ -18906,7 +18698,6 @@
 "loimola",
 "mohko",
 "nadvoitsy",
-"not_eligible_for_dynamic_country_name",
 "nurmes",
 "olonets",
 "ontajarvi",
@@ -18932,8 +18723,7 @@
 "vartsila",
 "vazhiny",
 "viinijarvi",
-"yanis_jarvi",
-"yes"
+"yanis_jarvi"
 ]
 },
 "1777": {
@@ -19157,20 +18947,10 @@
 "tier": "key/display",
 "locations": [
 "tian_shan1",
-"tian_shan10",
-"tian_shan11",
-"tian_shan12",
-"tian_shan13",
-"tian_shan14",
-"tian_shan15",
 "tian_shan2",
 "tian_shan3",
 "tian_shan4",
-"tian_shan5",
-"tian_shan6",
-"tian_shan7",
-"tian_shan8",
-"tian_shan9"
+"tian_shan5"
 ]
 },
 "1785": {
@@ -19274,13 +19054,11 @@
 "mwenezi",
 "nkankezi",
 "north_hlanganu",
-"not_eligible_for_dynamic_country_name",
 "nwalungu",
 "south_hlanganu",
 "thulamela",
 "west_shangana",
 "xai_xai",
-"yes",
 "zinjanja"
 ]
 },
@@ -19343,7 +19121,6 @@
 "nipissis",
 "nipisso",
 "northern_notre_dame_mountains",
-"not_eligible_for_dynamic_country_name",
 "notiskuan",
 "onatchiway",
 "ondaonnentakwi",
@@ -19373,8 +19150,7 @@
 "upuahpukau",
 "valin_mountains",
 "wachilmezi",
-"wolastoq",
-"yes"
+"wolastoq"
 ]
 },
 "1808": {
@@ -19533,7 +19309,6 @@
 "tier": "key/display",
 "locations": [
 "awa",
-"awa_brazil",
 "awa_shikoku"
 ]
 },
@@ -19672,9 +19447,7 @@
 "locations": [
 "kii_mountains",
 "nara",
-"not_eligible_for_dynamic_country_name",
 "takaichi",
-"yes",
 "yoshino"
 ]
 },
@@ -19689,15 +19462,12 @@
 ]
 },
 "1834": {
-"tier": "area-node",
+"tier": "alias",
 "locations": [
-"padise",
-"paide",
-"rakvere",
-"rapla",
-"tallinn",
-"toolse",
-"vasknarva"
+"tartu",
+"valka",
+"vastseliina",
+"vonnu"
 ]
 },
 "1835": {
@@ -19755,6 +19525,7 @@
 "balga",
 "barten",
 "bialobork",
+"brandenburg_prussia",
 "brodnica",
 "chelmno",
 "curonian_lagoon",
@@ -19954,10 +19725,8 @@
 "locations": [
 "dinant",
 "namur",
-"not_eligible_for_dynamic_country_name",
 "orchimont",
-"walcourt",
-"yes"
+"walcourt"
 ]
 },
 "1867": {
@@ -20688,7 +20457,6 @@
 "melnya",
 "mglin",
 "nizhyn",
-"not_eligible_for_dynamic_country_name",
 "novhorod_siverskyi",
 "pochep",
 "popowa_gora",
@@ -20707,7 +20475,6 @@
 "volosovichy",
 "voronizh_chernihiv",
 "vshchizh",
-"yes",
 "znobov"
 ]
 },
@@ -21570,6 +21337,7 @@
 "ranongga",
 "rao",
 "rapoisi_jungle",
+"rawa_papua",
 "redscar_bay",
 "reef_atoll",
 "remarkable_point",
@@ -22396,11 +22164,9 @@
 "jawhar",
 "mayuragiri",
 "nasik",
-"not_eligible_for_dynamic_country_name",
 "salagiri",
 "sinnar",
-"western_ghats_bombay",
-"yes"
+"western_ghats_bombay"
 ]
 },
 "2037": {
@@ -22762,9 +22528,7 @@
 "ballarpur",
 "bhadrachalam",
 "bramhapuri",
-"gadchiroli",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"gadchiroli"
 ]
 },
 "2052": {
@@ -22813,10 +22577,8 @@
 "chittor",
 "mandalgarh",
 "nagahrada",
-"not_eligible_for_dynamic_country_name",
 "phulia",
-"salumbar",
-"yes"
+"salumbar"
 ]
 },
 "2059": {
@@ -22964,9 +22726,7 @@
 "dwarahat",
 "kashipur",
 "nainital",
-"not_eligible_for_dynamic_country_name",
-"rudrapur_kumaon",
-"yes"
+"rudrapur_kumaon"
 ]
 },
 "2070": {
@@ -23731,6 +23491,8 @@
 "taukum_desert",
 "tekabket",
 "tekeli",
+"tian_shan10",
+"tian_shan6",
 "tokkuztara",
 "tolekskoe",
 "toli",
@@ -24316,12 +24078,10 @@
 "hequ_wuding",
 "laoling",
 "luquan",
-"not_eligible_for_dynamic_country_name",
 "rende",
 "shanghe",
 "yanci",
 "yangxin",
-"yes",
 "yuanmou"
 ]
 },
@@ -25112,13 +24872,11 @@
 "kedang",
 "kuntokling",
 "liulin",
-"not_eligible_for_dynamic_country_name",
 "qinlingshan2",
 "sangqu",
 "taktsang",
 "tewo",
-"tso_gon",
-"yes"
+"tso_gon"
 ]
 },
 "2184": {
@@ -25268,9 +25026,7 @@
 "jariekhi",
 "karcha_kala",
 "koban",
-"not_eligible_for_dynamic_country_name",
-"tatartup",
-"yes"
+"tatartup"
 ]
 },
 "2202": {
@@ -25322,8 +25078,7 @@
 "2204": {
 "tier": "key/display",
 "locations": [
-"kars",
-"kars_armenia"
+"kars"
 ]
 },
 "2205": {
@@ -25417,8 +25172,7 @@
 "2220": {
 "tier": "key/display",
 "locations": [
-"bam",
-"bam_esfarayen"
+"bam"
 ]
 },
 "2221": {
@@ -26325,11 +26079,9 @@
 "banfora",
 "farakala",
 "loropeni",
-"not_eligible_for_dynamic_country_name",
 "sanzana",
 "sideradougou",
-"sya",
-"yes"
+"sya"
 ]
 },
 "2256": {
@@ -26338,11 +26090,9 @@
 "bole",
 "chamba",
 "nakpa",
-"not_eligible_for_dynamic_country_name",
 "salaga",
 "wulensi",
-"yendi",
-"yes"
+"yendi"
 ]
 },
 "2260": {
@@ -26411,10 +26161,8 @@
 "bura",
 "dori",
 "kokorou",
-"not_eligible_for_dynamic_country_name",
 "sampelga",
-"tera",
-"yes"
+"tera"
 ]
 },
 "2266": {
@@ -26572,11 +26320,9 @@
 "birnin_kebbi",
 "goronyo",
 "koko",
-"not_eligible_for_dynamic_country_name",
 "sokoto",
 "surame",
-"takassaba",
-"yes"
+"takassaba"
 ]
 },
 "2279": {
@@ -26715,10 +26461,8 @@
 "massenya",
 "moito",
 "mora_cam",
-"not_eligible_for_dynamic_country_name",
 "pouss",
-"tele_nugar",
-"yes"
+"tele_nugar"
 ]
 },
 "2287": {
@@ -26783,9 +26527,7 @@
 "epe",
 "ijebu_ode",
 "ikorundu",
-"ikosi",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"ikosi"
 ]
 },
 "2291": {
@@ -27164,8 +26906,7 @@
 "2328": {
 "tier": "key/display",
 "locations": [
-"al_ula",
-"alula"
+"al_ula"
 ]
 },
 "2329": {
@@ -27579,6 +27320,8 @@
 "taukum_desert",
 "tekabket",
 "tekeli",
+"tian_shan10",
+"tian_shan6",
 "tokkuztara",
 "tolekskoe",
 "toli",
@@ -27923,6 +27666,8 @@
 "monhyin",
 "myedu",
 "myitkyina",
+"naga_hills3",
+"naga_hills4",
 "phakant",
 "putao",
 "sagaing_jungle",
@@ -28089,6 +27834,16 @@
 "vithold_hammami"
 ]
 },
+"2407": {
+"tier": "alias",
+"locations": [
+"boryspil",
+"kozelets",
+"oster",
+"pereiaslav",
+"yaroslavka"
+]
+},
 "2408": {
 "tier": "key/display",
 "locations": [
@@ -28146,6 +27901,60 @@
 "tier": "key/display",
 "locations": [
 "theodoro"
+]
+},
+"2411": {
+"tier": "alias",
+"locations": [
+"berestyn",
+"hryshyne",
+"ingul",
+"karlivka",
+"kichkas",
+"kodak",
+"kolomak",
+"kryvyi_rih",
+"mala_vyska",
+"mykytyn_rih",
+"myshuryn_rih",
+"oril",
+"pavlohrad",
+"petrove",
+"rozdory",
+"samarchyk",
+"sofiivka",
+"ternivka",
+"tomakivka",
+"umanske",
+"usivka",
+"yelanets"
+]
+},
+"2412": {
+"tier": "alias",
+"locations": [
+"berestyn",
+"hryshyne",
+"ingul",
+"karlivka",
+"kichkas",
+"kodak",
+"kolomak",
+"kryvyi_rih",
+"mala_vyska",
+"mykytyn_rih",
+"myshuryn_rih",
+"oril",
+"pavlohrad",
+"petrove",
+"rozdory",
+"samarchyk",
+"sofiivka",
+"ternivka",
+"tomakivka",
+"umanske",
+"usivka",
+"yelanets"
 ]
 },
 "2413": {
@@ -29145,11 +28954,9 @@
 "hamada_el_hamra",
 "murzuk",
 "murzuk_desert",
-"not_eligible_for_dynamic_country_name",
 "sabha",
 "sokna",
 "ubari",
-"yes",
 "zawila"
 ]
 },
@@ -30345,9 +30152,7 @@
 "locations": [
 "agouasaque",
 "gichthanne",
-"not_eligible_for_dynamic_country_name",
-"patoka",
-"yes"
+"patoka"
 ]
 },
 "2524": {
@@ -32084,11 +31889,9 @@
 "locations": [
 "bakhalal",
 "chacchoben",
-"not_eligible_for_dynamic_country_name",
 "telantunich",
 "tixmul",
-"xpaicheil",
-"yes"
+"xpaicheil"
 ]
 },
 "2639": {
@@ -32197,10 +32000,8 @@
 "cubao",
 "magorix",
 "moca",
-"not_eligible_for_dynamic_country_name",
 "samana",
-"yaqui",
-"yes"
+"yaqui"
 ]
 },
 "2664": {
@@ -32359,6 +32160,7 @@
 "kalianda",
 "krui",
 "lampung",
+"liwa_lampung",
 "palas_pasemah",
 "sukadana_lampung"
 ]
@@ -32986,11 +32788,9 @@
 "locations": [
 "banda_island",
 "kobroor",
-"not_eligible_for_dynamic_country_name",
 "ohoi_ewur",
 "trangan",
-"wokam",
-"yes"
+"wokam"
 ]
 },
 "2727": {
@@ -33393,9 +33193,7 @@
 "locations": [
 "bilo",
 "gambo",
-"maldarede",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"maldarede"
 ]
 },
 "2763": {
@@ -33426,9 +33224,7 @@
 "abala",
 "adigrat",
 "agula",
-"mekele",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"mekele"
 ]
 },
 "2769": {
@@ -33615,6 +33411,7 @@
 "2790": {
 "tier": "area-fallback",
 "locations": [
+"alula",
 "bandarbeyla",
 "barbacadle",
 "bargaal",
@@ -33643,6 +33440,7 @@
 "2792": {
 "tier": "area-fallback",
 "locations": [
+"alula",
 "bandarbeyla",
 "barbacadle",
 "bargaal",
@@ -36387,9 +36185,7 @@
 "locations": [
 "borgloon",
 "bree",
-"hasselt",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"hasselt"
 ]
 },
 "2975": {
@@ -36718,10 +36514,8 @@
 "ikongo",
 "manabondro",
 "masindrano",
-"not_eligible_for_dynamic_country_name",
 "rasanga",
-"vohipeno",
-"yes"
+"vohipeno"
 ]
 },
 "4027": {
@@ -36730,9 +36524,7 @@
 "ambositra",
 "fianarantsoa",
 "ikalamavony",
-"midongy",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"midongy"
 ]
 },
 "4031": {
@@ -37197,7 +36989,6 @@
 "meshchovsk",
 "mikhailovka",
 "mtsensk",
-"not_eligible_for_dynamic_country_name",
 "novosil",
 "obolensk",
 "odoyev",
@@ -37211,7 +37002,6 @@
 "volkona",
 "vorotynsk",
 "vorotynsk_novosil",
-"yes",
 "yukhnov",
 "zvenihorod_siverskyi"
 ]
@@ -37272,11 +37062,9 @@
 "magherafelt",
 "monaghan",
 "newtownards",
-"not_eligible_for_dynamic_country_name",
 "oriel",
 "raphoe",
-"strabane",
-"yes"
+"strabane"
 ]
 },
 "4122": {
@@ -37383,7 +37171,6 @@
 "loimola",
 "mohko",
 "nadvoitsy",
-"not_eligible_for_dynamic_country_name",
 "nurmes",
 "olonets",
 "ontajarvi",
@@ -37409,8 +37196,7 @@
 "vartsila",
 "vazhiny",
 "viinijarvi",
-"yanis_jarvi",
-"yes"
+"yanis_jarvi"
 ]
 },
 "4125": {
@@ -37891,22 +37677,16 @@
 "4175": {
 "tier": "area-node",
 "locations": [
-"argyrokastro",
-"avlonya",
 "ballsh",
 "berat",
-"butrint",
 "debar",
 "devol",
 "dukagjini",
 "elbasan",
 "has",
 "kavaje",
-"kleisoura_epirus",
 "koman",
-"konitsa",
 "lezha",
-"pindus_mountains6",
 "shkoder",
 "tirana"
 ]
@@ -37997,9 +37777,7 @@
 "kaisou",
 "minamimuro",
 "naga",
-"nishimuro",
-"not_eligible_for_dynamic_country_name",
-"yes"
+"nishimuro"
 ]
 },
 "4188": {
@@ -38519,13 +38297,9 @@
 "st_martin",
 "straupe",
 "suure_jaani",
-"tartu",
 "valjala",
-"valka",
 "valmiera",
-"vastseliina",
-"viljandi",
-"vonnu"
+"viljandi"
 ]
 },
 "4242": {
@@ -39895,11 +39669,9 @@
 "ichishi",
 "iga",
 "mie",
-"not_eligible_for_dynamic_country_name",
 "suzuka",
 "taki",
-"watarai",
-"yes"
+"watarai"
 ]
 },
 "4360": {
@@ -40359,9 +40131,7 @@
 "tier": "key/display",
 "locations": [
 "naga_hills1",
-"naga_hills2",
-"naga_hills3",
-"naga_hills4"
+"naga_hills2"
 ]
 },
 "4404": {
@@ -41052,8 +40822,7 @@
 "4447": {
 "tier": "key/display",
 "locations": [
-"patna",
-"patna_us"
+"patna"
 ]
 },
 "4448": {
@@ -41162,10 +40931,8 @@
 "ghatsila",
 "gorumahisani_range",
 "nilagiri",
-"not_eligible_for_dynamic_country_name",
 "rairangpur",
-"simlipal_hills",
-"yes"
+"simlipal_hills"
 ]
 },
 "4453": {
@@ -41588,10 +41355,8 @@
 "locations": [
 "dalingkot",
 "gangtok",
-"not_eligible_for_dynamic_country_name",
 "phari",
 "tsunthang",
-"yes",
 "yuksom"
 ]
 },
@@ -42319,8 +42084,7 @@
 "4525": {
 "tier": "key/display",
 "locations": [
-"rawa",
-"rawa_papua"
+"rawa"
 ]
 },
 "4526": {
@@ -42616,6 +42380,28 @@
 "zvenyhorod"
 ]
 },
+"4542": {
+"tier": "area-fallback",
+"locations": [
+"chornukhy",
+"hadiach",
+"horodyshche",
+"horoshino",
+"hovtva",
+"ichnia",
+"kremenchuk",
+"lubny",
+"lypova_dolyna",
+"myrhorod",
+"opishnya",
+"pryluky",
+"pyriatyn",
+"romen",
+"velyki_sorochyntsi",
+"yahotyn",
+"zolotonosha"
+]
+},
 "4543": {
 "tier": "key/display",
 "locations": [
@@ -42905,6 +42691,7 @@
 "annaba",
 "baghai",
 "bazer_sakhra",
+"beja_TUN",
 "bou_hajla",
 "chebba",
 "cheffia",
@@ -43788,9 +43575,7 @@
 "brosse",
 "charroux",
 "gueret",
-"not_eligible_for_dynamic_country_name",
-"rochechouart",
-"yes"
+"rochechouart"
 ]
 },
 "4698": {
@@ -44222,11 +44007,9 @@
 "tier": "node",
 "locations": [
 "ales",
-"not_eligible_for_dynamic_country_name",
 "oristano",
 "sorgono",
-"terralba",
-"yes"
+"terralba"
 ]
 },
 "4736": {
@@ -44324,8 +44107,7 @@
 "4748": {
 "tier": "key/display",
 "locations": [
-"brandenburg",
-"brandenburg_prussia"
+"brandenburg"
 ]
 },
 "4749": {
@@ -44573,10 +44355,9 @@
 ]
 },
 "4779": {
-"tier": "key/display",
+"tier": "alias",
 "locations": [
-"gallipoli",
-"gallipoliita"
+"gallipoli"
 ]
 },
 "4780": {

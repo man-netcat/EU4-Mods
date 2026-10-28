@@ -5,6 +5,7 @@ technology_group = western
 religion = catholic
 primary_culture = saxon
 add_accepted_culture = latvian
+add_accepted_culture = estonian
 capital = 37
 
 1542.1.1 = {

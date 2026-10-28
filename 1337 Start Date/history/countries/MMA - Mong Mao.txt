@@ -4,7 +4,7 @@ technology_group = chinese
 religion = buddhism
 primary_culture = assamese
 add_accepted_culture = shan
-capital = 660 # Dehong
+capital = 661 # Dehong
 
 monarch = {
 	name = "Hkan Hpa"

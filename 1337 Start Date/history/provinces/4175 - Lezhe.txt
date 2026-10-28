@@ -1,8 +1,9 @@
 #4175 - Lezhe, Scuttari, Northern Albania
 
-owner = EPI
-controller = EPI
-add_core = EPI
+owner = BYZ
+controller = BYZ
+add_core = BYZ
+add_core = SER
 is_city = yes
 culture = albanian
 religion = orthodox

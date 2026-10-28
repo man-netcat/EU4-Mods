@@ -143,6 +143,12 @@ def main():
     dropped = [p for p, (t, l) in res.items() if top(l[0]) not in ok[reg.get(area.get(p))]]
     for p in dropped:
         del res[p]
+    # a name can match locations in several parts of the world (Beja in Portugal and in Tunisia, Rothenburg, Gallipoli):
+    # keep a province's locations that sit in the EU5 regions its own region matches
+    for p, (t, l) in list(res.items()):
+        keep = [x for x in l if top(x) in ok[reg.get(area.get(p))]]
+        if keep and len(keep) < len(l):
+            res[p] = (t, keep)
     # area-node: EU4 area whose localised name equals an EU5 area/province name
     a4name = {k: v for k, v in yml(EU4_GAME / "localisation/areas_regions_l_english.yml").items() if k.endswith("_area")}
     used = {x for _, l in res.values() for x in l}

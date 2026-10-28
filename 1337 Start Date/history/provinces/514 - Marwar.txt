@@ -1,15 +1,15 @@
 #514 - Marwar
 
-owner = MAW
-controller = MAW
+owner = DLH
+controller = DLH
+add_core = DLH
 add_core = JSL
-add_core = MAW
 is_city = yes
 culture = rajput
 religion = hinduism
 add_rajputs_or_marathas_or_nobles_effect = yes
 capital = "Mandore"
-trade_goods = cotton
+trade_goods = gold
 hre = no
 base_tax = 8
 base_production = 7

@@ -1,13 +1,13 @@
 #661 - Dali
 
-owner = CDL
-controller = CDL
-add_core = CDL
+owner = MMA
+controller = MMA
+add_core = MMA
 is_city = yes
 culture = assamese
 religion = buddhism
 capital = "Dali"
-trade_goods = tea
+trade_goods = naval_supplies
 hre = no
 base_tax = 6 
 base_production = 6

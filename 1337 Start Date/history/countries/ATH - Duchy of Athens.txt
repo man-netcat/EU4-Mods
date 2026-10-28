@@ -6,7 +6,7 @@ add_accepted_culture = greek
 add_accepted_culture = maltese
 religion = catholic
 technology_group = western
-capital = 144	#Athens
+capital = 146	#Athens
 fixed_capital = 146 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {

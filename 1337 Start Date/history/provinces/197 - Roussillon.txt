@@ -1,9 +1,10 @@
 # 197 Roussillon - Principal cities: Perpignan
 
-owner = ARA
-controller = ARA
+owner = MJO
+controller = MJO
 add_core = ARA
 add_core = CAT
+add_core = MJO
 is_city = yes
 capital = "Perpignan"
 culture = catalan
@@ -13,7 +14,6 @@ base_tax = 3
 base_production = 3
 trade_goods = wine
 base_manpower = 2
-fort_15th = yes
 
 
 
