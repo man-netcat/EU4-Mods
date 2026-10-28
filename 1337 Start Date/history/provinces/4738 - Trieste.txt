@@ -1,18 +1,16 @@
 # 4738 - Trieste
 
-owner = ORT
-controller = ORT
-add_core = CAC
-add_core = HAB
-add_core = ORT
+owner = VEN
+controller = VEN
+add_core = VEN
 is_city = yes
 culture = slovene 
 religion = catholic 
-hre = yes
-base_tax = 4
-base_production = 3
-trade_goods = fish
-base_manpower = 2    
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 1    
 capital = "Trieste" 
 
 discovered_by = western

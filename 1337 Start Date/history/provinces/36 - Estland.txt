@@ -7,12 +7,11 @@ is_city = yes
 culture = estonian
 religion = catholic
 hre = no
-base_tax = 4
-base_production = 4
+base_tax = 3
+base_production = 3
 trade_goods = grain
 base_manpower = 2
 capital = "Reval"
-fort_15th = yes #Fortifications of Reval, Wesenberg, Toompea Castle
 center_of_trade = 1
 
 

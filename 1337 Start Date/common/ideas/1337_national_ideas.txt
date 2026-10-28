@@ -385,41 +385,6 @@ GOB_ideas = {
 	}
 }
 
-GOR_ideas = {
-	start = {
-		legitimacy = 1.0
-		global_unrest = -1.0
-	}
-	bonus = {
-		prestige = 1.0
-	}
-	trigger = {
-		tag = GOR
-	}
-	free = yes
-	GOR_idea_1 = {
-		land_morale = 0.1
-	}
-	GOR_idea_2 = {
-		build_cost = -0.1
-	}
-	GOR_idea_3 = {
-		global_manpower_modifier = 0.15
-	}
-	GOR_idea_4 = {
-		infantry_power = 0.1
-	}
-	GOR_idea_5 = {
-		production_efficiency = 0.1
-	}
-	GOR_idea_6 = {
-		inflation_reduction = 0.1
-	}
-	GOR_idea_7 = {
-		diplomatic_reputation = 1.0
-	}
-}
-
 GRG_ideas = {
 	start = {
 		cavalry_power = 0.125
@@ -486,7 +451,7 @@ HAL_ideas = {
 		global_tax_modifier = 0.1
 	}
 	HAL_idea_7 = {
-		diplomats = 1.0
+		global_ship_cost = -0.1
 	}
 }
 
@@ -1333,35 +1298,35 @@ RDY_ideas = {
 SBL_ideas = {
 	start = {
 		advisor_cost = -0.1
-		inflation_reduction = 0.1
+		land_forcelimit_modifier = 0.2
 	}
 	bonus = {
-		land_forcelimit_modifier = 0.25
+		infantry_power = 0.1
 	}
 	trigger = {
 		tag = SBL
 	}
 	free = yes
 	SBL_idea_1 = {
-		infantry_power = 0.1
-	}
-	SBL_idea_2 = {
 		core_creation = -0.15
 	}
-	SBL_idea_3 = {
+	SBL_idea_2 = {
 		global_unrest = -1.0
 	}
-	SBL_idea_4 = {
+	SBL_idea_3 = {
 		land_morale = 0.1
 	}
+	SBL_idea_4 = {
+		inflation_reduction = 0.1
+	}
 	SBL_idea_5 = {
-		global_tax_modifier = 0.1
+		hostile_attrition = 1.0
 	}
 	SBL_idea_6 = {
-		global_trade_goods_size_modifier = 0.1
+		diplomatic_upkeep = 1.0
 	}
 	SBL_idea_7 = {
-		hostile_attrition = 1.0
+		global_tax_modifier = 0.1
 	}
 }
 

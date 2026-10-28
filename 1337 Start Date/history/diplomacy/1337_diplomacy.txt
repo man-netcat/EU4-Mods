@@ -4,6 +4,7 @@ vassal = { first = ENG second = PLE start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = ENG second = AQN start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = SBL second = LOI start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = PLE second = KID start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = PLE second = ORD start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = PLE second = DMS start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = PLE second = ULS start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = SWE second = SKE start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -64,6 +65,7 @@ alliance = { first = TEU second = BOH start_date = 1337.4.1 end_date = 1836.12.3
 vassal = { first = LIT second = PLT start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = LIT second = POL start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = BOH second = MVA start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = BOH second = GLG start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = BOH second = OPL start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = BOH second = LBV start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = HUN second = POL start_date = 1337.4.1 end_date = 1836.12.31 }

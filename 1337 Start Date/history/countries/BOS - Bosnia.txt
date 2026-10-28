@@ -40,6 +40,7 @@ heir = {
 
 1337.3.1 = {
 	add_truce_with = BOH
+	add_truce_with = GLG
 	add_truce_with = MVA
 	add_truce_with = OPL
 }

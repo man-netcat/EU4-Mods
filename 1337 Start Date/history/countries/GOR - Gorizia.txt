@@ -3,9 +3,8 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = western
 primary_culture = austrian
-add_accepted_culture = slovene
 religion = catholic
-capital = 4751
+capital = 4759
 
 monarch = {
 	name = "Johann Heinrich"

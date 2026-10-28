@@ -144,13 +144,13 @@ def main():
     for p, (t, l) in res.items():
         votes[reg.get(area.get(p))][top(l[0])] += 1
     ok = {r: {k for k, v in c.items() if v >= 0.08 * sum(c.values())} for r, c in votes.items()}
-    dropped = [p for p, (t, l) in res.items() if top(l[0]) not in ok[reg.get(area.get(p))]]
+    dropped = [p for p, (t, l) in res.items() if t != "alias" and top(l[0]) not in ok[reg.get(area.get(p))]]  # a hand alias is not second-guessed
     for p in dropped:
         del res[p]
     # a name can match locations in several parts of the world (Beja in Portugal and in Tunisia, Rothenburg, Gallipoli):
     # keep a province's locations that sit in the EU5 regions its own region matches
     for p, (t, l) in list(res.items()):
-        keep = [x for x in l if top(x) in ok[reg.get(area.get(p))]]
+        keep = [x for x in l if top(x) in ok[reg.get(area.get(p))]] if t != "alias" else l
         if keep and len(keep) < len(l):
             res[p] = (t, keep)
     # area-node: EU4 area whose localised name equals an EU5 area/province name

@@ -114,7 +114,7 @@
 "skien"
 ],
 "4": [
-"dalarna_province"
+"vastmanland_province"
 ],
 "48": [
 "kolobrzeg"
@@ -138,7 +138,8 @@
 "gorlitz"
 ],
 "1769": [
-"gorizia_province"
+"gorizia",
+"tolmin"
 ],
 "32": [
 "korela_province"
@@ -433,5 +434,225 @@
 "vitoria",
 "salvatierra",
 "laguardia"
+],
+"8": [
+"dalarna_province"
+],
+"1930": [
+"kastelholm"
+],
+"18": [
+"ume_lappmark_province",
+"lule_lappmark_province",
+"torne_lappmark_province",
+"kemi_lappmark_province"
+],
+"22": [
+"hedmark_province",
+"oppland_province"
+],
+"4145": [
+"agder_province"
+],
+"4123": [
+"satakunta_province"
+],
+"4152": [
+"kajanaland_province"
+],
+"247": [
+"cumberland_province",
+"westmorland_province"
+],
+"4785": [
+"west_riding_province"
+],
+"1860": [
+"norfolk_province",
+"suffolk_province"
+],
+"4361": [
+"teviotdale_province"
+],
+"249": [
+"strathclyde_province"
+],
+"370": [
+"reikjavik",
+"keflavik",
+"selfoss",
+"hvolsvollur",
+"skalholt",
+"thingvellir",
+"borgarnes"
+],
+"1979": [
+"torshofn"
+],
+"1745": [
+"montana_province"
+],
+"1747": [
+"caceres_province"
+],
+"2751": [
+"cuenca_province"
+],
+"2754": [
+"east_mancha_province",
+"west_mancha_province"
+],
+"4549": [
+"jativa_province"
+],
+"4558": [
+"ourense"
+],
+"4559": [
+"ciudadela_de_menorca"
+],
+"375": [
+"limerick_province",
+"clare_province"
+],
+"4377": [
+"tipperary_province"
+],
+"36": [
+"estonia_province"
+],
+"37": [
+"inner_livonia_province"
+],
+"4241": [
+"north_livonia_province"
+],
+"86": [
+"munsterland_province"
+],
+"2973": [
+"emsland_province"
+],
+"261": [
+"halych_province"
+],
+"2424": [
+"przemysl_province"
+],
+"2961": [
+"lviv_province"
+],
+"4541": [
+"drohobych_province"
+],
+"264": [
+"wroclaw_province"
+],
+"2966": [
+"glogow_province"
+],
+"4238": [
+"legnica_province"
+],
+"263": [
+"tesin_province"
+],
+"4726": [
+"opavsko_province"
+],
+"1841": [
+"upper_prussia_province"
+],
+"4760": [
+"braunau"
+],
+"4724": [
+"chrudimsko_province"
+],
+"4762": [
+"ober_dem_wienerwald_province",
+"unter_dem_wienerwald_province"
+],
+"2963": [
+"naklo_province"
+],
+"34": [
+"vodskaya_province"
+],
+"4148": [
+"velikiye_luki"
+],
+"4124": [
+"aunus_karelia_province",
+"inner_aunus_karelia_province"
+],
+"313": [
+"pomorye_province"
+],
+"295": [
+"moscow_province"
+],
+"4251": [
+"mozhaysk_province"
+],
+"4252": [
+"kolomna_province",
+"zvenigorod_province"
+],
+"4254": [
+"shuya_province"
+],
+"281": [
+"western_podolia_province"
+],
+"4540": [
+"vinnytsia_province"
+],
+"4247": [
+"ovruch_province"
+],
+"1756": [
+"basarabia_province"
+],
+"2405": [
+"orhei_province"
+],
+"4530": [
+"barlad_province"
+],
+"4246": [
+"mstsislaw_province"
+],
+"160": [
+"north_oltenia_province",
+"south_oltenia_province"
+],
+"161": [
+"north_muntenia_province",
+"west_muntenia_province"
+],
+"1318": [
+"szepes_province"
+],
+"4175": [
+"albania_province"
+],
+"143": [
+"illyria_province"
+],
+"4239": [
+"belgrad"
+],
+"3000": [
+"nis_province"
+],
+"4757": [
+"zlatibor_province"
+],
+"4703": [
+"sredets_province"
+],
+"4705": [
+"rhodopes_province"
 ]
 }

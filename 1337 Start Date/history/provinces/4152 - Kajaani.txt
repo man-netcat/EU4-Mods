@@ -1,11 +1,7 @@
 #4152 - Kuusamo incl Maanselkä and Kitka
 
-owner = SWE
-controller = SWE
-add_core = SWE
-is_city = yes
 culture = sapmi
-religion = catholic
+religion = shamanism
 hre = no
 base_tax = 1 
 base_production = 1

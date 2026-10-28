@@ -1,17 +1,16 @@
 #4541 - Drohobycz
 
-owner = VOL
-controller = VOL
+owner = HAL
+controller = HAL
 add_core = HAL
-add_core = VOL
 is_city = yes
 culture = ruthenian
 religion = orthodox
 hre = no
-base_tax = 2
-base_production = 2
-trade_goods = livestock
-base_manpower = 1
+base_tax = 3
+base_production = 3
+trade_goods = salt
+base_manpower = 2
 capital = "Drohobycz"
 
 

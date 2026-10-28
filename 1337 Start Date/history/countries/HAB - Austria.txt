@@ -3,10 +3,9 @@ government = monarchy
 add_government_reform = austrian_archduchy_reform
 government_rank = 1
 primary_culture = bavarian
-add_accepted_culture = austrian
 religion = catholic
 technology_group = western
-capital = 134 # Wien
+capital = 4762 # Wien
 national_focus = ADM
 
 monarch = {
@@ -1233,6 +1232,7 @@ add_government_reform = autocracy_reform }
 
 1337.3.1 = {
 	add_truce_with = BOH
+	add_truce_with = GLG
 	add_truce_with = MVA
 	add_truce_with = OPL
 }

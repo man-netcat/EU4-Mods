@@ -1,16 +1,15 @@
 owner = BYZ
 controller = BYZ
-add_core = BUL
 add_core = BYZ
 is_city = yes
 culture = bulgarian
 religion = orthodox
 capital = "Gumulcine"
-trade_goods = livestock
+trade_goods = fur
 hre = no
-base_tax = 2
-base_production = 1
-base_manpower = 3
+base_tax = 3
+base_production = 2
+base_manpower = 5
 
 
 

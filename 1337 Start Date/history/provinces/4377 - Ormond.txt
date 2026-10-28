@@ -1,15 +1,15 @@
 #4377 - Ormond
 
-owner = DMS
-controller = DMS
-add_core = DMS
+owner = ORD
+controller = ORD
+add_core = ORD
 is_city = yes
 culture = irish
 religion = catholic
 hre = no
-base_tax = 3
+base_tax = 4
 base_production = 3
-trade_goods = livestock
+trade_goods = gold
 base_manpower = 1
 capital = "Kilkenny"
 discovered_by = western

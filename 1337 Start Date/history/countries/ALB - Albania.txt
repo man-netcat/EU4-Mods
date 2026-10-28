@@ -5,7 +5,7 @@ primary_culture = albanian
 add_accepted_culture = greek
 religion = catholic
 technology_group = eastern
-capital = 4174 # Lezhe
+capital = 4750 # Lezhe
 
 # The League of Lezhe
 

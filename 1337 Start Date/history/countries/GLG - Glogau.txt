@@ -290,3 +290,10 @@ monarch = {
 		mil = 1
 	}
 }
+
+1337.3.1 = {
+	add_truce_with = BOS
+	add_truce_with = HAB
+	add_truce_with = HUN
+	add_truce_with = POL
+}

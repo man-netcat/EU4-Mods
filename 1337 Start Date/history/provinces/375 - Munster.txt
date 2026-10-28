@@ -1,21 +1,22 @@
 #375 - Munster
 
-owner = MCM
-controller = MCM
-add_core = MCM
+owner = DMS
+controller = DMS
+add_core = DMS
 is_city = yes
-culture = hannoverian
+culture = irish
 religion = catholic
-hre = yes
+hre = no
 base_tax = 3
 base_production = 3
-trade_goods = fish
+trade_goods = cloth
 base_manpower = 2
 capital = "Limerick"
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
+fort_15th = yes
 
 1642.1.1 = { revolt = { type = nationalist_rebels size = 1 }  }
 1642.6.7 = {

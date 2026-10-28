@@ -3,7 +3,7 @@ add_government_reform = feudalism_reform
 primary_culture = icelandic
 religion = catholic
 technology_group = western
-capital = 1979 #Rejkyavik
+capital = 370 #Rejkyavik
 
 monarch = {
 	name = "Magnus VII"

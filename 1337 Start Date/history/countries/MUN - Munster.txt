@@ -7,6 +7,15 @@ technology_group = western
 capital = 86	# Münster
 fixed_capital = 86 # Cannot move capital away from this province & no power cost to move to it
 
+monarch = {
+	name = "Ludwig"
+	dynasty = "Hessen"
+	birth_date = 1283.6.24
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1450.6.3 = {
 	monarch = {
 		name = "Walram I"

@@ -1,16 +1,16 @@
 #2966 - Glogau 
 
-owner = BOH
-controller = BOH
-add_core = BOH
+owner = GLG
+controller = GLG
+add_core = GLG
 is_city = yes
 culture = schlesian
 religion = catholic
 capital = "Glogau"
-trade_goods = iron
+trade_goods = cloth
 hre = yes
 base_tax = 3
-base_production = 4
+base_production = 3
 base_manpower = 2
 discovered_by = KAZ
 discovered_by = CRI

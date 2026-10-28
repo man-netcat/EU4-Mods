@@ -7,12 +7,13 @@ is_city = yes
 culture = latvian
 religion = catholic
 capital = "Fellin"
-trade_goods = livestock
+trade_goods = fur
 hre = no
 base_tax = 3 
 base_production = 3
 base_manpower = 2
 discovered_by = western
 discovered_by = eastern
+fort_15th = yes
 
 1542.1.1 = { religion = protestant} # Unknown date

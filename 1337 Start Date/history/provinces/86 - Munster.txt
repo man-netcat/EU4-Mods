@@ -1,17 +1,16 @@
 # 86 - Munster
 
-owner = MCM
-controller = MCM
-add_core = MCM
+owner = MUN
+controller = MUN
+add_core = MUN
 is_city = yes
 culture = hannoverian
 religion = catholic
-trade_goods = cloth
+trade_goods = wool
 capital = "Münster"
-base_tax = 3
-base_production = 3
-base_manpower = 2
-fort_15th = yes
+base_tax = 5
+base_production = 4
+base_manpower = 4
 hre = yes
 
 

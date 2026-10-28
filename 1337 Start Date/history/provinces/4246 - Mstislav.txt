@@ -1,17 +1,16 @@
 #4246 - Mstislav
 
-owner = LIT
-controller = LIT
-add_core = LIT
-add_core = MIB
+owner = SMO
+controller = SMO
+add_core = SMO
 is_city = yes
-culture = byelorussian
+culture = ryazanian
 religion = orthodox 
 hre = no
-base_tax = 1
-base_production = 1
-trade_goods = wool 
-base_manpower = 1
+base_tax = 3
+base_production = 3
+trade_goods = cloth 
+base_manpower = 2
 capital = "Mstsislaw"
 discovered_by = western
 discovered_by = eastern

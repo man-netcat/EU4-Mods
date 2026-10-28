@@ -1,15 +1,15 @@
-government = theocracy
-add_government_reform = leading_clergy_reform
+government = monarchy
+add_government_reform = tanistry_reform
 government_rank = 1
 technology_group = western
-primary_culture = hannoverian
+primary_culture = irish
 religion = catholic
-capital = 375	# Kingdom of Desmond
+capital = 4378	# Kingdom of Desmond
 
 monarch = {
-	name = "Ludwig"
-	dynasty = "Hessen"
-	birth_date = 1283.6.24
+	name = "Cormac"
+	dynasty = "Mac Carthaigh"
+	birth_date = 1294.1.1
 	adm = 3
 	dip = 3
 	mil = 3

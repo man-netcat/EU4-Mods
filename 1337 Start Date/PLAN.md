@@ -186,7 +186,7 @@ area, sharing its location pool, or unmatched) and, per EU4 area, the EU5 provin
 aliases in `data/aliases.json` are written from that. Done so far: ~130 hand aliases (Italy, France, Low Countries,
 Germany, Iberia, the Balkans, the Pontic steppe), a name match is kept to the part of the world its province is in
 (Beja/Tunisia, Gallipoli/Apulia, Rothenburg), Navarre owns Navarra, Venice the lagoon, Florence its province, Ragusa Dubrovnik.
-Europe: 602 of 728 land provinces certain, 126 low confidence (mostly inside one owner's land, so ownership is unaffected).
+Europe: 677 of 728 land provinces certain, 51 low confidence (all inside one owner's land or on EU4 sub-province splits EU5 has no match for). Hand aliases are no longer second-guessed by the region filter.
 
 ## Quality checks (validate.py)
 

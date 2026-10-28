@@ -3,7 +3,7 @@ add_government_reform = feudalism_reform
 technology_group = eastern
 religion = orthodox
 primary_culture = ruthenian
-capital = 4541	# Volhynia
+capital = 2962	# Volhynia
 
 government_rank = 2
 
