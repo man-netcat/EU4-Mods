@@ -1,5 +1,5 @@
-government = theocracy
-add_government_reform = ajuuraan_theocracy_reform
+government = monarchy
+add_government_reform = feudalism_reform
 technology_group = east_african
 unit_type = sub_saharan
 religion = sunni

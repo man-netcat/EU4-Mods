@@ -1,5 +1,5 @@
-government = theocracy
-add_government_reform = leading_clergy_reform
+government = republic
+add_government_reform = plutocratic_reform
 technology_group = western
 primary_culture = saxon
 add_accepted_culture = baltic_german

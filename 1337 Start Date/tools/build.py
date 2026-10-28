@@ -431,6 +431,13 @@ def step_countries(table, po, cmap, rmap, stats):
                 base = re.sub(r"(?m)^primary_culture\s*=\s*\w+", f"primary_culture = {cul}", base)
             if rel:
                 base = re.sub(r"(?m)^religion\s*=\s*\w+", f"religion = {rel}", base)
+            want = GOV_DEFAULT.get(i.get("gov"))
+            have = re.search(r"(?m)^government\s*=\s*(\w+)", base)
+            if want and have and have[1] != want[0] and {have[1], want[0]} <= {"monarchy", "republic", "theocracy"}:
+                # EU5 types this state differently (Italian signorie as republics, a bishopric as theocracy): follow it
+                base = strip_depth0(base, r"\s*add_government_reform\s*=")
+                base = re.sub(r"(?m)^government\s*=\s*\w+", f"government = {want[0]}\nadd_government_reform = {want[1]}", base, count=1)
+                stats["government_changed"] += 1
             if i.get("rank") in RANK:
                 if re.search(r"(?m)^government_rank\s*=", base):
                     base = re.sub(r"(?m)^government_rank\s*=\s*\d", f"government_rank = {RANK[i['rank']]}", base)
@@ -519,6 +526,29 @@ def step_dormant(table, stats):
         (out / f.name).write_bytes(res.rstrip().encode("latin-1", "replace") + b"\n")
         n += 1
     return n
+
+
+def step_capitals():
+    """A realm's capital has to be a province it owns. Where the capital of a base-game file (or of EU5) fell to
+    another owner in the mapping, the realm's most developed province becomes the capital."""
+    owner, dev = {}, defaultdict(list)
+    for f in (MOD / "history/provinces").iterdir():
+        top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
+        m = re.search(r"(?m)^owner = (\w+)", top)
+        if m:
+            pid = int(re.match(r"\d+", f.name)[0])
+            owner[pid] = m[1]
+            dev[m[1]].append((sum(int(x) for x in re.findall(r"(?m)^base_(?:tax|production|manpower)\s*=\s*(\d+)", top)), -pid))
+    fixed = 0
+    for f in (MOD / "history/countries").glob("*.txt"):
+        tag = f.name[:3]
+        t = f.read_text(encoding="latin-1")
+        m = re.search(r"(?m)^capital = (\d+)", t)
+        if tag in dev and m and owner.get(int(m[1])) != tag:
+            new = -max(dev[tag])[1]
+            f.write_text(t[:m.start()] + f"capital = {new}" + t[m.end():], encoding="latin-1")
+            fixed += 1
+    return fixed
 
 
 def step_accepted(table):
@@ -1009,6 +1039,7 @@ def main():
     import ages, ideas as _ideas
     stats["age"] = ages.write(_ideas.vanilla_modifiers())
     stats["rivals"] = step_rivals(table)
+    stats["capitals_fixed"] = step_capitals()
     stats["accepted_cultures"] = step_accepted(table)
     stats["bookmark"] = step_bookmark(table)
     import flags

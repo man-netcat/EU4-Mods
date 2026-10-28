@@ -191,6 +191,16 @@ def main():
             errs.append(f"ages: missing loc {k}")
     if f'name = "{_ages.AGE}"' not in (MOD / "interface/ages_view.gui").read_text(encoding="latin-1"):
         errs.append("ages: no window for the new age in ages_view.gui")
+    # a realm's capital is one of its own provinces
+    capital_owner = {}
+    for f in (MOD / "history/provinces").iterdir():
+        m = re.search(r"(?m)^owner\s*=\s*(\w+)", re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0])
+        if m:
+            capital_owner[int(re.match(r"\d+", f.name)[0])] = m[1]
+    for f in (MOD / "history/countries").glob("*.txt"):
+        c = re.search(r"(?m)^capital\s*=\s*(\d+)", f.read_text(encoding="latin-1"))
+        if c and f.name[:3] in capital_owner.values() and capital_owner.get(int(c[1])) != f.name[:3]:
+            errs.append(f"{f.name}: capital {c[1]} is not an own province")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

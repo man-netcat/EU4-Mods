@@ -9,7 +9,7 @@ unlock_cult = central_african_ancestor_cult
 unlock_cult = cwezi_cult
 
 unit_type = sub_saharan
-capital = 4067 # Nduga
+capital = 4068 # Nduga
 
 1337.3.1 = {
 	add_adm_tech = 1

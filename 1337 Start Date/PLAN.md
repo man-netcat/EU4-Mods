@@ -171,6 +171,14 @@ modifiers), the per-age scripted-effect hook, a window in a copy of `interface/a
 window and popup use the Discovery pictures and sound until the age has its own art (`gfx/interface/ages/`); the age
 bar still shows the base game's four icons.
 
+## Consistency
+
+`step_capitals` moves a capital that fell to another owner onto the realm's most developed province (5 so far; validate
+checks it). Base-game states EU5 types differently (monarchy / republic / theocracy only, never tribal) take EU5's government
+with the generic reform (17: the Italian signorie as republics, bishoprics as theocracies, Genoa as a monarchy).
+The base game's backstory wars dated 1414-1443 (Hunger War, Wars of Lombardy, ...) are not removed: they run on their
+own dates as history between 1337 and 1444, with whatever tags then exist.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is
