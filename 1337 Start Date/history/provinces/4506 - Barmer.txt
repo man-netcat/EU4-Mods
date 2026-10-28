@@ -1,9 +1,9 @@
 #4506 - Barmer
 
-owner = MAW
-controller = MAW
+owner = DLH
+controller = DLH
+add_core = DLH
 add_core = JSL
-add_core = MAW
 is_city = yes
 culture = rajput
 religion = hinduism

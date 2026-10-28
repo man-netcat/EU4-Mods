@@ -1,5 +1,9 @@
 #800 - Chiquitos
 
+owner = LUP
+controller = LUP
+add_core = LUP
+is_city = yes
 culture = maipurean
 
 

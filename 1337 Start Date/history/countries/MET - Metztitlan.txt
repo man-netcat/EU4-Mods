@@ -3,5 +3,6 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = mesoamerican
 primary_culture = otomi
+add_accepted_culture = matlatzinca
 religion = nahuatl
 capital = 2642

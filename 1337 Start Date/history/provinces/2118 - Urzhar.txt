@@ -1,5 +1,9 @@
 # 2118 - Urzhar
 
+owner = QCH
+controller = QCH
+add_core = QCH
+is_city = yes
 culture = oirats
 religion = sunni
 capital = "Urzhar"

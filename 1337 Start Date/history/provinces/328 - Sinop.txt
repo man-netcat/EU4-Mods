@@ -1,17 +1,14 @@
 #328 - Sinope
 
-owner = CND
-controller = CND
-add_core = CND
-is_city = yes
-culture = pontic_greek
-religion = orthodox
+culture = turkish
+religion = sunni
 capital = "Sinop"
-trade_goods = dyes
+trade_goods = naval_supplies
 hre = no
-base_tax = 2 
-base_production = 2
+base_tax = 3 
+base_production = 3
 base_manpower = 2
+fort_15th = yes
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

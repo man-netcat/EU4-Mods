@@ -1,14 +1,14 @@
 #300 - Tula
 
-owner = KCH
-controller = KCH
-add_core = KCH
+owner = GLH
+controller = GLH
+add_core = GLH
 is_city = yes
-culture = ryazanian
+culture = mishary
 religion = orthodox
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 2
+base_production = 2
 trade_goods = iron 
 base_manpower = 2
 capital = "Tula"

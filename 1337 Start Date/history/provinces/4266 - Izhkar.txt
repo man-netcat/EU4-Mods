@@ -1,5 +1,9 @@
 #4266 - Izhkar
 
+owner = PRM
+controller = PRM
+add_core = PRM
+is_city = yes
 capital = "Izhkar"
 culture = uralic
 religion = tengri_pagan_reformed #Sami Shamanism

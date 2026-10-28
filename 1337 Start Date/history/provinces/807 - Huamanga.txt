@@ -1,5 +1,9 @@
 #807 - Abancay
 
+owner = LUP
+controller = LUP
+add_core = LUP
+is_city = yes
 culture = inca
 religion = inti
 capital = "Abancay"

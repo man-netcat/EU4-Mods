@@ -1,8 +1,9 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = swahili
-add_accepted_culture = kulin
 add_accepted_culture = ganda
+add_accepted_culture = rwandan
+add_accepted_culture = bantu
 religion = shamanism #Fetishism
 technology_group = central_african
 unlock_cult = mwari_cult
@@ -10,7 +11,7 @@ unlock_cult = central_african_ancestor_cult
 unlock_cult = cwezi_cult
 
 unit_type = sub_saharan
-capital = 1088 # Bigo Bya Mugenyi
+capital = 1273 # Bigo Bya Mugenyi
 government_rank = 3
 
 monarch = {

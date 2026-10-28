@@ -1,5 +1,9 @@
 #4043 - Phangwa
 
+owner = ZAN
+controller = ZAN
+add_core = ZAN
+is_city = yes
 culture = nyasa
 religion = shamanism #Fetishism
 trade_goods = unknown

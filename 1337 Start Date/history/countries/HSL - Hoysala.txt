@@ -6,7 +6,7 @@ primary_culture = kannada
 add_accepted_culture = tamil
 add_accepted_culture = telegu
 religion = hinduism
-capital = 2031
+capital = 540
 
 monarch = {
 	name = "Vira Ballala III"

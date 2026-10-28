@@ -1,5 +1,9 @@
 #430 - Bushehr
 
+owner = INJ
+controller = INJ
+add_core = INJ
+is_city = yes
 culture = persian
 religion = shiite
 capital = "Bushehr"

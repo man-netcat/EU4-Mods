@@ -1,5 +1,9 @@
 #2223 - Larestan
 
+owner = INJ
+controller = INJ
+add_core = INJ
+is_city = yes
 culture = persian
 religion = sunni
 capital = "Lar"

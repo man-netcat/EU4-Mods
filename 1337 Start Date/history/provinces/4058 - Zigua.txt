@@ -1,5 +1,9 @@
 #4058 - Zigua
 
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
 culture = swahili
 religion = shamanism #Fetishism
 trade_goods = unknown

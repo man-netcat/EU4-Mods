@@ -1,5 +1,9 @@
 #2711 - Bulungan
 
+owner = MNU
+controller = MNU
+add_core = MNU
+is_city = yes
 culture = bornean
 religion = hinduism
 capital = "Bulungan"

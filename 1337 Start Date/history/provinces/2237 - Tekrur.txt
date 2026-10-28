@@ -1,5 +1,10 @@
 # No previous file for Tekrur
 
+owner = MAL
+controller = MAL
+add_core = GRB
+add_core = MAL
+is_city = yes
 culture = fulani
 religion = shamanism #Fetishism
 capital = "Tekrur"

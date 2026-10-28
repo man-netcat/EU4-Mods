@@ -1,3 +1,7 @@
+owner = JAP
+controller = JAP
+add_core = JAP
+is_city = yes
 culture = luba
 religion = shamanism #Fetishism
 capital = "Hemba"

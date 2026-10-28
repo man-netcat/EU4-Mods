@@ -1,6 +1,6 @@
-owner = YUA
-controller = YUA
-add_core = YUA
+owner = BGT
+controller = BGT
+add_core = BGT
 is_city = yes
 culture = mongol
 religion = vajrayana

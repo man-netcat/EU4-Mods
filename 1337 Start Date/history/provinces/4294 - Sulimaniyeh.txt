@@ -1,9 +1,13 @@
 #4394 - Sulimaniyeh
 
+owner = JAL
+controller = JAL
+add_core = JAL
+is_city = yes
 culture = kurdish
 religion = sunni
 capital = "Sulimaniyeh"
-trade_goods = wool
+trade_goods = grain
 hre = no
 base_tax = 2
 base_production = 2

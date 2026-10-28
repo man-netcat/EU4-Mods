@@ -1,3 +1,7 @@
+owner = VUN
+controller = VUN
+add_core = VUN
+is_city = yes
 culture = mbangala
 religion = shamanism #Fetishism
 capital = "Kasanje"

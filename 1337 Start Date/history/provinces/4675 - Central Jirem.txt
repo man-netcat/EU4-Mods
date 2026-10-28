@@ -1,5 +1,6 @@
-owner = YUA
-controller = YUA
+owner = HCN
+controller = HCN
+add_core = HCN
 add_core = YUA
 is_city = yes
 culture = chahar

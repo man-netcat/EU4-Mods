@@ -4,15 +4,16 @@ owner = TLX
 controller = TLX
 add_core = TLX
 is_city = yes
-culture = totonac
+culture = aztek
 religion = nahuatl
 capital = "Tlaxcala"
-trade_goods = cocoa
+trade_goods = sugar
 hre = no 
 base_tax = 10 
 base_production = 10
 base_manpower = 3
 discovered_by = mesoamerican
+fort_15th = yes
 
 1519.1.1 = { discovered_by = SPA } # Hernán Cortés
 1525.1.1 = { religion = catholic } #Dominican friars arrive, but Tlaxcala largely retain its own government under Spanish rule & protection (protectorate in-game)

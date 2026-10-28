@@ -1,5 +1,9 @@
 #2764 - Aussa
 
+owner = JRN
+controller = JRN
+add_core = JRN
+is_city = yes
 culture = afar
 religion = sunni
 capital = "Aussa"

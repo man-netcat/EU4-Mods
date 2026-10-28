@@ -1,7 +1,7 @@
 culture = luba
-religion = shamanism #Fetishism
+religion = animism #Fetishism
 capital = "Kikondja"
-trade_goods = salt
+trade_goods = naval_supplies
 hre = no
 base_tax = 2
 base_production = 2

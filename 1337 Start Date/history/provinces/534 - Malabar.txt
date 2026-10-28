@@ -1,8 +1,8 @@
 #534 - Calicut
 
-owner = ALU
-controller = ALU
-add_core = ALU
+owner = VND
+controller = VND
+add_core = VND
 is_city = yes
 culture = malayalam
 religion = hinduism

@@ -1,17 +1,12 @@
 #2297 - Saruhan
 
-owner = SRU
-controller = SRU
-add_core = BYZ
-add_core = SRU
-is_city = yes
-culture = greek
-religion = orthodox
+culture = turkish
+religion = sunni
 capital = "Manisa"
-trade_goods = dyes
+trade_goods = cotton
 hre = no
-base_tax = 4
-base_production = 4
+base_tax = 3
+base_production = 3
 base_manpower = 2
 discovered_by = western
 discovered_by = eastern

@@ -1,11 +1,11 @@
 # 2019 - Nimiipu
 
-culture = shoshone
+culture = chinook
 religion = totemism 
 capital = "Nimiipu" 
-trade_goods = unknown 
+trade_goods = naval_supplies 
 hre = no 
-base_tax = 1 
+base_tax = 2 
 base_production = 1
 base_manpower = 1 
 native_size = 5 

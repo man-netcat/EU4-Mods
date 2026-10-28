@@ -1,11 +1,7 @@
 #1104 - Eiriksfjord
 
-owner = NOR
-controller = NOR
-add_core = NOR
-is_city = yes
-culture = icelandic
-religion = catholic
+culture = inuit
+religion = totemism
 capital = "Eiriksfjord"
 trade_goods = unknown
 hre = no

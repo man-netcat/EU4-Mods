@@ -1,8 +1,8 @@
 #690 - Shandong Bandao
 
-owner = YUA
-controller = YUA
-add_core = YUA
+owner = HCN
+controller = HCN
+add_core = HCN
 is_city = yes
 culture = khalkha
 religion = tengri_pagan_reformed

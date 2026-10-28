@@ -4,7 +4,7 @@ primary_culture = korean
 religion = mahayana
 add_harmonized_religion = mahayana
 technology_group = chinese
-capital = 735	# Hanseong
+capital = 2744	# Hanseong
 
 
 government_rank = 2

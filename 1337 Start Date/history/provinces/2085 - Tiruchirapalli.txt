@@ -1,12 +1,17 @@
 #2003 - Tiruchirapalli
 
+owner = MAC
+controller = MAC
+add_core = MAC
+add_core = PAA
+is_city = yes
 culture = tamil
 religion = hinduism
 capital = "Tiruchirapalli"
-trade_goods = cotton #Calicoes
+trade_goods = incense #Calicoes
 hre = no
-base_tax = 3 
-base_production = 3
+base_tax = 4 
+base_production = 4
 base_manpower = 2
 discovered_by = indian
 discovered_by = muslim 

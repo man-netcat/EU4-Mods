@@ -2,7 +2,6 @@ government = monarchy
 add_government_reform = beylik_government
 government_rank = 1
 primary_culture = turkish
-add_accepted_culture = greek
 religion = sunni
 technology_group = ottoman
 capital = 4309	# Aydin

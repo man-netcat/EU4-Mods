@@ -1,8 +1,8 @@
 #2198 - Khundzia
 
-owner = ALN
-controller = ALN
-add_core = ALN
+owner = AVR
+controller = AVR
+add_core = AVR
 is_city = yes
 culture = dagestani
 religion = sunni

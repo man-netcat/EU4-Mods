@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = sumatran
+add_accepted_culture = bornean
+religion = hinduism
+capital = 638
+
+monarch = {
+	name = "Wijaya Warman"
+	dynasty = "Kutai Martapura"
+	birth_date = 1310.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

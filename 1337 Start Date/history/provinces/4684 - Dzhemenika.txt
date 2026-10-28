@@ -1,5 +1,9 @@
 # 4684 - Dzhemenika
 
+owner = OGE
+controller = OGE
+add_core = OGE
+is_city = yes
 culture = oirats
 religion = sunni
 capital = "Dzhemenika"

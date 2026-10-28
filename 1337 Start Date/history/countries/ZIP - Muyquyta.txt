@@ -1,0 +1,9 @@
+government = native
+add_government_reform = native_clan_council_reform
+government_rank = 1
+technology_group = south_american
+primary_culture = muisca
+add_accepted_culture = guajiro
+add_accepted_culture = jivaro
+religion = animism
+capital = 822

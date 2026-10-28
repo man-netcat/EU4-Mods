@@ -1,5 +1,9 @@
 #815 - Iquitos
 
+owner = CAV
+controller = CAV
+add_core = CAV
+is_city = yes
 culture = jivaro
 religion = animism
 capital = "Iquitos"

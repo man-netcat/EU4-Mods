@@ -1,5 +1,9 @@
 #795 - Potosi
 
+owner = LUP
+controller = LUP
+add_core = LUP
+is_city = yes
 culture = aimara
 
 

@@ -1,12 +1,16 @@
 #4457 - Cambay/Khambhat
 
-culture = gujarati
+owner = DLH
+controller = DLH
+add_core = DLH
+is_city = yes
+culture = saurashtri
 religion = hinduism
 capital = "Khambhat"
-trade_goods = cloth #Chintz
+trade_goods = cotton #Chintz
 hre = no
-base_tax = 5
-base_production = 5
+base_tax = 4
+base_production = 3
 base_manpower = 1
 add_jains_or_burghers_effect = yes
 discovered_by = east_african

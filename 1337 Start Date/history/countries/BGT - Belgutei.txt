@@ -1,0 +1,26 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 2
+technology_group = nomad_group
+primary_culture = khalkha
+add_accepted_culture = mongol
+religion = tengri_pagan_reformed
+capital = 4673
+
+monarch = {
+	name = "Alguncha I"
+	dynasty = "Borjigin"
+	birth_date = 1291.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Temür Buqa"
+	dynasty = "Borjigin"
+	birth_date = 1316.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

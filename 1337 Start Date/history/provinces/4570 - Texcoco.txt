@@ -1,5 +1,9 @@
 # No previous file for Texcoco
 
+owner = TEP
+controller = TEP
+add_core = TEP
+is_city = yes
 culture = aztek 
 religion = nahuatl
 capital = "Texcoco" 

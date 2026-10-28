@@ -4,5 +4,6 @@ government_rank = 1
 technology_group = muslim
 primary_culture = beja
 add_accepted_culture = tigray
+add_accepted_culture = afar
 religion = sunni
 capital = 1230

@@ -1,8 +1,7 @@
 #405 - Tadmor
 
-owner = FAD
-controller = FAD
-add_core = FAD
+owner = MAM
+controller = MAM
 add_core = MAM
 is_city = yes
 culture = bedouin_arabic

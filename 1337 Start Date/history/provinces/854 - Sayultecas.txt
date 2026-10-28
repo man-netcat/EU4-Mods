@@ -1,5 +1,9 @@
 #854 - Sayultecas
 
+owner = TOL
+controller = TOL
+add_core = TOL
+is_city = yes
 culture = tepic
 religion = nahuatl
 capital = "Sayultecas" 

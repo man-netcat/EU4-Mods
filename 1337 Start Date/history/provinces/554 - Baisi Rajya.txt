@@ -1,5 +1,9 @@
 #554 - Baisi Rajya
 
+owner = DLH
+controller = DLH
+add_core = DLH
+is_city = yes
 culture = nepali
 religion = hinduism
 capital = "Jumbla"

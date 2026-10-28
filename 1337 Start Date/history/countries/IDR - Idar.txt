@@ -1,10 +1,11 @@
 government = monarchy
 add_government_reform = rajput_kingdom
 government_rank = 1
-primary_culture = gujarati
+primary_culture = saurashtri
+add_accepted_culture = gujarati
 religion = hinduism
 technology_group = indian
-capital = 4480	# Mahi Kantha - Idar
+capital = 4512	# Mahi Kantha - Idar
 
 #Rulers of Idar
 

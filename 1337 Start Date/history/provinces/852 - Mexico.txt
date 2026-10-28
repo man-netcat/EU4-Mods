@@ -1,5 +1,9 @@
 #852 - Mexico
 
+owner = TTZ
+controller = TTZ
+add_core = TTZ
+is_city = yes
 culture = aztek 
 religion = nahuatl
 capital = "Tenochtitlan" 

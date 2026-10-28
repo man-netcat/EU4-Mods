@@ -1,8 +1,8 @@
 #2708 - Sampit
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
+owner = TJP
+controller = TJP
+add_core = TJP
 is_city = yes
 culture = bornean
 religion = hinduism

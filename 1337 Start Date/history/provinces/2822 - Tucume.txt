@@ -1,8 +1,8 @@
 # - Tucume
 
-owner = CHM
-controller = CHM
-add_core = CHM
+owner = XLL
+controller = XLL
+add_core = XLL
 is_city = yes
 culture = chimuan
 religion = inti

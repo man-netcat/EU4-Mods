@@ -1,17 +1,14 @@
 #326 - Ankara
 
-owner = AHI
-controller = AHI
-add_core = AHI
-is_city = yes
 culture = turkish
 religion = sunni
 capital = "Ankara"
-trade_goods = wool
+trade_goods = cloth
 hre = no
 base_tax = 3
 base_production = 3
-base_manpower = 2
+base_manpower = 3
+fort_15th = yes
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

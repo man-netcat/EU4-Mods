@@ -11,7 +11,7 @@ capital = "Debre Asbo"
 base_manpower = 3
 trade_goods = coffee
 hre = no
-base_tax = 4 
+base_tax = 3 
 base_production = 3
 
 discovered_by = east_african

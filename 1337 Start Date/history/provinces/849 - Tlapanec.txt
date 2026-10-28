@@ -1,5 +1,9 @@
 #849 - Tlapanec
 
+owner = YUC
+controller = YUC
+add_core = YUC
+is_city = yes
 culture = tlapanec
 religion = nahuatl
 capital = "Acapulco"

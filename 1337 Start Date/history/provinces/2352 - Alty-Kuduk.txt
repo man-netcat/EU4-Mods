@@ -1,8 +1,9 @@
 # 2352 - Alty-Kuduk
 
-owner = GLH
-controller = GLH
-add_core = GLH
+owner = YSU
+controller = YSU
+add_core = CHG
+add_core = YSU
 is_city = yes
 culture = khazak
 religion = sunni

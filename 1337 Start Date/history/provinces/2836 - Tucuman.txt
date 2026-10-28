@@ -1,5 +1,9 @@
 #2836 - Tucuman
 
+owner = XLL
+controller = XLL
+add_core = XLL
+is_city = yes
 culture = diaguita
 discovered_by = south_american
 discovered_by = andean

@@ -1,8 +1,8 @@
 #844 - Zapotec
 
-owner = ZAP
-controller = ZAP
-add_core = ZAP
+owner = YUC
+controller = YUC
+add_core = YUC
 is_city = yes
 culture = zapotek
 religion = nahuatl

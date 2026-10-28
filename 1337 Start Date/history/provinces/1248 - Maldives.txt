@@ -1,5 +1,9 @@
 #1248 - Maldives
 
+owner = MAJ
+controller = MAJ
+add_core = MAJ
+is_city = yes
 culture = malayalam
 religion = sunni
 capital = "Malé"

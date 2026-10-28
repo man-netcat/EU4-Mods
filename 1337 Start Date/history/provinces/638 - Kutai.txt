@@ -1,5 +1,9 @@
 #638 - Kutai
 
+owner = MRP
+controller = MRP
+add_core = MRP
+is_city = yes
 culture = bornean
 religion = hinduism
 capital = "Kutai"

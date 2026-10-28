@@ -3,7 +3,7 @@ add_government_reform = indian_sultanate_reform
 primary_culture = kashmiri
 religion = hinduism
 technology_group = indian
-capital = 4521	# Srinagar
+capital = 508	# Srinagar
 religious_school = ismaili_school
 
 #Sultans of Kashmir

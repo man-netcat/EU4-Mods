@@ -1,0 +1,25 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = mesoamerican
+primary_culture = aztek
+religion = nahuatl
+capital = 852
+
+monarch = {
+	name = "Quinatzin"
+	dynasty = "Chichimecayotl"
+	birth_date = 1252.1.1
+	adm = 4
+	dip = 3
+	mil = 4
+}
+heir = {
+	name = "Techotlalatzin"
+	dynasty = "Chichimecayotl"
+	birth_date = 1323.1.1
+	claim = 95
+	adm = 4
+	dip = 2
+	mil = 4
+}

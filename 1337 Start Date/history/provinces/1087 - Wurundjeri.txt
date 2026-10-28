@@ -1,11 +1,7 @@
 #1087 - Wurundjeri
 
-owner = KIT
-controller = KIT
-add_core = KIT
-is_city = yes
 culture = kulin
-religion = animism
+religion = dreamtime
 capital = "Wurundjeri"
 hre = no
 trade_goods = livestock

@@ -1,8 +1,8 @@
 #538 - Karur
 
-owner = VIJ
-controller = VIJ
-add_core = VIJ
+owner = MAC
+controller = MAC
+add_core = MAC
 is_city = yes
 capital = "Karur"
 culture = tamil

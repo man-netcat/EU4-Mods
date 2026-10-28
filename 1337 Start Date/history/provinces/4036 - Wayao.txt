@@ -1,5 +1,9 @@
 #4036 - Wayao
 
+owner = ZAN
+controller = ZAN
+add_core = ZAN
+is_city = yes
 culture = makua
 religion = shamanism #Fetishism
 trade_goods = unknown

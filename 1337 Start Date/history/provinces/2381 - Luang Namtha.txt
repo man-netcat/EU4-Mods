@@ -1,5 +1,9 @@
 #2381 - Luang Namtha
 
+owner = DAI
+controller = DAI
+add_core = DAI
+is_city = yes
 culture = lao
 religion = animism
 capital = "Luang Namtha"

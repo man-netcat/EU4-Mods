@@ -1,5 +1,9 @@
 # No previous file for Chacujal
 
+owner = ITZ
+controller = ITZ
+add_core = ITZ
+is_city = yes
 culture = highland_mayan
 religion = mesoamerican_religion
 capital = "Chacujal"

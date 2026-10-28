@@ -1,3 +1,8 @@
+owner = OGE
+controller = OGE
+add_core = GLH
+add_core = OGE
+is_city = yes
 culture = khalkha
 religion = tengri_pagan_reformed
 capital = "Khovsgol"

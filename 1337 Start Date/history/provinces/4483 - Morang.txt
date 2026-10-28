@@ -1,8 +1,8 @@
 #4484 - Morang
 
-owner = KTU
-controller = KTU
-add_core = KTU
+owner = KHS
+controller = KHS
+add_core = KHS
 is_city = yes
 culture = nepali
 religion = hinduism

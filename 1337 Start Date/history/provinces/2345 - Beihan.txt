@@ -1,5 +1,9 @@
 #2345 - Beihan
 
+owner = YEM
+controller = YEM
+add_core = YEM
+is_city = yes
 culture = yemeni_culture
 religion = shiite
 capital = "Beihan"

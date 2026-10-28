@@ -1,8 +1,8 @@
 # No previous file for Cholula
 
-owner = TLX
-controller = TLX
-add_core = TLX
+owner = TPY
+controller = TPY
+add_core = TPY
 is_city = yes
 culture = aztek
 religion = nahuatl

@@ -2,7 +2,6 @@ government = tribal
 add_government_reform = tribal_despotism
 government_rank = 1
 primary_culture = moroccan
-add_accepted_culture = berber
 religion = sunni
 technology_group = muslim
 capital = 348	# Tafilalt

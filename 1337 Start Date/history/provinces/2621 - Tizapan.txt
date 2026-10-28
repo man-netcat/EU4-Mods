@@ -1,5 +1,9 @@
 # No previous file for Tizapan
 
+owner = TOL
+controller = TOL
+add_core = TOL
+is_city = yes
 culture = tepic
 religion = nahuatl
 capital = "Tizapan"

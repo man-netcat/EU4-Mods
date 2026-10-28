@@ -1,9 +1,5 @@
 # - Buyogoma
 
-owner = UBH
-controller = UBH
-add_core = UBH
-is_city = yes
 culture = rwandan #Ha
 religion = shamanism #Fetishism
 trade_goods = grain

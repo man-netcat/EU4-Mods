@@ -3,7 +3,7 @@
 culture = yorumba
 religion = shamanism #Fetishism
 capital = "São Tomé"
-trade_goods = unknown
+trade_goods = fish
 hre = no
 base_tax = 1 
 base_production = 1

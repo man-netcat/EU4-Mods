@@ -1,5 +1,9 @@
 #1056 - Barguzinsky
 
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
 discovered_by = nomad_group
 
 culture = buryat

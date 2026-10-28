@@ -2,17 +2,16 @@
 
 owner = SGT
 controller = SGT
-add_core = PLB
 add_core = SGT
 is_city = yes
 culture = sumatran
-religion = buddhism
+religion = mahayana
 capital = "Pagarruyung"
-trade_goods = gold
+trade_goods = naval_supplies
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 3
+base_tax = 2
+base_production = 2
+base_manpower = 1
 
 
 

@@ -1,8 +1,9 @@
 # No previous file for Mitla
 
-owner = ZAP
-controller = ZAP
-add_core = ZAP
+owner = TCQ
+controller = TCQ
+add_core = TCQ
+add_core = YUC
 is_city = yes
 culture = zapotek
 religion = nahuatl

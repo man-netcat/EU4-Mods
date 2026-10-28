@@ -1,6 +1,6 @@
 #1046 - Butalsk
 
-culture = turkish
+culture = uzbehk
 religion = tengri_pagan_reformed
 capital = "Ust-Maya"
 trade_goods = naval_supplies

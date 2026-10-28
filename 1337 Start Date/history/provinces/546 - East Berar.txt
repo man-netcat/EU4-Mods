@@ -1,5 +1,9 @@
 #546 - East Berar / Nagpur
 
+owner = DLH
+controller = DLH
+add_core = DLH
+is_city = yes
 culture = gondi
 religion = hinduism
 capital = "Wairagarh"

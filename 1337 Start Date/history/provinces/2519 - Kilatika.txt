@@ -1,5 +1,9 @@
 # No previous file for Kilatika
 
+owner = CAO
+controller = CAO
+add_core = CAO
+is_city = yes
 culture = miami
 religion = totemism
 capital = "Kilatika"

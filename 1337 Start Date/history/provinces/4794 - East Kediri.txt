@@ -1,6 +1,7 @@
-owner = MAJ
-controller = MAJ
+owner = SUN
+controller = SUN
 add_core = MAJ
+add_core = SUN
 is_city = yes
 culture = javanese
 religion = hinduism

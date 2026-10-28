@@ -1,8 +1,8 @@
 #4413 - Cannanore
 
-owner = KDU
-controller = KDU
-add_core = KDU
+owner = VLD
+controller = VLD
+add_core = VLD
 is_city = yes
 culture = malayalam
 religion = hinduism

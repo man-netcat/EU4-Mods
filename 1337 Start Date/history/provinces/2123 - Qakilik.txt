@@ -1,8 +1,9 @@
 # 2123 - Qakilik
 
-owner = CHG
-controller = CHG
-add_core = CHG
+owner = MNL
+controller = MNL
+add_core = MNL
+add_core = QCH
 is_city = yes
 culture = oirats
 religion = vajrayana

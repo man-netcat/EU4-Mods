@@ -6,7 +6,7 @@ primary_culture = khalkha
 add_accepted_culture = armenian
 add_accepted_culture = kurdish
 religion = sunni
-capital = 407
+capital = 418
 
 monarch = {
 	name = "Hajji Taghay"

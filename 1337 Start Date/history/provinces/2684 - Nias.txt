@@ -1,5 +1,9 @@
 #2684 - Nias
 
+owner = PLB
+controller = PLB
+add_core = PLB
+is_city = yes
 culture = sumatran
 religion = hinduism
 capital = "Nias"

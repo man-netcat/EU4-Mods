@@ -4,6 +4,7 @@ government_rank = 1
 technology_group = central_african
 primary_culture = kongolese
 add_accepted_culture = mbundu
+add_accepted_culture = mbangala
 religion = animism
 capital = 1098
 

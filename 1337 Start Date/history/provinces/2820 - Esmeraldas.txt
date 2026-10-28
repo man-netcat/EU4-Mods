@@ -1,5 +1,9 @@
 # - Esmeraldas
 
+owner = CAV
+controller = CAV
+add_core = CAV
+is_city = yes
 culture = cara
 religion = inti
 capital = "Esmeraldas"

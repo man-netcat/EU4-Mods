@@ -1,8 +1,8 @@
 # No previous file for Tecoman
 
-owner = TOL
-controller = TOL
-add_core = TOL
+owner = CLM
+controller = CLM
+add_core = CLM
 is_city = yes
 culture = tecos
 religion = nahuatl

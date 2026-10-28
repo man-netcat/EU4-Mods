@@ -1,8 +1,8 @@
 # No previous file for Xocotla
 
-owner = TLX
-controller = TLX
-add_core = TLX
+owner = TEO
+controller = TEO
+add_core = TEO
 is_city = yes
 culture = aztek
 religion = nahuatl

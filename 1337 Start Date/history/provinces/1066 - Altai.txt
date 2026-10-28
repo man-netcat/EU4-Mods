@@ -1,5 +1,9 @@
 #1066 - Altai
 
+owner = GLH
+controller = GLH
+add_core = GLH
+is_city = yes
 culture = buryat
 religion = tengri_pagan_reformed
 capital = "Altai Uriankhai"

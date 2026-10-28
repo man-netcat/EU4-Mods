@@ -1,5 +1,9 @@
 #716 - Tannu Tuva
 
+owner = GLH
+controller = GLH
+add_core = GLH
+is_city = yes
 culture = buryat
 religion = tengri_pagan_reformed
 capital = "Tannu Uriankhai"

@@ -1,3 +1,8 @@
+owner = BMR
+controller = BMR
+add_core = BMR
+add_core = TMB
+is_city = yes
 culture = bambara 
 religion = shamanism #Fetishism
 capital = "Sah"

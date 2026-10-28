@@ -1,8 +1,8 @@
 #Bushubi
 
-owner = UBH
-controller = UBH
-add_core = UBH
+owner = KIT
+controller = KIT
+add_core = KIT
 is_city = yes
 culture = rwandan
 religion = shamanism #Fetishism

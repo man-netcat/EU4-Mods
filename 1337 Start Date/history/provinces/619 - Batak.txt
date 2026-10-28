@@ -1,8 +1,8 @@
 #619 - Batak
 
-owner = BRS
-controller = BRS
-add_core = BRS
+owner = PLB
+controller = PLB
+add_core = PLB
 is_city = yes
 culture = sumatran
 religion = hinduism

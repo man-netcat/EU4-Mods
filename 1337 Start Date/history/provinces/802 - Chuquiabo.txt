@@ -1,5 +1,9 @@
 #802 - Chuquiabo
 
+owner = LUP
+controller = LUP
+add_core = LUP
+is_city = yes
 culture = aimara
 religion = inti
 capital = "Chuquiabo"

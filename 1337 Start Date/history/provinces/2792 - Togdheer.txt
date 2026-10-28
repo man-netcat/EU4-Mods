@@ -1,8 +1,9 @@
 #2792 - Togdheer
 
-owner = IFA
-controller = IFA
+owner = WAR
+controller = WAR
 add_core = IFA
+add_core = WAR
 is_city = yes
 culture = somali
 religion = sunni

@@ -1,4 +1,8 @@
 #843 - Belize
+owner = ITZ
+controller = ITZ
+add_core = ITZ
+is_city = yes
 culture = yucatec
 religion = mesoamerican_religion
 capital = "Chactemal" 

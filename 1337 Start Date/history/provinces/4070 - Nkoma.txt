@@ -1,11 +1,11 @@
 #Nkoma
 
 culture = rwandan
-religion = shamanism #Fetishism
+religion = animism #Fetishism
 capital = "Nkoma"
-trade_goods = iron
+trade_goods = fish
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 3
+base_tax = 5
+base_production = 4
+base_manpower = 4
 discovered_by = central_african

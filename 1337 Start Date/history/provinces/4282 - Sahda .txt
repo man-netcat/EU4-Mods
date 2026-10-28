@@ -1,5 +1,9 @@
 #4282 - Sahda
 
+owner = HZP
+controller = HZP
+add_core = HZP
+is_city = yes
 culture = yemeni_culture
 religion = shiite
 capital = "Sahda"

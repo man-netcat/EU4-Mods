@@ -1,8 +1,8 @@
 #712 - Uighuristan
 
-owner = KAS
-controller = KAS
-add_core = KAS
+owner = MNL
+controller = MNL
+add_core = MNL
 is_city = yes
 culture = uzbehk
 religion = sunni

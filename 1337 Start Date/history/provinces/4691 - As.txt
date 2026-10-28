@@ -1,5 +1,9 @@
 # 4691 - As
 
+owner = GLH
+controller = GLH
+add_core = GLH
+is_city = yes
 culture = ostyaki
 religion = tengri_pagan_reformed
 capital = "As"

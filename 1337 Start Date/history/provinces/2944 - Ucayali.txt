@@ -1,5 +1,9 @@
 #2944 - Ucayali
 
+owner = SAC
+controller = SAC
+add_core = SAC
+is_city = yes
 culture = maipurean
 
 

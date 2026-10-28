@@ -1,5 +1,9 @@
 #1999 - Cocos Island
 
+owner = MAJ
+controller = MAJ
+add_core = MAJ
+is_city = yes
 capital = "West Island"
 trade_goods = unknown
 hre = no

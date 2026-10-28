@@ -1,8 +1,8 @@
 #711 - Qarqan
 
-owner = KAS
-controller = KAS
-add_core = KAS
+owner = QCH
+controller = QCH
+add_core = QCH
 is_city = yes
 culture = uyghur
 religion = vajrayana

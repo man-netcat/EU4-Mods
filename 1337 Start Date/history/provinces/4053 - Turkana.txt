@@ -1,5 +1,9 @@
 #4053 - Turkana
 
+owner = KIT
+controller = KIT
+add_core = KIT
+is_city = yes
 culture = acholi
 religion = shamanism #Fetishism
 trade_goods = unknown

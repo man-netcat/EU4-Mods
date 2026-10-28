@@ -1,8 +1,8 @@
 # 4220 - Khiagt
 
-owner = YUA
-controller = YUA
-add_core = YUA
+owner = OTC
+controller = OTC
+add_core = OTC
 is_city = yes
 culture = khalkha
 religion = tengri_pagan_reformed

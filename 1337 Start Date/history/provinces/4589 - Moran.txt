@@ -1,5 +1,9 @@
 # No previous file for Moran
 
+owner = ITZ
+controller = ITZ
+add_core = ITZ
+is_city = yes
 culture = putun
 religion = mesoamerican_religion
 capital = "Moran"

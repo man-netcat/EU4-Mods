@@ -1,6 +1,7 @@
 government = monarchy
 add_government_reform = iqta
-primary_culture = dagestani
+primary_culture = georgian
+add_accepted_culture = dagestani
 religion = sunni
 technology_group = muslim
 capital = 2198 #Khunzah

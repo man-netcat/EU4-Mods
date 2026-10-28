@@ -1,5 +1,9 @@
 #845 - Campeche
 
+owner = CKP
+controller = CKP
+add_core = CKP
+is_city = yes
 culture = yucatec 
 religion = mesoamerican_religion
 capital = "Campeche" 

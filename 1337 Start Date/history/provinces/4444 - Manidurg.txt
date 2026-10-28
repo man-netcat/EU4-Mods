@@ -1,5 +1,10 @@
 #4444 - Manidurg
 
+owner = RCH
+controller = RCH
+add_core = MSN
+add_core = RCH
+is_city = yes
 culture = telegu
 religion = hinduism
 capital = "Manidurg"

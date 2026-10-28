@@ -1,5 +1,9 @@
 #1273 - Taveta
 
+owner = KIT
+controller = KIT
+add_core = KIT
+is_city = yes
 culture = bantu #thagiicu
 religion = shamanism #Fetishism
 trade_goods = unknown

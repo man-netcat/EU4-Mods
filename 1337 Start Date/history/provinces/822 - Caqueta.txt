@@ -1,5 +1,9 @@
 #822 - Caqueta
 
+owner = ZIP
+controller = ZIP
+add_core = ZIP
+is_city = yes
 culture = jivaro
 
 

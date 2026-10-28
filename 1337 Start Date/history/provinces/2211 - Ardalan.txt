@@ -1,5 +1,10 @@
 #2211 - Ardalan
 
+owner = HLG
+controller = HLG
+add_core = HLG
+add_core = JAL
+is_city = yes
 culture = kurdish
 religion = sunni
 capital = "Sanandaj"

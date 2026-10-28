@@ -1,9 +1,8 @@
 # 2188 - Alchuka
 
-owner = YUA
-controller = YUA
+owner = SHE
+controller = SHE
 add_core = SHE
-add_core = YUA
 is_city = yes
 culture = manchu
 religion = tengri_pagan_reformed

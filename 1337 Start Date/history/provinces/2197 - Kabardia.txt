@@ -1,5 +1,9 @@
 #2197 - Kabardia
 
+owner = DZK
+controller = DZK
+add_core = DZK
+is_city = yes
 culture = circassian
 religion = orthodox
 capital = "Nalchik"

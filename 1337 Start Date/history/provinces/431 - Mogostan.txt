@@ -1,5 +1,9 @@
 #431 - Mogostan
 
+owner = INJ
+controller = INJ
+add_core = INJ
+is_city = yes
 culture = gulf_arabic
 religion = sunni
 capital = "Gamrun"

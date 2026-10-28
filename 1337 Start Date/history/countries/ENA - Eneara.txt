@@ -1,10 +1,11 @@
 government = monarchy
 add_government_reform = autocracy_reform
-primary_culture = sidamo
+primary_culture = amhara
+add_accepted_culture = nubian
 religion = coptic
 technology_group = east_african
 unit_type = sub_saharan
-capital = 2758		# Eneara
+capital = 4033		# Eneara
 
 #Names are somewhat known, dates are fictional
 

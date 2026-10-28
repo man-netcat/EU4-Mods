@@ -1,11 +1,9 @@
 government = monarchy
 add_government_reform = mandala_reform
 primary_culture = javanese
-add_accepted_culture = malayan
-add_accepted_culture = acehnese
 technology_group = chinese
 religion = hinduism
-capital = 626	# Surabaya
+capital = 574	# Surabaya
 
 
 # Majapahit

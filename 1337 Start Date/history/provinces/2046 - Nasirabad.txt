@@ -1,5 +1,9 @@
 #2046 - Nasirabad
 
+owner = BHP
+controller = BHP
+add_core = BHP
+is_city = yes
 culture = bengali
 religion = hinduism
 capital = "Nasirabad"

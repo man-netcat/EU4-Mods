@@ -1,5 +1,9 @@
 #847 - Mixtec
 
+owner = YUC
+controller = YUC
+add_core = YUC
+is_city = yes
 culture = mixtec 
 religion = nahuatl
 capital = "Totopec" 

@@ -5,7 +5,7 @@ technology_group = indian
 primary_culture = kochi
 add_accepted_culture = assamese
 religion = hinduism
-capital = 571
+capital = 566
 
 monarch = {
 	name = "Durlabh"

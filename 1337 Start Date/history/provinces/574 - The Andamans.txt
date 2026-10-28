@@ -1,5 +1,9 @@
 #574 - The Andamans (and Nicobars)
 
+owner = MAJ
+controller = MAJ
+add_core = MAJ
+is_city = yes
 culture = filipino #closest we can get without making a new culture
 religion = animism
 capital = "The Andamans"

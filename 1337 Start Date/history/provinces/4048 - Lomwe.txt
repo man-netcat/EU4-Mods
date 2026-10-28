@@ -1,5 +1,9 @@
 #Lomwe
 
+owner = MRA
+controller = MRA
+add_core = MRA
+is_city = yes
 culture = makua
 religion = shamanism #Fetishism
 capital = "Lomwe"

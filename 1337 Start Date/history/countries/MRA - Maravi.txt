@@ -1,14 +1,21 @@
 government = tribal
 add_government_reform = tribal_despotism
 primary_culture = nyasa
-religion = shamanism #Fetishism
+add_accepted_culture = makua
+religion = animism #Fetishism
 technology_group = central_african
 unlock_cult = mwari_cult
 unlock_cult = central_african_ancestor_cult
 unlock_cult = cwezi_cult
 
 unit_type = sub_saharan
-capital = 4040	# Kalonga
+capital = 4048	# Kalonga
+
+1337.3.1 = {
+	add_adm_tech = 1
+	add_dip_tech = 1
+	add_mil_tech = 1
+}
 
 1470.1.1 = { #We don't really know what status Chunzo had exactly
 	monarch = {

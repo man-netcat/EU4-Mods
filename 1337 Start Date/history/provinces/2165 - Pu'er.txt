@@ -1,8 +1,8 @@
 # 2165 - Pu'er
 
-owner = CDL
-controller = CDL
-add_core = CDL
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = bai
 religion = buddhism

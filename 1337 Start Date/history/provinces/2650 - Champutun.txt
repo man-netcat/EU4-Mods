@@ -1,5 +1,10 @@
 # No previous file for Champutun
 
+owner = CNL
+controller = CNL
+add_core = CKP
+add_core = CNL
+is_city = yes
 culture = yucatec
 religion = mesoamerican_religion
 capital = "Champutun"

@@ -1,12 +1,16 @@
 #627 - Blambangan
 
+owner = MAJ
+controller = MAJ
+add_core = MAJ
+is_city = yes
 culture = javanese
 religion = hinduism
 capital = "Blambangan"
-trade_goods = cotton
+trade_goods = dyes
 hre = no
 base_tax = 4
-base_production = 4
+base_production = 3
 base_manpower = 3
 
 

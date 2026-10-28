@@ -1,8 +1,7 @@
 #2306 - Mush
 
-owner = ERE
-controller = ERE
-add_core = ERE
+owner = SUT
+controller = SUT
 add_core = SUT
 is_city = yes
 culture = armenian

@@ -1,5 +1,9 @@
 #457 - Tashkent
 
+owner = CHG
+controller = CHG
+add_core = CHG
+is_city = yes
 culture = uzbehk
 religion = sunni
 capital = "Tashkent"

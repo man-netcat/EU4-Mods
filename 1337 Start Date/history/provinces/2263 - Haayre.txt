@@ -1,17 +1,18 @@
 # No previous file for Haayre
 
-owner = YAT
-controller = YAT
-add_core = YAT
+owner = BMR
+controller = BMR
+add_core = BMR
+add_core = TMB
 is_city = yes
-culture = bozo 
+culture = dyola 
 religion = shamanism #Fetishism
 capital = "Douentza"
 trade_goods = ivory
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 3 
+base_production = 2
+base_manpower = 2
 
 
 

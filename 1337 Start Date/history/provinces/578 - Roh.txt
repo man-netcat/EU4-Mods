@@ -1,7 +1,8 @@
 #578 - Roh
 
-owner = QUN
-controller = QUN
+owner = NGD
+controller = NGD
+add_core = NGD
 add_core = QUN
 is_city = yes
 culture = afghani

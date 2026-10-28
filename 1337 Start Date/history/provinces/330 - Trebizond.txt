@@ -1,17 +1,18 @@
 #330 - Trebizond
 
-owner = TRE
-controller = TRE
-add_core = TRE
+owner = ERE
+controller = ERE
+add_core = ERE
 is_city = yes
-culture = pontic_greek
-religion = orthodox
+culture = armenian
+religion = coptic
 capital = "Trapezous"
-trade_goods = silk
+trade_goods = naval_supplies
 hre = no
 base_tax = 4 
-base_production = 3
-base_manpower = 3
+base_production = 4
+base_manpower = 4
+fort_15th = yes #Trebizond Castle
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

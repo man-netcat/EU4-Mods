@@ -7,9 +7,9 @@ culture = guarani
 discovered_by = south_american
 discovered_by = andean
 
-religion = animism
+religion = inti
 capital = "Caranga"
-trade_goods = unknown
+trade_goods = wool
 hre = no
 base_tax = 2 
 base_production = 1

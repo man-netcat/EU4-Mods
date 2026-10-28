@@ -1,5 +1,9 @@
 #4028 - Mahafaly
 
+owner = ABV
+controller = ABV
+add_core = ABV
+is_city = yes
 culture = madagasque
 religion = shamanism #Fetishism
 capital = "Mahafaly"

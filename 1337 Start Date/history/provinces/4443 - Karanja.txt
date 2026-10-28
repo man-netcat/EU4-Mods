@@ -1,5 +1,9 @@
 #4443 - Karanja
 
+owner = DLH
+controller = DLH
+add_core = DLH
+is_city = yes
 culture = marathi
 religion = hinduism
 capital = "Karanja"

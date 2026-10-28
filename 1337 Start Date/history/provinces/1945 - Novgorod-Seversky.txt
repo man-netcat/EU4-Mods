@@ -1,15 +1,15 @@
 #Severia
 
-owner = CHR
-controller = CHR
-add_core = CHR
+owner = GLH
+controller = GLH
+add_core = GLH
 is_city = yes
 culture = ryazanian
 religion = orthodox
 hre = no
 base_tax = 5
 base_production = 9
-trade_goods = grain 
+trade_goods = iron 
 base_manpower = 4
 capital = "Novgorod-Seversky"
 discovered_by = western

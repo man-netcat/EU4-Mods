@@ -96,7 +96,24 @@ def eu4_geo():
     return area, reg
 
 
-def main():
+def eu4_continents():
+    """EU4 province -> continent, from map/continent.txt."""
+    text = re.sub(r"#.*", "", (EU4_GAME / "map/continent.txt").read_text(encoding="latin-1"))
+    out = {}
+    for m in re.finditer(r"^(\w+)\s*=\s*\{([^}]*)\}", text, re.M):
+        for p in re.findall(r"\d+", m[2]):
+            out.setdefault(int(p), m[1])
+    return out
+
+
+# EU4 continent -> the EU5 continents its provinces may be matched to (EU5 files Anatolia and Arabia under asia, the
+# Caucasus and the steppe under europe, Egypt under africa)
+CONTINENT_OK = {"europe": {"europe"}, "asia": {"asia", "europe"}, "africa": {"africa", "asia"},
+                "north_america": {"america"}, "south_america": {"america"}, "new_world": {"america"},
+                "oceania": {"oceania", "asia"}}
+
+
+def main(auto=True, write=True):
     nodes, level, locs, path = eu5_tree()
     disp = defaultdict(set)  # normalised display name -> location keys
     for f in sorted((L5 / "location_names").glob("*_l_english.yml")):
@@ -134,10 +151,36 @@ def main():
             hit |= nodes[n] if n in nodes else {n}
         res[int(p)] = ("alias", sorted(hit))
         tiers["alias"] += 1
+    hand = set(res)
+    auto_file = MOD / "tools/data/aliases_auto.json"  # name matches fuzzy_aliases.py found; hand aliases win
+    if auto and auto_file.exists():
+        for p, names in json.load(open(auto_file)).items():
+            if int(p) in hand:
+                continue
+            hit = set()
+            for n in names:
+                hit |= nodes[n] if n in nodes else {n}
+            res[int(p)] = ("alias", sorted(hit))
+            tiers["alias"] += 1
     land = land_provinces()
     prov = {p: n for p, n in prov.items() if p in land}
     res = {p: v for p, v in res.items() if p in land}
     area, reg = eu4_geo()
+    # a name can also match across continents (Alcantara, Faro, Santarem: Iberia and Brazil): keep the compatible locations
+    cont = eu4_continents()
+
+    def cont_ok(p, l):
+        allowed = CONTINENT_OK.get(cont.get(p), None)
+        return allowed is None or path[l][0] in allowed
+
+    for p, (t, l) in list(res.items()):
+        if t == "alias":
+            continue
+        keep = [x for x in l if cont_ok(p, x)]
+        if not keep:
+            del res[p]
+        elif len(keep) < len(l):
+            res[p] = (t, keep)
     # region compatibility: EU4 region -> EU5 level-1 regions holding >=8% of its matches
     votes = defaultdict(lambda: defaultdict(int))
     top = lambda l: path[l][1] if len(path[l]) > 1 else path[l][0]
@@ -164,7 +207,9 @@ def main():
         cands = nodedisp.get(nm)
         if cands:
             node = sorted(cands, key=lambda n: level.get(n, 9))[0]
-            pool = sorted(nodes[node] - used) or sorted(nodes[node])
+            pool = [x for x in (sorted(nodes[node] - used) or sorted(nodes[node])) if cont_ok(p, x)]
+            if not pool:
+                continue
             res[p] = ("area-node", pool)
             tiers["area-node"] += 1
     # fallback: unmatched province inherits the dominant EU5 area of its EU4 area
@@ -177,18 +222,20 @@ def main():
         if p in res:
             continue
         v = areavote.get(area.get(p))
-        if v and max(v.values()) >= 2 and max(v.values()) >= 0.6 * sum(v.values()):
+        if v and max(v.values()) >= 1 and max(v.values()) >= 0.5 * sum(v.values()):
             a5 = max(v, key=v.get)
-            pool = sorted(nodes[a5] - used) or sorted(nodes[a5])
+            pool = [x for x in (sorted(nodes[a5] - used) or sorted(nodes[a5])) if cont_ok(p, x)]
+            if not pool:
+                continue
             res[p] = ("area-fallback", pool)
             tiers["area-fallback"] += 1
     print(f"{len(res)}/{len(prov)} land provinces matched; dropped {len(dropped)} region-incompatible", dict(tiers))
-    out = MOD / "tools/data"
-    out.mkdir(exist_ok=True)
-    import json
-    json.dump({str(p): {"tier": t, "locations": l} for p, (t, l) in sorted(res.items())}, open(out / "loc2prov.json", "w"), indent=0)
-    unmatched = [(p, prov[p]) for p in prov if p not in res]
-    json.dump(unmatched, open(out / "loc2prov_unmatched.json", "w"), indent=0)
+    if write:
+        out = MOD / "tools/data"
+        out.mkdir(exist_ok=True)
+        json.dump({str(p): {"tier": t, "locations": l} for p, (t, l) in sorted(res.items())}, open(out / "loc2prov.json", "w"), indent=0)
+        unmatched = [(p, prov[p]) for p in prov if p not in res]
+        json.dump(unmatched, open(out / "loc2prov_unmatched.json", "w"), indent=0)
     return prov, res, locs
 
 

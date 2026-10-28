@@ -1,6 +1,6 @@
-owner = BEI
-controller = BEI
-add_core = BEI
+owner = TJP
+controller = TJP
+add_core = TJP
 is_city = yes
 culture = bornean
 religion = sunni

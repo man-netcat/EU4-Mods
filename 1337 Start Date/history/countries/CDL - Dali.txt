@@ -1,9 +1,10 @@
 government = monarchy
 add_government_reform = autocracy_reform
 primary_culture = bai
+add_accepted_culture = assamese
 religion = mahayana
 technology_group = chinese
-capital = 2165	# Dali
+capital = 661	# Dali
 
 
 government_rank = 2

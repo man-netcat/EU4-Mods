@@ -1,8 +1,8 @@
 #1844 - Xiankhouang
 
-owner = MPH
-controller = MPH
-add_core = MPH
+owner = DAI
+controller = DAI
+add_core = DAI
 is_city = yes
 culture = lao
 religion = buddhism

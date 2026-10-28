@@ -3,7 +3,7 @@ add_government_reform = tribal_kingdom
 government_rank = 1
 technology_group = indian
 religion = hinduism
-primary_culture = oriya
+primary_culture = garjati
 capital = 2038	# Patna
 
 monarch = {

@@ -1,5 +1,9 @@
 #4393 - Tabayin
 
+owner = PIN
+controller = PIN
+add_core = PIN
+is_city = yes
 culture = burmese
 religion = buddhism
 capital = "Tabayin"

@@ -5,7 +5,7 @@ add_accepted_culture = bornean
 add_accepted_culture = filipino
 religion = hinduism
 technology_group = chinese
-capital = 655	# Brunei Town
+capital = 652	# Brunei Town
 religious_school = shafii_school
 
 

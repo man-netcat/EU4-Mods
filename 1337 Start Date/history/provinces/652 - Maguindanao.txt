@@ -1,5 +1,9 @@
 #652 - Maguindanao
 
+owner = BEI
+controller = BEI
+add_core = BEI
+is_city = yes
 culture = filipino
 religion = animism
 capital = "Maguindanao"

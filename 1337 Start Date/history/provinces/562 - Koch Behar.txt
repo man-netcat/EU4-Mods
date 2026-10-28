@@ -1,5 +1,9 @@
 #562 - Koch Behar
 
+owner = SGN
+controller = SGN
+add_core = SGN
+is_city = yes
 culture = kochi
 religion = hinduism
 capital = "Kamatapur"

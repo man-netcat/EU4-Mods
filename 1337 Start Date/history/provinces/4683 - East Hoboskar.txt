@@ -1,3 +1,7 @@
+owner = OGE
+controller = OGE
+add_core = OGE
+is_city = yes
 culture = oirats
 religion = tengri_pagan_reformed
 capital = "Altay"

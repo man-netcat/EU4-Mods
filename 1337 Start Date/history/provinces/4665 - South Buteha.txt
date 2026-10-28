@@ -1,6 +1,7 @@
-owner = YUA
-controller = YUA
-add_core = YUA
+owner = HCN
+controller = HCN
+add_core = HCN
+add_core = OTC
 is_city = yes
 culture = chahar
 religion = tengri_pagan_reformed

@@ -1,8 +1,8 @@
 # 2189 - Tsetserleg
 
-owner = YUA
-controller = YUA
-add_core = YUA
+owner = CRS
+controller = CRS
+add_core = CRS
 is_city = yes
 latent_trade_goods = {
 	coal

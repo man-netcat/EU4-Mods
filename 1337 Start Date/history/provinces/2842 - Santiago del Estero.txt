@@ -1,5 +1,9 @@
 # - Santiago del Estero
 
+owner = XLL
+controller = XLL
+add_core = XLL
+is_city = yes
 culture = diaguita
 
 

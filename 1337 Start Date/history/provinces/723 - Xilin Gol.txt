@@ -1,8 +1,8 @@
 #723 - Xilin Gol
 
-owner = YUA
-controller = YUA
-add_core = YUA
+owner = OTC
+controller = OTC
+add_core = OTC
 is_city = yes
 culture = mongol
 religion = vajrayana

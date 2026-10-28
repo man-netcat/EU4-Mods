@@ -3,7 +3,7 @@ add_government_reform = autocracy_reform
 primary_culture = rajput
 religion = hinduism
 technology_group = indian
-capital = 4506	# Jodphur
+capital = 514	# Jodphur
 
 monarch = {
 	name = "Chhadaji I"

@@ -1,5 +1,9 @@
 #463 - Circassia
 
+owner = ALN
+controller = ALN
+add_core = ALN
+is_city = yes
 culture = circassian
 religion = orthodox
 capital = "Adyche"

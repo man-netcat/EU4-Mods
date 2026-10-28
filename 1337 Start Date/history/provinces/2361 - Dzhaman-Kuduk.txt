@@ -1,8 +1,9 @@
 # 2361 - Dzhaman-Kuduk
 
-owner = GLH
-controller = GLH
-add_core = GLH
+owner = JLY
+controller = JLY
+add_core = CHG
+add_core = JLY
 is_city = yes
 culture = khazak
 religion = sunni

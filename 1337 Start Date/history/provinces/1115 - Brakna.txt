@@ -1,5 +1,10 @@
 #1115 - Brakna
 
+owner = MAL
+controller = MAL
+add_core = GRB
+add_core = MAL
+is_city = yes
 culture = fulani
 capital = "Aligh"
 religion = shamanism #Fetishism

@@ -1,5 +1,9 @@
 #1101 - Diego Garcia
 
+owner = MAJ
+controller = MAJ
+add_core = MAJ
+is_city = yes
 capital = "Diego Garcia"
 trade_goods = unknown
 hre = no

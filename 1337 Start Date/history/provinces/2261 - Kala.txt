@@ -1,5 +1,11 @@
 # No previous file for Kala
 
+owner = MAL
+controller = MAL
+add_core = BMR
+add_core = MAL
+add_core = TMB
+is_city = yes
 culture = bozo 
 religion = shamanism #Fetishism
 capital = "Isaq"

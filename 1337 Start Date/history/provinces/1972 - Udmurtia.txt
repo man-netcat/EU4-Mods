@@ -1,5 +1,9 @@
 #1972 - Udmurtia
 
+owner = PRM
+controller = PRM
+add_core = PRM
+is_city = yes
 capital = "Elabuga"
 culture = uralic
 religion = tengri_pagan_reformed #Sami Shamanism

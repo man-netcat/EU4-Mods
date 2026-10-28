@@ -1,5 +1,9 @@
 #2342 - Wusta
 
+owner = OMA
+controller = OMA
+add_core = OMA
+is_city = yes
 culture = mahri_culture
 religion = sunni
 capital = "Hasik" #Curia Muria Islands

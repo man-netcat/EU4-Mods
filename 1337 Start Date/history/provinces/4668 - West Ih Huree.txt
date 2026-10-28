@@ -1,6 +1,6 @@
-owner = YUA
-controller = YUA
-add_core = YUA
+owner = CRS
+controller = CRS
+add_core = CRS
 is_city = yes
 culture = khalkha
 religion = tengri_pagan_reformed

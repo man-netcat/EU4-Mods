@@ -1,7 +1,6 @@
 government = republic
 add_government_reform = city_alliance_reform
-primary_culture = totonac
-add_accepted_culture = aztek
+primary_culture = aztek
 religion = nahuatl
 technology_group = mesoamerican
 capital = 850

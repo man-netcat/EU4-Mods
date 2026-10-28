@@ -1,8 +1,8 @@
 # 1743 Cambray
 
-owner = CAA
-controller = CAA
-add_core = CAA
+owner = CAC
+controller = CAC
+add_core = CAC
 is_city = yes
 latent_trade_goods = {
 	coal

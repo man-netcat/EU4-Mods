@@ -1,5 +1,10 @@
 #401 - Dhofar
 
+owner = ORM
+controller = ORM
+add_core = OMA
+add_core = ORM
+is_city = yes
 culture = mahri_culture
 religion = sunni
 capital = "Salalah"

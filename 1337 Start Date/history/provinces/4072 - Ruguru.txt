@@ -1,6 +1,6 @@
 # - Ruguru
 
-culture = kulin #Ha
+culture = rwandan #Ha
 religion = animism #Fetishism
 trade_goods = grain
 capital = "Ruguru"

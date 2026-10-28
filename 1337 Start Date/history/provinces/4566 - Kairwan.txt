@@ -1,6 +1,7 @@
 # - Kairwan
-owner = TUN
-controller = TUN
+owner = BIA
+controller = BIA
+add_core = BIA
 add_core = TUN
 is_city = yes
 culture = tunisian

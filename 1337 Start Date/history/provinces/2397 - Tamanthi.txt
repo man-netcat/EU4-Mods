@@ -1,8 +1,8 @@
 #2397 - Tamanthi
 
-owner = MYA
-controller = MYA
-add_core = MYA
+owner = PIN
+controller = PIN
+add_core = PIN
 is_city = yes
 culture = shan
 religion = animism

@@ -1,13 +1,9 @@
 #322 - Küthaya
 
-owner = GRM
-controller = GRM
-add_core = GRM
-is_city = yes
-culture = greek
-religion = orthodox
+culture = turkish
+religion = sunni
 capital = "Kütahya"
-trade_goods = dyes
+trade_goods = cloth
 hre = no
 base_tax = 3
 base_production = 3

@@ -3,9 +3,10 @@ add_government_reform = feudalism_reform
 government_rank = 2
 technology_group = chinese
 primary_culture = uyghur
+add_accepted_culture = oirats
 add_accepted_culture = uzbehk
 religion = mahayana
-capital = 2127
+capital = 710
 
 monarch = {
 	name = "Uruktemur"

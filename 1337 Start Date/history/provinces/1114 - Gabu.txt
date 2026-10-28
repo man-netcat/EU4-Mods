@@ -1,8 +1,8 @@
 #1114 - Gabu
 
-owner = MAL
-controller = MAL
-add_core = MAL
+owner = KBU
+controller = KBU
+add_core = KBU
 is_city = yes
 culture = senegambian
 base_manpower = 2

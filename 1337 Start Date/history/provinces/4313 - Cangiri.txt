@@ -1,9 +1,5 @@
 #4313 - Kangiri
 
-owner = AHI
-controller = AHI
-add_core = AHI
-is_city = yes
 culture = turkish
 religion = sunni
 capital = "Kangiri"

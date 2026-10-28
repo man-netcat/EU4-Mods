@@ -1,5 +1,9 @@
 #1055 - Verkne-Angarsky
 
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
 culture = buryat
 religion = tengri_pagan_reformed
 capital = "Kirenga"

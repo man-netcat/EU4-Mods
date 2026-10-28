@@ -1,5 +1,9 @@
 #Bunyoro
 
+owner = KIT
+controller = KIT
+add_core = KIT
+is_city = yes
 culture = ganda
 religion = shamanism #Fetishism
 capital = "Mugenyi"

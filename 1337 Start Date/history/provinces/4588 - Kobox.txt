@@ -1,8 +1,8 @@
 # No previous file for Kobox
 
-owner = ITZ
-controller = ITZ
-add_core = ITZ
+owner = COC
+controller = COC
+add_core = COC
 is_city = yes
 culture = putun
 religion = mesoamerican_religion

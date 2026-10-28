@@ -1,5 +1,9 @@
 #2706 - Katapang
 
+owner = TJP
+controller = TJP
+add_core = TJP
+is_city = yes
 culture = bornean
 religion = hinduism
 capital = "Katapang"

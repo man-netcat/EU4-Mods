@@ -3,7 +3,7 @@
 culture = cree
 religion = totemism
 capital = "Abitbi"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1

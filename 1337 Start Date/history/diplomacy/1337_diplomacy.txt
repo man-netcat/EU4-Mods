@@ -20,6 +20,7 @@ dependency = { first = GLH second = KIE subject_type = "tributary_state" start_d
 dependency = { first = GLH second = VOL subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = DLH second = HAD start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = DLH second = MER start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = DLH second = IDR start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = DLH second = SGN start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = DLH second = GAU start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = DLH second = STN start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -71,24 +72,23 @@ alliance = { first = BOH second = LBV start_date = 1337.4.1 end_date = 1836.12.3
 alliance = { first = HUN second = POL start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = NAP second = ALB start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = HUN second = BOS start_date = 1337.4.1 end_date = 1836.12.31 }
-vassal = { first = GRM second = SRU start_date = 1337.4.1 end_date = 1836.12.31 }
-vassal = { first = GRM second = AYD start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = JAL second = ERE start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = JAL second = SUT start_date = 1337.4.1 end_date = 1836.12.31 }
-vassal = { first = MAM second = DUL start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = SUT second = BTL start_date = 1337.4.1 end_date = 1836.12.31 }
-alliance = { first = BYZ second = TRE start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GRG second = JKR start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GRG second = KRT start_date = 1337.4.1 end_date = 1836.12.31 }
 alliance = { first = HLG second = GRG start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GEO second = ARM start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GEO second = SME start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = GLH second = AVR start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = GLH second = TRK start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = ETH second = IFA subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
+dependency = { first = ETH second = ENA subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ETH second = HDY start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = IFA second = WAR subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = ZAN second = MLI subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = ZAN second = MBA subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = MAL second = BMR start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAL second = JOL start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAL second = KBU start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAL second = SON start_date = 1337.4.1 end_date = 1836.12.31 }
@@ -102,19 +102,28 @@ vassal = { first = YUA second = SHE start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = YUA second = TIB start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = YUA second = CDL start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = CHG second = KAS start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = CHG second = JLY start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = CHG second = NGD start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = CHG second = QCH start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = CHG second = QUN start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = CHG second = SLD start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = CHG second = YSU start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = KAS second = MNL start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = YUA second = ASU start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = YUA second = OGE start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = OGE second = CRS start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = YUA second = BGT start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = YUA second = HCN start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = YUA second = OTC start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = TIB second = GUG start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = YUA second = CHA subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = YUA second = DAI subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = PIN second = BPR start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAJ second = PLB start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = MAJ second = TJP start_date = 1337.4.1 end_date = 1836.12.31 }
 dependency = { first = MAJ second = KAI subject_type = "tributary_state" start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = BEI second = SUL start_date = 1337.4.1 end_date = 1836.12.31 }
+vassal = { first = BEI second = MNA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = BEI second = BTU start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAM second = BQA start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = MAM second = FAD start_date = 1337.4.1 end_date = 1836.12.31 }

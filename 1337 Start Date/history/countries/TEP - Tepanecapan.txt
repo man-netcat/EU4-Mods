@@ -2,9 +2,9 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = mesoamerican
-primary_culture = totonac
+primary_culture = aztek
 religion = nahuatl
-capital = 4571
+capital = 4570
 
 monarch = {
 	name = "Acolnahuacatl"

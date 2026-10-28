@@ -1,5 +1,9 @@
 #2002 - Galápagos Islands
 
+owner = XLL
+controller = XLL
+add_core = XLL
+is_city = yes
 capital = "Puerto Baquerizo Moreno"
 trade_goods = unknown
 hre = no

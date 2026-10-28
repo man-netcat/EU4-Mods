@@ -1,5 +1,9 @@
 # 2190 - Bayankhongor
 
+owner = CRS
+controller = CRS
+add_core = CRS
+is_city = yes
 culture = khalkha
 religion = tengri_pagan_reformed
 capital = "Sain Noyon"

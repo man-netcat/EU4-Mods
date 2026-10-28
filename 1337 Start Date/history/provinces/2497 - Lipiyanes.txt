@@ -1,9 +1,9 @@
 # No previous file for Lipiyanes
 
-culture = lipan
+culture = wichita
 religion = totemism
 capital = "Lipiyanes"
-trade_goods = unknown
+trade_goods = fur
 hre = no
 base_tax = 1 
 base_production = 1

@@ -1,5 +1,9 @@
 #1189 - Shangwe
 
+owner = TIB
+controller = TIB
+add_core = TIB
+is_city = yes
 culture = shona
 religion = shamanism
 capital = "Shangwe"

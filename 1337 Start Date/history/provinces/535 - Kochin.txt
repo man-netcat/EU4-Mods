@@ -1,8 +1,8 @@
 #535 - Kochin
 
-owner = KLT
-controller = KLT
-add_core = KLT
+owner = ALU
+controller = ALU
+add_core = ALU
 is_city = yes
 culture = malayalam
 religion = hinduism

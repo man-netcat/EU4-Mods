@@ -1,9 +1,9 @@
 government = monarchy
 add_government_reform = nayankara_reform
-primary_culture = oriya
+primary_culture = garjati
 religion = hinduism
 technology_group = indian
-capital = 552	# Cuttack
+capital = 4452	# Cuttack
 
 #Rajas of Orissa
 

@@ -4,5 +4,6 @@ government_rank = 1
 technology_group = muslim
 primary_culture = khalkha
 add_accepted_culture = uzbehk
+add_accepted_culture = khazak
 religion = sunni
 capital = 454

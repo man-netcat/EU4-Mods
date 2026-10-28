@@ -1,11 +1,7 @@
 #1105 - Vestbygden
 
-owner = NOR
-controller = NOR
-add_core = NOR
-is_city = yes
-culture = icelandic
-religion = catholic
+culture = inuit
+religion = totemism
 capital = "Vestbygden"
 trade_goods = unknown
 hre = no

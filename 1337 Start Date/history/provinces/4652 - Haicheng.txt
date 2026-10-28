@@ -2,6 +2,7 @@
 
 owner = YUA
 controller = YUA
+add_core = SHE
 add_core = YUA
 is_city = yes
 culture = shandong_culture # check

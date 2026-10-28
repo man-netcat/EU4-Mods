@@ -1,18 +1,14 @@
 #316 - Izmit
 
-owner = TUR
-controller = TUR
-add_core = BYZ
-add_core = TUR
-is_city = yes
-culture = greek
-religion = orthodox
+culture = turkish
+religion = sunni
 capital = "Izmit"
-trade_goods = wine
+trade_goods = grain
 hre = no
-base_tax = 5
-base_production = 5
-base_manpower = 4
+base_tax = 3
+base_production = 3
+base_manpower = 3
+fort_15th = yes
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

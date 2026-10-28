@@ -1,5 +1,9 @@
 # No previous file for Huichol
 
+owner = TAR
+controller = TAR
+add_core = TAR
+is_city = yes
 culture = tepic
 religion = nahuatl
 capital = "Huichol"

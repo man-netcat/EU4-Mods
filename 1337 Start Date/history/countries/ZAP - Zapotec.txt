@@ -1,6 +1,7 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = zapotek
+add_accepted_culture = lacandon
 religion = nahuatl
 technology_group = mesoamerican
 capital = 2631

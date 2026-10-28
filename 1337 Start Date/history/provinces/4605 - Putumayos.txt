@@ -1,5 +1,9 @@
 # No previous file for Putumayos
 
+owner = ZIP
+controller = ZIP
+add_core = ZIP
+is_city = yes
 culture = guajiro
 
 

@@ -1,5 +1,9 @@
 # 2119 - Chuguchak
 
+owner = CHG
+controller = CHG
+add_core = CHG
+is_city = yes
 culture = oirats
 religion = sunni
 capital = "Chugachak"

@@ -3,7 +3,6 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = muslim
 primary_culture = persian
-add_accepted_culture = luri
 religion = sunni
 capital = 2218
 

@@ -1,5 +1,9 @@
 #1215 - Tajura
 
+owner = DAA
+controller = DAA
+add_core = DAA
+is_city = yes
 culture = afar
 religion = sunni
 capital = "Tajura"

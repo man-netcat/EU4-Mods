@@ -1,5 +1,9 @@
 # No previous file for Tulucan
 
+owner = MET
+controller = MET
+add_core = MET
+is_city = yes
 culture = matlatzinca
 religion = nahuatl
 capital = "Matlatzinca"

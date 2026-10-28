@@ -1,5 +1,9 @@
 #4452 - Ratanpur
 
+owner = ORI
+controller = ORI
+add_core = ORI
+is_city = yes
 culture = gondi
 religion = hinduism
 capital = "Ratanpur"

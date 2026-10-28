@@ -1,6 +1,11 @@
 # No previous file for Tzotzil
 
 
+owner = ZAP
+controller = ZAP
+add_core = YUC
+add_core = ZAP
+is_city = yes
 culture = lacandon
 religion = mesoamerican_religion
 capital = "Tzotzil"

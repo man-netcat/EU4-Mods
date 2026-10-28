@@ -1,8 +1,8 @@
 #1134 - Jenne
 
-owner = MAL
-controller = MAL
-add_core = MAL
+owner = BMR
+controller = BMR
+add_core = BMR
 add_core = TMB
 is_city = yes
 culture = bozo
