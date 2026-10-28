@@ -1,17 +1,16 @@
 #210 - Navarra
 
-owner = CAS
-controller = CAS
-add_core = CAS
+owner = NAV
+controller = NAV
 add_core = NAV
 is_city = yes
 culture = basque
 religion = catholic
 hre = no
-base_tax = 7 
-base_production = 5
+base_tax = 5 
+base_production = 4
 trade_goods = wine
-base_manpower = 5 
+base_manpower = 4 
 #fort_15th = yes #Fortifications of Pamplona and Saint-Jean-Pied-de-Port
 capital = "Pamplona" 
 

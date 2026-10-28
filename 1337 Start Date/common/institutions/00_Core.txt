@@ -1037,6 +1037,7 @@ feudalism = {
 			province_id = 2986
 			province_id = 2987
 			province_id = 2988
+			province_id = 2989
 			province_id = 2990
 			province_id = 2991
 			province_id = 2992

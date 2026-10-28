@@ -179,6 +179,15 @@ with the generic reform (17: the Italian signorie as republics, bishoprics as th
 The base game's backstory wars dated 1414-1443 (Hunger War, Wars of Lombardy, ...) are not removed: they run on their
 own dates as history between 1337 and 1444, with whatever tags then exist.
 
+## Europe
+
+Extra care: `python3 tools/audit_regions.py europe` lists every low-confidence European province (matched only to a whole EU5
+area, sharing its location pool, or unmatched) and, per EU4 area, the EU5 provinces nothing certain claims, with owners; the
+aliases in `data/aliases.json` are written from that. Done so far: ~130 hand aliases (Italy, France, Low Countries,
+Germany, Iberia, the Balkans, the Pontic steppe), a name match is kept to the part of the world its province is in
+(Beja/Tunisia, Gallipoli/Apulia, Rothenburg), Navarre owns Navarra, Venice the lagoon, Florence its province, Ragusa Dubrovnik.
+Europe: 602 of 728 land provinces certain, 126 low confidence (mostly inside one owner's land, so ownership is unaffected).
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is
