@@ -1,6 +1,6 @@
 government = tribal
 add_government_reform = tribal_kingdom
-primary_culture = mixtec
+primary_culture = zapotek
 religion = nahuatl
 technology_group = mesoamerican
 capital = 2631

@@ -2,7 +2,7 @@ government = theocracy
 add_government_reform = leading_clergy_reform
 government_rank = 1
 technology_group = western
-primary_culture = swiss
+primary_culture = swabian
 religion = catholic
 capital = 1880
 

@@ -9,7 +9,7 @@ latent_trade_goods = {
 }
 
 capital= "Lwów"
-culture = russian
+culture = ruthenian
 religion = orthodox
 trade_goods = dyes #Polish cochineal
 hre = no

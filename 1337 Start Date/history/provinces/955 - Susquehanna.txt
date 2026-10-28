@@ -1,7 +1,7 @@
 #955 - Susquehanna
 
 
-culture = susquehannock
+culture = tionontate
 religion = totemism
 capital = "Susquehanna"
 trade_goods = unknown

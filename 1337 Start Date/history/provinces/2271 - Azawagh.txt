@@ -1,6 +1,6 @@
 # 2271 - Azawagh
 
-culture = berber 
+culture = tuareg 
 religion = sunni
 capital = "Menaka"
 trade_goods = livestock

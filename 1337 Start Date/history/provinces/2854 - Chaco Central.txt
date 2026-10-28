@@ -1,6 +1,6 @@
 # - Chaco Central
 
-culture = guarani
+culture = chacoan
 
 
 

@@ -1,6 +1,6 @@
 #2437 - Seganka
 
-culture = manchu
+culture = yakut
 religion = tengri_pagan_reformed
 capital = "Seganka"
 trade_goods = unknown

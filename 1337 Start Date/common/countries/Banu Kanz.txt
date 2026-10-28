@@ -1,3 +1,3 @@
-graphical_culture = muslimgfx
+graphical_culture = africangfx
 
 color = { 211 130 211 }

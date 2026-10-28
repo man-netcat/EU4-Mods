@@ -1,6 +1,6 @@
 #898 - Kansas
 
-culture = pawnee #Old plains people
+culture = wichita #Old plains people
 religion = totemism
 capital = "Kansas"
 trade_goods = unknown

@@ -8,7 +8,7 @@ latent_trade_goods = {
 	coal
 }
 
-culture = sumatran
+culture = filipino
 religion = animism
 capital = "Cebu"
 trade_goods = gems #Pearls

@@ -1,6 +1,6 @@
 #957 - Delaware
 
-culture = delaware
+culture = powhatan
 religion = totemism
 capital = "Delaware"
 trade_goods = unknown

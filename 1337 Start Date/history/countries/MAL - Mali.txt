@@ -1,6 +1,6 @@
 government = monarchy
 add_government_reform = musa_rule
-primary_culture = mali
+primary_culture = dyola
 religion = sunni
 technology_group = sub_saharan
 unlock_cult = yemoja_cult

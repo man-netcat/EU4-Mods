@@ -1,6 +1,6 @@
 #945 - Michigan
 
-culture = chiwere
+culture = mesquakie
 religion = totemism
 capital = "Michigan"
 trade_goods = fur

@@ -1,7 +1,7 @@
 # No previous file for Pitahawirata
 
 
-culture = wichita
+culture = pawnee
 religion = totemism
 capital = "Pitahawirata"
 trade_goods = unknown

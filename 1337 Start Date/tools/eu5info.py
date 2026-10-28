@@ -35,7 +35,7 @@ def display(key, fallback=None):
 @lru_cache(None)
 def named_colors():
     out = {}
-    for f in glob.glob(str(EU5_GAME / "main_menu/common/named_colors/*.txt")):
+    for f in sorted(glob.glob(str(EU5_GAME / "main_menu/common/named_colors/*.txt"))):
         r = parse(open(f, encoding="utf-8-sig").read())
         for k, b in get(r, "colors") or []:
             out[k] = b
@@ -58,7 +58,7 @@ def country_defs():
     """tag -> dict(color=(r,g,b), culture, religion)"""
     out = {}
     pat_rgb = re.compile(r"color\s*=\s*(rgb|hsv360|hsv)\s*\{([^}]*)\}")
-    for f in glob.glob(str(EU5_GAME / "in_game/setup/countries/*.txt")):
+    for f in sorted(glob.glob(str(EU5_GAME / "in_game/setup/countries/*.txt"))):
         text = open(f, encoding="utf-8-sig").read()
         for m in re.finditer(r"^([A-Za-z0-9_]+)\s*=\s*\{(.*?)^\}", text, re.M | re.S):
             body = m[2]
@@ -94,7 +94,7 @@ def to_rgb(kind, v):
 def named_rgb():
     out = {}
     text = ""
-    for f in glob.glob(str(EU5_GAME / "main_menu/common/named_colors/*.txt")):
+    for f in sorted(glob.glob(str(EU5_GAME / "main_menu/common/named_colors/*.txt"))):
         text += open(f, encoding="utf-8-sig").read() + "\n"
     for m in re.finditer(r"^\s*(\w+)\s*=\s*(rgb|hsv360|hsv)\s*\{([^}]*)\}", text, re.M):
         try:
@@ -110,7 +110,7 @@ def color_of(tag):
     if isinstance(c, tuple):
         return c
     # named colour: re-read raw
-    for f in glob.glob(str(EU5_GAME / "in_game/setup/countries/*.txt")):
+    for f in sorted(glob.glob(str(EU5_GAME / "in_game/setup/countries/*.txt"))):
         text = open(f, encoding="utf-8-sig").read()
         m = re.search(r"^%s\s*=\s*\{(.*?)^\}" % re.escape(tag), text, re.M | re.S)
         if m:

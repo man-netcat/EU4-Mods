@@ -1,6 +1,6 @@
 #501 - Barbados
 
-culture = guajiro
+culture = carib
 religion = animism
 capital = "Barbados"
 trade_goods = unknown

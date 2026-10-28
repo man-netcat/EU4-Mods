@@ -1,6 +1,6 @@
 #498 - Martinique
 
-culture = guajiro
+culture = carib
 religion = animism
 capital = "Martinique"
 trade_goods = unknown

@@ -1,6 +1,6 @@
 # No previous file for Skiri
 
-culture = wichita
+culture = pawnee
 religion = totemism
 capital = "Skiri"
 trade_goods = unknown

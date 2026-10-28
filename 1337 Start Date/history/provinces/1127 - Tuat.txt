@@ -1,6 +1,6 @@
 #1127 - Tuat
 
-culture = berber
+culture = tuareg
 capital = "Tawat"
 religion = sunni
 trade_goods = unknown

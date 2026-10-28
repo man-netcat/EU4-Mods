@@ -6,7 +6,7 @@ from paths import EU4_GAME, EU5_GAME, MOD
 
 def eu4_tags():
     tags = {}
-    for f in (EU4_GAME / "common/country_tags").glob("*.txt"):
+    for f in sorted((EU4_GAME / "common/country_tags").glob("*.txt")):
         for m in re.finditer(r"^([A-Z0-9]{3})\s*=\s*\"([^\"]+)\"", f.read_text(encoding="latin-1"), re.M):
             tags[m[1]] = m[2]
     return tags
@@ -14,7 +14,7 @@ def eu4_tags():
 
 def eu4_names():
     n = {}
-    for f in (EU4_GAME / "localisation").glob("*_l_english.yml"):
+    for f in sorted((EU4_GAME / "localisation").glob("*_l_english.yml")):
         n.update({k: v for k, v in yml(f).items() if re.fullmatch(r"[A-Z0-9]{3}", k)})
     return n
 

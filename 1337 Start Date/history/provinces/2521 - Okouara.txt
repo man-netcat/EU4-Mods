@@ -1,6 +1,6 @@
 # No previous file for Okouara
 
-culture = chiwere
+culture = mesquakie
 religion = totemism
 capital = "Okouara"
 trade_goods = unknown

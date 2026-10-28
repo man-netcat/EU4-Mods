@@ -1,6 +1,6 @@
 #Lolo
 
-culture = swahili
+culture = nyasa
 religion = animism #Fetishism
 capital = "Lolo"
 base_manpower = 1

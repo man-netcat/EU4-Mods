@@ -1,6 +1,6 @@
 # No previous file for Baachinena
 
-culture = pawnee
+culture = wichita
 religion = totemism
 capital = "Baachinena"
 trade_goods = unknown

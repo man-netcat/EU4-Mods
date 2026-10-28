@@ -1,6 +1,6 @@
 #931 - Chiaha
 
-culture = creek
+culture = yuchi
 religion = totemism
 capital = "Chiaha"
 trade_goods = fur

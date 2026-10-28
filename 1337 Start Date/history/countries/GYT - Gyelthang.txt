@@ -2,6 +2,6 @@ government = tribal
 add_government_reform = tribal_despotism
 government_rank = 1
 technology_group = chinese
-primary_culture = bai
+primary_culture = tibetan
 religion = vajrayana
 capital = 2167

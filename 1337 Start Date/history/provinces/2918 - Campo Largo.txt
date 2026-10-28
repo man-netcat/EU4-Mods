@@ -1,6 +1,6 @@
 # - Campo Largo
 
-culture = guarani
+culture = ge
 discovered_by = south_american
 religion = animism
 capital = "Campo Largo"

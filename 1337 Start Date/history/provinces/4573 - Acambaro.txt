@@ -1,6 +1,6 @@
 # No previous file for Acambaro
 
-culture = otomi
+culture = purepecha
 religion = nahuatl
 capital = "Acambaro"
 trade_goods = wool

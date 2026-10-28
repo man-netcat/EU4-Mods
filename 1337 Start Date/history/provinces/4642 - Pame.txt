@@ -5,7 +5,7 @@
 #add_core = CCM
 #is_city = yes
 tribal_owner = CCM
-culture = aztek 
+culture = totonac 
 religion = nahuatl
 capital = "Pame" 
 trade_goods = unknown 

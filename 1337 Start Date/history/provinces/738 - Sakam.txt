@@ -1,6 +1,6 @@
 #738 - Taiwan
 
-culture = sumatran
+culture = polynesian
 religion = animism
 capital = "Sakam"
 trade_goods = unknown

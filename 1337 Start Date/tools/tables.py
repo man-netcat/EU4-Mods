@@ -22,7 +22,7 @@ def eu5_culture_groups():
     from pdx import parse, get, getall
     from paths import EU5_GAME
     out = {}
-    for f in glob.glob(str(EU5_GAME / "in_game/common/cultures/*.txt")):
+    for f in sorted(glob.glob(str(EU5_GAME / "in_game/common/cultures/*.txt"))):
         for name, b in parse(open(f, encoding="utf-8-sig").read()):
             if isinstance(b, list):
                 g = get(b, "culture_groups")
@@ -70,12 +70,12 @@ def build():
     for c, cnt in cv.items():
         for g in groups.get(c, []):
             gv[g].update(cnt)
-    cmap = {c: (max(cv[c].items(), key=lambda kv: (kv[0] is not None, kv[1]))[0] if cv[c] else None) for c in eu5_cul}
+    cmap = {c: (max(cv[c].items(), key=lambda kv: (kv[0] is not None, kv[1], str(kv[0])))[0] if cv[c] else None) for c in eu5_cul}
     for c in cmap:
         if not cmap[c]:
             for g in groups.get(c, []):
                 if gv[g]:
-                    cmap[c] = max((kv for kv in gv[g].items() if kv[0]), key=lambda kv: kv[1])[0]
+                    cmap[c] = max((kv for kv in gv[g].items() if kv[0]), key=lambda kv: (kv[1], kv[0]))[0]
                     break
     return cmap, rmap, eu5_cul, eu5_rel
 

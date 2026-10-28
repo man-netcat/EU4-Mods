@@ -1,6 +1,6 @@
 # - Fuerte Borbon
 
-culture = guarani
+culture = chacoan
 
 
 

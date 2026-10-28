@@ -1,6 +1,6 @@
 government = monarchy
 add_government_reform = nayankara_reform
-primary_culture = garjati
+primary_culture = oriya
 religion = hinduism
 technology_group = indian
 capital = 2038	# Cuttack

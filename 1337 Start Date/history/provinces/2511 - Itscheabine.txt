@@ -1,7 +1,7 @@
 # No previous file for Itscheabine
 
 
-culture = blackfoot
+culture = nakota
 religion = totemism
 capital = "Itscheabine"
 trade_goods = fur

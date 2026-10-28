@@ -1,6 +1,6 @@
 # No previous file for Adai
 
-culture = yamasee
+culture = natchez
 religion = totemism
 capital = "Adai"
 trade_goods = unknown

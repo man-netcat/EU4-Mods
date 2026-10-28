@@ -1,6 +1,6 @@
 #912 - Sauk
 
-culture = chiwere
+culture = mesquakie
 religion = totemism
 capital = "Sauk"
 trade_goods = unknown

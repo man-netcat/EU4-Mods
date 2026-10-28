@@ -1,6 +1,6 @@
 #1072 - Obdorsk
 
-culture = samoyed
+culture = ostyaki
 religion = tengri_pagan_reformed #Sami Shamanism
 capital = "Obdorsk"
 trade_goods = unknown

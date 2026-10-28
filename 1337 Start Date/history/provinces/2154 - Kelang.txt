@@ -1,6 +1,6 @@
 # 2154 - Kelang
 
-culture = sumatran
+culture = polynesian
 religion = animism
 capital = "Kelang"
 trade_goods = unknown

@@ -1,6 +1,6 @@
 # No previous file for Mascouten
 
-culture = chiwere
+culture = mesquakie
 religion = totemism
 capital = "Mascouten"
 trade_goods = unknown

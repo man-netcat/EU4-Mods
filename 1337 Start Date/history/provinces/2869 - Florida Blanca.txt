@@ -1,6 +1,6 @@
 # - Florida Blanca
 
-culture = het
+culture = patagonian
 religion = animism
 capital = "Florida Blanca"
 trade_goods = unknown

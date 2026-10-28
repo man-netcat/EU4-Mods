@@ -2,8 +2,8 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = polynesian_tech
-primary_culture = polish
-religion = catholic
+primary_culture = melanesian
+religion = animism
 capital = 1986
 
 monarch = {

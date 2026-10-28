@@ -1,6 +1,6 @@
 #1122 - Konian
 
-culture = mali 
+culture = dyola 
 religion = shamanism #Fetishism
 capital = "Tingrela"
 trade_goods = dyes

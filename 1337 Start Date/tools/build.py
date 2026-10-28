@@ -143,8 +143,8 @@ def step_provinces(table, po, cmap, rmap, stats, hre_members=None):
                         cul += lp[l]["cul"]
                         rel += lp[l]["rel"]
                 if cul:
-                    c4 = cmap.get(cul.most_common(1)[0][0])
-                    r4 = rmap.get(rel.most_common(1)[0][0])
+                    c4 = cmap.get(max(cul, key=lambda k: (cul[k], k)))
+                    r4 = rmap.get(max(rel, key=lambda k: (rel[k], k)))
                     if c4:
                         base = re.sub(r"(?m)^culture\s*=\s*\w+", f"culture = {c4}", base)
                     if r4:
@@ -190,7 +190,7 @@ def culture_gfx():
 
 
 def vanilla_country(tag):
-    for f in (VAN / "countries").iterdir():
+    for f in sorted((VAN / "countries").iterdir()):
         if f.name.startswith(tag + " -"):
             return f
     return None
@@ -200,12 +200,12 @@ def tech_by_area():
     area, reg = eu4_geo()
     vote = defaultdict(Counter)
     vtech = {}
-    for f in (VAN / "countries").iterdir():
+    for f in sorted((VAN / "countries").iterdir()):
         t = f.name[:3]
         m = re.search(r"(?m)^technology_group\s*=\s*(\w+)", f.read_text(encoding="latin-1"))
         if m:
             vtech[t] = m[1]
-    for f in (VAN / "provinces").iterdir():
+    for f in sorted((VAN / "provinces").iterdir()):
         pid = int(re.match(r"(\d+)", f.name)[1])
         ow = re.search(r"(?m)^owner\s*=\s*(\w+)", split_blocks(f.read_text(encoding="latin-1"))[0])
         if ow and ow[1] in vtech:
@@ -240,7 +240,7 @@ def step_countries(table, po, cmap, rmap, stats):
                 l2p[l] = int(pid)
     vote, area, reg, vtech = tech_by_area()
     vown = {}
-    for f in (VAN / "provinces").iterdir():
+    for f in sorted((VAN / "provinces").iterdir()):
         pid = int(re.match(r"(\d+)", f.name)[1])
         ow = re.search(r"(?m)^owner\s*=\s*(\w+)", split_blocks(f.read_text(encoding="latin-1"))[0])
         vown[pid] = ow[1] if ow else None
@@ -249,7 +249,7 @@ def step_countries(table, po, cmap, rmap, stats):
         if v["owner"] in table and v["tier"] != "area-fallback" or v["owner"] in table:
             owned_by[v["owner"]].append(pid)
     reused = {r["eu4"] for r in table.values() if not r["new"]}
-    prov_file = {int(re.match(r"(\d+)", f.name)[1]): f.name for f in (MOD / "history/provinces").iterdir()}
+    prov_file = {int(re.match(r"(\d+)", f.name)[1]): f.name for f in sorted((MOD / "history/provinces").iterdir())}
     for tag5, r in table.items():
         tag, nm = r["eu4"], r["name"]
         i = info.get(tag5, {})
@@ -294,7 +294,7 @@ def step_countries(table, po, cmap, rmap, stats):
                     cul = cul or (m_ and m_[1])
             area_ = area.get(cap) or (area.get(cul_src) if not cap and cored else None)
             tv = vote.get(area_) or vote.get(reg.get(area_)) or Counter({"western": 1})
-            tech = tv.most_common(1)[0][0]
+            tech = max(tv, key=lambda k: (tv[k], k))
             if tech in NATIVE_TECH and gov in ("tribal",):
                 gov, reform = "native", "native_clan_council_reform"
             if not cul and cap:
@@ -335,7 +335,7 @@ def step_dormant(table):
     out = MOD / "history/countries"
     used = {r["eu4"] for r in table.values()}
     n = 0
-    for f in (VAN / "countries").iterdir():
+    for f in sorted((VAN / "countries").iterdir()):
         if f.name[:3] in used:
             continue
         base, blocks = split_blocks(f.read_text(encoding="latin-1"))
@@ -380,7 +380,7 @@ def step_diplomacy(table):
     from paths import EU5_SETUP
     from pdx import parse
     held = Counter()
-    for f in (MOD / "history/provinces").iterdir():
+    for f in sorted((MOD / "history/provinces").iterdir()):
         m = re.search(r"(?m)^owner\s*=\s*(\w+)", f.read_text(encoding="latin-1"))
         if m:
             held[m[1]] += 1

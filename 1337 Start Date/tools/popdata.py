@@ -26,7 +26,7 @@ def location_pops():
 def vanilla_cr():
     """EU4 vanilla province id -> (culture, religion) from undated top of history file."""
     out = {}
-    for f in (EU4_GAME / "history/provinces").iterdir():
+    for f in sorted((EU4_GAME / "history/provinces").iterdir()):
         m = re.match(r"(\d+)", f.name)
         if not m:
             continue

@@ -1,6 +1,6 @@
 #1159 - Bagirmi
 
-culture = bilala #bagirmi
+culture = kanuri #bagirmi
 religion = shamanism #Fetishism
 capital = "Massenya"
 base_manpower = 1

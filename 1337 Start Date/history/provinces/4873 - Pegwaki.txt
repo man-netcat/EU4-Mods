@@ -1,6 +1,6 @@
 # No previous file for Pegwaki
 
-culture = mikmaq
+culture = abenaki
 religion = totemism
 capital = "Pegwaki"
 trade_goods = unknown

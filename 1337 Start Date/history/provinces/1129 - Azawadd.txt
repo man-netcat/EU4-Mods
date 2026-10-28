@@ -1,6 +1,6 @@
 #1129 - Azawadd
 
-culture = berber
+culture = tuareg
 religion = sunni
 capital = "Arawan"
 trade_goods = salt

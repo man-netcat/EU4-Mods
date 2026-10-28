@@ -1,6 +1,6 @@
 #901 - Pawnee
 
-culture = wichita
+culture = pawnee
 religion = totemism
 capital = "Pawnee"
 trade_goods = grain

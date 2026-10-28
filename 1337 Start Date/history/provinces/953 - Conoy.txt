@@ -1,6 +1,6 @@
 #953 - Conoy
 
-culture = delaware
+culture = powhatan
 religion = totemism
 capital = "Conoy"
 trade_goods = unknown

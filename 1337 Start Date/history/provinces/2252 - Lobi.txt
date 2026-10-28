@@ -1,6 +1,6 @@
 # No previous file for Lobi
 
-culture = mali 
+culture = dyola 
 religion = shamanism #Fetishism
 capital = "Lobi"
 trade_goods = gold

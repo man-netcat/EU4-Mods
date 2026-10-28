@@ -1,6 +1,6 @@
 #497 - Dominica
 
-culture = guajiro
+culture = carib
 religion = animism
 capital = "Dominica"
 trade_goods = unknown 

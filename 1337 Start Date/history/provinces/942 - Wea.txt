@@ -1,6 +1,6 @@
 #942 - Wea
 
-culture = miami
+culture = osage
 religion = totemism
 capital = "Wea" 
 trade_goods = unknown

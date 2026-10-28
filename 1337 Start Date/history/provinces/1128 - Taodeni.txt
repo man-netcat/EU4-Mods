@@ -1,6 +1,6 @@
 #1128 - Taodeni
 
-culture = berber
+culture = tuareg
 religion = sunni
 capital = "Tawdani"
 trade_goods = salt

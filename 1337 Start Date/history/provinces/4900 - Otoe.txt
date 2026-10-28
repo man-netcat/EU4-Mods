@@ -1,7 +1,7 @@
 # No previous file for Otoe
 
 
-culture = chiwere
+culture = pawnee
 religion = totemism
 capital = "Otoe"
 trade_goods = unknown

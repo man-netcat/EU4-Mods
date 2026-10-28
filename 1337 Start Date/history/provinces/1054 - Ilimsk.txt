@@ -1,6 +1,6 @@
 #1054 - Ilimsk
 
-culture = manchu
+culture = yakut
 religion = tengri_pagan_reformed
 capital = "Mukhtuya"
 trade_goods = unknown

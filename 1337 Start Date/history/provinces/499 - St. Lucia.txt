@@ -1,6 +1,6 @@
 #499 - St. Lucia
 
-culture = guajiro
+culture = carib
 religion = animism
 capital = "St. Lucia"
 trade_goods = unknown

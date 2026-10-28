@@ -1,6 +1,6 @@
 #905 - Iowa
 
-culture = chiwere
+culture = pawnee
 religion = totemism
 capital = "Iowa"
 trade_goods = unknown

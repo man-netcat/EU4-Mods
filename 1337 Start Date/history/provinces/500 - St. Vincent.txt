@@ -1,6 +1,6 @@
 #500 - St. Vincent
 
-culture = guajiro
+culture = carib
 religion = animism
 capital = "St. Vincent"
 trade_goods = unknown

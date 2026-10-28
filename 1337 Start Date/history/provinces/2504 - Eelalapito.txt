@@ -1,6 +1,6 @@
 # No previous file for Eelalapito
 
-culture = nakota
+culture = pawnee
 religion = totemism
 capital = "Eelalapito"
 trade_goods = unknown

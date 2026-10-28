@@ -1,6 +1,6 @@
 #Lundu
 
-culture = swahili
+culture = nyasa
 religion = animism #Fetishism
 capital = "Mbebwe"
 base_manpower = 4

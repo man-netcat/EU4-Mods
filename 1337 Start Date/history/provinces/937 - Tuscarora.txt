@@ -1,6 +1,6 @@
 #937 - Tuscarora
 
-culture = creek
+culture = iroquois
 religion = totemism
 capital = "Tuscarora"
 trade_goods = tobacco

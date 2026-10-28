@@ -1,6 +1,6 @@
 # 2155 - Middag
 
-culture = sumatran
+culture = polynesian
 religion = animism
 capital = "Middag"
 trade_goods = unknown

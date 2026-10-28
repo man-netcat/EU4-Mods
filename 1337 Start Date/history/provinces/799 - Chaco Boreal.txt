@@ -1,6 +1,6 @@
 #799 - Chaco Boreal
 
-culture = guarani
+culture = chacoan
 
 
 

@@ -1,6 +1,6 @@
 #775 - Asuncion
 
-culture = guarani
+culture = chacoan
 discovered_by = south_american
 religion = animism
 capital = "Asunción"

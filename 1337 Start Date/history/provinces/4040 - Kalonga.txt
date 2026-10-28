@@ -1,6 +1,6 @@
 #Kalonga
 
-culture = swahili
+culture = nyasa
 religion = animism #Fetishism
 capital = "Manthimba"
 base_manpower = 4

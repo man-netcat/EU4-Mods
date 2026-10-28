@@ -1,6 +1,6 @@
 #782 - Tierra del Fuego
 
-culture = het
+culture = patagonian
 religion = animism
 capital = "Tierra del Fuego"
 trade_goods = unknown

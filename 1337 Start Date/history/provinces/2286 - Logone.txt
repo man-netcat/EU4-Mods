@@ -1,6 +1,6 @@
 # No previous file for Logone
 
-culture = bilala 
+culture = kanuri 
 religion = shamanism #Fetishism
 capital = "Logone"
 trade_goods = ivory

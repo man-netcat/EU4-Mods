@@ -1,6 +1,6 @@
 # No previous file for Warri
 
-culture = sawabantu 
+culture = yorumba 
 religion = shamanism #Fetishism
 capital = "Warri"
 trade_goods = slaves

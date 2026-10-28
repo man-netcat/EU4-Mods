@@ -1,6 +1,6 @@
 #831 - Caracas
 
-culture = guajiro discovered_by = south_american
+culture = carib discovered_by = south_american
 religion = animism
 capital = "Caracas"
 trade_goods = unknown

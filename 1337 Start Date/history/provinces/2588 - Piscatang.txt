@@ -1,6 +1,6 @@
 # No previous file for Piscatang
 
-culture = algonquin
+culture = cree
 religion = totemism
 capital = "Piscatang"
 trade_goods = unknown

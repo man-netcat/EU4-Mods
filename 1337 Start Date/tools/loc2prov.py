@@ -53,7 +53,7 @@ def eu5_tree():
 
 def eu4_provinces():
     prov = {}
-    for f in (EU4_GAME / "history/provinces").iterdir():
+    for f in sorted((EU4_GAME / "history/provinces").iterdir()):
         m = re.match(r"(\d+)\s*-?\s*(.*)\.txt", f.name, re.I)
         if m:
             prov[int(m[1])] = [m[2].strip()]
@@ -94,7 +94,7 @@ def eu4_geo():
 def main():
     nodes, level, locs, path = eu5_tree()
     disp = defaultdict(set)  # normalised display name -> location keys
-    for f in (L5 / "location_names").glob("*_l_english.yml"):
+    for f in sorted((L5 / "location_names").glob("*_l_english.yml")):
         for k, v in yml(f).items():
             if k in locs:
                 disp[norm(v)].add(k)
