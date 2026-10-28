@@ -252,6 +252,28 @@ def main():
     for f in (MOD / "common/countries").glob("*.txt"):
         if (EU4_GAME / "common/countries" / f.name).exists():
             errs.append(f"common/countries/{f.name} replaces a base-game country file")
+    # a country's reform belongs to its government type (the base game's governments file lists them per type)
+    gtext = (EU4_GAME / "common/governments/00_governments.txt").read_text(encoding="latin-1")
+    allowed = {}
+    for gname, gbody in parse(gtext):
+        if isinstance(gbody, list):
+            reform_names = set()
+            for lk, lv in gbody:
+                if lk == "reform_levels" and isinstance(lv, list):
+                    for _lvl, lbody in lv:
+                        for rk, rv in lbody:
+                            if rk == "reforms" and isinstance(rv, list):
+                                reform_names |= {x for _k, x in rv if _k is None}
+            allowed[gname] = reform_names
+    landed_tags = set(capital_owner.values())
+    for f in (MOD / "history/countries").glob("*.txt"):
+        if f.name[:3] not in landed_tags:
+            continue  # a dormant base-game file is the base game's own
+        top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
+        g = re.search(r"(?m)^government = (\w+)", top)
+        for r_ in re.findall(r"(?m)^add_government_reform = (\w+)", top):
+            if g and g[1] in allowed and r_ not in allowed[g[1]]:
+                errs.append(f"{f.name}: reform {r_} does not belong to government {g[1]}")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

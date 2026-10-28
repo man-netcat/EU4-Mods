@@ -343,7 +343,7 @@ def tech_by_area():
 
 GOV_DEFAULT = {
     "monarchy": ("monarchy", "feudalism_reform"),
-    "republic": ("republic", "plutocratic_reform"),
+    "republic": ("republic", "oligarchy_reform"),
     "theocracy": ("theocracy", "leading_clergy_reform"),
     "tribe": ("tribal", "tribal_despotism"),
     "horde": ("tribal", "steppe_horde"),
@@ -373,6 +373,17 @@ def ruler_text(tag, b, gov, table, stats):
         if origin != tag:
             MARRIAGES.add(tuple(sorted((tag, origin))))
     return out, True
+
+
+def reform_for(kind, culture, tag):
+    """The government reform a state of EU5 government `kind` starts with. Republics: free cities of the Empire are
+    free_city, Latin-culture ones signoria_reform (the base game's potential requires it), the rest oligarchy_reform."""
+    if kind == "republic":
+        import cultures_of
+        if tag in HRE_MEMBERS:
+            return "free_city"
+        return "signoria_reform" if cultures_of.groups().get(culture) == "latin" else "oligarchy_reform"
+    return GOV_DEFAULT[kind][1]
 
 
 def step_countries(table, po, cmap, rmap, stats):
@@ -429,7 +440,9 @@ def step_countries(table, po, cmap, rmap, stats):
             if want and have and have[1] != want[0] and {have[1], want[0]} <= {"monarchy", "republic", "theocracy"}:
                 # EU5 types this state differently (Italian signorie as republics, a bishopric as theocracy): follow it
                 base = strip_depth0(base, r"\s*add_government_reform\s*=")
-                base = re.sub(r"(?m)^government\s*=\s*\w+", f"government = {want[0]}\nadd_government_reform = {want[1]}", base, count=1)
+                pc = re.search(r"(?m)^primary_culture\s*=\s*(\w+)", base)
+                base = re.sub(r"(?m)^government\s*=\s*\w+",
+                              f"government = {want[0]}\nadd_government_reform = {reform_for(i.get('gov'), pc and pc[1], tag)}", base, count=1)
                 stats["government_changed"] += 1
             if i.get("rank") in RANK:
                 if re.search(r"(?m)^government_rank\s*=", base):
@@ -441,6 +454,8 @@ def step_countries(table, po, cmap, rmap, stats):
             fname = van.name
         else:
             gov, reform = GOV_DEFAULT.get(i.get("gov", "monarchy"), GOV_DEFAULT["monarchy"])
+            if gov == "republic":
+                reform = reform_for("republic", cul, tag)
             cored = None
             if not cap:
                 cored = [p for p, v in po.items() if tag5 in v["cores"] and p in prov_file]
@@ -1005,6 +1020,7 @@ def step_rivals(table):
 
 EMP = [None]
 ELECTORS = set()
+HRE_MEMBERS = set()
 TECH_GROUPS = {}
 MARRIAGES = set()  # (tag, tag) royal marriages: a ruler's consort comes from another country
 
@@ -1018,6 +1034,7 @@ def main():
     stats = Counter()
     hre, emperor, electors = hre_members(table)
     ELECTORS.update(electors)
+    HRE_MEMBERS.update(hre)
     stats["hre_members"] = len(hre)
     step_provinces(table, po, cmap, rmap, stats, hre)
     stats["emperor"] = emperor
