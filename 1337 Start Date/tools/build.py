@@ -533,7 +533,22 @@ def step_tags(table):
     p.write_text("﻿" + "\n".join(loc) + "\n", encoding="utf-8")
 
 
+# EU5 subject type -> (history/diplomacy key, EU4 subject type). Vassal-like EU5 types are all EU4 vassals; royal
+# cadet branches and family governors are appanages, tributaries are tributary states. Hanseatic members are
+# not subjects at all in EU4: they ally with their league.
+SUBJECT_KIND = {
+    "vassal": ("vassal", None), "fiefdom": ("vassal", None), "dominion": ("vassal", None),
+    "samanta": ("vassal", None), "tusi": ("vassal", None),
+    "appanage": ("dependency", "appanage"), "familial_governor": ("dependency", "appanage"),
+    "tributary": ("dependency", "tributary_state"), "hanseatic_member": ("alliance", None),
+}
+
+
 def step_diplomacy(table):
+    """history/diplomacy from 12_diplomacy. A subject of a tag that was folded into its own overlord is
+    re-attached to that overlord; each subject keeps its first overlord only; no subject is also allied
+    with, or guaranteed by, the overlord it already serves."""
+    import tagmap
     from paths import EU5_SETUP
     from pdx import parse
     held = Counter()
@@ -543,33 +558,62 @@ def step_diplomacy(table):
             held[m[1]] += 1
     dm = get(parse((EU5_SETUP / "12_diplomacy.txt").read_text(encoding="utf-8-sig")), "diplomacy_manager")
     out, n = ["# generated from EU5 12_diplomacy.txt - do not edit"], Counter()
+    sd = "start_date = 1337.4.1 end_date = 1836.12.31"
+    subjects, pairs = {}, set()
+    rows = []
     for k, b in dm:
         if not isinstance(b, list):
             continue
+        t = get(b, "subject_type") if k == "dependency" else get(b, "type")
         a, c = get(b, "first"), get(b, "second")
+        a = tagmap.FOLDED.get(a, a)
         if a not in table or c not in table:
             continue
         a, c = table[a]["eu4"], table[c]["eu4"]
         if not (held[a] and held[c]) or a == c:
             continue
-        t = get(b, "subject_type") if k == "dependency" else get(b, "type")
-        sd = "start_date = 1337.4.1 end_date = 1836.12.31"
-        if t in ("vassal", "fiefdom", "dominion", "appanage", "samanta", "tusi", "familial_governor", "hanseatic_member"):
-            out.append(f"vassal = {{ first = {a} second = {c} {sd} }}")
-        elif t == "tributary":
-            out.append(f"tributary = {{ first = {a} second = {c} {sd} }}")
-        elif t == "alliance":
-            out.append(f"alliance = {{ first = {a} second = {c} {sd} }}")
-        elif t == "guarantee":
-            out.append(f"guarantee = {{ first = {a} second = {c} {sd} }}")
-        elif t == "military_sponsorship":
-            out.append(f"alliance = {{ first = {a} second = {c} {sd} }}")
+        rows.append((k, t, a, c))
+    for k, t, a, c in rows:
+        kind = SUBJECT_KIND.get(t) if k == "dependency" else None
+        if kind and kind[0] in ("vassal", "dependency"):
+            if c in subjects:
+                continue  # one overlord each
+            subjects[c] = a
+    for k, t, a, c in rows:
+        kind = SUBJECT_KIND.get(t) if k == "dependency" else None
+        if kind and kind[0] in ("vassal", "dependency"):
+            if subjects.get(c) != a or (a, c, t) in pairs:
+                continue
+            pairs.add((a, c, t))
+            extra = f' subject_type = "{kind[1]}"' if kind[1] else ""
+            out.append(f"{kind[0]} = {{ first = {a} second = {c}{extra} {sd} }}")
+        elif kind or t in ("alliance", "guarantee", "military_sponsorship"):
+            key = kind[0] if kind else ("guarantee" if t == "guarantee" else "alliance")
+            if subjects.get(c) == a or subjects.get(a) == c or (key, frozenset((a, c))) in pairs:
+                continue
+            pairs.add((key, frozenset((a, c))))
+            out.append(f"{key} = {{ first = {a} second = {c} {sd} }}")
         else:
             continue
         n[t] += 1
+    # the Celestial Empire: EU5's China organisation names its leader and its celestial governors (tributaries)
+    org = (EU5_SETUP / "15_international_organizations.txt").read_text(encoding="utf-8-sig")
+    m = re.search(r"leader\s*=\s*(\w+)\s*celestial_governor\s*=\s*\{([^}]*)\}", org)
+    emperor = table.get(m[1], {}).get("eu4") if m else None
     p = MOD / "history/diplomacy"
     shutil.rmtree(p, ignore_errors=True)
     p.mkdir(parents=True)
+    if emperor and held[emperor]:
+        for g5 in m[2].split():
+            g4 = table.get(g5, {}).get("eu4")
+            if g4 and held[g4] and g4 not in subjects and g4 != emperor:
+                subjects[g4] = emperor
+                out.append(f'dependency = {{ first = {emperor} second = {g4} subject_type = "tributary_state" {sd} }}')
+                n["celestial_governor"] += 1
+        # same file name as the base game's, which crowns the Khalkha khan in 1260 and Ming in 1368
+        (p / "celestial_empire.txt").write_text(f"1260.5.5 = {{ celestial_emperor = {emperor} }}\n"
+                                                "1368.1.23 = { celestial_emperor = MNG }\n"
+                                                "1644.10.30 = { celestial_emperor = QNG }\n")
     (p / "1337_diplomacy.txt").write_text("\n".join(out) + "\n")
     return dict(n)
 

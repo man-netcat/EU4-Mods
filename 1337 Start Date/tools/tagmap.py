@@ -123,6 +123,7 @@ def province_owners(fold=True):
 
 SUBJECT_TYPES = ("vassal", "fiefdom", "dominion", "appanage", "samanta", "tusi", "familial_governor",
                  "hanseatic_member", "tributary")
+FOLDED = {}  # EU5 tag -> the overlord it was folded into (filled by fold_small_subjects)
 FOLD_MAX = 2  # a non-vanilla subject holding at most this many EU4 provinces is not worth a tag
 
 
@@ -169,6 +170,7 @@ def fold_small_subjects(po):
         return t
 
     fold = {t: top(t) for t in list(over) if small(t) and top(t) != t}
+    FOLDED.update(fold)
     for v in po.values():
         for key in ("owner", "controller"):
             v[key] = fold.get(v[key], v[key])

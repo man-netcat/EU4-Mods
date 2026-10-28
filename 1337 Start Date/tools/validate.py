@@ -98,6 +98,37 @@ def main():
             errs.append(f"{m[1]}: missing loc")
         if m[1] not in hist:
             errs.append(f"{m[1]}: no history file")
+    # subjects: known type, one overlord each, no cycles, both sides own land, no alliance with the overlord
+    dip = (MOD / "history/diplomacy/1337_diplomacy.txt").read_text(encoding="latin-1")
+    types = set(re.findall(r"^(\w+) = \{", (EU4_GAME / "common/subject_types/00_subject_types.txt").read_text(encoding="latin-1"), re.M))
+    over, allied = {}, set()
+    own_land = {m[1] for f in (MOD / "history/provinces").iterdir()
+                if (m := re.search(r"(?m)^owner\s*=\s*(\w+)", f.read_text(encoding="latin-1")))}
+    for kind, body in re.findall(r"^(\w+) = \{(.*)\}", dip, re.M):
+        m = re.search(r"first = (\w+) second = (\w+)", body)
+        a_, c_ = m[1], m[2]
+        for x in (a_, c_):
+            if x not in own_land:
+                errs.append(f"diplomacy: {kind} {a_}/{c_}: {x} owns no province")
+        st = re.search(r'subject_type = "(\w+)"', body)
+        if st and st[1] not in types:
+            errs.append(f"diplomacy: unknown subject type {st[1]}")
+        if kind in ("vassal", "dependency"):
+            if c_ in over:
+                errs.append(f"diplomacy: {c_} has two overlords ({over[c_]}, {a_})")
+            over[c_] = a_
+        elif kind == "alliance":
+            allied.add(frozenset((a_, c_)))
+    for c_, a_ in over.items():
+        seen, x = {c_}, a_
+        while x in over:
+            if x in seen:
+                errs.append(f"diplomacy: subject cycle through {x}")
+                break
+            seen.add(x)
+            x = over[x]
+        if frozenset((a_, c_)) in allied:
+            errs.append(f"diplomacy: {c_} is allied with its overlord {a_}")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

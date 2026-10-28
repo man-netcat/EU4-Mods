@@ -114,6 +114,14 @@ under it; heir = the block's `heir`, else the eldest son; queen = the ruler's li
 so EU4 generates one at start. Vanilla tags without land of ours (`step_dormant`) take the ruler of the same-named EU5
 country (49 so far).
 
+## Subjects and diplomacy
+
+`step_diplomacy` (history/diplomacy/1337_diplomacy.txt): EU5 vassal/fiefdom/dominion/samanta/tusi -> `vassal`; appanage and
+familial_governor -> `dependency` appanage; tributary -> `dependency` tributary_state; hanseatic_member -> alliance (not
+a subject). Subjects of a folded tag re-attach to its overlord; one overlord per subject; no alliance with the overlord;
+validate checks types, cycles and land. `celestial_empire.txt` overrides the base game's so the Yuan, not the Khalkha
+khan, hold the mandate. Two base-game alliances dated before 1337 (Hainaut-Holland, Kamata-Assam) still load.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy (fixed `eu4_geo` reading area colours as provinces, plus ~70 hand aliases for Europe and the Near East); ~735 unmapped keep their vanilla owner only if
