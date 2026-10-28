@@ -162,7 +162,7 @@ def tag_features():
             if isinstance(v, list):
                 rel_group[k] = g
     held, dev, goods = defaultdict(int), defaultdict(int), defaultdict(set)
-    for f in (MOD / "history/provinces").iterdir():
+    for f in sorted((MOD / "history/provinces").iterdir()):
         top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
         m = re.search(r"(?m)^owner = (\w+)", top)
         if not m:
@@ -179,7 +179,7 @@ def tag_features():
     for tag in sorted(new):
         if held[tag] < MIN_PROVINCES and dev[tag] < MIN_DEV:
             continue
-        f = next((MOD / "history/countries").glob(f"{tag} - *.txt"))
+        f = next(iter(sorted((MOD / "history/countries").glob(f"{tag} - *.txt"))))
         t = f.read_text(encoding="latin-1")
         gov = re.search(r"(?m)^government = (\w+)", t)[1]
         cul = re.search(r"(?m)^primary_culture = (\w+)", t)

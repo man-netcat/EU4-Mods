@@ -113,7 +113,7 @@ def development_targets(land, cr_vote, lp):
     vanilla's while who holds it follows 1337's population (Western Europe at its pre-plague peak).
     A floor of half the vanilla total keeps lone city locations from collapsing."""
     pops, vanilla = {}, {}
-    files = {int(re.match(r"\d+", f.name)[0]): f for f in (VAN / "provinces").iterdir()}
+    files = {int(re.match(r"\d+", f.name)[0]): f for f in sorted((VAN / "provinces").iterdir())}
     for pid in land:
         v = cr_vote.get(str(pid))
         if not v or v["tier"] in ("area-fallback", "area-node"):
@@ -540,7 +540,7 @@ def step_capitals():
     """A realm's capital has to be a province it owns. Where the capital of a base-game file (or of EU5) fell to
     another owner in the mapping, the realm's most developed province becomes the capital."""
     owner, dev = {}, defaultdict(list)
-    for f in (MOD / "history/provinces").iterdir():
+    for f in sorted((MOD / "history/provinces").iterdir()):
         top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
         m = re.search(r"(?m)^owner = (\w+)", top)
         if m:
@@ -548,7 +548,7 @@ def step_capitals():
             owner[pid] = m[1]
             dev[m[1]].append((sum(int(x) for x in re.findall(r"(?m)^base_(?:tax|production|manpower)\s*=\s*(\d+)", top)), -pid))
     fixed = 0
-    for f in (MOD / "history/countries").glob("*.txt"):
+    for f in sorted((MOD / "history/countries").glob("*.txt")):
         tag = f.name[:3]
         t = f.read_text(encoding="latin-1")
         m = re.search(r"(?m)^capital = (\d+)", t)
@@ -566,7 +566,7 @@ def step_accepted(table):
     import cultures_of
     group = cultures_of.groups()
     share = defaultdict(Counter)
-    for f in (MOD / "history/provinces").iterdir():
+    for f in sorted((MOD / "history/provinces").iterdir()):
         top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
         o, c = re.search(r"(?m)^owner = (\w+)", top), re.search(r"(?m)^culture = (\w+)", top)
         if o and c:
@@ -574,7 +574,7 @@ def step_accepted(table):
             share[o[1]][c[1]] += d
     n = 0
     for tag, cnt in share.items():
-        for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+        for f in sorted((MOD / "history/countries").glob(f"{tag} - *.txt")):
             t = f.read_text(encoding="latin-1")
             m = re.search(r"(?m)^primary_culture = (\w+)", t)
             if not m:
@@ -595,7 +595,7 @@ def step_bookmark(table):
     base game's bookmarks likewise list the great and mid powers), centred on the emperor-less west like the base
     game's, with the weakest-start large tags as the easy picks."""
     dev, held = Counter(), Counter()
-    for f in (MOD / "history/provinces").iterdir():
+    for f in sorted((MOD / "history/provinces").iterdir()):
         top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
         m = re.search(r"(?m)^owner = (\w+)", top)
         if m:
@@ -904,7 +904,7 @@ WAR_GOALS = {
 
 
 def tag_capital(tag):
-    for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+    for f in sorted((MOD / "history/countries").glob(f"{tag} - *.txt")):
         m = re.search(r"(?m)^capital\s*=\s*(\d+)", f.read_text(encoding="latin-1"))
         if m:
             return m[1]
@@ -918,7 +918,7 @@ def step_wars(table):
     from paths import EU5_SETUP
     from pdx import parse
     held = Counter()
-    for f in (MOD / "history/provinces").iterdir():
+    for f in sorted((MOD / "history/provinces").iterdir()):
         m = re.search(r"(?m)^owner\s*=\s*(\w+)", f.read_text(encoding="latin-1"))
         if m:
             held[m[1]] += 1
@@ -972,7 +972,7 @@ def step_wars(table):
                     pairs[x].add(y)
                     pairs[y].add(x)
     for tag, others in pairs.items():
-        for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+        for f in sorted((MOD / "history/countries").glob(f"{tag} - *.txt")):
             f.write_text(f.read_text(encoding="latin-1").rstrip("\n") + "\n\n1337.3.1 = {\n"
                          + "".join(f"\tadd_truce_with = {o}\n" for o in sorted(others)) + "}\n", encoding="latin-1")
             stats["truces"] += len(others)
@@ -986,7 +986,7 @@ def step_rivals(table):
     from paths import EU5_SETUP
     from pdx import parse
     held = set()
-    for f in (MOD / "history/provinces").iterdir():
+    for f in sorted((MOD / "history/provinces").iterdir()):
         m = re.search(r"(?m)^owner\s*=\s*(\w+)", f.read_text(encoding="latin-1"))
         if m:
             held.add(m[1])
@@ -1010,7 +1010,7 @@ def step_rivals(table):
     n = Counter()
     for tag, d in rel.items():
         lines = [f"{k} = {o}" for k in ("historical_rival", "historical_friend") for o in sorted(d[k])]
-        for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+        for f in sorted((MOD / "history/countries").glob(f"{tag} - *.txt")):
             f.write_text("\n".join(lines) + "\n" + f.read_text(encoding="latin-1"), encoding="latin-1")
             n["countries"] += 1
             n["rivals"] += len(d["historical_rival"])
