@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_age_of_traditions"
+		texturefile = "gfx/interface/ages/age_of_discovery.tga"
+		loadType = "INGAME"
+	}
+}

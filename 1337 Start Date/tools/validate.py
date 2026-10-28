@@ -169,6 +169,28 @@ def main():
             errs.append(f"technologies/{f}.txt: years not ascending")
     if not re.search(r"start_level = \d", (MOD / "common/technology.txt").read_text(encoding="latin-1")):
         errs.append("technology.txt: no start levels")
+    # the Age of Traditions: lifted objectives and our abilities exist, every key is localised, a window is in the gui
+    import ages as _ages
+    age = (MOD / "common/ages/00_traditions.txt").read_text(encoding="latin-1")
+    base_age = (EU4_GAME / "common/ages/00_default.txt").read_text(encoding="latin-1")
+    for o in _ages.LIFTED:
+        if f"\t\t{o} = {{" not in age or f"{o} = {{" not in base_age:
+            errs.append(f"ages: objective {o} not lifted from the base game")
+    amods = []
+    for _n, body in parse(age):
+        for key, part in body:
+            if key == "abilities":
+                for _ab, ab in part:
+                    amods += [k for kk, blk in ab if kk == "modifier" for k, _v in blk]
+    for m_ in amods:
+        if m_ != "num_of_age_rewards" and m_ not in mods:
+            errs.append(f"ages: modifier {m_} is not used by any base-game idea set")
+    aloc = (MOD / "localisation/1337_ages_l_english.yml").read_text(encoding="utf-8-sig")
+    for k in (_ages.AGE, _ages.AGE + "_desc", *(a_[0] + s_ for a_ in _ages.ABILITIES for s_ in ("", "_desc"))):
+        if f" {k}:0 " not in aloc:
+            errs.append(f"ages: missing loc {k}")
+    if f'name = "{_ages.AGE}"' not in (MOD / "interface/ages_view.gui").read_text(encoding="latin-1"):
+        errs.append("ages: no window for the new age in ages_view.gui")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

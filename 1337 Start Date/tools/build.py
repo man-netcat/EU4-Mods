@@ -1006,6 +1006,8 @@ def main():
     stats["diplomacy"] = step_diplomacy(table)
     stats["wars"] = step_wars(table)
     stats["institutions"] = step_institutions()
+    import ages, ideas as _ideas
+    stats["age"] = ages.write(_ideas.vanilla_modifiers())
     stats["rivals"] = step_rivals(table)
     stats["accepted_cultures"] = step_accepted(table)
     stats["bookmark"] = step_bookmark(table)

@@ -1,0 +1,114 @@
+age_of_traditions = {
+	start = 1337
+
+	can_start = {
+		always = yes
+	}
+
+	papacy = 1.0
+
+	objectives = {
+		obj_5_centers_of_trade = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
+					}
+					controlled_by = owner
+					is_core = ROOT
+				}
+				amount = 5
+			}
+		}
+		obj_30_development_city = {
+			custom_trigger_tooltip = {
+				tooltip = obj_30_development_city_tooltip
+				any_owned_province = {
+					exclude_from_progress = {
+						is_core = ROOT
+						controlled_by = owner
+					}
+					development_discounting_tribal = 30
+				}
+			}
+		}
+		obj_two_unions = {
+			allow = {
+				religion_group = christian
+			}
+			calc_true_if = {
+				all_subject_country = {
+					OR = {
+						is_subject_of_type = personal_union
+						is_subject_of_type = integrated_personal_union
+					}
+				}
+				amount = 2
+			}
+		}
+		obj_many_vassals = {
+			allow = {
+				NOT = { religion_group = christian }
+			}
+			vassal = 5
+		}
+		obj_humiliate_rival = {
+			custom_trigger_tooltip = {
+				tooltip = obj_humiliate_rival_tooltip
+				has_country_flag = humiliated_rival
+			}
+		}
+	}
+
+	abilities = {
+		ab_trad_feudal_levies = {
+			effect = {
+				on_age_ability_taken = { age = age_of_traditions }
+			}
+			modifier = {
+				land_forcelimit_modifier = 0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_trad_royal_demesne = {
+			effect = {
+				on_age_ability_taken = { age = age_of_traditions }
+			}
+			modifier = {
+				global_tax_modifier = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_trad_customary_law = {
+			effect = {
+				on_age_ability_taken = { age = age_of_traditions }
+			}
+			modifier = {
+				stability_cost_modifier = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_trad_court_of_honour = {
+			effect = {
+				on_age_ability_taken = { age = age_of_traditions }
+			}
+			modifier = {
+				diplomatic_reputation = 1.0
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

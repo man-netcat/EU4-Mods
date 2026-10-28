@@ -163,6 +163,14 @@ the base game is on time at 1444 holding level 3 (year 1440), so a start 107 yea
 EU5 level differs from its group's gets `add_adm/dip/mil_tech` in a 1337.3.1 block (48 do). All derived from the base game's
 files at build time.
 
+## Age of Traditions
+
+`tools/ages.py`: `common/ages/00_traditions.txt` (start 1337, ends when the base game's Age of Discovery starts in 1400): five
+objectives lifted from the Age of Discovery, four abilities of our own (modifiers checked against the base game's idea
+modifiers), the per-age scripted-effect hook, a window in a copy of `interface/ages_view.gui` and a popup sprite. The
+window and popup use the Discovery pictures and sound until the age has its own art (`gfx/interface/ages/`); the age
+bar still shows the base game's four icons.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is
