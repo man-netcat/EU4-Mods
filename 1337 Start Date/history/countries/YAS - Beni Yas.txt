@@ -12,6 +12,16 @@ religious_school = hanbali_school
 	add_mil_tech = -1
 }
 
+1440.1.1 = { #Fictional
+	monarch = {
+		name = "Muhammed"
+		dynasty = "Al Nahyan"
+		dip = 1
+		adm = 1
+		mil = 2
+	}
+}
+
 1480.1.1 = { #Fictional
 	monarch = {
 		name = "Tahnun"

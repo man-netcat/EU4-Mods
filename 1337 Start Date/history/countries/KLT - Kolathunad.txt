@@ -6,6 +6,16 @@ religion = hinduism
 primary_culture = malayalam
 capital = 535	# Cannanore
 
+1444.1.1 = {
+	monarch = {
+		name = "Udaya Varman"
+		dynasty = "Kolathiri"
+		DIP = 5
+		ADM = 3
+		MIL = 3
+	}
+}
+
 1591.1.1 = {
 	monarch = {
 		name = "Abubakar I"

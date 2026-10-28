@@ -11,6 +11,30 @@ religion = shamanism
 primary_culture = kongolese
 capital = 1166	# Loango
 
+1444.1.1 = {
+	monarch = {
+		name = "Tati"
+		dynasty = "Loanga"
+		dip = 3
+		adm = 3
+		mil = 3
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Bicullu"
+		monarch_name = "Bicullu"
+		dynasty = "Loanga"
+		birth_date = 1420.1.1
+		death_date = 1495.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
 1480.1.1 = {
 	monarch = {
 		name = "Bicullu"

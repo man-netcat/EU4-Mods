@@ -15,6 +15,114 @@ monarch = {
 	mil = 3
 }
 
+1338.1.1 = { 
+	monarch = {
+		name = "Takehito"
+		dynasty = "Kikuchi"
+		adm = 2
+		dip = 2
+		mil = 2
+		}
+	}	
+
+1363.1.1 = { 
+	monarch = {
+		name = "Takemitsu"
+		dynasty = "Kikuchi"
+		adm = 3
+		dip = 3
+		mil = 4
+		}
+	}
+
+1373.12.19 = { 
+	monarch = {
+		name = "Takemasa"
+		dynasty = "Kikuchi"
+		adm = 3
+		dip = 3
+		mil = 3
+		}
+	}
+	
+1374.7.6 = { 
+	monarch = {
+		name = "Taketomo"
+		dynasty = "Kikuchi"
+		adm = 2
+		dip = 2
+		mil = 3
+		}
+	}
+	
+1383.1.1 = {
+	heir = {
+		name = "Kanetomo"
+		monarch_name = "Kanetomo"
+		dynasty = "Kikuchi"
+		birth_date = 1383.1.1
+		death_date = 1444.3.27
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+	
+1407.4.25 = { 
+	monarch = {
+		name = "Kanetomo"
+		dynasty = "Kikuchi"
+		birth_date = 1383.1.1
+#		death_date = 1444.3.27
+		adm = 2
+		dip = 2
+		mil = 3
+		}
+	}
+	
+1409.1.1 = {
+	heir = {
+		name = "Mochitomo"
+		monarch_name = "Mochitomo"
+		dynasty = "Kikuchi"
+		birth_date = 1409.1.1
+		death_date = 1446.1.1
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+	
+1444.3.27 = { 
+	monarch = {
+		name = "Mochitomo"
+		dynasty = "Kikuchi"
+		birth_date = 1409.1.1
+#		death_date = 1446.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+		}
+	clear_scripted_personalities = yes
+	add_ruler_personality = charismatic_negotiator_personality
+	}
+	
+1444.3.27 = {
+	heir = {
+		name = "Tamekuni"
+		monarch_name = "Tamekuni"
+		dynasty = "Kikuchi"
+		birth_date = 1430.1.1
+		death_date = 1488.1.1
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+	
 1446.1.1 = { 
 	monarch = {
 		name = "Tamekuni"

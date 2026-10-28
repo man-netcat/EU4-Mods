@@ -5,6 +5,107 @@ religion = buddhism
 technology_group = chinese
 capital = 585 # Toungoo
 
+1399.1.1 = {
+	monarch = {
+		name = "Min Nemi"
+		dynasty = "Taungu"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1408.1.1 = {
+	monarch = {
+		name = "Letya Zeya Thingyan"
+		dynasty = "Taungu"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1412.1.1 = {
+	monarch = {
+		name = "Thinkhaya I"
+		dynasty = "Taungu"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1415.1.1 = {
+	monarch = {
+		name = "Thinkhaya II"
+		dynasty = "Taungu"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1419.1.1 = {
+	monarch = {
+		name = "Pantaung"
+		dynasty = "Taungu"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1420.1.1 = {
+	monarch = {
+		name = "Thinkhaya III"
+		dynasty = "Taungu"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1435.1.1 = {
+	monarch = {
+		name = "Uzana"
+		dynasty = "Hanthawaddy"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1436.1.1 = {
+	monarch = {
+		name = "Saw Oo II"
+		dynasty = "Hanthawaddy"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1440.1.1 = {
+	monarch = {
+		name = "Tarabya"
+		dynasty = "Taungu"
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+	heir = {
+		name = "Minkhaung"
+		monarch_name = "Minkhaung"
+		dynasty = "Taungu"
+		birth_date = 1420.1.1
+		death_Date = 1451.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
 1446.1.2 = {
 	monarch = {
 		name = "Minkhaung"

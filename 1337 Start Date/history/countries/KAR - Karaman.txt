@@ -16,6 +16,134 @@ monarch = {
 	mil = 3
 }
 
+1361.1.1 = {
+	monarch = {
+		name = "Alâeddîn I"
+		dynasty = Karamanoglu
+		birth_date = 1341.1.1
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+	add_piety = 0.1
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Seyfeddîn"
+		monarch_name = "Seyfeddîn Süleymân"
+		dynasty = "Karamanoglu"
+		birth_date = 1380.1.1
+		death_date = 1416.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+1407.1.1 = {
+	monarch = {
+		name = "Seyfeddîn Süleymân"
+		dynasty = Karamanoglu
+		birth_date = 1380.1.1
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+1407.1.1 = {
+	heir = {
+		name = "Mehmed"
+		monarch_name = "Mehmed II"
+		dynasty = "Karamanoglu"
+		birth_date = 1390.1.1
+		death_Date = 1419.1.1
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+1416.1.1 = {
+	monarch = {
+		name = "Mehmed II"
+		dynasty = Karamanoglu
+		birth_date = 1390.1.1
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+1416.1.1 = {
+	heir = {
+		name = "Alâeddîn"
+		monarch_name = "Alâeddîn Ali II"
+		dynasty = "Karamanoglu"
+		birth_date = 1400.1.1
+		death_date = 1424.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1419.1.1 = {
+	monarch = {
+		name = "Alâeddîn Ali II"
+		dynasty = Karamanoglu
+		birth_date = 1400.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1419.1.1 = {
+	heir = {
+		name = "Ibrâhîm"
+		monarch_name = "Ibrâhîm II"
+		dynasty = "Karamanoglu"
+		birth_date = 1409.1.1
+		death_date = 1464.1.1
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1424.1.1 = {
+	monarch = {
+		name = "Ibrâhîm II"
+		dynasty = Karamanoglu
+		birth_date = 1409.1.1
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = kind_hearted_personality
+}
+
+1424.1.1 = {
+	heir = {
+		name = "Sultanzâde"
+		monarch_name = "Sultanzâde Ishâk"
+		dynasty = "Karamanoglu"
+		birth_date = 1424.1.1
+		death_date = 1465.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
 1464.1.1 = {
 	monarch = {
 		name = "Sultanzâde Ishâk"

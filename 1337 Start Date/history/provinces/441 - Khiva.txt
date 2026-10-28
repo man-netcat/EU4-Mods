@@ -21,6 +21,11 @@ discovered_by = indian
 extra_cost = 8
 center_of_trade = 1
 
+1409.5.13 = { #Ulugh Beg is made Governor of Samarkand
+	owner = TRS
+	controller = TRS
+	add_core = TRS
+}
 1506.1.1 = {    unrest = 0 } # Conquered by Muhammad Shaybani
 1511.1.1 = {   fort_15th = yes } # Khiva separates from Uzbeks
 1717.1.1 = { discovered_by = RUS }

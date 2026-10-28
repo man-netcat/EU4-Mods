@@ -19,6 +19,78 @@ government_rank = 2
 	add_mil_tech = 1
 }
 
+1397.1.1 = {
+	monarch = {
+		name = "Orobiru"
+		dynasty = "Abomey"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Uwaifiokun"
+		monarch_name = "Uwaifiokun"
+		dynasty = "Abomey"
+		birth_date = 1399.1.1
+		death_Date = 1440.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+1434.1.1 = {
+	monarch = {
+		name = "Uwaifiokun"
+		dynasty = "Abomey"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}
+
+1434.1.1 = {
+	heir = {
+		name = "Ewuare"
+		monarch_name = "Ewuare"
+		dynasty = "Abomey"
+		birth_date = 1430.1.1
+		death_date = 1473.1.1
+		claim = 95
+		adm = 5
+		dip = 1
+		mil = 2
+	}
+}
+
+1440.1.1 = {
+	monarch = {
+		name = "Ewuare"
+		dynasty = "Abomey"
+		adm = 5
+		dip = 1
+		mil = 2
+	}
+}
+
+1440.1.1 = {
+	heir = {
+		name = "Ezoti"
+		monarch_name ="Ezoiti"
+		dynasty = "Abomey"
+		birth_date = 1420.1.1
+		death_Date = 1476.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
 1473.1.1 = {
 	monarch = {
 		name = "Ezoti"

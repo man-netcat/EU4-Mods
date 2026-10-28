@@ -25,6 +25,36 @@ heir = {
 	mil = 0
 }
 
+1361.1.1 = {
+	monarch = {
+		name = "Pierre II"
+		dynasty = "de Valois"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1404.1.1 = {
+	monarch = {
+		name = "Jean I"
+		dynasty = "de Valois"
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+}
+
+1414.1.1 = {
+	monarch = {
+		name = "Jean II"
+		dynasty = "de Valois"
+		adm = 0
+		mil = 2
+		dip = 4
+	}
+}
+
 1478.1.1 = {
 	monarch = {
 		name = "René"

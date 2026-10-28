@@ -9,6 +9,16 @@ religious_school = ismaili_school
 
 #Sharifs of Abu Arish since 13th century, independent due to waning Rasulid influence
 
+1430.1.1 = {
+	monarch = {
+		name = "Muhammad" #Fictional Ruler
+		dynasty = "Khayratid"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1470.1.1 = {
 	monarch = {
 		name = "Haydar" #Fictional Ruler

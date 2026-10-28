@@ -8,6 +8,16 @@ capital = 560 # Jharkhand
 
 #Chero Nagas of Kokrah:
 
+1440.1.1 = {
+	monarch = {
+		name = "Maharato"
+		dynasty = "Nagavamsi"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
 1500.1.1 = {
 	monarch = {
 		name = "Maharato II"

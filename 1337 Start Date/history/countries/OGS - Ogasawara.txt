@@ -24,6 +24,34 @@ heir = {
 	mil = 3
 }
 
+1420.1.1 = {
+	monarch = {
+		name = "Mochinaga" 
+		dynasty = "Ogasawara"
+		birth_date = 1396.7.27
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = charismatic_negotiator_personality
+}
+
+1420.1.1 = {
+	heir = {
+		name = "Kiyomune"
+		monarch_name = "Kiyomune"
+		dynasty = "Ogasawara"
+		birth_date = 1420.1.1
+		death_date = 1480.1.1
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
 1462.7.21 = {
 	monarch = {
 		name = "Kiyomune" 

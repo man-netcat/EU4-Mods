@@ -22,7 +22,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 1420.1.1 = {
-	
+	add_core = STY
 	capital = "Görz"
 } # To the Habsburgs
 1525.5.1 = { unrest = 5 } # Farmer insurrections 

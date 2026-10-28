@@ -6,6 +6,22 @@ technology_group = eastern
 capital = 2202	# Melikates
 government_rank = 1
 
+1443.1.1= {
+	monarch = {
+		name = "Albast"
+		dynasty = "Hasan-Jalalyan"
+		dip = 2
+		adm = 4
+		mil = 2
+	}
+	every_province = {
+		limit = { region = persia_region }
+		ROOT = { discover_province = PREV }
+	}
+	discover_province = 4170 
+	discover_province = 4172
+}
+
 1457.1.1= {
 	monarch = {
 		name = "Hatir"

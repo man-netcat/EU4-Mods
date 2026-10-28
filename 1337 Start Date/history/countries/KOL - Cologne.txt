@@ -20,6 +20,30 @@ monarch = {
 
 elector = yes
 
+1372.1.1 = {
+	monarch = {
+		name = "Friedrich III"
+		birth_date = 1348.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1414.4.9 = {
+	monarch = {
+		name = "Dietrich II von Mörs"
+		birth_date = 1385.1.1
+		adm = 4
+		dip = 1
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = conqueror_personality
+	add_ruler_personality = greedy_personality
+	add_ruler_personality = obsessive_perfectionist_personality
+}
+
 1463.2.14 = {
 	monarch = {
 		name = "Ruprecht I"

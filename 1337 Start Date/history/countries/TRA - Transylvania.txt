@@ -6,6 +6,26 @@ primary_culture = hungarian
 religion = catholic
 capital = 1951	# Alba Iulia
 
+1395.1.1 = {
+	monarch = {
+		name = "Stibor"
+		dynasty = "de Stiboricz"
+		adm = 3
+		dip = 0
+		mil = 0
+	}
+}
+
+1415.1.1 = {
+	monarch = {
+		name = "Miklós"
+		dynasty = "Csáki"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
 1445.1.1 = {
 	monarch = {
 		name = "János"

@@ -20,7 +20,7 @@ discovered_by = east_african
 		size = 1
 		leader = "Al-Hadi al-Mutahhar"
 	}
-	
+	controller = REB
 }
 1474.1.1 = {
 	revolt = { }

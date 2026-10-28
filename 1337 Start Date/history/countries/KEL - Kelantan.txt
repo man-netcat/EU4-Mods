@@ -7,6 +7,16 @@ technology_group = chinese
 capital = 599
 religious_school = shafii_school
 
+1444.1.1 = {
+	monarch = {
+		name = "Iskandar Shah"
+		dynasty = "Jambi"
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+}
+
 1480.1.1 = {
 	monarch = {
 		adm = 3

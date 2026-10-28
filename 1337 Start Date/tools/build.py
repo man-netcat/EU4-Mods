@@ -16,7 +16,8 @@ from tagmap import build_table, province_owners, eu4_tags
 
 DATA = MOD / "tools/data"
 VAN = EU4_GAME / "history"
-BACKSTORY_END = (1444, 11, 11)
+START = (1337, 4, 1)
+BACKSTORY_END = (1444, 11, 11)  # the base game's own start: its dated entries up to here are history the mod's start precedes
 OWN_KEYS = r"(?:owner|controller|add_core|remove_core|add_claim|remove_claim|add_permanent_claim|remove_permanent_claim)"
 # 1444 owners whose land belonged to a different state in 1337 (used only for provinces EU5 could not be mapped to)
 VANILLA_PROXY = {"MNG": "YUA", "KHA": "YUA", "KRC": "YUA", "NHX": "YUA", "SOL": "YUA", "MYR": "YUA", "MJZ": "YUA",
@@ -82,9 +83,15 @@ def strip_depth0(base, pattern):
 # ---------------------------------------------------------------- provinces
 
 def clean_dated(blocks, own_only=True):
+    """A province's dated entries. Before the start they are already part of the state EU5 gives, so they go. From the
+    start to the base game's own start (1444.11.11) they are the history between the two dates and stay whole
+    (ownership, cores, control, culture ...). After it, the base game's scripted events handle ownership, so
+    those keys are stripped as before."""
     kept = []
     for d, b in blocks:
-        b2 = re.sub(rf"\b{OWN_KEYS}\s*=\s*\w+", "", b)
+        if d <= START:
+            continue
+        b2 = b if d <= BACKSTORY_END else re.sub(rf"\b{OWN_KEYS}\s*=\s*\w+", "", b)
         body = re.sub(r"^\d+\.\d+\.\d+\s*=\s*\{|\}|#[^\n]*|\s", "", b2)
         if body:
             kept.append(b2)
@@ -428,7 +435,7 @@ def step_countries(table, po, cmap, rmap, stats):
         if van:
             text = van.read_text(encoding="latin-1")
             base, blocks = split_blocks(text)
-            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|elector|add_accepted_culture|historical_rival|historical_friend|change_estate_land_share|set_estate_privilege|add_estate_loyalty|add_estate_loyalty_modifier)\s*=")
+            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|elector|add_accepted_culture|historical_rival|historical_friend|change_estate_land_share|set_estate_privilege|add_estate_loyalty|add_estate_loyalty_modifier|add_truce_with)\s*=")
             if cap:
                 base = re.sub(r"(?m)^capital\s*=\s*\d+", f"capital = {cap}", base)
             if cul:
@@ -449,7 +456,7 @@ def step_countries(table, po, cmap, rmap, stats):
                     base = re.sub(r"(?m)^government_rank\s*=\s*\d", f"government_rank = {RANK[i['rank']]}", base)
                 else:
                     base += f"\ngovernment_rank = {RANK[i['rank']]}\n"
-            kept = [b_ for d, b_ in blocks if d > BACKSTORY_END]
+            kept = [re.sub(r"(?m)^[ \t]*add_truce_with\s*=\s*\w+[^\n]*\n", "", b_) for d, b_ in blocks if d > START]
             body = base.rstrip() + "\n"
             fname = van.name
         else:
@@ -530,7 +537,7 @@ def step_dormant(table, stats):
             text, got = ruler_text(f.name[:3], lent[f.name[:3]], None, table, stats)
             res += text
             stats["dormant_rulers"] += got
-        res += "\n" + "".join(b_ for d, b_ in blocks if d > BACKSTORY_END)
+        res += "\n" + "".join(b_ for d, b_ in blocks if d > START)
         (out / f.name).write_bytes(res.rstrip().encode("latin-1", "replace") + b"\n")
         n += 1
     return n

@@ -6,6 +6,26 @@ capital = 2700 #Panay
 religion = animism
 government_rank = 1
 
+1365.1.1 = {
+	monarch = {
+		name = "Kalantiaw"
+		dynasty = "Panay"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1437.1.1 = {
+	monarch = {
+		name = "Manduyog"
+		dynasty = "Batkcan"
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+
 1490.1.1 = {
 	monarch = {
 		name = "Padojinog"

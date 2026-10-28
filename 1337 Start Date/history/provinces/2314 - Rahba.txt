@@ -21,4 +21,10 @@ discovered_by = east_african
 discovered_by = BYZ
 add_local_autonomy = 20
 
+1411.1.1 = {
+	owner = QAR
+	controller = QAR
+	add_core = QAR
+	add_claim = MAM
+} # The Qara Koyunlu
 1515.1.1 = { discovered_by = POR }

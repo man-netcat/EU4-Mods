@@ -16,6 +16,24 @@ monarch = {
 	mil = 3
 }
 
+1444.1.1 = {
+	if = {
+		limit = {
+			NOT = { has_dlc = "Dharma" }
+		}
+		add_government_reform = feudalism_reform
+	}
+	monarch = {
+		name = "Bhanwar"  # "Grandson" Haven't been able to find dynastic info before 1530
+		dynasty = "Yadava Bhati"
+		DIP = 0
+		MIL = 1
+		ADM = 0
+	}
+}
+
+ 
+
 1480.1.1 = {
 	heir = {
 		name = "Lunkaran"

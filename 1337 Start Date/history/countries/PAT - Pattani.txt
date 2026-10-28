@@ -8,6 +8,20 @@ capital = 594	# Pattani
 fixed_capital = 594 # Cannot move capital away from this province & no power cost to move to it
 religious_school = shafii_school
 
+1399.1.1 = {
+	add_piety = -0.1
+}
+
+1440.1.1 = {
+	monarch = {
+		name = "Raja Emas Kelantan" # Fictional
+		dynasty = "Inland"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
 1470.1.1 = {
 	monarch = {
 		name = "Muzaffar Shah" # Fictional

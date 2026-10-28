@@ -18,6 +18,16 @@ capital = 503	# Kutch
 	}
 }
 
+1429.1.1 = {
+	monarch = {
+		name = "Bhenji"
+		dynasty = "Jadeja"
+		ADM = 2
+		DIP = 0
+		MIL = 1
+	}
+}
+
 1472.1.1 = {
 	monarch = {
 		name = "Hamirji"

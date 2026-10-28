@@ -17,6 +17,36 @@ monarch = {
 	mil = 1
 }
 
+1392.1.1 = {
+	monarch = {
+		name= "Siciid"
+		dynasty = "Gerad"
+		dip = 1
+		mil = 1
+		adm = 1
+	}
+}
+
+1409.1.1 = {
+	monarch = {
+		name= "Ahmed"
+		dynasty = "Gerad"
+		dip = 1
+		mil = 1
+		adm = 1
+	}
+}
+
+1430.1.1 = {
+	monarch = {
+		name= "Siciid II"
+		dynasty = "Gerad"
+		dip = 1
+		mil = 1
+		adm = 1
+	}
+}
+
 1450.1.1 = {
 	monarch = {
 		name= "Mohamud II"

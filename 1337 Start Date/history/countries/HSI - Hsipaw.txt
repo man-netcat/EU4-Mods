@@ -6,6 +6,16 @@ primary_culture = assamese
 add_accepted_culture = shan
 capital = 2400
 
+1444.1.1 = {
+	monarch = {
+		name = "Hkun Neng"
+		dynasty = "Hsipaw"
+		ADM = 2
+		DIP = 3
+		MIL = 4
+	}
+}
+
 1465.1.1 = {
 	monarch = {
 		name = "Kya Htun"

@@ -24,6 +24,81 @@ heir = {
 	mil = 3
 }
 
+1382.1.1 = {
+	monarch = {
+		name = "Francesco I"
+		dynasty = "Gonzaga"
+		birth_date = 1366.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+1395.1.1 = {
+	heir = {
+		name = "Gianfrancesco"
+		monarch_name = "Gianfrancesco I"
+		dynasty = "Gonzaga"
+		birth_date = 1395.1.1
+		death_date = 1444.9.23
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1407.1.1 = {
+	monarch = {
+		name = "Gianfrancesco I"
+		dynasty = "Gonzaga"
+		birth_date = 1395.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1412.6.5 = {
+	heir = {
+		name = "Ludovico"
+		monarch_name = "Ludovico III il Turco"
+		dynasty = "Gonzaga"
+		birth_date = 1412.6.5
+		death_date = 1478.6.12
+		claim = 95
+		adm = 6
+		dip = 4
+		mil = 3
+	}
+}
+
+1444.9.23 = {
+	monarch = {
+		name = "Lodovico III il Turco"
+		dynasty = "Gonzaga"
+		birth_date = 1412.6.5
+		adm = 6
+		dip = 4
+		mil = 3
+	}
+}
+
+1444.9.23 = {
+	heir = {
+		name = "Federico"
+		monarch_name = "Federico I"
+		dynasty = "Gonzaga"
+		birth_date = 1441.6.25
+		death_date = 1484.7.14
+		claim = 95
+		adm = 4
+		dip = 6
+		mil = 1
+	}
+}
+
 1478.6.13 = {
 	monarch = {
 		name = "Federico I"

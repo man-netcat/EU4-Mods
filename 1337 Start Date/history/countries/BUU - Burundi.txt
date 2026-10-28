@@ -10,6 +10,17 @@ unlock_cult = cwezi_cult
 unit_type = sub_saharan
 capital = 4070 # Nkoma
 
+1444.1.1 = {
+	monarch = {
+		name = "Karemera" #Fictional
+		dynasty = "Ntwero"
+		birth_date = 1400.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
 1470.1.1 = {
 	monarch = {
 		name = "Baramparaye" #Fictional

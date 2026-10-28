@@ -8,6 +8,19 @@ government_rank = 1
 add_army_professionalism = 0.05
 religious_school = ismaili_school
 
+1442.1.16 = {
+	monarch = {
+		name = "Muhammad ibn Falah"
+		dynasty = "Musha'sha'iya"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+	add_piety = -1
+	clear_scripted_personalities = yes
+	add_ruler_personality = zealot_personality
+}
+
 1465.1.1 = {
 	monarch = {
 		name = "Muhammad"

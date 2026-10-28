@@ -19,6 +19,175 @@ monarch = {
 	mil = 2
 }
 
+1390.1.1 = {
+	set_estate_privilege = estate_nobles_command_of_the_military
+}
+
+1398.1.1 = {
+	monarch = {
+		name = "An" #Tran Thieu De
+		dynasty = "Tran"
+		adm = 0
+		dip = 3
+		mil = 2
+	}
+}
+
+1398.1.1 = {
+	heir = {
+		name = "Quy Ly"
+		monarch_name = "Quy Ly"
+		dynasty = "Ho"
+		birth_date = 1370.1.1
+		death_date = 1400.6.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1400.1.1 = {
+	monarch = {
+		name = "Quy Ly"
+		dynasty = "Ho"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1400.1.1 = {
+	heir = {
+		name = "Han Thuong"
+		monarch_name = "Han Thuong"
+		dynasty = "Ho"
+		birth_date = 1380.1.1
+		death_date = 1407.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1400.6.1 = {
+	monarch = {
+		name = "Han Thuong"
+		dynasty = "Ho"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+
+1407.1.1 = {
+	monarch = {
+		name = "Ngoi" #Hau Tran Jian Dinh De
+		dynasty = "Tran"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1407.1.1 = {
+	heir = {
+		name = "Quy Khoang" #Hau Tran
+		monarch_name = "Quy Khoang"
+		dynasty = "Tran"
+		birth_date = 1380.1.1
+		death_date = 1427.1.1
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 2
+	}
+}
+
+1409.1.1 = {
+	monarch = {
+		name = "Quy Khoang" #Hau Tran
+		dynasty = "Tran"
+		adm = 0
+		dip = 2
+		mil = 2
+	}
+}
+
+# Later Le Dynasty
+
+1427.1.1 = {
+	monarch = {
+		name = "Loi" #Lê Loi
+		dynasty = "Le"
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = { name = "Lê Loi"	type = general	fire = 4	shock = 4	manuever = 5	siege = 0 }
+	}
+}
+
+1427.1.1 = {
+	heir = {
+		name = "Nguyen Long" #Lê Thai Tong
+		monarch_name = "Nguyen Long"
+		dynasty = "Lê"
+		birth_date = 1423.1.1
+		death_date = 1442.9.8
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+1427.1.1 = {
+	leader = {
+		name = "Trinh Kha"
+		type = general
+		fire = 2
+		shock = 3
+		manuever = 5
+		siege = 1
+		death_date = 1451.1.1
+		personality = inspirational_leader_general_personality
+	}
+}
+
+1438.1.1 = {
+	monarch = {
+		name = "Nguyen Long" #Lê Thai Tong
+		dynasty = "Lê"
+		adm = 0
+		dip = 0
+		mil = 2
+	}
+}
+
+1442.9.8 = {
+	monarch_consort = {
+		name = "Nguyen Thi Anh"
+		monarch_name = "Nguyen Thi Anh"
+		regent = yes
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Bang Co" #Lê Nhan Tong
+		monarch_name = "Bang Co"
+		dynasty = "Lê"
+		birth_date = 1441.1.1
+		death_date = 1459.10.29
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
 1459.1.1 = {
 	monarch = {
 		name = "Nghi Dan"

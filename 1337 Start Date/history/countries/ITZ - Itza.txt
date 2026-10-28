@@ -17,3 +17,13 @@ monarch = {
 	dip = 3
 	mil = 3
 }
+
+1440.1.1 = {
+	monarch = {
+		name = "Ahkinxok Muluchtzekel" #Fictional
+		dynasty = "Itza"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+} #No known Itza rulers in-timeline

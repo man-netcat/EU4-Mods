@@ -17,6 +17,17 @@ capital = 4069 # Ndorwe & Nkore Province
 	add_mil_tech = 1
 }
 
+1444.1.1 = {
+	monarch = {
+		name = "Ruhaga"
+		dynasty = "Buhaya"
+		birth_date = 1420.1.1
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
 1490.1.1 = {
 	monarch = {
 		name = "Ruhaga II"

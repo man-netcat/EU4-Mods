@@ -16,6 +16,11 @@ discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 
+1444.1.1 = {
+	owner = BOU
+	controller = BOU
+}
+
 1573.9.1 = { unrest = 5 } # Saint Barthelew's Day Massacre: the consequences in the land
 1574.5.1 = { unrest = 0 } # Charles IX dies, situation cools a bit	
 1588.12.1 = { unrest = 5 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy

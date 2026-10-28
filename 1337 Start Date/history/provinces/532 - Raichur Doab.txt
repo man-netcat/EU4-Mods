@@ -18,4 +18,9 @@ discovered_by = muslim
 discovered_by = ottoman
 discovered_by = chinese
 
+1378.1.1 = {
+	controller = BAH
+	owner = BAH
+}
+1428.1.1 = { add_core = BAH }
 1498.1.1 = { discovered_by = POR }

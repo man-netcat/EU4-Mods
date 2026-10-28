@@ -15,6 +15,59 @@ monarch = {
 	mil = 3
 }
 
+1372.1.1 = {
+	monarch = {
+		name = "Bernhard I"
+		birth_date = 1364.1.1
+		adm = 3
+		dip = 2
+		mil = 1
+		dynasty = "von Zähringen"		
+	}
+}
+
+1407.3.1 = {
+	heir = {
+		name = "Jakob"
+		monarch_name = "Jakob I"
+		birth_date = 1407.3.1
+		death_date = 1453.10.13
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 3
+		dynasty = "von Zähringen"		
+	}
+}
+
+1431.5.6 = {
+	monarch = {
+		name = "Jakob I"
+		birth_date = 1407.3.1
+		adm = 1
+		dip = 2
+		mil = 3
+		dynasty = "von Zähringen"
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = just_personality
+	add_ruler_personality = righteous_personality
+}
+
+1431.5.6 = {
+	heir = {
+		name = "Bernhard"
+		monarch_name = "Bernhard II"
+		birth_date = 1428.1.1
+		death_date = 1458.7.15
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 1
+		dynasty = "von Zähringen"		
+	}
+}
+		
 1453.10.14 = {
 	monarch = {
 		name = "Bernhard II"

@@ -16,6 +16,173 @@ change_brahmins_or_church_land_share_effect = {
 
 #Sultans of Bengal
 
+1390.1.1 = {
+	monarch = {
+		name = "Ghiyasuddin Azam"
+		dynasty = "Ilyas Shahi"
+		ADM = 1
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1390.1.1 = {
+	heir = {
+		name = "Hamza"
+		monarch_name = "Sayf-ud-Din Hamza"
+		dynasty = "Ilya Shahi"
+		birth_date = 1390.1.1
+		death_date = 1411.1.1
+		claim = 95
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+ 
+ 
+
+1410.1.1 = {
+	monarch = {
+		name = "Sayf-ud-Din Hamza"
+		dynasty = "Ilya Shahi"
+		ADM = 3
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1410.1.1 = {
+	heir = {
+		name = "Bayazid"
+		monarch_name = "Shihab-ud-Din Bayazid"
+		dynasty = "Ilyas Shahi"
+		birth_date = 1390.1.1
+		death_Date = 1414.1.1
+		claim = 95
+		ADM = 1
+		DIP = 3
+		MIL = 1
+	}
+}
+
+1412.1.1 = {
+	monarch = {
+		name = "Shihab-ud-Din Bayazid"
+		dynasty = "Ilyas Shahi"
+		ADM = 1
+		DIP = 3
+		MIL = 1
+	}
+}
+
+1412.1.1 = {
+	heir = {
+		name = "Firuz"
+		monarch_name = "Ala-ud-Din Firuz"
+		dynasty = "Ilyas Shahi"
+		birth_date = 1390.1.1
+		death_Date = 1415.1.1
+		claim = 95
+		ADM = 2
+		DIP = 0
+		MIL = 0
+	}
+}
+
+1414.1.1 = {
+	monarch = {
+		name = "Ala-ud-Din Firuz"
+		dynasty = "Ilyas Shahi"
+		ADM = 2
+		DIP = 0
+		MIL = 0
+	}
+}
+
+1415.1.1 = {
+	monarch = {
+		name = "Raja Ganesh"
+		dynasty = "Ganesha"
+		ADM = 1
+		DIP = 4
+		MIL = 3
+	}
+}
+
+1415.1.1 = {
+	heir = {
+		name = "Mohammed"
+		monarch_name = "Jalaluddin Mohammed"
+		dynasty = "Ganesha"
+		birth_date = 1400.1.1
+		death_date = 1433.1.1
+		claim = 95
+		ADM = 3
+		DIP = 1
+		MIL = 1
+	}
+}
+
+1418.1.1 = {
+	monarch = {
+		name = "Jalaluddin Mohammed"
+		dynasty = "Ganesha"
+		ADM = 3
+		DIP = 1
+		MIL = 1
+	}
+}
+
+1418.1.1 = {
+	heir = {
+		name = "Ahmad"
+		monarch_name = "Shamsuddin Ahmad"
+		dynasty = "Ganesha"
+		birth_date = 1410.1.1
+		death_date = 1435.1.1
+		claim = 95
+		ADM = 2
+		DIP = 4
+		MIL = 1
+	}
+}
+
+1433.1.1 = {
+	monarch = {
+		name = "Shamsuddin Ahmad"
+		dynasty = "Ganesha"
+		ADM = 2
+		DIP = 4
+		MIL = 1
+	}
+}
+
+1435.1.1 = {
+	monarch = {
+		name = "Nasir-ud-Din Mahmud"
+		dynasty = "Ilyas Shahi"
+		ADM = 4
+		DIP = 3
+		MIL = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = architectural_visionary_personality
+	add_heir_personality = bold_fighter_personality
+	heir = {
+		name = "Barbak"
+		monarch_name = "Rukun-ud-Din Barbak"
+		dynasty = "Ilyas Shahi"
+		birth_date = 1430.1.1
+		death_date = 1474.1.1
+		claim = 95
+		ADM = 4
+		DIP = 4
+		MIL = 5
+	}
+}
+
 1459.1.1 = {
 	monarch = {
 		name = "Rukun-ud-Din Barbak"

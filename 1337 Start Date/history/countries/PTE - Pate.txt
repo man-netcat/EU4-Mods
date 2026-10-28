@@ -26,6 +26,30 @@ monarch = {
 	mil = 3
 }
 
+1436.1.1 = {
+	monarch = {
+		name = "Abubakar I"
+		dynasty = "Nabhan"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1436.1.1 = {
+	heir = {
+		name = "Muhammad bin Abi Bakr"
+		monarch_name = "Muhammad IV"
+		dynasty = "Nabhan"
+		birth_date = 1430.1.1
+		death_Date = 1495.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
 1470.1.1 = {
 	monarch = {
 		name = "Muhammad IV"

@@ -8,6 +8,17 @@ technology_group = western
 capital = 2976
 fixed_capital = 2976 # Cannot move capital away from this province & no power cost to move to it
 
+1443.1.1 = {
+	monarch = {
+		name = "Braccio"
+		dynasty = "Baglioni"
+		birth_date = 1419.1.1
+		adm = 2
+		dip = 4
+		mil = 4
+	}
+}
+
 1479.1.1 = {
 	monarch = {
 		name = "Rodolfo"

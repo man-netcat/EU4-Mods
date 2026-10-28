@@ -7,6 +7,30 @@ capital = 554	#Jumla
 
 # Kalyana dynasty of Jumla
 
+1444.1.1 = {
+	monarch = {
+		name = "Baliraja"
+		dynasty = "Kalyana"
+		ADM = 3
+		DIP = 2
+		MIL = 3
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Vaksaraja"
+		monarch_name = "Vaksaraja"
+		dynasty = "Kalyana"
+		birth_date = 1400.1.1
+		death_date = 1480.1.1
+		claim = 95
+		ADM = 3
+		DIP = 3
+		MIL = 2
+	}
+}
+
 1445.1.1 = {
 	monarch = {
 		name = "Vaksaraja "

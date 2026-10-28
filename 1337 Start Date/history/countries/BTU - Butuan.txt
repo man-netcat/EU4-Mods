@@ -7,6 +7,16 @@ add_accepted_culture = filipino
 capital = 2702	# Butuan
 religion = hinduism
 
+1444.1.1 = {
+	monarch = {
+		name = "Colambu"
+		dynasty = "Butuan"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
 1490.1.1 = {
 	monarch = {
 		name = "Si Awi"

@@ -5,6 +5,26 @@ technology_group = chinese
 religion = hinduism
 capital = 638	# Kutai
 
+1399.1.1 = {
+	monarch = {
+		name = "Girishawardhana" # fictional
+		dynasty = "Kartanegara"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1429.1.1 = {
+	monarch = {
+		name = "Kertabumi" # fictional
+		dynasty = "Kartanegara"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1459.1.1 = {
 	monarch = {
 		name = "Wikramawardhana" # fictional

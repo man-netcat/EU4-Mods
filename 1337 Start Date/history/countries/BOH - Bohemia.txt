@@ -35,6 +35,37 @@ heir = {
 
 elector = yes
 
+1378.11.29 = {
+	monarch = {
+		name = "Václav IV"
+		dynasty = "von Luxemburg"
+		birth_date = 1361.2.26
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+# Personal Union with Hungary under Sigismund I 1419-1437
+
+1419.1.1 = { leader = {	name = "Jan Zizka"	type = general	fire = 6	shock = 3	manuever = 5	siege = 0	death_date = 1424.10.11 } }
+
+1419.1.1 = { leader = {	name = "Prokop Holý"	type = general	fire = 4	shock = 3	manuever = 5	siege = 1	death_date = 1434.5.30 } }
+
+# Personal Union with Habsburg under Albrecht II 1437-1439
+
+1439.10.27 = {
+	monarch = {
+		name = "Landfriedens"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+# Personal Union with Habsburg under Ladislaus Postumus 1453-1457
+
 1457.11.24 = {
 	monarch = {
 		name = "Jirí"

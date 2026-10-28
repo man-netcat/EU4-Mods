@@ -12,6 +12,16 @@ religious_school = maliki_school
 
 #Hypothetical rulers, from a genealogy of the XXth century sultan.
 
+1444.1.1 = {
+	monarch = {
+		name = "Kêda"
+		dynasty = "Mahamat"
+		dip = 2
+		adm = 1
+		mil = 4
+	}
+} 
+
 1465.1.1 = {
 	monarch = {
 		name = "Djil Goumsoumi"

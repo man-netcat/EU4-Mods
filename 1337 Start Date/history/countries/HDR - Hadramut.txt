@@ -8,6 +8,16 @@ religious_school = shafii_school
 
 #Sultans of Al-Kathiri
 
+1435.1.1 = {
+	monarch = {
+		name = "Muhammad ibn 'Ali"
+		dynasty = "Al Kathiri"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1493.1.1 = {
 	monarch = {
 		name = "Jafar"

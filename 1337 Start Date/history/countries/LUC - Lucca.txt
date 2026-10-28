@@ -26,6 +26,16 @@ heir = {
 	mil = 3
 }
 
+1444.11.11 = {
+	monarch = {
+		name = "Consiglio Generale"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
 1814.4.11 = {
 	government = monarchy
 	# add_government_reform = letat_cest_moi_reform

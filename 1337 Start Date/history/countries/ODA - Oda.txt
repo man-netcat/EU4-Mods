@@ -24,6 +24,21 @@ heir = {
 	mil = 3
 }
 
+1440.1.1 = {
+	monarch = {
+		name = "Hisanaga"
+		dynasty = "Oda"
+		birth_date = 1420.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = incorruptible_personality
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = zealot_personality
+}
+
 1452.1.1 = {
 	heir = {
 		name = "Toshisada"

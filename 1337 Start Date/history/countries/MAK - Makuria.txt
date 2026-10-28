@@ -19,6 +19,16 @@ monarch = {
 	mil = 2
 }
 
+1440.1.1 = {
+	monarch = {
+		name = "Siti"
+		dynasty = "Dotawo"
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+}
+
 1484.1.1 = {
 	monarch = {
 		name = "Ioel"

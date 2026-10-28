@@ -10,6 +10,16 @@ unlock_cult = cwezi_cult
 unit_type = sub_saharan
 capital = 4100 # Luapala
 
+1430.1.1 = {
+	monarch = {
+		name = "Mutanda"
+		dynasty = "Shila"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+} #Fictional. Just fill the gap until we get to the known rulers. Here, Kazembe represent assorted people of the region, such as the Shila.
+
 1500.1.1 = {
 	monarch = {
 		name = "Mfwama"

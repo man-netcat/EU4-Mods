@@ -24,6 +24,112 @@ heir = {
 	mil = 3
 }
 
+1372.1.30  = {
+	monarch = {
+		name = "Fuyusuke" # 1294 - 1375.9.22 
+		dynasty = "Shoni"
+		adm = 3
+		dip = 2
+		mil = 3
+		}
+}
+
+1375.9.22  = {
+	monarch = {
+		name = "Fuyusuke" # ?? - ??
+		dynasty = "Shoni"
+		adm = 3
+		dip = 2
+		mil = 3
+		}
+}
+
+1375.9.22 = {
+	heir = {
+		name = "Mitsusada"
+		monarch_name = "Mitsusada"
+		dynasty = "Shoni"
+		birth_date = 1375.9.22
+		death_date = 1404.1.1
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1387.1.1 = {
+	monarch = {
+		name = "Sadayori" # ? - 1404 
+		dynasty = "Shoni"
+		adm = 3
+		dip = 4
+		mil = 2
+		}
+}
+
+1387.1.1 = {
+	heir = {
+		name = "Mitsusada"
+		monarch_name = "Mitsusada"
+		dynasty = "Shoni"
+		birth_date = 1380.1.1
+		death_date = 1433.9.29
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1404.1.1 = {
+	monarch = {
+		name = "Mistusada"
+		dynasty = "Shoni"
+		birth_date = 1380.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+		}
+}
+
+1404.1.1 = {
+	heir = {
+		name = "Suketsugu"
+		monarch_name = "Suketsugu"
+		dynasty = "Shoni"
+		birth_date = 1400.1.1
+		death_date = 1441.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
+1433.9.29 = {
+	monarch = {
+		name = "Suketsugu"
+		dynasty = "Shoni"
+		birth_date = 1400.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+		}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+}
+
+1441.1.1 = {
+	monarch = {
+		name = "Noriyori" 
+		dynasty = "Shoni"
+		adm = 2
+		dip = 2
+		mil = 1
+		}
+}
+
 1450.1.1 = {
 	heir = {
 		name = "Masasuke"

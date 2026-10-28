@@ -7,6 +7,16 @@ capital = 2698 #Pangasinan
 religion = mahayana
 government_rank = 2
 
+1409.1.1 = {
+	monarch = {
+		name = "Liyu"
+		dynasty = "Caboloan"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
 1574.1.1 = { #Pirate Warlord
 	monarch = {
 		name = "Hong"

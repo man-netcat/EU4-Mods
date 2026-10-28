@@ -17,6 +17,16 @@ capital = 2256 #Yendi
 	add_mil_tech = 1
 }
 
+1442.1.1 = {
+	monarch = {
+		name = "Bierigudeera"
+		dynasty = "Naa"
+		DIP = 2
+		ADM = 1
+		MIL = 2
+	}
+}
+
 1454.1.1 = {
 	monarch = {
 		name = "Darigudeera"

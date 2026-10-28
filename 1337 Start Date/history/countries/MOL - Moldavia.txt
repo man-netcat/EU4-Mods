@@ -6,6 +6,90 @@ religion = orthodox
 technology_group = eastern
 capital = 268 # Suceava
 
+1399.1.1 = {
+	monarch = {
+		name = "Iuga Koriatovici"
+		dynasty = "Musat"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Alexandru"
+		monarch_name = "Alexandru I cel Bun"
+		dynasty = "Musat"
+		birth_date = 1380.1.1
+		death_date = 1432.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1400.1.1 = {
+	monarch = {
+		name = "Alexandru I cel Bun"
+		dynasty = "Musat"
+		birth_date = 1380.1.1
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1409.1.1 = {
+	heir = {
+		name = "Ilias"
+		monarch_name = "Ilias I"
+		dynasty = "Musat"
+		birth_date = 1409.1.1
+		death_date = 1448.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1432.1.1 = {
+	monarch = {
+		name = "Ilias I"
+		dynasty = "Musat"
+		birth_date = 1409.1.1
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+1433.1.1 = {
+	monarch = {
+		name = "Stefan II"
+		dynasty = "Musat"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+#1433.1.1 = {
+#	heir = {
+#		name = "Petru"
+#		monarch_name = "Petru III"
+#		dynasty = "Musat"
+#		birth_date = 1400.1.1
+#		death_date = 1452.1.1
+#		claim = 95
+#		adm = 3
+#		dip = 1
+#		mil = 1
+#	}
+#}
+
 1447.7.13 = {
 	monarch = {
 		name = "Roman II"

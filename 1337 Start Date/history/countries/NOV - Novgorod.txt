@@ -27,6 +27,15 @@ heir = {
 	mil = 3
 }
 
+1429.1.1 = {
+	monarch = {
+		name = "Evfimy II"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
 1456.2.1 = {
 	government_rank = 1
 }

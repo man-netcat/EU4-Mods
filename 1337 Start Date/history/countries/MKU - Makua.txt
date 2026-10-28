@@ -12,6 +12,16 @@ capital = 4034	# Makua
 
 #Dates are fictional, names are from various Makua Chiefs the Portuguese report having dealt with.
 
+1444.1.1 = {
+	monarch = {
+		name = "Gallo"
+		dynasty = "Makua"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+
 1490.1.1 = {
 	monarch = {
 		name = "Bano"

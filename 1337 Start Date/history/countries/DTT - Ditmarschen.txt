@@ -12,6 +12,16 @@ capital = 4141 #Ditmarschen
 	add_mil_tech = -1
 }
 
+1444.1.1 = {
+	monarch = {
+		name = "Achtundvierziger"
+		ADM = 3
+		DIP = 3
+		MIL = 5
+		regent = yes
+	}
+}
+
 1490.1.1 = { #Unkown before the battle of Hemmingstedt in 1500
 	monarch = {
 		name = "Wulf Isebrand"

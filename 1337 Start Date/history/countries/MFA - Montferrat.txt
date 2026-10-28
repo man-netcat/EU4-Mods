@@ -37,6 +37,70 @@ queen = {
 	mil = 3
 }
 
+1338.4.24 = {
+	monarch = {
+		name = "Giovanni II"
+		dynasty = "Palaiologos"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1372.3.19 = {
+	monarch = {
+		name = "Ottone III"
+		dynasty = "Palaiologos"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1378.12.16 = {
+	monarch = {
+		name = "Giovanni III"
+		dynasty = "Palaiologos"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1381.8.25 = {
+	monarch = {
+		name = "Teodoro II"
+		dynasty = "Palaiologos"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1418.4.26 = {
+	monarch = {
+		name = "Gian Giacomo"
+		dynasty = "Palaiologos"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1418.4.26 = {
+	heir = {
+		name = "Giovanni"
+		monarch_name = "Giovanni IV"
+		dynasty = "Palaiologos"
+		birth_date = 1413.6.24
+		death_date = 1464.1.19
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
 1445.3.12 = {
 	monarch = {
 		name = "Giovanni IV"

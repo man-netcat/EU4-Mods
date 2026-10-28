@@ -14,6 +14,16 @@ capital = 4045	# Tumbuka
 
 #Kisindile Clan, Custodians of the Snake Cult
 
+1444.1.1 = {
+	monarch = {
+		name = "Gonapamuhanya" #Fictional
+		dynasty = "Kisindile"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
 1500.1.1 = {
 	monarch = {
 		name = "Ziwange" #Fictional

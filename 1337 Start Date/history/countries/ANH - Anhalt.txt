@@ -16,6 +16,47 @@ monarch = {
 	mil = 3
 }
 
+1396.1.1 = {
+	monarch = {
+		name = "Sigismund I"
+		dynasty = "Askanier"
+		birth_date = 1368.1.1
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+}
+
+1396.1.1 = {
+	heir = {
+		name = "Georg"
+		monarch_name = "Georg I"
+		dynasty = "Askanier"
+		birth_date = 1390.1.1
+		death_date = 1474.9.21
+		claim = 85
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+		
+
+1405.1.19 = {
+	monarch = {
+		name = "Georg I"
+		dynasty = "Askanier"
+		birth_date = 1390.1.1
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = fertile_personality
+	add_ruler_personality = benevolent_personality
+	add_ruler_personality = charismatic_negotiator_personality
+}
+
 1450.1.1 = {
 	heir = {
 		name = "Ernst"

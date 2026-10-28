@@ -6,6 +6,26 @@ religion = animism
 technology_group = chinese
 capital = 2716	# Buton
 
+1399.1.1 = {
+	monarch = {
+		name = "Fakhr" # fictional
+		dynasty = "Bau-Bau"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1429.1.1 = {
+	monarch = {
+		name = "Tuni Palonga" # fictional
+		dynasty = "Bau-Bau"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1459.1.1 = {
 	monarch = {
 		name = "Shahab" # fictional

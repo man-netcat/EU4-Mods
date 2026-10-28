@@ -7,4 +7,14 @@ religion = catholic
 primary_culture = lower_saxon
 capital = 45	# Lübeck
 
+1444.11.11 = {
+	monarch = {
+		name = "Stadtrat"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
 1529.1.1 = { religion = protestant }

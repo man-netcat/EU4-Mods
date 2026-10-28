@@ -11,6 +11,16 @@ religious_school = hanafi_school
 #Rulers of Fuman
 #Unable to find direct list but described as they interact with the rulers of Lahijan/Biapis
 
+1430.1.1 = {
+	monarch = {
+		name = "Ala al-Din"
+		dynasty = "Eshaqvand"
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+}
+
 1461.1.1 = {
 	monarch = {
 		name = "Ala al-Din II" #Not the same Ala-al-din

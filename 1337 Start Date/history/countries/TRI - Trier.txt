@@ -21,6 +21,49 @@ monarch = {
 
 elector = yes
 
+1388.1.1 = {
+	monarch = {
+		name = "Werner von Falkenstein"
+		birth_date = 1355.1.1
+		dip = 2
+		adm = 0
+		mil = 2
+	}
+}
+
+1418.1.1 = {
+	monarch = {
+		name = "Otto von Ziegenhain"
+		birth_date = 1380.1.1
+		dip = 0
+		adm = 2
+		mil = 1
+	}
+}
+
+1430.1.1 = {
+	monarch = {
+		name = "Rhaban von Helmstadt"
+		birth_date = 1362.1.1
+		dip = 3
+		adm = 1
+		mil = 1
+	}
+}
+
+1438.6.27 = {
+	monarch = {
+		name = "Jakob von Sirk"
+		birth_date = 1398.1.1
+		dip = 2
+		adm = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = charismatic_negotiator_personality
+	add_ruler_personality = scholar_personality
+}
+
 1456.4.28 = {
 	monarch = {
 		name = "Johann I von Baden"

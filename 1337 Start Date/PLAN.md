@@ -196,6 +196,17 @@ belli, war goals, land), diplomacy (types, one overlord, cycles), capitals, idea
 replaced. Names go through `tools/textfold.py` for the Windows-1252 files. Wasteland (`impassable` in map/climate.txt) is not
 mapped. CI runs the whole chain and compares with the committed output.
 
+## History between 1337 and 1444
+
+EU5's setup holds no characters born after 1337 and almost no death dates, so the century after the start has no EU5 data.
+The base game's own history files do: 2,604 dated entries between 1337.4.1 and 1444.11.11 (1,369 monarch and 599 heir
+successions, 162 ownership changes, 117 cores, culture, religion, government and reform changes). They are kept for the
+base-game tags the mod reuses and for dormant ones (`step_countries`, `step_dormant`, `clean_dated`): successions happen on
+their real dates and the Hundred Years' War era conquests (Normandy 1419-20 ...) occur. Entries before the start are dropped
+(EU5's state replaces them); after 1444.11.11 province ownership keys stay stripped (the base game's events handle them).
+Undated 1444 truces and 1444 estate set-ups are removed. Heirs carry no invented death dates. Where the base game has no entry
+for an interval (France 1337-1380: Jean II, Charles V), EU4 generates successions.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is

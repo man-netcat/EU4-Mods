@@ -25,6 +25,16 @@ heir = {
 	mil = 3
 }
 
+1436.1.1 = {
+	monarch = {
+		name = "Qirqmas"
+		dynasty = "Al Abu Risha"
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+
 1480.1.1 = {
 	monarch = {
 		name = "Sayf"

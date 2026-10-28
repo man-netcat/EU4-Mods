@@ -8,6 +8,31 @@ religious_school = hanbali_school
 
 #Amirs of ad-Dar'iya
 
+1399.1.1 = {
+	monarch = {
+		name = "Watban"
+		dynasty = "Sa'ud"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+	add_piety = 0.1
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Mani"
+		monarch_name = "Mani"
+		dynasty = "Sa'ud"
+		birth_date = 1399.1.1
+		death_date = 1475.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
 1446.1.1 = {
 	monarch = {
 		name = "Mani"

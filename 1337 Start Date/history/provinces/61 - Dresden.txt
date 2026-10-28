@@ -20,7 +20,8 @@ extra_cost = 8
 center_of_trade = 1
 fort_15th = yes
 
-1423.1.6 = {     capital = "Dresden" } # Incorporated into Saxony
+1423.1.6 = { owner = SAX controller = SAX add_core = SAX remove_core = MEI capital = "Dresden" } # Incorporated into Saxony
+1444.1.1 = { add_core = MEI } # Meissen retains a core on its old capital
 1464.1.1 = { capital = "Dresden" }
 1531.1.1 = { religion = protestant }
 1589.1.1 = { fort_15th = no fort_16th = yes } # Current structure of Festung K�nigstein is built

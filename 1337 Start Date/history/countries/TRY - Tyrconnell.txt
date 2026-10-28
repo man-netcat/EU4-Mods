@@ -24,6 +24,16 @@ heir = {
 	mil = 3
 }
 
+1439.1.1 = {
+	monarch = {
+		name = "Neachtan"
+		dynasty = "Ó Domhnaill"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
 1461.1.1 = {
 	monarch = {
 		name = "Aodh Ruadh"

@@ -11,6 +11,16 @@ religious_school = maliki_school
 
 #Rulers of Zafunu are mostly unknown
 
+1410.1.1 = {
+	monarch = {
+		name = "Maga"
+		dynasty = "Diallo"
+		dip = 3
+		adm = 3
+		mil = 3
+	}
+} #Founder of the Peul kingdom of Macina
+
 1449.1.1 = {
 	monarch = {
 		name = "Alioun"

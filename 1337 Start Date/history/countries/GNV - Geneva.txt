@@ -25,6 +25,16 @@ heir = {
 	mil = 2
 }
 
+1399.1.1 = {
+	monarch = {
+		name = "Die Tagsatzung"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
 1528.1.1 = { religion = reformed }
 
 1798.1.1 = { set_legacy_government = constitutional_republic }

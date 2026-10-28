@@ -43,6 +43,44 @@ queen = {
 	mil = 3
 }
 
+1399.1.1 = {
+	monarch = {
+		name = "Abu-Sa'id Uthman III"
+		dynasty = "Marinid"
+		birth_date = 1383.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+	add_piety = 0.4
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Abdalhaqq"
+		monarch_name = "Abdalhaqq II"
+		dynasty = "Marinid"
+		birth_date = 1399.1.1
+		death_Date = 1465.1.1
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 0
+	}
+}
+
+1420.1.1 = {
+	monarch = {
+		name = "Abdalhaqq II"
+		dynasty = "Marinid"
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+	capital = 343 # Fez
+	set_estate_privilege = estate_nobles_strong_duchies
+}
+
 1465.1.1 = {
 	monarch = {
 		name = "Mohammed ibn Ali Amrani-Joutey"

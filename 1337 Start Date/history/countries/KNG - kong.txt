@@ -12,6 +12,16 @@ religious_school = shafii_school
 
 #Rulers of Kong (Start of Bokar's reign is unknown, reigned to circa 1500)
 
+1444.1.1 = {
+	monarch = {
+		name = "Bokar"
+		dynasty = "Gorogo"
+		DIP = 2
+		ADM = 1
+		MIL = 2
+	}
+}
+
 1500.1.1 = {
 	monarch = {
 		name = "Bagi"

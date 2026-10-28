@@ -24,6 +24,118 @@ heir = {
 	mil = 3
 }
 
+1362.1.1 = { 
+	monarch = {
+		name = "Yoshito"
+		dynasty = "Hatakeyama"
+		birth_date = 1331.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = righteous_personality
+	add_ruler_personality = calm_personality
+}
+	
+1362.1.1 = {
+	heir = {
+		name = "Motokuni"
+		monarch_name = "Motokuni"
+		dynasty = "Hatakeyama"
+		birth_date = 1352.1.1
+		death_date = 1406.2.5
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+1379.11.21 = { 
+	monarch = {
+		name = "Motokuni"
+		dynasty = "Hatakeyama"
+		birth_date = 1352.1.1
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = righteous_personality
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = inspiring_leader_personality
+}
+	
+1379.11.21 = {
+	heir = {
+		name = "Mitsuie"
+		monarch_name = "Mitsuie"
+		dynasty = "Hatakeyama"
+		birth_date = 1372.1.1
+		death_date = 1433.10.31
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1406.2.5 = {
+	monarch = {
+		name = "Mitsunori" 
+		dynasty = "Hatakeyama"
+		birth_date = 1380.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = just_personality
+}
+
+1410.1.1 = {
+	monarch = {
+		name = "Mitsuie" 
+		dynasty = "Hatakeyama"
+		birth_date = 1372.1.1
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = calm_personality
+	add_ruler_personality = silver_tongue_personality
+}
+
+1410.1.1 = {
+	heir = {
+		name = "Mochikuni"
+		monarch_name = "Mochikuni"
+		dynasty = "Hatakeyama"
+		birth_date = 1398.1.1
+		death_date = 1455.4.12
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1433.10.31 = {
+	monarch = {
+		name = "Mochikuni" 
+		dynasty = "Hatakeyama"
+		birth_date = 1398.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = greedy_personality
+	add_ruler_personality = benevolent_personality
+}
+
 1445.1.1 = {
 	heir = {
 		name = "Mochitomi"

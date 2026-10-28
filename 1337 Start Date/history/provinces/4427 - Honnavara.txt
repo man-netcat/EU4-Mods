@@ -21,6 +21,7 @@ discovered_by = chinese
 discovered_by = east_african
 
 1405.1.1 = { discovered_by = chinese }
+1444.1.1 = { add_core = BAH }
 1498.1.1 = { discovered_by = POR }
 1686.1.1 = {
 	

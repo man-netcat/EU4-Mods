@@ -10,6 +10,17 @@ religious_school = zaidi_school
 
 #Imams of Yemen
 
+1436.1.1 = {
+	monarch = {
+		name = "Al-Mutahhar"
+		dynasty = "al-Mutahhar"
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+	add_piety = 1
+}
+
 1474.1.1 = {
 	monarch = {
 		name = "Al-Mansur Muhammad"

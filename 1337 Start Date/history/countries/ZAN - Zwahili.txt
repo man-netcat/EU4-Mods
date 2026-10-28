@@ -31,6 +31,16 @@ heir = {
 	mil = 4
 }
 
+1442.1.1 = { #Suleimans Uncle
+	monarch = {
+		name = "Ismâ'îl"
+		dynasty = "al-Mawahib"
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+}
+
 1454.1.1 = { #Emir, usurper
 	monarch = {
 		name = "Muhammad III"

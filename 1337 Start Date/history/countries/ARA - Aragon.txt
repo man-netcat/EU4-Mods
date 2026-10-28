@@ -19,6 +19,96 @@ monarch = {
 	mil = 5
 }
 
+1396.5.19 = {
+	monarch = {
+		name = "Martí I"
+		dynasty = "d'Aragó"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1410.5.31 = {
+	monarch = {
+		name = "Compromís de Casp"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1412.6.24 = {
+	monarch = {
+		name = "Ferran I"
+		dynasty = "de Trastámara"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1412.6.24 = {
+	heir = {
+		name = "Alfons"
+		monarch_name = "Alfons V"
+		dynasty = "de Trastámara"
+		birth_date = 1396.1.1
+		death_date = 1458.6.27
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 6
+	}
+}
+		
+1416.4.2 = {
+	monarch = {
+		name = "Alfons V"
+		dynasty = "de Trastámara"
+		birth_date = 1396.1.1
+		adm = 2
+		dip = 4
+		mil = 6
+		leader = {	name = "Alfons V"	type = general	fire = 4	shock = 3	manuever = 4	siege = 1 }
+	}
+	
+	clear_scripted_personalities = yes
+	add_ruler_personality = well_connected_personality
+	add_ruler_personality = architectural_visionary_personality
+	set_heir_flag = joan_trastamara_flag
+	heir = {
+		name = "Joan"
+		monarch_name = "Joan II"
+		dynasty = "de Trastámara"
+		birth_date = 1397.6.29
+		death_date = 1479.1.20
+		claim = 95
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+	queen = {
+		country_of_origin = CAS
+		name = "Maria"
+		dynasty = "de Trastámara"
+		birth_date = 1401.9.14
+		death_date = 1458.9.7
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1443.1.1 = { 
+	leader = {	name = "Bernat de Vilamarí"	type = admiral	fire = 3	shock = 2	manuever = 2	siege = 0	death_date = 1463.9.1 } 
+	catalonia_area = {
+		add_local_autonomy = 90 
+	}
+}
+
 1458.6.29 = {
 	monarch = {
 		name = "Joan II"

@@ -18,6 +18,10 @@ discovered_by = ottoman
 discovered_by = nomad_group
 discovered_by = chinese
 
+1437.1.1 = {
+	owner = JNP
+	controller = JNP
+}
 1550.1.1 = { capital = "Rampur" }
 1565.1.1 = {  revolt = { type = noble_rebels } }	#Revolt of Uzbek commanders
 1566.6.1 = {  revolt = { } }

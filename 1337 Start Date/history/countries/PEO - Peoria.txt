@@ -12,3 +12,13 @@ federation = {
 	name = "illini_federation_name" 
 	members = { CAO KSK }
 }
+
+1444.11.11 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

@@ -24,6 +24,31 @@ heir = {
 	mil = 3
 }
 
+1405.9.7 = {
+	monarch = {
+		name = "James IV"
+		dynasty = "Butler"
+		birth_date = 1393.5.23
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+1420.11.24 = {
+	heir = {
+		name = "James"
+		monarch_name = "James V"
+		dynasty = "Butler"
+		birth_date = 1420.11.24
+		death_date = 1461.5.1 
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+}
+
 1452.8.23 = {
 	monarch = {
 		name = "James V"

@@ -6,6 +6,24 @@ technology_group = east_african
 unit_type = sub_saharan
 capital = 2757		# Kaffa
 
+1390.1.1 = {
+	monarch = {
+		name = "Minjiloch I"
+		dynasty = "Minjo"
+		adm = 6
+		dip = 5
+		mil = 6
+	}
+}
+1425.1.1 = {
+	monarch = {
+		name = "Shongetato I"
+		dynasty = "Minjo"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
 1460.1.1 = {
 	monarch = {
 		name = "Addiotato I"

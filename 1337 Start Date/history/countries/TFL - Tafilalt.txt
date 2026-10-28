@@ -18,6 +18,16 @@ monarch = {
 	mil = 5
 }
 
+1444.1.1 = {
+	monarch = {
+		name = "Abu Walid"
+		dynasty = "Saadi"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+	add_piety = 1.0
+}
 1472.1.1 = {
 	monarch = {
 		name = "Muhammad al-Qaim"

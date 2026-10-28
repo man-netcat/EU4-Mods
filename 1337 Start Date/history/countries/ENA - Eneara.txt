@@ -8,6 +8,16 @@ capital = 2758		# Eneara
 
 #Names are somewhat known, dates are fictional
 
+1444.1.1 = {
+	monarch = {
+		name = "Kaba Siyon"
+		dynasty = "Hinnare"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
 1530.1.1 = {
 	monarch = {
 		name = "La’Asohni"

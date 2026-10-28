@@ -24,6 +24,165 @@ heir = {
 	mil = 3
 }
 
+1342.10.13 = {
+	monarch = {
+		name = "Kiyouji"
+		dynasty = "Hosokawa"
+		birth_date = 1330.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = malevolent_personality
+}
+
+1362.8.14 = {
+	monarch = {
+		name = "Yoriyuki"
+		dynasty = "Hosokawa"
+		birth_date = 1329.1.1
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = calm_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = scholar_personality
+}
+
+1362.8.14 = {
+	heir = {
+		name = "Yorimoto"
+		monarch_name = "Yorimoto"
+		dynasty = "Hosokawa"
+		birth_date = 1343.1.1
+		death_date = 1397.6.2
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1392.3.25 = {
+	monarch = {
+		name = "Yorimoto" 
+		dynasty = "Hosokawa"
+		birth_date = 1343.1.1
+#		death_date = 1397.6.2
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = righteous_personality
+}
+
+1392.3.25 = {
+	heir = {
+		name = "Mitsumoto"
+		monarch_name = "Mitsumoto"
+		dynasty = "Hosokawa"
+		birth_date = 1378.1.1
+		death_date = 1426.11.15
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1397.6.2 = {
+	monarch = {
+		name = "Mitsumoto" 
+		dynasty = "Hosokawa"
+		birth_date = 1378.1.1
+#		death_date = 1426.11.15
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = righteous_personality
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = careful_personality
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Mochimoto"
+		monarch_name = "Mochimoto"
+		dynasty = "Hosokawa"
+		birth_date = 1399.1.1
+		death_date = 1429.8.14
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1426.11.15 = {
+	monarch = {
+		name = "Mochimoto" 
+		dynasty = "Hosokawa"
+		birth_date = 1399.1.1
+#		death_date = 1429.8.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = well_connected_personality
+}
+
+1429.8.14 = {
+	monarch = {
+		name = "Mochiyuki" 
+		dynasty = "Hosokawa"
+		birth_date = 1400.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = just_personality
+	add_ruler_personality = strict_personality
+}
+
+1430.1.1 = {
+	heir = {
+		name = "Katsumoto"
+		monarch_name = "Katsumoto"
+		dynasty = "Hosokawa"
+		birth_date = 1430.1.1
+		death_date = 1473.6.6
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1442.9.8 = {
+	monarch = {
+		name = "Katsumoto" 
+		dynasty = "Hosokawa"
+		birth_date = 1430.1.1
+#		death_date = 1473.6.6
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = well_advised_personality
+	add_ruler_personality = malevolent_personality
+	add_ruler_personality = naive_personality
+}
+
 1466.1.1 = {
 	heir = {
 		name = "Masamoto"

@@ -20,6 +20,21 @@ religious_school = maliki_school
 	add_mil_tech = 1
 }
 
+1434.1.1 = {
+	monarch = {
+		name = "Akil"
+		dynasty = "Akamalwal"
+		dip = 2
+		adm = 1
+		mil = 4
+	}
+	add_piety = -0.15
+}
+
+#Chased out of Timbuktu in 1468 by Songhai conquest.
+
+#Arma leaders of Timbuktu, appointed by Arma through elections by the military leaders
+
 1618.1.1 = {
 	government = republic
 add_government_reform = noble_elite_reform

@@ -5,6 +5,16 @@ primary_culture = manchu
 religion = tengri_pagan_reformed
 capital = 4663
 
+1444.1.1 = {
+	monarch = {
+		name = "Nisiha"
+		dynasty = "Hurha"
+		dip = 3
+		adm = 2
+		mil = 2
+	}
+}
+
 1480.1.1 = {
 	monarch = {
 		name = "Lomi"

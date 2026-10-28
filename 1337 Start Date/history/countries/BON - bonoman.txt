@@ -18,6 +18,16 @@ capital = 1138 #Bono-Manso
 	add_mil_tech = 1
 }
 
+1444.1.1 = {
+	monarch = {
+		name = "Nana Yaw Awere"
+		dynasty = "Bonomanhene"
+		DIP = 2
+		ADM  = 1
+		MIL = 2
+	}
+}
+
 1500.1.1 = {
 	monarch = {
 		name = "Nana Boadi Akim"

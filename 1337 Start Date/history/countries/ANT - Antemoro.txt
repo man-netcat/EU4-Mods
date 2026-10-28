@@ -12,6 +12,16 @@ unlock_cult = waaq_cult
 unlock_cult = zanahary_cult
 religious_school = shafii_school
 
+1444.1.1 = {
+	monarch = {
+		name = "Andriapanolaha"
+		dynasty = "Anteoni"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1488.1.1 = {
 	monarch = {
 		name = "Council of Chiefs"

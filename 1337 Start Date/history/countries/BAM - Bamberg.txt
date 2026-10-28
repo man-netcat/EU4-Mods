@@ -15,6 +15,16 @@ monarch = {
 	mil = 3
 }
 
+1431.9.1 = {
+	monarch = {
+		name = "Anton von Rotenhan" 
+		birth_date = 1390.1.1
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+
 1455.5.6 = {
 	monarch = {
 		name = "Georg I von Schaumberg" 

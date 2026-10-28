@@ -6,6 +6,15 @@ religion = animism
 technology_group = polynesian_tech
 capital = 1240 #Hawaii
 
+1444.11.11 = {
+	monarch = {
+		name = "Kihanuilulumoku"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 1465.11.11 = {
 	monarch = {
 		name = "Liloa"

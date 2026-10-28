@@ -25,6 +25,57 @@ heir = {
 	mil = 3
 }
 
+1397.1.1 = {
+	monarch = {
+		name = "Ahmad III"
+		dynasty = "Hawashim"
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+	add_piety = -0.05
+}
+
+1424.1.1 = {
+	monarch = {
+		name = "Hasan II"
+		dynasty = "Hawashim"
+		adm = 0
+		dip = 2
+		mil = 2
+	}
+}
+
+1426.1.1 = {
+	monarch = {
+		name = "Barakât I"
+		dynasty = "Hawashim"
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+}
+
+1441.1.1 = {
+	monarch = {
+		name = "'Ali III"
+		dynasty = "Hawashim"
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+
+1443.1.1 = {
+	monarch = {
+		name = "Abu'l Qasim"
+		dynasty = "Hawashim"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
 1446.1.1 = {
 	monarch = {
 		name = "Barakât I"

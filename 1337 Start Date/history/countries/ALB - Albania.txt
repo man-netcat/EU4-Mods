@@ -18,6 +18,35 @@ monarch = {
 	mil = 3
 }
 
+1443.3.4 = {
+	monarch = {
+		name = "Gjergj Skanderbeg"
+		dynasty = "Kastrioti"
+		birth_date = 1405.1.1		
+		adm = 6
+		dip = 5
+		mil = 6
+		leader = {	name = "Skanderbeg"            	type = general	fire = 5	shock = 5	manuever = 5	siege = 1}
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = silver_tongue_personality
+}
+
+1443.3.4 = {
+	heir = {
+		name = "Gjon"
+		monarch_name = "Gjon II"
+		dynasty = "Kastrioti"
+		birth_date = 1420.1.1
+		death_date = 1478.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
 1468.1.18 = {
 	monarch = {
 		name = "Gjon II"

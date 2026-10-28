@@ -18,6 +18,9 @@ base_manpower = 3
 discovered_by = chinese
 discovered_by = indian
 
+1438.1.1 = {	
+	add_core = AYU
+} # Sukhothai is under Personal Union with Ayutthaya
 1535.1.1 = { discovered_by = POR }
 1767.4.1 = { unrest = 7 } # The fall of Ayutthaya
 1774.1.1 = { unrest = 0 }

@@ -17,6 +17,16 @@ monarch = {
 	mil = 3
 }
 
+1440.1.1 = {
+	monarch = {
+		name = "Hirde"
+		dynasty = "Garha-Mandli"
+		ADM = 2
+		DIP = 3
+		MIL = 2
+	}
+}
+
 1448.1.1 = {
 	heir = {
 		name = "Sangrama Simha"

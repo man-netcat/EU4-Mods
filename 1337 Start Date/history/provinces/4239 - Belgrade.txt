@@ -26,9 +26,9 @@ extra_cost = 8
 center_of_trade = 1
 
 1428.1.1 = {
-	
-	
-	
+	owner = HUN
+	controller = HUN
+	add_core = HUN
 	capital = "Nándorfehérvár"
 }
 1521.8.29 = {

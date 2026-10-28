@@ -9,6 +9,110 @@ capital = 62 # Leipzig
 
 #Elector
 
+1388.1.1 = {
+	monarch = {
+		name = "Rudolf III"
+		dynasty = "Askanier"
+		birth_date = 1373.1.1
+		dip = 1
+		adm = 3
+		mil = 1
+	}
+}
+
+1388.1.1 = {
+	heir = {
+		name = "Albrecht"
+		monarch_name = "Albrecht III"
+		dynasty = "Askanier"
+		birth_date = 1375.1.1
+		death_date = 1422.11.12
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1419.1.1 = {
+	monarch = {
+		name = "Albrecht III"
+		dynasty = "Askanier"
+		birth_date = 1375.1.1
+		dip = 3
+		adm = 2
+		mil = 2
+	}
+}
+
+1423.1.1 = {
+	monarch = {
+		name = "Friedrich I"
+		dynasty = "von Wettin"
+		birth_date = 1370.4.11
+		dip = 1
+		adm = 2
+		mil = 1
+	}
+}
+
+1423.1.1 = {
+	heir = {
+		name = "Friedrich"
+		monarch_name = "Friedrich II"
+		dynasty = "von Wettin"
+		birth_date = 1412.8.22
+		death_date = 1464.9.7
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 0
+	}
+}
+
+1423.1.6 = { capital = 61 } # Meissen
+
+1428.1.4 = {
+	monarch = {
+		name = "Friedrich II"
+		dynasty = "von Wettin"
+		birth_date = 1412.8.22
+		dip = 3
+		adm = 4
+		mil = 0
+	}
+	queen = {
+		country_of_origin = HAB
+		name = "Margaret"
+		dynasty = "von Habsburg"
+		birth_date = 1416.6.3
+		death_date = 1464.9.7
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = fertile_personality
+	add_ruler_personality = industrious_personality
+}
+#Same as Friedrich II of Thuringia
+#Dukes of Saxony
+
+1443.7.31 = {
+	heir = {
+		name = "Albrecht"
+		monarch_name = "Albrecht I der Beherzte"
+		dynasty = "von Wettin"
+		birth_date = 1443.7.31
+		death_date = 1500.9.12
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 5
+	}
+}
+
 1464.9.7 = { elector = no }
 
 1464.9.7 = {

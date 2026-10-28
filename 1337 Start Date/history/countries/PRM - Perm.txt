@@ -7,6 +7,30 @@ religion = finnish_pagan
 technology_group = eastern
 capital = 1963	# Cherdyn
 
+1444.1.1 = {
+	monarch = {
+		name = "Yermolay I"
+		dynasty = "Velikopermsky"
+		adm = 6
+		dip = 4
+		mil = 5
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Mikhail"
+		monarch_name = "Mikhail I"
+		dynasty = "Velikopermsky"
+		birth_date = 1420.1.1
+		death_date = 1481.1.1
+		claim = 95
+		adm = 6
+		dip = 5
+		mil = 5
+	}
+}
+
 1451.1.1 = {
 	monarch = {
 		name = "Mikhail I"

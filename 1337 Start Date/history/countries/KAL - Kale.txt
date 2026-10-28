@@ -6,6 +6,16 @@ primary_culture = assamese
 add_accepted_culture = chin
 capital = 580
 
+1420.1.1 = {
+	monarch = {
+		name = "Tarabya"
+		dynasty = "Kale"
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
 1465.1.1 = {
 	monarch = {
 		name = "Kyetaungnyo"

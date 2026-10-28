@@ -21,6 +21,9 @@ extra_cost = 16
 center_of_trade = 2
 fort_15th = yes
 
+1405.1.1 = { owner = BYZ controller = BYZ } # Restored to the Byzantines
+1423.1.1 = { owner = VEN controller = VEN } # Sold to Venice by the weakening Byzantines
+1430.3.29 = { owner = TUR controller = TUR } # Finally conquered by Murad II 
 1555.1.1 = { unrest = 5 } # General discontent with the Janissaries' dominance
 1556.1.1 = { unrest = 0 }
 1615.1.1 = { base_tax = 4 

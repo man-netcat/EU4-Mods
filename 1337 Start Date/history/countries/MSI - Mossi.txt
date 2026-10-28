@@ -12,6 +12,16 @@ capital = 1137	# Niani
 
 #Kings of Northern Mossi, on fragmentary information.
 
+1444.1.1 = {
+	monarch = {
+		name = "Komdao I"
+		dynasty = "Tenga Niama"
+		dip = 2
+		adm = 1
+		mil = 3
+	}
+} #Known to have reigned in 1468
+
 1480.1.1 = {
 	monarch = {
 		name = "Na'asira I"

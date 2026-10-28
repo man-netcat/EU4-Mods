@@ -24,6 +24,19 @@ heir = {
 	mil = 3
 }
 
+1440.1.1 = {
+	monarch = {
+		name = "Noritomo"
+		dynasty = "Kitabatake"
+		birth_date = 1423.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = tactical_genius_personality
+}
+
 1448.1.1 = {
 	heir = {
 		name = "Masasato"

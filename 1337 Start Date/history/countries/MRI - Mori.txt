@@ -15,6 +15,91 @@ monarch = {
 	mil = 3
 }
 
+1341.1.1 = {
+	monarch = {
+		name = "Motoharu" #1323 - ??
+		dynasty = "Mori"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1347.1.1 = {
+	heir = {
+		name = "Hirofusa"
+		monarch_name = "Hirofusa"
+		dynasty = "Mori"
+		birth_date = 1347.1.1
+		death_date = 1385.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1386.1.1 = {
+	heir = {
+		name = "Mitsufusa"
+		monarch_name = "Mitsufusa"
+		dynasty = "Mori"
+		birth_date = 1386.1.1
+		death_date = 1436.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1401.1.1 = {
+	monarch = {
+		name = "Mitsufusa"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1412.1.1 = {
+	heir = {
+		name = "Hiromoto"
+		monarch_name = "Hiromoto"
+		dynasty = "Mori"
+		birth_date = 1412.1.1
+		death_date = 1464.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1436.1.1 = {
+	monarch = {
+		name = "Hiromoto" 
+		dynasty = "Mori"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Toyomoto"
+		monarch_name = "Toyomoto"
+		dynasty = "Mori"
+		birth_date = 1444.1.1
+		death_date = 1476.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
 1464.1.1 = {
 	monarch = {
 		name = "Toyomoto" 

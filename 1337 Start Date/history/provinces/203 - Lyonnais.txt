@@ -19,6 +19,7 @@ discovered_by = ottoman
 extra_cost = 16
 center_of_trade = 2
 
+1399.1.1 = { add_core = DAU }
 1446.9.27 = { revolt = { type = pretender_rebels size = 0 }  } # Dauphiné is ruled as a separate kingdom by Louis
 1461.7.22 = { revolt = {}  } # Louis is proclaimed king of France
 1573.9.1 = { unrest = 5 } # Saint Barthelew's Day Massacre: the consequences in the land

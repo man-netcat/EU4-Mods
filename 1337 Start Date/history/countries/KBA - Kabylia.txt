@@ -10,6 +10,30 @@ religious_school = maliki_school
 
 #Sultans of Ait Abbas and Hafsid Emirs of Bejaia
 
+1440.1.1 = {
+	monarch = {
+		name = "Abderrahmane"
+		dynasty = "Mokrani"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1440.1.1 = {
+	heir = {
+		name = "Ahmed"
+		monarch_name = "Ahmed I"
+		dynasty = "Mokrani"
+		birth_date = 1440.1.1
+		death_Date = 1510.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
 1500.1.1 = {
 	monarch = {
 		name = "Ahmed I"

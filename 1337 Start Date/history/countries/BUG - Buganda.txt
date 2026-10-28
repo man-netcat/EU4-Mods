@@ -34,6 +34,17 @@ heir = {
 	add_mil_tech = 1
 }
 
+1434.1.1 = {
+	monarch = {
+		name = "Kiggala"
+		dynasty = "Abalasangeye"
+		birth_date = 1410.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
 1464.1.1 = { #Abdication
 	monarch = {
 		name = "Kiyimba"

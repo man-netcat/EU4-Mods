@@ -6,6 +6,61 @@ technology_group = chinese
 capital = 2673	# Pasai
 religious_school = shafii_school
 
+1345.1.1 = {
+	monarch = {
+		name = "Ahmad Malik az-Zahir"
+		dynasty = "Pasai"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1383.1.1 = {
+	monarch = {
+		name = "Zain al Abidin I"
+		dynasty = "Pasai"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1405.1.1 = {
+	monarch = {
+		name = "Nahrasiyah"
+		dynasty = "Pasai"
+		adm = 3
+		dip = 3
+		mil = 3
+		female = yes
+	}
+}
+
+1412.1.1 = {
+	monarch = {
+		name = "Abu Zaid Malik az-Zahir"
+		dynasty = "Pasai"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1412.1.1 = {
+	heir = {
+		name = "Mahmud Malik az-Zahir"
+		monarch_name = "Mahmud Malik az-Zahir II"
+		dynasty = "Pasai"
+		birth_date = 1410.1.1
+		death_date = 1477.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
 1455.1.1 = {
 	monarch = {
 		name = "Mahmud Malik az-Zahir II"

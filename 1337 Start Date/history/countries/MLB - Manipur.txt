@@ -17,6 +17,54 @@ monarch = {
 	mil = 3
 }
 
+1399.1.1 = {
+	monarch = {
+		name = "Pengshiba"
+		dynasty = "Ningthouja"
+		adm = 1
+		dip = 4
+		mil = 1
+	}
+}
+
+1399.1.1 = {
+	heir = {
+		name = "Ningthou Khama"
+		monarch_name = "Ningthou Khama"
+		dynasty = "Ningthouja"
+		birth_Date = 1399.1.1
+		death_Date = 1467.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1432.1.1 = {
+	monarch = {
+		name = "Ningthou Khama"
+		dynasty = "Ningthouja"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1432.1.1 = {
+	heir = {
+		name = "Senbi Kiyamba"
+		monarch_name = "Senbi Kiyamba"
+		dynasty = "Ningthouja"
+		birth_Date = 1432.1.1
+		death_Date = 1507.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
 1467.1.1 = {
 	monarch = {
 		name = "Senbi Kiyamba"

@@ -18,9 +18,9 @@ culture = berber
 	discovered_by = ottoman
 	discovered_by = CAS
 
-	
-	
-	
+	owner = CAS
+	controller = CAS
+	add_core = CAS
 	is_city = yes
 	religion = catholic
 	culture = castillian	

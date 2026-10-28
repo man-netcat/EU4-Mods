@@ -17,6 +17,18 @@ religious_school = maliki_school
 	add_mil_tech = 1
 }
 
+1444.1.1 = {
+	monarch = {
+		name = "Tsoede"
+		dynasty = "Etsu Nupe"
+		DIP = 3
+		ADM = 2
+		MIL = 4
+	}
+}
+
+#Unknown
+
 1531.1.1 = {
 	monarch = {
 		name = "Edegi"

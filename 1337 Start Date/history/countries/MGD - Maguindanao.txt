@@ -6,6 +6,27 @@ primary_culture = filipino
 capital = 652	# Maguindanao
 religion = animism
 
+1444.1.1 = {
+	monarch = {
+		name = "Maraja"
+		dynasty = "Maguindanao"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	heir = {
+		name = "Tabunaway"
+		monarch_name = "Tabunaway"
+		dynasty = "Maguindanao"
+		birth_date = 1444.1.1
+		death_Date = 1530.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
 1480.1.1 = {
 	monarch = {
 		name = "Tabunaway"

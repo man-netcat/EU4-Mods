@@ -28,6 +28,89 @@ heir = {
 	mil = 5
 }
 
+1363.1.1 = {
+	monarch = {
+		name = "Antonio I"
+		dynasty = "da Montefeltro"
+		dip = 3
+		adm = 2
+		mil = 3
+	}
+}
+
+1377.1.1 = {
+	heir = {
+		name = "Guidantonio"
+		monarch_name = "Guidantonio I"
+		dynasty = "da Montefeltro"
+		birth_date = 1377.1.1 
+		death_date = 1443.2.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1404.1.1 = {
+	monarch = {
+		name = "Guidantonio I"
+		dynasty = "da Montefeltro"
+		dip = 2
+		adm = 1
+		mil = 1
+	}
+}
+
+1428.1.1 = {
+	heir = {
+		name = "Oddantonio"
+		monarch_name = "Oddantonio I"
+		dynasty = "da Montefeltro"
+		birth_date = 1428.1.1
+		death_date = 1444.7.22
+		claim = 95
+		adm = 0
+		dip = 3
+		mil = 2
+	}
+}
+
+1443.2.1 = {
+	monarch = {
+		name = "Oddantonio I"
+		dynasty = "da Montefeltro"
+		dip = 3
+		adm = 0
+		mil = 2
+	}
+}
+
+1443.2.1 = {
+	heir = {
+		name = "Federico"
+		monarch_name = "Federico III"
+		dynasty = "da Montefeltro"
+		birth_date = 1422.6.7
+		death_date = 1482.9.10
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+1444.7.22 = {
+	monarch = {
+		name = "Federico III"
+		dynasty = "da Montefeltro"
+		birth_date = 1422.6.7
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
 1472.1.17 = {
 	heir =  {
 		name = "Guidobaldo"

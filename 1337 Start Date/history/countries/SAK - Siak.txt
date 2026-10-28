@@ -6,6 +6,16 @@ technology_group = chinese
 capital = 620	# Siak
 religious_school = shafii_school
 
+1429.1.1 = {
+	monarch = {
+		name = "Tsau-Lha" # fictional
+		dynasty = "Siak"
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
 1445.1.1 = {
 	government_rank = 1
 }

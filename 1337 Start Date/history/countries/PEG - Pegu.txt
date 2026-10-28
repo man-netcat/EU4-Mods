@@ -37,6 +37,79 @@ queen = {
 	mil = 2
 }
 
+1384.1.23 = {
+	monarch = {
+		name = "Razadarit"
+		dynasty = "Wareru"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1393.1.1 = {
+	heir = {
+		name = "Binnya Dhammaraza"
+		monarch_name = "Binnya Dhammaraza"
+		dynasty = "Wareru"
+		birth_date = 1393.1.1
+		death_Date = 1426.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1421.2.1 = {
+	monarch = {
+		name = "Binnya Dammayaza"
+		dynasty = "Wareru"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1421.2.1 = {
+	heir = {
+		name = "Binnya Ran"
+		monarch_name = "Binnya Ran I"
+		dynasty = "Wareru"
+		birth_date = 1395.1.1
+		death_Date = 1446.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1426.1.1 = {
+	monarch = {
+		name = "Binnya Ran I"
+		dynasty = "Wareru"
+		birth_date = 1395.1.1
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}
+
+1426.1.1 = {
+	heir = {
+		name = "Binnya Waru"
+		monarch_name = "Binnya Waru"
+		dynasty = "Wareru"
+		birth_date = 1415.1.1
+		death_Date = 1450.1.1
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
 1446.1.1 = {
 	monarch = {
 		name = "Binnya Waru"

@@ -16,6 +16,30 @@ monarch = {
 	mil = 3
 }
 
+1382.1.1 = {
+	monarch = {
+		name = "Albrecht III"
+		adm = 3
+		dip = 2
+		mil = 0
+	}
+}
+
+1403.1.1 = {
+	monarch = {
+		name = "Günther II"
+		culture = saxon
+		birth_date = 1382.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = tolerant_personality
+	add_ruler_personality = sinner_personality
+	add_ruler_personality = embezzler_personality
+}
+
 1445.3.24 = {
 	monarch = {
 		name = "Friedrich III"

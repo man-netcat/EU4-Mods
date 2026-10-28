@@ -8,6 +8,18 @@ capital = 4448	# Parlakhimidi
 
 # Founder
 
+1444.1.1 = { # Younger son of Kapilendra of Orissa
+	monarch = {
+		name = "Kolahomi"
+		dynasty = "Gajapati"
+		ADM = 1
+		DIP = 1
+		MIL = 2
+	}
+}
+
+# Fictional son of Kolahomi
+
 1480.1.1 = {
 	heir = {
 		name = "Kaluadeva"
