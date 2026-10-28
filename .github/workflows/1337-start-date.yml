@@ -1,0 +1,56 @@
+name: 1337 Start Date
+
+on:
+  push:
+    paths:
+      - "1337 Start Date/**"
+      - ".github/workflows/1337-start-date.yml"
+  pull_request:
+    paths:
+      - "1337 Start Date/**"
+  workflow_dispatch:
+
+# EU4 and EU5 files come from the private man-netcat/eu4-ck3-reference repo (the REFERENCE_REPO_TOKEN secret, the same
+# one Charlemagne's Legacy uses, needs read access to it). Only the folders the tools read are checked out.
+env:
+  EU4_GAME: ${{ github.workspace }}/eu4-ck3-reference/eu4
+
+jobs:
+  validate:
+    name: Regenerate mapping and history, validate, and check the committed output is the build output
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            1337 Start Date
+          sparse-checkout-cone-mode: true
+      - uses: actions/checkout@v4
+        with:
+          repository: man-netcat/eu4-ck3-reference
+          token: ${{ secrets.REFERENCE_REPO_TOKEN }}
+          path: eu4-ck3-reference
+          fetch-depth: 1
+          sparse-checkout: |
+            eu4
+            eu5/main_menu
+            eu5/in_game/common
+            eu5/in_game/map_data
+            eu5/in_game/setup
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Mapping inputs (province matching, culture and religion tables)
+        working-directory: 1337 Start Date/tools
+        run: python3 loc2prov.py && python3 tables.py
+      - name: Build
+        working-directory: 1337 Start Date/tools
+        run: python3 build.py
+      - name: Validate (must end ALL CHECKS PASSED)
+        working-directory: 1337 Start Date/tools
+        run: python3 validate.py | tee /tmp/validate.txt; grep -q "ALL CHECKS PASSED" /tmp/validate.txt
+      - name: The committed files are what the tools write
+        run: |
+          git status --porcelain -- "1337 Start Date" | grep -v __pycache__ | tee /tmp/dirty.txt
+          test ! -s /tmp/dirty.txt || { echo "::error::tool output differs from what is committed - rerun the tools and commit the result"; git diff --stat -- "1337 Start Date" | tail -20; exit 1; }
