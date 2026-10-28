@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = catholic
+capital = 4743
+
+monarch = {
+	name = "Otto IV"
+	dynasty = "Askanier"
+	birth_date = 1305.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

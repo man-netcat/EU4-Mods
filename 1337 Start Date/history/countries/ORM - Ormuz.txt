@@ -1,0 +1,40 @@
+government = monarchy
+add_government_reform = arabic_plutocracy_reform
+government_rank = 2
+technology_group = muslim
+religion = sunni
+primary_culture = persian
+capital = 2999	# Ormuz Island
+religious_school = maliki_school
+
+#Rulers of Ormuz
+
+monarch = {
+	name = "Qutb.Al_Din II"
+	dynasty = "Deramk?"
+	birth_date = 1280.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Turan.Shah"
+	dynasty = "Deramk?"
+	birth_date = 1305.1.1
+	death_date = 1365.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1465.1.1 = {
+	monarch = {
+		name = "Salghur"
+		dynasty = "Turani"
+		dip = 4
+		mil = 2
+		adm = 2
+	}
+	add_piety = 0.1
+}

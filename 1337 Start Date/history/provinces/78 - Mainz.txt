@@ -1,0 +1,23 @@
+# 78 - Mainz
+owner = MAI
+controller = MAI
+add_core = MAI
+is_city = yes
+capital = "Mainz"
+culture = hessian
+religion = catholic
+trade_goods = paper
+base_tax = 4 
+base_production = 4
+base_manpower = 2
+hre = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+extra_cost = 8
+center_of_trade = 1
+
+1556.4.19 = { religion = protestant } # Ottheinrich converts the country to Calvinism
+1560.1.1 = { fort_15th = yes }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

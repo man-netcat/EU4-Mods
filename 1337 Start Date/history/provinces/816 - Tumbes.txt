@@ -1,0 +1,29 @@
+#816 - Tumbes
+
+culture = chimuan
+religion = inti
+capital = "Tumbes"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = south_american
+discovered_by = andean
+discovered_by = CHM
+
+fort_15th = yes
+
+1528.1.1 = { discovered_by = SPA } # Francisco Pizarro
+1532.1.1 = {
+	
+	
+	
+	culture = castillian
+	religion = catholic
+} # Battle of Cajamarca
+1537.1.1 = { unrest = 8 } # Fighting breaks out when Almagro seizes Cuzco
+1538.1.1 = { unrest = 5 } # Almagro is defeated & executed

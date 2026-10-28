@@ -1,0 +1,105 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = chinese
+capital = 1830	# Tajima
+
+1467.10.7 = {
+	heir = {
+		name = "Masatoyo"
+		monarch_name = "Masatoyo"
+		dynasty = "Yamana"
+		birth_date = 1441.1.1
+		death_date = 1499.1.1
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+	
+1473.4.15 = { 
+	monarch = {
+		name = "Masatoyo"
+		dynasty = "Yamana"
+		birth_date = 1441.1.1
+#		death_date = 1499.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1475.1.1 = {
+	heir = {
+		name = "Okitoyo"
+		monarch_name = "Okitoyo"
+		dynasty = "Yamana"
+		birth_date = 1475.1.1
+		death_date = 1528.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}	
+
+1486.1.1 = {
+	capital = 1830	# Tajima
+}
+
+1499.1.1 = { 
+	monarch = {
+		name = "Masatoyo"
+		dynasty = "Yamana"
+		birth_date = 1475.1.1
+#		death_date = 1528.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1511.1.1 = {
+	heir = {
+		name = "Suketoyo"
+		monarch_name = "Suketoyo"
+		dynasty = "Yamana"
+		birth_date = 1511.1.1
+		death_date = 1580.7.2
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}	
+
+1524.1.1 = { capital = 1830 } #Tajima
+
+1528.1.1 = { 
+	monarch = {
+		name = "Suketoyo"
+		dynasty = "Yamana"
+		birth_date = 1511.1.1
+#		death_date = 1580.7.2
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1552.1.1 = {
+	heir = {
+		name = "Akihiro"
+		monarch_name = "Akihiro"
+		dynasty = "Yamana"
+		birth_date = 1552.1.1
+		death_date = 1612.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

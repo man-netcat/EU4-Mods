@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = piedmontese
+religion = catholic
+capital = 1875
+
+monarch = {
+	name = "James I"
+	dynasty = "Savoy"
+	birth_date = 1315.1.16
+	adm = 3
+	dip = 3
+	mil = 3
+}

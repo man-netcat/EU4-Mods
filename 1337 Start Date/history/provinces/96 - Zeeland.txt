@@ -1,0 +1,23 @@
+# 96 Zeeland - Principal cities: Middelburg, Vlissingen & Zierikzee
+
+owner = HOL
+controller = HOL
+add_core = HOL
+is_city = yes
+capital = "Middelburg"
+culture = dutch
+religion = catholic
+hre = yes
+base_tax = 5
+base_production = 5
+trade_goods = salt
+base_manpower = 1
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1572.1.1 = { religion = reformed }
+1648.10.24 = { hre = no } # The Peace of Westphalia
+1681.1.1 = { base_tax = 6 
+base_production = 6 } # Protestants expelled from France

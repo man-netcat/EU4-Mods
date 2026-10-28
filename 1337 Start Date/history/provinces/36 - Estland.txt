@@ -1,0 +1,19 @@
+#Estland, incl. Reval, Hapsal, Weissenstein, Wesenberg and Pernau.
+
+culture = estonian
+religion = catholic
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = grain
+base_manpower = 2
+capital = "Reval"
+fort_15th = yes #Fortifications of Reval, Wesenberg, Toompea Castle
+center_of_trade = 1
+
+
+
+discovered_by = western
+discovered_by = eastern
+
+1542.1.1 = { religion = protestant} # Unknown date

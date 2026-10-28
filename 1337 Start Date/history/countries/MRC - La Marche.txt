@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = cosmopolitan_french
+religion = catholic
+capital = 4697
+
+monarch = {
+	name = "Louis I"
+	dynasty = "Bourbon"
+	birth_date = 1279.1.1
+	adm = 2
+	dip = 5
+	mil = 3
+}
+heir = {
+	name = "Peter"
+	dynasty = "Bourbon"
+	birth_date = 1311.1.1
+	death_date = 1371.1.1
+	claim = 95
+	adm = 2
+	dip = 3
+	mil = 2
+}

@@ -1,0 +1,20 @@
+#114 - Romagna
+
+owner = RAV
+controller = RAV
+add_core = RAV
+is_city = yes
+culture = romagnan 
+religion = catholic 
+hre = no 
+base_tax = 4
+base_production = 5
+trade_goods = salt
+base_manpower = 2
+capital = "Ravenna"
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman

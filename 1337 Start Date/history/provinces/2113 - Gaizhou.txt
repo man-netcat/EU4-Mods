@@ -1,0 +1,21 @@
+# 2113 - Gaizhou
+
+owner = SHE
+controller = SHE
+add_core = SHE
+is_city = yes
+culture = manchu
+religion = tengri_pagan_reformed
+capital = "Gaizhou"
+trade_goods = fish
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1519.1.1 = { discovered_by = POR } # Tome Pires

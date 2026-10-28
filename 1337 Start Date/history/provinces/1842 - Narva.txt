@@ -1,0 +1,23 @@
+#Narva
+
+owner = DAN
+controller = DAN
+add_core = DAN
+is_city = yes
+culture = estonian
+religion = catholic
+hre = no
+base_tax = 2 
+base_production = 2
+trade_goods = grain
+base_manpower = 1
+capital = "Narva"
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+
+1542.1.1 = { religion = protestant} # Unknown date

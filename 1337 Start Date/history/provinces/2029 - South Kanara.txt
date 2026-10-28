@@ -1,0 +1,24 @@
+#2029 - South Kanara
+
+owner = GOA
+controller = GOA
+add_core = GOA
+is_city = yes
+culture = marathi
+religion = hinduism
+capital = "Mangalore"
+trade_goods = tropical_wood
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+add_local_autonomy = 40
+add_vaisyas_or_burghers_effect = yes
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+discovered_by = east_african
+
+1498.1.1 = { discovered_by = POR }

@@ -1,0 +1,18 @@
+# No previous file for Kotoko
+
+owner = KBO
+controller = KBO
+add_core = KBO
+is_city = yes
+culture = kanuri 
+religion = sunni
+capital = "Kotoko"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+
+
+
+discovered_by = sub_saharan

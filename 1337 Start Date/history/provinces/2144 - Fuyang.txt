@@ -1,0 +1,21 @@
+# 2144 - Fuyang
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = zhongyuan
+religion = confucianism
+capital = "Fuyang"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1608.1.1 = { discovered_by = SPA }

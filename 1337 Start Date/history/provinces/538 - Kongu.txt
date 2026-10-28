@@ -1,0 +1,25 @@
+#538 - Karur
+
+owner = VIJ
+controller = VIJ
+add_core = VIJ
+is_city = yes
+capital = "Karur"
+culture = tamil
+religion = hinduism
+trade_goods = incense #Sandalwood
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+add_vaisyas_or_burghers_effect = yes
+add_local_autonomy = 25
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = muslim 
+discovered_by = ottoman
+discovered_by = chinese
+
+1498.1.1 = { discovered_by = POR }
+1543.1.1 = {  revolt = { size = 0 type = nationalist_rebels } }
+1550.1.1 = {  revolt = { } }

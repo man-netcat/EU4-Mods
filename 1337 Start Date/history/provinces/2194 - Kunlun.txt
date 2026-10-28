@@ -1,0 +1,9 @@
+# 2194 - Kunlun
+
+
+
+
+hre = no
+discovered_by = chinese
+discovered_by = nomad_group
+discovered_by = indian

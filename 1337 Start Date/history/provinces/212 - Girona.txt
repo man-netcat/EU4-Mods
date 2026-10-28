@@ -1,0 +1,42 @@
+#212 - Girona
+
+owner = DLH
+controller = DLH
+add_core = DLH
+is_city = yes
+culture = avadhi
+religion = hinduism
+hre = no
+base_tax = 3 
+base_production = 3
+trade_goods = fish 
+base_manpower = 3
+capital = "Girona" 
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1412.6.29 = { revolt = { type = pretender_rebels size = 0 }  } # Jaime de Urgell Uprising
+1413.1.1 = { revolt = {} revolt = { type = pretender_rebels size = 1 leader = "Jaume d'Urgell" }  }
+1413.8.31 = { revolt = {}  }
+1461.9.23 = { revolt = { type = revolutionary_rebels size = 0 }  } # Catalan nobility revolts against King Joan, later the "Remensa" peasant revolt erupts, which is used by the King to erode the Catalan nobility. 
+1462.4.11 = { revolt = {}  } # Catalan nobility revolts against King Joan, later the Remença peasant revolt erupts.
+1463.1.1 = { revolt = { type = pretender_rebels size = 1 leader = "Pere de Portugal" }  } # Jaime de Urgell Uprising
+1466.6.30 = { revolt = {}  } # census of 1473 (population lost due to the war). Succession war against Provence
+1484.1.1 = { unrest = 3 } # Second Remença revolt
+1486.4.21 = { unrest = 0 } # King Ferràn arbit rates a resolution between the revolted peasants and the catalan nobles. 
+1583.1.1 = { fort_15th = no fort_16th = yes } #Continously renovated and kept up to date
+1640.6.7 = { revolt = { type = nationalist_rebels size = 1 }  } # "Corpus of blood". The Viceroy is killed and the Catalan sublevation begins, fastly spreading to other cities. 
+1641.1.1 = {	revolt = {}
+	
+	
+	
+} # Louis XIII of France, Count of Barcelona.
+1659.1.1 = { fort_16th = no fort_17th = yes } #Ciutadella de Roses Renovated and brought up to date
+1753.1.1 = { fort_17th = no fort_18th = yes } #Sant Ferran Castle
+1813.8.31 = { revolt = { type = pretender_rebels size = 1 }  }
+1813.12.11 = { revolt = {}  }

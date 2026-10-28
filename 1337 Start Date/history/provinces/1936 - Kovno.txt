@@ -1,0 +1,31 @@
+#Kovno
+
+owner = LIT
+controller = LIT
+add_core = LIT
+add_core = SXM
+is_city = yes
+culture = lithuanian
+religion = animism
+capital = "Kovno"
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+fort_15th = yes
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1550.1.1 = { religion = reformed }
+1589.1.1 = { fort_16th = yes } #Birzai
+1662.1.1 = { fort_16th = no fort_17th = yes } #Birzai
+1794.3.24 = { unrest = 6 } # Kosciuszko uprising
+1794.11.16 = { unrest = 0 }

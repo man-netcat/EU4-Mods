@@ -1,0 +1,51 @@
+#2043 - Balasore
+
+owner = ORI
+controller = ORI
+add_core = ORI
+is_city = yes
+culture = garjati
+religion = hinduism
+capital = "Balasore"
+trade_goods = cloth
+hre = no
+base_tax = 4 
+base_production = 4
+base_manpower = 2
+add_vaisyas_or_burghers_effect = yes
+fort_15th = yes #Raibania
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = chinese
+discovered_by = muslim
+discovered_by = ottoman
+
+1405.1.1 = { discovered_by = MNG }
+1500.1.1 = { discovered_by = POR }
+
+1622.10.1 = {
+	
+	revolt = {
+		type = pretender_rebels
+		size = 0
+		name = "Khurrams Faction"
+		leader = "Shah Jahan Timurid"
+	}
+} #With some aid from Golconda Khurrams rebelion against his father continues
+1624.1.1 = {
+	
+	revolt = { }
+} #Khurram is defeated and is chased away by Mughal forces and rebelious Zamindars. Takes refuge in Ahmednagar and eventually surrenders on terms dictated by Nur Jahan
+1657.9.14 = {
+	
+	revolt = {
+		type = pretender_rebels
+		size = 0
+		name = "Muhammed Shuja's Faction"
+		leader = "Muhammed Shuja Timurid"
+	}
+} # Shah Jahan falls ill, his sons starts civil war
+1658.12.28 = {
+	
+	revolt = { }
+} # Muhammed Shuja defeated by Aurangzeb

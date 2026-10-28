@@ -1,0 +1,24 @@
+#232 - Bragança
+
+owner = POR
+controller = POR
+add_core = POR
+is_city = yes
+culture = portugese
+religion = catholic
+capital = "Bragança"
+trade_goods = wine
+hre = no
+base_tax = 5 
+base_production = 5
+base_manpower = 2
+
+
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1640.1.1 = { unrest = 8 } # Portugal revolt headed by John of Bragança
+1640.12.1 = { unrest = 0 } # Portugal regained its independence & colonial possessions

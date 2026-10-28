@@ -1,0 +1,94 @@
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 4380	# Donegal
+
+monarch = {
+	name = "Connor"
+	birth_date = 1303.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Angus"
+	birth_date = 1328.1.1
+	death_date = 1388.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1461.1.1 = {
+	monarch = {
+		name = "Aodh Ruadh"
+		dynasty = "Ó Domhnaill"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1505.1.1 = {
+	monarch = {
+		name = "Aodh Dubh"
+		dynasty = "Ó Domhnaill"
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+}
+
+1537.1.1 = {
+	monarch = {
+		name = "Manus"
+		dynasty = "Ó Domhnaill"
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+
+1564.1.1 = {
+	monarch = {
+		name = "Calbhach"
+		dynasty = "Ó Domhnaill"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1566.11.26 = {
+	monarch = {
+		name = "Aodh mac Maghnusa"
+		dynasty = "Ó Domhnaill"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1587.1.1 = {
+	monarch = {
+		name = "Aodh Ruadh"
+		dynasty = "Ó Domhnaill"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1602.9.10 = {
+	monarch = {
+		name = "Ruairí"
+		dynasty = "Ó Domhnaill"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

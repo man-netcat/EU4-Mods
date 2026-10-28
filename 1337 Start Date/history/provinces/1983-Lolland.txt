@@ -1,0 +1,23 @@
+#Lolland-Falster
+
+owner = DAN
+controller = DAN
+add_core = DAN
+is_city = yes
+culture = danish
+religion = catholic
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = fish
+base_manpower = 2
+capital = "Nykobing"
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1536.1.1 = { religion = protestant }

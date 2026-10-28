@@ -1,0 +1,23 @@
+# 1880 - Sundgau
+
+owner = STR
+controller = STR
+add_core = STR
+is_city = yes
+capital = "Altkirch"
+culture = swiss
+religion = catholic
+hre = yes
+base_tax = 3 
+base_production = 3
+trade_goods = iron
+base_manpower = 3
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

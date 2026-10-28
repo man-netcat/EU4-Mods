@@ -1,0 +1,20 @@
+#4516 - Purang
+
+owner = PUR
+controller = PUR
+add_core = PUR
+add_core = TIB
+is_city = yes
+culture = tibetan
+religion = vajrayana
+capital = "Purang"
+trade_goods = wool
+hre = no
+base_tax = 1
+base_production = 2
+base_manpower = 2
+discovered_by = chinese
+discovered_by = indian
+discovered_by = nomad_group
+
+1721.1.1 = { discovered_by = SPA }

@@ -1,0 +1,25 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = bai
+religion = buddhism
+
+monarch = {
+	name = "Boromracha I"
+	dynasty = "Singhanavati"
+	birth_date = 1290.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Uthong"
+	dynasty = "Singhanavati"
+	birth_date = 1314.3.10
+	death_date = 1374.3.10
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

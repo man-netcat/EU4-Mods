@@ -1,0 +1,35 @@
+#851 - Tarasco
+
+owner = TAR
+controller = TAR
+add_core = TAR
+is_city = yes
+culture = tlapanec
+religion = nahuatl
+capital = "Tarasco" 
+trade_goods = fish 
+hre = no 
+base_tax = 3 
+base_production = 3
+base_manpower = 1 
+add_local_autonomy = 50
+
+
+
+discovered_by = MAY
+discovered_by = ZAP
+discovered_by = AZT
+discovered_by = mesoamerican
+
+1522.1.1 = { discovered_by = SPA } # Cristobal de Olid 
+1523.1.1 = {
+	
+	
+	
+	religion = catholic
+	unrest = 5
+} #Forced to surrender by Alvarado, Colimotl murdered
+1541.1.1 = {
+	capital = "Valladolid"
+	culture = castillian
+} # Founded by Antonio de Mendoza 

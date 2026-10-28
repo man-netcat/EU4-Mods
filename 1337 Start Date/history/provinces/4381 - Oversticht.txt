@@ -1,0 +1,39 @@
+# 4381 - Oversticht
+
+owner = FRI
+controller = FRI
+add_core = FRI
+add_core = UTR
+is_city = yes
+capital = "Zwolle"
+culture = dutch
+religion = catholic
+hre = yes
+base_tax = 3
+base_production = 3
+trade_goods = livestock
+base_manpower = 2
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1559.5.12 = { unrest = 3 } # New bishoprics in the Lowlands create an outrage
+1565.1.1 = { unrest = 5 } # Letters of Segovia, Philip I orders the harsh persecution of Calvinists
+1566.4.5 = { unrest = 3 } # 'Eedverbond der Edelen', Margaretha of Parma promises leniency
+1567.9.10 = { unrest = 4 } # Counts of Egmont & Hoorne arrested
+1568.6.5 = { unrest = 6 } # Counts of Egmont & Hoorne beheaded
+1569.1.1 = { unrest = 12 } # The Duke of Alba reforms the taxation system ('tiende penning')
+1570.1.1 = { unrest = 20 } # The Duke of Alba reforms the penal system, 'Blood Council' (Bloedraad) established
+1572.6.5 = { unrest = 0 revolt = { type = nationalist_rebels size = 2 }  } # Rebels rise up in Gelre & Zutphen
+1572.9.1 = { revolt = {}  unrest = 10 } # Don Frederique takes control of Gelre for Spain again
+1577.2.12 = { unrest = 16 } # Eeuwig Edict accepted by Don Juan
+1579.1.23 = {	
+	
+	unrest = 0
+} # Union of Utrecht, Gelre joins
+1583.9.1 = {  unrest = 15 } # Alessandro Farnese captures Zutphen and the surrounding lands
+1592.7.4 = {  unrest = 0 } # The Republic takes back Zutphen and surrounding areas
+1648.10.24 = { hre = no } # The Peace of Westphalia
+1681.1.1 = { base_tax = 9 
+base_production = 9 } # Protestants expelled from France

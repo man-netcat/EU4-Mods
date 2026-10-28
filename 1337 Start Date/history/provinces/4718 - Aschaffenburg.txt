@@ -1,0 +1,21 @@
+owner = MAI
+controller = MAI
+add_core = MAI
+is_city = yes
+capital = "Aschaffenburg"
+culture = hessian
+religion = catholic
+hre = yes
+base_tax = 3 
+base_production = 2
+base_manpower = 2
+trade_goods = cloth
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1556.4.19 = { religion = protestant } # Ottheinrich converts the country to Calvinism
+1560.1.1 = { fort_15th = yes }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

@@ -1,0 +1,25 @@
+#481 - Bermuda
+
+capital = "Bermuda"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1 
+base_manpower = 1
+native_size = 0
+native_ferocity = 0
+native_hostileness = 0
+
+1503.1.1 = { discovered_by = CAS } # Possibly later, Juan de Bermudez
+1516.1.23 = { discovered_by = SPA }
+
+1612.1.1 = {
+	discovered_by = ENG
+	
+	
+	
+	culture = english
+	religion = protestant
+} # English colonists
+1613.1.1 = { capital = "St. George" } 
+1616.1.1 = { is_city = yes trade_goods = naval_supplies } # The first slaves are brought to Bermuda

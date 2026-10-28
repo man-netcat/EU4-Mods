@@ -1,0 +1,7 @@
+government = native
+add_government_reform = native_clan_council_reform
+government_rank = 1
+technology_group = mesoamerican
+primary_culture = chontales
+religion = mesoamerican_religion
+capital = 2632

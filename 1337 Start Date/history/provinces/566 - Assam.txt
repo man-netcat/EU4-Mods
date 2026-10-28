@@ -1,0 +1,51 @@
+#566 - Assam
+
+owner = KMA
+controller = KMA
+add_core = KMA
+is_city = yes
+culture = assamese
+religion = buddhism
+capital = "Charaideo"
+trade_goods = grain
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+
+
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = chinese
+
+1540.1.1 = {
+	capital = "Garhgaon"
+	fort_15th = yes
+}
+1627.1.1 = { discovered_by = POR }
+1707.1.1 = { capital = Rangpur }
+1769.9.15 = {
+	revolt = {
+		type = revolutionary_rebels size = 1
+		name = "Moran Rebels"
+		leader = "Ragh Neog"
+	}
+} # Moamoria rebellion
+1770.4.11 = {
+	
+	revolt = { }
+	unrest = 15
+} #Assamese Nobles with aid from Kuranganayani expel the rebel leaders. Rebellion continues in the countryside
+ #Rebels strike at the capital
+1788.1.19 = {
+	revolt = {
+		type = revolutionary_rebels size = 1
+		name = "Moran Rebels"
+	}
+	capital = "Jorhat"
+} #Maomoria rebellion
+1792.11.24 = {
+	revolt = { }
+	unrest = 0
+} #Rebels cleared by Thomas Welsh of the EIC

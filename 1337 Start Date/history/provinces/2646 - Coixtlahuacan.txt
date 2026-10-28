@@ -1,0 +1,29 @@
+# No previous file for Coixtlahuacan
+
+owner = YOD
+controller = YOD
+add_core = YOD
+is_city = yes
+culture = mixtec
+religion = nahuatl
+capital = "Coixtlahuacan"
+trade_goods = dyes
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = mesoamerican
+
+1521.8.13 = {
+	
+	
+	
+	culture = castillian
+	religion = catholic
+} # Fall of Tenochtitlan

@@ -1,0 +1,21 @@
+# 2169 - Langzhong
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = sichuanese
+religion = confucianism
+capital = "Langzhong"
+trade_goods = grain
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

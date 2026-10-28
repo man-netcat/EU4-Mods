@@ -1,0 +1,17 @@
+# 2119 - Chuguchak
+
+culture = oirats
+religion = sunni
+capital = "Chugachak"
+trade_goods = fur
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 2
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1622.1.1 = { discovered_by = RUS }

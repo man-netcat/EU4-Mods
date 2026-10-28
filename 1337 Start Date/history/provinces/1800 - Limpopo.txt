@@ -1,0 +1,19 @@
+#1800 - Limpopo
+
+owner = INH
+controller = INH
+add_core = INH
+is_city = yes
+culture = nguni
+religion = animism #Fetishism
+capital = "Gaza"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 70
+native_ferocity = 4
+native_hostileness = 9 
+discovered_by = east_african
+discovered_by = central_african

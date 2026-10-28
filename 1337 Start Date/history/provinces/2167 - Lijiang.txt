@@ -1,0 +1,23 @@
+# 2167 - Lijiang
+
+owner = GYT
+controller = GYT
+add_core = GYT
+add_core = LJG
+is_city = yes
+culture = bai
+religion = vajrayana
+capital = "Lijiang"
+trade_goods = tea
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

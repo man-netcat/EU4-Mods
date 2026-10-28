@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = tigray
+religion = coptic
+technology_group = east_african
+unit_type = sub_saharan
+capital = 2787		# Mendefera
+
+monarch = {
+	name = "Bahri Negus"
+	dynasty = "Medri Bahri"
+	birth_date = 1305.1.1
+	adm = 2
+	dip = 4
+	mil = 2
+}
+
+1526.1.1 = {
+	monarch = {
+		name = "Yeshaq I"
+		dynasty = "Bahrid"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1578.1.1 = {
+	monarch = {
+		name = "Yeshaq II"
+		dynasty = "Bahrid"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

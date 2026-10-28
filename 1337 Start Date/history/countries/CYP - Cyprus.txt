@@ -1,0 +1,105 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = cosmopolitan_french
+religion = catholic
+technology_group = western
+capital = 321	# Nicosia
+fixed_capital = 321 # Cannot move capital away from this province & no power cost to move to it
+
+
+government_rank = 2
+
+monarch = {
+	name = "Hugo IV"
+	dynasty = "Lusignan"
+	birth_date = 1294.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Wido"
+	dynasty = "Lusignan"
+	birth_date = 1316.1.1
+	death_date = 1376.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1458.7.27 = {
+	monarch = {
+		name = "Charlotte"
+		dynasty = "de Lusignan"
+		birth_date = 1444.6.28
+		adm = 1
+		dip = 0
+		mil = 0
+		female = yes
+	}
+}
+
+1458.7.27 = {
+	heir = {
+		name = "Jacques"
+		monarch_name = "Jacques II"
+		dynasty = "de Lusignan"
+		birth_date = 1438.1.1
+		death_date = 1473.7.6
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+}
+
+1460.9.27 = {
+	monarch = {
+		name = "Jacques II"
+		dynasty = "de Lusignan"
+		birth_date = 1438.1.1
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+}
+
+1473.7.6 = {
+	heir = {
+		name = "Jacques"
+		monarch_name = "Jacques III"
+		dynasty = "de Lusignan"
+		birth_date = 1473.7.6
+		death_date = 1474.8.26
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1473.7.7 = {
+	monarch = {
+		name = "Jacques III"
+		dynasty = "de Lusignan"
+		birth_date = 1473.7.6
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1474.8.27 = {
+	monarch = {
+		name = "Catarina"
+		dynasty = "Cornero"
+		birth_date = 1454.11.25
+		adm = 3
+		dip = 4
+		mil = 2
+		female = yes
+	}
+}
+
+# In control of Venice in 1489.

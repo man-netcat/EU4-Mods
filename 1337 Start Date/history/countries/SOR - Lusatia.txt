@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = sorbian
+religion = catholic
+capital = 1763	# Oberlausitz
+
+monarch = {
+	name = "Louis"
+	dynasty = "Wittelsbach"
+	birth_date = 1315.5.1
+	adm = 2
+	dip = 3
+	mil = 4
+}

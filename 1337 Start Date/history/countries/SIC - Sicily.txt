@@ -1,0 +1,56 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+religion = catholic
+primary_culture = sicilian
+capital = 125	# Palermo
+
+
+
+government_rank = 2
+
+monarch = {
+	name = "Frederick III"
+	dynasty = "Aragon"
+	birth_date = 1272.12.13
+	adm = 3
+	dip = 4
+	mil = 4
+}
+heir = {
+	name = "Alphonse"
+	birth_date = 1292.1.1
+	death_date = 1352.1.1
+	claim = 95
+	adm = 3
+	dip = 4
+	mil = 2
+}
+
+1713.4.12 = {
+	monarch = {
+		name = "Vittorio Amedeo II"
+		dynasty = "di Savoia"
+		adm = 4
+		dip = 6
+		mil = 5
+		leader = { name = "Vittorio Amedeo II" type = general fire = 4 shock = 4 manuever = 2 siege = 2 }
+	}
+}
+
+# 1720.1.1 Vittorio Amedeo II becomes king of Sardinia-Piemont
+
+1806.3.11 = { government = monarchy
+# add_government_reform = letat_cest_moi_reform 
+}
+
+# Ferdinand/Ferrante flees to Sicily
+1806.3.11 = {
+	monarch = {
+		name = "Ferrante IV"
+		dynasty = "de Bourbon"
+		dip = 0
+		mil = 0
+		adm = 0
+	}		
+}

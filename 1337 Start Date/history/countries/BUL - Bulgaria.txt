@@ -1,0 +1,27 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 150	# Sofia
+
+government_rank = 3
+
+monarch = {
+	name = "John.Alexander"
+	dynasty = "Sratsimir"
+	birth_date = 1301.1.1
+	adm = 5
+	dip = 3
+	mil = 2
+}
+heir = {
+	name = "Michael"
+	dynasty = "Sratsimir"
+	birth_date = 1322.1.1
+	death_date = 1382.1.1
+	claim = 95
+	adm = 2
+	dip = 2
+	mil = 4
+}

@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = chinese
+primary_culture = korean
+religion = mahayana
+capital = 726
+
+monarch = {
+	name = "Ko I"
+	dynasty = "Wang"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

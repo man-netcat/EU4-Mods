@@ -1,0 +1,16 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+technology_group = western
+primary_culture = hessian
+religion = catholic
+capital = 4774
+
+monarch = {
+	name = "Henrik VI"
+	dynasty = "$Hohenberg$"
+	birth_date = 1277.1.1
+	adm = 2
+	dip = 3
+	mil = 1
+}

@@ -1,0 +1,18 @@
+#2396 - Mong Kawng
+
+owner = MKA
+controller = MKA
+add_core = MKA
+is_city = yes
+culture = kachin
+religion = buddhism
+capital = "Mong Kawng"
+trade_goods = gems
+hre = no
+base_tax = 2
+base_production = 3
+base_manpower = 2
+discovered_by = chinese
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

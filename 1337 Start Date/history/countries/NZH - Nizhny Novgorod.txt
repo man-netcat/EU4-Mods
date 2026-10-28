@@ -1,0 +1,26 @@
+# Principality of Nizhny Novgorod-Suzdal
+
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+primary_culture = russian
+religion = orthodox
+technology_group = eastern
+capital = 306	# Nizhny Novgorod
+
+monarch = {
+	name = "Johan I"
+	birth_date = 1288.11.21
+	adm = 4
+	dip = 6
+	mil = 4
+}
+heir = {
+	name = "Simeon"
+	birth_date = 1317.9.7
+	death_date = 1377.9.7
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = kashmiri
+religion = shiite
+capital = 2073
+
+monarch = {
+	name = "Sau.Malik II"
+	dynasty = "Trakhan"
+	birth_date = 1256.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

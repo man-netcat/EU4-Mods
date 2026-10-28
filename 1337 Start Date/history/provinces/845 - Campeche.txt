@@ -1,0 +1,24 @@
+#845 - Campeche
+
+culture = yucatec 
+religion = mesoamerican_religion
+capital = "Campeche" 
+trade_goods = sugar 
+hre = no 
+base_tax = 4 
+base_production = 4
+base_manpower = 1 
+
+
+
+discovered_by = mesoamerican
+
+1517.1.1 = { discovered_by = SPA }
+
+1542.1.23 = {
+	
+	
+	
+	culture = castillian
+	religion = catholic
+} # the lord of Mani submits peacefully to the Spanish and converts, eastern Yucatan falls

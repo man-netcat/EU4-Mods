@@ -1,0 +1,45 @@
+#4176 - Branicevo
+
+owner = SER
+controller = SER
+add_core = SER
+is_city = yes
+culture = serbian
+religion = orthodox
+capital = "Kruševac"
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1459.6.20 = {
+	
+	
+	
+	capital = "Golubac"
+}
+1688.11.7 = { unrest = 12 } # Serb rebellion under D. Brankovic
+1717.8.22 = {
+	unrest = 0
+	
+	
+	
+} # Austrian occupation
+1806.1.8 = { revolt = { type = nationalist_rebels size = 2 }  } # Belgrade is occupied by Serbian rebels
+1813.1.1 = { revolt = {}  }
+1815.4.23 = { revolt = { type = nationalist_rebels size = 2 }  } # The Second Serbian uprising
+1817.7.26 = {
+	revolt = {}
+	
+	
+}

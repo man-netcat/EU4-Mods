@@ -1,0 +1,29 @@
+# 2108 - Huncun
+
+owner = HNC
+controller = HNC
+add_core = HNC
+is_city = yes
+culture = manchu
+religion = tengri_pagan_reformed
+capital = "Huncun"
+trade_goods = naval_supplies
+hre = no
+base_tax = 5 
+base_production = 5
+base_manpower = 5
+discovered_by = chinese
+discovered_by = nomad_group
+fort_15th = yes
+
+1542.1.1 = { discovered_by = POR }
+
+1616.1.1 = {
+	
+	
+	
+	
+	culture = manchu_new
+} # The Later Jin Khanate
+1709.1.1 = { discovered_by = SPA }
+1739.1.1 = { discovered_by = RUS } # Martin Spanberg

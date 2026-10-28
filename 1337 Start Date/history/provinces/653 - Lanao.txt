@@ -1,0 +1,14 @@
+#653 - Lanao
+
+culture = filipino
+religion = animism
+capital = "Marawi"
+trade_goods = spices
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+discovered_by = chinese
+
+1450.1.1 = { religion = sunni }
+1521.1.1 = { discovered_by = SPA }

@@ -1,0 +1,7 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+primary_culture = aimara
+religion = inti
+technology_group = andean
+unit_type = south_american
+capital = 809 #Lima (Pachacamac)

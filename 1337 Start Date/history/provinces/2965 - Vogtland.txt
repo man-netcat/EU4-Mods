@@ -1,0 +1,23 @@
+# - Vogtland
+
+owner = QUB
+controller = QUB
+add_core = PLN
+add_core = QUB
+is_city = yes
+culture = franconian
+religion = catholic
+capital = "Plauen"
+trade_goods = wool
+hre = yes
+base_tax = 3
+base_production = 3
+base_manpower = 1
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1790.8.1 = { unrest = 5 } # Peasant revolt
+1791.1.1 = { unrest = 0 }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

@@ -1,0 +1,20 @@
+# No previous file for Xocotla
+
+owner = TLX
+controller = TLX
+add_core = TLX
+is_city = yes
+culture = aztek
+religion = nahuatl
+capital = "Xocotla"
+trade_goods = sugar
+hre = no 
+base_tax = 4 
+base_production = 4
+base_manpower = 1
+discovered_by = mesoamerican
+
+add_province_triggered_modifier = MAY_obsidian_source
+
+1519.1.1 = { discovered_by = SPA } # Hernán Cortés
+1525.1.1 = { religion = catholic } #Dominican friars arrive, but Tlaxcala largely retain its own government under Spanish rule & protection (protectorate in-game)

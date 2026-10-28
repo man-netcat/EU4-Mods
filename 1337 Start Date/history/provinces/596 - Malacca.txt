@@ -1,0 +1,104 @@
+#596 - Malacca
+
+owner = PAH
+controller = PAH
+add_core = PAH
+is_city = yes
+culture = sumatran
+religion = mahayana
+capital = "Malacca"
+trade_goods = spices
+hre = no
+base_tax = 7 
+base_production = 7
+base_manpower = 3
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+extra_cost = 16
+center_of_trade = 2
+
+1509.1.1 = { discovered_by = POR } # Diego Lopez de Sequiera
+1511.9.10 = {
+	
+	
+	unrest = 8
+	add_to_trade_company = POR
+	add_trade_company_investment = {
+		investment = permanent_quarters
+		investor = POR
+	}
+	add_trade_company_investment = {
+		investment = company_depot
+		investor = POR
+	}
+	add_trade_company_investment = {
+		investment = admiralty
+		investor = POR
+	}
+	add_trade_company_investment = {
+		investment = district
+		investor = POR
+	}
+	add_trade_company_investment = {
+		investment = company_administration
+		investor = POR
+	}
+}# Conquered by the Portuguese, fierce resistance
+1519.1.1 = { fort_15th = yes }
+1526.1.1 = { unrest = 0 } # The Malay forces are finally subdued
+1641.1.14 = {
+	
+	
+	
+	
+	add_to_trade_company = NED
+	add_trade_company_investment = {
+		investment = permanent_quarters
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = company_depot
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = admiralty
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = district
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = company_administration
+		investor = NED
+	}
+}# Conquered by the Dutch
+1795.1.1 = {
+	
+	
+	
+	fort_15th = no
+	add_to_trade_company = GBR
+	add_trade_company_investment = {
+		investment = permanent_quarters
+		investor = GBR
+	}
+	add_trade_company_investment = {
+		investment = company_depot
+		investor = GBR
+	}
+	add_trade_company_investment = {
+		investment = admiralty
+		investor = GBR
+	}
+	add_trade_company_investment = {
+		investment = district
+		investor = GBR
+	}
+	add_trade_company_investment = {
+		investment = company_administration
+		investor = GBR
+	}
+}# Captured by the British

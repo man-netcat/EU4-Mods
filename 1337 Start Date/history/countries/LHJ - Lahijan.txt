@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = mazandarani
+religion = sunni
+capital = 417
+
+monarch = {
+	name = "Ali"
+	dynasty = "Naservand"
+	birth_date = 1295.1.1
+	adm = 2
+	dip = 4
+	mil = 2
+}

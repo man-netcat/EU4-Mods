@@ -1,0 +1,84 @@
+#621 - Bengkulu
+
+owner = PLB
+controller = PLB
+add_core = PLB
+is_city = yes
+latent_trade_goods = {
+	coal
+}
+
+culture = sumatran
+religion = mahayana
+capital = "Bengkulu"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+native_size = 20
+native_ferocity = 7
+native_hostileness = 5
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+
+1405.1.1 = { discovered_by = MNG }
+1509.1.1 = { discovered_by = POR }
+
+1550.1.1 = {
+	
+	
+	
+	is_city = yes
+	trade_goods = spices
+	religion = sunni
+	
+} # Banten Sultanate expanded the influence in South Sumatra
+1685.1.1 = {
+	
+	
+	
+	
+	add_to_trade_company = ENG
+	add_trade_company_investment = {
+		investment = company_depot
+		investor = ENG
+	}
+	add_trade_company_investment = {
+		investment = company_administration
+		investor = ENG
+	}
+	add_trade_company_investment = {
+		investment = brokers_exchange
+		investor = ENG
+	}
+	add_trade_company_investment = {
+		investment = local_quarter
+		investor = ENG
+	}
+} # British Bencoolen
+1707.5.12 = {
+	
+	
+	
+	
+	add_to_trade_company = GBR
+	add_trade_company_investment = {
+		investment = company_depot
+		investor = GBR
+	}
+	add_trade_company_investment = {
+		investment = company_administration
+		investor = GBR
+	}
+	add_trade_company_investment = {
+		investment = brokers_exchange
+		investor = GBR
+	}
+	add_trade_company_investment = {
+		investment = local_quarter
+		investor = GBR
+	}
+} # British Bencoolen

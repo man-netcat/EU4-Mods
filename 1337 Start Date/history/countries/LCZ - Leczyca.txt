@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = polish
+religion = catholic
+capital = 1939
+
+monarch = {
+	name = "Vladislav III"
+	dynasty = "Piast"
+	birth_date = 1305.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

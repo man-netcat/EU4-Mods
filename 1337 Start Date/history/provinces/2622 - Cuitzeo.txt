@@ -1,0 +1,30 @@
+# No previous file for Cuitzeo
+
+owner = CTE
+controller = CTE
+add_core = CTE
+is_city = yes
+culture = purepecha
+religion = nahuatl
+capital = "Zinapecuaro"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = mesoamerican
+
+1530.1.1 = {
+	
+	
+	
+	religion = catholic
+	unrest = 5
+} #Tangaxuan II is deposed and murdered.
+1541.1.1 = { culture = castillian } # growing aculturation

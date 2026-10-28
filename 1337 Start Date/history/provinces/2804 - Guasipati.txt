@@ -1,0 +1,35 @@
+# - Guasipati
+
+culture = carib
+discovered_by = south_american
+religion = animism
+capital = "Guasipati"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 15
+native_ferocity = 1
+native_hostileness = 2
+
+1498.1.1 = { discovered_by = CAS } # Christopher Columbus
+1516.1.23 = { discovered_by = SPA }
+
+1640.1.1 = {
+	
+	
+	
+	is_city = yes
+	culture = castillian
+	religion = catholic
+	trade_goods = coffee
+}
+1795.1.1 = { unrest = 4 } # Uprisings against Spanish control
+1810.4.9 = { unrest = 0 revolt = { type = nationalist_rebels size = 2 }  } # Vicente Emparán is overthrown
+1811.7.5 = {
+	revolt = {}
+	
+	
+	
+} # Venezuela declared its independence

@@ -1,0 +1,22 @@
+#355 - Sirt
+
+owner = TEL
+controller = TEL
+add_core = TEL
+is_city = yes
+culture = al_misr_arabic
+religion = sunni
+capital = "Ben Jawad"
+trade_goods = fish
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_local_autonomy = 25
+
+
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern

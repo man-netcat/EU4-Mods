@@ -1,0 +1,22 @@
+#582 - Mong Yang
+
+owner = CHB
+controller = CHB
+add_core = CHB
+is_city = yes
+culture = shan
+religion = animism
+capital = "Mong Yang"
+trade_goods = copper
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+fort_15th = yes
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

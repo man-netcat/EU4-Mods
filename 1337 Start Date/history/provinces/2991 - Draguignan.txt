@@ -1,0 +1,36 @@
+# Forcalquier
+
+owner = PRO
+controller = PRO
+add_core = PRO
+is_city = yes
+capital = "Forcalquier"
+culture = occitain
+religion = catholic
+hre = yes
+base_tax = 3 
+base_production = 3
+trade_goods = wool
+base_manpower = 2
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1545.1.1 = { unrest = 5 } # Unrest among the Waldensians in the Luberon mountains
+1546.1.1 = { unrest = 0 } # Peace returns
+1588.12.1 = { unrest = 5 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
+1594.1.1 = { unrest = 0 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
+1630.1.1 = { unrest = 5 }
+1633.1.1 = { unrest = 0 }
+1649.1.1 = { unrest = 5 }
+1650.1.14 = { unrest = 7 } # Mazarin arrests the Princes Condé, Conti & Longueville, the beginning of the Second Fronde
+1651.4.1 = { unrest = 4 } # An unstable peace is concluded
+1651.12.1 = { unrest = 7 } # Mazarin returns from exile, Condé sides with Spain, situation heats up again
+1652.10.21 = { unrest = 0 } # The King is allowed to enter Paris again, Mazarin leaves France for good. Second Fronde over.
+1659.1.1 = { unrest = 5 }
+1662.1.1 = { unrest = 0 }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

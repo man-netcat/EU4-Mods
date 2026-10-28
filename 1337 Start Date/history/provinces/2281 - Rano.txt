@@ -1,0 +1,18 @@
+# No previous file for Rano
+
+owner = RAN
+controller = RAN
+add_core = RAN
+is_city = yes
+culture = hausa 
+religion = shamanism
+capital = "Rano"
+trade_goods = dyes
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = sub_saharan

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = bosnian
+religion = orthodox
+technology_group = eastern
+government_rank = 1
+capital = 1831
+
+1466.1.1 = {
+	monarch = {
+		name = "Vladislav I"
+		dynasty = "Kosaca"
+		birth_date = 1426.1.1	
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Vlatko"
+		monarch_name = "Vlatko I"
+		dynasty = "Kosaca"
+		birth_date = 1428.1.1
+		death_date = 1489.1.1
+		claim = 85
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_heir_personality = naive_personality
+	add_ruler_personality = loose_lips_personality
+}

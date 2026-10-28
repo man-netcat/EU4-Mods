@@ -1,0 +1,3 @@
+graphical_culture = southeastasiangfx
+
+color = { 223 228 192 }

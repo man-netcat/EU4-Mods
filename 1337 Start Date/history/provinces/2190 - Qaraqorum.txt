@@ -1,0 +1,17 @@
+# 2190 - Bayankhongor
+
+culture = khalkha
+religion = tengri_pagan_reformed
+capital = "Sain Noyon"
+trade_goods = livestock
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 2
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1709.1.1 = { discovered_by = SPA }

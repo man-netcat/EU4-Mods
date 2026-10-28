@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = beylik_government
+government_rank = 1
+primary_culture = turkish
+religion = sunni
+technology_group = ottoman
+capital = 2297	# Saruhan
+
+monarch = {
+	name = "Saruhan"
+	dynasty = "Saruhano?ullar?"
+	birth_date = 1273.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Salomon"
+	dynasty = "Saruhano?ullar?"
+	birth_date = 1304.1.1
+	death_date = 1364.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

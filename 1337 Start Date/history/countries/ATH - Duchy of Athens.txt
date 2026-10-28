@@ -1,0 +1,38 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = catalan
+religion = catholic
+technology_group = western
+capital = 144	#Athens
+fixed_capital = 146 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "William II"
+	dynasty = "Aragon"
+	birth_date = 1312.1.1
+	adm = 3
+	dip = 2
+	mil = 2
+}
+
+1451.1.1 = {
+	monarch = {
+		name = "Francesco I"
+		dynasty = Acciaioli
+		birth_date = 1440.1.1		
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+1455.1.1 = {
+	monarch = {
+		name = "Francesco II"
+		dynasty = Acciaioli
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

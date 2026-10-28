@@ -1,0 +1,65 @@
+#For the record, LBV = Lower Bavaria
+
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = bavarian
+religion = catholic
+capital = 64	# Landshut
+
+monarch = {
+	name = "Henrik XIV"
+	dynasty = "Wittelsbach"
+	birth_date = 1305.9.29
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Johan"
+	dynasty = "Wittelsbach"
+	birth_date = 1329.11.29
+	death_date = 1389.11.29
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1450.7.30 = {
+	monarch = {
+		name = "Ludwig IX"
+		dynasty = "von Wittelsbach"
+		birth_date = 1417.2.23
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+1455.8.15 = {
+	heir = {
+		name = "Georg"
+		monarch_name = "Georg I"
+		dynasty = "von Wittelsbach"
+		birth_date = 1455.8.15
+		death_date = 1503.12.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1479.1.18 = {
+	monarch = {
+		name = "Georg I"
+		dynasty = "von Wittelsbach"
+		birth_date = 1455.8.15
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+# Bavaria Reunited

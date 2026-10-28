@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = burmese
+religion = buddhism
+capital = 581
+
+monarch = {
+	name = "Anawrahta"
+	dynasty = "Myinsaing"
+	birth_date = 1313.9.23
+	adm = 3
+	dip = 1
+	mil = 3
+}

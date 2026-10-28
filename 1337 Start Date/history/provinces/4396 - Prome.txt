@@ -1,0 +1,23 @@
+#4396 - Prome
+
+owner = PIN
+controller = PIN
+add_core = PIN
+is_city = yes
+culture = burmese
+religion = buddhism
+capital = "Prome"
+trade_goods = ivory
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1535.1.1 = { discovered_by = POR }
+
+1560.1.1 = { fort_15th = yes }

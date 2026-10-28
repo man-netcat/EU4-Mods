@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+technology_group = eastern
+religion = orthodox
+primary_culture = ryazanian
+capital = 1945	# Chernigov
+fixed_capital = 289 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "Gleb I"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 5
+	mil = 3
+}

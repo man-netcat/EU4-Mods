@@ -1,0 +1,25 @@
+government = monarchy
+add_government_reform = beylik_government
+government_rank = 1
+primary_culture = turkish
+religion = sunni
+technology_group = ottoman
+capital = 329	# Sivas
+religious_school = hanafi_school
+
+monarch = {
+	name = "Ala.Al_Din"
+	birth_date = 1290.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Hasan"
+	birth_date = 1312.1.1
+	death_date = 1372.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

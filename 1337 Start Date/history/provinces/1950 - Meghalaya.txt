@@ -1,0 +1,15 @@
+# - Meghalaya
+
+
+
+
+owner = LUR
+controller = LUR
+add_core = LUR
+is_city = yes
+hre = no
+discovered_by = indian
+discovered_by = chinese
+discovered_by = nomad_group
+
+1627.1.1 = { discovered_by = POR }

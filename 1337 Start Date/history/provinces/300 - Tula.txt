@@ -1,0 +1,29 @@
+#300 - Tula
+
+owner = KCH
+controller = KCH
+add_core = KCH
+is_city = yes
+culture = ryazanian
+religion = orthodox
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = iron 
+base_manpower = 2
+capital = "Tula"
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = GOL
+discovered_by = KAZ
+discovered_by = nomad_group
+
+1450.1.1 = { discovered_by = SIB }
+
+1598.1.7 = { unrest = 5 base_manpower = 4 } # "Time of troubles", peasantry brought into serfdom
+1613.3.3 = { unrest = 0 } # Order returned, Romanov dynasty
+1711.1.1 = { base_tax = 4 base_production = 4 } # Governmental reforms and the absolutism
+1712.1.1 = { trade_goods = iron } # Center of the ironworking industry, first arms factory in Russia
+1767.1.1 = { base_tax = 5 base_production = 5 } # Legislative reform
+1771.1.1 = { base_tax = 4 base_production = 4 }

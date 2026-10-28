@@ -1,0 +1,22 @@
+#4405 - Katha
+
+owner = MYA
+controller = MYA
+add_core = MYA
+is_city = yes
+culture = kachin
+religion = buddhism
+capital = "Katha"
+trade_goods = tea
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis
+1760.1.1 = { discovered_by = GBR }

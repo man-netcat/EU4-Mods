@@ -1,0 +1,30 @@
+#126 - Malta
+
+owner = SAO
+controller = SAO
+add_core = SAO
+is_city = yes
+culture = maltese 
+religion = catholic 
+hre = no 
+base_tax = 3 
+base_production = 3
+trade_goods = fish
+base_manpower = 2
+capital = "Mdina" 
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1530.1.1 = {
+	
+	
+	
+	capital = "Birgu"
+	
+	fort_16th = yes
+} # Malta given to the Knights
+1566.3.28 = { capital = "Valletta" }
+1775.1.1 = { unrest = 4 } # Revolt headed by priest Gaetano Mannarino failed.
+1776.1.1 = { unrest = 0 }

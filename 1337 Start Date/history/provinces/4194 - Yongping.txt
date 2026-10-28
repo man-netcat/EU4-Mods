@@ -1,0 +1,24 @@
+#4194 - Yongping
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+latent_trade_goods = {
+	coal
+}
+
+culture = chihan
+religion = animism
+capital = "Yongping"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+discovered_by = chinese
+discovered_by = nomad_group
+
+1519.1.1 = { discovered_by = POR } # Tome Pires
+1628.1.1 = { unrest = 6 } # Li Zicheng rebellion
+1644.4.1 = { unrest = 0   } # The Shun dynasty of Li Zicheng

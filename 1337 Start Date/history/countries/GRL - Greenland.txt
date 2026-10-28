@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = icelandic
+religion = catholic
+capital = 1804
+
+monarch = {
+	name = "Magnus VII"
+	dynasty = "Bjelbo"
+	birth_date = 1316.5.1
+	adm = 1
+	dip = 0
+	mil = 2
+}

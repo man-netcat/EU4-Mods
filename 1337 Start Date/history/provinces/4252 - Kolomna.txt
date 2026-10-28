@@ -1,0 +1,31 @@
+#4252 - Kolomna
+
+owner = MOS
+controller = MOS
+add_core = KOA
+add_core = MOS
+add_core = RYA
+is_city = yes
+culture = russian
+religion = orthodox
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock 
+base_manpower = 2
+capital = "Kolomna"
+discovered_by = eastern
+discovered_by = western
+discovered_by = GOL
+discovered_by = nomad_group
+
+1450.1.1 = { discovered_by = SIB }
+1495.1.1 = { fort_15th = no fort_16th = yes } #Kremlin
+1560.1.1 = { base_tax = 14 base_production = 14 } # Treasury reform
+1580.1.1 = { base_tax = 13 base_production = 13 }
+1598.1.1 = { unrest = 5 } # "Time of troubles"
+1613.1.1 = { unrest = 0 } # Order returned, Romanov dynasty
+1670.1.1 = { unrest = 8 } # Stepan Razin
+1671.1.1 = { unrest = 0 } # Razin is captured
+1711.1.1 = { base_tax = 14 base_production = 14  } # Governmental reforms and the absolutism
+1767.1.1 = { base_tax = 15 base_production = 15 } # Legislative reform

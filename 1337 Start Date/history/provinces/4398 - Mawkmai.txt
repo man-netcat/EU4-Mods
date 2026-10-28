@@ -1,0 +1,21 @@
+#4398 - Mawkmai
+
+owner = MNI
+controller = MNI
+add_core = MNI
+is_city = yes
+culture = shan
+religion = animism
+capital = "Mawkmai"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1535.1.1 = { discovered_by = POR }

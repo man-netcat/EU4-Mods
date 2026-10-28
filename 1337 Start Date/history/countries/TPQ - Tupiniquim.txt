@@ -1,0 +1,16 @@
+government = native
+add_government_reform = native_clan_council_reform
+government_rank = 1
+primary_culture = tupinamba
+religion = animism
+technology_group = south_american
+capital = 757
+
+1520.1.1 = {
+	monarch = {
+		name = "Tibiriçá"
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}

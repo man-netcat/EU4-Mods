@@ -1,0 +1,25 @@
+# No previous file for Mitla
+
+owner = ZAP
+controller = ZAP
+add_core = ZAP
+is_city = yes
+culture = zapotek
+religion = nahuatl
+capital = "Mitla"
+trade_goods = sugar
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = mesoamerican
+
+1524.1.1 = {
+	discovered_by = SPA 
+	 
+	
+	
+}

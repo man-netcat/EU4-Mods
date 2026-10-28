@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = cosmopolitan_french
+religion = catholic
+capital = 4776
+
+monarch = {
+	name = "Wido I"
+	dynasty = "Châtillon"
+	birth_date = 1298.1.1
+	adm = 2
+	dip = 2
+	mil = 3
+}
+heir = {
+	name = "Louis"
+	dynasty = "Châtillon"
+	birth_date = 1318.1.1
+	death_date = 1378.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

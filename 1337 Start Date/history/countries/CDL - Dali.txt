@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = bai
+religion = mahayana
+technology_group = chinese
+capital = 662	# Dali
+
+
+government_rank = 2
+
+monarch = {
+	name = "Guang I"
+	dynasty = "Duan"
+	birth_date = 1285.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

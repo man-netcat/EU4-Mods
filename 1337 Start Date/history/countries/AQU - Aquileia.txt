@@ -1,0 +1,15 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+primary_culture = venetian
+religion = catholic
+technology_group = western
+capital = 111	# Friuli
+government_rank = 1
+
+monarch = {
+	name = "Bertrand I"
+	birth_date = 1260.1.1
+	adm = 4
+	dip = 4
+	mil = 4
+}

@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = catalan
+religion = catholic
+capital = 126
+
+monarch = {
+	name = "Alphonse I"
+	birth_date = 1292.1.1
+	adm = 3
+	dip = 4
+	mil = 2
+}
+heir = {
+	name = "Peter"
+	birth_date = 1320.1.1
+	death_date = 1380.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

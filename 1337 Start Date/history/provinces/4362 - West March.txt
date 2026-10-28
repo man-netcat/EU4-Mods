@@ -1,0 +1,22 @@
+#4362 - West March (Dumfriesshire+Kircudbrightshire)
+
+owner = SBL
+controller = SBL
+add_core = SBL
+add_core = SCO
+is_city = yes
+culture = scottish
+religion = catholic
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = wool
+base_manpower = 2
+capital = "Dumfries"
+fort_15th = yes
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+1560.8.1 = { religion = reformed }

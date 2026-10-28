@@ -1,0 +1,29 @@
+# No previous file for Adai
+
+culture = yamasee
+religion = totemism
+capital = "Adai"
+trade_goods = unknown
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = north_american
+
+1519.1.1 = { discovered_by = SPA } # Alvarez de Piñeda explored the Gulf Coast
+
+1721.1.1 = {
+	
+	
+	
+	is_city = yes
+	religion = catholic
+	trade_goods = cotton
+	culture = castillian 
+} #Los Adaes Mission

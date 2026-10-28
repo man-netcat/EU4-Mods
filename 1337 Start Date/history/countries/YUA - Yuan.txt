@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = celestial_empire
+government_rank = 3
+technology_group = nomad_group
+religion = vajrayana
+primary_culture = khalkha
+capital = 2148
+
+monarch = {
+	name = "Togon Temür"
+	dynasty = "Borjigin"
+	birth_date = 1320.5.25
+	adm = 3
+	dip = 3
+	mil = 4
+}

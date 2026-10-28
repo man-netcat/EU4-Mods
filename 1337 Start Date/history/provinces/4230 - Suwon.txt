@@ -1,0 +1,21 @@
+#4230 - Suwon
+
+owner = KOR
+controller = KOR
+add_core = KOR
+is_city = yes
+culture = korean
+religion = mahayana
+capital = "Suwon"
+trade_goods = chinaware
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+discovered_by = chinese
+discovered_by = nomad_group
+
+1519.1.1 = { discovered_by = POR } # Tome Pires
+1592.6.11 = {  unrest = 5 } # Japanese invasion
+1593.5.20 = {  unrest = 0 } # With Chinese help the Japanese are driven back
+1653.1.1 = { discovered_by = NED } # Hendrick Hamel

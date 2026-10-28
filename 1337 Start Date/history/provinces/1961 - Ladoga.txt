@@ -1,0 +1,20 @@
+#Ladoga
+
+owner = NOV
+controller = NOV
+add_core = NOV
+is_city = yes
+culture = novgorodian
+religion = orthodox
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = fur
+base_manpower = 2
+capital = "Ladoga"
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group

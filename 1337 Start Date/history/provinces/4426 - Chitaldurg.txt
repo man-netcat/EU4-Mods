@@ -1,0 +1,21 @@
+#4426 - Chitradurg
+
+owner = HSL
+controller = HSL
+add_core = HSL
+is_city = yes
+culture = kannada
+religion = hinduism
+capital = "Chitradurg"
+trade_goods = cotton
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = chinese
+
+1498.1.1 = { discovered_by = POR }

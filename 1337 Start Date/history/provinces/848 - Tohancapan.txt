@@ -1,0 +1,27 @@
+#848 - Tohancapan
+
+owner = TTC
+controller = TTC
+add_core = TTC
+is_city = yes
+culture = yucatec
+religion = mesoamerican_religion
+capital = "Tohancapan"
+trade_goods = spices
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = mesoamerican
+
+1517.1.1 = { discovered_by = SPA }
+1521.8.13 = {
+	
+	
+	
+	culture = castillian
+	religion = catholic
+} # Fall of Tenochtitlan

@@ -1,0 +1,23 @@
+#587 - Kengtung
+
+owner = KTG
+controller = KTG
+add_core = KTG
+is_city = yes
+culture = shan
+religion = animism
+capital = "Kengtung"
+trade_goods = tropical_wood
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 2
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis
+1739.1.1 = { unrest = 5 } # Rebellion
+1740.1.1 = { unrest = 0 }

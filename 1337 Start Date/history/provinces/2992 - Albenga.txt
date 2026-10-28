@@ -1,0 +1,34 @@
+# - Albenga
+
+owner = GEN
+controller = GEN
+add_core = GEN
+is_city = yes
+culture = ligurian
+religion = catholic
+hre = yes
+base_tax = 6
+base_production = 6
+trade_goods = naval_supplies
+base_manpower = 1
+capital = "Albenga"
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1477.3.20 = { revolt = { type = revolutionary_rebels size = 2 }  }
+1477.4.28 = { revolt = {}  }
+1478.7.7 = { revolt = { type = revolutionary_rebels size = 2 }  }
+1488.1.6 = { revolt = {}  }
+1488.8.7 = { revolt = { type = revolutionary_rebels size = 2 }  }
+1488.9.13 = { revolt = {}  }
+1495.1.1 = { hre = no }
+1507.4.10 = { revolt = { type = nationalist_rebels size = 2 }  }
+1507.4.27 = { revolt = {}  }
+1512.1.1 = { revolt = { type = nationalist_rebels size = 2 }  }
+1513.1.1 = { revolt = {}  }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

@@ -1,0 +1,19 @@
+#1156 - Damagaram
+
+owner = GOB
+controller = GOB
+add_core = GOB
+is_city = yes
+culture = tuareg
+religion = sunni
+capital = "Mashina"
+base_manpower = 1
+trade_goods = livestock
+hre = no
+base_tax = 1 
+base_production = 1
+discovered_by = sub_saharan
+
+1736.1.1 = { capital = "Zinder" } #shift of political center as a result of Mallam migrations
+1760.1.1 = { unrest = 7 } #Tuareg raids in wake of fall of Agades
+1804.1.1 = { discovered_by = SOK }

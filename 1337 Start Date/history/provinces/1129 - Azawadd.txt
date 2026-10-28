@@ -1,0 +1,21 @@
+#1129 - Azawadd
+
+culture = berber
+religion = sunni
+capital = "Arawan"
+trade_goods = salt
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 30
+native_ferocity = 4
+native_hostileness = 10
+
+
+
+discovered_by = sub_saharan
+discovered_by = MOR
+
+1586.1.1 = { revolt = { type = revolutionary_rebels size = 1 }  } #Civil war between Al-Sadduk and Ishak
+1591.1.1 = { revolt = {}    } #occupied by Moroccans during march into Niger valley

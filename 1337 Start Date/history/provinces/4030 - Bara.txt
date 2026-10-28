@@ -1,0 +1,18 @@
+#4030 - Bara
+
+owner = MIR
+controller = MIR
+add_core = MIR
+is_city = yes
+culture = madagasque
+religion = shamanism #Fetishism
+capital = "Bara"
+trade_goods = grain
+hre = no
+add_local_autonomy = 40
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+discovered_by = east_african
+
+1500.8.20 = { discovered_by = POR } #Diego Dias

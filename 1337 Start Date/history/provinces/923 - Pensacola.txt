@@ -1,0 +1,38 @@
+#923 - Pensacola
+
+culture = choctaw
+religion = totemism
+capital = "Pensacola"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 6
+
+
+
+discovered_by = north_american
+
+1519.1.1 = { discovered_by = SPA } # Alvarez de Piñeda explored the Gulf Coast
+
+1698.1.1 = {
+	
+	
+	
+	culture = castillian
+	trade_goods = cotton
+	religion = catholic
+	is_city = yes
+}
+1763.2.10 = {
+	
+	
+	
+	
+	culture = english
+	religion = protestant
+} # Part of British West Florida after the Treaty of Paris
+1784.1.1 = { unrest = 7 } # Controversy over the Treaty of Versaille & the Treaty of Paris, Spanish or American?

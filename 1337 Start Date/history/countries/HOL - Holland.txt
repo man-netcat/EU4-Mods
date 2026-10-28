@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = flemish
+capital = 4383 #Haag
+
+monarch = {
+	name = "William III"
+	dynasty = "Avesnes"
+	birth_date = 1286.1.1
+	adm = 4
+	dip = 4
+	mil = 3
+}
+heir = {
+	name = "William"
+	dynasty = "Avesnes"
+	birth_date = 1307.1.1
+	death_date = 1367.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 4
+}
+
+1580.1.1 = { set_legacy_government = administrative_republic } # Constitutionalism and the General Estates

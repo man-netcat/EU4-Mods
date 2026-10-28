@@ -1,0 +1,15 @@
+# No previous file for Dallol
+
+owner = DAA
+controller = DAA
+add_core = DAA
+is_city = yes
+culture = songhai 
+religion = sunni #Fetishism
+capital = "Say"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+discovered_by = sub_saharan

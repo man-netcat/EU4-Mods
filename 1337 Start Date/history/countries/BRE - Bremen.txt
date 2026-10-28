@@ -1,0 +1,23 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+mercantilism = 25
+technology_group = western
+religion = catholic
+primary_culture = lower_saxon
+capital = 54	# Bremen
+historical_friend = HSA #Lübeck
+historical_friend = HAM #Hamburg
+historical_friend = RIG #Riga
+
+monarch = {
+	name = "Burchard"
+	birth_date = 1282.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1532.1.1 = { religion = protestant }
+
+1806.7.12 = { set_legacy_government = administrative_republic }

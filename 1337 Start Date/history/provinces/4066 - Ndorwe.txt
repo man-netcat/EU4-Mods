@@ -1,0 +1,15 @@
+#Ndorwe
+
+owner = KIT
+controller = KIT
+add_core = KIT
+is_city = yes
+culture = ganda
+religion = shamanism #Fetishism
+capital = "Nkore"
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = central_african

@@ -1,0 +1,24 @@
+#4197 - Huangzhou
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+latent_trade_goods = {
+	coal
+}
+
+culture = hubei
+religion = confucianism
+capital = "Huangzhou"
+trade_goods = grain
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+discovered_by = chinese
+discovered_by = nomad_group
+
+1608.1.1 = { discovered_by = SPA }
+1642.1.1 = { revolt = { type = anti_tax_rebels size = 2 }  } # Zhang Xianzhong rebellion
+1643.1.1 = { revolt = { } unrest = 0  } # The Xi dynasty of Zhang Xianzhong

@@ -1,0 +1,18 @@
+# 4202 - Taining
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = gan
+religion = confucianism
+capital = "Baichungtze"
+trade_goods = livestock
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+discovered_by = chinese
+discovered_by = nomad_group
+
+1709.1.1 = { discovered_by = SPA }

@@ -1,0 +1,26 @@
+#59 - Wittenberg
+
+owner = DLH
+controller = DLH
+add_core = DLH
+is_city = yes
+culture = avadhi
+religion = hinduism
+capital = "Wittenberg"
+trade_goods = wool
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 2
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1520.12.10 = {
+	religion = protestant
+	reformation_center = protestant
+}
+1790.8.1  = { unrest = 5 } # Peasant revolt
+1791.1.1  = { unrest = 0 }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

@@ -1,0 +1,83 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = chinese
+capital = 1019	# Harima
+
+1458.1.1 = { 
+	monarch = {
+		name = "Masanori"
+		dynasty = "Akamatsu"
+		birth_date = 1455.1.1
+#		death_date = 1496.6.6
+		adm = 2
+		dip = 2
+		mil = 2
+		}
+	}
+	
+1496.6.6 = { 
+	monarch = {
+		name = "Yoshimura"
+		dynasty = "Akamatsu"
+		birth_date = 1490.1.1
+#		death_date = 1521.10.17
+		adm = 1
+		dip = 0
+		mil = 0
+		}
+	}
+	
+1513.1.1 = {
+	heir = {
+		name = "Harumasa"
+		monarch_name = "Harumasa"
+		dynasty = "Akamatsu"
+		birth_date = 1513.1.1
+		death_date = 1565.1.16
+		claim = 70
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+	
+1521.10.7 = { 
+	monarch = {
+		name = "Harumasa"
+		dynasty = "Akamatsu"
+		birth_date = 1513.1.1
+#		death_date = 1565.1.16
+		adm = 1
+		dip = 1
+		mil = 1
+		}
+	}
+		
+1537.1.1 = {
+	heir = {
+		name = "Yoshisuke"
+		monarch_name = "Yoshisuke"
+		dynasty = "Akamatsu"
+		birth_date = 1537.1.1
+		death_date = 1576.3.15
+		claim = 80
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+	
+1558.1.1 = { 
+	monarch = {
+		name = "Yoshisuke"
+		dynasty = "Akamatsu"
+		birth_date = 1537.1.1
+#		death_date = 1576.3.15
+		adm = 1
+		dip = 1
+		mil = 1
+		}
+	}

@@ -1,0 +1,63 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+primary_culture = amhara
+religion = coptic
+technology_group = east_african
+unit_type = sub_saharan
+capital = 1218		# Damot
+
+#Converted to Christianity in the later part of the 13th century.
+#Ethiopian vassal since the rule of Amda Seyon I
+
+1470.1.1 = {
+	monarch = {
+		name = "Mota II" #Fictional
+		dynasty = "Damoto"
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+1530.1.1 = {
+	monarch = {
+		name = "Mota III" #Fictional
+		dynasty = "Damoto"
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+
+1580.1.1 = {
+	monarch = {
+		name = "Mota IV" #Fictional
+		dynasty = "Damoto"
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+
+1620.1.1 = {
+	monarch = {
+		name = "Mota V" #Fictional
+		dynasty = "Damoto"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+
+1650.1.1 = {
+	monarch = {
+		name = "Mota VI" #Fictional
+		dynasty = "Damoto"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

@@ -1,0 +1,15 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 2
+technology_group = muslim
+primary_culture = khalkha
+religion = sunni
+capital = 410
+
+monarch = {
+	name = "Hasan"
+	birth_date = 1281.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

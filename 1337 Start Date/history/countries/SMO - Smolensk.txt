@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+primary_culture = ryazanian
+religion = orthodox
+technology_group = eastern
+capital = 293	# Smolensk
+fixed_capital = 293 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "Johan I"
+	birth_date = 1283.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

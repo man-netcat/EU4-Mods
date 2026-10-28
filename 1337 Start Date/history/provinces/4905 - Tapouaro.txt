@@ -1,0 +1,32 @@
+# No previous file for Tapouaro
+
+
+culture = chiwere
+religion = totemism
+capital = "Tapouaro"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 6
+discovered_by = north_american
+
+1444.1.1 = { tribal_owner = PEO }
+1680.6.1 = {
+	
+	
+	
+	is_city = yes
+	trade_goods = grain
+} #Westward move during the Beavers WArs
+1808.1.1 = {
+	
+	
+	
+	trade_goods = grain
+	religion = protestant
+	culture = american 
+} #Fort Madison

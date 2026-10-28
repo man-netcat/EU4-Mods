@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = bosnian
+religion = animism
+technology_group = eastern
+capital = 3002	# Sarajevo
+historical_friend = SER
+
+
+government_rank = 1
+
+monarch = {
+	name = "Stefan II"
+	dynasty = "Kotromani?"
+	birth_date = 1292.1.1
+	adm = 2
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Catherine"
+	female = yes
+	dynasty = "Kotromani?"
+	birth_date = 1336.1.1
+	death_date = 1396.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1461.7.11 = {
+	monarch = {
+		name = "Stjepan Tomaševic"
+		dynasty = "Kotromanic"
+		birth_date = 1438.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

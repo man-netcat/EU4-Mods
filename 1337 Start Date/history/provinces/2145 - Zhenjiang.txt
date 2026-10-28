@@ -1,0 +1,21 @@
+# 2145 - Zhenjiang
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = wu
+religion = confucianism
+capital = "Zhenjiang"
+trade_goods = naval_supplies
+hre = no
+base_tax = 5 
+base_production = 5
+base_manpower = 2
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1519.1.1 = { discovered_by = POR } # Tome Pires

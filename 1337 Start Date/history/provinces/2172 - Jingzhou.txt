@@ -1,0 +1,21 @@
+# 2172 - Jingzhou
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = khalkha
+religion = tengri_pagan_reformed
+capital = "Jingzhou"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

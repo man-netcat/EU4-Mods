@@ -1,0 +1,27 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+primary_culture = byelorussian
+religion = orthodox
+technology_group = eastern
+capital = 275	# Polotsk
+fixed_capital = 275 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "Narimantas I"
+	dynasty = "Gediminid"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Alexander"
+	dynasty = "Gediminid"
+	birth_date = 1317.1.1
+	death_date = 1377.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 4
+}

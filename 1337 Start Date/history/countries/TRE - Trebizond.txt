@@ -1,0 +1,47 @@
+government = monarchy
+add_government_reform = empire_of_trebizond
+primary_culture = pontic_greek
+religion = orthodox
+technology_group = eastern
+historical_friend = FEO
+capital = 330	# Trebizond
+fixed_capital = 330 # Cannot move capital away from this province & no power cost to move to it
+add_historical_friend = GEO
+if = {
+	limit = {
+		has_dlc = "Winds of Change"
+	}
+	set_estate_privilege = estate_burghers_italian_coastal_influence
+}
+
+
+government_rank = 3
+
+monarch = {
+	name = "Basil I"
+	dynasty = "Komnenos"
+	birth_date = 1302.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Alexis"
+	dynasty = "Komnenos"
+	birth_date = 1327.1.1
+	death_date = 1387.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1459.1.1 = {
+	monarch = {
+		name = "Dauid"
+		dynasty = "Komnenos"
+		adm = 3
+		dip = 0
+		mil = 1
+	}
+}

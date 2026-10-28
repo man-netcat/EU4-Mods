@@ -1,0 +1,23 @@
+owner = ASU
+controller = ASU
+add_core = ASU
+is_city = yes
+culture = manchu
+religion = tengri_pagan_reformed
+capital = "Ningguta"
+trade_goods = iron
+hre = no
+base_tax = 3 
+base_production = 2
+base_manpower = 2
+discovered_by = chinese
+discovered_by = nomad_group
+
+1616.1.1 = {	
+	
+	
+	
+	
+	culture = manchu_new
+} # The Later Jin Khanate
+1709.1.1 = { discovered_by = SPA }

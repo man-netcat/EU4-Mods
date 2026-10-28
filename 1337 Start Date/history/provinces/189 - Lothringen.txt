@@ -1,0 +1,26 @@
+# 189 Lothringen - Principal cities: Nancy
+
+owner = LOR
+controller = LOR
+add_core = LOR
+is_city = yes
+capital = "Nancy"
+culture = burgundian
+religion = catholic
+hre = yes
+base_tax = 5 
+base_production = 5
+trade_goods = iron
+base_manpower = 5
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1475.11.30 = {   unrest = 5 } # Charles the Bold annexes Lorraine
+1476.1.1 = { revolt = { type = nationalist_rebels size = 1 }  } # Lorraine revolts against Charles the Bold during the Burgundian-Swiss War
+1477.1.5 = { revolt = {}    unrest = 0 } # Charles the Bold dies in the Siege of Nancy and Lorraine is re-established
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

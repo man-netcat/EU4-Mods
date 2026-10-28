@@ -1,0 +1,34 @@
+#267 - Plsen
+
+owner = BOH
+controller = BOH
+add_core = BOH
+is_city = yes
+capital = "Plzen"
+culture = czech
+religion = catholic
+trade_goods = naval_supplies
+hre = yes
+base_tax = 5 
+base_production = 5
+base_manpower = 1
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1419.12.1 = { unrest = 5 } # Hussite Wars, Battle of Nekmir
+1436.7.5 = { unrest = 0 } # Peace is signed in Jihlava
+1457.1.1 = { unrest = 5 } # George of Podiebrand had to secure recognition from the German and Catholic towns. Pilsen is very hostile towards him, the Roman church being dominant throughout Pilsen's history.
+1466.1.1 = {
+	
+	
+	
+	unrest = 0
+} # Pilsen accepts Matthias Corvinus (Hunyadi)as their King.
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

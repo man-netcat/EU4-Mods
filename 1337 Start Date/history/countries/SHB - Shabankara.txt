@@ -1,0 +1,16 @@
+government = tribal
+add_government_reform = tribal_despotism
+government_rank = 1
+technology_group = muslim
+primary_culture = persian
+religion = sunni
+capital = 4329
+
+monarch = {
+	name = "Artaxerxes"
+	dynasty = "Fadlawayhid"
+	birth_date = 1285.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

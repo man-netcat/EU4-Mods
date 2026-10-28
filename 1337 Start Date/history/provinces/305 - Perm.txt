@@ -1,0 +1,23 @@
+#305 - Perm
+
+owner = PRM
+controller = PRM
+add_core = PRM
+is_city = yes
+culture = uralic
+religion = tengri_pagan_reformed #Sami Shamanism
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = copper
+base_manpower = 3
+capital = "Yagoshiha"
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+
+1553.1.1 = { culture = russian religion = orthodox } # Most Tatars were christianized or killed
+1720.3.20 = { capital = "Perm" } # Peter the Great founds city

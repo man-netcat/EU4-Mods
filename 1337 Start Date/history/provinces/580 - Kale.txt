@@ -1,0 +1,21 @@
+#580 - Kale
+
+owner = KAL
+controller = KAL
+add_core = KAL
+is_city = yes
+culture = chin
+religion = animism
+capital = "Kale"
+trade_goods = ivory
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1760.1.1 = { discovered_by = GBR }

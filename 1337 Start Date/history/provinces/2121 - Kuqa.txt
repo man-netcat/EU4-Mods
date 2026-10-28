@@ -1,0 +1,16 @@
+# 2121 - Kuqa
+
+culture = uyghur
+religion = sunni
+capital = "Kuqa"
+trade_goods = gold
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 3
+
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group

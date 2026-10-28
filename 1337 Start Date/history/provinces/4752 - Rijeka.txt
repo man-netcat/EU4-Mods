@@ -1,0 +1,32 @@
+#4752 - Rijeka
+
+owner = AQU
+controller = AQU
+add_core = AQU
+is_city = yes
+culture = croatian
+religion = catholic
+capital = "Rijeka"
+trade_goods = cloth
+hre = yes
+base_tax = 4
+base_production = 4
+base_manpower = 2
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+extra_cost = 8
+center_of_trade = 1
+
+1573.1.20 = { revolt = { type = anti_tax_rebels size = 1 }  } # Peasant uprising against Habsburg rule & the feudal system
+1573.2.9 = { revolt = {}  } # Decisively defeated
+1671.1.1 = { unrest = 5 } # Conspiracy against Habsburg rule uncovered
+1671.5.1 = { unrest = 0 } # Estimated, the conspirators are executed
+1784.1.1 = { unrest = 7 } # Reforms to introduce German as the official language
+1789.1.1 = { unrest = 0 } # Most of the unpopular reforms were cancelled

@@ -1,0 +1,26 @@
+#Nyland, incl. Raseborg, Borgå, Helsingfors.
+
+owner = SWE
+controller = SWE
+add_core = SWE
+is_city = yes
+culture = finnish
+religion = catholic
+hre = no
+base_tax = 2 
+base_production = 2
+trade_goods = naval_supplies
+base_manpower = 2
+capital = "Borgå"
+
+
+
+discovered_by = western
+discovered_by = eastern
+
+1487.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # The Axelsson Tott Family
+1487.5.24 = { revolt = {}  } # The Demise of the Axelsson Tott Family
+# 1520.3.6 = {   } # The Council accept Christian II as King
+# 1523.9.15 = {   } # Liberated by Ivar and Erik Fleming and joins Gustav I Wasa
+1527.6.1 = { religion = protestant }
+1550.1.1 = { trade_goods = grain }

@@ -1,0 +1,3 @@
+{"_comment": "EU4 province id -> EU5 location keys or node names (hand-resolved; name matching failed)",
+ "12": ["zealand_province"], "14": ["funen_province"], "40": ["memel"], "85": ["cologne"],
+ "207": ["east_asturias_province", "west_asturias_province"], "309": ["olonets"], "2975": ["kleve"]}

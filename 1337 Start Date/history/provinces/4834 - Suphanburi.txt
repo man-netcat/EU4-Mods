@@ -1,0 +1,21 @@
+owner = SPN
+controller = SPN
+add_core = SPN
+is_city = yes
+culture = central_thai
+religion = buddhism
+capital = "Suphanburi"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+
+
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+
+1535.1.1 = { discovered_by = POR }

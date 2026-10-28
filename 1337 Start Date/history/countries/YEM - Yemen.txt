@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = yemeni_culture
+religion = sunni
+technology_group = muslim
+capital = 4279	# Taiz
+religious_school = shafii_school
+
+#Rasulids
+
+government_rank = 2
+
+monarch = {
+	name = "Ali"
+	dynasty = "Rasulid"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Al-Afdal"
+	dynasty = "Rasulid"
+	birth_date = 1323.1.1
+	death_date = 1383.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

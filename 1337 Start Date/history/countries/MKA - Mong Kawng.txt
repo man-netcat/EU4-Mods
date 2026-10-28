@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = mandala_reform
+technology_group = chinese
+religion = buddhism
+primary_culture = assamese
+capital = 2396
+
+
+# Fictional Sui monarchs unttil 1663
+
+1470.1.1 = {
+	monarch = {
+		name = "Yaw"
+		dynasty = "Sui"
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+# 1502 Shan Confederation

@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+primary_culture = english
+religion = catholic
+capital = 246	# Newcastle
+
+government_rank = 1

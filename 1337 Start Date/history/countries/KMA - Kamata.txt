@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = kochi
+religion = hinduism
+capital = 566
+
+monarch = {
+	name = "Durlabh"
+	dynasty = "Narayan"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

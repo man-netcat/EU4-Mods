@@ -1,0 +1,24 @@
+#1825 - Aki
+
+owner = JAP
+controller = JAP
+add_core = JAP
+is_city = yes
+culture = japanese
+religion = shinto
+capital = "Tomo"
+trade_goods = grain
+hre = no
+base_tax = 4
+base_manpower = 3
+base_production = 4
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1525.1.1 = { fort_15th = yes } # Yoshida Koriyama Castle, the capital of the Mori clan
+1525.1.1 = { capital = "Koriyama" }
+1542.1.1 = { discovered_by = POR }
+1599.1.1 = { capital = "Hiroshima" }

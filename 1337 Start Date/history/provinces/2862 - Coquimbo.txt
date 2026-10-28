@@ -1,0 +1,34 @@
+# - Coquimbo
+
+culture = mapuche
+
+
+
+discovered_by = south_american
+discovered_by = andean
+
+religion = animism
+capital = "Coquimbo"
+trade_goods = unknown
+hre = no
+base_tax = 2 
+base_production = 1
+base_manpower = 1
+native_size = 20
+native_ferocity = 2
+native_hostileness = 9	
+
+1487.1.1 = {
+	
+	
+	
+	is_city = yes
+	religion = inti
+	trade_goods = grain
+}
+1520.1.1 = { discovered_by = SPA } # Ferdinand Magellan
+1541.2.12 = {	
+	
+	culture = castillian
+	religion = catholic
+}

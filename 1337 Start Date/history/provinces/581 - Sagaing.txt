@@ -1,0 +1,21 @@
+#581 - Sagaing
+
+owner = SAG
+controller = SAG
+add_core = SAG
+is_city = yes
+culture = burmese
+religion = buddhism
+capital = "Sagaing"
+trade_goods = cotton
+hre = no
+base_tax = 5 
+base_production = 5
+base_manpower = 4
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1760.1.1 = { discovered_by = GBR }

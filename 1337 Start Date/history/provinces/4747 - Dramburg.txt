@@ -1,0 +1,23 @@
+# 4747 - Dramburg
+
+owner = TEU
+controller = TEU
+add_core = TEU
+is_city = yes
+culture = pommeranian
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 2
+trade_goods = livestock
+base_manpower = 1
+capital = "Dramburg"
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1536.1.1 = { religion = protestant }
+1650.1.1 = { culture = prussian }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

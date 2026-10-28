@@ -1,0 +1,30 @@
+# - Buzau
+
+owner = WAL
+controller = WAL
+add_core = WAL
+is_city = yes
+culture = romanian
+religion = orthodox
+capital = "Buzau"
+trade_goods = livestock
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 2
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1593.1.1 = { unrest = 7 } # Wallachian rising, the Turks & Tatars are expelled
+1595.1.1 = { unrest = 0  } # The Turks take control of most of Wallachia again
+1650.1.1 = { revolt = { type = noble_rebels size = 1 }  } # Boyar rebellions
+1658.1.1 = { revolt = {}  }
+1663.1.1 = { unrest = 7 } # Cantacuzino is murdered, struggle for power between the boyars
+1688.1.1 = { unrest = 0 } # Period of stability, Constantine Brancoveanu reigns

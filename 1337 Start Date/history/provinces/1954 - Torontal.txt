@@ -1,0 +1,34 @@
+#1954 - Torontál
+
+owner = HUN
+controller = HUN
+add_core = HUN
+is_city = yes
+culture = hungarian
+religion = catholic
+capital = "Nagybecskerek"
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1514.1.1 = { revolt = { type = anti_tax_rebels size = 2 }  } # Rebel peasant troops led by Gheorghe Doja
+1514.6.1 = { revolt = {}  } # Estimated
+1567.1.1 = { religion = reformed } # Synod of Debrecen
+#1570.1.1 = { 	} #Treaty of Speyer
+1594.6.20 = { revolt = { type = nationalist_rebels size = 2 }  } # Serbian revolt, against Ottoman rule
+1598.1.1 = { revolt = {}  }
+1738.1.1 = { revolt = { type = nationalist_rebels size = 2 }  } # Uprising against the imperial authority
+1739.1.1 = { revolt = {}  }
+1769.1.1 = { revolt = { type = nationalist_rebels size = 2 }  } # Anti Habsburg uprisings
+1770.1.1 = { revolt = {}  } # Estimated

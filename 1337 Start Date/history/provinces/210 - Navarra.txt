@@ -1,0 +1,31 @@
+#210 - Navarra
+
+owner = CAS
+controller = CAS
+add_core = CAS
+add_core = NAA
+is_city = yes
+culture = basque
+religion = catholic
+hre = no
+base_tax = 3 
+base_production = 2
+trade_goods = iron
+base_manpower = 2 
+#fort_15th = yes #Fortifications of Pamplona and Saint-Jean-Pied-de-Port
+capital = "Pamplona" 
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1483.1.29 = { unrest = 5 } # Civil War between the Beaumont and Agramont parties in Navarra
+1485.2.5 = { unrest = 0 } # Peace of Pau between the two parties
+1569.1.1 = { fort_15th = no fort_16th = yes } #Fortifications of Pamplona
+1808.6.6 = { revolt = { type = pretender_rebels size = 1 }  }
+1808.12.1 = { revolt = {}  }
+1813.6.21 = { revolt = { type = pretender_rebels size = 2 }  }
+1813.12.11 = { revolt = {}  }

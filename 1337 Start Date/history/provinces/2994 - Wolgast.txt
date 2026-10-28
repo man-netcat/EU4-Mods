@@ -1,0 +1,25 @@
+# - Wolgast
+
+owner = WOL
+controller = WOL
+add_core = WOL
+is_city = yes
+culture = pommeranian
+religion = catholic
+hre = yes
+base_tax = 3
+base_production = 2
+trade_goods = salt
+base_manpower = 2
+capital = "Wolgast"
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1534.1.1 = { religion = protestant  }
+1630.1.1 = { base_tax = 4 } # Devastating population losses in Thirty Years War
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

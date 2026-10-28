@@ -1,0 +1,23 @@
+#Dorpat
+
+owner = DAN
+controller = DAN
+add_core = DAN
+is_city = yes
+culture = estonian
+religion = catholic
+hre = no
+base_tax = 3 
+base_production = 3
+trade_goods = naval_supplies
+base_manpower = 2
+capital = "Dorpat"
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+
+1542.1.1 = { religion = protestant} # Unknown date

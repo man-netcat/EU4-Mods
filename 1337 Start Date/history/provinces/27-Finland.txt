@@ -1,0 +1,22 @@
+#Finland, incl. Åbo.
+
+owner = SWE
+controller = SWE
+add_core = FIN
+add_core = SWE
+is_city = yes
+culture = swedish
+religion = catholic
+hre = no
+base_tax = 3 
+base_production = 3
+trade_goods = grain
+base_manpower = 2
+capital = "Åbo"
+fort_15th = yes
+discovered_by = western
+discovered_by = eastern
+
+1527.6.1 = { religion = protestant}
+1563.6.7 = { revolt = { type = revolutionary_rebels size = 2 }  } # Duke Johan is sentenced to death
+1563.8.12 = { revolt = {}  } # Åbo falls and Duke Johan is imprisoned.

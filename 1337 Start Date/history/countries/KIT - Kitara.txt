@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = swahili
+religion = shamanism #Fetishism
+technology_group = central_african
+unlock_cult = mwari_cult
+unlock_cult = central_african_ancestor_cult
+unlock_cult = cwezi_cult
+
+unit_type = sub_saharan
+capital = 1088 # Bigo Bya Mugenyi
+government_rank = 3
+
+monarch = {
+	name = "Bukuku"
+	dynasty = "Baranzi"
+	birth_date = 1280.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Nyinamwiru"
+	female = yes
+	dynasty = "Baranzi"
+	birth_date = 1302.1.1
+	death_date = 1362.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

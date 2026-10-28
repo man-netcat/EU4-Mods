@@ -1,0 +1,3 @@
+graphical_culture = asiangfx
+
+color = { 210 190 15 }

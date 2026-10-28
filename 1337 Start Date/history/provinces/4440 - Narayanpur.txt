@@ -1,0 +1,42 @@
+#4440 - Narayanpur
+
+owner = KMA
+controller = KMA
+add_core = KMA
+is_city = yes
+culture = assamese
+religion = buddhism
+capital = "Narayanpur"
+trade_goods = tea
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = chinese
+
+1627.1.1 = { discovered_by = POR }
+1769.9.15 = {
+	revolt = {
+		type = revolutionary_rebels size = 0
+		name = "Moran Rebels"
+		leader = "Ragh Neog"
+	}
+} # Moamoria rebellion
+1770.4.11 = {
+	
+	revolt = { }
+	unrest = 15
+} #Assamese Nobles with aid from Kuranganayani expel the rebel leaders. Rebellion continues in the countryside
+ #Rebels strike at the capital
+1788.1.19 = {
+	revolt = {
+		type = revolutionary_rebels size = 1
+		name = "Moran Rebels"
+	}
+} #Maomoria rebellion
+1792.11.24 = {
+	revolt = { }
+	unrest = 0
+} #Rebels cleared by Thomas Welsh of the EIC

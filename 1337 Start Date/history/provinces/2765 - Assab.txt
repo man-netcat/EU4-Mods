@@ -1,0 +1,23 @@
+#2765 - Assab
+
+owner = DAA
+controller = DAA
+add_core = DAA
+is_city = yes
+culture = songhai
+religion = sunni
+capital = "Assab"
+base_manpower = 1
+trade_goods = livestock
+hre = no
+base_tax = 1 
+base_production = 1
+discovered_by = east_african
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = indian
+
+1499.1.1 = { discovered_by = POR }
+1550.1.1 = { discovered_by = TUR }
+1648.1.1 = { unrest = 7 } # Oromo Raids
+1649.1.1 = { unrest = 0 }

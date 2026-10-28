@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = mazandarani
+religion = shiite
+capital = 2215
+
+monarch = {
+	name = "Jalal I"
+	dynasty = "Baduspanid"
+	birth_date = 1290.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

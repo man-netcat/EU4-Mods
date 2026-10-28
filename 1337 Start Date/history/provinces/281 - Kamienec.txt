@@ -1,0 +1,32 @@
+#281 - Podolia
+
+owner = GLH
+controller = GLH
+add_core = GLH
+add_core = HAL
+is_city = yes
+culture = ruthenian
+religion = orthodox
+hre = no
+base_tax = 2
+base_production = 2
+trade_goods = livestock 
+base_manpower = 2
+capital = "Kamieniec"
+fort_15th = yes
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+
+1648.1.1 = {
+	revolt = { type = nationalist_rebels size = 0 }
+	
+	
+} # Chmielnicki uprising, civil war
+1654.1.1 = { revolt = {}   }
+1768.1.1 = { unrest = 8 } # Kolivshchyna rebellion, peasant uprising
+1769.1.1 = { unrest = 0 } # Suppressed by Polish and Russian troops
+1794.3.24 = { unrest = 5 } # Kosciuszko uprising, minimize the Russian influence
+1794.11.16 = { unrest = 0 }

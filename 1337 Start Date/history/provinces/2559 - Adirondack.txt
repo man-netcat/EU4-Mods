@@ -1,0 +1,50 @@
+# No previous file for Adirondack
+
+owner = KKA
+controller = KKA
+add_core = KKA
+is_city = yes
+culture = iroquois
+religion = totemism
+capital = "Adirondack"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+tribal_owner = MOH
+
+
+discovered_by = north_american
+
+1609.1.1 = { discovered_by = FRA } # Samuel de Champlain
+1629.1.1 = { discovered_by = ENG }
+
+1650.1.1 = {
+	
+	
+	
+	is_city = yes
+	trade_goods = naval_supplies 
+} #Extent of the Iroquois circa the Beaver Wars
+1707.5.12 = { discovered_by = GBR }
+1734.1.1 = {
+	
+	
+	
+	culture = cosmopolitan_french
+	religion = catholic
+} # Construction of Fort St. Frédérick
+1755.1.1 = { fort_18th = yes }
+1763.2.10 = {
+	
+	
+	
+	culture = english
+	religion = protestant
+	
+} # Treaty of Paris, ceded to Britain & France gave up its claim
+1775.5.10 = { revolt = { type = nationalist_rebels size = 2 }  culture = american } #Capture of Ticonderoga

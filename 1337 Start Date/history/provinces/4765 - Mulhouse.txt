@@ -1,0 +1,22 @@
+# 4765 - Mulhouse. Primary city: Mülhausen
+
+owner = MLH
+controller = MLH
+add_core = MLH
+is_city = yes
+capital = "Mülhausen"
+culture = swiss
+religion = catholic
+hre = yes
+base_tax = 3 
+base_production = 3
+trade_goods = cloth
+base_manpower = 2
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1529.1.1 = { religion = reformed }
+1746.1.1 = { base_production = 6 } # Koechlin Schmaltzer Dollfus & Cie
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

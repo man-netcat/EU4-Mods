@@ -1,0 +1,24 @@
+#655 - Palawan
+
+owner = TYY
+controller = TYY
+add_core = TYY
+is_city = yes
+culture = filipino
+religion = animism
+capital = "Palawan"
+trade_goods = sugar
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = chinese
+add_local_autonomy = 25
+
+1521.1.1 = { discovered_by = SPA } # Ferdinand Magellan 
+1749.1.1 = {
+	
+	
+	culture = castillian
+	religion = catholic
+} # Palawan is ceded to Spain

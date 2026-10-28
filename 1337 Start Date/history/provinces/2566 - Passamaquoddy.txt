@@ -1,0 +1,102 @@
+# No previous file for Passamaquoddy
+
+culture = maliseet
+religion = totemism
+capital = "Passamaquoddy"
+trade_goods = unknown
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+tribal_owner = MLS
+
+
+discovered_by = north_american
+
+1604.1.1 = { discovered_by = FRA } # Samuel de Champlain
+1605.1.1 = { discovered_by = ENG } # George Waymouth
+
+1613.1.1 = {
+	
+	
+	
+	is_city = yes	
+	culture = cosmopolitan_french
+	trade_goods = fish
+	religion = catholic
+} # French influence in the region, Fort Pentagouet, first trading posts
+1626.1.1 = {
+	
+	
+	
+	
+	culture = english
+	religion = protestant 
+} #Captured by New England settlers
+1632.3.29 = {
+	
+	
+	
+	
+	culture = cosmopolitan_french
+	religion = catholic
+} # Treaty of St. Germain-en-Layne, handed back to the French
+1654.1.1 = {
+	
+	
+	
+	
+	culture = english
+	religion = protestant 
+} #Captured by New England settlers (again)
+1670.1.1 = {
+	
+	
+	
+	
+	culture = cosmopolitan_french
+	religion = catholic
+} # Treaty, handed back to the French (again, again)
+ #Capital of French Acadia
+1674.1.1 = {
+	
+	
+	
+	
+	culture = dutch
+	religion = reformed 
+} #To the Dutch
+1676.1.1 = {
+	
+	
+	
+	
+	culture = cosmopolitan_french
+	religion = catholic
+} # Back to the French for the third time.
+1698.1.1 = {
+	
+	
+	
+	
+	culture = abenaki 
+} #Abandoned after another English raid
+1707.5.12 = { discovered_by = GBR } 
+1727.1.1 = {
+	
+	
+	
+	culture = maliseet
+	
+} #Decline of the New England Abenakis in the wake of Father Rale's War
+1763.1.1 = {
+	
+	
+	
+	culture = american
+	religion = protestant 
+} #Founding of Machias
+1782.11.1 = { unrest = 0 } # Preliminary articles of peace, the British recognized American independence

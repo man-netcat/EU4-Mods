@@ -1,0 +1,23 @@
+#2742 - North Hamgyeong
+
+owner = HIY
+controller = HIY
+add_core = HIY
+is_city = yes
+culture = manchu
+religion = confucianism
+capital = "Gyeongwon"
+trade_goods = naval_supplies
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+#add_core = MJZ
+discovered_by = chinese
+discovered_by = nomad_group
+add_local_autonomy = 60
+add_nationalism = 15
+
+1542.1.1 = { discovered_by = POR }
+1653.1.1 = { discovered_by = NED } # Hendrick Hamel
+1739.1.1 = { discovered_by = RUS } # Martin Spanberg

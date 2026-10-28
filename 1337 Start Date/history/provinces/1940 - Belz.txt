@@ -1,0 +1,33 @@
+#Belz
+
+owner = VOL
+controller = VOL
+add_core = VOL
+is_city = yes
+capital= "Belz"
+culture = ruthenian
+religion = orthodox
+trade_goods = livestock
+hre = no
+base_tax = 4 
+base_production = 3
+base_manpower = 2
+
+
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1570.1.1 = { religion = catholic } # Union of Lublin
+1588.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # Civil war
+1589.1.1 = { revolt = {}  } # Coronation of Sigismund III
+1596.1.1 = { unrest = 4 } # Religious struggles, union of Brest
+1597.1.1 = { unrest = 0 }
+1733.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # The war of Polish succession
+1735.1.1 = { revolt = {}  }

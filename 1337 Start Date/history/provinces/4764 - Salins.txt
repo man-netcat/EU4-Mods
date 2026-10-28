@@ -1,0 +1,21 @@
+# 4764 - Salins. Principal cities: Salins, Lons-le-Saunier, Arlay, Pontarlier
+
+owner = FCB
+controller = FCB
+add_core = FCB
+is_city = yes
+capital = "Salins"
+add_local_autonomy = 30 # The counts of Chalon-Arlay were very dominant in the region
+culture = occitain
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 3
+trade_goods = salt
+base_manpower = 2
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

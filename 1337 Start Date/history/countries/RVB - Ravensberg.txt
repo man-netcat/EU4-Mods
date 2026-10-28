@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = hannoverian
+religion = catholic
+capital = 4775
+
+monarch = {
+	name = "Bernard I"
+	dynasty = "Ravensberg"
+	birth_date = 1290.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

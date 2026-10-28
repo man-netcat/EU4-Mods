@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = eastern
+religion = orthodox
+primary_culture = ruthenian
+capital = 279	# Volhynia
+
+government_rank = 2
+
+monarch = {
+	name = "Boleslav II"
+	dynasty = "Piast"
+	birth_date = 1305.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

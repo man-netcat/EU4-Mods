@@ -1,0 +1,23 @@
+#4222 - Ulaangom
+
+culture = oirats
+religion = tengri_pagan_reformed
+capital = "Ulaangom"
+trade_goods = livestock
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 2
+discovered_by = chinese
+discovered_by = nomad_group
+
+1543.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # Fighting broke out between the Mongols
+1552.1.1 = {
+	revolt = {}
+	
+	
+	
+} # The Oirads are defeated & Altan Khan reunites the the area.
+# 1586.1.1 = { religion = buddhism } # State religion
+1622.1.1 = { discovered_by = RUS }
+1709.1.1 = { discovered_by = SPA }

@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = baluchi
+religion = sunni
+capital = 575
+
+monarch = {
+	name = "Ghiyath.Al_Din"
+	dynasty = "Hot"
+	birth_date = 1300.1.1
+	adm = 4
+	dip = 6
+	mil = 4
+}

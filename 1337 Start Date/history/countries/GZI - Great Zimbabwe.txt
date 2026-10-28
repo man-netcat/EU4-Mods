@@ -1,0 +1,11 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = shona
+religion = animism
+technology_group = central_african
+unit_type = sub_saharan
+capital = 2951	# Khami
+unlock_cult = mwari_cult
+unlock_cult = central_african_ancestor_cult
+unlock_cult = cwezi_cult
+government_rank = 2

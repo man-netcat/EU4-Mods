@@ -1,0 +1,20 @@
+# 2132 - Markam
+
+owner = BTG
+controller = BTG
+add_core = BTG
+add_core = TIB
+is_city = yes
+culture = bai
+religion = vajrayana
+capital = "Markam"
+trade_goods = livestock
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 2
+discovered_by = chinese
+discovered_by = nomad_group
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

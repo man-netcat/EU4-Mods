@@ -1,0 +1,18 @@
+#1817 - Nan
+
+owner = LNA
+controller = LNA
+add_core = LNA
+is_city = yes
+culture = central_thai
+religion = buddhism
+capital = "Lamphun"
+trade_goods = grain
+hre = no
+base_tax = 4 
+base_production = 3
+base_manpower = 3
+discovered_by = chinese
+discovered_by = indian
+
+1535.1.1 = { discovered_by = POR }

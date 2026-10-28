@@ -1,0 +1,9 @@
+# No previous file for Can Pech
+
+government = tribal
+add_government_reform = tribal_despotism
+primary_culture = yucatec
+religion = mesoamerican_religion
+technology_group = mesoamerican
+capital = 845
+historical_rival = COC

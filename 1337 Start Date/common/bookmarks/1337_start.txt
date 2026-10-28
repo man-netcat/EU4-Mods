@@ -1,0 +1,30 @@
+bookmark =
+{
+	name = "START_1337_NAME"
+	desc = "START_1337_DESC"
+	date = 1337.4.1
+	default = yes
+	center = 236
+
+	# Placeholder roster: tags are the vanilla ones until the 1337 tag set is generated
+	country = ENG
+	country = FRA
+	country = CAS
+	country = ARA
+	country = POR
+	country = POL
+	country = HUN
+	country = BOH
+	country = HAB
+	country = BYZ
+	country = TUR
+	country = LIT
+	country = MAM
+	country = YUA
+	country = GLH
+	country = NOV
+
+	easy_country = ENG
+	easy_country = POL
+	easy_country = CAS
+}

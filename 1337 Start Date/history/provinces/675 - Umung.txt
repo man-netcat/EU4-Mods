@@ -1,0 +1,22 @@
+#675 - Qujing
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = sichuanese
+religion = confucianism
+capital = "Umung"
+trade_goods = copper
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 3
+
+
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = nomad_group
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

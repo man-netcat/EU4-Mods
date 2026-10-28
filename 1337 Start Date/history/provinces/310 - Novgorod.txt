@@ -1,0 +1,26 @@
+# 310 - Novgorod
+
+owner = NOV
+controller = NOV
+add_core = NOV
+is_city = yes
+culture = novgorodian
+religion = orthodox
+hre = no
+base_tax = 7
+base_production = 7
+trade_goods = fur
+base_manpower = 6
+capital = "Novgorod"
+fort_15th = yes #Novgorod Kremlin
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+extra_cost = 16
+center_of_trade = 2
+
+1484.1.1 = { unrest = 6 } # Massacres and deportation of leading citizens to inland Russia
+1489.1.1 = { unrest = 0 }
+1598.1.7 = { unrest = 5 } # "Time of troubles"
+1615.1.1 = { base_tax = 5 base_production = 5 } # Ingrian war
+1617.2.27 = {  unrest = 0 } # Peace of Stolbova

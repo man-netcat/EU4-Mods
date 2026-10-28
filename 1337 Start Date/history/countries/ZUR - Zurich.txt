@@ -1,0 +1,15 @@
+government = republic
+add_government_reform = plutocratic_reform
+government_rank = 1
+technology_group = western
+primary_culture = swiss
+religion = catholic
+capital = 1869
+
+monarch = {
+	name = "Rudolf"
+	birth_date = 1295.1.1
+	adm = 4
+	dip = 3
+	mil = 5
+}

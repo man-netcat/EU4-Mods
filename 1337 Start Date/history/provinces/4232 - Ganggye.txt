@@ -1,0 +1,23 @@
+#4232 - Ganggye
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = manchu
+religion = tengri_pagan_reformed
+capital = "Ganggye"
+trade_goods = fur
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+add_local_autonomy = 35
+fort_15th = yes
+discovered_by = chinese
+discovered_by = nomad_group
+
+1519.1.1 = { discovered_by = POR } # Tome Pires
+1592.7.19 = {  unrest = 5 } # Japanese invasion
+1593.2.8 = {  unrest = 0 } # Japanese retreat
+1653.1.1 = { discovered_by = NED } # Hendrick Hamel

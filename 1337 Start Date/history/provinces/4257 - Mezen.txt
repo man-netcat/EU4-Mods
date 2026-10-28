@@ -1,0 +1,22 @@
+#4257 - Mezen
+
+culture = novgorodian
+religion = animism
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = fish 
+base_manpower = 1
+capital = "Okladnikova Sloboda"
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = eastern
+discovered_by = western
+
+1554.1.1 = { capital = "Novokholmogory" } # Richard Chancellor discovers the northern route, trade begins
+1584.1.1 = { capital = "Archangelsk" }
+1598.1.7 = { unrest = 5 } # "Time of troubles"
+1613.3.3 = { unrest = 0 } # Order returned, Romanov dynasty, kremlin built

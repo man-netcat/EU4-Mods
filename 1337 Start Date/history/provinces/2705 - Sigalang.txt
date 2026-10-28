@@ -1,0 +1,22 @@
+#2705 - Sigalang
+
+owner = BEI
+controller = BEI
+add_core = BEI
+is_city = yes
+culture = bornean
+religion = sunni
+capital = "Sigalang"
+trade_goods = gems
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+
+1521.1.1 = { discovered_by = SPA }
+1672.1.1 = { revolt = { type = revolutionary_rebels size = 2 }  } # Civil war over succession
+1673.1.1 = { revolt = {}  }

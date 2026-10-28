@@ -1,0 +1,30 @@
+# No previous file for Galam
+
+owner = TKR
+controller = TKR
+add_core = GRB
+add_core = TKR
+is_city = yes
+culture = senegambian 
+religion = sunni #Fetishism
+capital = "Galam"
+trade_goods = unknown
+hre = no
+base_tax = 3 
+base_production = 3
+native_size = 40
+native_ferocity = 4
+native_hostileness = 9
+base_manpower = 1
+
+
+
+discovered_by = sub_saharan
+
+1490.1.1 = {
+	
+	
+	
+	trade_goods = gold
+	is_city = yes 
+} #Rise of Great Fulo

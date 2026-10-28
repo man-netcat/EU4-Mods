@@ -1,0 +1,36 @@
+# 188 Metz - Principal cities: Metz, Thionville
+
+owner = MTZ
+controller = MTZ
+add_core = MTZ
+is_city = yes
+latent_trade_goods = {
+	coal
+}
+
+capital = "Metz"
+culture = burgundian
+religion = catholic
+hre = yes
+base_tax = 6 
+base_production = 6
+trade_goods = glass
+base_manpower = 5
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+extra_cost = 8
+center_of_trade = 1
+
+1475.11.30 = {   capital = "Thionville" unrest = 5 } # Charles the Bold annexes Lorraine
+1476.1.1 = { revolt = { type = nationalist_rebels size = 0 }  } # Lorraine revolts against Charles the Bold during the Burgundian-Swiss War
+1477.1.5 = { revolt = {}   capital = "Metz"  unrest = 0 } # Charles the Bold dies and Lorraine is re-established
+1588.12.1 = { unrest = 5 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
+1594.1.1 = { unrest = 0 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
+1650.1.14 = { unrest = 7 } # Mazarin arrests the Princes Condé, Conti & Longueville, the beginning of the Second Fronde
+1651.4.1 = { unrest = 4 } # An unstable peace is concluded
+1651.12.1 = { unrest = 7 } # Mazarin returns from exile, Condé sides with Spain, situation heats up again
+1652.10.21 = { unrest = 0 } # The King is allowed to enter Paris again, Mazarin leaves France for good. Second Fronde over.
+1749.1.1 = { base_tax = 8 base_production = 8 } # Machault & the 5% tax
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

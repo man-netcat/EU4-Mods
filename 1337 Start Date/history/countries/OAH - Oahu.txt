@@ -1,0 +1,16 @@
+government = tribal
+add_government_reform = polynesian_kingdom
+government_rank = 2
+primary_culture = polynesian
+religion = animism
+technology_group = polynesian_tech
+capital = 4935 #Oahu
+
+monarch = {
+	name = "Nawele I"
+	dynasty = "M?weke"
+	birth_date = 1270.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

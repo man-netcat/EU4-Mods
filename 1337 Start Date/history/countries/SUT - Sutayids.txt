@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = khalkha
+religion = sunni
+capital = 418
+
+monarch = {
+	name = "Hajji Taghay"
+	birth_date = 1288.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Ibrahim Sah"
+	birth_date = 1319.1.1
+	death_date = 1379.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

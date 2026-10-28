@@ -1,0 +1,32 @@
+# No previous file for Timiskaming
+
+culture = algonquin
+religion = totemism
+capital = "Timiskaming"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = north_american
+
+1444.1.1 = { tribal_owner = AGQ }
+1609.1.1 = { discovered_by = FRA } # Samuel de Champlain
+1615.1.1 = { discovered_by = ENG } # Settlement hindered by the Iroquois
+
+1668.1.1 = {
+	
+	
+	
+	is_city = yes
+	culture = cosmopolitan_french
+	religion = catholic
+	trade_goods = fur
+} #Fort Témiscamingue founded
+1707.5.12 = { discovered_by = GBR } 

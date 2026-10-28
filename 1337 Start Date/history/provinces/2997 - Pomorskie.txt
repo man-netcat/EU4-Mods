@@ -1,0 +1,51 @@
+#2997 - Pomorskie
+
+owner = TEU
+controller = TEU
+add_core = POL
+add_core = TEU
+is_city = yes
+capital = "Tuchel"
+culture = prussian
+religion = catholic
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 4
+base_manpower = 3
+fort_15th = yes
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1454.2.10 = {
+	
+	revolt = {
+		type = revolutionary_rebels size = 0
+	}
+	
+} # Thirteen Years War
+1466.10.19 = {
+	revolt = {}
+	
+	
+	
+	
+} # Peace of Torun
+1523.1.25 = { unrest = 6 } # Iconoclast riots
+1525.1.1 = { unrest = 0 }
+1550.1.1 = { religion = protestant }
+1572.1.1 = { unrest = 6 } # Sigismund II dies
+1588.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # Civil war
+1589.1.1 = { revolt = {}  unrest = 0 } # Coronation of Sigismund III
+#1669.1.1 # last Hanseatic conference
+1733.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # The war of Polish succession
+1735.10.3 = { revolt = {}  } # War of Polish successio ends
+1806.11.3  = { revolt = { type = nationalist_rebels size = 2 }  } # Polish uprising instigated by Napoleon
+1807.7.9 = {
+	revolt = {}
+	
+	
+	
+} # The Duchy of Warsaw is established after the treaty of Tilsit, ruled by Frederick Augustus I of Saxony

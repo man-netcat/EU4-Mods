@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+primary_culture = basque
+religion = catholic
+
+monarch = {
+	name = "Joanna II"
+	female = yes
+	dynasty = "Capet"
+	birth_date = 1312.1.28
+	adm = 3
+	dip = 3
+	mil = 3
+}

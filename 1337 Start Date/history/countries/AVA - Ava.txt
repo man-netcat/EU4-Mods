@@ -1,0 +1,152 @@
+government = monarchy
+add_government_reform = mandala_reform
+technology_group = chinese
+religion = buddhism
+primary_culture = burmese
+capital = 584	# Ava
+
+# Ava Dynasty
+
+1468.7.24 = {
+	monarch = {
+		name = "Thihathura"
+		dynasty = "Ava"
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1468.7.24 = {
+	heir = {
+		name = "Minkhaung"
+		monarch_name = "Minkhaung II"
+		dynasty = "Ava"
+		birth_date = 1446.10.9
+		death_date = 1501.4.7
+		claim = 95
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1480.8.1 = {
+	monarch = {
+		name = "Minkhaung"
+		dynasty = "Ava"
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1480.8.1 = {
+	heir = {
+		name = "Narapati"
+		monarch_name = "Narapati II"
+		dynasty = "Ava"
+		birth_date = 1476.9.22
+		death_date = 1527.3.25
+		claim = 95
+		ADM = 2
+		DIP = 3
+		MIL = 1
+	}
+}
+
+1501.4.7 = {
+	monarch = {
+		name = "Narapati II"
+		dynasty = "Ava"
+		ADM = 2
+		DIP = 3
+		MIL = 1
+	}
+}
+
+# Mohnyin (Mong Yang) Dynasty
+
+1527.3.25 = {
+	monarch = {
+		name = "Sao Hung Pha"
+		dynasty = "Mohnyin"
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1527.3.25 = {
+	heir = {
+		name = "Sao Hkun Mong"
+		monarch_name = "Sao Hkun Mong"
+		dynasty = "Mohnyin"
+		birth_date = 1497.8.1
+		death_date = 1545.9.1
+		claim = 95
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1542.5.1 = {
+	monarch = {
+		name = "Sao Hkun Mong"
+		dynasty = "Mohnyin"
+		ADM = 2
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1542.5.1 = {
+	heir = {
+		name = "Narapati"
+		monarch_name = "Narapati III"
+		dynasty = "Mohnyin"
+		birth_date = 1516.5.1
+		death_date = 1551.10.1
+		claim = 95
+		ADM = 2
+		DIP = 1
+		MIL = 1
+	}
+}
+
+1545.9.1 = {
+	monarch = {
+		name = "Narapati III"
+		dynasty = "Mohnyin"
+		ADM = 1
+		DIP = 2
+		MIL = 2
+	}
+}
+
+1545.9.1 = {
+	heir = {
+		name = "Narapati"
+		monarch_name = "Narapati IV"
+		dynasty = "Mohnyin"
+		birth_date = 1495.1.1
+		death_date = 1555.1.22
+		claim = 95
+		ADM = 1
+		DIP = 2
+		MIL = 1
+	}
+}
+
+1551.10.1 = {
+	monarch = {
+		name = "Narapati IV"
+		dynasty = "Mohnyin"
+		ADM = 1
+		DIP = 2
+		MIL = 1
+	}
+}
+
+# Taungu conquered Ava

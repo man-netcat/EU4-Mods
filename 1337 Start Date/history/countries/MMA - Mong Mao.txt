@@ -1,0 +1,15 @@
+government = monarchy
+add_government_reform = mandala_reform
+technology_group = chinese
+religion = buddhism
+primary_culture = assamese
+capital = 661 # Dehong
+
+monarch = {
+	name = "Hkan Hpa"
+	dynasty = "Hso"
+	birth_date = 1294.1.1
+	adm = 2
+	dip = 3
+	mil = 4
+}

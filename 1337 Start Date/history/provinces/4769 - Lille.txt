@@ -1,0 +1,29 @@
+# 4769 - Lille, meant to represent Waals Vlaanderen. Principal cities: Lille, Douai, Orchies
+
+owner = FRA
+controller = FRA
+add_core = FLA
+add_core = FRA
+is_city = yes
+capital = "Lille"
+culture = wallonian
+religion = catholic
+hre = no
+base_tax = 4
+base_production = 5
+trade_goods = cloth
+base_manpower = 2
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+fort_15th = yes
+
+1548.6.26 = { hre = yes } # Flanders incorporated into the Holy Roman Empire
+1555.1.1 = { religion = reformed }
+1582.1.1 = { religion = catholic } # defeat of the Hurlus
+1671.1.1 = {
+	fort_15th = no
+	fort_17th = yes
+} # Vauban's Citadel of Lille begins to be used while still under construction.
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

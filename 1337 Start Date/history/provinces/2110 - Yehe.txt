@@ -1,0 +1,27 @@
+# 2110 - Yehe
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = manchu
+religion = tengri_pagan_reformed
+capital = "Yehe"
+trade_goods = fur
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1619.9.1 = {
+	
+	
+	
+	culture = manchu_new
+} # The Later Jin Khanate
+1709.1.1 = { discovered_by = SPA }

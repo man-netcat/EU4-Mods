@@ -1,0 +1,28 @@
+#1878 - Aachen
+
+owner = AAC
+controller = AAC
+add_core = AAC
+is_city = yes
+latent_trade_goods = {
+	coal
+}
+
+culture = hessian
+religion = catholic
+trade_goods = grain
+capital = "Aachen"
+base_tax = 6
+base_production = 6
+base_manpower = 2
+hre = yes
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1690.1.1 = { base_manpower = 1 }
+1730.1.1 = { base_manpower = 2 } #
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

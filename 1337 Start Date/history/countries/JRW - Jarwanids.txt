@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = gulf_arabic
+religion = shiite
+capital = 394
+
+monarch = {
+	name = "Jarwan"
+	dynasty = "Jarwanid"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

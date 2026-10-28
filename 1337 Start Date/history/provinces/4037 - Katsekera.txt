@@ -1,0 +1,11 @@
+#Katsekera
+
+culture = nyasa
+religion = shamanism #Fetishism
+capital = "Katsekera"
+base_manpower = 2
+trade_goods = ivory
+hre = no
+base_tax = 2
+base_production = 3
+discovered_by = central_african

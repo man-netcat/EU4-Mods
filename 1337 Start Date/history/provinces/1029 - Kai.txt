@@ -1,0 +1,23 @@
+#1029 - Kai
+
+owner = JAP
+controller = JAP
+add_core = JAP
+is_city = yes
+culture = togoku
+religion = shinto
+capital = "Kofu"
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1498.1.1 = { trade_goods = gold } # Kurokawa gold mine discovered
+1542.1.1 = { discovered_by = POR }

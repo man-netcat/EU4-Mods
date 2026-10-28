@@ -1,0 +1,25 @@
+# 4384 Rennes
+
+owner = BRI
+controller = BRI
+add_core = BRI
+is_city = yes
+capital = "Rennes"
+culture = breton
+religion = catholic
+hre = no
+base_tax = 4
+base_production = 4
+trade_goods = cloth
+base_manpower = 4
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1588.12.1 = { unrest = 5 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
+1594.1.1 = { unrest = 0 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
+1636.1.1 = { unrest = 3 } # Revolt imminent
+1638.1.1 = { unrest = 0 }
+1639.1.1 = { unrest = 3 } 
+1641.1.1 = { unrest = 0 }

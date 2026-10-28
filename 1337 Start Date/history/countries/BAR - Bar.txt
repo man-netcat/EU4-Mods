@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = burgundian
+religion = catholic
+technology_group = western
+capital = 187	# Verdun
+
+monarch = {
+	name = "Henrik IV"
+	dynasty = "$Bar$"
+	birth_date = 1315.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1480.7.10 = {
+	monarch = {
+		name = "Yolande"
+		dynasty = "de Vaudémont"
+		adm = 2
+		dip = 2
+		mil = 1
+		female = yes
+	}
+}
+
+# 1483.3.23: Inherited by René II of Lorraine

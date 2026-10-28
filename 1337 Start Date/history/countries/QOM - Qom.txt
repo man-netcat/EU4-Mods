@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = iqta
+government_rank = 1
+primary_culture = persian
+add_accepted_culture = azerbaijani
+religion = shiite
+technology_group = muslim
+capital = 2213 # Qom
+religious_school = ismaili_school
+
+add_army_tradition = 20			#Years of fighting and infighting before the game start.
+add_army_professionalism = 0.05
+
+1451.1.1 = {
+	religion = shiite
+	religious_school = ismaili_school
+}
+1504.1.1 = {
+	religious_school = jafari_school
+}

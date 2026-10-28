@@ -1,0 +1,25 @@
+#1979 - Färöarna
+
+owner = ICE
+controller = ICE
+add_core = ICE
+is_city = yes
+culture = icelandic
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+trade_goods = fish
+capital = "Torshavn"
+
+
+
+discovered_by = western
+
+1536.1.1 = {
+	religion = protestant
+	
+	
+	
+}

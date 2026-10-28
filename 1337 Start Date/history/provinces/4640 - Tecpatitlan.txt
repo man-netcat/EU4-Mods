@@ -1,0 +1,30 @@
+# No previous file for Tecpatitlan
+
+owner = TPN
+controller = TPN
+add_core = TPN
+is_city = yes
+culture = tepic
+religion = nahuatl
+capital = "Tonala"
+trade_goods = wool
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = mesoamerican
+
+1532.1.1 = { 
+	discovered_by = SPA
+	
+	
+	
+	is_city = yes
+	capital = "Guadalajara"
+}

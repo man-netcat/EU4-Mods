@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = venetian
+religion = catholic
+capital = 163	# Heraklion
+fixed_capital = 163 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "Viago"
+	dynasty = "Zeno"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

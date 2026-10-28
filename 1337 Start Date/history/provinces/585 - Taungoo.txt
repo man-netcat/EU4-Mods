@@ -1,0 +1,23 @@
+#585 - Toungoo
+
+owner = TOA
+controller = TOA
+add_core = TOA
+is_city = yes
+culture = burmese
+religion = buddhism
+capital = "Toungoo"
+trade_goods = chinaware
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 4
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1535.1.1 = { discovered_by = POR }
+
+1560.1.1 = { fort_15th = yes }

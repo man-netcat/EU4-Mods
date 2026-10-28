@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = khorasani
+religion = sunni
+capital = 446
+
+monarch = {
+	name = "Muizz.Al_Din I"
+	dynasty = "Kart"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

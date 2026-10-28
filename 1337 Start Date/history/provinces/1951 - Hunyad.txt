@@ -1,0 +1,43 @@
+#1951 - Hunyad
+
+owner = HUN
+controller = HUN
+add_core = HUN
+is_city = yes
+latent_trade_goods = {
+	coal
+}
+
+culture = transylvanian
+religion = orthodox
+capital = "Alba Iulia"
+trade_goods = iron
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1506.1.1 = { revolt = { type = nationalist_rebels size = 2 }  } # Szekely rebellion
+1507.1.1 = { revolt = {}  } # Estimated
+1514.4.1 = { revolt = { type = anti_tax_rebels size = 0 }  } # Peasant rebellion against Hungary's magnates
+1514.10.1 = { revolt = {}  } # Estimated, the rebellions is put down by Szapolyiai
+1562.1.1 = { revolt = { type = nationalist_rebels size = 1 }  } # Szekely rebellion
+1563.1.1 = { revolt = {}  } # Estimated
+1567.1.1 = { religion = reformed } # Synod of Debrecen
+1604.10.1 = { revolt = { type = nationalist_rebels size = 1 }  } # Estimated, rebellion (Stephen Bocskai) against Austrian rule
+1606.6.23 = { revolt = {}   } # Stephen becomes prince of Transylvania
+1703.1.1 = { revolt = { type = nationalist_rebels size = 1.5 }  } # Kuruc rebellion, led by Francisc Rakoczy
+1711.1.1 = { revolt = {}  } # The treaty of Szatmar, Austrian governors replaced the prince of Transylvania
+1744.1.1 = { revolt = { type = heretic_rebels size = 2 }  } # Visarion Sarai stir up an orthodox rebellion against the Uniate church
+1745.1.1 = { revolt = {}  } # Estimated, Visarion Sarai is arrested and executed
+1784.1.1 = { revolt = { type = anti_tax_rebels size = 2 }  } # Peasant rebellion against the nobles
+1785.1.1 = { revolt = {}  } # The leaders are arrested and executed

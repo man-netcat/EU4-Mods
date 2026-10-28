@@ -1,0 +1,41 @@
+#1111 - Arguin
+
+culture = berber
+religion = sunni
+capital = "Arguin"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 50
+native_ferocity = 4
+native_hostileness = 9
+
+1443.1.1 = { discovered_by = POR }
+1445.1.1 = { #Portuguese Trading Post
+	
+	
+	
+	trade_goods = slaves
+	is_city = yes
+}
+1600.1.1 = { discovered_by = MOR }
+1678.10.1 = { #Abandoned
+	owner = ---
+	controller = ---
+	is_city = no
+	
+}
+1685.10.5 = { #Captain seizes the abandoned fort and makes a deal with Brandenburg
+	
+	
+	
+	is_city = yes
+}
+1728.1.1 = { #Abandoned again.
+	owner = ---
+	controller = ---
+	is_city = no
+	
+}

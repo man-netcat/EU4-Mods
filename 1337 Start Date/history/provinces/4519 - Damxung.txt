@@ -1,0 +1,21 @@
+#4519 - Damxung
+
+owner = TIB
+controller = TIB
+add_core = TIB
+is_city = yes
+culture = tibetan
+religion = vajrayana
+capital = "Damxung"
+trade_goods = wool
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+discovered_by = chinese
+discovered_by = indian
+discovered_by = nomad_group
+
+1721.1.1 = { discovered_by = SPA }
+1755.10.4 = { unrest = 7 } # Rebellion aginst the Chinese
+1757.10.4 = { unrest = 0 }

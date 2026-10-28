@@ -1,0 +1,24 @@
+#1099 - Socotra
+
+owner = DHF
+controller = DHF
+add_core = DHF
+add_core = YEM
+is_city = yes
+culture = bedouin_arabic
+religion = sunni
+capital = "Suqutra"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 2
+base_manpower = 1
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = east_african
+
+1488.1.1 = { discovered_by = POR }
+
+1550.1.1 = { discovered_by = TUR }

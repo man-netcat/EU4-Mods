@@ -1,0 +1,11 @@
+#Tumbuka
+
+culture = nyasa
+religion = animism #Fetishism
+capital = "Kasungu"
+base_manpower = 2
+trade_goods = gems
+hre = no
+base_tax = 2
+base_production = 2
+discovered_by = central_african

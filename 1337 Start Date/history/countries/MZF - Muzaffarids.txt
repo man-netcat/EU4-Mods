@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = persian
+religion = sunni
+capital = 433
+
+monarch = {
+	name = "Mubariz.Al_Din I"
+	dynasty = "Muzaffarid"
+	birth_date = 1301.1.1
+	adm = 2
+	dip = 3
+	mil = 5
+}
+heir = {
+	name = "Shah.Shoja"
+	dynasty = "Muzaffarid"
+	birth_date = 1333.3.10
+	death_date = 1393.3.10
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 4
+}

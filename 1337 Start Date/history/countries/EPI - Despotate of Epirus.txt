@@ -1,0 +1,38 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+technology_group = western
+primary_culture = greek
+religion = orthodox
+capital = 4699
+fixed_capital = 4699 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "Theodore"
+	dynasty = "Synadenos"
+	birth_date = 1277.1.1
+	adm = 2
+	dip = 4
+	mil = 2
+}
+heir = {
+	name = "Anna"
+	female = yes
+	dynasty = "Synadenos"
+	birth_date = 1306.1.1
+	death_date = 1366.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1448.9.30 = {
+	monarch = {
+		name = "Leonardo"
+		dynasty = "Tocco"
+		dip = 1
+		adm = 2
+		mil = 3
+	}
+}

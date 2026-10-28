@@ -1,0 +1,21 @@
+government = tribal
+add_government_reform = tribal_federation
+primary_culture = azerbaijani
+#add_accepted_culture = armenian
+add_accepted_culture = kurdish
+religion = shiite
+technology_group = muslim
+capital = 416 # Tabriz
+religious_school = ismaili_school
+
+set_estate_privilege = estate_nobles_emirs_of_baghdad
+
+1467.11.11 = {
+	monarch = {
+		name = "Hasan 'Ali"
+		dynasty = "Qara Qoyunlu"
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+}

@@ -1,0 +1,24 @@
+#4414 - Salem
+
+owner = HSL
+controller = HSL
+add_core = HSL
+is_city = yes
+capital = "Salem"
+culture = tamil
+religion = hinduism
+trade_goods = cotton
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+add_local_autonomy = 25
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = muslim 
+discovered_by = ottoman
+discovered_by = chinese
+
+1498.1.1 = { discovered_by = POR }
+1543.1.1 = {  revolt = { size = 0 type = nationalist_rebels } }
+1550.1.1 = {  revolt = { } }

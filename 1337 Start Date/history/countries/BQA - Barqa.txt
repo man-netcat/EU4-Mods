@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = al_misr_arabic
+religion = sunni
+capital = 2326
+
+monarch = {
+	name = "Fayed"
+	dynasty = "Heib"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

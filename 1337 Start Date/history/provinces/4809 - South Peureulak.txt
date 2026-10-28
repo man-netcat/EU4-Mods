@@ -1,0 +1,23 @@
+owner = ARU
+controller = ARU
+add_core = ARU
+is_city = yes
+culture = acehnese
+religion = sunni
+capital = "Langkat"
+trade_goods = spices
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 3
+
+
+
+discovered_by = chinese
+discovered_by = indian
+discovered_by = muslim
+discovered_by = ottoman
+
+1405.1.1 = { discovered_by = MNG }
+
+1509.1.1 = { discovered_by = POR }

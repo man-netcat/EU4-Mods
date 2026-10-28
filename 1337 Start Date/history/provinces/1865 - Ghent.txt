@@ -1,0 +1,22 @@
+# 1865 - Ghent
+
+owner = FLA
+controller = FLA
+add_core = FLA
+is_city = yes
+capital = "Ghent"
+culture = flemish
+religion = catholic
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = cloth
+base_manpower = 3
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1798.10.12 = { revolt = { type = nationalist_rebels size = 2 }  } # Revolt against French rule, "Boerenkrijg"
+1798.12.1 = { revolt = {}  }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

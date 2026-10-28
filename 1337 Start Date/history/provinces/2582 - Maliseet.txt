@@ -1,0 +1,30 @@
+# No previous file for Maliseet
+
+culture = innu
+religion = totemism
+capital = "Maliseet"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+tribal_owner = MLS
+
+
+discovered_by = north_american
+
+1535.1.1 = { discovered_by = FRA } # Jacques Cartier
+1629.1.1 = { discovered_by = ENG }
+
+1672.1.1 = {
+	
+	
+	
+	culture = cosmopolitan_french
+	religion = catholic
+	trade_goods = fish
+	is_city = yes
+} # First seigneuries of the Bas-Saint-Laurent region

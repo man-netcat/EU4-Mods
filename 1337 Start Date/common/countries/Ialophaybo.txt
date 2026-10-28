@@ -1,0 +1,3 @@
+graphical_culture = northamericagfx
+
+color = { 99 58 52 }

@@ -1,0 +1,30 @@
+#862 - Yaqui
+
+culture = arawak
+religion = animism
+capital = "Yaqui" 
+trade_goods = unknown 
+hre = no 
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+native_size = 5 
+native_ferocity = 1 
+native_hostileness = 5 
+
+
+
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1533.1.1 = { discovered_by = SPA }
+
+1709.10.12 = {
+	
+	
+	
+	is_city = yes
+	culture = castillian
+	religion = catholic
+	trade_goods = wool 
+}

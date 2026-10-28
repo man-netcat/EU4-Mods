@@ -1,0 +1,23 @@
+#Österbotten, down to Vasa.
+
+owner = SWE
+controller = SWE
+add_core = SWE
+is_city = yes
+culture = finnish
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+capital = "Korsholm"
+#fort_15th = yes
+discovered_by = eastern
+discovered_by = western
+
+1527.6.1 = { religion = protestant}
+1596.11.1 = { revolt = { type = anti_tax_rebels size = 1}  }
+1597.2.24 = { revolt = {}  }
+1606.1.1 = { capital = "Vasa" } # Unknown date
+1650.1.1 = { trade_goods = naval_supplies }

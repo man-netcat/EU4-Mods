@@ -1,0 +1,24 @@
+#4152 - Kuusamo incl Maanselkä and Kitka
+
+owner = SWE
+controller = SWE
+add_core = SWE
+is_city = yes
+culture = sapmi
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+add_local_autonomy = 80
+capital = "Maanselkä"
+discovered_by = eastern
+discovered_by = western
+
+1527.6.1 = { religion = protestant}
+1651.3.6 = {
+	trade_goods = naval_supplies
+	add_local_autonomy = -40
+	capital = "Kaajani"
+}

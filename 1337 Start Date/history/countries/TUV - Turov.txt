@@ -1,0 +1,15 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = byelorussian
+religion = orthodox
+capital = 1941
+
+monarch = {
+	name = "Daniel I"
+	birth_date = 1297.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

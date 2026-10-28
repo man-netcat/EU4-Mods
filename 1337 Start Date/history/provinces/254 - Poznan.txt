@@ -1,0 +1,42 @@
+#254 - Poznan
+
+owner = POL
+controller = POL
+add_core = POL
+is_city = yes
+capital = "Poznan"
+culture = polish
+religion = catholic
+trade_goods = salt
+hre = no
+base_tax = 6
+base_production = 6
+base_manpower = 5
+fort_15th = yes
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1530.1.1 = {
+	trade_goods = paper
+}
+1588.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # Civil war, Polish succession
+1589.1.1 = { revolt = {}  } # Coronation of Sigismund III
+1733.1.1 = { revolt = { type = revolutionary_rebels size = 2 }  } # The war of the Polish succession
+1735.1.1 = { revolt = {}   }
+1794.3.24 = { revolt = { type = nationalist_rebels size = 2 leader = "Tadeusz Kosciuszko" }   } # Kosciuszko uprising, Prussia lost control briefly
+1794.11.16 = { revolt = {}  } # The end of the uprising
+1806.11.3 = { revolt = { type = nationalist_rebels size = 2 }  } # Polish uprising instigated by Napoleon
+1807.7.9 = {
+	revolt = {}
+	
+	
+	
+	
+} # The Duchy of Warsaw is established after the treaty of Tilsit, ruled by Frederick Augustus I of Saxony

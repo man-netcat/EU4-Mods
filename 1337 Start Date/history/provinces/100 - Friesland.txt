@@ -1,0 +1,34 @@
+# 100 Friesland - Principal cities: Leeuwarden & Harlingen 
+
+owner = FRI
+controller = FRI
+add_core = FRI
+add_core = UTR
+is_city = yes
+capital = "Leeuwarden"
+culture = frisian
+religion = catholic
+hre = yes
+base_tax = 6
+base_production = 6
+trade_goods = livestock 
+base_manpower = 2
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1536.1.1 = { religion = reformed reformation_center = reformed }
+1559.5.12 = { unrest = 3 } # New bishoprics established in the Lowlands create an outrage
+1565.1.1 = { unrest = 5 } # Letters of Segovia, harsh persecution of Calvinists advocated by Philip I
+1566.4.5 = { unrest = 3 } # 'Eedverbond der Edelen', Margaretha of Parma promises leniency
+1567.9.10 = { unrest = 4 } # Counts of Egmont & Hoorne arrested
+1568.5.23 = { revolt = { type = nationalist_rebels size = 2 name = "Les Gueux"	leader = "Louis of Nassau" }  } # Louis of Nassau beats a Spanish army at Heiligerlee
+1568.7.21 = { revolt = {}  } # Louis of Nassau is beaten at Jemmingen (actually just across the German border)
+1569.1.1 = { unrest = 12 } # The Duke of Alba reforms the tax system ('tiende penning')
+1570.1.1 = { unrest = 20 } # The Duke of Alba reforms the penal system, 'Blood Council' (Bloedraad) established
+1577.2.12 = { unrest = 16 } # The 'Perpetual Edict' (Eeuwig Edict) is accepted by Don Juan
+1579.1.23 = {  unrest = 0 } # Union of Utrecht - Friesland joins
+1648.10.24 = { hre = no } # The Peace of Westphalia
+1681.1.1 = { base_tax = 9 
+base_production = 9 } # Protestants expelled from France

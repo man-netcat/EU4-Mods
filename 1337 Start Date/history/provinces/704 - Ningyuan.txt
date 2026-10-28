@@ -1,0 +1,24 @@
+#704 - Liaoxi
+
+owner = YUA
+controller = YUA
+add_core = YUA
+is_city = yes
+culture = yi
+religion = confucianism
+capital = "Ningyuan"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 2
+#fort_15th = yes #the Nine Garrisons
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+
+1500.1.1 = { base_tax = 9 
+base_production = 9 } # Repairs of the Great Wall
+1519.1.1 = { discovered_by = POR } # Tome Pires

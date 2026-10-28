@@ -1,0 +1,25 @@
+government = monarchy
+add_government_reform = plutocratic_reform
+government_rank = 1
+primary_culture = sulawesi
+religion = animism
+technology_group = chinese
+capital = 4795
+
+monarch = {
+	name = "Manurunge"
+	dynasty = "Bone"
+	birth_date = 1305.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1480.1.1 = {
+	monarch = {
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

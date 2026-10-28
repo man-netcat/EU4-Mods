@@ -1,0 +1,17 @@
+#Ösel and Dagö, incl. Sonnenburg and Arensburg.
+
+culture = estonian
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = grain
+base_manpower = 1
+capital = "Arensburg"
+
+
+
+discovered_by = western
+discovered_by = eastern
+
+1542.1.1 = { religion = protestant} # Unknown date

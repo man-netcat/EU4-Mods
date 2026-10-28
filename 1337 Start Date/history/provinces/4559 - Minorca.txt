@@ -1,0 +1,24 @@
+#Minorca
+
+owner = MLL
+controller = MLL
+add_core = ARA
+add_core = MLL
+is_city = yes
+culture = catalan
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 1 
+capital = "Mahon" 
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1462.1.1 = { unrest = 2 } # Remença peasant revolt, in parallel with the Catalan civil war.
+1472.1.1 = { unrest = 0 } # End of the First Remença revolt
+1521.3.16 = { revolt = { type = revolutionary_rebels size = 0 }  } # The Germanies movement reaches the archipelago, the viceroy is deposed by the revolters
+1523.3.8 = { revolt = {}  } # The royal army retakes the city of Palma

@@ -1,0 +1,20 @@
+#1753 - Kostroma
+
+owner = KOS
+controller = KOS
+add_core = KOS
+is_city = yes
+culture = russian 
+religion = orthodox
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = cloth
+base_manpower = 3
+capital = "Kostroma"
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+
+1598.1.7 = { unrest = 5 } # "Time of troubles"
+1612.3.1 = { unrest = 0 } # Pozharsky army moves through Kostroma

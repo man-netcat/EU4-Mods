@@ -1,0 +1,24 @@
+#781 - Patagonia Oriental
+
+culture = het
+religion = animism
+capital = "Puerto Desaedo"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 8
+native_ferocity = 1
+native_hostileness = 3
+
+1520.1.1 = { discovered_by = SPA } # Ferdinand Magellan
+1776.1.1 = {
+	
+	
+	
+	culture = castillian
+	religion = catholic
+	is_city = yes
+	trade_goods = fish
+} # Incorporated into the viceroyalty of Rio de la Plata

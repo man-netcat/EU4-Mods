@@ -1,0 +1,38 @@
+# No previous file for Keres
+
+owner = TSI
+controller = TSI
+add_core = TSI
+is_city = yes
+culture = pueblo
+religion = totemism
+capital = "Zia"
+trade_goods = grain
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+
+
+discovered_by = north_american
+
+1541.1.1 = { discovered_by = SPA } # Francisco Vásquez de Coronado
+
+1598.1.1 = {
+	
+	
+	
+	trade_goods = wool
+ } # conquered by Spain
+1680.8.10 = { revolt = { type = nationalist_rebels size = 0 }  } # Pueblo revolt
+1692.9.13 = {
+ 	 
+	 
+	 
+	culture = castillian 
+	religion = catholic 
+} # The Spanish reestablished control 

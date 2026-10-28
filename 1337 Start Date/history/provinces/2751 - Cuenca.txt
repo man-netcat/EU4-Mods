@@ -1,0 +1,31 @@
+#2751 - Cuenca
+
+owner = CAS
+controller = CAS
+add_core = CAS
+add_core = TOL
+is_city = yes
+culture = castillian
+religion = catholic
+hre = no
+base_tax = 4 
+base_production = 4
+trade_goods = wool 
+base_manpower = 3
+capital = "Cuenca" 
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1520.6.1 = { revolt = { type = revolutionary_rebels size = 1 }  } # The revolt of the comuneros
+1521.4.1 = { revolt = {}  } # The Comuneros are defeated
+1699.1.1 = { unrest = 3 } # Restlessness due to prolonged famines
+1700.1.1 = { unrest = 0 } # The King is forced to adopt measures to appease the population, a new corregidor is elected
+1808.6.6 = { revolt = { type = pretender_rebels size = 1 }  }
+1809.1.1 = { revolt = {}  }
+1812.10.1 = { revolt = { type = pretender_rebels size = 0 }  }
+1813.12.11 = { revolt = {}  }

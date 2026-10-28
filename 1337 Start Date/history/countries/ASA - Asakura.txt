@@ -1,0 +1,155 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = japanese
+religion = shinto
+technology_group = chinese
+capital = 1023	# Echizen
+
+1451.1.22 = {
+	heir = {
+		name = "Takakage"
+		monarch_name = "Takakage"
+		dynasty = "Asakura"
+		birth_date = 1428.6.2
+		death_date = 1481.8.21
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1463.9.2 = {
+	monarch = {
+		name = "Takakage" 
+		dynasty = "Asakura"
+		birth_date = 1428.6.2
+#		death_date = 1481.8.21
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = free_thinker_personality
+	add_ruler_personality = charismatic_negotiator_personality
+	add_ruler_personality = inspiring_leader_personality
+}
+
+1463.9.2 = {
+	heir = {
+		name = "Ujikage"
+		monarch_name = "Ujikage"
+		dynasty = "Asakura"
+		birth_date = 1449.4.27
+		death_date = 1486.8.3
+		claim = 90
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1481.8.21 = {
+	monarch = {
+		name = "Ujikage" 
+		dynasty = "Asakura"
+		birth_date = 1449.4.27
+#		death_date = 1486.8.3
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = righteous_personality
+}
+
+1481.8.21 = {
+	heir = {
+		name = "Sadakage"
+		monarch_name = "Sadakage"
+		dynasty = "Asakura"
+		birth_date = 1473.3.3
+		death_date = 1512.4.11
+		claim = 90
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1486.8.3 = {
+	monarch = {
+		name = "Sadakage" 
+		dynasty = "Asakura"
+		birth_date = 1473.3.3
+#		death_date = 1512.4.11
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = calm_personality
+}
+
+1493.12.30 = {
+	heir = {
+		name = "Takakage"
+		monarch_name = "Takakage"
+		dynasty = "Asakura"
+		birth_date = 1493.12.30
+		death_date = 1548.4.30
+		claim = 90
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}
+
+1512.4.11 = {
+	monarch = {
+		name = "Takakage" 
+		dynasty = "Asakura"
+		birth_date = 1493.12.30
+#		death_date = 1548.4.30
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = midas_touched_personality
+	add_ruler_personality = well_connected_personality
+}
+
+1533.10.12 = {
+	heir = {
+		name = "Yoshikage"
+		monarch_name = "Yoshikage"
+		dynasty = "Asakura"
+		birth_date = 1533.10.12
+		death_date = 1573.9.16
+		claim = 80
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1548.4.30 = {
+	monarch = {
+		name = "Yoshikage" 
+		dynasty = "Asakura"
+		birth_date = 1533.10.12
+#		death_date = 1573.9.16
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = careful_personality
+	add_ruler_personality = entrepreneur_personality
+	add_ruler_personality = craven_personality
+}

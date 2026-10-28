@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = occitain
+religion = catholic
+capital = 204
+
+monarch = {
+	name = "Humbert II"
+	dynasty = "la Tour du Pin"
+	birth_date = 1312.1.1
+	adm = 4
+	dip = 2
+	mil = 2
+}

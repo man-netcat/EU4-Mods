@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = mandala_reform
+technology_group = chinese
+religion = buddhism
+primary_culture = assamese
+capital = 2400
+
+1465.1.1 = {
+	monarch = {
+		name = "Kya Htun"
+		dynasty = "Hsipaw"
+		ADM = 2
+		DIP = 3
+		MIL = 4
+	}
+}
+
+# 1502 Shan Confederation

@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+primary_culture = sumatran
+religion = mahayana
+technology_group = chinese
+capital = 598
+
+1480.1.1 = {
+	monarch = {
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

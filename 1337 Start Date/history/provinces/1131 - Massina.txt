@@ -1,0 +1,21 @@
+#1131 - Massina
+
+culture = bambara
+base_manpower = 1
+religion = shamanism #Fetishism
+capital = "Macina"
+trade_goods = grain
+hre = no
+base_tax = 4 
+base_production = 4
+native_ferocity = 4
+native_hostileness = 9
+discovered_by = sub_saharan
+extra_cost = 8
+center_of_trade = 1
+
+1481.1.1 = { unrest = 3 } #Mossi Raid led by Nasere I devastates region
+1685.1.1 = { revolt = { type = revolutionary_rebels size = 1 }  } #Bambara decline after death of Kaniadan Kulibali
+1720.1.1 = { revolt = {}  } #Mamia Kulibali restores Bambara authority in region
+1756.1.1 = { unrest = 9 } # Denkoro seizes power in wake of father Mamali's death, civil war
+1766.1.1 = { unrest = 0 } # Ngolo Diarra restores authortiy of Segu state, ends civil war

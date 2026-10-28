@@ -1,0 +1,40 @@
+#Leczyca
+
+owner = LCZ
+controller = LCZ
+add_core = LCZ
+is_city = yes
+capital = "Leczyca"
+culture = polish
+religion = catholic
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+
+
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1588.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # Civil war
+1589.1.1 = { revolt = {}  } # Coronation of Sigismund III
+1606.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # Civil war
+1608.1.1 = { revolt = {}  } # Minor victory of Sigismund
+1733.1.1 = { revolt = { type = revolutionary_rebels size = 0 }  } # The war of Polish succession
+1735.1.1 = { revolt = {}  }
+1806.11.3 = { revolt = { type = nationalist_rebels size = 0 }  } # Polish uprising instigated by Napoleon
+1807.7.9 = {
+	revolt = {}
+	
+	
+	
+	
+} # The Duchy of Warsaw is established after the treaty of Tilsit, ruled by Frederick Augustus I of Saxony

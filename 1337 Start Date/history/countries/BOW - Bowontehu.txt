@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = chinese
+primary_culture = sulawesi
+religion = animism
+capital = 644
+
+monarch = {
+	name = "Mokodoludu"
+	dynasty = "Bowontehu"
+	birth_date = 1310.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

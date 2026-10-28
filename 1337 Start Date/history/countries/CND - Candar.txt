@@ -1,0 +1,38 @@
+government = monarchy
+add_government_reform = beylik_government
+government_rank = 1
+primary_culture = turkish
+religion = sunni
+technology_group = ottoman
+capital = 325	# Sinop
+religious_school = hanafi_school
+
+monarch = {
+	name = "Salomon"
+	birth_date = 1261.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Abraham"
+	birth_date = 1289.1.1
+	death_date = 1349.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
+1461.1.1 = {
+	monarch = {
+		name = "Ahmed"
+		dynasty = Candaroglu
+		birth_date = 1425.1.1
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+
+# Annexed by the Ottoman Empire at the end 1461

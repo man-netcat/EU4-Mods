@@ -1,0 +1,18 @@
+#4218 - Buteha
+
+owner = OTC
+controller = OTC
+add_core = OTC
+is_city = yes
+culture = chahar
+religion = tengri_pagan_reformed
+capital = "Buteha"
+trade_goods = livestock
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+discovered_by = chinese
+discovered_by = nomad_group
+
+1709.1.1 = { discovered_by = SPA }

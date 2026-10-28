@@ -1,0 +1,30 @@
+#2700 - Panay
+
+owner = MDY
+controller = MDY
+add_core = MDY
+is_city = yes
+culture = filipino
+religion = animism
+capital = "Panay"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 4
+base_manpower = 2
+discovered_by = chinese
+extra_cost = 8
+center_of_trade = 1
+
+1521.1.1 = { discovered_by = SPA } # Ferdinand Magellan 
+1569.1.1 = {
+	
+	
+	religion = catholic
+	
+}
+1762.10.6 = {
+	
+	unrest = 6
+} # Captured by the British East India Company. Diego Silang rebellion
+1763.9.10 = { unrest = 0 } # The revolts are defeated

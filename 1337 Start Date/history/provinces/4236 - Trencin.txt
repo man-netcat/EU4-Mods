@@ -1,0 +1,37 @@
+#4236 - Trencin
+
+owner = HUN
+controller = HUN
+add_core = HUN
+is_city = yes
+culture = slovak
+religion = catholic
+capital = "Trencin"
+trade_goods = iron
+hre = no
+base_tax = 2
+base_production = 3
+base_manpower = 1
+fort_15th = yes #Trencin Castle
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+1432.1.1 = { unrest = 10 } # The city is attacked by Hussites
+1434.1.1 = { unrest = 0 }
+1440.1.1 = { unrest = 10 } # Struggles between the supporters of Ladislaus and Elisabeth of Hungary
+1443.1.1 = { unrest = 0 }
+1545.1.1 = { religion = protestant } # Synod of Erdod
+1567.1.1 = { religion = reformed } # Synod of Debrecen
+1604.1.1 = { revolt = { type = nationalist_rebels size = 2 }  } # The nobility in Royal Hungary rebelled against Habsburg & Jesuit repression
+1606.1.1 = { revolt = {}  religion = reformed } # Peace treaty, guaranteed religious toleration
+1619.1.1 = { revolt = { type = nationalist_rebels size = 2 }  } # Bethlen uprisings
+1626.1.1 = { revolt = {}   } # The 3rd Peace of Pressburg, puts an end to the Bethlen uprisings
+1703.1.1 = { revolt = { type = nationalist_rebels size = 2 }  } # Kuruc rebellion, lead by Francisc Rakoczy
+1710.1.1 = { revolt = {} } # Plague

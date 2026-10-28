@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = cosmopolitan_french
+religion = catholic
+capital = 145	# Mystras
+
+
+# Principality of Achaea #
+
+monarch = {
+	name = "Catherine I"
+	female = yes
+	dynasty = "Valois"
+	birth_date = 1303.4.1
+	adm = 4
+	dip = 3
+	mil = 2
+}
+
+1453.5.29 = {
+	monarch = {
+		name = "Thomas"
+		dynasty = "Palaiologos"
+		dip = 2
+		adm = 1
+		mil = 1
+	}
+}

@@ -1,0 +1,16 @@
+#4404 - Minsin
+
+culture = kachin
+religion = animism
+capital = "Minsin"
+trade_goods = grain
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

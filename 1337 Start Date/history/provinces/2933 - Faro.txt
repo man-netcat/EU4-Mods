@@ -1,0 +1,30 @@
+# - Barcelos
+
+owner = POR
+controller = POR
+add_core = ALV
+add_core = POR
+is_city = yes
+culture = portugese
+discovered_by = south_american
+religion = catholic
+capital = "Barcelos"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 15
+native_ferocity = 2
+native_hostileness = 6
+
+1758.5.27 = {
+	is_city = yes
+	
+	
+	discovered_by = POR
+	
+	culture = portugese
+	religion = catholic
+	trade_goods = cocoa
+}

@@ -1,0 +1,28 @@
+#4350 - Mindoro
+
+owner = TDO
+controller = TDO
+add_core = TDO
+is_city = yes
+culture = filipino
+religion = mahayana
+capital = "Caminawit"
+trade_goods = gems
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+discovered_by = chinese
+
+1521.1.1 = { discovered_by = SPA } # Ferdinand Magellan
+1571.1.1 = {
+	
+	
+	religion = catholic
+	
+}
+1762.10.6 = {
+	
+	unrest = 6
+} # Captured by the British East India Company. Diego Silang rebellion
+1763.9.10 = { unrest = 0 } # The revolts are defeated

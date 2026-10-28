@@ -1,0 +1,14 @@
+government = republic
+primary_culture = icelandic
+religion = catholic
+technology_group = western
+capital = 1979 #Rejkyavik
+
+monarch = {
+	name = "Magnus VII"
+	dynasty = "Bjelbo"
+	birth_date = 1316.5.1
+	adm = 1
+	dip = 0
+	mil = 2
+}

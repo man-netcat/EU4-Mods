@@ -1,0 +1,27 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = polish
+religion = catholic
+capital = 4528
+
+monarch = {
+	name = "Casimir III"
+	dynasty = "Piast"
+	birth_date = 1310.4.30
+	adm = 5
+	dip = 4
+	mil = 5
+}
+heir = {
+	name = "Elizabeth"
+	female = yes
+	dynasty = "Piast"
+	birth_date = 1326.1.1
+	death_date = 1386.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

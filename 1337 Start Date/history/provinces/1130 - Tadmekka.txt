@@ -1,0 +1,21 @@
+#1130 - Tadimekket
+
+owner = TMK
+controller = TMK
+add_core = SON
+add_core = TMK
+is_city = yes
+culture = tuareg
+base_manpower = 1
+religion = sunni
+capital = "Tadmekka al-Suq"
+trade_goods = wool
+hre = no
+base_tax = 1 
+base_production = 1
+
+
+
+discovered_by = sub_saharan
+
+1543.1.1 = { discovered_by = MOR }

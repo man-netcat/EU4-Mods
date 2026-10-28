@@ -1,0 +1,30 @@
+#2041 - Manipur
+
+owner = KAB
+controller = KAB
+add_core = KAB
+is_city = yes
+culture = chin
+religion = animism
+capital = "Imphal"
+trade_goods = cloth
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = indian
+discovered_by = nomad_group
+discovered_by = chinese
+
+1597.1.1 = { fort_15th = yes } #Kangla
+1732.1.1 = {
+	unrest = 5
+	religion = hinduism
+} # King Pamheiba expelled everyone who opposed vaisnavism
+1735.1.1 = { unrest = 0 }
+1760.1.1 = { discovered_by = GBR }
+1769.1.1 = { unrest = 6 }
+1773.1.1 = { unrest = 0 }

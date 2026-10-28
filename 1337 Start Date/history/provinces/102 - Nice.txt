@@ -1,0 +1,24 @@
+#102 - Nice
+
+owner = SAV
+controller = SAV
+add_core = SAV
+is_city = yes
+culture = ligurian
+religion = catholic
+hre = yes
+base_tax = 4 
+base_production = 4
+trade_goods = fish
+base_manpower = 2
+capital = "Nice"
+
+
+
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+1495.1.1 = { hre = no }
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

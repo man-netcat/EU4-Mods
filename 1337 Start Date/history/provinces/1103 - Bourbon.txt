@@ -1,0 +1,28 @@
+#1103 - Bourbon
+
+owner = BOU
+controller = BOU
+add_core = BOU
+is_city = yes
+capital = "Bourbon"
+trade_goods = unknown
+hre = no
+base_tax = 5 
+base_production = 5
+base_manpower = 1
+native_size = 0
+native_ferocity = 0
+native_hostileness = 0
+
+1513.1.1 = { discovered_by = POR }
+
+1642.1.1 = {
+	
+	
+	
+	culture = cosmopolitan_french
+	religion = catholic
+	is_city = yes
+} # Claimed by Jacques Pronis
+1669.1.1 = { capital = "Saint-Denis" }
+1700.1.1 = { trade_goods = sugar }

@@ -1,0 +1,21 @@
+#2395 - Hkamti Long
+
+owner = MKN
+controller = MKN
+add_core = MKN
+is_city = yes
+culture = kachin
+religion = animism
+capital = "Hkamti Long"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+
+
+
+discovered_by = chinese
+discovered_by = indian
+
+1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis

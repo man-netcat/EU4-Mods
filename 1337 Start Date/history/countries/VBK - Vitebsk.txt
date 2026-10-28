@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = byelorussian
+religion = orthodox
+capital = 771
+
+monarch = {
+	name = "Algirdas I"
+	dynasty = "Gediminid"
+	birth_date = 1296.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Andrew"
+	dynasty = "Gediminid"
+	birth_date = 1325.1.1
+	death_date = 1385.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
