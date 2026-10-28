@@ -544,6 +544,30 @@ SUBJECT_KIND = {
 }
 
 
+def drop_base_game_relations_at_start(tags):
+    """The base game's history/diplomacy files carry relations that were already running before 1337.4.1
+    (a 1299 Hainaut-Holland alliance, ...). Where one of them involves a tag that EU5 has in a subject or union
+    relation, the mod ships that file without the relation, so it cannot double up with ours."""
+    start = (1337, 4, 1)
+    for f in sorted((EU4_GAME / "history/diplomacy").glob("*.txt")):
+        text = f.read_text(encoding="latin-1")
+        kept, changed = [], False
+        for m in re.finditer(r"(?ms)^(\w+) = \{.*?^\}[^\n]*\n?|[^\n]*\n", text):
+            blk = m[0]
+            if m[1] and m[1] != "emperor":
+                sd = re.search(r"start_date\s*=\s*(\d+)\.(\d+)\.(\d+)", blk)
+                ed = re.search(r"end_date\s*=\s*(\d+)\.(\d+)\.(\d+)", blk)
+                two = re.findall(r"(?:first|second)\s*=\s*(\w+)", blk)
+                if (sd and tuple(map(int, sd.groups())) <= start and (not ed or tuple(map(int, ed.groups())) > start)
+                        and len(two) == 2 and set(two) <= tags):
+                    changed = True
+                    continue
+            kept.append(blk)
+        dst = MOD / "history/diplomacy" / f.name
+        if changed:
+            dst.write_text("".join(kept), encoding="latin-1")
+
+
 def step_diplomacy(table):
     """history/diplomacy from 12_diplomacy. A subject of a tag that was folded into its own overlord is
     re-attached to that overlord; each subject keeps its first overlord only; no subject is also allied
@@ -596,6 +620,33 @@ def step_diplomacy(table):
         else:
             continue
         n[t] += 1
+    # personal unions: EU5 has no union object, a union is one ruler holding several crowns. The ruler's own
+    # country (character `tag`) is the senior; the others, unless already subjects of someone, become juniors.
+    cdict = dict(countries())
+    crowns = defaultdict(list)
+    for t5, cb in cdict.items():
+        rid = chars.country_rulers(cb)[0]
+        if rid:
+            crowns[rid].append(t5)
+    union_juniors = set()
+    for rid, group in sorted(crowns.items()):
+        if len(group) < 2:
+            continue
+        home = chars.get(chars.characters()[rid], "tag")
+        senior = home
+        if senior not in table or senior in tagmap.FOLDED:
+            continue
+        s4 = table[senior]["eu4"]
+        for j5 in sorted(group):
+            if j5 == senior or j5 not in table or j5 in tagmap.FOLDED:
+                continue
+            j4 = table[j5]["eu4"]
+            if (held[s4] and held[j4] and j4 != s4 and j4 not in subjects and s4 not in subjects
+                    and j4 not in union_juniors and s4 not in union_juniors):
+                union_juniors.add(j4)
+                subjects[j4] = s4
+                out.append(f"union = {{ first = {s4} second = {j4} {sd} }}")
+                n["union"] += 1
     # the Celestial Empire: EU5's China organisation names its leader and its celestial governors (tributaries)
     org = (EU5_SETUP / "15_international_organizations.txt").read_text(encoding="utf-8-sig")
     m = re.search(r"leader\s*=\s*(\w+)\s*celestial_governor\s*=\s*\{([^}]*)\}", org)
@@ -603,6 +654,7 @@ def step_diplomacy(table):
     p = MOD / "history/diplomacy"
     shutil.rmtree(p, ignore_errors=True)
     p.mkdir(parents=True)
+    drop_base_game_relations_at_start(set(subjects) | set(subjects.values()))
     if emperor and held[emperor]:
         for g5 in m[2].split():
             g4 = table.get(g5, {}).get("eu4")

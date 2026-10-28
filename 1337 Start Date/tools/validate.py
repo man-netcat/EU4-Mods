@@ -113,7 +113,7 @@ def main():
         st = re.search(r'subject_type = "(\w+)"', body)
         if st and st[1] not in types:
             errs.append(f"diplomacy: unknown subject type {st[1]}")
-        if kind in ("vassal", "dependency"):
+        if kind in ("vassal", "dependency", "union"):
             if c_ in over:
                 errs.append(f"diplomacy: {c_} has two overlords ({over[c_]}, {a_})")
             over[c_] = a_

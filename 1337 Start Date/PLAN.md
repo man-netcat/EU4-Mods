@@ -120,7 +120,11 @@ country (49 so far).
 familial_governor -> `dependency` appanage; tributary -> `dependency` tributary_state; hanseatic_member -> alliance (not
 a subject). Subjects of a folded tag re-attach to its overlord; one overlord per subject; no alliance with the overlord;
 validate checks types, cycles and land. `celestial_empire.txt` overrides the base game's so the Yuan, not the Khalkha
-khan, hold the mandate. Two base-game alliances dated before 1337 (Hainaut-Holland, Kamata-Assam) still load.
+khan, hold the mandate. Personal unions: EU5 has no union object; one ruler holding several crowns is a union. The ruler's own country
+(character `tag`) is the senior, the others become `union` juniors unless they are subjects or were folded (9 so far:
+Hainaut-Holland, Moscow-Novgorod/Nizhny/Kostroma/Vladimir, Hungary-Croatia, Bohemia-Luxembourg, Naples-Provence,
+Sweden-Norway). Base-game relations that were running before 1337 and involve such tags are shipped removed
+(`drop_base_game_relations_at_start`, e.g. the 1299 Hainaut-Holland alliance), lifted from the base game by the build.
 
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 

@@ -118,3 +118,12 @@ vassal = { first = MAM second = MDA start_date = 1337.4.1 end_date = 1836.12.31 
 vassal = { first = MAM second = MEC start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = ORM second = JRW start_date = 1337.4.1 end_date = 1836.12.31 }
 vassal = { first = COC second = XIU start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = BOH second = LUX start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = HAI second = HOL start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = HUN second = CRO start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = MOS second = KOS start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = MOS second = NOV start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = MOS second = NZH start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = MOS second = VLR start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = NAP second = PRO start_date = 1337.4.1 end_date = 1836.12.31 }
+union = { first = SWE second = NOR start_date = 1337.4.1 end_date = 1836.12.31 }
