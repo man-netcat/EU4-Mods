@@ -6,6 +6,7 @@ unlock_cult = roog_cult
 unlock_cult = nyame_cult
 religion = sunni
 primary_culture = kanuri
+add_accepted_culture = hausa
 capital = 2287	# Gatiga, Gazargamu
 religious_school = maliki_school
 

@@ -3,5 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = chinese
 primary_culture = sumatran
+add_accepted_culture = acehnese
+add_accepted_culture = malayan
 religion = sunni
 capital = 617

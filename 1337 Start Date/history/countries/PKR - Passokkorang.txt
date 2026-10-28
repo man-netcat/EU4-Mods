@@ -3,5 +3,6 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = chinese
 primary_culture = sumatran
+add_accepted_culture = sulawesi
 religion = animism
 capital = 2716

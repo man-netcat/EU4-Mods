@@ -1,6 +1,8 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = swahili
+add_accepted_culture = kulin
+add_accepted_culture = ganda
 religion = shamanism #Fetishism
 technology_group = central_african
 unlock_cult = mwari_cult

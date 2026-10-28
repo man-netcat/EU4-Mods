@@ -4,6 +4,7 @@ government_rank = 1
 technology_group = western
 religion = catholic
 primary_culture = saxon
+add_accepted_culture = latvian
 capital = 37
 
 1542.1.1 = {

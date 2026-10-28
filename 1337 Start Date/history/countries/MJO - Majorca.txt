@@ -4,6 +4,7 @@ add_government_reform = feudalism_reform
 
 religion = catholic
 primary_culture = catalan
+add_accepted_culture = occitain
 technology_group = western
 capital = 333	# Majorca
 

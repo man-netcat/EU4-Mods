@@ -3,6 +3,7 @@ add_government_reform = appanage_reform
 technology_group = western
 religion = catholic
 primary_culture = occitain
+add_accepted_culture = gascon
 capital = 4694	# Pau
 fixed_capital = 176 # Cannot move capital away from this province & no power cost to move to it
 

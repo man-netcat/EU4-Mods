@@ -4,6 +4,8 @@ government_rank = 2
 technology_group = muslim
 religion = sunni
 primary_culture = persian
+add_accepted_culture = omani_culture
+add_accepted_culture = gulf_arabic
 capital = 2999	# Ormuz Island
 religious_school = maliki_school
 

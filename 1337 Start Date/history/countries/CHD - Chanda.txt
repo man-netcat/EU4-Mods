@@ -4,6 +4,8 @@ government_rank = 1
 technology_group = indian
 religion = hinduism
 primary_culture = gondi
+add_accepted_culture = marathi
+add_accepted_culture = telegu
 capital = 2050	# Ballarsah
 fixed_capital = 2050 # Cannot move capital away from this province & no power cost to move to it
 

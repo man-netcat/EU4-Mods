@@ -3,6 +3,8 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = chinese
 primary_culture = assamese
+add_accepted_culture = mon
+add_accepted_culture = central_thai
 religion = buddhism
 capital = 4832
 

@@ -3,5 +3,6 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = indian
 primary_culture = khmer
+add_accepted_culture = assamese
 religion = hinduism
 capital = 4440

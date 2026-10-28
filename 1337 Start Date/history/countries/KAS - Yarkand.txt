@@ -1,6 +1,8 @@
 government = monarchy
 add_government_reform = iqta
 primary_culture = khalkha
+add_accepted_culture = uzbehk
+add_accepted_culture = uyghur
 religion = sunni
 technology_group = chinese
 capital = 739	# kashgar

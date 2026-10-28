@@ -6,6 +6,7 @@ add_government_reform = native_martial_tradition_reform
 add_government_reform = native_settle_down_reform
 government_rank = 1
 primary_culture = iroquois
+add_accepted_culture = mahican
 religion = totemism
 technology_group = north_american
 capital = 963

@@ -5,6 +5,7 @@ add_government_reform = barbary_sultanate_reform
 technology_group = muslim
 religion = sunni
 primary_culture = berber
+add_accepted_culture = algerian
 capital = 336 # Tlemcen
 fixed_capital = 336 # Cannot move capital away from this province & no power cost to move to it
 religious_school = maliki_school

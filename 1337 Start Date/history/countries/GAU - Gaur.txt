@@ -3,6 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = indian
 primary_culture = bengali
+add_accepted_culture = kochi
 religion = sunni
 capital = 563
 

@@ -515,6 +515,37 @@ def step_dormant(table, stats):
     return n
 
 
+def step_accepted(table):
+    """add_accepted_culture in the country files: a culture that makes up a real share of a realm's development
+    (>= 20%, or >= 10% for a culture of the ruling culture's own group) is accepted, up to three. The base game's
+    1444 lists are stripped, so every tag's come from where its people actually live at the start."""
+    import cultures_of
+    group = cultures_of.groups()
+    share = defaultdict(Counter)
+    for f in (MOD / "history/provinces").iterdir():
+        top = re.split(r"(?m)^\d{3,4}\.\d+\.\d+\s*=", f.read_text(encoding="latin-1"))[0]
+        o, c = re.search(r"(?m)^owner = (\w+)", top), re.search(r"(?m)^culture = (\w+)", top)
+        if o and c:
+            d = sum(int(x) for x in re.findall(r"(?m)^base_(?:tax|production|manpower)\s*=\s*(\d+)", top))
+            share[o[1]][c[1]] += d
+    n = 0
+    for tag, cnt in share.items():
+        for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+            t = f.read_text(encoding="latin-1")
+            m = re.search(r"(?m)^primary_culture = (\w+)", t)
+            if not m:
+                continue
+            tot = sum(cnt.values()) or 1
+            own = group.get(m[1])
+            acc = [c for c, d in cnt.most_common()
+                   if c != m[1] and (d / tot >= 0.2 or (group.get(c) == own and d / tot >= 0.1))][:3]
+            if acc:
+                add = "".join(f"add_accepted_culture = {c}\n" for c in acc)
+                f.write_text(re.sub(r"(?m)^(primary_culture = \w+[^\n]*\n)", lambda x: x[1] + add, t, count=1), encoding="latin-1")
+                n += len(acc)
+    return n
+
+
 def step_bookmark(table):
     """common/bookmarks/1337_start.txt: the playable roster is the tags with the most development at the start (the
     base game's bookmarks likewise list the great and mid powers), centred on the emperor-less west like the base
@@ -924,6 +955,7 @@ def main():
     stats["wars"] = step_wars(table)
     stats["institutions"] = step_institutions()
     stats["rivals"] = step_rivals(table)
+    stats["accepted_cultures"] = step_accepted(table)
     stats["bookmark"] = step_bookmark(table)
     import flags
     stats["flags"] = flags.write(MOD / "gfx/flags", {r["eu4"]: eu5info.color_of(t5) or (100, 100, 100)

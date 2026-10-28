@@ -3,6 +3,8 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = muslim
 primary_culture = khalkha
+add_accepted_culture = armenian
+add_accepted_culture = kurdish
 religion = sunni
 capital = 407
 

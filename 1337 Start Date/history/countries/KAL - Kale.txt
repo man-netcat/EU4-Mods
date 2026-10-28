@@ -3,6 +3,7 @@ add_government_reform = mandala_reform
 technology_group = chinese
 religion = buddhism
 primary_culture = assamese
+add_accepted_culture = chin
 capital = 580
 
 1465.1.1 = {

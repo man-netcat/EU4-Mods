@@ -1,6 +1,7 @@
 government = monarchy
 add_government_reform = autocracy_reform
 primary_culture = purepecha
+add_accepted_culture = tlapanec
 religion = nahuatl
 technology_group = mesoamerican
 capital = 851

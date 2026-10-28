@@ -3,5 +3,6 @@ add_government_reform = tribal_despotism
 government_rank = 1
 technology_group = sub_saharan
 primary_culture = tunjur
+add_accepted_culture = nubian
 religion = shamanism
 capital = 1216

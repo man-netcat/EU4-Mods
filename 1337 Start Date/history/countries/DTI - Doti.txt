@@ -2,6 +2,7 @@ government = monarchy
 add_government_reform = feudalism_reform
 technology_group = indian
 primary_culture = pahari
+add_accepted_culture = nepali
 religion = hinduism
 capital = 4485	#Doti
 

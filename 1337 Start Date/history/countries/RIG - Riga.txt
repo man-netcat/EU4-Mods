@@ -2,6 +2,7 @@ government = theocracy
 add_government_reform = leading_clergy_reform
 technology_group = western
 primary_culture = saxon
+add_accepted_culture = baltic_german
 religion = catholic
 capital = 38	# Riga
 fixed_capital = 38 # Cannot move capital away from this province & no power cost to move to it

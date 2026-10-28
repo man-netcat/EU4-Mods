@@ -1,6 +1,7 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = kulin
+add_accepted_culture = rwandan
 religion = animism #Fetishism
 technology_group = central_african
 unlock_cult = mwari_cult

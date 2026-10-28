@@ -3,6 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = ottoman
 primary_culture = turkish
+add_accepted_culture = greek
 religion = sunni
 capital = 1848
 

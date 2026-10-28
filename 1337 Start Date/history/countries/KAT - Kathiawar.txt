@@ -4,6 +4,7 @@ government_rank = 1
 technology_group = indian
 religion = hinduism
 primary_culture = sindhi
+add_accepted_culture = saurashtri
 capital = 503	# Kutch
 
 #Jams of Kutch:

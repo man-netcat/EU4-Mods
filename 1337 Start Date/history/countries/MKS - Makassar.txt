@@ -2,6 +2,7 @@ government = monarchy
 add_government_reform = plutocratic_reform
 government_rank = 1
 primary_culture = sumatran
+add_accepted_culture = sulawesi
 religion = animism
 technology_group = chinese
 capital = 641	# Makassar

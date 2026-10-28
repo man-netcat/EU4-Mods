@@ -147,13 +147,20 @@ Charlemagne's Legacy; both files are written by `step_tags`.
   value the base game gives it; validate fails on any modifier outside that set. Smaller new tags get the base game's group
   or default ideas; base-game tags keep their own.
 
+## Support content (what a vanilla start date has)
+
+- Bookmark roster generated from the start's strongest tags (`step_bookmark`); electors from EU5's HRE (`elector = yes`,
+  the base game's stripped); royal marriages from foreign consorts; accepted cultures from where a realm's development
+  lives (`step_accepted`, the base game's 1444 lists stripped); placeholder flags for the new tags (`tools/flags.py`,
+  never overwrites an existing file).
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
-1. Province mapping: 2622/3357 land provinces by name/hierarchy (fixed `eu4_geo` reading area colours as provinces, plus ~70 hand aliases for Europe and the Near East); ~735 unmapped keep their vanilla owner only if
-   that tag is in the 1337 table (plus `VANILLA_PROXY` in build.py: Ming->Yuan etc.), else are unowned.
-   Hand aliases go in `tools/data/aliases.json`; review `data/loc2prov_unmatched.json`.
-2. Tags are matched by name + `ALIASES` in tagmap.py; ~384 are new tags with generated codes (no flags yet).
-3. EU5 accepted cultures, estates/land shares, ideas for new tags, flags, monarch names lists.
-4. Religion: Baltic and Finnic paganism are the mod's own religions (`common/religions/1337_religions.txt`, added to the vanilla `pagan` group; they borrow the Norse/shamanism icon frames, so the owner should check in-game that the group merges). Faiths EU4 lacks (Judaism, Jain, Cathar, Bosnian Church...) map to the nearest vanilla religion in `tools/tables.py` `RELIGION_HAND`, then `python3 tools/tables.py` rewrites `data/cr_map.json`.
-5. Governments for new tags copy the vanilla pattern of the area, overridden by EU5 type (tribe/horde/republic/theocracy).
-6. Possible historical errors to review in EU5 data are logged in `tools/corrections.md` (empty so far).
+1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is
+   in the 1337 table (plus `VANILLA_PROXY` in build.py), else are unowned. Hand aliases: `tools/data/aliases.json`;
+   review `data/loc2prov_unmatched.json`.
+2. The new tags' flags are plain heraldic placeholders; EU5's coats of arms are not renderable from text.
+3. Starting technology, mission trees, events and decisions for 1337-1444 history are not written; base-game scripts
+   keyed to 1444 may misfire. Starts that need the owner's playtest: `error.log`.
+4. Religion: see above (Baltic/Finnic pagan own religions; verify the pagan group merges in-game).
+5. Possible historical errors in EU5's data are logged in `tools/corrections.md` (empty so far).

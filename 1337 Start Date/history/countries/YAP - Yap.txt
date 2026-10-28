@@ -3,5 +3,6 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = polynesian_tech
 primary_culture = melanesian
+add_accepted_culture = polynesian
 religion = animism
 capital = 1995

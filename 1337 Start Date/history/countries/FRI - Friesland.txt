@@ -2,6 +2,7 @@ government = republic
 add_government_reform = peasants_republic
 government_rank = 1
 primary_culture = frisian
+add_accepted_culture = dutch
 religion = catholic
 technology_group = western
 capital = 4382	# Groningen

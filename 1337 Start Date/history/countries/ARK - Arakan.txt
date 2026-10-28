@@ -1,6 +1,7 @@
 government = monarchy
 add_government_reform = mandala_reform 
 primary_culture = bengali
+add_accepted_culture = arakanese
 religion = buddhism
 capital = 2402	# Mrauk U
 technology_group = chinese

@@ -4,6 +4,7 @@ government_rank = 1
 technology_group = indian
 religion = hinduism
 primary_culture = marathi
+add_accepted_culture = rajput
 capital = 4491	# Mayuragiri
 
 #Rajas of Baglana

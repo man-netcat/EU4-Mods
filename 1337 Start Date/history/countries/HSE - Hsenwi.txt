@@ -3,6 +3,7 @@ add_government_reform = mandala_reform
 technology_group = chinese
 religion = buddhism
 primary_culture = assamese
+add_accepted_culture = shan
 capital = 583	# Hsenwi
 
 # Kengtung Dynasty (as representant)

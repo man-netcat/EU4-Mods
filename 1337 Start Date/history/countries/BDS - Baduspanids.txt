@@ -3,6 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = muslim
 primary_culture = mazandarani
+add_accepted_culture = khalkha
 religion = shiite
 capital = 2215
 

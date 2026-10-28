@@ -1,6 +1,7 @@
 government = monarchy
 add_government_reform = feudalism_reform
 primary_culture = catalan
+add_accepted_culture = aragonese
 religion = catholic
 technology_group = western
 capital = 213 # Tinto HQ

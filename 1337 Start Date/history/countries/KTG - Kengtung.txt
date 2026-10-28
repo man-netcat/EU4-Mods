@@ -3,6 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = chinese
 primary_culture = assamese
+add_accepted_culture = shan
 religion = buddhism
 capital = 587
 

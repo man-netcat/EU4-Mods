@@ -3,5 +3,6 @@ add_government_reform = tribal_despotism
 government_rank = 1
 technology_group = muslim
 primary_culture = beja
+add_accepted_culture = tigray
 religion = sunni
 capital = 1230

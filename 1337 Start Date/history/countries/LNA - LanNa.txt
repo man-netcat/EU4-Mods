@@ -3,6 +3,7 @@ add_government_reform = mandala_reform
 technology_group = chinese
 religion = buddhism
 primary_culture = northern_thai
+add_accepted_culture = central_thai
 capital = 589 # Chiang Mai
 
 

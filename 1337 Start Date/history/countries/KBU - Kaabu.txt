@@ -1,6 +1,7 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = tupinamba
+add_accepted_culture = senegambian
 religion = animism
 technology_group = sub_saharan
 unlock_cult = yemoja_cult

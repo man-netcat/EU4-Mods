@@ -1,6 +1,8 @@
 government = tribal
 add_government_reform = tribal_kingdom
 primary_culture = totonac
+add_accepted_culture = tecos
+add_accepted_culture = purepecha
 religion = nahuatl
 technology_group = mesoamerican
 capital = 2643

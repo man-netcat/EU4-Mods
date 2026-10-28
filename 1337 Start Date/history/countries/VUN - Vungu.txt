@@ -3,6 +3,7 @@ add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = central_african
 primary_culture = kongolese
+add_accepted_culture = mbundu
 religion = animism
 capital = 1098
 

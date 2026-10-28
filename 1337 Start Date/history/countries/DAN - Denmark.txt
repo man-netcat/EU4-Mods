@@ -3,6 +3,7 @@ historical_friend = UBV
 government = monarchy
 add_government_reform = kalmar_union
 primary_culture = danish
+add_accepted_culture = estonian
 religion = catholic
 technology_group = western
 capital = 12 #Sjaelland

@@ -3,5 +3,6 @@ add_government_reform = tribal_despotism
 government_rank = 1
 technology_group = muslim
 primary_culture = sindhi
+add_accepted_culture = baluchi
 religion = sunni
 capital = 2231

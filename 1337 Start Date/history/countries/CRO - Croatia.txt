@@ -1,6 +1,7 @@
 government = monarchy
 add_government_reform = feudalism_reform
 primary_culture = croatian
+add_accepted_culture = dalmatian
 religion = catholic
 technology_group = eastern
 capital = 137	# Zagreb
