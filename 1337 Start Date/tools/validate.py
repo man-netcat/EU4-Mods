@@ -162,6 +162,13 @@ def main():
     for m in re.finditer(r"^([A-Z0-9]{3})\s*=", (MOD / "common/country_tags/1337_tags.txt").read_text(encoding="latin-1"), re.M):
         if not (MOD / "gfx/flags" / f"{m[1]}.tga").exists():
             errs.append(f"{m[1]}: no flag")
+    # technology: years ascend, every group has a start level the countries' adjustments are relative to
+    for f in ("adm", "dip", "mil"):
+        yrs = [int(x) for x in re.findall(r"(?m)^\s*year\s*=\s*(\d+)", (MOD / f"common/technologies/{f}.txt").read_text(encoding="latin-1"))]
+        if yrs != sorted(yrs):
+            errs.append(f"technologies/{f}.txt: years not ascending")
+    if not re.search(r"start_level = \d", (MOD / "common/technology.txt").read_text(encoding="latin-1")):
+        errs.append("technology.txt: no start levels")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

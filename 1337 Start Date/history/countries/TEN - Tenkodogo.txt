@@ -10,6 +10,12 @@ capital = 2267
 
 #Kings of Yatenga, unknown dates of reign. Length determined to fill 150000-1754
 
+1337.3.1 = {
+	add_adm_tech = 1
+	add_dip_tech = 1
+	add_mil_tech = 1
+}
+
 1500.1.1 = {
 	monarch = {
 		name = "Yadega"

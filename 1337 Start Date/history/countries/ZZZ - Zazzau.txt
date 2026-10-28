@@ -12,6 +12,12 @@ capital = 1154	# Niani
 
 #Extremely speculative attempt to reconcile some very conflicting sources on the dating. (Basically by assuminng there were two Bakwa Turunku)
 
+1337.3.1 = {
+	add_adm_tech = 1
+	add_dip_tech = 1
+	add_mil_tech = 1
+}
+
 1509.1.1 = {
 	monarch = {
 		name = "Bakwa Turunku II"

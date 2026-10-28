@@ -6,3 +6,9 @@ primary_culture = sindhi
 add_accepted_culture = baluchi
 religion = sunni
 capital = 2231
+
+1337.3.1 = {
+	add_adm_tech = -1
+	add_dip_tech = -1
+	add_mil_tech = -1
+}

@@ -11,6 +11,12 @@ capital = 2256 #Yendi
 
 #Rulers
 
+1337.3.1 = {
+	add_adm_tech = 1
+	add_dip_tech = 1
+	add_mil_tech = 1
+}
+
 1454.1.1 = {
 	monarch = {
 		name = "Darigudeera"

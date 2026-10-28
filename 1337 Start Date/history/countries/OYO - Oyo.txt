@@ -11,6 +11,12 @@ capital = 1144	# Ife Ile
 
 #Alafins
 
+1337.3.1 = {
+	add_adm_tech = 1
+	add_dip_tech = 1
+	add_mil_tech = 1
+}
+
 1450.1.1 = {
 	monarch = {
 		name = "Sango"

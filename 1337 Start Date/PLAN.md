@@ -154,13 +154,22 @@ Charlemagne's Legacy; both files are written by `step_tags`.
   lives (`step_accepted`, the base game's 1444 lists stripped); placeholder flags for the new tags (`tools/flags.py`,
   never overwrites an existing file).
 
+## Technology
+
+EU5's `starting_technology_level` (3 for most, 0-2 for steppe, Siberian and Amerind states) is lifted by `step_technology`:
+the base game is on time at 1444 holding level 3 (year 1440), so a start 107 years earlier holds level 1. Every group's
+`start_level` becomes `max(0, level - 2)` (`common/technology.txt`), the years of levels 0-3 move to 1325/1340/1370/1410
+(`common/technologies/*.txt`, so the next level is researchable instead of 80 years "ahead of time"), and a country whose
+EU5 level differs from its group's gets `add_adm/dip/mil_tech` in a 1337.3.1 block (48 do). All derived from the base game's
+files at build time.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is
    in the 1337 table (plus `VANILLA_PROXY` in build.py), else are unowned. Hand aliases: `tools/data/aliases.json`;
    review `data/loc2prov_unmatched.json`.
 2. The new tags' flags are plain heraldic placeholders; EU5's coats of arms are not renderable from text.
-3. Starting technology, mission trees, events and decisions for 1337-1444 history are not written; base-game scripts
+3. Mission trees, events and decisions for 1337-1444 history are not written; base-game scripts
    keyed to 1444 may misfire. Starts that need the owner's playtest: `error.log`.
 4. Religion: see above (Baltic/Finnic pagan own religions; verify the pagan group merges in-game).
 5. Possible historical errors in EU5's data are logged in `tools/corrections.md` (empty so far).

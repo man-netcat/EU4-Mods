@@ -472,6 +472,12 @@ def step_countries(table, po, cmap, rmap, stats):
         text, got = ruler_text(tag, b, i.get("gov"), table, stats)
         body += text
         stats["rulers" if got else "no_ruler"] += 1
+        tg = re.search(r"(?m)^technology_group = (\w+)", body)
+        if tg and i.get("tech") is not None and tg[1] in TECH_GROUPS:
+            delta = tech_start(i["tech"]) - TECH_GROUPS[tg[1]]
+            if delta:
+                body += "\n1337.3.1 = {\n" + "".join(f"\tadd_{k}_tech = {delta}\n" for k in ("adm", "dip", "mil")) + "}\n"
+                stats["tech_adjusted"] += 1
         if tag in ELECTORS:
             body += "\nelector = yes\n"
         if tag == EMP[0] and "emperor = yes" not in body:
@@ -568,6 +574,50 @@ def step_bookmark(table):
     lines += [f"\tcountry = {t}" for t in ranked] + [""] + [f"\teasy_country = {t}" for t in easy] + ["}"]
     (MOD / "common/bookmarks/1337_start.txt").write_text("\n".join(lines) + "\n")
     return {"playable": len(ranked)}
+
+
+# Base-game technology years of levels 0-3 and the 1337 ones: the base game is on time at 1444 with level 3 (year
+# 1440); a start 107 years earlier holds level 1 on time and meets level 2 and 3 early enough to research them.
+TECH_YEARS = {1350: 1325, 1390: 1340, 1420: 1370, 1440: 1410}
+
+
+def tech_start(level):
+    """EU5's starting technology level (0-3, 3 the common one) as the EU4 level held at 1337.4.1."""
+    return max(0, int(level) - 2)
+
+
+def step_technology():
+    """common/technology.txt (start level of every technology group) and common/technologies/*.txt (the years
+    of levels 0-3), from the base game's files. Returns {technology group: start level}."""
+    src = (EU4_GAME / "common/technology.txt").read_text(encoding="latin-1")
+    groups = {}
+    cur = [None]
+
+    def lvl(m):
+        groups[cur[0]] = tech_start(m[2])
+        return f"{m[1]}{groups[cur[0]]}"
+
+    out = []
+    for line in src.split("\n"):
+        g = re.match(r"^\t(\w+) = \{", line)
+        if g:
+            cur[0] = g[1]
+        out.append(re.sub(r"^(\s*start_level\s*=\s*)(\d+)", lvl, line))
+    (MOD / "common").mkdir(exist_ok=True)
+    (MOD / "common/technology.txt").write_bytes("\n".join(out).encode("latin-1", "replace"))
+    d = MOD / "common/technologies"
+    shutil.rmtree(d, ignore_errors=True)
+    d.mkdir(parents=True)
+    for f in ("adm", "dip", "mil"):
+        text = (EU4_GAME / "common/technologies" / f"{f}.txt").read_text(encoding="latin-1")
+        seen = [0]
+
+        def year(m):
+            seen[0] += 1
+            return m[1] + str(TECH_YEARS.get(int(m[2]), int(m[2]))) if seen[0] <= 4 else m[0]
+
+        (d / f"{f}.txt").write_bytes(re.sub(r"(?m)^(\s*year\s*=\s*)(\d+)", year, text).encode("latin-1", "replace"))
+    return groups
 
 
 def step_institutions():
@@ -930,6 +980,7 @@ def step_rivals(table):
 
 EMP = [None]
 ELECTORS = set()
+TECH_GROUPS = {}
 MARRIAGES = set()  # (tag, tag) royal marriages: a ruler's consort comes from another country
 
 
@@ -945,6 +996,7 @@ def main():
     stats["hre_members"] = len(hre)
     step_provinces(table, po, cmap, rmap, stats, hre)
     stats["emperor"] = emperor
+    TECH_GROUPS.update(step_technology())
     EMP[0] = emperor
     step_countries(table, po, cmap, rmap, stats)
     stats["dormant"] = step_dormant(table, stats)

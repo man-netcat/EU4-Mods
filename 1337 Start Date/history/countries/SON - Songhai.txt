@@ -14,6 +14,12 @@ change_dhimmi_or_church_land_share_effect = {
 	share = 10
 }
 
+1337.3.1 = {
+	add_adm_tech = 1
+	add_dip_tech = 1
+	add_mil_tech = 1
+}
+
 1449.1.1 = {
 	monarch = {
 		name = "Mar Arandan"
