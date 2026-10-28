@@ -22,7 +22,7 @@ def tags_all():
 def names(kind):
     s = set()
     t = (EU4_GAME / f"common/{kind}")
-    for f in t.glob("*.txt"):
+    for f in [*t.glob("*.txt"), *(MOD / f"common/{kind}").glob("*.txt")]:
         for k, v in parse(f.read_text(encoding="latin-1")):
             if isinstance(v, list):
                 s.add(k)

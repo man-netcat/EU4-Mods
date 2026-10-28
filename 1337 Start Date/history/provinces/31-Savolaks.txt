@@ -1,7 +1,7 @@
 #Savolaks, incl. Nyslott(Olofsborg).
 
 culture = finnish
-religion = animism
+religion = finnish_pagan
 hre = no
 base_tax = 1 
 base_production = 1

@@ -95,6 +95,6 @@ generated output. Playtest is by the owner; paste `error.log` back.
    Hand aliases go in `tools/data/aliases.json`; review `data/loc2prov_unmatched.json`.
 2. Tags are matched by name + `ALIASES` in tagmap.py; ~384 are new tags with generated codes (no flags yet).
 3. EU5 accepted cultures, estates/land shares, ideas for new tags, flags, monarch names lists.
-4. Religion: Baltic/Finnic paganism has no vanilla EU4 religion (mapped to animism; needs a custom religion).
+4. Religion: Baltic and Finnic paganism are the mod's own religions (`common/religions/1337_religions.txt`, added to the vanilla `pagan` group; they borrow the Norse/shamanism icon frames, so the owner should check in-game that the group merges). Faiths EU4 lacks (Judaism, Jain, Cathar, Bosnian Church...) map to the nearest vanilla religion in `tools/tables.py` `RELIGION_HAND`, then `python3 tools/tables.py` rewrites `data/cr_map.json`.
 5. Governments for new tags copy the vanilla pattern of the area, overridden by EU5 type (tribe/horde/republic/theocracy).
 6. Possible historical errors to review in EU5 data are logged in `tools/corrections.md` (empty so far).

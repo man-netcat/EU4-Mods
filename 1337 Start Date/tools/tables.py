@@ -11,8 +11,13 @@ RELIGION_HAND = {
     "tengri": "tengri_pagan_reformed", "dreamtime_religion": "dreamtime", "inti": "inti",
     "mesoamerican": "nahuatl", "nahuatl": "nahuatl", "mayan": "mesoamerican_religion",
     "druzism": "shiite", "jewish": "jewish", "zoroastrian": "zoroastrian", "sikh": "sikhism",
-    # TODO(new religion): Baltic/Finnic paganism has no vanilla EU4 religion
-    "romuva": "animism", "muinaisusko": "animism", "sapmi_shamanism": "shamanism",
+    # Baltic and Finnic paganism are this mod's own religions (common/religions/1337_religions.txt)
+    "romuva": "baltic_pagan", "muinaisusko": "finnish_pagan", "votian_religion": "finnish_pagan",
+    "mari_paganism": "finnish_pagan", "erzya_religion": "finnish_pagan", "moksha_religion": "finnish_pagan",
+    "udmurt_paganism": "finnish_pagan", "komi_paganism": "finnish_pagan", "sapmi_shamanism": "shamanism",
+    # faiths EU4 has no religion for: the nearest one it does have, not animism
+    "judaism": "jewish", "samaritanism": "jewish", "jain": "hinduism", "bosnian_church": "catholic",
+    "catharism": "catholic", "waldensian": "catholic", "bogomilism": "orthodox", "paulicianism": "orthodox",
     "norse": "norse_pagan_reformed", "norse_pagan": "norse_pagan_reformed", "bantu_religion": "animism",
 }
 
