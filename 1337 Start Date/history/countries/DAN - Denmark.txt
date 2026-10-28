@@ -23,6 +23,15 @@ change_estate_land_share = {
 
 government_rank = 2
 
+monarch = {
+	name = "Waldemar"
+	dynasty = "Estrid"
+	birth_date = 1320.1.1
+	adm = 5
+	dip = 2
+	mil = 5
+}
+
 1445.9.26 = {
 	queen = {
 		country_of_origin = BRA

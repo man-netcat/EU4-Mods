@@ -5,3 +5,12 @@ technology_group = western
 primary_culture = austrian
 religion = catholic
 capital = 4751
+
+monarch = {
+	name = "Johan Henrik"
+	dynasty = "Görz"
+	birth_date = 1322.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

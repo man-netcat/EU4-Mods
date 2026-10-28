@@ -8,7 +8,7 @@ capital = 323	# Karaman
 religious_school = hanafi_school
 
 monarch = {
-	name = "Ala.Al_Din.Khalil"
+	name = "Ala al-Din Khalil"
 	birth_date = 1288.1.1
 	adm = 3
 	dip = 3

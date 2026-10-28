@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 4188	# Shinano
 
+monarch = {
+	name = "Sadamune I"
+	dynasty = "Ogasawara"
+	birth_date = 1292.4.30
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Masanaga"
+	dynasty = "Ogasawara"
+	birth_date = 1319.7.28
+	death_date = 1379.7.28
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1462.7.21 = {
 	monarch = {
 		name = "Kiyomune" 

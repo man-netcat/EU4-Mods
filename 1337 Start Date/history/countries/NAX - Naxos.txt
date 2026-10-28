@@ -17,6 +17,16 @@ monarch = {
 	dip = 3
 	mil = 3
 }
+queen = {
+	country = NAX
+	name = "Joanna"
+	dynasty = "Brienne"
+	birth_date = 1292.1.1
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1446.1.1 = {
 	heir = {

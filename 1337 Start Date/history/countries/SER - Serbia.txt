@@ -9,7 +9,7 @@ capital = 1766	# Krusevac
 government_rank = 2
 
 monarch = {
-	name = "Stephen.Uros IV"
+	name = "Stefan Urosh IV"
 	dynasty = "Nemanji?"
 	birth_date = 1312.1.1
 	adm = 5
@@ -17,7 +17,7 @@ monarch = {
 	mil = 6
 }
 heir = {
-	name = "Stephen.Uros"
+	name = "Stefan Urosh"
 	dynasty = "Nemanji?"
 	birth_date = 1336.1.1
 	death_date = 1396.1.1

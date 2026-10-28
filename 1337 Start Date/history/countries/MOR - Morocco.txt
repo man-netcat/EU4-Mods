@@ -26,7 +26,7 @@ change_estate_land_share = {
 government_rank = 2
 
 monarch = {
-	name = "Abu_Al_Hasan.Ali I"
+	name = "Abu al-Hasan Ali I"
 	dynasty = "Marinid"
 	birth_date = 1297.1.1
 	adm = 2
@@ -42,6 +42,16 @@ heir = {
 	adm = 3
 	dip = 3
 	mil = 5
+}
+queen = {
+	country = MOR
+	name = "Fatimah"
+	dynasty = "Hafsid"
+	birth_date = 1313.1.1
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
 }
 
 1465.1.1 = {

@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 4131 # Mutsu
 
+monarch = {
+	name = "Nobunaga I"
+	dynasty = "Nanbu"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Masayuki"
+	dynasty = "Nanbu"
+	birth_date = 1328.1.1
+	death_date = 1388.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1473.4.2 = {
 	monarch = {
 		name = "Michitsugu" 

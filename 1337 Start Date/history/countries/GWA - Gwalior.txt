@@ -9,6 +9,25 @@ fixed_capital = 525 # Cannot move capital away from this province & no power cos
 
 #Tomar Rajputs
 
+monarch = {
+	name = "Kunwar Pal"
+	dynasty = "Tomara"
+	birth_date = 1280.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Virsingh Dev"
+	dynasty = "Tomara"
+	birth_date = 1305.1.1
+	death_date = 1365.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1486.1.1 = {
 	monarch = {
 		name = "Man Singh"

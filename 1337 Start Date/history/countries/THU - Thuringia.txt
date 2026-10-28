@@ -6,6 +6,25 @@ religion = catholic
 technology_group = western
 capital = 4743	# Weimar
 
+monarch = {
+	name = "Frederick"
+	dynasty = "Wettin"
+	birth_date = 1290.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Frederick"
+	dynasty = "Wettin"
+	birth_date = 1332.12.14
+	death_date = 1392.12.14
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1445.9.10 = {
 	monarch = {
 		name = "Wilhelm III"

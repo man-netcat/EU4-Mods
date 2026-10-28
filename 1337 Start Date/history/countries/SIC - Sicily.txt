@@ -19,13 +19,14 @@ monarch = {
 	mil = 4
 }
 heir = {
-	name = "Alphonse"
-	birth_date = 1292.1.1
-	death_date = 1352.1.1
+	name = "Peter"
+	dynasty = "Aragon"
+	birth_date = 1305.7.24
+	death_date = 1365.7.24
 	claim = 95
 	adm = 3
-	dip = 4
-	mil = 2
+	dip = 3
+	mil = 3
 }
 
 1713.4.12 = {

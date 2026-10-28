@@ -7,7 +7,7 @@ religion = sunni
 capital = 433
 
 monarch = {
-	name = "Mubariz.Al_Din I"
+	name = "Mubariz al-Din I"
 	dynasty = "Muzaffarid"
 	birth_date = 1301.1.1
 	adm = 2
@@ -15,7 +15,7 @@ monarch = {
 	mil = 5
 }
 heir = {
-	name = "Shah.Shoja"
+	name = "Shah Shoja"
 	dynasty = "Muzaffarid"
 	birth_date = 1333.3.10
 	death_date = 1393.3.10

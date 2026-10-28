@@ -8,6 +8,15 @@ capital = 4480	# Mahi Kantha - Idar
 
 #Rulers of Idar
 
+monarch = {
+	name = "Kehar I"
+	dynasty = "Rathore"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1480.1.1 = {
 	monarch = {
 		name = "Surajmal"

@@ -15,6 +15,14 @@ monarch = {
 	dip = 4
 	mil = 3
 }
+queen = {
+	country = TIR
+	name = "Johan Henrik"
+	birth_date = 1322.2.12
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1454.1.1 = {
 	monarch = {

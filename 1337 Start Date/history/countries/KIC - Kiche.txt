@@ -5,6 +5,15 @@ religion = mesoamerican_religion
 technology_group = mesoamerican
 capital = 4587
 
+monarch = {
+	name = "K'okaib'"
+	dynasty = "Ah K'iche'"
+	birth_date = 1298.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1475.1.1 = {
 	monarch = {
 		name = "Vahxak i-Kaam"

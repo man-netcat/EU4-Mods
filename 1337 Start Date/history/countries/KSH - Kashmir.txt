@@ -8,6 +8,15 @@ religious_school = ismaili_school
 
 #Sultans of Kashmir
 
+monarch = {
+	name = "Haydar Khan"
+	dynasty = "Lohara"
+	birth_date = 1320.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1470.5.12 = {
 	monarch = {
 		name = "Haydar Shah"

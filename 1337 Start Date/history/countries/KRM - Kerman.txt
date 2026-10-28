@@ -8,7 +8,7 @@ capital = 432 # Kerman
 religious_school = ismaili_school
 
 monarch = {
-	name = "Qutb.Al_Din"
+	name = "Qutb al-Din"
 	dynasty = "Nikruzi"
 	birth_date = 1300.1.1
 	adm = 3

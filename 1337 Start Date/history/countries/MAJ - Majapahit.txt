@@ -19,6 +19,14 @@ monarch = {
 	dip = 5
 	mil = 4
 }
+queen = {
+	country = MAJ
+	name = "Cakradhara"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1447.1.1 = {
 	monarch = {

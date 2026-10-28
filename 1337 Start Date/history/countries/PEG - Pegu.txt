@@ -27,6 +27,16 @@ heir = {
 	dip = 2
 	mil = 1
 }
+queen = {
+	country = PEG
+	name = "Sanda Min Hla"
+	dynasty = "Wareru"
+	birth_date = 1300.1.1
+	female = yes
+	adm = 2
+	dip = 4
+	mil = 2
+}
 
 1446.1.1 = {
 	monarch = {

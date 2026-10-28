@@ -9,3 +9,11 @@ capital = 67 # Nürnberg
 fixed_capital = 67 # Cannot move capital away from this province & no power cost to move to it
 
 #Ruled by a council of Patricians
+
+monarch = {
+	name = "Rappold"
+	birth_date = 1280.1.1
+	adm = 4
+	dip = 4
+	mil = 4
+}

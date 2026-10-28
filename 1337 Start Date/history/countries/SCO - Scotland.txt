@@ -10,6 +10,25 @@ capital = 249 # Edinburgh
 
 government_rank = 2
 
+monarch = {
+	name = "David"
+	dynasty = "Bruce"
+	birth_date = 1324.3.5
+	adm = 3
+	dip = 3
+	mil = 3
+}
+queen = {
+	country = FRA
+	name = "Joanna"
+	dynasty = "Plantagenet"
+	birth_date = 1321.7.5
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1449.7.3 = {
 	queen = {
 		country_of_origin = GEL

@@ -6,6 +6,15 @@ religion = shinto
 technology_group = chinese
 capital = 1825	# Aki
 
+monarch = {
+	name = "Motoharu"
+	dynasty = "M?ri"
+	birth_date = 1323.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1464.1.1 = {
 	monarch = {
 		name = "Toyomoto" 

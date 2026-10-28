@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 4191	# Shimotsune
 
+monarch = {
+	name = "Kintsuna I"
+	dynasty = "Utsunomiya"
+	birth_date = 1302.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Ujitsuna"
+	dynasty = "Utsunomiya"
+	birth_date = 1326.1.1
+	death_date = 1386.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1460.3.23 = {
 	monarch = {
 		name = "Akitsuna" 

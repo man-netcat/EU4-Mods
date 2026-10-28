@@ -6,6 +6,15 @@ religion = shinto
 technology_group = chinese
 capital = 4190	# Shimousa
 
+monarch = {
+	name = "Sadatane I"
+	dynasty = "Chiba"
+	birth_date = 1292.1.6
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1445.1.8 = {
 	heir = {
 		name = "Tanenobu"

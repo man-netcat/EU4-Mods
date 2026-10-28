@@ -25,6 +25,16 @@ heir = {
 	dip = 3
 	mil = 3
 }
+queen = {
+	country = LIT
+	name = "Jewna"
+	dynasty = "Polotsk"
+	birth_date = 1280.1.1
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1461.8.5 = {
 	heir = {

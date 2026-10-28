@@ -6,6 +6,15 @@ religion = shinto
 technology_group = chinese
 capital = 1839	# Suruga
 
+monarch = {
+	name = "Norimasa I"
+	dynasty = "Ikeda"
+	birth_date = 1315.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1590.8.10 = { 
 	monarch = {
 		name = "Terumasa"

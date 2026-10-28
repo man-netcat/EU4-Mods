@@ -7,7 +7,7 @@ religion = sunni
 capital = 4326
 
 monarch = {
-	name = "Arghun.Shah"
+	name = "Arghun Shah"
 	dynasty = "Arghunid"
 	birth_date = 1280.1.1
 	adm = 3
@@ -15,7 +15,7 @@ monarch = {
 	mil = 3
 }
 heir = {
-	name = "Muhammad.Beg"
+	name = "Muhammad Beg"
 	dynasty = "Arghunid"
 	birth_date = 1300.1.1
 	death_date = 1360.1.1

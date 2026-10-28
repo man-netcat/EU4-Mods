@@ -8,7 +8,7 @@ capital = 4704	# Sofia
 government_rank = 3
 
 monarch = {
-	name = "John.Alexander"
+	name = "Johan Alexander"
 	dynasty = "Sratsimir"
 	birth_date = 1301.1.1
 	adm = 5
@@ -24,4 +24,14 @@ heir = {
 	adm = 2
 	dip = 2
 	mil = 4
+}
+queen = {
+	country = BUL
+	name = "Theodora"
+	dynasty = "Basarab"
+	birth_date = 1302.1.1
+	female = yes
+	adm = 2
+	dip = 3
+	mil = 3
 }

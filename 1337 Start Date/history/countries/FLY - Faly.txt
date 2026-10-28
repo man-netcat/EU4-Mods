@@ -6,6 +6,14 @@ primary_culture = irish
 religion = catholic
 capital = 4379	# Offaly
 
+monarch = {
+	name = "Murtagh"
+	birth_date = 1315.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1458.1.1 = {
 	monarch = {
 		name = "Conn"

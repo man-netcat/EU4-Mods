@@ -36,6 +36,15 @@ heir = {
 	dip = 4
 	mil = 6
 }
+queen = {
+	country = TUR
+	name = "Asporcha"
+	birth_date = 1278.1.1
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1446.1.1 = {
 	monarch = {

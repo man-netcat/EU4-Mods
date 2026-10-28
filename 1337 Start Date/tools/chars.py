@@ -56,10 +56,21 @@ def stat(c, k):
         return 3
 
 
+def _name_piece(piece):
+    n = names()
+    key = piece if piece.startswith("name_") else "name_" + piece
+    return n.get(key) or n.get(piece) or piece.replace("name_", "").replace("_", " ").title()
+
+
 def first_name(c):
+    """The character's name, or None when EU5 leaves it to the game to generate (`random`)."""
     fn = get(c, "first_name")
-    key = get(fn, "name") if isinstance(fn, list) else None
-    return names().get(key) or (key or "Unknown").replace("name_", "").title()
+    key = get(fn, "name") if isinstance(fn, list) else fn
+    if not key or key == "random":
+        return None
+    if key in names():
+        return names()[key]
+    return " ".join(_name_piece(p) for p in key.split("."))
 
 
 def dynasty_name(c):
@@ -75,6 +86,8 @@ def ascii_name(s):
 def block(cid, c, regnal=None, heir=False, indent="\t"):
     """EU4 monarch/heir body text."""
     name = first_name(c)
+    if name is None:
+        return None
     if regnal:
         name += " " + roman(regnal)
     b = date(get(c, "birth_date"))
@@ -103,6 +116,51 @@ def ruler_regnal(cid, tag_block):
             except (TypeError, ValueError):
                 return None
     return None
+
+
+def country_rulers(b):
+    """(ruler id, heir id or None) of an EU5 country block at the start date. The ruler is `ruler`; failing that the
+    open-ended ruler_term; failing that, in a regency, the heir who reigns under it. `ruler = random` is the
+    game's own to generate and gives None. The heir is the block's `heir`, else the eldest son."""
+    g = get(b, "government")
+    g = g if isinstance(g, list) else []
+    rid = get(g, "ruler")
+    chs = characters()
+    if rid == "random":
+        return None, None
+    heir = get(g, "heir")
+    if not rid:
+        open_terms = [get(t, "character") for t in getall(g, "ruler_term") if isinstance(t, list) and get(t, "end_date") is None]
+        rid = open_terms[-1] if open_terms else (heir if get(g, "active_regent") else None)
+        if rid == heir:
+            heir = None
+    if rid not in chs or not alive(chs[rid]):
+        return None, None
+    if heir not in chs or not alive(chs[heir]):
+        heir = find_heir(rid)[0]
+    return rid, heir
+
+
+def queen_block(cid, own_tag, tag_of=lambda t: None, indent="\t"):
+    """EU4 queen body from the ruler's living spouse (None when there is none or no usable name)."""
+    c = characters().get(cid)
+    sp = get(c, "spouse") if c else None
+    sc = characters().get(sp) if sp else None
+    if not sc or not alive(sc) or get(sc, "female") == get(c, "female"):
+        return None
+    name = first_name(sc)
+    b = date(get(sc, "birth_date"))
+    if name is None or b is None:
+        return None
+    lines = [f"country = {tag_of(get(sc, 'tag')) or own_tag}", f'name = "{name}"']
+    dyn = dynasty_name(sc)
+    if dyn:
+        lines.append(f'dynasty = "{dyn}"')
+    lines.append("birth_date = %d.%d.%d" % b)
+    if get(sc, "female") == "yes":
+        lines.append("female = yes")
+    lines += [f"adm = {stat(sc, 'adm')}", f"dip = {stat(sc, 'dip')}", f"mil = {stat(sc, 'mil')}"]
+    return "\n".join(indent + l for l in lines)
 
 
 def find_heir(cid):

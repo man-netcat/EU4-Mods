@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1017	# Suo
 
+monarch = {
+	name = "Hiroyuki I"
+	dynasty = "?uchi"
+	birth_date = 1305.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Hiroyo"
+	dynasty = "?uchi"
+	birth_date = 1326.1.1
+	death_date = 1386.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1446.8.27 = {
 	heir = {
 		name = "Masahiro"

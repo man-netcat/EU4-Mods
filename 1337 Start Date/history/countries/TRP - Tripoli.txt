@@ -10,6 +10,25 @@ religious_school = maliki_school
 
 #Based in Djerba
 
+monarch = {
+	name = "Muhammad I"
+	dynasty = "Th?bit"
+	birth_date = 1293.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Thabit"
+	dynasty = "Th?bit"
+	birth_date = 1322.1.1
+	death_date = 1382.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1503.1.1 = {
 	monarch = {
 		name = "Oruç Reis"

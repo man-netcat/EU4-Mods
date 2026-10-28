@@ -26,6 +26,15 @@ heir = {
 	dip = 3
 	mil = 3
 }
+queen = {
+	country = EPI
+	name = "Eudokia"
+	birth_date = 1289.1.1
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1448.9.30 = {
 	monarch = {

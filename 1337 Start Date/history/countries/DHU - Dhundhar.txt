@@ -7,6 +7,15 @@ technology_group = indian
 capital = 519	# Jaipur
 fixed_capital = 519 # Cannot move capital away from this province & no power cost to move to it
 
+monarch = {
+	name = "Jansi Deo I"
+	dynasty = "Kachhwaha"
+	birth_date = 1290.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1467.1.1 = {
 	monarch = {
 		name = "Chandra Sena"

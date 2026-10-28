@@ -24,3 +24,12 @@ heir = {
 	dip = 4
 	mil = 4
 }
+queen = {
+	country = SNG
+	name = "Wan Sri Bini"
+	birth_date = 1280.1.1
+	female = yes
+	adm = 4
+	dip = 3
+	mil = 3
+}

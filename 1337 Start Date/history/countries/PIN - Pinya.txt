@@ -24,3 +24,13 @@ heir = {
 	dip = 3
 	mil = 1
 }
+queen = {
+	country = PIN
+	name = "Atula"
+	dynasty = "Pagan"
+	birth_date = 1295.1.1
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
+}

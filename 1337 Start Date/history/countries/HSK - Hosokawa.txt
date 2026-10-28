@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1021	# Settsu
 
+monarch = {
+	name = "Kazuuji I"
+	dynasty = "Hosokawa"
+	birth_date = 1296.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Kiyouji"
+	dynasty = "Hosokawa"
+	birth_date = 1325.1.1
+	death_date = 1385.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1466.1.1 = {
 	heir = {
 		name = "Masamoto"

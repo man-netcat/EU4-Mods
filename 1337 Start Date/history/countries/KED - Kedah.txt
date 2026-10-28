@@ -25,6 +25,15 @@ heir = {
 	dip = 4
 	mil = 3
 }
+queen = {
+	country = KED
+	name = "Tunku Mala"
+	birth_date = 1310.1.1
+	female = yes
+	adm = 2
+	dip = 3
+	mil = 2
+}
 
 1472.1.1 = {
 	monarch = {

@@ -11,7 +11,7 @@ capital = 552	# Cuttack
 government_rank = 2
 
 monarch = {
-	name = "Narasimha.Deva III"
+	name = "Narasinha Deva III"
 	dynasty = "Purba Ganga"
 	birth_date = 1300.1.1
 	adm = 3

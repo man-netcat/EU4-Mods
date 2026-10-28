@@ -6,6 +6,15 @@ religion = shinto
 technology_group = chinese
 capital = 4181	# Higo
 
+monarch = {
+	name = "Takeshige I"
+	dynasty = "Kikuchi"
+	birth_date = 1307.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1446.1.1 = { 
 	monarch = {
 		name = "Tamekuni"

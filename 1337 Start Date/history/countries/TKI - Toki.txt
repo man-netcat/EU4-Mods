@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1835	# Mino
 
+monarch = {
+	name = "Yorisada I"
+	dynasty = "Toki"
+	birth_date = 1271.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Yorito"
+	dynasty = "Toki"
+	birth_date = 1295.1.1
+	death_date = 1355.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1467.1.1 = { 
 	monarch = {
 		name = "Shigeyori"

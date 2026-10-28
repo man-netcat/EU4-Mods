@@ -7,6 +7,16 @@ religion = catholic
 primary_culture = irish
 capital = 4121	# Ulster
 
+monarch = {
+	name = "Elizabeth"
+	female = yes
+	dynasty = "Burgh"
+	birth_date = 1332.6.6
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1480.1.1 = { #Also Fictional
 	monarch = {
 		name = "Donal"

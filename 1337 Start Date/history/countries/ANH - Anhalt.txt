@@ -7,6 +7,15 @@ religion = catholic
 capital = 58	# Dessau
 fixed_capital = 58 # Cannot move capital away from this province & no power cost to move to it
 
+monarch = {
+	name = "Albert II"
+	dynasty = "Askanier"
+	birth_date = 1310.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1450.1.1 = {
 	heir = {
 		name = "Ernst"

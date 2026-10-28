@@ -15,3 +15,12 @@ monarch = {
 	dip = 3
 	mil = 3
 }
+queen = {
+	country = LDB
+	name = "Magnus"
+	dynasty = "Welf"
+	birth_date = 1304.6.24
+	adm = 3
+	dip = 3
+	mil = 2
+}

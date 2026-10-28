@@ -352,6 +352,26 @@ NATIVE_TECH = {"north_american", "mesoamerican", "andean", "south_american", "ab
 RANK = {"rank_county": 1, "rank_duchy": 1, "rank_kingdom": 2, "rank_empire": 3}
 
 
+def ruler_text(tag, b, gov, table, stats):
+    """monarch / heir / queen blocks for an EU5 country block `b` (empty when EU5 leaves the ruler random)."""
+    rid, hid = chars.country_rulers(b) if b else (None, None)
+    ch = chars.characters().get(rid) if rid else None
+    mb = chars.block(rid, ch, chars.ruler_regnal(rid, b)) if ch and b else None
+    if not mb:
+        return "", False
+    out = "\nmonarch = {\n" + mb + "\n}\n"
+    hch = chars.characters().get(hid) if hid else None
+    hb = chars.block(hid, hch, heir=True) if hch else None
+    if hb:
+        out += "heir = {\n" + hb + "\n}\n"
+        stats["heirs"] += 1
+    qb = chars.queen_block(rid, tag, lambda t: (table.get(t) or {}).get("eu4")) if gov != "republic" else None
+    if qb:
+        out += "queen = {\n" + qb + "\n}\n"
+        stats["queens"] += 1
+    return out, True
+
+
 def step_countries(table, po, cmap, rmap, stats):
     out = MOD / "history/countries"
     shutil.rmtree(out, ignore_errors=True)
@@ -438,36 +458,46 @@ def step_countries(table, po, cmap, rmap, stats):
             kept = []
             fname = f"{tag} - {latin1(ascii_(nm))}.txt"
             stats["new_tags"] += 1
-        # rulers
-        rid = i.get("ruler")
-        ch = chars.characters().get(rid) if rid else None
-        mb = chars.block(rid, ch, chars.ruler_regnal(rid, b)) if ch and b else None
-        if mb:
-            body += "\nmonarch = {\n" + mb + "\n}\n"
-            hid, hch = chars.find_heir(rid)
-            hb = chars.block(hid, hch, heir=True) if hch else None
-            if hb:
-                body += "heir = {\n" + hb + "\n}\n"
-            stats["rulers"] += 1
-        else:
-            stats["no_ruler"] += 1
+        # rulers, heirs and consorts, lifted from EU5's characters
+        text, got = ruler_text(tag, b, i.get("gov"), table, stats)
+        body += text
+        stats["rulers" if got else "no_ruler"] += 1
         if tag == EMP[0] and "emperor = yes" not in body:
             body += "\nemperor = yes\n"
         res = body + "\n" + "".join(kept)
         (out / fname).write_bytes(res.rstrip().encode("latin-1", "replace") + b"\n")
 
 
-def step_dormant(table):
-    """vanilla tags with no EU5 1337 counterpart keep their files (backstory entries dropped)"""
+def step_dormant(table, stats):
+    """vanilla tags with no EU5 1337 counterpart that holds land keep their files (backstory entries dropped);
+    where EU5 has a country of the same name (no land of ours), it lends its ruler, heir and consort."""
+    from loc2prov import norm
+    import tagmap
     out = MOD / "history/countries"
     used = {r["eu4"] for r in table.values()}
+    n4, e4 = tagmap.eu4_names(), tagmap.eu4_tags()
+    by_name = {}
+    for t in sorted(e4):
+        if t in n4:
+            by_name.setdefault(norm(n4[t]), t)
+    cdict = dict(countries())
+    lent = {}
+    for t5, b in cdict.items():
+        cand = tagmap.ALIASES.get(t5) or by_name.get(norm(eu5info.display(t5)))
+        if cand and cand not in used and cand not in lent:
+            lent[cand] = b
     n = 0
     for f in sorted((VAN / "countries").iterdir()):
         if f.name[:3] in used:
             continue
         base, blocks = split_blocks(f.read_text(encoding="latin-1"))
         base = strip_depth0(base, r"\s*(?:monarch|heir|queen)\s*=")
-        res = base.rstrip() + "\n\n" + "".join(b for d, b in blocks if d > BACKSTORY_END)
+        res = base.rstrip() + "\n"
+        if f.name[:3] in lent:
+            text, got = ruler_text(f.name[:3], lent[f.name[:3]], None, table, stats)
+            res += text
+            stats["dormant_rulers"] += got
+        res += "\n" + "".join(b_ for d, b_ in blocks if d > BACKSTORY_END)
         (out / f.name).write_bytes(res.rstrip().encode("latin-1", "replace") + b"\n")
         n += 1
     return n
@@ -692,7 +722,7 @@ def main():
     stats["emperor"] = emperor
     EMP[0] = emperor
     step_countries(table, po, cmap, rmap, stats)
-    stats["dormant"] = step_dormant(table)
+    stats["dormant"] = step_dormant(table, stats)
     step_tags(table)
     stats["diplomacy"] = step_diplomacy(table)
     stats["wars"] = step_wars(table)

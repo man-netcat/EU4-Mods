@@ -7,7 +7,7 @@ religion = sunni
 capital = 2218
 
 monarch = {
-	name = "Ghiyath.Al_Din I"
+	name = "Ghiyath al-Din I"
 	dynasty = "Injuid"
 	birth_date = 1300.1.1
 	adm = 3

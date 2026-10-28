@@ -6,7 +6,7 @@ technology_group = indian
 capital = 2058	# Chittogarh
 
 monarch = {
-	name = "Hammir.Singh"
+	name = "Hammir Singh"
 	dynasty = "Sisodia"
 	birth_date = 1302.1.1
 	adm = 3

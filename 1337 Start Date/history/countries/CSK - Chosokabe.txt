@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1819	# Tosa
 
+monarch = {
+	name = "Nobuyoshi I"
+	dynasty = "Ch?sokabe"
+	birth_date = 1305.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Kaneyoshi"
+	dynasty = "Ch?sokabe"
+	birth_date = 1325.1.1
+	death_date = 1385.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1450.1.1 = {
 	monarch = {
 		name = "Motokado" 

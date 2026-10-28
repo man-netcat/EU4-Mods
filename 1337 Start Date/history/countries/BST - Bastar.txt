@@ -8,7 +8,7 @@ capital = 547	# Bastar
 fixed_capital = 547 # Cannot move capital away from this province & no power cost to move to it
 
 monarch = {
-	name = "Annan.Deo"
+	name = "Annan Deo"
 	dynasty = "Kakatiya"
 	birth_date = 1300.1.1
 	adm = 3

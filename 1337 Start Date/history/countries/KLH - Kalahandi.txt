@@ -8,6 +8,15 @@ capital = 4446	# Kalahandi
 
 #The royal house of Kalahandi
 
+monarch = {
+	name = "Raghuraj Deo"
+	dynasty = "Naga"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1468.1.1 = {
 	monarch = {
 		name = "Harirudra Deo"

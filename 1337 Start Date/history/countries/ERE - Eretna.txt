@@ -8,7 +8,7 @@ capital = 329	# Sivas
 religious_school = hanafi_school
 
 monarch = {
-	name = "Ala.Al_Din"
+	name = "Ala al-Din"
 	birth_date = 1290.1.1
 	adm = 3
 	dip = 3

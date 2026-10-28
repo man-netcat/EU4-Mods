@@ -7,7 +7,7 @@ religion = shiite
 capital = 2073
 
 monarch = {
-	name = "Sau.Malik II"
+	name = "Sau Malik II"
 	dynasty = "Trakhan"
 	birth_date = 1256.1.1
 	adm = 3

@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 4185	# Tango
 
+monarch = {
+	name = "Noriuji I"
+	dynasty = "Isshiki"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Naouji"
+	dynasty = "Isshiki"
+	birth_date = 1320.1.1
+	death_date = 1380.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1451.12.21 = {
 	monarch = {
 		name = "Yoshinao" 

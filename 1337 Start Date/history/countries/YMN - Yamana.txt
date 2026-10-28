@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1830	# Tajima
 
+monarch = {
+	name = "Masauji I"
+	dynasty = "Yamana"
+	birth_date = 1280.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Tokiuji"
+	dynasty = "Yamana"
+	birth_date = 1303.1.1
+	death_date = 1363.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1467.10.7 = {
 	heir = {
 		name = "Masatoyo"

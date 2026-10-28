@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 4182	# Hizen
 
+monarch = {
+	name = "Yorihisa I"
+	dynasty = "Sh?ni"
+	birth_date = 1294.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Tadasuke"
+	dynasty = "Sh?ni"
+	birth_date = 1320.1.1
+	death_date = 1380.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1450.1.1 = {
 	heir = {
 		name = "Masasuke"

@@ -9,7 +9,7 @@ religion = sunni
 capital = 428
 
 monarch = {
-	name = "Togha.Timur"
+	name = "Togha Timur"
 	dynasty = "Borjigin"
 	birth_date = 1300.1.1
 	adm = 2

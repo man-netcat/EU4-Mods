@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1027	# Hitachi
 
+monarch = {
+	name = "Sadayoshi I"
+	dynasty = "Satake"
+	birth_date = 1287.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Yoshiatsu"
+	dynasty = "Satake"
+	birth_date = 1311.1.1
+	death_date = 1371.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1468.1.19 = { 
 	monarch = {
 		name = "Yoshitoshi"

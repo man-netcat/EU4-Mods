@@ -7,7 +7,7 @@ religion = hinduism
 capital = 4462
 
 monarch = {
-	name = "Dungar.Singh I"
+	name = "Dungar Singh I"
 	dynasty = "Sisodia"
 	birth_date = 1301.1.1
 	adm = 3

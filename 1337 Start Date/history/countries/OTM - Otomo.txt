@@ -6,6 +6,15 @@ religion = shinto
 technology_group = chinese
 capital = 1014	# Bungo
 
+monarch = {
+	name = "Ujiyasu I"
+	dynasty = "?tomo"
+	birth_date = 1321.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1445.1.1 = {
 	monarch = {
 		name = "Chikatsuna"

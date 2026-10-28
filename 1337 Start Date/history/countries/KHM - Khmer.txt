@@ -27,6 +27,16 @@ heir = {
 	dip = 2
 	mil = 3
 }
+queen = {
+	country = KHM
+	name = "Candravati"
+	dynasty = "Indravarman"
+	birth_date = 1280.1.1
+	female = yes
+	adm = 4
+	dip = 4
+	mil = 2
+}
 
 1463.1.1 = {
 	monarch = {

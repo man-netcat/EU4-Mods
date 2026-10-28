@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1023	# Echizen
 
+monarch = {
+	name = "Takatsune I"
+	dynasty = "Shiba"
+	birth_date = 1305.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Ienaga"
+	dynasty = "Shiba"
+	birth_date = 1321.1.1
+	death_date = 1381.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1452.10.13 = {
 	monarch = {
 		name = "Yoshitoshi" 

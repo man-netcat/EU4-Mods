@@ -8,6 +8,15 @@ capital = 2966
 
 # Dukes of Olawa/Lubin
 
+monarch = {
+	name = "Henrik I"
+	dynasty = "Piast"
+	birth_date = 1294.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1446.5.3 = {
 	heir = {
 		name = "Fryderyk"

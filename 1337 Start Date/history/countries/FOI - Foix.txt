@@ -15,7 +15,7 @@ monarch = {
 	mil = 4
 }
 heir = {
-	name = "Arnold.William"
+	name = "Arnold William"
 	dynasty = "Foix"
 	birth_date = 1330.1.1
 	death_date = 1390.1.1

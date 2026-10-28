@@ -7,7 +7,7 @@ religion = hinduism
 capital = 4419
 
 monarch = {
-	name = "Prolaya.Vema I"
+	name = "Prolaya Vema I"
 	dynasty = "Reddi"
 	birth_date = 1300.1.1
 	adm = 3

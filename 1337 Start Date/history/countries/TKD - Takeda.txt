@@ -6,6 +6,25 @@ religion = shinto
 technology_group = chinese
 capital = 1029	# Kai
 
+monarch = {
+	name = "Nobutake I"
+	dynasty = "Takeda"
+	birth_date = 1292.5.22
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Nobunari"
+	dynasty = "Takeda"
+	birth_date = 1310.1.1
+	death_date = 1370.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1450.12.28 = { 
 	monarch = {
 		name = "Nobumori"

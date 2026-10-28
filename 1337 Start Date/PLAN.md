@@ -106,6 +106,14 @@ generated output. Playtest is by the owner; paste `error.log` back.
 - Rivals/friends: `step_rivals` writes `historical_rival` (20_rivals) and `historical_friend` (alliances); the
   1444 ones in vanilla country files are stripped.
 
+## Rulers
+
+`chars.country_rulers`: the country's `ruler`, else its open-ended ruler_term, else (in a regency) the heir who reigns
+under it; heir = the block's `heir`, else the eldest son; queen = the ruler's living spouse. Compound EU5 names
+(`name_stephen.name_uros`) are resolved. Countries whose EU5 ruler is `random` (~275 of ours) have none in the data,
+so EU4 generates one at start. Vanilla tags without land of ours (`step_dormant`) take the ruler of the same-named EU5
+country (49 so far).
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy (fixed `eu4_geo` reading area colours as provinces, plus ~70 hand aliases for Europe and the Near East); ~735 unmapped keep their vanilla owner only if

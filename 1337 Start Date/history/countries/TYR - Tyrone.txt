@@ -26,6 +26,15 @@ heir = {
 	dip = 3
 	mil = 3
 }
+queen = {
+	country = TYR
+	name = "Bridget"
+	birth_date = 1310.1.1
+	female = yes
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1455.1.1 = {
 	monarch = {
