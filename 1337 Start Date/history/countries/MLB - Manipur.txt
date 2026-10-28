@@ -8,6 +8,15 @@ fixed_capital = 2041 # Cannot move capital away from this province & no power co
 
 #Rajas of Manipur
 
+monarch = {
+	name = "Telheipa"
+	dynasty = "Kangleipak"
+	birth_date = 1285.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1467.1.1 = {
 	monarch = {
 		name = "Senbi Kiyamba"

@@ -1,9 +1,9 @@
 #333 - The Baleares
 
-owner = MLL
-controller = MLL
+owner = MJO
+controller = MJO
 add_core = ARA
-add_core = MLL
+add_core = MJO
 is_city = yes
 culture = catalan
 religion = catholic

@@ -4,8 +4,17 @@ government_rank = 1
 technology_group = indian
 religion = hinduism
 primary_culture = vindhyan
-capital = 2097	# Baghelkhand
+capital = 4468	# Baghelkhand
 fixed_capital = 2097 # Cannot move capital away from this province & no power cost to move to it
+
+monarch = {
+	name = "Sohagdeva"
+	dynasty = "Baghela"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1495.1.1 = {
 	monarch = {

@@ -2,10 +2,29 @@ government = monarchy
 add_government_reform = sharifate_reform
 government_rank = 1
 technology_group = muslim
-religion = sunni
+religion = shiite
 primary_culture = hejazi_culture
 capital = 385	# Jiddah
 religious_school = shafii_school
+
+monarch = {
+	name = "Asad al-D?n I"
+	dynasty = "Qatadid"
+	birth_date = 1275.1.1
+	adm = 2
+	dip = 2
+	mil = 3
+}
+heir = {
+	name = "'Izz al-D?n"
+	dynasty = "Qatadid"
+	birth_date = 1307.1.1
+	death_date = 1367.1.1
+	claim = 95
+	adm = 1
+	dip = 2
+	mil = 3
+}
 
 1446.1.1 = {
 	monarch = {

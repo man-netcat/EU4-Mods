@@ -6,3 +6,24 @@ religion = catholic
 primary_culture = catalan
 technology_group = western
 capital = 333	# Majorca
+
+government_rank = 2
+
+monarch = {
+	name = "James III"
+	dynasty = "Aragon"
+	birth_date = 1315.4.5
+	adm = 3
+	dip = 3
+	mil = 2
+}
+heir = {
+	name = "James"
+	dynasty = "Aragon"
+	birth_date = 1336.8.26
+	death_date = 1396.8.26
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

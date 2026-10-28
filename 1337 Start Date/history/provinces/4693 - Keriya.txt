@@ -1,8 +1,8 @@
 # 4693 - Keriya
 
-owner = DGH
-controller = DGH
-add_core = DGH
+owner = KAS
+controller = KAS
+add_core = KAS
 is_city = yes
 culture = uzbehk
 religion = sunni

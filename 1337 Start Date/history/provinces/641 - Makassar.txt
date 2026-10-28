@@ -1,8 +1,8 @@
 #641 - Makassar
 
-owner = GOW
-controller = GOW
-add_core = GOW
+owner = MKS
+controller = MKS
+add_core = MKS
 is_city = yes
 culture = sulawesi
 religion = animism

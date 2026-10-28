@@ -1,8 +1,8 @@
 #2331 - Jeddah
 
-owner = MEC
-controller = MEC
-add_core = MEC
+owner = HED
+controller = HED
+add_core = HED
 is_city = yes
 culture = hejazi_culture
 religion = shiite

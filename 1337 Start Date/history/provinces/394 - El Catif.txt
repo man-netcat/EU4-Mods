@@ -1,8 +1,8 @@
 #394 - El Catif
 
-owner = JRW
-controller = JRW
-add_core = JRW
+owner = ALH
+controller = ALH
+add_core = ALH
 is_city = yes
 culture = gulf_arabic
 religion = shiite

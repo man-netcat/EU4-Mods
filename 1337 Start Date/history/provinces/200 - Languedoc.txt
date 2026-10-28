@@ -1,9 +1,9 @@
 # 200 Languedoc - Principal cities: Montpellier
 
-owner = MLL
-controller = MLL
+owner = MJO
+controller = MJO
 add_core = ARA
-add_core = MLL
+add_core = MJO
 add_core = TOU
 is_city = yes
 capital = "Montpellier"

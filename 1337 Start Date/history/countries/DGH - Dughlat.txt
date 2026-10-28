@@ -1,7 +1,0 @@
-government = tribal
-add_government_reform = steppe_horde
-government_rank = 1
-technology_group = chinese
-primary_culture = khalkha
-religion = sunni
-capital = 739

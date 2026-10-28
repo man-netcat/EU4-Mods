@@ -1,8 +1,8 @@
 #2230 - Chakansur
 
-owner = MIH
-controller = MIH
-add_core = MIH
+owner = SIS
+controller = SIS
+add_core = SIS
 is_city = yes
 culture = afghani
 religion = sunni

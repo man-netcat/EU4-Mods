@@ -1,3 +1,0 @@
-graphical_culture = northamericagfx
-
-color = { 31 246 56 }

@@ -1,8 +1,8 @@
 #406 - As Sahiliyah
 
-owner = FDL
-controller = FDL
-add_core = FDL
+owner = FAD
+controller = FAD
+add_core = FAD
 add_core = JAL
 is_city = yes
 culture = al_iraqiya_arabic

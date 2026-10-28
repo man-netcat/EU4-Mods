@@ -1,6 +1,6 @@
 government = monarchy
 add_government_reform = iqta
-primary_culture = khorasani
+primary_culture = persian
 religion = sunni
 government_rank = 1
 technology_group = muslim
@@ -8,6 +8,25 @@ capital = 435	# Zaranj
 religious_school = shafii_school
 
 #Mihrabanids
+
+monarch = {
+	name = "Qutb al-Din"
+	dynasty = "Mihrabanid"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Taj al-Din"
+	dynasty = "Mihrabanid"
+	birth_date = 1320.1.1
+	death_date = 1380.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1480.1.1 = {
 	monarch = {

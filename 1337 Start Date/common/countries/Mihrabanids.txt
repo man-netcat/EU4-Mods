@@ -1,3 +1,0 @@
-graphical_culture = muslimgfx
-
-color = { 224 74 54 }

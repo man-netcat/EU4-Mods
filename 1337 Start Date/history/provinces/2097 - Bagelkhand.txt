@@ -1,8 +1,8 @@
 #2097 - Baghelkhand
 
-owner = BGK
-controller = BGK
-add_core = BGK
+owner = BGL
+controller = BGL
+add_core = BGL
 is_city = yes
 culture = vindhyan
 religion = hinduism

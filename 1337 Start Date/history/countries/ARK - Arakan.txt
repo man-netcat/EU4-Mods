@@ -1,9 +1,18 @@
 government = monarchy
 add_government_reform = mandala_reform 
-primary_culture = arakanese
+primary_culture = bengali
 religion = buddhism
-capital = 579	# Mrauk U
+capital = 2402	# Mrauk U
 technology_group = chinese
+
+monarch = {
+	name = "Min Hti"
+	dynasty = "Launggyet"
+	birth_date = 1274.1.1
+	adm = 4
+	dip = 4
+	mil = 4
+}
 
 1459.1.1 = {
 	monarch = {

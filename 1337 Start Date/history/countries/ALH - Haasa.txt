@@ -2,12 +2,21 @@ government = monarchy
 add_government_reform = iqta
 government_rank = 1 #Emirate
 technology_group = muslim
-religion = sunni
+religion = shiite
 primary_culture = gulf_arabic
 capital = 394	# Al Hasa
 religious_school = maliki_school
 
 #Rulers of Qatif
+
+monarch = {
+	name = "Jarwan"
+	dynasty = "Jarwanid"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1480.1.1 = {
 	heir = {

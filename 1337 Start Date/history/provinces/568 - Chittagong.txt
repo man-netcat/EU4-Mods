@@ -1,8 +1,8 @@
 #568 - Chittagong
 
-owner = LAA
-controller = LAA
-add_core = LAA
+owner = ARK
+controller = ARK
+add_core = ARK
 is_city = yes
 culture = bengali
 religion = buddhism #A good case could be made that this province was atleast 50% buddhist

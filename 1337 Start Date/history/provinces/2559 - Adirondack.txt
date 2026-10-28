@@ -1,8 +1,8 @@
 # No previous file for Adirondack
 
-owner = KKA
-controller = KKA
-add_core = KKA
+owner = MOH
+controller = MOH
+add_core = MOH
 is_city = yes
 culture = iroquois
 religion = totemism

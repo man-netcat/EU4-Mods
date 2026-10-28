@@ -187,6 +187,10 @@ ALIASES = {
     "AJU": "AJU", "COC": "COC", "TLX": "TLX", "YOK": "YOK", "XIU": "XIU", "KBO": "KBO", "KNI": "KNI",
     "ALS": "ALS", "CLM": "CLM", "JLW": "JLV", "KLT": "KLT", "MEN": "MEN", "MUA": "MPH", "NAV": "NAV",
     "ONN": "ONO", "MDY": "MAS",
+    # same polity under another name in the base game (Viennois = Dauphine, Kangleipak = Manipur, Mecca = Hejaz ...)
+    "ARK": "ARK", "AYD": "AYD", "BGK": "BGL", "CUT": "SDY", "DAU": "DAU", "DGH": "KAS", "FDL": "FAD", "GOW": "MKS",
+    "GYO": "CAY", "HTR": "SHL", "JRW": "ALH", "KKA": "MOH", "MEC": "HED", "MIH": "SIS", "MLB": "MLB", "MLL": "MJO",
+    "ONY": "ONE",
     "CRT": "CRT", "GEL": "GEL", "SUL": "SUL", "MBA": "MBA", "ZAP": "ZAP", "SRU": "SRU", "ASU": "ASU",
 }
 

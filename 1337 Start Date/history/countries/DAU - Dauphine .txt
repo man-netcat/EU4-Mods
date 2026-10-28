@@ -6,6 +6,15 @@ religion = catholic
 primary_culture = occitain
 capital = 204	# Grenoble
 
+monarch = {
+	name = "Humbert II"
+	dynasty = "la Tour du Pin"
+	birth_date = 1312.1.1
+	adm = 4
+	dip = 2
+	mil = 2
+}
+
 1515.1.1 = { government = monarchy
 add_government_reform = autocracy_reform }
 

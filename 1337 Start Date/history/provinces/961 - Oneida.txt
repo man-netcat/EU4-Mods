@@ -1,8 +1,8 @@
 #961 - Oneida
 
-owner = ONY
-controller = ONY
-add_core = ONY
+owner = ONE
+controller = ONE
+add_core = ONE
 is_city = yes
 culture = iroquois
 religion = totemism

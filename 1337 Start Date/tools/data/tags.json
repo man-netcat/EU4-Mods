@@ -140,9 +140,9 @@
 "new": true
 },
 "ARK": {
-"eu4": "LAA",
+"eu4": "ARK",
 "name": "Launggyet",
-"new": true
+"new": false
 },
 "ARM": {
 "eu4": "ARM",
@@ -185,9 +185,9 @@
 "new": true
 },
 "AYD": {
-"eu4": "AYA",
+"eu4": "AYD",
 "name": "Aydınids",
-"new": true
+"new": false
 },
 "AZF": {
 "eu4": "AZF",
@@ -235,9 +235,9 @@
 "new": false
 },
 "BGK": {
-"eu4": "BGK",
+"eu4": "BGL",
 "name": "Bagelkhand",
-"new": true
+"new": false
 },
 "BGL": {
 "eu4": "BGA",
@@ -610,9 +610,9 @@
 "new": true
 },
 "CUT": {
-"eu4": "CUT",
+"eu4": "SDY",
 "name": "Chutia",
-"new": true
+"new": false
 },
 "CUZ": {
 "eu4": "CUZ",
@@ -650,9 +650,9 @@
 "new": false
 },
 "DAU": {
-"eu4": "VIA",
+"eu4": "DAU",
 "name": "Viennois",
-"new": true
+"new": false
 },
 "DBD": {
 "eu4": "DBD",
@@ -665,9 +665,9 @@
 "new": false
 },
 "DGH": {
-"eu4": "DGH",
+"eu4": "KAS",
 "name": "Dughlat",
-"new": true
+"new": false
 },
 "DGR": {
 "eu4": "DGR",
@@ -770,9 +770,9 @@
 "new": true
 },
 "FDL": {
-"eu4": "FDL",
+"eu4": "FAD",
 "name": "Āl Faḍl",
-"new": true
+"new": false
 },
 "FEO": {
 "eu4": "FEO",
@@ -945,9 +945,9 @@
 "new": false
 },
 "GOW": {
-"eu4": "GOW",
+"eu4": "MKS",
 "name": "Gowa",
-"new": true
+"new": false
 },
 "GRA": {
 "eu4": "GRA",
@@ -995,9 +995,9 @@
 "new": false
 },
 "GYO": {
-"eu4": "GYO",
+"eu4": "CAY",
 "name": "Gayogohono",
-"new": true
+"new": false
 },
 "HAB": {
 "eu4": "HAB",
@@ -1095,9 +1095,9 @@
 "new": true
 },
 "HTR": {
-"eu4": "HTR",
+"eu4": "SHL",
 "name": "Holstein-Rendsburg",
-"new": true
+"new": false
 },
 "HUN": {
 "eu4": "HUN",
@@ -1215,9 +1215,9 @@
 "new": true
 },
 "JRW": {
-"eu4": "JRW",
+"eu4": "ALH",
 "name": "Jarwanids",
-"new": true
+"new": false
 },
 "JSL": {
 "eu4": "JSL",
@@ -1330,9 +1330,9 @@
 "new": false
 },
 "KKA": {
-"eu4": "KKA",
+"eu4": "MOH",
 "name": "Kanien'kehaka",
-"new": true
+"new": false
 },
 "KKR": {
 "eu4": "KKR",
@@ -1685,9 +1685,9 @@
 "new": false
 },
 "MEC": {
-"eu4": "MEC",
+"eu4": "HED",
 "name": "Mecca",
-"new": true
+"new": false
 },
 "MED": {
 "eu4": "MED",
@@ -1725,9 +1725,9 @@
 "new": false
 },
 "MIH": {
-"eu4": "MIH",
+"eu4": "SIS",
 "name": "Mihrabanids",
-"new": true
+"new": false
 },
 "MIR": {
 "eu4": "MIR",
@@ -1760,9 +1760,9 @@
 "new": true
 },
 "MLB": {
-"eu4": "KAB",
+"eu4": "MLB",
 "name": "Kangleipak",
-"new": true
+"new": false
 },
 "MLI": {
 "eu4": "MLI",
@@ -1770,9 +1770,9 @@
 "new": false
 },
 "MLL": {
-"eu4": "MLL",
+"eu4": "MJO",
 "name": "Mallorca",
-"new": true
+"new": false
 },
 "MLN": {
 "eu4": "MLN",
@@ -2040,9 +2040,9 @@
 "new": true
 },
 "ONY": {
-"eu4": "ONY",
+"eu4": "ONE",
 "name": "Onyota'aka",
-"new": true
+"new": false
 },
 "OPL": {
 "eu4": "OPL",

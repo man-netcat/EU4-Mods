@@ -1,8 +1,8 @@
 #2041 - Manipur
 
-owner = KAB
-controller = KAB
-add_core = KAB
+owner = MLB
+controller = MLB
+add_core = MLB
 is_city = yes
 culture = chin
 religion = animism

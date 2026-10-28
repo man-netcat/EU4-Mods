@@ -1,8 +1,8 @@
 #1775 - Holstein
 
-owner = HTR
-controller = HTR
-add_core = HTR
+owner = SHL
+controller = SHL
+add_core = SHL
 is_city = yes
 culture = lower_saxon
 religion = catholic

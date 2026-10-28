@@ -1,8 +1,8 @@
 #435 - Sistan
 
-owner = MIH
-controller = MIH
-add_core = MIH
+owner = SIS
+controller = SIS
+add_core = SIS
 is_city = yes
 culture = khorasani
 religion = sunni

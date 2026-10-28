@@ -1,8 +1,8 @@
 #2040 - Sadiya
 
-owner = CUT
-controller = CUT
-add_core = CUT
+owner = SDY
+controller = SDY
+add_core = SDY
 is_city = yes
 culture = assamese
 religion = hinduism

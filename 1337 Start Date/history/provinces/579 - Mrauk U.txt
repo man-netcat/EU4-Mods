@@ -1,8 +1,8 @@
 #579 - Mrauk U
 
-owner = LAA
-controller = LAA
-add_core = LAA
+owner = ARK
+controller = ARK
+add_core = ARK
 is_city = yes
 culture = bengali
 religion = buddhism

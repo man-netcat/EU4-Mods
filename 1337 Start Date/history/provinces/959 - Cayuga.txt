@@ -1,8 +1,8 @@
 #959 - Cayuga
 
-owner = GYO
-controller = GYO
-add_core = GYO
+owner = CAY
+controller = CAY
+add_core = CAY
 is_city = yes
 culture = iroquois
 religion = totemism

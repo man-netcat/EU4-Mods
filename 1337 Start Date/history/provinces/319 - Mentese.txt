@@ -2,7 +2,7 @@
 
 owner = MEN
 controller = MEN
-add_core = AYA
+add_core = AYD
 add_core = BYZ
 add_core = MEN
 is_city = yes
