@@ -141,8 +141,11 @@ Charlemagne's Legacy; both files are written by `step_tags`.
 - Estates: EU5's privileges and estate setup do not map onto EU4's, so estates are EU4's defaults per government
   (reform) for every tag. The 1444 `change_estate_land_share` / `set_estate_privilege` / estate loyalty lines of base-game
   country files are stripped so no tag starts with a 1444 estate set-up.
-- Ideas: EU5 has no national ideas. New tags get the base game's group ideas (culture group, government, tech group)
-  or its default ideas, as every minor base-game tag does; base-game tags keep their own.
+- Ideas: EU5 has no national ideas. `tools/ideas.py` builds a 7-idea set (+ traditions and ambition) for each new tag with
+  >= 3 provinces or >= 25 development (54 of them) from themed modifier lists chosen by government, culture group,
+  religion group, coast and wealth. A modifier is only used if the base game's idea files use it and takes the median
+  value the base game gives it; validate fails on any modifier outside that set. Smaller new tags get the base game's group
+  or default ideas; base-game tags keep their own.
 
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 

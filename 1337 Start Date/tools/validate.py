@@ -129,6 +129,31 @@ def main():
             x = over[x]
         if frozenset((a_, c_)) in allied:
             errs.append(f"diplomacy: {c_} is allied with its overlord {a_}")
+    # national ideas: every modifier is one the base game's own idea sets use ,
+    # seven ideas per set, every name and description present, tag registered
+    import ideas as _ideas
+    mods = _ideas.vanilla_modifiers()
+    own_loc = (MOD / "localisation/1337_ideas_l_english.yml").read_text(encoding="utf-8-sig")
+    registered = {m[1] for m in re.finditer(r"(?m)^([A-Z0-9]{3})\s*=", (MOD / "common/country_tags/1337_tags.txt").read_text(encoding="latin-1"))}
+    n_sets = 0
+    for name, body in parse((MOD / "common/ideas/1337_national_ideas.txt").read_text(encoding="latin-1")):
+        n_sets += 1
+        tag = name[:3]
+        if tag not in registered:
+            errs.append(f"ideas {name}: {tag} is not a registered tag")
+        singles = [k for k, v in body if isinstance(v, list) and k not in ("start", "bonus", "trigger")]
+        if len(singles) != 7:
+            errs.append(f"ideas {name}: {len(singles)} ideas, not 7")
+        for key, part in body:
+            if not isinstance(part, list) or key == "trigger":
+                continue
+            for mod, val in part:
+                if mod not in mods:
+                    errs.append(f"ideas {name}: modifier {mod} is not used by any base-game idea set")
+        for k in (name, name + "_start", name + "_bonus", *singles, *(x + "_desc" for x in singles)):
+            if f" {k}:0 " not in own_loc:
+                errs.append(f"ideas {name}: missing loc {k}")
+    print(f"  {n_sets} national idea sets checked against {len(mods)} base-game modifiers")
     # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
     owners = {}
     for f in (MOD / "history/provinces").iterdir():

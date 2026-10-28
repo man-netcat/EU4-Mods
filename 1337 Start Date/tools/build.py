@@ -874,6 +874,8 @@ def main():
     step_countries(table, po, cmap, rmap, stats)
     stats["dormant"] = step_dormant(table, stats)
     step_tags(table)
+    import ideas
+    stats["idea_sets"] = ideas.write()
     stats["diplomacy"] = step_diplomacy(table)
     stats["wars"] = step_wars(table)
     stats["institutions"] = step_institutions()
