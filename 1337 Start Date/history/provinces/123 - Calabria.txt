@@ -7,10 +7,10 @@ is_city = yes
 culture = neapolitan 
 religion = catholic 
 hre = no 
-base_tax = 2 
-base_production = 2
+base_tax = 6 
+base_production = 6
 trade_goods = fish
-base_manpower = 2
+base_manpower = 5
 capital = "Reggio di Calabria"
 
 

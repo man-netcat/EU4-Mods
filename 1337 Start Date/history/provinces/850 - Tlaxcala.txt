@@ -9,9 +9,9 @@ religion = nahuatl
 capital = "Tlaxcala"
 trade_goods = sugar
 hre = no 
-base_tax = 4 
-base_production = 4
-base_manpower = 1
+base_tax = 10 
+base_production = 10
+base_manpower = 2
 discovered_by = mesoamerican
 fort_15th = yes
 

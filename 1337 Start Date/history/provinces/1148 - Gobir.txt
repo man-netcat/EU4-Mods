@@ -5,13 +5,13 @@ controller = GOB
 add_core = GOB
 is_city = yes
 culture = hausa
-base_manpower = 3
+base_manpower = 4
 religion = shamanism
 capital = "Birnin Lalle"
 trade_goods = iron
 hre = no
-base_tax = 3 
-base_production = 3
+base_tax = 4 
+base_production = 4
 
 
 

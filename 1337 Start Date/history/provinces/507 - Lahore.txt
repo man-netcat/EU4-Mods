@@ -9,9 +9,9 @@ religion = hinduism
 capital = "Lahore"
 trade_goods = silk
 hre = no
-base_tax = 10
-base_production = 10
-base_manpower = 3
+base_tax = 5
+base_production = 5
+base_manpower = 2
 fort_15th = yes #Lahore Fort
 #Data Durbar Complex
 discovered_by = indian

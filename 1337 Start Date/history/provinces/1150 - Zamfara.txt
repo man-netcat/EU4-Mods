@@ -5,13 +5,13 @@ controller = ZAM
 add_core = ZAM
 is_city = yes
 culture = hausa
-base_manpower = 1
+base_manpower = 2
 religion = shamanism #Fetishism
 capital = "Dutsi"
 trade_goods = grain
 hre = no
-base_tax = 3 
-base_production = 3
+base_tax = 5 
+base_production = 5
 
 
 

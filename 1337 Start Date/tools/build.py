@@ -106,6 +106,52 @@ def hre_members(table):
     return {table[x]["eu4"] for x in mem if x in table}, table.get(m[2], {}).get("eu4")
 
 
+def development_targets(land, cr_vote, lp):
+    """EU4 province -> total development from EU5 population. Only provinces whose locations were matched
+    by name (not the area fallbacks, which share locations) take part; their pops are ranked and given
+    the sorted vanilla totals of the same provinces, so the world's development distribution stays
+    vanilla's while who holds it follows 1337's population (Western Europe at its pre-plague peak).
+    A floor of half the vanilla total keeps lone city locations from collapsing."""
+    pops, vanilla = {}, {}
+    files = {int(re.match(r"\d+", f.name)[0]): f for f in (VAN / "provinces").iterdir()}
+    for pid in land:
+        v = cr_vote.get(str(pid))
+        if not v or v["tier"] in ("area-fallback", "area-node"):
+            continue
+        pop = sum(lp[l]["pop"] for l in v["locations"] if l in lp)
+        f = files.get(pid)
+        if not pop or f is None:
+            continue
+        top = split_blocks(f.read_text(encoding="latin-1"))[0]
+        vals = [int(m[1]) for m in re.finditer(r"(?m)^base_(?:tax|production|manpower)\s*=\s*(\d+)", top)]
+        if len(vals) == 3:
+            pops[pid], vanilla[pid] = pop, sum(vals)
+    ranked = sorted(pops, key=lambda p: (pops[p], p))
+    totals = sorted(vanilla.values())
+    # a province never falls below half its vanilla development: EU5's pops are per location, so a lone city
+    # location (London, Cologne) can rank below a province that sums several rural ones
+    return {p: max(t, -(-vanilla[p] // 2)) for p, t in zip(ranked, totals)}
+
+
+def scale_development(base, total):
+    """Rewrite base_tax/base_production/base_manpower to sum to `total`, keeping their vanilla proportions
+    (each at least 1)."""
+    keys = ("base_tax", "base_production", "base_manpower")
+    old = [int(re.search(rf"(?m)^{k}\s*=\s*(\d+)", base)[1]) for k in keys]
+    total = max(total, 3)
+    raw = [o / sum(old) * total for o in old]
+    new = [max(1, int(r)) for r in raw]
+    while sum(new) < total:
+        i = max(range(3), key=lambda j: (raw[j] - new[j], -j))
+        new[i] += 1
+    while sum(new) > total:
+        i = max((j for j in range(3) if new[j] > 1), key=lambda j: (new[j] - raw[j], -j))
+        new[i] -= 1
+    for k, n in zip(keys, new):
+        base = re.sub(rf"(?m)^({k}\s*=\s*)\d+", rf"\g<1>{n}", base, count=1)
+    return base
+
+
 def step_provinces(table, po, cmap, rmap, stats, hre_members=None):
     reused_codes = {r["eu4"] for r in table.values()}
     out = MOD / "history/provinces"
@@ -115,6 +161,8 @@ def step_provinces(table, po, cmap, rmap, stats, hre_members=None):
     cr_vote = json.load(open(DATA / "loc2prov.json"))
     from popdata import location_pops
     lp = location_pops()
+    dev = development_targets(land, cr_vote, lp)
+    stats["developed"] = len(dev)
     for f in sorted((VAN / "provinces").iterdir()):
         m = re.match(r"(\d+)", f.name)
         pid = int(m[1])
@@ -136,6 +184,8 @@ def step_provinces(table, po, cmap, rmap, stats, hre_members=None):
                 stats["owned"] += 1
             else:
                 stats["unowned"] += 1
+            if pid in dev:
+                base = scale_development(base, dev[pid])
             if info["tier"] != "area-fallback":
                 cul, rel = Counter(), Counter()
                 for l in cr_vote[str(pid)]["locations"]:

@@ -9,9 +9,9 @@ religion = mahayana
 capital = "Jinan"
 trade_goods = cloth
 hre = no
-base_tax = 5
-base_production = 5
-base_manpower = 3
+base_tax = 3
+base_production = 3
+base_manpower = 1
 
 
 

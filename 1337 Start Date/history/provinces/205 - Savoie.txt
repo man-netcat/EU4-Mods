@@ -7,10 +7,10 @@ is_city = yes
 culture = occitain
 religion = catholic
 hre = yes
-base_tax = 6
-base_production = 6
+base_tax = 3
+base_production = 3
 trade_goods = cloth
-base_manpower = 3
+base_manpower = 2
 capital = "Chambéry"
 fort_15th = yes
 

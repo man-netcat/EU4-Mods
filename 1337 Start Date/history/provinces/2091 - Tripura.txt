@@ -9,9 +9,9 @@ religion = hinduism
 capital = "Udaipur"
 trade_goods = tropical_wood
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 5 
+base_production = 5
+base_manpower = 5
 
 
 

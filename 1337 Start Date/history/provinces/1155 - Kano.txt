@@ -5,13 +5,13 @@ controller = KAN
 add_core = KAN
 is_city = yes
 culture = hausa
-base_manpower = 5
+base_manpower = 3
 religion = shamanism
 capital = "Kano"
 trade_goods = dyes
 hre = no
-base_tax = 5 
-base_production = 5
+base_tax = 4 
+base_production = 3
 
 
 discovered_by = sub_saharan

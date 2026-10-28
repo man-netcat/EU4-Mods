@@ -7,10 +7,10 @@ is_city = yes
 culture = neapolitan 
 religion = catholic 
 hre = no 
-base_tax = 5
+base_tax = 4
 base_production = 1
 trade_goods = fish 
-base_manpower = 4
+base_manpower = 3
 capital = "Salerno" 
 
 

@@ -15,9 +15,9 @@ religion = inti
 capital = "Macaya"
 trade_goods = grain
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 1
+base_tax = 3 
+base_production = 3
+base_manpower = 2
 
 1533.8.29 = {
 	discovered_by = SPA

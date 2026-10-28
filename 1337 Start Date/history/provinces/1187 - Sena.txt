@@ -3,11 +3,11 @@
 culture = shona
 religion = animism
 capital = "Sena"
-base_manpower = 2
+base_manpower = 1
 trade_goods = ivory
 hre = no
 base_tax = 2 
-base_production = 2
+base_production = 1
 discovered_by = east_african
 discovered_by = central_african
 

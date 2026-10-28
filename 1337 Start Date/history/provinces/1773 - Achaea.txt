@@ -11,7 +11,7 @@ capital = "Nafplio"
 trade_goods = wine
 hre = no
 base_tax = 2
-base_production = 3
+base_production = 4
 base_manpower = 1
 
 add_local_autonomy = 25 #held by pretty-independent despots of morea

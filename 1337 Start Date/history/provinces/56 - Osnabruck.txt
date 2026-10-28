@@ -10,7 +10,7 @@ capital = "Osnabrück"
 trade_goods = salt
 hre = yes
 base_tax = 3
-base_production = 4
+base_production = 3
 base_manpower = 2
 
 

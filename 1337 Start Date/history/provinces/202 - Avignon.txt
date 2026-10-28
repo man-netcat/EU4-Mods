@@ -9,10 +9,10 @@ capital = "Avignon"
 culture = occitain
 religion = catholic
 hre = no
-base_tax = 4 
+base_tax = 3 
 base_production = 3
 trade_goods = cloth
-base_manpower = 4
+base_manpower = 3
 fort_15th = yes # Le Palais des Papes is super strong, and built on and beneath a natural rock formation
 extra_cost = 8
 

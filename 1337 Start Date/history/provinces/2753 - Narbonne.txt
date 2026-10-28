@@ -9,10 +9,10 @@ capital = "Narbonne"
 culture = occitain
 religion = catholic
 hre = no
-base_tax = 5
-base_production = 5
+base_tax = 3
+base_production = 3
 trade_goods = wine
-base_manpower = 3
+base_manpower = 2
 fort_15th = yes
 
 

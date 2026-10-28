@@ -8,9 +8,9 @@ culture = nubian
 religion = coptic
 capital = "Sennar"
 trade_goods = livestock
-base_manpower = 2
-base_tax = 1 
-base_production = 1
+base_manpower = 4
+base_tax = 2 
+base_production = 2
 hre = no
 
 discovered_by = east_african

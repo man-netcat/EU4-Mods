@@ -9,7 +9,7 @@ religion = confucianism
 capital = "Quanzhou"
 trade_goods = tea
 hre = no
-base_tax = 8 
+base_tax = 9 
 base_production = 8
 base_manpower = 3
 

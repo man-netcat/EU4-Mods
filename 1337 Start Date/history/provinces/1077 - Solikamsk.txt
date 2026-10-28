@@ -9,8 +9,8 @@ culture = uralic
 religion = finnish_pagan #Sami Shamanism
 trade_goods = salt # was center of salt mining
 hre = no
-base_tax = 3 
-base_production = 5 #Salt Mines
+base_tax = 1 
+base_production = 3 #Salt Mines
 base_manpower = 1
 
 

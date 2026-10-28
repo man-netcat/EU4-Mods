@@ -7,9 +7,9 @@ religion = orthodox
 capital = "Gallipoli"
 trade_goods = livestock
 hre = no
-base_tax = 2
+base_tax = 3
 base_production = 1
-base_manpower = 3
+base_manpower = 4
 fort_15th = yes #Fortress of Gallipoli
 
 

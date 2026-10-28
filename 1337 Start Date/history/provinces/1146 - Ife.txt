@@ -10,7 +10,7 @@ capital = "Ife Ile"
 base_manpower = 2
 trade_goods = glass #Ife Glass Beads
 hre = no
-base_tax = 3
+base_tax = 4
 base_production = 3
 
 add_province_triggered_modifier = city_of_401_deities

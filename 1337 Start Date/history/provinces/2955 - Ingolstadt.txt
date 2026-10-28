@@ -6,10 +6,10 @@ add_core = UBV
 is_city = yes
 culture = bavarian
 religion = catholic
-base_tax = 5 
-base_production = 5
+base_tax = 3 
+base_production = 3
 trade_goods = wine #Would shift to beer over time
-base_manpower = 3
+base_manpower = 1
 capital	= "Ingolstadt" 
 hre = yes
 

@@ -17,7 +17,9 @@ historically wrong, we correct it (log each correction in `tools/corrections.md`
   colour, graphical culture, loc, history); alliances/vassals/tributaries/guarantees from `12_diplomacy`;
   HRE membership and emperor (UBV, Louis IV) from `15_international_organizations`.
 - Vanilla tags without an EU5 1337 counterpart stay as dormant files (pre-1444.11.11 entries dropped).
-- Province development, trade goods, buildings, institutions, estates, ideas/mission trees are still vanilla.
+- Development: `development_targets` ranks the name-matched provinces by EU5 pop and hands them the sorted vanilla
+  totals (floor: half the vanilla total), keeping each province's tax/production/manpower proportions. First pass,
+  not playtested. Trade goods, buildings, institutions, estates, ideas/mission trees are still vanilla.
 
 ## Progress on step 1 (loc2prov, no map geometry - the owner vetoed pixel/coordinate mapping)
 
