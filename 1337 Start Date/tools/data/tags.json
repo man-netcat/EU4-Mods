@@ -544,6 +544,11 @@
 "name": "Clandeboye",
 "new": true
 },
+"CLI": {
+"eu4": "CLI",
+"name": "Cilli",
+"new": false
+},
 "CLM": {
 "eu4": "CLM",
 "name": "Coliman",

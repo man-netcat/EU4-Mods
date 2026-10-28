@@ -1,10 +1,10 @@
 #1867 - Freiburg
 
-owner = FBG
-controller = FBG
-add_core = FBG
+owner = HAB
+controller = HAB
+add_core = HAB
 is_city = yes
-culture = swabian
+culture = occitain
 religion = catholic
 capital = "Lausanne"
 trade_goods = livestock

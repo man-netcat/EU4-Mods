@@ -18904,9 +18904,9 @@
 ]
 },
 "1867": {
-"tier": "key/display",
+"tier": "alias",
 "locations": [
-"freiburg"
+"fribourg"
 ]
 },
 "1868": {
@@ -19906,68 +19906,18 @@
 ]
 },
 "1983": {
-"tier": "area-node",
+"tier": "alias",
 "locations": [
-"aabenraa",
-"aalborg",
-"amrum_island_wasteland",
-"ars",
-"eckernforde",
-"flensburg",
-"grindsted",
-"haderslev",
-"hjorring",
-"husum",
-"kalo",
-"randers",
-"ribe",
-"silkeborg",
-"skagen",
-"thisted",
-"tonder"
+"falster"
 ]
 },
 "1984": {
-"tier": "area-fallback",
+"tier": "alias",
 "locations": [
-"aabenraa",
-"aalborg",
-"aarhus",
-"amrum_island_wasteland",
-"ars",
-"assens",
 "bolling",
-"eckernforde",
-"falster",
-"flensburg",
-"grindsted",
-"haderslev",
-"hammershus",
-"helsingor",
-"hjorring",
 "holstebro_lundenes",
-"husum",
-"kalo",
-"kalundborg",
-"kobenhavn",
-"kolding",
-"navskov",
-"odense",
-"randers",
-"ribe",
 "ringkobing",
-"ringsted",
-"roskilde",
-"silkeborg",
-"skagen",
-"slagelse",
-"slesvig",
-"svendborg",
-"thisted",
-"tonder",
-"varde",
-"viborg",
-"vordingborg"
+"varde"
 ]
 },
 "1985": {
@@ -41806,59 +41756,9 @@
 ]
 },
 "4702": {
-"tier": "area-node",
+"tier": "alias",
 "locations": [
-"bansko",
-"bitola",
-"dospat",
-"drama",
-"edessa",
-"florina",
-"giannitsa",
-"grevena",
-"gynaikokastro",
-"hatera",
-"kassandreia",
-"kavala",
-"kicevo",
-"kilkis",
-"kocani",
-"kratovo",
-"krupnik",
-"kumanovo",
-"lake_achinos",
-"lake_ohrid",
-"lake_prespa",
-"lake_volvi",
-"melnik",
-"mount_athos",
-"nevrokop",
-"ostrovo",
-"pindus_mountains1",
-"pindus_mountains10",
-"pindus_mountains2",
-"pindus_mountains3",
-"pindus_mountains4",
-"pindus_mountains5",
-"pindus_mountains8",
-"pindus_mountains9",
-"polygyros",
-"prilep",
-"prosek",
-"rentina",
-"rhodope_mountains1",
-"rhodope_mountains2",
-"rhodope_mountains3",
-"rhodope_mountains4",
-"serres",
-"servia",
-"shtip",
-"siatista",
-"strumica",
-"tetovo",
-"thasos",
-"veles",
-"veria"
+"serres"
 ]
 },
 "4703": {
@@ -42224,9 +42124,9 @@
 ]
 },
 "4751": {
-"tier": "area-node",
+"tier": "alias",
 "locations": [
-"julian_alps"
+"celje"
 ]
 },
 "4752": {
