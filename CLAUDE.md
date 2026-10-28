@@ -26,7 +26,9 @@ cd "1337 Start Date/tools"
 python3 loc2prov.py && python3 tables.py   # only after changing mapping inputs (data/aliases.json ...)
 python3 build.py && python3 validate.py    # must end with ALL CHECKS PASSED
 ```
-Stdlib only. Output is deterministic (same result from the local installs and from the reference clone).
+Stdlib only. Output is deterministic (same result from the local installs and from the reference clone). CI
+(`.github/workflows/1337-start-date.yml`) regenerates, validates and fails if the committed output differs.
+`python3 tools/audit_regions.py europe` lists the low-confidence province mappings (see PLAN.md, Europe).
 
 ## Cloud sessions
 

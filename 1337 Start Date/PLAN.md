@@ -188,6 +188,14 @@ Germany, Iberia, the Balkans, the Pontic steppe), a name match is kept to the pa
 (Beja/Tunisia, Gallipoli/Apulia, Rothenburg), Navarre owns Navarra, Venice the lagoon, Florence its province, Ragusa Dubrovnik.
 Europe: 602 of 728 land provinces certain, 126 low confidence (mostly inside one owner's land, so ownership is unaffected).
 
+## Quality checks (validate.py)
+
+Provinces (development, trade good, controller, owner as core), tags and references, colours and flags, localisation lines and
+unique keys, braces in every text file, no characters lost to `?`, reforms that belong to their government, wars (casus
+belli, war goals, land), diplomacy (types, one overlord, cycles), capitals, ideas, ages, technology, base-game file names not
+replaced. Names go through `tools/textfold.py` for the Windows-1252 files. Wasteland (`impassable` in map/climate.txt) is not
+mapped. CI runs the whole chain and compares with the committed output.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy; ~735 unmapped keep their vanilla owner only if that tag is
