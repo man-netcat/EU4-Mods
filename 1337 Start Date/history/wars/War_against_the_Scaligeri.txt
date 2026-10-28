@@ -1,0 +1,21 @@
+# generated from EU5 16_wars.txt - do not edit
+name = "War against the Scaligeri"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 108
+}
+
+1337.3.1 = {
+	add_attacker = VEN
+	add_attacker = TTE
+	add_attacker = CRT
+	add_attacker = LAN
+	add_attacker = MLO
+	add_attacker = FER
+	add_attacker = MAN
+	add_defender = VRN
+	add_defender = PDV
+	add_defender = PAR
+	add_defender = LUC
+}

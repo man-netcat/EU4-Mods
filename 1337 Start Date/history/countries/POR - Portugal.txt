@@ -690,3 +690,7 @@ add_government_reform = autocracy_reform }
 		mil = 0
 	}
 }
+
+1337.3.1 = {
+	add_truce_with = CAS
+}

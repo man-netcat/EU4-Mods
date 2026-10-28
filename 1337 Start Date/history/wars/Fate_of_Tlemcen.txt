@@ -1,0 +1,13 @@
+# generated from EU5 16_wars.txt - do not edit
+name = "Fate of Tlemcen"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 2461
+}
+
+1337.3.1 = {
+	add_attacker = MOR
+	add_attacker = TFL
+	add_defender = TLC
+}

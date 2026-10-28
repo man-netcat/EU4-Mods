@@ -417,12 +417,97 @@ def step_diplomacy(table):
     return dict(n)
 
 
-def step_clear_wars():
-    for d in ("wars",):
-        p = MOD / "history" / d
-        shutil.rmtree(p, ignore_errors=True)
-        p.mkdir(parents=True)
-        (p / "1337_placeholder.txt").write_text("# generated diplomacy goes here\n")
+WAR_NAMES = {
+    "CIVIL_WAR_NAME": "Second War of Scottish Independence",
+    "CRUSADE_WAR_NAME": "Lithuanian Crusade",
+    "FATE_OF_TLEMCEN": "Fate of Tlemcen",
+    "UNIFY_ILKHANATE_WAR_NAME": "Unification of the Ilkhanate",
+    "SCALIGER_WAR_NAME": "War against the Scaligeri",
+}
+# EU5 war kind -> EU4 war goal; `capital` points the goal at the first defender's capital province
+WAR_GOALS = {
+    "civil_war": ("take_capital_throne", "cb_claim_throne", "tag"),
+    "cb_crusade": ("superiority_crusade", "cb_crusade", None),
+    "cb_conquer_province": ("take_claim", "cb_conquest", "province"),
+    "cb_unify_ilkahante": ("take_claim", "cb_conquest", "capital"),
+    "cb_scaligeri_war": ("take_claim", "cb_conquest", "capital"),
+}
+
+
+def tag_capital(tag):
+    for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+        m = re.search(r"(?m)^capital\s*=\s*(\d+)", f.read_text(encoding="latin-1"))
+        if m:
+            return m[1]
+    return None
+
+
+def step_wars(table):
+    """The wars and truces EU5 has running in April 1337 (16_wars): wars as history/wars files dated
+    1337.3.1, truces as add_truce_with in the country files. Countries with no EU4 counterpart or no
+    land are left out; a war that loses all of one side is dropped."""
+    from paths import EU5_SETUP
+    from pdx import parse
+    held = Counter()
+    for f in (MOD / "history/provinces").iterdir():
+        m = re.search(r"(?m)^owner\s*=\s*(\w+)", f.read_text(encoding="latin-1"))
+        if m:
+            held[m[1]] += 1
+    l2p = json.load(open(DATA / "loc2prov.json"))
+    loc_prov = {loc: pid for pid, v in l2p.items() for loc in v["locations"]}
+
+    def eu4(t):
+        e = table.get(t, {}).get("eu4")
+        return e if e and held[e] else None
+
+    wm = get(parse((EU5_SETUP / "16_wars.txt").read_text(encoding="utf-8-sig")), "war_manager")
+    shutil.rmtree(MOD / "history/wars", ignore_errors=True)
+    (MOD / "history/wars").mkdir(parents=True)
+    stats = Counter()
+    for kind, w in wm:
+        if kind not in ("war", "civil_war"):
+            continue
+        att = [x for x in (eu4(get(a, "country")) for a in getall(w, "attacker")) if x]
+        dfn = [x for x in (eu4(get(a, "country")) for a in getall(w, "defender")) if x]
+        wn = get(w, "war_name")
+        name = WAR_NAMES.get(get(wn, "name"), get(wn, "name"))
+        if not att or not dfn:
+            stats["war_skipped"] += 1
+            continue
+        tp = get(w, "take_province") or get(w, "superiority") or []
+        cb = "civil_war" if kind == "civil_war" else get(tp, "casus_belli")
+        typ, ecb, how = WAR_GOALS[cb]
+        goal = [f"\ttype = {typ}", f"\tcasus_belli = {ecb}"]
+        if how == "tag":
+            goal.append(f"\ttag = {att[0]}")
+        elif how == "province":
+            prov = loc_prov.get(get(tp, "location")) or tag_capital(dfn[0])
+            goal.append(f"\tprovince = {prov}")
+        elif how == "capital":
+            goal.append(f"\tprovince = {tag_capital(dfn[0])}")
+        body = [f'name = "{name}"', "war_goal = {", *goal, "}", "", "1337.3.1 = {"]
+        body += [f"\tadd_attacker = {t}" for t in att] + [f"\tadd_defender = {t}" for t in dfn] + ["}", ""]
+        fn = re.sub(r"[^A-Za-z0-9]+", "_", name) + ".txt"
+        (MOD / "history/wars" / fn).write_text("# generated from EU5 16_wars.txt - do not edit\n" + "\n".join(body))
+        stats["wars"] += 1
+    # truces: every pair across the two sides of each EU5 truce, in the country files
+    pairs = defaultdict(set)
+    for kind, tr in wm:
+        if kind != "truce":
+            continue
+        a = {x for x in (eu4(t) for t in getall(tr, "attacker")) if x}
+        d = {x for x in (eu4(t) for t in getall(tr, "defender")) if x}
+        for x in a:
+            for y in d:
+                if x != y:
+                    pairs[x].add(y)
+                    pairs[y].add(x)
+    for tag, others in pairs.items():
+        for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+            f.write_text(f.read_text(encoding="latin-1").rstrip("\n") + "\n\n1337.3.1 = {\n"
+                         + "".join(f"\tadd_truce_with = {o}\n" for o in sorted(others)) + "}\n", encoding="latin-1")
+            stats["truces"] += len(others)
+    return dict(stats)
 
 
 EMP = [None]
@@ -444,7 +529,7 @@ def main():
     stats["dormant"] = step_dormant(table)
     step_tags(table)
     stats["diplomacy"] = step_diplomacy(table)
-    step_clear_wars()
+    stats["wars"] = step_wars(table)
     print(dict(stats))
 
 

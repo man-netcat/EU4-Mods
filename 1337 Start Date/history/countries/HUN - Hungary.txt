@@ -234,3 +234,10 @@ add_government_reform = autocracy_reform }
 1744.1.1 = { leader = {	name = "Andras Hadik"          	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1790.3.12 } }
 
 1784.1.1 = { capital = 153 } # Buda
+
+1337.3.1 = {
+	add_truce_with = BOH
+	add_truce_with = MVA
+	add_truce_with = OPL
+	add_truce_with = OPV
+}

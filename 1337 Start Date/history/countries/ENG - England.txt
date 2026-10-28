@@ -976,3 +976,8 @@ heir = {
 		mil = 5
 	}
 }
+
+1337.3.1 = {
+	add_truce_with = SBL
+	add_truce_with = SCO
+}

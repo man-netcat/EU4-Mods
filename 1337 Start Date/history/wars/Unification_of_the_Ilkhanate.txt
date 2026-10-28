@@ -1,0 +1,32 @@
+# generated from EU5 16_wars.txt - do not edit
+name = "Unification of the Ilkhanate"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 410
+}
+
+1337.3.1 = {
+	add_attacker = HLG
+	add_attacker = HLL
+	add_attacker = GRG
+	add_attacker = HDN
+	add_attacker = JKR
+	add_attacker = KHT
+	add_attacker = KSA
+	add_attacker = MZN
+	add_attacker = QOA
+	add_attacker = SBZ
+	add_attacker = SFR
+	add_attacker = KRT
+	add_defender = JAL
+	add_defender = DML
+	add_defender = IHB
+	add_defender = KKL
+	add_defender = SYY
+	add_defender = ERE
+	add_defender = TDJ
+	add_defender = SUT
+	add_defender = BTL
+	add_defender = JLM
+}

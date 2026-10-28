@@ -1,0 +1,20 @@
+# generated from EU5 16_wars.txt - do not edit
+name = "Lithuanian Crusade"
+war_goal = {
+	type = superiority_crusade
+	casus_belli = cb_crusade
+}
+
+1337.3.1 = {
+	add_attacker = TEU
+	add_attacker = ERM
+	add_attacker = LVA
+	add_attacker = RIG
+	add_defender = LIT
+	add_defender = PNK
+	add_defender = PLT
+	add_defender = TPS
+	add_defender = TUV
+	add_defender = VBK
+	add_defender = RZH
+}

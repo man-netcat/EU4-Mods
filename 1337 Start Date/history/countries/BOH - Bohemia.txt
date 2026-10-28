@@ -206,3 +206,15 @@ add_government_reform = autocracy_reform }
 1620.11.8 = {
 	leave_league = protestant
 }
+
+1337.3.1 = {
+	add_truce_with = BOS
+	add_truce_with = CZK
+	add_truce_with = HAB
+	add_truce_with = HUN
+	add_truce_with = INO
+	add_truce_with = LCZ
+	add_truce_with = PLK
+	add_truce_with = POL
+	add_truce_with = RAW
+}

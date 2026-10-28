@@ -98,6 +98,31 @@ def main():
             errs.append(f"{m[1]}: missing loc")
         if m[1] not in hist:
             errs.append(f"{m[1]}: no history file")
+    # wars: both sides non-empty, every tag owns land, a goal province exists, truce partners own land
+    owners = {}
+    for f in (MOD / "history/provinces").iterdir():
+        m = re.search(r"(?m)^owner\s*=\s*(\w+)", f.read_text(encoding="latin-1"))
+        if m:
+            owners[int(re.match(r"\d+", f.name)[0])] = m[1]
+    landed = set(owners.values())
+    for f in sorted((MOD / "history/wars").glob("*.txt")):
+        t = f.read_text(encoding="latin-1")
+        att = re.findall(r"add_attacker\s*=\s*(\w+)", t)
+        dfn = re.findall(r"add_defender\s*=\s*(\w+)", t)
+        if not att or not dfn:
+            errs.append(f"{f.name}: a war needs both sides")
+        for tag in att + dfn:
+            if tag not in landed:
+                errs.append(f"{f.name}: {tag} owns no province")
+        if set(att) & set(dfn):
+            errs.append(f"{f.name}: a tag fights on both sides")
+        for pid in re.findall(r"^\s*province\s*=\s*(\d+)", t, re.M):
+            if int(pid) not in owners:
+                errs.append(f"{f.name}: war goal province {pid} is unowned")
+    for f in (MOD / "history/countries").glob("*.txt"):
+        for o in re.findall(r"add_truce_with\s*=\s*(\w+)", f.read_text(encoding="latin-1")):
+            if o not in landed:
+                errs.append(f"{f.name}: truce with {o}, which owns no province")
     for w in warns[:30]:
         print("WARN", w)
     for e in errs[:80]:
