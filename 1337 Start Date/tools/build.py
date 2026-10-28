@@ -68,20 +68,20 @@ def split_blocks(text):
 
 
 def strip_depth0(base, pattern):
-    """remove depth-0 lines matching pattern (single-line statements only)"""
-    out, depth = [], 0
+    """remove depth-0 statements matching pattern, whole `key = { ... }` blocks included"""
+    out, depth, skip = [], 0, False
     for line in base.split("\n"):
         code = line.split("#")[0]
-        if depth == 0 and re.match(pattern, code):
-            if code.count("{") > code.count("}"):
-                depth += code.count("{") - code.count("}")
-                continue
+        delta = code.count("{") - code.count("}")
+        if skip:
+            depth += delta
+            skip = depth > 0
             continue
-        if depth > 0 and re.match(pattern, code) is None:
-            pass
-        depth += code.count("{") - code.count("}")
-        if depth < 0:
-            depth = 0
+        if depth == 0 and re.match(pattern, code):
+            if delta > 0:
+                depth, skip = delta, True
+            continue
+        depth = max(0, depth + delta)
         out.append(line)
     return "\n".join(out)
 
@@ -414,7 +414,7 @@ def step_countries(table, po, cmap, rmap, stats):
         if van:
             text = van.read_text(encoding="latin-1")
             base, blocks = split_blocks(text)
-            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|add_accepted_culture|historical_rival|historical_friend)\s*=")
+            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|add_accepted_culture|historical_rival|historical_friend|change_estate_land_share|set_estate_privilege|add_estate_loyalty|add_estate_loyalty_modifier)\s*=")
             if cap:
                 base = re.sub(r"(?m)^capital\s*=\s*\d+", f"capital = {cap}", base)
             if cul:
@@ -501,6 +501,45 @@ def step_dormant(table, stats):
         (out / f.name).write_bytes(res.rstrip().encode("latin-1", "replace") + b"\n")
         n += 1
     return n
+
+
+def step_institutions():
+    """common/institutions/00_Core.txt: the base game's file, its Feudalism rule wrapped so that provinces matched
+    to EU5 locations follow EU5 (feudalism present where any of their locations has it at 1337, absent where none
+    does; EU5 lists only locations an institution has reached) and the base game's own rule (culture, technology group, government) still decides the rest. EU5's
+    other institutions (legalism, meritocracy) have no EU4 counterpart."""
+    from paths import EU5_SETUP
+    t5 = (EU5_SETUP / "08_institutions.txt").read_text(encoding="utf-8-sig")
+    have = set(re.findall(r"(?m)^(\w+) = \{\n(?:\t[^\n]*\n)*?\tfeudalism = yes", t5))
+    vote = json.load(open(DATA / "loc2prov.json"))
+    pools = Counter(tuple(sorted(v["locations"])) for v in vote.values())
+    yes, no = [], []
+    for pid, v in sorted(vote.items(), key=lambda kv: int(kv[0])):
+        if v["tier"] in ("area-fallback", "area-node") or pools[tuple(sorted(v["locations"]))] > 1:
+            continue
+        (yes if any(l in have for l in v["locations"]) else no).append(pid)
+    src = (EU4_GAME / "common/institutions/00_Core.txt").read_text(encoding="latin-1")
+    a = src.index("feudalism = {")
+    h = src.index("history = {", a)
+    start = src.index("\n", h) + 1
+    # end of the history block: matching brace
+    depth, i = 1, start
+    while depth:
+        depth += {"{": 1, "}": -1}.get(src[i], 0)
+        i += 1
+    body = src[start:i - 1]
+    year = "\t\tis_year = 1000\n"
+    assert year in body, "feudalism history changed"
+    rule = body.replace(year, "")
+    new = (year + "\t\tOR = {\n" + "".join(f"\t\t\tprovince_id = {p}\n" for p in yes)
+           + "\t\t\tAND = {\n\t\t\t\tNOT = {\n" + "".join(f"\t\t\t\t\tprovince_id = {p}\n" for p in no)
+           + "\t\t\t\t}\n" + "".join("\t" + ln + "\n" if ln.strip() else "\n" for ln in rule.rstrip("\n").split("\n"))
+           + "\t\t\t}\n\t\t}\n\t")
+    out = MOD / "common/institutions"
+    shutil.rmtree(out, ignore_errors=True)
+    out.mkdir(parents=True)
+    (out / "00_Core.txt").write_bytes((src[:start] + new + src[i - 1:]).encode("latin-1", "replace"))
+    return {"feudalism_yes": len(yes), "feudalism_no": len(no)}
 
 
 def step_tags(table):
@@ -837,6 +876,7 @@ def main():
     step_tags(table)
     stats["diplomacy"] = step_diplomacy(table)
     stats["wars"] = step_wars(table)
+    stats["institutions"] = step_institutions()
     stats["rivals"] = step_rivals(table)
     print(dict(stats))
 

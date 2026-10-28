@@ -7,7 +7,6 @@ religion = catholic
 technology_group = western
 capital = 134 # Wien
 national_focus = ADM
-set_estate_privilege = estate_nobles_habsburg_disunity
 
 monarch = {
 	name = "Albert II"

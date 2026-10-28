@@ -1,0 +1,4846 @@
+#
+# remember to add graphics for relevant ones when you add to this
+#
+# if a modifier is scaled, its multiplied with development in the province.
+
+
+# any_friendly_coast_border_province is a special scope made for institution spread.
+# It checks for adjacent provinces or provinces one seazone away.
+# Friendly is defined as at positive relations or owned by the same country that owns the province.
+
+#######################################
+# Feudalism.  
+# 
+# Most in the old world start with it.
+#######################################
+
+feudalism = {
+
+	bonus = {
+		free_leader_pool = 1
+	}
+
+	trade_company_efficiency = 0.2
+
+	#effect = { } # When a country embraces it
+
+	history = {
+		is_year = 1000
+		OR = {
+			province_id = 1
+			province_id = 2
+			province_id = 3
+			province_id = 4
+			province_id = 5
+			province_id = 6
+			province_id = 9
+			province_id = 10
+			province_id = 12
+			province_id = 13
+			province_id = 14
+			province_id = 15
+			province_id = 17
+			province_id = 19
+			province_id = 20
+			province_id = 23
+			province_id = 24
+			province_id = 25
+			province_id = 26
+			province_id = 27
+			province_id = 28
+			province_id = 29
+			province_id = 30
+			province_id = 32
+			province_id = 33
+			province_id = 35
+			province_id = 38
+			province_id = 39
+			province_id = 40
+			province_id = 41
+			province_id = 42
+			province_id = 43
+			province_id = 44
+			province_id = 45
+			province_id = 46
+			province_id = 47
+			province_id = 48
+			province_id = 50
+			province_id = 51
+			province_id = 52
+			province_id = 53
+			province_id = 54
+			province_id = 55
+			province_id = 56
+			province_id = 57
+			province_id = 59
+			province_id = 60
+			province_id = 61
+			province_id = 62
+			province_id = 63
+			province_id = 64
+			province_id = 66
+			province_id = 68
+			province_id = 69
+			province_id = 70
+			province_id = 71
+			province_id = 74
+			province_id = 76
+			province_id = 77
+			province_id = 78
+			province_id = 79
+			province_id = 80
+			province_id = 82
+			province_id = 84
+			province_id = 85
+			province_id = 87
+			province_id = 90
+			province_id = 91
+			province_id = 92
+			province_id = 93
+			province_id = 95
+			province_id = 97
+			province_id = 98
+			province_id = 101
+			province_id = 102
+			province_id = 104
+			province_id = 105
+			province_id = 106
+			province_id = 107
+			province_id = 108
+			province_id = 109
+			province_id = 110
+			province_id = 111
+			province_id = 113
+			province_id = 114
+			province_id = 115
+			province_id = 117
+			province_id = 119
+			province_id = 120
+			province_id = 121
+			province_id = 122
+			province_id = 123
+			province_id = 124
+			province_id = 125
+			province_id = 126
+			province_id = 127
+			province_id = 128
+			province_id = 131
+			province_id = 132
+			province_id = 133
+			province_id = 134
+			province_id = 135
+			province_id = 136
+			province_id = 138
+			province_id = 141
+			province_id = 142
+			province_id = 145
+			province_id = 146
+			province_id = 147
+			province_id = 148
+			province_id = 149
+			province_id = 150
+			province_id = 151
+			province_id = 152
+			province_id = 153
+			province_id = 154
+			province_id = 155
+			province_id = 156
+			province_id = 157
+			province_id = 159
+			province_id = 162
+			province_id = 163
+			province_id = 164
+			province_id = 165
+			province_id = 166
+			province_id = 168
+			province_id = 170
+			province_id = 171
+			province_id = 172
+			province_id = 174
+			province_id = 175
+			province_id = 176
+			province_id = 177
+			province_id = 178
+			province_id = 179
+			province_id = 181
+			province_id = 182
+			province_id = 183
+			province_id = 184
+			province_id = 185
+			province_id = 186
+			province_id = 187
+			province_id = 188
+			province_id = 190
+			province_id = 191
+			province_id = 192
+			province_id = 193
+			province_id = 194
+			province_id = 195
+			province_id = 196
+			province_id = 198
+			province_id = 200
+			province_id = 201
+			province_id = 202
+			province_id = 203
+			province_id = 205
+			province_id = 207
+			province_id = 208
+			province_id = 209
+			province_id = 211
+			province_id = 212
+			province_id = 213
+			province_id = 214
+			province_id = 215
+			province_id = 216
+			province_id = 217
+			province_id = 218
+			province_id = 219
+			province_id = 220
+			province_id = 221
+			province_id = 222
+			province_id = 223
+			province_id = 224
+			province_id = 225
+			province_id = 226
+			province_id = 228
+			province_id = 229
+			province_id = 230
+			province_id = 231
+			province_id = 232
+			province_id = 233
+			province_id = 234
+			province_id = 235
+			province_id = 236
+			province_id = 237
+			province_id = 238
+			province_id = 239
+			province_id = 240
+			province_id = 241
+			province_id = 242
+			province_id = 243
+			province_id = 244
+			province_id = 245
+			province_id = 246
+			province_id = 248
+			province_id = 250
+			province_id = 251
+			province_id = 252
+			province_id = 253
+			province_id = 254
+			province_id = 255
+			province_id = 256
+			province_id = 257
+			province_id = 258
+			province_id = 259
+			province_id = 260
+			province_id = 262
+			province_id = 265
+			province_id = 266
+			province_id = 267
+			province_id = 268
+			province_id = 270
+			province_id = 273
+			province_id = 274
+			province_id = 275
+			province_id = 276
+			province_id = 278
+			province_id = 284
+			province_id = 285
+			province_id = 290
+			province_id = 292
+			province_id = 293
+			province_id = 294
+			province_id = 296
+			province_id = 297
+			province_id = 298
+			province_id = 299
+			province_id = 301
+			province_id = 302
+			province_id = 304
+			province_id = 305
+			province_id = 306
+			province_id = 307
+			province_id = 308
+			province_id = 309
+			province_id = 310
+			province_id = 311
+			province_id = 312
+			province_id = 314
+			province_id = 316
+			province_id = 317
+			province_id = 320
+			province_id = 321
+			province_id = 322
+			province_id = 323
+			province_id = 325
+			province_id = 326
+			province_id = 327
+			province_id = 328
+			province_id = 329
+			province_id = 330
+			province_id = 331
+			province_id = 332
+			province_id = 335
+			province_id = 336
+			province_id = 337
+			province_id = 338
+			province_id = 339
+			province_id = 340
+			province_id = 341
+			province_id = 343
+			province_id = 347
+			province_id = 348
+			province_id = 350
+			province_id = 351
+			province_id = 352
+			province_id = 353
+			province_id = 354
+			province_id = 356
+			province_id = 358
+			province_id = 359
+			province_id = 360
+			province_id = 361
+			province_id = 363
+			province_id = 364
+			province_id = 365
+			province_id = 369
+			province_id = 371
+			province_id = 372
+			province_id = 373
+			province_id = 374
+			province_id = 376
+			province_id = 377
+			province_id = 379
+			province_id = 380
+			province_id = 382
+			province_id = 383
+			province_id = 384
+			province_id = 385
+			province_id = 386
+			province_id = 388
+			province_id = 391
+			province_id = 392
+			province_id = 394
+			province_id = 395
+			province_id = 397
+			province_id = 399
+			province_id = 403
+			province_id = 404
+			province_id = 406
+			province_id = 408
+			province_id = 409
+			province_id = 410
+			province_id = 411
+			province_id = 412
+			province_id = 413
+			province_id = 414
+			province_id = 415
+			province_id = 416
+			province_id = 417
+			province_id = 419
+			province_id = 420
+			province_id = 421
+			province_id = 423
+			province_id = 424
+			province_id = 426
+			province_id = 427
+			province_id = 429
+			province_id = 432
+			province_id = 433
+			province_id = 435
+			province_id = 436
+			province_id = 439
+			province_id = 441
+			province_id = 442
+			province_id = 445
+			province_id = 446
+			province_id = 447
+			province_id = 448
+			province_id = 450
+			province_id = 451
+			province_id = 454
+			province_id = 456
+			province_id = 458
+			province_id = 461
+			province_id = 464
+			province_id = 466
+			province_id = 467
+			province_id = 469
+			province_id = 473
+			province_id = 474
+			province_id = 503
+			province_id = 504
+			province_id = 505
+			province_id = 506
+			province_id = 507
+			province_id = 509
+			province_id = 510
+			province_id = 511
+			province_id = 512
+			province_id = 513
+			province_id = 516
+			province_id = 517
+			province_id = 518
+			province_id = 520
+			province_id = 522
+			province_id = 523
+			province_id = 524
+			province_id = 525
+			province_id = 526
+			province_id = 527
+			province_id = 528
+			province_id = 529
+			province_id = 530
+			province_id = 532
+			province_id = 533
+			province_id = 536
+			province_id = 539
+			province_id = 541
+			province_id = 542
+			province_id = 545
+			province_id = 547
+			province_id = 548
+			province_id = 549
+			province_id = 551
+			province_id = 553
+			province_id = 555
+			province_id = 559
+			province_id = 565
+			province_id = 568
+			province_id = 569
+			province_id = 572
+			province_id = 575
+			province_id = 576
+			province_id = 577
+			province_id = 579
+			province_id = 580
+			province_id = 581
+			province_id = 582
+			province_id = 583
+			province_id = 585
+			province_id = 586
+			province_id = 587
+			province_id = 588
+			province_id = 589
+			province_id = 591
+			province_id = 592
+			province_id = 594
+			province_id = 595
+			province_id = 596
+			province_id = 598
+			province_id = 599
+			province_id = 600
+			province_id = 601
+			province_id = 602
+			province_id = 605
+			province_id = 606
+			province_id = 607
+			province_id = 609
+			province_id = 610
+			province_id = 612
+			province_id = 614
+			province_id = 618
+			province_id = 620
+			province_id = 621
+			province_id = 622
+			province_id = 624
+			province_id = 625
+			province_id = 628
+			province_id = 629
+			province_id = 631
+			province_id = 632
+			province_id = 633
+			province_id = 637
+			province_id = 639
+			province_id = 640
+			province_id = 643
+			province_id = 644
+			province_id = 649
+			province_id = 650
+			province_id = 651
+			province_id = 655
+			province_id = 662
+			province_id = 663
+			province_id = 669
+			province_id = 670
+			province_id = 671
+			province_id = 672
+			province_id = 673
+			province_id = 674
+			province_id = 676
+			province_id = 677
+			province_id = 679
+			province_id = 680
+			province_id = 682
+			province_id = 683
+			province_id = 684
+			province_id = 685
+			province_id = 686
+			province_id = 687
+			province_id = 688
+			province_id = 689
+			province_id = 690
+			province_id = 691
+			province_id = 692
+			province_id = 693
+			province_id = 694
+			province_id = 695
+			province_id = 696
+			province_id = 697
+			province_id = 698
+			province_id = 699
+			province_id = 700
+			province_id = 701
+			province_id = 704
+			province_id = 707
+			province_id = 709
+			province_id = 712
+			province_id = 714
+			province_id = 715
+			province_id = 717
+			province_id = 719
+			province_id = 726
+			province_id = 731
+			province_id = 732
+			province_id = 733
+			province_id = 734
+			province_id = 735
+			province_id = 736
+			province_id = 737
+			province_id = 739
+			province_id = 740
+			province_id = 750
+			province_id = 767
+			province_id = 770
+			province_id = 771
+			province_id = 788
+			province_id = 828
+			province_id = 1012
+			province_id = 1013
+			province_id = 1014
+			province_id = 1017
+			province_id = 1018
+			province_id = 1019
+			province_id = 1020
+			province_id = 1021
+			province_id = 1023
+			province_id = 1024
+			province_id = 1025
+			province_id = 1026
+			province_id = 1027
+			province_id = 1028
+			province_id = 1029
+			province_id = 1030
+			province_id = 1064
+			province_id = 1071
+			province_id = 1077
+			province_id = 1081
+			province_id = 1082
+			province_id = 1083
+			province_id = 1110
+			province_id = 1121
+			province_id = 1130
+			province_id = 1132
+			province_id = 1133
+			province_id = 1134
+			province_id = 1181
+			province_id = 1185
+			province_id = 1186
+			province_id = 1192
+			province_id = 1195
+			province_id = 1196
+			province_id = 1197
+			province_id = 1198
+			province_id = 1199
+			province_id = 1200
+			province_id = 1201
+			province_id = 1202
+			province_id = 1203
+			province_id = 1204
+			province_id = 1205
+			province_id = 1206
+			province_id = 1208
+			province_id = 1209
+			province_id = 1212
+			province_id = 1218
+			province_id = 1220
+			province_id = 1221
+			province_id = 1223
+			province_id = 1224
+			province_id = 1228
+			province_id = 1229
+			province_id = 1230
+			province_id = 1231
+			province_id = 1232
+			province_id = 1233
+			province_id = 1742
+			province_id = 1744
+			province_id = 1746
+			province_id = 1748
+			province_id = 1749
+			province_id = 1750
+			province_id = 1751
+			province_id = 1752
+			province_id = 1753
+			province_id = 1754
+			province_id = 1758
+			province_id = 1759
+			province_id = 1762
+			province_id = 1763
+			province_id = 1764
+			province_id = 1766
+			province_id = 1768
+			province_id = 1770
+			province_id = 1772
+			province_id = 1773
+			province_id = 1774
+			province_id = 1775
+			province_id = 1778
+			province_id = 1784
+			province_id = 1785
+			province_id = 1787
+			province_id = 1800
+			province_id = 1815
+			province_id = 1817
+			province_id = 1818
+			province_id = 1819
+			province_id = 1820
+			province_id = 1822
+			province_id = 1823
+			province_id = 1824
+			province_id = 1825
+			province_id = 1826
+			province_id = 1827
+			province_id = 1828
+			province_id = 1829
+			province_id = 1830
+			province_id = 1832
+			province_id = 1833
+			province_id = 1835
+			province_id = 1836
+			province_id = 1837
+			province_id = 1838
+			province_id = 1839
+			province_id = 1840
+			province_id = 1842
+			province_id = 1843
+			province_id = 1846
+			province_id = 1848
+			province_id = 1849
+			province_id = 1851
+			province_id = 1853
+			province_id = 1854
+			province_id = 1855
+			province_id = 1856
+			province_id = 1857
+			province_id = 1858
+			province_id = 1859
+			province_id = 1861
+			province_id = 1862
+			province_id = 1863
+			province_id = 1864
+			province_id = 1865
+			province_id = 1866
+			province_id = 1868
+			province_id = 1869
+			province_id = 1870
+			province_id = 1871
+			province_id = 1872
+			province_id = 1873
+			province_id = 1874
+			province_id = 1876
+			province_id = 1877
+			province_id = 1878
+			province_id = 1879
+			province_id = 1933
+			province_id = 1934
+			province_id = 1935
+			province_id = 1937
+			province_id = 1938
+			province_id = 1939
+			province_id = 1940
+			province_id = 1941
+			province_id = 1942
+			province_id = 1943
+			province_id = 1944
+			province_id = 1946
+			province_id = 1947
+			province_id = 1948
+			province_id = 1949
+			province_id = 1950
+			province_id = 1951
+			province_id = 1952
+			province_id = 1953
+			province_id = 1956
+			province_id = 1957
+			province_id = 1959
+			province_id = 1960
+			province_id = 1961
+			province_id = 1962
+			province_id = 1963
+			province_id = 1965
+			province_id = 1967
+			province_id = 1968
+			province_id = 1969
+			province_id = 1971
+			province_id = 1973
+			province_id = 1978
+			province_id = 1982
+			province_id = 1985
+			province_id = 2016
+			province_id = 2024
+			province_id = 2027
+			province_id = 2028
+			province_id = 2030
+			province_id = 2034
+			province_id = 2035
+			province_id = 2036
+			province_id = 2037
+			province_id = 2040
+			province_id = 2041
+			province_id = 2043
+			province_id = 2044
+			province_id = 2045
+			province_id = 2049
+			province_id = 2050
+			province_id = 2052
+			province_id = 2053
+			province_id = 2055
+			province_id = 2056
+			province_id = 2057
+			province_id = 2058
+			province_id = 2059
+			province_id = 2060
+			province_id = 2062
+			province_id = 2063
+			province_id = 2064
+			province_id = 2065
+			province_id = 2066
+			province_id = 2069
+			province_id = 2072
+			province_id = 2075
+			province_id = 2076
+			province_id = 2078
+			province_id = 2079
+			province_id = 2082
+			province_id = 2083
+			province_id = 2086
+			province_id = 2087
+			province_id = 2088
+			province_id = 2089
+			province_id = 2090
+			province_id = 2092
+			province_id = 2093
+			province_id = 2095
+			province_id = 2097
+			province_id = 2098
+			province_id = 2099
+			province_id = 2100
+			province_id = 2101
+			province_id = 2107
+			province_id = 2108
+			province_id = 2109
+			province_id = 2110
+			province_id = 2111
+			province_id = 2112
+			province_id = 2113
+			province_id = 2115
+			province_id = 2122
+			province_id = 2124
+			province_id = 2125
+			province_id = 2128
+			province_id = 2129
+			province_id = 2136
+			province_id = 2137
+			province_id = 2138
+			province_id = 2139
+			province_id = 2140
+			province_id = 2141
+			province_id = 2142
+			province_id = 2143
+			province_id = 2144
+			province_id = 2145
+			province_id = 2146
+			province_id = 2147
+			province_id = 2149
+			province_id = 2150
+			province_id = 2151
+			province_id = 2152
+			province_id = 2153
+			province_id = 2163
+			province_id = 2167
+			province_id = 2168
+			province_id = 2169
+			province_id = 2171
+			province_id = 2172
+			province_id = 2173
+			province_id = 2174
+			province_id = 2175
+			province_id = 2178
+			province_id = 2179
+			province_id = 2181
+			province_id = 2183
+			province_id = 2184
+			province_id = 2189
+			province_id = 2199
+			province_id = 2201
+			province_id = 2203
+			province_id = 2204
+			province_id = 2205
+			province_id = 2206
+			province_id = 2207
+			province_id = 2208
+			province_id = 2209
+			province_id = 2210
+			province_id = 2212
+			province_id = 2213
+			province_id = 2215
+			province_id = 2216
+			province_id = 2217
+			province_id = 2218
+			province_id = 2220
+			province_id = 2221
+			province_id = 2222
+			province_id = 2225
+			province_id = 2226
+			province_id = 2227
+			province_id = 2228
+			province_id = 2231
+			province_id = 2232
+			province_id = 2234
+			province_id = 2235
+			province_id = 2236
+			province_id = 2238
+			province_id = 2240
+			province_id = 2264
+			province_id = 2270
+			province_id = 2296
+			province_id = 2297
+			province_id = 2299
+			province_id = 2300
+			province_id = 2301
+			province_id = 2302
+			province_id = 2303
+			province_id = 2304
+			province_id = 2305
+			province_id = 2307
+			province_id = 2308
+			province_id = 2309
+			province_id = 2310
+			province_id = 2312
+			province_id = 2313
+			province_id = 2314
+			province_id = 2315
+			province_id = 2317
+			province_id = 2319
+			province_id = 2320
+			province_id = 2325
+			province_id = 2327
+			province_id = 2328
+			province_id = 2329
+			province_id = 2331
+			province_id = 2335
+			province_id = 2337
+			province_id = 2339
+			province_id = 2341
+			province_id = 2344
+			province_id = 2346
+			province_id = 2348
+			province_id = 2349
+			province_id = 2350
+			province_id = 2356
+			province_id = 2364
+			province_id = 2365
+			province_id = 2367
+			province_id = 2373
+			province_id = 2374
+			province_id = 2379
+			province_id = 2380
+			province_id = 2385
+			province_id = 2386
+			province_id = 2387
+			province_id = 2390
+			province_id = 2391
+			province_id = 2394
+			province_id = 2396
+			province_id = 2398
+			province_id = 2399
+			province_id = 2400
+			province_id = 2401
+			province_id = 2404
+			province_id = 2408
+			province_id = 2410
+			province_id = 2416
+			province_id = 2418
+			province_id = 2423
+			province_id = 2434
+			province_id = 2447
+			province_id = 2450
+			province_id = 2452
+			province_id = 2454
+			province_id = 2455
+			province_id = 2456
+			province_id = 2457
+			province_id = 2459
+			province_id = 2460
+			province_id = 2462
+			province_id = 2464
+			province_id = 2465
+			province_id = 2466
+			province_id = 2467
+			province_id = 2468
+			province_id = 2469
+			province_id = 2470
+			province_id = 2472
+			province_id = 2473
+			province_id = 2673
+			province_id = 2674
+			province_id = 2675
+			province_id = 2677
+			province_id = 2678
+			province_id = 2680
+			province_id = 2682
+			province_id = 2687
+			province_id = 2688
+			province_id = 2689
+			province_id = 2690
+			province_id = 2693
+			province_id = 2694
+			province_id = 2697
+			province_id = 2700
+			province_id = 2702
+			province_id = 2707
+			province_id = 2708
+			province_id = 2709
+			province_id = 2710
+			province_id = 2713
+			province_id = 2715
+			province_id = 2743
+			province_id = 2745
+			province_id = 2746
+			province_id = 2748
+			province_id = 2749
+			province_id = 2750
+			province_id = 2752
+			province_id = 2753
+			province_id = 2755
+			province_id = 2760
+			province_id = 2765
+			province_id = 2766
+			province_id = 2767
+			province_id = 2769
+			province_id = 2771
+			province_id = 2774
+			province_id = 2775
+			province_id = 2777
+			province_id = 2780
+			province_id = 2782
+			province_id = 2783
+			province_id = 2784
+			province_id = 2785
+			province_id = 2786
+			province_id = 2787
+			province_id = 2789
+			province_id = 2791
+			province_id = 2793
+			province_id = 2794
+			province_id = 2796
+			province_id = 2798
+			province_id = 2799
+			province_id = 2800
+			province_id = 2813
+			province_id = 2927
+			province_id = 2930
+			province_id = 2933
+			province_id = 2955
+			province_id = 2956
+			province_id = 2957
+			province_id = 2958
+			province_id = 2959
+			province_id = 2960
+			province_id = 2964
+			province_id = 2965
+			province_id = 2968
+			province_id = 2970
+			province_id = 2971
+			province_id = 2972
+			province_id = 2973
+			province_id = 2974
+			province_id = 2975
+			province_id = 2976
+			province_id = 2977
+			province_id = 2978
+			province_id = 2979
+			province_id = 2980
+			province_id = 2982
+			province_id = 2983
+			province_id = 2984
+			province_id = 2985
+			province_id = 2986
+			province_id = 2987
+			province_id = 2988
+			province_id = 2990
+			province_id = 2991
+			province_id = 2992
+			province_id = 2993
+			province_id = 2994
+			province_id = 2995
+			province_id = 2996
+			province_id = 2997
+			province_id = 2998
+			province_id = 2999
+			province_id = 3001
+			province_id = 3003
+			province_id = 4020
+			province_id = 4022
+			province_id = 4026
+			province_id = 4049
+			province_id = 4073
+			province_id = 4105
+			province_id = 4110
+			province_id = 4111
+			province_id = 4112
+			province_id = 4115
+			province_id = 4117
+			province_id = 4118
+			province_id = 4119
+			province_id = 4120
+			province_id = 4121
+			province_id = 4125
+			province_id = 4126
+			province_id = 4127
+			province_id = 4128
+			province_id = 4129
+			province_id = 4130
+			province_id = 4142
+			province_id = 4143
+			province_id = 4144
+			province_id = 4147
+			province_id = 4149
+			province_id = 4150
+			province_id = 4165
+			province_id = 4166
+			province_id = 4169
+			province_id = 4174
+			province_id = 4176
+			province_id = 4180
+			province_id = 4181
+			province_id = 4182
+			province_id = 4183
+			province_id = 4184
+			province_id = 4185
+			province_id = 4186
+			province_id = 4187
+			province_id = 4188
+			province_id = 4189
+			province_id = 4190
+			province_id = 4191
+			province_id = 4192
+			province_id = 4194
+			province_id = 4195
+			province_id = 4196
+			province_id = 4197
+			province_id = 4198
+			province_id = 4199
+			province_id = 4200
+			province_id = 4201
+			province_id = 4202
+			province_id = 4204
+			province_id = 4207
+			province_id = 4209
+			province_id = 4211
+			province_id = 4212
+			province_id = 4213
+			province_id = 4218
+			province_id = 4219
+			province_id = 4223
+			province_id = 4227
+			province_id = 4228
+			province_id = 4229
+			province_id = 4230
+			province_id = 4231
+			province_id = 4232
+			province_id = 4236
+			province_id = 4237
+			province_id = 4240
+			province_id = 4243
+			province_id = 4245
+			province_id = 4248
+			province_id = 4249
+			province_id = 4250
+			province_id = 4252
+			province_id = 4255
+			province_id = 4257
+			province_id = 4259
+			province_id = 4260
+			province_id = 4261
+			province_id = 4262
+			province_id = 4264
+			province_id = 4268
+			province_id = 4269
+			province_id = 4270
+			province_id = 4271
+			province_id = 4275
+			province_id = 4277
+			province_id = 4279
+			province_id = 4281
+			province_id = 4286
+			province_id = 4287
+			province_id = 4289
+			province_id = 4290
+			province_id = 4292
+			province_id = 4296
+			province_id = 4297
+			province_id = 4298
+			province_id = 4299
+			province_id = 4301
+			province_id = 4303
+			province_id = 4304
+			province_id = 4305
+			province_id = 4307
+			province_id = 4310
+			province_id = 4311
+			province_id = 4312
+			province_id = 4314
+			province_id = 4315
+			province_id = 4318
+			province_id = 4319
+			province_id = 4323
+			province_id = 4325
+			province_id = 4326
+			province_id = 4327
+			province_id = 4329
+			province_id = 4330
+			province_id = 4331
+			province_id = 4332
+			province_id = 4335
+			province_id = 4336
+			province_id = 4339
+			province_id = 4341
+			province_id = 4343
+			province_id = 4351
+			province_id = 4354
+			province_id = 4359
+			province_id = 4360
+			province_id = 4362
+			province_id = 4363
+			province_id = 4364
+			province_id = 4365
+			province_id = 4366
+			province_id = 4367
+			province_id = 4368
+			province_id = 4369
+			province_id = 4370
+			province_id = 4371
+			province_id = 4372
+			province_id = 4373
+			province_id = 4374
+			province_id = 4375
+			province_id = 4376
+			province_id = 4378
+			province_id = 4379
+			province_id = 4380
+			province_id = 4382
+			province_id = 4384
+			province_id = 4385
+			province_id = 4387
+			province_id = 4388
+			province_id = 4389
+			province_id = 4390
+			province_id = 4391
+			province_id = 4392
+			province_id = 4394
+			province_id = 4397
+			province_id = 4398
+			province_id = 4399
+			province_id = 4400
+			province_id = 4404
+			province_id = 4405
+			province_id = 4406
+			province_id = 4407
+			province_id = 4408
+			province_id = 4412
+			province_id = 4414
+			province_id = 4417
+			province_id = 4418
+			province_id = 4419
+			province_id = 4421
+			province_id = 4422
+			province_id = 4423
+			province_id = 4425
+			province_id = 4427
+			province_id = 4428
+			province_id = 4429
+			province_id = 4430
+			province_id = 4431
+			province_id = 4433
+			province_id = 4434
+			province_id = 4435
+			province_id = 4436
+			province_id = 4438
+			province_id = 4441
+			province_id = 4445
+			province_id = 4449
+			province_id = 4450
+			province_id = 4453
+			province_id = 4455
+			province_id = 4456
+			province_id = 4460
+			province_id = 4461
+			province_id = 4462
+			province_id = 4464
+			province_id = 4465
+			province_id = 4466
+			province_id = 4467
+			province_id = 4468
+			province_id = 4469
+			province_id = 4471
+			province_id = 4472
+			province_id = 4474
+			province_id = 4475
+			province_id = 4476
+			province_id = 4477
+			province_id = 4479
+			province_id = 4481
+			province_id = 4482
+			province_id = 4484
+			province_id = 4486
+			province_id = 4489
+			province_id = 4490
+			province_id = 4491
+			province_id = 4494
+			province_id = 4498
+			province_id = 4500
+			province_id = 4501
+			province_id = 4502
+			province_id = 4503
+			province_id = 4505
+			province_id = 4507
+			province_id = 4509
+			province_id = 4510
+			province_id = 4511
+			province_id = 4513
+			province_id = 4514
+			province_id = 4516
+			province_id = 4517
+			province_id = 4518
+			province_id = 4523
+			province_id = 4524
+			province_id = 4525
+			province_id = 4526
+			province_id = 4527
+			province_id = 4528
+			province_id = 4529
+			province_id = 4531
+			province_id = 4532
+			province_id = 4533
+			province_id = 4536
+			province_id = 4538
+			province_id = 4539
+			province_id = 4543
+			province_id = 4546
+			province_id = 4547
+			province_id = 4548
+			province_id = 4550
+			province_id = 4551
+			province_id = 4552
+			province_id = 4553
+			province_id = 4554
+			province_id = 4555
+			province_id = 4556
+			province_id = 4557
+			province_id = 4560
+			province_id = 4561
+			province_id = 4563
+			province_id = 4564
+			province_id = 4567
+			province_id = 4568
+			province_id = 4651
+			province_id = 4663
+			province_id = 4687
+			province_id = 4690
+			province_id = 4693
+			province_id = 4694
+			province_id = 4695
+			province_id = 4696
+			province_id = 4697
+			province_id = 4698
+			province_id = 4699
+			province_id = 4701
+			province_id = 4704
+			province_id = 4706
+			province_id = 4707
+			province_id = 4708
+			province_id = 4709
+			province_id = 4710
+			province_id = 4712
+			province_id = 4713
+			province_id = 4714
+			province_id = 4715
+			province_id = 4716
+			province_id = 4717
+			province_id = 4718
+			province_id = 4719
+			province_id = 4720
+			province_id = 4721
+			province_id = 4723
+			province_id = 4725
+			province_id = 4727
+			province_id = 4728
+			province_id = 4729
+			province_id = 4730
+			province_id = 4731
+			province_id = 4732
+			province_id = 4733
+			province_id = 4734
+			province_id = 4735
+			province_id = 4736
+			province_id = 4737
+			province_id = 4739
+			province_id = 4740
+			province_id = 4741
+			province_id = 4742
+			province_id = 4743
+			province_id = 4744
+			province_id = 4745
+			province_id = 4748
+			province_id = 4750
+			province_id = 4752
+			province_id = 4753
+			province_id = 4754
+			province_id = 4755
+			province_id = 4756
+			province_id = 4759
+			province_id = 4761
+			province_id = 4764
+			province_id = 4765
+			province_id = 4766
+			province_id = 4767
+			province_id = 4768
+			province_id = 4769
+			province_id = 4771
+			province_id = 4772
+			province_id = 4774
+			province_id = 4775
+			province_id = 4776
+			province_id = 4778
+			province_id = 4779
+			province_id = 4780
+			province_id = 4787
+			province_id = 4788
+			province_id = 4789
+			province_id = 4791
+			province_id = 4795
+			province_id = 4800
+			province_id = 4811
+			province_id = 4812
+			province_id = 4816
+			province_id = 4817
+			province_id = 4821
+			province_id = 4822
+			province_id = 4825
+			province_id = 4828
+			province_id = 4830
+			province_id = 4832
+			province_id = 4834
+			province_id = 4835
+			province_id = 4839
+			province_id = 4841
+			AND = {
+				NOT = {
+					province_id = 11
+					province_id = 21
+					province_id = 31
+					province_id = 315
+					province_id = 367
+					province_id = 443
+					province_id = 482
+					province_id = 484
+					province_id = 486
+					province_id = 489
+					province_id = 490
+					province_id = 492
+					province_id = 634
+					province_id = 645
+					province_id = 654
+					province_id = 706
+					province_id = 727
+					province_id = 741
+					province_id = 742
+					province_id = 743
+					province_id = 744
+					province_id = 745
+					province_id = 746
+					province_id = 753
+					province_id = 754
+					province_id = 769
+					province_id = 772
+					province_id = 777
+					province_id = 779
+					province_id = 783
+					province_id = 785
+					province_id = 794
+					province_id = 796
+					province_id = 797
+					province_id = 798
+					province_id = 803
+					province_id = 805
+					province_id = 812
+					province_id = 816
+					province_id = 819
+					province_id = 820
+					province_id = 821
+					province_id = 826
+					province_id = 829
+					province_id = 831
+					province_id = 834
+					province_id = 842
+					province_id = 850
+					province_id = 853
+					province_id = 856
+					province_id = 857
+					province_id = 859
+					province_id = 860
+					province_id = 862
+					province_id = 863
+					province_id = 865
+					province_id = 866
+					province_id = 867
+					province_id = 868
+					province_id = 869
+					province_id = 871
+					province_id = 873
+					province_id = 874
+					province_id = 882
+					province_id = 883
+					province_id = 884
+					province_id = 886
+					province_id = 887
+					province_id = 889
+					province_id = 890
+					province_id = 891
+					province_id = 895
+					province_id = 896
+					province_id = 897
+					province_id = 898
+					province_id = 899
+					province_id = 900
+					province_id = 903
+					province_id = 905
+					province_id = 910
+					province_id = 911
+					province_id = 912
+					province_id = 915
+					province_id = 916
+					province_id = 917
+					province_id = 918
+					province_id = 919
+					province_id = 922
+					province_id = 923
+					province_id = 924
+					province_id = 927
+					province_id = 928
+					province_id = 929
+					province_id = 930
+					province_id = 932
+					province_id = 933
+					province_id = 934
+					province_id = 936
+					province_id = 938
+					province_id = 939
+					province_id = 940
+					province_id = 941
+					province_id = 942
+					province_id = 943
+					province_id = 947
+					province_id = 949
+					province_id = 951
+					province_id = 954
+					province_id = 956
+					province_id = 957
+					province_id = 958
+					province_id = 959
+					province_id = 961
+					province_id = 964
+					province_id = 965
+					province_id = 967
+					province_id = 973
+					province_id = 975
+					province_id = 982
+					province_id = 986
+					province_id = 987
+					province_id = 990
+					province_id = 992
+					province_id = 994
+					province_id = 999
+					province_id = 1004
+					province_id = 1008
+					province_id = 1009
+					province_id = 1033
+					province_id = 1036
+					province_id = 1041
+					province_id = 1044
+					province_id = 1046
+					province_id = 1050
+					province_id = 1051
+					province_id = 1057
+					province_id = 1059
+					province_id = 1060
+					province_id = 1061
+					province_id = 1062
+					province_id = 1068
+					province_id = 1069
+					province_id = 1072
+					province_id = 1080
+					province_id = 1085
+					province_id = 1089
+					province_id = 1090
+					province_id = 1091
+					province_id = 1094
+					province_id = 1095
+					province_id = 1096
+					province_id = 1097
+					province_id = 1102
+					province_id = 1107
+					province_id = 1108
+					province_id = 1109
+					province_id = 1111
+					province_id = 1113
+					province_id = 1119
+					province_id = 1125
+					province_id = 1126
+					province_id = 1135
+					province_id = 1138
+					province_id = 1140
+					province_id = 1143
+					province_id = 1144
+					province_id = 1145
+					province_id = 1146
+					province_id = 1147
+					province_id = 1148
+					province_id = 1149
+					province_id = 1150
+					province_id = 1151
+					province_id = 1152
+					province_id = 1154
+					province_id = 1155
+					province_id = 1159
+					province_id = 1160
+					province_id = 1161
+					province_id = 1162
+					province_id = 1163
+					province_id = 1164
+					province_id = 1166
+					province_id = 1167
+					province_id = 1168
+					province_id = 1171
+					province_id = 1179
+					province_id = 1182
+					province_id = 1183
+					province_id = 1187
+					province_id = 1188
+					province_id = 1190
+					province_id = 1191
+					province_id = 1193
+					province_id = 1194
+					province_id = 1217
+					province_id = 1239
+					province_id = 1243
+					province_id = 1244
+					province_id = 1249
+					province_id = 1777
+					province_id = 1786
+					province_id = 1792
+					province_id = 1808
+					province_id = 1809
+					province_id = 1813
+					province_id = 1847
+					province_id = 1852
+					province_id = 1955
+					province_id = 1958
+					province_id = 1966
+					province_id = 1988
+					province_id = 1989
+					province_id = 1990
+					province_id = 1992
+					province_id = 1995
+					province_id = 1998
+					province_id = 2005
+					province_id = 2006
+					province_id = 2010
+					province_id = 2011
+					province_id = 2014
+					province_id = 2015
+					province_id = 2020
+					province_id = 2021
+					province_id = 2025
+					province_id = 2073
+					province_id = 2102
+					province_id = 2185
+					province_id = 2194
+					province_id = 2200
+					province_id = 2239
+					province_id = 2244
+					province_id = 2253
+					province_id = 2256
+					province_id = 2265
+					province_id = 2266
+					province_id = 2267
+					province_id = 2273
+					province_id = 2275
+					province_id = 2277
+					province_id = 2278
+					province_id = 2279
+					province_id = 2280
+					province_id = 2281
+					province_id = 2284
+					province_id = 2286
+					province_id = 2288
+					province_id = 2289
+					province_id = 2290
+					province_id = 2291
+					province_id = 2294
+					province_id = 2440
+					province_id = 2442
+					province_id = 2446
+					province_id = 2475
+					province_id = 2476
+					province_id = 2478
+					province_id = 2479
+					province_id = 2480
+					province_id = 2481
+					province_id = 2483
+					province_id = 2485
+					province_id = 2490
+					province_id = 2491
+					province_id = 2495
+					province_id = 2498
+					province_id = 2506
+					province_id = 2509
+					province_id = 2511
+					province_id = 2513
+					province_id = 2523
+					province_id = 2524
+					province_id = 2528
+					province_id = 2529
+					province_id = 2530
+					province_id = 2532
+					province_id = 2533
+					province_id = 2536
+					province_id = 2537
+					province_id = 2538
+					province_id = 2539
+					province_id = 2541
+					province_id = 2543
+					province_id = 2544
+					province_id = 2545
+					province_id = 2546
+					province_id = 2547
+					province_id = 2548
+					province_id = 2550
+					province_id = 2551
+					province_id = 2553
+					province_id = 2554
+					province_id = 2556
+					province_id = 2557
+					province_id = 2559
+					province_id = 2560
+					province_id = 2566
+					province_id = 2567
+					province_id = 2569
+					province_id = 2571
+					province_id = 2572
+					province_id = 2573
+					province_id = 2576
+					province_id = 2577
+					province_id = 2578
+					province_id = 2581
+					province_id = 2583
+					province_id = 2584
+					province_id = 2599
+					province_id = 2607
+					province_id = 2609
+					province_id = 2610
+					province_id = 2620
+					province_id = 2622
+					province_id = 2623
+					province_id = 2624
+					province_id = 2627
+					province_id = 2629
+					province_id = 2630
+					province_id = 2631
+					province_id = 2632
+					province_id = 2633
+					province_id = 2634
+					province_id = 2639
+					province_id = 2642
+					province_id = 2643
+					province_id = 2645
+					province_id = 2646
+					province_id = 2647
+					province_id = 2648
+					province_id = 2649
+					province_id = 2654
+					province_id = 2655
+					province_id = 2656
+					province_id = 2658
+					province_id = 2659
+					province_id = 2670
+					province_id = 2696
+					province_id = 2701
+					province_id = 2725
+					province_id = 2727
+					province_id = 2728
+					province_id = 2729
+					province_id = 2730
+					province_id = 2732
+					province_id = 2734
+					province_id = 2735
+					province_id = 2736
+					province_id = 2737
+					province_id = 2739
+					province_id = 2759
+					province_id = 2805
+					province_id = 2808
+					province_id = 2810
+					province_id = 2816
+					province_id = 2823
+					province_id = 2828
+					province_id = 2829
+					province_id = 2838
+					province_id = 2841
+					province_id = 2844
+					province_id = 2846
+					province_id = 2853
+					province_id = 2859
+					province_id = 2875
+					province_id = 2878
+					province_id = 2881
+					province_id = 2886
+					province_id = 2888
+					province_id = 2893
+					province_id = 2894
+					province_id = 2896
+					province_id = 2898
+					province_id = 2909
+					province_id = 2925
+					province_id = 2929
+					province_id = 2947
+					province_id = 2948
+					province_id = 2952
+					province_id = 4023
+					province_id = 4024
+					province_id = 4025
+					province_id = 4027
+					province_id = 4042
+					province_id = 4045
+					province_id = 4051
+					province_id = 4054
+					province_id = 4062
+					province_id = 4064
+					province_id = 4067
+					province_id = 4072
+					province_id = 4075
+					province_id = 4078
+					province_id = 4080
+					province_id = 4086
+					province_id = 4090
+					province_id = 4093
+					province_id = 4100
+					province_id = 4101
+					province_id = 4108
+					province_id = 4109
+					province_id = 4113
+					province_id = 4114
+					province_id = 4122
+					province_id = 4151
+					province_id = 4168
+					province_id = 4193
+					province_id = 4258
+					province_id = 4355
+					province_id = 4356
+					province_id = 4571
+					province_id = 4572
+					province_id = 4573
+					province_id = 4574
+					province_id = 4575
+					province_id = 4578
+					province_id = 4579
+					province_id = 4581
+					province_id = 4582
+					province_id = 4596
+					province_id = 4598
+					province_id = 4599
+					province_id = 4606
+					province_id = 4610
+					province_id = 4615
+					province_id = 4618
+					province_id = 4619
+					province_id = 4620
+					province_id = 4621
+					province_id = 4625
+					province_id = 4626
+					province_id = 4628
+					province_id = 4629
+					province_id = 4630
+					province_id = 4632
+					province_id = 4633
+					province_id = 4635
+					province_id = 4640
+					province_id = 4641
+					province_id = 4642
+					province_id = 4643
+					province_id = 4644
+					province_id = 4645
+					province_id = 4649
+					province_id = 4658
+					province_id = 4783
+					province_id = 4846
+					province_id = 4849
+					province_id = 4853
+					province_id = 4854
+					province_id = 4858
+					province_id = 4860
+					province_id = 4861
+					province_id = 4862
+					province_id = 4864
+					province_id = 4866
+					province_id = 4868
+					province_id = 4869
+					province_id = 4871
+					province_id = 4876
+					province_id = 4878
+					province_id = 4880
+					province_id = 4881
+					province_id = 4884
+					province_id = 4886
+					province_id = 4889
+					province_id = 4891
+					province_id = 4893
+					province_id = 4896
+					province_id = 4906
+					province_id = 4908
+					province_id = 4910
+					province_id = 4911
+					province_id = 4912
+					province_id = 4913
+					province_id = 4919
+					province_id = 4921
+					province_id = 4923
+					province_id = 4924
+					province_id = 4926
+					province_id = 4931
+					province_id = 4932
+					province_id = 4934
+					province_id = 4935
+					province_id = 4936
+					province_id = 4938
+				}
+			OR = {
+				AND = { #If this is changed costs for Nation Designer may also need to be changed.
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+					owner = {
+						is_playing_custom_nation = yes
+						OR = {
+							technology_group = western
+							technology_group = eastern
+							technology_group = ottoman
+							technology_group = muslim
+							technology_group = indian
+							technology_group = chinese
+							#technology_group = high_american #Is listed below as High Americans get it regardless of if Nation Designer is used.
+						}
+					}
+				}
+				AND = {
+					owner = { is_playing_custom_nation = no }
+					OR = {
+						culture = persian
+						culture = azerbaijani
+						culture = kurdish
+						culture = armenian
+						culture = mazandarani
+						culture = turkish
+						culture = omani_culture
+						culture = yemeni_culture
+						culture = swahili
+						area = ningguta_area
+						area = jilin_area
+						culture_group = byzantine
+						culture_group = dravidian
+						culture_group = east_asian
+						culture_group = east_slavic
+						culture_group = slavic
+						culture_group = eastern_aryan
+						culture_group = japanese_g
+						culture_group = korean_g
+						culture_group = scandinavian
+						culture_group = west_slavic
+						culture_group = western_aryan
+						province_id = 383
+						province_id = 412
+						province_id = 2327
+						province_id = 2329
+						province_id = 2331
+						province_id = 2999
+					}
+				}
+				AND = {
+					region = horn_of_africa_region
+					owner = { NOT = { has_reform = tribal_federation } }
+				}
+				AND = {
+					culture = al_misr_arabic
+					NOT = { area = al_wahat_area }
+					NOT = { area = cyrenaica_area }
+				}
+				AND = {
+					culture_group = hindusthani
+					NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
+				}
+				owner = { technology_group = high_american }
+				owner = {
+					NOT = {
+						government = tribal
+						government = native
+						primary_culture = bedouin_arabic
+						primary_culture = uyghur
+						technology_group = andean
+						technology_group = mesoamerican
+						technology_group = north_american
+						technology_group = south_american
+						technology_group = sub_saharan
+						technology_group = aboriginal_tech
+					}
+				}
+				AND = {
+					is_year = 1600
+					owner = {
+						NOT = { has_reform = siberian_tribe }
+						NOT = { has_reform = steppe_horde }
+					}
+				}
+				is_year = 1700
+			}
+
+			}
+		}
+	}
+	
+	# no need for events, as its there from the start.
+	#can_start = {	is_year = 1000	}
+	#start_chance = 100
+	#on_start = institution_events.1
+
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 0.6
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = FRIENDLY_NEIGHBOR_OR_COAST_PROVINCE_HAS_EMBRACED
+				any_friendly_coast_border_province = {
+					feudalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						feudalism = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = NEIGHBOR_NOT_OWNED_IS_FEUDAL
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					feudalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_nobles }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FEUDALISM_AND_NOBLES
+				any_neighbor_province = {
+					feudalism = 100
+				}
+				owner = {
+					has_estate = estate_nobles
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+					estate_territory = {
+						estate = estate_nobles
+						territory = 30
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PORT_OR_CAPITAL_IN_COLONY_FEUDAL
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = feudalism }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				owner = { is_colonial_nation = no }
+			}
+			custom_trigger_tooltip = {
+				tooltip = CAPITAL_IN_OLD_WORLD_FEUDAL
+			
+				is_capital = yes
+				NOT = { continent = north_america }
+				NOT = { continent = south_america }
+				NOT = { continent = new_world }
+				NOT = { region = australia_region }
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = feudalism
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_feudalism_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = feudalism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Renaissance
+# 
+# Flows from italy
+#######################################
+
+renaissance = {
+
+	bonus = {
+		development_cost = -0.05
+		build_cost = -0.05
+	}
+
+	trade_company_efficiency = 0.4
+
+
+	historical_start_date = 1450.1.1
+	historical_start_province = 116 # Florence
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1450
+				region = italy_region
+			}
+			
+			AND = {
+				is_year = 1450
+				continent = europe
+			}
+			AND = {
+				is_year = 1500
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1500
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1500
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+			AND = {
+				is_year = 1600
+				continent = asia
+				owner = {
+					NOT = { government = tribal }
+				}
+			}
+			is_year = 1780
+		}
+	}
+	
+	can_start = {
+		is_year = 1450
+		is_institution_enabled = feudalism
+		region = italy_region
+		is_state = yes
+		NOT = { province_id = 126 }
+		is_island = no
+		OR = {
+			development = 20
+			is_capital = yes
+			normal_or_historical_nations = no
+			is_year = 1475
+		}
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.2
+	
+	
+	
+
+	
+	
+	can_embrace = {
+		owner = { has_institution = feudalism }
+	}
+
+
+	
+	embracement_speed = {
+		modifier = {
+			scale = yes
+			factor = 0.6
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_renaissance
+				any_friendly_coast_border_province = {
+					renaissance = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						renaissance = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_renaissance
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					renaissance = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			potential = {
+				region = italy_region
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_italian_capital
+				is_capital = yes
+				region = italy_region
+				culture_group = latin
+			}
+			
+			
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = europe
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_10
+				continent = europe
+				development = 10
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = europe
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_20
+				development = 20
+				continent = europe
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				continent = europe
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_5_post_1500
+				continent = europe
+				is_year = 1500
+				development = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				OR = {
+					area = flanders_area
+					area = tuscany_area
+					area = venetia_area
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_flanders_tuscany_venetia
+				OR = {
+					area = flanders_area
+					area = tuscany_area
+					area = venetia_area
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_renaissance
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = renaissance }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = renaissance
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_renaissance_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = renaissance
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+#######################################
+# New World
+# 
+# Colonising is good.. mkay.-.
+#######################################
+new_world_i = {
+
+	bonus = {
+		global_prov_trade_power_modifier = 0.10
+	}
+
+	trade_company_efficiency = 0.6
+
+
+	historical_start_date = 1500.1.1
+	historical_start_province = 224 #Sevilla
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1500
+				continent = europe
+				OR = {
+					owner = { has_idea = quest_for_the_new_world }
+					owner = { colony = 1 }
+				}
+			}
+			AND = {
+				is_year = 1550
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1550
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1550
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+			AND = {
+				is_year = 1600
+				superregion = near_east_superregion
+			}
+			AND = {
+				is_year = 1600
+				continent = europe
+			}
+			AND = {
+				is_year = 1625
+				superregion = persia_superregion
+			}
+			AND = {
+				is_year = 1650
+				superregion = india_superregion
+			}
+			
+			
+			AND = {
+				is_year = 1650
+				superregion = china_superregion
+			}
+			
+			AND = {
+				is_year = 1650
+				superregion = east_indies_superregion
+			}
+			AND = {
+				is_year = 1700
+				superregion = africa_superregion
+			}
+			is_year = 1800
+		}
+	}
+	
+	can_start = {
+		is_year = 1500
+		is_institution_enabled = renaissance
+		OR = {
+			continent = europe
+			continent = asia
+			continent = africa
+		}
+		has_port = yes
+		is_island = no
+		is_state = yes
+		OR = {
+			province_has_center_of_trade_of_level = 1
+			development = 12
+			is_capital = yes
+		}
+		is_in_capital_area = yes
+		owner = { 
+			has_any_exploration_idea = yes
+			#at least one province colonised or colonising, or have a subject colony
+			OR = {
+				any_owned_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+						continent = new_world
+					}
+				}
+				any_subject_country = {
+					OR = {
+						is_subject_of_type = colony
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+					capital_scope = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = new_world
+						}
+					}
+				}
+			}
+			OR = {
+				north_america = { has_discovered = PREV }
+				south_america = { has_discovered = PREV }
+				new_world = { has_discovered = PREV }
+			}
+		}
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.3
+	
+	
+	
+
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+
+	
+	embracement_speed = {
+	
+		modifier = {
+			factor = 1.2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_colonialism
+				any_friendly_coast_border_province = {
+					new_world_i = 100
+				}
+			}
+			
+		}
+		
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				has_port = yes
+				NOT = {
+					any_friendly_coast_border_province = {
+						new_world_i = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_neighbor_port_province_new_world
+				has_port = yes
+				any_neighbor_province = {
+					new_world_i = 100
+				}
+			}
+		}
+		
+		#Port provinces in countries with colonial subjects
+		modifier = {
+			factor = 10
+			potential = {
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					capital_scope = {
+						NOT = { continent = north_america }
+						NOT = { continent = south_america }
+						NOT = { continent = new_world }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_colonial_subject_in_new_world
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					colony = 1
+					any_subject_country = {
+						is_colonial_nation = yes
+						OR = {
+							capital_scope = { continent = north_america }
+							capital_scope = { continent = south_america }
+							capital_scope = { continent = new_world }
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_new_world_i
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = new_world_i }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = new_world_i
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_new_world_i_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = new_world_i
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+
+#######################################
+# Printing Press
+#######################################
+printing_press = {
+
+	bonus = {
+		stability_cost_modifier = -0.05
+	}
+
+	trade_company_efficiency = 0.8
+
+	historical_start_date = 1550.1.1
+	historical_start_province = 1876 #Frankfurt
+
+	history = {
+		OR = {
+			AND = {
+				province_id = 1876
+				is_year = 1550
+			}
+			AND = {
+				is_year = 1560
+				OR = {
+					religion = protestant
+					religion = reformed
+					region = italy_region
+					region = france_region
+				}
+			}
+			AND = {
+				is_year = 1575
+				continent = europe
+				development = 12
+			}
+			AND = {
+				is_year = 1600
+				continent = europe
+			}
+			AND = {
+				is_year = 1600
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1600
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1600
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+			AND = {
+				is_year = 1625
+				superregion = near_east_superregion
+			}
+			AND = {
+				is_year = 1650
+				superregion = persia_superregion
+			}
+			AND = {
+				is_year = 1725
+				superregion = china_superregion
+			}
+			AND = {
+				is_year = 1725
+				superregion = india_superregion
+			}
+			AND = {
+				is_year = 1725
+				superregion = east_indies_superregion
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1550
+		is_institution_enabled = new_world_i
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		OR = {
+			development = 15
+			is_capital = yes
+			trade_goods = paper
+		}
+		OR = {
+			religion = protestant
+			religion = reformed
+			region = north_german_region
+			region = south_german_region
+		}
+
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.4
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+	
+		modifier = {
+			factor = 0.6
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_printing_press
+				any_friendly_coast_border_province = {
+					printing_press = 100
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						printing_press = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_printing_press
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					printing_press = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_church }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_printing_press_clergy
+				any_neighbor_province = {
+					printing_press = 100
+				}
+				owner = {
+					has_estate = estate_church
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+					estate_territory = {
+						estate = estate_church
+						territory = 30
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = tooltip_dip_tech15_capital
+				is_capital = yes
+				owner = {
+					dip_tech = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = europe
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_development_20_capital
+				development = 20
+				is_capital = yes
+				continent = europe
+			}
+		}
+		modifier = {
+			factor = 2
+			potential = {
+				owner = {
+					religion_group = christian
+				}
+			}
+			if = {
+				limit = { has_dlc = "Rule Britannia" }
+				custom_trigger_tooltip = {
+					tooltip = tooltip_owner_protestant
+					is_owned_by_trade_company = no
+					owner = {
+						OR = {
+							religion = protestant
+							religion = reformed
+							religion = anglican
+							religion = hussite
+						}
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = tooltip_owner_protestant
+					is_owned_by_trade_company = no
+					owner = {
+						OR = {
+							religion = protestant
+							religion = reformed
+							religion = anglican
+							religion = hussite
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				custom_trigger_tooltip = {
+					tooltip = tooltip_province_protestant_RB
+					OR = {
+						religion = reformed
+						religion = protestant
+						religion = anglican
+						religion = hussite
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = tooltip_province_protestant
+					OR = {
+						religion = reformed
+						religion = protestant
+						religion = anglican
+						religion = hussite
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_printing_press
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = printing_press }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = printing_press
+				}
+				continent = owner
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_printing_press_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = printing_press
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = printing_press
+				}
+				NOT = { continent = owner }
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_printing_press_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = printing_press
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+
+
+
+#######################################
+# Global Trade
+#######################################
+global_trade = {
+
+	bonus = {
+		merchants = 1
+	}
+
+	trade_company_efficiency = 1.0
+
+	historical_start_date = 1600.1.1
+	historical_start_province = 97 #Holland
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1620
+				continent = europe
+				owner = { technology_group = western }
+			}
+			
+			AND = {
+				is_year = 1660
+				continent = europe
+			}	
+			AND = {
+				is_year = 1660
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1660
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1660
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+			AND = {
+				is_year = 1700
+				OR = {
+					region = maghreb_region
+					region = egypt_region
+					superregion = near_east_superregion
+				}
+			}
+			
+			AND = {
+				is_year = 1720
+				has_port = yes
+				OR = {
+					superregion = india_superregion
+					superregion = persia_superregion
+					superregion = east_indies_superregion
+				}
+			}
+			AND = {
+				is_year = 1750
+				has_port = yes
+				superregion = africa_superregion
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1600
+		is_institution_enabled = printing_press
+		is_island = no
+		highest_value_trade_node = yes
+		OR = {
+			province_has_center_of_trade_of_level = 3
+			province_has_center_of_trade_of_level = 2
+			is_capital = yes
+			AND = {
+				is_year = 1630 #fallback
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		owner = {
+			any_active_trade_node = {
+				is_strongest_trade_power = PREV
+				highest_value_trade_node = yes
+			}
+		}
+
+	}
+	start_chance = 25		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.5
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+	
+		modifier = {
+			factor = 0.4 #Not scaled
+			province_trade_power = 15
+		}
+		modifier = {
+			factor = 0.8 #Not Scaled
+			province_trade_power = 25
+		}
+		modifier = {
+			factor = 1.2 #Not Scaled
+			province_trade_power = 35
+		}
+		modifier = {
+			factor = 1.6 #Not Scaled
+			province_trade_power = 45
+		}
+		modifier = {
+			factor = 0.4
+			scale = yes
+			potential = {
+				province_has_center_of_trade_of_level = 1
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_center_of_trade_3_spread
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				province_has_center_of_trade_of_level = 1
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_center_of_trade_spread
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_burghers }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_global_trade_burghers
+				any_neighbor_province = {
+					global_trade = 100
+				}
+				owner = {
+					has_estate = estate_burghers
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 40
+					}
+					estate_territory = {
+						estate = estate_burghers
+						territory = 30
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.25
+			scale = yes
+			potential = {
+				has_port = no
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_neighbor_non_port_province_global_trade
+				has_port = no
+				any_neighbor_province = {
+					global_trade = 100
+					
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				has_port = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_neighbor_port_province_global_trade
+				has_port = yes
+				any_neighbor_province = {
+					global_trade = 100
+					
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_global_trade
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = global_trade }
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			printing_press = 100
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = global_trade
+				}
+				continent = owner
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_global_trade_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = global_trade
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = global_trade
+				}
+				NOT = { continent = owner }
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_global_trade_embraced_other_continent
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = global_trade
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+#######################################
+# Manufactories
+#######################################
+manufactories = {
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	trade_company_efficiency = 1.25
+
+	historical_start_date = 1650.1.1
+	historical_start_province = 183 #Paris
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1680
+				continent = europe
+				owner = { technology_group = western }
+			}
+			
+			AND = {
+				is_year = 1720
+				continent = europe
+			}	
+			AND = {
+				is_year = 1750
+				superregion = china_superregion
+			}
+			AND = {
+				is_year = 1750
+				superregion = india_superregion
+			}
+			AND = {
+				is_year = 1750
+				superregion = near_east_superregion
+			}
+			AND = {
+				is_year = 1750
+				region = maghreb_region
+			}
+			AND = {
+				is_year = 1750
+				region = egypt_region
+			}
+			AND = {
+				is_year = 1760
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1760
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1760
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+			
+			AND = {
+				is_year = 1780
+				superregion = persia_superregion
+			}
+			
+		}
+	}
+	
+	can_start = {
+		is_year = 1650
+		is_institution_enabled = global_trade
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		development = 20
+		printing_press = 100
+		global_trade = 100
+		custom_trigger_tooltip = {
+			tooltip = two_neighbor_dev_15_provinces
+			calc_true_if = {
+				amount = 2
+				all_neighbor_province = {
+					development = 15
+				}
+			}
+		}
+		OR = {
+			has_building = wharf
+			has_building = weapons
+			has_building = textile
+			has_building = plantations
+			has_building = tradecompany
+			has_building = mills
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.6
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_manufactories
+				any_friendly_coast_border_province = {
+					manufactories = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						manufactories = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_manufactories
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					manufactories = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = naval_supplies
+					trade_goods = fish
+					trade_goods = salt
+				}
+					
+				manufactories_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_wharf_on_institution_continent
+				has_building = wharf
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+				}
+				manufactories_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_weapons_on_institution_continent
+				has_building = weapons
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = wool
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = dyes
+				}
+				manufactories_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_on_institution_continent
+				has_building = textile
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = sugar
+					trade_goods = tobacco
+					trade_goods = tea
+					trade_goods = cocoa
+				}
+				manufactories_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_plantations_on_institution_continent
+				has_building = plantations
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = ivory
+					trade_goods = slaves
+					trade_goods = spices
+					trade_goods = cloves
+					trade_goods = fur
+					trade_goods = incense
+				}
+				manufactories_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_tradecompany_on_institution_continent
+				has_building = tradecompany
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+				manufactories_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_farm_estate_on_institution_continent
+				has_building = farm_estate
+			}
+		}
+		modifier = {
+			factor = 0.8
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = paper
+					trade_goods = gems
+					trade_goods = tropical_wood
+					trade_goods = glass
+					trade_goods = chinaware
+				}
+				manufactories_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_mills_on_institution_continent
+				has_building = mills
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = naval_supplies
+					trade_goods = fish
+					trade_goods = salt
+				}
+				manufactories_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_wharf_not_institution_continent
+				has_building = wharf
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+				}
+				manufactories_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_weapons_not_institution_continent
+				has_building = weapons
+			}
+		}
+		modifier = {
+			factor = 0.4
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = wool
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = dyes
+				}
+				manufactories_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_not_institution_continent
+				has_building = textile
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = sugar
+					trade_goods = tobacco
+					trade_goods = tea
+					trade_goods = cocoa
+				}
+				manufactories_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_plantations_not_institution_continent
+				has_building = plantations
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = ivory
+					trade_goods = slaves
+					trade_goods = spices
+					trade_goods = cloves
+					trade_goods = fur
+					trade_goods = incense
+				}
+				manufactories_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_tradecompany_not_institution_continent
+				has_building = tradecompany
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+				manufactories_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_farm_estate_not_institution_continent
+				has_building = farm_estate
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = paper
+					trade_goods = gems
+					trade_goods = tropical_wood
+					trade_goods = glass
+					trade_goods = chinaware
+				}
+				manufactories_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_mills_not_institution_continent
+				has_building = mills
+			}
+		}
+		modifier = {
+			factor = 3
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_manufactories
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = manufactories }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = manufactories
+				}
+				continent = owner
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_manufactories_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = manufactories
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = manufactories
+				}
+				NOT = { continent = owner }
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_manufactories_embraced_other_continent
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = manufactories
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+
+#######################################
+# Enlightenment
+#######################################
+enlightenment = {
+
+	bonus = {
+		culture_conversion_cost = -0.25
+	}
+
+	trade_company_efficiency = 1.5
+
+	historical_start_date = 1700.1.1
+	historical_start_province = 236 #London
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1700
+				continent = europe
+				owner = { technology_group = western }
+			}
+			
+			AND = {
+				is_year = 1730
+				continent = europe
+			}	
+
+			AND = {
+				is_year = 1800
+				superregion = near_east_superregion
+			}
+			AND = {
+				is_year = 1770
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = south_america_superregion
+			}
+			AND = {
+				is_year = 1770
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = north_america_superregion
+			}
+			AND = {
+				is_year = 1770
+				owner = {
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = south_american }
+					NOT = { technology_group = andean }
+				}
+				superregion = central_america_superregion
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1700
+		is_institution_enabled = manufactories
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		printing_press = 100
+		global_trade = 100
+		development = 30
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seat_in_parliament
+				has_seat_in_parliament = yes
+			}
+			has_building = university
+			AND = {
+				continent = europe
+				owner = {
+					ADM = 5
+					MIL = 5
+					DIP = 5
+				}
+			}
+			
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.7
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.4
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_enlightenment
+				any_friendly_coast_border_province = {
+					enlightenment = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						enlightenment = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_enlightenment
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					enlightenment = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			potential = {
+				is_capital = yes
+			}
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_with_worse_tech_has_embraced_enlightenment
+				owner = {
+					any_neighbor_country = {
+						has_institution = enlightenment
+						NOT = { tech_difference = 0 }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.4
+			potential = {
+				enlightenment_origin = {
+					same_continent = PREV
+				}
+			}
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_university_on_institution_continent
+				has_building = university
+			}
+		}
+		modifier = {
+			factor = 0.1
+			potential = {
+				enlightenment_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_university_not_institution_continent
+				has_building = university
+			}
+		}
+		modifier = {
+			factor = 0.4
+			potential = {
+				owner = {
+					has_parliament = yes
+				}
+			}
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seat_in_parliament_on_institution_continent
+				has_seat_in_parliament = yes
+				enlightenment_origin = {
+					same_continent = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			potential = {
+				owner = {
+					has_parliament = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seat_in_parliament_not_institution_continent
+				has_seat_in_parliament = yes
+				enlightenment_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			potential = {
+				enlightenment_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_philosopher_capital
+				is_capital = yes
+				owner = {
+					advisor = philosopher
+					dip_tech = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			potential = {
+				enlightenment_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_philosopher_capital
+				is_capital = yes
+				owner = {
+					advisor = philosopher
+					dip_tech = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			potential = {
+				enlightenment_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_scientist_capital
+				is_capital = yes
+				owner = {
+					advisor = natural_scientist
+					dip_tech = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			potential = {
+				enlightenment_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_scientist_capital
+				is_capital = yes
+				owner = {
+					advisor = natural_scientist
+					dip_tech = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			potential = {
+				enlightenment_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_full_innovativeness
+				is_capital = yes
+				owner = {
+					full_idea_group = innovativeness_ideas
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			potential = {
+				enlightenment_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_full_innovativeness
+				is_capital = yes
+				owner = {
+					full_idea_group = innovativeness_ideas
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_enlightenment
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = enlightenment }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = enlightenment
+				}
+				continent = owner
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_enlightenment_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = enlightenment
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = enlightenment
+				}
+				NOT = { continent = owner }
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_enlightenment_embraced_other_continent
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = enlightenment
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+
+#######################################
+# Industrialisation
+#######################################
+industrialization = {
+	
+	trade_company_efficiency = 2.0
+
+	bonus = {
+		global_manpower_modifier = 0.25
+		global_tax_modifier = 0.15
+	}
+
+	historical_start_date = 1750.1.1
+	historical_start_province = 244 #Lancashire
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1780
+				continent = europe
+				owner = { technology_group = western }
+			}
+			
+			AND = {
+				is_year = 1820
+				OR = {
+					owner = { technology_group = western }
+					continent = europe
+				}
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1750
+		is_institution_enabled = enlightenment
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		development = 30
+		manufactories = 100
+		enlightenment = 100
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
+				NOT = { is_year = 1780 } #just in case no one develops their coal provinces
+			}
+			has_building = furnace
+			owner = {
+				OR = {
+					production_leader = {
+						trade_goods = iron
+					}
+					production_leader = {
+						trade_goods = cloth
+					}
+					production_leader = {
+						trade_goods = coal
+					}
+					num_of_trading_bonuses = 3
+					is_year = 1770 #fallback
+				}
+			}
+			OR = {
+				highest_value_trade_node = yes
+				is_year = 1760 #fallback
+			}
+		}
+		else = {
+			OR = {
+				has_building = weapons
+				has_building = textile
+			}
+			owner = {
+				OR = {
+					production_leader = {
+						trade_goods = iron
+					}
+					production_leader = {
+						trade_goods = cloth
+					}
+					num_of_trading_bonuses = 3
+					is_year = 1770 #fallback
+				}
+			}
+			OR = {
+				highest_value_trade_node = yes
+				is_year = 1760 #fallback
+			}
+		}
+	}
+	start_chance = 100		#in 100 for when a province can_start
+	
+	
+	on_start = institution_events.80
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		#Split between RB and non-RB for these four as RB gives more possibilities for spread (so higher for non-RB to compensate
+		modifier = {
+			factor = 0.3
+			force_potential = yes
+			potential = {
+				has_dlc = "Rule Britannia"
+			}
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_industrialization
+				any_friendly_coast_border_province = {
+					industrialization = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			force_potential = yes
+			potential = {
+				NOT = { has_dlc = "Rule Britannia" }
+			}
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_industrialization
+				any_friendly_coast_border_province = {
+					industrialization = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			force_potential = yes
+			potential = {
+				has_dlc = "Rule Britannia"
+				NOT = {
+					any_friendly_coast_border_province = {
+						industrialization = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_industrialization
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					industrialization = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			force_potential = yes
+			potential = {
+				NOT = { has_dlc = "Rule Britannia" }
+				NOT = {
+					any_friendly_coast_border_province = {
+						industrialization = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_industrialization
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					industrialization = 100
+				}
+			}
+		}
+		#Rule Britannia specific
+		modifier = {
+			factor = 1
+			force_potential = yes
+			potential = {
+				has_dlc = "Rule Britannia"
+				has_manufactory_trigger = yes
+				development = 20
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_inovativeness_10
+				owner = {
+					innovativeness = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			force_potential = yes
+			potential = {
+				has_dlc = "Rule Britannia"
+				has_manufactory_trigger = yes
+				development = 20
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_inovativeness_15
+				owner = {
+					innovativeness = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			force_potential = yes
+			potential = {
+				has_dlc = "Rule Britannia"
+				has_manufactory_trigger = yes
+				development = 20
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_inovativeness_25
+				owner = {
+					innovativeness = 25
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			force_potential = yes
+			potential = {
+				has_dlc = "Rule Britannia"
+				OR = {
+					trade_goods = coal
+					has_latent_trade_goods = coal
+				}
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_furnace_on_institution_continent
+				has_building = furnace
+			}
+		}
+		modifier = {
+			factor = 0.25
+			scale = yes
+			force_potential = yes
+			potential = {
+				has_dlc = "Rule Britannia"
+				OR = {
+					trade_goods = coal
+					has_latent_trade_goods = coal
+				}
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_furnace_not_on_institution_continent
+				has_building = furnace
+			}
+		}
+
+
+		#General Manufactories
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = naval_supplies
+					trade_goods = fish
+					trade_goods = salt
+				}
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_wharf_on_institution_continent_industrialization
+				has_building = wharf
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+				}
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_weapons_on_institution_continent_industrialization
+				has_building = weapons
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = wool
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = dyes
+				}
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_on_institution_continent_industrialization
+				has_building = textile
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = sugar
+					trade_goods = tobacco
+					trade_goods = tea
+					trade_goods = cocoa
+				}
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_plantations_on_institution_continent_industrialization
+				has_building = plantations
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = ivory
+					trade_goods = slaves
+					trade_goods = spices
+					trade_goods = cloves
+					trade_goods = fur
+					trade_goods = incense
+				}
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_tradecompany_on_institution_continent_industrialization
+				has_building = tradecompany
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_farm_estate_on_institution_continent_industrialization
+				has_building = farm_estate
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = paper
+					trade_goods = gems
+					trade_goods = tropical_wood
+					trade_goods = glass
+					trade_goods = chinaware
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_mills_on_institution_continent_industrialization
+				has_building = mills
+				industrialization_origin = {
+					same_continent = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.08
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = naval_supplies
+					trade_goods = fish
+					trade_goods = salt
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_wharf_not_institution_continent_industrialization
+				has_building = wharf
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_weapons_not_institution_continent_industrialization
+				has_building = weapons
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = wool
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = dyes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_textile_not_institution_continent_industrialization
+				has_building = textile
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.08
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = coffee
+					trade_goods = cotton
+					trade_goods = sugar
+					trade_goods = tobacco
+					trade_goods = tea
+					trade_goods = cocoa
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_plantations_not_institution_continent_industrialization
+				has_building = plantations
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.08
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = ivory
+					trade_goods = slaves
+					trade_goods = spices
+					trade_goods = cloves
+					trade_goods = fur
+					trade_goods = incense
+				}
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_tradecompany_not_institution_continent_industrialization
+				has_building = tradecompany
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_farm_estate_not_institution_continent_industrialization
+				has_building = farm_estate
+			}
+		}
+		modifier = {
+			factor = 0.08
+			scale = yes
+			potential = {
+				OR = {
+					trade_goods = paper
+					trade_goods = gems
+					trade_goods = tropical_wood
+					trade_goods = glass
+					trade_goods = chinaware
+				}
+				industrialization_origin = {
+					NOT = { same_continent = PREV }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_mills_not_institution_continent_industrialization
+				has_building = mills
+			}
+		}
+
+		#Trade variables
+		modifier = {
+			factor = 0.18
+			scale = yes
+			potential = {
+				any_trade_node_member_province = {
+					industrialization = 100
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_strongest_trade_power_in_node_with_industrialization
+				is_strongest_trade_power = owner
+			}
+		}
+		modifier = {
+			factor = 3
+			potential = {
+				province_trade_power = 15
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_15_trade_power_and_50_percent_of_income_from_trade
+				owner = { trade_income_percentage = 0.5 }
+				province_trade_power = 15
+			}
+		}
+		modifier = {
+			factor = 3
+			potential = {
+				continent = owner
+				has_port = yes
+				development = 20
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_port_and_owner_has_two_CNs
+				owner = {
+					calc_true_if = {
+						amount = 2
+						all_subject_country = {
+							is_colonial_nation = yes
+						}
+					}
+				}
+			}
+		}
+
+		#Stuff once someone has embraced it
+		modifier = {
+			factor = 0.75
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_industrialization
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = industrialization }
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = industrialization
+				}
+				continent = owner
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_industrialization_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = industrialization
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = industrialization
+				}
+				NOT = { continent = owner }
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_industrialization_embraced_other_continent
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = industrialization
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}

@@ -6,10 +6,6 @@ religion = catholic
 technology_group = eastern
 capital = 1318 # Buda
 
-change_estate_land_share = {
-	estate = estate_church
-	share = -5
-}
 
 
 government_rank = 2

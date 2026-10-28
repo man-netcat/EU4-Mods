@@ -8,15 +8,6 @@ unit_type = sub_saharan
 capital = 2791		# Gonder
 add_historical_rival = ADA
 
-change_estate_land_share = {
-	estate = estate_nobles
-	share = 12
-}
-change_estate_land_share = {
-	estate = estate_church
-	share = -12
-}
-
 monarch = {
 	name = "Amda Seyon I"
 	dynasty = "Solomon"

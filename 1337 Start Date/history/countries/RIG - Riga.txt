@@ -5,14 +5,6 @@ primary_culture = saxon
 religion = catholic
 capital = 38	# Riga
 fixed_capital = 38 # Cannot move capital away from this province & no power cost to move to it
-change_estate_land_share = {
-	estate = estate_nobles
-	share = -10
-}
-change_estate_land_share = {
-	estate = estate_burghers
-	share = 20
-}
 
 #Archbishops
 

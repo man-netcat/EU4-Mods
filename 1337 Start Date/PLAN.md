@@ -19,7 +19,7 @@ historically wrong, we correct it (log each correction in `tools/corrections.md`
 - Vanilla tags without an EU5 1337 counterpart stay as dormant files (pre-1444.11.11 entries dropped).
 - Development: `development_targets` ranks the name-matched provinces by EU5 pop and hands them the sorted vanilla
   totals (floor: half the vanilla total), keeping each province's tax/production/manpower proportions. First pass,
-  not playtested. Institutions, estates, ideas/mission trees are still vanilla.
+  not playtested. Mission trees are still vanilla (none for new tags).
 - Economy (`economy_targets`): trade goods from the EU5 raw material of a province's name-matched locations (weighted,
   rare goods heavier; `GOODS`), `fort_15th` from EU5 castles/walls/strongholds, `shipyard` from wharves/docks/arsenals,
   `center_of_trade = 1` on EU5 market towns lacking one. Provinces on shared location pools keep vanilla values.
@@ -131,6 +131,18 @@ Sweden-Norway). Base-game relations that were running before 1337 and involve su
 New tags: `localisation/1337_countries_l_english.yml`. Base-game tags the mod reuses take EU5's name and adjective for their
 state through `localisation/replace/1337_countries_l_english.yml` (only where it differs from the base game's), as in
 Charlemagne's Legacy; both files are written by `step_tags`.
+
+## Estates, institutions, ideas
+
+- Institutions: `step_institutions` ships the base game's `common/institutions/00_Core.txt` with Feudalism's history rule
+  wrapped: provinces matched to EU5 locations follow EU5's 08_institutions (present if any location has `feudalism`,
+  absent otherwise; ~1300 / ~490 provinces), the base game's culture/tech-group rule decides the rest. Legalism and
+  meritocracy have no EU4 counterpart; the other EU4 institutions spawn by date as usual.
+- Estates: EU5's privileges and estate setup do not map onto EU4's, so estates are EU4's defaults per government
+  (reform) for every tag. The 1444 `change_estate_land_share` / `set_estate_privilege` / estate loyalty lines of base-game
+  country files are stripped so no tag starts with a 1444 estate set-up.
+- Ideas: EU5 has no national ideas. New tags get the base game's group ideas (culture group, government, tech group)
+  or its default ideas, as every minor base-game tag does; base-game tags keep their own.
 
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 

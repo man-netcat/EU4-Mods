@@ -7,7 +7,6 @@ religion = catholic
 technology_group = western
 capital = 2976
 fixed_capital = 2976 # Cannot move capital away from this province & no power cost to move to it
-set_estate_privilege = estate_church_papal_emissary
 
 1479.1.1 = {
 	monarch = {
