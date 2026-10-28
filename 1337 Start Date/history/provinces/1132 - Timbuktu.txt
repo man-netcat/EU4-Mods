@@ -1,8 +1,8 @@
 #1132 - Timbuktu
 
-owner = GHA
-controller = GHA
-add_core = GHA
+owner = MAL
+controller = MAL
+add_core = MAL
 add_core = TMB
 is_city = yes
 culture = dyola

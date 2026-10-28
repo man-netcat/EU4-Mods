@@ -90,6 +90,18 @@ generated output. Playtest is by the owner; paste `error.log` back.
 - Wars: `step_wars` writes the 5 EU5 wars running in 1337 to `history/wars` (dated 1337.3.1) and the 10 truces as
   `add_truce_with` in country files; validate checks them.
 
+## Tag granularity (EU4's spirit, not one tag per EU5 county)
+
+- `tagmap.fold_small_subjects`: a subject (12_diplomacy) that is not a base-game tag and holds <= `FOLD_MAX` (2)
+  EU4 provinces gets no tag; its provinces, control and cores pass to its overlord (e.g. the Polish duchies).
+  New tags 395 -> ~285. Independent single-province states stay (EU4 has many of those too).
+- `tagmap.partition_shared_pools`: EU4 provinces matched to the same pool of EU5 locations share the pool's owners
+  in proportion to pop instead of all taking the majority owner (this is how Navarre keeps a province).
+  EU5 owners holding an EU4 province: 504 -> ~540 of 1566; the rest are mostly rural Asian/African/American
+  counties and subjects folded into overlords.
+- Rivals/friends: `step_rivals` writes `historical_rival` (20_rivals) and `historical_friend` (alliances); the
+  1444 ones in vanilla country files are stripped.
+
 ## Known gaps / TODO (generated output is a first pass, not playtested)
 
 1. Province mapping: 2622/3357 land provinces by name/hierarchy (fixed `eu4_geo` reading area colours as provinces, plus ~70 hand aliases for Europe and the Near East); ~735 unmapped keep their vanilla owner only if

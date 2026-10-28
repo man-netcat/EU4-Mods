@@ -1,8 +1,8 @@
 #4530 - Birlad
 
-owner = IAS
-controller = IAS
-add_core = IAS
+owner = GLH
+controller = GLH
+add_core = GLH
 is_city = yes
 culture = romanian
 religion = orthodox

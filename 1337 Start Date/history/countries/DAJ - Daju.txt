@@ -4,4 +4,4 @@ government_rank = 1
 technology_group = sub_saharan
 primary_culture = tunjur
 religion = shamanism
-capital = 1219
+capital = 1216

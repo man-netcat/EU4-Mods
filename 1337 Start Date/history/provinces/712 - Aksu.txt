@@ -1,8 +1,8 @@
 #712 - Uighuristan
 
-owner = MNL
-controller = MNL
-add_core = MNL
+owner = DGH
+controller = DGH
+add_core = DGH
 is_city = yes
 culture = uzbehk
 religion = sunni

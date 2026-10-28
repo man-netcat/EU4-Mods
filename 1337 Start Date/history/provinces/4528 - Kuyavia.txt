@@ -1,8 +1,7 @@
 # Kuyavia
 
-owner = INO
-controller = INO
-add_core = INO
+owner = POL
+controller = POL
 add_core = POL
 is_city = yes
 capital = "Brzesc Kujawski"

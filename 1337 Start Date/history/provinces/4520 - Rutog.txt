@@ -1,8 +1,7 @@
 #4520 - Rutog
 
-owner = MAF
-controller = MAF
-add_core = MAF
+owner = TIB
+controller = TIB
 add_core = TIB
 is_city = yes
 culture = tibetan

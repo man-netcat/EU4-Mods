@@ -1,9 +1,9 @@
 #514 - Marwar
 
-owner = DLH
-controller = DLH
-add_core = DLH
-add_core = PRT
+owner = MAW
+controller = MAW
+add_core = JSL
+add_core = MAW
 is_city = yes
 culture = rajput
 religion = hinduism

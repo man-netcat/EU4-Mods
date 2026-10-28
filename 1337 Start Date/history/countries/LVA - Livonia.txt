@@ -11,10 +11,5 @@ capital = 37
 }
 
 1337.3.1 = {
-	add_truce_with = CZK
-	add_truce_with = INO
-	add_truce_with = LCZ
-	add_truce_with = PLK
 	add_truce_with = POL
-	add_truce_with = RAW
 }

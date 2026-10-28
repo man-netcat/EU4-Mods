@@ -1,9 +1,9 @@
 #4450 - Mayurbhanj
 
-owner = MJU
-controller = MJU
+owner = ORI
+controller = ORI
 add_core = BHP
-add_core = MJU
+add_core = ORI
 is_city = yes
 culture = oriya
 religion = hinduism

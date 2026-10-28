@@ -1,8 +1,9 @@
 # - Thubaqt
 
-owner = TEL
-controller = TEL
-add_core = TEL
+owner = GBS
+controller = GBS
+add_core = GBS
+add_core = TUN
 is_city = yes
 culture = tunisian
 religion = sunni

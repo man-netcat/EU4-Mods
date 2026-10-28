@@ -1,8 +1,8 @@
 #244 - Lancashire
 
-owner = LAB
-controller = LAB
-add_core = LAB
+owner = ENG
+controller = ENG
+add_core = ENG
 is_city = yes
 culture = english
 religion = catholic

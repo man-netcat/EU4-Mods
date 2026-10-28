@@ -1,7 +1,8 @@
 #2392 - Selangor
 
-owner = LIG
-controller = LIG
+owner = LGK
+controller = LGK
+add_core = LGK
 add_core = LIG
 is_city = yes
 culture = malayan

@@ -1,8 +1,8 @@
 #4478 - Haibatnagar 
 
-owner = STN
-controller = STN
-add_core = STN
+owner = GAU
+controller = GAU
+add_core = GAU
 is_city = yes
 culture = bengali
 religion = hinduism

@@ -1,8 +1,8 @@
 # 1866 - Namur
 
-owner = NAM
-controller = NAM
-add_core = NAM
+owner = FLA
+controller = FLA
+add_core = FLA
 is_city = yes
 latent_trade_goods = {
 	coal
@@ -11,7 +11,7 @@ latent_trade_goods = {
 capital = "Namur"
 culture = wallonian
 religion = catholic
-hre = yes
+hre = no
 base_tax = 4 
 base_production = 4
 trade_goods = iron

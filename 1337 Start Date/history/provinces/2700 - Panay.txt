@@ -1,8 +1,8 @@
 #2700 - Panay
 
-owner = MDY
-controller = MDY
-add_core = MDY
+owner = MAS
+controller = MAS
+add_core = MAS
 is_city = yes
 culture = filipino
 religion = animism

@@ -4,4 +4,4 @@ government_rank = 1
 technology_group = chinese
 primary_culture = sumatran
 religion = animism
-capital = 4798
+capital = 641

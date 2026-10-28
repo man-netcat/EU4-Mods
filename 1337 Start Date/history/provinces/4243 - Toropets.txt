@@ -1,8 +1,8 @@
 #4243 - Toropets
 
-owner = TPS
-controller = TPS
-add_core = TPS
+owner = LIT
+controller = LIT
+add_core = LIT
 is_city = yes
 culture = novgorodian
 religion = orthodox

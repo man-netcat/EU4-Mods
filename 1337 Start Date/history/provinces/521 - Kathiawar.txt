@@ -1,8 +1,9 @@
 #521 - Kathiawar
 
-owner = JGD
-controller = JGD
+owner = PTL
+controller = PTL
 add_core = JGD
+add_core = PTL
 is_city = yes
 culture = saurashtri
 religion = hinduism

@@ -1,3 +1,4 @@
+historical_friend = BOH
 #For the record, LBV = Lower Bavaria
 
 government = monarchy

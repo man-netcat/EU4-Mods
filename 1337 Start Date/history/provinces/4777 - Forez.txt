@@ -1,6 +1,7 @@
-owner = FRA
-controller = FRA
+owner = BOU
+controller = BOU
 add_core = AQN
+add_core = BOU
 add_core = FRA
 is_city = yes
 capital = "Montbrison"

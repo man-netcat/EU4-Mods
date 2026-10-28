@@ -1,7 +1,0 @@
-government = tribal
-add_government_reform = tribal_despotism
-government_rank = 1
-technology_group = central_african
-primary_culture = tibetan
-religion = vajrayana
-capital = 1185

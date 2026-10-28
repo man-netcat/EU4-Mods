@@ -1,8 +1,8 @@
 #4254 - Starodub
 
-owner = STS
-controller = STS
-add_core = STS
+owner = CHR
+controller = CHR
+add_core = CHR
 is_city = yes
 culture = ryazanian
 religion = orthodox

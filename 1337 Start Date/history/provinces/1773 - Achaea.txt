@@ -1,9 +1,8 @@
 #1773 - Achaea
 
-owner = PAB
-controller = PAB
+owner = ACH
+controller = ACH
 add_core = ACH
-add_core = PAB
 is_city = yes
 culture = greek
 religion = orthodox

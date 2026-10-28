@@ -2,8 +2,8 @@
 
 owner = MAM
 controller = MAM
+add_core = IFA
 add_core = MAM
-add_core = TDE
 is_city = yes
 culture = hejazi_culture
 religion = sunni

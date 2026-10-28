@@ -1,8 +1,8 @@
 #1231 - Ibrim
 
-owner = BKZ
-controller = BKZ
-add_core = BKZ
+owner = MAM
+controller = MAM
+add_core = MAM
 is_city = yes
 culture = al_misr_arabic
 religion = shiite

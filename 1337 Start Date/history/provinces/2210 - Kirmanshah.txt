@@ -1,9 +1,8 @@
 #2210 - Kirmanshah
 
-owner = KLR
-controller = KLR
-add_core = KLR
-add_core = RKL
+owner = JAL
+controller = JAL
+add_core = JAL
 is_city = yes
 culture = kurdish
 religion = sunni

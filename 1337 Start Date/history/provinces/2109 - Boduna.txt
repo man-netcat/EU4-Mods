@@ -1,8 +1,8 @@
 # 2109 - Boduna
 
-owner = SNC
-controller = SNC
-add_core = SNC
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = manchu
 religion = tengri_pagan_reformed

@@ -1,8 +1,8 @@
 #415 - Sharazor
 
-owner = SYY
-controller = SYY
-add_core = SYY
+owner = JAL
+controller = JAL
+add_core = JAL
 is_city = yes
 culture = kurdish
 religion = sunni

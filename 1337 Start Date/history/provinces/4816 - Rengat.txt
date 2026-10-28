@@ -1,6 +1,6 @@
-owner = INR
-controller = INR
-add_core = INR
+owner = MAJ
+controller = MAJ
+add_core = MAJ
 is_city = yes
 culture = malayan
 religion = mahayana

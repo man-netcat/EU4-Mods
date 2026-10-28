@@ -1,7 +1,7 @@
 #4543 - Rylsk
-owner = RYL
-controller = RYL
-add_core = RYL
+owner = CHR
+controller = CHR
+add_core = CHR
 is_city = yes
 culture = ryazanian
 religion = orthodox

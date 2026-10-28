@@ -1,3 +1,5 @@
+historical_rival = TLC
+historical_friend = MOR
 government = monarchy
 add_government_reform = barbary_sultanate_reform
 primary_culture = tunisian

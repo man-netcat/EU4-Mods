@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = muslim
 primary_culture = baluchi
 religion = sunni
-capital = 575
+capital = 2068
 
 monarch = {
 	name = "Ghiyath.Al_Din"

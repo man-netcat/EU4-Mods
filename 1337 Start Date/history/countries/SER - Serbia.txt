@@ -4,7 +4,6 @@ primary_culture = serbian
 religion = orthodox
 technology_group = eastern
 capital = 1766	# Krusevac
-historical_friend = BOS
 
 
 government_rank = 2

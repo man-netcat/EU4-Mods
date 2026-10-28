@@ -1,7 +1,8 @@
 #4470 - Soumelpur
 
-owner = DLH
-controller = DLH
+owner = CER
+controller = CER
+add_core = CER
 add_core = DLH
 is_city = yes
 culture = jharkhandi

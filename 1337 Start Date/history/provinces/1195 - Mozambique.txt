@@ -1,8 +1,8 @@
 #1195 - Mozambique
 
-owner = MOZ
-controller = MOZ
-add_core = MOZ
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 is_city = yes
 culture = swahili
 religion = animism

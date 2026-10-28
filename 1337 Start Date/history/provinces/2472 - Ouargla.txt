@@ -1,8 +1,8 @@
 # - Ouargla
 
-owner = OGL
-controller = OGL
-add_core = OGL
+owner = TUN
+controller = TUN
+add_core = TUN
 is_city = yes
 culture = berber
 religion = ibadi

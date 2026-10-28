@@ -1,7 +1,7 @@
 
-owner = GOW
-controller = GOW
-add_core = GOW
+owner = SIG
+controller = SIG
+add_core = SIG
 is_city = yes
 culture = sulawesi
 religion = animism

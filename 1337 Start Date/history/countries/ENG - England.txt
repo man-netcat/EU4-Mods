@@ -1,3 +1,5 @@
+historical_rival = FRA
+historical_rival = SCO
 government = monarchy
 add_government_reform = english_monarchy
 mercantilism = 25

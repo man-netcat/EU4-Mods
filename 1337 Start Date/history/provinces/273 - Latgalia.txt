@@ -2,7 +2,6 @@
 
 owner = LVA
 controller = LVA
-add_core = ARR
 add_core = LVA
 is_city = yes
 culture = latvian

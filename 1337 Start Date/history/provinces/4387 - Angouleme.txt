@@ -1,9 +1,9 @@
 # 4387 Angoulême
 
-owner = ANG
-controller = ANG
-add_core = ANG
+owner = FRA
+controller = FRA
 add_core = AQN
+add_core = FRA
 is_city = yes
 capital = "Angoulême"
 culture = cosmopolitan_french

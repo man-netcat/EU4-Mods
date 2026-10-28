@@ -1,8 +1,8 @@
 #2071 - Limbuwan
 
-owner = KHS
-controller = KHS
-add_core = KHS
+owner = LWA
+controller = LWA
+add_core = LWA
 is_city = yes
 culture = nepali
 religion = hinduism

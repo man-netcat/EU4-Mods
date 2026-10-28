@@ -1,8 +1,9 @@
 #4488 - Champaran
 
-owner = DLH
-controller = DLH
+owner = ONW
+controller = ONW
 add_core = DLH
+add_core = ONW
 is_city = yes
 culture = bihari
 religion = hinduism

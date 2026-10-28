@@ -1,8 +1,8 @@
 #369 - Orkney
 
-owner = ORK
-controller = ORK
-add_core = ORK
+owner = NOR
+controller = NOR
+add_core = NOR
 is_city = yes
 culture = norwegian
 religion = catholic

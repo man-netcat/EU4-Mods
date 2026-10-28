@@ -1,7 +1,8 @@
 #4454 - Porbandar
 
-owner = JGD
-controller = JGD
+owner = GHL
+controller = GHL
+add_core = GHL
 add_core = JGD
 is_city = yes
 culture = saurashtri

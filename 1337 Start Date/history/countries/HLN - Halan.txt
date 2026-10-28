@@ -1,7 +1,0 @@
-government = tribal
-add_government_reform = tribal_despotism
-government_rank = 1
-technology_group = chinese
-primary_culture = manchu
-religion = tengri_pagan_reformed
-capital = 732

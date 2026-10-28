@@ -1,8 +1,8 @@
 #647 - Ceram
 
-owner = JLO
-controller = JLO
-add_core = JLO
+owner = MOO
+controller = MOO
+add_core = MOO
 is_city = yes
 culture = moluccan
 religion = animism

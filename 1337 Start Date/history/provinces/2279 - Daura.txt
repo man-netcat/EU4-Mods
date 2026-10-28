@@ -1,8 +1,8 @@
 # No previous file for Daura
 
-owner = DAB
-controller = DAB
-add_core = DAB
+owner = KBO
+controller = KBO
+add_core = KBO
 is_city = yes
 culture = hausa 
 religion = shamanism

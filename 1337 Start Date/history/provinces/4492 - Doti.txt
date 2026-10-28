@@ -1,5 +1,9 @@
 #4492 - Doti
 
+owner = DTI
+controller = DTI
+add_core = DTI
+is_city = yes
 culture = nepali
 religion = hinduism
 capital = "Doti"

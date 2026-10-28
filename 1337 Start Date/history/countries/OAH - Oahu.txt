@@ -4,7 +4,7 @@ government_rank = 2
 primary_culture = polynesian
 religion = animism
 technology_group = polynesian_tech
-capital = 4935 #Oahu
+capital = 1997 #Oahu
 
 monarch = {
 	name = "Nawele I"

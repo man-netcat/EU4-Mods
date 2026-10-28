@@ -1,9 +1,9 @@
 #210 - Navarra
 
-owner = CAS
-controller = CAS
+owner = NAV
+controller = NAV
 add_core = CAS
-add_core = NAA
+add_core = NAV
 is_city = yes
 culture = basque
 religion = catholic

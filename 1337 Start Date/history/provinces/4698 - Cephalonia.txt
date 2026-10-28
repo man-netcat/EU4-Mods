@@ -1,6 +1,6 @@
-owner = CEA
-controller = CEA
-add_core = CEA
+owner = ACH
+controller = ACH
+add_core = ACH
 is_city = yes
 culture = greek
 religion = orthodox

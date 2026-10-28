@@ -1,8 +1,9 @@
 #4541 - Drohobycz
 
-owner = HAL
-controller = HAL
+owner = VOL
+controller = VOL
 add_core = HAL
+add_core = VOL
 is_city = yes
 culture = ruthenian
 religion = orthodox

@@ -1,8 +1,8 @@
 #1105 - Vestbygden
 
-owner = GRL
-controller = GRL
-add_core = GRL
+owner = NOR
+controller = NOR
+add_core = NOR
 is_city = yes
 culture = icelandic
 religion = catholic

@@ -1,8 +1,8 @@
 #582 - Mong Yang
 
-owner = CHB
-controller = CHB
-add_core = CHB
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = shan
 religion = animism

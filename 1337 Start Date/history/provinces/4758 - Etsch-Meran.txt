@@ -1,8 +1,9 @@
 #4758 - Etsch (Meran)
 
-owner = TIR
-controller = TIR
+owner = TNT
+controller = TNT
 add_core = TIR
+add_core = TNT
 is_city = yes
 culture = austrian
 religion = catholic

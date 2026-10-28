@@ -1,3 +1,0 @@
-graphical_culture = africangfx
-
-color = { 23 223 231 }

@@ -1,8 +1,8 @@
 #4274 - Sudayr
 
-owner = BNL
-controller = BNL
-add_core = BNL
+owner = AAD
+controller = AAD
+add_core = AAD
 is_city = yes
 culture = bedouin_arabic
 religion = sunni

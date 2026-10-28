@@ -1,9 +1,8 @@
 #1846 - Amasya
 
-owner = TDJ
-controller = TDJ
+owner = ERE
+controller = ERE
 add_core = ERE
-add_core = TDJ
 is_city = yes
 culture = turkish
 religion = sunni

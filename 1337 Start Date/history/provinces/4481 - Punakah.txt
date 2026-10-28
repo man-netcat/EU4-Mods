@@ -1,8 +1,8 @@
 #4481 - Punakah
 
-owner = LMN
-controller = LMN
-add_core = LMN
+owner = TIB
+controller = TIB
+add_core = TIB
 is_city = yes
 culture = tibetan
 religion = vajrayana

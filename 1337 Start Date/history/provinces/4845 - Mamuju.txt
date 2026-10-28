@@ -1,8 +1,8 @@
 #644 - Manado
 
-owner = LUW
-controller = LUW
-add_core = LUW
+owner = BLN
+controller = BLN
+add_core = BLN
 is_city = yes
 culture = sulawesi
 religion = animism

@@ -1,8 +1,8 @@
 #1150 - Zamfara
 
-owner = ZAM
-controller = ZAM
-add_core = ZAM
+owner = KBO
+controller = KBO
+add_core = KBO
 is_city = yes
 culture = hausa
 base_manpower = 2

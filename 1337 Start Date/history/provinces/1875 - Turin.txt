@@ -1,8 +1,8 @@
 #1875 - Cuneo (can't change filename)
 
-owner = PIE
-controller = PIE
-add_core = PIE
+owner = SAV
+controller = SAV
+add_core = SAV
 is_city = yes
 culture = piedmontese
 religion = catholic

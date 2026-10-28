@@ -1,9 +1,9 @@
 #1137 - Wagadugi
 
 #Senior of the Mossi Kingdoms centered here
-owner = BSM
-controller = BSM
-add_core = BSM
+owner = TEN
+controller = TEN
+add_core = TEN
 is_city = yes
 culture = mossi #mossi
 religion = shamanism #Fetishism

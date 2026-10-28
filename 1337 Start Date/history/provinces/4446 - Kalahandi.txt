@@ -1,8 +1,8 @@
 #4446 - Kalahandi
 
-owner = DLH
-controller = DLH
-add_core = DLH
+owner = BND
+controller = BND
+add_core = BND
 is_city = yes
 culture = garjati
 religion = hinduism

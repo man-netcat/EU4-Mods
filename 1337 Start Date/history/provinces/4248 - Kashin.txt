@@ -1,8 +1,8 @@
 #4248 - Kashin
 
-owner = KAD
-controller = KAD
-add_core = KAD
+owner = TVE
+controller = TVE
+add_core = TVE
 is_city = yes
 culture = russian
 religion = orthodox

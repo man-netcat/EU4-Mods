@@ -1,8 +1,8 @@
 #4273 - Karaitan
 
-owner = BNL
-controller = BNL
-add_core = BNL
+owner = SBY
+controller = SBY
+add_core = SBY
 is_city = yes
 culture = bedouin_arabic
 religion = sunni

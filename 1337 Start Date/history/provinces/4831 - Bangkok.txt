@@ -1,6 +1,7 @@
 
-owner = SUK
-controller = SUK
+owner = SPN
+controller = SPN
+add_core = SPN
 add_core = SUK
 is_city = yes
 culture = central_thai

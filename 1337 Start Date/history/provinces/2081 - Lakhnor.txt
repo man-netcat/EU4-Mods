@@ -1,8 +1,8 @@
 # 2081 - Lakhnor
 
-owner = STN
-controller = STN
-add_core = STN
+owner = BHP
+controller = BHP
+add_core = BHP
 is_city = yes
 latent_trade_goods = {
 	coal

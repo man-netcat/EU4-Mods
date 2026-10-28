@@ -1,8 +1,8 @@
 #535 - Kochin
 
-owner = VND
-controller = VND
-add_core = VND
+owner = KLT
+controller = KLT
+add_core = KLT
 is_city = yes
 culture = malayalam
 religion = hinduism

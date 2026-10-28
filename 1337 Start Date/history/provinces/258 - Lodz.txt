@@ -1,8 +1,8 @@
 #258 - Lodz
 
-owner = LCZ
-controller = LCZ
-add_core = LCZ
+owner = POL
+controller = POL
+add_core = POL
 is_city = yes
 capital = "Sieradz"
 culture = polish

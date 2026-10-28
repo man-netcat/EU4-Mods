@@ -1,8 +1,8 @@
 #4354 - Zamboanga
 
-owner = SML
-controller = SML
-add_core = SML
+owner = SUL
+controller = SUL
+add_core = SUL
 is_city = yes
 culture = filipino
 religion = animism

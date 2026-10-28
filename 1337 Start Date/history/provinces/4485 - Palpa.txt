@@ -1,8 +1,8 @@
 #4485 - Palpa
 
-owner = KHS
-controller = KHS
-add_core = KHS
+owner = DTI
+controller = DTI
+add_core = DTI
 is_city = yes
 culture = nepali
 religion = hinduism

@@ -1,8 +1,8 @@
 #Upper Oka Basin
 
-owner = KCH
-controller = KCH
-add_core = KCH
+owner = NSL
+controller = NSL
+add_core = NSL
 is_city = yes
 culture = ryazanian
 religion = orthodox

@@ -1,8 +1,8 @@
 #575 - Eastern Makran
 
-owner = KHN
-controller = KHN
-add_core = KHN
+owner = NGD
+controller = NGD
+add_core = NGD
 is_city = yes
 culture = baluchi
 religion = sunni

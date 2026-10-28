@@ -1,12 +1,12 @@
 #285 - Kaffa
 
-owner = GAA
-controller = GAA
-add_core = GAA
+owner = GEN
+controller = GEN
+add_core = GEN
 is_city = yes
 culture = pontic_greek
 religion = orthodox
-hre = no
+hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = wine

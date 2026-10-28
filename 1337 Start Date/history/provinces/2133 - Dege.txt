@@ -1,9 +1,9 @@
 # 2133 - Dege
 
-owner = BTG
-controller = BTG
-add_core = BTG
+owner = YUA
+controller = YUA
 add_core = TIB
+add_core = YUA
 is_city = yes
 culture = tibetan
 religion = vajrayana

@@ -1,3 +1,6 @@
+historical_rival = CAS
+historical_rival = TLC
+historical_friend = TUN
 government = monarchy
 add_government_reform = barbary_sultanate_reform
 primary_culture = al_misr_arabic

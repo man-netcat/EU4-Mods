@@ -1,8 +1,8 @@
 #445 - Marv
 
-owner = MRV
-controller = MRV
-add_core = MRV
+owner = KRT
+controller = KRT
+add_core = KRT
 is_city = yes
 culture = afghani
 religion = sunni

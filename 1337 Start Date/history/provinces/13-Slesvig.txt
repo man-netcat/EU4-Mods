@@ -1,8 +1,8 @@
 #Sönderjylland-Slesvig, incl. Slesvig, Haderslev and Flensborg
 
-owner = SLV
-controller = SLV
-add_core = SLV
+owner = DAN
+controller = DAN
+add_core = DAN
 is_city = yes
 culture = lower_saxon
 religion = catholic

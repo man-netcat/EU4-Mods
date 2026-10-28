@@ -1,7 +1,7 @@
-owner = MRC
-controller = MRC
+owner = BOU
+controller = BOU
 add_core = AQN
-add_core = MRC
+add_core = BOU
 is_city = yes
 capital = "Guéret"
 culture = gascon

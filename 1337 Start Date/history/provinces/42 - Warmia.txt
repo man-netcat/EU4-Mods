@@ -1,8 +1,8 @@
 #42 - Warmia
 
-owner = ERM
-controller = ERM
-add_core = ERM
+owner = TEU
+controller = TEU
+add_core = TEU
 is_city = yes
 capital = "Allenstein"
 culture = prussian

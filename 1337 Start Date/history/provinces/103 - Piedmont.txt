@@ -1,8 +1,8 @@
 #103 - Piedmont
 
-owner = PIE
-controller = PIE
-add_core = PIE
+owner = SAV
+controller = SAV
+add_core = SAV
 is_city = yes
 culture = piedmontese
 religion = catholic

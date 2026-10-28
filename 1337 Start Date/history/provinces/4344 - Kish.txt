@@ -1,7 +1,8 @@
 #4344 - Kish
 
-owner = SLD
-controller = SLD
+owner = CHG
+controller = CHG
+add_core = CHG
 add_core = SLD
 is_city = yes
 culture = uzbehk

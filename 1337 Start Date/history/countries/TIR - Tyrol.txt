@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = western
 religion = catholic
 primary_culture = austrian
-capital = 4758	# Innsbruck
+capital = 73	# Innsbruck
 
 monarch = {
 	name = "Margaret I"

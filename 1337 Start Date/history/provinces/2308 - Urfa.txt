@@ -1,8 +1,8 @@
 #2308 - Urfa
 
-owner = DGE
-controller = DGE
-add_core = DGE
+owner = MAM
+controller = MAM
+add_core = MAM
 is_city = yes
 culture = turkish
 religion = sunni

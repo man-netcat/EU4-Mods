@@ -1,8 +1,7 @@
 # 2132 - Markam
 
-owner = BTG
-controller = BTG
-add_core = BTG
+owner = TIB
+controller = TIB
 add_core = TIB
 is_city = yes
 culture = tibetan

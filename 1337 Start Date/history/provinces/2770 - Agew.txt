@@ -1,8 +1,9 @@
 #2770 - Agew
 
-owner = ETH
-controller = ETH
+owner = ENA
+controller = ENA
 add_core = DAM
+add_core = ENA
 add_core = ETH
 is_city = yes
 culture = amhara 

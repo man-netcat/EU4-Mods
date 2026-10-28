@@ -1,8 +1,8 @@
 #732 - Hamgyeong
 
-owner = HLN
-controller = HLN
-add_core = HLN
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = manchu
 religion = tengri_pagan_reformed

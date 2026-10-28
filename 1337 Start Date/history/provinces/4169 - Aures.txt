@@ -1,8 +1,8 @@
 #High Atlas
 
-owner = ZAB
-controller = ZAB
-add_core = ZAB
+owner = TUN
+controller = TUN
+add_core = TUN
 is_city = yes
 hre = no
 discovered_by = western

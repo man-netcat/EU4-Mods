@@ -4,4 +4,4 @@ government_rank = 1
 technology_group = mesoamerican
 primary_culture = wastek
 religion = mesoamerican_religion
-capital = 2641
+capital = 848

@@ -1,8 +1,8 @@
 #4250 - Mologa
 
-owner = MOG
-controller = MOG
-add_core = MOG
+owner = YAR
+controller = YAR
+add_core = YAR
 is_city = yes
 culture = russian
 religion = orthodox

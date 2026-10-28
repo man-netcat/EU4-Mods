@@ -1,8 +1,8 @@
 # Narbonne - Principal cities: Narbonne
 
-owner = NRB
-controller = NRB
-add_core = NRB
+owner = FRA
+controller = FRA
+add_core = FRA
 add_core = TOU
 is_city = yes
 capital = "Narbonne"

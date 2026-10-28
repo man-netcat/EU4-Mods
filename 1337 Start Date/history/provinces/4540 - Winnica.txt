@@ -1,7 +1,7 @@
 # Winnica / Vinnystia
 
-owner = GLH
-controller = GLH
+owner = HAL
+controller = HAL
 add_core = GLH
 add_core = HAL
 is_city = yes

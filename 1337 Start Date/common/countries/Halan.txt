@@ -1,3 +1,0 @@
-graphical_culture = inuitgfx
-
-color = { 53 250 204 }

@@ -1,9 +1,9 @@
 #426 - Amol
 
-owner = MZN
-controller = MZN
-add_core = BRL
-add_core = MZN
+owner = GRG
+controller = GRG
+add_core = CHG
+add_core = GRG
 is_city = yes
 culture = mazandarani
 religion = shiite

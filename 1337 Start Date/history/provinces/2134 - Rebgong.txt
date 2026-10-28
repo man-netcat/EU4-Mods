@@ -1,9 +1,9 @@
 # 2134 - Rebgong
 
-owner = NCN
-controller = NCN
-add_core = NCN
+owner = YUA
+controller = YUA
 add_core = TIB
+add_core = YUA
 is_city = yes
 culture = tibetan
 religion = vajrayana

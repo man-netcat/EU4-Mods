@@ -1,8 +1,8 @@
 # 2183 - Taozhou
 
-owner = TAZ
-controller = TAZ
-add_core = TAZ
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = tibetan
 religion = vajrayana

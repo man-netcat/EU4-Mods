@@ -4,4 +4,4 @@ government_rank = 1
 technology_group = western
 primary_culture = austrian
 religion = catholic
-capital = 4759
+capital = 4751

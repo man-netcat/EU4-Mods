@@ -3,7 +3,6 @@
 owner = GRG
 controller = GRG
 add_core = GRG
-add_core = MZN
 is_city = yes
 culture = mazandarani
 religion = shiite

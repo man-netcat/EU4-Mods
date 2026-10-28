@@ -1,3 +1,6 @@
+historical_rival = UBV
+historical_friend = LBV
+historical_friend = TEU
 government = monarchy
 add_government_reform = bohemian_elective_kingdom_reform
 primary_culture = czech
@@ -209,12 +212,7 @@ add_government_reform = autocracy_reform }
 
 1337.3.1 = {
 	add_truce_with = BOS
-	add_truce_with = CZK
 	add_truce_with = HAB
 	add_truce_with = HUN
-	add_truce_with = INO
-	add_truce_with = LCZ
-	add_truce_with = PLK
 	add_truce_with = POL
-	add_truce_with = RAW
 }

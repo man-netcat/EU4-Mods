@@ -1,7 +1,7 @@
 # 4381 - Oversticht
 
-owner = FRI
-controller = FRI
+owner = UTR
+controller = UTR
 add_core = FRI
 add_core = UTR
 is_city = yes

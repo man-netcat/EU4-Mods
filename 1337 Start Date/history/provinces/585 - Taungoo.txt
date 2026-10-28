@@ -1,8 +1,8 @@
 #585 - Toungoo
 
-owner = TOA
-controller = TOA
-add_core = TOA
+owner = PIN
+controller = PIN
+add_core = PIN
 is_city = yes
 culture = burmese
 religion = buddhism

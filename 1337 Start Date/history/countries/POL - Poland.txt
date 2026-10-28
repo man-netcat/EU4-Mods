@@ -1,10 +1,10 @@
+historical_friend = HUN
+historical_friend = LIT
 government = monarchy
 add_government_reform = polish_great_sejm
 primary_culture = polish
 religion = catholic
 technology_group = eastern
-historical_friend = LIT
-historical_rival = TEU
 capital = 262 # Krakow
 add_truce_with = HUN
 
@@ -335,13 +335,10 @@ heir = {
 }
 
 1337.3.1 = {
-	add_truce_with = BIO
 	add_truce_with = BOH
-	add_truce_with = ERM
 	add_truce_with = LVA
 	add_truce_with = MVA
 	add_truce_with = OPL
-	add_truce_with = OPV
 	add_truce_with = RIG
 	add_truce_with = TEU
 }

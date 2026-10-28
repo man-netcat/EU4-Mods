@@ -1,9 +1,9 @@
 #4238 - Liegnitz (Liegnitz+Schweidnitz+Jauer+Glatz+Neisse+Münsterberg)
 
 #Coal
-owner = OPV
-controller = OPV
-add_core = OPV
+owner = BOH
+controller = BOH
+add_core = BOH
 is_city = yes
 culture = schlesian
 religion = catholic

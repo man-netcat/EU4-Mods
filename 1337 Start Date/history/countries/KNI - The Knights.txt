@@ -5,7 +5,6 @@ primary_culture = cosmopolitan_french
 religion = catholic
 technology_group = western
 capital = 320 # Rhodes
-historical_friend = VEN
 add_army_professionalism = 0.1
 
 monarch = {

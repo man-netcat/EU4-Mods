@@ -1,8 +1,8 @@
 #278 - Pinsk
 
-owner = PNK
-controller = PNK
-add_core = PNK
+owner = LIT
+controller = LIT
+add_core = LIT
 is_city = yes
 culture = byelorussian
 religion = orthodox

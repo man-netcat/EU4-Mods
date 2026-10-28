@@ -1,8 +1,8 @@
 #4200 - Hulan
 
-owner = TAS
-controller = TAS
-add_core = TAS
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = manchu
 religion = tengri_pagan_reformed

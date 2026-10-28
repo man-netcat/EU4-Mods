@@ -5,6 +5,15 @@ religion = buddhism
 technology_group = chinese
 capital = 4396
 
+monarch = {
+	name = "Kyaswa"
+	dynasty = "Pagan"
+	birth_date = 1265.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1446.1.1 = {
 	monarch = {
 		name = "Mingyi Swa"

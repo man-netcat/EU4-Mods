@@ -1,8 +1,8 @@
 #Turov
 
-owner = TUV
-controller = TUV
-add_core = TUV
+owner = LIT
+controller = LIT
+add_core = LIT
 is_city = yes
 culture = byelorussian
 religion = orthodox

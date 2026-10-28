@@ -1,8 +1,8 @@
 #4271 - Suwaida
 
-owner = AMR
-controller = AMR
-add_core = AMR
+owner = MAM
+controller = MAM
+add_core = MAM
 is_city = yes
 culture = al_suryah_arabic
 religion = shiite

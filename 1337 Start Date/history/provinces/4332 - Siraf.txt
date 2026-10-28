@@ -1,8 +1,8 @@
 #4332 - Siraf
 
-owner = FAL
-controller = FAL
-add_core = FAL
+owner = ORM
+controller = ORM
+add_core = ORM
 is_city = yes
 culture = persian
 religion = sunni

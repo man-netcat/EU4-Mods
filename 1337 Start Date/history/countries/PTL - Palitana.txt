@@ -4,7 +4,16 @@ government_rank = 1
 technology_group = indian
 religion = hinduism
 primary_culture = saurashtri
-capital = 2051	# Gohilvad
+capital = 521	# Gohilvad
+
+monarch = {
+	name = "Nonghanji I"
+	dynasty = "Guhila"
+	birth_date = 1280.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
 
 1455.1.1 = {
 	monarch = {

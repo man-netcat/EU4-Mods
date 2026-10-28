@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = muslim
 primary_culture = bedouin_arabic
 religion = sunni
-capital = 2314
+capital = 405
 
 monarch = {
 	name = "Moses"

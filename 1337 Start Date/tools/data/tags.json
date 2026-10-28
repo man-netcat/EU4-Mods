@@ -4,9 +4,9 @@
 "name": "Aachen",
 "new": false
 },
-"AAI": {
-"eu4": "AAI",
-"name": "Alastani",
+"AAD": {
+"eu4": "AAD",
+"name": "Al A'idh",
 "new": true
 },
 "ABV": {
@@ -22,11 +22,6 @@
 "ACO": {
 "eu4": "AAK",
 "name": "Áak'u",
-"new": true
-},
-"ADH": {
-"eu4": "ADH",
-"name": "Ayodhya",
 "new": true
 },
 "AFA": {
@@ -47,6 +42,11 @@
 "AHI": {
 "eu4": "AHI",
 "name": "Ahis",
+"new": true
+},
+"AHO": {
+"eu4": "AHO",
+"name": "Ahom",
 "new": true
 },
 "AIT": {
@@ -85,8 +85,13 @@
 "new": false
 },
 "ALS": {
-"eu4": "STR",
+"eu4": "ALS",
 "name": "Strasbourgum",
+"new": false
+},
+"ALU": {
+"eu4": "ALU",
+"name": "Alupa",
 "new": true
 },
 "ALV": {
@@ -94,29 +99,14 @@
 "name": "Algarve",
 "new": true
 },
-"AMD": {
-"eu4": "AMD",
-"name": "Amdo",
-"new": true
-},
 "AMG": {
 "eu4": "AMG",
 "name": "Armagnac",
 "new": false
 },
-"AMR": {
-"eu4": "AMR",
-"name": "Al Mira",
-"new": true
-},
 "ANC": {
 "eu4": "ANC",
 "name": "Ancona",
-"new": true
-},
-"ANG": {
-"eu4": "ANG",
-"name": "Angoulême",
 "new": true
 },
 "ANS": {
@@ -158,21 +148,6 @@
 "eu4": "ARM",
 "name": "Armenia",
 "new": false
-},
-"ARR": {
-"eu4": "ARR",
-"name": "Riga Lettoniae",
-"new": true
-},
-"ARS": {
-"eu4": "ARS",
-"name": "Artois",
-"new": true
-},
-"ART": {
-"eu4": "ART",
-"name": "Arlat",
-"new": true
 },
 "ARU": {
 "eu4": "ARU",
@@ -274,11 +249,6 @@
 "name": "Bergamo",
 "new": true
 },
-"BGT": {
-"eu4": "BGT",
-"name": "Belgutei",
-"new": true
-},
 "BHA": {
 "eu4": "BHB",
 "name": "Bhatnir",
@@ -289,30 +259,15 @@
 "name": "Mallabhum",
 "new": true
 },
-"BIA": {
-"eu4": "BAI",
-"name": "Baia",
-"new": true
-},
 "BIJ": {
 "eu4": "BIA",
 "name": "Bijaya",
-"new": true
-},
-"BIO": {
-"eu4": "BIO",
-"name": "Ösel",
 "new": true
 },
 "BIT": {
 "eu4": "BTL",
 "name": "Bitlis",
 "new": false
-},
-"BKZ": {
-"eu4": "BKZ",
-"name": "Banu Kanz",
-"new": true
 },
 "BLG": {
 "eu4": "BLG",
@@ -324,24 +279,19 @@
 "name": "Bali",
 "new": false
 },
+"BLN": {
+"eu4": "BLN",
+"name": "Bolaang",
+"new": true
+},
 "BLO": {
 "eu4": "BLO",
 "name": "Beloozero",
 "new": false
 },
-"BLS": {
-"eu4": "BLS",
-"name": "Blois",
-"new": true
-},
 "BMB": {
 "eu4": "BMB",
 "name": "Bambao",
-"new": true
-},
-"BMR": {
-"eu4": "BMR",
-"name": "Bambara",
 "new": true
 },
 "BND": {
@@ -389,6 +339,11 @@
 "name": "Bowontehu",
 "new": true
 },
+"BPR": {
+"eu4": "BPR",
+"name": "Prome",
+"new": false
+},
 "BQA": {
 "eu4": "BQA",
 "name": "Barqa",
@@ -409,15 +364,15 @@
 "name": "Brema",
 "new": false
 },
+"BRG": {
+"eu4": "BRG",
+"name": "Berg",
+"new": false
+},
 "BRI": {
 "eu4": "BRI",
 "name": "Brittany",
 "new": false
-},
-"BRL": {
-"eu4": "BRL",
-"name": "Barlas",
-"new": true
 },
 "BRM": {
 "eu4": "BRM",
@@ -429,11 +384,6 @@
 "name": "Bern",
 "new": true
 },
-"BRR": {
-"eu4": "BEA",
-"name": "Béarn",
-"new": true
-},
 "BRS": {
 "eu4": "BRC",
 "name": "Brescia",
@@ -443,11 +393,6 @@
 "eu4": "BRU",
 "name": "Brunswick",
 "new": false
-},
-"BRY": {
-"eu4": "BRY",
-"name": "Bryansk",
-"new": true
 },
 "BSG": {
 "eu4": "BSG",
@@ -464,19 +409,9 @@
 "name": "Bastar",
 "new": false
 },
-"BTG": {
-"eu4": "BTG",
-"name": "Batang",
-"new": true
-},
 "BTI": {
 "eu4": "SIM",
 "name": "Simien",
-"new": true
-},
-"BTL": {
-"eu4": "TEL",
-"name": "Tellīs",
 "new": true
 },
 "BTU": {
@@ -509,11 +444,6 @@
 "name": "Byzantium",
 "new": false
 },
-"BZU": {
-"eu4": "BZU",
-"name": "Bōzhōu",
-"new": true
-},
 "CAG": {
 "eu4": "CAG",
 "name": "Cagliari",
@@ -544,19 +474,9 @@
 "name": "Cebu",
 "new": false
 },
-"CEP": {
-"eu4": "CEA",
-"name": "Cephalonia",
-"new": true
-},
 "CER": {
 "eu4": "CER",
 "name": "Chero",
-"new": true
-},
-"CET": {
-"eu4": "CET",
-"name": "Chester",
 "new": true
 },
 "CHA": {
@@ -573,11 +493,6 @@
 "eu4": "CHG",
 "name": "Chagatai",
 "new": false
-},
-"CHH": {
-"eu4": "CHB",
-"name": "Chiang Hung",
-"new": true
 },
 "CHI": {
 "eu4": "YUA",
@@ -620,19 +535,14 @@
 "new": true
 },
 "CLM": {
-"eu4": "COA",
+"eu4": "CLM",
 "name": "Coliman",
-"new": true
+"new": false
 },
 "CLR": {
 "eu4": "CNN",
 "name": "Clanricarde",
 "new": false
-},
-"CMN": {
-"eu4": "CMN",
-"name": "Champaner",
-"new": true
 },
 "CND": {
 "eu4": "CND",
@@ -679,11 +589,6 @@
 "name": "Croatia",
 "new": false
 },
-"CRS": {
-"eu4": "CRS",
-"name": "Choros",
-"new": true
-},
 "CRT": {
 "eu4": "CRT",
 "name": "Candia",
@@ -724,16 +629,6 @@
 "name": "Cyprus",
 "new": false
 },
-"CZK": {
-"eu4": "CZK",
-"name": "Czersk",
-"new": true
-},
-"DAA": {
-"eu4": "DAB",
-"name": "Daura",
-"new": true
-},
 "DAI": {
 "eu4": "DAI",
 "name": "Đại Việt",
@@ -769,11 +664,6 @@
 "name": "Dagbon",
 "new": false
 },
-"DGE": {
-"eu4": "DGE",
-"name": "Döger",
-"new": true
-},
 "DGH": {
 "eu4": "DGH",
 "name": "Dughlat",
@@ -794,11 +684,6 @@
 "name": "Dhofar",
 "new": true
 },
-"DIL": {
-"eu4": "DIL",
-"name": "Dilmaçids",
-"new": true
-},
 "DJE": {
 "eu4": "GHD",
 "name": "Djerid",
@@ -809,11 +694,6 @@
 "name": "Delhi",
 "new": false
 },
-"DML": {
-"eu4": "DML",
-"name": "Domboli",
-"new": true
-},
 "DMS": {
 "eu4": "DMS",
 "name": "Desmond",
@@ -823,6 +703,11 @@
 "eu4": "DOG",
 "name": "Dogra",
 "new": true
+},
+"DTI": {
+"eu4": "DTI",
+"name": "Doti",
+"new": false
 },
 "DTM": {
 "eu4": "RVA",
@@ -849,6 +734,11 @@
 "name": "England",
 "new": false
 },
+"ENN": {
+"eu4": "ENA",
+"name": "Ennarea",
+"new": false
+},
 "EPI": {
 "eu4": "EPI",
 "name": "Epirus",
@@ -864,20 +754,10 @@
 "name": "Erfurt",
 "new": true
 },
-"ERM": {
-"eu4": "ERM",
-"name": "Warmia",
-"new": true
-},
 "ETH": {
 "eu4": "ETH",
 "name": "Ethiopia",
 "new": false
-},
-"FAL": {
-"eu4": "FAL",
-"name": "Fal",
-"new": true
 },
 "FBG": {
 "eu4": "FBG",
@@ -954,11 +834,6 @@
 "name": "Frankfurt",
 "new": false
 },
-"FRZ": {
-"eu4": "FRZ",
-"name": "Forez",
-"new": true
-},
 "FUL": {
 "eu4": "GRB",
 "name": "Great Fulo",
@@ -972,11 +847,6 @@
 "GAU": {
 "eu4": "GAU",
 "name": "Gaur",
-"new": true
-},
-"GAZ": {
-"eu4": "GAA",
-"name": "Gazaria",
 "new": true
 },
 "GBS": {
@@ -1009,14 +879,9 @@
 "name": "Georgia",
 "new": false
 },
-"GFS": {
-"eu4": "GFS",
-"name": "Gafsa",
-"new": true
-},
-"GHA": {
-"eu4": "GHA",
-"name": "Ghana",
+"GHL": {
+"eu4": "GHL",
+"name": "Gohilvad",
 "new": true
 },
 "GHR": {
@@ -1052,16 +917,6 @@
 "GLM": {
 "eu4": "GLM",
 "name": "Galich-Mersky",
-"new": true
-},
-"GMG": {
-"eu4": "GMG",
-"name": "Glamorgan",
-"new": true
-},
-"GNN": {
-"eu4": "GNN",
-"name": "Guǎngnán",
 "new": true
 },
 "GNV": {
@@ -1104,11 +959,6 @@
 "name": "Gurgan",
 "new": true
 },
-"GRL": {
-"eu4": "GRL",
-"name": "Greenland",
-"new": true
-},
 "GRM": {
 "eu4": "GRM",
 "name": "Germiyanids",
@@ -1117,6 +967,11 @@
 "GRT": {
 "eu4": "GRT",
 "name": "Gorontalo",
+"new": true
+},
+"GSW": {
+"eu4": "GSW",
+"name": "Güstrow",
 "new": true
 },
 "GUG": {
@@ -1142,11 +997,6 @@
 "GYO": {
 "eu4": "GYO",
 "name": "Gayogohono",
-"new": true
-},
-"GYT": {
-"eu4": "GYT",
-"name": "Gyelthang",
 "new": true
 },
 "HAB": {
@@ -1179,16 +1029,6 @@
 "name": "Hawai'i",
 "new": false
 },
-"HCN": {
-"eu4": "HCN",
-"name": "Hachiun",
-"new": true
-},
-"HDN": {
-"eu4": "HDN",
-"name": "Hamedān",
-"new": true
-},
 "HDY": {
 "eu4": "HDY",
 "name": "Hadiya",
@@ -1204,24 +1044,9 @@
 "name": "Hsawng Hsup",
 "new": true
 },
-"HIY": {
-"eu4": "HIY",
-"name": "Haiyan",
-"new": true
-},
 "HLG": {
 "eu4": "HLG",
 "name": "Hüleguids",
-"new": true
-},
-"HLL": {
-"eu4": "HLL",
-"name": "Hillah",
-"new": true
-},
-"HLN": {
-"eu4": "HLN",
-"name": "Halan",
 "new": true
 },
 "HMD": {
@@ -1232,11 +1057,6 @@
 "HNB": {
 "eu4": "HNB",
 "name": "Henneberg",
-"new": true
-},
-"HNC": {
-"eu4": "HNC",
-"name": "Huncun",
 "new": true
 },
 "HNV": {
@@ -1284,19 +1104,9 @@
 "name": "Hungary",
 "new": false
 },
-"HUR": {
-"eu4": "HUB",
-"name": "Hūrga",
-"new": true
-},
 "HZP": {
 "eu4": "HZP",
 "name": "Hazaraspids",
-"new": true
-},
-"IAS": {
-"eu4": "IAS",
-"name": "Iaşi",
 "new": true
 },
 "ICE": {
@@ -1332,16 +1142,6 @@
 "INJ": {
 "eu4": "INJ",
 "name": "Injuids",
-"new": true
-},
-"INO": {
-"eu4": "INO",
-"name": "Inowrocław",
-"new": true
-},
-"INR": {
-"eu4": "INR",
-"name": "Indragiri",
 "new": true
 },
 "ITZ": {
@@ -1384,35 +1184,25 @@
 "name": "Jauni Kurban",
 "new": true
 },
-"JLM": {
-"eu4": "JLM",
-"name": "Jolemark",
-"new": true
-},
 "JLO": {
 "eu4": "JLO",
 "name": "Jailolo",
 "new": true
 },
 "JLW": {
-"eu4": "JLW",
+"eu4": "JLV",
 "name": "Jhalawad",
-"new": true
-},
-"JLY": {
-"eu4": "JLY",
-"name": "Jalayirs",
-"new": true
-},
-"JMB": {
-"eu4": "MEL",
-"name": "Melayu",
-"new": true
+"new": false
 },
 "JNG": {
 "eu4": "JGD",
 "name": "Junagarh",
 "new": false
+},
+"JNT": {
+"eu4": "JNT",
+"name": "Jaintia",
+"new": true
 },
 "JOL": {
 "eu4": "JOL",
@@ -1427,11 +1217,6 @@
 "JRW": {
 "eu4": "JRW",
 "name": "Jarwanids",
-"new": true
-},
-"JSK": {
-"eu4": "JSK",
-"name": "Jāsk",
 "new": true
 },
 "JSL": {
@@ -1469,11 +1254,6 @@
 "name": "Karamanids",
 "new": false
 },
-"KAS": {
-"eu4": "KAD",
-"name": "Kashin",
-"new": true
-},
 "KAU": {
 "eu4": "KAA",
 "name": "Kaua'i",
@@ -1487,6 +1267,11 @@
 "KCH": {
 "eu4": "KCH",
 "name": "Karachev",
+"new": true
+},
+"KDU": {
+"eu4": "KDU",
+"name": "Padinjattedathu",
 "new": true
 },
 "KED": {
@@ -1509,11 +1294,6 @@
 "name": "Kangra",
 "new": false
 },
-"KHD": {
-"eu4": "KHB",
-"name": "Khoid",
-"new": true
-},
 "KHM": {
 "eu4": "KHM",
 "name": "Khmer",
@@ -1527,11 +1307,6 @@
 "KHS": {
 "eu4": "KHS",
 "name": "Khasa",
-"new": true
-},
-"KHT": {
-"eu4": "KHT",
-"name": "Kuhistān",
 "new": true
 },
 "KHZ": {
@@ -1559,9 +1334,9 @@
 "name": "Kanien'kehaka",
 "new": true
 },
-"KKL": {
-"eu4": "KKL",
-"name": "Khalkhal",
+"KKR": {
+"eu4": "KKR",
+"name": "Khokhra",
 "new": true
 },
 "KLA": {
@@ -1584,10 +1359,10 @@
 "name": "Kolomna",
 "new": true
 },
-"KLR": {
-"eu4": "KLR",
-"name": "Kalhor",
-"new": true
+"KLT": {
+"eu4": "KLT",
+"name": "Kolathunadu",
+"new": false
 },
 "KMA": {
 "eu4": "KMA",
@@ -1669,15 +1444,15 @@
 "name": "Kartids",
 "new": true
 },
-"KSA": {
-"eu4": "KSA",
-"name": "Kāshān",
-"new": true
-},
 "KSH": {
 "eu4": "KSH",
 "name": "Kashmir",
 "new": false
+},
+"KSW": {
+"eu4": "KSW",
+"name": "Kishtwar",
+"new": true
 },
 "KTG": {
 "eu4": "KTG",
@@ -1689,6 +1464,11 @@
 "name": "Katsina",
 "new": false
 },
+"KTU": {
+"eu4": "KTU",
+"name": "Kathmandu",
+"new": false
+},
 "KUT": {
 "eu4": "KAT",
 "name": "Kutch",
@@ -1697,11 +1477,6 @@
 "LAM": {
 "eu4": "LAM",
 "name": "Lamu",
-"new": true
-},
-"LAN": {
-"eu4": "LAB",
-"name": "Lancaster",
 "new": true
 },
 "LAU": {
@@ -1727,11 +1502,6 @@
 "LCK": {
 "eu4": "LCK",
 "name": "Khorshidi",
-"new": true
-},
-"LCZ": {
-"eu4": "LCZ",
-"name": "Łęczyca",
 "new": true
 },
 "LDB": {
@@ -1773,16 +1543,6 @@
 "eu4": "LVA",
 "name": "Livonia",
 "new": false
-},
-"LJG": {
-"eu4": "LJG",
-"name": "Lijiang",
-"new": true
-},
-"LMN": {
-"eu4": "LMN",
-"name": "Lho Mon",
-"new": true
 },
 "LNA": {
 "eu4": "LNA",
@@ -1844,14 +1604,14 @@
 "name": "Luxembourg",
 "new": false
 },
+"LWA": {
+"eu4": "LWA",
+"name": "Limbuwan",
+"new": false
+},
 "MAB": {
 "eu4": "MAC",
 "name": "Ma'bar",
-"new": true
-},
-"MAC": {
-"eu4": "MAO",
-"name": "March",
 "new": true
 },
 "MAG": {
@@ -1889,9 +1649,9 @@
 "name": "Mantua",
 "new": false
 },
-"MAR": {
-"eu4": "MAF",
-"name": "Maryul",
+"MAT": {
+"eu4": "TOL",
+"name": "Tollohcan",
 "new": true
 },
 "MBA": {
@@ -1920,9 +1680,9 @@
 "new": false
 },
 "MDY": {
-"eu4": "MDY",
+"eu4": "MAS",
 "name": "Madya-as",
-"new": true
+"new": false
 },
 "MEC": {
 "eu4": "MEC",
@@ -1944,6 +1704,11 @@
 "name": "Memmingen",
 "new": false
 },
+"MEN": {
+"eu4": "MEN",
+"name": "Menteşeids",
+"new": false
+},
 "MET": {
 "eu4": "MET",
 "name": "Metztitlan",
@@ -1959,11 +1724,6 @@
 "name": "Montferrat",
 "new": false
 },
-"MIE": {
-"eu4": "MIE",
-"name": "Maine",
-"new": true
-},
 "MIH": {
 "eu4": "MIH",
 "name": "Mihrabanids",
@@ -1977,11 +1737,6 @@
 "MIS": {
 "eu4": "MIB",
 "name": "Minsk",
-"new": true
-},
-"MJU": {
-"eu4": "MJU",
-"name": "Mayurbhanj",
 "new": true
 },
 "MKA": {
@@ -2044,11 +1799,6 @@
 "name": "Manjung",
 "new": true
 },
-"MNL": {
-"eu4": "MNL",
-"name": "Mangalai",
-"new": true
-},
 "MNN": {
 "eu4": "KOI",
 "name": "Mann",
@@ -2064,14 +1814,14 @@
 "name": "Modena",
 "new": false
 },
-"MOG": {
-"eu4": "MOG",
-"name": "Mologa",
-"new": true
-},
 "MOM": {
 "eu4": "MOM",
 "name": "Momboares",
+"new": true
+},
+"MOO": {
+"eu4": "MOO",
+"name": "Moro",
 "new": true
 },
 "MOR": {
@@ -2083,21 +1833,6 @@
 "eu4": "MOS",
 "name": "Muscovy",
 "new": false
-},
-"MOY": {
-"eu4": "MOY",
-"name": "Moray",
-"new": true
-},
-"MOZ": {
-"eu4": "MOZ",
-"name": "Mozambique",
-"new": true
-},
-"MRC": {
-"eu4": "MRC",
-"name": "La Marche",
-"new": true
 },
 "MRH": {
 "eu4": "MRH",
@@ -2114,10 +1849,10 @@
 "name": "Murom",
 "new": true
 },
-"MRV": {
-"eu4": "MRV",
-"name": "Merv",
-"new": true
+"MRW": {
+"eu4": "MAW",
+"name": "Marwar",
+"new": false
 },
 "MSN": {
 "eu4": "MSN",
@@ -2135,9 +1870,9 @@
 "new": true
 },
 "MUA": {
-"eu4": "MUA",
+"eu4": "MPH",
 "name": "Muang Sua",
-"new": true
+"new": false
 },
 "MUC": {
 "eu4": "MUC",
@@ -2184,35 +1919,20 @@
 "name": "Muzaffarids",
 "new": true
 },
-"MZN": {
-"eu4": "MZN",
-"name": "Tabaristan",
-"new": true
-},
-"NAM": {
-"eu4": "NAM",
-"name": "Namur",
-"new": true
-},
 "NAP": {
 "eu4": "NAP",
 "name": "Naples",
 "new": false
 },
 "NAV": {
-"eu4": "NAA",
+"eu4": "NAV",
 "name": "Navarre",
-"new": true
+"new": false
 },
 "NAX": {
 "eu4": "NAX",
 "name": "Naxos",
 "new": false
-},
-"NCN": {
-"eu4": "NCN",
-"name": "Nangchen",
-"new": true
 },
 "NEG": {
 "eu4": "NEG",
@@ -2254,11 +1974,6 @@
 "name": "Velikiy Novgorod",
 "new": false
 },
-"NRB": {
-"eu4": "NRB",
-"name": "Narbonne",
-"new": true
-},
 "NRI": {
 "eu4": "NRI",
 "name": "Nri",
@@ -2268,6 +1983,11 @@
 "eu4": "NRM",
 "name": "Normandy",
 "new": false
+},
+"NSL": {
+"eu4": "NSL",
+"name": "Novosil",
+"new": true
 },
 "NSR": {
 "eu4": "NSR",
@@ -2284,11 +2004,6 @@
 "name": "Novara",
 "new": true
 },
-"NYM": {
-"eu4": "NYM",
-"name": "Boeny",
-"new": true
-},
 "NZH": {
 "eu4": "NZH",
 "name": "Nizhny Novgorod",
@@ -2298,11 +2013,6 @@
 "eu4": "OAH",
 "name": "O'ahu",
 "new": false
-},
-"OGL": {
-"eu4": "OGL",
-"name": "Ouargla",
-"new": true
 },
 "OLD": {
 "eu4": "OLD",
@@ -2320,9 +2030,9 @@
 "new": true
 },
 "ONN": {
-"eu4": "ONN",
+"eu4": "ONO",
 "name": "Onondowa'ga",
-"new": true
+"new": false
 },
 "ONW": {
 "eu4": "ONW",
@@ -2339,45 +2049,35 @@
 "name": "Opole",
 "new": false
 },
-"OPV": {
-"eu4": "OPV",
-"name": "Opava",
-"new": true
-},
-"ORE": {
-"eu4": "ORE",
-"name": "Oreshek",
-"new": true
-},
 "ORI": {
 "eu4": "ORI",
 "name": "Orissa",
 "new": false
-},
-"ORK": {
-"eu4": "ORK",
-"name": "Orkney",
-"new": true
 },
 "ORM": {
 "eu4": "ORM",
 "name": "Ormus",
 "new": false
 },
+"ORT": {
+"eu4": "ORT",
+"name": "Ortenburg",
+"new": true
+},
 "OSN": {
 "eu4": "OSN",
 "name": "Osnabrück",
 "new": false
 },
-"OTC": {
-"eu4": "OTC",
-"name": "Otchigin",
-"new": true
-},
 "OYO": {
 "eu4": "OYO",
 "name": "Oyo",
 "new": false
+},
+"OZL": {
+"eu4": "OZL",
+"name": "Ozuluama",
+"new": true
 },
 "PAD": {
 "eu4": "PDV",
@@ -2404,11 +2104,6 @@
 "name": "Parma",
 "new": false
 },
-"PAT": {
-"eu4": "PAB",
-"name": "Patras",
-"new": true
-},
 "PAV": {
 "eu4": "PAV",
 "name": "Pavia",
@@ -2434,11 +2129,6 @@
 "name": "Picardy",
 "new": false
 },
-"PIE": {
-"eu4": "PIE",
-"name": "Piedmont",
-"new": true
-},
 "PIN": {
 "eu4": "PIN",
 "name": "Pinya",
@@ -2448,6 +2138,11 @@
 "eu4": "PIS",
 "name": "Pisa",
 "new": false
+},
+"PKR": {
+"eu4": "PKR",
+"name": "Passokkorang",
+"new": true
 },
 "PLB": {
 "eu4": "PLB",
@@ -2459,20 +2154,15 @@
 "name": "Pale",
 "new": true
 },
-"PLK": {
-"eu4": "PLK",
-"name": "Płock",
-"new": true
-},
 "PLN": {
 "eu4": "PLN",
 "name": "Plauen",
 "new": true
 },
-"PNK": {
-"eu4": "PNK",
-"name": "Pinsk",
-"new": true
+"PLT": {
+"eu4": "PTL",
+"name": "Palitana",
+"new": false
 },
 "POI": {
 "eu4": "POI",
@@ -2494,16 +2184,6 @@
 "name": "Portugal",
 "new": false
 },
-"POS": {
-"eu4": "POS",
-"name": "Powis",
-"new": true
-},
-"PRK": {
-"eu4": "PRA",
-"name": "Pronsk",
-"new": true
-},
 "PRM": {
 "eu4": "PRM",
 "name": "Perm",
@@ -2513,11 +2193,6 @@
 "eu4": "PRO",
 "name": "Provence",
 "new": false
-},
-"PRT": {
-"eu4": "PRT",
-"name": "Mandore",
-"new": true
 },
 "PSA": {
 "eu4": "PSA",
@@ -2534,11 +2209,6 @@
 "name": "Passau",
 "new": false
 },
-"PTC": {
-"eu4": "PTC",
-"name": "Phetchaburi",
-"new": true
-},
 "PTE": {
 "eu4": "PTE",
 "name": "Pate",
@@ -2548,16 +2218,6 @@
 "eu4": "PTT",
 "name": "Patna",
 "new": false
-},
-"PUA": {
-"eu4": "PUA",
-"name": "Pua",
-"new": true
-},
-"PUR": {
-"eu4": "PUR",
-"name": "Purang",
-"new": true
 },
 "PWS": {
 "eu4": "PWS",
@@ -2572,11 +2232,6 @@
 "QLM": {
 "eu4": "QLM",
 "name": "Quelimane",
-"new": true
-},
-"QOM": {
-"eu4": "QOA",
-"name": "Qom",
 "new": true
 },
 "QUB": {
@@ -2594,19 +2249,9 @@
 "name": "Qara'unas",
 "new": true
 },
-"RAN": {
-"eu4": "RAN",
-"name": "Rano",
-"new": true
-},
 "RAV": {
 "eu4": "RAV",
 "name": "Ravenna",
-"new": true
-},
-"RAW": {
-"eu4": "RAW",
-"name": "Rawa",
 "new": true
 },
 "RCH": {
@@ -2624,24 +2269,19 @@
 "name": "Regensburg",
 "new": false
 },
-"RET": {
-"eu4": "RET",
-"name": "Rethel",
-"new": true
-},
 "RIG": {
 "eu4": "RIG",
 "name": "Riga",
 "new": false
 },
-"RKL": {
-"eu4": "RKL",
-"name": "Rankali",
-"new": true
-},
 "RKS": {
 "eu4": "RKS",
 "name": "Raksel",
+"new": true
+},
+"RRU": {
+"eu4": "RRU",
+"name": "Barru",
 "new": true
 },
 "RSH": {
@@ -2679,16 +2319,6 @@
 "name": "Ryazan",
 "new": false
 },
-"RYL": {
-"eu4": "RYL",
-"name": "Rylsk",
-"new": true
-},
-"RZH": {
-"eu4": "RZH",
-"name": "Rzhev",
-"new": true
-},
 "SAG": {
 "eu4": "SAG",
 "name": "Sagaing",
@@ -2703,11 +2333,6 @@
 "eu4": "SAM",
 "name": "Samoa",
 "new": false
-},
-"SAO": {
-"eu4": "SAO",
-"name": "Salona",
-"new": true
 },
 "SAV": {
 "eu4": "SAV",
@@ -2724,9 +2349,9 @@
 "name": "Balliol",
 "new": true
 },
-"SBZ": {
-"eu4": "SBZ",
-"name": "Sabzevār",
+"SBY": {
+"eu4": "SBY",
+"name": "Subay",
 "new": true
 },
 "SCO": {
@@ -2748,11 +2373,6 @@
 "eu4": "SFA",
 "name": "Sofala",
 "new": false
-},
-"SFR": {
-"eu4": "SFR",
-"name": "Esfarāyen",
-"new": true
 },
 "SGN": {
 "eu4": "SGN",
@@ -2789,6 +2409,11 @@
 "name": "Siena",
 "new": false
 },
+"SIG": {
+"eu4": "SIG",
+"name": "Siang",
+"new": true
+},
 "SIT": {
 "eu4": "SIT",
 "name": "Sion",
@@ -2799,20 +2424,10 @@
 "name": "Scania",
 "new": true
 },
-"SKI": {
-"eu4": "SKI",
-"name": "Shaki",
-"new": true
-},
 "SKK": {
 "eu4": "SKK",
 "name": "Sikkim",
 "new": false
-},
-"SKN": {
-"eu4": "SKN",
-"name": "Suakin",
-"new": true
 },
 "SLD": {
 "eu4": "SLD",
@@ -2834,11 +2449,6 @@
 "name": "Selaparang",
 "new": true
 },
-"SLV": {
-"eu4": "SLV",
-"name": "Schleswig",
-"new": true
-},
 "SLZ": {
 "eu4": "SLZ",
 "name": "Salzburg",
@@ -2854,11 +2464,6 @@
 "name": "Samtskhe",
 "new": false
 },
-"SML": {
-"eu4": "SML",
-"name": "Sanmalan",
-"new": true
-},
 "SMO": {
 "eu4": "SMO",
 "name": "Smolensk",
@@ -2869,15 +2474,15 @@
 "name": "Sambuvarayar",
 "new": true
 },
-"SNC": {
-"eu4": "SNC",
-"name": "Sancaha",
-"new": true
-},
 "SND": {
 "eu4": "SND",
 "name": "Sindh",
 "new": false
+},
+"SNG": {
+"eu4": "SNG",
+"name": "Singapura",
+"new": true
 },
 "SOA": {
 "eu4": "SOA",
@@ -2909,11 +2514,6 @@
 "name": "Suphanburi",
 "new": true
 },
-"SRL": {
-"eu4": "SRL",
-"name": "Sarikol",
-"new": true
-},
 "SRU": {
 "eu4": "SRU",
 "name": "Saruhanids",
@@ -2937,11 +2537,6 @@
 "STN": {
 "eu4": "STN",
 "name": "Saptagram",
-"new": true
-},
-"STS": {
-"eu4": "STS",
-"name": "Starodub-Siverskyi",
 "new": true
 },
 "STY": {
@@ -2994,16 +2589,6 @@
 "name": "Shěnyáng",
 "new": true
 },
-"SYU": {
-"eu4": "SYU",
-"name": "Syunik",
-"new": true
-},
-"SYY": {
-"eu4": "SYY",
-"name": "Saqiyya",
-"new": true
-},
 "SYZ": {
 "eu4": "SYZ",
 "name": "Schwyz",
@@ -3029,24 +2614,9 @@
 "name": "Purépecha",
 "new": false
 },
-"TAS": {
-"eu4": "TAS",
-"name": "Tashan",
-"new": true
-},
 "TAT": {
 "eu4": "TAT",
 "name": "Touat",
-"new": true
-},
-"TAZ": {
-"eu4": "TAZ",
-"name": "Táozhōu",
-"new": true
-},
-"TCP": {
-"eu4": "TCP",
-"name": "Tlacōpan",
 "new": true
 },
 "TCY": {
@@ -3054,19 +2624,9 @@
 "name": "Tlapacoyan",
 "new": true
 },
-"TDE": {
-"eu4": "TDE",
-"name": "Tanade",
-"new": true
-},
 "TDG": {
 "eu4": "TDG",
 "name": "Tidung",
-"new": true
-},
-"TDJ": {
-"eu4": "TDJ",
-"name": "Tacettinids",
 "new": true
 },
 "TDO": {
@@ -3083,6 +2643,11 @@
 "eu4": "TEO",
 "name": "Teotitlan",
 "new": false
+},
+"TEP": {
+"eu4": "TEP",
+"name": "Tepanecapan",
+"new": true
 },
 "TER": {
 "eu4": "TER",
@@ -3104,20 +2669,10 @@
 "name": "Tafilalt",
 "new": false
 },
-"TGR": {
-"eu4": "TGR",
-"name": "Tóngrén",
-"new": true
-},
 "TGT": {
 "eu4": "TGT",
 "name": "Touggourt",
 "new": false
-},
-"THP": {
-"eu4": "THP",
-"name": "Thopia",
-"new": true
 },
 "THS": {
 "eu4": "THS",
@@ -3144,16 +2699,6 @@
 "name": "Tyrol",
 "new": false
 },
-"TJP": {
-"eu4": "TJP",
-"name": "Tanjungpura",
-"new": true
-},
-"TKR": {
-"eu4": "TKR",
-"name": "Takrur",
-"new": true
-},
 "TLE": {
 "eu4": "TLC",
 "name": "Tlemcen",
@@ -3173,16 +2718,6 @@
 "eu4": "TMB",
 "name": "Timbuktu",
 "new": false
-},
-"TMK": {
-"eu4": "TMK",
-"name": "Tadmekka",
-"new": true
-},
-"TNG": {
-"eu4": "TOA",
-"name": "Toungoo",
-"new": true
 },
 "TNK": {
 "eu4": "PAA",
@@ -3205,7 +2740,7 @@
 "new": true
 },
 "TOL": {
-"eu4": "TOL",
+"eu4": "TOA",
 "name": "Toledo",
 "new": true
 },
@@ -3222,11 +2757,6 @@
 "TPN": {
 "eu4": "TPN",
 "name": "Tecpatitlan",
-"new": true
-},
-"TPS": {
-"eu4": "TPS",
-"name": "Toropets",
 "new": true
 },
 "TRA": {
@@ -3264,11 +2794,6 @@
 "name": "Tyrconnell",
 "new": false
 },
-"TSM": {
-"eu4": "TSM",
-"name": "Tenasserim",
-"new": true
-},
 "TTC": {
 "eu4": "TTC",
 "name": "Tamtoc",
@@ -3284,11 +2809,6 @@
 "name": "Ottomans",
 "new": false
 },
-"TUV": {
-"eu4": "TUV",
-"name": "Turov",
-"new": true
-},
 "TVE": {
 "eu4": "TVE",
 "name": "Tver",
@@ -3303,11 +2823,6 @@
 "eu4": "TYR",
 "name": "Tyrone",
 "new": false
-},
-"TYY": {
-"eu4": "TYY",
-"name": "Taytay",
-"new": true
 },
 "TZZ": {
 "eu4": "TZZ",
@@ -3359,11 +2874,6 @@
 "name": "Valencia",
 "new": false
 },
-"VBK": {
-"eu4": "VBK",
-"name": "Vitebsk",
-"new": true
-},
 "VDU": {
 "eu4": "VDU",
 "name": "Verdun",
@@ -3389,6 +2899,11 @@
 "name": "Vijayanagar",
 "new": false
 },
+"VLD": {
+"eu4": "VLD",
+"name": "Valluvanad",
+"new": true
+},
 "VLR": {
 "eu4": "VLR",
 "name": "Vladimir",
@@ -3398,11 +2913,6 @@
 "eu4": "VND",
 "name": "Venad",
 "new": false
-},
-"VOH": {
-"eu4": "VOH",
-"name": "Vohemar",
-"new": true
 },
 "VOL": {
 "eu4": "VOL",
@@ -3422,11 +2932,6 @@
 "VUN": {
 "eu4": "VUN",
 "name": "Vungu",
-"new": true
-},
-"VYA": {
-"eu4": "VYA",
-"name": "Vyazma",
 "new": true
 },
 "WAL": {
@@ -3514,6 +3019,11 @@
 "name": "Yatenga",
 "new": false
 },
+"YDR": {
+"eu4": "YDR",
+"name": "Yadavaraya",
+"new": true
+},
 "YEM": {
 "eu4": "YEM",
 "name": "Yemen",
@@ -3532,16 +3042,6 @@
 "YSU": {
 "eu4": "YSU",
 "name": "Yasa'uri",
-"new": true
-},
-"ZAB": {
-"eu4": "ZAB",
-"name": "Zab",
-"new": true
-},
-"ZAM": {
-"eu4": "ZAM",
-"name": "Zamfara",
 "new": true
 },
 "ZAN": {
@@ -3564,11 +3064,6 @@
 "name": "Zeta",
 "new": true
 },
-"ZUB": {
-"eu4": "ZUB",
-"name": "Zubtsov",
-"new": true
-},
 "ZUR": {
 "eu4": "ZUR",
 "name": "Zürich",
@@ -3577,11 +3072,6 @@
 "ZWE": {
 "eu4": "ZWE",
 "name": "Zweibrücken",
-"new": true
-},
-"ZZB": {
-"eu4": "ZZB",
-"name": "Zanzibar",
 "new": true
 },
 "ZZZ": {

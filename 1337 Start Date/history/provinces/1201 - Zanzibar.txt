@@ -1,8 +1,8 @@
 #1201 - Zanzibar
 
-owner = ZZB
-controller = ZZB
-add_core = ZZB
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 is_city = yes
 culture = swahili
 religion = sunni

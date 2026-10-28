@@ -1,8 +1,8 @@
 #4456 - Jhalavad
 
-owner = JLW
-controller = JLW
-add_core = JLW
+owner = JLV
+controller = JLV
+add_core = JLV
 is_city = yes
 culture = saurashtri
 religion = hinduism

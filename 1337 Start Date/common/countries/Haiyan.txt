@@ -1,3 +1,0 @@
-graphical_culture = inuitgfx
-
-color = { 176 146 222 }

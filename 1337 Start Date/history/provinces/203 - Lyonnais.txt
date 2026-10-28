@@ -1,8 +1,8 @@
 # 203 Lyonnais - Principal cities: Lyon
 
-owner = FRZ
-controller = FRZ
-add_core = FRZ
+owner = FRA
+controller = FRA
+add_core = FRA
 is_city = yes
 capital = "Lyon"
 culture = occitain

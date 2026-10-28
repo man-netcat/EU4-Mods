@@ -1,8 +1,8 @@
 #4305 - Shakhi
 
-owner = SKI
-controller = SKI
-add_core = SKI
+owner = GEO
+controller = GEO
+add_core = GEO
 is_city = yes
 culture = azerbaijani
 religion = orthodox

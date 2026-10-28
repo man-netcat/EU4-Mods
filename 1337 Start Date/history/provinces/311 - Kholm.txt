@@ -1,9 +1,9 @@
 #311 - Kholm
 
-owner = ZUB
-controller = ZUB
+owner = TVE
+controller = TVE
 add_core = NOV
-add_core = ZUB
+add_core = TVE
 is_city = yes
 culture = russian
 religion = orthodox

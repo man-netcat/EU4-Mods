@@ -4,4 +4,4 @@ government_rank = 1
 technology_group = indian
 primary_culture = chin
 religion = hinduism
-capital = 4473
+capital = 567

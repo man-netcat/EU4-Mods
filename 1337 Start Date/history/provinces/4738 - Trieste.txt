@@ -1,9 +1,10 @@
 # 4738 - Trieste
 
-owner = HAB
-controller = HAB
+owner = ORT
+controller = ORT
 add_core = CAA
 add_core = HAB
+add_core = ORT
 is_city = yes
 culture = slovene 
 religion = catholic 

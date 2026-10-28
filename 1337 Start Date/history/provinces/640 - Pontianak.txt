@@ -1,8 +1,8 @@
 #640 - Pontianak
 
-owner = TJP
-controller = TJP
-add_core = TJP
+owner = MAJ
+controller = MAJ
+add_core = MAJ
 is_city = yes
 culture = malayan
 religion = hinduism

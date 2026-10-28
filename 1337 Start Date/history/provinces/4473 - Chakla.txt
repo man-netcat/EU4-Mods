@@ -1,7 +1,8 @@
 #4473 - Chakla #Tripuran Plains Region
 
-owner = TWI
-controller = TWI
+owner = GAU
+controller = GAU
+add_core = GAU
 add_core = TWI
 is_city = yes
 culture = chin

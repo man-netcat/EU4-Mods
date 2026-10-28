@@ -1,8 +1,8 @@
 #2039 - Sunderbans
 
-owner = STN
-controller = STN
-add_core = STN
+owner = SGN
+controller = SGN
+add_core = SGN
 is_city = yes
 culture = bengali
 religion = hinduism

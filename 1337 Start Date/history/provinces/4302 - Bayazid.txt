@@ -1,8 +1,7 @@
 #4302 - Bayazid
 
-owner = AAI
-controller = AAI
-add_core = AAI
+owner = ARM
+controller = ARM
 add_core = ARM
 is_city = yes
 culture = armenian

@@ -1,8 +1,8 @@
 #2404 - Mergui
 
-owner = TSM
-controller = TSM
-add_core = TSM
+owner = SUK
+controller = SUK
+add_core = SUK
 is_city = yes
 culture = mon
 religion = buddhism

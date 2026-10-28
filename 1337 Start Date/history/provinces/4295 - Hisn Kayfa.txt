@@ -1,7 +1,8 @@
 #4395 - Hisn Kayfa
 
-owner = SUT
-controller = SUT
+owner = JAL
+controller = JAL
+add_core = JAL
 add_core = SUT
 is_city = yes
 culture = kurdish

@@ -1,8 +1,8 @@
 #2307 - Van
 
-owner = JLM
-controller = JLM
-add_core = JLM
+owner = SUT
+controller = SUT
+add_core = SUT
 is_city = yes
 culture = armenian
 religion = coptic

@@ -1,7 +1,8 @@
 #4786 - Prignitz
 
-owner = MKL
-controller = MKL
+owner = GSW
+controller = GSW
+add_core = GSW
 add_core = MKL
 is_city = yes
 culture = pommeranian

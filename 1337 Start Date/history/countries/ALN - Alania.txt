@@ -1,6 +1,7 @@
 government = tribal
 add_government_reform = tribal_despotism
 government_rank = 1
-technology_group = eastern
-primary_culture = circassian
+technology_group = muslim
+primary_culture = dagestani
 religion = orthodox
+capital = 2198

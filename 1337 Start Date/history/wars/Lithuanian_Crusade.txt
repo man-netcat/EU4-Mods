@@ -7,15 +7,8 @@ war_goal = {
 
 1337.3.1 = {
 	add_attacker = TEU
-	add_attacker = ERM
 	add_attacker = LVA
 	add_attacker = RIG
-	add_attacker = BIO
 	add_defender = LIT
-	add_defender = PNK
 	add_defender = PLT
-	add_defender = TPS
-	add_defender = TUV
-	add_defender = VBK
-	add_defender = RZH
 }

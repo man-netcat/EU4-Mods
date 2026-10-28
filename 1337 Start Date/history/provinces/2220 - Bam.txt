@@ -1,8 +1,8 @@
 #2220 - Bam
 
-owner = SFR
-controller = SFR
-add_core = SFR
+owner = GRG
+controller = GRG
+add_core = GRG
 is_city = yes
 culture = khorasani
 religion = shiite

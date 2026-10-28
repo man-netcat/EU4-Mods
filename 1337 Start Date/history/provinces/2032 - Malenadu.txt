@@ -1,8 +1,8 @@
 #2032 - Malenadu
 
-owner = GOA
-controller = GOA
-add_core = GOA
+owner = ALU
+controller = ALU
+add_core = ALU
 is_city = yes
 culture = marathi
 religion = hinduism

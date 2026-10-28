@@ -1,8 +1,8 @@
 #4410 - Kumari
 
-owner = VND
-controller = VND
-add_core = VND
+owner = VLD
+controller = VLD
+add_core = VLD
 is_city = yes
 culture = malayalam
 religion = hinduism

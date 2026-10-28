@@ -1,9 +1,10 @@
 #319 - Mentese
 
-owner = AYA
-controller = AYA
+owner = MEN
+controller = MEN
 add_core = AYA
 add_core = BYZ
+add_core = MEN
 is_city = yes
 culture = greek
 religion = orthodox

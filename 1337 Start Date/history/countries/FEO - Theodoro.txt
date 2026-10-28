@@ -4,7 +4,6 @@ government_rank = 1
 primary_culture = pontic_greek
 religion = orthodox
 technology_group = eastern
-historical_friend = TRE
 capital = 2410	# Theodoro
 fixed_capital = 2410 # Cannot move capital away from this province & no power cost to move to it
 if = {

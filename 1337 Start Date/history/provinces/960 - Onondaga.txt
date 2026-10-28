@@ -1,5 +1,9 @@
 #960 - Onondaga
 
+owner = ONO
+controller = ONO
+add_core = ONO
+is_city = yes
 culture = iroquois
 religion = totemism
 capital = "Onondaga"

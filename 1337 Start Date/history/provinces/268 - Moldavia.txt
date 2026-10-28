@@ -1,8 +1,8 @@
 #268 - Moldavia
 
-owner = BAI
-controller = BAI
-add_core = BAI
+owner = GLH
+controller = GLH
+add_core = GLH
 is_city = yes
 culture = romanian
 religion = orthodox

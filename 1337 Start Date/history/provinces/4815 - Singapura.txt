@@ -1,6 +1,7 @@
-owner = PAH
-controller = PAH
+owner = SNG
+controller = SNG
 add_core = PAH
+add_core = SNG
 is_city = yes
 culture = malayan
 religion = mahayana

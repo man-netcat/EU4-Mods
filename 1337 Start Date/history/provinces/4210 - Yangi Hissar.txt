@@ -1,7 +1,8 @@
 #4210 - Yangi Hissar
 
-owner = QCH
-controller = QCH
+owner = DGH
+controller = DGH
+add_core = DGH
 add_core = QCH
 is_city = yes
 culture = uyghur

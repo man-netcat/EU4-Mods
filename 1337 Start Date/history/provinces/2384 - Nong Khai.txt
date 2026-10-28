@@ -1,8 +1,8 @@
 #2384 - Nong Khai
 
-owner = MUA
-controller = MUA
-add_core = MUA
+owner = MPH
+controller = MPH
+add_core = MPH
 is_city = yes
 culture = lao
 religion = buddhism

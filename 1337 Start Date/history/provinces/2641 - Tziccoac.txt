@@ -1,7 +1,8 @@
 # No previous file for Tziccoac
 
-owner = TTC
-controller = TTC
+owner = OZL
+controller = OZL
+add_core = OZL
 add_core = TTC
 is_city = yes
 culture = wastek

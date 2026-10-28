@@ -317,7 +317,7 @@ def step_countries(table, po, cmap, rmap, stats):
         if van:
             text = van.read_text(encoding="latin-1")
             base, blocks = split_blocks(text)
-            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|add_accepted_culture)\s*=")
+            base = strip_depth0(base, r"\s*(?:monarch|heir|queen|add_accepted_culture|historical_rival|historical_friend)\s*=")
             if cap:
                 base = re.sub(r"(?m)^capital\s*=\s*\d+", f"capital = {cap}", base)
             if cul:
@@ -560,6 +560,45 @@ def step_wars(table):
     return dict(stats)
 
 
+def step_rivals(table):
+    """historical_rival / historical_friend in the country files: EU5's 20_rivals (a rival = { first second }
+    is first's rival) and the alliances of 12_diplomacy (friends). The 1444 ones the vanilla files carry are
+    stripped in step_countries. Only tags with land."""
+    from paths import EU5_SETUP
+    from pdx import parse
+    held = set()
+    for f in (MOD / "history/provinces").iterdir():
+        m = re.search(r"(?m)^owner\s*=\s*(\w+)", f.read_text(encoding="latin-1"))
+        if m:
+            held.add(m[1])
+
+    def eu4(t):
+        e = table.get(t, {}).get("eu4")
+        return e if e in held else None
+
+    rel = defaultdict(lambda: {"historical_rival": set(), "historical_friend": set()})
+    for fname, man, kinds in (("20_rivals.txt", "diplomacy_manager", {"rival": "historical_rival"}),
+                              ("12_diplomacy.txt", "diplomacy_manager", {"alliance": "historical_friend"})):
+        for k, b in get(parse((EU5_SETUP / fname).read_text(encoding="utf-8-sig")), man):
+            if not isinstance(b, list):
+                continue
+            key = kinds.get(k) or (kinds.get(get(b, "type")) if k == "dependency" else kinds.get(get(b, "type")))
+            a, c = eu4(get(b, "first")), eu4(get(b, "second"))
+            if key and a and c and a != c:
+                rel[a][key].add(c)
+                if key == "historical_friend":
+                    rel[c][key].add(a)
+    n = Counter()
+    for tag, d in rel.items():
+        lines = [f"{k} = {o}" for k in ("historical_rival", "historical_friend") for o in sorted(d[k])]
+        for f in (MOD / "history/countries").glob(f"{tag} - *.txt"):
+            f.write_text("\n".join(lines) + "\n" + f.read_text(encoding="latin-1"), encoding="latin-1")
+            n["countries"] += 1
+            n["rivals"] += len(d["historical_rival"])
+            n["friends"] += len(d["historical_friend"])
+    return dict(n)
+
+
 EMP = [None]
 
 
@@ -580,6 +619,7 @@ def main():
     step_tags(table)
     stats["diplomacy"] = step_diplomacy(table)
     stats["wars"] = step_wars(table)
+    stats["rivals"] = step_rivals(table)
     print(dict(stats))
 
 

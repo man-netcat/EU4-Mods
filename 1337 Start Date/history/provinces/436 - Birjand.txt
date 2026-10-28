@@ -1,8 +1,8 @@
 #436 - Birjand
 
-owner = KHT
-controller = KHT
-add_core = KHT
+owner = GRG
+controller = GRG
+add_core = GRG
 is_city = yes
 culture = khorasani
 religion = sunni

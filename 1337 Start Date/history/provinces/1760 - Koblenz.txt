@@ -1,6 +1,6 @@
-owner = KOL
-controller = KOL
-add_core = KOL
+owner = BRG
+controller = BRG
+add_core = BRG
 is_city = yes
 culture = hessian
 religion = catholic

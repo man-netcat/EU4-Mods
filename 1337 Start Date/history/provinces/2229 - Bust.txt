@@ -1,8 +1,8 @@
 #2229 - Bust
 
-owner = QUN
-controller = QUN
-add_core = QUN
+owner = NGD
+controller = NGD
+add_core = NGD
 is_city = yes
 culture = afghani
 religion = sunni

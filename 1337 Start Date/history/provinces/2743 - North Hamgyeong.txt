@@ -1,8 +1,8 @@
 #2742 - Gyeongseong
 
-owner = HIY
-controller = HIY
-add_core = HIY
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = manchu
 religion = tengri_pagan_reformed

@@ -5,6 +5,15 @@ religion = hinduism
 technology_group = indian
 capital = 514	# Jodphur
 
+monarch = {
+	name = "Chhadaji I"
+	dynasty = "Rathore"
+	birth_date = 1308.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+
 1488.1.1 = {
 	monarch = {
 		name = "Satal"

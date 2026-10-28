@@ -1,8 +1,9 @@
 #2096 - Damin
 
-owner = DLH
-controller = DLH
+owner = KKR
+controller = KKR
 add_core = DLH
+add_core = KKR
 is_city = yes
 culture = jharkhandi
 religion = hinduism

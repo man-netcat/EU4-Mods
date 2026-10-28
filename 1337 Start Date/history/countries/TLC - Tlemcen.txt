@@ -1,3 +1,5 @@
+historical_rival = MOR
+historical_rival = TUN
 government = monarchy
 add_government_reform = barbary_sultanate_reform
 technology_group = muslim

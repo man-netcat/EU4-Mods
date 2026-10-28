@@ -1,9 +1,9 @@
 # No previous file for Galam
 
-owner = TKR
-controller = TKR
+owner = MAL
+controller = MAL
 add_core = GRB
-add_core = TKR
+add_core = MAL
 is_city = yes
 culture = senegambian 
 religion = sunni #Fetishism

@@ -1,7 +1,8 @@
 #4426 - Chitradurg
 
-owner = HSL
-controller = HSL
+owner = DLH
+controller = DLH
+add_core = DLH
 add_core = HSL
 is_city = yes
 culture = kannada

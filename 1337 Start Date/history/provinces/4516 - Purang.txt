@@ -1,8 +1,7 @@
 #4516 - Purang
 
-owner = PUR
-controller = PUR
-add_core = PUR
+owner = TIB
+controller = TIB
 add_core = TIB
 is_city = yes
 culture = tibetan

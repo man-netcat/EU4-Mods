@@ -1,8 +1,8 @@
 #2056 - Rewa Kantha
 
-owner = CMN
-controller = CMN
-add_core = CMN
+owner = DLH
+controller = DLH
+add_core = DLH
 is_city = yes
 culture = saurashtri
 religion = hinduism

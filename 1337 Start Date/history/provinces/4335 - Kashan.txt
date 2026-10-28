@@ -1,8 +1,8 @@
 #4335 - Kashan
 
-owner = KSA
-controller = KSA
-add_core = KSA
+owner = GRG
+controller = GRG
+add_core = GRG
 is_city = yes
 culture = persian
 religion = shiite

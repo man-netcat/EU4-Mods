@@ -1,8 +1,8 @@
 #4424 - Adavani
 
-owner = RDY
-controller = RDY
-add_core = RDY
+owner = VIJ
+controller = VIJ
+add_core = VIJ
 is_city = yes
 culture = telegu
 religion = hinduism

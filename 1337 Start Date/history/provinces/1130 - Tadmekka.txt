@@ -1,9 +1,9 @@
 #1130 - Tadimekket
 
-owner = TMK
-controller = TMK
+owner = MAL
+controller = MAL
+add_core = MAL
 add_core = SON
-add_core = TMK
 is_city = yes
 culture = tunjur
 base_manpower = 1

@@ -1,8 +1,8 @@
 # No previous file for Rano
 
-owner = RAN
-controller = RAN
-add_core = RAN
+owner = KBO
+controller = KBO
+add_core = KBO
 is_city = yes
 culture = hausa 
 religion = shamanism

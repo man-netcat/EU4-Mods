@@ -1,8 +1,8 @@
 #661 - Dali
 
-owner = MMA
-controller = MMA
-add_core = MMA
+owner = CDL
+controller = CDL
+add_core = CDL
 is_city = yes
 culture = assamese
 religion = buddhism

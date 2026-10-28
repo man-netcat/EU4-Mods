@@ -1,8 +1,9 @@
 #2427 - Ostyaki
 
-owner = GLH
-controller = GLH
+owner = PRM
+controller = PRM
 add_core = GLH
+add_core = PRM
 is_city = yes
 capital = "Beloyarskiy"
 culture = uralic

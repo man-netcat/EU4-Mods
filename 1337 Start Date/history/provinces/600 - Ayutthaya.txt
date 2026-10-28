@@ -2,7 +2,6 @@
 
 owner = LAV
 controller = LAV
-add_core = ADH
 add_core = LAV
 is_city = yes
 culture = mon

@@ -1,10 +1,9 @@
+historical_rival = MOR
 government = monarchy
 add_government_reform = feudalism_reform
 primary_culture = castillian
 religion = catholic
 technology_group = western
-historical_rival = GRA
-historical_friend = POR
 capital = 215 # Toledo
 national_focus = MIL
 

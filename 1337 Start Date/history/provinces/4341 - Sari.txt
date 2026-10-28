@@ -1,8 +1,8 @@
 #4341 - Sari
 
-owner = MZN
-controller = MZN
-add_core = MZN
+owner = GRG
+controller = GRG
+add_core = GRG
 is_city = yes
 culture = mazandarani
 religion = shiite

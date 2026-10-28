@@ -1,7 +1,0 @@
-government = tribal
-add_government_reform = tribal_despotism
-government_rank = 1
-technology_group = muslim
-primary_culture = kurdish
-religion = sunni
-capital = 2307

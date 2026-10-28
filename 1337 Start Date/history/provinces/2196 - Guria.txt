@@ -2,7 +2,7 @@
 
 owner = SME
 controller = SME
-add_core = AAI
+add_core = GEO
 add_core = SME
 is_city = yes
 culture = georgian

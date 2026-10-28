@@ -1,6 +1,6 @@
-owner = BLS
-controller = BLS
-add_core = BLS
+owner = FRA
+controller = FRA
+add_core = FRA
 is_city = yes
 capital = "Blois"
 culture = cosmopolitan_french

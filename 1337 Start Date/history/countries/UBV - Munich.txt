@@ -1,3 +1,6 @@
+historical_rival = BOH
+historical_rival = HAB
+historical_friend = DAN
 #For the record, UBV = Upper Bavaria
 
 government = monarchy
@@ -6,7 +9,7 @@ government_rank = 1
 technology_group = western
 primary_culture = bavarian
 religion = catholic
-capital = 2955	# München!
+capital = 1757	# München!
 
 monarch = {
 	name = "Louis IV"

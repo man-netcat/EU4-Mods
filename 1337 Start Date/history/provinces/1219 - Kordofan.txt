@@ -1,7 +1,8 @@
 #1219 - Darfur
 
-owner = DAJ
-controller = DAJ
+owner = ALO
+controller = ALO
+add_core = ALO
 add_core = DAJ
 is_city = yes
 culture = tunjur

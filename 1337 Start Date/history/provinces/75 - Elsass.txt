@@ -1,8 +1,8 @@
 # 75 Elsass - Principal cities: Strasbourg
 
-owner = STR
-controller = STR
-add_core = STR
+owner = ALS
+controller = ALS
+add_core = ALS
 is_city = yes
 capital = "Straﬂburg"
 culture = swabian

@@ -1,8 +1,8 @@
 #2029 - South Kanara
 
-owner = GOA
-controller = GOA
-add_core = GOA
+owner = VIJ
+controller = VIJ
+add_core = VIJ
 is_city = yes
 culture = marathi
 religion = hinduism

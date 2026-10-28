@@ -1,8 +1,8 @@
 # No previous file for Tlacopan
 
-owner = TCP
-controller = TCP
-add_core = TCP
+owner = TEP
+controller = TEP
+add_core = TEP
 is_city = yes
 culture = totonac 
 religion = nahuatl

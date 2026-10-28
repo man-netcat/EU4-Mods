@@ -1,5 +1,9 @@
 #2051 - Bhavnagar
 
+owner = PTL
+controller = PTL
+add_core = PTL
+is_city = yes
 culture = saurashtri
 religion = hinduism
 capital = "Bhavnagar"

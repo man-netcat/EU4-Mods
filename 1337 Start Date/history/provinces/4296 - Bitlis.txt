@@ -3,7 +3,7 @@
 owner = BTL
 controller = BTL
 add_core = BTL
-add_core = DIL
+add_core = SUT
 is_city = yes
 culture = armenian
 religion = coptic

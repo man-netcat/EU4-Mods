@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = indian
+primary_culture = saurashtri
+religion = hinduism
+capital = 4454
+
+monarch = {
+	name = "Mokhdaji Ranoji I"
+	dynasty = "Guhila"
+	birth_date = 1278.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}

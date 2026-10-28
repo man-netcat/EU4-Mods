@@ -1,8 +1,8 @@
 #2716 - Buton
 
-owner = LUW
-controller = LUW
-add_core = LUW
+owner = PKR
+controller = PKR
+add_core = PKR
 is_city = yes
 culture = sulawesi
 religion = animism

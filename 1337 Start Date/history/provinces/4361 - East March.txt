@@ -1,7 +1,7 @@
 #4361 - Central + East March (Roxburghshire+Berwickshire+Selkirkshire)
 
-owner = SCO
-controller = SCO
+owner = SBL
+controller = SBL
 add_core = SBL
 add_core = SCO
 is_city = yes

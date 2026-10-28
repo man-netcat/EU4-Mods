@@ -1,8 +1,8 @@
 #2677 - Jambi
 
-owner = MEL
-controller = MEL
-add_core = MEL
+owner = MAJ
+controller = MAJ
+add_core = MAJ
 is_city = yes
 culture = malayan
 religion = mahayana

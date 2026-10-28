@@ -1,8 +1,8 @@
 #414 - Hamadan
 
-owner = HDN
-controller = HDN
-add_core = HDN
+owner = GRG
+controller = GRG
+add_core = GRG
 is_city = yes
 culture = persian
 religion = sunni

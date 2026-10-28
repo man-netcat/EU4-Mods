@@ -1,3 +1,0 @@
-graphical_culture = westerngfx
-
-color = { 36 174 242 }

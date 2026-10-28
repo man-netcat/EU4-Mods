@@ -1,8 +1,8 @@
 #355 - Sirt
 
-owner = TEL
-controller = TEL
-add_core = TEL
+owner = TUN
+controller = TUN
+add_core = TUN
 is_city = yes
 culture = tunisian
 religion = sunni

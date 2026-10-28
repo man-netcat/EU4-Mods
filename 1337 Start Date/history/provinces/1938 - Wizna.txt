@@ -1,8 +1,8 @@
 #Wizna
 
-owner = RAW
-controller = RAW
-add_core = RAW
+owner = POL
+controller = POL
+add_core = POL
 is_city = yes
 capital = "Wizna"
 culture = polish

@@ -1,8 +1,8 @@
 #252 - Highlands
 
-owner = MOY
-controller = MOY
-add_core = MOY
+owner = SCO
+controller = SCO
+add_core = SCO
 is_city = yes
 culture = highland_scottish
 religion = catholic

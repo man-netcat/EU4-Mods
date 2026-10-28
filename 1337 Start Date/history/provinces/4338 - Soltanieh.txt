@@ -1,7 +1,8 @@
 #4338 - Soltanieh & Abhar
 
-owner = JAL
-controller = JAL
+owner = GRG
+controller = GRG
+add_core = GRG
 add_core = JAL
 is_city = yes
 culture = azerbaijani

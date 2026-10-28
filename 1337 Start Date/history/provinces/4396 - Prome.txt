@@ -1,7 +1,8 @@
 #4396 - Prome
 
-owner = PIN
-controller = PIN
+owner = BPR
+controller = BPR
+add_core = BPR
 add_core = PIN
 is_city = yes
 culture = burmese

@@ -1,9 +1,10 @@
+historical_rival = ENG
 government = monarchy
 add_government_reform = scottish_monarchy_reform
 primary_culture = scottish
 religion = catholic
 technology_group = western
-capital = 4361 # Edinburgh
+capital = 249 # Edinburgh
 
 
 

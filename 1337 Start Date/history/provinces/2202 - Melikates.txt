@@ -1,9 +1,9 @@
 #2202 - Melikates
 
-owner = AAI
-controller = AAI
-add_core = AAI
+owner = GEO
+controller = GEO
 add_core = ARM
+add_core = GEO
 is_city = yes
 culture = armenian
 religion = coptic

@@ -1,8 +1,8 @@
 #257 - Mazovia
 
-owner = CZK
-controller = CZK
-add_core = CZK
+owner = POL
+controller = POL
+add_core = POL
 is_city = yes
 capital = "Warszawa"
 culture = polish

@@ -1,8 +1,8 @@
 # No previous file for Apatzingan
 
-owner = COA
-controller = COA
-add_core = COA
+owner = CLM
+controller = CLM
+add_core = CLM
 is_city = yes
 culture = purepecha
 religion = nahuatl

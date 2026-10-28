@@ -1,8 +1,9 @@
 #3002 - Southern part of Vrhbosna + some lands in modern Serbia
 
-owner = BOS
-controller = BOS
+owner = SER
+controller = SER
 add_core = BOS
+add_core = SER
 is_city = yes
 culture = bosnian
 religion = catholic

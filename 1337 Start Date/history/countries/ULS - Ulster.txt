@@ -1,3 +1,4 @@
+historical_rival = CNN
 government = monarchy
 add_government_reform = tanistry_reform
 government_rank = 1

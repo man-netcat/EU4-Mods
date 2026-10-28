@@ -1,11 +1,11 @@
+historical_rival = POL
+historical_friend = BOH
 government = theocracy
 add_government_reform = monastic_order_reform
 government_rank = 1
 primary_culture = prussian
 religion = catholic
 technology_group = western
-historical_friend = LIV
-historical_rival = POL
 capital = 1841	# Marienburg
 add_army_professionalism = 0.1
 
@@ -119,10 +119,5 @@ monarch = {
 }
 
 1337.3.1 = {
-	add_truce_with = CZK
-	add_truce_with = INO
-	add_truce_with = LCZ
-	add_truce_with = PLK
 	add_truce_with = POL
-	add_truce_with = RAW
 }

@@ -1,8 +1,8 @@
 #297 - Bryansk
 
-owner = BRY
-controller = BRY
-add_core = BRY
+owner = GLH
+controller = GLH
+add_core = GLH
 is_city = yes
 culture = ryazanian
 religion = orthodox 

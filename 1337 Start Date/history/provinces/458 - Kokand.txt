@@ -1,8 +1,8 @@
 #458 - Kokand
 
-owner = JLY
-controller = JLY
-add_core = JLY
+owner = CHG
+controller = CHG
+add_core = CHG
 is_city = yes
 culture = uzbehk
 religion = sunni

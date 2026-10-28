@@ -1,3 +1,0 @@
-graphical_culture = asiangfx
-
-color = { 232 214 9 }

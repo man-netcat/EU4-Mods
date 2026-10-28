@@ -1,8 +1,8 @@
 #352 - Gafsa
 
-owner = GFS
-controller = GFS
-add_core = GFS
+owner = TUN
+controller = TUN
+add_core = TUN
 is_city = yes
 culture = tunisian
 religion = sunni

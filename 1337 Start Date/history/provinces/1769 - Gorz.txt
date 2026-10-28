@@ -1,6 +1,7 @@
 # 1769 - Görz
-owner = HAB
-controller = HAB
+owner = AQU
+controller = AQU
+add_core = AQU
 add_core = CAA
 add_core = HAB
 is_city = yes

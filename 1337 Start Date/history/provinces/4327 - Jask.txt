@@ -1,8 +1,8 @@
 #4327 - Jask
 
-owner = JSK
-controller = JSK
-add_core = JSK
+owner = ORM
+controller = ORM
+add_core = ORM
 is_city = yes
 culture = baluchi
 religion = sunni

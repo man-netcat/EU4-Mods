@@ -1,3 +1,4 @@
+historical_rival = ENG
 government = monarchy
 add_government_reform = feudal_france_reform
 primary_culture = cosmopolitan_french
@@ -5,7 +6,6 @@ religion = catholic
 technology_group = western
 capital = 183 # Paris
 national_focus = DIP
-historical_rival = HAB
 
 change_estate_land_share = {
 	estate = estate_nobles

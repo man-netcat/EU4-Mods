@@ -1,10 +1,10 @@
+historical_friend = POL
 government = monarchy
 add_government_reform = apostolic_kingdom
 primary_culture = hungarian
 religion = catholic
 technology_group = eastern
 capital = 1318 # Buda
-historical_friend = HAB
 
 change_estate_land_share = {
 	estate = estate_church
@@ -239,5 +239,4 @@ add_government_reform = autocracy_reform }
 	add_truce_with = BOH
 	add_truce_with = MVA
 	add_truce_with = OPL
-	add_truce_with = OPV
 }

@@ -1,9 +1,9 @@
 # 176 Béarn - Principal cities: Pau
 
-owner = BEA
-controller = BEA
+owner = FOI
+controller = FOI
 add_core = AQN
-add_core = BEA
+add_core = FOI
 is_city = yes
 capital = "Pau"
 culture = gascon

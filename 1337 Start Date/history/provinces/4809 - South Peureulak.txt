@@ -1,6 +1,6 @@
-owner = ARU
-controller = ARU
-add_core = ARU
+owner = MAJ
+controller = MAJ
+add_core = MAJ
 is_city = yes
 culture = acehnese
 religion = sunni

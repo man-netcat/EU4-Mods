@@ -1,8 +1,8 @@
 #4199 - Tongren
 
-owner = TGR
-controller = TGR
-add_core = TGR
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = miao
 religion = animism

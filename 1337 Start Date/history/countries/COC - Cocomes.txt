@@ -4,7 +4,6 @@ primary_culture = yucatec
 religion = mesoamerican_religion
 technology_group = mesoamerican
 capital = 2651
-historical_rival = XIU
 
 1464.1.1 = {
 	monarch = {

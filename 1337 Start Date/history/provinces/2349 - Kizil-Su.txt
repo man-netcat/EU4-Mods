@@ -1,8 +1,8 @@
 # 2349 - Kizil-Su
 
-owner = SRL
-controller = SRL
-add_core = SRL
+owner = DGH
+controller = DGH
+add_core = DGH
 is_city = yes
 culture = uzbehk
 religion = sunni

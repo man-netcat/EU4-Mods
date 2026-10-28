@@ -1,8 +1,8 @@
 # 87 Calais - Principal cities: Calais
 
-owner = ARS
-controller = ARS
-add_core = ARS
+owner = FRA
+controller = FRA
+add_core = FRA
 add_core = PIC
 is_city = yes
 capital = "Calais"

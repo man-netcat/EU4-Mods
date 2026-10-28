@@ -1,8 +1,8 @@
 #4245 - Vyazma
 
-owner = VYA
-controller = VYA
-add_core = VYA
+owner = SMO
+controller = SMO
+add_core = SMO
 is_city = yes
 culture = ryazanian
 religion = orthodox

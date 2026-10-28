@@ -1,8 +1,8 @@
 #4440 - Narayanpur
 
-owner = KMA
-controller = KMA
-add_core = KMA
+owner = JNT
+controller = JNT
+add_core = JNT
 is_city = yes
 culture = assamese
 religion = buddhism

@@ -1,7 +1,7 @@
 #592 - Ratchaburi
 
-owner = VIE
-controller = VIE
+owner = KHM
+controller = KHM
 add_core = KHM
 add_core = VIE
 is_city = yes

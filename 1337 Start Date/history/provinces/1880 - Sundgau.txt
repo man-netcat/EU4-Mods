@@ -1,8 +1,8 @@
 # 1880 - Sundgau
 
-owner = STR
-controller = STR
-add_core = STR
+owner = ALS
+controller = ALS
+add_core = ALS
 is_city = yes
 capital = "Altkirch"
 culture = swabian

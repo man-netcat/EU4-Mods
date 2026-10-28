@@ -1,8 +1,8 @@
 #4306 - Lakia
 
-owner = TRK
-controller = TRK
-add_core = TRK
+owner = GLH
+controller = GLH
+add_core = GLH
 is_city = yes
 culture = dagestani
 religion = sunni

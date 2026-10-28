@@ -1,8 +1,9 @@
 #2347 - Hofuf
 
-owner = JRW
-controller = JRW
+owner = ORM
+controller = ORM
 add_core = JRW
+add_core = ORM
 is_city = yes
 culture = gulf_arabic
 religion = shiite

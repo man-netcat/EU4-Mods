@@ -1,8 +1,8 @@
 #2042 - Koch Hajo
 
-owner = KMA
-controller = KMA
-add_core = KMA
+owner = LUR
+controller = LUR
+add_core = LUR
 is_city = yes
 culture = assamese
 religion = buddhism

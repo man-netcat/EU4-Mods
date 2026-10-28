@@ -1,8 +1,8 @@
 #2235 - Sabzevar
 
-owner = SBZ
-controller = SBZ
-add_core = SBZ
+owner = GRG
+controller = GRG
+add_core = GRG
 is_city = yes
 culture = khorasani
 religion = shiite

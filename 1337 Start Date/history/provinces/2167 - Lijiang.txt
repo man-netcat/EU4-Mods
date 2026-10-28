@@ -1,9 +1,8 @@
 # 2167 - Lijiang
 
-owner = GYT
-controller = GYT
-add_core = GYT
-add_core = LJG
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = tibetan
 religion = vajrayana

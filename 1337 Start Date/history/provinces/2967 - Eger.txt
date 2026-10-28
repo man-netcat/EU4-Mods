@@ -1,7 +1,8 @@
 # - Eger
 
-owner = MEI
-controller = MEI
+owner = LDB
+controller = LDB
+add_core = LDB
 add_core = MEI
 is_city = yes
 capital = "Cheb"

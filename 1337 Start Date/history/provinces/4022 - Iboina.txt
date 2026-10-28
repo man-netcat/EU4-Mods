@@ -1,8 +1,8 @@
 #4022 - Iboina
 
-owner = NYM
-controller = NYM
-add_core = NYM
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 is_city = yes
 culture = madagasque #Malagasy
 religion = shamanism #Fetishism

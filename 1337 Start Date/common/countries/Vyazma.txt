@@ -1,3 +1,0 @@
-graphical_culture = easterngfx
-
-color = { 0 102 54 }

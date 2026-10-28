@@ -1,5 +1,9 @@
 #1844 - Xiankhouang
 
+owner = MPH
+controller = MPH
+add_core = MPH
+is_city = yes
 culture = lao
 religion = buddhism
 capital = "Muang Khoun"

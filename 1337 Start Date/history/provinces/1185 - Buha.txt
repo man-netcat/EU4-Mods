@@ -1,9 +1,9 @@
 #1185 - Uteve
 
-owner = AMD
-controller = AMD
-add_core = AMD
+owner = YUA
+controller = YUA
 add_core = TIB
+add_core = YUA
 is_city = yes
 culture = tibetan
 religion = vajrayana

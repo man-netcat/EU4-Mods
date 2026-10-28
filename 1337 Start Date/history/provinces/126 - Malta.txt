@@ -1,8 +1,8 @@
 #126 - Malta
 
-owner = SAO
-controller = SAO
-add_core = SAO
+owner = ATH
+controller = ATH
+add_core = ATH
 is_city = yes
 culture = maltese 
 religion = catholic 

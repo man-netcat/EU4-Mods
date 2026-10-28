@@ -3,7 +3,7 @@ add_government_reform = autocracy_reform
 primary_culture = bai
 religion = mahayana
 technology_group = chinese
-capital = 662	# Dali
+capital = 661	# Dali
 
 
 government_rank = 2

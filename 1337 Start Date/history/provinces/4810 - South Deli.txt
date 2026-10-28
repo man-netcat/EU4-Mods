@@ -1,6 +1,6 @@
-owner = ARU
-controller = ARU
-add_core = ARU
+owner = BRS
+controller = BRS
+add_core = BRS
 is_city = yes
 culture = sumatran
 religion = sunni

@@ -1,8 +1,8 @@
 #719 - Sayin Noyan
 
-owner = KHB
-controller = KHB
-add_core = KHB
+owner = YUA
+controller = YUA
+add_core = YUA
 is_city = yes
 culture = oirats
 religion = tengri_pagan_reformed

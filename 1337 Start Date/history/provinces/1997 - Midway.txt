@@ -1,8 +1,8 @@
 #1997 - Midway
 
-owner = HAW
-controller = HAW
-add_core = HAW
+owner = OAH
+controller = OAH
+add_core = OAH
 is_city = yes
 culture = polynesian
 religion = animism

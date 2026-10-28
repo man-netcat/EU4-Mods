@@ -1,8 +1,8 @@
 #Näset + the land around the river Neva, incl. Nöteborg, Nyen and St.Petersburg.
 
-owner = ORE
-controller = ORE
-add_core = ORE
+owner = NOV
+controller = NOV
+add_core = NOV
 is_city = yes
 culture = karelian
 religion = orthodox

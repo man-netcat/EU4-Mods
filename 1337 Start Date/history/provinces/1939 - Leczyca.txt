@@ -1,8 +1,8 @@
 #Leczyca
 
-owner = LCZ
-controller = LCZ
-add_core = LCZ
+owner = POL
+controller = POL
+add_core = POL
 is_city = yes
 capital = "Leczyca"
 culture = polish

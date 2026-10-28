@@ -1,8 +1,8 @@
 # 181 Rethel
 
-owner = RET
-controller = RET
-add_core = RET
+owner = FRA
+controller = FRA
+add_core = FRA
 is_city = yes
 capital = "Rethel"
 culture = cosmopolitan_french

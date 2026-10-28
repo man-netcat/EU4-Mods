@@ -2,8 +2,8 @@
 
 owner = JAL
 controller = JAL
+add_core = ARM
 add_core = JAL
-add_core = SYU
 is_city = yes
 culture = armenian
 religion = sunni

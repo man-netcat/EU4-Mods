@@ -1,9 +1,7 @@
 #4366 - Montgomery + Radnor
 
-owner = POS
-controller = POS
-add_core = MAO
-add_core = POS
+owner = WLS
+controller = WLS
 add_core = PWS
 add_core = WLS
 is_city = yes

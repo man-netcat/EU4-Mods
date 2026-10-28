@@ -1,8 +1,8 @@
 #1817 - Nan
 
-owner = PUA
-controller = PUA
-add_core = PUA
+owner = SUK
+controller = SUK
+add_core = SUK
 is_city = yes
 culture = northern_thai
 religion = buddhism

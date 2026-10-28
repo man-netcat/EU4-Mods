@@ -1,8 +1,8 @@
 #771 - Vitebsk
 
-owner = VBK
-controller = VBK
-add_core = VBK
+owner = LIT
+controller = LIT
+add_core = LIT
 is_city = yes
 culture = byelorussian
 religion = orthodox

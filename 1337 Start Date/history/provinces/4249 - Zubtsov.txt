@@ -1,8 +1,8 @@
 #4249 - Zubtsov
 
-owner = ZUB
-controller = ZUB
-add_core = ZUB
+owner = TVE
+controller = TVE
+add_core = TVE
 is_city = yes
 culture = russian
 religion = orthodox

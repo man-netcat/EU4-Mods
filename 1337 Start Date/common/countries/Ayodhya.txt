@@ -1,3 +1,0 @@
-graphical_culture = indiangfx
-
-color = { 220 150 50 }

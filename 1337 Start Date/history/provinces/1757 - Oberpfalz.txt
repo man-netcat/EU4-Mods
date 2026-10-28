@@ -1,8 +1,9 @@
 #1757 - Oberpfalz
 
-owner = LBV
-controller = LBV
+owner = UBV
+controller = UBV
 add_core = LBV
+add_core = UBV
 is_city = yes
 culture = bavarian
 religion = catholic

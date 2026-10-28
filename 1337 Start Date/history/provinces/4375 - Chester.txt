@@ -1,8 +1,8 @@
 #4375 - Chester
 
-owner = CET
-controller = CET
-add_core = CET
+owner = ENG
+controller = ENG
+add_core = ENG
 is_city = yes
 latent_trade_goods = {
 	coal
