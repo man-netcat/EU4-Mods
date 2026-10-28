@@ -71,13 +71,13 @@
 "franche_comte_area"
 ],
 "75": [
-"alsace_area"
+"lower_alsace_province"
 ],
 "72": [
 "freiburg"
 ],
 "170": [
-"finisterre"
+"cornouaille_province"
 ],
 "102": [
 "nice_province"
@@ -221,5 +221,166 @@
 ],
 "1794": [
 "central_sahara"
+],
+"112": [
+"venice"
+],
+"116": [
+"florence_province"
+],
+"118": [
+"patrimonio_province",
+"campagna_province"
+],
+"4732": [
+"marittima_province"
+],
+"2981": [
+"monferrato_province"
+],
+"1247": [
+"cismonte_province",
+"pumonte_province"
+],
+"88": [
+"lower_artois_province",
+"upper_artois_province"
+],
+"89": [
+"amienois_province",
+"thierache_province"
+],
+"1743": [
+"cambrai"
+],
+"167": [
+"caux_province"
+],
+"169": [
+"tregor_province",
+"ploermel_province"
+],
+"172": [
+"nantais_province"
+],
+"4386": [
+"lower_poitou_province"
+],
+"173": [
+"bayonne_province"
+],
+"189": [
+"pays_nancy_province",
+"vosges_province"
+],
+"4777": [
+"lyonnais_province"
+],
+"204": [
+"viennois_province",
+"gresivaudan_province"
+],
+"94": [
+"east_luxembourg_province",
+"west_luxembourg_province"
+],
+"1866": [
+"namur_province"
+],
+"4770": [
+"kempenland_province"
+],
+"96": [
+"middelburg"
+],
+"4383": [
+"south_holland_province"
+],
+"99": [
+"gelderland_province"
+],
+"100": [
+"friesland_province"
+],
+"1931": [
+"east_friesland_province"
+],
+"4381": [
+"overijssel_province",
+"drenthe_province"
+],
+"4382": [
+"ommelanden_province"
+],
+"4141": [
+"heide"
+],
+"4749": [
+"seenplatte_province"
+],
+"4786": [
+"prignitz_province"
+],
+"4746": [
+"pyritz_province"
+],
+"58": [
+"bernburg",
+"zerbst"
+],
+"4773": [
+"leine_province"
+],
+"67": [
+"nuremberg"
+],
+"4711": [
+"ries_province"
+],
+"65": [
+"munchner_schotterebene_province"
+],
+"1757": [
+"oberpfalzer_wald_province"
+],
+"73": [
+"unterinntal_province",
+"oberinntal_province"
+],
+"4758": [
+"south_tirol_province"
+],
+"1880": [
+"upper_alsace_province"
+],
+"1761": [
+"palatinate_province"
+],
+"81": [
+"hessen_bergland_province"
+],
+"1760": [
+"coblenz"
+],
+"83": [
+"taunus_province"
+],
+"4722": [
+"graubunden_province"
+],
+"4715": [
+"rothenburg"
+],
+"130": [
+"istria_province"
+],
+"4738": [
+"trieste"
+],
+"1771": [
+"erzgebirge_province"
+],
+"2967": [
+"chebsko_province"
 ]
 }

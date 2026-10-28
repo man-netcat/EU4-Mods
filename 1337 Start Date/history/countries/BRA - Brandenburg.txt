@@ -4,6 +4,7 @@ add_government_reform = margraviate_reform
 government_rank = 1
 technology_group = western
 primary_culture = saxon
+add_accepted_culture = pommeranian
 religion = catholic
 capital = 4748	# Berlin
 

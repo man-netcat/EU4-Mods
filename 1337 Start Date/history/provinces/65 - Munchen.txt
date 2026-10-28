@@ -1,17 +1,16 @@
 # 65 - München
-owner = LBV
-controller = LBV
-add_core = LBV
+owner = UBV
+controller = UBV
+add_core = UBV
 is_city = yes
 culture = bavarian
 religion = catholic
-base_tax = 6 
-base_production = 5
+base_tax = 5 
+base_production = 4
 trade_goods = grain
 base_manpower = 4
 capital = "München"
 hre = yes
-fort_15th = yes
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

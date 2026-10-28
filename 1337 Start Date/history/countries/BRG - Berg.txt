@@ -4,7 +4,7 @@ government_rank = 1
 primary_culture = hessian
 religion = catholic
 technology_group = western
-capital = 1760 # Berg
+capital = 84 # Berg
 
 monarch = {
 	name = "Adolf I"

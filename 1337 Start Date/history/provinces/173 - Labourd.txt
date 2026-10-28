@@ -4,16 +4,16 @@ owner = AQN
 controller = AQN
 add_core = AQN
 add_core = GUY
+add_core = NAV
 is_city = yes
 capital = "Bayonne"
-culture = gascon
+culture = basque
 religion = catholic
 hre = no
 base_tax = 3 
 base_production = 3
-trade_goods = wine
+trade_goods = livestock
 base_manpower = 4
-fort_15th = yes
 
 
 
@@ -21,6 +21,7 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
+fort_15th = yes
 
 1560.1.1 = { religion = reformed }
 1565.1.1 = { unrest = 8 } # France is restless once again as ultra-catholic intentions become clear

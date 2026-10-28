@@ -10,7 +10,7 @@ capital = "Charaideo"
 trade_goods = grain
 hre = no
 base_tax = 10
-base_production = 9
+base_production = 10
 base_manpower = 7
 
 

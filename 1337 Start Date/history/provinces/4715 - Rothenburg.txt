@@ -1,13 +1,13 @@
-owner = BOH
-controller = BOH
-add_core = BOH
+owner = ROT
+controller = ROT
+add_core = ROT
 is_city = yes
 capital = "Rothenburg ob der Tauber"
 culture = franconian
 religion = catholic
 hre = yes
-base_tax = 3 
-base_production = 3
+base_tax = 2 
+base_production = 2
 base_manpower = 1
 trade_goods = cloth
 

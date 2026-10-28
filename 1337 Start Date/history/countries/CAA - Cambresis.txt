@@ -1,0 +1,15 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+technology_group = western
+primary_culture = wallonian
+religion = catholic
+capital = 1743
+
+monarch = {
+	name = "William II"
+	birth_date = 1294.1.1
+	adm = 2
+	dip = 4
+	mil = 2
+}

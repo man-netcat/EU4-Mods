@@ -1,17 +1,17 @@
 #4773 - Göttingen
 
-owner = BRU
-controller = BRU
-add_core = BRU
+owner = GBH
+controller = GBH
+add_core = GBH
 is_city = yes
 culture = lower_saxon
 religion = catholic
 capital = "Göttingen"
-trade_goods = cloth
+trade_goods = wool
 hre = yes
-base_tax = 2 
-base_production = 2
-base_manpower = 2
+base_tax = 5 
+base_production = 4
+base_manpower = 4
 
 
 

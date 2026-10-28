@@ -1,14 +1,14 @@
-owner = KOL
-controller = KOL
-add_core = KOL
+owner = DIE
+controller = DIE
+add_core = DIE
 is_city = yes
 capital = "Wiesbaden"
-trade_goods = copper
+trade_goods = wool
 hre = yes
 culture = hessian
 religion = catholic
-base_tax = 3 
-base_production = 3
+base_tax = 4 
+base_production = 4
 base_manpower = 3
 
 

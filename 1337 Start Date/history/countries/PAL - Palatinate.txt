@@ -2,9 +2,10 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 primary_culture = hessian
+add_accepted_culture = bavarian
 religion = catholic
 technology_group = western
-capital = 77	# Pfalz
+capital = 1761	# Pfalz
 
 monarch = {
 	name = "Rudolf II"

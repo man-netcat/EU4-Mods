@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = western
 primary_culture = swiss
 religion = catholic
-capital = 1873
+capital = 4722
 
 monarch = {
 	name = "Ulrick"

@@ -1,10 +1,10 @@
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
-primary_culture = flemish
+primary_culture = dutch
 religion = catholic
 technology_group = western
-capital = 4383	# Coevorde
+capital = 99	# Coevorde
 
 monarch = {
 	name = "Reginald II"

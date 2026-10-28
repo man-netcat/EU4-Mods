@@ -1,8 +1,8 @@
 # 1743 Cambray
 
-owner = ENG
-controller = ENG
-add_core = ENG
+owner = CAA
+controller = CAA
+add_core = CAA
 is_city = yes
 latent_trade_goods = {
 	coal
@@ -11,11 +11,11 @@ latent_trade_goods = {
 capital = "Cambray"
 culture = wallonian
 religion = catholic
-hre = no
-base_tax = 5 
-base_production = 5
+hre = yes
+base_tax = 3 
+base_production = 3
 trade_goods = grain
-base_manpower = 2
+base_manpower = 1
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

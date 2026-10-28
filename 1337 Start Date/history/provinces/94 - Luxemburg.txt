@@ -8,11 +8,10 @@ capital = "Luxemburg"
 culture = wallonian
 religion = catholic 
 hre = yes
-base_tax = 5
-base_production = 5
+base_tax = 4
+base_production = 4
 trade_goods = iron
 base_manpower = 2
-fort_15th = yes
 
 
 
@@ -20,6 +19,7 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
+fort_15th = yes
 
 1545.1.1 = { fort_15th = no fort_16th = yes } #1545, representing the first bastions and curtain walls - way ahead of tech though (3-4)
 1559.5.12 = { unrest = 3 } # New bishoprics in the Lowlands create an outrage

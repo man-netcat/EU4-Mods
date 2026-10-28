@@ -1,17 +1,17 @@
 # 1880 - Sundgau
 
-owner = ALS
-controller = ALS
-add_core = ALS
+owner = FRT
+controller = FRT
+add_core = FRT
 is_city = yes
 capital = "Altkirch"
 culture = swabian
 religion = catholic
 hre = yes
-base_tax = 3 
-base_production = 3
-trade_goods = iron
-base_manpower = 3
+base_tax = 5 
+base_production = 4
+trade_goods = copper
+base_manpower = 4
 
 
 

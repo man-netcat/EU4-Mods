@@ -109,6 +109,11 @@
 "name": "Ancona",
 "new": true
 },
+"ANH": {
+"eu4": "ANH",
+"name": "Anhalt",
+"new": false
+},
 "ANS": {
 "eu4": "ANS",
 "name": "Ansbach",
@@ -294,6 +299,11 @@
 "name": "Bambao",
 "new": true
 },
+"BNB": {
+"eu4": "BNB",
+"name": "Bernburg",
+"new": true
+},
 "BND": {
 "eu4": "BND",
 "name": "Bundelkhand",
@@ -362,11 +372,6 @@
 "BRE": {
 "eu4": "BRE",
 "name": "Brema",
-"new": false
-},
-"BRG": {
-"eu4": "BRG",
-"name": "Berg",
 "new": false
 },
 "BRI": {
@@ -449,8 +454,13 @@
 "name": "Cagliari",
 "new": true
 },
-"CAR": {
+"CAM": {
 "eu4": "CAA",
+"name": "Cambrésis",
+"new": true
+},
+"CAR": {
+"eu4": "CAC",
 "name": "Carniola",
 "new": true
 },
@@ -558,6 +568,11 @@
 "eu4": "YOD",
 "name": "Yodzo Coo",
 "new": true
+},
+"COR": {
+"eu4": "COR",
+"name": "Corsica",
+"new": false
 },
 "CRD": {
 "eu4": "CRD",
@@ -683,6 +698,16 @@
 "eu4": "DHF",
 "name": "Dhofar",
 "new": true
+},
+"DIE": {
+"eu4": "DIE",
+"name": "Diez",
+"new": true
+},
+"DIT": {
+"eu4": "DTT",
+"name": "Dithmarschen",
+"new": false
 },
 "DJE": {
 "eu4": "GHD",
@@ -834,6 +859,11 @@
 "name": "Frankfurt",
 "new": false
 },
+"FRT": {
+"eu4": "FRT",
+"name": "Ferrette",
+"new": true
+},
 "FUL": {
 "eu4": "GRB",
 "name": "Great Fulo",
@@ -847,6 +877,11 @@
 "GAU": {
 "eu4": "GAU",
 "name": "Gaur",
+"new": true
+},
+"GBH": {
+"eu4": "GBH",
+"name": "Grubenhagen",
 "new": true
 },
 "GBS": {
@@ -1103,6 +1138,11 @@
 "eu4": "HUN",
 "name": "Hungary",
 "new": false
+},
+"HVB": {
+"eu4": "HVB",
+"name": "Havelberg",
+"new": true
 },
 "HZP": {
 "eu4": "HZP",
@@ -1999,6 +2039,11 @@
 "name": "Nupe",
 "new": false
 },
+"NUR": {
+"eu4": "NUM",
+"name": "Nuremberg",
+"new": false
+},
 "NVA": {
 "eu4": "NVA",
 "name": "Novara",
@@ -2278,6 +2323,11 @@
 "eu4": "RKS",
 "name": "Raksel",
 "new": true
+},
+"ROT": {
+"eu4": "ROT",
+"name": "Rothenburg",
+"new": false
 },
 "RRU": {
 "eu4": "RRU",
@@ -2838,11 +2888,6 @@
 "eu4": "UBV",
 "name": "Upper Bavaria",
 "new": false
-},
-"UFF": {
-"eu4": "UFF",
-"name": "Hohenlohe",
-"new": true
 },
 "ULM": {
 "eu4": "ULM",

@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = hessian
+religion = catholic
+capital = 83
+
+monarch = {
+	name = "Gerard VI"
+	dynasty = "Diez"
+	birth_date = 1300.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Gerard"
+	dynasty = "Diez"
+	birth_date = 1325.1.1
+	death_date = 1385.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

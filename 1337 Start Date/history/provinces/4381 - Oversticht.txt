@@ -2,17 +2,16 @@
 
 owner = UTR
 controller = UTR
-add_core = FRI
 add_core = UTR
 is_city = yes
 capital = "Zwolle"
-culture = dutch
+culture = hannoverian
 religion = catholic
 hre = yes
-base_tax = 3
-base_production = 3
-trade_goods = livestock
-base_manpower = 2
+base_tax = 4
+base_production = 4
+trade_goods = grain
+base_manpower = 3
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

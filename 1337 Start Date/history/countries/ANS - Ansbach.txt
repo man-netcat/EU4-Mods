@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = western
 primary_culture = franconian
 religion = catholic
-capital = 71	# Ansbach
+capital = 4711	# Ansbach
 fixed_capital = 71 # Cannot move capital away from this province & no power cost to move to it
 
 # Margraves

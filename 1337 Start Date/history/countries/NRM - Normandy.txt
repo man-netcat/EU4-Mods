@@ -4,7 +4,7 @@ government_rank = 1
 technology_group = western
 primary_culture = normand
 religion = catholic
-capital = 167	# Caen
+capital = 4385	# Caen
 
 monarch = {
 	name = "Johan II"

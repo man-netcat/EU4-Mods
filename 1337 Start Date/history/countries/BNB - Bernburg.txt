@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = catholic
+capital = 58
+
+monarch = {
+	name = "Bernard III"
+	dynasty = "Askanier"
+	birth_date = 1290.1.1
+	adm = 3
+	dip = 3
+	mil = 3
+}
+heir = {
+	name = "Bernard"
+	dynasty = "Askanier"
+	birth_date = 1328.1.1
+	death_date = 1388.1.1
+	claim = 95
+	adm = 3
+	dip = 3
+	mil = 3
+}

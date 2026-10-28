@@ -1,19 +1,17 @@
 # 4383 South Holland - Principal cities: Den Haag, Delft, Leiden
 
-owner = GEL
-controller = GEL
-add_core = GEL
+owner = HOL
+controller = HOL
 add_core = HOL
 is_city = yes
 capital = "'s-Gravenhage"
-culture = flemish
+culture = dutch
 religion = catholic
 hre = yes
-base_tax = 6
-base_production = 6
-trade_goods = cloth
-base_manpower = 3
-fort_15th = yes
+base_tax = 5
+base_production = 5
+trade_goods = salt
+base_manpower = 2
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

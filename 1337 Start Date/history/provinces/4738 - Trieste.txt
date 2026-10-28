@@ -2,7 +2,7 @@
 
 owner = ORT
 controller = ORT
-add_core = CAA
+add_core = CAC
 add_core = HAB
 add_core = ORT
 is_city = yes

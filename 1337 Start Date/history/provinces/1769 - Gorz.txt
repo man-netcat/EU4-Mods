@@ -2,7 +2,7 @@
 owner = AQU
 controller = AQU
 add_core = AQU
-add_core = CAA
+add_core = CAC
 add_core = HAB
 is_city = yes
 culture = slovene

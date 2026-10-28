@@ -1,16 +1,15 @@
 # - Eger
 
-owner = LDB
-controller = LDB
-add_core = LDB
-add_core = MEI
+owner = BOH
+controller = BOH
+add_core = BOH
 is_city = yes
 capital = "Cheb"
-culture = saxon
+culture = czech
 religion = catholic
-trade_goods = gold #Joachimstal mines
+trade_goods = copper #Joachimstal mines
 hre = yes
-base_tax = 4
+base_tax = 5
 base_production = 4
 base_manpower = 2
 discovered_by = western

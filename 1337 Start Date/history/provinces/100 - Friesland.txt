@@ -1,18 +1,17 @@
 # 100 Friesland - Principal cities: Leeuwarden & Harlingen 
 
-owner = UTR
-controller = UTR
+owner = FRI
+controller = FRI
 add_core = FRI
-add_core = UTR
 is_city = yes
 capital = "Leeuwarden"
 culture = frisian
 religion = catholic
 hre = yes
-base_tax = 7
-base_production = 6
-trade_goods = livestock 
-base_manpower = 2
+base_tax = 4
+base_production = 4
+trade_goods = salt 
+base_manpower = 1
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

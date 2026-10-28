@@ -1,7 +1,7 @@
 # 4751 - Cilli
 owner = GOR
 controller = GOR
-add_core = CAA
+add_core = CAC
 add_core = GOR
 add_core = HAB
 is_city = yes

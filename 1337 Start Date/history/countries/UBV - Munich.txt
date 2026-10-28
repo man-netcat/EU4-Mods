@@ -9,7 +9,7 @@ government_rank = 1
 technology_group = western
 primary_culture = bavarian
 religion = catholic
-capital = 1757	# München!
+capital = 65	# München!
 
 monarch = {
 	name = "Louis IV"
