@@ -6,13 +6,3 @@ primary_culture = aztek
 religion = nahuatl
 technology_group = mesoamerican
 capital = 4582
-
-1440.1.1 = {
-	monarch = {
-		name = "Aztahua"
-		dynasty = "Teotitlan"
-		adm = 3
-		dip = 2
-		mil = 3
-	}
-}

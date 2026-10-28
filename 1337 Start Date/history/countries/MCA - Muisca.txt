@@ -8,32 +8,6 @@ capital = 825 #Bogota
 
 #Zipas of Bacatá
 
-1444.1.1 = {
-	monarch = {
-		name = "Meicuchuca"
-		dynasty = "Bacatá"
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-}
-
-
-1444.1.1 = {
-	heir = {
-		name = "Saguamanchica"
-		monarch_name = "Saguamanchica"
-		dynasty = "Bacatá"
-		birth_date = 1425.1.1
-		death_date = 1490.1.1
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 2
-	}
-}
-
-
 1470.1.1 = {
 	monarch = {
 		name = "Saguamanchica"

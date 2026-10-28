@@ -24,62 +24,6 @@ heir = {
 	mil = 3
 }
 
-1395.1.1 = {
-	monarch = {
-		name = "Morisue" 
-		dynasty = "Ando"
-		birth_date = 1375.1.1
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = silver_tongue_personality
-	add_ruler_personality = industrious_personality
-	add_ruler_personality = lawgiver_personality
-}
-
-1400.1.1 = {
-	heir = {
-		name = "Yasusue"
-		monarch_name = "Yasusue"
-		dynasty = "Ando"
-		birth_date = 1400.1.1
-		death_date = 1446.1.1
-		claim = 90
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
-1443.1.1 = {
-	monarch = {
-		name = "Yasusue" 
-		dynasty = "Ando"
-		birth_date = 1400.1.1
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = benevolent_personality
-}
-
-1443.1.1 = {
-	heir = {
-		name = "Yoshisue"
-		monarch_name = "Yoshisue"
-		dynasty = "Ando"
-		birth_date = 1420.1.1
-		death_date = 1453.11.9
-		claim = 90
-		adm = 3
-		dip = 3
-		mil = 2
-	}
-}
-
 1446.1.1 = {
 	monarch = {
 		name = "Yoshisue"

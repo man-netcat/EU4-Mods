@@ -16,15 +16,6 @@ monarch = {
 	mil = 3
 }
 
-1423.7.1 = {
-	monarch = {
-		name = "Leonhard von Laiming" 
-		birth_date = 1381.1.1
-		adm = 4
-		dip = 3
-		mil = 0
-	}
-}
 1451.6.25 = {
 	monarch = {
 		name = "Ulrich von Nuﬂdorf"

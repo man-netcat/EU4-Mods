@@ -22,7 +22,7 @@ discovered_by = ottoman
 discovered_by = eastern
 discovered_by = western
 
-1430.1.1 = { owner = TUR add_core = TUR controller = TUR capital = "Janina" }
+1430.1.1 = {    capital = "Janina" }
 1555.1.1 = { unrest = 5 } # General discontent against the Janissaries' dominance
 1556.1.1 = { unrest = 0 }
 1611.1.1 = { unrest = 3 } # Revolutionary movement of Dionysios, Christians are driven away

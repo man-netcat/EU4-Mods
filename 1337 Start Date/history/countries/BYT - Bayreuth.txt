@@ -10,17 +10,6 @@ fixed_capital = 4717 # Cannot move capital away from this province & no power co
 # Made junior partner of Ansbach for gameplay reasons.
 #defining a dummy so that it knows von Hohenzollern as the native dynasty
 
-1420.1.1 = {
-	monarch = {
-		name = "Friedrich VI"
-		dynasty = "von Hohenzollern"
-		birth_date = 1371.9.21
-		dip = 1
-		adm = 1
-		mil = 1
-	}
-}
-
 1533.1.1 = { religion = protestant }
 
 1608.5.14 = {

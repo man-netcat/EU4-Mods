@@ -9,16 +9,6 @@ capital = 4493	#Sirmur
 
 #Prakash Rajas of shifting Capitals
 
-1440.1.1 = {
-	monarch = {
-		name = "Bir"
-		dynasty = "Plassia"
-		ADM = 2
-		DIP = 3
-		MIL = 2
-	}
-}
-
 1570.1.1 = {
 	monarch = {
 		name = "Dip"

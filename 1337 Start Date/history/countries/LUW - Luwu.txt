@@ -6,26 +6,6 @@ religion = animism
 technology_group = chinese
 capital = 2714	# Palopo
 
-1399.1.1 = {
-	monarch = {
-		name = "Tunyachoka-ri" # fictional
-		dynasty = "Palopo"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
-1429.1.1 = {
-	monarch = {
-		name = "Tuni Djallo" # fictional
-		dynasty = "Palopo"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
 1459.1.1 = {
 	monarch = {
 		name = "Fakhr" # fictional

@@ -32,30 +32,6 @@ heir = {
 	mil = 3
 }
 
-1410.3.8 = {
-	monarch = {
-		name = "Alexis"
-		dynasty = "Gavras"
-		adm = 2
-		dip = 5
-		mil = 4
-	}
-}
-
-1443.10.29 = {
-	heir = {
-		name = "Manuel"
-		monarch_name = "Manuel Olubei"
-		dynasty = "Gavras"
-		birth_date = 1443.10.29
-		death_date = 1475.1.1
-		claim = 95
-		adm = 3
-		dip = 4
-		mil = 5
-	}
-}
-
 1446.11.11 = {
 	monarch = {
 		name = "Manuel Olubei"

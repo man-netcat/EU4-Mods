@@ -28,56 +28,6 @@ heir = {
 	mil = 0
 }
 
-1393.1.1 = {
-	monarch = {
-		name = "Niccolò III"
-		dynasty = "d'Este"
-		birth_date = 1383.11.9
-		adm = 2
-		dip = 1
-		mil = 2
-	}
-}
-
-1407.1.1 = {
-	heir = {
-		name = "Leonello"
-		monarch_name = "Leonello I"
-		dynasty = "d'Este"
-		birth_date = 1407.1.1
-		death_date = 1450.10.2
-		claim = 95
-		adm = 1
-		dip = 1
-		mil = 0
-	}
-}
-
-1441.1.1 = {
-	monarch = {
-		name = "Leonello I"
-		dynasty = "d'Este"
-		birth_date = 1407.1.1
-		adm = 1
-		dip = 1
-		mil = 0
-	}
-}
-
-1441.1.1 = {
-	heir = {
-		name = "Borso"
-		monarch_name = "Borso I"
-		dynasty = "d'Este"
-		birth_date = 1413.1.1
-		death_date = 1471.8.20
-		claim = 95
-		adm = 3
-		dip = 4
-		mil = 2
-	}
-}
-
 1450.10.2 = {
 	monarch = {
 		name = "Borso I"

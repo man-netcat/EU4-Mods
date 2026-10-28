@@ -16,11 +16,6 @@ discovered_by = chinese
 add_local_autonomy = 25
 add_vaisyas_or_burghers_effect = yes
 
-1378.1.1 = {
-	owner = VIJ
-	controller = VIJ
-}
-1428.1.1 = { add_core = VIJ }
 1498.1.1 = { discovered_by = POR }
 1543.1.1 = {  revolt = { size = 0 type = nationalist_rebels } }
 1550.1.1 = {  revolt = { } }

@@ -15,7 +15,6 @@ discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
 
-1444.1.1 = { add_core = SWI }
 1513.7.3 = { unrest = 7 } # Luzern Peasant War
 1515.1.1 = { unrest = 0 }
 1536.1.1 = {   religion = reformed } #By 1536 the area was completely annexed. Calvin Debate in the Cathedral of Lausanne.

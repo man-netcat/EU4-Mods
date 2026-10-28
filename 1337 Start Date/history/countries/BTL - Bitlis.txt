@@ -17,16 +17,6 @@ monarch = {
 	mil = 3
 }
 
-1440.1.1 = {
-	monarch = {
-		name = "Bidlo"
-		dynasty = "Rojaki"
-		adm = 3
-		dip = 4
-		mil = 3
-	}
-}
-
 1510.1.1 = { #Swears alegience to the Safavids in 1532
 	monarch = {
 		name = "Serefhan IV"

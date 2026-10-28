@@ -17,16 +17,6 @@ religious_school = maliki_school
 	add_mil_tech = 1
 }
 
-1430.1.1 = {
-	monarch = {
-		name = "Sanau I"
-		dynasty = "Azna"
-		dip = 2
-		adm = 1
-		mil = 2
-	}
-} #Last Azna ruler of Katsina. Date of start of reign unknown. There are conflictin chronologies of who reigned when. 
-
 1445.1.1 = {
 	monarch = {
 		name = "Muhammad Korau I"

@@ -6,15 +6,6 @@ religion = totemism
 technology_group = north_american
 capital = 988	# Huron
 
-1399.1.1 = {
-	monarch = {
-		name = "Ahatsistari"
-		adm = 2
-		dip = 2
-		mil = 4
-	}
-}
-
 1525.1.1 = {
 	monarch = {
 		name = "Dannaconna"

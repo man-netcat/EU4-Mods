@@ -19,8 +19,6 @@ discovered_by = ottoman
 center_of_trade = 2
 fort_15th = yes
 
-1420.1.1 = { controller = ENG } # Captured by the English
-1437.1.1 = { controller = FRA } # Retaken by Charles VII
 1571.1.1 = { unrest = 5 } # Unrest spreads in catholic territory: massacres of protestants in Rouen, Orange & Paris
 1573.8.23 = { unrest = 10 } # Saint Barthelew's Day Massacre
 1574.5.1 = { unrest = 0 } # Charles IX dies, situation cools a bit	

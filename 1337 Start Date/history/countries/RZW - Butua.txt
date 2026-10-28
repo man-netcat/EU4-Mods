@@ -13,16 +13,6 @@ capital = 1185	# Butua
 
 #Torwa Dynasty
 
-1444.1.1 = {
-	monarch = {
-		name = "Dlembeu"
-		dynasty = "Torwa"
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-}
-
 1490.1.1 = {
 	monarch = {
 		name = "Dlembeu II"

@@ -15,16 +15,6 @@ monarch = {
 	mil = 3
 }
 
-1444.11.11 = {
-	monarch = {
-		name = "Stadtrat"
-		adm = 3
-		dip = 3
-		mil = 3
-		regent = yes
-	}
-}
-
 1532.1.1 = { religion = protestant }
 
 1806.7.12 = { set_legacy_government = administrative_republic }

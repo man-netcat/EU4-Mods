@@ -10,16 +10,6 @@ unlock_cult = cwezi_cult
 unit_type = sub_saharan
 capital = 4080	# Soyo
 
-1430.1.1 = {
-	monarch = {
-		name = "Mani"
-		dynasty = "Soyo"
-		adm = 2
-		dip = 3
-		mil = 3
-	}
-} #Mani is actually a title, not a name. No heir for reasons that shall be seen below: 
-
 1491.4.3 = {
 	monarch = {
 		name = "Manuel I"

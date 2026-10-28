@@ -15,35 +15,6 @@ monarch = {
 	mil = 4
 }
 
-1394.1.1 = {
-	monarch = {
-		name = "Wilhelm II"		
-		adm = 2
-		dip = 1
-		mil = 2
-	}
-}
-
-1439.1.1 = {
-	monarch = {
-		name = "Konrad IV"
-		adm = 3
-		dip = 1
-		mil = 1
-	}
-}
-
-1440.11.11 = {
-	monarch = {
-		name = "Ruprecht I"
-		culture = hessian
-		birth_date = 1420.1.1
-		adm = 2
-		dip = 1
-		mil = 2
-	}
-}
-
 1478.10.18 = {
 	monarch = {
 		name = "Albrecht I"

@@ -8,17 +8,6 @@ capital = 2211 # Ardalan
 fixed_capital = 2211 # Cannot move capital away from this province & no power cost to move to it
 religious_school = shafii_school
 
-1399.1.1 = {
-	monarch = {
-		name = "Bawa"
-		dynasty = "Ardalan"
-		adm = 2
-		dip = 3
-		mil = 1
-	}
-	add_piety = 0.1
-}
-
 1525.1.1 = {
 	monarch = {
 		name = "Timur"

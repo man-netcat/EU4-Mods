@@ -19,9 +19,4 @@ discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
 
-1405.1.1 = {	owner = VEN
-	controller = VEN
-	add_core = VEN
-	remove_core = MLO
-} # To Milano
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

@@ -10,16 +10,6 @@ unlock_cult = enkai_cult
 unlock_cult = waaq_cult
 unlock_cult = zanahary_cult
 
-1440.1.1 = {
-	monarch = {
-		name = "Andrianampandrandrandava"
-		dynasty = "Vazimba"
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-}
-
 1460.1.1 = {
 	monarch = {
 		name = "Andrianmasinidohafandrana"

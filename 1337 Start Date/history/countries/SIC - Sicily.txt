@@ -28,17 +28,6 @@ heir = {
 	mil = 3
 }
 
-1377.1.28 = {
-	monarch = { 
-		name = "Maria I"
-		dynasty = "d'Aragó"
-		dip = 3
-		mil = 4
-		adm = 2
-		female = yes
-	}
-}
-
 1713.4.12 = {
 	monarch = {
 		name = "Vittorio Amedeo II"

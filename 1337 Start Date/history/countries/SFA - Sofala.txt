@@ -10,31 +10,6 @@ capital = 1186	# Sofala
 fixed_capital = 1186 # Cannot move capital away from this province & no power cost to move to it
 religious_school = shafii_school
 
-1444.1.1 = {
-	monarch = {
-		name= "Suleiman I"
-		dynasty = "al-Mawahib"
-		dip = 3
-		mil = 2
-		adm = 2
-	}
-	add_piety = 0.1
-}
-
-1444.1.1 = {
-	heir = {
-		name = "Yussuf"
-		monarch_name = "Yussuf I"
-		dynasty = "al-Mawahib"
-		birth_date = 1435.1.1
-		death_date = 1505.1.1
-		claim = 95
-		dip = 3
-		mil = 2
-		adm = 3
-	}
-}
-
 1490.1.1 = {
 	monarch = {
 		name= "Yussuf I"

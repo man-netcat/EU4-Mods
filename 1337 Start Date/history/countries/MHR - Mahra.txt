@@ -8,16 +8,6 @@ religious_school = shafii_school
 
 #Fictional Banu Afrar leaders
 
-1435.1.1 = {
-	monarch = {
-		name = "Ahmad"
-		dynasty = "Banu Afrar"
-		adm = 3
-		dip = 1
-		mil = 2
-	}
-}
-
 1480.1.1 = { #Fictional
 	monarch = {
 		name = "Tawari"

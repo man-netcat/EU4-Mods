@@ -6,16 +6,6 @@ religion = sunni
 capital = 4791 # Cirebon
 religious_school = shafii_school
 
-1426.1.1 = {
-	monarch = {
-		name = "Ki Gedeng Tapa"
-		dynasty = "Muara Jati"
-		adm = 3
-		dip = 4
-		mil = 3
-	}
-}
-
 1445.1.1 = {
 	monarch = {
 		name = "Ki Gedheng Danusela"

@@ -22,31 +22,6 @@ heir = {
 	mil = 2
 }
 
-1399.1.1 = {
-	monarch = {
-		name = "Zaachilla II"
-		dynasty = "Tehuantepec"
-		adm = 1
-		dip = 3
-		mil = 3
-	}
-
-}
-
-1399.1.1 = {
-	heir = {
-		name = "Zaachilla"
-		monarch_name = "Zaachilla"
-		dynasty = "Tehuantepec"
-		birth_date = 1399.1.1
-		death_date = 1482.1.1
-		claim = 95
-		adm = 2
-		dip = 3
-		mil = 1
-	}
-}
-
 1450.1.1 = {
 	monarch = {
 		name = "Zaachilla III"

@@ -29,19 +29,6 @@ heir = {
 	mil = 3
 }
 
-1444.10.1 = {
-	set_estate_privilege = estate_nobles_golden_liberty
-}
-
-1444.11.11 = {
-	monarch = {
-		adm = 0
-		mil = 0
-		dip = 0
-		regent = yes
-	}
-}
-
 1447.6.25 = {
 	monarch = {
 		name = "Kazimierz IV"

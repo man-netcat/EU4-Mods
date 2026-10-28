@@ -17,7 +17,7 @@ discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
 
-1399.1.1 = { unrest = 3 owner = MLO controller = MLO } # The city's seigniory given to Gian Galeazzo, Visconti of Milan
-1404.1.1 = { unrest = 0 owner = SIE controller = SIE } # Visconti is driven out
+1399.1.1 = { unrest = 3   } # The city's seigniory given to Gian Galeazzo, Visconti of Milan
+1404.1.1 = { unrest = 0   } # Visconti is driven out
 1495.1.1 = { hre = no }
 1583.1.1 = { fort_16th = yes } #Medicean Walls

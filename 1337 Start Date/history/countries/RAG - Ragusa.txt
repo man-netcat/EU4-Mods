@@ -16,13 +16,3 @@ monarch = {
 	dip = 3
 	mil = 3
 }
-
-1444.11.11 = {
-      monarch = {
-           name = "Vijece"
-           adm = 3
-           dip = 3
-           mil = 2
-           regent = yes
-      }
-} # Noble councils.

@@ -8,61 +8,6 @@ add_accepted_culture = khalkha
 
 #Khans of the Oirats (Kalmyks, Dzungars)
 
-1399.1.1 = {
-	monarch = {
-		name = "Batula"
-		dynasty = "Choros"
-		adm = 3
-		dip = 4
-		mil = 4
-	}
-}
-
-1408.1.1 = {
-	monarch = {
-		name = "Toghan"
-		dynasty = "Choros"
-		adm = 3
-		dip = 4
-		mil = 4
-	}
-}
-
-1408.1.1 = {
-	heir = {
-		name = "Esen"
-		monarch_name = "Esen"
-		dynasty = "Choros"
-		birth_date = 1407.1.1
-		death_Date = 1455.1.1
-		claim = 95
-		adm = 3
-		dip = 3
-		mil = 5
-	}
-}
-
-1438.1.1 = {
-	monarch = {
-		name = "Esen"
-		dynasty = "Choros"
-		adm = 3
-		dip = 3
-		mil = 5
-		birth_date = 1407.1.1
-		leader = {
-			name = "Esen Taishi"
-			type = general
-			fire = 2
-			shock = 5
-			manuever = 5
-			siege = 0
-			personality = goal_oriented_personality
-		}
-	}
-	add_ruler_personality = inspiring_leader_personality
-}
-
 1454.1.1 = {
 	monarch = {
 		name = "Amasanj"

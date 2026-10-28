@@ -6,26 +6,6 @@ religion = animism
 technology_group = chinese
 capital = 650	# Tidore
 
-1399.1.1 = {
-	monarch = {
-		name = "Bayanullah" # fictional
-		dynasty = "Tidore"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
-1429.1.1 = {
-	monarch = {
-		name = "Khairun Jamil" # fictional
-		dynasty = "Tidore"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
 1459.1.1 = {
 	monarch = {
 		name = "Hamzah" # fictional

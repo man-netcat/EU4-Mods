@@ -9,16 +9,6 @@ religious_school = shafii_school
 # Pulling a Hansa with the first 1st ruler ( as information before Umal-Muhammad is limited ).  Usually referred to only by their title.
 # Also with birth dates (seniority based system)
 
-1444.1.1 = {			
-	monarch = {
-		name = "Shamkhal"
-		dynasty = "Kumukh"
-		adm = 2
-		dip = 3
-		mil = 2
-	}
-}
-
 1494.1.1 = {			
 	monarch = {
 		name = "Alibek"

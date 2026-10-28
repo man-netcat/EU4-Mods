@@ -25,14 +25,3 @@ heir = {
 	dip = 2
 	mil = 4
 }
-
-1443.1.1 = {
-	monarch = {
-		name = "Annibale"
-		dynasty = "Bentivoglio"
-		birth_date = 1415.8.1
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-}

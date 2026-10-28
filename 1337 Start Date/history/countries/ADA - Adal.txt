@@ -18,46 +18,6 @@ monarch = {
 	mil = 2
 }
 
-1415.1.1 = {
-	monarch = {
-		name = "Sabr"
-		dynasty = "Walashma"
-		dip = 0
-		mil = 0
-		adm = 1
-	}
-}
-
-1422.1.1 = {
-	monarch = {
-		name = "Mansur"
-		dynasty = "Walashma"
-		adm = 2
-		dip = 1
-		mil = 0
-	}
-}
-
-1424.1.1 = {
-	monarch = {
-		name = "Jamal"
-		dynasty = "Walashma"
-		adm = 2
-		dip = 0
-		mil = 2
-	}
-}
-
-1433.1.1 = {
-	monarch = {
-		name = "Badlay"
-		dynasty = "Walashma"
-		adm = 2
-		dip = 2
-		mil = 1
-	}
-}
-
 1445.1.1 = {
 	monarch = {
 		name = "Mohammed"

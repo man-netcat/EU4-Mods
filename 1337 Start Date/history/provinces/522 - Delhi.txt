@@ -20,7 +20,6 @@ discovered_by = chinese
 extra_cost = 16
 center_of_trade = 2
 
-1414.1.1 = { remove_core = MUL }
 1517.11.21 = { unrest = 8 } #Afghan factionalism
 1546.1.1 = { fort_15th = yes } #Salimgarh
 1566.1.1 = { revolt = { type = noble_rebels size = 1 } }

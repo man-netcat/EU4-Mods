@@ -11,19 +11,6 @@ add_army_professionalism = 0.05
 
 #Timurid Governors of Kabul, sons of Soyurghatmish
 
-1443.1.1 = {
-	monarch = {
-		name = "Karatshar bin Soyurghatmish"
-		culture = uzbehk
-		dynasty = "Timurid"
-		adm = 2
-		dip = 4
-		mil = 2
-	}
-}
-#1451 falls to Babur bin Baysonqor
-
-#Kingdom of the Mughal prince Hakim
 1565.1.1 = {
 	monarch = {
 		name = "Hakim"

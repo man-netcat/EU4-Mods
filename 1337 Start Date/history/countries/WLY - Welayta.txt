@@ -11,27 +11,6 @@ unlock_cult = cwezi_cult
 unlock_cult = christianity_cult
 unlock_cult = islam_cult
 
-1444.1.1 = {
-	monarch = {
-		name = "Kote"
-		dynasty = "Tegra`i"
-		adm = 3
-		dip = 2
-		mil = 4
-	}
-	heir = {
-		name = "Gaga"
-		monarch_name = "Gaga"
-		dynasty = "Tegra`i"
-		birth_date = 1430.1.1
-		death_date = 1560.1.1
-		claim = 90
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
 1490.1.1 = {
 	monarch = {
 		name = "Gaga"

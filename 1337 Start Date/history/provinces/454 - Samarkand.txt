@@ -21,10 +21,6 @@ extra_cost = 16
 center_of_trade = 2
 fort_15th = yes
 
-1409.5.13 = { #Ulugh Beg is made Governor of Samarkand
-	owner = TRS
-	controller = TRS
-}
 1673.1.1 = { discovered_by = ENG }
 1677.1.1 = { discovered_by = FRA }
 1707.5.12 = { discovered_by = GBR }

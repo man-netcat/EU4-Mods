@@ -17,11 +17,6 @@ discovered_by = ottoman
 discovered_by = nomad_group
 discovered_by = indian
 
-1444.1.1 = {
-	owner = KHO
-	controller = KHO
-	add_core = KHO
-} # Babur Ibn-Baysunkur
 1532.1.1 = {
 	religion = shiite
 } # Estimated time when the Safavids convert the Sunni to Shia

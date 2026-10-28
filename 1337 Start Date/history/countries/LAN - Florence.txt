@@ -26,27 +26,6 @@ heir = {
 	mil = 3
 }
 
-1421.1.1 = {
-	monarch = {
-		name = "Giovanni"
-		dynasty = "de' Medici"
-		adm = 3
-		dip = 4
-		mil = 1
-	}
-}
-
-1429.2.20 = {
-	monarch = {
-		name = "Cosimo"
-		dynasty = "de' Medici"
-		birth_date = 1389.9.27                
-		adm = 6
-		dip = 5
-		mil = 5
-	}
-}
-
 1464.8.3 = {
 	monarch = {
 		name = "Piero il Gottoso"

@@ -5,52 +5,6 @@ primary_culture = nepali
 religion = hinduism
 capital = 557	# Kathmandu
 
-1395.1.1 = {
-	monarch = {
-		name = "Jayajyotimalla"
-		dynasty = "Malla"
-		ADM = 0
-		DIP = 1
-		MIL = 2
-	}
-}
-
-1395.6.1 = {
-	monarch = {
-		name = "Jayajyoti"
-		dynasty = "Malla"
-		ADM = 0
-		DIP = 1
-		MIL = 2
-	}
-}
-
-1395.6.1 = {
-	heir = {
-		name = "Jayayaksha"
-		monarch_name = "Jayayaksha"
-		dynasty = "Malla"
-		birth_date = 1395.6.1
-		death_date = 1482.3.1
-		claim = 95
-		ADM = 0
-		DIP = 1
-		MIL = 2
-	}
-}
-
- 
-
-1424.1.1 = {
-	monarch = {
-		name = "Jayayaksha"
-		dynasty = "Malla"
-		ADM = 0
-		DIP = 1
-		MIL = 2
-	}
-}
-
 1460.1.1 = {
 	heir = {
 		name = "Ratna"

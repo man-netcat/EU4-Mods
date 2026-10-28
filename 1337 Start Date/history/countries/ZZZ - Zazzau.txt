@@ -18,30 +18,6 @@ capital = 1154	# Niani
 	add_mil_tech = 1
 }
 
-1432.1.1 = {
-	monarch = {
-		name = "Amina"
-		dynasty = "Zazzau"
-		dip = 4
-		adm = 5
-		mil = 6
-		female = yes
-		leader = {
-			name = "Amina"
-			type = general
-			fire = 4
-			shock = 4
-			manuever = 5
-			siege = 1
-			female = yes
-		}
-	}
-}
-
-#Ruled then (Kano chronicle), or in the early sixteenth century (one interpretation of the Zazzau chronicle), or the late sixteenth century (another interpretation). Going with this date (out of the three) so as to include her in a 1444 start. 
-
-#Unknown number of unknown rulers
-
 1509.1.1 = {
 	monarch = {
 		name = "Bakwa Turunku II"

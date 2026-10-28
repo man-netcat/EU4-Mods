@@ -25,9 +25,9 @@ discovered_by = ottoman
 
 1405.1.1 = { discovered_by = MNG }
 1444.1.1 = {
-	owner = PLB
-	controller = PLB
-	add_core = PLB
+	
+	
+	
 	is_city = yes
 	trade_goods = spices
 }

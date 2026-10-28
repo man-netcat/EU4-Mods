@@ -15,16 +15,6 @@ monarch = {
 	mil = 2
 }
 
-1396.1.1 = {
-	monarch = {
-		name = "Menas I"
-		dynasty = "Bahrid"
-		adm = 3
-		dip = 3
-		mil = 5
-	}
-}
-
 1526.1.1 = {
 	monarch = {
 		name = "Yeshaq I"

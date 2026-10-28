@@ -18,26 +18,6 @@ monarch = {
 	mil = 1
 }
 
-1391.1.1 = {
-	monarch = {
-		name = "Gendun Drup"
-		adm = 1
-		dip = 2
-		mil = 1
-	}
-}
-
-1399.1.1 = { decision = monastic_education }
-
-1443.1.1 = {
-	monarch = {
-		name = "Trakpa Chunge"
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
 1465.1.1 = {
 	monarch = {
 		name = "Sangye Gyantesen Pal"

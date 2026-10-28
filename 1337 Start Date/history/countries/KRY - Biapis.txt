@@ -7,17 +7,6 @@ technology_group = muslim
 capital = 417 # Lahijan
 religious_school = zaidi_school
 
-1430.1.1 = {
-	monarch = {
-		name = "Sayyed Naser"
-		dynasty = "Kiya"
-		adm = 3
-		dip = 4
-		mil = 3
-	}
-	add_piety = 0.25
-}
-
 1448.1.1 = {
 	monarch = {
 		name = "Mohammad"

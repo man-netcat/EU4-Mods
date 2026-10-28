@@ -10,16 +10,6 @@ unlock_cult = cwezi_cult
 unit_type = sub_saharan
 capital = 1169	# Anziku
 
-1430.1.1 = {
-	monarch = {
-		name = "Kateng"
-		dynasty = "Tyo"
-		adm = 2
-		dip = 3
-		mil = 3
-	}
-} #All fictional
-
 1490.1.1 = {
 	monarch = {
 		name = "Mpemba"

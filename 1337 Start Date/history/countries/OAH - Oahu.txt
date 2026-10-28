@@ -14,12 +14,3 @@ monarch = {
 	dip = 3
 	mil = 3
 }
-
-1444.11.11 = {
-	monarch = {
-		name = "Ma'ilikukahi"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}

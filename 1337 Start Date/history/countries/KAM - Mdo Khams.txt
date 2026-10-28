@@ -6,16 +6,6 @@ technology_group = chinese
 capital = 2133	# Derge
 government_rank = 1
 
-1400.1.1 = {
-	monarch = {
-		name = "Sönam Sangpo"
-		dynasty = "Derge"
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
 1450.1.1 = {
 	monarch = {
 		name = "Lodrö Tob"

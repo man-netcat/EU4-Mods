@@ -8,15 +8,6 @@ capital = 2457	# Mzab
 fixed_capital = 2457 # Cannot move capital away from this province & no power cost to move to it
 religious_school = maliki_school
 
-1442.1.1 = {
-	monarch = {
-		name = "Hassan"
-		adm = 2
-		dip = 1
-		mil = 2
-	}
-}
-
 1500.1.1 = {
 	monarch = {
 		name = "Bahayou"

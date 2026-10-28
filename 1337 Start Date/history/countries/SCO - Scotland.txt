@@ -30,69 +30,6 @@ queen = {
 	mil = 3
 }
 
-1390.1.1 = {
-	monarch = {
-		name = "Robert III"
-		dynasty = Stuart
-		adm = 1
-		dip = 2
-		mil = 2
-	}
-}
-
-1394.12.10 = {
-	heir = {
-		name = "James"
-		monarch_name = "James I"
-		dynasty = "Stuart"
-		birth_date = 1394.12.10
-		death_date = 1437.2.21
-		claim = 95
-		adm = 3
-		dip = 1
-		mil = 2
-	}
-}
-
-1400.12.24 = { leader = { name = "Archibald Douglas"	type = general	fire = 2	shock = 2	manuever = 3	siege = 0	death_date = 1424.8.17 } }
-
-1406.1.1 = {
-	monarch = {
-		name = "James I"
-		dynasty = Stuart
-		adm = 3
-		dip = 1
-		mil = 2
-	}
-}
-
-1430.10.16 = {
-	heir = {	
-		name = "James"
-		monarch_name = "James II"
-		dynasty = "Stuart"
-		birth_date = 1430.10.16
-		death_date = 1460.8.3
-		claim = 95
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-}
-
-1437.2.20 = {
-	#decision = use_highland_charge
-	monarch = {
-		name = "James II"
-		dynasty = Stuart
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = righteous_personality
-}
-
 1449.7.3 = {
 	queen = {
 		country_of_origin = GEL

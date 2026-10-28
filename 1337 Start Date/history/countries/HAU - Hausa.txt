@@ -9,31 +9,6 @@ unlock_cult = nyame_cult
 capital = 1155	# Kano
 religious_school = maliki_school
 
-1399.1.1 = {
-	monarch = {
-		name = "Chiroma"
-		dynasty = "Habe"
-		dip = 2
-		adm = 1
-		mil = 0
-	}
-	add_piety = 0.25
-}
-
-1420.1.1 = {
-	heir = {
-		name = "Yakubu"
-		monarch_name = "Yakubu"
-		dynasty = "Habe"
-		birth_date = 1420.1.1
-		death_Date = 1462.9.1
-		claim = 95
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
 1452.1.1 = {
 	monarch = {
 		name = "Yakubu"

@@ -6,30 +6,6 @@ religion = tengri_pagan_reformed
 secondary_religion = confucianism
 capital = 2110	# Yehe
 
-1444.1.1 = {
-	monarch = {
-		name = "Singgen Darha"
-		dynasty = "Yehe Nara"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-}
-
-1444.1.1 = {
-	heir = {
-		name = "Sirugeminggedo"
-		monarch_name = "Sirugeminggedo"
-		dynasty = "Yehe Nara"
-		birth_date = 1420.1.1
-		death_date = 1495.1.1
-		claim = 95
-		adm = 1
-		dip = 2
-		mil = 3
-	}
-}
-
 1460.1.1 = {
 	monarch = {
 		name = "Sirugeminggedo"

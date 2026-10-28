@@ -10,16 +10,6 @@ capital = 1226
 government_rank = 1
 religious_school = maliki_school
 
-1444.1.1 = {
-	monarch = {
-		name = "Nazir" #Fictional
-		dynasty = "Balawat" 
-		adm = 1
-		dip = 2
-		mil = 1
-	}
-}
-
 1490.1.1 = {
 	monarch = {
 		name = "Nazir II" #Fictional

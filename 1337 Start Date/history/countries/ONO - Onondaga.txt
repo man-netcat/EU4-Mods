@@ -15,13 +15,3 @@ federation = {
 	name = "iroquois_federation_name" 
 	members = { MOH ONE CAY SEN }
 }
-
-1444.11.11 = {
-	monarch = {
-		name = "Native Council"
-		adm = 3
-		dip = 3
-		mil = 3
-		regent = yes
-	}
-}

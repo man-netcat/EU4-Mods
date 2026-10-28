@@ -24,12 +24,7 @@ add_local_autonomy = 25
 extra_cost = 8
 center_of_trade = 1
 
-1378.1.1 = {
-	owner = VIJ
-	controller = VIJ
-}
 1405.1.1 = { discovered_by = chinese }
-1428.1.1 = { add_core = VIJ  }
 1498.1.1 = { discovered_by = POR }
 1529.1.1 = {
 	

@@ -8,30 +8,6 @@ capital = 4485	#Doti
 
 # Malla Raikas of Doti
 
-1443.1.1 = {
-	monarch = {
-		name = "Kalyan"
-		dynasty = "Malla"
-		ADM = 1
-		DIP = 1
-		MIL = 3
-	}
-}
-
-1443.1.1 = {
-	heir = {
-		name = "Suratan"
-		monarch_name = "Suratan"
-		dynasty = "Malla"
-		birth_date = 1443.1.1
-		death_date = 1482.1.1
-		claim = 95
-		ADM = 2
-		DIP = 0
-		MIL = 0
-	}
-}
-
 1478.1.1 = {
 	monarch = {
 		name = "Suratan"

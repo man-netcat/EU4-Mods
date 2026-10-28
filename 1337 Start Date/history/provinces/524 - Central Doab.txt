@@ -21,10 +21,6 @@ discovered_by = chinese
 extra_cost = 16
 center_of_trade = 2
 
-1437.1.1 = {
-	owner = JNP
-	controller = JNP
-}
 1504.1.1 = { capital = "Agra" }
 1517.11.21 = { unrest = 8 } #Afghan factionalism
 1526.4.1 = {

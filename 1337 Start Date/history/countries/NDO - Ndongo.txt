@@ -13,16 +13,6 @@ capital = 1171
 
 #Ruled earlier, date changed as we don't now who ruled then.
 
-1444.1.1 = {
-	monarch = {
-		name = "a-Nzinga"
-		dynasty = "Ngola"
-		DIP = 3
-		ADM = 2
-		MIL = 3
-	}
-}
-
 1515.1.1 = {
 	monarch = {
 		name = "Kiluanji Inene"

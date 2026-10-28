@@ -19,12 +19,4 @@ discovered_by = indian
 discovered_by = chinese
 discovered_by = east_african
 
-1411.1.1 = {
-	owner = CEY
-	controller = CEY
-}	#Sangamas expelled by Zheng He
-1432.1.1 = {
-	owner = JFN
-	controller = JFN
-}	#Reconquest by Vijayanagar
 1505.1.1 = { discovered_by = POR } # Francisco de Almeida

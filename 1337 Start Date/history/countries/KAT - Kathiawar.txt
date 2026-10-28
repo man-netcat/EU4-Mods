@@ -18,26 +18,6 @@ monarch = {
 	mil = 3
 }
 
-1386.1.1 = {
-	monarch = {
-		name = "Amarji"
-		dynasty = "Jadeja"
-		ADM = 2
-		DIP = 0
-		MIL = 1
-	}
-}
-
-1429.1.1 = {
-	monarch = {
-		name = "Bhenji"
-		dynasty = "Jadeja"
-		ADM = 2
-		DIP = 0
-		MIL = 1
-	}
-}
-
 1472.1.1 = {
 	monarch = {
 		name = "Hamirji"

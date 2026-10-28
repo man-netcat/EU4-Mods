@@ -10,16 +10,6 @@ religious_school = hanafi_school
 
 #Khorshidis
 
-1413.1.1 = {
-	monarch = {
-		name = "Hussein"
-		dynasty = "Khorshidi"
-		adm = 2
-		dip = 3
-		mil = 3
-	}
-}
-
 1466.1.1 = {
 	monarch = {
 		name = "Rustam"

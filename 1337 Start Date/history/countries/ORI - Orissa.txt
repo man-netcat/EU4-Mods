@@ -19,43 +19,6 @@ monarch = {
 	mil = 3
 }
 
-1434.1.1 = {
-	monarch = {
-		name = "Kapilendra"
-		dynasty = "Gajapati" #Suryavamshi
-		ADM = 4
-		DIP = 5
-		MIL = 6
-		leader = { name = "Kapilendra"	type = general	fire = 3	shock = 5	manuever = 2	siege = 1 }
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = conqueror_personality
-	add_ruler_personality = inspiring_leader_personality
-	add_heir_personality = bold_fighter_personality
-	heir = {
-		name = "Hamvira"
-		monarch_name = "Hamvira"
-		dynasty = "Gajapati"
-		birth_date = 1418.1.1
-		death_Date = 1476.1.1
-		claim = 95
-		ADM = 3
-		DIP = 2
-		MIL = 2
-	}
-	queen = {
-		country_of_origin = ORI
-		name = "Parvati Devi" #Mother of Purushottama
-		dynasty = "Dash" #Unkown Brahmin family
-		birth_date = 1420.1.1
-		death_date = 1480.1.1
-		female = yes
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
 1465.1.1 = {	#Heir changed by Kapilendra
 	heir = {
 		name = "Purushottama"

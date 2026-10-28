@@ -20,10 +20,10 @@ extra_cost = 16
 center_of_trade = 2
 fort_15th = yes
 
-1436.4.28 = { revolt = { type = pretender_rebels size = 1 leader = "Karl Knutsson Bonde" } controller = REB add_base_tax = 1 } # Karl Knutsson Bonde marsh on Stockholm
-1438.3.6 = { revolt = {} controller = SWE } # Unclear date
-1438.10.1 = { revolt = { type = pretender_rebels size = 1 leader = "Karl Knutsson Bonde" } controller = REB } # Unclear date
-1440.9.1 = { revolt = {} controller = SWE } # Christopher III elected Union King
+1436.4.28 = { revolt = { type = pretender_rebels size = 1 leader = "Karl Knutsson Bonde" }  add_base_tax = 1 } # Karl Knutsson Bonde marsh on Stockholm
+1438.3.6 = { revolt = {}  } # Unclear date
+1438.10.1 = { revolt = { type = pretender_rebels size = 1 leader = "Karl Knutsson Bonde" }  } # Unclear date
+1440.9.1 = { revolt = {}  } # Christopher III elected Union King
 1444.11.12 = { add_base_tax = 2 }
 1448.6.20 = { revolt = {}  } # Karl VIII is elected king of Sweden
 1523.6.7 = { base_manpower = 4 } # Kgl.Drabantkåren/Svea Livgarde

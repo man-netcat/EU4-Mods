@@ -17,54 +17,6 @@ monarch = {
 	mil = 3
 }
 
-1416.1.1 = {
-	monarch = {
-		name = "Sao Hsam"
-		dynasty = "Kengtung"
-		ADM = 2
-		DIP = 2
-		MIL = 2
-	}
-}
-
-1416.1.1 = {
-	heir = {
-		name = "Sao Hsam Si-Li"
-		monarch_name = "Sao Hsam Si-Li"
-		dynasty = "Kengtung"
-		birth_date = 1410.1.1
-		death_date = 1456.1.1
-		claim = 95
-		ADM = 2
-		DIP = 3
-		MIL = 2
-	}
-}
-
-1441.1.1 = {
-	monarch = {
-		name = "Sao Hsam Si-Li"
-		dynasty = "Kengtung"
-		ADM = 2
-		DIP = 3
-		MIL = 2
-	}
-}
-
-1441.1.1 = {
-	heir = {
-		name = "Ai Lao Hkham"
-		monarch_name = "Ai Lao Hkham"
-		dynasty = "Kengtung"
-		birth_date = 1430.1.1
-		death_date = 1474.1.1
-		claim = 95
-		ADM = 3
-		DIP = 2
-		MIL = 2
-	}
-}
-
 1456.1.1 = {
 	monarch = {
 		name = "Ai Lao Hkham"

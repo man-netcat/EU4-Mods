@@ -28,17 +28,6 @@ heir = {
 	mil = 5
 }
 
-1430.1.1 = {
-	monarch = {
-		name = "Tangaxuan"
-		dynasty = "Uacusecha"
-		adm = 4
-		dip = 2
-		mil = 4
-	}
-
-}
-
 1454.1.1 = {
 	monarch = {
 		name = "Tzitzipandaquare"

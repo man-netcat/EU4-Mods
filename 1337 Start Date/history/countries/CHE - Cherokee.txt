@@ -6,15 +6,6 @@ religion = totemism
 technology_group = north_american
 capital = 4879 # Cheraw
 
-1399.1.1 = {
-	monarch = {
-		name = "Tistoe"
-		adm = 1
-		dip = 2
-		mil = 2
-	}
-}
-
 1700.1.1 = {
 	monarch = {
 		name = "Amatoya Moytoy"

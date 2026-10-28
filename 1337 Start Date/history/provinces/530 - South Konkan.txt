@@ -20,9 +20,4 @@ discovered_by = ottoman
 discovered_by = chinese
 discovered_by = east_african
 
-1380.1.1 = {
-	controller = VIJ
-	owner = VIJ
-} # Taken by Harihara II
-1444.1.1 = { add_core = BAH }
 1498.1.1 = { discovered_by = POR }

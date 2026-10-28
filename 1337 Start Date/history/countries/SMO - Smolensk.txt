@@ -15,13 +15,3 @@ monarch = {
 	dip = 3
 	mil = 3
 }
-
-1386.1.1 = {
-	monarch = {
-		name = "Yury I"
-		dynasty = "Rostaslavichi"
-		adm = 0
-		dip = 0
-		mil = 3
-	}
-}

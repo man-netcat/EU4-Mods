@@ -15,22 +15,6 @@ monarch = {
 	mil = 3
 }
 
-1400.1.1 = {
-	if = {
-		limit = {
-			NOT = { has_dlc = "Dharma" }
-		}
-		add_government_reform = feudalism_reform
-	}
-	monarch = {
-		name = "Banaji"
-		dynasty = "Gohil"
-		ADM = 2
-		DIP = 3
-		MIL = 3
-	}
-}
-
 1455.1.1 = {
 	monarch = {
 		name = "Savaji"

@@ -29,69 +29,6 @@ queen = {
 	mil = 3
 }
 
-1397.1.1 = {
-	monarch = {
-		name = "Giacomo I"
-		dynasty = "Crispo"
-		birth_date = 1382.1.1
-		adm = 2
-		dip = 2
-		mil = 2
-	}
-}
-
-1397.1.1 = {
-	heir = {
-		name = "Giovanni"
-		monarch_name = "Giovanni II"
-		dynasty = "Crispo"
-		birth_date = 1388.1.1
-		death_date = 1433.1.1
-		claim = 95
-		adm = 2
-		dip = 3
-		mil = 0
-	}
-}
-
-1418.1.1 = {
-	monarch = {
-		name = "Giovanni II"
-		dynasty = "Crispo"
-		birth_date = 1388.1.1
-		adm = 2
-		dip = 3
-		mil = 0
-	}
-}
-
-1426.1.1 = {
-	heir = {
-		name = "Giacomo"
-		monarch_name = "Giacomo II"
-		dynasty = "Crispo"
-		birth_date = 1426.1.1
-		death_date = 1447.1.1
-		claim = 95
-		adm = 1
-		dip = 2
-		mil = 2
-	}
-}
-
-1433.1.1 = {
-	monarch = {
-		name = "Giacomo II"
-		dynasty = "Crispo"
-		birth_date = 1426.1.1
-		adm = 1
-		dip = 3
-		mil = 2
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = intricate_web_weaver_personality
-}
-
 1446.1.1 = {
 	heir = {
 		name = "Gian Giacomo"

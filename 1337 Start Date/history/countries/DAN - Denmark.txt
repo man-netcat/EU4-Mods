@@ -20,32 +20,6 @@ monarch = {
 	mil = 5
 }
 
-1397.6.17 = {
-	monarch = {
-		name = "Eric VII"
-		dynasty = Gryf
-		birth_date = 1381.1.1
-		adm = 1
-		dip = 2
-		mil = 3
-	}
-}
-
-1440.4.9 = {
-	monarch = {
-		name = "Christopher III"
-		dynasty = "von Wittelsbach"
-		birth_date = 1416.2.26
-		culture = bavarian
-		adm = 3
-		dip = 2
-		mil = 2
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = infertile_personality
-	set_ruler_flag = has_proclaimed_archking_title
-}
-
 1445.9.26 = {
 	queen = {
 		country_of_origin = BRA

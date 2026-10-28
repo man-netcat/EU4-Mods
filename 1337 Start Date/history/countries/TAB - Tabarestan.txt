@@ -12,17 +12,6 @@ religious_school = jafari_school
 #Sari and Amol. Regnal numbers also based on Amol.
 #In the region are also a few minor dynasties too small to represent without further splitting provinces into tiny parts such as the ancient Paduspanid
 
-1443.1.1 = { #Also ruled 1435 - 1440 and 1441-1442
-	monarch = {
-		name = "Kamal al-Din"
-		dynasty = "Marashi"
-		adm = 3
-		dip = 3
-		mil = 5
-	}
-	add_piety = 0.05
-}
-
 1445.1.1 = { #Also ruled a bit in 1441 and 1442-1443
 	monarch = {
 		name = "Murtada"

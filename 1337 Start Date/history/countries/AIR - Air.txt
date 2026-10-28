@@ -11,18 +11,6 @@ religious_school = maliki_school
 
 #Sultans of Air
 
-1444.1.1 = {
-	monarch = {
-		name = "Yunus"
-		dynasty = "Istanbulewa"
-		dip = 2
-		adm = 3
-		mil = 2
-	}
-} #Founder. Most dating says 1449, but it's somewhat uncertain.
-#(Later) dynastic claims of ties to the Ottomans explain dynastic name
-#Unknown number of unknown rulers
-
 1687.1.1 = {
 	monarch = {
 		name = "Muhammad Agg-Abba"

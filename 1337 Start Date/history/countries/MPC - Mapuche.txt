@@ -6,16 +6,6 @@ religion = animism
 technology_group = south_american
 capital = 784
 
-1444.1.1 = {
-	monarch = {
-		name = "Native Council"
-		adm = 3
-		dip = 3
-		mil = 3
-		regent = yes
-	}
-}
-
 1534.1.1 = {
 	monarch = {
 		name = "Lautaro"

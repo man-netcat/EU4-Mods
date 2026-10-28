@@ -7,16 +7,6 @@ technology_group = chinese
 capital = 4818
 religious_school = shafii_school
 
-1444.1.1 = {
-	monarch = {
-		name = "Krisna"
-		dynasty = "Indrapura"
-		adm = 2
-		dip = 1
-		mil = 1
-	}
-}
-
 1480.1.1 = {
 	monarch = {
 		adm = 3

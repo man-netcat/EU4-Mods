@@ -19,7 +19,6 @@ discovered_by = OIR
 discovered_by = QNG
 fort_15th = yes
 
-1420.1.1 = { add_core = OUC }
 1525.1.1 = { fort_15th = yes } # Yoshida Koriyama Castle, the capital of the Mori clan
 1525.1.1 = { capital = "Koriyama" }
 1542.1.1 = { discovered_by = POR }

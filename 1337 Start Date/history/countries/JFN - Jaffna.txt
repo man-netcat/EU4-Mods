@@ -16,16 +16,6 @@ monarch = {
 	mil = 3
 }
 
-1440.1.1 = {
-	monarch = {
-		name = "Kanakasooriya Cinkaiariyan"
-		dynasty = "Aryacakravarti"
-		ADM = 2
-		DIP = 3
-		MIL = 3
-	}
-}
-
 1450.1.1 = {
 	monarch = {
 		name = "Sapumal Kumaraya" #Later Bhuvanaikabahu VI of Kotte

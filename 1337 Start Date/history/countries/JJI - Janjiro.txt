@@ -13,16 +13,6 @@ unlock_cult = islam_cult
 
 #Names are somewhat known, dates are fictional
 
-1444.1.1 = {
-	monarch = {
-		name = "Takibo"
-		dynasty = "Yengar"
-		adm = 3
-		dip = 4
-		mil = 3
-	}
-}
-
 1490.1.1 = {
 	monarch = {
 		name = "Dirgimo"

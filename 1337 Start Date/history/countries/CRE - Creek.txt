@@ -6,15 +6,6 @@ religion = totemism
 technology_group = north_american
 capital = 925
 
-1399.1.1 = {
-	monarch = {
-		name = "Brim"
-		adm = 4
-		dip = 2
-		mil = 4
-	}
-}
-
 1550.1.1 = {
 	monarch = {
 		name = "Chigelli"

@@ -8,17 +8,6 @@ capital = 4482	# Sikkim
 # Lepchas of Kabi Lungchok
 # Elective tribal leadership
 
-1444.1.1 = {
-	monarch = {
-		name = "Tur Ve Pa No"
-		ADM = 2
-		DIP = 0
-		MIL = 2
-	}
-	government = tribal
-	add_government_reform = tribal_kingdom
-}
-
 1484.1.1 = {
 	monarch = {
 		name = "Tur Song Pa No"

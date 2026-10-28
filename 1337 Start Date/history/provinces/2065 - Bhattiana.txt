@@ -20,11 +20,6 @@ discovered_by = muslim
 discovered_by = ottoman
 discovered_by = chinese
 
-1414.1.1 = {
-	owner = DLH
-	controller = DLH
-	remove_core = MUL
-}
 1540.1.1 = {
 	religion = sikhism
 	

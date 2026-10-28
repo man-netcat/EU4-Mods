@@ -10,16 +10,6 @@ unlock_cult = cwezi_cult
 unit_type = sub_saharan
 capital = 4082 # Kasanje
 
-1430.1.1 = {
-	monarch = {
-		name = "Kinguri"
-		dynasty = "Imbangala"
-		adm = 2
-		dip = 3
-		mil = 3
-	}
-} #An ancestor of the Kasanje state.
-
 1480.1.1 = {
 	monarch = {
 		name = "Kasanje ka Imbe"

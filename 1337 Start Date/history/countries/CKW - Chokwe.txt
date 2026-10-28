@@ -12,16 +12,6 @@ capital = 4095 # Chokwe
 
 #Rulers actually from the Mbunda Kingdom.
 
-1440.1.1 = {
-	monarch = {
-		name = "Chinguli"
-		dynasty = "Mwene"
-		adm = 3
-		dip = 3
-		mil = 3
-	}
-} #Legendary founder.
-
 1460.1.1 = {
 	monarch = {
 		name = "Naama"

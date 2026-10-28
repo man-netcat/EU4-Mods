@@ -14,16 +14,6 @@ monarch = {
 	mil = 3
 }
 
-1437.1.1 = {
-	monarch = {
-		name = "Bharati"
-		dynasty = "Chand"
-		ADM = 2
-		DIP = 3
-		MIL = 3
-	}
-}
-
 1450.1.1 = {
 	monarch = {
 		name = "Ratna"

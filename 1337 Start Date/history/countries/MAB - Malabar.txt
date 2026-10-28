@@ -6,30 +6,6 @@ religion = hinduism
 primary_culture = malayalam
 capital = 534	# Calicut
 
-1415.1.1 = {
-	monarch = {
-		name = "Manaveda I"
-		dynasty = "Saamoothiri"
-		DIP = 3
-		ADM = 5
-		MIL = 2
-	}
-}
-
-1430.1.1 = {
-	heir = {
-		name = "Manavikraman"
-		monarch_name = "Manavikraman II"
-		dynasty = "Saamoothiri"
-		birth_date = 1430.1.1
-		death_date = 1485.1.1
-		claim = 95
-		DIP = 2
-		ADM = 4
-		MIL = 3
-	}
-}
-
 1453.1.1 = {
 	monarch = {
 		name = "Manavikraman I"

@@ -11,31 +11,6 @@ unlock_cult = cwezi_cult
 unit_type = sub_saharan
 capital = 4065 # Bunyoro
 
-1444.1.1 = {
-	monarch = {
-		name = "Rikidu"
-		dynasty = "Babiito"
-		birth_date = 1420.1.1
-		adm = 3
-		dip = 3
-		mil = 4
-	}
-}
-
-1444.1.1 = {
-	heir = {
-		name = "Ocaki"
-		monarch_name = "Ocaki"
-		dynasty = "Babiito"
-		birth_date = 1444.1.1
-		death_date = 1530.1.1
-		claim = 95
-		adm = 2
-		dip = 2
-		mil = 1
-	}
-}
-
 1480.1.1 = {
 	monarch = {
 		name = "Ocaki"

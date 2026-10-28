@@ -7,19 +7,6 @@ add_accepted_culture = filipino
 capital = 651	# Jolo
 religious_school = shafii_school
 
-1405.1.1 = {
-	monarch = {
-		name = "Sharif ul Hashim"
-		dynasty = "Adinda"
-		culture = malayan
-		religion = sunni
-		dip = 3
-		adm = 3
-		mil = 1
-	}
-	add_piety = -0.15
-}
-
 1450.1.1 = {
 	heir = {
 		name = "Kamal ud Din"

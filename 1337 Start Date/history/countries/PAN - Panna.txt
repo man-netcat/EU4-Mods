@@ -8,22 +8,6 @@ capital = 4467	# Kalinjar/Panna
 
 #Chandellas of Kalinjar
 
-1430.1.1 = {
-	if = {
-		limit = {
-			NOT = { has_dlc = "Dharma" }
-		}
-		add_government_reform = feudalism_reform
-	}
-	monarch = {
-		name = "Pahar Chand"
-		dynasty = "Chandella"
-		ADM = 3
-		DIP = 3
-		MIL = 3
-	}
-}
-
 1481.1.1 = {
 	monarch = {
 		name = "Kirat Pal Singh"
