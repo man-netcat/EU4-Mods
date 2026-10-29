@@ -4,7 +4,8 @@
 CK3 carries no alliance data for 867, but its characters do carry marriages. Two tags are bound when one's ruler is
 married to a close relative of the other's ruler: the spouse's own parents or siblings, or a child's spouse and that
 spouse's parents. Each bound pair starts both allied and married (CK3 marriages normally carry an alliance). Pairs
-already tied by a subject relation, or listed in the diplomacy table, are left alone.
+already tied by a subject relation, listed in the diplomacy table, or involving a vassal or union subject (which
+cannot ally on its own) are left alone.
 
     python3 tools/marriages.py       # list the lifted pairs
 """
@@ -88,13 +89,20 @@ def marriage_pairs():
     return _pairs
 
 
+def subjects_without_alliances():
+    """Tags that cannot make an alliance or marriage of their own: vassals, marches and personal-union subjects
+    (a subject type's alliances belong to the overlord). Tributaries are left free."""
+    return {d.subject for d in DIPLOMACY if d.relation not in PEER_RELATIONS and d.relation != "tributary_state"}
+
+
 def derived_relations():
     """Diplomacy rows for the lifted pairs: an alliance and a royal marriage each, minus pairs the table covers."""
     tied = {frozenset((d.liege, d.subject)) for d in DIPLOMACY if d.relation not in PEER_RELATIONS}
+    bound = subjects_without_alliances()
     have = {(frozenset((d.liege, d.subject)), d.relation) for d in DIPLOMACY if d.relation in PEER_RELATIONS}
     out = []
     for a, b in marriage_pairs():
-        if frozenset((a, b)) in tied:
+        if frozenset((a, b)) in tied or a in bound or b in bound:
             continue
         for rel in PEER_RELATIONS:
             if (frozenset((a, b)), rel) not in have:

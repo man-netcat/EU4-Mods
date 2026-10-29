@@ -433,12 +433,4 @@ royal_marriage = {
 	first = NTH
 	second = SJA
 }
-alliance = {
-	first = SPL
-	second = TUS
-}
-royal_marriage = {
-	first = SPL
-	second = TUS
-}
 867.1.1 = { celestial_emperor = TNG }

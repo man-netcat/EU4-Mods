@@ -797,6 +797,16 @@ def run() -> int:
         for t, n in sorted(used.items())
         if t in BY_TAG and n > _limit(BY_TAG[t].rank)
     ]
+    from marriages import subjects_without_alliances  # noqa: E402
+
+    stuck = sorted(
+        f"{d.liege}/{d.subject} {d.relation}" for d in all_relations()
+        if d.relation in PEER_RELATIONS
+        and (d.liege in subjects_without_alliances() or d.subject in subjects_without_alliances())
+    )
+    note(not stuck, f"no vassal or union subject holds an alliance or marriage of its own ({len(stuck)} do)")
+    for x in stuck:
+        print("        " + x)
     note(not over, f"no tag starts over its diplomatic relation limit ({len(over)} over, base {base})")
     for o in over:
         print("        " + o)
