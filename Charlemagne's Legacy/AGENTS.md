@@ -101,7 +101,8 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `missions/Reconquista.txt` (hand-written Reconquista trees for ASU/LEO, NAV and CST: claims, vigour, prestige). Never playtested.
   The start-date tilt (user-requested, a deliberate departure from raw CK3 weights): `common/on_actions/IberianOnActions.txt` gives ADU
   `kar_emirate_overextended` (-15% force limit, -10% manpower, 20 years) and unrest in four Muladi provinces, and ASU/NAV/CST/BGS/VLL
-  `kar_mountain_strongholds`; ASU and NAV start allied (`diplomacy` relation `alliance`, a peer relation, see `PEER_RELATIONS` in `eu4.py`).
+  `kar_mountain_strongholds`; ASU and NAV start allied and married (`diplomacy` relations `alliance` and `royal_marriage`, peer relations, see `PEER_RELATIONS` in `tagdb.py`;
+  the table's key is (liege, subject, relation), so a pair can hold several).
   The Al Andalus events give players a costly second option; the AI always takes the hit.
   Portugal and Galicia follow the same pattern: Reconquista-style ambition trees for PRT/POR (5) and GAL (4) in `missions/Reconquista.txt`,
   an event that loosens Portucale from Cordoba, PRT starting with 50 liberty desire and the strongholds modifier, and GAL taking the

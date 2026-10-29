@@ -31,6 +31,7 @@ from tagdb import (
     CTRY_DATE,
     DIPLOMACY,
     FORMABLES,
+    PEER_RELATIONS,
     PROVINCES,
     PROVINCE_OWNERS,
     SEED_CORES,
@@ -135,10 +136,6 @@ def karling_realms():
     dynasty = max(counts, key=counts.get)
     ktags = sorted(t for t, d in dyn_of.items() if d == dynasty)
     return dynasty, ktags
-
-
-#: Start-date relations between equals: nobody is anyone's subject.
-PEER_RELATIONS = ("alliance", "royal_marriage")
 
 
 def empire_core():

@@ -183,7 +183,8 @@ class Diplomacy(Base):
 
     liege = Column(String, ForeignKey("tags.tag"), primary_key=True)
     subject = Column(String, ForeignKey("tags.tag"), primary_key=True)
-    relation = Column(String, nullable=False, default="vassal")
+    # part of the key: a pair may hold several relations (an alliance and a royal marriage)
+    relation = Column(String, primary_key=True, default="vassal")
 
 
 class Rivalry(Base):

@@ -746,7 +746,7 @@ def run() -> int:
     # per their subject type's takes_diplo_slot); alliances and royal marriages take one for each party (an alliance and a marriage with the same country share one slot). The
     # limit is the base game's base_values diplomatic_upkeep (as patched) plus the government rank's own
     # diplomatic_upkeep, both read from the mod's files so a tuning change cannot drift from this check.
-    from eu4 import PEER_RELATIONS  # noqa: E402
+    from tagdb import PEER_RELATIONS  # noqa: E402
 
     def _blocks(text):
         out = {}

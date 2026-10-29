@@ -179,6 +179,10 @@ def ck3_government(t: Tag) -> str:
     return "feudal_government"
 
 
+#: Start-date relations between equals: nobody is anyone's subject.
+PEER_RELATIONS = ("alliance", "royal_marriage")
+
+
 @dataclass(frozen=True)
 class Diplomacy:
     """One start-date relationship, written into history/diplomacy by
@@ -287,7 +291,7 @@ def _load() -> tuple[
         dips = [
             Diplomacy(r.liege, r.subject, r.relation)
             for r in s.query(DiplomacyRow).order_by(
-                DiplomacyRow.liege, DiplomacyRow.subject
+                DiplomacyRow.liege, DiplomacyRow.subject, DiplomacyRow.relation
             )
         ]
         sides: dict[str, dict[str, list]] = {}
@@ -408,7 +412,13 @@ def culture_groups() -> dict[str, list[str]]:
 def selfcheck() -> None:
     seen = set()
     known = {t.tag for t in TAGS}
+    peer_seen = set()
     for d in DIPLOMACY:
+        if d.relation in PEER_RELATIONS:
+            key = (frozenset((d.liege, d.subject)), d.relation)
+            if key in peer_seen:
+                raise ValueError(f"{d.liege} / {d.subject}: {d.relation} is listed twice")
+            peer_seen.add(key)
         if d.liege not in known or d.subject not in known or d.liege == d.subject:
             raise ValueError(
                 f"{d.liege} -> {d.subject}: a Diplomacy must link two different "

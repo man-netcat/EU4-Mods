@@ -38,6 +38,10 @@ alliance = {
 	first = ASU
 	second = NAV
 }
+royal_marriage = {
+	first = ASU
+	second = NAV
+}
 vassal = {
 	first = BAV
 	second = NRD
