@@ -1,8 +1,9 @@
 #2750 - Plovdiv / Upper Thrace
 
-owner = BUL
-controller = BUL
+owner = BYZ
+controller = BYZ
 add_core = BUL
+add_core = BYZ
 capital = "Plovdiv"
 culture = greek
 religion = christian_faith
@@ -20,7 +21,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BUL
-	controller = BUL
-	add_core = BUL
+	owner = BYZ
+	controller = BYZ
+	add_core = BYZ
 }

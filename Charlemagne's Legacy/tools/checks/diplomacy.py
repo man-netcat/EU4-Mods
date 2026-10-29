@@ -111,6 +111,13 @@ def vassalage_matches_ck3_s_867_lieges() -> None:
     note(not lg_bad, f"every tag's liege is what CK3 gives it at 867 ({len(lg_bad)} differ)")
     for tag, mod, ck in lg_bad:
         print(f"        {tag}: mod says {mod}, CK3 says {ck}")
+    from lieges import governor_province_mismatches  # noqa: E402
+
+    gp_bad = governor_province_mismatches()
+    note(not gp_bad, "governor and realm provinces follow CK3's 867 vassal chains "
+         f"({len(gp_bad)} off)")
+    for pid, county, owner, want in gp_bad:
+        print(f"        {pid} {county}: owned by {owner}, CK3 says {want}")
 
 
 def historical_friendships_and_rivalries() -> None:

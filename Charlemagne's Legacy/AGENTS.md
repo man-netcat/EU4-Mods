@@ -141,6 +141,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   Palmyra, Khuzestan), each with its sub-vassals folded in, on `theme_subject_type` (slotless; the Caliph's rank-4 limit is 8). The nine county-rank
   direct vassals (Qatif, Dhafra, al-Hasa, Hulwan, Homs, Kermanshah, Turuberan, Takrit, al-Jawf) stay with ARB. Six provinces CK3 holds under someone
   else went to their CK3 owners (Luristan to DLF, Mesopotamia/Melitene to MRW, Ilam to LWA, Behabad to SAF). Placeholder flags; untested in-game.
+- Governor provinces are checked against CK3 too (`lieges.governor_province_mismatches`, in validate): for BYZ and ARB every province held under
+  the sovereign belongs to the governor tag of its direct-vassal duchy, else the realm (or one of its other subjects); nothing outside the realm
+  may sit in the realm or a governor. The pass moved Phrygia to Opsikion, Satala to Khaldia, Philippopolis to BYZ, Batina and Samman to ARB,
+  Maragha to Azerbaijan, Tihama to Medina and Lar to Fars (Yemen's capital became Sanaa).
 - Lieges follow CK3's 867 (`tools/lieges.py`, checked by validate): a tag with no subject relation, or only a tributary one, must have no `liege =` in CK3;
   a vassal must have its overlord's realm as liege (a governor folded into a tag counts as that tag; a union subject may share its overlord's ruler).
   Brought in line on 29 Oct 2026: Toledo (ADU), Nedenes and Telemark (SJA), Tripolitania and Ghadames (TUN), Venice (BYZ) and Zammour (MOR) became

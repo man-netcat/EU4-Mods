@@ -16,7 +16,7 @@ sys.path.insert(0, HERE)
 
 import ck3  # noqa: E402
 import state867 as S  # noqa: E402
-from tagdb import BY_TAG, DIPLOMACY, DORMANT, PEER_RELATIONS  # noqa: E402
+from tagdb import BY_TAG, DIPLOMACY, DORMANT, PEER_RELATIONS, PROVINCE_OWNERS  # noqa: E402
 
 _cache = None
 
@@ -49,6 +49,43 @@ def lieges():
         out[tag] = sorted(by_ruler[str(lg)]) if lg and by_ruler.get(str(lg)) else None
     _cache = (ruler, out)
     return _cache
+
+
+def governor_province_mismatches():
+    """[(pid, county, owner, expected)] for the provinces of every realm that has governor vassals (`theme_subject_type`).
+
+    A province whose 867 holder sits under the realm's ruler belongs to the governor tag whose title is the holder's
+    direct-vassal duchy, else to the realm itself (or to one of the realm's other subjects, which keep their own
+    lands). Conversely a province owned by the realm or a governor must be held under the realm's ruler in CK3."""
+    import provfaiths as pf
+    bad = []
+    for realm in sorted({d.liege for d in DIPLOMACY if d.relation == "theme_subject_type"}):
+        subs = {d.subject for d in DIPLOMACY if d.liege == realm}
+        govs = {d.subject: BY_TAG[d.subject].ck3_title for d in DIPLOMACY
+                if d.liege == realm and d.relation == "theme_subject_type"}
+        top = S.holder(BY_TAG[realm].ck3_title)
+        for pid, county in sorted(pf.PROVINCE_COUNTY.items()):
+            h = S.holder(county)
+            sov = S.sovereign(h)[0] if h else None
+            owner = PROVINCE_OWNERS.get(pid)
+            if sov != top:
+                if owner in govs or owner == realm:
+                    bad.append((pid, county, owner, f"held under {sov} in CK3, outside {realm}"))
+                continue
+            cur, direct = h, None
+            while cur != top:
+                prim = S.primary(cur)
+                lg = S.liege_holder(prim) if prim else None
+                if lg == top:
+                    direct = S.primary(cur)
+                    break
+                if lg is None or lg == cur:
+                    break
+                cur = lg
+            want = next((t for t, ti in govs.items() if ti == direct), realm)
+            if owner != want and not (want == realm and owner in subs):
+                bad.append((pid, county, owner, want))
+    return bad
 
 
 def mismatches():

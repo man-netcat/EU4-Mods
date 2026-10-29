@@ -1,8 +1,8 @@
 #2305 - Erzincan
 
-owner = MRW
-controller = MRW
-add_core = MRW
+owner = KAD
+controller = KAD
+add_core = KAD
 capital = "Erzindjan"
 culture = greek
 religion = christian_faith
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = MRW
-	controller = MRW
-	add_core = MRW
+	owner = KAD
+	controller = KAD
+	add_core = KAD
 }

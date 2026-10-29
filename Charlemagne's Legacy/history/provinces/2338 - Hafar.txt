@@ -1,8 +1,8 @@
 #2338 - Hafar
 
-owner = NAJ
-controller = NAJ
-add_core = NAJ
+owner = ARB
+controller = ARB
+add_core = ARB
 capital = "Hafar"
 culture = bedouin
 religion = sunni
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = east_african
 
 867.1.1 = {
-	owner = NAJ
-	controller = NAJ
-	add_core = NAJ
+	owner = ARB
+	controller = ARB
+	add_core = ARB
 }

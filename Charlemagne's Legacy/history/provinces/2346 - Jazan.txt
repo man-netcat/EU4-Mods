@@ -1,8 +1,9 @@
 #2346 - Jazan
 
-owner = YEM
-controller = YEM
+owner = MDN
+controller = MDN
 add_core = YEM
+add_core = MDN
 capital = "Jazan"
 culture = bedouin
 religion = sunni
@@ -21,7 +22,7 @@ discovered_by = nomad_group
 discovered_by = east_african
 
 867.1.1 = {
-	owner = YEM
-	controller = YEM
-	add_core = YEM
+	owner = MDN
+	controller = MDN
+	add_core = MDN
 }
