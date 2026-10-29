@@ -78,9 +78,9 @@ def retag(con, old, new, vfiles):
 
 def suggest(min_seq):
     """(OLD, NEW) for tags from `min_seq` on whose name is a free base-game tag's name."""
-    import eu4
+    from steps.vanilla_countries import load_vanilla_countries
 
-    vfiles = eu4.load_vanilla_countries()
+    vfiles = load_vanilla_countries()
     names = {}
     for f in glob.glob(os.path.join(os.environ["EU4_GAME"], "localisation", "*_l_english.yml")):
         for m in re.finditer(r'(?m)^ ([A-Z][A-Z0-9]{2}):\d* "([^"]+)"', open(f, encoding="utf-8-sig", errors="replace").read()):
@@ -100,7 +100,7 @@ def suggest(min_seq):
 
 
 if __name__ == "__main__":
-    import eu4
+    from steps.vanilla_countries import load_vanilla_countries
 
     args = sys.argv[1:]
     if args[:1] == ["suggest"]:
@@ -108,7 +108,7 @@ if __name__ == "__main__":
         sys.exit(0)
     if not args or len(args) % 2:
         sys.exit(__doc__)
-    vfiles = {t: fn for t, (fn, _x) in eu4.load_vanilla_countries().items()}
+    vfiles = {t: fn for t, (fn, _x) in load_vanilla_countries().items()}
     con = sqlite3.connect(os.path.join(HERE, "tags.db"))
     for old, new in zip(args[::2], args[1::2]):
         retag(con, old, new, vfiles)

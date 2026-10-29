@@ -400,7 +400,8 @@ def resolve(tag, titles, chars, dyns, houses):
 
 
 def land_holders():
-    from eu4 import effective, MOD
+    from steps.layout import MOD
+    from steps.parsing import effective
 
     out = {}
     for f in sorted((MOD / "history" / "provinces").glob("*.txt")):
@@ -446,7 +447,8 @@ def heir_dynasty(text):
 
 
 def step_ck3(argv):
-    from eu4 import COUNTRY_OUT, VANILLA_CDIR, hist_name
+    from steps.countries import hist_name
+    from steps.layout import COUNTRY_OUT, VANILLA_CDIR
 
     fix = "--fix" in argv
     titles, chars = load_titles(), load_chars()

@@ -26,7 +26,8 @@ import unicodedata
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import db  # noqa: E402
-from eu4 import GAME, vanilla_prov_file  # noqa: E402
+from steps.layout import GAME
+from steps.provdata import vanilla_prov_file  # noqa: E402
 from models import (  # noqa: E402
     Culture as CultureRow,
     Province as ProvinceRow,
@@ -247,7 +248,7 @@ def main(argv):
             sys.exit(f"{val} is no {key} in tags.db - lift it first")
     seq = s.query(func.max(TagRow.seq)).scalar() + 1
     country_file = (a.file or ascii_name(name)) + ".txt"
-    from eu4 import load_vanilla_countries
+    from steps.vanilla_countries import load_vanilla_countries
 
     vanilla_countries = load_vanilla_countries()
     taken_files = {fn for fn, _text in vanilla_countries.values()}

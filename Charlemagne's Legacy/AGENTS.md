@@ -24,11 +24,18 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `tag_suppress`, `diplomacy`, `rivalries`, `friendships`, `core_deny`,
   `cultures`, `religions`.
 - `tagdb.py` loads/validates the DB (`selfcheck()` runs on import).
-- `eu4.py` writes provinces, countries, flags (clones only), decisions,
-  diplomacy, triggers. `step_provinces` **wipes** `history/provinces/` first.
+- `tools/steps/` holds the build's generation steps, one module per responsibility: `layout` (where things live),
+  `parsing`, `output`, `provdata` (the map's province facts and the vanilla probe), `allocation` (tag -> province owner),
+  `provinces` (history files; `step_provinces` **wipes** `history/provinces/` first), `empire`, `diplomacy` (subjects,
+  alliances, marriages, wars), `countries`, `vanilla_countries`, `vanilla_scripts` (events and decisions), `custom` (the
+  Magyars), `formations` and `start`. `build.py` only orders them.
+- `tools/checks/` holds the verifier, one module per area: `realms`, `provinces`, `tags`, `rulers`, `decisions`,
+  `diplomacy`, `scripts`, `localisation`, `interface`, `religion`, `cultures`, `filenames`; `report` collects failures and
+  `context` holds what they share. `validate.py` only runs them. A new check goes in the module for its area as a
+  function, called from that module's `run()`.
 - `ck3.py` resolves 867 rulers/holders/colours from CK3 data (parsed CK3 is
   cached as mtime-keyed pickles in `tools/cache/` — never commit that dir).
-- `histgen.py` builds country-history text. `build.py` orchestrates.
+- `histgen.py` builds country-history text.
 - `models.py` is the SQLAlchemy schema, `db.py` the connection,
   `enc.py` transliterates names into cp1252.
 

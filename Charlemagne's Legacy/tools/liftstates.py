@@ -44,9 +44,9 @@ TECH_OF_PID.update({2078: "indian", 4470: "indian", 1139: "sub_saharan", 2257: "
 
 
 def region_pids(names):
-    import eu4
+    from steps.provdata import load_areas, load_region_areas
 
-    areas, regions = eu4.load_areas(), eu4.load_region_areas()
+    areas, regions = load_areas(), load_region_areas()
     out = set()
     for r in names:
         if isinstance(r, str) and r.startswith("@"):  # every province the tag owns now
@@ -130,7 +130,8 @@ def plan(pids):
 def apply(pids, region=None):
     import addtag
     import db
-    import eu4
+    from steps.provdata import vanilla_prov_file
+    from steps.vanilla_countries import load_vanilla_countries
     import provfaiths as pf
     from models import Culture, Province
 
@@ -138,14 +139,14 @@ def apply(pids, region=None):
     con = sqlite3.connect(os.path.join(HERE, "tags.db"))
     taken = {r[0] for r in con.execute("select tag from tags")} | addtag.vanilla_tags()
     con.close()
-    vanilla_files = {fn for fn, _t in eu4.load_vanilla_countries().values()}
+    vanilla_files = {fn for fn, _t in load_vanilla_countries().values()}
     # provinces first: vanilla name and culture, religion from the CK3 county's faith
     s = db.session()
     for pl in plans:
         for pid in pl["provs"]:
             if s.get(Province, pid) is not None:
                 continue
-            src = eu4.vanilla_prov_file(pid)
+            src = vanilla_prov_file(pid)
             nm = re.sub(r"^\d+\s*-\s*", "", os.path.basename(src)[:-4])
             txt = open(src, encoding="cp1252", errors="replace").read()
             cul = re.search(r"^culture\s*=\s*(\w+)", txt, re.M)

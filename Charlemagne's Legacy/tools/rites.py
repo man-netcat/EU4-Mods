@@ -988,7 +988,7 @@ def verify(check_history=True):
 
 
 def step_rites():
-    from eu4 import write_out
+    from steps.output import write_out
 
     patch_religion_file()
     write_out(os.path.join(MOD, "common", "static_modifiers", "karolingian_rites.txt"), static_modifiers())
