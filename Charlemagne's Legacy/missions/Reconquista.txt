@@ -1,0 +1,321 @@
+# Reconquista: native Iberian kingdoms push the frontier south (claims, modifiers, prestige).
+# Hand-written; the missions folder replaces the base game's.
+
+kar_asturian_reconquista = {
+
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = ASU
+			tag = LEO
+		}
+	}
+	has_country_shield = yes
+
+	kar_asturias_duero = {
+		icon = mission_unite_home_region
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			owns = 4551
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_frontier_vigor
+				duration = 3650
+			}
+			4788 = { add_permanent_claim = ROOT }
+			1747 = { add_permanent_claim = ROOT }
+			218 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_asturias_portucale = {
+		icon = mission_hands_praying
+		required_missions = { kar_asturias_duero }
+		position = 2
+
+		trigger = {
+			owns = 231
+			owns = 232
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_repopulated_frontier
+				duration = 7300
+			}
+			1851 = { add_permanent_claim = ROOT }
+			227 = { add_permanent_claim = ROOT }
+			4787 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_asturias_tagus = {
+		icon = mission_assemble_an_army
+		required_missions = { kar_asturias_portucale }
+		position = 3
+
+		trigger = {
+			owns = 1851
+			owns = 227
+		}
+
+		effect = {
+			add_prestige = 15
+			229 = { add_permanent_claim = ROOT }
+			230 = { add_permanent_claim = ROOT }
+			4150 = { add_permanent_claim = ROOT }
+			228 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_asturias_toledo = {
+		icon = mission_arabian_fort
+		required_missions = { kar_asturias_duero }
+		position = 4
+
+		trigger = {
+			owns = 219
+			owns = 217
+		}
+
+		effect = {
+			add_prestige = 20
+			add_legitimacy = 10
+			1748 = { add_permanent_claim = ROOT }
+			2754 = { add_permanent_claim = ROOT }
+			2751 = { add_permanent_claim = ROOT }
+			225 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_asturias_cordoba = {
+		icon = mission_monarch_in_throne_room
+		required_missions = { kar_asturias_toledo kar_asturias_tagus }
+		position = 5
+
+		trigger = {
+			owns = 225
+		}
+
+		effect = {
+			add_prestige = 25
+			add_legitimacy = 20
+			224 = { add_permanent_claim = ROOT }
+			223 = { add_permanent_claim = ROOT }
+			4546 = { add_permanent_claim = ROOT }
+			1749 = { add_permanent_claim = ROOT }
+			4548 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_asturias_hispania = {
+		icon = mission_empire
+		required_missions = { kar_asturias_cordoba }
+		position = 6
+
+		trigger = {
+			owns = 224
+			owns = 223
+		}
+
+		effect = {
+			add_prestige = 50
+			add_country_modifier = {
+				name = kar_hispania_restored
+				duration = -1
+			}
+		}
+	}
+}
+
+kar_navarrese_reconquista = {
+
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		tag = NAV
+	}
+	has_country_shield = yes
+
+	kar_navarra_rioja = {
+		icon = mission_unite_home_region
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			owns = 2989
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_frontier_vigor
+				duration = 3650
+			}
+			214 = { add_permanent_claim = ROOT }
+			2990 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_navarra_ebro = {
+		icon = mission_hands_praying
+		required_missions = { kar_navarra_rioja }
+		position = 2
+
+		trigger = {
+			owns = 214
+		}
+
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = kar_repopulated_frontier
+				duration = 7300
+			}
+			2988 = { add_permanent_claim = ROOT }
+			4557 = { add_permanent_claim = ROOT }
+			4550 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_navarra_levant = {
+		icon = mission_assemble_an_army
+		required_missions = { kar_navarra_ebro }
+		position = 3
+
+		trigger = {
+			owns = 220
+		}
+
+		effect = {
+			add_prestige = 20
+			add_legitimacy = 10
+			4549 = { add_permanent_claim = ROOT }
+			1750 = { add_permanent_claim = ROOT }
+			221 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_navarra_hispania = {
+		icon = mission_empire
+		required_missions = { kar_navarra_levant }
+		position = 4
+
+		trigger = {
+			owns = 219
+			owns = 214
+			owns = 220
+		}
+
+		effect = {
+			add_prestige = 50
+			add_country_modifier = {
+				name = kar_hispania_restored
+				duration = -1
+			}
+		}
+	}
+}
+
+kar_castilian_reconquista = {
+
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		tag = CST
+	}
+	has_country_shield = yes
+
+	kar_castile_burgos = {
+		icon = mission_unite_home_region
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			owns = 1746
+			owns = 215
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_frontier_vigor
+				duration = 3650
+			}
+			2755 = { add_permanent_claim = ROOT }
+			217 = { add_permanent_claim = ROOT }
+			4551 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_castile_soria = {
+		icon = mission_hands_praying
+		required_missions = { kar_castile_burgos }
+		position = 2
+
+		trigger = {
+			owns = 2755
+			owns = 217
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_repopulated_frontier
+				duration = 7300
+			}
+			219 = { add_permanent_claim = ROOT }
+			2751 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_castile_toledo = {
+		icon = mission_arabian_fort
+		required_missions = { kar_castile_soria }
+		position = 3
+
+		trigger = {
+			owns = 219
+		}
+
+		effect = {
+			add_prestige = 20
+			add_legitimacy = 10
+			1748 = { add_permanent_claim = ROOT }
+			2754 = { add_permanent_claim = ROOT }
+			225 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_castile_hispania = {
+		icon = mission_empire
+		required_missions = { kar_castile_toledo }
+		position = 4
+
+		trigger = {
+			owns = 225
+			owns = 219
+		}
+
+		effect = {
+			add_prestige = 50
+			add_country_modifier = {
+				name = kar_hispania_restored
+				duration = -1
+			}
+		}
+	}
+}

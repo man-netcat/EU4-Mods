@@ -1,0 +1,134 @@
+# Cordoba cracks: the Emirate of the 860s holds Iberia by garrison and tribute, not consent.
+# Each event fires once (country flag) after its own delay, so the pressure arrives over decades
+# rather than at a stroke. Nothing here helps the Christians directly (see missions/Reconquista.txt);
+# it only takes the emirate's grip away.
+namespace = iberian_instability
+
+# Muladi discontent: the convert families of the Marches and Extremadura resent Arab tax-farmers.
+country_event = {
+	id = kar_iberia.1
+	title = kar_iberia_1_title
+	desc = kar_iberia_1_desc
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		tag = ADU
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = kar_iberia_muladi }
+	}
+
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	option = {
+		name = kar_iberia_1_a
+		set_country_flag = kar_iberia_muladi
+		218 = { add_unrest = 4 }
+		219 = { add_unrest = 4 }
+		214 = { add_unrest = 4 }
+		add_country_modifier = {
+			name = kar_emirate_fraying
+			duration = 3650
+		}
+	}
+}
+
+# The Berber garrisons were never paid in full and have noticed.
+country_event = {
+	id = kar_iberia.2
+	title = kar_iberia_2_title
+	desc = kar_iberia_2_desc
+	picture = MILITARY_CAMP_eventPicture
+
+	trigger = {
+		tag = ADU
+		is_free_or_tributary_trigger = yes
+		has_country_flag = kar_iberia_muladi
+		NOT = { has_country_flag = kar_iberia_berbers }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = kar_iberia_2_a
+		set_country_flag = kar_iberia_berbers
+		add_country_modifier = {
+			name = kar_berber_garrisons_restive
+			duration = 3650
+		}
+		every_subject_country = {
+			add_liberty_desire = 10
+		}
+	}
+}
+
+# The Mozarabs of the south have kept their churches and their grievances.
+country_event = {
+	id = kar_iberia.3
+	title = kar_iberia_3_title
+	desc = kar_iberia_3_desc
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		tag = ADU
+		is_free_or_tributary_trigger = yes
+		has_country_flag = kar_iberia_muladi
+		NOT = { has_country_flag = kar_iberia_mozarabs }
+	}
+
+	mean_time_to_happen = {
+		months = 72
+	}
+
+	option = {
+		name = kar_iberia_3_a
+		set_country_flag = kar_iberia_mozarabs
+		random_owned_province = {
+			limit = {
+				religion = christian_faith
+			}
+			add_unrest = 6
+			spawn_rebels = {
+				type = religious_rebels
+				size = 2
+			}
+		}
+		add_stability = -1
+	}
+}
+
+# An emir dies and his sons do not agree who inherits.
+country_event = {
+	id = kar_iberia.4
+	title = kar_iberia_4_title
+	desc = kar_iberia_4_desc
+	picture = COURT_eventPicture
+
+	trigger = {
+		tag = ADU
+		is_free_or_tributary_trigger = yes
+		has_country_flag = kar_iberia_berbers
+		NOT = { has_country_flag = kar_iberia_succession }
+	}
+
+	mean_time_to_happen = {
+		months = 96
+	}
+
+	option = {
+		name = kar_iberia_4_a
+		set_country_flag = kar_iberia_succession
+		add_legitimacy = -20
+		add_prestige = -10
+		add_country_modifier = {
+			name = kar_weak_succession
+			duration = 3650
+		}
+		every_subject_country = {
+			add_liberty_desire = 15
+		}
+	}
+}

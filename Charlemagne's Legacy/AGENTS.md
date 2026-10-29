@@ -96,6 +96,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   (vanilla London). `events/IberianKingdoms.txt` still crowns Leon and Portugal by event.
   ARA BDJ CAS SPA VAL carry placeholder flags (`tools/placeholder_flags.py`: tag colour on one diagonal, black on the other,
   never overwrites; delete one to bake the real flag; `placeholder_flags.py --list` and validate list every flag still a placeholder). LEO.tga is a copy of the old LON.tga.
+- Iberia leans native: `events/IberianInstability.txt` (four one-shot events that fray the Emirate of Cordoba: Muladi,
+  Berber, Mozarab, succession; modifiers in `common/event_modifiers/kar_iberia_modifiers.txt`) and
+  `missions/Reconquista.txt` (hand-written Reconquista trees for ASU/LEO, NAV and CST: claims, vigour, prestige). Never playtested.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).
