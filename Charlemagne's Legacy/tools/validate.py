@@ -743,7 +743,7 @@ def run() -> int:
 
     print("\n== no tag starts over its diplomatic relation limit ==")
     # Vassals, marches, appanages and personal unions each take a relation slot (tributaries and daimyo do not,
-    # per their subject type's takes_diplo_slot); alliances and royal marriages take one for each party. The
+    # per their subject type's takes_diplo_slot); alliances and royal marriages take one for each party (an alliance and a marriage with the same country share one slot). The
     # limit is the base game's base_values diplomatic_upkeep (as patched) plus the government rank's own
     # diplomatic_upkeep, both read from the mod's files so a tuning change cannot drift from this check.
     from eu4 import PEER_RELATIONS  # noqa: E402
@@ -781,12 +781,15 @@ def run() -> int:
         return base + (int(m.group(1)) if m else 0)
 
     used = {}
+    peers = set()  # an alliance and a royal marriage with the same country share one slot
     for d in DIPLOMACY:
         if d.relation in PEER_RELATIONS:
-            used[d.liege] = used.get(d.liege, 0) + 1
-            used[d.subject] = used.get(d.subject, 0) + 1
+            peers.add(frozenset((d.liege, d.subject)))
         elif _takes_slot({"union": "personal_union"}.get(d.relation, d.relation)):
             used[d.liege] = used.get(d.liege, 0) + 1
+    for pair in peers:
+        for t in pair:
+            used[t] = used.get(t, 0) + 1
     over = [
         f"{t}: {n} relations, limit {_limit(BY_TAG[t].rank)} (rank {BY_TAG[t].rank})"
         for t, n in sorted(used.items())
