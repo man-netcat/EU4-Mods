@@ -129,6 +129,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   all in revolt), base liberty -25, and 50% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
   the themes were appointed strategoi, not hereditary lords, and pronoia is 11th-century - chosen anyway to follow CK3. Four provinces CK3 does not
   hold under the Basileus went to their CK3 owners (Apulia to BNV, Kaffa to WEE, Ohrid to BUL, Kalos Limen to KHZ). Placeholder flags; untested in-game.
+- Lieges follow CK3's 867 (`tools/lieges.py`, checked by validate): a tag with no subject relation, or only a tributary one, must have no `liege =` in CK3;
+  a vassal must have its overlord's realm as liege (a governor folded into a tag counts as that tag; a union subject may share its overlord's ruler).
+  Brought in line on 29 Oct 2026: Toledo (ADU), Nedenes and Telemark (SJA), Tripolitania and Ghadames (TUN), Venice (BYZ) and Zammour (MOR) became
+  vassals, APR went from tributary to vassal of ARB, and Dalmatia (independent in CK3, `liege = 0` since 750) left Byzantium.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

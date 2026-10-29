@@ -815,6 +815,17 @@ def run() -> int:
     if tight:
         print("  WARN at the limit already (one more subject puts them over): " + ", ".join(tight))
 
+    print("\n== vassalage matches CK3's 867 lieges (tools/lieges.py) ==")
+    # An independent tag (and a tributary, which CK3 writes as `tributary_of`, never `liege =`) must have no liege in
+    # CK3's 867 title history; a vassal, march or appanage must have exactly its overlord's realm as liege (a governor
+    # folded into a tag counts as that tag; a union subject may instead share its overlord's ruler).
+    from lieges import mismatches  # noqa: E402
+
+    lg_bad = mismatches()
+    note(not lg_bad, f"every tag's liege is what CK3 gives it at 867 ({len(lg_bad)} differ)")
+    for tag, mod, ck in lg_bad:
+        print(f"        {tag}: mod says {mod}, CK3 says {ck}")
+
     print("\n== historical friendships and rivalries ==")
     bad_rel = []
     for tag in sorted(BY_TAG):
