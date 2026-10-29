@@ -1,8 +1,9 @@
 #1853 - Kastoria
 
-owner = BYZ
-controller = BYZ
+owner = BUL
+controller = BUL
 add_core = BYZ
+add_core = BUL
 capital = "Kastoria"
 culture = bulgarian
 religion = christian_faith
@@ -20,7 +21,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = BUL
+	controller = BUL
+	add_core = BUL
 }

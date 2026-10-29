@@ -1,8 +1,8 @@
 #285 - Kaffa
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = WEE
+controller = WEE
+add_core = WEE
 capital = "Kaffa"
 culture = welayta
 religion = waaqism_pagan
@@ -22,7 +22,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = WEE
+	controller = WEE
+	add_core = WEE
 }

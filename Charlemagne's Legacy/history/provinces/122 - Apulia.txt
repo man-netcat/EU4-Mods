@@ -1,8 +1,8 @@
 #122 - Apulia
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = BNV
+controller = BNV
+add_core = BNV
 capital = "Taranto"
 culture = lombard
 religion = christian_faith
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = BNV
+	controller = BNV
+	add_core = BNV
 }

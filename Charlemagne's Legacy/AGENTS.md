@@ -128,7 +128,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   blow the empire's limit of 8), `relative_power_class` 0 and no development-ratio liberty (a 7-province capital against 23 governors would put them
   all in revolt), base liberty -25, and 50% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
   the themes were appointed strategoi, not hereditary lords, and pronoia is 11th-century - chosen anyway to follow CK3. Four provinces CK3 does not
-  hold under the Basileus (Apulia, Kaffa, Ohrid, Kalos Limen) still sit with BYZ and want an owner. Placeholder flags; untested in-game.
+  hold under the Basileus went to their CK3 owners (Apulia to BNV, Kaffa to WEE, Ohrid to BUL, Kalos Limen to KHZ). Placeholder flags; untested in-game.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).
