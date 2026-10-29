@@ -136,6 +136,11 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   all in revolt), base liberty -25, and 50% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
   the themes were appointed strategoi, not hereditary lords, and pronoia is 11th-century - chosen anyway to follow CK3. Four provinces CK3 does not
   hold under the Basileus went to their CK3 owners (Apulia to BNV, Kaffa to WEE, Ohrid to BUL, Kalos Limen to KHZ). Placeholder flags; untested in-game.
+- The Abbasid Caliphate's governors are 16 vassal tags (user decision, 29 Oct 2026), built like the themes: the duchy-rank `d_*` direct vassals of the
+  Caliph in CK3's 867 (Fars, Damascus, Palestine, Edessa, Lebanon, Aleppo, Wasit, Basra, Cilicia, Shammar, Medina, Azerbaijan, Diyarmudar, Diyarrabia,
+  Palmyra, Khuzestan), each with its sub-vassals folded in, on `theme_subject_type` (slotless; the Caliph's rank-4 limit is 8). The nine county-rank
+  direct vassals (Qatif, Dhafra, al-Hasa, Hulwan, Homs, Kermanshah, Turuberan, Takrit, al-Jawf) stay with ARB. Six provinces CK3 holds under someone
+  else went to their CK3 owners (Luristan to DLF, Mesopotamia/Melitene to MRW, Ilam to LWA, Behabad to SAF). Placeholder flags; untested in-game.
 - Lieges follow CK3's 867 (`tools/lieges.py`, checked by validate): a tag with no subject relation, or only a tributary one, must have no `liege =` in CK3;
   a vassal must have its overlord's realm as liege (a governor folded into a tag counts as that tag; a union subject may share its overlord's ruler).
   Brought in line on 29 Oct 2026: Toledo (ADU), Nedenes and Telemark (SJA), Tripolitania and Ghadames (TUN), Venice (BYZ) and Zammour (MOR) became

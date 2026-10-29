@@ -1700,8 +1700,73 @@ armenian_apr_titles = {
 }
 
 
+armenian_clc_titles = {
+# lifted from CK3 flavorization for CLC: d_cilicia carries rule specials the shared armenian_titles block cannot express; Islam heir = True
+	rank = {
+		1 = ARMENIAN_CLC_COUNTY  # county_islamic_clan
+		2 = ARMENIAN_CLC_DUCHY  # duchy_islamic_clan
+		3 = ARMENIAN_CLC_KINGDOM  # kingdom_islamic_clan
+		4 = ARMENIAN_CLC_EMPIRE  # empire_islamic_clan
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ARMENIAN_CLC_COUNT_MALE  # count_islamic_clan_male
+		2 = ARMENIAN_CLC_DUKE_MALE  # duke_islamic_clan_male
+		3 = ARMENIAN_CLC_KING_MALE  # king_islamic_clan_male
+		4 = ARMENIAN_CLC_EMPEROR_MALE  # emperor_islamic_clan_male
+		5 = ARMENIAN_CLC_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ARMENIAN_CLC_COUNT_FEMALE  # count_islamic_clan_female
+		2 = ARMENIAN_CLC_DUKE_FEMALE  # duke_islamic_clan_female
+		3 = ARMENIAN_CLC_KING_FEMALE  # king_islamic_clan_female
+		4 = ARMENIAN_CLC_EMPEROR_FEMALE  # emperor_islamic_clan_female
+		5 = ARMENIAN_CLC_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ARMENIAN_CLC_COUNT_MALE  # consort uses the ruler form
+		2 = ARMENIAN_CLC_DUKE_MALE  # consort uses the ruler form
+		3 = ARMENIAN_CLC_KING_MALE  # consort uses the ruler form
+		4 = ARMENIAN_CLC_EMPEROR_MALE  # consort uses the ruler form
+		5 = ARMENIAN_CLC_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ARMENIAN_CLC_COUNT_FEMALE  # count_islamic_clan_female
+		2 = ARMENIAN_CLC_DUKE_FEMALE  # duke_islamic_clan_female
+		3 = ARMENIAN_CLC_KING_FEMALE  # king_islamic_clan_female
+		4 = ARMENIAN_CLC_EMPEROR_FEMALE  # emperor_islamic_clan_female
+		5 = ARMENIAN_CLC_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		tag = CLC
+	}
+}
+
+
 armenian_titles = {
-# CK3 ladders for MLK(r1), TAO(r2), SNK(r1)
+# CK3 ladders for MLK(r1), TAO(r2), SNK(r1) - feudal CK3 government
 	rank = {
 		1 = ARMENIAN_COUNTY  # county_feudal
 		2 = ARMENIAN_DUCHY  # duchy_feudal_prince_always
@@ -1760,6 +1825,7 @@ armenian_titles = {
 
 	trigger = {
 		government = monarchy
+		has_country_flag = kar_gov_feudal_government
 		primary_culture = armenian
 	}
 }
@@ -3463,46 +3529,46 @@ guanches_titles = {
 }
 
 
-bedouin_ada_titles = {
-# lifted from CK3 flavorization for ADA: d_adal carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+bedouin_dho_titles = {
+# lifted from CK3 flavorization for DHO: c_dhofar carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
 	rank = {
-		1 = BEDOUIN_ADA_COUNTY  # county_feudal_arabic_group
-		2 = BEDOUIN_ADA_DUCHY  # duchy_feudal_arabic_group
-		3 = BEDOUIN_ADA_KINGDOM  # kingdom_feudal_muslim_arabic_group
-		4 = BEDOUIN_ADA_EMPIRE  # empire_feudal_arabic_group
+		1 = BEDOUIN_DHO_COUNTY  # county_tribal
+		2 = BEDOUIN_DHO_DUCHY  # duchy_tribal
+		3 = BEDOUIN_DHO_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_DHO_EMPIRE  # empire_feudal_arabic_group
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEDOUIN_ADA_COUNT_MALE  # count_feudal_male_arabic_group
-		2 = BEDOUIN_ADA_DUKE_MALE  # duke_feudal_male_arabic_group
-		3 = BEDOUIN_ADA_KING_MALE  # king_feudal_muslim_male_arabic_group
-		4 = BEDOUIN_ADA_EMPEROR_MALE  # emperor_feudal_male_arabic_group
-		5 = BEDOUIN_ADA_HEGEMON_MALE  # hegemon
+		1 = BEDOUIN_DHO_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_DHO_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_DHO_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_DHO_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_DHO_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEDOUIN_ADA_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_ADA_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_ADA_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_ADA_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_ADA_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_DHO_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_DHO_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_DHO_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_DHO_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_DHO_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = BEDOUIN_ADA_COUNT_MALE  # consort uses the ruler form
-		2 = BEDOUIN_ADA_DUKE_MALE  # consort uses the ruler form
-		3 = BEDOUIN_ADA_KING_MALE  # consort uses the ruler form
-		4 = BEDOUIN_ADA_EMPEROR_MALE  # consort uses the ruler form
-		5 = BEDOUIN_ADA_HEGEMON_MALE  # consort uses the ruler form
+		1 = BEDOUIN_DHO_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_DHO_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_DHO_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_DHO_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_DHO_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = BEDOUIN_ADA_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_ADA_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_ADA_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_ADA_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_ADA_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_DHO_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_DHO_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_DHO_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_DHO_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_DHO_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -3523,51 +3589,51 @@ bedouin_ada_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = ADA
+		tag = DHO
 	}
 }
 
 
-bedouin_dlf_titles = {
-# lifted from CK3 flavorization for DLF: d_hamadan carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+bedouin_hdr_titles = {
+# lifted from CK3 flavorization for HDR: c_hadramawt carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
 	rank = {
-		1 = BEDOUIN_DLF_COUNTY  # county_feudal_arabic_group
-		2 = BEDOUIN_DLF_DUCHY  # duchy_feudal_arabic_group
-		3 = BEDOUIN_DLF_KINGDOM  # kingdom_feudal_muslim_arabic_group
-		4 = BEDOUIN_DLF_EMPIRE  # empire_feudal_arabic_group
+		1 = BEDOUIN_HDR_COUNTY  # county_tribal
+		2 = BEDOUIN_HDR_DUCHY  # duchy_tribal
+		3 = BEDOUIN_HDR_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_HDR_EMPIRE  # empire_feudal_arabic_group
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEDOUIN_DLF_COUNT_MALE  # count_feudal_male_arabic_group
-		2 = BEDOUIN_DLF_DUKE_MALE  # duke_feudal_male_arabic_group
-		3 = BEDOUIN_DLF_KING_MALE  # king_feudal_muslim_male_arabic_group
-		4 = BEDOUIN_DLF_EMPEROR_MALE  # emperor_feudal_male_arabic_group
-		5 = BEDOUIN_DLF_HEGEMON_MALE  # hegemon
+		1 = BEDOUIN_HDR_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_HDR_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_HDR_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_HDR_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_HDR_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEDOUIN_DLF_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_DLF_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_DLF_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_DLF_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_DLF_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_HDR_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_HDR_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_HDR_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_HDR_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_HDR_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = BEDOUIN_DLF_COUNT_MALE  # consort uses the ruler form
-		2 = BEDOUIN_DLF_DUKE_MALE  # consort uses the ruler form
-		3 = BEDOUIN_DLF_KING_MALE  # consort uses the ruler form
-		4 = BEDOUIN_DLF_EMPEROR_MALE  # consort uses the ruler form
-		5 = BEDOUIN_DLF_HEGEMON_MALE  # consort uses the ruler form
+		1 = BEDOUIN_HDR_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_HDR_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_HDR_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_HDR_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_HDR_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = BEDOUIN_DLF_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_DLF_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_DLF_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_DLF_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_DLF_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_HDR_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_HDR_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_HDR_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_HDR_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_HDR_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -3588,51 +3654,51 @@ bedouin_dlf_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = DLF
+		tag = HDR
 	}
 }
 
 
-bedouin_ede_titles = {
-# lifted from CK3 flavorization for EDE: d_eastern_desert carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+bedouin_hrh_titles = {
+# lifted from CK3 flavorization for HRH: c_harrat_rahat carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
 	rank = {
-		1 = BEDOUIN_EDE_COUNTY  # county_feudal_arabic_group
-		2 = BEDOUIN_EDE_DUCHY  # duchy_feudal_arabic_group
-		3 = BEDOUIN_EDE_KINGDOM  # kingdom_feudal_muslim_arabic_group
-		4 = BEDOUIN_EDE_EMPIRE  # empire_feudal_arabic_group
+		1 = BEDOUIN_HRH_COUNTY  # county_tribal
+		2 = BEDOUIN_HRH_DUCHY  # duchy_tribal
+		3 = BEDOUIN_HRH_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_HRH_EMPIRE  # empire_feudal_arabic_group
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEDOUIN_EDE_COUNT_MALE  # count_feudal_male_arabic_group
-		2 = BEDOUIN_EDE_DUKE_MALE  # duke_feudal_male_arabic_group
-		3 = BEDOUIN_EDE_KING_MALE  # king_feudal_muslim_male_arabic_group
-		4 = BEDOUIN_EDE_EMPEROR_MALE  # emperor_feudal_male_arabic_group
-		5 = BEDOUIN_EDE_HEGEMON_MALE  # hegemon
+		1 = BEDOUIN_HRH_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_HRH_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_HRH_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_HRH_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_HRH_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEDOUIN_EDE_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_EDE_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_EDE_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_EDE_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_EDE_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_HRH_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_HRH_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_HRH_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_HRH_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_HRH_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = BEDOUIN_EDE_COUNT_MALE  # consort uses the ruler form
-		2 = BEDOUIN_EDE_DUKE_MALE  # consort uses the ruler form
-		3 = BEDOUIN_EDE_KING_MALE  # consort uses the ruler form
-		4 = BEDOUIN_EDE_EMPEROR_MALE  # consort uses the ruler form
-		5 = BEDOUIN_EDE_HEGEMON_MALE  # consort uses the ruler form
+		1 = BEDOUIN_HRH_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_HRH_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_HRH_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_HRH_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_HRH_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = BEDOUIN_EDE_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_EDE_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_EDE_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_EDE_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_EDE_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_HRH_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_HRH_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_HRH_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_HRH_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_HRH_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -3653,51 +3719,51 @@ bedouin_ede_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = EDE
+		tag = HRH
 	}
 }
 
 
-bedouin_oma_titles = {
-# lifted from CK3 flavorization for OMA: d_oman carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+bedouin_jwf_titles = {
+# lifted from CK3 flavorization for JWF: d_jawf-al-yamani carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
 	rank = {
-		1 = BEDOUIN_OMA_COUNTY  # county_feudal_arabic_group
-		2 = BEDOUIN_OMA_DUCHY  # duchy_feudal_arabic_group
-		3 = BEDOUIN_OMA_KINGDOM  # kingdom_feudal_muslim_arabic_group
-		4 = BEDOUIN_OMA_EMPIRE  # empire_feudal_arabic_group
+		1 = BEDOUIN_JWF_COUNTY  # county_tribal
+		2 = BEDOUIN_JWF_DUCHY  # duchy_tribal
+		3 = BEDOUIN_JWF_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_JWF_EMPIRE  # empire_feudal_arabic_group
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEDOUIN_OMA_COUNT_MALE  # count_feudal_male_arabic_group
-		2 = BEDOUIN_OMA_DUKE_MALE  # duke_feudal_male_arabic_group
-		3 = BEDOUIN_OMA_KING_MALE  # king_feudal_muslim_male_arabic_group
-		4 = BEDOUIN_OMA_EMPEROR_MALE  # emperor_feudal_male_arabic_group
-		5 = BEDOUIN_OMA_HEGEMON_MALE  # hegemon
+		1 = BEDOUIN_JWF_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_JWF_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_JWF_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_JWF_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_JWF_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEDOUIN_OMA_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_OMA_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_OMA_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_OMA_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_OMA_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_JWF_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_JWF_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_JWF_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_JWF_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_JWF_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = BEDOUIN_OMA_COUNT_MALE  # consort uses the ruler form
-		2 = BEDOUIN_OMA_DUKE_MALE  # consort uses the ruler form
-		3 = BEDOUIN_OMA_KING_MALE  # consort uses the ruler form
-		4 = BEDOUIN_OMA_EMPEROR_MALE  # consort uses the ruler form
-		5 = BEDOUIN_OMA_HEGEMON_MALE  # consort uses the ruler form
+		1 = BEDOUIN_JWF_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_JWF_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_JWF_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_JWF_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_JWF_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = BEDOUIN_OMA_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_OMA_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_OMA_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_OMA_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_OMA_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_JWF_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_JWF_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_JWF_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_JWF_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_JWF_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -3718,51 +3784,51 @@ bedouin_oma_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = OMA
+		tag = JWF
 	}
 }
 
 
-bedouin_sui_titles = {
-# lifted from CK3 flavorization for SUI: c_suakin carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+bedouin_mhr_titles = {
+# lifted from CK3 flavorization for MHR: c_mahra carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
 	rank = {
-		1 = BEDOUIN_SUI_COUNTY  # county_feudal_arabic_group
-		2 = BEDOUIN_SUI_DUCHY  # duchy_feudal_arabic_group
-		3 = BEDOUIN_SUI_KINGDOM  # kingdom_feudal_muslim_arabic_group
-		4 = BEDOUIN_SUI_EMPIRE  # empire_feudal_arabic_group
+		1 = BEDOUIN_MHR_COUNTY  # county_tribal
+		2 = BEDOUIN_MHR_DUCHY  # duchy_tribal
+		3 = BEDOUIN_MHR_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_MHR_EMPIRE  # empire_feudal_arabic_group
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEDOUIN_SUI_COUNT_MALE  # count_feudal_male_arabic_group
-		2 = BEDOUIN_SUI_DUKE_MALE  # duke_feudal_male_arabic_group
-		3 = BEDOUIN_SUI_KING_MALE  # king_feudal_muslim_male_arabic_group
-		4 = BEDOUIN_SUI_EMPEROR_MALE  # emperor_feudal_male_arabic_group
-		5 = BEDOUIN_SUI_HEGEMON_MALE  # hegemon
+		1 = BEDOUIN_MHR_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_MHR_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_MHR_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_MHR_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_MHR_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEDOUIN_SUI_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_SUI_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_SUI_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_SUI_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_SUI_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_MHR_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_MHR_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_MHR_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_MHR_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_MHR_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = BEDOUIN_SUI_COUNT_MALE  # consort uses the ruler form
-		2 = BEDOUIN_SUI_DUKE_MALE  # consort uses the ruler form
-		3 = BEDOUIN_SUI_KING_MALE  # consort uses the ruler form
-		4 = BEDOUIN_SUI_EMPEROR_MALE  # consort uses the ruler form
-		5 = BEDOUIN_SUI_HEGEMON_MALE  # consort uses the ruler form
+		1 = BEDOUIN_MHR_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_MHR_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_MHR_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_MHR_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_MHR_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = BEDOUIN_SUI_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_SUI_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_SUI_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_SUI_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_SUI_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_MHR_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_MHR_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_MHR_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_MHR_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_MHR_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -3783,51 +3849,51 @@ bedouin_sui_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = SUI
+		tag = MHR
 	}
 }
 
 
-bedouin_tab_titles = {
-# lifted from CK3 flavorization for TAB: d_tabaristan carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+bedouin_naj_titles = {
+# lifted from CK3 flavorization for NAJ: d_najd carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
 	rank = {
-		1 = BEDOUIN_TAB_COUNTY  # county_feudal_arabic_group
-		2 = BEDOUIN_TAB_DUCHY  # duchy_feudal_arabic_group
-		3 = BEDOUIN_TAB_KINGDOM  # kingdom_feudal_muslim_arabic_group
-		4 = BEDOUIN_TAB_EMPIRE  # empire_feudal_arabic_group
+		1 = BEDOUIN_NAJ_COUNTY  # county_tribal
+		2 = BEDOUIN_NAJ_DUCHY  # duchy_tribal
+		3 = BEDOUIN_NAJ_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_NAJ_EMPIRE  # empire_feudal_arabic_group
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEDOUIN_TAB_COUNT_MALE  # count_feudal_male_arabic_group
-		2 = BEDOUIN_TAB_DUKE_MALE  # duke_feudal_male_arabic_group
-		3 = BEDOUIN_TAB_KING_MALE  # king_feudal_muslim_male_arabic_group
-		4 = BEDOUIN_TAB_EMPEROR_MALE  # emperor_feudal_male_arabic_group
-		5 = BEDOUIN_TAB_HEGEMON_MALE  # hegemon
+		1 = BEDOUIN_NAJ_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_NAJ_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_NAJ_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_NAJ_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_NAJ_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEDOUIN_TAB_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_TAB_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_TAB_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_TAB_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_TAB_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_NAJ_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_NAJ_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_NAJ_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_NAJ_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_NAJ_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = BEDOUIN_TAB_COUNT_MALE  # consort uses the ruler form
-		2 = BEDOUIN_TAB_DUKE_MALE  # consort uses the ruler form
-		3 = BEDOUIN_TAB_KING_MALE  # consort uses the ruler form
-		4 = BEDOUIN_TAB_EMPEROR_MALE  # consort uses the ruler form
-		5 = BEDOUIN_TAB_HEGEMON_MALE  # consort uses the ruler form
+		1 = BEDOUIN_NAJ_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_NAJ_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_NAJ_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_NAJ_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_NAJ_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = BEDOUIN_TAB_COUNT_FEMALE  # count_feudal_female_arabic_group
-		2 = BEDOUIN_TAB_DUKE_FEMALE  # duke_feudal_female_arabic_group
-		3 = BEDOUIN_TAB_KING_FEMALE  # king_feudal_muslim_female_arabic_group
-		4 = BEDOUIN_TAB_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
-		5 = BEDOUIN_TAB_HEGEMON_FEMALE  # hegemon_female
+		1 = BEDOUIN_NAJ_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_NAJ_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_NAJ_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_NAJ_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_NAJ_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -3848,32 +3914,162 @@ bedouin_tab_titles = {
 
 	trigger = {
 		government = monarchy
-		tag = TAB
+		tag = NAJ
+	}
+}
+
+
+bedouin_tif_titles = {
+# lifted from CK3 flavorization for TIF: c_taif carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+	rank = {
+		1 = BEDOUIN_TIF_COUNTY  # county_tribal
+		2 = BEDOUIN_TIF_DUCHY  # duchy_tribal
+		3 = BEDOUIN_TIF_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_TIF_EMPIRE  # empire_feudal_arabic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BEDOUIN_TIF_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_TIF_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_TIF_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_TIF_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_TIF_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BEDOUIN_TIF_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_TIF_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_TIF_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_TIF_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_TIF_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BEDOUIN_TIF_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_TIF_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_TIF_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_TIF_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_TIF_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BEDOUIN_TIF_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_TIF_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_TIF_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_TIF_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_TIF_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		tag = TIF
+	}
+}
+
+
+bedouin_yam_titles = {
+# lifted from CK3 flavorization for YAM: d_yamama carries rule specials the shared bedouin_titles block cannot express; Islam heir = True
+	rank = {
+		1 = BEDOUIN_YAM_COUNTY  # county_tribal
+		2 = BEDOUIN_YAM_DUCHY  # duchy_tribal
+		3 = BEDOUIN_YAM_KINGDOM  # kingdom_feudal_muslim_arabic_group
+		4 = BEDOUIN_YAM_EMPIRE  # empire_feudal_arabic_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BEDOUIN_YAM_COUNT_MALE  # count_tribal_male
+		2 = BEDOUIN_YAM_DUKE_MALE  # duke_tribal_male
+		3 = BEDOUIN_YAM_KING_MALE  # king_feudal_muslim_male_arabic_group
+		4 = BEDOUIN_YAM_EMPEROR_MALE  # emperor_feudal_male_arabic_group
+		5 = BEDOUIN_YAM_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BEDOUIN_YAM_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_YAM_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_YAM_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_YAM_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_YAM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BEDOUIN_YAM_COUNT_MALE  # consort uses the ruler form
+		2 = BEDOUIN_YAM_DUKE_MALE  # consort uses the ruler form
+		3 = BEDOUIN_YAM_KING_MALE  # consort uses the ruler form
+		4 = BEDOUIN_YAM_EMPEROR_MALE  # consort uses the ruler form
+		5 = BEDOUIN_YAM_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BEDOUIN_YAM_COUNT_FEMALE  # count_tribal_female
+		2 = BEDOUIN_YAM_DUKE_FEMALE  # duke_tribal_female
+		3 = BEDOUIN_YAM_KING_FEMALE  # king_feudal_muslim_female_arabic_group
+		4 = BEDOUIN_YAM_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
+		5 = BEDOUIN_YAM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		tag = YAM
 	}
 }
 
 
 bedouin_titles = {
-# CK3 ladders for YAM(r2), HRH(r1), TIF(r1), NAJ(r2), DHO(r1), JWF(r2), HDR(r1), MHR(r1) - tribal CK3 government - islam realms (Shahzade)
+# CK3 ladders for EDE(r2), OMA(r2), TAB(r2), DLF(r2), ADA(r2), SUI(r1), AZB(r2), SHQ(r2), MDN(r2) - clan/feudal CK3 government - islam realms (Shahzade)
 	rank = {
-		1 = BEDOUIN_COUNTY  # county_tribal
-		2 = BEDOUIN_DUCHY  # duchy_tribal
+		1 = BEDOUIN_COUNTY  # county_feudal_arabic_group
+		2 = BEDOUIN_DUCHY  # duchy_feudal_arabic_group
 		3 = BEDOUIN_KINGDOM  # kingdom_feudal_muslim_arabic_group
 		4 = BEDOUIN_EMPIRE  # empire_feudal_arabic_group
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = BEDOUIN_COUNT_MALE  # count_tribal_male
-		2 = BEDOUIN_DUKE_MALE  # duke_tribal_male
+		1 = BEDOUIN_COUNT_MALE  # count_feudal_male_arabic_group
+		2 = BEDOUIN_DUKE_MALE  # duke_feudal_male_arabic_group
 		3 = BEDOUIN_KING_MALE  # king_feudal_muslim_male_arabic_group
 		4 = BEDOUIN_EMPEROR_MALE  # emperor_feudal_male_arabic_group
 		5 = BEDOUIN_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = BEDOUIN_COUNT_FEMALE  # count_tribal_female
-		2 = BEDOUIN_DUKE_FEMALE  # duke_tribal_female
+		1 = BEDOUIN_COUNT_FEMALE  # count_feudal_female_arabic_group
+		2 = BEDOUIN_DUKE_FEMALE  # duke_feudal_female_arabic_group
 		3 = BEDOUIN_KING_FEMALE  # king_feudal_muslim_female_arabic_group
 		4 = BEDOUIN_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
 		5 = BEDOUIN_HEGEMON_FEMALE  # hegemon_female
@@ -3888,8 +4084,8 @@ bedouin_titles = {
 	}
 
 	consort_female = {
-		1 = BEDOUIN_COUNT_FEMALE  # count_tribal_female
-		2 = BEDOUIN_DUKE_FEMALE  # duke_tribal_female
+		1 = BEDOUIN_COUNT_FEMALE  # count_feudal_female_arabic_group
+		2 = BEDOUIN_DUKE_FEMALE  # duke_feudal_female_arabic_group
 		3 = BEDOUIN_KING_FEMALE  # king_feudal_muslim_female_arabic_group
 		4 = BEDOUIN_EMPEROR_FEMALE  # emperor_feudal_female_arabic_group
 		5 = BEDOUIN_HEGEMON_FEMALE  # hegemon_female
@@ -3913,7 +4109,10 @@ bedouin_titles = {
 
 	trigger = {
 		government = monarchy
-		has_country_flag = kar_gov_tribal_government
+		OR = {
+			has_country_flag = kar_gov_clan_government
+			has_country_flag = kar_gov_feudal_government
+		}
 		primary_culture = bedouin
 	}
 }
@@ -4439,6 +4638,71 @@ daylamite_titles = {
 	trigger = {
 		government = monarchy
 		primary_culture = daylamite
+	}
+}
+
+
+tajik_far_titles = {
+# lifted from CK3 flavorization for FAR: d_fars carries rule specials the shared tajik_titles block cannot express; Islam heir = True
+	rank = {
+		1 = TAJIK_FAR_COUNTY  # county_feudal_muslim_iranian_group
+		2 = TAJIK_FAR_DUCHY  # duchy_feudal_muslim_iranian_group
+		3 = TAJIK_FAR_KINGDOM  # kingdom_feudal_muslim_iranian_group
+		4 = TAJIK_FAR_EMPIRE  # empire_feudal_iranian_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = TAJIK_FAR_COUNT_MALE  # count_feudal_muslim_male_iranian_group
+		2 = TAJIK_FAR_DUKE_MALE  # duke_feudal_muslim_male_iranian_group
+		3 = TAJIK_FAR_KING_MALE  # king_feudal_muslim_male_iranian_group
+		4 = TAJIK_FAR_EMPEROR_MALE  # emperor_feudal_male_iranian_group
+		5 = TAJIK_FAR_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = TAJIK_FAR_COUNT_FEMALE  # count_feudal_muslim_female_iranian_group
+		2 = TAJIK_FAR_DUKE_FEMALE  # duke_feudal_muslim_female_iranian_group
+		3 = TAJIK_FAR_KING_FEMALE  # king_feudal_muslim_female_iranian_group
+		4 = TAJIK_FAR_EMPEROR_FEMALE  # emperor_feudal_female_iranian_group
+		5 = TAJIK_FAR_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = TAJIK_FAR_COUNT_MALE  # consort uses the ruler form
+		2 = TAJIK_FAR_DUKE_MALE  # consort uses the ruler form
+		3 = TAJIK_FAR_KING_MALE  # consort uses the ruler form
+		4 = TAJIK_FAR_EMPEROR_MALE  # consort uses the ruler form
+		5 = TAJIK_FAR_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = TAJIK_FAR_COUNT_FEMALE  # count_feudal_muslim_female_iranian_group
+		2 = TAJIK_FAR_DUKE_FEMALE  # duke_feudal_muslim_female_iranian_group
+		3 = TAJIK_FAR_KING_FEMALE  # king_feudal_muslim_female_iranian_group
+		4 = TAJIK_FAR_EMPEROR_FEMALE  # emperor_feudal_female_iranian_group
+		5 = TAJIK_FAR_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		tag = FAR
 	}
 }
 
@@ -15327,6 +15591,71 @@ viet_titles = {
 	trigger = {
 		government = monarchy
 		primary_culture = viet
+	}
+}
+
+
+sogdian_titles = {
+# CK3 ladders for KZS(r2) - islam realms (Shahzade)
+	rank = {
+		1 = SOGDIAN_COUNTY  # county_feudal_muslim_iranian_group
+		2 = SOGDIAN_DUCHY  # duchy_feudal_muslim_iranian_group
+		3 = SOGDIAN_KINGDOM  # kingdom_feudal_muslim_iranian_group
+		4 = SOGDIAN_EMPIRE  # empire_feudal_iranian_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SOGDIAN_COUNT_MALE  # count_feudal_muslim_male_iranian_group
+		2 = SOGDIAN_DUKE_MALE  # duke_feudal_muslim_male_iranian_group
+		3 = SOGDIAN_KING_MALE  # king_feudal_muslim_male_iranian_group
+		4 = SOGDIAN_EMPEROR_MALE  # emperor_feudal_male_iranian_group
+		5 = SOGDIAN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SOGDIAN_COUNT_FEMALE  # count_feudal_muslim_female_iranian_group
+		2 = SOGDIAN_DUKE_FEMALE  # duke_feudal_muslim_female_iranian_group
+		3 = SOGDIAN_KING_FEMALE  # king_feudal_muslim_female_iranian_group
+		4 = SOGDIAN_EMPEROR_FEMALE  # emperor_feudal_female_iranian_group
+		5 = SOGDIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SOGDIAN_COUNT_MALE  # consort uses the ruler form
+		2 = SOGDIAN_DUKE_MALE  # consort uses the ruler form
+		3 = SOGDIAN_KING_MALE  # consort uses the ruler form
+		4 = SOGDIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = SOGDIAN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SOGDIAN_COUNT_FEMALE  # count_feudal_muslim_female_iranian_group
+		2 = SOGDIAN_DUKE_FEMALE  # duke_feudal_muslim_female_iranian_group
+		3 = SOGDIAN_KING_FEMALE  # king_feudal_muslim_female_iranian_group
+		4 = SOGDIAN_EMPEROR_FEMALE  # emperor_feudal_female_iranian_group
+		5 = SOGDIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = sogdian
 	}
 }
 

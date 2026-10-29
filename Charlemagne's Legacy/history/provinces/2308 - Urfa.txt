@@ -1,8 +1,8 @@
 #2308 - Urfa
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = EDS
+controller = EDS
+add_core = EDS
 capital = "Urfa"
 culture = armenian
 religion = armenian_apostolic
@@ -22,7 +22,7 @@ discovered_by = nomad_group
 discovered_by = indian
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = EDS
+	controller = EDS
+	add_core = EDS
 }

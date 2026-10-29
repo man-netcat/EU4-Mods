@@ -24,14 +24,94 @@ vassal = {
 	first = AQI
 	second = TOU
 }
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = ALP
+}
 vassal = {
 	first = ARB
 	second = APR
 }
 dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = AZB
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = BSA
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = CLC
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = DCS
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = DMU
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = DRA
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = EDS
+}
+dependency = {
 	subject_type = tributary_state
 	first = ARB
 	second = EGY
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = FAR
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = KZS
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = LBN
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = MDN
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = PLS
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = PMY
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = SHQ
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = ARB
+	second = WSD
 }
 vassal = {
 	first = ASU

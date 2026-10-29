@@ -1,8 +1,8 @@
 #412 - Khuzestan
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = KZS
+controller = KZS
+add_core = KZS
 capital = "Ahvaz"
 culture = bedouin
 religion = mazdakism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = indian
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = KZS
+	controller = KZS
+	add_core = KZS
 }

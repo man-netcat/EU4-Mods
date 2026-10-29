@@ -1,8 +1,8 @@
 #365 - Aqaba
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = SHQ
+controller = SHQ
+add_core = SHQ
 capital = "Aqaba"
 culture = bedouin
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = SHQ
+	controller = SHQ
+	add_core = SHQ
 }

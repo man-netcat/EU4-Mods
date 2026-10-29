@@ -1,8 +1,8 @@
 #380 - Al Karak
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = DCS
+controller = DCS
+add_core = DCS
 capital = "Al Karak"
 culture = levantine
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = DCS
+	controller = DCS
+	add_core = DCS
 }

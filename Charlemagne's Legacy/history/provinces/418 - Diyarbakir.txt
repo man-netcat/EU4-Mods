@@ -1,8 +1,8 @@
 #418 - Diyarbakir
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = MRW
+controller = MRW
+add_core = MRW
 capital = "Diyar Bekir"
 culture = armenian
 religion = armenian_apostolic
@@ -24,7 +24,7 @@ discovered_by = eastern
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = MRW
+	controller = MRW
+	add_core = MRW
 }

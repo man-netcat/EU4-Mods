@@ -1,8 +1,8 @@
 # - Cezair i-Arab -> al-Qurna, Zihiya, Rahmaniya
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = BSA
+controller = BSA
+add_core = BSA
 capital = "al-Qurna"
 culture = bedouin
 religion = sunni
@@ -20,7 +20,7 @@ discovered_by = indian
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = BSA
+	controller = BSA
+	add_core = BSA
 }

@@ -1,8 +1,8 @@
 #4271 - Suwaida
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = DCS
+controller = DCS
+add_core = DCS
 capital = "As-Suwayda"
 culture = levantine
 religion = sunni
@@ -20,7 +20,7 @@ discovered_by = indian
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = DCS
+	controller = DCS
+	add_core = DCS
 }

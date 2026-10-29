@@ -1,8 +1,8 @@
 #377 - Aleppo
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = ALP
+controller = ALP
+add_core = ALP
 capital = "Halab"
 culture = levantine
 religion = sunni
@@ -24,7 +24,7 @@ discovered_by = nomad_group
 discovered_by = indian
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = ALP
+	controller = ALP
+	add_core = ALP
 }

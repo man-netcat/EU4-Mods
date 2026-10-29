@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = tajik
+religion = sunni
+capital = 430
+religious_school = shafii_school
+867.1.1 = {
+	monarch = {
+		name = "Muhammad"
+		dynasty = "Tahirid"
+		birth_date = 820.3.2
+		death_date = 867.10.10
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+	heir = {
+		name = "Tahir"
+		monarch_name = "Tahir"
+		dynasty = "Tahirid"
+		birth_date = 844.1.1
+		death_date = 897.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_clan_government
+}

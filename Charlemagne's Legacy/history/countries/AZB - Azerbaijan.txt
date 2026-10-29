@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = bedouin
+religion = sunni
+capital = 416
+religious_school = shafii_school
+867.1.1 = {
+	monarch = {
+		name = "Murr"
+		dynasty = "Banu Tayy"
+		birth_date = 835.11.2
+		death_date = 890.4.6
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_clan_government
+}

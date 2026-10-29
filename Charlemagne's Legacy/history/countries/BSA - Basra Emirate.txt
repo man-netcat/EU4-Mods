@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = muslim
+primary_culture = levantine
+religion = sunni
+capital = 408
+religious_school = hanafi_school
+867.1.1 = {
+	monarch = {
+		name = "al-Muwaffak"
+		dynasty = "Abbasid"
+		birth_date = 843.11.20
+		death_date = 891.6.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "al-Mu'tadid"
+		monarch_name = "al-Mu'tadid"
+		dynasty = "Abbasid"
+		birth_date = 857.1.1
+		death_date = 902.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_clan_government
+}

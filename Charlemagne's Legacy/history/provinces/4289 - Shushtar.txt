@@ -1,8 +1,8 @@
 #4289 - Shushtar
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = KZS
+controller = KZS
+add_core = KZS
 capital = "Shushtar"
 culture = persian
 religion = sunni
@@ -21,7 +21,7 @@ discovered_by = indian
 
 #fort_15th = yes #Shushtar, Dezful
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = KZS
+	controller = KZS
+	add_core = KZS
 }

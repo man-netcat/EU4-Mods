@@ -1,8 +1,8 @@
 #378 - Tripoli
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = LBN
+controller = LBN
+add_core = LBN
 capital = "Trablos" #Tripoli in the East.
 culture = levantine
 religion = miaphysitism
@@ -24,7 +24,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = LBN
+	controller = LBN
+	add_core = LBN
 }

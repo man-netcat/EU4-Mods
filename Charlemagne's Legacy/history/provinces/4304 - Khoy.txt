@@ -1,8 +1,8 @@
 #2035 - Khoy
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = AZB
+controller = AZB
+add_core = AZB
 capital = "Khoy"
 culture = kurdish
 religion = sunni
@@ -21,7 +21,7 @@ discovered_by = western
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = AZB
+	controller = AZB
+	add_core = AZB
 }

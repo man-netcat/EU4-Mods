@@ -1,8 +1,8 @@
 #405 - Tadmor
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = PMY
+controller = PMY
+add_core = PMY
 capital = "Tadmuriyah"
 culture = levantine
 religion = miaphysitism
@@ -20,7 +20,7 @@ discovered_by = indian
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = PMY
+	controller = PMY
+	add_core = PMY
 }

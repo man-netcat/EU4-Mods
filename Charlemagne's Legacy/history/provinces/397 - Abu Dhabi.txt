@@ -1,8 +1,8 @@
 #397 - Abu Dhabi
 
-owner = ARB
-controller = ARB
-add_core = ARB
+owner = PLS
+controller = PLS
+add_core = PLS
 capital = "Abu Dhabi"
 culture = levantine
 religion = miaphysitism
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = east_african
 
 867.1.1 = {
-	owner = ARB
-	controller = ARB
-	add_core = ARB
+	owner = PLS
+	controller = PLS
+	add_core = PLS
 }
