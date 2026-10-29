@@ -94,7 +94,8 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   VAL k_valencia (MLR), BDJ k_badajoz (TOL), SPA e_spain (ADU, NAV; kings only).
   A tag has one `forms`, so Asturias takes Leon and cannot also take Spain. Leon is LEO, not LON
   (vanilla London). `events/IberianKingdoms.txt` still crowns Leon and Portugal by event.
-  Flags for ARA BDJ CAS SPA VAL are still to bake (validate fails until they exist; LEO.tga is a copy of the old LON.tga).
+  ARA BDJ CAS SPA VAL carry placeholder flags (`tools/placeholder_flags.py`: tag colour on one diagonal, black on the other,
+  never overwrites; delete one to bake the real flag). LEO.tga is a copy of the old LON.tga.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).
