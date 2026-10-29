@@ -129,22 +129,7 @@ dependency = {
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
-	second = KEC
-}
-dependency = {
-	subject_type = theme_subject_type
-	first = BYZ
 	second = KIB
-}
-dependency = {
-	subject_type = theme_subject_type
-	first = BYZ
-	second = MLT
-}
-dependency = {
-	subject_type = theme_subject_type
-	first = BYZ
-	second = NIC
 }
 dependency = {
 	subject_type = theme_subject_type
@@ -165,11 +150,6 @@ dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = SEB
-}
-dependency = {
-	subject_type = theme_subject_type
-	first = BYZ
-	second = SEL
 }
 vassal = {
 	first = BYZ

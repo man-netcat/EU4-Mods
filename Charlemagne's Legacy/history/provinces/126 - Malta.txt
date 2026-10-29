@@ -1,8 +1,8 @@
 #126 - Malta
 
-owner = MLT
-controller = MLT
-add_core = MLT
+owner = BYZ
+controller = BYZ
+add_core = BYZ
 capital = "Mdina"
 culture = greek
 religion = christian_faith
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = MLT
-	controller = MLT
-	add_core = MLT
+	owner = BYZ
+	controller = BYZ
+	add_core = BYZ
 }

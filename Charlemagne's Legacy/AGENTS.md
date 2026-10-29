@@ -120,8 +120,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   starts allied and married (CK3 has no alliance data). 10 pairs today (Mercia-Wessex, Northumbria-Jutland, Meath-Scotland...), plus the
   hand-set Asturias-Navarra pair in the diplomacy table. Pairs already tied by a subject relation, and anything involving a vassal or union
   subject (which cannot ally alone; validate checks it), are skipped. A ruler holding several tags binds through the one that is not a subject, then the highest rank.
-- Byzantium's themes are 23 vassal tags (user decision, 29 Oct 2026): the Basileus's direct vassals in CK3's 867 (each with their sub-vassals folded in) -
-  20 landless noble-family duchies `d_nf_*` (rank 2) and 3 counties (Malta, Nicosia, Seleucia, Kerch: 4 with Kerch). The tag name is the theme region CK3 writes
+- Byzantium's themes are 19 vassal tags (user decision, 29 Oct 2026): the landless noble-family duchies `d_nf_*` (rank 2) that are direct vassals of the
+  Basileus in CK3's 867, each with their sub-vassals folded in. Only duchy-rank themes: the four county-level direct vassals (Malta, Nicosia, Seleucia,
+  Kerch) are not tags and stay with BYZ. The tag name is the theme region CK3 writes
   in the comment on the family title (`d_nf_hexavoulis = { # Hexavoulis (Epirus)` -> Epirus; `tagloc.family_region`); the code is the region's first free letters.
   They hold `theme_subject_type` (own block in `vanillapatch.py`, marked BEGIN/END kar theme): count = vassal, no relation slot (twenty-odd vassals would
   blow the empire's limit of 8), `relative_power_class` 0 and no development-ratio liberty (a 7-province capital against 23 governors would put them
