@@ -13,7 +13,7 @@ country_event = {
 
 	trigger = {
 		tag = ASU
-		NOT = { exists = LON }
+		NOT = { exists = LEO }
 		is_free_or_tributary_trigger = yes
 		owns = 208
 		owns = 207
@@ -27,7 +27,7 @@ country_event = {
 		name = kar_leon_1_a
 		ai_chance = { factor = 100 }
 		set_capital = 208
-		change_tag = LON
+		change_tag = LEO
 	}
 	option = {
 		name = kar_leon_1_b
@@ -84,7 +84,7 @@ country_event = {
 	trigger = {
 		OR = {
 			tag = ASU
-			tag = LON
+			tag = LEO
 		}
 		NOT = { exists = GAL }
 		is_free_or_tributary_trigger = yes

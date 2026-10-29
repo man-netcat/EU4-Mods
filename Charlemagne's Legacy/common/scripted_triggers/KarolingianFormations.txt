@@ -75,6 +75,33 @@ kar_form_hre_provinces_trigger = {
 	}
 }
 
+kar_form_spain_provinces_trigger = {
+	OR = {
+		area = alentejo_area
+		area = aragon_area
+		area = asturias_area
+		area = baleares_area
+		area = basque_country
+		area = beieras_area
+		area = castille_area
+		area = catalonia_area
+		area = extremadura_area
+		area = galicia_area
+		area = leon_area
+		area = lower_andalucia_area
+		area = toledo_area
+		area = upper_andalucia_area
+		area = valencia_area
+	}
+}
+
+kar_form_leon_provinces_trigger = {
+	OR = {
+		area = leon_area
+		province_id = 4551 #avila
+	}
+}
+
 kar_form_rome_provinces_trigger = {
 	OR = {
 		area = aegean_archipelago_area
@@ -218,6 +245,15 @@ kar_form_lithuania_provinces_trigger = {
 		area = lithuania_area
 		area = samogitia_area
 		area = west_prussia_area
+	}
+}
+
+kar_form_aragon_provinces_trigger = {
+	OR = {
+		area = catalonia_area
+		province_id = 211 #pirineo
+		province_id = 214 #aragon
+		province_id = 4557 #lleida
 	}
 }
 
@@ -390,6 +426,28 @@ kar_form_ireland_provinces_trigger = {
 	}
 }
 
+kar_form_castile_provinces_trigger = {
+	OR = {
+		area = asturias_area
+		province_id = 2755 #soria
+		province_id = 4789 #segovia
+	}
+}
+
+kar_form_portugal_provinces_trigger = {
+	OR = {
+		area = beieras_area
+		province_id = 227 #lisboa
+	}
+}
+
+kar_form_badajoz_provinces_trigger = {
+	OR = {
+		area = alentejo_area
+		area = extremadura_area
+	}
+}
+
 kar_form_sicily_provinces_trigger = {
 	OR = {
 		area = apulia_area
@@ -397,6 +455,16 @@ kar_form_sicily_provinces_trigger = {
 		area = naples_area
 		area = sicily_area
 		area = western_sicily_area
+	}
+}
+
+kar_form_valencia_provinces_trigger = {
+	OR = {
+		area = baleares_area
+		area = valencia_area
+		province_id = 221 #murcia
+		province_id = 2990 #teruel
+		province_id = 4547 #albacete
 	}
 }
 

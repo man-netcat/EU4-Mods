@@ -88,6 +88,13 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   formable row, the triggers are hardcoded specs like the HRE one.
   ROM's restoration is custom too (`decisions/FormROM.txt` carries vanilla's
   behaviour at hegemony rank); HLR fires it through its tag, BYZ starts it.
+- Iberian formables (lifted from CK3's de jure counties under e_spain, 75%, own capital):
+  LEO k_leon (ASU, GAL), CAS k_castille (CST, BGS, VLL), ARA k_aragon (ARG, GTH),
+  POR k_portugal (PRT; its capital Lisboa lies in k_badajoz de jure, so 227 is added to the land),
+  VAL k_valencia (MLR), BDJ k_badajoz (TOL), SPA e_spain (ADU, NAV; kings only).
+  A tag has one `forms`, so Asturias takes Leon and cannot also take Spain. Leon is LEO, not LON
+  (vanilla London). `events/IberianKingdoms.txt` still crowns Leon and Portugal by event.
+  Flags for ARA BDJ CAS SPA VAL are still to bake (validate fails until they exist; LEO.tga is a copy of the old LON.tga).
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

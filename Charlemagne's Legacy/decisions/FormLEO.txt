@@ -1,0 +1,53 @@
+country_decisions = {
+	kar_form_leon = {
+		major = yes
+
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = kar_form_leon }
+			NOT = { tag = LEO }
+			NOT = { exists = LEO }
+			OR = {
+				tag = ASU
+				tag = GAL
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+
+		provinces_to_highlight = {
+			kar_form_leon_provinces_trigger = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 4
+				kar_form_leon_provinces_trigger = yes
+			}
+			owns = 208
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+		}
+
+		effect = {
+			change_tag = LEO
+			on_change_tag_effect = yes
+			change_government_to_monarchy = yes
+			set_capital = 208
+			set_country_flag = kar_form_leon
+			hidden_effect = {
+				set_government_rank = 3
+			}
+			add_prestige = 25
+			add_legitimacy = 10
+
+		}
+	}
+}
