@@ -817,6 +817,11 @@ def run() -> int:
     )
     note(not noflag, "every tag has its own flag in the mod (vanilla flags never count)"
          + (f" (missing: {', '.join(noflag)})" if noflag else ""))
+    import placeholder_flags  # noqa: E402
+
+    ph = placeholder_flags.placeholders()
+    if ph:
+        print(f"  WARN {len(ph)} placeholder flags (colour and black diagonal) still to replace: {', '.join(ph)}")
 
     done = set()
     from eu4 import VANILLA_FORMATION_FILES  # noqa: E402
