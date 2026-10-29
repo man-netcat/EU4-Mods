@@ -741,6 +741,65 @@ def run() -> int:
         print(f"        in file    : {found}")
         print(f"        in tagdb   : {expected_dip}")
 
+    print("\n== no tag starts over its diplomatic relation limit ==")
+    # Vassals, marches, appanages and personal unions each take a relation slot (tributaries and daimyo do not,
+    # per their subject type's takes_diplo_slot); alliances and royal marriages take one for each party. The
+    # limit is the base game's base_values diplomatic_upkeep (as patched) plus the government rank's own
+    # diplomatic_upkeep, both read from the mod's files so a tuning change cannot drift from this check.
+    from eu4 import PEER_RELATIONS  # noqa: E402
+
+    def _blocks(text):
+        out = {}
+        for m in re.finditer(r"(?m)^(\w+) = \{\n", text):
+            i, d = m.end(), 1
+            while d and i < len(text):
+                d += (text[i] == "{") - (text[i] == "}")
+                i += 1
+            out[m.group(1)] = text[m.end():i]
+        return out
+
+    def _read(rel):
+        return open(os.path.join(MOD, rel), encoding="cp1252", errors="replace").read()
+
+    sub_blocks = _blocks(_read("common/subject_types/00_subject_types.txt"))
+
+    def _takes_slot(kind, depth=0):
+        b = sub_blocks.get(kind, "")
+        m = re.search(r"(?m)^\s*takes_diplo_slot\s*=\s*(yes|no)", b)
+        if m:
+            return m.group(1) == "yes"
+        c = re.search(r"(?m)^\s*copy_from\s*=\s*(\w+)", b)
+        return _takes_slot(c.group(1), depth + 1) if c and depth < 8 else True
+
+    base = int(re.search(r"(?m)^\s*diplomatic_upkeep\s*=\s*(-?\d+)",
+                         _blocks(_read("common/static_modifiers/00_static_modifiers.txt"))["base_values"]).group(1))
+    rank_blocks = _blocks(_read("common/government_ranks/zz_kar_government_ranks.txt"))
+
+    def _limit(rank):
+        b = rank_blocks.get(str(rank), "")
+        m = re.search(r"(?m)^\s*diplomatic_upkeep\s*=\s*(-?\d+)", b)
+        return base + (int(m.group(1)) if m else 0)
+
+    used = {}
+    for d in DIPLOMACY:
+        if d.relation in PEER_RELATIONS:
+            used[d.liege] = used.get(d.liege, 0) + 1
+            used[d.subject] = used.get(d.subject, 0) + 1
+        elif _takes_slot({"union": "personal_union"}.get(d.relation, d.relation)):
+            used[d.liege] = used.get(d.liege, 0) + 1
+    over = [
+        f"{t}: {n} relations, limit {_limit(BY_TAG[t].rank)} (rank {BY_TAG[t].rank})"
+        for t, n in sorted(used.items())
+        if t in BY_TAG and n > _limit(BY_TAG[t].rank)
+    ]
+    note(not over, f"no tag starts over its diplomatic relation limit ({len(over)} over, base {base})")
+    for o in over:
+        print("        " + o)
+    tight = [f"{t} {n}/{_limit(BY_TAG[t].rank)}" for t, n in sorted(used.items())
+             if t in BY_TAG and n == _limit(BY_TAG[t].rank)]
+    if tight:
+        print("  WARN at the limit already (one more subject puts them over): " + ", ".join(tight))
+
     print("\n== historical friendships and rivalries ==")
     bad_rel = []
     for tag in sorted(BY_TAG):

@@ -110,6 +110,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   modifier emptied); instead every country gets diplomatic relation slots by government rank: `base_values` `diplomatic_upkeep` 4 -> 5
   (county +1) and the rank blocks add +1 (duchy +2), +2 (kingdom +3), +3 (empire +4), +4 (rank 5: +5). All through `tools/vanillapatch.py`
   (subject_types, static_modifiers) and `common/government_ranks/zz_kar_government_ranks.txt`. Vassals still take a slot each. Untested in-game.
+  Validate fails when a tag starts over its relation limit (subjects that take a slot, plus alliances and royal marriages; limit read from the patched files).
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).
