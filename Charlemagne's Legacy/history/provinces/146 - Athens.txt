@@ -1,8 +1,8 @@
 #146 - Athens
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = ATE
+controller = ATE
+add_core = ATE
 capital = "Athens"
 culture = greek
 religion = christian_faith
@@ -22,7 +22,7 @@ discovered_by = western
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = ATE
+	controller = ATE
+	add_core = ATE
 }

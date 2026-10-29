@@ -1,0 +1,8 @@
+﻿l_english:
+ theme_subject_type:0 "Theme"
+ theme_subject_type_long_desc:0 "A Theme is a province of the empire governed by a strategos the emperor appointed. It must follow its overlord to war, takes no diplomatic relation slot, and sends half of its force limit and manpower to the throne."
+ theme_subject_type_title:0 "Theme"
+ theme_subject_type_title_plural:0 "Themes"
+ theme_subject_type_overlord:0 "Theme Overlord"
+ theme_subject_type_subject:0 "Theme"
+ theme_subject_type_is_our:0 "$NAME|Y$ is our Theme."

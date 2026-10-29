@@ -1,8 +1,8 @@
 #4309 - Aydin
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = EPH
+controller = EPH
+add_core = EPH
 capital = "Aydin"
 culture = greek
 religion = christian_faith
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = EPH
+	controller = EPH
+	add_core = EPH
 }

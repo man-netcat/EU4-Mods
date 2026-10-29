@@ -62,13 +62,128 @@ vassal = {
 	first = BUL
 	second = VSG
 }
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = ACA
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = AEG
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = ANI
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = ARE
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = ATE
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = BOK
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = CHS
+}
 vassal = {
 	first = BYZ
 	second = DAL
 }
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = DYR
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = EPH
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = EPR
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = KAD
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = KAP
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = KEC
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = KIB
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = MLT
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = NIC
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = OPS
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = OPT
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = PPH
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = SEB
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = SEL
+}
 vassal = {
 	first = BYZ
 	second = SYC
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = THE
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = THR
 }
 dependency = {
 	subject_type = tributary_state

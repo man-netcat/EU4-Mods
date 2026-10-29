@@ -1,8 +1,8 @@
 #2300 - Bozok
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = CHS
+controller = CHS
+add_core = CHS
 capital = "Yozgat"
 culture = greek
 religion = christian_faith
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = CHS
+	controller = CHS
+	add_core = CHS
 }

@@ -1,8 +1,8 @@
 #321 - Cyprus
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = NIC
+controller = NIC
+add_core = NIC
 capital = "Nicosia"
 culture = greek
 religion = christian_faith
@@ -20,7 +20,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = NIC
+	controller = NIC
+	add_core = NIC
 }

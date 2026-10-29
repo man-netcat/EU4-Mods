@@ -174,11 +174,30 @@ def title_names(title, rank, tag=None):
     return got
 
 
+_FAMILY_REGION = {}
+
+
+def family_region(title):
+    """The region CK3 names in the comment on a landless noble-family duchy (`d_nf_hexavoulis = { # Hexavoulis
+    (Epirus)`): the Byzantine themes' families carry no territorial name of their own, only that comment."""
+    if not _FAMILY_REGION:
+        import glob
+        from paths import CK3_GAME
+
+        for f in sorted(glob.glob(os.path.join(CK3_GAME, "common", "landed_titles", "*.txt"))):
+            for m in re.finditer(r"(?m)^(d_nf_\w+)\s*=\s*\{\s*#[^\n(]*\(([^)\n]+)\)", open(f, encoding="utf-8-sig", errors="replace").read()):
+                _FAMILY_REGION.setdefault(m.group(1), m.group(2).strip())
+    return _FAMILY_REGION.get(title)
+
+
 def _title_names(title, rank, tag):
     import ck3
     import culturalnames as cn
     from enc import fold_loc
 
+    region = family_region(title)
+    if region:
+        return fold_loc(region), fold_loc(region)
     st = STYLE.get(tag)
     if st and st[0] == "key":
         name = _resolve(ck3.loc(st[1]))

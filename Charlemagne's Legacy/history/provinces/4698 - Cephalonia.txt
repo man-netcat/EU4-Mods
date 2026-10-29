@@ -1,6 +1,6 @@
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = EPR
+controller = EPR
+add_core = EPR
 capital = "Agios Georgios"
 culture = greek
 religion = christian_faith
@@ -17,7 +17,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = EPR
+	controller = EPR
+	add_core = EPR
 }

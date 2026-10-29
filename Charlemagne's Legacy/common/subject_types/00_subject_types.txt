@@ -298,6 +298,23 @@ vassal = {
 	subject_opinion_modifier = is_vassal
 }
 
+# BEGIN kar theme
+# The Byzantine themes: governors the emperor appointed, not rivals of the throne. A vassal in every respect the
+# scripts see (count = vassal) but no relation slot, no relative-power liberty pull (a tiny capital against twenty
+# governors would put them all in revolt), loyal by default, and half of their force limit and manpower go to the
+# emperor, whose own few counties carry no army (user request, 29 Oct 2026).
+theme_subject_type = {
+	copy_from = vassal
+	count = vassal
+	takes_diplo_slot = no
+	relative_power_class = 0
+	liberty_desire_development_ratio = 0.0
+	base_liberty_desire = -25.0
+	forcelimit_to_overlord = 0.5
+	manpower_to_overlord = 0.5
+}
+# END kar theme
+
 march = {
 	copy_from = vassal
 	

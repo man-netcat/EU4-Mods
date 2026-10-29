@@ -1,8 +1,8 @@
 #2298 - Tekke
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = KIB
+controller = KIB
+add_core = KIB
 capital = "Adalia"
 culture = greek
 religion = christian_faith
@@ -20,7 +20,7 @@ discovered_by = nomad_group
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = KIB
+	controller = KIB
+	add_core = KIB
 }

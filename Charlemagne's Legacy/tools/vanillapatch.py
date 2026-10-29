@@ -193,6 +193,32 @@ PATCHES = {
    ]
   ],
   [
+   [],
+   [
+    "march = {"
+   ],
+   [
+    "# BEGIN kar theme",
+    "# The Byzantine themes: governors the emperor appointed, not rivals of the throne. A vassal in every respect the",
+    "# scripts see (count = vassal) but no relation slot, no relative-power liberty pull (a tiny capital against twenty",
+    "# governors would put them all in revolt), loyal by default, and half of their force limit and manpower go to the",
+    "# emperor, whose own few counties carry no army (user request, 29 Oct 2026).",
+    "theme_subject_type = {",
+    "\tcopy_from = vassal",
+    "\tcount = vassal",
+    "\ttakes_diplo_slot = no",
+    "\trelative_power_class = 0",
+    "\tliberty_desire_development_ratio = 0.0",
+    "\tbase_liberty_desire = -25.0",
+    "\tforcelimit_to_overlord = 0.5",
+    "\tmanpower_to_overlord = 0.5",
+    "}",
+    "# END kar theme",
+    "",
+    "march = {"
+   ]
+  ],
+  [
    [
     "\tbase_liberty_desire = -15.0",
     "\tcan_be_annexed = no"

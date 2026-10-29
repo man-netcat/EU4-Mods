@@ -1,8 +1,8 @@
 #317 - Bursa
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = OPS
+controller = OPS
+add_core = OPS
 capital = "Bursa"
 culture = greek
 religion = christian_faith
@@ -22,7 +22,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = OPS
+	controller = OPS
+	add_core = OPS
 }

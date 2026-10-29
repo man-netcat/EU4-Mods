@@ -1,8 +1,9 @@
 #144 - Epiros
 
-owner = BYZ
-controller = BYZ
+owner = EPR
+controller = EPR
 add_core = BYZ
+add_core = EPR
 capital = "Ioannina"
 culture = greek
 religion = christian_faith
@@ -19,7 +20,7 @@ discovered_by = eastern
 discovered_by = western
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = EPR
+	controller = EPR
+	add_core = EPR
 }

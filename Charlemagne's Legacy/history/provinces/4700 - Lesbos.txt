@@ -1,8 +1,8 @@
 #2348 - Chios
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = AEG
+controller = AEG
+add_core = AEG
 capital = "Mytilene"
 culture = greek
 religion = christian_faith
@@ -19,7 +19,7 @@ discovered_by = eastern
 discovered_by = western
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = AEG
+	controller = AEG
+	add_core = AEG
 }

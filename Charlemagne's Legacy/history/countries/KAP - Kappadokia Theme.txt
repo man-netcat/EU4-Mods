@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = eastern
+primary_culture = greek
+religion = christian_faith
+capital = 4307
+religious_school = byzantine_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Alexios"
+		dynasty = "Maleios"
+		birth_date = 825.12.20
+		death_date = 893.9.11
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Matthaios"
+		monarch_name = "Matthaios"
+		dynasty = "Maleios"
+		birth_date = 848.3.28
+		death_date = 912.12.16
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_administrative_government
+}

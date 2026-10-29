@@ -120,10 +120,14 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   starts allied and married (CK3 has no alliance data). 10 pairs today (Mercia-Wessex, Northumbria-Jutland, Meath-Scotland...), plus the
   hand-set Asturias-Navarra pair in the diplomacy table. Pairs already tied by a subject relation, and anything involving a vassal or union
   subject (which cannot ally alone; validate checks it), are skipped. A ruler holding several tags binds through the one that is not a subject, then the highest rank.
-- Byzantium stays one tag (decided, do not split without asking): in CK3's 867 the Basileus holds only 3 counties directly and about 35
-  strategoi hold the rest as vassals, but the lifting rule folds vassals into their sovereign (only independents become tags); the themes were
-  appointed governors, not hereditary lords; pronoia is an 11th-century system and vanilla's pronoia subjects cost their overlord -5 force limit
-  each at 50 liberty desire; and ~35 one-to-three-province tags would carry no flags and blow the relation limit (pronoia takes no slot, vassals do).
+- Byzantium's themes are 23 vassal tags (user decision, 29 Oct 2026): the Basileus's direct vassals in CK3's 867 (each with their sub-vassals folded in) -
+  20 landless noble-family duchies `d_nf_*` (rank 2) and 3 counties (Malta, Nicosia, Seleucia, Kerch: 4 with Kerch). The tag name is the theme region CK3 writes
+  in the comment on the family title (`d_nf_hexavoulis = { # Hexavoulis (Epirus)` -> Epirus; `tagloc.family_region`); the code is the region's first free letters.
+  They hold `theme_subject_type` (own block in `vanillapatch.py`, marked BEGIN/END kar theme): count = vassal, no relation slot (twenty-odd vassals would
+  blow the empire's limit of 8), `relative_power_class` 0 and no development-ratio liberty (a 7-province capital against 23 governors would put them
+  all in revolt), base liberty -25, and 50% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
+  the themes were appointed strategoi, not hereditary lords, and pronoia is 11th-century - chosen anyway to follow CK3. Four provinces CK3 does not
+  hold under the Basileus (Apulia, Kaffa, Ohrid, Kalos Limen) still sit with BYZ and want an owner. Placeholder flags; untested in-game.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

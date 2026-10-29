@@ -1,8 +1,8 @@
 #316 - Izmit
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = OPT
+controller = OPT
+add_core = OPT
 capital = "Izmit"
 culture = greek
 religion = christian_faith
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = OPT
+	controller = OPT
+	add_core = OPT
 }

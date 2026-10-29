@@ -1,8 +1,8 @@
 #325 - Kastamonu
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = PPH
+controller = PPH
+add_core = PPH
 capital = "Kastamonu"
 culture = greek
 religion = christian_faith
@@ -20,7 +20,7 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = PPH
+	controller = PPH
+	add_core = PPH
 }

@@ -1,8 +1,8 @@
 #4174 - Durres
 
-owner = BYZ
-controller = BYZ
-add_core = BYZ
+owner = DYR
+controller = DYR
+add_core = DYR
 capital = "Durrës"
 culture = albanian
 religion = christian_faith
@@ -21,7 +21,7 @@ discovered_by = eastern
 discovered_by = western
 
 867.1.1 = {
-	owner = BYZ
-	controller = BYZ
-	add_core = BYZ
+	owner = DYR
+	controller = DYR
+	add_core = DYR
 }

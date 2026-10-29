@@ -1652,8 +1652,13 @@ def run() -> int:
 
     vsub = _code_lines(os.path.join(GAME, "common", "subject_types",
                                     "00_subject_types.txt"))
-    msub = _code_lines(os.path.join(MOD, "common", "subject_types",
-                                    "00_subject_types.txt"))
+    msub_text = open(os.path.join(MOD, "common", "subject_types", "00_subject_types.txt"),
+                     encoding="cp1252", errors="replace").read()
+    # the mod's own subject types sit between BEGIN/END markers; everything outside them is vanilla's
+    msub_text = re.sub(r"(?s)# BEGIN kar [^\n]*\n.*?# END kar [^\n]*\n", "", msub_text)
+    _tmp = os.path.join(str(CACHE), "subject_types_without_ours.txt")
+    open(_tmp, "w", encoding="cp1252").write(msub_text)
+    msub = _code_lines(_tmp)
     sdiff = [(a, b) for a, b in zip(vsub, msub) if a != b]
     # the mod's edits: the vassal rank cap, and vassals/marches adding less force limit to the overlord
     expected_sdiff = [
