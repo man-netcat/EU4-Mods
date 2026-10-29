@@ -8,7 +8,9 @@ parity convention; known-good: Constantinople's Theodosian Walls.
 Known-removed: Budjak/Akkerman (no fortress there in 867), stripped via
 `provinces.no_fort` + `strip_fort` — reuse that mechanism per province.
 
-## Feudal vassal gameplay (parked)
+## Feudal vassal gameplay (parked; the slot and force-limit parts are done)
+
+Done: vassals add no force limit and every country gets relation slots by government rank (see AGENTS.md). Still parked: options B/C below.
 
 Goal: heavier emphasis on vassals for the feudal era — many more tags as
 vassals without constant rebellions. Andalusia work comes first.
