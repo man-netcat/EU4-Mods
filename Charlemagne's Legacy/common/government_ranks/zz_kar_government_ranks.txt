@@ -1,10 +1,12 @@
 2 = {
+	diplomatic_upkeep = 1
 	diplomats = 1
 	governing_capacity = 200
 	global_autonomy = -0.025
 }
 
 3 = {
+	diplomatic_upkeep = 2
 	governing_capacity = 400
 	global_autonomy = -0.05
 	max_absolutism = 5
@@ -13,6 +15,7 @@
 }
 
 4 = {
+	diplomatic_upkeep = 3
 	diplomats = 2
 	governing_capacity = 600
 	global_autonomy = -0.075
@@ -21,6 +24,7 @@
 }
 
 5 = {
+	diplomatic_upkeep = 4
 	diplomats = 3
 	governing_capacity = 1000
 	global_autonomy = -0.1

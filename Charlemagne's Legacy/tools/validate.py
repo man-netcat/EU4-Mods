@@ -1581,12 +1581,15 @@ def run() -> int:
     msub = _code_lines(os.path.join(MOD, "common", "subject_types",
                                     "00_subject_types.txt"))
     sdiff = [(a, b) for a, b in zip(vsub, msub) if a != b]
+    # the mod's edits: the vassal rank cap, and vassals/marches adding less force limit to the overlord
+    expected_sdiff = [
+        ("max_government_rank = 1", "max_government_rank = 0"),
+        ("forcelimit_to_overlord = 0.1", "forcelimit_to_overlord = 0.0"),
+        ("forcelimit_to_overlord = 0.2", "forcelimit_to_overlord = 0.1"),
+    ]
     note(
-        len(vsub) == len(msub)
-        and len(sdiff) == 1
-        and sdiff[0][0] == "max_government_rank = 1"
-        and sdiff[0][1] == "max_government_rank = 0",
-        "subject types = vanilla copy with only the vassal cap lifted",
+        len(vsub) == len(msub) and sdiff == expected_sdiff,
+        "subject types = vanilla copy with only the vassal cap lifted and the vassal force limit cut",
     )
     if len(vsub) != len(msub) or len(sdiff) != 1:
         print(f"        {len(vsub)} vanilla vs {len(msub)} ours, "

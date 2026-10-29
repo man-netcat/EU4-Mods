@@ -106,6 +106,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   Portugal and Galicia follow the same pattern: Reconquista-style ambition trees for PRT/POR (5) and GAL (4) in `missions/Reconquista.txt`,
   an event that loosens Portucale from Cordoba, PRT starting with 50 liberty desire and the strongholds modifier, and GAL taking the
   strongholds modifier when Asturias or Leon releases it.
+- Vassals add no force limit to their overlord (`vassal` `forcelimit_to_overlord` 0, `march` 0.1, the flat +1 `vassal_subject`
+  modifier emptied); instead every country gets diplomatic relation slots by government rank: `base_values` `diplomatic_upkeep` 4 -> 5
+  (county +1) and the rank blocks add +1 (duchy +2), +2 (kingdom +3), +3 (empire +4), +4 (rank 5: +5). All through `tools/vanillapatch.py`
+  (subject_types, static_modifiers) and `common/government_ranks/zz_kar_government_ranks.txt`. Vassals still take a slot each. Untested in-game.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

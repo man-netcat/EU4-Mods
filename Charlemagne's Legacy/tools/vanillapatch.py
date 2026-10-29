@@ -162,7 +162,7 @@ PATCHES = {
    [],
    [
     "",
-    "# Karolingian: vanilla copy, one edit - vassal max_government_rank 1 -> 0.",
+    "# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.1.",
     "# Engine (CCountry::CalcGovernmentRank) clamps a subject's rank down to its",
     "# subject type's max_government_rank; CK3-true vassals (TRA/VSG/GTH/DAL/",
     "# SIC/CST/ARG/PRT) hold duchy titles and must read as Duchy (user 18 Oct 2026).",
@@ -179,6 +179,53 @@ PATCHES = {
    ],
    [
     "\tmax_government_rank = 0\t\t\t\t\t\t# CK3 ranks: vassalage shows at the held title's rank"
+   ]
+  ],
+  [
+   [
+    "\tpays_overlord = 1.0"
+   ],
+   [
+    "\tforcelimit_to_overlord = 0.1"
+   ],
+   [
+    "\tforcelimit_to_overlord = 0.0\t\t\t\t\t# vassals add nothing to the overlord's force limit (slots come with rank instead)"
+   ]
+  ],
+  [
+   [
+    "\tbase_liberty_desire = -15.0",
+    "\tcan_be_annexed = no"
+   ],
+   [
+    "\tforcelimit_to_overlord = 0.2"
+   ],
+   [
+    "\tforcelimit_to_overlord = 0.1"
+   ]
+  ]
+ ],
+ "common/static_modifiers/00_static_modifiers.txt": [
+  [
+   [
+    "vassal_subject = {"
+   ],
+   [
+    "\tland_forcelimit = 1"
+   ],
+   [
+    "\t# no flat force limit per vassal"
+   ]
+  ],
+  [
+   [
+    "\ttolerance_own = 3"
+   ],
+   [
+    "\tdiplomatic_upkeep = 4"
+   ],
+   [
+    "\tdiplomatic_upkeep = 5\t\t\t\t\t\t# +1 for every country (a county's vassal slot); each government rank above adds one more"
    ]
   ]
  ]

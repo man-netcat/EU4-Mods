@@ -1,5 +1,5 @@
 
-# Karolingian: vanilla copy, one edit - vassal max_government_rank 1 -> 0.
+# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.1.
 # Engine (CCountry::CalcGovernmentRank) clamps a subject's rank down to its
 # subject type's max_government_rank; CK3-true vassals (TRA/VSG/GTH/DAL/
 # SIC/CST/ARG/PRT) hold duchy titles and must read as Duchy (user 18 Oct 2026).
@@ -237,7 +237,7 @@ vassal = {
 	liberty_desire_development_ratio = 0.25
 	liberty_desire_same_dynasty = -5.0
 	pays_overlord = 1.0
-	forcelimit_to_overlord = 0.1
+	forcelimit_to_overlord = 0.0					# vassals add nothing to the overlord's force limit (slots come with rank instead)
 
 	relative_power_class = 2
 	should_quit_wars_on_activation = yes
@@ -311,7 +311,7 @@ march = {
 	military_focus = 1.5
 	base_liberty_desire = -15.0
 	can_be_annexed = no
-	forcelimit_to_overlord = 0.2
+	forcelimit_to_overlord = 0.1
 	is_march = yes
 	forms_trade_companies = no
 
