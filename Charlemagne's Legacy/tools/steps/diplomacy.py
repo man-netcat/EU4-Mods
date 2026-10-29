@@ -2,7 +2,7 @@
 """Start-date relations between tags: subjects, alliances, marriages, guarantees, and the preset wars."""
 
 import os
-from tagdb import PEER_RELATIONS, WARS
+from tagdb import CTRY_DATE, PEER_RELATIONS, WARS
 from steps.layout import MOD
 from steps.output import write_out
 
@@ -10,7 +10,8 @@ from steps.output import write_out
 def step_diplomacy() -> None:
     lines = [
         "# Starting subjects and guarantees of the Carolingian world.",
-        "# No start_date: each holds from the mod's start.",
+        f"# Every subject relation is created at the start date ({CTRY_DATE}): a vassal can be integrated 50 years after",
+        "# that (defines INTEGRATE_VASSAL_MIN_YEARS), not at once as a relation without a start_date can.",
     ]
     from marriages import all_relations  # lifted from CK3 (alliances and marriages between rulers' families)
 
@@ -21,6 +22,7 @@ def step_diplomacy() -> None:
                 "vassal = {",
                 "\tfirst = " + rel.liege,
                 "\tsecond = " + rel.subject,
+                f"\tstart_date = {CTRY_DATE}",
                 "}",
             ]
         elif rel.relation == "guarantee":
@@ -42,6 +44,7 @@ def step_diplomacy() -> None:
                 "union = {",
                 "\tfirst = " + rel.liege,
                 "\tsecond = " + rel.subject,
+                f"\tstart_date = {CTRY_DATE}",
                 "}",
             ]
         else:
@@ -50,6 +53,7 @@ def step_diplomacy() -> None:
                 "\tsubject_type = " + rel.relation,
                 "\tfirst = " + rel.liege,
                 "\tsecond = " + rel.subject,
+                f"\tstart_date = {CTRY_DATE}",
                 "}",
             ]
     path = os.path.join(MOD, "history", "diplomacy", "karolingian_vassals.txt")

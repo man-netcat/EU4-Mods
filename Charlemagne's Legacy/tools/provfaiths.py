@@ -547,7 +547,7 @@ PROVINCE_COUNTY.update({
     2984: "c_cosenza", 2986: "c_cagliari", 2987: "c_urgell", 2988: "c_tarragona", 2990: "c_teruel",
     2994: "c_wolgast", 2996: "c_mecklenburg", 2998: "c_buzau", 2999: "c_hormuz", 3001: "c_skopje",
     3002: "c_rama", 3003: "c_euboea", 4110: "c_sutherland", 4111: "c_saintonge", 4112: "c_quercy",
-    4115: "c_korosten", 4116: "c_phrygia", 4118: "c_desmond", 4119: "c_mayo", 4120: "c_dublin",
+    4115: "c_korosten", 4116: "c_karachev", 4118: "c_desmond", 4119: "c_mayo", 4120: "c_dublin",
     4121: "c_ulster", 4122: "c_shenkursk", 4125: "c_hewes", 4126: "c_bacs", 4130: "c_somerset",
     4141: "c_ditmarschen", 4142: "c_aarhus", 4147: "c_yaroslavl", 4148: "c_luki",
     4149: "c_vorbasse", 4150: "c_beja", 4151: "c_inari", 4152: "c_kainuu", 4164: "c_dal",
@@ -644,7 +644,7 @@ PROVINCE_COUNTY.update({
 PROVINCE_COUNTY.update({
     103: "c_canavese", 104: "c_lombardia", 123: "c_reggio_calabria", 131: "c_zagorje",
     138: "c_duklja", 139: "c_zachlumia", 140: "c_vhrbosna", 143: "c_avlonas", 144: "c_epeiros",
-    145: "c_laconia", 147: "c_thessalonika", 149: "c_adrianopolis", 152: "c_zagorje",
+    145: "c_laconia", 147: "c_thessalia", 149: "c_adrianopolis", 152: "c_zagorje",
     158: "c_szekelyfold", 159: "c_dorostorum", 160: "c_craiova", 161: "c_campulung",
     163: "c_chandax", 1247: "c_bastia", 1756: "c_cetatea_alba", 1765: "c_naissus",
     1766: "c_hvosno", 1767: "c_pozega", 1773: "c_achaia", 1831: "c_travunia", 1875: "c_turin",
@@ -661,8 +661,9 @@ PROVINCE_COUNTY.update({
 PROVINCE_COUNTY.update({
     269: "c_volkovysk", 279: "c_volodymyr", 280: "c_kiev", 281: "c_terebovl", 282: "c_odessa",
     283: "c_khortytsia", 284: "c_perekop", 286: "c_tana", 288: "c_millerovo", 291: "c_oskol",
-    292: "c_orsha", 297: "c_karachev", 316: "c_bithynia", 317: "c_prusa", 318: "c_caria",
-    319: "c_caria", 320: "c_rhodos", 321: "c_nicosia", 322: "c_pacatiana", 323: "c_lycaonia",
+    292: "c_orsha", 297: "c_karachev", 316: "c_bithynia", 317: "c_prusa", 318: "c_ionia",  # Sugla: its city is Izmir (Smyrna), b_smyrna of c_ionia
+    
+    319: "c_caria", 320: "c_rhodos", 321: "c_nicosia", 322: "c_phrygia", 323: "c_lycaonia",
     324: "c_isauria", 325: "c_pompeiopolis", 326: "c_galatia", 328: "c_sinope", 329: "c_sebasteia",
     331: "c_theodosiopolis", 418: "c_mesopotamia", 422: "c_odishi", 425: "c_derbent",
     463: "c_zichia", 466: "c_astrakhanka", 467: "c_balachev", 1846: "c_euchaita",
@@ -676,7 +677,7 @@ PROVINCE_COUNTY.update({
     2414: "c_tana", 2417: "c_maghas", 2447: "c_kerch", 2962: "c_peresopnytsia", 4242: "c_orsha",
     4246: "c_roslavl", 4247: "c_chornobyl", 4295: "c_mesopotamia", 4296: "c_apahunik",
     4299: "c_shirvan", 4302: "c_bagrewand", 4303: "c_tao", 4306: "c_khumar", 4307: "c_cappadocia",
-    4308: "c_chonae", 4309: "c_ionia", 4310: "c_sebasteia", 4311: "c_philomelium",
+    4308: "c_chonae", 4309: "c_ionia", 4310: "c_sebasteia", 4311: "c_pacatiana",
     4312: "c_galatia_salutaris", 4313: "c_hadrianopolis", 4314: "c_lower_galatia", 4315: "c_zela",
     4340: "c_talish", 4537: "c_novogrudok", 4538: "c_cherven", 4539: "c_zaslavl",
     4540: "c_ushytsia", 4542: "c_romen", 4544: "c_babruysk", 4545: "c_slutsk",

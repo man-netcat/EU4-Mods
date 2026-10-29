@@ -132,6 +132,13 @@ def named_realm_governments():
     return out
 
 
+def _muslim(tag):
+    """A realm of the Muslim religions takes its dynasty's name whatever the heritage of its ruler
+    (Cilicia under the Armani, Mombasa under the Mvita, Tulaytulah under the Qutamids)."""
+    row = sqlite3.connect(DB).execute("select religion from tags where tag=?", (tag,)).fetchone()
+    return bool(row) and row[0] in ("sunni", "shiite", "ibadi")
+
+
 def dynasty_realm(tag, title, rank):
     """(name, adjective) when the realm is named for its 867 ruler's dynasty, else None."""
     import ck3
@@ -142,13 +149,15 @@ def dynasty_realm(tag, title, rank):
 
     if rank is None or rank < 2 or rank > 4:
         return None
-    if re.search(r"can_be_named_after_dynasty\s*=\s*no", cn._title_blocks().get(title, "")):
+    muslim = _muslim(tag)
+    # CK3's opt-outs and tribal/administrative governments do not stop a Muslim realm from being named for its dynasty
+    if not muslim and re.search(r"can_be_named_after_dynasty\s*=\s*no", cn._title_blocks().get(title, "")):
         return None
     gov = ck3.title_government(title)
-    if gov and gov not in named_realm_governments():
+    if not muslim and gov and gov not in named_realm_governments():
         return None
     _h, cc = cl.holder_culture(title)
-    if not cc or ct.culture_info(cc)[0] not in DYNASTY_HERITAGES:
+    if not cc or (ct.culture_info(cc)[0] not in DYNASTY_HERITAGES and not _muslim(tag)):
         return None
     if not _ctx:
         _ctx.append((ck3.load_titles(), ck3.load_chars(), ck3.load_dynasties(), ck3.load_houses()))
@@ -159,15 +168,17 @@ def dynasty_realm(tag, title, rank):
     if not dyn:
         return None
     d = fold_loc(dyn)
-    return (d + "s" if d.lower().endswith("id") else d), d
+    if len(d) < 4:  # a clipped dynasty name ("al") is no name
+        return None
+    return (d + "s" if d.lower().endswith(("id", "yad")) else d), d
 
 
 _ctx = []
 
 
-def title_names(title, rank, tag=None):
+def title_names(title, rank, tag=None, dynasty=True):
     """(name, adjective) the tag shows at the start, folded; None when CK3 has no name."""
-    got = _title_names(title, rank, tag)
+    got = _title_names(title, rank, tag, dynasty)
     st = STYLE.get(tag)
     if got and st and st[0] == "prefix":
         got = (st[1] + got[0], got[1])
@@ -190,7 +201,7 @@ def family_region(title):
     return _FAMILY_REGION.get(title)
 
 
-def _title_names(title, rank, tag):
+def _title_names(title, rank, tag, dynasty=True):
     import ck3
     import culturalnames as cn
     from enc import fold_loc
@@ -203,7 +214,7 @@ def _title_names(title, rank, tag):
         name = _resolve(ck3.loc(st[1]))
         adj = _resolve(ck3.loc(st[1] + "_adj")) or name
         return (fold_loc(name), fold_loc(adj)) if name else None
-    dn = dynasty_realm(tag, title, rank) if tag else None
+    dn = dynasty_realm(tag, title, rank) if tag and dynasty else None
     if dn:
         return dn
     key = history_name(title)
@@ -230,11 +241,65 @@ LIFT_FORMABLES = ("TIB", "UTS", "KAM", "AMD", "BHU", "LDK", "GRO", "KIN", "LIO",
 
 def wanted():
     con = sqlite3.connect(DB)
-    out = {tag: title_names(title, rank, tag)
-           for tag, title, rank in con.execute("select tag, ck3_title, rank from tags order by seq")}
-    for tag, title, rank in con.execute("select tag, ck3_title, rank from formables"):
-        if tag in LIFT_FORMABLES:
-            out[tag] = title_names(title, rank, tag)
+    rows = list(con.execute("select tag, ck3_title, rank, name, seq, forms from tags order by seq"))
+    out = {tag: title_names(title, rank, tag) for tag, title, rank, _n, _s, _f in rows}
+    forms = {tag: (title, rank, name, adj) for tag, title, rank, name, adj in
+             con.execute("select tag, ck3_title, rank, name, adj from formables")}
+    for tag, (title, rank, name, adj) in forms.items():
+        out[tag] = title_names(title, rank, tag) if tag in LIFT_FORMABLES else (name, adj)
+    return _unique(out, rows, forms)
+
+
+_TIER_WORD = {1: "County", 2: "Duchy", 3: "Kingdom", 4: "Empire"}
+
+
+def _unique(out, rows, forms):
+    """No two tags show the same name, except a starter and the formable it forms. Between
+    landed tags a place name beats a dynasty's name, then the higher rank and the earlier tag win.
+    A dynasty-named loser shows its title's own name (the Abbasid governors are not "Abbasids"); a
+    place-named loser is qualified by its tier ("Duchy of Castile")."""
+    info = {tag: (title, rank, name, seq) for tag, title, rank, name, seq, _f in rows}
+    starts = {tag: f for tag, _t, _r, _n, _s, f in rows if f}
+    plain = {}
+
+    def plain_name(tag):
+        if tag not in plain:
+            title, rank = info[tag][0], info[tag][1]
+            plain[tag] = title_names(title, rank, tag, dynasty=False)
+        return plain[tag]
+
+    for _ in range(4):
+        byname = {}
+        for tag, got in out.items():
+            if got is not None:
+                byname.setdefault(got[0], []).append(tag)
+        # a starter may share its name with the formable it forms (Bohemia and the Bohemian duchy)
+        groups = [g for g in ([t for t in ts if starts.get(t) not in ts] for ts in byname.values()) if len(g) > 1]
+        if not groups:
+            break
+        for ts in groups:
+            def key(t):
+                if t in forms:
+                    return (0, 0, 0)
+                dyn = plain_name(t) is not None and plain_name(t) != out[t]
+                return (1, dyn, -(info[t][1] or 0), info[t][3])
+
+            ts.sort(key=key)
+            for tag in ts[1:]:
+                if tag not in info:
+                    continue
+                title, rank, name, _seq = info[tag]
+                taken = {g[0] for g in out.values() if g}
+                alt = plain_name(tag)
+                if alt is not None and alt != out[tag] and alt[0] not in taken:
+                    out[tag] = alt
+                    continue
+                base = out[tag]
+                if name and name != base[0] and name not in taken:
+                    out[tag] = (name, base[1])
+                    continue
+                word = _TIER_WORD.get(rank, "Realm")
+                out[tag] = (f"{word} of {base[0]}", base[1])
     return out
 
 

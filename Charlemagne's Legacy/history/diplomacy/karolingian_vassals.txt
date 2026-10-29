@@ -1,121 +1,131 @@
 # Starting subjects and guarantees of the Carolingian world.
-# No start_date: each holds from the mod's start.
+# Every subject relation is created at the start date (867.1.1): a vassal can be integrated 50 years after
+# that (defines INTEGRATE_VASSAL_MIN_YEARS), not at once as a relation without a start_date can.
 vassal = {
 	first = ADU
 	second = ARG
+	start_date = 867.1.1
 }
 vassal = {
 	first = ADU
 	second = PRT
+	start_date = 867.1.1
 }
 vassal = {
 	first = ADU
 	second = TOL
+	start_date = 867.1.1
 }
 vassal = {
 	first = AQI
 	second = GTH
+	start_date = 867.1.1
 }
 vassal = {
 	first = AQI
 	second = GUY
+	start_date = 867.1.1
 }
 vassal = {
 	first = AQI
 	second = TOU
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = ALP
+	start_date = 867.1.1
 }
 vassal = {
 	first = ARB
 	second = APR
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = AZB
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = BSA
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = CLC
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = DCS
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = DMU
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = DRA
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = EDS
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = tributary_state
 	first = ARB
 	second = EGY
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = FAR
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = KZS
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = LBN
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = MDN
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = PLS
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = PMY
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = SHQ
+	start_date = 867.1.1
 }
-dependency = {
-	subject_type = theme_subject_type
+vassal = {
 	first = ARB
 	second = WSD
+	start_date = 867.1.1
 }
 vassal = {
 	first = ASU
 	second = CST
+	start_date = 867.1.1
 }
 alliance = {
 	first = ASU
@@ -128,428 +138,533 @@ royal_marriage = {
 vassal = {
 	first = BAV
 	second = NRD
+	start_date = 867.1.1
 }
 vassal = {
 	first = BAV
 	second = SLZ
+	start_date = 867.1.1
 }
 vassal = {
 	first = BUL
 	second = TEM
+	start_date = 867.1.1
 }
 vassal = {
 	first = BUL
 	second = TRA
+	start_date = 867.1.1
 }
 vassal = {
 	first = BUL
 	second = VSG
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = ACA
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = AEG
+	start_date = 867.1.1
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = BYZ
+	second = ALB
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = ANI
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = ARE
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = ATE
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = BOK
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = CHS
-}
-dependency = {
-	subject_type = theme_subject_type
-	first = BYZ
-	second = DYR
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = EPH
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = EPR
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = KAD
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = KAP
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = KIB
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = OPS
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = OPT
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = PPH
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = SEB
+	start_date = 867.1.1
 }
 vassal = {
 	first = BYZ
 	second = SYC
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = THE
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
 	second = THR
+	start_date = 867.1.1
 }
-vassal = {
+dependency = {
+	subject_type = tributary_state
 	first = BYZ
 	second = VEN
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = tributary_state
 	first = EGY
 	second = MAK
+	start_date = 867.1.1
 }
 vassal = {
 	first = FRA
 	second = ANJ
+	start_date = 867.1.1
 }
 union = {
 	first = FRA
 	second = AQI
+	start_date = 867.1.1
 }
 vassal = {
 	first = FRA
 	second = FLA
+	start_date = 867.1.1
 }
 vassal = {
 	first = FRA
 	second = NRM
+	start_date = 867.1.1
 }
 vassal = {
 	first = FRA
 	second = REI
+	start_date = 867.1.1
 }
 vassal = {
 	first = GER
 	second = AGR
+	start_date = 867.1.1
 }
 union = {
 	first = GER
 	second = BAV
+	start_date = 867.1.1
 }
 vassal = {
 	first = GER
 	second = HAM
+	start_date = 867.1.1
 }
 vassal = {
 	first = GER
 	second = MAI
+	start_date = 867.1.1
 }
 vassal = {
 	first = GER
 	second = SWA
+	start_date = 867.1.1
 }
 vassal = {
 	first = GER
 	second = THU
+	start_date = 867.1.1
 }
 vassal = {
 	first = GER
 	second = WFR
+	start_date = 867.1.1
 }
 vassal = {
 	first = ITA
 	second = FRL
+	start_date = 867.1.1
 }
 union = {
 	first = ITA
 	second = PRO
+	start_date = 867.1.1
 }
 vassal = {
 	first = ITA
 	second = SPL
+	start_date = 867.1.1
 }
 vassal = {
 	first = ITA
 	second = TUS
+	start_date = 867.1.1
 }
 vassal = {
 	first = ITA
 	second = UBG
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = AKI
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = AWA
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = BUN
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = BZN
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = CKZ
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = ECG
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = ECH
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = ETC
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = HIA
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = HIG
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = HIT
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = HRM
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = HYU
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = HZN
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = ISE
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = IWM
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = IYO
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = IZU
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = KAI
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = KII
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = KOZ
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = MKW
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = MNO
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = MUS
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = NUS
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = OWA
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = SAG
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = SET
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = SHI
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = SMS
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = STM
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = SUO
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = SUR
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = TAJ
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = TGO
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = TOS
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = TSU
+	start_date = 867.1.1
 }
 dependency = {
 	subject_type = daimyo_vassal
 	first = JAP
 	second = YMT
+	start_date = 867.1.1
 }
 union = {
 	first = LOT
 	second = DAU
+	start_date = 867.1.1
 }
 vassal = {
 	first = LOT
 	second = HOL
+	start_date = 867.1.1
 }
 vassal = {
 	first = LOT
 	second = KOL
+	start_date = 867.1.1
 }
 vassal = {
 	first = LOT
 	second = TRI
+	start_date = 867.1.1
 }
 vassal = {
 	first = MOR
 	second = ZAM
+	start_date = 867.1.1
 }
 vassal = {
 	first = SJA
 	second = NES
+	start_date = 867.1.1
 }
 vassal = {
 	first = SJA
 	second = TEL
+	start_date = 867.1.1
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = THE
+	second = THS
+	start_date = 867.1.1
+}
+dependency = {
+	subject_type = theme_subject_type
+	first = THE
+	second = TSL
+	start_date = 867.1.1
 }
 vassal = {
 	first = TUN
 	second = GHA
+	start_date = 867.1.1
 }
 vassal = {
 	first = TUN
 	second = SIQ
+	start_date = 867.1.1
 }
 vassal = {
 	first = TUN
 	second = TRP
+	start_date = 867.1.1
 }
 alliance = {
 	first = CRD

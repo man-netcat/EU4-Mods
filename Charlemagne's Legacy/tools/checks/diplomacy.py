@@ -65,6 +65,21 @@ def subjects_and_relation_limit() -> None:
         m = re.search(r"(?m)^\s*diplomatic_upkeep\s*=\s*(-?\d+)", b)
         return base + (int(m.group(1)) if m else 0)
 
+    def _modifier_slots(tag):
+        """diplomatic_upkeep that the tag's start-date country modifiers add (kar_caliphal_governors)."""
+        extra = getattr(BY_TAG.get(tag), "extra", "") or ""
+        total = 0
+        for name in re.findall(r"add_country_modifier\s*=\s*\{[^}]*?name\s*=\s*(\w+)", extra):
+            for fn in os.listdir(os.path.join(MOD, "common", "event_modifiers")):
+                mb = _blocks(_read(f"common/event_modifiers/{fn}")).get(name)
+                if mb:
+                    m = re.search(r"(?m)^\s*diplomatic_upkeep\s*=\s*(-?\d+)", mb)
+                    total += int(m.group(1)) if m else 0
+        return total
+
+    def _limit_of(tag):
+        return _limit(BY_TAG[tag].rank) + _modifier_slots(tag)
+
     used = {}
     peers = set()  # an alliance and a royal marriage with the same country share one slot
     for d in all_relations():
@@ -76,9 +91,9 @@ def subjects_and_relation_limit() -> None:
         for t in pair:
             used[t] = used.get(t, 0) + 1
     over = [
-        f"{t}: {n} relations, limit {_limit(BY_TAG[t].rank)} (rank {BY_TAG[t].rank})"
+        f"{t}: {n} relations, limit {_limit_of(t)} (rank {BY_TAG[t].rank})"
         for t, n in sorted(used.items())
-        if t in BY_TAG and n > _limit(BY_TAG[t].rank)
+        if t in BY_TAG and n > _limit_of(t)
     ]
     from marriages import subjects_without_alliances  # noqa: E402
 
@@ -93,8 +108,8 @@ def subjects_and_relation_limit() -> None:
     note(not over, f"no tag starts over its diplomatic relation limit ({len(over)} over, base {base})")
     for o in over:
         print("        " + o)
-    tight = [f"{t} {n}/{_limit(BY_TAG[t].rank)}" for t, n in sorted(used.items())
-             if t in BY_TAG and n == _limit(BY_TAG[t].rank)]
+    tight = [f"{t} {n}/{_limit_of(t)}" for t, n in sorted(used.items())
+             if t in BY_TAG and n == _limit_of(t)]
     if tight:
         print("  WARN at the limit already (one more subject puts them over): " + ", ".join(tight))
 
@@ -170,19 +185,27 @@ def subject_types_keep_ck3_true_vassal_ranks() -> None:
     open(_tmp, "w", encoding="cp1252").write(msub_text)
     msub = _code_lines(_tmp)
     sdiff = [(a, b) for a, b in zip(vsub, msub) if a != b]
-    # the mod's edits: the vassal rank cap, and vassals/marches adding less force limit to the overlord
-    expected_sdiff = [
-        ("max_government_rank = 1", "max_government_rank = 0"),
-        ("forcelimit_to_overlord = 0.1", "forcelimit_to_overlord = 0.0"),
-        ("forcelimit_to_overlord = 0.2", "forcelimit_to_overlord = 0.1"),
-    ]
+    # the mod's edits: the vassal rank cap, and no subject type adding force limit, naval force limit,
+    # manpower or sailors to its overlord
+    MILITARY = ("forcelimit_to_overlord", "naval_forcelimit_to_overlord", "manpower_to_overlord",
+                "sailors_to_overlord")
+
+    def _allowed(a, b):
+        if (a, b) == ("max_government_rank = 1", "max_government_rank = 0"):
+            return True
+        ka, _, va = a.partition(" = ")
+        kb, _, vb = b.partition(" = ")
+        return ka == kb and ka in MILITARY and vb.split("#")[0].strip() == "0.0"
+
     note(
-        len(vsub) == len(msub) and sdiff == expected_sdiff,
-        "subject types = vanilla copy with only the vassal cap lifted and the vassal force limit cut",
+        len(vsub) == len(msub) and all(_allowed(a, b) for a, b in sdiff),
+        "subject types = vanilla copy with only the vassal cap lifted and every overlord bonus cut to 0",
     )
-    if len(vsub) != len(msub) or len(sdiff) != 1:
-        print(f"        {len(vsub)} vanilla vs {len(msub)} ours, "
-              f"{len(sdiff)} code-line diffs: {sdiff[:4]}")
+    ours = open(os.path.join(MOD, "common", "subject_types", "00_subject_types.txt"),
+                encoding="cp1252", errors="replace").read()
+    gives = [f"{k} = {v}" for k, v in re.findall(
+        r"(?m)^\s*(%s)\s*=\s*([0-9.]+)" % "|".join(MILITARY), ours) if float(v) != 0.0]
+    note(not gives, f"no subject type adds force limit or manpower to its overlord ({len(gives)} do)")
 
 
 def preset_wars_use_live_tags_and_real_cbs() -> None:
@@ -232,9 +255,100 @@ def preset_wars_use_live_tags_and_real_cbs() -> None:
         print("        " + b)
 
 
+def subjects_have_the_right_subject_type() -> None:
+    """Every subject relation uses the subject type its realm calls for."""
+    print("\n== subjects have the right subject type ==")
+    from marriages import all_relations  # noqa: E402
+    from tagdb import PEER_RELATIONS  # noqa: E402
+
+    # The rules, one per subject type. `vassal` is the default; a republic cannot be a vassal (Venice is
+    # Byzantium's tributary); the theme type is Byzantium's alone (the Abbasid governors are ordinary
+    # vassals); daimyo are Japan's; a union is the king's other crown; a tributary is a republic or one
+    # of the realms CK3 itself marks as tribute-paying (Egypt to the Abbasids, Makuria to Egypt).
+    TRIBUTARY = {("ARB", "EGY"), ("EGY", "MAK")}
+    # a theme can hold themes of its own (Strymon's Thessalonika and Thessaly)
+    byz_themes = {d.subject for d in all_relations() if d.relation == "theme_subject_type" and d.liege == "BYZ"}
+    bad = []
+    for d in all_relations():
+        if d.relation in PEER_RELATIONS:
+            continue
+        sub = BY_TAG.get(d.subject)
+        republic = bool(sub) and getattr(sub, "government", "") == "republic"
+        want = None
+        if republic:
+            want = "tributary_state"
+        elif d.relation == "theme_subject_type" and d.liege != "BYZ" and (d.liege not in byz_themes):
+            want = "vassal"
+        elif d.relation == "daimyo_vassal" and d.liege != "JAP":
+            want = "vassal"
+        elif d.relation == "tributary_state" and (d.liege, d.subject) not in TRIBUTARY:
+            want = "vassal"
+        if want and want != d.relation:
+            bad.append(f"{d.liege}/{d.subject}: {d.relation}, should be {want}")
+    note(not bad, f"every subject has the subject type its realm calls for ({len(bad)} wrong)")
+    for b in bad:
+        print("        " + b)
+
+
+def force_limit_comes_from_provinces() -> None:
+    """No flat base force limit: every country's land and naval force limit is its provinces' alone."""
+    print("\n== force limit comes from the provinces ==")
+    text = open(os.path.join(MOD, "common", "static_modifiers", "00_static_modifiers.txt"),
+                encoding="cp1252", errors="replace").read()
+    flat = []
+    m = re.search(r"(?ms)^all_nations = \{(.*?)^\}", text)
+    for k, v in re.findall(r"(?m)^\s*((?:land|naval)_forcelimit)\s*=\s*(-?[0-9.]+)", m.group(1) if m else ""):
+        if float(v) != 0.0:
+            flat.append(f"all_nations: {k} = {v}")
+    m = re.search(r"(?ms)^subject_nation = \{(.*?)^\}", text)
+    for k, v in re.findall(r"(?m)^\s*(\w+)\s*=\s*(-?[0-9.]+)", m.group(1) if m else ""):
+        if float(v) != 0.0:
+            flat.append(f"subject_nation: {k} = {v}")
+    note(not flat, "no flat base force limit and no subject_nation malus"
+         + (": " + ", ".join(flat) if flat else ""))
+
+
+def vassals_cannot_be_integrated_at_the_start() -> None:
+    """Every starting subject relation carries its creation date, and a vassal waits 50 years."""
+    print("\n== subject status has a creation date ==")
+    from tagdb import CTRY_DATE  # noqa: E402
+
+    path = os.path.join(MOD, "history", "diplomacy", "karolingian_vassals.txt")
+    text = open(path, encoding="cp1252", errors="replace").read()
+    undated = []
+    for m in re.finditer(r"(?m)^(vassal|union|dependency)\s*=\s*\{(.*?)^\}", text, re.S):
+        if f"start_date = {CTRY_DATE}" not in m.group(2):
+            f = re.search(r"first\s*=\s*(\w+)", m.group(2))
+            s2 = re.search(r"second\s*=\s*(\w+)", m.group(2))
+            undated.append(f"{f.group(1) if f else '?'}/{s2.group(1) if s2 else '?'}")
+    note(not undated, f"every starting subject relation is dated {CTRY_DATE}"
+         + (": " + ", ".join(undated[:8]) if undated else ""))
+    defines = open(os.path.join(MOD, "common", "defines.lua"), encoding="cp1252", errors="replace").read()
+    m = re.search(r"INTEGRATE_VASSAL_MIN_YEARS\s*=\s*(\d+)", defines)
+    rp = re.search(r"LIBERTY_DESIRE_RELATIVE_POWER\s*=\s*([0-9.]+)", defines)
+    note(rp is not None and float(rp.group(1)) == 37.5,
+         f"relative army power pulls half as hard as the base game's 75 (defines say {rp.group(1) if rp else 'nothing'})")
+    sub = open(os.path.join(MOD, "common", "subject_types", "00_subject_types.txt"), encoding="cp1252", errors="replace").read()
+    cls = lambda name: (re.search(r"(?ms)^%s = \{[ \t]*\r?\n.*?relative_power_class\s*=\s*(\d+)" % name, sub) or [None, None])[1]
+    tc = cls("theme_subject_type")
+    note(tc is not None and int(tc) >= 2 and tc != cls("vassal"),
+         f"themes weigh their army against the emperor's as a pool of their own (class {tc}, the vassals' is {cls('vassal')})")
+    theme_base = re.search(r"(?ms)^theme_subject_type = \{.*?base_liberty_desire\s*=\s*(-?[0-9.]+)", sub)
+    note(rp is not None and theme_base is not None
+         and abs(float(theme_base.group(1)) + 0.9 * float(rp.group(1))) < 1e-6,
+         "a theme's loyalty offset cancels 90% of the relative-power pull (it keeps a tenth of a vassal's): "
+         f"base_liberty_desire {theme_base.group(1) if theme_base else None} vs -0.9 x "
+         f"{rp.group(1) if rp else None}")
+    note(m is not None and int(m.group(1)) == 50,
+         f"a vassal can be integrated 50 years after its status was created (defines say {m.group(1) if m else 'nothing'})")
+
+
 def run() -> None:
     subjects_and_relation_limit()
     vassalage_matches_ck3_s_867_lieges()
     historical_friendships_and_rivalries()
     subject_types_keep_ck3_true_vassal_ranks()
+    subjects_have_the_right_subject_type()
+    force_limit_comes_from_provinces()
+    vassals_cannot_be_integrated_at_the_start()
     preset_wars_use_live_tags_and_real_cbs()

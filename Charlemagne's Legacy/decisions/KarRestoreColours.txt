@@ -10,6 +10,7 @@ country_decisions = {
 				tag = ADU
 				tag = AFG
 				tag = AIR
+				tag = ALB
 				tag = ALG
 				tag = ALO
 				tag = ARB
@@ -207,6 +208,12 @@ country_decisions = {
 			limit = { tag = AIR }
 			change_country_color = {
 				color = { 30 31 162 }
+			}
+		}
+		if = {
+			limit = { tag = ALB }
+			change_country_color = {
+				color = { 181 0 20 }
 			}
 		}
 		if = {

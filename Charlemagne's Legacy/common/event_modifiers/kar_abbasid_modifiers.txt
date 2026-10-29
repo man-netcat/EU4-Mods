@@ -1,0 +1,6 @@
+# The Caliph's governors: the 16 duchy-rank governors of CK3's 867 are ordinary vassals, and the
+# Caliphate carries the diplomatic slots they take (the verifier counts this modifier into ARB's limit)
+
+kar_caliphal_governors = {
+	diplomatic_upkeep = 10
+}

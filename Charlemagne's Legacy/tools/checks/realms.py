@@ -83,6 +83,21 @@ def country_definitions() -> None:
                 got == want,
                 f"{t.tag} colour {got} lifted from CK3 {t.ck3_title} {want}",
             )
+    landless = [t.tag for t in _REALMS if t.ck3_title and t.ck3_title.startswith("d_nf_")]
+    note(not landless, "no tag sits on a landless noble-family duchy (d_nf_*); it takes the land duchy its "
+         "holder holds" + (f" ({', '.join(landless)})" if landless else ""))
+    # tags whose CK3 title gives no usable colour carry their own: it must be a real colour and
+    # no other tag's
+    own = [t for t in _REALMS if t.ck3_title and ck3_colors.get(t.ck3_title) is None]
+    greys = [t.tag for t in own if max(t.color) - min(t.color) < 20]
+    note(not greys, f"tags with their own colour are not grey ({', '.join(greys) or 'none'})")
+    seen = {}
+    for t in _REALMS:
+        eff = t.color if t in own else (ck3_colors.get(t.ck3_title) or t.color)
+        seen.setdefault(eff, []).append(t.tag)
+    clash = {c: ts for c, ts in seen.items() if len(ts) > 1 and any(x in {o.tag for o in own} for x in ts)}
+    note(not clash, "tags with their own colour share it with no other tag"
+         + ("".join(f" {c}: {', '.join(ts)};" for c, ts in clash.items()) if clash else ""))
     for t in TAGS:
         if t not in base and t not in mine:
             continue

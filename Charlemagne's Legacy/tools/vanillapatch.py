@@ -162,7 +162,7 @@ PATCHES = {
    [],
    [
     "",
-    "# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.1.",
+    "# Karolingian: vanilla copy, two kinds of edit - vassal max_government_rank 1 -> 0, and no subject type adds force limit, naval force limit, manpower or sailors to its overlord (every *_to_overlord is 0.0).",
     "# Engine (CCountry::CalcGovernmentRank) clamps a subject's rank down to its",
     "# subject type's max_government_rank; CK3-true vassals (TRA/VSG/GTH/DAL/",
     "# SIC/CST/ARG/PRT) hold duchy titles and must read as Duchy (user 18 Oct 2026).",
@@ -200,18 +200,20 @@ PATCHES = {
    [
     "# BEGIN kar theme",
     "# The Byzantine themes: governors the emperor appointed, not rivals of the throne. A vassal in every respect the",
-    "# scripts see (count = vassal) but no relation slot, no relative-power liberty pull (a tiny capital against twenty",
-    "# governors would put them all in revolt), loyal by default, and half of their force limit and manpower go to the",
-    "# emperor, whose own few counties carry no army (user request, 29 Oct 2026).",
+    "# scripts see (count = vassal) but no relation slot and loyal by default. Like every subject type they add no force",
+    "# limit or manpower to the emperor. Their army power counts against the emperor's as the themes' own pool (a class",
+    "# of their own, 3: the sum of the themes, not the vassals'). The relative-power pull is one global define (37.5 for every",
+    "# subject), so a theme's loyalty offset cancels 90% of it: base_liberty_desire = -0.9 x LIBERTY_DESIRE_RELATIVE_POWER,",
+    "# leaving the themes a tenth of a vassal's pull.",
     "theme_subject_type = {",
     "\tcopy_from = vassal",
     "\tcount = vassal",
     "\ttakes_diplo_slot = no",
-    "\trelative_power_class = 0",
+    "\trelative_power_class = 3",
     "\tliberty_desire_development_ratio = 0.0",
-    "\tbase_liberty_desire = -25.0",
-    "\tforcelimit_to_overlord = 0.5",
-    "\tmanpower_to_overlord = 0.5",
+    "\tbase_liberty_desire = -33.75",
+    "\tforcelimit_to_overlord = 0.0",
+    "\tmanpower_to_overlord = 0.0",
     "}",
     "# END kar theme",
     "",
@@ -257,6 +259,41 @@ PATCHES = {
  ]
 }
 
+def _no_overlord_bonus(text):
+    """No subject type adds force limit, naval force limit, manpower or sailors to its overlord."""
+    import re
+    return re.sub(r"(?m)^(\t(?:naval_)?forcelimit_to_overlord\s*=\s*|\tmanpower_to_overlord\s*=\s*|\tsailors_to_overlord\s*=\s*)[0-9.]+",
+                  lambda m: m.group(1) + "0.0", text)
+
+
+def _no_base_force_limit(text):
+    """Force limit is the provinces' alone: the flat 6 land / 12 naval every country gets is 0, and the
+    subject_nation malus (the matching force limit penalty and the -6 tax) is gone with it."""
+    import re
+
+    def base(m):
+        return re.sub(r"(?m)^(\t(?:land|naval)_forcelimit\s*=\s*)-?[0-9.]+", lambda x: x.group(1) + "0", m.group(0))
+
+    def malus(m):
+        return re.sub(r"(?m)^(\t\w+\s*=\s*)-?[0-9.]+", lambda x: x.group(1) + "0", m.group(0))
+
+    text = re.sub(r"(?ms)^all_nations = \{.*?^\}", base, text)
+    return re.sub(r"(?ms)^subject_nation = \{.*?^\}", malus, text)
+
+
+def _vassal_integration_wait(text):
+    """A vassal can be integrated 50 years after its subject status was created (the base game: 10)."""
+    assert "INTEGRATE_VASSAL_MIN_YEARS = 10," in text and "LIBERTY_DESIRE_RELATIVE_POWER = 75," in text
+    text = text.replace("INTEGRATE_VASSAL_MIN_YEARS = 10,", "INTEGRATE_VASSAL_MIN_YEARS = 50,", 1)
+    # relative army power pulls half as hard towards independence
+    return text.replace("LIBERTY_DESIRE_RELATIVE_POWER = 75,", "LIBERTY_DESIRE_RELATIVE_POWER = 37.5,", 1)
+
+
+POST = {"common/defines.lua": _vassal_integration_wait,
+        "common/subject_types/00_subject_types.txt": _no_overlord_bonus,
+        "common/static_modifiers/00_static_modifiers.txt": _no_base_force_limit}
+
+
 def patched(path):
     raw = open(os.path.join(str(EU4_GAME), path), "rb").read().decode("latin-1")
     lines = raw.replace("\r\n", "\n").split("\n")
@@ -271,7 +308,10 @@ def patched(path):
                              "in the base game's file (changed by a patch?)")
         at = hits[0] + len(ctx)
         lines[at:at + len(old)] = new
-    return "\n".join(lines)
+    text = "\n".join(lines)
+    if path in POST:
+        text = POST[path](text)
+    return text
 
 
 def write(check=False):

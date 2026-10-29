@@ -357,7 +357,7 @@ NDiplomacy = {
 	ELECTIVE_VICTORY_LEGITIMACY = 10,				-- Legitimacy for getting a heir from your country onto the throne of an elective nation
 
 	INTEGRATE_UNION_MIN_YEARS = 50,					-- Number of years before a union can be integrated
-	INTEGRATE_VASSAL_MIN_YEARS = 10,				-- Number of years before a vassal can be integrated
+	INTEGRATE_VASSAL_MIN_YEARS = 50,				-- Number of years before a vassal can be integrated
 
 	MONTHS_BEFORE_TOTAL_OCCUPATION = 60,			-- Before this many months have passed in the war, you cannot gain 100% warscore by just occupying the warleader
 
@@ -901,7 +901,7 @@ NCountry = {
 	LIBERTY_DESIRE_ENFORCE_PEACE = 0.1,				-- Liberty desire from Enforce Peace in vassal wars.
 	LIBERTY_DESIRE_WAR_EXHAUSTION = 1,				-- Liberty desire from overlord's war exhaustion (per WE)
 	LIBERTY_DESIRE_MERCANTILISM = 0.25,				-- Liberty desire from overlord's mercantilism (per Merc).
-	LIBERTY_DESIRE_RELATIVE_POWER = 75,				-- Liberty desire from relative power to liege
+	LIBERTY_DESIRE_RELATIVE_POWER = 37.5,				-- Liberty desire from relative power to liege
 	LIBERTY_DESIRE_ADM_EFFICIENCY = 0.2,			-- Liberty desire per point of admistrative efficiency (colonies only)
 	LIBERTY_DESIRE_DIPLO_TECH = 5,					-- Liberty desire per point of diplo tech more than overlord
 	LIBERTY_DESIRE_HISTORICAL_FRIEND = -50,			-- Liberty desire from being historical friends

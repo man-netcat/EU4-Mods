@@ -1,5 +1,5 @@
 
-# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.1.
+# Karolingian: vanilla copy, two kinds of edit - vassal max_government_rank 1 -> 0, and no subject type adds force limit, naval force limit, manpower or sailors to its overlord (every *_to_overlord is 0.0).
 # Engine (CCountry::CalcGovernmentRank) clamps a subject's rank down to its
 # subject type's max_government_rank; CK3-true vassals (TRA/VSG/GTH/DAL/
 # SIC/CST/ARG/PRT) hold duchy titles and must read as Duchy (user 18 Oct 2026).
@@ -300,18 +300,20 @@ vassal = {
 
 # BEGIN kar theme
 # The Byzantine themes: governors the emperor appointed, not rivals of the throne. A vassal in every respect the
-# scripts see (count = vassal) but no relation slot, no relative-power liberty pull (a tiny capital against twenty
-# governors would put them all in revolt), loyal by default, and half of their force limit and manpower go to the
-# emperor, whose own few counties carry no army (user request, 29 Oct 2026).
+# scripts see (count = vassal) but no relation slot and loyal by default. Like every subject type they add no force
+# limit or manpower to the emperor. Their army power counts against the emperor's as the themes' own pool (a class
+# of their own, 3: the sum of the themes, not the vassals'). The relative-power pull is one global define (37.5 for every
+# subject), so a theme's loyalty offset cancels 90% of it: base_liberty_desire = -0.9 x LIBERTY_DESIRE_RELATIVE_POWER,
+# leaving the themes a tenth of a vassal's pull.
 theme_subject_type = {
 	copy_from = vassal
 	count = vassal
 	takes_diplo_slot = no
-	relative_power_class = 0
+	relative_power_class = 3
 	liberty_desire_development_ratio = 0.0
-	base_liberty_desire = -25.0
-	forcelimit_to_overlord = 0.5
-	manpower_to_overlord = 0.5
+	base_liberty_desire = -33.75
+	forcelimit_to_overlord = 0.0
+	manpower_to_overlord = 0.0
 }
 # END kar theme
 
@@ -328,7 +330,7 @@ march = {
 	military_focus = 1.5
 	base_liberty_desire = -15.0
 	can_be_annexed = no
-	forcelimit_to_overlord = 0.1
+	forcelimit_to_overlord = 0.0
 	is_march = yes
 	forms_trade_companies = no
 
@@ -730,10 +732,10 @@ crown_colony = {
 	can_send_missionary_to_subject = yes	
 	count = colony
 
-	forcelimit_to_overlord = 0.3
-	manpower_to_overlord = 0.3
-	naval_forcelimit_to_overlord = 0.01
-	sailors_to_overlord = 0.01
+	forcelimit_to_overlord = 0.0
+	manpower_to_overlord = 0.0
+	naval_forcelimit_to_overlord = 0.0
+	sailors_to_overlord = 0.0
 
 	# Subject Interactions:
 	embargo_rivals = yes
@@ -771,8 +773,8 @@ private_enterprise = {
 
 	forcelimit_to_overlord = 0.0
 	manpower_to_overlord = 0.0
-	naval_forcelimit_to_overlord = 0.3
-	sailors_to_overlord = 0.3
+	naval_forcelimit_to_overlord = 0.0
+	sailors_to_overlord = 0.0
 
 	# Subject Interactions:
 	replace_governor = no
@@ -803,10 +805,10 @@ self_governing_colony = {
 	is_colony_subtype = yes
 	count = colony
 
-	forcelimit_to_overlord = 0.002
-	manpower_to_overlord = 0.002
-	naval_forcelimit_to_overlord = 0.002
-	sailors_to_overlord = 0.002
+	forcelimit_to_overlord = 0.0
+	manpower_to_overlord = 0.0
+	naval_forcelimit_to_overlord = 0.0
+	sailors_to_overlord = 0.0
 
 	# Subject Interactions:
 	replace_governor = no
@@ -1005,10 +1007,10 @@ eyalet = {
 	liberty_desire_development_ratio = 0.1
 	liberty_desire_same_dynasty = -5.0
 	pays_overlord = 1.25
-	forcelimit_to_overlord = 0.1						# Percent of subject FL to use as base for modifiers
-	naval_forcelimit_to_overlord = 0.1					# Percent of subject FL to use as base for modifiers
-	manpower_to_overlord = 0.1							# Percent of subject FL to use as base for modifiers
-	sailors_to_overlord = 0.1							# Percent of subject FL to use as base for modifiers
+	forcelimit_to_overlord = 0.0						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.0					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
 
 	relative_power_class = 2
 	should_quit_wars_on_activation = yes
@@ -1067,10 +1069,10 @@ core_eyalet = {
 	liberty_desire_development_ratio = 0.1
 	liberty_desire_same_dynasty = -5.0
 	pays_overlord = 1.5
-	forcelimit_to_overlord = 0.2						# Percent of subject FL to use as base for modifiers
-	naval_forcelimit_to_overlord = 0.2					# Percent of subject FL to use as base for modifiers
-	manpower_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
-	sailors_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
+	forcelimit_to_overlord = 0.0						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.0					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
 	annex_cost_per_development = 6.0					# annex/integrate cost per development
 	must_accept_cta_from_overlord = no
 	relative_power_class = 1
@@ -1152,10 +1154,10 @@ commercial_enterprise = {
 		independent_nations = yes
 		other_overlord = all
 	}
-	forcelimit_to_overlord = 0.1						# Percent of subject FL to use as base for modifiers
-	naval_forcelimit_to_overlord = 0.1					# Percent of subject FL to use as base for modifiers
-	manpower_to_overlord = 0.1							# Percent of subject FL to use as base for modifiers
-	sailors_to_overlord = 0.1							# Percent of subject FL to use as base for modifiers
+	forcelimit_to_overlord = 0.0						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.0					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
 
 	# Subject Interactions:
 	# (continuous)
@@ -1346,10 +1348,10 @@ hereditary_pronoia_subject_type = {
 	base_liberty_desire = 25.0
 	
 	pays_overlord = 0.1 #purely military subject. Pays very little by default.
-	forcelimit_to_overlord = 0.1
-	naval_forcelimit_to_overlord = 0.1		
-	manpower_to_overlord = 0.2		    
-	sailors_to_overlord = 0.2		
+	forcelimit_to_overlord = 0.0
+	naval_forcelimit_to_overlord = 0.0		
+	manpower_to_overlord = 0.0		    
+	sailors_to_overlord = 0.0		
 	military_focus = 1.0
 	
 	subsidize_armies = yes
@@ -1592,7 +1594,7 @@ nahuatl_tributary = {
 	trust_on_start = 0
 	base_liberty_desire = 0.0
 	liberty_desire_development_ratio = 0.15
-	forcelimit_to_overlord = 0.1
+	forcelimit_to_overlord = 0.0
 	military_focus = 2.0
 	share_rebel_popup = yes
 	can_set_mil_focus = no
@@ -1725,7 +1727,7 @@ mongol_brother_realm = {
 	trust_on_start = 20
 	base_liberty_desire = -25.0
 	liberty_desire_development_ratio = 0.01
-	forcelimit_to_overlord = 0.5
+	forcelimit_to_overlord = 0.0
 	military_focus = 1.0
 	share_rebel_popup = yes
 	can_set_mil_focus = yes
@@ -1789,10 +1791,10 @@ soyurghal_subject_type = {
 	place_relative_on_throne = no
 	
 	pays_overlord = 0
-	forcelimit_to_overlord = 0.2
-	naval_forcelimit_to_overlord = 0.2		
-	manpower_to_overlord = 0.2
-	sailors_to_overlord = 0.25
+	forcelimit_to_overlord = 0.0
+	naval_forcelimit_to_overlord = 0.0		
+	manpower_to_overlord = 0.0
+	sailors_to_overlord = 0.0
 	military_focus = 1.0
 	
 	subsidize_armies = yes

@@ -787,6 +787,71 @@ polish_titles = {
 }
 
 
+greek_tsl_titles = {
+# lifted from CK3 flavorization for TSL: d_thessaly carries rule specials the shared greek_titles block cannot express; Islam heir = False
+	rank = {
+		1 = GREEK_TSL_COUNTY  # county_feudal
+		2 = GREEK_TSL_DUCHY  # duchy_feudal
+		3 = GREEK_TSL_KINGDOM  # kingdom_feudal_greek
+		4 = GREEK_TSL_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = GREEK_TSL_COUNT_MALE  # count_feudal_male
+		2 = GREEK_TSL_DUKE_MALE  # duke_feudal_male_greek
+		3 = GREEK_TSL_KING_MALE  # king_feudal_male_greek
+		4 = GREEK_TSL_EMPEROR_MALE  # emperor_feudal_male
+		5 = GREEK_TSL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = GREEK_TSL_COUNT_FEMALE  # count_feudal_female
+		2 = GREEK_TSL_DUKE_FEMALE  # duke_feudal_female
+		3 = GREEK_TSL_KING_FEMALE  # king_feudal_female_greek
+		4 = GREEK_TSL_EMPEROR_FEMALE  # emperor_feudal_female_greek
+		5 = GREEK_TSL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = GREEK_TSL_COUNT_MALE  # consort uses the ruler form
+		2 = GREEK_TSL_DUKE_MALE  # consort uses the ruler form
+		3 = GREEK_TSL_KING_MALE  # consort uses the ruler form
+		4 = GREEK_TSL_EMPEROR_MALE  # consort uses the ruler form
+		5 = GREEK_TSL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = GREEK_TSL_COUNT_FEMALE  # count_feudal_female
+		2 = GREEK_TSL_DUKE_FEMALE  # duke_feudal_female
+		3 = GREEK_TSL_KING_FEMALE  # king_feudal_female_greek
+		4 = GREEK_TSL_EMPEROR_FEMALE  # emperor_feudal_female_greek
+		5 = GREEK_TSL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = TSL
+	}
+}
+
+
 greek_titles = {
 # CK3 ladders for DAL(r2), NAP(r1) - feudal CK3 government
 	rank = {

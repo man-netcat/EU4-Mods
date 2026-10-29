@@ -21,7 +21,7 @@ sys.path.insert(0, HERE)
 MOD = os.path.join(HERE, "..")
 LOC = os.path.join(MOD, "localisation", "replace", "countries_l_english.yml")
 ZZ = os.path.join(MOD, "common", "government_names", "zz_kar_government_names.txt")
-VALIDATE = os.path.join(HERE, "validate.py")
+VALIDATE = os.path.join(HERE, "checks", "tags.py")  # the VANILLA_REUSE guard lives in the tags check
 
 TABLES = [("tags", "tag"), ("tag_areas", "tag"), ("tag_provinces", "tag"), ("tag_reforms", "tag"),
           ("tag_suppress", "tag"), ("diplomacy", "liege"), ("diplomacy", "subject"),
@@ -43,8 +43,8 @@ def retag(con, old, new, vfiles):
     loc = open(LOC, encoding="utf-8-sig").read()
     for suffix in ("", "_ADJ"):
         loc, n = re.subn(rf"(?m)^ {old}{suffix}:", f" {new}{suffix}:", loc)
-        if suffix == "" and n != 1:
-            sys.exit(f"{old}: no loc line")
+        if suffix == "" and n > 1:
+            sys.exit(f"{old}: {n} loc lines")  # none is fine: tagloc writes every tag's name at build time
     open(LOC, "w", encoding="utf-8-sig", newline="").write(loc)
     zz = open(ZZ, encoding="cp1252", newline="").read()
     zz = re.sub(rf"(\btag = ){old}\b", rf"\g<1>{new}", zz)

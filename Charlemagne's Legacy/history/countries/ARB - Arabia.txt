@@ -29,6 +29,14 @@ historical_rival = BYZ
 # exactly the Abbasid/Tulunid relationship this scenario inherits from the
 # Tulunid Mamluks ruling Egypt. adm/dip/mil follow CK3's education_diplomacy_1
 # and lifestyle_poet.
+
+# The caliphate's 16 governors are ordinary vassals; the modifier gives the Caliph their diplomatic slots.
+867.1.1 = {
+	add_country_modifier = {
+		name = kar_caliphal_governors
+		duration = -1
+	}
+}
 867.1.1 = {
 	monarch = {
 		name = "al-Mu'tazz"

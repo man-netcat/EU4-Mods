@@ -1,6 +1,6 @@
 graphical_culture = easterngfx
 
-color = { 100  100  100 }
+color = { 150  130  180 }
 
 revolutionary_colors = { 5  0  10 }
 

@@ -18,7 +18,7 @@ religious_school = byzantine_rite_school
 	}
 	heir = {
 		name = "Theodoros"
-		monarch_name = "Theodoros II"
+		monarch_name = "Theodoros III"
 		dynasty = "Skleros"
 		birth_date = 835.1.1
 		death_date = 895.1.1

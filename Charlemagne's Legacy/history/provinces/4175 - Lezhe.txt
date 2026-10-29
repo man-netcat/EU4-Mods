@@ -1,8 +1,8 @@
 #4175 - Lezhe, Scuttari, Northern Albania
 
-owner = DYR
-controller = DYR
-add_core = DYR
+owner = ALB
+controller = ALB
+add_core = ALB
 capital = "Lezhë"
 culture = albanian
 religion = christian_faith
@@ -19,7 +19,7 @@ discovered_by = eastern
 discovered_by = western
 
 867.1.1 = {
-	owner = DYR
-	controller = DYR
-	add_core = DYR
+	owner = ALB
+	controller = ALB
+	add_core = ALB
 }

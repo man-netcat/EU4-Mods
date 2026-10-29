@@ -121,7 +121,39 @@ def formables_carry_their_loc() -> None:
          + (f" (missing: {', '.join(unnamed_landed)})" if unnamed_landed else ""))
 
 
+def tag_names_are_unique() -> None:
+    """No two tags of the mod show the same name (the Abbasid governors are not all "Abbasids")."""
+    print("\n== tag names are unique ==")
+    modloc = ""
+    for root, _dirs, files in os.walk(LOC):
+        for fn in files:
+            if fn.endswith("_l_english.yml"):
+                modloc += open(os.path.join(root, fn), encoding="utf-8-sig").read() + "\n"
+    gameloc = ""
+    gdir = os.path.join(GAME, "localisation")
+    for fn in os.listdir(gdir):
+        if fn.endswith("_l_english.yml"):
+            gameloc += open(os.path.join(gdir, fn), encoding="utf-8-sig").read() + "\n"
+
+    def name_of(tag, text):
+        m = re.search(rf'(?m)^ {tag}:\d* "([^"]*)"', text)
+        return m.group(1) if m else None
+
+    names = {}
+    for tag in sorted(set(TAGS) | set(FORMABLE_TAGS)):
+        n = name_of(tag, modloc) or name_of(tag, gameloc)
+        if n:
+            names.setdefault(n, []).append(tag)
+    starts = {t.tag: getattr(t, "forms", None) for t in _REALMS if getattr(t, "forms", None)}
+    # a starter may share its name with the formable it forms (Bohemia and the Bohemian duchy)
+    dups = {n: g for n, g in ((n, [t for t in ts if starts.get(t) not in ts]) for n, ts in names.items())
+            if len(g) > 1}
+    note(not dups, "no two tags share a name (a starter may share its formable's)"
+         + ("".join(f" ({n}: {', '.join(ts)})" for n, ts in sorted(dups.items())) if dups else ""))
+
+
 def run() -> None:
     localisation_files_load()
     loc_values_use_glyphs_eu4_renders()
     formables_carry_their_loc()
+    tag_names_are_unique()
