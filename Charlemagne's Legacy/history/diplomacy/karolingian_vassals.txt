@@ -34,6 +34,10 @@ vassal = {
 	first = ASU
 	second = CST
 }
+alliance = {
+	first = ASU
+	second = NAV
+}
 vassal = {
 	first = BAV
 	second = NRD

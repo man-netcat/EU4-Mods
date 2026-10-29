@@ -23,6 +23,7 @@ country_event = {
 
 	option = {
 		name = kar_iberia_1_a
+		ai_chance = { factor = 100 }
 		set_country_flag = kar_iberia_muladi
 		218 = { add_unrest = 4 }
 		219 = { add_unrest = 4 }
@@ -31,6 +32,16 @@ country_event = {
 			name = kar_emirate_fraying
 			duration = 3650
 		}
+	}
+
+	option = {
+		name = kar_iberia_1_b
+		ai_chance = { factor = 0 }
+		set_country_flag = kar_iberia_muladi
+		add_years_of_income = -0.5
+		218 = { add_unrest = 2 }
+		219 = { add_unrest = 2 }
+		214 = { add_unrest = 2 }
 	}
 }
 
@@ -54,6 +65,7 @@ country_event = {
 
 	option = {
 		name = kar_iberia_2_a
+		ai_chance = { factor = 100 }
 		set_country_flag = kar_iberia_berbers
 		add_country_modifier = {
 			name = kar_berber_garrisons_restive
@@ -61,6 +73,16 @@ country_event = {
 		}
 		every_subject_country = {
 			add_liberty_desire = 10
+		}
+	}
+
+	option = {
+		name = kar_iberia_2_b
+		ai_chance = { factor = 0 }
+		set_country_flag = kar_iberia_berbers
+		add_prestige = -10
+		every_subject_country = {
+			add_liberty_desire = 5
 		}
 	}
 }
@@ -85,6 +107,7 @@ country_event = {
 
 	option = {
 		name = kar_iberia_3_a
+		ai_chance = { factor = 100 }
 		set_country_flag = kar_iberia_mozarabs
 		random_owned_province = {
 			limit = {
@@ -97,6 +120,20 @@ country_event = {
 			}
 		}
 		add_stability = -1
+	}
+
+	option = {
+		name = kar_iberia_3_b
+		ai_chance = { factor = 0 }
+		set_country_flag = kar_iberia_mozarabs
+		add_years_of_income = -0.3
+		add_prestige = -5
+		random_owned_province = {
+			limit = {
+				religion = christian_faith
+			}
+			add_unrest = 3
+		}
 	}
 }
 
@@ -120,6 +157,7 @@ country_event = {
 
 	option = {
 		name = kar_iberia_4_a
+		ai_chance = { factor = 100 }
 		set_country_flag = kar_iberia_succession
 		add_legitimacy = -20
 		add_prestige = -10
@@ -129,6 +167,18 @@ country_event = {
 		}
 		every_subject_country = {
 			add_liberty_desire = 15
+		}
+	}
+
+	option = {
+		name = kar_iberia_4_b
+		ai_chance = { factor = 0 }
+		set_country_flag = kar_iberia_succession
+		add_years_of_income = -1
+		add_legitimacy = -10
+		add_prestige = -5
+		every_subject_country = {
+			add_liberty_desire = 8
 		}
 	}
 }

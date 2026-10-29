@@ -99,6 +99,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - Iberia leans native: `events/IberianInstability.txt` (four one-shot events that fray the Emirate of Cordoba: Muladi,
   Berber, Mozarab, succession; modifiers in `common/event_modifiers/kar_iberia_modifiers.txt`) and
   `missions/Reconquista.txt` (hand-written Reconquista trees for ASU/LEO, NAV and CST: claims, vigour, prestige). Never playtested.
+  The start-date tilt (user-requested, a deliberate departure from raw CK3 weights): `common/on_actions/IberianOnActions.txt` gives ADU
+  `kar_emirate_overextended` (-15% force limit, -10% manpower, 20 years) and unrest in four Muladi provinces, and ASU/NAV/CST/BGS/VLL
+  `kar_mountain_strongholds`; ASU and NAV start allied (`diplomacy` relation `alliance`, a peer relation, see `PEER_RELATIONS` in `eu4.py`).
+  The Al Andalus events give players a costly second option; the AI always takes the hit.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

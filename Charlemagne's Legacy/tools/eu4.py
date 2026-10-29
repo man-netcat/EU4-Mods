@@ -137,11 +137,15 @@ def karling_realms():
     return dynasty, ktags
 
 
+#: Start-date relations between equals: nobody is anyone's subject.
+PEER_RELATIONS = ("alliance", "royal_marriage")
+
+
 def empire_core():
     alloc = build()
     _, ktags = karling_realms()
     tags = set(ktags)
-    tags |= {d.subject for d in DIPLOMACY if d.liege in tags}
+    tags |= {d.subject for d in DIPLOMACY if d.liege in tags and d.relation not in PEER_RELATIONS}
     return sorted({p for t in tags for p in alloc.get(t, ())})
 
 
@@ -767,6 +771,13 @@ def step_diplomacy() -> None:
                 "\tsecond = " + rel.subject,
                 "}",
             ]
+        elif rel.relation in PEER_RELATIONS:
+            lines += [
+                rel.relation + " = {",
+                "\tfirst = " + rel.liege,
+                "\tsecond = " + rel.subject,
+                "}",
+            ]
         elif rel.relation == "union":
             lines += [
                 "union = {",
@@ -788,7 +799,7 @@ def step_diplomacy() -> None:
         "867.1.1 = { celestial_emperor = TNG }",
     ]
     write_out(path, "\n".join(lines) + "\n")
-    pairs = ", ".join(f"{d.subject} under {d.liege}" for d in DIPLOMACY)
+    pairs = ", ".join(f"{d.subject} {d.relation} {d.liege}" for d in DIPLOMACY)
     print(f"wrote {path}  ({pairs})")
 
 

@@ -3,7 +3,6 @@
 kar_frontier_vigor = {
 	manpower_recovery_speed = 0.15
 	global_manpower_modifier = 0.1
-	land_forcelimit_modifier = 0.1
 }
 
 kar_repopulated_frontier = {
@@ -30,4 +29,16 @@ kar_berber_garrisons_restive = {
 kar_weak_succession = {
 	stability_cost_modifier = 0.1
 	global_tax_modifier = -0.05
+}
+
+# Start-date tilt: Cordoba governs by garrison and is stretched across the peninsula; the northern
+# kingdoms hold mountains that have never been conquered.
+kar_emirate_overextended = {
+	land_forcelimit_modifier = -0.15
+	global_manpower_modifier = -0.1
+}
+
+kar_mountain_strongholds = {
+	manpower_recovery_speed = 0.1
+	defensiveness = 0.1
 }

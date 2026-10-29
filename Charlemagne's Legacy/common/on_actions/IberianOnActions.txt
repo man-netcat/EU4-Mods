@@ -1,0 +1,32 @@
+# Additive file (same-key on_action blocks coexist across files, like decisions).
+# Iberian start-date tilt: 867 is Cordoba's by raw weight, but an emirate stretched across the peninsula
+# with garrison armies is not what the northern kingdoms of the mountains face in practice.
+on_startup = {
+	if = {
+		limit = { tag = ADU }
+		add_country_modifier = {
+			name = kar_emirate_overextended
+			duration = 7300
+		}
+		# The Marches and the Guadiana were Muladi country: converts who never forgot who they were.
+		218 = { add_unrest = 5 }
+		1747 = { add_unrest = 5 }
+		2989 = { add_unrest = 5 }
+		220 = { add_unrest = 5 }
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = ASU
+				tag = NAV
+				tag = CST
+				tag = BGS
+				tag = VLL
+			}
+		}
+		add_country_modifier = {
+			name = kar_mountain_strongholds
+			duration = 7300
+		}
+	}
+}
