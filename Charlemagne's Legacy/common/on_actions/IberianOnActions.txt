@@ -15,6 +15,10 @@ on_startup = {
 		220 = { add_unrest = 5 }
 	}
 	if = {
+		limit = { tag = PRT }
+		add_liberty_desire = 50
+	}
+	if = {
 		limit = {
 			OR = {
 				tag = ASU
@@ -22,6 +26,7 @@ on_startup = {
 				tag = CST
 				tag = BGS
 				tag = VLL
+				tag = PRT
 			}
 		}
 		add_country_modifier = {

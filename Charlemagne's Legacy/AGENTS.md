@@ -103,6 +103,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `kar_emirate_overextended` (-15% force limit, -10% manpower, 20 years) and unrest in four Muladi provinces, and ASU/NAV/CST/BGS/VLL
   `kar_mountain_strongholds`; ASU and NAV start allied (`diplomacy` relation `alliance`, a peer relation, see `PEER_RELATIONS` in `eu4.py`).
   The Al Andalus events give players a costly second option; the AI always takes the hit.
+  Portugal and Galicia follow the same pattern: Reconquista-style ambition trees for PRT/POR (5) and GAL (4) in `missions/Reconquista.txt`,
+  an event that loosens Portucale from Cordoba, PRT starting with 50 liberty desire and the strongholds modifier, and GAL taking the
+  strongholds modifier when Asturias or Leon releases it.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

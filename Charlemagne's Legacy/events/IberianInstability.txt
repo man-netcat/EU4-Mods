@@ -182,3 +182,39 @@ country_event = {
 		}
 	}
 }
+
+# Portucale slips away: the lord of Porto remembers that his people are northerners, not Cordobans.
+country_event = {
+	id = kar_iberia.5
+	title = kar_iberia_5_title
+	desc = kar_iberia_5_desc
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		tag = ADU
+		is_free_or_tributary_trigger = yes
+		exists = PRT
+		PRT = { is_subject_of = ADU }
+		NOT = { has_country_flag = kar_iberia_portucale }
+	}
+
+	mean_time_to_happen = {
+		months = 48
+	}
+
+	option = {
+		name = kar_iberia_5_a
+		ai_chance = { factor = 100 }
+		set_country_flag = kar_iberia_portucale
+		PRT = { add_liberty_desire = 20 }
+		add_prestige = -5
+	}
+
+	option = {
+		name = kar_iberia_5_b
+		ai_chance = { factor = 0 }
+		set_country_flag = kar_iberia_portucale
+		add_years_of_income = -0.5
+		PRT = { add_liberty_desire = 5 }
+	}
+}

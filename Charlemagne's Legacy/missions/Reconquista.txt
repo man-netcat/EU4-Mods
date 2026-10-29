@@ -319,3 +319,208 @@ kar_castilian_reconquista = {
 		}
 	}
 }
+
+kar_portuguese_ambition = {
+
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = PRT
+			tag = POR
+		}
+	}
+	has_country_shield = yes
+
+	kar_portugal_free = {
+		icon = mission_monarch_in_throne_room
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			is_subject = no
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_frontier_vigor
+				duration = 3650
+			}
+		}
+	}
+
+	kar_portugal_mondego = {
+		icon = mission_unite_home_region
+		required_missions = { kar_portugal_free }
+		position = 2
+
+		trigger = {
+			owns = 1851
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_repopulated_frontier
+				duration = 7300
+			}
+			227 = { add_permanent_claim = ROOT }
+			4787 = { add_permanent_claim = ROOT }
+			228 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_portugal_tagus = {
+		icon = mission_assemble_an_army
+		required_missions = { kar_portugal_mondego }
+		position = 3
+
+		trigger = {
+			owns = 227
+		}
+
+		effect = {
+			add_prestige = 15
+			229 = { add_permanent_claim = ROOT }
+			230 = { add_permanent_claim = ROOT }
+			4150 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_portugal_algarve = {
+		icon = mission_hands_praying
+		required_missions = { kar_portugal_tagus }
+		position = 4
+
+		trigger = {
+			owns = 229
+			owns = 230
+			owns = 4150
+		}
+
+		effect = {
+			add_prestige = 20
+			add_legitimacy = 10
+			1747 = { add_permanent_claim = ROOT }
+			218 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_portugal_complete = {
+		icon = mission_empire
+		required_missions = { kar_portugal_algarve }
+		position = 5
+
+		trigger = {
+			owns = 231
+			owns = 232
+			owns = 1851
+			owns = 227
+			owns = 229
+			owns = 230
+		}
+
+		effect = {
+			add_prestige = 50
+			add_country_modifier = {
+				name = kar_realm_consolidated
+				duration = -1
+			}
+		}
+	}
+}
+
+kar_galician_ambition = {
+
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		tag = GAL
+	}
+	has_country_shield = yes
+
+	kar_galicia_minho = {
+		icon = mission_unite_home_region
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			owns = 231
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_frontier_vigor
+				duration = 3650
+			}
+			232 = { add_permanent_claim = ROOT }
+			4556 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_galicia_douro = {
+		icon = mission_hands_praying
+		required_missions = { kar_galicia_minho }
+		position = 2
+
+		trigger = {
+			owns = 232
+			owns = 4556
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = kar_repopulated_frontier
+				duration = 7300
+			}
+			1851 = { add_permanent_claim = ROOT }
+			4553 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_galicia_leon = {
+		icon = mission_assemble_an_army
+		required_missions = { kar_galicia_douro }
+		position = 3
+
+		trigger = {
+			owns = 4553
+			owns = 208
+		}
+
+		effect = {
+			add_prestige = 20
+			add_legitimacy = 10
+			207 = { add_permanent_claim = ROOT }
+			216 = { add_permanent_claim = ROOT }
+		}
+	}
+
+	kar_galicia_kingdom = {
+		icon = mission_empire
+		required_missions = { kar_galicia_leon }
+		position = 4
+
+		trigger = {
+			owns = 206
+			owns = 231
+			owns = 4553
+			owns = 208
+		}
+
+		effect = {
+			add_prestige = 50
+			add_country_modifier = {
+				name = kar_realm_consolidated
+				duration = -1
+			}
+		}
+	}
+}

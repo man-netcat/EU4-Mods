@@ -100,6 +100,12 @@ country_event = {
 		name = kar_galicia_1_a
 		ai_chance = { factor = 100 }
 		release = GAL
+		GAL = {
+			add_country_modifier = {
+				name = kar_mountain_strongholds
+				duration = 7300
+			}
+		}
 	}
 	option = {
 		name = kar_galicia_1_b
