@@ -1,0 +1,21 @@
+# Additive file (same-key on_action blocks coexist across files, like decisions).
+# Historical mechanic: the Slavic peoples east of the Elbe and the Danube held their land from gords, ring-forts
+# that made Frankish campaigns slow and costly; East Francia took generations to subdue the Elbe Slavs and never took Moravia.
+# Twenty years of fortified resistance at the start, then the base game's own rules.
+on_startup = {
+	if = {
+		limit = {
+			OR = {
+				primary_culture = czech
+				primary_culture = polabian
+				primary_culture = polish
+				primary_culture = slovien
+				primary_culture = croatian
+			}
+		}
+		add_country_modifier = {
+			name = kar_slavic_gords
+			duration = 7300
+		}
+	}
+}

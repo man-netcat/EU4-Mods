@@ -1,0 +1,6 @@
+# The Slavic lands of the 9th century are a country of gords: ring-forts of earth, timber and water that
+# the Franks found harder to take than any city.
+kar_slavic_gords = {
+	defensiveness = 0.25
+	garrison_size = 0.5
+}
