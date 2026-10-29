@@ -735,7 +735,9 @@ def run() -> int:
             re.findall(r"second\s*=\s*([A-Z]{3})", raw_dip),
         )
     )
-    expected_dip = [(d.liege, d.subject) for d in DIPLOMACY]
+    from marriages import all_relations  # noqa: E402
+
+    expected_dip = [(d.liege, d.subject) for d in all_relations()]
     note(found == expected_dip, "diplomacy file lists exactly the starting subjects")
     if found != expected_dip:
         print(f"        in file    : {found}")
@@ -782,7 +784,7 @@ def run() -> int:
 
     used = {}
     peers = set()  # an alliance and a royal marriage with the same country share one slot
-    for d in DIPLOMACY:
+    for d in all_relations():
         if d.relation in PEER_RELATIONS:
             peers.add(frozenset((d.liege, d.subject)))
         elif _takes_slot({"union": "personal_union"}.get(d.relation, d.relation)):

@@ -115,6 +115,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - Slavic resistance to East Francia (historical mechanic: the gords, ring-forts that kept the Franks out of Moravia and slowed them on the Elbe):
   `common/on_actions/SlavicOnActions.txt` gives every tag of the czech, polabian, polish, slovien and croatian cultures `kar_slavic_gords`
   (+25% defensiveness, +50% garrison size, 20 years). Untested in-game and a modest lever against East Francia's roughly 700 dev with vassals.
+- Start-date alliances and royal marriages come from CK3's 867 marriages (`tools/marriages.py`, lifted by the build, never stored): two realms are
+  bound when one ruler is married to the other's close family (spouse's parents or siblings, a child's spouse and their parents). Each bound pair
+  starts allied and married (CK3 has no alliance data). 11 pairs today (Flanders-West Francia, Mercia-Wessex, Northumbria-Jutland...), plus the
+  hand-set Asturias-Navarra pair in the diplomacy table. A ruler holding several tags binds through the one that is not a subject, then the highest rank.
 - A formable may carry rows on `formable_renames` (former tag or culture
   -> loc key shown via `override_country_name`, most-specific first;
   GBR fired by welsh becomes Prydain — the Armenia pattern).

@@ -353,4 +353,92 @@ vassal = {
 	first = TUN
 	second = SIQ
 }
+alliance = {
+	first = APR
+	second = KAK
+}
+royal_marriage = {
+	first = APR
+	second = KAK
+}
+alliance = {
+	first = CRD
+	second = GWY
+}
+royal_marriage = {
+	first = CRD
+	second = GWY
+}
+alliance = {
+	first = DUA
+	second = KAN
+}
+royal_marriage = {
+	first = DUA
+	second = KAN
+}
+alliance = {
+	first = HRF
+	second = SMT
+}
+royal_marriage = {
+	first = HRF
+	second = SMT
+}
+alliance = {
+	first = KAN
+	second = KBO
+}
+royal_marriage = {
+	first = KAN
+	second = KBO
+}
+alliance = {
+	first = LTU
+	second = ZEM
+}
+royal_marriage = {
+	first = LTU
+	second = ZEM
+}
+alliance = {
+	first = MTH
+	second = OSR
+}
+royal_marriage = {
+	first = MTH
+	second = OSR
+}
+alliance = {
+	first = MTH
+	second = SCO
+}
+royal_marriage = {
+	first = MTH
+	second = SCO
+}
+alliance = {
+	first = NOV
+	second = UPL
+}
+royal_marriage = {
+	first = NOV
+	second = UPL
+}
+alliance = {
+	first = NTH
+	second = SJA
+}
+royal_marriage = {
+	first = NTH
+	second = SJA
+}
+alliance = {
+	first = SPL
+	second = TUS
+}
+royal_marriage = {
+	first = SPL
+	second = TUS
+}
 867.1.1 = { celestial_emperor = TNG }

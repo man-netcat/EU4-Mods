@@ -753,7 +753,10 @@ def step_diplomacy() -> None:
         "# Starting subjects and guarantees of the Carolingian world.",
         "# No start_date: each holds from the mod's start.",
     ]
-    for rel in DIPLOMACY:
+    from marriages import all_relations  # lifted from CK3 (alliances and marriages between rulers' families)
+
+    relations = all_relations()
+    for rel in relations:
         if rel.relation == "vassal":
             lines += [
                 "vassal = {",
@@ -796,7 +799,7 @@ def step_diplomacy() -> None:
         "867.1.1 = { celestial_emperor = TNG }",
     ]
     write_out(path, "\n".join(lines) + "\n")
-    pairs = ", ".join(f"{d.subject} {d.relation} {d.liege}" for d in DIPLOMACY)
+    pairs = ", ".join(f"{d.subject} {d.relation} {d.liege}" for d in relations)
     print(f"wrote {path}  ({pairs})")
 
 
