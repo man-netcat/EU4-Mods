@@ -5,7 +5,7 @@
 
 NEW must be a base-game tag the mod does not use yet; OLD a tags.db tag. Every
 table that names the tag, the localisation pair, the tag-gated title blocks and
-the VANILLA_REUSE guard in validate.py follow (a flag file is renamed, never
+the VANILLA_REUSE guard in checks/tags.py follow (a flag file is renamed, never
 overwritten), and the tag takes over the base
 game's country file name (the build then replaces the vanilla definition and
 history under their own file names).
@@ -21,13 +21,13 @@ sys.path.insert(0, HERE)
 MOD = os.path.join(HERE, "..")
 LOC = os.path.join(MOD, "localisation", "replace", "countries_l_english.yml")
 ZZ = os.path.join(MOD, "common", "government_names", "zz_kar_government_names.txt")
-VALIDATE = os.path.join(HERE, "validate.py")
+VALIDATE = os.path.join(HERE, "checks", "tags.py")
 
 TABLES = [("tags", "tag"), ("tag_areas", "tag"), ("tag_provinces", "tag"), ("tag_reforms", "tag"),
           ("tag_suppress", "tag"), ("diplomacy", "liege"), ("diplomacy", "subject"),
           ("formables", "tag"), ("formable_renames", "tag"), ("core_deny", "holder"),
           ("core_deny", "owner"), ("rivalries", "tag"), ("friendships", "tag"),
-          ("wars", "goal_tag"), ("war_sides", "tag"), ("seed_cores", "tag")]
+          ("wars", "goal_tag"), ("war_sides", "tag"), ("seed_cores", "tag"), ("releasables", "tag")]
 
 
 def retag(con, old, new, vfiles):

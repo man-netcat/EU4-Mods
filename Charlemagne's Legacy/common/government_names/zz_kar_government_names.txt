@@ -788,7 +788,7 @@ egyptian_titles = {
 
 
 polish_titles = {
-# CK3 ladders for SIL(r2), KRA(r1), TRN(r1), LEC(r1), WIE(r2), KUJ(r1), PLO(r1), STZ(r1), SAN(r1), OPO(r1)
+# CK3 ladders for SIL(r2), KRA(r1), TRN(r1), LEC(r1), WIE(r2), KUJ(r1), PLO(r1), STZ(r1), SAN(r1), OPL(r1)
 	rank = {
 		1 = POLISH_COUNTY  # county_tribal
 		2 = POLISH_DUCHY  # duchy_tribal
@@ -5164,7 +5164,7 @@ saka_titles = {
 
 
 saxon_titles = {
-# CK3 ladders for AGR(r2), MGB(r1)
+# CK3 ladders for AGR(r2), MAG(r1)
 	rank = {
 		1 = SAXON_COUNTY  # county_feudal
 		2 = SAXON_DUCHY  # duchy_feudal
@@ -15791,7 +15791,7 @@ carantanian_titles = {
 
 
 swabian_titles = {
-# CK3 ladders for STR(r1), GRI(r1)
+# CK3 ladders for ALS(r1), GRI(r1)
 	rank = {
 		1 = SWABIAN_COUNTY  # county_feudal
 		2 = SWABIAN_DUCHY  # duchy_feudal

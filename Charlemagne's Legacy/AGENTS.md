@@ -157,9 +157,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   Luxemburg, Bern, Fribourg and the Brabant provinces. Validate keeps the event lists equal to LOT's provinces. Also moved to their CK3 owners: Limburg
   (MAI), Freiburg (GER), Wallis and Annecy (UBG), Oldenburg (AGR). Ribemont (880) is not built. Never playtested.
 - Releasables (user decision, 30 Oct 2026): 16 dormant county tags in the `releasables` table (`addtag.py TAG c_title PID.. --tech T --dormant [--hre]`: no land,
-  cores seeded on the county via `seed_cores`, listed DORMANT automatically). Carinthia KAE (c_karnten), Carniola LEA (c_ljubljana), Isle of Man ISO,
-  Vannes VAE, Rennes REN, Cornouaille COU, Chartres CAR, Magdeburg MGB, Strassburg STR, Speyer SPE, Ulm ULA, Hohenlohe HOH, Grisons GRI (c_grisons +
-  one more province), Opole OPO (+ Ratibor), Penllyn PEL (c_maldwyn), Eryri ERY (c_caernarfonshire); the `hre` ones are the first eight of the German
+  cores seeded on the county via `seed_cores`, listed DORMANT automatically). Carinthia KAE (c_karnten), Carniola LEA (c_ljubljana), Isle of Man KOI (vanilla Mann),
+  Vannes VAE, Rennes REN, Cornouaille COU, Chartres CAR, Magdeburg MAG, Strassburg ALS (vanilla Strasbourg), Speyer SPE, Ulm ULM, Hohenlohe HOH, Grisons GRI (c_grisons +
+  one more province), Opole OPL (+ Ratibor), Penllyn PEL (c_maldwyn), Eryri ERY (c_caernarfonshire); base-game tags are reused where one exists (`retag.py`: Mann, Magdeburg, Ulm, Opole, Strasbourg; the rest have no vanilla tag); the `hre` ones are the first eight of the German
   and Alpine counties. Chosen from a CK3 scan (counties held by an independent ruler for 50+ years between 870 and 1100, Europe, no tag): the scan is
   noisy, so the set is curated by hand, and counties whose 867 holder is the owner tag's own ruler (Inner Hebrides, Penthievre, Wurzburg, Gorlitz,
   Arbanon) were dropped as they are that realm's own demesne. `steps/releasables.py` writes `events/KarReleasables.txt` + loc: at each county's CK3

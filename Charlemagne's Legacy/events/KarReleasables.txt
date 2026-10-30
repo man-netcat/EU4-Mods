@@ -81,9 +81,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { exists = ISO }
+		NOT = { exists = KOI }
 		is_year = 935
-		NOT = { tag = ISO }
+		NOT = { tag = KOI }
 		OR = {
 			owns = 4365
 		}
@@ -96,7 +96,7 @@ country_event = {
 	option = {
 		name = kar_releasables.3.a
 		ai_chance = { factor = 20 }
-		release = ISO
+		release = KOI
 	}
 
 	option = {
@@ -256,9 +256,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { exists = STR }
+		NOT = { exists = ALS }
 		is_year = 923
-		NOT = { tag = STR }
+		NOT = { tag = ALS }
 		OR = {
 			owns = 75
 		}
@@ -271,7 +271,7 @@ country_event = {
 	option = {
 		name = kar_releasables.8.a
 		ai_chance = { factor = 20 }
-		release = STR
+		release = ALS
 	}
 
 	option = {
@@ -326,9 +326,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { exists = MGB }
+		NOT = { exists = MAG }
 		is_year = 881
-		NOT = { tag = MGB }
+		NOT = { tag = MAG }
 		OR = {
 			owns = 52
 		}
@@ -341,7 +341,7 @@ country_event = {
 	option = {
 		name = kar_releasables.10.a
 		ai_chance = { factor = 20 }
-		release = MGB
+		release = MAG
 	}
 
 	option = {
@@ -503,9 +503,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { exists = ULA }
+		NOT = { exists = ULM }
 		is_year = 1025
-		NOT = { tag = ULA }
+		NOT = { tag = ULM }
 		OR = {
 			owns = 1872
 		}
@@ -518,7 +518,7 @@ country_event = {
 	option = {
 		name = kar_releasables.15.a
 		ai_chance = { factor = 20 }
-		release = ULA
+		release = ULM
 	}
 
 	option = {
@@ -538,9 +538,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { exists = OPO }
+		NOT = { exists = OPL }
 		is_year = 985
-		NOT = { tag = OPO }
+		NOT = { tag = OPL }
 		OR = {
 			owns = 263
 			owns = 4723
@@ -554,7 +554,7 @@ country_event = {
 	option = {
 		name = kar_releasables.16.a
 		ai_chance = { factor = 20 }
-		release = OPO
+		release = OPL
 	}
 
 	option = {
@@ -605,12 +605,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					NOT = { exists = STR }
+					NOT = { exists = ALS }
 					OR = {
 						owns = 75
 					}
 				}
-				release = STR
+				release = ALS
 			}
 			if = {
 				limit = {
@@ -623,12 +623,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					NOT = { exists = MGB }
+					NOT = { exists = MAG }
 					OR = {
 						owns = 52
 					}
 				}
-				release = MGB
+				release = MAG
 			}
 			if = {
 				limit = {
@@ -651,12 +651,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					NOT = { exists = ULA }
+					NOT = { exists = ULM }
 					OR = {
 						owns = 1872
 					}
 				}
-				release = ULA
+				release = ULM
 			}
 		}
 	}
