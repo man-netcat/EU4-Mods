@@ -167,10 +167,13 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   `kar_releasables.N` (release 20% for the AI, else +5 unrest), and when a Karolingian ruler forms the empire `kar_form_hre` schedules `kar_releasables.100`
   a year on: the emperor may free the `hre` ones sitting on his land. The vanilla HRE (members, free cities, princes) is not in this mod (every province is
   `hre = no`), so the released tags are plain independents, not members. Never playtested; flags are placeholders.
+- `python3 tools/retag.py OLD NEW [OLD NEW ...]` swaps a tag's code everywhere: every table, the loc pair, the government-name blocks, the flag file, the stale
+  country history, and the hand-kept docs and flag tools (`SWEEP`), then lists any other file that still names the old code. NEW is a free base-game tag
+  (a deliberate reuse, with its vanilla tech and file name) or any free code (a plain rename: PMS -> BHM, Bohemia's duchy). Rebuild afterwards.
 - Rule (user, 30 Oct 2026): a tag whose name equals a free base-game tag's name reuses that tag, whatever the government (`python3 tools/retag.py suggest 0` lists
   them; `retag.py OLD NEW`). Done for Mann, Magdeburg, Ulm, Opole, Strasbourg and the Byzantine and Abbasid governors Epirus (EPI), Athens (ATH), Shammar (SHM)
   and Medina (MDA). Not done where the vanilla tag is already a formable of ours: Lithuania (LIT), Bohemia (BOH) and Castile (CAS) stay the formables, and the
-  duchy tags LTU, PMS and CST keep their codes.
+  duchy tags LTU, BHM and CST keep their codes.
 - Lieges follow CK3's 867 (`tools/lieges.py`, checked by validate): a tag with no subject relation, or only a tributary one, must have no `liege =` in CK3;
   a vassal must have its overlord's realm as liege (a governor folded into a tag counts as that tag; a union subject may share its overlord's ruler).
   Brought in line on 29 Oct 2026: Toledo (ADU), Nedenes and Telemark (SJA), Tripolitania and Ghadames (TUN), Venice (BYZ) and Zammour (MOR) became

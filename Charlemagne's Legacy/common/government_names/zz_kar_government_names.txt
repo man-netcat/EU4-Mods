@@ -1571,7 +1571,7 @@ estonian_titles = {
 
 
 czech_titles = {
-# CK3 ladders for PMS(r2)
+# CK3 ladders for BHM(r2)
 	rank = {
 		1 = CZECH_COUNTY  # county_feudal
 		2 = CZECH_DUCHY  # duchy_feudal

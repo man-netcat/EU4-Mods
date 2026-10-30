@@ -444,7 +444,7 @@ def _dynasty_ids_tags():
     from db import Session
     from sqlalchemy import text
     s = Session()
-    kept = {"PMS"}  # Přemyslids keep their old WappenWiki flag, not a CK3 CoA
+    kept = {"BHM"}  # Přemyslids keep their old WappenWiki flag, not a CK3 CoA
     return [r[0] for r in s.execute(
         text("select tag from tags where name like '%ids' order by tag")).all()
         if r[0] not in kept]

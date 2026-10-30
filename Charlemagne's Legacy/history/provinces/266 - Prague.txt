@@ -1,8 +1,8 @@
 #266 - Bohemia
 
-owner = PMS
-controller = PMS
-add_core = PMS
+owner = BHM
+controller = BHM
+add_core = BHM
 capital = "Praha"
 culture = czech
 religion = slavic_pagan
@@ -21,7 +21,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = PMS
-	controller = PMS
-	add_core = PMS
+	owner = BHM
+	controller = BHM
+	add_core = BHM
 }
