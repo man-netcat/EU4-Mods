@@ -310,8 +310,8 @@ theme_subject_type = {
 	relative_power_class = 0
 	liberty_desire_development_ratio = 0.0
 	base_liberty_desire = -25.0
-	forcelimit_to_overlord = 0.5
-	manpower_to_overlord = 0.5
+	forcelimit_to_overlord = 0.25
+	manpower_to_overlord = 0.25
 }
 # END kar theme
 

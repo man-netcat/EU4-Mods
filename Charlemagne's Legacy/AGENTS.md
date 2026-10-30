@@ -133,7 +133,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   in the comment on the family title (`d_nf_hexavoulis = { # Hexavoulis (Epirus)` -> Epirus; `tagloc.family_region`); the code is the region's first free letters.
   They hold `theme_subject_type` (own block in `vanillapatch.py`, marked BEGIN/END kar theme): count = vassal, no relation slot (twenty-odd vassals would
   blow the empire's limit of 8), `relative_power_class` 0 and no development-ratio liberty (a 7-province capital against 23 governors would put them
-  all in revolt), base liberty -25, and 50% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
+  all in revolt), base liberty -25, and 25% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
   the themes were appointed strategoi, not hereditary lords, and pronoia is 11th-century - chosen anyway to follow CK3. Four provinces CK3 does not
   hold under the Basileus went to their CK3 owners (Apulia to BNV, Kaffa to WEE, Ohrid to BUL, Kalos Limen to KHZ). Placeholder flags; untested in-game.
 - The Abbasid Caliphate's governors are 16 vassal tags (user decision, 29 Oct 2026), built like the themes: the duchy-rank `d_*` direct vassals of the
@@ -145,6 +145,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   the sovereign belongs to the governor tag of its direct-vassal duchy, else the realm (or one of its other subjects); nothing outside the realm
   may sit in the realm or a governor. The pass moved Phrygia to Opsikion, Satala to Khaldia, Philippopolis to BYZ, Batina and Samman to ARB,
   Maragha to Azerbaijan, Tihama to Medina and Lar to Fars (Yemen's capital became Sanaa).
+- `python3 tools/troops.py [N|--all|--csv]` ranks every sovereign tag by the force limit and manpower it can field (own, from governor subjects, and the
+  whole bloc incl. vassals); a model from the base-game static modifiers, not in-game numbers. Governors give 25% (was 50%: it put Byzantium and the
+  Caliphate at ~90 force limit, above every realm but Tang; at 25% they sit at ~53, between Kosala and Karnata).
 - Lieges follow CK3's 867 (`tools/lieges.py`, checked by validate): a tag with no subject relation, or only a tributary one, must have no `liege =` in CK3;
   a vassal must have its overlord's realm as liege (a governor folded into a tag counts as that tag; a union subject may share its overlord's ruler).
   Brought in line on 29 Oct 2026: Toledo (ADU), Nedenes and Telemark (SJA), Tripolitania and Ghadames (TUN), Venice (BYZ) and Zammour (MOR) became
