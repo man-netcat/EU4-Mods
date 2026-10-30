@@ -169,6 +169,16 @@ class SeedCore(Base):
     pid = Column(Integer, ForeignKey("provinces.pid"), primary_key=True)
 
 
+class Releasable(Base):
+    """A dormant county tag that wakes by event (steps/releasables.py): at its CK3 independence year, and, when `hre`,
+    also when a Karolingian emperor forms the empire."""
+
+    __tablename__ = "releasables"
+
+    tag = Column(String, ForeignKey("tags.tag"), primary_key=True)
+    hre = Column(Boolean, nullable=False, default=False)
+
+
 class CoreDeny(Base):
     """A judged-dormant claim: HOLDER keeps no cores on OWNER's land."""
 

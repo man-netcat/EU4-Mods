@@ -3,6 +3,7 @@
 owner = BRI
 controller = BRI
 add_core = BRI
+add_core = REN
 capital = "Rennes"
 culture = breton
 religion = christian_faith

@@ -3,6 +3,7 @@
 owner = GWY
 controller = GWY
 add_core = GWY
+add_core = ERY
 capital = "Caernarvon"
 culture = welsh
 religion = christian_faith

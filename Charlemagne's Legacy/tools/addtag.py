@@ -32,6 +32,8 @@ from models import (  # noqa: E402
     Culture as CultureRow,
     Province as ProvinceRow,
     Religion as ReligionRow,
+    Releasable as ReleasableRow,
+    SeedCore as SeedCoreRow,
     Tag as TagRow,
     TagProvince as TagProvinceRow,
     TagReform as TagReformRow,
@@ -100,6 +102,10 @@ def main(argv):
     ap.add_argument("--adj")
     ap.add_argument("--file")
     ap.add_argument("--take", action="store_true")
+    ap.add_argument("--dormant", action="store_true",
+                    help="a releasable: the tag owns nothing; its provinces (kept by their owner) get seeded cores")
+    ap.add_argument("--hre", action="store_true",
+                    help="with --dormant: an HRE-area tag that the Karolingian Empire's formation can release")
     ap.add_argument("--reuse", action="store_true",
                     help="code is a vanilla tag taken over deliberately")
     a = ap.parse_args(argv)
@@ -184,13 +190,17 @@ def main(argv):
         sys.exit(f"{a.tag} is a vanilla tag (pass --reuse to take it over deliberately)")
     if s.get(TagRow, a.tag) is not None:
         sys.exit(f"{a.tag} already in tags.db")
-    taken = s.query(TagProvinceRow.tag, TagProvinceRow.pid).filter(
+    taken = [] if a.dormant else s.query(TagProvinceRow.tag, TagProvinceRow.pid).filter(
         TagProvinceRow.pid.in_(a.pids)).all()
     if taken and not a.take:
         sys.exit(f"provinces owned already ({taken}); pass --take to reassign")
     for tag, pid in taken:
         s.delete(s.get(TagProvinceRow, (tag, pid)))
         print(f"  took {pid} from {tag}")
+    if a.dormant:
+        free = [p for p in a.pids if s.query(TagProvinceRow).filter_by(pid=p).first() is None]
+        if free:
+            sys.exit(f"--dormant seeds cores on owned land; {free} belong to no tag")
 
     if a.tech is None:
         hint = "pass --tech"
@@ -274,8 +284,14 @@ def main(argv):
             pname, pcul, prel = datas[pid]
             s.add(ProvinceRow(pid=pid, name=pname, culture=a.culture or pcul,
                               religion=a.religion or prel, fort=False))
-        s.add(TagProvinceRow(tag=a.tag, pid=pid))
+        if a.dormant:
+            s.flush()
+            s.add(SeedCoreRow(tag=a.tag, pid=pid))
+        else:
+            s.add(TagProvinceRow(tag=a.tag, pid=pid))
     s.add(TagReformRow(tag=a.tag, pos=seq, reform="feudalism_reform"))
+    if a.dormant:
+        s.add(ReleasableRow(tag=a.tag, hre=a.hre))
     s.commit()
     s.close()
 

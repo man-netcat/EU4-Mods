@@ -3,6 +3,7 @@
 owner = BAV
 controller = BAV
 add_core = BAV
+add_core = KAE
 capital = "Klagenfurt"
 culture = carantanian
 religion = christian_faith

@@ -3,6 +3,7 @@
 owner = LOI
 controller = LOI
 add_core = LOI
+add_core = ISO
 capital = "Castletown"
 culture = gaelic
 religion = christian_faith
