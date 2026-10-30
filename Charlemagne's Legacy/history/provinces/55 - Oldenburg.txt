@@ -1,8 +1,8 @@
 #55 - Oldenburg
 
-owner = HOL
-controller = HOL
-add_core = HOL
+owner = AGR
+controller = AGR
+add_core = AGR
 capital = "Oldenburg"
 culture = saxon
 religion = christian_faith
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = HOL
-	controller = HOL
-	add_core = HOL
+	owner = AGR
+	controller = AGR
+	add_core = AGR
 }

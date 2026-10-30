@@ -1,0 +1,235 @@
+# The partition of Lotharingia (history: Lothair II died at Piacenza on 8.8.869 with only an illegitimate son;
+# Charles the Bald had himself crowned at Metz on 9.9.869; the Treaty of Meerssen of 8.8.870 divided the Middle Kingdom
+# between him and Louis the German). CK3's 867 data has no partition (k_lotharingia goes whole to Charles on 869.8.8),
+# so the line below is a deliberate, user-approved departure from CK3: Meuse and Rhone-Saone (Cambrai, Verdun, Toul,
+# Besancon, Lyon, Vienne) to West Francia, the Rhineland, Frisia, Aachen, Metz and Alsace to East Francia.
+# The tags LOT, HOL, KOL, TRI and DAU are the only ones touched; tools/checks/diplomacy.py keeps the lists below equal to
+# the provinces those five tags own at the start.
+# Flow: .1 (LOT, 869.8.9) -> accept: .4 after a year (the treaty, AI default); defy: .2 FRA and .3 GER claim their halves.
+namespace = kar_lotharingia
+
+# The death of Lothair II
+country_event = {
+	id = kar_lotharingia.1
+	title = kar_lotharingia.1.t
+	desc = kar_lotharingia.1.d
+	picture = CIVIL_WAR_eventPicture
+
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = LOT
+		date = 869.8.9
+		OR = {
+			owns = 1878
+			owns = 188
+			owns = 75
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	# Defy the uncles: Hugh is proclaimed, the kingdom stays whole, and Charles and Louis both reach for it.
+	option = {
+		name = kar_lotharingia.1.a
+		ai_chance = { factor = 0 }
+		set_country_flag = kar_lotharingia_defiant
+		add_country_modifier = {
+			name = kar_lotharingia_succession_crisis
+			duration = 1825
+		}
+		if = {
+			limit = { exists = FRA }
+			FRA = { country_event = { id = kar_lotharingia.2 days = 10 } }
+		}
+		if = {
+			limit = { exists = GER }
+			GER = { country_event = { id = kar_lotharingia.3 days = 10 } }
+		}
+	}
+
+	# Treat with the uncles: the kingdom is divided at Meerssen a year on.
+	option = {
+		name = kar_lotharingia.1.b
+		ai_chance = { factor = 100 }
+		set_country_flag = kar_lotharingia_partitioning
+		country_event = { id = kar_lotharingia.4 months = 12 }
+	}
+}
+
+# Charles the Bald reaches for the Middle Kingdom
+country_event = {
+	id = kar_lotharingia.2
+	title = kar_lotharingia.2.t
+	desc = kar_lotharingia.2.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = kar_lotharingia.2.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { exists = LOT }
+			91 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			92 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			93 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			95 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4770 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			1743 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			1744 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			1866 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4766 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			187 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			189 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			193 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4764 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+		}
+	}
+
+	option = {
+		name = kar_lotharingia.2.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Louis the German reaches for the Middle Kingdom
+country_event = {
+	id = kar_lotharingia.3
+	title = kar_lotharingia.3.t
+	desc = kar_lotharingia.3.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = kar_lotharingia.3.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { exists = LOT }
+			75 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			1878 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			2975 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			99 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			98 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4381 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			188 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			94 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			2974 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4768 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			1880 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4765 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			165 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4721 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+		}
+	}
+
+	option = {
+		name = kar_lotharingia.3.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+# The Treaty of Meerssen (8.8.870)
+country_event = {
+	id = kar_lotharingia.4
+	title = kar_lotharingia.4.t
+	desc = kar_lotharingia.4.d
+	picture = DIPLOMACY_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = LOT
+		NOT = { has_country_flag = kar_lotharingia_defiant }
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { exists = FRA }
+				if = {
+					limit = { exists = DAU DAU = { is_subject_of = ROOT } }
+					break_union = DAU
+					FRA = { vassalize = DAU }
+				}
+				91 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				92 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				93 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				95 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				4770 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				1743 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				1744 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				1866 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				4766 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				187 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				189 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				193 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				4764 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+			}
+			if = {
+				limit = { exists = GER }
+				if = {
+					limit = { exists = HOL HOL = { is_subject_of = ROOT } }
+					HOL = { grant_independence = yes }
+					GER = { vassalize = HOL }
+				}
+				if = {
+					limit = { exists = KOL KOL = { is_subject_of = ROOT } }
+					KOL = { grant_independence = yes }
+					GER = { vassalize = KOL }
+				}
+				if = {
+					limit = { exists = TRI TRI = { is_subject_of = ROOT } }
+					TRI = { grant_independence = yes }
+					GER = { vassalize = TRI }
+				}
+				75 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				1878 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				2975 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				99 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				98 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				4381 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				188 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				94 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				2974 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				4768 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				1880 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				4765 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				165 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				4721 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+			}
+			if = {
+				limit = { exists = FRA }
+				FRA = { add_prestige = 10 country_event = { id = kar_lotharingia.5 } }
+			}
+			if = {
+				limit = { exists = GER }
+				GER = { add_prestige = 10 country_event = { id = kar_lotharingia.5 } }
+			}
+		}
+	}
+
+	option = {
+		name = kar_lotharingia.4.a
+	}
+}
+
+# FRA and GER are told of their share
+country_event = {
+	id = kar_lotharingia.5
+	title = kar_lotharingia.5.t
+	desc = kar_lotharingia.5.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = kar_lotharingia.5.a
+	}
+}

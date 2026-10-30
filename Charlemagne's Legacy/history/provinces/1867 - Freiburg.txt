@@ -1,8 +1,8 @@
 #1867 - Freiburg
 
-owner = LOT
-controller = LOT
-add_core = LOT
+owner = GER
+controller = GER
+add_core = GER
 capital = "Lausanne"
 culture = swabian
 religion = christian_faith
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = LOT
-	controller = LOT
-	add_core = LOT
+	owner = GER
+	controller = GER
+	add_core = GER
 }

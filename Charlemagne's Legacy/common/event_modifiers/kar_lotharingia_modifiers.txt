@@ -1,0 +1,7 @@
+# Lothair II's death with no legitimate heir (events/LotharingianPartition.txt): the nobles split between Hugh,
+# Charles the Bald and Louis the German, and the kingdom is governed by whoever holds the next castle.
+kar_lotharingia_succession_crisis = {
+	global_unrest = 2
+	legitimacy = -0.5
+	land_forcelimit_modifier = -0.1
+}

@@ -148,6 +148,14 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - `python3 tools/troops.py [N|--all|--csv]` ranks every sovereign tag by the force limit and manpower it can field (own, from governor subjects, and the
   whole bloc incl. vassals); a model from the base-game static modifiers, not in-game numbers. Governors give 25% (was 50%: it put Byzantium and the
   Caliphate at ~90 force limit, above every realm but Tang; at 25% they sit at ~53, between Kosala and Karnata).
+- Lotharingia is partitioned by `events/LotharingianPartition.txt` (user decision, 30 Oct 2026; history, not CK3: CK3 gives the whole kingdom to Charles
+  the Bald on 869.8.8 and to Louis the Younger on 877.6.10 and has no Meerssen). `kar_lotharingia.1` (LOT, from 869.8.9, after Lothair II's death in the
+  country history): the AI accepts, the treaty (`.4`) follows a year later and hands LOT's provinces to FRA (13: Hainaut, Brabant, Liege, Breda,
+  's-Hertogenbosch, Cambrai, Antwerp, Namur, Verdun, Barrois, Lorraine, Besancon, Salins) and GER (14: Alsace, Aachen, Kleves, Gelre, Utrecht, Oversticht,
+  Metz, Luxemburg, Maastricht, Julich, Sundgau, Mulhouse, Bern, Fribourg), the union DAU to FRA and the vassals HOL, KOL, TRI to GER. A player LOT can
+  defy it (`kar_lotharingia_succession_crisis`, FRA and GER get permanent claims on their halves, `.2` and `.3`). Borderline calls are mine: Liege,
+  Luxemburg, Bern, Fribourg and the Brabant provinces. Validate keeps the event lists equal to LOT's provinces. Also moved to their CK3 owners: Limburg
+  (MAI), Freiburg (GER), Wallis and Annecy (UBG), Oldenburg (AGR). Ribemont (880) is not built. Never playtested.
 - Lieges follow CK3's 867 (`tools/lieges.py`, checked by validate): a tag with no subject relation, or only a tributary one, must have no `liege =` in CK3;
   a vassal must have its overlord's realm as liege (a governor folded into a tag counts as that tag; a union subject may share its overlord's ruler).
   Brought in line on 29 Oct 2026: Toledo (ADU), Nedenes and Telemark (SJA), Tripolitania and Ghadames (TUN), Venice (BYZ) and Zammour (MOR) became
