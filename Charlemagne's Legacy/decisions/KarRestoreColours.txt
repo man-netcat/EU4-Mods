@@ -18,6 +18,7 @@ country_decisions = {
 				tag = ASH
 				tag = ASS
 				tag = ASU
+				tag = ATH
 				tag = AVA
 				tag = BAV
 				tag = BEI
@@ -46,6 +47,7 @@ country_decisions = {
 				tag = DGL
 				tag = DMS
 				tag = EGY
+				tag = EPI
 				tag = EST
 				tag = ETH
 				tag = FIN
@@ -102,6 +104,7 @@ country_decisions = {
 				tag = MAI
 				tag = MAK
 				tag = MBA
+				tag = MDA
 				tag = MDI
 				tag = MGD
 				tag = MHR
@@ -144,6 +147,7 @@ country_decisions = {
 				tag = RYU
 				tag = SBP
 				tag = SCO
+				tag = SHM
 				tag = SIB
 				tag = SIL
 				tag = SLZ
@@ -260,6 +264,12 @@ country_decisions = {
 			limit = { tag = ASU }
 			change_country_color = {
 				color = { 104 173 230 }
+			}
+		}
+		if = {
+			limit = { tag = ATH }
+			change_country_color = {
+				color = { 113 112 96 }
 			}
 		}
 		if = {
@@ -428,6 +438,12 @@ country_decisions = {
 			limit = { tag = EGY }
 			change_country_color = {
 				color = { 255 220 104 }
+			}
+		}
+		if = {
+			limit = { tag = EPI }
+			change_country_color = {
+				color = { 230 228 214 }
 			}
 		}
 		if = {
@@ -767,6 +783,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = MDA }
+			change_country_color = {
+				color = { 191 68 86 }
+			}
+		}
+		if = {
 			limit = { tag = MDI }
 			change_country_color = {
 				color = { 212 175 55 }
@@ -1016,6 +1038,12 @@ country_decisions = {
 			limit = { tag = SCO }
 			change_country_color = {
 				color = { 199 175 12 }
+			}
+		}
+		if = {
+			limit = { tag = SHM }
+			change_country_color = {
+				color = { 255 204 45 }
 			}
 		}
 		if = {

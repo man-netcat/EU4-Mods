@@ -4115,7 +4115,7 @@ bedouin_yam_titles = {
 
 
 bedouin_titles = {
-# CK3 ladders for EDE(r2), OMA(r2), TAB(r2), DLF(r2), ADA(r2), SUI(r1), AZB(r2), SHQ(r2), MDN(r2) - clan/feudal CK3 government - islam realms (Shahzade)
+# CK3 ladders for EDE(r2), OMA(r2), TAB(r2), DLF(r2), ADA(r2), SUI(r1), AZB(r2), SHM(r2), MDA(r2) - clan/feudal CK3 government - islam realms (Shahzade)
 	rank = {
 		1 = BEDOUIN_COUNTY  # county_feudal_arabic_group
 		2 = BEDOUIN_DUCHY  # duchy_feudal_arabic_group

@@ -1,6 +1,6 @@
-owner = EPR
-controller = EPR
-add_core = EPR
+owner = EPI
+controller = EPI
+add_core = EPI
 capital = "Arta"
 culture = greek
 religion = christian_faith
@@ -17,7 +17,7 @@ discovered_by = eastern
 discovered_by = western
 
 867.1.1 = {
-	owner = EPR
-	controller = EPR
-	add_core = EPR
+	owner = EPI
+	controller = EPI
+	add_core = EPI
 }

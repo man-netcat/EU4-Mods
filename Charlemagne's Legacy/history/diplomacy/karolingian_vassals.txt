@@ -91,7 +91,7 @@ dependency = {
 dependency = {
 	subject_type = theme_subject_type
 	first = ARB
-	second = MDN
+	second = MDA
 }
 dependency = {
 	subject_type = theme_subject_type
@@ -106,7 +106,7 @@ dependency = {
 dependency = {
 	subject_type = theme_subject_type
 	first = ARB
-	second = SHQ
+	second = SHM
 }
 dependency = {
 	subject_type = theme_subject_type
@@ -168,7 +168,7 @@ dependency = {
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
-	second = ATE
+	second = ATH
 }
 dependency = {
 	subject_type = theme_subject_type
@@ -193,7 +193,7 @@ dependency = {
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
-	second = EPR
+	second = EPI
 }
 dependency = {
 	subject_type = theme_subject_type

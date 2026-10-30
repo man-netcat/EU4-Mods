@@ -1,8 +1,8 @@
 #4269 - Al Wajh
 
-owner = MDN
-controller = MDN
-add_core = MDN
+owner = MDA
+controller = MDA
+add_core = MDA
 capital = "Al Wajh"
 culture = bedouin
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = nomad_group
 discovered_by = east_african
 
 867.1.1 = {
-	owner = MDN
-	controller = MDN
-	add_core = MDN
+	owner = MDA
+	controller = MDA
+	add_core = MDA
 }
