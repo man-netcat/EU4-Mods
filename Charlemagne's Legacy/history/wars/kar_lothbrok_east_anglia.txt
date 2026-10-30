@@ -1,0 +1,13 @@
+name = "Lothbrok Invasion of East Anglia"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 1860
+}
+
+867.1.1 = {
+	add_attacker = LOI
+	add_defender = HRF
+	add_defender = NFK
+	add_defender = SMT
+}

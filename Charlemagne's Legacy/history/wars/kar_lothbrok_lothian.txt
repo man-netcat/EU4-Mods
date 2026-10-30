@@ -1,0 +1,11 @@
+name = "Lothbrok Invasion of Lothian"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 248
+}
+
+867.1.1 = {
+	add_attacker = LOI
+	add_defender = NTH
+}

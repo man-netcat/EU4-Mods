@@ -45,6 +45,12 @@ SOURCES = {
     "APR": "Hethumid",
     # Karelia: the arms of the Karelian realm (two arms with swords under a crown, on gules)
     "KRL": "Karelia",
+    # European placeholders: the arms WappenWiki files under the county's own name
+    "COU": "Cornouaille",                    # c_cornouaille
+    "HOH": "Hohenlohe",                      # c_hohenlohe
+    "KAE": "Sponheim Carinthia Ancient",     # c_karnten: Carinthia's arms under the Sponheim dukes
+    "LEA": "Krain Ancient",                  # c_ljubljana: the arms of Carniola
+    "OPL": "Opole",                          # c_opole
 }
 CHARGES = Path("/home/rick/Paradox/heraldry/charges")
 # Arms whose bordure follows the shield outline: keep the charge only (fractions of the render)
@@ -63,11 +69,35 @@ def build(tag, title, size=256, height=218, inner=None):
     f = re.search(r"fill:\s*(#[0-9a-fA-F]{6})", shield) or re.search(r'fill="(#[0-9a-fA-F]{6})"', shield)
     field = tuple(int(f.group(1)[i:i + 2], 16) for i in (1, 3, 5))
     # drop the shield and any outline/overlay copy of the same geometry
-    geo = re.search(r'(?:points|d)="\s*M?\s*([-\d.,]+)', shield).group(1)[:10]
+    geo = re.search(r'(?:points|d)="\s*[Mm]?\s*([-\d.,]+)', shield).group(1)[:10]
     # (the shield outline is often a separate unfilled polygon with ~100 points)
     s = SHIELD_RE.sub(lambda x: "" if geo in x.group(0) or (
         x.group(1) == "polygon" and re.search(r'fill[:=]"?\s*none', x.group(0))
         and x.group(0).count(" ") > 100) else x.group(0), s)
+    # arms drawn as a stack of shield-sized polygons (a white underlay, then the coloured field): the
+    # field is the last big filled one, and all of them go
+    def _bbox(el):
+        pts = re.search(r'points="([^"]+)"', el)
+        if not pts:
+            return None
+        n = [float(x) for x in re.findall(r"-?[\d.]+", pts.group(1))]
+        xs, ys = n[0::2], n[1::2]
+        return (min(xs), min(ys), max(xs), max(ys))
+
+    sb = _bbox(shield)
+    if sb:
+        area = (sb[2] - sb[0]) * (sb[3] - sb[1])
+        big = []
+        for x in SHIELD_RE.finditer(s):
+            bb = _bbox(x.group(0)) if x.group(1) == "polygon" else None
+            if bb and (bb[2] - bb[0]) * (bb[3] - bb[1]) >= 0.85 * area and not re.search(r'fill[:=]"?\s*none', x.group(0)):
+                big.append(x)
+        for x in big:
+            f2 = re.search(r"fill:\s*(#[0-9a-fA-F]{6})", x.group(0)) or re.search(r'fill="(#[0-9a-fA-F]{6})"', x.group(0))
+            if f2 and f2.group(1).lower() != "#f6f6f6":
+                field = tuple(int(f2.group(1)[i:i + 2], 16) for i in (1, 3, 5))
+        for x in reversed(big):
+            s = s[:x.start()] + s[x.end():]
     with tempfile.TemporaryDirectory() as d:
         src, png = Path(d, "a.svg"), Path(d, "a.png")
         src.write_text(s)
@@ -110,7 +140,7 @@ def jemtland(tag="JAM", size=256, band=28, marks=6, S=4):
     s = re.sub(r"<!DOCTYPE.*?\]>", "", s, flags=re.S)
     s = re.sub(r"&ns_[a-z_]+;", "", s)
     m = SHIELD_RE.search(s)
-    geo = re.search(r'(?:points|d)="\s*M?\s*([-\d.,]+)', m.group(0)).group(1)[:10]
+    geo = re.search(r'(?:points|d)="\s*[Mm]?\s*([-\d.,]+)', m.group(0)).group(1)[:10]
     s = SHIELD_RE.sub(lambda x: "" if geo in x.group(0) else x.group(0), s)
     with tempfile.TemporaryDirectory() as d:
         src, png = Path(d, "a.svg"), Path(d, "a.png")

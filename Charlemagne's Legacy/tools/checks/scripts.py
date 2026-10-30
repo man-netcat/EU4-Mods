@@ -143,7 +143,22 @@ def country_history_uses_vanilla_key_shapes() -> None:
         print("        " + b)
 
 
+def ages_wait_for_their_year() -> None:
+    """No age can start before its own year: the game starts in 867, and the base game's ages assume 1444."""
+    print("\n== ages wait for their year ==")
+    text = open(os.path.join(MOD, "common", "ages", "00_default.txt"), encoding="cp1252", errors="replace").read()
+    bad = []
+    for m in re.finditer(r"(?ms)^(age_\w+) = \{\s*start = (\d+)(.*?)^\}", text):
+        name, start, body = m.group(1), int(m.group(2)), m.group(3)
+        cs = re.search(r"can_start = \{(.*?)\n\t\}", body, re.S)
+        y = re.search(r"\byear = (\d+)", cs.group(1)) if cs else None
+        if not y or int(y.group(1)) < start:
+            bad.append(f"{name} (start {start}, can_start year {y.group(1) if y else 'none'})")
+    note(not bad, "every age's can_start waits for the age's start year" + (": " + ", ".join(bad) if bad else ""))
+
+
 def run() -> None:
+    ages_wait_for_their_year()
     kept_events_and_decisions()
     custom_script_has_no_per_pid_limit_blocks()
     country_history_uses_vanilla_key_shapes()

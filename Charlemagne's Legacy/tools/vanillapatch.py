@@ -233,6 +233,55 @@ PATCHES = {
    ]
   ]
  ],
+ "common/ages/00_default.txt": [
+  [
+   [
+    "\tcan_start = {"
+   ],
+   [
+    "\t\talways = yes"
+   ],
+   [
+    "\t\tyear = 1400\t\t\t\t# no age starts before its own year (the base game's start is 1444; ours is 867)"
+   ]
+  ],
+  [
+   [
+    "\tcan_start = {"
+   ],
+   [
+    "\t\tis_religion_enabled = protestant"
+   ],
+   [
+    "\t\tyear = 1530",
+    "\t\tis_religion_enabled = protestant"
+   ]
+  ],
+  [
+   [
+    "\tcan_start = {"
+   ],
+   [
+    "\t\tis_institution_enabled = global_trade"
+   ],
+   [
+    "\t\tyear = 1620",
+    "\t\tis_institution_enabled = global_trade"
+   ]
+  ],
+  [
+   [
+    "\tcan_start = {"
+   ],
+   [
+    "\t\tis_institution_enabled = enlightenment"
+   ],
+   [
+    "\t\tyear = 1710",
+    "\t\tis_institution_enabled = enlightenment"
+   ]
+  ]
+ ],
  "common/static_modifiers/00_static_modifiers.txt": [
   [
    [

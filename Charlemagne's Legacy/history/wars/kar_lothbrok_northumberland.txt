@@ -1,0 +1,14 @@
+name = "Lothbrok Invasion of Northumberland"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 246
+}
+
+867.1.1 = {
+	add_attacker = UPL
+	add_attacker = YRK
+	add_defender = HRF
+	add_defender = NTH
+	add_defender = SMT
+}
