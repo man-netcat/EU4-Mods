@@ -1,6 +1,5 @@
 owner = ACA
 controller = ACA
-add_core = BYZ
 add_core = ACA
 capital = "Corinth"
 culture = greek

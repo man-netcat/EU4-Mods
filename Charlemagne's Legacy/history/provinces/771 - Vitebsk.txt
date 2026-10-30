@@ -2,7 +2,6 @@
 
 owner = MSK
 controller = MSK
-add_core = PLT
 add_core = MSK
 capital = "Vitebsk"
 culture = russian

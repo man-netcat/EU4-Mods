@@ -3,8 +3,6 @@
 owner = TIM
 controller = TIM
 add_core = TIM
-add_core = AFG
-add_core = KHO
 capital = "Ferah"
 culture = afghan
 religion = zun_pagan

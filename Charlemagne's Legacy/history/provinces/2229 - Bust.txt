@@ -2,8 +2,6 @@
 
 owner = SAF
 controller = SAF
-add_core = AFG
-add_core = KHO
 add_core = SAF
 capital = "Bust"
 culture = afghan

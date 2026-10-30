@@ -2,7 +2,6 @@
 
 owner = DON
 controller = DON
-add_core = VIE
 add_core = DON
 capital = "Chaiyaphum"
 culture = khmer

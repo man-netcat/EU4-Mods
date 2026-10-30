@@ -2,7 +2,6 @@
 
 owner = TRS
 controller = TRS
-add_core = AFG
 add_core = TRS
 capital = "Munjan"
 culture = sogdian

@@ -2,7 +2,6 @@
 
 owner = NYL
 controller = NYL
-add_core = FIN
 add_core = NYL
 capital = "Tavastehus"
 culture = finnish

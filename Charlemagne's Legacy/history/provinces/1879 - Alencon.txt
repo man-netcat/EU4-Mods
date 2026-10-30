@@ -2,7 +2,6 @@
 
 owner = NRM
 controller = NRM
-add_core = FRA
 add_core = NRM
 capital = "Alençon"
 culture = french

@@ -2,7 +2,6 @@
 
 owner = KGZ
 controller = KGZ
-add_core = SIB
 add_core = KGZ
 capital = "Baraba"
 culture = khanty

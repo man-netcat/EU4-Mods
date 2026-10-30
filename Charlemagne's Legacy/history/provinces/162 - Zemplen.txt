@@ -2,7 +2,6 @@
 
 owner = UNG
 controller = UNG
-add_core = TRA
 add_core = UNG
 capital = "Kassa"
 culture = croatian

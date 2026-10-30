@@ -2,7 +2,6 @@
 
 owner = FRL
 controller = FRL
-add_core = DAL
 add_core = FRL
 capital = "Pula"
 culture = croatian

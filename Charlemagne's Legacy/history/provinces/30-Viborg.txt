@@ -2,7 +2,6 @@
 
 owner = KKS
 controller = KKS
-add_core = FIN
 add_core = KKS
 capital = "Viborg"
 culture = norse

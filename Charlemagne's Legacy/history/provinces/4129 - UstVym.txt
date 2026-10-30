@@ -2,7 +2,6 @@
 
 owner = KAG
 controller = KAG
-add_core = NOV # Novgorodian claims
 add_core = KAG
 capital = "Ust-Vym"
 culture = komi

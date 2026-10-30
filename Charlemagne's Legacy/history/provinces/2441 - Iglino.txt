@@ -2,7 +2,6 @@
 
 owner = SBK
 controller = SBK
-add_core = SIB
 add_core = SBK
 capital = "Iglino"
 culture = bolghar

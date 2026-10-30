@@ -2,7 +2,6 @@
 
 owner = SYC
 controller = SYC
-add_core = NAP
 add_core = SYC
 capital = "Syracusa"
 culture = greek

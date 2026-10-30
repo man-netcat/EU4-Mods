@@ -2,7 +2,6 @@
 
 owner = OUL
 controller = OUL
-add_core = FIN
 add_core = OUL
 capital = "Korsholm"
 culture = finnish

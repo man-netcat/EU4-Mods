@@ -271,6 +271,20 @@ def strip_denied_cores(text, owner, denied):
     return "\n".join(out) + "\n"
 
 
+def strip_foreign_cores(text, owner, seeds):
+    # No dormant cores: a province carries its owner's core and the releasables the database seeds on it
+    # (seed_cores), nothing else - an overlord keeps no core on its vassal's land, a former ruler none on its heir's.
+    if not owner:
+        return text
+    out = []
+    for ln in text.splitlines():
+        m = re.match(r"^\s*add_core\s*=\s*([A-Z]{3})\b", ln)
+        if m and m.group(1) != owner and m.group(1) not in seeds:
+            continue
+        out.append(ln)
+    return "\n".join(out) + "\n"
+
+
 def take_group_visibility(text):
     # Visibility everywhere: keep only tech-group discovered_by lines.
     # No tag-specific discoveries: dead tags spam the log, and living tags
@@ -342,6 +356,7 @@ def step_provinces():
                 new += ln + "\n"
         new = strip_dead_cores(new, keep)
         new = strip_denied_cores(new, tag, denied)
+        new = strip_foreign_cores(new, tag, SEED_CORES.get(pid, ()))
         new = tidy_province(new)
 
         write_out(os.path.join(PROV_OUT, os.path.basename(src)), new)

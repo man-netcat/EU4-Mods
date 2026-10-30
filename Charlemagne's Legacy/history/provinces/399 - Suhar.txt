@@ -2,7 +2,6 @@
 
 owner = ARB
 controller = ARB
-add_core = OMA
 add_core = ARB
 capital = "Suhar"
 culture = bedouin

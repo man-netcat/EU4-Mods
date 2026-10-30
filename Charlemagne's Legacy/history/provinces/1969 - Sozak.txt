@@ -2,7 +2,6 @@
 
 owner = OGZ
 controller = OGZ
-add_core = TRS
 add_core = OGZ
 capital = "Sozak"
 culture = karluk

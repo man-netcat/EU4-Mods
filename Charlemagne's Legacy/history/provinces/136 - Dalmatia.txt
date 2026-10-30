@@ -2,7 +2,6 @@
 
 owner = DAL
 controller = DAL
-add_core = CRO
 add_core = DAL
 capital = "Split"
 culture = greek

@@ -2,7 +2,6 @@
 
 owner = KOS
 controller = KOS
-add_core = MUL
 add_core = KOS
 capital = "Delhi"
 culture = hindustani

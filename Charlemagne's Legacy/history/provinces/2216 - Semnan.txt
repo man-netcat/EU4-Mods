@@ -2,7 +2,6 @@
 
 owner = TAB
 controller = TAB
-add_core = KHO
 add_core = TAB
 capital = "Semnan"
 culture = persian

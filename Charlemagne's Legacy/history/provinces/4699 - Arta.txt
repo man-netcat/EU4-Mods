@@ -1,6 +1,5 @@
 owner = EPR
 controller = EPR
-add_core = BYZ
 add_core = EPR
 capital = "Arta"
 culture = greek

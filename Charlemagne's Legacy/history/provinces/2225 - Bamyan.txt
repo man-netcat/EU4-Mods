@@ -2,7 +2,6 @@
 
 owner = GHG
 controller = GHG
-add_core = AFG
 add_core = GHG
 capital = "Bamyan"
 culture = afghan

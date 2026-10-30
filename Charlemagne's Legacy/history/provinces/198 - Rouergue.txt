@@ -2,7 +2,6 @@
 
 owner = TOU
 controller = TOU
-add_core = GUY
 add_core = TOU
 capital = "Rodez"
 culture = occitan

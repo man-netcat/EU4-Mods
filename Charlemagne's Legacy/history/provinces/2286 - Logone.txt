@@ -2,7 +2,6 @@
 
 owner = KEA
 controller = KEA
-add_core = KBO
 add_core = KEA
 capital = "Logone"
 culture = sao

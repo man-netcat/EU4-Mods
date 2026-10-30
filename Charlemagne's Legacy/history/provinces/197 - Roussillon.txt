@@ -2,7 +2,6 @@
 
 owner = GTH
 controller = GTH
-add_core = TOU
 add_core = GTH
 capital = "Perpignan"
 culture = catalan

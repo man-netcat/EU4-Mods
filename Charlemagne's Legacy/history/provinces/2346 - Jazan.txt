@@ -2,7 +2,6 @@
 
 owner = MDN
 controller = MDN
-add_core = YEM
 add_core = MDN
 capital = "Jazan"
 culture = bedouin

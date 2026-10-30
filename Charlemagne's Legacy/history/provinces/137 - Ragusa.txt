@@ -2,7 +2,6 @@
 
 owner = HRZ
 controller = HRZ
-add_core = DAL
 add_core = HRZ
 capital = "Ragusa"
 culture = serbian

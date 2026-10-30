@@ -388,8 +388,8 @@ install is present if a flag file equals one of the base game's.
   keep their vanilla tech-group `discovered_by` too, so visibility matches
   the base game everywhere; dead-tag cores are stripped (cores respawn
   tags via rebels/release). Reassigning land drops the previous living
-  owner's cores (`patch()`), and judged-dormant claims go in `core_deny`
-  (holder, owner) pairs, enforced by validate. Dormant cores for future
+  owner's cores (`patch()`), and no province keeps anyone else's core (`strip_foreign_cores`: 192 inherited foreign cores, such as Byzantium's on its
+  themes' land, dropped on 30 Oct 2026; validate enforces it) except the `seed_cores` releasables. `core_deny` (holder, owner) pairs are now redundant. Dormant cores for future
   releasables live in `seed_cores` (Dublin on Sudreyjar-held Dyflin:
   rebels or a manual release wake it, no scripted path needed). Forts exist only where the
   database says so (`provinces.fort`, stone-walled cities still garrisoned

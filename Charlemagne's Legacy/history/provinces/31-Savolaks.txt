@@ -2,7 +2,6 @@
 
 owner = OLA
 controller = OLA
-add_core = FIN
 add_core = OLA
 capital = "Olofsborg"
 culture = finnish

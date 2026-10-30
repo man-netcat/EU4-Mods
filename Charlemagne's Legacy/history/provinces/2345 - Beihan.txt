@@ -2,7 +2,6 @@
 
 owner = ZIY
 controller = ZIY
-add_core = YEM
 add_core = ZIY
 capital = "Beihan"
 culture = bedouin

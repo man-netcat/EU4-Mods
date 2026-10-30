@@ -2,7 +2,6 @@
 
 owner = PAK
 controller = PAK
-add_core = YOR
 add_core = PAK
 capital = "Nellore"
 culture = telugu

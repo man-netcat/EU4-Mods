@@ -2,7 +2,6 @@
 
 owner = VSG
 controller = VSG
-add_core = TRA
 add_core = VSG
 capital = "Oradea"
 culture = avar

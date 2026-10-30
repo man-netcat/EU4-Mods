@@ -2,7 +2,6 @@
 
 owner = SPW
 controller = SPW
-add_core = SOR
 add_core = SPW
 capital = "Chotebuz"
 culture = polabian

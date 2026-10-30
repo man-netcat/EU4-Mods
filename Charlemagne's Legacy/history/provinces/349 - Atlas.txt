@@ -2,7 +2,6 @@
 
 owner = ALG
 controller = ALG
-add_core = TFL
 add_core = ALG
 capital = "Figuig"
 culture = butr

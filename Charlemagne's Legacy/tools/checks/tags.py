@@ -178,6 +178,22 @@ def tag_tech_culture_faith_and_size() -> None:
     for b in stray[:8]:
         print("        " + b)
 
+    from tagdb import SEED_CORES  # noqa: E402
+
+    dormant = []
+    for pid, path in files.items():
+        s, _, _ = parse(path)
+        o = s.get("owner")
+        if not o:
+            continue
+        text = open(path, encoding="utf-8", errors="surrogateescape").read()
+        for c in set(re.findall(r"(?m)^\s*add_core\s*=\s*([A-Z]{3})", text)):
+            if c != o and c not in SEED_CORES.get(pid, ()):
+                dormant.append(f"{pid} owned by {o} still cored by {c}")
+    note(not dormant, f"no dormant cores: every province is cored by its owner alone, bar seeded releasables ({len(dormant)} problems)")
+    for b in dormant[:8]:
+        print("        " + b)
+
     print("\n== realm sizes ==")
     for t in TAGS:
         if t in DORMANT:

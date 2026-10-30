@@ -2,7 +2,6 @@
 
 owner = VGD
 controller = VGD
-add_core = NOV # Novgorodian claims
 add_core = VGD
 capital = "Vologda"
 culture = vepsian

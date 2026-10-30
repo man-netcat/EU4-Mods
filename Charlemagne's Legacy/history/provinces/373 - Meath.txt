@@ -2,7 +2,6 @@
 
 owner = LOI
 controller = LOI
-add_core = MTH
 add_core = LOI
 add_core = DUB
 capital = "Dublin"

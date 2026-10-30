@@ -2,7 +2,6 @@
 
 owner = DAU
 controller = DAU
-add_core = TOU
 add_core = DAU
 capital = "Viviers"
 culture = occitan

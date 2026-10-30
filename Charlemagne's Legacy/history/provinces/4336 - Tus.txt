@@ -2,7 +2,6 @@
 
 owner = SAF
 controller = SAF
-add_core = KHO
 add_core = SAF
 capital = "Tun"
 culture = tajik

@@ -3,7 +3,6 @@
 owner = TUN
 controller = TUN
 add_core = TUN
-add_core = TRP
 capital = "Djerba"
 culture = butr
 religion = kharijite

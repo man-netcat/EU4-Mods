@@ -2,7 +2,6 @@
 
 owner = GUY
 controller = GUY
-add_core = FRA
 add_core = GUY
 capital = "Bordeaux"
 culture = occitan

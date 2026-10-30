@@ -2,7 +2,6 @@
 
 owner = KZS
 controller = KZS
-add_core = TIM
 add_core = KZS
 capital = "Malamir"
 culture = persian
