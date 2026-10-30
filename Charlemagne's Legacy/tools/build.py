@@ -28,6 +28,7 @@ from steps.diplomacy import step_diplomacy, step_wars  # noqa: E402
 from steps.empire import step_hre  # noqa: E402
 from steps.formations import step_formation_triggers  # noqa: E402
 from steps.provinces import step_provinces  # noqa: E402
+from steps.releasables import step_releasables  # noqa: E402
 from steps.start import step_start  # noqa: E402
 from steps.vanilla_countries import step_restore_colours, step_vanilla_countries  # noqa: E402
 from steps.vanilla_scripts import step_events, step_filter_decisions  # noqa: E402
@@ -51,6 +52,7 @@ PHASES = [
     ("rewrite vanilla realm colours", step_vanilla_countries),
     ("generate the restore-colours decision", step_restore_colours),
     ("write formation triggers", step_formation_triggers),
+    ("write the releasables' events", step_releasables),
     ("filter vanilla events", step_events),
     ("filter vanilla decisions", step_filter_decisions),
     ("check CK3 rulers", step_ck3, []),

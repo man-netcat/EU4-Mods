@@ -1,6 +1,7 @@
 owner = GMA
 controller = GMA
 add_core = GMA
+add_core = OPL
 capital = "Opole"
 culture = polish
 religion = slavic_pagan

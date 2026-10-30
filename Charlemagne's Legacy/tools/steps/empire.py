@@ -91,6 +91,7 @@ def step_hre() -> None:
 \t\t\tchange_government_to_monarchy = yes
 \t\t\tset_in_empire = no
 \t\t\tset_country_flag = kar_formed_hre
+\t\t\tcountry_event = {{ id = kar_releasables.100 days = 365 }}
 \t\t\thidden_effect = {{
 \t\t\t\tset_government_rank = 4
 \t\t\t}}

@@ -2,8 +2,6 @@
 
 owner = THS
 controller = THS
-add_core = BYZ
-add_core = VEN
 add_core = THS
 capital = "Thessaloniki"
 culture = greek

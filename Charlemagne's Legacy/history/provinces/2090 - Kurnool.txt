@@ -2,7 +2,6 @@
 
 owner = PEA
 controller = PEA
-add_core = YOR
 add_core = PEA
 capital = "Srisailam"
 culture = telugu

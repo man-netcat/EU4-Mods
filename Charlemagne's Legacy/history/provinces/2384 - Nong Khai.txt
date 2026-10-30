@@ -2,7 +2,6 @@
 
 owner = KUK
 controller = KUK
-add_core = VIE
 add_core = KUK
 capital = "Nong Khai"
 culture = mon

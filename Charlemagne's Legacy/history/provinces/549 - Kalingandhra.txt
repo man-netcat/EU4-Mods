@@ -2,7 +2,6 @@
 
 owner = KLA
 controller = KLA
-add_core = YOR
 add_core = KLA
 capital = "Vizianagaram"
 culture = telugu

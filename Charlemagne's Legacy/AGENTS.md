@@ -133,7 +133,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   in the comment on the family title (`d_nf_hexavoulis = { # Hexavoulis (Epirus)` -> Epirus; `tagloc.family_region`); the code is the region's first free letters.
   They hold `theme_subject_type` (own block in `vanillapatch.py`, marked BEGIN/END kar theme): count = vassal, no relation slot (twenty-odd vassals would
   blow the empire's limit of 8), `relative_power_class` 0 and no development-ratio liberty (a 7-province capital against 23 governors would put them
-  all in revolt), base liberty -25, and 50% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
+  all in revolt), base liberty -25, and 25% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
   the themes were appointed strategoi, not hereditary lords, and pronoia is 11th-century - chosen anyway to follow CK3. Four provinces CK3 does not
   hold under the Basileus went to their CK3 owners (Apulia to BNV, Kaffa to WEE, Ohrid to BUL, Kalos Limen to KHZ). Placeholder flags; untested in-game.
 - The Abbasid Caliphate's governors are 16 vassal tags (user decision, 29 Oct 2026), built like the themes: the duchy-rank `d_*` direct vassals of the
@@ -145,6 +145,35 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   the sovereign belongs to the governor tag of its direct-vassal duchy, else the realm (or one of its other subjects); nothing outside the realm
   may sit in the realm or a governor. The pass moved Phrygia to Opsikion, Satala to Khaldia, Philippopolis to BYZ, Batina and Samman to ARB,
   Maragha to Azerbaijan, Tihama to Medina and Lar to Fars (Yemen's capital became Sanaa).
+- `python3 tools/troops.py [N|--all|--csv]` ranks every sovereign tag by the force limit and manpower it can field (own, from governor subjects, and the
+  whole bloc incl. vassals); a model from the base-game static modifiers, not in-game numbers. Governors give 25% (was 50%: it put Byzantium and the
+  Caliphate at ~90 force limit, above every realm but Tang; at 25% they sit at ~53, between Kosala and Karnata).
+- Lotharingia is partitioned by `events/LotharingianPartition.txt` (user decision, 30 Oct 2026; history, not CK3: CK3 gives the whole kingdom to Charles
+  the Bald on 869.8.8 and to Louis the Younger on 877.6.10 and has no Meerssen). `kar_lotharingia.1` (LOT, from 869.8.9, after Lothair II's death in the
+  country history): the AI accepts, the treaty (`.4`) follows a year later and hands LOT's provinces to FRA (13: Hainaut, Brabant, Liege, Breda,
+  's-Hertogenbosch, Cambrai, Antwerp, Namur, Verdun, Barrois, Lorraine, Besancon, Salins) and GER (14: Alsace, Aachen, Kleves, Gelre, Utrecht, Oversticht,
+  Metz, Luxemburg, Maastricht, Julich, Sundgau, Mulhouse, Bern, Fribourg), the union DAU to FRA and the vassals HOL, KOL, TRI to GER. A player LOT can
+  defy it (`kar_lotharingia_succession_crisis`, FRA and GER get permanent claims on their halves, `.2` and `.3`). Borderline calls are mine: Liege,
+  Luxemburg, Bern, Fribourg and the Brabant provinces. Validate keeps the event lists equal to LOT's provinces. Also moved to their CK3 owners: Limburg
+  (MAI), Freiburg (GER), Wallis and Annecy (UBG), Oldenburg (AGR). Ribemont (880) is not built. Never playtested.
+- Releasables (user decision, 30 Oct 2026): 16 dormant county tags in the `releasables` table (`addtag.py TAG c_title PID.. --tech T --dormant [--hre]`: no land,
+  cores seeded on the county via `seed_cores`, listed DORMANT automatically). Carinthia KAE (c_karnten), Carniola LEA (c_ljubljana), Isle of Man KOI (vanilla Mann),
+  Vannes VAE, Rennes REN, Cornouaille COU, Chartres CAR, Magdeburg MAG, Strassburg ALS (vanilla Strasbourg), Speyer SPE, Ulm ULM, Hohenlohe HOH, Grisons GRI (c_grisons +
+  one more province), Opole OPL (+ Ratibor), Penllyn PEL (c_maldwyn), Eryri ERY (c_caernarfonshire); base-game tags are reused where one exists (`retag.py`: Mann, Magdeburg, Ulm, Opole, Strasbourg; the rest have no vanilla tag); the `hre` ones are the first eight of the German
+  and Alpine counties. Chosen from a CK3 scan (counties held by an independent ruler for 50+ years between 870 and 1100, Europe, no tag): the scan is
+  noisy, so the set is curated by hand, and counties whose 867 holder is the owner tag's own ruler (Inner Hebrides, Penthievre, Wurzburg, Gorlitz,
+  Arbanon) were dropped as they are that realm's own demesne. `steps/releasables.py` writes `events/KarReleasables.txt` + loc: at each county's CK3
+  independence year (`independence_years`: first year of a ten-year stretch with the county as the holder's top title and no liege) the owner gets
+  `kar_releasables.N` (release 20% for the AI, else +5 unrest), and when a Karolingian ruler forms the empire `kar_form_hre` schedules `kar_releasables.100`
+  a year on: the emperor may free the `hre` ones sitting on his land. The vanilla HRE (members, free cities, princes) is not in this mod (every province is
+  `hre = no`), so the released tags are plain independents, not members. Never playtested; flags are placeholders.
+- `python3 tools/retag.py OLD NEW [OLD NEW ...]` swaps a tag's code everywhere: every table, the loc pair, the government-name blocks, the flag file, the stale
+  country history, and the hand-kept docs and flag tools (`SWEEP`), then lists any other file that still names the old code. NEW is a free base-game tag
+  (a deliberate reuse, with its vanilla tech and file name) or any free code (a plain rename: PMS -> BHM, Bohemia's duchy). Rebuild afterwards.
+- Rule (user, 30 Oct 2026): a tag whose name equals a free base-game tag's name reuses that tag, whatever the government (`python3 tools/retag.py suggest 0` lists
+  them; `retag.py OLD NEW`). Done for Mann, Magdeburg, Ulm, Opole, Strasbourg and the Byzantine and Abbasid governors Epirus (EPI), Athens (ATH), Shammar (SHM)
+  and Medina (MDA). Not done where the vanilla tag is already a formable of ours: Lithuania (LIT), Bohemia (BOH) and Castile (CAS) stay the formables, and the
+  duchy tags LTU, BHM and CST keep their codes.
 - Lieges follow CK3's 867 (`tools/lieges.py`, checked by validate): a tag with no subject relation, or only a tributary one, must have no `liege =` in CK3;
   a vassal must have its overlord's realm as liege (a governor folded into a tag counts as that tag; a union subject may share its overlord's ruler).
   Brought in line on 29 Oct 2026: Toledo (ADU), Nedenes and Telemark (SJA), Tripolitania and Ghadames (TUN), Venice (BYZ) and Zammour (MOR) became
@@ -159,7 +188,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   (`set_capital`, Somalia precedent). Validate checks the enacted value, the land
   and the capital line in the decision file.
 - Tags come in three flavours: `LandedTag` (starts on the map),
-  `FormableTag` (requirements, no land), `ReleasableTag` (stub, unused).
+  `FormableTag` (requirements, no land), `ReleasableTag` (stub, unused; the real releasables are the `releasables` table).
 - When the base game has its own formation decision for a formable tag,
   the starters suppress it via `tag_suppress` (HUN/POL/ENG/ICE/IRE do;
   SAR/VOL/WLS/HLR have no vanilla counterpart). Neutralization is by
@@ -377,8 +406,8 @@ install is present if a flag file equals one of the base game's.
   keep their vanilla tech-group `discovered_by` too, so visibility matches
   the base game everywhere; dead-tag cores are stripped (cores respawn
   tags via rebels/release). Reassigning land drops the previous living
-  owner's cores (`patch()`), and judged-dormant claims go in `core_deny`
-  (holder, owner) pairs, enforced by validate. Dormant cores for future
+  owner's cores (`patch()`), and no province keeps anyone else's core (`strip_foreign_cores`: 192 inherited foreign cores, such as Byzantium's on its
+  themes' land, dropped on 30 Oct 2026; validate enforces it) except the `seed_cores` releasables. `core_deny` (holder, owner) pairs are now redundant. Dormant cores for future
   releasables live in `seed_cores` (Dublin on Sudreyjar-held Dyflin:
   rebels or a manual release wake it, no scripted path needed). Forts exist only where the
   database says so (`provinces.fort`, stone-walled cities still garrisoned

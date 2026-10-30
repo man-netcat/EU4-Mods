@@ -2,7 +2,6 @@
 
 owner = AFR
 controller = AFR
-add_core = TRS
 add_core = AFR
 capital = "Chimbay"
 culture = turkish

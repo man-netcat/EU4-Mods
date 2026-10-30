@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = bavarian
+religion = christian_faith
+capital = 1872
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Welf"
+		dynasty = "Welfen"
+		birth_date = 838.1.1
+		death_date = 876.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Eticho"
+		monarch_name = "Eticho"
+		dynasty = "Welfen"
+		birth_date = 865.1.1
+		death_date = 911.1.1
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

@@ -3,6 +3,7 @@
 owner = ANJ
 controller = ANJ
 add_core = ANJ
+add_core = CAR
 capital = "Chartres"
 culture = french
 religion = christian_faith

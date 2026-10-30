@@ -2,7 +2,6 @@
 
 owner = LVA
 controller = LVA
-add_core = EST
 add_core = LVA
 capital = "Arensburg"
 culture = estonian

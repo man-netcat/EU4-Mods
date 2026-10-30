@@ -1,6 +1,5 @@
 owner = THE
 controller = THE
-add_core = BYZ
 add_core = THE
 capital = "Gumulcine"
 culture = greek

@@ -74,7 +74,7 @@ The tags carry CK3's own coat of arms for that 867 dynasty:
   time: `character_lookup` maps the game char to the save's internal
   index and the dynasty whose `dynasty_head` is that index carries
   the CoA (`save-char-dyn#`, the Shujahid precedent). `--all`
-  covers every `-ids`-named tag except **PMS** (the Přemyslids keep
+  covers every `-ids`-named tag except **BHM** (the Přemyslids keep
   their old WappenWiki flag by decision); arbitrary tags take
   positional arguments.
 - **Engine model — copied from the shipped shaders** (`jomini/gfx/FX/

@@ -2,7 +2,6 @@
 
 owner = RAU
 controller = RAU
-add_core = ARK
 add_core = RAU
 capital = "Chittagong"
 culture = bengali

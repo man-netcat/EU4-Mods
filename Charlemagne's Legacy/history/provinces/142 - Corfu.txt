@@ -1,8 +1,8 @@
 #142 - Corfu
 
-owner = EPR
-controller = EPR
-add_core = EPR
+owner = EPI
+controller = EPI
+add_core = EPI
 capital = "Corfu"
 culture = greek
 religion = christian_faith
@@ -19,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = EPR
-	controller = EPR
-	add_core = EPR
+	owner = EPI
+	controller = EPI
+	add_core = EPI
 }

@@ -2,7 +2,6 @@
 
 owner = WUI
 controller = WUI
-add_core = KBU #Subjet province within the empire
 add_core = WUI
 capital = "Sutuco"
 culture = wolof

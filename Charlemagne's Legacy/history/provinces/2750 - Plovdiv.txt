@@ -2,7 +2,6 @@
 
 owner = BYZ
 controller = BYZ
-add_core = BUL
 add_core = BYZ
 capital = "Plovdiv"
 culture = greek

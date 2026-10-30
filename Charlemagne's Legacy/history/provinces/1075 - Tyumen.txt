@@ -2,7 +2,6 @@
 
 owner = ISM
 controller = ISM
-add_core = SIB
 add_core = ISM
 capital = "Chimgi-Tura"
 culture = khanty

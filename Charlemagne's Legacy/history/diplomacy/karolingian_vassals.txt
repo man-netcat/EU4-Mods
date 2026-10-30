@@ -99,7 +99,7 @@ vassal = {
 }
 vassal = {
 	first = ARB
-	second = MDN
+	second = MDA
 	start_date = 867.1.1
 }
 vassal = {
@@ -114,7 +114,7 @@ vassal = {
 }
 vassal = {
 	first = ARB
-	second = SHQ
+	second = SHM
 	start_date = 867.1.1
 }
 vassal = {
@@ -193,7 +193,7 @@ dependency = {
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
-	second = ATE
+	second = ATH
 	start_date = 867.1.1
 }
 dependency = {
@@ -217,7 +217,7 @@ dependency = {
 dependency = {
 	subject_type = theme_subject_type
 	first = BYZ
-	second = EPR
+	second = EPI
 	start_date = 867.1.1
 }
 dependency = {

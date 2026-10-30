@@ -2,7 +2,6 @@
 
 owner = KRG
 controller = KRG
-add_core = NOV # Novgorodian claims
 add_core = KRG
 capital = "Totma"
 culture = vepsian

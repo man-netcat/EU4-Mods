@@ -2,7 +2,6 @@
 
 owner = MDI
 controller = MDI
-add_core = HOB
 add_core = MDI
 capital = "Qardho"
 culture = somali

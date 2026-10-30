@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = franconian
+religion = christian_faith
+capital = 77
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Werner"
+		dynasty = "Salian"
+		birth_date = 831.1.1
+		death_date = 877.1.20
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Werner"
+		monarch_name = "Werner II"
+		dynasty = "Salian"
+		birth_date = 859.1.1
+		death_date = 919.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

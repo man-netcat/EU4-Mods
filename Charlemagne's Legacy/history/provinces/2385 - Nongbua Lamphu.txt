@@ -2,7 +2,6 @@
 
 owner = MUT
 controller = MUT
-add_core = VIE
 add_core = MUT
 capital = "Nongbua Lamphu"
 culture = mon

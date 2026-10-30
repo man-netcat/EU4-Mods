@@ -2,7 +2,6 @@
 
 owner = TVR
 controller = TVR
-add_core = KIE
 add_core = TVR
 capital = "Ovruch"
 culture = russian

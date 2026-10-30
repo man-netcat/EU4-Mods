@@ -2,8 +2,6 @@
 
 owner = SPL
 controller = SPL
-add_core = VEN
-add_core = PAP
 add_core = SPL
 capital = "Ravenna"
 culture = cisalpine

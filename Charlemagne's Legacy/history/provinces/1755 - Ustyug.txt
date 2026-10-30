@@ -2,7 +2,6 @@
 
 owner = UST
 controller = UST
-add_core = NOV # Novgorodian claims
 add_core = UST
 capital = "Ustyug"
 culture = vepsian

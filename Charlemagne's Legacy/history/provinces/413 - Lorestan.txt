@@ -2,7 +2,6 @@
 
 owner = DLF
 controller = DLF
-add_core = TIM
 add_core = DLF
 capital = "Khorramabad"
 culture = persian

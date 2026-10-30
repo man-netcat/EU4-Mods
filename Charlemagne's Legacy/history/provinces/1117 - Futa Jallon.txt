@@ -2,7 +2,6 @@
 
 owner = FUT
 controller = FUT
-add_core = KBU #Subject province within the empire
 add_core = FUT
 capital = "Timbo"
 culture = malinke

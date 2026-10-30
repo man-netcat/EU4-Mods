@@ -3,7 +3,6 @@
 owner = GDW
 controller = GDW
 add_core = GDW
-add_core = RTT
 capital = "Mandla"
 culture = gond
 religion = vaishnava_faith

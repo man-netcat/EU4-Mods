@@ -178,6 +178,22 @@ def tag_tech_culture_faith_and_size() -> None:
     for b in stray[:8]:
         print("        " + b)
 
+    from tagdb import SEED_CORES  # noqa: E402
+
+    dormant = []
+    for pid, path in files.items():
+        s, _, _ = parse(path)
+        o = s.get("owner")
+        if not o:
+            continue
+        text = open(path, encoding="utf-8", errors="surrogateescape").read()
+        for c in set(re.findall(r"(?m)^\s*add_core\s*=\s*([A-Z]{3})", text)):
+            if c != o and c not in SEED_CORES.get(pid, ()):
+                dormant.append(f"{pid} owned by {o} still cored by {c}")
+    note(not dormant, f"no dormant cores: every province is cored by its owner alone, bar seeded releasables ({len(dormant)} problems)")
+    for b in dormant[:8]:
+        print("        " + b)
+
     print("\n== realm sizes ==")
     for t in TAGS:
         if t in DORMANT:
@@ -194,7 +210,7 @@ def vanilla_tag_reuse_is_deliberate() -> None:
         "ADU ALG ARB ARM ASU BAV BOH BRI BUL BYZ CRO CRT CRN DAL DAN DAU EGY ENG EST FIN FRA GAL "
         "GBR GER GMA GOT HLR HSA HUN ICE IRE ITA KIE KRA KRL KUR LIT LOI LOT LVA MAI MLK MOR MZB NAP NAV NOR NOV PAP PLT POL POM PRU PRO ROM RUG SAR "
         "SIL SCA SCO SER SIC SLZ SPA CAS ARA POR VAL SMI SOR SRV STE SWE SWA THU TNG TRA TRP TUN VEN VOL WLS WOL NAJ HDR MHR OMA JAP "
-        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM MTR SUN KUT BNJ TDO DGL KED BEU PAH BLI BEI MRI TER TID SUL MGD LNO PGS BTU LUW BRS KAN WGD KBU JOL KNG NUP MBA MLI PTE SMB MNS ULS MTH DMS ORD LEI KRY MDI DAM HOB KAZ PRM GUG PHA CDL PGR LIG VIE LUA BPR TAB YEM TFL MON HRZ KBO AIR ASH SON BON GUR ADA WLY SOA PAT TIB UTS KAM BHU LDK JIN SLL KOR BRT MGE SIB DAI ALB".split()    )
+        "TIM KHO AFG TRS KSH TOU GUY FLA NRM HOL HAM KOL TRI TUS SPL ANU RYU MAK ALO ETH ADA NUB BNG ASS ORI CEY NPL MLB MUL MAD TNJ KMN GDW RTT SBP KGR BST YOR SND LWA CHA ARK HSE PEG AVA SUK KHM MTR SUN KUT BNJ TDO DGL KED BEU PAH BLI BEI MRI TER TID SUL MGD LNO PGS BTU LUW BRS KAN WGD KBU JOL KNG NUP MBA MLI PTE SMB MNS ULS MTH DMS ORD LEI KRY MDI DAM HOB KAZ PRM GUG PHA CDL PGR LIG VIE LUA BPR TAB YEM TFL MON HRZ KBO AIR ASH SON BON GUR ADA WLY SOA PAT TIB UTS KAM BHU LDK JIN SLL KOR BRT MGE SIB DAI MAG ULM OPL KOI ALS EPI ATH SHM MDA ALB".split()    )
 
     vtags = set()
     vd = os.path.join(GAME, "common", "country_tags")

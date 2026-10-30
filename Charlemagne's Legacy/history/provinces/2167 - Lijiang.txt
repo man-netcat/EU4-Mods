@@ -2,7 +2,6 @@
 
 owner = DEQ
 controller = DEQ
-add_core = CDL
 add_core = DEQ
 capital = "Lijiang"
 culture = bai

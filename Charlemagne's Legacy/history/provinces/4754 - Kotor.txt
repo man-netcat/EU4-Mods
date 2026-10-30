@@ -3,7 +3,6 @@
 owner = MON
 controller = MON
 add_core = MON
-add_core = VEN #Venetian Albania
 capital = "Kotor"
 culture = serbian
 religion = slavic_pagan

@@ -2,7 +2,6 @@
 
 owner = KNA
 controller = KNA
-add_core = SIB
 add_core = KNA
 capital = "Beloyarskiy"
 culture = khanty

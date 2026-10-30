@@ -2,7 +2,6 @@
 
 owner = KOO
 controller = KOO
-add_core = KBO
 add_core = KOO
 capital = "Kotoko"
 culture = sao

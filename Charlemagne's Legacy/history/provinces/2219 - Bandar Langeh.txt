@@ -2,7 +2,6 @@
 
 owner = FAR
 controller = FAR
-add_core = TIM
 add_core = FAR
 capital = "Bandar Langeh"
 culture = kurdish

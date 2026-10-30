@@ -2,7 +2,6 @@
 
 owner = SIQ
 controller = SIQ
-add_core = NAP
 add_core = SIQ
 capital = "Trapani"
 culture = maghrebi

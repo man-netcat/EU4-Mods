@@ -4,6 +4,7 @@
 import os
 import re
 from checks.report import note
+from tagdb import DIPLOMACY
 from checks.context import BY_TAG, CACHE, GAME, MOD, _REALMS, country_path
 
 
@@ -133,6 +134,28 @@ def vassalage_matches_ck3_s_867_lieges() -> None:
          f"({len(gp_bad)} off)")
     for pid, county, owner, want in gp_bad:
         print(f"        {pid} {county}: owned by {owner}, CK3 says {want}")
+
+
+def lotharingian_partition_covers_lotharingia() -> None:
+    """The Treaty of Meerssen event hands over exactly the provinces LOT owns, and its subjects go to the right kings."""
+    print("\n== the partition of Lotharingia covers its realm (events/LotharingianPartition.txt) ==")
+    txt = open(os.path.join(MOD, "events", "LotharingianPartition.txt"), encoding="cp1252").read()
+    ceded = {side: set(map(int, re.findall(rf"(\d+) = \{{ limit = \{{ owned_by = ROOT \}} remove_core = ROOT cede_province = {side} add_core = {side} \}}", txt)))
+             for side in ("FRA", "GER")}
+    claimed = {}
+    for ev, side in (("2", "FRA"), ("3", "GER")):
+        body = txt.split(f"id = kar_lotharingia.{ev}\n", 1)[1].split("\ncountry_event", 1)[0]
+        claimed[side] = set(map(int, re.findall(r"(\d+) = \{ limit = \{ owned_by = LOT \} add_permanent_claim = ROOT", body)))
+    owned = set(BY_TAG["LOT"].provinces)
+    note(ceded["FRA"] | ceded["GER"] == owned and not ceded["FRA"] & ceded["GER"],
+         f"FRA and GER shares are LOT's {len(owned)} provinces, each given once "
+         f"(FRA {len(ceded['FRA'])}, GER {len(ceded['GER'])})")
+    for side in ("FRA", "GER"):
+        note(claimed[side] == ceded[side], f"{side}'s claims are the share it gets at Meerssen")
+    for ev, want in (("DAU", "FRA"), ("HOL", "GER"), ("KOL", "GER"), ("TRI", "GER")):
+        in_ev = f"{want} = {{ vassalize = {ev} }}" in txt
+        liege = [d.liege for d in DIPLOMACY if d.subject == ev]
+        note(in_ev and liege == ["LOT"], f"{ev} is LOT's subject at the start and Meerssen hands it to {want}")
 
 
 def historical_friendships_and_rivalries() -> None:
@@ -346,6 +369,7 @@ def vassals_cannot_be_integrated_at_the_start() -> None:
 def run() -> None:
     subjects_and_relation_limit()
     vassalage_matches_ck3_s_867_lieges()
+    lotharingian_partition_covers_lotharingia()
     historical_friendships_and_rivalries()
     subject_types_keep_ck3_true_vassal_ranks()
     subjects_have_the_right_subject_type()

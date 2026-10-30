@@ -28,6 +28,7 @@ from models import (
     Province as ProvinceRow,
     Rivalry as RivalryRow,
     SeedCore as SeedCoreRow,
+    Releasable as ReleasableRow,
     Tag as TagRow,
     TagArea,
     TagProvince,
@@ -351,12 +352,16 @@ def _load() -> tuple[
         )
         for r in rows
     ]
-    return tags, dips, provs, formables, wars, seeds
+    releasables = {r.tag: bool(r.hre) for r in s.query(ReleasableRow).order_by(ReleasableRow.tag)}
+    return tags, dips, provs, formables, wars, seeds, releasables
 
 
-TAGS, DIPLOMACY, PROVINCES, FORMABLES, WARS, SEED_CORES = _load()
+TAGS, DIPLOMACY, PROVINCES, FORMABLES, WARS, SEED_CORES, RELEASABLES = _load()
 
 BY_TAG: dict[str, LandedTag] = {t.tag: t for t in TAGS}
+
+#: the releasables (models.Releasable) are dormant too: landless, woken by event
+DORMANT = DORMANT | frozenset(RELEASABLES)
 
 BY_FORMABLE: dict[str, FormableTag] = {f.tag: f for f in FORMABLES}
 

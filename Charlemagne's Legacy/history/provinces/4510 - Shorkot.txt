@@ -2,7 +2,6 @@
 
 owner = DIP
 controller = DIP
-add_core = MUL
 add_core = DIP
 capital = "Shorkot"
 culture = punjabi

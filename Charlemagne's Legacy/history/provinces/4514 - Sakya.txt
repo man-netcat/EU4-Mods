@@ -2,7 +2,6 @@
 
 owner = SAY
 controller = SAY
-add_core = PHA
 add_core = SAY
 capital = "Sakya"
 culture = bodpa

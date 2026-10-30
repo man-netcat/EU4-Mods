@@ -1,8 +1,8 @@
 #2327 - Maan
 
-owner = SHQ
-controller = SHQ
-add_core = SHQ
+owner = SHM
+controller = SHM
+add_core = SHM
 capital = "Maan"
 culture = bedouin
 religion = sunni
@@ -22,7 +22,7 @@ discovered_by = indian
 discovered_by = east_african
 
 867.1.1 = {
-	owner = SHQ
-	controller = SHQ
-	add_core = SHQ
+	owner = SHM
+	controller = SHM
+	add_core = SHM
 }

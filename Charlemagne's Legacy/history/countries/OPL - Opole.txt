@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = polish
+religion = slavic_pagan
+capital = 4723
+religious_school = slavic_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Wratyslaw"
+		dynasty = "Wratyslawicz"
+		birth_date = 815.1.1
+		death_date = 880.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Krzesimir"
+		monarch_name = "Krzesimir"
+		dynasty = "Wratyslawicz"
+		birth_date = 862.1.1
+		death_date = 900.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

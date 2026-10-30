@@ -2,8 +2,9 @@
 
 owner = LOI
 controller = LOI
-add_core = SCO
+add_core = KOI
 add_core = LOI
+add_core = KOI
 capital = "Castletown"
 culture = gaelic
 religion = christian_faith

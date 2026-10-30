@@ -2,7 +2,6 @@
 
 owner = TNJ
 controller = TNJ
-add_core = MAD
 add_core = TNJ
 capital = "Kuddaluru"
 culture = tamil

@@ -266,11 +266,76 @@ basque_titles = {
 }
 
 
+breton_bri_titles = {
+# lifted from CK3 flavorization for BRI: k_brittany carries rule specials the shared breton_titles block cannot express; Islam heir = False
+	rank = {
+		1 = BRETON_BRI_COUNTY  # county_feudal
+		2 = BRETON_BRI_DUCHY  # duchy_feudal_independent
+		3 = BRETON_BRI_KINGDOM  # kingdom_feudal
+		4 = BRETON_BRI_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BRETON_BRI_COUNT_MALE  # count_feudal_male
+		2 = BRETON_BRI_DUKE_MALE  # duke_feudal_independent
+		3 = BRETON_BRI_KING_MALE  # king_feudal_male
+		4 = BRETON_BRI_EMPEROR_MALE  # emperor_feudal_male
+		5 = BRETON_BRI_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BRETON_BRI_COUNT_FEMALE  # count_feudal_female
+		2 = BRETON_BRI_DUKE_FEMALE  # duke_feudal_independent_female
+		3 = BRETON_BRI_KING_FEMALE  # king_feudal_female
+		4 = BRETON_BRI_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = BRETON_BRI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BRETON_BRI_COUNT_MALE  # consort uses the ruler form
+		2 = BRETON_BRI_DUKE_MALE  # consort uses the ruler form
+		3 = BRETON_BRI_KING_MALE  # consort uses the ruler form
+		4 = BRETON_BRI_EMPEROR_MALE  # consort uses the ruler form
+		5 = BRETON_BRI_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BRETON_BRI_COUNT_FEMALE  # count_feudal_female
+		2 = BRETON_BRI_DUKE_FEMALE  # duke_feudal_independent_female
+		3 = BRETON_BRI_KING_FEMALE  # king_feudal_female
+		4 = BRETON_BRI_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = BRETON_BRI_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = BRI
+	}
+}
+
+
 breton_titles = {
-# CK3 ladders for BRI(r3)
+# CK3 ladders for VAE(r1), REN(r1), COU(r1)
 	rank = {
 		1 = BRETON_COUNTY  # county_feudal
-		2 = BRETON_DUCHY  # duchy_feudal_independent
+		2 = BRETON_DUCHY  # duchy_feudal
 		3 = BRETON_KINGDOM  # kingdom_feudal
 		4 = BRETON_EMPIRE  # empire_feudal
 		5 = HEGEMONY
@@ -278,7 +343,7 @@ breton_titles = {
 
 	ruler_male = {
 		1 = BRETON_COUNT_MALE  # count_feudal_male
-		2 = BRETON_DUKE_MALE  # duke_feudal_independent
+		2 = BRETON_DUKE_MALE  # duke_feudal_male
 		3 = BRETON_KING_MALE  # king_feudal_male
 		4 = BRETON_EMPEROR_MALE  # emperor_feudal_male
 		5 = BRETON_HEGEMON_MALE  # hegemon
@@ -286,7 +351,7 @@ breton_titles = {
 
 	ruler_female = {
 		1 = BRETON_COUNT_FEMALE  # count_feudal_female
-		2 = BRETON_DUKE_FEMALE  # duke_feudal_independent_female
+		2 = BRETON_DUKE_FEMALE  # duke_feudal_female
 		3 = BRETON_KING_FEMALE  # king_feudal_female
 		4 = BRETON_EMPEROR_FEMALE  # emperor_feudal_female
 		5 = BRETON_HEGEMON_FEMALE  # hegemon_female
@@ -302,7 +367,7 @@ breton_titles = {
 
 	consort_female = {
 		1 = BRETON_COUNT_FEMALE  # count_feudal_female
-		2 = BRETON_DUKE_FEMALE  # duke_feudal_independent_female
+		2 = BRETON_DUKE_FEMALE  # duke_feudal_female
 		3 = BRETON_KING_FEMALE  # king_feudal_female
 		4 = BRETON_EMPEROR_FEMALE  # emperor_feudal_female
 		5 = BRETON_HEGEMON_FEMALE  # hegemon_female
@@ -723,7 +788,7 @@ egyptian_titles = {
 
 
 polish_titles = {
-# CK3 ladders for SIL(r2), KRA(r1), TRN(r1), LEC(r1), WIE(r2), KUJ(r1), PLO(r1), STZ(r1), SAN(r1)
+# CK3 ladders for SIL(r2), KRA(r1), TRN(r1), LEC(r1), WIE(r2), KUJ(r1), PLO(r1), STZ(r1), SAN(r1), OPL(r1)
 	rank = {
 		1 = POLISH_COUNTY  # county_tribal
 		2 = POLISH_DUCHY  # duchy_tribal
@@ -1571,7 +1636,7 @@ estonian_titles = {
 
 
 czech_titles = {
-# CK3 ladders for PMS(r2)
+# CK3 ladders for BHM(r2)
 	rank = {
 		1 = CZECH_COUNTY  # county_feudal
 		2 = CZECH_DUCHY  # duchy_feudal
@@ -4115,7 +4180,7 @@ bedouin_yam_titles = {
 
 
 bedouin_titles = {
-# CK3 ladders for EDE(r2), OMA(r2), TAB(r2), DLF(r2), ADA(r2), SUI(r1), AZB(r2), SHQ(r2), MDN(r2) - clan/feudal CK3 government - islam realms (Shahzade)
+# CK3 ladders for EDE(r2), OMA(r2), TAB(r2), DLF(r2), ADA(r2), SUI(r1), AZB(r2), SHM(r2), MDA(r2) - clan/feudal CK3 government - islam realms (Shahzade)
 	rank = {
 		1 = BEDOUIN_COUNTY  # county_feudal_arabic_group
 		2 = BEDOUIN_DUCHY  # duchy_feudal_arabic_group
@@ -5164,7 +5229,7 @@ saka_titles = {
 
 
 saxon_titles = {
-# CK3 ladders for AGR(r2)
+# CK3 ladders for AGR(r2), MAG(r1)
 	rank = {
 		1 = SAXON_COUNTY  # county_feudal
 		2 = SAXON_DUCHY  # duchy_feudal
@@ -15721,6 +15786,136 @@ sogdian_titles = {
 	trigger = {
 		government = monarchy
 		primary_culture = sogdian
+	}
+}
+
+
+carantanian_titles = {
+# CK3 ladders for LEA(r1)
+	rank = {
+		1 = CARANTANIAN_COUNTY  # county_feudal
+		2 = CARANTANIAN_DUCHY  # duchy_feudal
+		3 = CARANTANIAN_KINGDOM  # kingdom_feudal
+		4 = CARANTANIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CARANTANIAN_COUNT_MALE  # count_feudal_male
+		2 = CARANTANIAN_DUKE_MALE  # duke_feudal_male
+		3 = CARANTANIAN_KING_MALE  # king_feudal_male
+		4 = CARANTANIAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = CARANTANIAN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CARANTANIAN_COUNT_FEMALE  # count_feudal_female
+		2 = CARANTANIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = CARANTANIAN_KING_FEMALE  # king_feudal_female
+		4 = CARANTANIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CARANTANIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CARANTANIAN_COUNT_MALE  # consort uses the ruler form
+		2 = CARANTANIAN_DUKE_MALE  # consort uses the ruler form
+		3 = CARANTANIAN_KING_MALE  # consort uses the ruler form
+		4 = CARANTANIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = CARANTANIAN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CARANTANIAN_COUNT_FEMALE  # count_feudal_female
+		2 = CARANTANIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = CARANTANIAN_KING_FEMALE  # king_feudal_female
+		4 = CARANTANIAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CARANTANIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = carantanian
+	}
+}
+
+
+swabian_titles = {
+# CK3 ladders for ALS(r1), GRI(r1)
+	rank = {
+		1 = SWABIAN_COUNTY  # county_feudal
+		2 = SWABIAN_DUCHY  # duchy_feudal
+		3 = SWABIAN_KINGDOM  # kingdom_feudal
+		4 = SWABIAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SWABIAN_COUNT_MALE  # count_feudal_male
+		2 = SWABIAN_DUKE_MALE  # duke_feudal_male
+		3 = SWABIAN_KING_MALE  # king_feudal_male
+		4 = SWABIAN_EMPEROR_MALE  # emperor_feudal_male_german
+		5 = SWABIAN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SWABIAN_COUNT_FEMALE  # count_feudal_female
+		2 = SWABIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = SWABIAN_KING_FEMALE  # king_feudal_female
+		4 = SWABIAN_EMPEROR_FEMALE  # emperor_feudal_female_german
+		5 = SWABIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SWABIAN_COUNT_MALE  # consort uses the ruler form
+		2 = SWABIAN_DUKE_MALE  # consort uses the ruler form
+		3 = SWABIAN_KING_MALE  # consort uses the ruler form
+		4 = SWABIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = SWABIAN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SWABIAN_COUNT_FEMALE  # count_feudal_female
+		2 = SWABIAN_DUKE_FEMALE  # duke_feudal_female
+		3 = SWABIAN_KING_FEMALE  # king_feudal_female
+		4 = SWABIAN_EMPEROR_FEMALE  # emperor_feudal_female_german
+		5 = SWABIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = swabian
 	}
 }
 

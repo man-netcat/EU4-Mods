@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = christian_faith
+capital = 52
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Bruno II"
+		dynasty = "Ludolfing"
+		birth_date = 840.1.1
+		death_date = 880.2.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Otto"
+		monarch_name = "Otto"
+		dynasty = "Ludolfing"
+		birth_date = 851.1.1
+		death_date = 912.11.12
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

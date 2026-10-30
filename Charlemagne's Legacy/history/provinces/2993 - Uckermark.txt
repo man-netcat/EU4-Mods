@@ -2,7 +2,6 @@
 
 owner = UKI
 controller = UKI
-add_core = STE
 add_core = UKI
 capital = "Prenzlau"
 culture = polabian

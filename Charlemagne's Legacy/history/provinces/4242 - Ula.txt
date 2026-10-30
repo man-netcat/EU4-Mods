@@ -2,7 +2,6 @@
 
 owner = MSK
 controller = MSK
-add_core = PLT
 add_core = MSK
 capital = "Ula"
 culture = russian

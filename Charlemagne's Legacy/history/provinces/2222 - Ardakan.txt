@@ -2,7 +2,6 @@
 
 owner = DLF
 controller = DLF
-add_core = KHO
 add_core = DLF
 capital = "Ardakan"
 culture = persian

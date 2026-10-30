@@ -2,7 +2,6 @@
 
 owner = JWF
 controller = JWF
-add_core = YEM
 add_core = JWF
 capital = "Marib"
 culture = bedouin

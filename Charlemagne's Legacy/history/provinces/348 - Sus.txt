@@ -2,7 +2,6 @@
 
 owner = TIN
 controller = TIN
-add_core = TFL
 add_core = TIN
 capital = "Taroudant"
 culture = baranis

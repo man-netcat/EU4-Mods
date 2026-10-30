@@ -2,7 +2,6 @@
 
 owner = TRQ
 controller = TRQ
-add_core = SIB
 add_core = TRQ
 capital = "Yugan"
 culture = khanty

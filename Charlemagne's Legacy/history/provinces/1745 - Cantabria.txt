@@ -2,7 +2,6 @@
 
 owner = CST
 controller = CST
-add_core = ASU
 add_core = CST
 capital = "Santander"
 culture = castilian

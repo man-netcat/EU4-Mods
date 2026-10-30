@@ -2,7 +2,6 @@
 
 owner = TSL
 controller = TSL
-add_core = BYZ
 add_core = TSL
 capital = "Trikala"
 culture = greek
