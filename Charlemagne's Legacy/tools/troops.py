@@ -3,7 +3,7 @@
 
     python3 tools/troops.py [N]      # the N largest (default 40); --all lists every tag, --csv writes the table
 
-Model (EU4 1.37): force limit = (6 + 0.1 per development point) x (1 + land_forcelimit_modifier of the government
+Model (EU4 1.37): force limit = (6 all_nations, -3 more for a subject, + 0.1 per development point) x (1 + land_forcelimit_modifier of the government
 reforms); manpower = (10 + 0.25 per manpower development point) thousand x (1 + global_manpower_modifier). A subject adds
 its own figure times its subject type's forcelimit_to_overlord / manpower_to_overlord (vassal 0, march 0.1, governor
 (theme_subject_type) 0.5, personal union and tributary 0). Autonomy, buildings, ideas and traditions are not modelled, so
@@ -23,6 +23,7 @@ from paths import EU4_GAME  # noqa: E402
 from tagdb import BY_TAG, DIPLOMACY, DORMANT, PEER_RELATIONS  # noqa: E402
 
 MOD = os.path.join(HERE, "..")
+_cut = set()
 
 
 def _dev():
@@ -94,6 +95,11 @@ def main(argv):
         if d.relation in PEER_RELATIONS or d.relation == "tributary_state":
             continue
         subj.setdefault(d.subject, []).append((d.liege, d.relation))
+    # subject_nation (static modifier) takes 3 off the force limit of every subject, tributaries included
+    for d in DIPLOMACY:
+        if d.relation not in PEER_RELATIONS and d.subject in own and d.subject not in _cut:
+            _cut.add(d.subject)
+            own[d.subject][0] = max(0.0, own[d.subject][0] - 3)
     rows = []
     for tag, (fl, mp, d, n) in own.items():
         if any(rel not in ("tributary_state",) for _, rel in subj.get(tag, [])):
