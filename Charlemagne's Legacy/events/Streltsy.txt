@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ###########################################
 # Events for Streltsy Units
 # Written by Henrik Lohmander
@@ -728,7 +729,7 @@ country_event = {
 		num_of_streltsy = 5
 		is_at_war = no
 		NOT = { had_recent_war = 6 }
-		mil_tech = 6
+		mil_tech = 22
 		NOT = {
 			has_country_modifier = streltsy_inspection
 		}

@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ########################################
 # Events for Innovativeness
 #
@@ -67,13 +68,13 @@ country_event = {
 		employed_advisor = {
 			type = natural_scientist
 		}
-		adm_tech = 4
+		adm_tech = 20
 		has_institution = renaissance
 		OR = {
 			natural_scientist = 3
 			AND = {
 				natural_scientist = 2
-				adm_tech = 7
+				adm_tech = 23
 			}
 		}
 	}
@@ -604,8 +605,8 @@ country_event = {
 		has_dlc = "Rule Britannia"
 		innovativeness = 5
 		full_idea_group = exploration_ideas
-		adm_tech = 23 # map the world
-		dip_tech = 23
+		adm_tech = 39 # map the world
+		dip_tech = 39
 		OR = {
 			has_discovered = argentine_sea_area
 			has_discovered = tasman_sea_area

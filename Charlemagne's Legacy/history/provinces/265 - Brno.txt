@@ -7,10 +7,10 @@ add_core = GMA
 capital = "Brno"
 culture = czech
 religion = slavic_pagan
-base_tax = 3
-base_production = 3
+base_tax = 2
+base_production = 1
 trade_goods = wine
-base_manpower = 2
+base_manpower = 1
 
 discovered_by = western
 discovered_by = eastern

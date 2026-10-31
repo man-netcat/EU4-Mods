@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ########################################
 # Events about Trade Leagues
 #
@@ -551,8 +552,8 @@ country_event = {
 	trigger = {
 		has_dlc = "Mare Nostrum"
 		is_in_trade_league = yes
-		adm_tech = 6
-		dip_tech = 6
+		adm_tech = 22
+		dip_tech = 22
 	}
 
 	fire_only_once = yes

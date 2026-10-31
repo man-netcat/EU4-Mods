@@ -1,0 +1,335 @@
+# Written by tools/steps/ages.py. Do not edit.
+
+age_of_successors = {
+	start = 867
+
+	can_start = {
+		is_year = 867
+	}
+
+	objectives = {
+		kar_obj_hold_court = {
+			prestige = 40
+		}
+		kar_obj_loyal_realm = {
+			vassal = 3
+		}
+		kar_obj_sworn_allies = {
+			num_of_allies = 2
+		}
+		kar_obj_growing_domain = {
+			total_development = 60
+		}
+	}
+
+	abilities = {
+		kar_ab_oaths_of_fealty = {
+			modifier = {
+				reduced_liberty_desire = 10
+				diplomatic_reputation = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_levied_hosts = {
+			modifier = {
+				land_forcelimit_modifier = 0.15
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_royal_demesne = {
+			modifier = {
+				global_tax_modifier = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}
+
+age_of_raiders = {
+	start = 960
+
+	can_start = {
+		is_year = 960
+	}
+
+	objectives = {
+		kar_obj_walled_realm = {
+			total_development = 80
+		}
+		kar_obj_standing_host = {
+			army_size = 15
+		}
+		kar_obj_tribute_of_kings = {
+			vassal = 2
+		}
+		kar_obj_steady_throne = {
+			stability = 2
+		}
+	}
+
+	abilities = {
+		kar_ab_shore_watch = {
+			modifier = {
+				naval_forcelimit_modifier = 0.2
+				defensiveness = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_burgh_walls = {
+			modifier = {
+				fort_maintenance_modifier = -0.2
+				global_unrest = -1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_mounted_retinues = {
+			modifier = {
+				cavalry_power = 0.1
+				cav_to_inf_ratio = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}
+
+age_of_feudalism = {
+	start = 1055
+
+	can_start = {
+		is_year = 1055
+	}
+
+	objectives = {
+		kar_obj_castellans = {
+			vassal = 5
+		}
+		kar_obj_great_domain = {
+			total_development = 120
+		}
+		kar_obj_knights_host = {
+			army_size = 25
+		}
+		kar_obj_pious_ruler = {
+			legitimacy = 100
+		}
+	}
+
+	abilities = {
+		kar_ab_knights_fees = {
+			modifier = {
+				land_forcelimit_modifier = 0.2
+				cavalry_power = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_feudal_dues = {
+			modifier = {
+				vassal_income = 0.25
+				global_tax_modifier = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_peace_of_god = {
+			modifier = {
+				stability_cost_modifier = -0.1
+				global_unrest = -1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}
+
+age_of_crusades = {
+	start = 1150
+
+	can_start = {
+		is_year = 1150
+	}
+
+	objectives = {
+		kar_obj_holy_war = {
+			prestige = 150
+		}
+		kar_obj_rich_treasury = {
+			treasury = 500
+		}
+		kar_obj_realm_of_cities = {
+			num_of_cities = 25
+		}
+		kar_obj_marriage_alliances = {
+			num_of_royal_marriages = 2
+		}
+	}
+
+	abilities = {
+		kar_ab_crusader_zeal = {
+			modifier = {
+				land_morale = 0.1
+				tolerance_own = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_pilgrim_roads = {
+			modifier = {
+				trade_efficiency = 0.1
+				global_trade_power = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_military_orders = {
+			modifier = {
+				discipline = 0.05
+				land_maintenance_modifier = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}
+
+age_of_estates = {
+	start = 1245
+
+	can_start = {
+		is_year = 1245
+	}
+
+	objectives = {
+		kar_obj_charter_towns = {
+			total_development = 180
+		}
+		kar_obj_royal_council = {
+			stability = 1
+		}
+		kar_obj_grand_alliance = {
+			num_of_allies = 3
+		}
+		kar_obj_feared_crown = {
+			prestige = 100
+		}
+	}
+
+	abilities = {
+		kar_ab_guild_charters = {
+			modifier = {
+				production_efficiency = 0.1
+				build_cost = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_common_law = {
+			modifier = {
+				legitimacy = 0.5
+				global_unrest = -1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_scutage = {
+			modifier = {
+				global_manpower_modifier = 0.15
+				advisor_cost = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}
+
+age_of_traditions = {
+	start = 1337
+
+	can_start = {
+		is_year = 1337
+	}
+
+	objectives = {
+		kar_obj_ancient_customs = {
+			total_development = 250
+		}
+		kar_obj_great_host = {
+			army_size = 40
+		}
+		kar_obj_loyal_lords = {
+			vassal = 5
+		}
+		kar_obj_deep_coffers = {
+			treasury = 1000
+		}
+	}
+
+	abilities = {
+		kar_ab_custom_and_law = {
+			modifier = {
+				stability_cost_modifier = -0.1
+				legitimacy = 0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_long_bows = {
+			modifier = {
+				infantry_power = 0.1
+				land_forcelimit_modifier = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		kar_ab_burghers_purse = {
+			modifier = {
+				global_trade_power = 0.1
+				global_tax_modifier = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

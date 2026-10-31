@@ -1,0 +1,11 @@
+name = "Reconquest of Bari"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 1933
+}
+
+867.1.1 = {
+	add_attacker = ITA
+	add_defender = SAW
+}

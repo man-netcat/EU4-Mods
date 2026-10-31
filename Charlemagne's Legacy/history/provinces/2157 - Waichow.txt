@@ -7,10 +7,10 @@ capital = "Waichow"
 culture = han
 religion = mahayana_faith
 hre = no
-base_tax = 7
-base_production = 7
+base_tax = 6
+base_production = 5
 trade_goods = grain
-base_manpower = 3
+base_manpower = 2
 is_city = yes
 
 discovered_by = chinese

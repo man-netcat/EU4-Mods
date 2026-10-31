@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 namespace = native_americans
 
 # Frozen Lands - colonizing arctic
@@ -1723,14 +1724,14 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = {
-				mil_tech = 6
+				mil_tech = 22
 			}
 		}
 		desc = "native_americans.33.d1"
 	}
 	desc = {
 		trigger = {
-			mil_tech = 6
+			mil_tech = 22
 		}
 		desc = "native_americans.33.d2"
 	}
@@ -1748,7 +1749,7 @@ country_event = {
 			primary_culture = shoshone
 		}
 		NOT = {
-			mil_tech = 6
+			mil_tech = 22
 		}
 		NOT = { 
 			OR = {
@@ -1789,7 +1790,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				mil_tech = 6
+				mil_tech = 22
 			}
 			add_country_modifier = {
 				name = "travois_no_horses"
@@ -1878,7 +1879,7 @@ country_event = {
 			primary_culture = kiowa
 			primary_culture = shoshone
 		}
-		mil_tech = 6
+		mil_tech = 22
 	}
 
 	mean_time_to_happen = {

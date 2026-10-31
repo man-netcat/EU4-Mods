@@ -7,10 +7,10 @@ capital = "Varniai"
 culture = lithuanian
 religion = baltic_pagan
 hre = no
-base_tax = 2
-base_production = 2
+base_tax = 1
+base_production = 1
 trade_goods = livestock
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 
 discovered_by = western

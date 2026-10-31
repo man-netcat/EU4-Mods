@@ -23,6 +23,7 @@ from checks import (
     rulers,
     scripts,
     tags,
+    techs,
 )
 
 CHECKS = [
@@ -38,6 +39,7 @@ CHECKS = [
     religion,
     cultures,
     filenames,
+    techs,
 ]
 
 

@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 namespace = republic_factions
 
 ########################################
@@ -1337,7 +1338,7 @@ country_event = {
 				limit = {
 					is_capital = no
 					is_in_capital_area = yes
-					owner = { adm_tech = 22 }
+					owner = { adm_tech = 38 }
 				}
 				spawn_rebels = {
 					type = revolutionary_rebels
@@ -1348,7 +1349,7 @@ country_event = {
 				limit = {
 					is_capital = no
 					is_in_capital_area = yes
-					owner = { NOT = { adm_tech = 22 } }
+					owner = { NOT = { adm_tech = 38 } }
 				}
 				spawn_rebels = {
 					type = noble_rebels
@@ -1509,7 +1510,7 @@ country_event = {
 				limit = {
 					is_capital = no
 					is_in_capital_area = yes
-					owner = { adm_tech = 22 }
+					owner = { adm_tech = 38 }
 				}
 				spawn_rebels = {
 					type = revolutionary_rebels
@@ -1520,7 +1521,7 @@ country_event = {
 				limit = {
 					is_capital = no
 					is_in_capital_area = yes
-					owner = { NOT = { adm_tech = 22 } }
+					owner = { NOT = { adm_tech = 38 } }
 				}
 				spawn_rebels = {
 					type = noble_rebels
@@ -1684,7 +1685,7 @@ country_event = {
 				limit = {
 					is_capital = no
 					is_in_capital_area = yes
-					owner = { adm_tech = 22 }
+					owner = { adm_tech = 38 }
 				}
 				spawn_rebels = {
 					type = revolutionary_rebels
@@ -1695,7 +1696,7 @@ country_event = {
 				limit = {
 					is_capital = no
 					is_in_capital_area = yes
-					owner = { NOT = { adm_tech = 22 } }
+					owner = { NOT = { adm_tech = 38 } }
 				}
 				spawn_rebels = {
 					type = anti_tax_rebels

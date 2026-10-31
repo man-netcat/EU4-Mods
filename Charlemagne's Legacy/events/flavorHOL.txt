@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ########################################
 # Flavor events for Holland/The Netherlands
 #

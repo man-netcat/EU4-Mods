@@ -7,10 +7,10 @@ capital = "Quanzhou"
 culture = han
 religion = manichaean_faith
 hre = no
-base_tax = 8
-base_production = 8
+base_tax = 7
+base_production = 7
 trade_goods = tea
-base_manpower = 3
+base_manpower = 2
 is_city = yes
 
 discovered_by = chinese

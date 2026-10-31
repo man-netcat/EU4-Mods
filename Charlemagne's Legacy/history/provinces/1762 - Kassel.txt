@@ -4,10 +4,10 @@ add_core = AGR
 capital = "Kassel"
 culture = franconian
 religion = christian_faith
-base_tax = 5
-base_production = 5
+base_tax = 3
+base_production = 3
 trade_goods = glass
-base_manpower = 3
+base_manpower = 2
 is_city = yes
 
 discovered_by = eastern

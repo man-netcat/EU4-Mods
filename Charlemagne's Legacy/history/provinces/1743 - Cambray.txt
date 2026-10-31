@@ -6,10 +6,10 @@ add_core = LOT
 capital = "Cambray"
 culture = french
 religion = christian_faith
-base_tax = 5
-base_production = 5
+base_tax = 3
+base_production = 3
 trade_goods = grain
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 latent_trade_goods = {
 	coal

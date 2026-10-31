@@ -1,0 +1,11 @@
+name = "Saffarid-Tahirid War"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 4326
+}
+
+867.1.1 = {
+	add_attacker = SAF
+	add_defender = KHO
+}

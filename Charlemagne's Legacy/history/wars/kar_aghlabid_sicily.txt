@@ -1,0 +1,11 @@
+name = "Aghlabid Conquest of Sicily"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 126
+}
+
+867.1.1 = {
+	add_attacker = TUN
+	add_defender = BYZ
+}

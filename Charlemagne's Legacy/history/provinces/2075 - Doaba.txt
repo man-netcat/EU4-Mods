@@ -7,10 +7,10 @@ capital = "Jalandhar"
 culture = punjabi
 religion = vajrayana_faith
 hre = no
-base_tax = 7
-base_production = 7
+base_tax = 5
+base_production = 5
 trade_goods = dyes
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 add_province_triggered_modifier = sikh_amritsar
 

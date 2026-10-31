@@ -5,10 +5,10 @@ capital = "Xekong"
 culture = khmu
 religion = shaiva_faith
 hre = no
-base_tax = 2
-base_production = 2
+base_tax = 1
+base_production = 1
 trade_goods = ivory
-base_manpower = 1
+base_manpower = 2
 is_city = yes
 
 discovered_by = chinese

@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 country_decisions = {
 	pirate_king_decision = {
 		major = yes
@@ -8,7 +9,7 @@ country_decisions = {
 			NOT = { has_dlc = "Emperor" }
 		}
 		allow = {
-			adm_tech = 12
+			adm_tech = 28
 			stability = 1
 			custom_trigger_tooltip = {
 				tooltip = recently_changed_government_flag_tooltip
@@ -36,7 +37,7 @@ country_decisions = {
 			NOT = { has_dlc = "Emperor" }
 		}
 		allow = {
-			adm_tech = 12
+			adm_tech = 28
 			full_idea_group = trade_ideas
 			stability = 1
 			custom_trigger_tooltip = {
@@ -65,7 +66,7 @@ country_decisions = {
 			NOT = { has_dlc = "Emperor" }
 		}
 		allow = {
-			adm_tech = 12
+			adm_tech = 28
 			republican_tradition = 90
 			stability = 1
 			custom_trigger_tooltip = {

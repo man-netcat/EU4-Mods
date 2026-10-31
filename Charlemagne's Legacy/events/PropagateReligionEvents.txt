@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ######################################################
 # Muslim Propagation of Religion Trade Policy Events #
 #                         							 #
@@ -441,7 +442,7 @@ country_event = {
 		any_active_trade_node = {
 			any_country_active_in_node = {
 				religion_group = muslim
-				adm_tech = 4
+				adm_tech = 20
 				trading_policy_in_node = {
 					node = PREV
 					policy = propagate_religion
@@ -469,7 +470,7 @@ country_event = {
 							node = PREV
 							policy = propagate_religion
 						}
-						adm_tech = 4
+						adm_tech = 20
 					}
 					any_trade_node_member_province = {
 						owned_by = ROOT
@@ -488,7 +489,7 @@ country_event = {
 							node = PREV
 							policy = propagate_religion
 						}
-						adm_tech = 4
+						adm_tech = 20
 					}
 					save_event_target_as = converter_country
 				}

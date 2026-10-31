@@ -6,10 +6,10 @@ add_core = AGR
 capital = "Braunschweig"
 culture = saxon
 religion = christian_faith
-base_tax = 3
-base_production = 3
+base_tax = 2
+base_production = 1
 trade_goods = iron
-base_manpower = 3
+base_manpower = 1
 is_city = yes
 
 discovered_by = eastern

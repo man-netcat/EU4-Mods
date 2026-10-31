@@ -6,11 +6,11 @@ add_core = GUG
 culture = zhangzhung
 religion = bon_faith
 hre = no
-base_tax = 1
-base_production = 1
+base_tax = 3
+base_production = 3
 #capital = "Ngari"
 trade_goods = gold
-base_manpower = 1
+base_manpower = 3
 is_city = yes
 
 discovered_by = chinese

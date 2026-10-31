@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ###########################################################
 # Events for the Marathas Estate
 #
@@ -205,12 +206,12 @@ country_event = {
 			any_rival_country = {
 				num_of_artillery = root
 				num_of_artillery = 10
-				mil_tech = 10
+				mil_tech = 26
 			}
 			any_enemy_country = {
 				num_of_artillery = root
 				num_of_artillery = 10
-				mil_tech = 10
+				mil_tech = 26
 			}
 		}
 	}

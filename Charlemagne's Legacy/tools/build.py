@@ -22,6 +22,7 @@ from ck3 import step_ck3  # noqa: E402
 from culturetitles import step_government_names  # noqa: E402
 from rites import step_rites  # noqa: E402
 from steps import provdata  # noqa: E402
+from steps.ages import step_ages  # noqa: E402
 from steps.countries import step_countries  # noqa: E402
 from steps.custom import step_custom  # noqa: E402
 from steps.diplomacy import step_diplomacy, step_wars  # noqa: E402
@@ -32,6 +33,8 @@ from steps.releasables import step_releasables  # noqa: E402
 from steps.start import step_start  # noqa: E402
 from steps.vanilla_countries import step_restore_colours, step_vanilla_countries  # noqa: E402
 from steps.vanilla_scripts import step_events, step_filter_decisions  # noqa: E402
+from reforms import step_reforms  # noqa: E402
+from techs import step_techs  # noqa: E402
 from tagdb import selfcheck  # noqa: E402
 from tagloc import step_tagloc  # noqa: E402
 from vanillapatch import step_vanilla_patches  # noqa: E402
@@ -48,6 +51,7 @@ PHASES = [
     ("generate the empire decision", step_hre),
     ("write starting vassals", step_diplomacy),
     ("write preset wars", step_wars),
+    ("write the early ages", step_ages),
     ("generate the Magyars", step_custom),
     ("rewrite vanilla realm colours", step_vanilla_countries),
     ("generate the restore-colours decision", step_restore_colours),
@@ -55,6 +59,8 @@ PHASES = [
     ("write the releasables' events", step_releasables),
     ("filter vanilla events", step_events),
     ("filter vanilla decisions", step_filter_decisions),
+    ("write the early technology levels", step_techs),
+    ("write the early government reforms", step_reforms),
     ("check CK3 rulers", step_ck3, []),
     ("check start-date ownership", step_start),
 ]

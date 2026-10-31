@@ -152,7 +152,74 @@ def tag_names_are_unique() -> None:
          + ("".join(f" ({n}: {', '.join(ts)})" for n, ts in sorted(dups.items())) if dups else ""))
 
 
+def _resolved_english():
+    """{key: value} of the base game's English localisation with the mod's laid over it (the mod wins)."""
+    loc = {}
+    for base in (os.path.join(GAME, "localisation"), LOC):
+        for root, _dirs, files in sorted(os.walk(base)):
+            for fn in sorted(files):
+                if fn.endswith("_l_english.yml"):
+                    for m in re.finditer(r'(?m)^\s+([\w.\-]+):\d*\s+"(.*)"', open(os.path.join(root, fn), encoding="utf-8-sig", errors="replace").read()):
+                        loc[m.group(1)] = m.group(2)
+    return loc
+
+
+def _grouped_keys(rel, member_marker):
+    """(groups, members) of a common/ file whose top-level blocks are groups and whose second-level blocks holding
+    `member_marker` are the members (cultures in culture groups, religions in religion groups)."""
+    text = re.sub(r"#[^\n]*", "", open(os.path.join(MOD, rel), encoding="utf-8", errors="replace").read())
+    groups, members, depth, stack, i = [], [], 0, [], 0
+    for m in re.finditer(r"(\w+)\s*=\s*\{|[{}]", text):
+        if m.group(0) == "}":
+            depth -= 1
+            stack.pop()
+            continue
+        if m.group(0) == "{":
+            depth += 1
+            stack.append(None)
+            continue
+        depth += 1
+        stack.append((m.group(1), m.end()))
+        if depth == 1:
+            groups.append(m.group(1))
+        elif depth == 2:
+            end, d = m.end(), 1
+            while d:
+                d += {"{": 1, "}": -1}.get(text[end], 0)
+                end += 1
+            if re.search(rf"(?m)^\s*{member_marker}\b", text[m.end():end]):
+                members.append(m.group(1))
+    return groups, members
+
+
+PARTICLES = {"of", "the", "de", "del", "della", "di", "da", "do", "la", "le", "al", "el", "bin", "ibn", "von", "van", "and", "y", "in", "ap", "an", "ul"}
+
+
+def cultures_and_religions_are_named_and_capitalised() -> None:
+    """Every culture, culture group, religion and religion group has an English name, and every word of it starts with a capital
+    (small connecting words such as 'of' or 'de' excepted)."""
+    print("\n== cultures, culture groups, religions and religion groups are named and capitalised ==")
+    loc = _resolved_english()
+    cgroups, cultures = _grouped_keys("common/cultures/00_cultures.txt", "male_names")
+    rgroups, religions = _grouped_keys("common/religions/00_religion.txt", "icon")
+    for label, keys in (("culture groups", cgroups), ("cultures", cultures), ("religion groups", rgroups), ("religions", religions)):
+        missing = [k for k in keys if not loc.get(k, "").strip()]
+        low = []
+        for k in keys:
+            name = loc.get(k, "")
+            words = re.split(r"[\s\-]+", name.replace("\u00a7", " ")) if name else []
+            for w in words:
+                core = re.sub(r"^[^\w]+", "", w)
+                if core and core[0].isalpha() and core[0].islower() and core.lower() not in PARTICLES:
+                    low.append(f"{k}={name!r}")
+                    break
+        note(not missing and not low, f"{len(keys)} {label} are named and capitalised"
+             + (f" ({len(missing)} unnamed: {', '.join(missing[:8])})" if missing else "")
+             + (f" ({len(low)} not capitalised: {', '.join(low[:8])})" if low else ""))
+
+
 def run() -> None:
+    cultures_and_religions_are_named_and_capitalised()
     localisation_files_load()
     loc_values_use_glyphs_eu4_renders()
     formables_carry_their_loc()

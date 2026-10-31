@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 country_decisions = {
 
 	#provincial_system = {
@@ -11,7 +12,7 @@ country_decisions = {
 	#		}
 	#	}
 	#	allow = {
-	#		adm_tech = 5
+	#		adm_tech = 21
 	#		ADM = 4
 	#		adm_power = 50
 	#	}

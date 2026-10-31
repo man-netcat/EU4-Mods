@@ -7,10 +7,10 @@ capital = "Salerno"
 culture = lombard
 religion = christian_faith
 hre = no
-base_tax = 5
+base_tax = 3
 base_production = 1
 trade_goods = fish
-base_manpower = 4
+base_manpower = 2
 is_city = yes	# Estimated
 
 discovered_by = western

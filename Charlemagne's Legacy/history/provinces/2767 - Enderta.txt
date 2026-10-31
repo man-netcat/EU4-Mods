@@ -7,10 +7,10 @@ capital = "Antalo"
 culture = ethiopian
 religion = miaphysitism
 hre = no
-base_tax = 1
-base_production = 1
+base_tax = 4
+base_production = 3
 trade_goods = copper
-base_manpower = 2
+base_manpower = 7
 is_city = yes
 
 discovered_by = east_african

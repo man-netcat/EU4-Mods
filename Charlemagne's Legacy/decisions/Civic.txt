@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 country_decisions = {
 	#Major Decisions:	color = { 146 174 114 }
 	#Minor Decisions:	color = { 60 117 165 }
@@ -11,7 +12,7 @@ country_decisions = {
 				current_age = age_of_revolutions
 				has_country_flag = ned_abolish_slavery_flag
 			}
-			adm_tech = 15
+			adm_tech = 31
 		}
 		allow = {
 			dip = 3

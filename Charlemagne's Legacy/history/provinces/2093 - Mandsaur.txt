@@ -7,10 +7,10 @@ capital = "Mandsaur"
 culture = malvi
 religion = jain_faith
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 4
+base_production = 4
 trade_goods = spices	#Opium
-base_manpower = 2
+base_manpower = 3
 is_city = yes
 add_rajputs_or_marathas_or_nobles_effect = yes
 

@@ -882,6 +882,23 @@ def expected_culture(pid):
     return cc, cc
 
 
+# Homonyms the first pairing took for the wrong place (Brittany's Brest for Brest-Litovsk, Ethiopia's Kaffa for the Crimean
+# one, ...); found by comparing each province's county with the counties of the rest of its EU4 area.
+PROVINCE_COUNTY.update({
+    277: "c_berestye",   # Brest-Litovsk (c_french_leon holds Brittany's Brest)
+    285: "c_kerch",      # Kaffa on the Crimean coast: b_theodosia (c_kaffa is Kaffa in Ethiopia)
+    150: "c_turnovo",    # Tarnovo, the Bulgarian town (c_lower_dniepr is Pontic steppe)
+    2967: "c_vogtland",  # Eger, i.e. Cheb in Bohemia: b_cheb (c_hewes is Eger in Hungary)
+    2208: "c_cabardinia",  # the Terek of the northern Caucasus (c_terek_pass is in the Tarim basin)
+    4339: "c_gilan",     # Rasht in Gilan (c_rasht is in Tajikistan)
+    2209: "c_luristan",  # Ilam in Luristan (c_ilam is in Nepal)
+})
+
+# Provinces whose religion is set by hand, with the reason: the county's own faith is not the province's.
+FAITH_OVERRIDE = {
+    379: ("christian_faith", "Jerusalem: Christendom's holiest city, its people mostly Melkite Chalcedonians under Muslim rule"),
+}
+
 # Provinces CK3 has no county for (the Azores are not in CK3's world): left as they are.
 NO_COUNTY = {367: "The Azores"}
 
@@ -892,6 +909,8 @@ def expected(pid):
 
     rite = county_rite(PROVINCE_COUNTY[pid])
     faith = ck3_rites().get(rite)
+    if pid in FAITH_OVERRIDE:
+        faith = FAITH_OVERRIDE[pid][0]
     return (faith if faith in known_faiths() else None), rite, faith
 
 

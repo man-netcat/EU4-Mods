@@ -7,10 +7,10 @@ capital = "Kastamonu"
 culture = greek
 religion = christian_faith
 hre = no
-base_tax = 3
-base_production = 5 #Huge copper mine
+base_tax = 1
+base_production = 2 #Huge copper mine
 trade_goods = copper
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 
 discovered_by = western

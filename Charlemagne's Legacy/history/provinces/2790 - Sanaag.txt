@@ -10,7 +10,7 @@ hre = no
 base_tax = 1
 base_production = 1
 trade_goods = incense
-base_manpower = 2 #home of clan
+base_manpower = 1 #home of clan
 is_city = yes
 
 discovered_by = east_african

@@ -282,9 +282,14 @@ def _loc_text(pairs):
 def loc_text():
     cults = sorted(needed())
     groups = sorted({group_of(c) for c in cults})
-    got = ck3_loc(cults + ["heritage_" + g for g in groups])
-    pairs = [(g, got["heritage_" + g]) for g in groups if got.get("heritage_" + g)]
-    pairs += [(c, got[c]) for c in cults if got.get(c)]
+    got = ck3_loc(cults + ["heritage_" + g + "_name" for g in groups])
+    for k, v in list(got.items()):  # CK3 names some heritages by reference to a culture ("$vlach$")
+        ref = re.fullmatch(r"\$(\w+)\$", v or "")
+        if ref:
+            got[k] = ck3_loc([ref.group(1)])[ref.group(1)]
+    # a group sharing its key with a culture (akan, vlach ...) keeps the culture's name, which is the one players see most
+    pairs = [(c, got[c]) for c in cults if got.get(c)]
+    pairs += [(g, got["heritage_" + g + "_name"]) for g in groups if got.get("heritage_" + g + "_name")]
     return _loc_text(pairs)
 
 

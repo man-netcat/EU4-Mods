@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 namespace = ideagroups
 
 #######################################
@@ -3514,7 +3515,7 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = defensive_ideas	
-		mil_tech = 2
+		mil_tech = 18
 		any_owned_province = {
 			fort_level = 1
 			NOT = { has_province_modifier = local_fortress }
@@ -5986,7 +5987,7 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = quantity_ideas
-		mil_tech = 7
+		mil_tech = 23
 		NOT = { has_country_modifier = "cheap_iron" }
 	}	
 
@@ -6014,7 +6015,7 @@ country_event = {
 
 	trigger = {
 		has_idea_group = quantity_ideas
-		dip_tech = 3
+		dip_tech = 19
 		NOT = { has_country_modifier = timber_shortage }
 		NOT = { has_country_modifier = "timber_surplus" }
 		num_of_ports = 1
@@ -6068,7 +6069,7 @@ country_event = {
 
 	trigger = {
 		has_idea_group = quantity_ideas
-		dip_tech = 3
+		dip_tech = 19
 		NOT = { has_country_modifier = timber_shortage }
 		NOT = { has_country_modifier = "timber_surplus" }
 		primitives = no		

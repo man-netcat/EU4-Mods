@@ -7,10 +7,10 @@ capital = "Thanh Hoa"
 culture = cham
 religion = mahayana_faith
 hre = no
-base_tax = 7
+base_tax = 6
 base_production = 4
 trade_goods = grain
-base_manpower = 4
+base_manpower = 3
 is_city = yes
 
 discovered_by = chinese

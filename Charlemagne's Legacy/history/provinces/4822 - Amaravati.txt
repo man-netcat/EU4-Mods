@@ -5,10 +5,10 @@ capital = "Amaravati"
 culture = cham
 religion = mahayana_faith
 hre = no
-base_tax = 4
-base_production = 3
+base_tax = 3
+base_production = 2
 trade_goods = incense
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 
 discovered_by = chinese

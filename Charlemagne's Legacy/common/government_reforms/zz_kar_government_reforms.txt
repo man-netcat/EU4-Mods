@@ -1,0 +1,1249 @@
+# Written by tools/reforms.py. Do not edit.
+
+kar_household_court_reform = {
+	icon = "crown"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		governing_capacity = 20
+		advisor_cost = -0.1
+		stability_cost_modifier = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_oath_bound_reform = {
+	icon = "nobleman"
+	trigger = {
+		adm_tech = 2
+	}
+	modifiers = {
+		governing_capacity = 20
+		vassal_income = 0.15
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_missi_reform = {
+	icon = "king"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 30
+		vassal_income = -0.1
+		legitimacy = 0.5
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_palatine_counties_reform = {
+	icon = "nobleman"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		governing_capacity = 30
+		nobles_influence_modifier = 0.1
+		core_creation = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_ministeriales_reform = {
+	icon = "judge"
+	trigger = {
+		adm_tech = 8
+	}
+	modifiers = {
+		governing_capacity = 25
+		global_tax_modifier = 0.05
+		nobles_influence_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_cathedral_chapters_reform = {
+	icon = "pope"
+	trigger = {
+		adm_tech = 8
+	}
+	modifiers = {
+		governing_capacity = 30
+		church_influence_modifier = 0.1
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_royal_chancery_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 10
+	}
+	modifiers = {
+		governing_capacity_modifier = 0.1
+		advisor_cost = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_borough_charters_reform = {
+	icon = "merchant"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		governing_capacity = 20
+		burghers_influence_modifier = 0.1
+		production_efficiency = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_exchequer_reform = {
+	icon = "paper_with_seal_3"
+	trigger = {
+		adm_tech = 12
+	}
+	modifiers = {
+		governing_capacity = 25
+		global_tax_modifier = 0.1
+		stability_cost_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_manorial_economy_reform = {
+	icon = "peasants"
+	trigger = {
+		adm_tech = 4
+	}
+	modifiers = {
+		governing_capacity = 20
+		global_tax_modifier = 0.1
+		nobles_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_market_rights_reform = {
+	icon = "trading_city"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		governing_capacity = 20
+		trade_efficiency = 0.1
+		burghers_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_royal_church_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 6
+	}
+	modifiers = {
+		governing_capacity = 25
+		tolerance_own = 2
+		legitimacy = 0.5
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_retinue_host_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 15
+		land_forcelimit_modifier = 0.1
+		land_maintenance_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_castle_guard_reform = {
+	icon = "castle"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		governing_capacity = 15
+		defensiveness = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_guild_assembly_reform = {
+	icon = "assembly_hall"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 20
+		production_efficiency = 0.05
+		burghers_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_patrician_council_reform = {
+	icon = "politician"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		governing_capacity = 30
+		republican_tradition = 0.5
+		trade_efficiency = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_civic_militia_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 4
+	}
+	modifiers = {
+		governing_capacity = 15
+		land_forcelimit_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_staple_rights_reform = {
+	icon = "merchant"
+	trigger = {
+		adm_tech = 6
+	}
+	modifiers = {
+		governing_capacity = 20
+		trade_efficiency = 0.1
+		global_tax_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_abbot_lord_reform = {
+	icon = "pope"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 25
+		tolerance_own = 2
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_clerical_scribes_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 6
+	}
+	modifiers = {
+		governing_capacity = 30
+		advisor_cost = -0.1
+		stability_cost_modifier = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_monastic_estates_reform = {
+	icon = "peasants"
+	trigger = {
+		adm_tech = 4
+	}
+	modifiers = {
+		governing_capacity = 20
+		global_tax_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_clan_moots_reform = {
+	icon = "tribal_council"
+	trigger = {
+		adm_tech = 2
+	}
+	modifiers = {
+		governing_capacity = 20
+		stability_cost_modifier = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_war_band_reform = {
+	icon = "chieftain"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 15
+		land_forcelimit_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_oath_circles_reform = {
+	icon = "shaman"
+	trigger = {
+		adm_tech = 4
+	}
+	modifiers = {
+		governing_capacity = 15
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_1a_reform = {
+	icon = "king"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		governing_capacity = 10
+		num_accepted_cultures = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_1b_reform = {
+	icon = "king"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		global_unrest = -0.5
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_2a_reform = {
+	icon = "judge"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 10
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_2b_reform = {
+	icon = "judge"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		global_unrest = -1
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_3a_reform = {
+	icon = "nobleman"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		governing_capacity = 10
+		advisor_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_3b_reform = {
+	icon = "nobleman"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_4a_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		governing_capacity = 10
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_4b_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		land_morale = 0.05
+		defensiveness = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_5a_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		governing_capacity = 10
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_5b_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		tolerance_heretic = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_6a_reform = {
+	icon = "merchant"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		governing_capacity = 10
+		trade_efficiency = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_6b_reform = {
+	icon = "merchant"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		global_tax_modifier = 0.05
+		build_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_7a_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		governing_capacity = 10
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_7b_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		production_efficiency = 0.05
+		core_creation = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_8a_reform = {
+	icon = "parliament_hall"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		governing_capacity = 15
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_monarchy_8b_reform = {
+	icon = "parliament_hall"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		global_manpower_modifier = 0.1
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_1a_reform = {
+	icon = "politician"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		governing_capacity = 10
+		num_accepted_cultures = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_1b_reform = {
+	icon = "politician"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		global_unrest = -0.5
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_2a_reform = {
+	icon = "judge"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 10
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_2b_reform = {
+	icon = "judge"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		global_unrest = -1
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_3a_reform = {
+	icon = "assembly_hall"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		governing_capacity = 10
+		advisor_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_3b_reform = {
+	icon = "assembly_hall"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_4a_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		governing_capacity = 10
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_4b_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		land_morale = 0.05
+		defensiveness = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_5a_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		governing_capacity = 10
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_5b_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		tolerance_heretic = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_6a_reform = {
+	icon = "trading_city"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		governing_capacity = 10
+		trade_efficiency = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_6b_reform = {
+	icon = "trading_city"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		global_tax_modifier = 0.05
+		build_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_7a_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		governing_capacity = 10
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_7b_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		production_efficiency = 0.05
+		core_creation = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_8a_reform = {
+	icon = "assembly_hall"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		governing_capacity = 15
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_republic_8b_reform = {
+	icon = "assembly_hall"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		global_manpower_modifier = 0.1
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_1a_reform = {
+	icon = "pope"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		governing_capacity = 10
+		num_accepted_cultures = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_1b_reform = {
+	icon = "pope"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		global_unrest = -0.5
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_2a_reform = {
+	icon = "judge"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 10
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_2b_reform = {
+	icon = "judge"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		global_unrest = -1
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_3a_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		governing_capacity = 10
+		advisor_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_3b_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_4a_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		governing_capacity = 10
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_4b_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		land_morale = 0.05
+		defensiveness = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_5a_reform = {
+	icon = "pope"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		governing_capacity = 10
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_5b_reform = {
+	icon = "pope"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		tolerance_heretic = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_6a_reform = {
+	icon = "peasants"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		governing_capacity = 10
+		trade_efficiency = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_6b_reform = {
+	icon = "peasants"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		global_tax_modifier = 0.05
+		build_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_7a_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		governing_capacity = 10
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_7b_reform = {
+	icon = "paper_with_seal"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		production_efficiency = 0.05
+		core_creation = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_8a_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		governing_capacity = 15
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_theocracy_8b_reform = {
+	icon = "religious_leader"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		global_manpower_modifier = 0.1
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_1a_reform = {
+	icon = "chieftain"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		governing_capacity = 10
+		num_accepted_cultures = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_1b_reform = {
+	icon = "chieftain"
+	trigger = {
+		adm_tech = 1
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		global_unrest = -0.5
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_2a_reform = {
+	icon = "tribal_council"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		governing_capacity = 10
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_2b_reform = {
+	icon = "tribal_council"
+	trigger = {
+		adm_tech = 3
+	}
+	modifiers = {
+		global_unrest = -1
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_3a_reform = {
+	icon = "chieftain"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		governing_capacity = 10
+		advisor_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_3b_reform = {
+	icon = "chieftain"
+	trigger = {
+		adm_tech = 5
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_4a_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		governing_capacity = 10
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_4b_reform = {
+	icon = "soldiers_2"
+	trigger = {
+		adm_tech = 7
+	}
+	modifiers = {
+		land_morale = 0.05
+		defensiveness = 0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_5a_reform = {
+	icon = "shaman"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		governing_capacity = 10
+		tolerance_own = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_5b_reform = {
+	icon = "shaman"
+	trigger = {
+		adm_tech = 9
+	}
+	modifiers = {
+		culture_conversion_cost = -0.1
+		tolerance_heretic = 1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_6a_reform = {
+	icon = "trading_city"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		governing_capacity = 10
+		trade_efficiency = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_6b_reform = {
+	icon = "trading_city"
+	trigger = {
+		adm_tech = 11
+	}
+	modifiers = {
+		global_tax_modifier = 0.05
+		build_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_7a_reform = {
+	icon = "shaman"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		governing_capacity = 10
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_7b_reform = {
+	icon = "shaman"
+	trigger = {
+		adm_tech = 13
+	}
+	modifiers = {
+		production_efficiency = 0.05
+		core_creation = -0.1
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_8a_reform = {
+	icon = "tribal_council"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		governing_capacity = 15
+		stability_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}
+
+kar_early_tribal_8b_reform = {
+	icon = "tribal_council"
+	trigger = {
+		adm_tech = 15
+	}
+	modifiers = {
+		global_manpower_modifier = 0.1
+		land_forcelimit_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5
+	}
+}

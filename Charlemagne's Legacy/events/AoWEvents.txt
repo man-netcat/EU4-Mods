@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ########################################
 # Events for Art of War patch
 #
@@ -919,7 +920,7 @@ country_event = {
 			defensive_war_with = ROOT
 		}
 		# Check that the nation has infantry guns at all
-		mil_tech = 9
+		mil_tech = 25
 	}
 
 	mean_time_to_happen = {

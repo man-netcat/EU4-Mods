@@ -6,10 +6,10 @@ add_core = BAV
 capital = "Augsburg"
 culture = swabian
 religion = christian_faith
-base_tax = 7
-base_production = 6
+base_tax = 3
+base_production = 3
 trade_goods = cloth	#fustians
-base_manpower = 4
+base_manpower = 2
 is_city = yes
 
 discovered_by = eastern

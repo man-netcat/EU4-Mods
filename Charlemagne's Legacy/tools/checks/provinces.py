@@ -233,8 +233,43 @@ def untouched_neighbours_intact() -> None:
         note(not owned, f"{t} owns none of the {len(reassigned)} reassigned provinces")
 
 
+def development_follows_the_ck3_counties() -> None:
+    """Every owned province carries the 867 development tools/development.py works out, none under 3."""
+    print("\n== development follows the CK3 counties ==")
+    import development
+
+    want = development.compute()
+    bad, low = [], []
+    region = development.province_region()
+    eu_before = eu_after = eu_n = 0
+    for fn in os.listdir(PDIR):
+        m = re.match(r"(\d+) - ", fn)
+        if not m or int(m.group(1)) not in want:
+            continue
+        pid = int(m.group(1))
+        text = open(os.path.join(PDIR, fn), encoding="utf-8", errors="replace").read()
+        got = tuple(int((re.search(rf"(?m)^{k}\s*=\s*(\d+)", text) or [0, 0])[1])
+                    for k in ("base_tax", "base_production", "base_manpower"))
+        if got != want[pid][:3]:
+            bad.append(f"{pid}: file {got}, worked out {want[pid][:3]}")
+        if sum(got) < 3:
+            low.append(pid)
+        if region.get(pid) == "europe":
+            v = development.vanilla_dev(pid)
+            eu_n += 1
+            eu_before += sum(v) if v else 0
+            eu_after += sum(got)
+    note(not bad, f"every owned province carries its worked-out development ({len(bad)} differ)")
+    for b in bad[:5]:
+        print("        " + b)
+    note(not low, f"no owned province has less than 3 development ({len(low)} do)")
+    note(eu_n and eu_after <= 0.6 * eu_before,
+         f"Europe's total development is at most 60% of the base game's ({eu_after} of {eu_before} over {eu_n} provinces)")
+
+
 def run() -> None:
     province_ownership()
+    development_follows_the_ck3_counties()
     no_province_is_in_vanilla_hre()
     unownable_land_is_unowned_in_database()
     the_new_world_and_australia_stay_uncolonised()

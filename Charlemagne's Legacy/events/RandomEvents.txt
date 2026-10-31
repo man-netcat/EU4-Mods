@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 #########################################################
 #		Gift to the state								#
 #########################################################
@@ -3647,10 +3648,10 @@ country_event = {
 
 	trigger = {
 		capital_scope = { continent = europe }
-		mil_tech = 5 #firearms generally adopted
+		mil_tech = 21 #firearms generally adopted
 		any_neighbor_country = {
 			same_continent = root
-			mil_tech = 5
+			mil_tech = 21
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
@@ -3701,7 +3702,7 @@ country_event = {
 							}
 						}
 					}
-					mil_tech = 5
+					mil_tech = 21
 				}
 				save_event_target_as = drill_instructor_country
 				root = {
@@ -8001,8 +8002,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		mil_tech = 6
-		NOT = { mil_tech = 15 }
+		mil_tech = 22
+		NOT = { mil_tech = 31 }
 	}
 	
 	mean_time_to_happen = {
@@ -8557,7 +8558,7 @@ country_event = {
 		capital_scope = {
 			continent = europe
 		}
-		NOT = { adm_tech = 20 }
+		NOT = { adm_tech = 36 }
 		NOT = { has_country_flag = has_competent_doctors }
 	}
 	
@@ -11146,9 +11147,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		mil_tech = 8
+		mil_tech = 24
 		NOT = {
-			mil_tech = 14
+			mil_tech = 30
 		}
 		has_regency = no
 		NOT = {
@@ -11792,7 +11793,7 @@ country_event = {
 
 	trigger = {
 		copper = 1
-		mil_tech = 7
+		mil_tech = 23
 		NOT = { has_country_modifier = poor_copper }
 	}
 

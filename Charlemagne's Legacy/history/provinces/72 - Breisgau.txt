@@ -6,10 +6,10 @@ add_core = GER
 capital = "Freiburg"
 culture = swabian
 religion = christian_faith
-base_tax = 4
-base_production = 4
+base_tax = 2
+base_production = 1
 trade_goods = glass
-base_manpower = 3
+base_manpower = 1
 is_city = yes
 
 discovered_by = eastern

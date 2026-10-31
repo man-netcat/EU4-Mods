@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 country_decisions = {
 	close_foreign_trade = {
 		potential = {
@@ -48,7 +49,7 @@ country_decisions = {
 		allow = {
 			has_institution = feudalism
 			has_institution = new_world_i
-			adm_tech = 12
+			adm_tech = 28
 			NOT = { government = tribal }
 			adm_power = 200
 		}

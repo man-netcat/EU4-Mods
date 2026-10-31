@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ########################################
 # Major Flavor Events                  #
 ########################################
@@ -283,7 +284,7 @@ country_event = {
 		name = flavor_rus.47.a
 		add_adm_power = 50
 		if = {
-			limit = { NOT = { adm_tech = 32 } }
+			limit = { NOT = { adm_tech = 48 } }
 			add_adm_tech = 1
 		}
 		change_government_reform_progress = 25
@@ -297,7 +298,7 @@ country_event = {
 		name = flavor_rus.47.b
 		add_dip_power = 50
 		if = {
-			limit = { NOT = { dip_tech = 32 } }
+			limit = { NOT = { dip_tech = 48 } }
 			add_dip_tech = 1
 		}
 		add_navy_tradition = 20
@@ -311,7 +312,7 @@ country_event = {
 		name = flavor_rus.47.c
 		add_mil_power = 50
 		if = {
-			limit = { NOT = { mil_tech = 32 } }
+			limit = { NOT = { mil_tech = 48 } }
 			add_mil_tech = 1
 		}
 		add_army_tradition = 20
@@ -1321,7 +1322,7 @@ country_event = {
 	trigger = {
 		has_dlc = "Domination"
 		has_estate_privilege = estate_nobles_early_serfdom
-		adm_tech = 12
+		adm_tech = 28
 	}
 	
 	mean_time_to_happen = {
@@ -1395,7 +1396,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Domination"
-		adm_tech = 12
+		adm_tech = 28
 		has_estate_privilege = estate_nobles_increased_peasant_freedom
 	}
 	
@@ -1467,7 +1468,7 @@ country_event = {
 	goto = revolt_province
 	trigger = {
 		has_dlc = "Domination"
-		adm_tech = 17
+		adm_tech = 33
 		has_estate_privilege = estate_nobles_legalized_serfdom
 		NOT = { has_country_flag = rus_pugachev_uprising }
 	}
@@ -1547,7 +1548,7 @@ country_event = {
 	picture = BURGHER_ESTATE_UPSET_eventPicture
 	trigger = {
 		has_dlc = "Domination"
-		adm_tech = 17
+		adm_tech = 33
 		has_estate_privilege = estate_nobles_peasant_liberation
 		NOT = { has_country_flag = rus_rise_of_the_burghers }
 		has_estate = estate_burghers

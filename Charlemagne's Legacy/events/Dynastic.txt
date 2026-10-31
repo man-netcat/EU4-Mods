@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 # Carnal sins
 country_event = {
 	id = 9450
@@ -619,7 +620,7 @@ country_event = {
 		NOT = { has_reform = mamluk_government }
 		NOT = { has_government_attribute = has_harem_events }
 		NOT = { has_reform = celestial_empire }
-		adm_tech = 20
+		adm_tech = 36
 		adm_power = 200
 		has_factions = no
 	}

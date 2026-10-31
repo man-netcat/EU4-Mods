@@ -99,7 +99,73 @@ def province_religions_track_ck3_s_counties() -> None:
         warn(w)
 
 
+def province_religions_fit_their_surroundings() -> None:
+    """Warn when a province's religion does not fit the provinces around it. Two signs of a province paired with the wrong
+    CK3 county (Brest-Litovsk with Brittany's Brest, the Crimean Kaffa with Ethiopia's): its religion is found almost only in
+    other regions of the world (Waaqism in the Crimea), or it stands alone against an area that is nearly all of one other religion
+    (a Chalcedonian Brest among Slavic pagans)."""
+    print("\n== province religions fit their surroundings ==")
+    import collections
+    import sqlite3
+
+    import development as dev
+    from paths import EU4_GAME
+
+    areas = {}
+    areafile = os.path.join(str(EU4_GAME), "map", "area.txt")
+    for name, body in dev._blocks(dev._strip(open(areafile, encoding="latin-1").read())):
+        areas[name] = [int(x) for x in re.findall(r"\b\d+\b", re.sub(r"color\s*=\s*\{[^}]*\}", "", body))]
+    area_of, region_of = {}, {}
+    for name, body in dev._blocks(dev._strip(open(os.path.join(str(EU4_GAME), "map", "region.txt"), encoding="latin-1").read())):
+        m = re.search(r"areas = \{(.*?)\}", body, re.S)
+        for a in (m.group(1).split() if m else []):
+            for p in areas.get(a, []):
+                area_of[p], region_of[p] = a, name
+    con = sqlite3.connect(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tags.db"))
+    prov = {p: (n, r) for p, n, r in con.execute("select pid, name, religion from provinces")}
+    owned = {r[0] for r in con.execute("select distinct pid from tag_provinces")} & set(region_of)
+    con.close()
+
+    by_rel = collections.defaultdict(collections.Counter)
+    for p in owned:
+        by_rel[prov[p][1]][region_of[p]] += 1
+    warnings = []
+    for rel, counts in by_rel.items():  # the regions that between them hold 90% of a religion are its home
+        total = sum(counts.values())
+        if total < 8:
+            continue
+        home, run = set(), 0
+        for region, n in counts.most_common():
+            if run >= 0.9 * total:
+                break
+            home.add(region)
+            run += n
+        for p in sorted(owned):
+            if prov[p][1] == rel and region_of[p] not in home and counts[region_of[p]] <= 2:
+                warnings.append(f"{p} {prov[p][0]} is {rel}, which is found almost only in {', '.join(sorted(home)[:3])}... not in {region_of[p]}")
+    in_area = collections.defaultdict(list)
+    for p in owned:
+        in_area[area_of[p]].append(p)
+    for area, ps in in_area.items():
+        if len(ps) < 4:
+            continue
+        (main, n), = collections.Counter(prov[p][1] for p in ps).most_common(1)
+        if n < 0.75 * len(ps):
+            continue
+        for p in ps:
+            rel = prov[p][1]
+            if rel != main and sum(1 for q in owned if region_of[q] == region_of[p] and prov[q][1] == rel and q != p) <= 1:
+                warnings.append(f"{p} {prov[p][0]} is {rel}, alone in {region_of[p]} among {main} in {area}")
+    per_province = {}
+    for w in sorted(set(warnings)):
+        per_province.setdefault(w.split()[0], []).append(w.split(" ", 1)[1])
+    for pid in sorted(per_province, key=int):
+        warn(f"{pid} " + "; ".join(per_province[pid]))
+    note(True, f"{len(per_province)} provinces whose religion does not fit their surroundings (warnings above)")
+
+
 def run() -> None:
+    province_religions_fit_their_surroundings()
     religion_key_exists_in_vanilla_or_our_additions()
     christian_rite_schools()
     religion_groups_follow_ck3_s_religions()

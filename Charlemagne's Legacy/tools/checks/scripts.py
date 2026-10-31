@@ -144,17 +144,43 @@ def country_history_uses_vanilla_key_shapes() -> None:
 
 
 def ages_wait_for_their_year() -> None:
-    """No age can start before its own year: the game starts in 867, and the base game's ages assume 1444."""
+    """No age can start before its own year (the game starts in 867, the base game's ages assume 1444), every age has
+    its names and its objectives' and abilities' localisation, and the ages run in order up to Discovery."""
     print("\n== ages wait for their year ==")
-    text = open(os.path.join(MOD, "common", "ages", "00_default.txt"), encoding="cp1252", errors="replace").read()
-    bad = []
-    for m in re.finditer(r"(?ms)^(age_\w+) = \{\s*start = (\d+)(.*?)^\}", text):
-        name, start, body = m.group(1), int(m.group(2)), m.group(3)
-        cs = re.search(r"can_start = \{(.*?)\n\t\}", body, re.S)
-        y = re.search(r"\byear = (\d+)", cs.group(1)) if cs else None
-        if not y or int(y.group(1)) < start:
-            bad.append(f"{name} (start {start}, can_start year {y.group(1) if y else 'none'})")
+    adir = os.path.join(MOD, "common", "ages")
+    loc = ""
+    for f in os.listdir(os.path.join(MOD, "localisation")):
+        if f.endswith("_l_english.yml"):
+            loc += open(os.path.join(MOD, "localisation", f), encoding="utf-8-sig", errors="replace").read()
+    bad, missing, starts = [], [], {}
+    for fn in sorted(os.listdir(adir)):
+        text = open(os.path.join(adir, fn), encoding="cp1252", errors="replace").read()
+        for m in re.finditer(r"(?ms)^(age_\w+) = \{\s*start = (\d+)(.*?)^\}", text):
+            name, start, body = m.group(1), int(m.group(2)), m.group(3)
+            starts[name] = start
+            cs = re.search(r"can_start = \{(.*?)\n\t\}", body, re.S)
+            y = re.search(r"\bis_year = (\d+)", cs.group(1)) if cs else None
+            if not y or int(y.group(1)) < start:
+                bad.append(f"{name} (start {start}, can_start year {y.group(1) if y else 'none'})")
+            keys = []
+            if fn.startswith("00_a_kar"):  # the base game's ages keep the base game's localisation
+                keys = [name, name + "_short", name + "_desc"]
+                keys += re.findall(r"^\t\t(kar_(?:obj|ab)_\w+) = \{", body, re.M)
+            missing += [k for k in keys if f" {k}:" not in loc]
     note(not bad, "every age's can_start waits for the age's start year" + (": " + ", ".join(bad) if bad else ""))
+    note(not missing, "the early ages and their objectives and abilities are localised" + (": " + ", ".join(missing) if missing else ""))
+    gui = open(os.path.join(MOD, "interface", "ages_view.gui"), encoding="cp1252", errors="replace").read()
+    gfx = open(os.path.join(MOD, "interface", "kar_ages.gfx"), encoding="cp1252", errors="replace").read()
+    no_view = [a for a in starts if f'name = "{a}"' not in gui]
+    no_art = [k for k in re.findall(r"(?m)^\t\t(kar_(?:obj|ab)_\w+) = \{", open(os.path.join(adir, "00_a_kar_early_ages.txt"), encoding="cp1252").read()) if f'"GFX_{k}"' not in gfx]
+    no_art += [a for a in starts if a.startswith("age_of_") and f'"GFX_{a}"' not in gfx and f"GFX_{a}" not in open(os.path.join(GAME, "interface", "ages_view.gfx"), encoding="cp1252", errors="replace").read()]
+    # the ages window has a block per age and finds each age's, objective's and ability's sprite by name: a current age without
+    # its block crashes the game when the age button is clicked
+    note(not no_view and not no_art, "the ages window has a block for every age and every age, objective and ability has a sprite" + (f": no block {no_view}, no sprite {no_art[:4]}" if no_view or no_art else ""))
+    order = sorted(starts, key=starts.get)
+    note(starts.get("age_of_traditions") == 1337 and "age_of_successors" in starts and order.index("age_of_traditions") + 1 == order.index("age_of_discovery") and starts.get("age_of_discovery") == 1437
+         and [starts.get(a) for a in ("age_of_reformation", "age_of_absolutism", "age_of_revolutions")] == [1537, 1637, 1737],
+         "the ages run from the Successors (867) through Traditions (1337) to Discovery (1437), both as in EU5")
 
 
 def run() -> None:

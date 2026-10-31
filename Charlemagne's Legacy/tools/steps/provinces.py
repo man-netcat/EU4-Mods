@@ -217,6 +217,20 @@ def patch(text, new_owner, pid=None):
     return "\n".join(head + out) + "\n" + force_block(new_owner, claims)
 
 
+def apply_development(text, pid):
+    """The province's 867 development (tools/development.py) in place of the base game's 1444 one."""
+    import development
+
+    got = development.compute().get(pid)
+    if not got:
+        return text
+    for key, val in zip(("base_tax", "base_production", "base_manpower"), got[:3]):
+        text, n = re.subn(rf"(?m)^(\s*{key}\s*=\s*)\d+", rf"\g<1>{val}", text, count=1)
+        if n != 1:
+            raise SystemExit(f"province {pid}: no {key} line to set")
+    return text
+
+
 def strip_fort(text):
     # Drop the vanilla fortress: only provinces flagged in the database
     # keep (or gain) one, everything else goes.
@@ -347,6 +361,7 @@ def step_provinces():
         text = apply_db_culture_religion(text, pid)
         tag = owner_of.get(pid)
         new = patch(text, tag, pid) if tag else text
+        new = apply_development(new, pid)
         new = ensure_fort(new, PROVINCES[pid].fort)
         for st in SEED_CORES.get(pid, ()):
             new += f"add_core = {st}\n"

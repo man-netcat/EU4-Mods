@@ -99,7 +99,7 @@ NDiplomacy = {
 	MAX_CLIENT_STATES = 10,							-- Max client states for one country
 
 	ALLOW_LEADER_DEMAND_TOGGLE = 0,					-- Whether or not player is allowed to set if warleader can negotiate for them
-	VASSALIZE_BASE_DEVELOPMENT_CAP = 100, 			-- Countries with more total development than this cannot be vassalized
+	VASSALIZE_BASE_DEVELOPMENT_CAP = 1000, 			-- Countries with more total development than this cannot be vassalized
 
 	MARCH_BASE_DEVELOPMENT_CAP = 200, 				-- Countries with more total development than this cannot be made into a march
 
@@ -646,7 +646,7 @@ NCountry = {
 
 
 	EXPLORE_COAST_EVENT_CHANCE = 2,			-- Chance (in %) of getting an event when exploring coasts
-	MIN_TECH_FOR_CIRCUMNAVIGATE = 9,			-- Must have this level of dip tech to circumnavigate the globe
+	MIN_TECH_FOR_CIRCUMNAVIGATE = 25,			-- Must have this level of dip tech to circumnavigate the globe
 	CIRCUMNAVIGATION_PROVINCE_1 = 1468,			-- Provinces for circumnavigation (coast of gambia)
 	CIRCUMNAVIGATION_PROVINCE_2 = 1539,			-- Provinces for circumnavigation (magellan strait)
 	CIRCUMNAVIGATION_PROVINCE_3 = 1697,			-- Provinces for circumnavigation (hawaii sea)
@@ -884,12 +884,12 @@ NCountry = {
 	REBEL_BREAK_EXHAUSTION_SET = 0, 				-- Exhaustion will be set to this value when rebels break country.
 	REVOLT_SIZE_DEVELOPMENT_MULTIPLIER = 0.1,		-- Multiplied with the province's development
 	REVOLT_SIZE_BASE = 5,
-	REVOLT_TECH_IMPACT = 0.03, 			-- % each tech increases size of rebels by this percent.
-	REVOLT_TECH_MORALE = 0.01,			-- 1% per tech level
+	REVOLT_TECH_IMPACT = 0.02, 			-- % each tech increases size of rebels by this percent.
+	REVOLT_TECH_MORALE = 0.0067,			-- 1% per tech level
 
-	REBEL_ARTILLERY_INCREASE_LEVEL_1_TECH = 11,		-- Tech level at which REBEL_ARTILLERY_INCREASE_LEVEL_1_SIZE is applied
+	REBEL_ARTILLERY_INCREASE_LEVEL_1_TECH = 27,		-- Tech level at which REBEL_ARTILLERY_INCREASE_LEVEL_1_SIZE is applied
 	REBEL_ARTILLERY_INCREASE_LEVEL_1_SIZE = 0.1,	-- The increase in artillery as fraction of total troops given to rebels
-	REBEL_ARTILLERY_INCREASE_LEVEL_2_TECH = 16,		-- Tech level at which REBEL_ARTILLERY_INCREASE_LEVEL_2_SIZE is applied
+	REBEL_ARTILLERY_INCREASE_LEVEL_2_TECH = 32,		-- Tech level at which REBEL_ARTILLERY_INCREASE_LEVEL_2_SIZE is applied
 	REBEL_ARTILLERY_INCREASE_LEVEL_2_SIZE = 0.15,	-- The increase in artillery as fraction of total troops given to rebels (does not stack with level 1)
 	MIGRATION_DEPLETION_TIME = 7300,				-- How many days a province needs to recover from migrants
 	BASE_TARIFF = 0.10,								-- Basic part of colonies income that goes to tariffs
@@ -984,10 +984,10 @@ NCountry = {
 	RAZE_UNREST_DURATION = 10,						-- Years of unrest. Also used for duration of neg. opinion modifier for previous owner.
 	RAZE_PROVINCE_DEVELOPMENT_DECREASE = 0.33,
 	RAZE_PROVINCE_POWER_PER_DEVELOPMENT = 25.0,
-	HORDE_RAZE_TECH_BASE_LEVEL = 3,
+	HORDE_RAZE_TECH_BASE_LEVEL = 19,
 	HORDE_RAZE_TECH_POWER_DECREASE = 0.04, -- Per military tech above base level
 	HORDE_RAZE_TECH_POWER_DECREASE_MAX = 0.8,
-	DEVOTION_RAZE_TECH_BASE_LEVEL = 12,
+	DEVOTION_RAZE_TECH_BASE_LEVEL = 28,
 	DEVOTION_RAZE_TECH_POWER_DECREASE = 0.04, -- Per military tech above base level
 	DEVOTION_RAZE_TECH_POWER_DECREASE_MAX = 0.8,
 	RAZE_PROVINCE_COOLDOWN_YRS = 20,
@@ -1041,7 +1041,7 @@ NCountry = {
 	LOW_ARMY_PROFESSIONALISM_MAX_RANGE = 0.5,
 	HIGH_ARMY_PROFESSIONALISM_MIN_RANGE = 0.0,
 	HIGH_ARMY_PROFESSIONALISM_MAX_RANGE = 1.0,
-	ARMY_PROFESSIONALISM_PER_AGE = 0.2,
+	ARMY_PROFESSIONALISM_PER_AGE = 0.08,
 	TRADING_POLICY_COOLDOWN_MONTHS  = 12,			-- Cooldown until you can change Trading Policy after selecting.
 	INNOVATIVENESS_FIRST_REACHED_TECH_LEVEL = 4.0,  -- Innovativeness bonus to first country (or countries) to reach a certain tech level.
 	INNOVATIVENESS_FIRST_PICKED_IDEA = 2.0,			-- Innovativeness bonus to first country (or countries) to pick an idea.
@@ -1151,9 +1151,9 @@ NEconomy = {
 	INCREASE_AUTONOMY_STEP = 25,
 	INCREASE_AUTONOMY_MAX = 91,
 	AUTONOMY_CHANGE_DURATION = 10950,			-- about 30 years
-	LAND_TECH_MAINTENANCE_IMPACT = 0.02, 			-- % each tech increases it.
-	NAVAL_TECH_MAINTENANCE_IMPACT = 0.02, 			-- % each tech increases it.
-	LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.08, 			-- % each tech increases it.
+	LAND_TECH_MAINTENANCE_IMPACT = 0.0133, 			-- % each tech increases it.
+	NAVAL_TECH_MAINTENANCE_IMPACT = 0.0133, 			-- % each tech increases it.
+	LAND_TECH_MERC_MAINTENANCE_IMPACT = 0.0533, 			-- % each tech increases it.
 	ADVISOR_COST = 1.0,								-- Advisor cost modifier
 	GOLD_INFLATION_THRESHOLD = 0.0,					-- _EDEF_GOLD_INFLATION_THRESHOLD_
 	GOLD_INFLATION = 0.5,							-- _EDEF_GOLD_INFLATION_
@@ -1724,7 +1724,7 @@ NAI = {
 	DEFICIT_SPENDING_MIN_MONTHS_PEACETIME = 48, -- Same as DEFICIT_SPENDING_MIN_MONTHS, but during peacetime, no rebels and no war exhaustion
 	BIGSHIP_FRACTION = 0.4,	-- The proportion of big ships in an AI navy of light ships and big ships (for coastal sea countries, this fraction is mostly galleys)
 	ARTILLERY_FRACTION = 0.25, 	-- Ratio of artillery to infantry AI will build (doubles after FORCE_COMPOSITION_CHANGE_TECH_LEVEL) (reduced when on tight budget)
-	FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 11, -- Tech level at which AI will double its artillery fraction
+	FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 27, -- Tech level at which AI will double its artillery fraction
 	TRANSPORT_FRACTION = 0.5, -- Max fraction of naval forcelimit that should be transports
 	INCOME_SAVINGS_FRACTION = 0.25, -- AI will reserve this amount of their surplus for long-term savings
 	OVER_FORCELIMIT_AVOIDANCE_FACTOR = 10, -- The higher this number is, the less willing the AI will be to exceed forcelimits
@@ -1774,8 +1774,8 @@ NAI = {
 
 	DEBASE_THRESHOLD = 10000,-- AI will not debase if it has more gold than this.
 
-	DEVELOPMENT_CAP_BASE = 10,	-- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
-	DEVELOPMENT_CAP_MULT = 2,
+	DEVELOPMENT_CAP_BASE = 500,	-- AI will not develop provinces that have more development than this or DEVELOPMENT_CAP_MULT*original development (whichever is bigger)
+	DEVELOPMENT_CAP_MULT = 5,
 
 	PEACE_BASE_RELUCTANCE = 0, -- AI base stubbornness to refuse peace (always applied)
 	PEACE_BATTLE_RELUCTANCE = 60, -- Reluctance multiplied by fraction of support limit currently in an ongoing battle in this war (to encourage battle resolution before peacing).
@@ -2716,8 +2716,8 @@ NGovernment = {
 	SELECT_HEIR_FROM_HAREM_AT_MONARCH_AGE = 30, -- The age in years when an heir is selected if the government "has_harem" flag is set.
 
 	TRIBAL_ALLEGIANCE_HUMILIATE = 30.0, -- TA gained from doing Humiliate or Show Strength in a war.
-	GOVERNMENT_REFORM_BASE_COST = 100.0,
-	GOVERNMENT_REFORM_COST_INCREASE = 40.0,
+	GOVERNMENT_REFORM_BASE_COST = 300.0,
+	GOVERNMENT_REFORM_COST_INCREASE = 10.0,
 	GOVERNMENT_REFORM_YEARLY_BASE_PROGRESS = 10.0,
 	GOVERNMENT_REFORM_HISTORIC_AUTONOMY = 0.25,
 	GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 50.0,

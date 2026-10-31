@@ -19,6 +19,7 @@ from paths import EU4_GAME  # noqa: E402
 MOD = os.path.join(HERE, "..")
 
 PATCHES = {
+ "common/governments/00_governments.txt": [],
  "common/defines.lua": [
   [
    [
@@ -236,13 +237,57 @@ PATCHES = {
  "common/ages/00_default.txt": [
   [
    [
+    "age_of_reformation = {"
+   ],
+   [
+    "\tstart = 1530"
+   ],
+   [
+    "\tstart = 1537\t\t\t\t# EU5's date"
+   ]
+  ],
+  [
+   [
+    "age_of_absolutism = {"
+   ],
+   [
+    "\tstart = 1620"
+   ],
+   [
+    "\tstart = 1637\t\t\t\t# EU5's date"
+   ]
+  ],
+  [
+   [
+    "age_of_revolutions = {"
+   ],
+   [
+    "\tstart = 1710"
+   ],
+   [
+    "\tstart = 1737\t\t\t\t# EU5's date"
+   ]
+  ],
+  [
+   [
+    "age_of_discovery = {"
+   ],
+   [
+    "\tstart = 1400"
+   ],
+   [
+    "\tstart = 1437\t\t\t\t# EU5's date for its Age of Discovery: a century after Traditions begins"
+   ]
+  ],
+  [
+   [
     "\tcan_start = {"
    ],
    [
     "\t\talways = yes"
    ],
    [
-    "\t\tyear = 1400\t\t\t\t# no age starts before its own year (the base game's start is 1444; ours is 867)"
+    "\t\tis_year = 1437\t\t\t\t# no age starts before its own year (the base game's start is 1444; ours is 867)"
    ]
   ],
   [
@@ -253,7 +298,7 @@ PATCHES = {
     "\t\tis_religion_enabled = protestant"
    ],
    [
-    "\t\tyear = 1530",
+    "\t\tis_year = 1537",
     "\t\tis_religion_enabled = protestant"
    ]
   ],
@@ -265,7 +310,7 @@ PATCHES = {
     "\t\tis_institution_enabled = global_trade"
    ],
    [
-    "\t\tyear = 1620",
+    "\t\tis_year = 1637",
     "\t\tis_institution_enabled = global_trade"
    ]
   ],
@@ -277,7 +322,7 @@ PATCHES = {
     "\t\tis_institution_enabled = enlightenment"
    ],
    [
-    "\t\tyear = 1710",
+    "\t\tis_year = 1737",
     "\t\tis_institution_enabled = enlightenment"
    ]
   ]
@@ -338,9 +383,25 @@ def _vassal_integration_wait(text):
     return text.replace("LIBERTY_DESIRE_RELATIVE_POWER = 75,", "LIBERTY_DESIRE_RELATIVE_POWER = 37.5,", 1)
 
 
-POST = {"common/defines.lua": _vassal_integration_wait,
+def _early_techs_defines(text):
+    import techs
+    return techs.defines_patch(_vassal_integration_wait(text))
+
+
+def _low_governing_capacity(text):
+    import techs
+    return techs.governing_capacity_patch(_no_base_force_limit(text))
+
+
+def _more_reforms(text):
+    import reforms
+    return reforms.add_to_tiers(text)
+
+
+POST = {"common/governments/00_governments.txt": _more_reforms,
+        "common/defines.lua": _early_techs_defines,
         "common/subject_types/00_subject_types.txt": _no_overlord_bonus,
-        "common/static_modifiers/00_static_modifiers.txt": _no_base_force_limit}
+        "common/static_modifiers/00_static_modifiers.txt": _low_governing_capacity}
 
 
 def patched(path):

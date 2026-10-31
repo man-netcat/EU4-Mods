@@ -7,10 +7,10 @@ capital = "Nishapur"
 culture = tajik
 religion = sunni
 hre = no
-base_tax = 2
-base_production = 2
+base_tax = 3
+base_production = 3
 trade_goods = gems #Turquoise
-base_manpower = 2
+base_manpower = 3
 is_city = yes
 
 discovered_by = muslim

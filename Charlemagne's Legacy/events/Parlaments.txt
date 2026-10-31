@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 namespace = parlaments
 
 province_event = {
@@ -1316,7 +1317,7 @@ province_event = {
 		modifier = {
 			factor = 0.8
 			owner = {
-				adm_tech = 20
+				adm_tech = 36
 			}
 		}
 		modifier = {
@@ -1642,7 +1643,7 @@ country_event = {
 			has_dlc = "Common Sense"
 			has_dlc = "Domination"
 		}
-		adm_tech = 22
+		adm_tech = 38
 		num_of_cities = 4
 		any_owned_province = {
 			NOT = { has_province_modifier = demands_representation }
@@ -1723,7 +1724,7 @@ country_event = {
 			has_dlc = "Common Sense"
 			has_dlc = "Domination"
 		}
-		adm_tech = 22
+		adm_tech = 38
 		num_of_cities = 2
 		num_of_loans = 5
 		NOT = { treasury = 50 }
@@ -1854,7 +1855,7 @@ province_event = {
 		is_overseas = no
 		NOT = { has_province_modifier = demands_representation }
 		owner = {
-			adm_tech = 22
+			adm_tech = 38
 			NOT = { stability = 2 }
 			NOT = { has_reform = english_monarchy }
 			NOT = { has_reform = parliamentary_reform }

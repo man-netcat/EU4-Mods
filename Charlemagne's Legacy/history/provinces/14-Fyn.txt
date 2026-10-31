@@ -7,10 +7,10 @@ capital = "Odense"
 culture = norse
 religion = norse_pagan
 hre = no
-base_tax = 5
-base_production = 5
+base_tax = 2
+base_production = 1
 trade_goods = fish
-base_manpower = 4
+base_manpower = 1
 is_city = yes
 
 discovered_by = eastern

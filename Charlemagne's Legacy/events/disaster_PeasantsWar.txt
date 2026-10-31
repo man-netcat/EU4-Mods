@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 namespace = peasants_war
 
 # Peasants' War
@@ -128,8 +129,8 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = obsolete_forces }
-		mil_tech = 6
-		NOT = { mil_tech = 18 }
+		mil_tech = 22
+		NOT = { mil_tech = 34 }
 	}
 
 	mean_time_to_happen = {

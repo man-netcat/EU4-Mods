@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ########################################
 # Events for West African nations
 #
@@ -668,10 +669,10 @@ country_event = {
 	trigger = {
 		has_dlc = "Art of War"
 		technology_group = sub_saharan
-		NOT = { mil_tech = 12 }
+		NOT = { mil_tech = 28 }
 		any_neighbor_country = {
 			technology_group = western
-			mil_tech = 12
+			mil_tech = 28
 		}
 	}
 
@@ -1211,7 +1212,7 @@ country_event = {
 			culture_group = mande
 			culture_group = west_african
 		}
-		NOT = { mil_tech = 12 }
+		NOT = { mil_tech = 28 }
 	}
 
 	mean_time_to_happen = {

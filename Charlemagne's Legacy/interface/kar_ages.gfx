@@ -1,0 +1,243 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_age_of_successors"
+		texturefile = "gfx/interface/ages/age_of_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_age_of_raiders"
+		texturefile = "gfx/interface/ages/age_of_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_age_of_feudalism"
+		texturefile = "gfx/interface/ages/age_of_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_age_of_crusades"
+		texturefile = "gfx/interface/ages/age_of_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_age_of_estates"
+		texturefile = "gfx/interface/ages/age_of_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_age_of_traditions"
+		texturefile = "gfx/interface/ages/age_of_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_hold_court"
+		texturefile = "gfx/interface/ages/obj_100_development.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_loyal_realm"
+		texturefile = "gfx/interface/ages/obj_large_forcelimit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_sworn_allies"
+		texturefile = "gfx/interface/ages/obj_many_vassals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_growing_domain"
+		texturefile = "gfx/interface/ages/obj_cultures_accepted.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_walled_realm"
+		texturefile = "gfx/interface/ages/obj_universities.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_standing_host"
+		texturefile = "gfx/interface/ages/obj_disc_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_tribute_of_kings"
+		texturefile = "gfx/interface/ages/obj_huge_capital.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_steady_throne"
+		texturefile = "gfx/interface/ages/obj_great_general.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_castellans"
+		texturefile = "gfx/interface/ages/obj_large_subject.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_great_domain"
+		texturefile = "gfx/interface/ages/obj_parliament.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_knights_host"
+		texturefile = "gfx/interface/ages/obj_100_development.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_pious_ruler"
+		texturefile = "gfx/interface/ages/obj_large_forcelimit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_holy_war"
+		texturefile = "gfx/interface/ages/obj_many_vassals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_rich_treasury"
+		texturefile = "gfx/interface/ages/obj_cultures_accepted.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_realm_of_cities"
+		texturefile = "gfx/interface/ages/obj_universities.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_marriage_alliances"
+		texturefile = "gfx/interface/ages/obj_disc_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_charter_towns"
+		texturefile = "gfx/interface/ages/obj_huge_capital.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_royal_council"
+		texturefile = "gfx/interface/ages/obj_great_general.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_grand_alliance"
+		texturefile = "gfx/interface/ages/obj_large_subject.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_feared_crown"
+		texturefile = "gfx/interface/ages/obj_parliament.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_ancient_customs"
+		texturefile = "gfx/interface/ages/obj_100_development.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_great_host"
+		texturefile = "gfx/interface/ages/obj_large_forcelimit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_loyal_lords"
+		texturefile = "gfx/interface/ages/obj_many_vassals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_obj_deep_coffers"
+		texturefile = "gfx/interface/ages/obj_cultures_accepted.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_oaths_of_fealty"
+		texturefile = "gfx/interface/ages/ab_allow_feudal_de_jure_law.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_levied_hosts"
+		texturefile = "gfx/interface/ages/ab_claim_duration.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_royal_demesne"
+		texturefile = "gfx/interface/ages/ab_justified_wars.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_shore_watch"
+		texturefile = "gfx/interface/ages/ab_free_war_taxes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_burgh_walls"
+		texturefile = "gfx/interface/ages/ab_cavalry_armies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_mounted_retinues"
+		texturefile = "gfx/interface/ages/ab_mercenary_discipline.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_knights_fees"
+		texturefile = "gfx/interface/ages/ab_siege_blockades.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_feudal_dues"
+		texturefile = "gfx/interface/ages/ab_culture_cost.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_peace_of_god"
+		texturefile = "gfx/interface/ages/ab_autonomy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_crusader_zeal"
+		texturefile = "gfx/interface/ages/ab_adm_efficiency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_pilgrim_roads"
+		texturefile = "gfx/interface/ages/ab_allow_feudal_de_jure_law.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_military_orders"
+		texturefile = "gfx/interface/ages/ab_claim_duration.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_guild_charters"
+		texturefile = "gfx/interface/ages/ab_justified_wars.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_common_law"
+		texturefile = "gfx/interface/ages/ab_free_war_taxes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_scutage"
+		texturefile = "gfx/interface/ages/ab_cavalry_armies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_custom_and_law"
+		texturefile = "gfx/interface/ages/ab_mercenary_discipline.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_long_bows"
+		texturefile = "gfx/interface/ages/ab_siege_blockades.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kar_ab_burghers_purse"
+		texturefile = "gfx/interface/ages/ab_culture_cost.dds"
+	}
+
+}

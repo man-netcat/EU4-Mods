@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ######################################
 # Army Professionalism Events        #
 #                            		 #
@@ -745,7 +746,7 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		has_country_modifier = gunpowder_core
-		mil_tech = 19
+		mil_tech = 35
 	}
 	
 	

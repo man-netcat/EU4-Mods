@@ -7,10 +7,10 @@ capital = "Khujand"
 culture = sogdian
 religion = khurramism
 hre = no
-base_tax = 2
-base_production = 2
+base_tax = 3
+base_production = 3
 trade_goods = silk
-base_manpower = 3
+base_manpower = 5
 is_city = yes
 
 discovered_by = muslim

@@ -1,8 +1,8 @@
 age_of_discovery = {
-	start = 1400
+	start = 1437				# EU5's date for its Age of Discovery: a century after Traditions begins
 	
 	can_start = {
-		year = 1400				# no age starts before its own year (the base game's start is 1444; ours is 867)
+		is_year = 1437				# no age starts before its own year (the base game's start is 1444; ours is 867)
 	}
 	
 	religious_conflicts = yes
@@ -284,10 +284,10 @@ age_of_discovery = {
 }
 
 age_of_reformation = {
-	start = 1530
+	start = 1537				# EU5's date
 	
 	can_start = {
-		year = 1530
+		is_year = 1537
 		is_religion_enabled = protestant
 	}
 	
@@ -556,10 +556,10 @@ age_of_reformation = {
 
 
 age_of_absolutism = {
-	start = 1620
+	start = 1637				# EU5's date
 	
 	can_start = {
-		year = 1620
+		is_year = 1637
 		is_institution_enabled = global_trade
 	}
 	
@@ -794,10 +794,10 @@ age_of_absolutism = {
 }
 
 age_of_revolutions = {
-	start = 1710
+	start = 1737				# EU5's date
 	
 	can_start = {
-		year = 1710
+		is_year = 1737
 		is_institution_enabled = enlightenment
 	}
 	

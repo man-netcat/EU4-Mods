@@ -8,9 +8,9 @@ culture = bulgarian
 religion = christian_faith
 hre = no
 base_tax = 2
-base_production = 4 #Many productive Mines. Main Source of Ottoman Silver in 1444.
+base_production = 3 #Many productive Mines. Main Source of Ottoman Silver in 1444.
 trade_goods = copper
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 
 discovered_by = western

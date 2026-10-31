@@ -7,10 +7,10 @@ capital = "Ha Tinh"
 culture = viet
 religion = mahayana_faith
 hre = no
-base_tax = 5
-base_production = 3
+base_tax = 4
+base_production = 2
 trade_goods = fish
-base_manpower = 3
+base_manpower = 2
 is_city = yes
 
 discovered_by = chinese

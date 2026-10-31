@@ -7,10 +7,10 @@ add_core = OPL
 capital = "Ratibor"
 culture = polish
 religion = slavic_pagan
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = iron
-base_manpower = 2
+base_manpower = 1
 is_city = yes
 latent_trade_goods = {
 	coal

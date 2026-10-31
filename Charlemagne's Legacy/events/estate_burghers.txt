@@ -1,3 +1,4 @@
+# tech levels shifted by 16 (tools/techs.py)
 ###########################################################
 # Events for the Burghers Estate
 #
@@ -998,7 +999,7 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_burghers
-		dip_tech = 5
+		dip_tech = 21
 		num_of_cities = 8
 		estate_territory = { 
 			estate = estate_burghers
@@ -1742,7 +1743,7 @@ country_event = {
 		days = 1
 		modifier = {
 			factor = 2.0
-			dip_tech = 20
+			dip_tech = 36
 		}
 	}
 	

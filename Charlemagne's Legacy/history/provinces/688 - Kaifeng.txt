@@ -7,10 +7,10 @@ capital = "Kaifeng"
 culture = han
 religion = mahayana_faith
 hre = no
-base_tax = 8
-base_production = 8
+base_tax = 7
+base_production = 7
 trade_goods = chinaware
-base_manpower = 4
+base_manpower = 3
 is_city = yes
 
 discovered_by = chinese
