@@ -3,7 +3,7 @@
 owner = BUC
 controller = BUC
 add_core = BUC
-add_core = TIG
+add_core = CEA
 capital = "Bender"
 culture = vlach
 religion = christian_faith

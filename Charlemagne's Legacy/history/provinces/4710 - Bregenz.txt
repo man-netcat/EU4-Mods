@@ -3,7 +3,7 @@
 owner = BAV
 controller = BAV
 add_core = BAV
-add_core = RAE
+add_core = ULM
 capital = "Bregenz"
 culture = swabian
 religion = christian_faith

@@ -3,7 +3,7 @@
 owner = BHM
 controller = BHM
 add_core = BHM
-add_core = HVE
+add_core = HEV
 capital = "Cheb"
 culture = avar
 religion = tengri_pagan

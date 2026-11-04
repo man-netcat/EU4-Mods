@@ -143,7 +143,6 @@ country_decisions = {
 				tag = NSA
 				tag = NUP
 				tag = OMA
-				tag = OPL
 				tag = ORD
 				tag = ORI
 				tag = OSN
@@ -164,7 +163,6 @@ country_decisions = {
 				tag = PTE
 				tag = RTT
 				tag = RUG
-				tag = RVA
 				tag = RYU
 				tag = SBP
 				tag = SCO
@@ -1041,12 +1039,6 @@ country_decisions = {
 			}
 		}
 		if = {
-			limit = { tag = OPL }
-			change_country_color = {
-				color = { 117 140 36 }
-			}
-		}
-		if = {
 			limit = { tag = ORD }
 			change_country_color = {
 				color = { 220 227 43 }
@@ -1164,12 +1156,6 @@ country_decisions = {
 			limit = { tag = RUG }
 			change_country_color = {
 				color = { 51 59 76 }
-			}
-		}
-		if = {
-			limit = { tag = RVA }
-			change_country_color = {
-				color = { 108 139 228 }
 			}
 		}
 		if = {

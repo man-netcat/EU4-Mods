@@ -984,7 +984,7 @@ egyptian_titles = {
 
 
 polish_titles = {
-# CK3 ladders for SIL(r2), KRA(r1), TRN(r1), LEC(r1), WIE(r2), KUJ(r1), PLO(r1), STZ(r1), SAN(r1), OPL(r1)
+# CK3 ladders for SIL(r2), KRA(r1), TRN(r1), LEC(r1), WIE(r2), KUJ(r1), PLO(r1), STZ(r1), SAN(r1)
 	rank = {
 		1 = POLISH_COUNTY  # county_tribal
 		2 = POLISH_DUCHY  # duchy_tribal
@@ -1507,7 +1507,7 @@ mogyer_titles = {
 
 
 lithuanian_titles = {
-# CK3 ladders for ZEM(r2), LTU(r2), YTV(r1), GRO(r1), GRD(r1)
+# CK3 ladders for ZEM(r2), LTU(r2), YTV(r1), GRO(r1)
 	rank = {
 		1 = LITHUANIAN_COUNTY  # county_tribal
 		2 = LITHUANIAN_DUCHY  # duchy_tribal
@@ -3398,7 +3398,7 @@ baranis_titles = {
 
 
 avar_titles = {
-# CK3 ladders for VSG(r2), BIH(r1), TES(r1), SZE(r1), HEV(r1), HVE(r1)
+# CK3 ladders for VSG(r2), BIH(r1), TES(r1), SZE(r1), HEV(r1)
 	rank = {
 		1 = AVAR_COUNTY  # county_tribal
 		2 = AVAR_DUCHY  # duchy_tribal
@@ -6144,7 +6144,7 @@ saxon_osn_titles = {
 
 
 saxon_titles = {
-# CK3 ladders for AGR(r2), MAG(r1), STD(r1), MID(r1), GLI(r1), KSS(r1), GUE(r1), KLE(r1) - feudal CK3 government
+# CK3 ladders for AGR(r2), MAG(r1), STD(r1), GLI(r1), KSS(r1), GUE(r1), KLE(r1) - feudal CK3 government
 	rank = {
 		1 = SAXON_COUNTY  # county_feudal
 		2 = SAXON_DUCHY  # duchy_feudal
@@ -16713,7 +16713,7 @@ sogdian_titles = {
 
 
 carantanian_titles = {
-# CK3 ladders for LEA(r1), KAJ(r1)
+# CK3 ladders for LEA(r1)
 	rank = {
 		1 = CARANTANIAN_COUNTY  # county_feudal
 		2 = CARANTANIAN_DUCHY  # duchy_feudal
@@ -16843,7 +16843,7 @@ swabian_knz_titles = {
 
 
 swabian_titles = {
-# CK3 ladders for ALS(r1), GRI(r1), BEG(r1), BBB(r1), ZUR(r1), SUD(r1) - feudal CK3 government
+# CK3 ladders for ALS(r1), GRI(r1), BBB(r1), ZUR(r1), SUD(r1) - feudal CK3 government
 	rank = {
 		1 = SWABIAN_COUNTY  # county_feudal
 		2 = SWABIAN_DUCHY  # duchy_feudal
@@ -16909,7 +16909,7 @@ swabian_titles = {
 
 
 vlach_titles = {
-# CK3 ladders for GIU(r1), CEA(r1), TIG(r1), IAS(r1), SEE(r1)
+# CK3 ladders for GIU(r1), CEA(r1), IAS(r1), SEE(r1)
 	rank = {
 		1 = VLACH_COUNTY  # county_tribal
 		2 = VLACH_DUCHY  # duchy_tribal

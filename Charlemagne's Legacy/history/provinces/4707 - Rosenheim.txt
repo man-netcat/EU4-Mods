@@ -1,7 +1,7 @@
 owner = BAV
 controller = BAV
 add_core = BAV
-add_core = FAL
+add_core = HOH
 capital = "Wasserburg"
 culture = bavarian
 religion = christian_faith

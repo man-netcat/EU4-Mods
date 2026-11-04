@@ -3,7 +3,7 @@
 owner = SLZ
 controller = SLZ
 add_core = SLZ
-add_core = PAU
+add_core = PSS
 capital	= "Braunau am Inn"
 culture = bavarian
 religion = christian_faith

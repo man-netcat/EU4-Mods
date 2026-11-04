@@ -16,7 +16,7 @@ sys.path.insert(0, HERE)
 
 import ck3  # noqa: E402
 import state867 as S  # noqa: E402
-from tagdb import BY_TAG, DIPLOMACY, DORMANT, PEER_RELATIONS, PROVINCE_OWNERS  # noqa: E402
+from tagdb import BY_TAG, DIPLOMACY, DORMANT, PEER_RELATIONS, PROVINCE_OWNERS, RELEASABLES  # noqa: E402
 
 _cache = None
 
@@ -85,6 +85,27 @@ def governor_province_mismatches():
             want = next((t for t, ti in govs.items() if ti == direct), realm)
             if owner != want and not (want == realm and owner in subs):
                 bad.append((pid, county, owner, want))
+    return bad
+
+
+def releasable_problems():
+    """[(tag, what is wrong)]: a releasable's title must have an 867 holder who is a count (a county is his top title)
+    under a liege, and no count may hold two releasables (his counties share one tag)."""
+    bad, seen = [], {}
+    for tag in sorted(RELEASABLES):
+        title = BY_TAG[tag].ck3_title
+        h = S.holder(title)
+        if not h:
+            bad.append((tag, f"{title} has no holder at 867"))
+            continue
+        prim = S.primary(h)
+        if not prim or prim[0] != "c":
+            bad.append((tag, f"holder of {title} is no count (top title {prim})"))
+        elif S.liege_holder(prim) is None:
+            bad.append((tag, f"holder of {title} has no liege"))
+        if h in seen:
+            bad.append((tag, f"{title}'s count already has {seen[h]}"))
+        seen[h] = tag
     return bad
 
 

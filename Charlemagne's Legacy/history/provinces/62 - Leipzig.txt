@@ -3,7 +3,7 @@
 owner = AGR
 controller = AGR
 add_core = AGR
-add_core = MID
+add_core = MAG
 capital = "Leipzig"
 culture = polabian
 religion = christian_faith

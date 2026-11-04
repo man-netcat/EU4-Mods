@@ -143,6 +143,17 @@ def lotharingian_partition_covers_lotharingia() -> None:
         note(in_ev and liege == ["LOT"], f"{ev} is LOT's subject at the start and Meerssen hands it to {want}")
 
 
+def releasables_are_counts_with_lieges() -> None:
+    """Every releasable is a county held in 867 by a count with a liege, one tag per count."""
+    print("\n== releasables are counts with lieges ==")
+    from lieges import releasable_problems  # noqa: E402
+
+    bad = releasable_problems()
+    note(not bad, f"every releasable's 867 holder is a count under a liege, one tag each ({len(bad)} problems)")
+    for tag, why in bad[:10]:
+        print(f"        {tag}: {why}")
+
+
 def historical_friendships_and_rivalries() -> None:
     """Historical friendships and rivalries."""
     print("\n== historical friendships and rivalries ==")
@@ -259,6 +270,7 @@ def run() -> None:
     subjects_and_relation_limit()
     vassalage_matches_ck3_s_867_lieges()
     lotharingian_partition_covers_lotharingia()
+    releasables_are_counts_with_lieges()
     historical_friendships_and_rivalries()
     subject_types_keep_ck3_true_vassal_ranks()
     preset_wars_use_live_tags_and_real_cbs()

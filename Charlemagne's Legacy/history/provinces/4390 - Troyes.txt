@@ -3,7 +3,7 @@
 owner = FRA
 controller = FRA
 add_core = FRA
-add_core = TRO
+add_core = BOB
 capital = "Troyes"
 culture = french
 religion = christian_faith
