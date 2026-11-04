@@ -1,8 +1,8 @@
 #1857 - Lauenburg
 
-owner = HAM
-controller = HAM
-add_core = HAM
+owner = AGR
+controller = AGR
+add_core = AGR
 capital = "Lauenburg"
 culture = polabian
 religion = christian_faith
@@ -18,7 +18,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = HAM
-	controller = HAM
-	add_core = HAM
+	owner = AGR
+	controller = AGR
+	add_core = AGR
 }

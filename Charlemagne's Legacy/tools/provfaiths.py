@@ -892,6 +892,9 @@ PROVINCE_COUNTY.update({
     2208: "c_cabardinia",  # the Terek of the northern Caucasus (c_terek_pass is in the Tarim basin)
     4339: "c_gilan",     # Rasht in Gilan (c_rasht is in Tajikistan)
     2209: "c_luristan",  # Ilam in Luristan (c_ilam is in Nepal)
+    2992: "c_genoa",     # Albenga, on the Ligurian coast: CK3 has no Albenga, and Savona in c_genoa is the nearest barony (c_tortona is inland)
+    4768: "c_aachen",    # Julich: CK3 has no Julich county; Duren, the nearest barony it names, is in c_aachen (not Cologne's c_cologne)
+    1742: "c_guelders",  # Limburg is the Upper Quarter of Guelders (c_frankfurt holds Limburg an der Lahn)
 })
 
 # Provinces whose religion is set by hand, with the reason: the county's own faith is not the province's.

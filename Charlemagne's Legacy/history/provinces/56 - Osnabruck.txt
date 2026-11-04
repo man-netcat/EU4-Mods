@@ -2,7 +2,9 @@
 
 owner = AGR
 controller = AGR
+add_core = OSN
 add_core = AGR
+add_core = OSN
 capital = "Osnabrück"
 culture = saxon
 religion = christian_faith

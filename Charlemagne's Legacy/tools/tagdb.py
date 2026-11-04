@@ -353,9 +353,12 @@ def _load() -> tuple[
         for r in rows
     ]
     releasables = {r.tag: bool(r.hre) for r in s.query(ReleasableRow).order_by(ReleasableRow.tag)}
+    global RELEASABLE_YEARS
+    RELEASABLE_YEARS = {r.tag: r.year for r in s.query(ReleasableRow) if r.year}
     return tags, dips, provs, formables, wars, seeds, releasables
 
 
+RELEASABLE_YEARS: dict = {}
 TAGS, DIPLOMACY, PROVINCES, FORMABLES, WARS, SEED_CORES, RELEASABLES = _load()
 
 BY_TAG: dict[str, LandedTag] = {t.tag: t for t in TAGS}

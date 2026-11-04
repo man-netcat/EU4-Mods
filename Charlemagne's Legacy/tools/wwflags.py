@@ -51,6 +51,19 @@ SOURCES = {
     "KAE": "Sponheim Carinthia Ancient",     # c_karnten: Carinthia's arms under the Sponheim dukes
     "LEA": "Krain Ancient",                  # c_ljubljana: the arms of Carniola
     "OPL": "Opole",                          # c_opole
+    # The Lotharingian counties (releasables), from WappenWiki, the files under the county's own name
+    "ZUT": "Zutphen",                        # c_zutphen: the lion of the counts of Zutphen
+    "MTZ": "Metz Bishopric",                 # c_metz: the arms WappenWiki files for the bishopric
+    "ANW": "Antwerp",                        # c_antwerpen: the eagle over the castle of Antwerp
+    "BRN": "Bern",                           # c_bern: the Bernese bear on its bend
+    "SGU": "Haute Alsace",                   # c_sundgau: Upper Alsace, the bend with three crowns
+    "BSC": "Besançon",                       # c_besancon: the eagle of Besancon
+    # The Italian counties (releasables)
+    "LMB": "Visconti",                       # c_lombardia: the biscione, the snake and the man, alone on white (CK3 gives the title a snake)
+    "KSL": "Hessen",                         # c_kassel: the barry lion of Hesse, on blue
+    "OLM": "Orlamunde",                      # c_orlamunde: black lion among red hearts, on gold
+    "ZRC": "Zurich",                         # c_zurich: per bend argent and azure, drawn by diagonal_split
+    "NVA": "Novara",                         # c_novara: the white cross on red of Novara
 }
 CHARGES = Path("/home/rick/Paradox/heraldry/charges")
 # Arms whose bordure follows the shield outline: keep the charge only (fractions of the render)
@@ -58,7 +71,8 @@ INNER = {"JAM": (0.15, 0.14, 0.85, 0.75)}
 SHIELD_RE = re.compile(r"<(polygon|path)\b[^>]*?(?:/>|>\s*</\1>)", re.S)
 
 
-def build(tag, title, size=256, height=218, inner=None):
+def render_arms(title):
+    """The arms' SVG without its shield outline, rendered 2400 px high: (RGBA image, field colour)."""
     src_dir = MIRROR if (MIRROR / f"{title}.svg").exists() else CHARGES
     s = (src_dir / f"{title}.svg").read_text(errors="replace")
     s = re.sub(r"<!DOCTYPE.*?\]>", "", s, flags=re.S)
@@ -104,6 +118,11 @@ def build(tag, title, size=256, height=218, inner=None):
         subprocess.run(["inkscape", str(src), "-h", "2400", "-o", str(png)], check=True,
                        capture_output=True)
         im = Image.open(png).convert("RGBA")
+    return im, field
+
+
+def build(tag, title, size=256, height=218, inner=None):
+    im, field = render_arms(title)
     if inner:  # keep only the central part (drops a shield-shaped bordure)
         w, h = im.size
         im = im.crop((round(w * inner[0]), round(h * inner[1]), round(w * inner[2]), round(h * inner[3])))
@@ -195,12 +214,122 @@ def jemtland(tag="JAM", size=256, band=28, marks=6, S=4):
     (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + rgb.tobytes("raw", "BGR"))
 
 
+def _charges(im, ordinary_mask, grow=3, join=30, opening=2):
+    """The arms' charges as separate sprites: everything that is not the ordinary (grown a little to take its outline), clustered by
+    proximity. [(sprite RGBA, centre (x, y) in the render)], left to right."""
+    import numpy as np
+    from scipy import ndimage
+    a = np.array(im)
+    alpha = a[..., 3] > 8
+    rest = alpha & ~ndimage.binary_dilation(ordinary_mask, iterations=grow)
+    rest = ndimage.binary_opening(rest, iterations=opening)
+    lab, n = ndimage.label(ndimage.binary_dilation(rest, iterations=join))
+    sprites = []
+    for i in range(1, n + 1):
+        m = ndimage.binary_fill_holes(rest & (lab == i))
+        if m.sum() < 1500:
+            continue
+        ys, xs = np.where(m)
+        box = (xs.min(), ys.min(), xs.max() + 1, ys.max() + 1)
+        sp = im.crop(box)
+        al = np.array(sp.getchannel("A")) * m[box[1]:box[3], box[0]:box[2]]
+        sp.putalpha(Image.fromarray(al.astype("uint8")))
+        sprites.append((sp, ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)))
+    return sorted(sprites, key=lambda t: t[1][0])
+
+
+def _gold_band(im, colour=(242, 188, 81), tol=60):
+    import numpy as np
+    from scipy import ndimage
+    a = np.array(im)
+    m = (a[..., 3] > 8) & (np.abs(a[..., :3].astype(int) - np.array(colour)).sum(2) < tol)
+    lab, n = ndimage.label(m)
+    big = 1 + int(np.argmax(ndimage.sum(m, lab, range(1, n + 1))))
+    return lab == big
+
+
+def squared_bend(tag, title, size=256, S=4, bend=0.42, stroke=0.006, opening=2, crowns=0, height=0.40, crown=0.18):
+    """A bend arms redrawn on the square: the bend runs corner to corner (top left to bottom right) with a black edge, and the charge
+    cut from the original is set on it, upright and centred, `height` of the square tall (it may reach over the bend's edges, as Bern's bear does). With crowns > 0 the arms are the
+    Upper Alsace ones: that many of the original's crown on each side of the bend, evenly spaced along it."""
+    import numpy as np
+    im, field = render_arms(title)
+    band = _gold_band(im)
+    sprites = _charges(im, band, grow=4, opening=opening)
+    W = size * S
+    yy, xx = np.mgrid[0:W, 0:W]
+    c = bend * W / 2  # half the bend's width, measured along a row
+    out = np.zeros((W, W, 3), "u1")
+    out[:] = field
+    out[np.abs(xx - yy) <= c] = (242, 188, 81)
+    out[np.abs(np.abs(xx - yy) - c) * 0.7071 <= stroke * W / 2] = (0, 0, 0)
+    img = Image.fromarray(out).convert("RGBA")
+
+    def put(sp, k, cx, cy):
+        sp2 = sp.resize((max(1, round(sp.width * k)), max(1, round(sp.height * k))), Image.LANCZOS)
+        img.alpha_composite(sp2, (round(cx - sp2.width / 2), round(cy - sp2.height / 2)))
+
+    if crowns:
+        # one crown (the arms repeat it): the median-sized sprite. Each side of the bend holds three in a triangle, two and one as in
+        # the original (two along the top / one beneath the right one; the other side is the same turned half way round)
+        sp = sorted((t[0] for t in sprites), key=lambda x: x.width * x.height)[len(sprites) // 2]
+        k = crown * W / max(sp.width, sp.height)
+        tri = [(0.53, 0.18), (0.83, 0.18), (0.83, 0.47)]
+        for x, y in tri:
+            put(sp, k, x * W, y * W)
+            put(sp, k, (1 - x) * W, (1 - y) * W)
+    else:
+        sp = max((t[0] for t in sprites), key=lambda x: x.width * x.height)
+        k = height * W / sp.height
+        put(sp, k, W / 2, W / 2)
+    rgb = img.resize((size, size), Image.LANCZOS).convert("RGB")
+    (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + rgb.tobytes("raw", "BGR"))
+    return len(sprites)
+
+
+def squared_chief(tag, title, size=256, S=4, chief=0.36, stroke=0.006):
+    """Antwerp: a chief across the top of the square (the eagle in it) over the red field with the castle."""
+    import numpy as np
+    from PIL import ImageDraw
+    im, field = render_arms(title)
+    ih = im.height
+    band = _gold_band(im)  # the chief
+    sprites = _charges(im, band, grow=4, join=22, opening=5)
+    W = size * S
+    img = Image.new("RGBA", (W, W), field + (255,))
+    dr = ImageDraw.Draw(img)
+    ch = round(chief * W)
+    dr.rectangle((0, 0, W, ch), fill=(242, 188, 81, 255))
+    dr.line((0, ch, W, ch), fill=(0, 0, 0, 255), width=max(1, round(stroke * W)))
+    chief_y = 0.34 * ih  # the original's chief ends about a third of the way down
+    top = [t for t in sprites if t[1][1] < chief_y]
+    low = [t for t in sprites if t[1][1] >= chief_y]
+    for group, (y0, y1), h in ((top, (0, ch), 0.8 * ch), (low, (ch, W), 0.5 * (W - ch) / 0.5 * 0.5)):
+        if not group:
+            continue
+        xs0 = min(t[1][0] - t[0].width / 2 for t in group)
+        xs1 = max(t[1][0] + t[0].width / 2 for t in group)
+        ys0 = min(t[1][1] - t[0].height / 2 for t in group)
+        ys1 = max(t[1][1] + t[0].height / 2 for t in group)
+        k = min(h / (ys1 - ys0), 0.62 * W / (xs1 - xs0))
+        cx0, cy0 = W / 2, (y0 + y1) / 2
+        for sp, (cx, cy) in group:
+            sp2 = sp.resize((max(1, round(sp.width * k)), max(1, round(sp.height * k))), Image.LANCZOS)
+            px = cx0 + (cx - (xs0 + xs1) / 2) * k
+            py = cy0 + (cy - (ys0 + ys1) / 2) * k
+            img.alpha_composite(sp2, (round(px - sp2.width / 2), round(py - sp2.height / 2)))
+    rgb = img.resize((size, size), Image.LANCZOS).convert("RGB")
+    (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + rgb.tobytes("raw", "BGR"))
+    return len(sprites)
+
+
 # Animal charges from Armoria's bundled charge set. Armoria's charges are themselves
 # WappenWiki artwork (each SVG's <metadata> names http://wappenwiki.org, CC BY-NC-SA 3.0),
 # placed on the tinctures CK3 gives the title arms.
 ARMORIA = Path(os.environ.get("ARMORIA", "/home/rick/Paradox/heraldry/Armoria")) / "public" / "charges"
 WHITE, BLACK, BLUE, RED, GOLD = "#f6f6f6", "#333333", "#0d6793", "#bc2e2e", "#f2bc51"
 # TAG: (charge, field, primary, secondary, tertiary)   # CK3 arms it follows
+ARMORIA_ROTATE = {"STD": 40}
 ARMORIA_FLAGS = {
     "AUD": ("raven", WHITE, BLACK, WHITE, BLACK),          # c_austisland: black raven on white
     "DLR": ("boarRampant", GOLD, BLACK, RED, RED),         # d_dalir: black boar, red tongue/hooves, on gold
@@ -215,6 +344,8 @@ ARMORIA_FLAGS = {
     "SPW": ("bullPassant", WHITE, RED, RED, WHITE),        # c_spreewald: red bull on white
     "GLL": ("cock", WHITE, BLACK, RED, WHITE),             # c_gallura: black cock, red comb, on white
     "CAG": ("horsePassant", WHITE, BLACK, BLACK, BLACK),   # c_cagliari: black horse on white
+    "STD": ("key", BLUE, WHITE, WHITE, WHITE),             # c_stade: St Peter's key on blue, set in bend
+    "BRX": ("lionRampant", WHITE, BLUE, RED, WHITE),       # c_brescia: blue lion, red tongue, on white
 }
 
 
@@ -230,6 +361,8 @@ def armoria(tag, size=256, height=218):
         src.write_text(s)
         subprocess.run(["inkscape", str(src), "-h", "2400", "-o", str(png)], check=True, capture_output=True)
         im = Image.open(png).convert("RGBA")
+    if tag in ARMORIA_ROTATE:  # a charge set in bend: turned counter-clockwise (bow to the top left)
+        im = im.rotate(ARMORIA_ROTATE[tag], expand=True, resample=Image.BICUBIC)
     im = im.crop(im.getchannel("A").getbbox())
     k = min(height / im.height, 238 / im.width)
     im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
@@ -237,6 +370,42 @@ def armoria(tag, size=256, height=218):
     out = Image.new("RGBA", (size, size), fc + (255,))
     out.alpha_composite(im, ((size - im.width) // 2, (size - im.height) // 2))
     (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + out.convert("RGB").tobytes("raw", "BGR"))
+
+
+def plain_cross(tag, field=(188, 46, 46), cross=(246, 246, 246), arm=56, size=256):
+    """A cross reaching the edges on a plain field (Novara's arms: the file's white cross is part of the shield stack the renderer drops)."""
+    lo = (size - arm) // 2
+    rows = b""
+    for y in range(size):
+        rows += b"".join(bytes((cross if (lo <= x < lo + arm or lo <= y < lo + arm) else field)[::-1]) for x in range(size))
+    (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + rows)
+
+
+def diagonal_split(tag, upper_right=(246, 246, 246), lower_left=(13, 103, 147), size=256, S=4):
+    """The square cut along its top-left to bottom-right diagonal (Zurich's per bend: white above, blue below), edges smoothed."""
+    from PIL import Image as _I
+    big = size * S
+    img = _I.new("RGB", (big, big), lower_left)
+    px = img.load()
+    for y in range(big):
+        for x in range(big):
+            if x > y:
+                px[x, y] = upper_right
+    rgb = img.resize((size, size), _I.LANCZOS)
+    (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + rgb.tobytes("raw", "BGR"))
+
+
+def chief(tag, field=(188, 46, 46), band=(246, 246, 246), height=0.31, size=256):
+    """A plain chief across the top of the field (CK3's c_gleichenstein: white over red)."""
+    h = round(height * size)
+    rows = b"".join(bytes((band if y < h else field)[::-1]) * size for y in range(size))
+    (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + rows)
+
+
+def barry(tag, n=6, c1=(188, 46, 46), c2=(246, 246, 246), size=256):
+    """Horizontal bars of two tinctures (CK3's ce_barry_06 on c_cremona: red and white)."""
+    rows = b"".join((bytes((c1 if (y * n // size) % 2 == 0 else c2)[::-1]) * size) for y in range(size))
+    (FLAGS / f"{tag}.tga").write_bytes((FLAGS / "DEH.tga").read_bytes()[:18] + rows)
 
 
 # CK3 bakes whose emblem sits off-centre in the title arms; re-centred on the ink bbox
@@ -272,6 +441,24 @@ if __name__ == "__main__":
         if t in ARMORIA_FLAGS:
             armoria(t)
             print(t, ARMORIA_FLAGS[t][0], "Armoria")
+        elif t == "BRN":
+            print(t, "Bern", squared_bend(t, "Bern", opening=7, bend=0.46), "charges, bend corner to corner")
+        elif t == "SGU":
+            print(t, "Haute Alsace", squared_bend(t, "Haute Alsace", opening=5, crowns=3, bend=0.34), "charges, bend corner to corner")
+        elif t == "ANW":
+            print(t, "Antwerp", squared_chief(t, "Antwerp"), "charges, chief across the square")
+        elif t == "GLC":
+            chief(t)
+            print(t, "Gleichenstein: white chief on red (CK3)")
+        elif t == "ZRC":
+            diagonal_split(t)
+            print(t, "Zurich: per bend, white and blue")
+        elif t == "NVA":
+            plain_cross(t)
+            print(t, "Novara: white cross on red")
+        elif t == "CRM":
+            barry(t)
+            print(t, "barry of six, red and white (c_cremona)")
         elif t == "JAM":
             jemtland()
             print(t, SOURCES[t], "squared bordure")

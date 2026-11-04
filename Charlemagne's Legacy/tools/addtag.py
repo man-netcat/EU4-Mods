@@ -106,6 +106,8 @@ def main(argv):
                     help="a releasable: the tag owns nothing; its provinces (kept by their owner) get seeded cores")
     ap.add_argument("--hre", action="store_true",
                     help="with --dormant: an HRE-area tag that the Karolingian Empire's formation can release")
+    ap.add_argument("--year", type=int,
+                    help="with --dormant: the year its event fires, when CK3's independence rule does not fit")
     ap.add_argument("--reuse", action="store_true",
                     help="code is a vanilla tag taken over deliberately")
     a = ap.parse_args(argv)
@@ -291,7 +293,7 @@ def main(argv):
             s.add(TagProvinceRow(tag=a.tag, pid=pid))
     s.add(TagReformRow(tag=a.tag, pos=seq, reform="feudalism_reform"))
     if a.dormant:
-        s.add(ReleasableRow(tag=a.tag, hre=a.hre))
+        s.add(ReleasableRow(tag=a.tag, hre=a.hre, year=a.year))
     s.commit()
     s.close()
 

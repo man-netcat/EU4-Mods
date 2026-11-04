@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = swabian
+religion = christian_faith
+capital = 1880
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Liutfried II"
+		dynasty = "Etichonen"
+		birth_date = 839.1.1
+		death_date = 916.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hupold"
+		monarch_name = "Hupold"
+		dynasty = "Etichonen"
+		birth_date = 840.1.1
+		death_date = 890.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

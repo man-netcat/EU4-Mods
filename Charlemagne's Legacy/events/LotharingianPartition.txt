@@ -114,12 +114,14 @@ country_event = {
 			1878 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			2975 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			99 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4767 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			4768 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			1742 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			98 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			4381 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			188 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			94 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			2974 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4768 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			1880 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			4765 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
 			165 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
@@ -193,12 +195,14 @@ country_event = {
 				1878 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				2975 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				99 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				4767 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				4768 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				1742 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				98 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				4381 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				188 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				94 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				2974 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				4768 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				1880 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				4765 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
 				165 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }

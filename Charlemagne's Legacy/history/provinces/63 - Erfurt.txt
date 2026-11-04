@@ -3,6 +3,7 @@
 owner = THU
 controller = THU
 add_core = THU
+add_core = GLC
 capital = "Erfurt"
 culture = franconian
 religion = christian_faith

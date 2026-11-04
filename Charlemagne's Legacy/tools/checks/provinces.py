@@ -3,7 +3,7 @@
 
 import os
 import re
-from checks.report import note
+from checks.report import note, warn
 from checks.context import CAPS, DORMANT, GAME, HERE, KEPT_REALMS, PDIR, PROVINCES, TAGS, parse, province_files
 from steps.allocation import build
 from steps.provdata import lake_ids, sea_ids, vanilla_prov_file, vanilla_prov_ids, waste_ids
@@ -267,7 +267,50 @@ def development_follows_the_ck3_counties() -> None:
          f"Europe's total development is at most 60% of the base game's ({eu_after} of {eu_before} over {eu_n} provinces)")
 
 
+def formable_provinces_lie_in_the_formable_s_ck3_title() -> None:
+    """The explicit provinces of a formable are paired with counties under the formable's own CK3 title. Warns for every formable
+    where one is not (a province the title was widened by, or a mispairing); the audited formables must have none."""
+    print("\n== formable provinces lie in the formable's CK3 title ==")
+    import re
+    import sqlite3
+
+    import provfaiths
+    from paths import CK3_GAME
+
+    root = os.path.join(str(CK3_GAME), "common", "landed_titles")
+    up = {}
+    for fn in sorted(os.listdir(root)):
+        text = open(os.path.join(root, fn), encoding="utf-8", errors="replace").read()
+        stack = []
+        for m in re.finditer(r"(?m)^(\t*)([bcdke]_[\w-]+)\s*=\s*\{", text):
+            depth, tid = len(m.group(1)), m.group(2)
+            while stack and stack[-1][0] >= depth:
+                stack.pop()
+            if tid.startswith("c_"):
+                up[tid] = {t for _, t in stack}
+            stack.append((depth, tid))
+    con = sqlite3.connect(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tags.db"))
+    audited = {"MLO"}
+    bad_audited, warned = [], 0
+    for tag, title in con.execute("select tag, ck3_title from formables"):
+        pids = [p for (p,) in con.execute("select pid from formable_provinces where formable=?", (tag,))]
+        off = []
+        for p in pids:
+            county = provfaiths.PROVINCE_COUNTY.get(p)
+            if county is None or title not in up.get(county, set()):
+                off.append(f"{p} ({county})")
+        if off and tag in audited:
+            bad_audited.append(f"{tag}: {', '.join(off)}")
+        elif off:
+            warned += 1
+            warn(f"{tag} ({title}): provinces outside the title: {', '.join(off[:8])}")
+    con.close()
+    note(not bad_audited, "the audited formables' provinces all lie under their CK3 title (" + ", ".join(sorted(audited)) + ")"
+         + (": " + "; ".join(bad_audited) if bad_audited else "") + f"; {warned} other formables warned")
+
+
 def run() -> None:
+    formable_provinces_lie_in_the_formable_s_ck3_title()
     province_ownership()
     development_follows_the_ck3_counties()
     no_province_is_in_vanilla_hre()

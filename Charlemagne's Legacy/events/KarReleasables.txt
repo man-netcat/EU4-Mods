@@ -295,7 +295,10 @@ country_event = {
 		is_year = 1025
 		NOT = { tag = SPE }
 		OR = {
+			owns = 69
 			owns = 77
+			owns = 1761
+			owns = 4718
 		}
 	}
 
@@ -312,7 +315,10 @@ country_event = {
 	option = {
 		name = kar_releasables.9.b
 		ai_chance = { factor = 80 }
+			69 = { limit = { owned_by = ROOT } add_unrest = 5 }
 			77 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1761 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4718 = { limit = { owned_by = ROOT } add_unrest = 5 }
 	}
 }
 
@@ -331,6 +337,10 @@ country_event = {
 		NOT = { tag = MAG }
 		OR = {
 			owns = 52
+			owns = 57
+			owns = 62
+			owns = 2971
+			owns = 4741
 		}
 	}
 
@@ -348,6 +358,10 @@ country_event = {
 		name = kar_releasables.10.b
 		ai_chance = { factor = 80 }
 			52 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			57 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			62 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			2971 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4741 = { limit = { owned_by = ROOT } add_unrest = 5 }
 	}
 }
 
@@ -365,6 +379,10 @@ country_event = {
 		is_year = 1025
 		NOT = { tag = HOH }
 		OR = {
+			owns = 70
+			owns = 71
+			owns = 4711
+			owns = 4713
 			owns = 4715
 		}
 	}
@@ -382,6 +400,10 @@ country_event = {
 	option = {
 		name = kar_releasables.11.b
 		ai_chance = { factor = 80 }
+			70 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			71 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4711 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4713 = { limit = { owned_by = ROOT } add_unrest = 5 }
 			4715 = { limit = { owned_by = ROOT } add_unrest = 5 }
 	}
 }
@@ -400,6 +422,8 @@ country_event = {
 		is_year = 1025
 		NOT = { tag = GRI }
 		OR = {
+			owns = 72
+			owns = 1867
 			owns = 1873
 			owns = 4722
 		}
@@ -418,6 +442,8 @@ country_event = {
 	option = {
 		name = kar_releasables.12.b
 		ai_chance = { factor = 80 }
+			72 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1867 = { limit = { owned_by = ROOT } add_unrest = 5 }
 			1873 = { limit = { owned_by = ROOT } add_unrest = 5 }
 			4722 = { limit = { owned_by = ROOT } add_unrest = 5 }
 	}
@@ -565,6 +591,1114 @@ country_event = {
 	}
 }
 
+# c_nedersticht: set up by CK3 in 1112
+country_event = {
+	id = kar_releasables.17
+	title = kar_releasables.17.t
+	desc = kar_releasables.17.d
+	picture = RELIGION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = UTR }
+		is_year = 1112
+		NOT = { tag = UTR }
+		OR = {
+			owns = 98
+			owns = 4381
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.17.a
+		ai_chance = { factor = 20 }
+		release = UTR
+	}
+
+	option = {
+		name = kar_releasables.17.b
+		ai_chance = { factor = 80 }
+			98 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4381 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_guelders: set up by CK3 in 1066
+country_event = {
+	id = kar_releasables.18
+	title = kar_releasables.18.t
+	desc = kar_releasables.18.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = GEL }
+		is_year = 1066
+		NOT = { tag = GEL }
+		OR = {
+			owns = 99
+			owns = 1742
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.18.a
+		ai_chance = { factor = 20 }
+		release = GEL
+	}
+
+	option = {
+		name = kar_releasables.18.b
+		ai_chance = { factor = 80 }
+			99 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1742 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_zutphen: set up by CK3 in 1065
+country_event = {
+	id = kar_releasables.19
+	title = kar_releasables.19.t
+	desc = kar_releasables.19.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = ZUT }
+		is_year = 1065
+		NOT = { tag = ZUT }
+		OR = {
+			owns = 2975
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.19.a
+		ai_chance = { factor = 20 }
+		release = ZUT
+	}
+
+	option = {
+		name = kar_releasables.19.b
+		ai_chance = { factor = 80 }
+			2975 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_aachen: set up by CK3 in 1024
+country_event = {
+	id = kar_releasables.20
+	title = kar_releasables.20.t
+	desc = kar_releasables.20.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = AAC }
+		is_year = 1024
+		NOT = { tag = AAC }
+		OR = {
+			owns = 1878
+			owns = 2974
+			owns = 4768
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.20.a
+		ai_chance = { factor = 20 }
+		release = AAC
+	}
+
+	option = {
+		name = kar_releasables.20.b
+		ai_chance = { factor = 80 }
+			1878 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			2974 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4768 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_liege: set up by CK3 in 1167
+country_event = {
+	id = kar_releasables.21
+	title = kar_releasables.21.t
+	desc = kar_releasables.21.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = LIE }
+		is_year = 1167
+		NOT = { tag = LIE }
+		OR = {
+			owns = 93
+			owns = 1866
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.21.a
+		ai_chance = { factor = 20 }
+		release = LIE
+	}
+
+	option = {
+		name = kar_releasables.21.b
+		ai_chance = { factor = 80 }
+			93 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1866 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_brabant: set up by CK3 in 1139
+country_event = {
+	id = kar_releasables.22
+	title = kar_releasables.22.t
+	desc = kar_releasables.22.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = BRB }
+		is_year = 1139
+		NOT = { tag = BRB }
+		OR = {
+			owns = 91
+			owns = 92
+			owns = 1743
+			owns = 4770
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.22.a
+		ai_chance = { factor = 20 }
+		release = BRB
+	}
+
+	option = {
+		name = kar_releasables.22.b
+		ai_chance = { factor = 80 }
+			91 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			92 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1743 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4770 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_luxembourg: set up by CK3 in 963
+country_event = {
+	id = kar_releasables.23
+	title = kar_releasables.23.t
+	desc = kar_releasables.23.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = LUX }
+		is_year = 963
+		NOT = { tag = LUX }
+		OR = {
+			owns = 94
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.23.a
+		ai_chance = { factor = 20 }
+		release = LUX
+	}
+
+	option = {
+		name = kar_releasables.23.b
+		ai_chance = { factor = 80 }
+			94 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_metz: set up by CK3 in 1048
+country_event = {
+	id = kar_releasables.24
+	title = kar_releasables.24.t
+	desc = kar_releasables.24.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = MTZ }
+		is_year = 1048
+		NOT = { tag = MTZ }
+		OR = {
+			owns = 188
+			owns = 4767
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.24.a
+		ai_chance = { factor = 20 }
+		release = MTZ
+	}
+
+	option = {
+		name = kar_releasables.24.b
+		ai_chance = { factor = 80 }
+			188 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4767 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_antwerpen: set up by CK3 in 1139
+country_event = {
+	id = kar_releasables.25
+	title = kar_releasables.25.t
+	desc = kar_releasables.25.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = ANW }
+		is_year = 1139
+		NOT = { tag = ANW }
+		OR = {
+			owns = 95
+			owns = 1744
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.25.a
+		ai_chance = { factor = 20 }
+		release = ANW
+	}
+
+	option = {
+		name = kar_releasables.25.b
+		ai_chance = { factor = 80 }
+			95 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1744 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_bern: set up by CK3 in 1032
+country_event = {
+	id = kar_releasables.26
+	title = kar_releasables.26.t
+	desc = kar_releasables.26.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = BRN }
+		is_year = 1032
+		NOT = { tag = BRN }
+		OR = {
+			owns = 165
+			owns = 4721
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.26.a
+		ai_chance = { factor = 20 }
+		release = BRN
+	}
+
+	option = {
+		name = kar_releasables.26.b
+		ai_chance = { factor = 80 }
+			165 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4721 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_sundgau: set up by CK3 in 1048
+country_event = {
+	id = kar_releasables.27
+	title = kar_releasables.27.t
+	desc = kar_releasables.27.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = SGU }
+		is_year = 1048
+		NOT = { tag = SGU }
+		OR = {
+			owns = 1880
+			owns = 4765
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.27.a
+		ai_chance = { factor = 20 }
+		release = SGU
+	}
+
+	option = {
+		name = kar_releasables.27.b
+		ai_chance = { factor = 80 }
+			1880 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4765 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_besancon: set up by CK3 in 1026
+country_event = {
+	id = kar_releasables.28
+	title = kar_releasables.28.t
+	desc = kar_releasables.28.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = BSC }
+		is_year = 1026
+		NOT = { tag = BSC }
+		OR = {
+			owns = 193
+			owns = 4764
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.28.a
+		ai_chance = { factor = 20 }
+		release = BSC
+	}
+
+	option = {
+		name = kar_releasables.28.b
+		ai_chance = { factor = 80 }
+			193 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4764 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_genoa: set up by CK3 in 1099
+country_event = {
+	id = kar_releasables.29
+	title = kar_releasables.29.t
+	desc = kar_releasables.29.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = GEN }
+		is_year = 1099
+		NOT = { tag = GEN }
+		OR = {
+			owns = 101
+			owns = 2992
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.29.a
+		ai_chance = { factor = 20 }
+		release = GEN
+	}
+
+	option = {
+		name = kar_releasables.29.b
+		ai_chance = { factor = 80 }
+			101 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			2992 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_lombardia: set up by CK3 in 1158
+country_event = {
+	id = kar_releasables.30
+	title = kar_releasables.30.t
+	desc = kar_releasables.30.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = LMB }
+		is_year = 1158
+		NOT = { tag = LMB }
+		OR = {
+			owns = 104
+			owns = 4740
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.30.a
+		ai_chance = { factor = 20 }
+		release = LMB
+	}
+
+	option = {
+		name = kar_releasables.30.b
+		ai_chance = { factor = 80 }
+			104 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4740 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_brescia: set up by CK3 in 1115
+country_event = {
+	id = kar_releasables.31
+	title = kar_releasables.31.t
+	desc = kar_releasables.31.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = BRX }
+		is_year = 1115
+		NOT = { tag = BRX }
+		OR = {
+			owns = 107
+			owns = 4739
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.31.a
+		ai_chance = { factor = 20 }
+		release = BRX
+	}
+
+	option = {
+		name = kar_releasables.31.b
+		ai_chance = { factor = 80 }
+			107 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4739 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_mantua: set up by CK3 in 1090
+country_event = {
+	id = kar_releasables.32
+	title = kar_releasables.32.t
+	desc = kar_releasables.32.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = MAN }
+		is_year = 1090
+		NOT = { tag = MAN }
+		OR = {
+			owns = 109
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.32.a
+		ai_chance = { factor = 20 }
+		release = MAN
+	}
+
+	option = {
+		name = kar_releasables.32.b
+		ai_chance = { factor = 80 }
+			109 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_cremona: set up by CK3 in 1120
+country_event = {
+	id = kar_releasables.33
+	title = kar_releasables.33.t
+	desc = kar_releasables.33.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = CRM }
+		is_year = 1120
+		NOT = { tag = CRM }
+		OR = {
+			owns = 1862
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.33.a
+		ai_chance = { factor = 20 }
+		release = CRM
+	}
+
+	option = {
+		name = kar_releasables.33.b
+		ai_chance = { factor = 80 }
+			1862 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_novara: set up by CK3 in 1091
+country_event = {
+	id = kar_releasables.34
+	title = kar_releasables.34.t
+	desc = kar_releasables.34.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = NVA }
+		is_year = 1091
+		NOT = { tag = NVA }
+		OR = {
+			owns = 2979
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.34.a
+		ai_chance = { factor = 20 }
+		release = NVA
+	}
+
+	option = {
+		name = kar_releasables.34.b
+		ai_chance = { factor = 80 }
+			2979 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_monferrato: set up by CK3 in 1024
+country_event = {
+	id = kar_releasables.35
+	title = kar_releasables.35.t
+	desc = kar_releasables.35.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = MFA }
+		is_year = 1024
+		NOT = { tag = MFA }
+		OR = {
+			owns = 2981
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.35.a
+		ai_chance = { factor = 20 }
+		release = MFA
+	}
+
+	option = {
+		name = kar_releasables.35.b
+		ai_chance = { factor = 80 }
+			2981 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_cuneo: set up by CK3 in 1034
+country_event = {
+	id = kar_releasables.36
+	title = kar_releasables.36.t
+	desc = kar_releasables.36.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = SZO }
+		is_year = 1034
+		NOT = { tag = SZO }
+		OR = {
+			owns = 4727
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.36.a
+		ai_chance = { factor = 20 }
+		release = SZO
+	}
+
+	option = {
+		name = kar_releasables.36.b
+		ai_chance = { factor = 80 }
+			4727 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_nassau: set up by CK3 in 1125
+country_event = {
+	id = kar_releasables.37
+	title = kar_releasables.37.t
+	desc = kar_releasables.37.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = NSA }
+		is_year = 1125
+		NOT = { tag = NSA }
+		OR = {
+			owns = 81
+			owns = 83
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.37.a
+		ai_chance = { factor = 20 }
+		release = NSA
+	}
+
+	option = {
+		name = kar_releasables.37.b
+		ai_chance = { factor = 80 }
+			81 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			83 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_zurich: set up by CK3 in 1268
+country_event = {
+	id = kar_releasables.38
+	title = kar_releasables.38.t
+	desc = kar_releasables.38.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = ZRC }
+		is_year = 1268
+		NOT = { tag = ZRC }
+		OR = {
+			owns = 166
+			owns = 1869
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.38.a
+		ai_chance = { factor = 20 }
+		release = ZRC
+	}
+
+	option = {
+		name = kar_releasables.38.b
+		ai_chance = { factor = 80 }
+			166 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1869 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_sankt_gallen: set up by CK3 in 935
+country_event = {
+	id = kar_releasables.39
+	title = kar_releasables.39.t
+	desc = kar_releasables.39.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = KNZ }
+		is_year = 935
+		NOT = { tag = KNZ }
+		OR = {
+			owns = 1870
+			owns = 4712
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.39.a
+		ai_chance = { factor = 20 }
+		release = KNZ
+	}
+
+	option = {
+		name = kar_releasables.39.b
+		ai_chance = { factor = 80 }
+			1870 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4712 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_kassel: set up by CK3 in 1061
+country_event = {
+	id = kar_releasables.40
+	title = kar_releasables.40.t
+	desc = kar_releasables.40.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = KSL }
+		is_year = 1061
+		NOT = { tag = KSL }
+		OR = {
+			owns = 82
+			owns = 1758
+			owns = 1762
+			owns = 2972
+			owns = 4742
+			owns = 4773
+			owns = 4774
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.40.a
+		ai_chance = { factor = 20 }
+		release = KSL
+	}
+
+	option = {
+		name = kar_releasables.40.b
+		ai_chance = { factor = 80 }
+			82 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1758 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			1762 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			2972 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4742 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4773 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4774 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_osnabruck: set up by CK3 in 1180
+country_event = {
+	id = kar_releasables.41
+	title = kar_releasables.41.t
+	desc = kar_releasables.41.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = OSN }
+		is_year = 1180
+		NOT = { tag = OSN }
+		OR = {
+			owns = 56
+			owns = 2973
+			owns = 4775
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.41.a
+		ai_chance = { factor = 20 }
+		release = OSN
+	}
+
+	option = {
+		name = kar_releasables.41.b
+		ai_chance = { factor = 80 }
+			56 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			2973 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4775 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_stade: set up by CK3 in 1057
+country_event = {
+	id = kar_releasables.42
+	title = kar_releasables.42.t
+	desc = kar_releasables.42.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = STD }
+		is_year = 1057
+		NOT = { tag = STD }
+		OR = {
+			owns = 54
+			owns = 55
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.42.a
+		ai_chance = { factor = 20 }
+		release = STD
+	}
+
+	option = {
+		name = kar_releasables.42.b
+		ai_chance = { factor = 80 }
+			54 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			55 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_munster: set up by CK3 in 1180
+country_event = {
+	id = kar_releasables.43
+	title = kar_releasables.43.t
+	desc = kar_releasables.43.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = MUN }
+		is_year = 1180
+		NOT = { tag = MUN }
+		OR = {
+			owns = 86
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.43.a
+		ai_chance = { factor = 20 }
+		release = MUN
+	}
+
+	option = {
+		name = kar_releasables.43.b
+		ai_chance = { factor = 80 }
+			86 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_gleichenstein: set up by CK3 in 1046
+country_event = {
+	id = kar_releasables.44
+	title = kar_releasables.44.t
+	desc = kar_releasables.44.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = GLC }
+		is_year = 1046
+		NOT = { tag = GLC }
+		OR = {
+			owns = 63
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.44.a
+		ai_chance = { factor = 20 }
+		release = GLC
+	}
+
+	option = {
+		name = kar_releasables.44.b
+		ai_chance = { factor = 80 }
+			63 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_orlamunde: set up by CK3 in 1062
+country_event = {
+	id = kar_releasables.45
+	title = kar_releasables.45.t
+	desc = kar_releasables.45.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = OLM }
+		is_year = 1062
+		NOT = { tag = OLM }
+		OR = {
+			owns = 4743
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.45.a
+		ai_chance = { factor = 20 }
+		release = OLM
+	}
+
+	option = {
+		name = kar_releasables.45.b
+		ai_chance = { factor = 80 }
+			4743 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
+# c_coburg: set up by CK3 in 1066
+country_event = {
+	id = kar_releasables.46
+	title = kar_releasables.46.t
+	desc = kar_releasables.46.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { exists = COB }
+		is_year = 1066
+		NOT = { tag = COB }
+		OR = {
+			owns = 66
+			owns = 4716
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = kar_releasables.46.a
+		ai_chance = { factor = 20 }
+		release = COB
+	}
+
+	option = {
+		name = kar_releasables.46.b
+		ai_chance = { factor = 80 }
+			66 = { limit = { owned_by = ROOT } add_unrest = 5 }
+			4716 = { limit = { owned_by = ROOT } add_unrest = 5 }
+	}
+}
+
 # The Karolingian Empire is formed: the emperor may grant immediacy to the free counties and bishoprics of the Empire's heartland
 country_event = {
 	id = kar_releasables.100
@@ -616,7 +1750,10 @@ country_event = {
 				limit = {
 					NOT = { exists = SPE }
 					OR = {
+						owns = 69
 						owns = 77
+						owns = 1761
+						owns = 4718
 					}
 				}
 				release = SPE
@@ -626,6 +1763,10 @@ country_event = {
 					NOT = { exists = MAG }
 					OR = {
 						owns = 52
+						owns = 57
+						owns = 62
+						owns = 2971
+						owns = 4741
 					}
 				}
 				release = MAG
@@ -634,6 +1775,10 @@ country_event = {
 				limit = {
 					NOT = { exists = HOH }
 					OR = {
+						owns = 70
+						owns = 71
+						owns = 4711
+						owns = 4713
 						owns = 4715
 					}
 				}
@@ -643,6 +1788,8 @@ country_event = {
 				limit = {
 					NOT = { exists = GRI }
 					OR = {
+						owns = 72
+						owns = 1867
 						owns = 1873
 						owns = 4722
 					}
@@ -657,6 +1804,305 @@ country_event = {
 					}
 				}
 				release = ULM
+			}
+			if = {
+				limit = {
+					NOT = { exists = UTR }
+					OR = {
+						owns = 98
+						owns = 4381
+					}
+				}
+				release = UTR
+			}
+			if = {
+				limit = {
+					NOT = { exists = GEL }
+					OR = {
+						owns = 99
+						owns = 1742
+					}
+				}
+				release = GEL
+			}
+			if = {
+				limit = {
+					NOT = { exists = ZUT }
+					OR = {
+						owns = 2975
+					}
+				}
+				release = ZUT
+			}
+			if = {
+				limit = {
+					NOT = { exists = AAC }
+					OR = {
+						owns = 1878
+						owns = 2974
+						owns = 4768
+					}
+				}
+				release = AAC
+			}
+			if = {
+				limit = {
+					NOT = { exists = LIE }
+					OR = {
+						owns = 93
+						owns = 1866
+					}
+				}
+				release = LIE
+			}
+			if = {
+				limit = {
+					NOT = { exists = BRB }
+					OR = {
+						owns = 91
+						owns = 92
+						owns = 1743
+						owns = 4770
+					}
+				}
+				release = BRB
+			}
+			if = {
+				limit = {
+					NOT = { exists = LUX }
+					OR = {
+						owns = 94
+					}
+				}
+				release = LUX
+			}
+			if = {
+				limit = {
+					NOT = { exists = MTZ }
+					OR = {
+						owns = 188
+						owns = 4767
+					}
+				}
+				release = MTZ
+			}
+			if = {
+				limit = {
+					NOT = { exists = ANW }
+					OR = {
+						owns = 95
+						owns = 1744
+					}
+				}
+				release = ANW
+			}
+			if = {
+				limit = {
+					NOT = { exists = BRN }
+					OR = {
+						owns = 165
+						owns = 4721
+					}
+				}
+				release = BRN
+			}
+			if = {
+				limit = {
+					NOT = { exists = SGU }
+					OR = {
+						owns = 1880
+						owns = 4765
+					}
+				}
+				release = SGU
+			}
+			if = {
+				limit = {
+					NOT = { exists = BSC }
+					OR = {
+						owns = 193
+						owns = 4764
+					}
+				}
+				release = BSC
+			}
+			if = {
+				limit = {
+					NOT = { exists = GEN }
+					OR = {
+						owns = 101
+						owns = 2992
+					}
+				}
+				release = GEN
+			}
+			if = {
+				limit = {
+					NOT = { exists = LMB }
+					OR = {
+						owns = 104
+						owns = 4740
+					}
+				}
+				release = LMB
+			}
+			if = {
+				limit = {
+					NOT = { exists = BRX }
+					OR = {
+						owns = 107
+						owns = 4739
+					}
+				}
+				release = BRX
+			}
+			if = {
+				limit = {
+					NOT = { exists = MAN }
+					OR = {
+						owns = 109
+					}
+				}
+				release = MAN
+			}
+			if = {
+				limit = {
+					NOT = { exists = CRM }
+					OR = {
+						owns = 1862
+					}
+				}
+				release = CRM
+			}
+			if = {
+				limit = {
+					NOT = { exists = NVA }
+					OR = {
+						owns = 2979
+					}
+				}
+				release = NVA
+			}
+			if = {
+				limit = {
+					NOT = { exists = MFA }
+					OR = {
+						owns = 2981
+					}
+				}
+				release = MFA
+			}
+			if = {
+				limit = {
+					NOT = { exists = SZO }
+					OR = {
+						owns = 4727
+					}
+				}
+				release = SZO
+			}
+			if = {
+				limit = {
+					NOT = { exists = NSA }
+					OR = {
+						owns = 81
+						owns = 83
+					}
+				}
+				release = NSA
+			}
+			if = {
+				limit = {
+					NOT = { exists = ZRC }
+					OR = {
+						owns = 166
+						owns = 1869
+					}
+				}
+				release = ZRC
+			}
+			if = {
+				limit = {
+					NOT = { exists = KNZ }
+					OR = {
+						owns = 1870
+						owns = 4712
+					}
+				}
+				release = KNZ
+			}
+			if = {
+				limit = {
+					NOT = { exists = KSL }
+					OR = {
+						owns = 82
+						owns = 1758
+						owns = 1762
+						owns = 2972
+						owns = 4742
+						owns = 4773
+						owns = 4774
+					}
+				}
+				release = KSL
+			}
+			if = {
+				limit = {
+					NOT = { exists = OSN }
+					OR = {
+						owns = 56
+						owns = 2973
+						owns = 4775
+					}
+				}
+				release = OSN
+			}
+			if = {
+				limit = {
+					NOT = { exists = STD }
+					OR = {
+						owns = 54
+						owns = 55
+					}
+				}
+				release = STD
+			}
+			if = {
+				limit = {
+					NOT = { exists = MUN }
+					OR = {
+						owns = 86
+					}
+				}
+				release = MUN
+			}
+			if = {
+				limit = {
+					NOT = { exists = GLC }
+					OR = {
+						owns = 63
+					}
+				}
+				release = GLC
+			}
+			if = {
+				limit = {
+					NOT = { exists = OLM }
+					OR = {
+						owns = 4743
+					}
+				}
+				release = OLM
+			}
+			if = {
+				limit = {
+					NOT = { exists = COB }
+					OR = {
+						owns = 66
+						owns = 4716
+					}
+				}
+				release = COB
 			}
 		}
 	}

@@ -1,6 +1,7 @@
 owner = GER
 controller = GER
 add_core = GER
+add_core = KNZ
 capital = "Konstanz"
 culture = swabian
 religion = christian_faith

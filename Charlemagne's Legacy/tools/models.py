@@ -177,6 +177,9 @@ class Releasable(Base):
 
     tag = Column(String, ForeignKey("tags.tag"), primary_key=True)
     hre = Column(Boolean, nullable=False, default=False)
+    #: the year the event fires when CK3's independence rule does not fit (the county became part of a duchy, not independent:
+    #: Utrecht's bishops hold d_utrecht from 1112); None takes the year from CK3's independence
+    year = Column(Integer, nullable=True)
 
 
 class CoreDeny(Base):

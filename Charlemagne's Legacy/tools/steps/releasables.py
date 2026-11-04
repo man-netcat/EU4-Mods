@@ -16,10 +16,22 @@ import ck3
 import state867 as S
 from steps.layout import MOD
 from steps.output import write_loc, write_out
-from tagdb import BY_TAG, RELEASABLES, SEED_CORES, TAGS
+from tagdb import BY_TAG, RELEASABLE_YEARS, RELEASABLES, SEED_CORES, TAGS
 
 FIRST, LAST, RUN = 868, 1100, 10
 HRE_EVENT = 100
+
+# Releasables whose event is not the rebellious county of the generic text: tag -> (title, description, accept, refuse, picture).
+# Utrecht: CK3 has its bishop hold three counties from 867 under the Lotharingian kings, then the emperor's own immediate vassal, and
+# gives him the duchy of Utrecht, the Prince-Bishopric, in 1112 (history/titles/k_frisia.txt d_utrecht, a holder of ecclesiastical government).
+CUSTOM_TEXT = {
+    "UTR": ("The Bishop of Utrecht Is Made a Prince",
+            "The bishops of Utrecht have long held Nedersticht and Oversticht for the crown, and the emperor now names the bishop prince of both: "
+            "a duchy of the Church, answering to no count or duke, with its own court and its own army. Our officers in the Sticht are asked to withdraw.",
+            "Raise the bishop to prince.",
+            "The Sticht is ours to keep.",
+            "RELIGION_eventPicture"),
+}
 
 
 def independence_years(titles):
@@ -59,21 +71,24 @@ def step_releasables():
     order = {t.tag: i for i, t in enumerate(TAGS)}
     tags = sorted(RELEASABLES, key=order.get)
     ev, loc, years = [], [], {}
-    by_title = independence_years([BY_TAG[t].ck3_title for t in tags])
+    by_title = independence_years([BY_TAG[t].ck3_title for t in tags if t not in RELEASABLE_YEARS])
     for n, tag in enumerate(tags, 1):
         provs = _provinces(tag)
-        year = by_title[BY_TAG[tag].ck3_title]
+        year = RELEASABLE_YEARS.get(tag) or by_title[BY_TAG[tag].ck3_title]
         if year is None:
             raise SystemExit(f"{tag} ({BY_TAG[tag].ck3_title}) is never independent in CK3 between {FIRST} and {LAST}")
         years[tag] = year
         eid = f"kar_releasables.{n}"
         cores = "\n".join(f"\t\t\t{p} = {{ limit = {{ owned_by = ROOT }} add_unrest = 5 }}" for p in provs)
-        ev.append(f"""# {BY_TAG[tag].ck3_title}: independent in CK3 from {year}
+        custom = CUSTOM_TEXT.get(tag)
+        picture = custom[4] if custom else "CIVIL_WAR_eventPicture"
+        why = "set up by CK3 in" if tag in RELEASABLE_YEARS else "independent in CK3 from"
+        ev.append(f"""# {BY_TAG[tag].ck3_title}: {why} {year}
 country_event = {{
 	id = {eid}
 	title = {eid}.t
 	desc = {eid}.d
-	picture = CIVIL_WAR_eventPicture
+	picture = {picture}
 
 	fire_only_once = yes
 
@@ -103,10 +118,13 @@ country_event = {{
 	}}
 }}
 """)
-        loc += [(f"{eid}.t", f"[{tag}.GetName] Wants Its Freedom"),
-                (f"{eid}.d", f"The lords and townsmen of [{tag}.GetName] have long chafed under their overlord and now have a ruler of their own who will not kneel. We can let them go or hold them by force."),
-                (f"{eid}.a", "Let them go."),
-                (f"{eid}.b", "They will learn their place.")]
+        if custom:
+            loc += [(f"{eid}.t", custom[0]), (f"{eid}.d", custom[1]), (f"{eid}.a", custom[2]), (f"{eid}.b", custom[3])]
+        else:
+            loc += [(f"{eid}.t", f"[{tag}.GetName] Wants Its Freedom"),
+                    (f"{eid}.d", f"The lords and townsmen of [{tag}.GetName] have long chafed under their overlord and now have a ruler of their own who will not kneel. We can let them go or hold them by force."),
+                    (f"{eid}.a", "Let them go."),
+                    (f"{eid}.b", "They will learn their place.")]
     hre = [t for t in tags if RELEASABLES[t]]
     releases = "\n".join(
         f"\t\t\tif = {{\n\t\t\t\tlimit = {{\n\t\t\t\t\tNOT = {{ exists = {t} }}\n\t\t\t\t\tOR = {{\n{_owns(_provinces(t), chr(9) * 6)}\n\t\t\t\t\t}}\n\t\t\t\t}}\n\t\t\t\trelease = {t}\n\t\t\t}}"

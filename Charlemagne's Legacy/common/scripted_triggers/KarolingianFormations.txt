@@ -33,7 +33,6 @@ kar_form_hre_provinces_trigger = {
 		area = north_brabant_area
 		area = north_rhine_area
 		area = north_westphalia_area
-		area = northern_saxony_area
 		area = orleans_area
 		area = palatinate_area
 		area = picardy_area
@@ -54,6 +53,7 @@ kar_form_hre_provinces_trigger = {
 		area = weser_area
 		area = west_burgundy_area
 		area = westphalia_area
+		province_id = 52 #magdeburg
 		province_id = 62 #leipzig
 		province_id = 63 #erfurt
 		province_id = 108 #verona
@@ -64,6 +64,7 @@ kar_form_hre_provinces_trigger = {
 		province_id = 213 #barcelona
 		province_id = 1247 #corsica
 		province_id = 1774 #treviso
+		province_id = 2964 #altmark
 		province_id = 2976 #umbria
 		province_id = 2987 #urgell
 		province_id = 4111 #saintonge
@@ -71,6 +72,8 @@ kar_form_hre_provinces_trigger = {
 		province_id = 4387 #angouleme
 		province_id = 4729 #padova
 		province_id = 4731 #spoleto
+		province_id = 4741 #halle
+		province_id = 4742 #goslar
 		province_id = 4743 #weimar
 	}
 }
@@ -641,6 +644,19 @@ kar_form_dai_viet_provinces_trigger = {
 		province_id = 4819 #son nam
 		province_id = 4820 #minh quang
 		province_id = 4821 #nghe an
+	}
+}
+
+kar_form_milan_provinces_trigger = {
+	OR = {
+		province_id = 104 #milan
+		province_id = 105 #parma
+		province_id = 107 #brescia
+		province_id = 110 #trent
+		province_id = 1862 #cremona
+		province_id = 4728 #pavia
+		province_id = 4739 #bergamo
+		province_id = 4740 #como
 	}
 }
 

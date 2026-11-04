@@ -3,6 +3,7 @@
 owner = GER
 controller = GER
 add_core = GER
+add_core = KNZ
 capital = "St Gallen"
 culture = swabian
 religion = christian_faith

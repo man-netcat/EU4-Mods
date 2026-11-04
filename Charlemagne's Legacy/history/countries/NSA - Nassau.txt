@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = franconian
+religion = christian_faith
+capital = 81
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Gebhard"
+		dynasty = "Orleans"
+		birth_date = 815.1.1
+		death_date = 879.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+	heir = {
+		name = "Udo"
+		monarch_name = "Udo"
+		dynasty = "Orleans"
+		birth_date = 835.1.1
+		death_date = 880.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

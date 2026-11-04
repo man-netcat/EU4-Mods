@@ -3,6 +3,7 @@
 owner = AGR
 controller = AGR
 add_core = AGR
+add_core = KSL
 capital = "Fulda"
 culture = franconian
 religion = christian_faith

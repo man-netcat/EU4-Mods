@@ -1,8 +1,9 @@
 # 4767 - Zweibrücken
 
-owner = GER
-controller = GER
-add_core = GER
+owner = LOT
+controller = LOT
+add_core = LOT
+add_core = MTZ
 capital = "Zweibrücken"
 culture = franconian
 religion = christian_faith
@@ -18,7 +19,7 @@ discovered_by = muslim
 discovered_by = ottoman
 
 867.1.1 = {
-	owner = GER
-	controller = GER
-	add_core = GER
+	owner = LOT
+	controller = LOT
+	add_core = LOT
 }
