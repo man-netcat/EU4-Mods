@@ -3,6 +3,7 @@
 owner = TUS
 controller = TUS
 add_core = TUS
+add_core = SIE
 capital = "Siena"
 culture = italian
 religion = christian_faith

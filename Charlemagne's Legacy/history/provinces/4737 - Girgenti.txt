@@ -3,6 +3,7 @@
 owner = SIQ
 controller = SIQ
 add_core = SIQ
+add_core = CAV
 capital = "Girgenti"
 culture = greek
 religion = christian_faith

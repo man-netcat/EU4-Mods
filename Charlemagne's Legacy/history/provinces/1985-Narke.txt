@@ -3,6 +3,7 @@
 owner = UPL
 controller = UPL
 add_core = UPL
+add_core = NER
 capital = "Örebro"
 culture = norse
 religion = norse_pagan

@@ -4,6 +4,7 @@ owner = KHZ
 controller = KHZ
 #add_local_autonomy = 10
 add_core = KHZ
+add_core = PEE
 capital = "Pereyaslav"
 culture = russian
 religion = slavic_pagan

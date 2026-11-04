@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = khazar
+religion = kabarism
+capital = 291
+religious_school = kabarism_school
+867.1.1 = {
+	monarch = {
+		name = "Kisa"
+		birth_date = 848.1.26
+		death_date = 898.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

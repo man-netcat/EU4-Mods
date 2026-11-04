@@ -3,6 +3,7 @@
 owner = DAU
 controller = DAU
 add_core = DAU
+add_core = VIV
 capital = "Viviers"
 culture = occitan
 religion = christian_faith

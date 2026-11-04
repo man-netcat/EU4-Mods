@@ -2,7 +2,9 @@
 
 owner = AQI
 controller = AQI
+add_core = AUV
 add_core = AQI
+add_core = AUV
 capital = "Clermont"
 culture = occitan
 religion = christian_faith

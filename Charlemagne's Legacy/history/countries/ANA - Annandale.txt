@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = anglo_saxon
+religion = christian_faith
+capital = 4362
+religious_school = roman_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Ælfgar"
+		dynasty = "Northumbria"
+		birth_date = 843.1.1
+		death_date = 867.3.21
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Blæja"
+		monarch_name = "Blæja"
+		dynasty = "Northumbria"
+		female = yes
+		birth_date = 841.1.1
+		death_date = 893.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

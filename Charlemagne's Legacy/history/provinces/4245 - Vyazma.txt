@@ -3,6 +3,7 @@
 owner = MSK
 controller = MSK
 add_core = MSK
+add_core = SMO
 capital = "Vyazma"
 culture = russian
 religion = slavic_pagan

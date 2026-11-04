@@ -2,7 +2,9 @@
 
 owner = FRL
 controller = FRL
+add_core = VRN
 add_core = FRL
+add_core = VRN
 capital = "Verona"
 culture = cisalpine
 religion = christian_faith

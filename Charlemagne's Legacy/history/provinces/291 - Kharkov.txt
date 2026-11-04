@@ -4,6 +4,7 @@ owner = KHZ
 controller = KHZ
 #add_core = CHR
 add_core = KHZ
+add_core = OSK
 capital = "Belgorod"
 culture = khazar
 religion = tengri_pagan

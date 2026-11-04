@@ -3,6 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
+add_core = NAE
 capital = "Logroño"
 culture = basque
 religion = christian_faith

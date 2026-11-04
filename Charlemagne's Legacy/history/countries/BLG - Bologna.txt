@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = french
+religion = christian_faith
+capital = 4730
+religious_school = roman_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Hucbald"
+		dynasty = "Hucbaldi"
+		birth_date = 830.1.1
+		death_date = 893.3.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hucbald"
+		monarch_name = "Hucbald II"
+		dynasty = "Hucbaldi"
+		birth_date = 860.1.1
+		death_date = 893.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

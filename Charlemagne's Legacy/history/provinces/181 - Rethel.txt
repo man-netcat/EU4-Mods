@@ -3,6 +3,7 @@
 owner = FRA
 controller = FRA
 add_core = FRA
+add_core = RET
 capital = "Rethel"
 culture = french
 religion = christian_faith

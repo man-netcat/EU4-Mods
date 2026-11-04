@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = french
+religion = christian_faith
+capital = 4387
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Wulgrin III"
+		dynasty = "Taillefer"
+		birth_date = 830.1.1
+		death_date = 886.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Guillaume"
+		monarch_name = "Guillaume"
+		dynasty = "Taillefer"
+		birth_date = 864.1.1
+		death_date = 918.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

@@ -3,6 +3,7 @@
 owner = THU
 controller = THU
 add_core = THU
+add_core = ORA
 capital = "Weimar"
 culture = polabian
 religion = christian_faith

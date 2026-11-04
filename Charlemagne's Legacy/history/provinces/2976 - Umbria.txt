@@ -3,6 +3,7 @@
 owner = TUS
 controller = TUS
 add_core = TUS
+add_core = ORV
 capital = "Perugia"
 culture = lombard
 religion = christian_faith

@@ -3,6 +3,7 @@
 owner = SOR
 controller = SOR
 add_core = SOR
+add_core = WIT
 capital = "Wittenberg"
 culture = polabian
 religion = slavic_pagan

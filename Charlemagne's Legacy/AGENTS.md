@@ -170,6 +170,14 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - `python3 tools/retag.py OLD NEW [OLD NEW ...]` swaps a tag's code everywhere: every table, the loc pair, the government-name blocks, the flag file, the stale
   country history, and the hand-kept docs and flag tools (`SWEEP`), then lists any other file that still names the old code. NEW is a free base-game tag
   (a deliberate reuse, with its vanilla tech and file name) or any free code (a plain rename: PMS -> BHM, Bohemia's duchy). Rebuild afterwards.
+- All the other counties of Europe that CK3 holds under a liege are releasables too (user, 4 Nov 2026): 163 more dormant tags, one per count (his counties
+  grouped; the tag's title is his top county, capital its province), taken from the owning tag's land where the 867 holder is not that tag's ruler, rules no
+  tag of his own, has a county as his top title and a liege. Region: Iberia, France, the Low Countries, the isles, Germany, Italy, Scandinavia, Poland, the
+  Baltic, Ruthenia, the Carpathians and the Balkans. `hre` when the land lies in the German, Low Country or Italian regions. Where the count was never
+  independent in CK3 (868-1100) the tag has no dated event, only the seeded cores (rebels or a manual release wake it); the first sixteen and a few of
+  these also get their independence-year event. Names equal to a free base-game tag reuse it (`retag.py suggest`: Osnabruck, Coburg, Augsburg, Dortmund (vanilla
+  RVA is named Dortmund), Nassau, Munster, Brabant, Liege, Luxembourg, Genoa, Parma, Verona, Mantua, Pisa, Siena, Malta (JAI), Auvergne, Chernigov, Smolensk,
+  Konstanz, Aachen, Cleves, Passau, Bologna). All new flags are placeholders.
 - Rule (user, 30 Oct 2026): a tag whose name equals a free base-game tag's name reuses that tag, whatever the government (`python3 tools/retag.py suggest 0` lists
   them; `retag.py OLD NEW`). Done for Mann, Magdeburg, Ulm, Opole, Strasbourg and the Byzantine and Abbasid governors Epirus (EPI), Athens (ATH), Shammar (SHM)
   and Medina (MDA). Not done where the vanilla tag is already a formable of ours: Lithuania (LIT), Bohemia (BOH) and Castile (CAS) stay the formables, and the

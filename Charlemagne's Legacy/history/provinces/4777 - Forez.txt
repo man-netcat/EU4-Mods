@@ -1,6 +1,7 @@
 owner = DAU
 controller = DAU
 add_core = DAU
+add_core = LYO
 capital = "Montbrison"
 culture = french
 religion = christian_faith

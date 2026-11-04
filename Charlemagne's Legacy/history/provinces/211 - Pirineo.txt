@@ -3,6 +3,7 @@
 owner = NAV
 controller = NAV
 add_core = NAV
+add_core = HUE
 capital = "Huesca"
 culture = basque
 religion = christian_faith

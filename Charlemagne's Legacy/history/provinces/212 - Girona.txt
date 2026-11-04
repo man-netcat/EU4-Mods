@@ -3,6 +3,7 @@
 owner = GTH
 controller = GTH
 add_core = GTH
+add_core = GIR
 capital = "Girona"
 culture = catalan
 religion = christian_faith

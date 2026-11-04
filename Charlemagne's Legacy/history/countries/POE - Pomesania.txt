@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = prussian
+religion = baltic_pagan
+capital = 1841
+religious_school = baltic_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Gauronas"
+		dynasty = "Wilks"
+		birth_date = 845.1.1
+		death_date = 900.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Bajoras"
+		monarch_name = "Bajoras"
+		dynasty = "Wilks"
+		birth_date = 840.1.1
+		death_date = 900.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

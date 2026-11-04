@@ -3,6 +3,7 @@
 owner = NTH
 controller = NTH
 add_core = NTH
+add_core = LAA
 capital = "Lancaster"
 culture = anglo_saxon
 religion = christian_faith

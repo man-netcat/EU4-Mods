@@ -3,6 +3,7 @@
 owner = ARG
 controller = ARG
 add_core = ARG
+add_core = TRR
 capital = "Taragona"
 culture = catalan
 religion = christian_faith

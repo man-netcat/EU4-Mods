@@ -3,6 +3,7 @@
 owner = KUR
 controller = KUR
 add_core = KUR
+add_core = SEI
 capital = "Mitau"
 culture = latgalian
 religion = baltic_pagan

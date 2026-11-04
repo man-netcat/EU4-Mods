@@ -3,6 +3,7 @@
 owner = SJA
 controller = SJA
 add_core = SJA
+add_core = ELI
 capital = "Marstrand"
 culture = norse
 religion = norse_pagan

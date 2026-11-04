@@ -3,6 +3,7 @@
 owner = BES
 controller = BES
 add_core = BES
+add_core = GRO
 capital = "Grodno"
 culture = lithuanian
 religion = baltic_pagan

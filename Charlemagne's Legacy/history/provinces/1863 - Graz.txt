@@ -3,6 +3,7 @@
 owner = BAV
 controller = BAV
 add_core = BAV
+add_core = GRZ
 capital = "Graz"
 culture = carantanian
 religion = christian_faith

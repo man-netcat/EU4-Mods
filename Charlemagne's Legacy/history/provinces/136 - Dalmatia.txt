@@ -3,6 +3,7 @@
 owner = DAL
 controller = DAL
 add_core = DAL
+add_core = CET
 capital = "Split"
 culture = greek
 religion = christian_faith

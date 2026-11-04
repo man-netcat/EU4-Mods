@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = french
+religion = christian_faith
+capital = 4697
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Louis II"
+		dynasty = "Karling"
+		birth_date = 843.1.2
+		death_date = 879.1.11
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Louis"
+		monarch_name = "Louis III"
+		dynasty = "Karling"
+		birth_date = 863.1.18
+		death_date = 882.8.5
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

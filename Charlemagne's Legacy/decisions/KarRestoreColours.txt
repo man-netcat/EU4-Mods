@@ -6,6 +6,7 @@ country_decisions = {
 	kar_restore_base_game_colours = {
 		potential = {
 			OR = {
+				tag = AAC
 				tag = ADA
 				tag = ADU
 				tag = AFG
@@ -19,15 +20,19 @@ country_decisions = {
 				tag = ASS
 				tag = ASU
 				tag = ATH
+				tag = AUG
+				tag = AUV
 				tag = AVA
 				tag = BAV
 				tag = BEI
 				tag = BEU
+				tag = BLG
 				tag = BLI
 				tag = BNG
 				tag = BNJ
 				tag = BON
 				tag = BPR
+				tag = BRB
 				tag = BRI
 				tag = BRS
 				tag = BST
@@ -37,6 +42,8 @@ country_decisions = {
 				tag = CDL
 				tag = CEY
 				tag = CHA
+				tag = CHR
+				tag = COB
 				tag = CRN
 				tag = CRO
 				tag = CRT
@@ -55,6 +62,7 @@ country_decisions = {
 				tag = FRA
 				tag = GAL
 				tag = GDW
+				tag = GEN
 				tag = GER
 				tag = GMA
 				tag = GOT
@@ -69,6 +77,7 @@ country_decisions = {
 				tag = HSA
 				tag = HSE
 				tag = ITA
+				tag = JAI
 				tag = JAP
 				tag = JOL
 				tag = KAN
@@ -80,8 +89,10 @@ country_decisions = {
 				tag = KHM
 				tag = KHO
 				tag = KIE
+				tag = KLE
 				tag = KMN
 				tag = KNG
+				tag = KNZ
 				tag = KOI
 				tag = KOL
 				tag = KRA
@@ -91,18 +102,21 @@ country_decisions = {
 				tag = KUR
 				tag = KUT
 				tag = LEI
+				tag = LIE
 				tag = LIG
 				tag = LNO
 				tag = LOI
 				tag = LOT
 				tag = LUA
 				tag = LUW
+				tag = LUX
 				tag = LVA
 				tag = LWA
 				tag = MAD
 				tag = MAG
 				tag = MAI
 				tag = MAK
+				tag = MAN
 				tag = MBA
 				tag = MDA
 				tag = MDI
@@ -118,6 +132,7 @@ country_decisions = {
 				tag = MTH
 				tag = MTR
 				tag = MUL
+				tag = MUN
 				tag = MZB
 				tag = NAJ
 				tag = NAP
@@ -125,33 +140,41 @@ country_decisions = {
 				tag = NOV
 				tag = NPL
 				tag = NRM
+				tag = NSA
 				tag = NUP
 				tag = OMA
 				tag = OPL
 				tag = ORD
 				tag = ORI
+				tag = OSN
 				tag = PAH
 				tag = PAP
+				tag = PAR
 				tag = PAT
 				tag = PEG
 				tag = PGR
 				tag = PGS
 				tag = PHA
+				tag = PIS
 				tag = PLT
 				tag = PRM
 				tag = PRO
 				tag = PRU
+				tag = PSS
 				tag = PTE
 				tag = RTT
 				tag = RUG
+				tag = RVA
 				tag = RYU
 				tag = SBP
 				tag = SCO
 				tag = SHM
 				tag = SIB
+				tag = SIE
 				tag = SIL
 				tag = SLZ
 				tag = SMB
+				tag = SMO
 				tag = SND
 				tag = SOA
 				tag = SON
@@ -183,6 +206,7 @@ country_decisions = {
 				tag = ULS
 				tag = VEN
 				tag = VIE
+				tag = VRN
 				tag = WGD
 				tag = WLY
 				tag = WOL
@@ -194,6 +218,12 @@ country_decisions = {
 			always = yes
 		}
 		effect = {
+		if = {
+			limit = { tag = AAC }
+			change_country_color = {
+				color = { 157 51 167 }
+			}
+		}
 		if = {
 			limit = { tag = ADA }
 			change_country_color = {
@@ -273,6 +303,18 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = AUG }
+			change_country_color = {
+				color = { 20 188 118 }
+			}
+		}
+		if = {
+			limit = { tag = AUV }
+			change_country_color = {
+				color = { 218 155 75 }
+			}
+		}
+		if = {
 			limit = { tag = AVA }
 			change_country_color = {
 				color = { 98 138 99 }
@@ -294,6 +336,12 @@ country_decisions = {
 			limit = { tag = BEU }
 			change_country_color = {
 				color = { 122 116 124 }
+			}
+		}
+		if = {
+			limit = { tag = BLG }
+			change_country_color = {
+				color = { 236 95 0 }
 			}
 		}
 		if = {
@@ -324,6 +372,12 @@ country_decisions = {
 			limit = { tag = BPR }
 			change_country_color = {
 				color = { 155 3 22 }
+			}
+		}
+		if = {
+			limit = { tag = BRB }
+			change_country_color = {
+				color = { 118 193 153 }
 			}
 		}
 		if = {
@@ -378,6 +432,18 @@ country_decisions = {
 			limit = { tag = CHA }
 			change_country_color = {
 				color = { 53 151 151 }
+			}
+		}
+		if = {
+			limit = { tag = CHR }
+			change_country_color = {
+				color = { 190 190 190 }
+			}
+		}
+		if = {
+			limit = { tag = COB }
+			change_country_color = {
+				color = { 71 201 101 }
 			}
 		}
 		if = {
@@ -489,6 +555,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = GEN }
+			change_country_color = {
+				color = { 218 215 56 }
+			}
+		}
+		if = {
 			limit = { tag = GER }
 			change_country_color = {
 				color = { 75 130 135 }
@@ -573,6 +645,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = JAI }
+			change_country_color = {
+				color = { 80 200 120 }
+			}
+		}
+		if = {
 			limit = { tag = JAP }
 			change_country_color = {
 				color = { 194 53 60 }
@@ -639,6 +717,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = KLE }
+			change_country_color = {
+				color = { 173 176 113 }
+			}
+		}
+		if = {
 			limit = { tag = KMN }
 			change_country_color = {
 				color = { 135 219 135 }
@@ -648,6 +732,12 @@ country_decisions = {
 			limit = { tag = KNG }
 			change_country_color = {
 				color = { 137 98 195 }
+			}
+		}
+		if = {
+			limit = { tag = KNZ }
+			change_country_color = {
+				color = { 255 133 59 }
 			}
 		}
 		if = {
@@ -705,6 +795,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = LIE }
+			change_country_color = {
+				color = { 149 186 37 }
+			}
+		}
+		if = {
 			limit = { tag = LIG }
 			change_country_color = {
 				color = { 16 114 124 }
@@ -741,6 +837,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = LUX }
+			change_country_color = {
+				color = { 53 140 73 }
+			}
+		}
+		if = {
 			limit = { tag = LVA }
 			change_country_color = {
 				color = { 20 14 150 }
@@ -774,6 +876,12 @@ country_decisions = {
 			limit = { tag = MAK }
 			change_country_color = {
 				color = { 184 80 52 }
+			}
+		}
+		if = {
+			limit = { tag = MAN }
+			change_country_color = {
+				color = { 191 83 101 }
 			}
 		}
 		if = {
@@ -867,6 +975,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = MUN }
+			change_country_color = {
+				color = { 205 103 80 }
+			}
+		}
+		if = {
 			limit = { tag = MZB }
 			change_country_color = {
 				color = { 185 172 208 }
@@ -909,6 +1023,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = NSA }
+			change_country_color = {
+				color = { 91 83 203 }
+			}
+		}
+		if = {
 			limit = { tag = NUP }
 			change_country_color = {
 				color = { 211 84 79 }
@@ -939,6 +1059,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = OSN }
+			change_country_color = {
+				color = { 135 138 192 }
+			}
+		}
+		if = {
 			limit = { tag = PAH }
 			change_country_color = {
 				color = { 98 186 171 }
@@ -948,6 +1074,12 @@ country_decisions = {
 			limit = { tag = PAP }
 			change_country_color = {
 				color = { 211 220 178 }
+			}
+		}
+		if = {
+			limit = { tag = PAR }
+			change_country_color = {
+				color = { 128 202 129 }
 			}
 		}
 		if = {
@@ -981,6 +1113,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = PIS }
+			change_country_color = {
+				color = { 177 150 109 }
+			}
+		}
+		if = {
 			limit = { tag = PLT }
 			change_country_color = {
 				color = { 16 113 155 }
@@ -1005,6 +1143,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = PSS }
+			change_country_color = {
+				color = { 239 99 135 }
+			}
+		}
+		if = {
 			limit = { tag = PTE }
 			change_country_color = {
 				color = { 104 111 208 }
@@ -1020,6 +1164,12 @@ country_decisions = {
 			limit = { tag = RUG }
 			change_country_color = {
 				color = { 51 59 76 }
+			}
+		}
+		if = {
+			limit = { tag = RVA }
+			change_country_color = {
+				color = { 108 139 228 }
 			}
 		}
 		if = {
@@ -1053,6 +1203,12 @@ country_decisions = {
 			}
 		}
 		if = {
+			limit = { tag = SIE }
+			change_country_color = {
+				color = { 165 171 115 }
+			}
+		}
+		if = {
 			limit = { tag = SIL }
 			change_country_color = {
 				color = { 84 166 93 }
@@ -1068,6 +1224,12 @@ country_decisions = {
 			limit = { tag = SMB }
 			change_country_color = {
 				color = { 255 89 4 }
+			}
+		}
+		if = {
+			limit = { tag = SMO }
+			change_country_color = {
+				color = { 106 160 43 }
 			}
 		}
 		if = {
@@ -1254,6 +1416,12 @@ country_decisions = {
 			limit = { tag = VIE }
 			change_country_color = {
 				color = { 151 174 28 }
+			}
+		}
+		if = {
+			limit = { tag = VRN }
+			change_country_color = {
+				color = { 121 163 114 }
 			}
 		}
 		if = {

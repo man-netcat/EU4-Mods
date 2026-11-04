@@ -3,6 +3,7 @@
 owner = NTH
 controller = NTH
 add_core = NTH
+add_core = ANA
 capital = "Dumfries"
 culture = cumbrian
 religion = christian_faith

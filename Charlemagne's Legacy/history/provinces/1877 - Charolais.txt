@@ -1,6 +1,7 @@
 owner = FRA
 controller = FRA
 add_core = FRA
+add_core = CLO
 capital = "Charolles"
 culture = french
 religion = christian_faith

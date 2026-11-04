@@ -3,6 +3,7 @@
 owner = TVR
 controller = TVR
 add_core = TVR
+add_core = KRO
 capital = "Mazyr"
 culture = russian
 religion = slavic_pagan

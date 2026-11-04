@@ -3,6 +3,7 @@
 owner = SMT
 controller = SMT
 add_core = SMT
+add_core = DOS
 capital = "Weymouth"
 culture = anglo_saxon
 religion = christian_faith

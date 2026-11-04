@@ -2,6 +2,7 @@ owner = AAR
 controller = AAR
 add_core = AAR
 add_core = AAR
+add_core = PIT
 #Ume, Åsele, Piteå Lappmarks
 capital = "Arvidsjaur"
 culture = sami

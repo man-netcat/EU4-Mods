@@ -3,6 +3,7 @@
 owner = NRM
 controller = NRM
 add_core = NRM
+add_core = BAU
 capital = "Alençon"
 culture = french
 religion = christian_faith

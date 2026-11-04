@@ -3,6 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
+add_core = ALC
 capital = "Gibraltar"
 culture = andalusian
 religion = sunni

@@ -3,6 +3,7 @@
 owner = BUL
 controller = BUL
 add_core = BUL
+add_core = CEA
 capital = "Kilia"
 culture = vlach
 religion = christian_faith

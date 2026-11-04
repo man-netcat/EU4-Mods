@@ -3,6 +3,7 @@
 owner = LVA
 controller = LVA
 add_core = LVA
+add_core = SAE
 capital = "Arensburg"
 culture = estonian
 religion = finnish_pagan

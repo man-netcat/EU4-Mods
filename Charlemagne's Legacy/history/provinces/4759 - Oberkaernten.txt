@@ -3,6 +3,7 @@
 owner = BAV
 controller = BAV
 add_core = BAV
+add_core = VIC
 capital = "Villach"
 culture = carantanian
 religion = christian_faith

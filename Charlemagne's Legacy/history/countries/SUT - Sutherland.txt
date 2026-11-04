@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = gaelic
+religion = christian_faith
+capital = 4110
+religious_school = insular_celtic_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Máel-Brígte"
+		dynasty = "Giric"
+		birth_date = 828.1.2
+		death_date = 873.1.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Domnall"
+		monarch_name = "Domnall"
+		dynasty = "Giric"
+		birth_date = 855.1.2
+		death_date = 905.1.2
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

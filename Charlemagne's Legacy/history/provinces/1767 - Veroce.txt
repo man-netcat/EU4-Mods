@@ -3,6 +3,7 @@
 owner = SLA
 controller = SLA
 add_core = SLA
+add_core = POZ
 capital = "Osijek"
 culture = croatian
 religion = christian_faith

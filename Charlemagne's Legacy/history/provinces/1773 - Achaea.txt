@@ -3,6 +3,7 @@
 owner = ACA
 controller = ACA
 add_core = ACA
+add_core = ACI
 capital = "Nafplio"
 culture = greek
 religion = christian_faith

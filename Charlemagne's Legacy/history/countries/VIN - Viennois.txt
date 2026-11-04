@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = franconian
+religion = christian_faith
+capital = 204
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Gerhard"
+		dynasty = "Chatenois"
+		birth_date = 809.1.1
+		death_date = 874.2.11
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Adalhard"
+		monarch_name = "Adalhard"
+		dynasty = "Chatenois"
+		birth_date = 810.1.2
+		death_date = 870.1.2
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

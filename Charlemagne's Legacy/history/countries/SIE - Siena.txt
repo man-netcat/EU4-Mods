@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = italian
+religion = christian_faith
+capital = 117
+religious_school = roman_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Berardo"
+		dynasty = "Bonifazi"
+		birth_date = 818.1.1
+		death_date = 888.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Adalberto"
+		monarch_name = "Adalberto"
+		dynasty = "Bonifazi"
+		birth_date = 820.1.1
+		death_date = 884.1.1
+		claim = 90
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

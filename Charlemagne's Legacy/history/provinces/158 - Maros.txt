@@ -3,6 +3,7 @@
 owner = TRA
 controller = TRA
 add_core = TRA
+add_core = SZE
 capital = "Targu Mures"
 culture = avar #Szeklers
 religion = tengri_pagan

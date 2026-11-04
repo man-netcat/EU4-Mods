@@ -3,6 +3,7 @@
 owner = AGR
 controller = AGR
 add_core = AGR
+add_core = STD
 capital = "Stade"
 culture = saxon
 religion = christian_faith

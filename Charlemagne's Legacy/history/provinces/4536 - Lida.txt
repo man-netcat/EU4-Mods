@@ -4,6 +4,7 @@ owner = LTU
 controller = LTU
 #fort_15th = yes #Trakai Castles "Little Marienburg"
 add_core = LTU
+add_core = GRD
 capital = "Lyda"
 culture = lithuanian
 religion = baltic_pagan

@@ -1,6 +1,8 @@
 owner = WFR
 controller = WFR
+add_core = COB
 add_core = WFR
+add_core = COB
 capital = "Coburg"
 culture = franconian
 religion = christian_faith

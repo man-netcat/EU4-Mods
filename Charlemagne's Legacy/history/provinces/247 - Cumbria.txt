@@ -4,6 +4,7 @@
 owner = NTH
 controller = NTH
 add_core = NTH
+add_core = CUM
 capital = "Carlisle"
 culture = cumbrian
 religion = christian_faith

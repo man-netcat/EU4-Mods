@@ -3,6 +3,7 @@
 owner = SPL
 controller = SPL
 add_core = SPL
+add_core = RAV
 capital = "Ravenna"
 culture = cisalpine
 religion = christian_faith

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = russian
+religion = slavic_pagan
+capital = 298
+religious_school = slavic_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Zhavoronok"
+		dynasty = "Vyatich"
+		birth_date = 831.1.1
+		death_date = 890.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Vladislav"
+		monarch_name = "Vladislav"
+		dynasty = "Vyatich"
+		birth_date = 850.1.1
+		death_date = 900.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

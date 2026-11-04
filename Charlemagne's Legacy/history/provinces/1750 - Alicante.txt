@@ -3,6 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
+add_core = ALI
 capital = "Alàcant"
 culture = andalusian
 religion = christian_faith

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = occitan
+religion = christian_faith
+capital = 202
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Angilbotto"
+		dynasty = "la Tour du Pin"
+		birth_date = 820.1.1
+		death_date = 883.11.15
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Erlulf"
+		monarch_name = "Erlulf"
+		dynasty = "la Tour du Pin"
+		birth_date = 840.1.1
+		death_date = 883.11.10
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

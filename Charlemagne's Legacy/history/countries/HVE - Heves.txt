@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = avar
+religion = tengri_pagan
+capital = 2967
+religious_school = tengri_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Tuzniq"
+		dynasty = "Khunzakhal"
+		birth_date = 850.1.1
+		death_date = 891.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Khudbard"
+		monarch_name = "Khudbard"
+		dynasty = "Khunzakhal"
+		birth_date = 852.1.1
+		death_date = 909.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

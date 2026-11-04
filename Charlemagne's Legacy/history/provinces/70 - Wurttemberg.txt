@@ -1,6 +1,7 @@
 owner = GER
 controller = GER
 add_core = GER
+add_core = WUT
 capital = "Stuttgart"
 culture = swabian
 religion = christian_faith

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = gaelic
+religion = christian_faith
+capital = 250
+religious_school = insular_celtic_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Comgal"
+		dynasty = "Comgall"
+		birth_date = 821.1.2
+		death_date = 869.1.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Malserf"
+		monarch_name = "Malserf"
+		dynasty = "Comgall"
+		birth_date = 844.1.2
+		death_date = 887.1.2
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

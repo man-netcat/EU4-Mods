@@ -2,7 +2,9 @@
 
 owner = SPL
 controller = SPL
+add_core = PAR
 add_core = SPL
+add_core = PAR
 capital = "Parma"
 culture = cisalpine
 religion = christian_faith

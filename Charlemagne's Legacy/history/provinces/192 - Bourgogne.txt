@@ -3,6 +3,7 @@
 owner = FRA
 controller = FRA
 add_core = FRA
+add_core = DIJ
 capital = "Dijon"
 culture = french
 religion = christian_faith

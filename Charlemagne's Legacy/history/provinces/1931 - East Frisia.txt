@@ -3,6 +3,7 @@
 owner = HOL
 controller = HOL
 add_core = HOL
+add_core = OSF
 capital = "Emden"
 culture = dutch
 religion = christian_faith

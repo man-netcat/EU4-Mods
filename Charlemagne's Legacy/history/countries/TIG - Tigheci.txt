@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = vlach
+religion = christian_faith
+capital = 2405
+religious_school = byzantine_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Corneliu"
+		dynasty = "Tigheci"
+		birth_date = 839.8.23
+		death_date = 906.12.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Iorghu"
+		monarch_name = "Iorghu"
+		dynasty = "Tigheci"
+		birth_date = 843.10.17
+		death_date = 901.3.28
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

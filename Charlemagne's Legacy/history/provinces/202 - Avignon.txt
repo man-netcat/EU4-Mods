@@ -3,6 +3,7 @@
 owner = PRO
 controller = PRO
 add_core = PRO
+add_core = VEA
 capital = "Avignon"
 culture = occitan
 religion = christian_faith

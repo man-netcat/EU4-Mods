@@ -3,6 +3,7 @@
 owner = CRO
 controller = CRO
 add_core = CRO
+add_core = DOJ
 capital = "Jajce"
 culture = bosnian
 religion = bosnian_church

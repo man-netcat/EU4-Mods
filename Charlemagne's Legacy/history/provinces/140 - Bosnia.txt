@@ -3,6 +3,7 @@
 owner = RSK
 controller = RSK
 add_core = RSK
+add_core = RRR
 capital = "Doboj" #or Srebrenik
 culture = bosnian
 religion = bosnian_church

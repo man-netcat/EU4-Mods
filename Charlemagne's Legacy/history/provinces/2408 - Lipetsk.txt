@@ -3,6 +3,7 @@
 owner = KHZ
 controller = KHZ
 add_core = KHZ
+add_core = KHP
 capital = "Yelets"
 culture = mordvin
 religion = finnish_pagan

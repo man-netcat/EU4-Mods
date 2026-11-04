@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = levantine
+religion = sunni
+capital = 2988
+religious_school = maliki_school
+867.1.1 = {
+	monarch = {
+		name = "Aid"
+		dynasty = "A'idid"
+		birth_date = 839.1.1
+		death_date = 892.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Yahya"
+		monarch_name = "Yahya"
+		dynasty = "A'idid"
+		birth_date = 865.1.1
+		death_date = 898.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_clan_government
+}

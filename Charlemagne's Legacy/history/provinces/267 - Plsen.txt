@@ -3,6 +3,7 @@
 owner = BHM
 controller = BHM
 add_core = BHM
+add_core = PLZ
 capital = "Plzen"
 culture = czech
 religion = slavic_pagan

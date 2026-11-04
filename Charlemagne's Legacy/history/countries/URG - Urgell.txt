@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = catalan
+religion = christian_faith
+capital = 2987
+religious_school = roman_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Guifré"
+		dynasty = "Barcelona"
+		birth_date = 840.1.1
+		death_date = 897.8.11
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+	heir = {
+		name = "Miron"
+		monarch_name = "Miron"
+		dynasty = "Barcelona"
+		birth_date = 842.1.1
+		death_date = 896.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

@@ -3,6 +3,7 @@
 owner = SJA
 controller = SJA
 add_core = SJA
+add_core = SKN
 capital = "Lund"
 culture = norse
 religion = norse_pagan

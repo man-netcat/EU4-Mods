@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = bavarian
+religion = christian_faith
+capital = 4760
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Aribo"
+		dynasty = "Aribonen"
+		birth_date = 840.1.1
+		death_date = 909.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Pilgrim"
+		monarch_name = "Pilgrim"
+		dynasty = "Aribonen"
+		birth_date = 857.1.1
+		death_date = 923.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

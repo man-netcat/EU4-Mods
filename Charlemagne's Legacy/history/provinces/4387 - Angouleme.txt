@@ -3,6 +3,7 @@
 owner = AQI
 controller = AQI
 add_core = AQI
+add_core = ANE
 capital = "Angoulême"
 culture = occitan
 religion = christian_faith

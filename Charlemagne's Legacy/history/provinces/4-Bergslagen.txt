@@ -3,6 +3,7 @@
 owner = UPL
 controller = UPL
 add_core = UPL
+add_core = DAE
 capital = "Västerås"
 culture = norse
 religion = norse_pagan

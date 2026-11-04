@@ -3,6 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
+add_core = JAE
 capital = "Jaén"
 culture = andalusian
 religion = sunni

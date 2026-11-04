@@ -4,6 +4,7 @@ owner = FRA
 controller = FRA
 #fort_15th = yes
 add_core = FRA
+add_core = VEM
 capital = "Soissons"
 culture = french
 religion = christian_faith

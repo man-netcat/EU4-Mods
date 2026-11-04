@@ -137,7 +137,7 @@ dauphine_dauphinate = {
 }
 
 polabian_titles = {
-# CK3 ladders for SOR(r2), HSA(r1), LUT(r2), RUG(r1), WOL(r1), UKI(r1), SPW(r1), LBS(r1)
+# CK3 ladders for SOR(r2), HSA(r1), LUT(r2), RUG(r1), WOL(r1), UKI(r1), SPW(r1), LBS(r1), WIT(r1)
 	rank = {
 		1 = POLABIAN_COUNTY  # county_tribal
 		2 = POLABIAN_DUCHY  # duchy_tribal
@@ -201,8 +201,73 @@ polabian_titles = {
 }
 
 
+basque_nae_titles = {
+# lifted from CK3 flavorization for NAE: c_najera carries rule specials the shared basque_titles block cannot express; Islam heir = True
+	rank = {
+		1 = BASQUE_NAE_COUNTY  # county_clan_iberian_group
+		2 = BASQUE_NAE_DUCHY  # duchy_clan_iberian_group
+		3 = BASQUE_NAE_KINGDOM  # kingdom_clan_iberian_group
+		4 = BASQUE_NAE_EMPIRE  # empire_clan_iberian_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = BASQUE_NAE_COUNT_MALE  # count_clan_male_iberian_group
+		2 = BASQUE_NAE_DUKE_MALE  # duke_clan_male_iberian_group
+		3 = BASQUE_NAE_KING_MALE  # king_clan_male_iberian_group
+		4 = BASQUE_NAE_EMPEROR_MALE  # emperor_clan_male_iberian_group
+		5 = BASQUE_NAE_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = BASQUE_NAE_COUNT_FEMALE  # count_clan_female_iberian_group
+		2 = BASQUE_NAE_DUKE_FEMALE  # duke_clan_female_iberian_group
+		3 = BASQUE_NAE_KING_FEMALE  # king_clan_female_iberian_group
+		4 = BASQUE_NAE_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
+		5 = BASQUE_NAE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = BASQUE_NAE_COUNT_MALE  # consort uses the ruler form
+		2 = BASQUE_NAE_DUKE_MALE  # consort uses the ruler form
+		3 = BASQUE_NAE_KING_MALE  # consort uses the ruler form
+		4 = BASQUE_NAE_EMPEROR_MALE  # consort uses the ruler form
+		5 = BASQUE_NAE_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = BASQUE_NAE_COUNT_FEMALE  # count_clan_female_iberian_group
+		2 = BASQUE_NAE_DUKE_FEMALE  # duke_clan_female_iberian_group
+		3 = BASQUE_NAE_KING_FEMALE  # king_clan_female_iberian_group
+		4 = BASQUE_NAE_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
+		5 = BASQUE_NAE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		tag = NAE
+	}
+}
+
+
 basque_titles = {
-# CK3 ladders for NAV(r3), GUY(r2)
+# CK3 ladders for NAV(r3), GUY(r2), HUE(r1) - feudal CK3 government
 	rank = {
 		1 = BASQUE_COUNTY  # county_feudal
 		2 = BASQUE_DUCHY  # duchy_feudal
@@ -261,6 +326,7 @@ basque_titles = {
 
 	trigger = {
 		government = monarchy
+		has_country_flag = kar_gov_feudal_government
 		primary_culture = basque
 	}
 }
@@ -461,241 +527,46 @@ asturleonese_titles = {
 }
 
 
-andalusian_crt_titles = {
-# lifted from CK3 flavorization for CRT: d_krete carries rule specials the shared andalusian_titles block cannot express; Islam heir = True
+andalusian_bgs_titles = {
+# lifted from CK3 flavorization for BGS: c_burgos carries rule specials the shared andalusian_titles block cannot express; Islam heir = False
 	rank = {
-		1 = ANDALUSIAN_CRT_COUNTY  # county_clan_iberian_group
-		2 = ANDALUSIAN_CRT_DUCHY  # duchy_clan_iberian_group
-		3 = ANDALUSIAN_CRT_KINGDOM  # kingdom_clan_iberian_group
-		4 = ANDALUSIAN_CRT_EMPIRE  # empire_clan_iberian_group
+		1 = ANDALUSIAN_BGS_COUNTY  # county_feudal
+		2 = ANDALUSIAN_BGS_DUCHY  # duchy_feudal
+		3 = ANDALUSIAN_BGS_KINGDOM  # kingdom_feudal
+		4 = ANDALUSIAN_BGS_EMPIRE  # empire_feudal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = ANDALUSIAN_CRT_COUNT_MALE  # count_clan_male_iberian_group
-		2 = ANDALUSIAN_CRT_DUKE_MALE  # duke_clan_male_iberian_group
-		3 = ANDALUSIAN_CRT_KING_MALE  # king_clan_male_iberian_group
-		4 = ANDALUSIAN_CRT_EMPEROR_MALE  # emperor_clan_male_iberian_group
-		5 = ANDALUSIAN_CRT_HEGEMON_MALE  # hegemon
+		1 = ANDALUSIAN_BGS_COUNT_MALE  # count_feudal_male
+		2 = ANDALUSIAN_BGS_DUKE_MALE  # duke_feudal_male
+		3 = ANDALUSIAN_BGS_KING_MALE  # king_feudal_male
+		4 = ANDALUSIAN_BGS_EMPEROR_MALE  # emperor_feudal_male
+		5 = ANDALUSIAN_BGS_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = ANDALUSIAN_CRT_COUNT_FEMALE  # count_clan_female_iberian_group
-		2 = ANDALUSIAN_CRT_DUKE_FEMALE  # duke_clan_female_iberian_group
-		3 = ANDALUSIAN_CRT_KING_FEMALE  # king_clan_female_iberian_group
-		4 = ANDALUSIAN_CRT_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
-		5 = ANDALUSIAN_CRT_HEGEMON_FEMALE  # hegemon_female
+		1 = ANDALUSIAN_BGS_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_BGS_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_BGS_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_BGS_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_BGS_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = ANDALUSIAN_CRT_COUNT_MALE  # consort uses the ruler form
-		2 = ANDALUSIAN_CRT_DUKE_MALE  # consort uses the ruler form
-		3 = ANDALUSIAN_CRT_KING_MALE  # consort uses the ruler form
-		4 = ANDALUSIAN_CRT_EMPEROR_MALE  # consort uses the ruler form
-		5 = ANDALUSIAN_CRT_HEGEMON_MALE  # consort uses the ruler form
+		1 = ANDALUSIAN_BGS_COUNT_MALE  # consort uses the ruler form
+		2 = ANDALUSIAN_BGS_DUKE_MALE  # consort uses the ruler form
+		3 = ANDALUSIAN_BGS_KING_MALE  # consort uses the ruler form
+		4 = ANDALUSIAN_BGS_EMPEROR_MALE  # consort uses the ruler form
+		5 = ANDALUSIAN_BGS_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = ANDALUSIAN_CRT_COUNT_FEMALE  # count_clan_female_iberian_group
-		2 = ANDALUSIAN_CRT_DUKE_FEMALE  # duke_clan_female_iberian_group
-		3 = ANDALUSIAN_CRT_KING_FEMALE  # king_clan_female_iberian_group
-		4 = ANDALUSIAN_CRT_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
-		5 = ANDALUSIAN_CRT_HEGEMON_FEMALE  # hegemon_female
-	}
-
-	heir_male = {
-		1 = HEIR
-		2 = SHAHZADE
-		3 = SHAHZADE
-		4 = SHAHZADE
-		5 = SHAHZADE
-	}
-
-	heir_female = {
-		1 = HEIR_fem
-		2 = SHAHZADE
-		3 = SHAHZADE
-		4 = SHAHZADE
-		5 = SHAHZADE
-	}
-
-	trigger = {
-		government = monarchy
-		tag = CRT
-	}
-}
-
-
-andalusian_prt_titles = {
-# lifted from CK3 flavorization for PRT: d_porto carries rule specials the shared andalusian_titles block cannot express; Islam heir = True
-	rank = {
-		1 = ANDALUSIAN_PRT_COUNTY  # county_clan_iberian_group
-		2 = ANDALUSIAN_PRT_DUCHY  # duchy_clan_iberian_group
-		3 = ANDALUSIAN_PRT_KINGDOM  # kingdom_clan_iberian_group
-		4 = ANDALUSIAN_PRT_EMPIRE  # empire_clan_iberian_group
-		5 = HEGEMONY
-	}
-
-	ruler_male = {
-		1 = ANDALUSIAN_PRT_COUNT_MALE  # count_clan_male_iberian_group
-		2 = ANDALUSIAN_PRT_DUKE_MALE  # duke_clan_male_iberian_group
-		3 = ANDALUSIAN_PRT_KING_MALE  # king_clan_male_iberian_group
-		4 = ANDALUSIAN_PRT_EMPEROR_MALE  # emperor_clan_male_iberian_group
-		5 = ANDALUSIAN_PRT_HEGEMON_MALE  # hegemon
-	}
-
-	ruler_female = {
-		1 = ANDALUSIAN_PRT_COUNT_FEMALE  # count_clan_female_iberian_group
-		2 = ANDALUSIAN_PRT_DUKE_FEMALE  # duke_clan_female_iberian_group
-		3 = ANDALUSIAN_PRT_KING_FEMALE  # king_clan_female_iberian_group
-		4 = ANDALUSIAN_PRT_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
-		5 = ANDALUSIAN_PRT_HEGEMON_FEMALE  # hegemon_female
-	}
-
-	consort_male = {
-		1 = ANDALUSIAN_PRT_COUNT_MALE  # consort uses the ruler form
-		2 = ANDALUSIAN_PRT_DUKE_MALE  # consort uses the ruler form
-		3 = ANDALUSIAN_PRT_KING_MALE  # consort uses the ruler form
-		4 = ANDALUSIAN_PRT_EMPEROR_MALE  # consort uses the ruler form
-		5 = ANDALUSIAN_PRT_HEGEMON_MALE  # consort uses the ruler form
-	}
-
-	consort_female = {
-		1 = ANDALUSIAN_PRT_COUNT_FEMALE  # count_clan_female_iberian_group
-		2 = ANDALUSIAN_PRT_DUKE_FEMALE  # duke_clan_female_iberian_group
-		3 = ANDALUSIAN_PRT_KING_FEMALE  # king_clan_female_iberian_group
-		4 = ANDALUSIAN_PRT_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
-		5 = ANDALUSIAN_PRT_HEGEMON_FEMALE  # hegemon_female
-	}
-
-	heir_male = {
-		1 = HEIR
-		2 = SHAHZADE
-		3 = SHAHZADE
-		4 = SHAHZADE
-		5 = SHAHZADE
-	}
-
-	heir_female = {
-		1 = HEIR_fem
-		2 = SHAHZADE
-		3 = SHAHZADE
-		4 = SHAHZADE
-		5 = SHAHZADE
-	}
-
-	trigger = {
-		government = monarchy
-		tag = PRT
-	}
-}
-
-
-andalusian_tol_titles = {
-# lifted from CK3 flavorization for TOL: d_toledo carries rule specials the shared andalusian_titles block cannot express; Islam heir = True
-	rank = {
-		1 = ANDALUSIAN_TOL_COUNTY  # county_clan_iberian_group
-		2 = ANDALUSIAN_TOL_DUCHY  # duchy_clan_iberian_group
-		3 = ANDALUSIAN_TOL_KINGDOM  # kingdom_clan_iberian_group
-		4 = ANDALUSIAN_TOL_EMPIRE  # empire_clan_iberian_group
-		5 = HEGEMONY
-	}
-
-	ruler_male = {
-		1 = ANDALUSIAN_TOL_COUNT_MALE  # count_clan_male_iberian_group
-		2 = ANDALUSIAN_TOL_DUKE_MALE  # duke_clan_male_iberian_group
-		3 = ANDALUSIAN_TOL_KING_MALE  # king_clan_male_iberian_group
-		4 = ANDALUSIAN_TOL_EMPEROR_MALE  # emperor_clan_male_iberian_group
-		5 = ANDALUSIAN_TOL_HEGEMON_MALE  # hegemon
-	}
-
-	ruler_female = {
-		1 = ANDALUSIAN_TOL_COUNT_FEMALE  # count_clan_female_iberian_group
-		2 = ANDALUSIAN_TOL_DUKE_FEMALE  # duke_clan_female_iberian_group
-		3 = ANDALUSIAN_TOL_KING_FEMALE  # king_clan_female_iberian_group
-		4 = ANDALUSIAN_TOL_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
-		5 = ANDALUSIAN_TOL_HEGEMON_FEMALE  # hegemon_female
-	}
-
-	consort_male = {
-		1 = ANDALUSIAN_TOL_COUNT_MALE  # consort uses the ruler form
-		2 = ANDALUSIAN_TOL_DUKE_MALE  # consort uses the ruler form
-		3 = ANDALUSIAN_TOL_KING_MALE  # consort uses the ruler form
-		4 = ANDALUSIAN_TOL_EMPEROR_MALE  # consort uses the ruler form
-		5 = ANDALUSIAN_TOL_HEGEMON_MALE  # consort uses the ruler form
-	}
-
-	consort_female = {
-		1 = ANDALUSIAN_TOL_COUNT_FEMALE  # count_clan_female_iberian_group
-		2 = ANDALUSIAN_TOL_DUKE_FEMALE  # duke_clan_female_iberian_group
-		3 = ANDALUSIAN_TOL_KING_FEMALE  # king_clan_female_iberian_group
-		4 = ANDALUSIAN_TOL_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
-		5 = ANDALUSIAN_TOL_HEGEMON_FEMALE  # hegemon_female
-	}
-
-	heir_male = {
-		1 = HEIR
-		2 = SHAHZADE
-		3 = SHAHZADE
-		4 = SHAHZADE
-		5 = SHAHZADE
-	}
-
-	heir_female = {
-		1 = HEIR_fem
-		2 = SHAHZADE
-		3 = SHAHZADE
-		4 = SHAHZADE
-		5 = SHAHZADE
-	}
-
-	trigger = {
-		government = monarchy
-		tag = TOL
-	}
-}
-
-
-andalusian_titles = {
-# CK3 ladders for BGS(r1), VLL(r1), SLM(r1), CUE(r1), MLR(r1) - feudal CK3 government
-	rank = {
-		1 = ANDALUSIAN_COUNTY  # county_feudal
-		2 = ANDALUSIAN_DUCHY  # duchy_feudal
-		3 = ANDALUSIAN_KINGDOM  # kingdom_feudal
-		4 = ANDALUSIAN_EMPIRE  # empire_feudal
-		5 = HEGEMONY
-	}
-
-	ruler_male = {
-		1 = ANDALUSIAN_COUNT_MALE  # count_feudal_male
-		2 = ANDALUSIAN_DUKE_MALE  # duke_feudal_male
-		3 = ANDALUSIAN_KING_MALE  # king_feudal_male
-		4 = ANDALUSIAN_EMPEROR_MALE  # emperor_feudal_male
-		5 = ANDALUSIAN_HEGEMON_MALE  # hegemon
-	}
-
-	ruler_female = {
-		1 = ANDALUSIAN_COUNT_FEMALE  # count_feudal_female
-		2 = ANDALUSIAN_DUKE_FEMALE  # duke_feudal_female
-		3 = ANDALUSIAN_KING_FEMALE  # king_feudal_female
-		4 = ANDALUSIAN_EMPEROR_FEMALE  # emperor_feudal_female
-		5 = ANDALUSIAN_HEGEMON_FEMALE  # hegemon_female
-	}
-
-	consort_male = {
-		1 = ANDALUSIAN_COUNT_MALE  # consort uses the ruler form
-		2 = ANDALUSIAN_DUKE_MALE  # consort uses the ruler form
-		3 = ANDALUSIAN_KING_MALE  # consort uses the ruler form
-		4 = ANDALUSIAN_EMPEROR_MALE  # consort uses the ruler form
-		5 = ANDALUSIAN_HEGEMON_MALE  # consort uses the ruler form
-	}
-
-	consort_female = {
-		1 = ANDALUSIAN_COUNT_FEMALE  # count_feudal_female
-		2 = ANDALUSIAN_DUKE_FEMALE  # duke_feudal_female
-		3 = ANDALUSIAN_KING_FEMALE  # king_feudal_female
-		4 = ANDALUSIAN_EMPEROR_FEMALE  # emperor_feudal_female
-		5 = ANDALUSIAN_HEGEMON_FEMALE  # hegemon_female
+		1 = ANDALUSIAN_BGS_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_BGS_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_BGS_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_BGS_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_BGS_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -716,7 +587,332 @@ andalusian_titles = {
 
 	trigger = {
 		government = monarchy
-		has_country_flag = kar_gov_feudal_government
+		tag = BGS
+	}
+}
+
+
+andalusian_cue_titles = {
+# lifted from CK3 flavorization for CUE: c_cuellar carries rule specials the shared andalusian_titles block cannot express; Islam heir = False
+	rank = {
+		1 = ANDALUSIAN_CUE_COUNTY  # county_feudal
+		2 = ANDALUSIAN_CUE_DUCHY  # duchy_feudal
+		3 = ANDALUSIAN_CUE_KINGDOM  # kingdom_feudal
+		4 = ANDALUSIAN_CUE_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ANDALUSIAN_CUE_COUNT_MALE  # count_feudal_male
+		2 = ANDALUSIAN_CUE_DUKE_MALE  # duke_feudal_male
+		3 = ANDALUSIAN_CUE_KING_MALE  # king_feudal_male
+		4 = ANDALUSIAN_CUE_EMPEROR_MALE  # emperor_feudal_male
+		5 = ANDALUSIAN_CUE_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ANDALUSIAN_CUE_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_CUE_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_CUE_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_CUE_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_CUE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ANDALUSIAN_CUE_COUNT_MALE  # consort uses the ruler form
+		2 = ANDALUSIAN_CUE_DUKE_MALE  # consort uses the ruler form
+		3 = ANDALUSIAN_CUE_KING_MALE  # consort uses the ruler form
+		4 = ANDALUSIAN_CUE_EMPEROR_MALE  # consort uses the ruler form
+		5 = ANDALUSIAN_CUE_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ANDALUSIAN_CUE_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_CUE_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_CUE_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_CUE_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_CUE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = CUE
+	}
+}
+
+
+andalusian_mlr_titles = {
+# lifted from CK3 flavorization for MLR: c_mallorca carries rule specials the shared andalusian_titles block cannot express; Islam heir = False
+	rank = {
+		1 = ANDALUSIAN_MLR_COUNTY  # county_feudal
+		2 = ANDALUSIAN_MLR_DUCHY  # duchy_feudal
+		3 = ANDALUSIAN_MLR_KINGDOM  # kingdom_feudal
+		4 = ANDALUSIAN_MLR_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ANDALUSIAN_MLR_COUNT_MALE  # count_feudal_male
+		2 = ANDALUSIAN_MLR_DUKE_MALE  # duke_feudal_male
+		3 = ANDALUSIAN_MLR_KING_MALE  # king_feudal_male
+		4 = ANDALUSIAN_MLR_EMPEROR_MALE  # emperor_feudal_male
+		5 = ANDALUSIAN_MLR_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ANDALUSIAN_MLR_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_MLR_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_MLR_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_MLR_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_MLR_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ANDALUSIAN_MLR_COUNT_MALE  # consort uses the ruler form
+		2 = ANDALUSIAN_MLR_DUKE_MALE  # consort uses the ruler form
+		3 = ANDALUSIAN_MLR_KING_MALE  # consort uses the ruler form
+		4 = ANDALUSIAN_MLR_EMPEROR_MALE  # consort uses the ruler form
+		5 = ANDALUSIAN_MLR_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ANDALUSIAN_MLR_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_MLR_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_MLR_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_MLR_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_MLR_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = MLR
+	}
+}
+
+
+andalusian_slm_titles = {
+# lifted from CK3 flavorization for SLM: c_salamanca carries rule specials the shared andalusian_titles block cannot express; Islam heir = False
+	rank = {
+		1 = ANDALUSIAN_SLM_COUNTY  # county_feudal
+		2 = ANDALUSIAN_SLM_DUCHY  # duchy_feudal
+		3 = ANDALUSIAN_SLM_KINGDOM  # kingdom_feudal
+		4 = ANDALUSIAN_SLM_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ANDALUSIAN_SLM_COUNT_MALE  # count_feudal_male
+		2 = ANDALUSIAN_SLM_DUKE_MALE  # duke_feudal_male
+		3 = ANDALUSIAN_SLM_KING_MALE  # king_feudal_male
+		4 = ANDALUSIAN_SLM_EMPEROR_MALE  # emperor_feudal_male
+		5 = ANDALUSIAN_SLM_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ANDALUSIAN_SLM_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_SLM_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_SLM_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_SLM_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_SLM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ANDALUSIAN_SLM_COUNT_MALE  # consort uses the ruler form
+		2 = ANDALUSIAN_SLM_DUKE_MALE  # consort uses the ruler form
+		3 = ANDALUSIAN_SLM_KING_MALE  # consort uses the ruler form
+		4 = ANDALUSIAN_SLM_EMPEROR_MALE  # consort uses the ruler form
+		5 = ANDALUSIAN_SLM_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ANDALUSIAN_SLM_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_SLM_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_SLM_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_SLM_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_SLM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = SLM
+	}
+}
+
+
+andalusian_vll_titles = {
+# lifted from CK3 flavorization for VLL: c_valladolid carries rule specials the shared andalusian_titles block cannot express; Islam heir = False
+	rank = {
+		1 = ANDALUSIAN_VLL_COUNTY  # county_feudal
+		2 = ANDALUSIAN_VLL_DUCHY  # duchy_feudal
+		3 = ANDALUSIAN_VLL_KINGDOM  # kingdom_feudal
+		4 = ANDALUSIAN_VLL_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ANDALUSIAN_VLL_COUNT_MALE  # count_feudal_male
+		2 = ANDALUSIAN_VLL_DUKE_MALE  # duke_feudal_male
+		3 = ANDALUSIAN_VLL_KING_MALE  # king_feudal_male
+		4 = ANDALUSIAN_VLL_EMPEROR_MALE  # emperor_feudal_male
+		5 = ANDALUSIAN_VLL_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ANDALUSIAN_VLL_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_VLL_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_VLL_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_VLL_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_VLL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ANDALUSIAN_VLL_COUNT_MALE  # consort uses the ruler form
+		2 = ANDALUSIAN_VLL_DUKE_MALE  # consort uses the ruler form
+		3 = ANDALUSIAN_VLL_KING_MALE  # consort uses the ruler form
+		4 = ANDALUSIAN_VLL_EMPEROR_MALE  # consort uses the ruler form
+		5 = ANDALUSIAN_VLL_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ANDALUSIAN_VLL_COUNT_FEMALE  # count_feudal_female
+		2 = ANDALUSIAN_VLL_DUKE_FEMALE  # duke_feudal_female
+		3 = ANDALUSIAN_VLL_KING_FEMALE  # king_feudal_female
+		4 = ANDALUSIAN_VLL_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = ANDALUSIAN_VLL_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = VLL
+	}
+}
+
+
+andalusian_titles = {
+# CK3 ladders for CRT(r2), PRT(r2), TOL(r2), SEV(r1), MLA(r1) - clan CK3 government - islam realms (Shahzade)
+	rank = {
+		1 = ANDALUSIAN_COUNTY  # county_clan_iberian_group
+		2 = ANDALUSIAN_DUCHY  # duchy_clan_iberian_group
+		3 = ANDALUSIAN_KINGDOM  # kingdom_clan_iberian_group
+		4 = ANDALUSIAN_EMPIRE  # empire_clan_iberian_group
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = ANDALUSIAN_COUNT_MALE  # count_clan_male_iberian_group
+		2 = ANDALUSIAN_DUKE_MALE  # duke_clan_male_iberian_group
+		3 = ANDALUSIAN_KING_MALE  # king_clan_male_iberian_group
+		4 = ANDALUSIAN_EMPEROR_MALE  # emperor_clan_male_iberian_group
+		5 = ANDALUSIAN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = ANDALUSIAN_COUNT_FEMALE  # count_clan_female_iberian_group
+		2 = ANDALUSIAN_DUKE_FEMALE  # duke_clan_female_iberian_group
+		3 = ANDALUSIAN_KING_FEMALE  # king_clan_female_iberian_group
+		4 = ANDALUSIAN_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
+		5 = ANDALUSIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = ANDALUSIAN_COUNT_MALE  # consort uses the ruler form
+		2 = ANDALUSIAN_DUKE_MALE  # consort uses the ruler form
+		3 = ANDALUSIAN_KING_MALE  # consort uses the ruler form
+		4 = ANDALUSIAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = ANDALUSIAN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = ANDALUSIAN_COUNT_FEMALE  # count_clan_female_iberian_group
+		2 = ANDALUSIAN_DUKE_FEMALE  # duke_clan_female_iberian_group
+		3 = ANDALUSIAN_KING_FEMALE  # king_clan_female_iberian_group
+		4 = ANDALUSIAN_EMPEROR_FEMALE  # emperor_clan_female_iberian_group
+		5 = ANDALUSIAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = SHAHZADE
+		3 = SHAHZADE
+		4 = SHAHZADE
+		5 = SHAHZADE
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_clan_government
 		primary_culture = andalusian
 	}
 }
@@ -848,6 +1044,136 @@ polish_titles = {
 	trigger = {
 		government = monarchy
 		primary_culture = polish
+	}
+}
+
+
+greek_bbu_titles = {
+# lifted from CK3 flavorization for BBU: c_burgas carries rule specials the shared greek_titles block cannot express; Islam heir = False
+	rank = {
+		1 = GREEK_BBU_COUNTY  # county_feudal
+		2 = GREEK_BBU_DUCHY  # duchy_feudal
+		3 = GREEK_BBU_KINGDOM  # kingdom_feudal_greek
+		4 = GREEK_BBU_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = GREEK_BBU_COUNT_MALE  # count_feudal_male
+		2 = GREEK_BBU_DUKE_MALE  # duke_feudal_male_greek
+		3 = GREEK_BBU_KING_MALE  # king_feudal_male_greek
+		4 = GREEK_BBU_EMPEROR_MALE  # emperor_feudal_male
+		5 = GREEK_BBU_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = GREEK_BBU_COUNT_FEMALE  # count_feudal_female
+		2 = GREEK_BBU_DUKE_FEMALE  # duke_feudal_female
+		3 = GREEK_BBU_KING_FEMALE  # king_feudal_female_greek
+		4 = GREEK_BBU_EMPEROR_FEMALE  # emperor_feudal_female_greek
+		5 = GREEK_BBU_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = GREEK_BBU_COUNT_MALE  # consort uses the ruler form
+		2 = GREEK_BBU_DUKE_MALE  # consort uses the ruler form
+		3 = GREEK_BBU_KING_MALE  # consort uses the ruler form
+		4 = GREEK_BBU_EMPEROR_MALE  # consort uses the ruler form
+		5 = GREEK_BBU_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = GREEK_BBU_COUNT_FEMALE  # count_feudal_female
+		2 = GREEK_BBU_DUKE_FEMALE  # duke_feudal_female
+		3 = GREEK_BBU_KING_FEMALE  # king_feudal_female_greek
+		4 = GREEK_BBU_EMPEROR_FEMALE  # emperor_feudal_female_greek
+		5 = GREEK_BBU_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = BBU
+	}
+}
+
+
+greek_cet_titles = {
+# lifted from CK3 flavorization for CET: c_cetina carries rule specials the shared greek_titles block cannot express; Islam heir = False
+	rank = {
+		1 = GREEK_CET_COUNTY  # county_feudal
+		2 = GREEK_CET_DUCHY  # duchy_feudal
+		3 = GREEK_CET_KINGDOM  # kingdom_feudal_greek
+		4 = GREEK_CET_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = GREEK_CET_COUNT_MALE  # count_feudal_male
+		2 = GREEK_CET_DUKE_MALE  # duke_feudal_male_greek
+		3 = GREEK_CET_KING_MALE  # king_feudal_male_greek
+		4 = GREEK_CET_EMPEROR_MALE  # emperor_feudal_male
+		5 = GREEK_CET_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = GREEK_CET_COUNT_FEMALE  # count_feudal_female
+		2 = GREEK_CET_DUKE_FEMALE  # duke_feudal_female
+		3 = GREEK_CET_KING_FEMALE  # king_feudal_female_greek
+		4 = GREEK_CET_EMPEROR_FEMALE  # emperor_feudal_female_greek
+		5 = GREEK_CET_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = GREEK_CET_COUNT_MALE  # consort uses the ruler form
+		2 = GREEK_CET_DUKE_MALE  # consort uses the ruler form
+		3 = GREEK_CET_KING_MALE  # consort uses the ruler form
+		4 = GREEK_CET_EMPEROR_MALE  # consort uses the ruler form
+		5 = GREEK_CET_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = GREEK_CET_COUNT_FEMALE  # count_feudal_female
+		2 = GREEK_CET_DUKE_FEMALE  # duke_feudal_female
+		3 = GREEK_CET_KING_FEMALE  # king_feudal_female_greek
+		4 = GREEK_CET_EMPEROR_FEMALE  # emperor_feudal_female_greek
+		5 = GREEK_CET_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = CET
 	}
 }
 
@@ -1181,7 +1507,7 @@ mogyer_titles = {
 
 
 lithuanian_titles = {
-# CK3 ladders for ZEM(r2), LTU(r2), YTV(r1)
+# CK3 ladders for ZEM(r2), LTU(r2), YTV(r1), GRO(r1), GRD(r1)
 	rank = {
 		1 = LITHUANIAN_COUNTY  # county_tribal
 		2 = LITHUANIAN_DUCHY  # duchy_tribal
@@ -1245,8 +1571,73 @@ lithuanian_titles = {
 }
 
 
+occitan_viv_titles = {
+# lifted from CK3 flavorization for VIV: c_viviers carries rule specials the shared occitan_titles block cannot express; Islam heir = False
+	rank = {
+		1 = OCCITAN_VIV_COUNTY  # county_theocracy_christianity_religion
+		2 = OCCITAN_VIV_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = OCCITAN_VIV_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = OCCITAN_VIV_EMPIRE  # empire_theocracy_christianity_religion
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = OCCITAN_VIV_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = OCCITAN_VIV_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = OCCITAN_VIV_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = OCCITAN_VIV_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = OCCITAN_VIV_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = OCCITAN_VIV_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = OCCITAN_VIV_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = OCCITAN_VIV_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = OCCITAN_VIV_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = OCCITAN_VIV_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = OCCITAN_VIV_COUNT_MALE  # consort uses the ruler form
+		2 = OCCITAN_VIV_DUKE_MALE  # consort uses the ruler form
+		3 = OCCITAN_VIV_KING_MALE  # consort uses the ruler form
+		4 = OCCITAN_VIV_EMPEROR_MALE  # consort uses the ruler form
+		5 = OCCITAN_VIV_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = OCCITAN_VIV_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = OCCITAN_VIV_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = OCCITAN_VIV_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = OCCITAN_VIV_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = OCCITAN_VIV_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = VIV
+	}
+}
+
+
 occitan_titles = {
-# CK3 ladders for GTH(r2), TOU(r2)
+# CK3 ladders for GTH(r2), TOU(r2), BBE(r1), VEA(r1), LYO(r1), CAC(r1) - feudal CK3 government
 	rank = {
 		1 = OCCITAN_COUNTY  # county_feudal
 		2 = OCCITAN_DUCHY  # duchy_feudal
@@ -1305,13 +1696,14 @@ occitan_titles = {
 
 	trigger = {
 		government = monarchy
+		has_country_flag = kar_gov_feudal_government
 		primary_culture = occitan
 	}
 }
 
 
 serbian_titles = {
-# CK3 ladders for MON(r1), RSK(r2), HRZ(r1)
+# CK3 ladders for MON(r1), RSK(r2), HRZ(r1), RRR(r1)
 	rank = {
 		1 = SERBIAN_COUNTY  # county_feudal
 		2 = SERBIAN_DUCHY  # duchy_feudal
@@ -1376,7 +1768,7 @@ serbian_titles = {
 
 
 prussian_titles = {
-# CK3 ladders for PRU(r2)
+# CK3 ladders for PRU(r2), GAI(r1), POE(r1)
 	rank = {
 		1 = PRUSSIAN_COUNTY  # county_tribal
 		2 = PRUSSIAN_DUCHY  # duchy_tribal
@@ -1441,7 +1833,7 @@ prussian_titles = {
 
 
 latgalian_titles = {
-# CK3 ladders for KUR(r2)
+# CK3 ladders for KUR(r2), SEI(r1)
 	rank = {
 		1 = LATGALIAN_COUNTY  # county_tribal
 		2 = LATGALIAN_DUCHY  # duchy_tribal
@@ -1506,7 +1898,7 @@ latgalian_titles = {
 
 
 estonian_titles = {
-# CK3 ladders for LVA(r2), EST(r2), VOD(r1)
+# CK3 ladders for LVA(r2), EST(r2), VOD(r1), SAE(r1), UGA(r1), VIR(r1)
 	rank = {
 		1 = ESTONIAN_COUNTY  # county_tribal
 		2 = ESTONIAN_DUCHY  # duchy_tribal
@@ -1570,29 +1962,94 @@ estonian_titles = {
 }
 
 
-czech_titles = {
-# CK3 ladders for BHM(r2)
+czech_bhm_titles = {
+# lifted from CK3 flavorization for BHM: d_bohemia carries rule specials the shared czech_titles block cannot express; Islam heir = False
 	rank = {
-		1 = CZECH_COUNTY  # county_feudal
-		2 = CZECH_DUCHY  # duchy_feudal
-		3 = CZECH_KINGDOM  # kingdom_feudal
-		4 = CZECH_EMPIRE  # empire_feudal
+		1 = CZECH_BHM_COUNTY  # county_feudal
+		2 = CZECH_BHM_DUCHY  # duchy_feudal
+		3 = CZECH_BHM_KINGDOM  # kingdom_feudal
+		4 = CZECH_BHM_EMPIRE  # empire_feudal
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = CZECH_COUNT_MALE  # count_feudal_male
-		2 = CZECH_DUKE_MALE  # duke_feudal_male
-		3 = CZECH_KING_MALE  # king_feudal_male
-		4 = CZECH_EMPEROR_MALE  # emperor_feudal_male
+		1 = CZECH_BHM_COUNT_MALE  # count_feudal_male
+		2 = CZECH_BHM_DUKE_MALE  # duke_feudal_male
+		3 = CZECH_BHM_KING_MALE  # king_feudal_male
+		4 = CZECH_BHM_EMPEROR_MALE  # emperor_feudal_male
+		5 = CZECH_BHM_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CZECH_BHM_COUNT_FEMALE  # count_feudal_female
+		2 = CZECH_BHM_DUKE_FEMALE  # duke_feudal_female
+		3 = CZECH_BHM_KING_FEMALE  # king_feudal_female
+		4 = CZECH_BHM_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CZECH_BHM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CZECH_BHM_COUNT_MALE  # consort uses the ruler form
+		2 = CZECH_BHM_DUKE_MALE  # consort uses the ruler form
+		3 = CZECH_BHM_KING_MALE  # consort uses the ruler form
+		4 = CZECH_BHM_EMPEROR_MALE  # consort uses the ruler form
+		5 = CZECH_BHM_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CZECH_BHM_COUNT_FEMALE  # count_feudal_female
+		2 = CZECH_BHM_DUKE_FEMALE  # duke_feudal_female
+		3 = CZECH_BHM_KING_FEMALE  # king_feudal_female
+		4 = CZECH_BHM_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CZECH_BHM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = BHM
+	}
+}
+
+
+czech_titles = {
+# CK3 ladders for PLZ(r1), HRA(r1) - tribal CK3 government
+	rank = {
+		1 = CZECH_COUNTY  # county_tribal
+		2 = CZECH_DUCHY  # duchy_tribal
+		3 = CZECH_KINGDOM  # kingdom_tribal
+		4 = CZECH_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CZECH_COUNT_MALE  # count_tribal_male
+		2 = CZECH_DUKE_MALE  # duke_tribal_male
+		3 = CZECH_KING_MALE  # king_tribal_male
+		4 = CZECH_EMPEROR_MALE  # emperor_tribal_male
 		5 = CZECH_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = CZECH_COUNT_FEMALE  # count_feudal_female
-		2 = CZECH_DUKE_FEMALE  # duke_feudal_female
-		3 = CZECH_KING_FEMALE  # king_feudal_female
-		4 = CZECH_EMPEROR_FEMALE  # emperor_feudal_female
+		1 = CZECH_COUNT_FEMALE  # count_tribal_female
+		2 = CZECH_DUKE_FEMALE  # duke_tribal_female
+		3 = CZECH_KING_FEMALE  # king_tribal_female
+		4 = CZECH_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = CZECH_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -1605,10 +2062,10 @@ czech_titles = {
 	}
 
 	consort_female = {
-		1 = CZECH_COUNT_FEMALE  # count_feudal_female
-		2 = CZECH_DUKE_FEMALE  # duke_feudal_female
-		3 = CZECH_KING_FEMALE  # king_feudal_female
-		4 = CZECH_EMPEROR_FEMALE  # emperor_feudal_female
+		1 = CZECH_COUNT_FEMALE  # count_tribal_female
+		2 = CZECH_DUKE_FEMALE  # duke_tribal_female
+		3 = CZECH_KING_FEMALE  # king_tribal_female
+		4 = CZECH_EMPEROR_FEMALE  # emperor_tribal_female
 		5 = CZECH_HEGEMON_FEMALE  # hegemon_female
 	}
 
@@ -1630,6 +2087,7 @@ czech_titles = {
 
 	trigger = {
 		government = monarchy
+		has_country_flag = kar_gov_tribal_government
 		primary_culture = czech
 	}
 }
@@ -1961,46 +2419,241 @@ pommeranian_titles = {
 }
 
 
-cisalpine_titles = {
-# CK3 ladders for VEN(r3)
+cisalpine_nic_titles = {
+# lifted from CK3 flavorization for NIC: c_nice carries rule specials the shared cisalpine_titles block cannot express; Islam heir = False
 	rank = {
-		1 = CISALPINE_COUNTY  # county_republic
-		2 = CISALPINE_DUCHY  # duchy_republic
-		3 = CISALPINE_KINGDOM  # kingdom_republic
-		4 = CISALPINE_EMPIRE  # empire_republic
+		1 = CISALPINE_NIC_COUNTY  # county_theocracy_christianity_religion
+		2 = CISALPINE_NIC_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = CISALPINE_NIC_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = CISALPINE_NIC_EMPIRE  # empire_theocracy_christianity_religion
 		5 = HEGEMONY
 	}
 
 	ruler_male = {
-		1 = CISALPINE_COUNT_MALE  # count_republic_latin_male
-		2 = CISALPINE_DUKE_MALE  # duke_republic_male_latin_group
-		3 = CISALPINE_KING_MALE  # king_republic_male_latin_group
-		4 = CISALPINE_EMPEROR_MALE  # emperor_republic_male
-		5 = CISALPINE_HEGEMON_MALE  # hegemon
+		1 = CISALPINE_NIC_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = CISALPINE_NIC_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = CISALPINE_NIC_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = CISALPINE_NIC_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = CISALPINE_NIC_HEGEMON_MALE  # hegemon
 	}
 
 	ruler_female = {
-		1 = CISALPINE_COUNT_FEMALE  # count_republic_latin_female
-		2 = CISALPINE_DUKE_FEMALE  # duke_republic_female_latin_group
-		3 = CISALPINE_KING_FEMALE  # king_republic_female_latin_group
-		4 = CISALPINE_EMPEROR_FEMALE  # emperor_republic_female
-		5 = CISALPINE_HEGEMON_FEMALE  # hegemon_female
+		1 = CISALPINE_NIC_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = CISALPINE_NIC_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = CISALPINE_NIC_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = CISALPINE_NIC_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = CISALPINE_NIC_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	consort_male = {
-		1 = CISALPINE_COUNT_MALE  # consort uses the ruler form
-		2 = CISALPINE_DUKE_MALE  # consort uses the ruler form
-		3 = CISALPINE_KING_MALE  # consort uses the ruler form
-		4 = CISALPINE_EMPEROR_MALE  # consort uses the ruler form
-		5 = CISALPINE_HEGEMON_MALE  # consort uses the ruler form
+		1 = CISALPINE_NIC_COUNT_MALE  # consort uses the ruler form
+		2 = CISALPINE_NIC_DUKE_MALE  # consort uses the ruler form
+		3 = CISALPINE_NIC_KING_MALE  # consort uses the ruler form
+		4 = CISALPINE_NIC_EMPEROR_MALE  # consort uses the ruler form
+		5 = CISALPINE_NIC_HEGEMON_MALE  # consort uses the ruler form
 	}
 
 	consort_female = {
-		1 = CISALPINE_COUNT_FEMALE  # count_republic_latin_female
-		2 = CISALPINE_DUKE_FEMALE  # duke_republic_female_latin_group
-		3 = CISALPINE_KING_FEMALE  # king_republic_female_latin_group
-		4 = CISALPINE_EMPEROR_FEMALE  # emperor_republic_female
-		5 = CISALPINE_HEGEMON_FEMALE  # hegemon_female
+		1 = CISALPINE_NIC_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = CISALPINE_NIC_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = CISALPINE_NIC_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = CISALPINE_NIC_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = CISALPINE_NIC_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = NIC
+	}
+}
+
+
+cisalpine_noa_titles = {
+# lifted from CK3 flavorization for NOA: c_novara carries rule specials the shared cisalpine_titles block cannot express; Islam heir = False
+	rank = {
+		1 = CISALPINE_NOA_COUNTY  # county_theocracy_christianity_religion
+		2 = CISALPINE_NOA_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = CISALPINE_NOA_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = CISALPINE_NOA_EMPIRE  # empire_theocracy_christianity_religion
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CISALPINE_NOA_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = CISALPINE_NOA_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = CISALPINE_NOA_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = CISALPINE_NOA_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = CISALPINE_NOA_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CISALPINE_NOA_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = CISALPINE_NOA_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = CISALPINE_NOA_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = CISALPINE_NOA_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = CISALPINE_NOA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CISALPINE_NOA_COUNT_MALE  # consort uses the ruler form
+		2 = CISALPINE_NOA_DUKE_MALE  # consort uses the ruler form
+		3 = CISALPINE_NOA_KING_MALE  # consort uses the ruler form
+		4 = CISALPINE_NOA_EMPEROR_MALE  # consort uses the ruler form
+		5 = CISALPINE_NOA_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CISALPINE_NOA_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = CISALPINE_NOA_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = CISALPINE_NOA_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = CISALPINE_NOA_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = CISALPINE_NOA_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = NOA
+	}
+}
+
+
+cisalpine_rav_titles = {
+# lifted from CK3 flavorization for RAV: c_ravenna carries rule specials the shared cisalpine_titles block cannot express; Islam heir = False
+	rank = {
+		1 = CISALPINE_RAV_COUNTY  # county_theocracy_christianity_religion
+		2 = CISALPINE_RAV_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = CISALPINE_RAV_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = CISALPINE_RAV_EMPIRE  # empire_theocracy_christianity_religion
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CISALPINE_RAV_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = CISALPINE_RAV_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = CISALPINE_RAV_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = CISALPINE_RAV_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = CISALPINE_RAV_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CISALPINE_RAV_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = CISALPINE_RAV_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = CISALPINE_RAV_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = CISALPINE_RAV_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = CISALPINE_RAV_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CISALPINE_RAV_COUNT_MALE  # consort uses the ruler form
+		2 = CISALPINE_RAV_DUKE_MALE  # consort uses the ruler form
+		3 = CISALPINE_RAV_KING_MALE  # consort uses the ruler form
+		4 = CISALPINE_RAV_EMPEROR_MALE  # consort uses the ruler form
+		5 = CISALPINE_RAV_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CISALPINE_RAV_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = CISALPINE_RAV_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = CISALPINE_RAV_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = CISALPINE_RAV_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = CISALPINE_RAV_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = RAV
+	}
+}
+
+
+cisalpine_ven_titles = {
+# lifted from CK3 flavorization for VEN: k_venice carries rule specials the shared cisalpine_titles block cannot express; Islam heir = False
+	rank = {
+		1 = CISALPINE_VEN_COUNTY  # county_republic
+		2 = CISALPINE_VEN_DUCHY  # duchy_republic
+		3 = CISALPINE_VEN_KINGDOM  # kingdom_republic
+		4 = CISALPINE_VEN_EMPIRE  # empire_republic
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CISALPINE_VEN_COUNT_MALE  # count_republic_latin_male
+		2 = CISALPINE_VEN_DUKE_MALE  # duke_republic_male_latin_group
+		3 = CISALPINE_VEN_KING_MALE  # king_republic_male_latin_group
+		4 = CISALPINE_VEN_EMPEROR_MALE  # emperor_republic_male
+		5 = CISALPINE_VEN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CISALPINE_VEN_COUNT_FEMALE  # count_republic_latin_female
+		2 = CISALPINE_VEN_DUKE_FEMALE  # duke_republic_female_latin_group
+		3 = CISALPINE_VEN_KING_FEMALE  # king_republic_female_latin_group
+		4 = CISALPINE_VEN_EMPEROR_FEMALE  # emperor_republic_female
+		5 = CISALPINE_VEN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CISALPINE_VEN_COUNT_MALE  # consort uses the ruler form
+		2 = CISALPINE_VEN_DUKE_MALE  # consort uses the ruler form
+		3 = CISALPINE_VEN_KING_MALE  # consort uses the ruler form
+		4 = CISALPINE_VEN_EMPEROR_MALE  # consort uses the ruler form
+		5 = CISALPINE_VEN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CISALPINE_VEN_COUNT_FEMALE  # count_republic_latin_female
+		2 = CISALPINE_VEN_DUKE_FEMALE  # duke_republic_female_latin_group
+		3 = CISALPINE_VEN_KING_FEMALE  # king_republic_female_latin_group
+		4 = CISALPINE_VEN_EMPEROR_FEMALE  # emperor_republic_female
+		5 = CISALPINE_VEN_HEGEMON_FEMALE  # hegemon_female
 	}
 
 	heir_male = {
@@ -2021,6 +2674,72 @@ cisalpine_titles = {
 
 	trigger = {
 		government = republic
+		tag = VEN
+	}
+}
+
+
+cisalpine_titles = {
+# CK3 ladders for GEN(r1), LOD(r1), VRN(r1), MAN(r1), CUN(r1) - feudal CK3 government
+	rank = {
+		1 = CISALPINE_COUNTY  # county_feudal
+		2 = CISALPINE_DUCHY  # duchy_feudal
+		3 = CISALPINE_KINGDOM  # kingdom_feudal
+		4 = CISALPINE_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CISALPINE_COUNT_MALE  # count_feudal_male
+		2 = CISALPINE_DUKE_MALE  # duke_feudal_male
+		3 = CISALPINE_KING_MALE  # king_feudal_male
+		4 = CISALPINE_EMPEROR_MALE  # emperor_feudal_male
+		5 = CISALPINE_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CISALPINE_COUNT_FEMALE  # count_feudal_female
+		2 = CISALPINE_DUKE_FEMALE  # duke_feudal_female
+		3 = CISALPINE_KING_FEMALE  # king_feudal_female
+		4 = CISALPINE_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CISALPINE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CISALPINE_COUNT_MALE  # consort uses the ruler form
+		2 = CISALPINE_DUKE_MALE  # consort uses the ruler form
+		3 = CISALPINE_KING_MALE  # consort uses the ruler form
+		4 = CISALPINE_EMPEROR_MALE  # consort uses the ruler form
+		5 = CISALPINE_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CISALPINE_COUNT_FEMALE  # count_feudal_female
+		2 = CISALPINE_DUKE_FEMALE  # duke_feudal_female
+		3 = CISALPINE_KING_FEMALE  # king_feudal_female
+		4 = CISALPINE_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CISALPINE_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		has_country_flag = kar_gov_feudal_government
 		primary_culture = cisalpine
 	}
 }
@@ -2417,8 +3136,138 @@ khitan_titles = {
 }
 
 
+lombard_brc_titles = {
+# lifted from CK3 flavorization for BRC: c_brescia carries rule specials the shared lombard_titles block cannot express; Islam heir = False
+	rank = {
+		1 = LOMBARD_BRC_COUNTY  # county_feudal
+		2 = LOMBARD_BRC_DUCHY  # duchy_feudal
+		3 = LOMBARD_BRC_KINGDOM  # kingdom_feudal
+		4 = LOMBARD_BRC_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = LOMBARD_BRC_COUNT_MALE  # count_feudal_male
+		2 = LOMBARD_BRC_DUKE_MALE  # duke_feudal_male
+		3 = LOMBARD_BRC_KING_MALE  # king_feudal_male
+		4 = LOMBARD_BRC_EMPEROR_MALE  # emperor_feudal_male
+		5 = LOMBARD_BRC_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = LOMBARD_BRC_COUNT_FEMALE  # count_feudal_female
+		2 = LOMBARD_BRC_DUKE_FEMALE  # duke_feudal_female
+		3 = LOMBARD_BRC_KING_FEMALE  # king_feudal_female
+		4 = LOMBARD_BRC_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = LOMBARD_BRC_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = LOMBARD_BRC_COUNT_MALE  # consort uses the ruler form
+		2 = LOMBARD_BRC_DUKE_MALE  # consort uses the ruler form
+		3 = LOMBARD_BRC_KING_MALE  # consort uses the ruler form
+		4 = LOMBARD_BRC_EMPEROR_MALE  # consort uses the ruler form
+		5 = LOMBARD_BRC_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = LOMBARD_BRC_COUNT_FEMALE  # count_feudal_female
+		2 = LOMBARD_BRC_DUKE_FEMALE  # duke_feudal_female
+		3 = LOMBARD_BRC_KING_FEMALE  # king_feudal_female
+		4 = LOMBARD_BRC_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = LOMBARD_BRC_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = BRC
+	}
+}
+
+
+lombard_crm_titles = {
+# lifted from CK3 flavorization for CRM: c_cremona carries rule specials the shared lombard_titles block cannot express; Islam heir = False
+	rank = {
+		1 = LOMBARD_CRM_COUNTY  # county_theocracy_christianity_religion
+		2 = LOMBARD_CRM_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = LOMBARD_CRM_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = LOMBARD_CRM_EMPIRE  # empire_theocracy_christianity_religion
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = LOMBARD_CRM_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = LOMBARD_CRM_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = LOMBARD_CRM_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = LOMBARD_CRM_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = LOMBARD_CRM_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = LOMBARD_CRM_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = LOMBARD_CRM_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = LOMBARD_CRM_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = LOMBARD_CRM_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = LOMBARD_CRM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = LOMBARD_CRM_COUNT_MALE  # consort uses the ruler form
+		2 = LOMBARD_CRM_DUKE_MALE  # consort uses the ruler form
+		3 = LOMBARD_CRM_KING_MALE  # consort uses the ruler form
+		4 = LOMBARD_CRM_EMPEROR_MALE  # consort uses the ruler form
+		5 = LOMBARD_CRM_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = LOMBARD_CRM_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = LOMBARD_CRM_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = LOMBARD_CRM_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = LOMBARD_CRM_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = LOMBARD_CRM_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = CRM
+	}
+}
+
+
 lombard_titles = {
-# CK3 ladders for SLR(r2), BNV(r2)
+# CK3 ladders for SLR(r2), BNV(r2) - feudal CK3 government
 	rank = {
 		1 = LOMBARD_COUNTY  # county_feudal
 		2 = LOMBARD_DUCHY  # duchy_feudal_prince_independent
@@ -2477,6 +3326,7 @@ lombard_titles = {
 
 	trigger = {
 		government = monarchy
+		has_country_flag = kar_gov_feudal_government
 		primary_culture = lombard
 	}
 }
@@ -2548,7 +3398,7 @@ baranis_titles = {
 
 
 avar_titles = {
-# CK3 ladders for VSG(r2)
+# CK3 ladders for VSG(r2), BIH(r1), TES(r1), SZE(r1), HEV(r1), HVE(r1)
 	rank = {
 		1 = AVAR_COUNTY  # county_tribal
 		2 = AVAR_DUCHY  # duchy_tribal
@@ -2613,7 +3463,7 @@ avar_titles = {
 
 
 finnish_titles = {
-# CK3 ladders for FIN(r2), NYL(r1), OLA(r1), OUL(r1)
+# CK3 ladders for FIN(r2), NYL(r1), OLA(r1), OUL(r1), FIL(r1)
 	rank = {
 		1 = FINNISH_COUNTY  # county_tribal
 		2 = FINNISH_DUCHY  # duchy_tribal
@@ -2876,7 +3726,7 @@ vepsian_titles = {
 
 
 sami_titles = {
-# CK3 ladders for KIL(r1), ROU(r1), KTK(r1), INA(r1), SIG(r1), AAR(r2)
+# CK3 ladders for KIL(r1), ROU(r1), KTK(r1), INA(r1), SIG(r1), AAR(r2), PIT(r1)
 	rank = {
 		1 = SAMI_COUNTY  # county_tribal
 		2 = SAMI_DUCHY  # duchy_tribal
@@ -3465,7 +4315,7 @@ butr_titles = {
 
 
 maghrebi_titles = {
-# CK3 ladders for SIQ(r2), ALG(r2), TUN(r3), MOR(r3) - islam realms (Shahzade)
+# CK3 ladders for SIQ(r2), ALG(r2), TUN(r3), MOR(r3), CAV(r1) - islam realms (Shahzade)
 	rank = {
 		1 = MAGHREBI_COUNTY  # county_feudal_arabic_group
 		2 = MAGHREBI_DUCHY  # duchy_feudal_arabic_group
@@ -4115,7 +4965,7 @@ bedouin_yam_titles = {
 
 
 bedouin_titles = {
-# CK3 ladders for EDE(r2), OMA(r2), TAB(r2), DLF(r2), ADA(r2), SUI(r1), AZB(r2), SHM(r2), MDA(r2) - clan/feudal CK3 government - islam realms (Shahzade)
+# CK3 ladders for EDE(r2), OMA(r2), TAB(r2), DLF(r2), ADA(r2), SUI(r1), AZB(r2), SHM(r2), MDA(r2), MUC(r1), JAE(r1), CAI(r1), ALR(r1) - clan/feudal CK3 government - islam realms (Shahzade)
 	rank = {
 		1 = BEDOUIN_COUNTY  # county_feudal_arabic_group
 		2 = BEDOUIN_DUCHY  # duchy_feudal_arabic_group
@@ -5163,8 +6013,138 @@ saka_titles = {
 }
 
 
+saxon_mun_titles = {
+# lifted from CK3 flavorization for MUN: c_munster carries rule specials the shared saxon_titles block cannot express; Islam heir = False
+	rank = {
+		1 = SAXON_MUN_COUNTY  # county_theocracy_christianity_religion
+		2 = SAXON_MUN_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = SAXON_MUN_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = SAXON_MUN_EMPIRE  # empire_theocracy_christianity_religion
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SAXON_MUN_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = SAXON_MUN_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = SAXON_MUN_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = SAXON_MUN_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = SAXON_MUN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SAXON_MUN_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = SAXON_MUN_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = SAXON_MUN_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = SAXON_MUN_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = SAXON_MUN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SAXON_MUN_COUNT_MALE  # consort uses the ruler form
+		2 = SAXON_MUN_DUKE_MALE  # consort uses the ruler form
+		3 = SAXON_MUN_KING_MALE  # consort uses the ruler form
+		4 = SAXON_MUN_EMPEROR_MALE  # consort uses the ruler form
+		5 = SAXON_MUN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SAXON_MUN_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = SAXON_MUN_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = SAXON_MUN_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = SAXON_MUN_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = SAXON_MUN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = MUN
+	}
+}
+
+
+saxon_osn_titles = {
+# lifted from CK3 flavorization for OSN: c_osnabruck carries rule specials the shared saxon_titles block cannot express; Islam heir = False
+	rank = {
+		1 = SAXON_OSN_COUNTY  # county_theocracy_christianity_religion
+		2 = SAXON_OSN_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = SAXON_OSN_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = SAXON_OSN_EMPIRE  # empire_theocracy_christianity_religion
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SAXON_OSN_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = SAXON_OSN_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = SAXON_OSN_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = SAXON_OSN_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = SAXON_OSN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SAXON_OSN_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = SAXON_OSN_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = SAXON_OSN_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = SAXON_OSN_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = SAXON_OSN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SAXON_OSN_COUNT_MALE  # consort uses the ruler form
+		2 = SAXON_OSN_DUKE_MALE  # consort uses the ruler form
+		3 = SAXON_OSN_KING_MALE  # consort uses the ruler form
+		4 = SAXON_OSN_EMPEROR_MALE  # consort uses the ruler form
+		5 = SAXON_OSN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SAXON_OSN_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = SAXON_OSN_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = SAXON_OSN_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = SAXON_OSN_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = SAXON_OSN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = OSN
+	}
+}
+
+
 saxon_titles = {
-# CK3 ladders for AGR(r2), MAG(r1)
+# CK3 ladders for AGR(r2), MAG(r1), STD(r1), MID(r1), GLI(r1), KSS(r1), GUE(r1), KLE(r1) - feudal CK3 government
 	rank = {
 		1 = SAXON_COUNTY  # county_feudal
 		2 = SAXON_DUCHY  # duchy_feudal
@@ -5223,6 +6203,7 @@ saxon_titles = {
 
 	trigger = {
 		government = monarchy
+		has_country_flag = kar_gov_feudal_government
 		primary_culture = saxon
 	}
 }
@@ -6532,7 +7513,7 @@ pecheneg_titles = {
 
 
 khazar_titles = {
-# CK3 ladders for KHZ(r4)
+# CK3 ladders for KHZ(r4), OSK(r1)
 	rank = {
 		1 = KHAZAR_COUNTY  # county_tribal
 		2 = KHAZAR_DUCHY  # duchy_tribal
@@ -6590,7 +7571,10 @@ khazar_titles = {
 	}
 
 	trigger = {
-		government = tribal
+		OR = {
+			government = monarchy
+			government = tribal
+		}
 		primary_culture = khazar
 	}
 }
@@ -6923,7 +7907,7 @@ mari_titles = {
 
 
 mordvin_titles = {
-# CK3 ladders for CHB(r1)
+# CK3 ladders for CHB(r1), VOR(r1), KHP(r1)
 	rank = {
 		1 = MORDVIN_COUNTY  # county_tribal
 		2 = MORDVIN_DUCHY  # duchy_tribal
@@ -6981,7 +7965,10 @@ mordvin_titles = {
 	}
 
 	trigger = {
-		government = tribal
+		OR = {
+			government = monarchy
+			government = tribal
+		}
 		primary_culture = mordvin
 	}
 }
@@ -15726,7 +16713,7 @@ sogdian_titles = {
 
 
 carantanian_titles = {
-# CK3 ladders for LEA(r1)
+# CK3 ladders for LEA(r1), KAJ(r1)
 	rank = {
 		1 = CARANTANIAN_COUNTY  # county_feudal
 		2 = CARANTANIAN_DUCHY  # duchy_feudal
@@ -15790,8 +16777,73 @@ carantanian_titles = {
 }
 
 
+swabian_knz_titles = {
+# lifted from CK3 flavorization for KNZ: c_sankt_gallen carries rule specials the shared swabian_titles block cannot express; Islam heir = False
+	rank = {
+		1 = SWABIAN_KNZ_COUNTY  # county_theocracy_christianity_religion
+		2 = SWABIAN_KNZ_DUCHY  # clerical_elector_duchy_cardinalate
+		3 = SWABIAN_KNZ_KINGDOM  # kingdom_theocracy_christianity_religion
+		4 = SWABIAN_KNZ_EMPIRE  # empire_theocracy_christianity_religion
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = SWABIAN_KNZ_COUNT_MALE  # count_theocracy_male_christianity_religion
+		2 = SWABIAN_KNZ_DUKE_MALE  # duke_theocracy_male_christianity_religion
+		3 = SWABIAN_KNZ_KING_MALE  # king_theocracy_male_christianity_religion
+		4 = SWABIAN_KNZ_EMPEROR_MALE  # emperor_theocracy_male_christianity_religion
+		5 = SWABIAN_KNZ_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = SWABIAN_KNZ_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = SWABIAN_KNZ_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = SWABIAN_KNZ_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = SWABIAN_KNZ_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = SWABIAN_KNZ_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = SWABIAN_KNZ_COUNT_MALE  # consort uses the ruler form
+		2 = SWABIAN_KNZ_DUKE_MALE  # consort uses the ruler form
+		3 = SWABIAN_KNZ_KING_MALE  # consort uses the ruler form
+		4 = SWABIAN_KNZ_EMPEROR_MALE  # consort uses the ruler form
+		5 = SWABIAN_KNZ_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = SWABIAN_KNZ_COUNT_FEMALE  # count_theocracy_female_christianity_religion
+		2 = SWABIAN_KNZ_DUKE_FEMALE  # duke_theocracy_female_christianity_religion
+		3 = SWABIAN_KNZ_KING_FEMALE  # king_theocracy_female_christianity_religion
+		4 = SWABIAN_KNZ_EMPEROR_FEMALE  # emperor_theocracy_female_christianity_religion
+		5 = SWABIAN_KNZ_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		tag = KNZ
+	}
+}
+
+
 swabian_titles = {
-# CK3 ladders for ALS(r1), GRI(r1)
+# CK3 ladders for ALS(r1), GRI(r1), BEG(r1), BBB(r1), ZUR(r1), SUD(r1) - feudal CK3 government
 	rank = {
 		1 = SWABIAN_COUNTY  # county_feudal
 		2 = SWABIAN_DUCHY  # duchy_feudal
@@ -15850,7 +16902,138 @@ swabian_titles = {
 
 	trigger = {
 		government = monarchy
+		has_country_flag = kar_gov_feudal_government
 		primary_culture = swabian
+	}
+}
+
+
+vlach_titles = {
+# CK3 ladders for GIU(r1), CEA(r1), TIG(r1), IAS(r1), SEE(r1)
+	rank = {
+		1 = VLACH_COUNTY  # county_tribal
+		2 = VLACH_DUCHY  # duchy_tribal
+		3 = VLACH_KINGDOM  # kingdom_tribal
+		4 = VLACH_EMPIRE  # empire_tribal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = VLACH_COUNT_MALE  # count_tribal_male
+		2 = VLACH_DUKE_MALE  # duke_tribal_male
+		3 = VLACH_KING_MALE  # king_tribal_male
+		4 = VLACH_EMPEROR_MALE  # emperor_tribal_male
+		5 = VLACH_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = VLACH_COUNT_FEMALE  # count_tribal_female
+		2 = VLACH_DUKE_FEMALE  # duke_tribal_female
+		3 = VLACH_KING_FEMALE  # king_tribal_female
+		4 = VLACH_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = VLACH_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = VLACH_COUNT_MALE  # consort uses the ruler form
+		2 = VLACH_DUKE_MALE  # consort uses the ruler form
+		3 = VLACH_KING_MALE  # consort uses the ruler form
+		4 = VLACH_EMPEROR_MALE  # consort uses the ruler form
+		5 = VLACH_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = VLACH_COUNT_FEMALE  # count_tribal_female
+		2 = VLACH_DUKE_FEMALE  # duke_tribal_female
+		3 = VLACH_KING_FEMALE  # king_tribal_female
+		4 = VLACH_EMPEROR_FEMALE  # emperor_tribal_female
+		5 = VLACH_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = vlach
+	}
+}
+
+
+catalan_titles = {
+# CK3 ladders for GIR(r1), URG(r1)
+	rank = {
+		1 = CATALAN_COUNTY  # county_feudal
+		2 = CATALAN_DUCHY  # duchy_feudal
+		3 = CATALAN_KINGDOM  # kingdom_feudal
+		4 = CATALAN_EMPIRE  # empire_feudal
+		5 = HEGEMONY
+	}
+
+	ruler_male = {
+		1 = CATALAN_COUNT_MALE  # count_feudal_male
+		2 = CATALAN_DUKE_MALE  # duke_feudal_male
+		3 = CATALAN_KING_MALE  # king_feudal_male
+		4 = CATALAN_EMPEROR_MALE  # emperor_feudal_male
+		5 = CATALAN_HEGEMON_MALE  # hegemon
+	}
+
+	ruler_female = {
+		1 = CATALAN_COUNT_FEMALE  # count_feudal_female
+		2 = CATALAN_DUKE_FEMALE  # duke_feudal_female
+		3 = CATALAN_KING_FEMALE  # king_feudal_female
+		4 = CATALAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CATALAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	consort_male = {
+		1 = CATALAN_COUNT_MALE  # consort uses the ruler form
+		2 = CATALAN_DUKE_MALE  # consort uses the ruler form
+		3 = CATALAN_KING_MALE  # consort uses the ruler form
+		4 = CATALAN_EMPEROR_MALE  # consort uses the ruler form
+		5 = CATALAN_HEGEMON_MALE  # consort uses the ruler form
+	}
+
+	consort_female = {
+		1 = CATALAN_COUNT_FEMALE  # count_feudal_female
+		2 = CATALAN_DUKE_FEMALE  # duke_feudal_female
+		3 = CATALAN_KING_FEMALE  # king_feudal_female
+		4 = CATALAN_EMPEROR_FEMALE  # emperor_feudal_female
+		5 = CATALAN_HEGEMON_FEMALE  # hegemon_female
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+		4 = HEIR_fem
+		5 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = catalan
 	}
 }
 

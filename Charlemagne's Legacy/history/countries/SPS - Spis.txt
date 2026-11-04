@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = slovien
+religion = christian_faith
+capital = 1318
+religious_school = roman_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Velemír"
+		dynasty = "Divinsky"
+		birth_date = 843.1.1
+		death_date = 902.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Horislav"
+		monarch_name = "Horislav"
+		dynasty = "Divinsky"
+		birth_date = 866.1.1
+		death_date = 906.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

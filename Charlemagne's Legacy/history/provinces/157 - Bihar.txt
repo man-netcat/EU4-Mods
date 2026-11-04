@@ -3,6 +3,7 @@
 owner = VSG
 controller = VSG
 add_core = VSG
+add_core = BIH
 capital = "Oradea"
 culture = avar
 religion = tengri_pagan

@@ -3,6 +3,7 @@
 owner = TUS
 controller = TUS
 add_core = TUS
+add_core = PIS
 capital = "Pisa"
 culture = italian
 religion = christian_faith

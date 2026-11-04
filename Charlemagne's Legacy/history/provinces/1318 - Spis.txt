@@ -3,6 +3,7 @@
 owner = GMA
 controller = GMA
 add_core = GMA
+add_core = SPS
 capital = "Spiš"
 culture = slovien
 religion = slavic_pagan

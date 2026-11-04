@@ -3,6 +3,7 @@
 owner = NRM
 controller = NRM
 add_core = NRM
+add_core = EEE
 capital = "Rouen"
 culture = french
 religion = christian_faith

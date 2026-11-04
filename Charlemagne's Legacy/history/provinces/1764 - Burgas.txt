@@ -4,6 +4,7 @@ owner = BUL
 controller = BUL
 # add_core = TUR
 add_core = BUL
+add_core = BBU
 capital = "Burgas"
 culture = greek
 religion = christian_faith

@@ -3,6 +3,7 @@
 owner = TEM
 controller = TEM
 add_core = TEM
+add_core = TES
 capital = "Temesvár"
 culture = avar
 religion = tengri_pagan

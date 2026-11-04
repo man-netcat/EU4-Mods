@@ -3,6 +3,7 @@
 owner = SPL
 controller = SPL
 add_core = SPL
+add_core = ANC
 capital = "Ancona"
 culture = italian
 religion = christian_faith

@@ -3,6 +3,7 @@
 owner = ACA
 controller = ACA
 add_core = ACA
+add_core = LAO
 capital = "Mystras"
 culture = greek
 religion = christian_faith

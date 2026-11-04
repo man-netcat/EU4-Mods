@@ -3,6 +3,7 @@
 owner = GUY
 controller = GUY
 add_core = GUY
+add_core = BBE
 capital = "Pau"
 culture = basque
 religion = christian_faith

@@ -3,6 +3,7 @@
 owner = BAV
 controller = BAV
 add_core = BAV
+add_core = AUG
 capital = "Memmingen"
 culture = swabian
 religion = christian_faith

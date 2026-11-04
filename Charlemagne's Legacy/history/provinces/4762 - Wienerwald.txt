@@ -3,6 +3,7 @@
 owner = BAV
 controller = BAV
 add_core = BAV
+add_core = WIN
 capital = "Sankt Pölten"
 culture = bavarian
 religion = christian_faith

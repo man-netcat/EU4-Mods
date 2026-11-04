@@ -3,6 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
+add_core = CAE
 capital = "Viseu"
 culture = andalusian
 religion = christian_faith

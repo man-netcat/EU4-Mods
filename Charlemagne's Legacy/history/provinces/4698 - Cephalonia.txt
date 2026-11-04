@@ -1,6 +1,7 @@
 owner = EPI
 controller = EPI
 add_core = EPI
+add_core = CEH
 capital = "Agios Georgios"
 culture = greek
 religion = christian_faith

@@ -3,6 +3,7 @@
 owner = KHZ
 controller = KHZ
 add_core = KHZ
+add_core = KKK
 capital = "Bryansk"
 culture = russian
 religion = slavic_pagan

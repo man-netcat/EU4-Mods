@@ -64,7 +64,7 @@ def step_releasables():
         provs = _provinces(tag)
         year = by_title[BY_TAG[tag].ck3_title]
         if year is None:
-            raise SystemExit(f"{tag} ({BY_TAG[tag].ck3_title}) is never independent in CK3 between {FIRST} and {LAST}")
+            continue  # a vassal count all his life in CK3: dormant cores only (rebels or a manual release wake it)
         years[tag] = year
         eid = f"kar_releasables.{n}"
         cores = "\n".join(f"\t\t\t{p} = {{ limit = {{ owned_by = ROOT }} add_unrest = 5 }}" for p in provs)

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = anglo_saxon
+religion = christian_faith
+capital = 4374
+religious_school = roman_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Alfred"
+		dynasty = "Wessex"
+		birth_date = 849.1.1
+		death_date = 899.10.26
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	heir = {
+		name = "Æthelred"
+		monarch_name = "Æthelred"
+		dynasty = "Wessex"
+		birth_date = 840.1.1
+		death_date = 871.1.1
+		claim = 90
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

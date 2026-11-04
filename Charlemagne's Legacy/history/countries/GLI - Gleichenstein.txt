@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = christian_faith
+capital = 63
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Esiko II"
+		dynasty = "Esikonen"
+		birth_date = 812.1.1
+		death_date = 896.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hiddi"
+		monarch_name = "Hiddi II"
+		dynasty = "Esikonen"
+		birth_date = 814.1.1
+		death_date = 877.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

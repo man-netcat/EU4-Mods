@@ -3,6 +3,7 @@
 owner = ADU
 controller = ADU
 add_core = ADU
+add_core = EVO
 capital = "Évora"
 culture = andalusian
 religion = christian_faith

@@ -1,6 +1,7 @@
 owner = GTH
 controller = GTH
 add_core = GTH
+add_core = CAC
 capital = "Carcassonne"
 culture = occitan
 religion = christian_faith

@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = norse
+religion = norse_pagan
+capital = 6
+religious_school = norse_pagan_school
+867.1.1 = {
+	monarch = {
+		name = "Sigfrið"
+		dynasty = "Akra"
+		birth_date = 825.1.1
+		death_date = 885.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Haraldr"
+		monarch_name = "Haraldr"
+		dynasty = "Akra"
+		birth_date = 855.1.1
+		death_date = 915.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_tribal_government
+}

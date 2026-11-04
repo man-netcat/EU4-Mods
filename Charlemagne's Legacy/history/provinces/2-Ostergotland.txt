@@ -3,6 +3,7 @@
 owner = UPL
 controller = UPL
 add_core = UPL
+add_core = OST
 capital = "Linköping"
 culture = norse
 religion = norse_pagan

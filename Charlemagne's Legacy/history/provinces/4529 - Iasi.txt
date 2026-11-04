@@ -3,6 +3,7 @@
 owner = BUC
 controller = BUC
 add_core = BUC
+add_core = IAS
 capital = "Iasi"
 culture = russian
 religion = slavic_pagan

@@ -3,6 +3,7 @@
 owner = HRF
 controller = HRF
 add_core = HRF
+add_core = LIC
 capital = "Lincoln"
 culture = anglo_saxon
 religion = christian_faith

@@ -1,6 +1,7 @@
 owner = THE
 controller = THE
 add_core = THE
+add_core = MOY
 capital = "Siroz"
 culture = greek
 religion = christian_faith

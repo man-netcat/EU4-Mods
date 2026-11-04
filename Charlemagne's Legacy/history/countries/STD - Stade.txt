@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = saxon
+religion = christian_faith
+capital = 54
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Lothar"
+		dynasty = "Udonen"
+		birth_date = 830.1.1
+		death_date = 880.2.2
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Lothar"
+		monarch_name = "Lothar II"
+		dynasty = "Udonen"
+		birth_date = 865.1.1
+		death_date = 929.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

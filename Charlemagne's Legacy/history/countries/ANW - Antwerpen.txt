@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = dutch
+religion = christian_faith
+capital = 95
+religious_school = carolingian_rite_school
+867.1.1 = {
+	monarch = {
+		name = "Ansfried"
+		dynasty = "Teisterbant"
+		birth_date = 820.1.1
+		death_date = 868.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Hildiward"
+		monarch_name = "Hildiward"
+		dynasty = "Teisterbant"
+		birth_date = 845.1.1
+		death_date = 868.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+
+	set_country_flag = kar_gov_feudal_government
+}

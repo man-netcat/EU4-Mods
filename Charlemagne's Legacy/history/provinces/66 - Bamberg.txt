@@ -3,6 +3,7 @@
 owner = WFR
 controller = WFR
 add_core = WFR
+add_core = COB
 capital = "Bamberg"
 culture = franconian
 religion = christian_faith
