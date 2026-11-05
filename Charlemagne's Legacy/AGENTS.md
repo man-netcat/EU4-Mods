@@ -176,6 +176,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   independent in CK3 (868-1100) the tag has no dated event, only the seeded cores (rebels or a manual release wake it); the first sixteen and a few of
   these also get their independence-year event. Names equal to a free base-game tag reuse it (`retag.py suggest`: Osnabruck, Coburg, Augsburg, Nassau, Munster, Brabant, Liege, Luxembourg, Genoa, Parma, Verona, Mantua, Pisa, Siena, Malta (JAI), Auvergne, Chernigov, Smolensk,
   Konstanz, Aachen, Cleves, Passau, Bologna). All new flags are placeholders.
+- Vanilla Byzantine flavour is emptied (user, 5 Nov 2026): `flavorBYZ.txt` (the 29 events with BYZ_ flags, missions and modifiers nothing sets, plus the Sack of
+  Venice and the other flavor_byz ones) and `Byzantine_Decisions.txt` (the Justinian decision, gated on a flag nobody sets) keep only their namespace and comments, so
+  the same-filename override still replaces vanilla's. `steps/vanilla_scripts.py` `DEAD_BYZANTINE_*`. Nothing of ours references the cut ids (the mission-branch
+  lines in MissionDecisions.txt are commented out). Byzantine missions and reform of our own are still to write.
 - Rule (user, 30 Oct 2026): a tag whose name equals a free base-game tag's name reuses that tag, whatever the government (`python3 tools/retag.py suggest 0` lists
   them; `retag.py OLD NEW`). Done for Mann, Magdeburg, Ulm, Opole, Strasbourg and the Byzantine and Abbasid governors Epirus (EPI), Athens (ATH), Shammar (SHM)
   and Medina (MDA). Not done where the vanilla tag is already a formable of ours: Lithuania (LIT), Bohemia (BOH) and Castile (CAS) stay the formables, and the

@@ -34,6 +34,13 @@ VANILLA_STUB_DECISION_FILES = {
 }
 
 
+#: Vanilla Byzantine flavour that can never fire in a 867 world: its triggers hang on BYZ_ flags, missions and
+#: modifiers nothing here sets (the Justinian decision flag, the branching missions). Emptied whole (user, 5 Nov 2026);
+#: the event file keeps its namespace line, the decision file ends empty, so the same-filename override still wins.
+DEAD_BYZANTINE_EVENT_FILES = {"flavorBYZ.txt"}
+DEAD_BYZANTINE_DECISION_FILES = {"Byzantine_Decisions.txt"}
+
+
 def all_known_tags():
     """Every 3-letter tag vanilla can name. Ours are irrelevant here: we
     want vanilla's tag-specific content invalid, whatever names it uses."""
@@ -104,9 +111,12 @@ def step_events() -> None:
         segs = split_event_blocks(text)
         keep = []
         for kind, lines in segs:
-            if kind == "event" and event_mentions_tag("\n".join(lines), tagset):
+            if kind == "event" and (fn in DEAD_BYZANTINE_EVENT_FILES
+                                    or event_mentions_tag("\n".join(lines), tagset)):
                 dropped += 1
                 continue
+            if fn in DEAD_BYZANTINE_EVENT_FILES and not re.match(r"^\s*(namespace\b|#|$)", lines[0]):
+                continue  # stray top-level script (vanilla leaves a trigger line loose here)
             keep.append(lines)
             if kind == "event":
                 kept_events += 1
@@ -184,7 +194,8 @@ def step_filter_decisions() -> None:
         segs = split_decision_blocks(text)
         body = []
         for kind, key, lines in segs:
-            if kind == "decision" and event_mentions_tag("\n".join(lines), tagset):
+            if kind == "decision" and (fn in DEAD_BYZANTINE_DECISION_FILES
+                                       or event_mentions_tag("\n".join(lines), tagset)):
                 dropped.append(f"{fn}:{key}")
                 continue
             body.append(lines)
