@@ -162,7 +162,7 @@ PATCHES = {
    [],
    [
     "",
-    "# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.1.",
+    "# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.0.",
     "# Engine (CCountry::CalcGovernmentRank) clamps a subject's rank down to its",
     "# subject type's max_government_rank; CK3-true vassals (TRA/VSG/GTH/DAL/",
     "# SIC/CST/ARG/PRT) hold duchy titles and must read as Duchy (user 18 Oct 2026).",
@@ -201,8 +201,8 @@ PATCHES = {
     "# BEGIN kar theme",
     "# The Byzantine themes: governors the emperor appointed, not rivals of the throne. A vassal in every respect the",
     "# scripts see (count = vassal) but no relation slot, no relative-power liberty pull (a tiny capital against twenty",
-    "# governors would put them all in revolt), loyal by default, and half of their force limit and manpower go to the",
-    "# emperor, whose own few counties carry no army (user request, 29 Oct 2026).",
+    "# governors would put them all in revolt), loyal by default, and (like every subject) add nothing to the",
+    "# emperor's force limit or manpower: troops come from development alone (user, 5 Nov 2026).",
     "theme_subject_type = {",
     "\tcopy_from = vassal",
     "\tcount = vassal",
@@ -210,8 +210,8 @@ PATCHES = {
     "\trelative_power_class = 0",
     "\tliberty_desire_development_ratio = 0.0",
     "\tbase_liberty_desire = -25.0",
-    "\tforcelimit_to_overlord = 0.25",
-    "\tmanpower_to_overlord = 0.25",
+    "\tforcelimit_to_overlord = 0.0",
+    "\tmanpower_to_overlord = 0.0",
     "}",
     "# END kar theme",
     "",
@@ -227,7 +227,7 @@ PATCHES = {
     "\tforcelimit_to_overlord = 0.2"
    ],
    [
-    "\tforcelimit_to_overlord = 0.1"
+    "\tforcelimit_to_overlord = 0.0\t\t\t\t\t# marches add nothing either: force limit comes from development alone"
    ]
   ]
  ],

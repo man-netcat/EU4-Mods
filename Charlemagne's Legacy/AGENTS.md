@@ -133,7 +133,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   in the comment on the family title (`d_nf_hexavoulis = { # Hexavoulis (Epirus)` -> Epirus; `tagloc.family_region`); the code is the region's first free letters.
   They hold `theme_subject_type` (own block in `vanillapatch.py`, marked BEGIN/END kar theme): count = vassal, no relation slot (twenty-odd vassals would
   blow the empire's limit of 8), `relative_power_class` 0 and no development-ratio liberty (a 7-province capital against 23 governors would put them
-  all in revolt), base liberty -25, and 25% of their force limit and manpower go to the emperor (whose three counties carry no army). Historically
+  all in revolt), base liberty -25, and, like every subject, they add nothing to the emperor's force limit or manpower. Historically
   the themes were appointed strategoi, not hereditary lords, and pronoia is 11th-century - chosen anyway to follow CK3. Four provinces CK3 does not
   hold under the Basileus went to their CK3 owners (Apulia to BNV, Kaffa to WEE, Ohrid to BUL, Kalos Limen to KHZ). Placeholder flags; untested in-game.
 - The Abbasid Caliphate's governors are 16 vassal tags (user decision, 29 Oct 2026), built like the themes: the duchy-rank `d_*` direct vassals of the
@@ -146,8 +146,7 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   may sit in the realm or a governor. The pass moved Phrygia to Opsikion, Satala to Khaldia, Philippopolis to BYZ, Batina and Samman to ARB,
   Maragha to Azerbaijan, Tihama to Medina and Lar to Fars (Yemen's capital became Sanaa).
 - `python3 tools/troops.py [N|--all|--csv]` ranks every sovereign tag by the force limit and manpower it can field (own, from governor subjects, and the
-  whole bloc incl. vassals); a model from the base-game static modifiers, not in-game numbers. Governors give 25% (was 50%: it put Byzantium and the
-  Caliphate at ~90 force limit, above every realm but Tang; at 25% they sit at ~53, between Kosala and Karnata).
+  whole bloc incl. vassals); a model from the base-game static modifiers, not in-game numbers. No subject adds force limit or manpower to its overlord (vassal, march and the governor type are all 0; the colonial types keep vanilla's values): troops come from development alone (user, 5 Nov 2026; governors were 50%, then 25%).
 - Lotharingia is partitioned by `events/LotharingianPartition.txt` (user decision, 30 Oct 2026; history, not CK3: CK3 gives the whole kingdom to Charles
   the Bald on 869.8.8 and to Louis the Younger on 877.6.10 and has no Meerssen). `kar_lotharingia.1` (LOT, from 869.8.9, after Lothair II's death in the
   country history): the AI accepts, the treaty (`.4`) follows a year later and hands LOT's provinces to FRA (13: Hainaut, Brabant, Liege, Breda,

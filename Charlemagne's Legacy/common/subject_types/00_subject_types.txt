@@ -1,5 +1,5 @@
 
-# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.1.
+# Karolingian: vanilla copy, three edits - vassal max_government_rank 1 -> 0, vassal forcelimit_to_overlord 0.1 -> 0.0, march 0.2 -> 0.0.
 # Engine (CCountry::CalcGovernmentRank) clamps a subject's rank down to its
 # subject type's max_government_rank; CK3-true vassals (TRA/VSG/GTH/DAL/
 # SIC/CST/ARG/PRT) hold duchy titles and must read as Duchy (user 18 Oct 2026).
@@ -301,8 +301,8 @@ vassal = {
 # BEGIN kar theme
 # The Byzantine themes: governors the emperor appointed, not rivals of the throne. A vassal in every respect the
 # scripts see (count = vassal) but no relation slot, no relative-power liberty pull (a tiny capital against twenty
-# governors would put them all in revolt), loyal by default, and half of their force limit and manpower go to the
-# emperor, whose own few counties carry no army (user request, 29 Oct 2026).
+# governors would put them all in revolt), loyal by default, and (like every subject) add nothing to the
+# emperor's force limit or manpower: troops come from development alone (user, 5 Nov 2026).
 theme_subject_type = {
 	copy_from = vassal
 	count = vassal
@@ -310,8 +310,8 @@ theme_subject_type = {
 	relative_power_class = 0
 	liberty_desire_development_ratio = 0.0
 	base_liberty_desire = -25.0
-	forcelimit_to_overlord = 0.25
-	manpower_to_overlord = 0.25
+	forcelimit_to_overlord = 0.0
+	manpower_to_overlord = 0.0
 }
 # END kar theme
 
@@ -328,7 +328,7 @@ march = {
 	military_focus = 1.5
 	base_liberty_desire = -15.0
 	can_be_annexed = no
-	forcelimit_to_overlord = 0.1
+	forcelimit_to_overlord = 0.0					# marches add nothing either: force limit comes from development alone
 	is_march = yes
 	forms_trade_companies = no
 

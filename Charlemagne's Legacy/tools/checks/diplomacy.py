@@ -204,11 +204,11 @@ def subject_types_keep_ck3_true_vassal_ranks() -> None:
     open(_tmp, "w", encoding="cp1252").write(msub_text)
     msub = _code_lines(_tmp)
     sdiff = [(a, b) for a, b in zip(vsub, msub) if a != b]
-    # the mod's edits: the vassal rank cap, and vassals/marches adding less force limit to the overlord
+    # the mod's edits: the vassal rank cap, and vassals and marches adding no force limit to the overlord
     expected_sdiff = [
         ("max_government_rank = 1", "max_government_rank = 0"),
         ("forcelimit_to_overlord = 0.1", "forcelimit_to_overlord = 0.0"),
-        ("forcelimit_to_overlord = 0.2", "forcelimit_to_overlord = 0.1"),
+        ("forcelimit_to_overlord = 0.2", "forcelimit_to_overlord = 0.0"),
     ]
     note(
         len(vsub) == len(msub) and sdiff == expected_sdiff,
