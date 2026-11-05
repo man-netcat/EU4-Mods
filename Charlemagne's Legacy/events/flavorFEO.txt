@@ -6,53 +6,6 @@ namespace = flavor_feo
 
 
 
-country_event = {
-	id = flavor_feo.2
-	title = "flavor_feo.2.t"
-	desc = "flavor_feo.2.d"
-	picture = CITY_VIEW_eventPicture
-
-	is_triggered_only = yes
-
-	option = {	
-		name = "flavor_feo.2.a"
-		
-		ai_chance = { factor = 3 }
-		
-		custom_tooltip = FEO_FORMING_BYZANTIUM_GIVES_US_RULER_STATS
-		set_country_flag = feo_byzantium_formation_stats_flag
-		
-	}
-	option = {	
-		name = "flavor_feo.2.b"
-		
-		ai_chance = { factor = 1 }
-		
-		custom_tooltip = FEO_MOVE_GOTHIC_TO_GERMAN
-		hidden_effect = {
-			change_primary_culture = gothic_ger
-			remove_accepted_culture = goths
-			every_owned_province = {
-				limit = {
-					culture = goths
-				}
-				change_culture = gothic_ger
-			}
-			set_ruler_culture = gothic_ger
-			if = {
-				limit = {
-					has_heir = yes
-				}
-				set_heir_culture = gothic_ger
-			}
-		}
-		#custom_tooltip = " "
-		#custom_tooltip = FEO_UPGRADE_THEODORO_IDEAS
-		#set_country_flag
-		custom_tooltip = " "
-		add_government_reform = gothic_monarchy_reform
-	}
-}
 
 
 country_event = {

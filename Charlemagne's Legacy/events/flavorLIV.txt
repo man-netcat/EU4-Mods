@@ -372,54 +372,6 @@ country_event = {
 }
 
 # The Livonian Order declares the Great Schism mended
-country_event = {
-	id = flavor_liv.7
-	title = flavor_liv.7.t
-	desc = flavor_liv.7.desc
-	picture = RELIGION_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = flavor_liv.7.a
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				ai_attitude = {
-					who = FROM
-					attitude = attitude_rivalry
-				}
-				ai_attitude = {
-					who = FROM
-					attitude = attitude_hostile
-				}
-				ai_attitude = {
-					who = FROM
-					attitude = attitude_outraged
-				}
-			}
-		}
-		change_religion = catholic
-		capital_scope = {
-			if = {
-				limit = {
-					NOT = { religion = catholic }
-				}
-				change_religion = catholic
-			}
-		}
-		add_stability = -1
-		add_prestige = -30
-	}
-	option = {
-		name = flavor_liv.7.b
-		ai_chance = {
-			factor = 1
-		}
-		add_stability = -3
-	}
-}
 
 # The Livonian Order gains an additional center of trade or trade post in L�beck
 country_event = {

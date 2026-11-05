@@ -187,89 +187,8 @@ country_event = {
 }
 
 # Charter a Guild of St. Luke
-country_event = {
-	id = cultural_event.6
-	title = cultural_event.6.t
-	desc = cultural_event.6.d
-	picture = IMPORTANT_STATUE_eventPicture
-
-	trigger = {
-		religion = catholic
-		NOT = {
-			has_country_flag = guild_of_st_luke
-		}
-		has_idea = patron_of_art
-		years_of_income = 0.2
-		adm_power = 10
-	}
-	
-	mean_time_to_happen = {
-		months = 2400
-	}
-	
-	immediate = {
-		set_country_flag = guild_of_st_luke
-	}
-	
-	option = {
-		name = cultural_event.4.a
-		add_country_modifier = {
-			name = "guild_of_st_luke"
-			duration = 36500
-		}
-		add_years_of_income = -0.2
-		add_adm_power = -10
-	}
-	option = {
-		name = cultural_event.4.b
-		add_prestige = -5
-	}
-}
 
 # Golden Age of Dutch Painting
-country_event = {
-	id = cultural_event.7
-	title = cultural_event.7.t
-	desc = cultural_event.7.d
-	picture = IMPORTANT_STATUE_eventPicture
-
-	trigger = {
-		owns = 97
-		97 = {
-			religion = reformed
-			controller = { tag = root }
-		}
-		NOT = {
-			has_country_flag = dutch_masters
-		}
-		current_age = age_of_absolutism
-		has_idea = patron_of_art
-		years_of_income = 0.6
-		adm_power = 10
-	}
-	
-	mean_time_to_happen = {
-		months = 160
-	}
-	
-	immediate = {
-		set_country_flag = dutch_masters
-	}
-	
-	option = {
-		name = cultural_event.4.a
-		add_country_modifier = {
-			name = "dutch_masters"
-			duration = 18250
-		}
-		add_years_of_income = -0.6
-		add_adm_power = -10
-	}
-	option = {
-		name = cultural_event.4.b
-		add_prestige = -5
-	}
-}
 
 # Diwani Script
 country_event = {
@@ -311,54 +230,6 @@ country_event = {
 }
 
 # The Way of Tea
-country_event = {
-	id = cultural_event.9
-	title = cultural_event.9.t
-	desc = cultural_event.9.d
-	picture = TRADEGOODS_eventPicture
-
-	trigger = {
-		religion = shinto
-		NOT = {
-			has_country_modifier = way_of_tea
-		}
-		NOT = {
-			any_country = {
-				capital_scope = { has_province_modifier = controls_tea_trade }
-			}
-		}
-		trading_part = {
-			trade_goods = tea
-			value = 0.1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-	}
-	
-	option = {
-		name = cultural_event.8.a
-		every_country = {
-			limit = { has_country_modifier = way_of_tea }
-			remove_country_modifier = way_of_tea
-		}
-		add_country_modifier = {
-			name = "way_of_tea"
-			duration = -1
-		}
-		capital_scope = {
-			add_province_modifier = {
-				name = "controls_tea_trade"
-				duration = 365
-			}			
-		}
-	}
-	option = {
-		name = cultural_event.8.b
-		add_prestige = -10
-	}
-}
 
 # Endorse Renaissance Philosophy
 country_event = {
@@ -411,46 +282,6 @@ country_event = {
 }
 
 # The South German Organ Tradition
-country_event = {
-	id = cultural_event.11
-	title = cultural_event.11.t
-	desc = cultural_event.11.d
-	picture = CULTURE_eventPicture
-
-	trigger = {
-		current_age = age_of_absolutism
-		NOT = { has_country_flag = south_german_organ_tradition }
-		capital_scope = { continent = europe }
-		culture_group = germanic
-		any_owned_province = {
-			has_building = temple
-		}
-		adm_power = 30
-		years_of_income = 0.5
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-	}
-	
-	immediate = {
-		set_country_flag = south_german_organ_tradition
-	}
-	
-	option = {
-		name = cultural_event.4.a
-		add_country_modifier = {
-			name = "south_german_organ_tradition"
-			duration = 10950
-		}
-		add_adm_power = -30
-		add_years_of_income = -0.5
-	}
-	option = {
-		name = cultural_event.4.b
-		add_prestige = -5
-	}
-}
 
 # Support Baroque Music
 country_event = {

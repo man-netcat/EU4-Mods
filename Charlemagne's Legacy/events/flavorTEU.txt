@@ -205,56 +205,6 @@ country_event = {
 }
 
 # Join the HRE?
-country_event = {
-	id = flavor_teu.17
-	title = flavor_teu.17.t
-	desc = flavor_teu.17.desc
-	picture = HRE_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# We must seek out the protection of the HRE
-		name = flavor_teu.17.a
-		trigger = {
-			hre_size = 1
-		}
-		if = {
-			limit = { has_dlc = "Emperor" }
-			custom_tooltip = burgundy_asks_to_join_empire_tt
-			emperor = {
-				set_imperial_incident = incident_teutonic_order_wants_to_join
-			}
-		}
-		else = {
-			custom_tooltip = flavor_teu.17.a.tt
-			hidden_effect = {
-				emperor = {
-					country_event = {
-						id = flavor_teu.28
-					}
-				}
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-	
-	option = {	# We can hold the ground by our own
-		name = flavor_teu.17.b
-		add_mil_power = 100
-		add_country_modifier = {
-			name = teu_rejects_imperial_protection
-			duration = 9125
-		}
-		reverse_add_opinion = {
-			who = emperor
-			modifier = teu_rejects_the_hre
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
 
 # Teutonic/Prussian Path between Conquest of Germany and becoming an own kingdom
 country_event = {
@@ -659,54 +609,6 @@ country_event = {
 # The Fate of Moscow
 
 # The Teutonic Order declares the Great Schism mended
-country_event = {
-	id = flavor_teu.38
-	title = flavor_teu.38.t
-	desc = flavor_teu.38.desc
-	picture = RELIGION_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = flavor_teu.38.a
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				ai_attitude = {
-					who = FROM
-					attitude = attitude_rivalry
-				}
-				ai_attitude = {
-					who = FROM
-					attitude = attitude_hostile
-				}
-				ai_attitude = {
-					who = FROM
-					attitude = attitude_outraged
-				}
-			}
-		}
-		change_religion = catholic
-		capital_scope = {
-			if = {
-				limit = {
-					NOT = { religion = catholic }
-				}
-				change_religion = catholic
-			}
-		}
-		add_stability = -1
-		add_prestige = -30
-	}
-	option = {
-		name = flavor_teu.38.b
-		ai_chance = {
-			factor = 1
-		}
-		add_stability = -2
-	}
-}
 
 # The Teutonic Order reforms into a Crusader Order
 country_event = {

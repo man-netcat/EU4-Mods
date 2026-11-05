@@ -301,42 +301,6 @@ country_event = {
 }
 
 # $COUNTRY$ asks for advise from the Pope
-country_event = {
-	id = papacy_events.26
-	title = papacy_events.26.t
-	desc = papacy_events.26.d
-	picture = RELIGION_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = papacy_events.26.a
-		ai_chance = {
-			factor = 90
-		}
-		add_devotion = 10
-		FROM = {
-			country_event = {
-				id = papacy_events.27
-				tooltip = papacy_events.27.t
-			}
-		}
-	}
-	
-	option = {
-		name = papacy_events.26.b
-		ai_chance = {
-			factor = 10
-		}
-		add_reform_desire = -0.05
-		FROM = {
-			country_event = {
-				id = papacy_events.28
-				tooltip = papacy_events.28.t
-			}
-		}
-	}
-}
 
 # Pope says to condemn witch trials
 

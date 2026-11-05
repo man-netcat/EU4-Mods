@@ -400,46 +400,6 @@ country_event = {
 
 
 
-country_event = {
-	id = flavor_tim.15
-	title = "flavor_tim.15.t"
-	desc = "flavor_tim.15.d"
-	picture = RELIGIOUS_TURMOIL_eventPicture
-	
-	is_triggered_only = yes
-	
-	
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = flavor_tim.15.a
-		
-		change_primary_culture = persian
-					
-		custom_tooltip = TIM_will_be_necessary_to_form_persia
-		
-		custom_tooltip = " "
-		 
-		add_accepted_culture_or_dip_power = {
-			culture = uzbehk
-			dip_reward = yes
-		}
-	}
-	
-	option = {
-		ai_chance = {
-			factor = 0
-		}
-		name = flavor_tim.15.b
-		
-		add_country_modifier = {
-			name = TIM_dev_cost_until_persia_formation
-			duration = -1
-			desc = TIM_until_persia
-		}
-	}
-}
 
 country_event = {
 	id = flavor_tim.16

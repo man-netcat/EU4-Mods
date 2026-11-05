@@ -25,52 +25,6 @@ normal_or_historical_nations = yes
 
 
 # The Hussites of Bohemia (Papal reaction)
-country_event = {
-	id = flavor_boh.9
-	title = flavor_boh.9.t
-	desc = flavor_boh.9.d
-	picture = {	
-		trigger = {
-			has_dlc = "Emperor"
-		}
-		picture = ADULT_BAPTISME_eventPicture
-	}
-	picture = {	
-		trigger = {
-			NOT = { has_dlc = "Emperor" }
-		}
-		picture = POPE_PREACHING_eventPicture
-	}
-	
-	is_triggered_only = yes
-
-	option = {
-		name = flavor_boh.9.a #Condemn the [From.Monarch.GetTitle]
-		ai_chance = { factor = 90 }
-		add_devotion = 10
-		add_reform_desire = -0.01
-		FROM = {
-			country_event = { id = flavor_boh.10 }
-			add_opinion = {
-				who = root
-				modifier = boh_heretic_hussite
-			}
-		}
-	}
-	option = {
-		name = flavor_boh.9.b #We must seek Reconciliation
-		ai_chance = { factor = 10 }
-		add_reform_desire = 0.005
-		add_devotion = -10
-		FROM = {
-			country_event = { id = flavor_boh.11 }
-			add_opinion = {
-				who = root
-				modifier = boh_papal_reconciled
-			}
-		}
-	}
-}
 
 # The Pope Condemns [Root.Monarch.GetName]
 country_event = {
@@ -126,38 +80,6 @@ province_event = {
 # 1.37 Bohemia by Parmelion
 ########################################
 
-country_event = {
-    id = flavor_boh.14
-    title = none
-    desc = none
-    picture = none
-    hidden = yes
-    is_triggered_only = yes
-    option = {
-		ai_chance = { 
-			factor = 50
-			modifier = {
-				factor = 0
-				NOT = { religion = catholic }
-			}
-		}
-        set_country_flag = boh_catholic_missions
-        clr_country_flag = boh_hussite_missions
-        swap_non_generic_missions = yes
-    }
-    option = {
-		ai_chance = { 
-			factor = 50
-			modifier = {
-				factor = 0
-				NOT = { religion = hussite }
-			}
-		}
-        set_country_flag = boh_hussite_missions
-        clr_country_flag = boh_catholic_missions
-        swap_non_generic_missions = yes
-    }
-}
 
 #The Aftermath of the Hussite Wars
 country_event = {

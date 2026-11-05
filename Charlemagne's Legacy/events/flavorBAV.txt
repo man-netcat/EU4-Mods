@@ -158,48 +158,6 @@ country_event = {
 #The Religious Mandate
 
 #The Religious Mandate Expires
-country_event = {
-	id = new_flavour_bav.181
-	title = new_flavour_bav.181.name
-	desc = new_flavour_bav.181.desc
-	picture = REFORM_eventPicture
-
-	fire_only_once = yes
-
-	trigger = {
-		has_country_modifier = bav_religious_mandate_mod
-		OR = {
-			current_age = age_of_absolutism
-			NOT = {
-				any_country = {
-					OR = {
-						religion = protestant
-						religion = reformed
-					}
-				}
-			}
-		}
-		all_owned_province = {
-			OR = {
-				religion = root
-				NOT = { religion_group = root }
-			}
-		}
-		had_global_flag = {
-			flag = reformation_started
-			days = 18250
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-	}
-
-	option = {
-		name = new_flavour_bav.181.A
-		remove_country_modifier = bav_religious_mandate_mod
-	}
-}
 
 
 #Hans Steininger's Beard

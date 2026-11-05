@@ -260,38 +260,6 @@ namespace = new_flavour_hun
 
 
 #The Greeks in Constantinople (used by Austria too)
-country_event = {
-	id = new_flavour_hun.3
-	title = new_flavour_hun.3.name
-	desc = new_flavour_hun.3.desc
-	picture = CITY_VIEW_eventPicture
-
-	is_triggered_only = yes
-
-	option = { #Bring back the Greeks
-		name = new_flavour_hun.3.A
-
-		151 = {
-			change_culture = greek
-			change_religion = orthodox
-		}
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-	option = { #Leave it as is
-		name = new_flavour_hun.3.B
-
-		151 = {
-			add_nationalism = -5
-		}
-
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
 
 ########################################
 # New Hungarian flavor events for 1.37

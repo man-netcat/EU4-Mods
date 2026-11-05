@@ -169,62 +169,6 @@ country_event = {
 # Anne Boleyn
 
 # Siti Wan Kembang
-country_event = {
-	id = women_history_events.25
-	title = women_history_events.25.t
-	desc = women_history_events.25.d
-	picture = wihgfx_FEMALE_GENERAL_eventPicture
-
-	trigger = {
-		has_consort = no
-		owns = 599
-		is_year = 1585
-		NOT = {
-			is_year = 1630
-		}
-		NOT = {
-			has_global_flag = wih_sitiwankembang_flag
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 200
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = wih_sitiwankembang_flag
-		}
-	}
-	
-	option = {
-		name = women_history_events.25.a
-		add_meritocracy_effect = yes
-		define_advisor = {
-			female = yes
-			type = commandant
-			skill = 2
-			name = "Siti Wan Kembang"
-			culture = malayan
-			discount = yes
-		}
-	}
-	option = {
-		name = women_history_events.25.b
-		define_general = {
-			name = "Siti Wan Kembang"
-			shock = 5
-			fire = 2
-			manuever = 5
-			siege = 1
-			female = yes
-		}
-	}
-	option = {
-		name = women_history_events.25.c
-		add_prestige = 10
-	}
-}
 
 # Catherine of Aragon 
 
@@ -245,56 +189,6 @@ country_event = {
 # Pari Khan Khanum (d. 1578)
 
 # Meera Bai
-country_event = {
-	id = women_history_events.35
-	title = women_history_events.35.t
-	desc = women_history_events.35.d
-	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
-
-	trigger = {
-		religion = hinduism
-		primary_culture = rajput
-		capital_scope = {
-			region = west_india_region
-		}
-		NOT = {
-			is_year = 1500
-		}
-		NOT = {
-			has_global_flag = wih_meerabai_flag
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 200
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = wih_meerabai_flag
-		}
-	}
-	
-	option = {
-		name = women_history_events.35.a
-		add_meritocracy_effect = yes
-		define_advisor = {
-			female = yes
-			type = theologian
-			culture = rajput
-			discount = yes
-			skill = 2
-			name = "Meera Bai"
-		}
-	}
-	option = {
-		name = women_history_events.35.b
-		add_country_modifier = {
-			name = wih_meera_bai
-			duration = 7300
-		}
-	}
-}
 
 # Amina
 
@@ -307,45 +201,6 @@ country_event = {
 # Rani Durgavati
 
 # Kateri Tekakwitha
-country_event = {
-	id = women_history_events.41
-	title = women_history_events.41.t
-	desc = women_history_events.41.d
-	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
-
-	trigger = {
-		OR = {
-			owns = 965 # Manhattan
-			owns = 992 # Algonquin
-		}
-		religion = catholic
-		is_year = 1656
-		NOT = {
-			is_year = 1700
-		}
-		NOT = {
-			has_global_flag = wih_kateritekakwitha_flag
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 200
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = wih_kateritekakwitha_flag
-		}
-	}
-	
-	option = {
-		name = women_history_events.41.a
-		add_country_modifier = {
-			name = wih_kateritekakwitha
-			duration = 7300
-		}
-	}
-}
 
 # Maria Sibylla Merian
 
@@ -617,56 +472,6 @@ country_event = {
 # Marie Antoinette
 
 # Anacaona
-country_event = {
-	id = women_history_events.72
-	title = women_history_events.72.t
-	desc = women_history_events.72.d
-	picture = wihgfx_FEMALES_eventPicture
-
-	trigger = {
-		is_year = 1474
-		NOT = {
-			is_year = 1503
-		}
-		any_owned_province = {
-			region = carribeans_region
-		}
-		capital_scope = {
-			continent = europe
-		}
-		NOT = {
-			has_global_flag = wih_anacaona_flag
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 200
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = wih_anacaona_flag
-		}
-	}
-	
-	option = {
-		name = women_history_events.72.a
-		add_meritocracy_effect = yes
-		define_advisor = {
-			name = "Anacaona"
-			type = statesman
-			discount = yes
-			culture = arawak
-			religion = animism
-			skill = 2
-			female = yes
-		}
-	}
-	option = {
-		name = women_history_events.72.b
-		add_dip_power = 50
-	}
-}
 
 # Barbara of Cilli
 

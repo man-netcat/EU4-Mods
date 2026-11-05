@@ -479,44 +479,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = flavor_ita.11
-	title = flavor_ita.11.t
-	desc = flavor_ita.11.d
-	picture = EXPLORERS_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {
-		name = flavor_ita.11.a
-		
-		ai_chance = {
-			factor = 1 #preferable to AI, more natural
-		}
-		
-		custom_tooltip = ITA_estate_privilege_for_colonization
-		set_country_flag = ITA_estate_privilege_for_colonization_flag
-		
-		custom_tooltip = " "
-		
-		create_explorer = { tradition = 80 culture = ligurian }
-	}
-
-	option = {
-		name = flavor_ita.11.b
-		
-		ai_chance = {
-			factor = 0
-		}
-		
-		custom_tooltip = ITA_cb_for_america
-		set_country_flag = ITA_cb_for_america_flag
-		
-		custom_tooltip = " "
-		
-		create_conquistador = { tradition = 80 }
-	}
-}
 
 
 country_event = {

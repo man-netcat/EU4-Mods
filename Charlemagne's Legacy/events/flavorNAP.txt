@@ -48,30 +48,6 @@ namespace = new_flavour_nap
 # Senatus Populusque Neapolitanus (version where NAP is in a PU)
 
 # Senatus Populusque Neapolitanus (senior PU partner)
-country_event = {
-	id = new_flavour_nap.3
-	title = new_flavour_nap.2.name
-	desc = new_flavour_nap.2.desc
-	picture = ANGRY_MOB_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {
-		name = new_flavour_nap.2.A
-		tooltip = {
-			121 = {
-				spawn_rebels = {
-					type = nap_republican_rebels
-					size = 3
-					leader = "Masaniello"
-					win = yes
-				}
-			}
-		}
-		custom_tooltip = new_flavour_nap.3.A.tooltip
-		tooltip = { event_target:rival_of_overlord = { country_event = { id = new_flavour_nap.4 days = 30 } } }
-	}
-}
 
 # Neapolitan Republican Emissaries to overlord's rival
 

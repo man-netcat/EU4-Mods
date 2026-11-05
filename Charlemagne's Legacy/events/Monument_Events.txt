@@ -176,55 +176,6 @@ country_event = {
 # Saint Peter's Basilica
 
 # Pilgrimage Shwedagon Pagoda
-country_event = {
-    id = monument_events.4
-    title = monument_events.4.t
-    desc = monument_events.4.d
-	picture = SHWEDAGON_PAGON_eventPicture
-	goto = pagoda_province
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	 immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					has_great_project = {
-						type = shwedagon_pagoda
-						tier = 3
-					}
-					religion = buddhism
-				}
-				save_event_target_as = pagoda_province
-			}
-		}
-    }
-
-    option = { #tax the pilgrims
-        name = monument_events.4.a
-        add_country_modifier = {
-			name = shwedagon_pilgrimage
-			duration = 3650
-		}
-		event_target:pagoda_province = {
-			add_unrest = 3
-		}
-    }
-    option = { #donate flowers and candles
-        name = monument_events.4.b
-        add_years_of_income = -0.1
-		add_stability = 1
-		event_target:pagoda_province = {
-			add_unrest = -3
-			if = {
-				limit = { NOT = { is_core = ROOT } }
-				add_core = ROOT
-			}
-		}
-    }
-}
 
 # Borobudur Temple
 

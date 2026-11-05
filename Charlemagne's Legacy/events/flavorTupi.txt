@@ -9,71 +9,6 @@ normal_or_historical_nations = yes
 
 	
 #Banderiante Raiders (Start of the Tamoyo Confederation)
-country_event = {
-	id = flavor_tupi.1
-	title = flavor_tupi.1.t
-	desc = flavor_tupi.1.d
-	picture = EXPLORERS_eventPicture
-	fire_only_once = yes
-
-	trigger = {
-		primary_culture = tupinamba
-		government = native
-		is_year = 1500
-		capital_scope = {
-			continent = south_america
-		}
-		any_known_country = {
-			is_neighbor_of = ROOT
-			OR = {
-				capital_scope = {
-					continent = europe
-				}
-				colonial_parent = {
-					capital_scope = {
-						continent = europe
-					}
-				}
-			}
-			NOT = { has_opinion = { who = ROOT value = 75 } }
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 48
-	}
-	
-	
-	option = {
-		name = flavor_tupi.1.a #Let us summon the Tupi tribes and unite against the invaders.
-		ai_chance = { factor = 95 }
-		set_country_flag = tamoyo_confederation_leader
-		every_known_country = {
-			limit = { primary_culture = tupinamba }
-			country_event = { id = flavor_tupi.2 } #The Tamoyo Confederation
-		}
-		random_neighbor_country = {
-			limit = {
-				any_owned_province = {
-					continent = south_america
-				}
-				NOT = { has_opinion = { who = ROOT value = 75 } }
-			}
-			country_event = { id = flavor_tupi.5 } #The Tamoyo Confederation
-			add_opinion = {
-				who = ROOT
-				modifier = targeted_by_tamoyos
-			}
-			set_country_flag = tamoyo_enemy
-		}
-		custom_tooltip = flavor_tupi_confederation
-	}
-	option = {
-		name = flavor_tupi.1.b #We must have faith in the foreigners policing themselves.
-		ai_chance = { factor = 5 }
-		add_stability_or_adm_power = yes #Everything is fine, nothing for you to worry about.
-	}
-}
 
 #The Tamoyo Confederation (for Tupi Tribes)
 country_event = {
@@ -173,62 +108,6 @@ country_event = {
 }
 
 #The Tamoyo Confederation ("Portuguese" party)
-country_event = {
-	id = flavor_tupi.5
-	title = flavor_tupi.5.t
-	desc = flavor_tupi.5.d
-	picture = EXPLORERS_eventPicture
-
-	is_triggered_only = yes
-	
-	option = {
-		name = flavor_tupi.5.a #We must meet them with force. (shorter local unrest)
-		ai_chance = { factor = 50 }
-		add_prestige = 10
-		FROM = {
-			add_opinion = {
-				who = ROOT
-				modifier = tamoyo_target
-			}
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					any_neighbor_province = {
-						culture = tupinamba
-					}
-				}
-				add_province_modifier = {
-					name = "tupi_hostility"
-					duration = 1825 #Local minor tribes, ignited by the conflict but largely detached from it.
-				}
-			}
-		}
-		custom_tooltip = flavour_tupi_tamoyo_force
-	}
-	option = {
-		name = flavor_tupi.5.b #Send for skilled Jesuits. (may end confict outright)
-		trigger = { religion = catholic }
-		ai_chance = { factor = 50 }
-		FROM = {
-			country_event = { id = flavor_tupi.6 days = 670  }
-			add_opinion = {
-				who = ROOT
-				modifier = tamoyo_target
-			}
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = { culture = tupinamba }
-				add_province_modifier = {
-					name = "tupi_hostility"
-					duration = 3650 #Local minor tribes, ignited by the conflict but largely detached from it.
-				}
-			}
-		}
-		custom_tooltip = flavour_tupi_tamoyo_jesuits
-	}
-}
 
 #Jesuits Arrive
 country_event = {
@@ -353,71 +232,6 @@ country_event = {
 #The Tapuia - Tupi Rivalry
 
 #Caramuru
-country_event = {
-	id = flavor_tupi.12
-	title = flavor_tupi.12.t
-	desc = flavor_tupi.12.d
-	picture = EXPLORERS_eventPicture
-	fire_only_once = yes
-
-	trigger = {
-		primary_culture = tupinamba
-		any_owned_province = {
-			has_port = yes
-		}
-		any_known_country = {
-			is_neighbor_of = ROOT
-			OR = {
-				capital_scope = {
-					continent = europe
-				}
-				colonial_parent = {
-					capital_scope = {
-						continent = europe
-					}
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
-	
-	
-	option = {
-		name = flavor_tupi.12.a #Help Caramuru
-		ai_chance = { factor = 95 }
-		set_country_flag = caramuru
-		custom_tooltip = flavor_tupi.12.a.tt
-		add_stability = -2
-	}
-	option = {
-		name = flavor_tupi.12.b #Send him on his way
-		ai_chance = { factor = 5 }
-		custom_tooltip = flavor_tupi.12.b.tt
-		add_prestige = 5
-		random_known_country = {
-			limit = {
-				is_neighbor_of = ROOT
-				OR = {
-					capital_scope = {
-						continent = europe
-					}
-					colonial_parent = {
-						capital_scope = {
-							continent = europe
-						}
-					}
-				}
-			}
-			add_opinion = {
-				who = ROOT
-				modifier = opinion_caramuru_sent_away
-			}
-		}
-	}
-}
 
 #Caramuru's life among the Tupi
 country_event = {

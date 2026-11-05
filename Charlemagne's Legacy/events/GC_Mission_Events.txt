@@ -66,48 +66,6 @@ country_event = {
 
 # Portuguese Nagasaki
 # for owner
-country_event = {
-	id = more_flavor_por.3
-	title = "more_flavor_por.EVTNAME3"
-	desc = "more_flavor_por.EVTDESC3"
-	picture = PORTUGUESE_MERCHANTS_eventPicture
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = more_flavor_por.EVTOPTA3
-		trigger = {
-			NOT = {
-				AND = {
-					has_dlc = "Mandate of Heaven"
-					religion = shinto
-					isolationism = 4
-				}
-			}
-			4182 = {
-				is_capital = no
-			}
-		}
-		ai_chance = { factor = 1 }
-		tooltip = {
-			4182 = {
-				cede_province = FROM
-				add_core = FROM
-			}
-		}
-		hidden_effect = {
-			FROM = {
-				country_event = { id = more_flavor_por.4 }
-			}
-		}
-	}
-	option = {
-		name = more_flavor_por.EVTOPTB3
-		ai_chance = { factor = 0 }
-		add_prestige = 5
-	}
-}
 
 # Portuguese Nagasaki
 # for Portugal
@@ -130,26 +88,3 @@ country_event = {
 }
 
 # Excommunication of Malay Were-Tigers
-country_event = {
-	id = more_flavor_por.5
-	title = "more_flavor_por.EVTNAME5"
-	desc = "more_flavor_por.EVTDESC5"
-	picture = PORTUGUESE_MERCHANTS_eventPicture
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = "more_flavor_por.EVTOPTA5"
-		add_prestige = 5
-		add_papal_influence = 10
-		random_list = {
-			70 = { }
-			30 = {
-				596 = {
-					change_religion = catholic
-				}
-			}
-		}
-	}
-}

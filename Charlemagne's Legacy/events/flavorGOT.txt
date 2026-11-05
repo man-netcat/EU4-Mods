@@ -189,52 +189,6 @@ country_event = {
 # The Holstein Promise
 
 # Emperor remembers Schleswig-Holstein promise
-country_event = {
-	id = flavor_got.9
-	title = flavor_got.9.t
-	desc = flavor_got.9.desc
-	picture = DIPLOMACY_eventPicture
-	is_triggered_only = yes
-	option = {	#Schleswig-Holstein must return to the Empire!
-		name = flavor_got.9.a
-		custom_tooltip = flavor_got.9.a.tt
-		reverse_add_opinion = {
-			who = FROM
-			modifier = got_made_an_ultimatum
-		}
-		hidden_effect = {
-			FROM = {
-				country_event = {
-					id = flavor_got.10
-				}
-			}
-		}
-		
-		ai_chance = {
-			factor = 1
-		}
-	}
-	option = {	#Nah, not worth the effort to worry about it.
-		name = flavor_got.9.b
-		custom_tooltip = flavor_got.9.b.tt
-		add_imperial_influence = -5
-		reverse_add_opinion = {
-			who = FROM
-			modifier = got_granted_us_holstein
-		}
-		hidden_effect = {
-			FROM = {
-				country_event = {
-					id = flavor_got.11
-				}
-			}
-		}
-		
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
 
 # Hostein or War!
 
@@ -550,39 +504,6 @@ country_event = {
 }
 
 #Steal the Curia Coffers
-country_event = {
-	id = flavor_got.42
-	title = flavor_got.42.t
-	desc = flavor_got.42.desc
-	picture = SMUGGLERS_eventPicture
-	is_triggered_only = yes
-	goto = 118
-	major = yes
-	major_trigger = {
-		religion = catholic
-	}
-	
-	option = {
-		name = flavor_got.42.a
-		make_ruler_to_legendary_pirate = yes
-		if = {
-			limit = {
-				has_dlc = "Emperor"
-			}
-			add_curia_treasury = -5000
-		}
-		add_treasury = 5000
-		add_papal_influence = -200
-		118 = {
-			add_loot_from_rich_province_general_effect = {
-				LOOTER = ROOT
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 #Sack Venice
 country_event = {

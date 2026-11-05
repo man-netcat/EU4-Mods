@@ -55,6 +55,49 @@ def all_known_tags():
     return found
 
 
+_CULTURE_KINDS = {"primary_culture", "culture", "culture_group", "change_primary_culture", "add_accepted_culture",
+                  "remove_accepted_culture", "change_culture", "dominant_culture", "accepted_culture"}
+_RELIGION_KINDS = {"religion", "religion_group", "change_religion", "secondary_religion", "is_religion_enabled",
+                   "dominant_religion", "add_religion_years"}
+_KEY_PAT = re.compile(r"\b(" + "|".join(sorted(_CULTURE_KINDS | _RELIGION_KINDS)) + r')\s*=\s*"?([a-z_0-9]+)"?')
+_EVENT_REF = re.compile(r'(?:country_event|province_event)\s*=\s*\{[^}]*?\bid\s*=\s*"?([A-Za-z_0-9.]+)"?', re.S)
+_EVENT_ID = re.compile(r'\bid\s*=\s*"?([A-Za-z_0-9.]+)"?')
+
+
+def _block_keys(directory):
+    """Every top-level and second-level block name in a folder of culture or religion files (groups and members)."""
+    found = set()
+    for fn in os.listdir(directory):
+        if not fn.endswith(".txt"):
+            continue
+        depth = 0
+        for ln in re.sub(r"#.*", "", open(os.path.join(directory, fn), encoding="cp1252", errors="replace").read()).splitlines():
+            m = re.match(r"^\s*([A-Za-z0-9_]+)\s*=\s*\{", ln)
+            if m and depth <= 1:
+                found.add(m.group(1))
+            depth += ln.count("{") - ln.count("}")
+    return found
+
+
+def lost_keys():
+    """(cultures, religions) the base game defines and this mod does not: the 1444 world's, dead here."""
+    out = []
+    for sub in ("cultures", "religions"):
+        out.append(_block_keys(os.path.join(GAME, "common", sub)) - _block_keys(os.path.join(MOD, "common", sub)))
+    return out
+
+
+def names_lost_key(block, lost):
+    """The first culture or religion key `block` names that the mod no longer defines, else None (comments stripped)."""
+    cultures, religions = lost
+    code = "\n".join(ln.split("#", 1)[0] for ln in block.splitlines())
+    for m in _KEY_PAT.finditer(code):
+        kind, val = m.group(1), m.group(2)
+        if (kind in _CULTURE_KINDS and val in cultures) or (kind in _RELIGION_KINDS and val in religions):
+            return val
+    return None
+
+
 def event_mentions_tag(block, tagset):
     """True when an event block names any tag (comments stripped first, so
     prose like '# England wins' never counts)."""
@@ -95,25 +138,56 @@ def split_event_blocks(text):
 
 
 def step_events() -> None:
-    """Vendor vanilla events with tag-specific events cut out: any event
-    naming a tag goes (it belongs to another century or a dead realm),
-    everything generic stays byte-identical. Our own files (non-vanilla
-    names) are never touched."""
+    """Vendor vanilla events with the ones of another world cut out: any event naming a tag goes (it belongs to another
+    century or a dead realm), so does any event naming a culture or religion the base game defines and this mod does not
+    (the 1444 set: catholic, buddhism, shinto, tengri_pagan_reformed...), and any event that fires a dropped event. Everything
+    else stays byte-identical. Our own files (non-vanilla names) are never touched."""
     tagset = all_known_tags()
+    lost = lost_keys()
     vdir = os.path.join(GAME, "events")
     edir = os.path.join(MOD, "events")
     os.makedirs(edir, exist_ok=True)
-    vanilla = {fn for fn in os.listdir(vdir) if fn.endswith(".txt")}
-    kept_files, kept_events, dropped = 0, 0, 0
-    for fn in sorted(vanilla):
-        text = open(os.path.join(vdir, fn), encoding="utf-8",
-                    errors="replace").read()
+    vanilla = sorted(fn for fn in os.listdir(vdir) if fn.endswith(".txt"))
+
+    # pass 1: split every file, decide which events go (a tag, a culture or religion this world lacks, a dead Byzantine
+    # file), then cascade: an event that fires a cut event is cut too, or the game logs a missing event
+    files, entries = {}, []
+    for fn in vanilla:
+        text = open(os.path.join(vdir, fn), encoding="utf-8", errors="replace").read()
         segs = split_event_blocks(text)
+        files[fn] = segs
+        for idx, (kind, lines) in enumerate(segs):
+            if kind != "event":
+                continue
+            block = "\n".join(lines)
+            code = "\n".join(ln.split("#", 1)[0] for ln in lines)
+            m = _EVENT_ID.search(code)
+            if fn in DEAD_BYZANTINE_EVENT_FILES or event_mentions_tag(block, tagset):
+                why = "tag"
+            elif names_lost_key(block, lost):
+                why = "world"
+            else:
+                why = None
+            entries.append({"fn": fn, "idx": idx, "id": m.group(1) if m else None, "code": code, "why": why})
+    cut_ids = {e["id"] for e in entries if e["why"] and e["id"]}
+    cascaded = 0
+    changed = True
+    while changed:
+        changed = False
+        for e in entries:
+            if not e["why"] and any(r in cut_ids for r in _EVENT_REF.findall(e["code"])):
+                e["why"] = "cascade"
+                cascaded += 1
+                changed = True
+                if e["id"]:
+                    cut_ids.add(e["id"])
+    gone = {(e["fn"], e["idx"]) for e in entries if e["why"]}
+
+    kept_files, kept_events, dropped = 0, 0, len(gone)
+    for fn in vanilla:
         keep = []
-        for kind, lines in segs:
-            if kind == "event" and (fn in DEAD_BYZANTINE_EVENT_FILES
-                                    or event_mentions_tag("\n".join(lines), tagset)):
-                dropped += 1
+        for idx, (kind, lines) in enumerate(files[fn]):
+            if (fn, idx) in gone:
                 continue
             if fn in DEAD_BYZANTINE_EVENT_FILES and not re.match(r"^\s*(namespace\b|#|$)", lines[0]):
                 continue  # stray top-level script (vanilla leaves a trigger line loose here)
@@ -133,8 +207,9 @@ def step_events() -> None:
         if old != out:
             write_out(dest, out, encoding="utf-8", errors="strict")
         kept_files += 1
+    world = sum(1 for e in entries if e["why"] == "world")
     print(f"events: {kept_files} files, {kept_events} generic events kept, "
-          f"{dropped} tag-specific dropped")
+          f"{dropped} dropped ({world} for a culture or religion this world lacks, {cascaded} for firing a dropped event)")
 
 
 def split_decision_blocks(text):

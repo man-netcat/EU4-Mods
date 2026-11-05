@@ -30,26 +30,6 @@ country_event = {
 
 
 # The Pentarchy
-country_event = {
-	id = catholic_flavor.3
-	title = catholic_flavor.3.t
-	desc = catholic_flavor.3.d
-	picture = ORTHODOX_eventPicture
-	
-	is_triggered_only = yes
-	
-	major = yes
-
-	option = {
-		name = catholic_flavor.3.a
-		add_prestige = 25
-		add_legitimacy = 25
-		set_religion_papacy_active = {
-			religion = catholic
-			active = no
-		}
-	}
-}
 
 # Simony
 

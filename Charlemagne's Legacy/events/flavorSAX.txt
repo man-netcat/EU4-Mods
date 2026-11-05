@@ -76,33 +76,6 @@ country_event = {
 
 #on_siege_won_country
 #Get the Saxon Electorate (version 2)
-country_event = {
-	id = flavor_sax.10
-	title = flavor_sax.9.name
-	desc = flavor_sax.9.desc
-	picture = DIPLOMACY_eventPicture
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = flavor_sax.9.A
-		
-		emperor = { country_event = { id = flavor_sax.11 } }
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-	option = {
-		name = flavor_sax.9.C
-		
-		add_prestige = 10
-
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
 
 
 #Transfer the Saxon Electorate to Thuringia

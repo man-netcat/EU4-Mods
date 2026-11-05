@@ -37,46 +37,8 @@ normal_or_historical_nations = yes
 # Protestants expelled from France
 
 # Protestants expelled from France
-country_event = {
-	id = flavor_fra.1
-	title = "flavor_fra.EVTNAME1"
-	desc = "flavor_fra.EVTDESC1"
-	picture = RELIGION_eventPicture
-
-	is_triggered_only = yes
-
-	option = {		# They are a welcome addition
-		name = "flavor_fra.EVTOPTA1"
-		random_owned_province = {
-			limit = {
-				religion = protestant
-			}
-			add_base_tax = 1
-		}
-	}
-
-}
 
 # Protestants expelled from France
-country_event = {
-	id = flavor_fra.2
-	title = "flavor_fra.EVTNAME2"
-	desc = "flavor_fra.EVTDESC2"
-	picture = RELIGION_eventPicture
-
-	is_triggered_only = yes
-
-	option = {		# They are a welcome addition
-		name = "flavor_fra.EVTOPTA2"
-		random_owned_province = {
-			limit = {
-				religion = reformed
-			}
-			add_base_tax = 1
-		}
-	}
-
-}
 
 # The Mississippi Trade Company
 
@@ -388,42 +350,6 @@ country_event = { #The Rade of the Toulon Arsenal
 }
 	
 	
-country_event = { #Rise of the French Isles
-	id = flavor_fra.203
-	title = flavor_fra.203.t 
-	desc = flavor_fra.203.d 
-	picture = HARBOUR_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = { 
-		name = flavor_fra.203.a 
-		
-		add_country_modifier = {
-			name = fra_rules_the_waves_modifier
-			duration = -1 
-		}
-		add_accepted_culture = english 
-		
-		# custom_tooltip = fra_enabling_parliamentarism_extra_bonus_tt
-		# set_country_flag = fra_powerful_parliament_flag
-		change_government_reform_progress = 150
-	}
-	
-	option = {
-		name = flavor_fra.203.b 
-		
-		add_country_modifier = {
-			name = fra_french_isles_modifier
-			duration = -1 
-		}
-		
-		if = { 
-			limit = { has_dlc = "Leviathan" }
-			custom_tooltip = fra_concentrate_dev_tt
-		}
-	}
-}
 
 country_event = { #La Sorbonne
 	id = flavor_fra.204

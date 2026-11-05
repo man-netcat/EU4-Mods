@@ -10,49 +10,6 @@ normal_or_historical_nations = yes
 # Popol Vuh
 
 # League of Mayapan
-country_event = {
-	id = flavor_may.2
-	title = flavor_may.2.t
-	desc = flavor_may.2.d
-	picture = CIVIL_WAR_eventPicture
-	
-	trigger = {
-		religion = mesoamerican_religion
-		NOT = { has_country_flag = may_league_mayapan_flag }
-	}
-	
-	mean_time_to_happen = {
-		months = 22
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_country_flag = may_league_mayapan_flag
-		}
-	}
-	
-	option = {
-		name = flavor_may.2.a
-		add_prestige = 10
-		every_country = {
-			limit = {
-				religion = mesoamerican_religion
-				NOT = { tag = ROOT }
-			}
-			add_opinion = { who = ROOT modifier = stronger_alone }
-		}
-	}
-	option = {
-		name = flavor_may.2.b
-		every_country = {
-			limit = {
-				religion = mesoamerican_religion
-				NOT = { tag = ROOT }
-			}
-			add_opinion = { who = ROOT modifier = league_mayapan }
-		}	
-	}
-}
 
 ### Conversion of Itza to Catholic by Spain ###
 # Kan Ek and the Prophecy

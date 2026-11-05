@@ -168,96 +168,12 @@ country_event = {
 }
 
 #Persianization of the Turkomans
-country_event = {
-	id = flavor_turkoman.5
-	title = flavor_turkoman.5.t
-	desc = flavor_turkoman.5.d
-	picture = muslimgfx_GOOD_WITH_MONARCH_eventPicture
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-
-	option = {
-		name = flavor_turkoman.5.a
-		custom_tooltip = turkoman_unlock_persia_decision
-		set_government_rank = 3
-		custom_tooltip = turkoman_shahanshah_title
-		custom_tooltip = turkoman_turcoiranian_culture
-		set_country_flag = turkoman_can_form_persia
-		set_country_flag = turkoman_adopt_shahanshah_title
-		add_country_modifier = {
-			name = turkoman_shahanshahs
-			duration = 7300
-		}
-		hidden_effect = {
-			change_primary_culture = turco_iranian
-			set_ruler_culture = turco_iranian
-			set_heir_culture = turco_iranian
-			set_consort_culture = turco_iranian
-			every_owned_province = {
-				limit = {
-					OR = {
-						culture = turkish
-						culture = azerbaijani
-						culture = turkmeni
-					}
-				}
-				change_culture = turco_iranian
-			}
-		}
-	}
-	
-}
 
 #The Death of Ispend Mirza
 
 #Fate of Trebizond - Qara Qoyunlu
 
 #Fate of Trebizond - Aq Qoyunlu
-country_event = {
-	id = flavor_turkoman.8
-	title = flavor_turkoman.8.t
-	desc = flavor_turkoman.8.d
-	picture = BYZ_BYZANTINE_EAGLE_eventPicture
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-
-	option = {
-		name = flavor_turkoman.8.a
-		add_dip_power = -50
-		add_accepted_culture_or_dip_power = { culture = pontic_greek dip_reward = yes }
-		330 = {
-			add_local_autonomy = -50
-		}
-		330 = {
-			add_province_modifier = {
-				name = turkoman_guaranteed_the_rights
-				duration = 3650
-			}
-		}
-	}
-	
-	option = {
-		name = flavor_turkoman.8.b
-		add_adm_power = -50
-		330 = {
-			spawn_rebels = {
-				type = nationalist_rebels
-				size = 2
-			}
-		}
-		330 = {
-			change_culture = ROOT
-		}
-		330 = {
-			change_religion = ROOT
-		}
-	}
-	
-}
 
 #The Safavid Order
 

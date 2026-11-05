@@ -198,42 +198,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = flavor_mug.9
-	title = flavor_mug.9.t
-	desc = flavor_mug.9.d
-	picture = ANGRY_MOB_eventPicture
-	hidden = yes 
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			pick_best_provinces = {
-				3 = yes
-				global_trigger = "
-					has_manpower_building_trigger = yes
-					religion = hinduism
-				"
-				scope = every_owned_province
-				scale = higher_development_than
-				event_target_name = mug_target
-			}
-		}
-		event_target:mug_target_1 = {
-			add_or_upgrade_manpower_building = yes
-		}
-		event_target:mug_target_2 = {
-			add_or_upgrade_manpower_building = yes
-		}
-		event_target:mug_target_3 = {
-			add_or_upgrade_manpower_building = yes
-		}
-	}
-	
-	option = {
-		name = "flavor_mug.9.a"
-	}
-}
 
 country_event = {
 	id = flavor_mug.10

@@ -17,47 +17,6 @@ country_event = {
 }
 
 
-country_event = {
-	id = dutch_mission_events.2
-	title = "dutch_mission_events.2.t"
-	desc = "dutch_mission_events.2.d"
-	picture = ADVISOR_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "dutch_mission_events.2.a"
-		
-		1744 = {
-			change_culture = ROOT
-			add_province_modifier = {
-				name = ned_hollander_settlers
-				duration = 7300
-			}
-		}
-	}
-
-	option = {
-		name = "dutch_mission_events.2.b"
-		
-		custom_tooltip = NED_ALL_FLEMISH_PROVINCES_LOSE_SEPERATISM
-		custom_tooltip = " "
-		define_advisor = {
-			culture = flemish
-			skill = 2
-			type = artist
-			cost_multiplier = 0.5
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					culture = flemish
-				}
-				add_nationalism = -15
-			}
-		}
-	}
-}
 
 
 country_event = {

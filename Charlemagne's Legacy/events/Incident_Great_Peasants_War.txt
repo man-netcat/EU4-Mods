@@ -4,47 +4,6 @@
 namespace = great_peasant_war
 
 # Great Peasants' war
-country_event = {
-	id = great_peasant_war.1
-	title = great_peasant_war.1.t
-	desc = great_peasant_war.1.d
-	picture = ANGRY_MOB_eventPicture
-	
-	major = yes
-	fire_only_once = yes
-	
-	trigger = {
-		has_dlc = "Emperor"
-		current_age = age_of_reformation
-		hre_leagues_enabled = no
-		hre_religion_locked = no
-		hre_religion_treaty = no
-		hre_size = 1
-		is_part_of_hre = yes
-		is_religion_enabled = reformed
-	}
-	
-	mean_time_to_happen = {
-		months = 7300
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = great_peasants_war_flag
-			1 = {
-				set_variable = {
-					which = GPW_counting_variable
-					value = 0
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = great_peasant_war.1.a
-		custom_tooltip = gpw_effects_tt
-	}
-}
 
 # Peasant Republic on rebel break event
 

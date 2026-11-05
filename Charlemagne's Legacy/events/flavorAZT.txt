@@ -253,39 +253,6 @@ country_event = {
 }
 
 # Cocoliztli
-country_event = {
-	id = flavor_azt.14
-	title = flavor_azt.14.t
-	desc = flavor_azt.14.d
-	picture = PLAGUE_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		culture_group = central_american
-		has_country_flag = european_diseases_struck
-		is_year = 1545
-		NOT = { is_year = 1576 }
-		NOT = {
-			any_owned_province = {
-				has_province_modifier = inc_smallpox_outbreak
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 93
-	}
-	
-	option = {
-		name = flavor_azt.14.a #
-		add_stability = -2
-		add_country_modifier = {
-			name = azt_cocoliztli
-			duration = 730
-		}
-	}
-}
 
 #Smallpox Epidemic
 country_event = {
@@ -377,62 +344,6 @@ country_event = {
 }
 
 #The Temples of Cholula
-country_event = {
-	id = flavor_azt.18
-	title = flavor_azt.18.t
-	desc = flavor_azt.18.d
-	picture = GREAT_BUILDING_eventPicture
-	
-	trigger = {
-		NOT = { religion = nahuatl }
-		owns = 2644
-		2644 = {
-			has_province_modifier = cholula_temples
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-	}
-	
-	option = { #Destroy the Temples
-		name = flavor_azt.18.a
-		ai_chance = { factor = 1 }
-		add_years_of_income = 0.01
-		2644 = {
-			remove_province_modifier = cholula_temples
-			add_unrest = 5
-		}
-	}
-	
-	option = { #This is a fascinating religion, let us embrace it instead.
-		ai_chance = { factor = 1 }
-		name = flavor_azt.18.b
-		trigger = {
-			religion_group = pagan
-			is_colonial_nation = no
-			NOT = { religion = inti }
-			NOT = { religion = mesoamerican_religion }
-		}
-		change_religion = nahuatl
-		if = {
-			limit = { government = native }
-			change_government = tribal
-			#set_legacy_government = tribal_despotism_legacy
-		}
-	}
-	option = { #Let them continue worship there.
-		name = flavor_azt.18.c
-		trigger = { full_idea_group = humanist_ideas }
-		ai_chance = { factor = 0 }
-		add_stability = -1
-		2644 = {
-			remove_province_modifier = cholula_temples
-			add_base_tax = 1
-		}
-	}
-	
-}
 
 #Rulers of the Lake
 country_event = {

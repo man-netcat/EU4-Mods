@@ -437,70 +437,6 @@ country_event = {
 
 # Optimus Excells at Examination
 # Good Event
-country_event = {
-	id = china_events.9
-	title = "china_events.9.t"
-	desc = "china_events.9.d"
-	picture = ADVISOR_eventPicture
-	
-	trigger = {
-		has_reform = celestial_empire
-		num_of_cities = 2
-		any_owned_province = {
-			is_capital = no
-			is_state = yes
-		}
-	}
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "china_events.9.a"
-		define_advisor = {
-			type = philosopher
-			skill = 3
-			religion = confucianism
-			discount = yes
-		}
-		boost_bureaucrats_effect = yes
-	}
-	
-	option = {
-		name = "china_events.9.b"
-		random_owned_province = {
-			limit = {
-				is_state = yes
-				is_capital = no
-			}
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-				}
-				if = {
-					limit = { NOT = { prosperity = 100 } }
-					add_prosperity = 75
-				}
-				area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
-						name = "china_gifted_official"
-						duration = 3650
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = { has_dlc = "Mandate of Heaven" }
-				}
-				add_base_production = 1
-			}
-		}
-		boost_eunuchs_effect = yes
-	}
-}
 
 # Eunuch Smokes Opium
 country_event = {
@@ -2133,45 +2069,6 @@ country_event = {
 }
 
 # Honoring The Ancestors
-country_event = {
-	id = china_events.40
-	title = "china_events.40.t"
-	desc = "china_events.40.d"
-	picture = COURT_eventPicture
-	
-	trigger = {
-		has_reform = celestial_empire
-		religion = confucianism
-	}
-	
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "china_events.40.a"
-		boost_temples_effect = yes
-		add_adm_power = -50
-		add_mil_power = 50
-	}
-	
-	option = {
-		name = "china_events.40.b"
-		boost_bureaucrats_effect = yes
-		add_dip_power = -50
-		add_adm_power = 50
-	}
-	
-	option = {
-		name = "china_events.40.c"
-		boost_eunuchs_effect = yes
-		add_mil_power = -50
-		add_legitimacy = 5
-		add_meritocracy_effect = yes
-	}
-}
 
 # Bad Feng Shui
 country_event = {

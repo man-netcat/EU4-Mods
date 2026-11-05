@@ -6,147 +6,12 @@
 
 namespace = hindu_events
 
-country_event = {
-	id = hindu_events.1
-	title = "hindu_events.1.t"
-	desc = "hindu_events.1.d"
-	picture = PRAYING_eventPicture
-
-	trigger = {
-		religion = hinduism
-		has_dlc = "Wealth of Nations"
-		has_regency = no
-		OR = {
-			has_country_flag = brahmin_deity_interaction
-			AND = {
-				NOT = { has_personal_deity = buddha }
-				NOT = { has_personal_deity = shiva }
-				NOT = { has_personal_deity = ganesha }
-				NOT = { has_personal_deity = surya }
-				NOT = { has_personal_deity = ganga }
-				NOT = { has_personal_deity = shakti }
-				NOT = { has_personal_deity = vishnu }
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
-
-	# Shaivism
-	option = {
-		name = "hindu_events.1.a"
-		change_personal_deity = shiva
-	}
-
-	# Skaktism
-	option = {
-		name = "hindu_events.1.b"
-		change_personal_deity = shakti
-	}
-
-	# Vaishnavism
-	option = {
-		name = "hindu_events.1.c"
-		change_personal_deity = vishnu
-	}
-
-	# Ganga
-	option = {
-		name = "hindu_events.1.e"
-		change_personal_deity = ganga
-	}
-
-	# Ganesha
-	option = {
-		name = "hindu_events.1.f"
-		change_personal_deity = ganesha
-	}
-
-	# Surya
-	option = {
-		name = "hindu_events.1.g"
-		change_personal_deity = surya
-	}
-
-	# Buddha
-	option = {
-		name = "hindu_events.1.h"
-		trigger = {
-			OR = {
-				mission_completed = mnd_maj_candi_shrines
-				mission_completed = sun_candi_temples
-				mission_completed = mnd_khm_religion
-			}
-		}
-		change_personal_deity = buddha
-	}
-	
-	# Not ready
-	option = {
-		trigger = {
-			NOT = { has_country_flag = brahmin_deity_interaction }
-		}
-		name = "hindu_events.1.i"
-	}
-	
-	after = {
-		clr_country_flag = brahmin_deity_interaction
-	}
-}
 
 ##################################################
 # Shaiva paths: Faces of Shiva
 ##################################################
 
 # Sadyojata (Shiva the Creator)
-country_event = {
-	id = hindu_events.2
-	title = "hindu_events.2.t"
-	desc = "hindu_events.2.d"
-	picture = RELIGION_eventPicture
-
-	trigger = {
-		has_personal_deity = shiva
-		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		employed_advisor = {
-			type = artist
-			religion = hinduism
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1200
-		modifier = {
-			factor = 0.9
-			stability = 2
-		}
-		modifier = {
-			factor = 0.8
-			stability = 3
-		}
-	}
-
-	# Contemplate creative aspect of Shiva
-	option = {
-		name = "hindu_events.2.a"
-		add_ruler_modifier = { name = hindu_shaiva_1 hidden = yes }
-		add_ruler_modifier = {
-			name = hindu_withdrawn_contemplation
-			duration = 1825
-		}
-		hidden_effect = { country_event = { id = hindu_events.3 days = 1826 } }
-	}
-
-	# Continue search
-	option = {
-		name = "hindu_events.2.b"
-		add_prestige = 2
-	}
-}
 
 # Sadyojata Jnana (Srishti)
 country_event = {
@@ -180,54 +45,6 @@ country_event = {
 }
 
 # Vamadeva (Shiva the Preserver)
-country_event = {
-	id = hindu_events.4
-	title = "hindu_events.4.t"
-	desc = "hindu_events.4.d"
-	picture = CITY_VIEW_eventPicture
-
-	trigger = {
-		has_personal_deity = shiva
-		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		employed_advisor = {
-			type = theologian
-			religion = hinduism
-		}
-		stability = 1
-		is_at_war = no
-	}
-
-	mean_time_to_happen = {
-		months = 1200
-		modifier = {
-			factor = 0.9
-			stability = 2
-		}
-		modifier = {
-			factor = 0.8
-			stability = 3
-		}
-	}
-
-	# Contemplate preservative aspect of Shiva
-	option = {
-		name = "hindu_events.4.a"
-		add_ruler_modifier = { name = hindu_shaiva_2 hidden = yes }
-		add_ruler_modifier = {
-			name = hindu_withdrawn_contemplation
-			duration = 1825
-		}
-		hidden_effect = { country_event = { id = hindu_events.5 days = 1826 } }
-	}
-
-	# Continue search
-	option = {
-		name = "hindu_events.4.b"
-		add_prestige = 2
-	}
-}
 
 # Vamadeva Jnana (Sthiti)
 country_event = {
@@ -269,53 +86,6 @@ country_event = {
 }
 
 # Aghora (Shiva the Destroyer)
-country_event = {
-	id = hindu_events.6
-	title = "hindu_events.6.t"
-	desc = "hindu_events.6.d"
-	picture = BATTLE_eventPicture
-
-	trigger = {
-		has_personal_deity = shiva
-		is_at_war = yes
-		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		employed_advisor = {
-			type = inquisitor
-			religion = hinduism
-		}
-		war_score = 20
-		any_known_country = {
-			defensive_war_with = ROOT
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1000
-		modifier = {
-			factor = 0.75
-			war_score = 50
-		}
-	}
-
-	# Contemplate the destructive aspect of Shiva
-	option = {
-		name = "hindu_events.6.a"
-		add_ruler_modifier = { name = hindu_shaiva_3 hidden = yes }
-		add_ruler_modifier = {
-			name = hindu_withdrawn_contemplation
-			duration = 1825
-		}
-		hidden_effect = { country_event = { id = hindu_events.7 days = 1826 } }
-	}
-
-	# Continue search
-	option = {
-		name = "hindu_events.6.b"
-		add_prestige = 2
-	}
-}
 
 # Aghora Jnana (Samhara)
 country_event = {
@@ -355,52 +125,6 @@ country_event = {
 }
 
 # Tatpuru?a (Shiva Concealed)
-country_event = {
-	id = hindu_events.8
-	title = "hindu_events.8.t"
-	desc = "hindu_events.8.d"
-	picture = RELIGION_eventPicture
-
-	trigger = {
-		has_personal_deity = shiva
-		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		employed_advisor = {
-			type = philosopher
-			religion = hinduism
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1200
-		modifier = {
-			factor = 0.9
-			stability = 2
-		}
-		modifier = {
-			factor = 0.8
-			stability = 3
-		}
-	}
-
-	# Contemplate how Shiva is concealed, but present in all things
-	option = {
-		name = "hindu_events.8.a"
-		add_ruler_modifier = { name = hindu_shaiva_4 hidden = yes }
-		add_ruler_modifier = {
-			name = hindu_withdrawn_contemplation
-			duration = 1825
-		}
-		hidden_effect = { country_event = { id = hindu_events.9 days = 1826 } }
-	}
-
-	# Continue search
-	option = {
-		name = "hindu_events.8.b"
-		add_prestige = 2
-	}
-}
 
 # Tatpuru?a Jnana (Tirodhana)
 country_event = {
@@ -1188,64 +912,6 @@ country_event = {
 }
 
 # Brahma sampradaya
-country_event = {
-	id = hindu_events.27
-	title = "hindu_events.27.t"
-	desc = "hindu_events.27.d"
-	picture = RELIGION_eventPicture
-
-	trigger = {
-		has_personal_deity = vishnu
-		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		employed_advisor = {
-			type = theologian
-			religion = hinduism
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1200
-		modifier = {
-			factor = 0.9
-			stability = 2
-		}
-		modifier = {
-			factor = 0.8
-			stability = 3
-		}
-	}
-
-	# Accept theologian's tutorage
-	option = {
-		name = "hindu_events.27.a"
-		add_ruler_modifier = { name = hindu_vaishnava_2a hidden = yes }
-		add_ruler_modifier = {
-			name = hindu_withdrawn_contemplation
-			duration = 1825
-		}
-		hidden_effect = { country_event = { id = hindu_events.28 days = 1826 } }
-	}
-
-	# Accept advice, seek other teacher
-	option = {
-		name = "hindu_events.27.b"
-		add_ruler_modifier = { name = hindu_vaishnava_2b hidden = yes }
-		add_ruler_modifier = { name = vishnu_brahma }
-		add_ruler_modifier = {
-			name = hindu_withdrawn_contemplation
-			duration = 1825
-		}
-		hidden_effect = { country_event = { id = hindu_events.29 days = 1826 } }
-	}
-
-	# Continue search
-	option = {
-		name = "hindu_events.27.c"
-		add_prestige = 2
-	}
-}
 
 # Brahma sampradaya Jnana - Theologian tutor
 country_event = {
