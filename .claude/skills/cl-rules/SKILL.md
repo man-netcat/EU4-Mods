@@ -35,7 +35,7 @@ verifier now lives in `tools/checks/`, the build in `tools/steps/`, and the vani
 - **No dormant cores:** a province is cored by its owner alone, bar the `seed_cores` releasables.
 - **No subject adds force limit or manpower to its overlord;** troops come from development alone.
 - **Provinces follow their CK3 holder:** when the check says a province sits with the wrong tag, move it to its CK3
-  owner's tag (`cl-add-tag`), not the other way round.
+  owner's tag (`cl-assign-provinces`), not the other way round.
 - **Commit and push to the branch the session names; open no pull request unless asked.** After every push, check CI
   and report the result (`cl-build-validate`).
 - **Cloud sessions cannot** run EU4 or CK3, bake coat-of-arms flags, or update the reference repo. Say which of your

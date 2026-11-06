@@ -5,6 +5,11 @@ description: Vassals, governors, unions, tributaries, alliances and royal marria
 
 # Subjects and relations
 
+Tasks this covers: make a tag a vassal / union subject / tributary / governor of another; add an alliance or royal marriage;
+find why a tag is over its relation limit; check lieges against CK3. Steps: decide from CK3 (the liege chain), insert the
+`diplomacy` row, then `build.py` and `validate.py` and read "starting subjects", "no tag starts over its diplomatic relation
+limit" and "vassalage matches CK3's 867 lieges".
+
 ## The table
 
 `diplomacy(liege, subject, relation)`, primary key on all three columns, so a pair may hold several relations.

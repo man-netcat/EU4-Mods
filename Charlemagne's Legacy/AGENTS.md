@@ -39,9 +39,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - `models.py` is the SQLAlchemy schema, `db.py` the connection,
   `enc.py` transliterates names into cp1252.
 
-Project skills live in `../.claude/skills/` (`cl-rules` first; then `cl-build-validate`, `cl-add-tag`, `cl-retag`, `cl-subjects`,
-`cl-releasables`, `cl-formables`, `cl-vanilla-scripts`, `cl-ck3-lifting`, `cl-events`, `cl-flags`, `cl-balance`; the other mods have
-`eu4-1337-start-date` and `eu4-new-mod`). Where a skill and an older paragraph here disagree, the skill follows the current code.
+Project skills live in `../.claude/skills/`, one per task (`cl-rules` first): `cl-build-validate`, `cl-new-tag`, `cl-assign-provinces`,
+`cl-remove-tag`, `cl-tag-identity`, `cl-retag`, `cl-subjects`, `cl-releasables`, `cl-formables`, `cl-new-war`, `cl-lift-region`, `cl-new-religion`,
+`cl-vanilla-scripts`, `cl-events`, `cl-ck3-lifting`, `cl-flags`, `cl-balance`; the other mods have `eu4-1337-start-date` and `eu4-new-mod`. Where a skill
+and an older paragraph here disagree, the skill follows the current code.
 
 ## Adding a tag (checklist)
 
