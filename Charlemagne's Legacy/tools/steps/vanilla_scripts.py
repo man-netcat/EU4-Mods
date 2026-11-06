@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Base-game events and decisions: keep what a 867 world can use, strip tag references, and neutralise the rest."""
 
+import collections
 import os
 import re
 from steps.layout import GAME, MOD
@@ -77,6 +78,34 @@ def _block_keys(directory):
                 found.add(m.group(1))
             depth += ln.count("{") - ln.count("}")
     return found
+
+
+#: What a purely generic event of the 9th-11th century may not hinge on (user, 6 Nov 2026): a place (a province id, an
+#: area, a region), a date after CK3's last bookmark, or a system of the new world and the early modern age.
+_PROVINCE_REF = re.compile(
+    r"\b(?:owns|owned_by|controls|province_id|is_core|is_claim|is_permanent_claim|has_province_modifier_in)\s*=\s*\d{1,4}\b"
+    r"|(?m:^\s*(?:1\d\d|[2-9]\d\d|\d{4})\s*=\s*\{)")
+_AREA_REF = re.compile(r"\b[a-z_0-9]+_(?:area|region|superregion)\s*=\s*\{|\b(?:area|region|superregion)\s*=\s*[a-z_0-9]+")
+_DATE_GATE = re.compile(r"(?m)^\s*(?:is_year|date)\s*=\s*(\d{4})")
+LAST_YEAR = 1066
+_LATE_SYSTEM = re.compile(
+    r"\b(colonist|num_of_colonies|is_colonial_nation|colony|colonial|trade_company|new_world|conquistador|north_america|"
+    r"south_america|oceania|south_africa|is_in_new_world|institution|institution_present|embrace_institution|has_institution|"
+    r"absolutism|enlightenment|industrial|revolutionary|army_professionalism|embargo|privateer|mercantilism|gunpowder|"
+    r"musket|cannon|artillery)\b")
+
+
+def names_late_or_local(code):
+    """Why a generic event is not generic for this world and time (a short label), else None. `code` has no comments."""
+    if _PROVINCE_REF.search(code):
+        return "province"
+    if _AREA_REF.search(code):
+        return "area"
+    if any(int(y) > LAST_YEAR for y in _DATE_GATE.findall(code)):
+        return "date"
+    if _LATE_SYSTEM.search(code):
+        return "late"
+    return None
 
 
 def lost_keys():
@@ -166,6 +195,8 @@ def step_events() -> None:
                 why = "tag"
             elif names_lost_key(block, lost):
                 why = "world"
+            elif names_late_or_local(code):
+                why = "era:" + names_late_or_local(code)
             else:
                 why = None
             entries.append({"fn": fn, "idx": idx, "id": m.group(1) if m else None, "code": code, "why": why})
@@ -208,8 +239,10 @@ def step_events() -> None:
             write_out(dest, out, encoding="utf-8", errors="strict")
         kept_files += 1
     world = sum(1 for e in entries if e["why"] == "world")
-    print(f"events: {kept_files} files, {kept_events} generic events kept, "
-          f"{dropped} dropped ({world} for a culture or religion this world lacks, {cascaded} for firing a dropped event)")
+    era = collections.Counter(e["why"][4:] for e in entries if e["why"] and e["why"].startswith("era:"))
+    print(f"events: {kept_files} files, {kept_events} generic events kept, {dropped} dropped ({world} for a culture or "
+          f"religion this world lacks, {sum(era.values())} not generic or not of the period {dict(era)}, "
+          f"{cascaded} for firing a dropped event)")
 
 
 def split_decision_blocks(text):
@@ -254,6 +287,15 @@ def step_filter_decisions() -> None:
     hand (VANILLA_FORMATION_FILES) are left alone, as are our own
     decisions (non-vanilla names)."""
     tagset = all_known_tags()
+    from steps.eventrefs import CALL, ID, _code, _match_brace, defined_event_ids
+
+    defined = defined_event_ids()
+
+    def fires_missing(block):
+        code = _code(block)
+        return any((i := ID.search(code[m.end():_match_brace(code, m.end() - 1)])) and i.group(1) not in defined
+                   for m in CALL.finditer(code))
+
     vdir = os.path.join(GAME, "decisions")
     ddir = os.path.join(MOD, "decisions")
     os.makedirs(ddir, exist_ok=True)
@@ -270,7 +312,8 @@ def step_filter_decisions() -> None:
         body = []
         for kind, key, lines in segs:
             if kind == "decision" and (fn in DEAD_BYZANTINE_DECISION_FILES
-                                       or event_mentions_tag("\n".join(lines), tagset)):
+                                       or event_mentions_tag("\n".join(lines), tagset)
+                                       or fires_missing("\n".join(lines))):
                 dropped.append(f"{fn}:{key}")
                 continue
             body.append(lines)

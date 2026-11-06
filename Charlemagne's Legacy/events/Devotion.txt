@@ -1526,59 +1526,6 @@ country_event = {
 }
 
 # The Bazaar
-country_event = {
-	id = devotion_events.205
-	title = devotion_events.205.t
-	desc = devotion_events.205.d
-	picture = MERCHANTS_TALKING_eventPicture
-
-	trigger = {
-		has_dlc = "Common Sense"
-		religion_group = muslim
-		uses_devotion = yes
-		OR = {
-			NOT = {
-				mercantilism = 50
-			}
-			NOT = {
-				trade_efficiency = 0.5
-			}
-		}
-	}
-	
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-		
-	option = {
-		name = devotion_events.205.a
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0.25
-				has_estate = estate_church
-				NOT = {
-					estate_loyalty = {
-						estate = estate_church
-						loyalty = 40
-					}
-				}
-			}
-		}
-		add_mercantilism = 1
-		reduce_estate_church_loyalty_effect = yes
-	}
-	option = {
-		name = devotion_events.205.b
-		ai_chance = {
-			factor = 50
-		}
-		add_devotion = 10
-		add_estate_church_loyalty_effect = yes
-	}
-}
 
 # Religious Cleansing
 province_event = {

@@ -142,46 +142,6 @@ country_event = {
 # Dreaming of Sanssouci
 
 # Palace of Sanssouci finished
-country_event = {
-	id = flavor_brapru.32
-	title = flavor_brapru.32.t
-	picture = GREAT_BUILDING_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_country_flag = pru_sanssouci_palace_flag
-		owns = 1759
-	}
-
-	immediate = {
-		hidden_effect = {
-			1759 = {
-				save_event_target_as = potsdam_province
-			}
-		}
-	}
-
-	desc = { trigger = { has_ruler_flag = pru_sanssouci_builder_flag }
-		desc = flavor_brapru.32.da
-	}
-	desc = { trigger = { NOT = { has_ruler_flag = pru_sanssouci_builder_flag } }
-		desc = flavor_brapru.32.db
-	}
-
-	option = { #Great!
-		name = flavor_brapru.32.a
-		add_prestige = 10
-		1759 = {
-			add_province_modifier = {
-				name = "pru_sanssouci_palace"
-				duration = -1
-			}
-		}
-		clr_country_flag = pru_sanssouci_palace_flag
-		clr_ruler_flag = pru_sanssouci_builder_flag
-	}
-}
 
 # Diet of 1653
 

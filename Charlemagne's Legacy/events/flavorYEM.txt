@@ -1,40 +1,5 @@
 namespace = flavor_YEM
 
-country_event = {
-	id = flavor_YEM.1
-	title = flavor_YEM.1.t
-	desc = flavor_YEM.1.d
-	picture = TRADE_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = flavor_YEM.1.a
-		
-		ai_chance = {
-			factor = 1
-		}
-		
-		goto = 4346
-		
-		add_power_projection_mission = { amount = 30 }
-		
-		custom_tooltip = " "
-		
-		4346 = {
-			add_trade_modifier = {
-				who = ROOT
-				duration = -1
-				power = 100
-				key = YEM_competition_less
-			}
-		}
-		
-		custom_tooltip = " "
-		
-		create_admiral = { tradition = 60 }
-	}
-}
 
 country_event = {
 	id = flavor_YEM.2

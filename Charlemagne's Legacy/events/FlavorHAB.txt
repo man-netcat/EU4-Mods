@@ -113,69 +113,6 @@ normal_or_historical_nations = yes
 
 
 # The Italian Wars
-country_event = {
-	id = flavor_hab.1008
-	title = "flavor_spa.EVTNAME1008"
-	desc = "flavor_spa.EVTDESC1008"
-	picture = {	
-		trigger = {
-			has_dlc = "Emperor"
-		}
-		picture = ITALIAN_wars_eventPicture
-	}
-	picture = {	
-		trigger = {
-			NOT = { has_dlc = "Emperor" }
-		}
-		picture = MILITARY_CAMP_eventPicture
-	}
-	
-	is_triggered_only = yes
-
-	option = {		# Then counter-claim all ADJECTIVE provinces!
-		name = "flavor_spa.EVTOPTA1008"
-		trigger = {
-			italy_region = {
-				owned_by = FROM
-			}				
-		}
-		ai_chance = { factor = 90 }
-		FROM = {
-			every_owned_province = {
-				limit = {
-					region = italy_region
-				}
-				add_claim = ROOT
-			}
-			hidden_effect = {
-				country_event = { id = flavor_hab.1009 days = 10 }
-			}
-		}
-	}
-	option = {		# We should back down in Italy
-		name = "flavor_spa.EVTOPTB1008"
-		ai_chance = { factor = 10 }
-		add_prestige = -10
-	}
-	option = {		# If it's war they want...
-		name = "flavor_hab.EVTOPTC1008"
-		trigger = {
-			NOT = {
-				italy_region = {
-					owned_by = FROM
-				}				
-			}
-		}
-		ai_chance = { factor = 90 }
-		add_prestige = 10
-		FROM = {
-			add_opinion = {
-				who = ROOT
-				modifier = claimed_italy
-			}
-		}
-	}
-}
 
 # The Italian Wars
 country_event = {
@@ -209,43 +146,6 @@ country_event = {
 # German Settlement of Hungary
 
 # Schwaz Silver Mine
-country_event = {
-	id = flavor_hab.11
-	title = flavor_hab.11.t
-	desc = flavor_hab.11.d
-	picture = ECONOMY_eventPicture
-
-	fire_only_once = yes
-
-	trigger = {
-		OR = {
-			has_country_flag = hab_guaranteed_silver_mine_flag
-			AND = {
-				owns = 73
-				is_year = 1460
-				NOT = { is_year = 1480 }
-				73 = {
-					NOT = { has_province_modifier = hab_schwaz_mine }
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
-
-
-	option = {# Great!
-		name = flavor_hab.11.a
-		73 = {
-			add_permanent_province_modifier = {
-				name = "hab_schwaz_mine"
-				duration = -1
-			}
-		}
-	}
-}
 
 # Generallandtag
 
@@ -438,40 +338,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = flavor_hab.31
-	title = flavor_hab.31.t
-	desc = flavor_hab.31.d
-	picture = CITY_DEVELOPMENT_eventPicture
-
-	is_triggered_only = yes
-	
-	option = {
-		name = flavor_hab.31.a
-		goto = 262
-
-		262 = {
-			add_base_production = 3
-			add_province_modifier = {
-				name = hab_expansion_of_krakow
-				duration = -1
-			}
-		}
-	}
-
-	option = {
-		name = flavor_hab.31.b
-		goto = 257
-
-		257 = {
-			add_base_manpower = 2
-			add_province_modifier = {
-				name = hab_conscription_in_warsaw
-				duration = -1
-			}
-		}
-	}
-}
 
 country_event = {
 	id = flavor_hab.32

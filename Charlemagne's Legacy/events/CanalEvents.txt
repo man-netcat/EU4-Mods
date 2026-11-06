@@ -912,48 +912,6 @@ province_event = {
 }
 
 # Canal Crossing River
-province_event = {
-	id = canal_events.23
-	title = "canal_events.EVTNAME23"
-	desc = "canal_events.EVTDESC23"
-	picture = OVEREXTENSION_eventPicture
-	goto = root
-	
-	trigger = {
-		has_construction = canal
-		province_id = 835	# Panama
-		owner = {
-			manpower = 12
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 300
-		modifier = {
-			factor = 3
-			has_construction = kiel_canal
-		}
-		modifier = {
-			factor = 0.75
-			has_construction = panama_canal
-		}
-	}
-
-	option = {
-		name = "canal_events.EVTOPTA23"
-		ai_chance = { factor = 25 }
-		owner = {
-			add_adm_power = -100
-		}
-	}
-	option = {
-		name = "canal_events.EVTOPTB23"
-		ai_chance = { factor = 75 }
-		owner = {
-			add_manpower = -10
-		}
-	}
-}
 
 # Lack of Fresh Water
 province_event = {

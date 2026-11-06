@@ -90,41 +90,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = dutch_mission_events.6
-	title = "dutch_mission_events.6.t"
-	desc = "dutch_mission_events.6.d"
-	picture = SHIP_SAILING_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "dutch_mission_events.6.a"
-		
-		custom_tooltip = NED_MODIFY_BURGHERS_IN_THE_ADMIRALITY_TOOLTIP
-		set_country_flag = ned_burghers_in_admirality_buff_flag
-	}
-	
-	option = {
-		name = "dutch_mission_events.6.b"
-		
-		custom_tooltip = NED_GRANT_DUTCH_ADMIRALITY_CONDITIONAL_MODIFIERS
-		hidden_effect = {
-			97 = {
-				add_province_triggered_modifier = ned_dutch_admirality
-			}
-			100 = {
-				add_province_triggered_modifier = ned_dutch_admirality
-			}
-			4383 = {
-				add_province_triggered_modifier = ned_dutch_admirality
-			}
-			96 = {
-				add_province_triggered_modifier = ned_dutch_admirality
-			}
-		}
-	}
-}
 
 country_event = {
 	id = dutch_mission_events.7

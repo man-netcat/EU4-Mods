@@ -1,36 +1,5 @@
 country_decisions = {
 
-	eng_make_orkney_offer = {
-		potential = {
-			has_country_flag = eng_can_buy_orkney_flag
-			NOT = { owns_or_non_sovereign_subject_of = 369 }
-		}
-		allow = {
-			is_at_war = no
-			treasury = 200
-			369 = {
-				owner = {
-					is_at_war = no
-				}
-			}
-		}
-		effect = {
-			clr_country_flag = eng_can_buy_orkney_flag
-			custom_tooltip = flavor_gbr.2.a.tt
-			hidden_effect = {
-				369 = {
-					owner = {
-						country_event = {
-							id = flavor_gbr.3
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
 	eng_abolish_adjustments_of_laws = {
 		potential = {
 			has_issue_unlocked = {

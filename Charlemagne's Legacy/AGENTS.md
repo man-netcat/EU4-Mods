@@ -180,10 +180,12 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   Venice and the other flavor_byz ones) and `Byzantine_Decisions.txt` (the Justinian decision, gated on a flag nobody sets) keep only their namespace and comments, so
   the same-filename override still replaces vanilla's. `steps/vanilla_scripts.py` `DEAD_BYZANTINE_*`. Nothing of ours references the cut ids (the mission-branch
   lines in MissionDecisions.txt are commented out). Byzantine missions and reform of our own are still to write.
-- Anachronistic vanilla events are cut too (user, 5 Nov 2026): besides the events that name a tag, `step_events` drops every vanilla event that names a culture or
-  religion the base game defines and this mod does not (Catholic/Orthodox/Protestant, Buddhism, Shinto, the Tengri reform, Nahuatl, Inti...: 783 events) and every
-  event that fires a dropped one (30 more). The build prints the counts. Vanilla decisions still only lose the tag-naming ones. A few vanilla on_actions still fire
-  events that were cut for naming a tag (flavor_cri.1, pirates.1...): that is older and logs a missing event, not fixed here.
+- Only purely generic vanilla events of the period stay (user, 5-6 Nov 2026). `step_events` drops an event that names a tag, a culture or religion the mod lacks,
+  a place (a province id, an area, a region: `names_late_or_local`), a date after 1066, or a system of the new world and early modern age (colonies, trade companies,
+  institutions, absolutism, gunpowder...), plus any event that fires a dropped one: 3,474 of 6,366 go, 2,892 stay. Decisions that fire a missing event go too.
+  `steps/eventrefs.py` (`step_dangling`) then writes overrides of the vanilla missions (series naming a tag dropped: 1,352) and of every other file that still
+  fires an event the mod does not define (on_actions, scripted effects, disasters, rebel types, reforms, incidents, imperial reforms...: the calls are cut out of
+  the file); validate fails if anything still fires a missing event. Dated generic events before 1066 stay.
 - Rule (user, 30 Oct 2026): a tag whose name equals a free base-game tag's name reuses that tag, whatever the government (`python3 tools/retag.py suggest 0` lists
   them; `retag.py OLD NEW`). Done for Mann, Magdeburg, Ulm, Opole, Strasbourg and the Byzantine and Abbasid governors Epirus (EPI), Athens (ATH), Shammar (SHM)
   and Medina (MDA). Not done where the vanilla tag is already a formable of ours: Lithuania (LIT), Bohemia (BOH) and Castile (CAS) stay the formables, and the

@@ -114,27 +114,6 @@ country_decisions = {
 		}
 	}
 
-	send_the_shaman_to_a_foreign_country = {
-		potential = {
-			has_country_flag = can_choose_to_unlock_a_cult
-			religion = shamanism
-			has_dlc = "Rights of Man"
-		}
-		allow = {
-			uses_cults = yes
-		}
-		effect = {
-			hidden_effect = {
-				clr_country_flag = can_choose_to_unlock_a_cult
-			}
-			country_event = {
-				id = fetishist_flavor.601
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
 
 	swap_primary_cult = {
 		potential = {

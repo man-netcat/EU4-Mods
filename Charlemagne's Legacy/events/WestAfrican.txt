@@ -542,41 +542,6 @@ country_event = {
 # [Religion] Scholars
 
 # The Flora of [Country]
-country_event = {
-	id = west_african.15
-	title = "west_african.15.t"
-	desc = "west_african.15.d"
-	picture = SONGHAIR_SCHOLAR_WRITING_eventPicture
-
-	trigger = {
-		has_dlc = "Art of War"
-		capital_scope = {
-			OR = {
-				region = guinea_region
-				region = niger_region
-				region = south_africa_region
-				region = central_africa_region
-				region = kongo_region
-			}
-		}
-		has_idea_group = innovativeness_ideas
-		any_owned_province = {
-			has_climate = tropical
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 480
-	}
-
-	# 
-	option = {
-		name = "west_african.15.a"
-		add_adm_power = 40
-		add_prestige = 15
-		set_country_flag = tropical_botany
-	}
-}
 
 # The Weapons of our Neighbors
 country_event = {
@@ -707,54 +672,6 @@ country_event = {
 
 
 # Self-rule for the [Culture]
-province_event = {
-	id = west_african.22
-	title = "west_african.22.t"
-	desc = "west_african.22.d"
-	picture = AFRICAN_KING_MEDIATING_eventPicture
-
-	trigger = {
-		has_dlc = "Art of War"
-		is_capital = no
-		owner = {
-			is_tribal = yes
-			NOT = { accepted_culture = ROOT }
-			capital_scope = {
-				OR = {
-					region = guinea_region
-					region = niger_region
-					region = south_africa_region
-					region = central_africa_region
-					region = kongo_region
-				}
-			}
-		}
-	}
-
-	is_mtth_scaled_to_size = 1
-
-	mean_time_to_happen = {
-		months = 800
-	}
-
-	# Let tribes rule themselves
-	option = {
-		name = "west_african.22.a"
-		owner = {
-			add_stability_or_adm_power = yes
-			every_owned_province = {
-				limit = { culture = ROOT }
-				add_local_autonomy = 15
-			}
-		}
-	}
-
-	# Retain control
-	option = {
-		name = "west_african.22.b"
-		create_revolt = 3
-	}
-}
 
 # Raids Through the Jungle
 country_event = {
@@ -811,74 +728,6 @@ country_event = {
 }
 
 # Into the Unknown
-country_event = {
-	id = west_african.24
-	title = "west_african.24.t"
-	desc = "west_african.24.d"
-	picture = AFRICAN_EXPLORING_JUNGLE_eventPicture
-
-	trigger = {
-		has_dlc = "Art of War"
-		capital_scope = { has_climate = tropical }
-		is_tribal = yes
-		NOT = { num_of_colonies = 1 }
-		any_owned_province = {
-			any_empty_neighbor_province = {
-				has_climate = tropical
-			}
-		}
-		manpower = 3
-		monthly_income = 5
-		NOT = { num_of_loans = 5 }
-		OR = {
-			years_of_income = 1
-			is_in_deficit = no
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 1200
-	}
-
-	# Send a party to explore
-	option = {
-		name = "west_african.24.a"
-		add_manpower = -3
-		random_owned_province = {
-			limit = {
-				any_empty_neighbor_province = {
-					has_climate = tropical
-				}
-			}
-			random_empty_neighbor_province = {
-				limit = { has_climate = tropical }
-				create_colony = 300
-				add_province_modifier = {
-					name = "used_to_tropical"
-					duration = -1
-				}
-			}
-		}
-		ai_chance = {
-			factor = 2
-			modifier = {
-				factor = 0
-				OR = {
-					is_in_deficit = yes
-					num_of_loans = 1
-					NOT = { monthly_income = 10 }
-				}
-			}
-		}
-	}
-
-	# Tell them to stay here
-	option = {
-		name = "west_african.24.b"
-		add_prestige = -10
-		add_adm_power = 20
-	}
-}
 
 # New Dyes
 country_event = {
@@ -912,50 +761,6 @@ country_event = {
 }
 
 # The Spirits Remain
-country_event = {
-	id = west_african.26
-	title = "west_african.26.t"
-	desc = "west_african.26.d"
-	picture = ANIMIST_RELIGIOUS_CEREMONY_eventPicture
-
-	trigger = {
-		has_dlc = "Art of War"
-		religion = shamanism
-		is_year = 1650
-		any_owned_province = {
-			NOT = { religion_group = pagan }
-		}
-		any_neighbor_country = {
-			NOT = { religion_group = pagan }
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 960
-	}
-
-	# Have a countrywide animist celebration
-	option = {
-		name = "west_african.26.a"
-		add_prestige = 10
-		add_legitimacy = 10
-		every_neighbor_country = {
-			limit = {
-				NOT = { religion_group = pagan }
-			}
-			add_opinion = {
-				who = ROOT
-				modifier = practiced_animist_rituals
-			}
-		}
-	}
-
-	# Keep worship low-key
-	option = {
-		name = "west_african.26.b"
-		add_prestige = -10
-	}
-}
 
 # Immortal [Ruler]
 

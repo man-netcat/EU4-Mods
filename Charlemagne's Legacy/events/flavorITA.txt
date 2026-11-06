@@ -219,47 +219,6 @@ country_event = {
 	}
 }
 					
-country_event = {
-	id = flavor_ita.5
-	title = flavor_ita.5.t
-	desc = flavor_ita.5.d
-	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	is_triggered_only = yes 
-	major = yes
-	
-	option = {
-		name = flavor_ita.5.a
-		
-		ai_chance = {
-			factor = 1
-		}
-		118 = {
-			add_province_triggered_modifier = ITA_all_roads_lead_to_rome
-		}
-		
-		custom_tooltip = " "
-		
-		custom_tooltip = ITA_final_modifier_tt
-		hidden_effect = {
-			remove_country_modifier = ITA_conquest_of_africa_2
-			remove_country_modifier = ITA_conquest_of_east_2
-			remove_country_modifier = ITA_conquest_of_west_2
-			remove_country_modifier = ITA_humiliation_of_holy_roman_empire_2
-			add_country_modifier = {
-				name = ITA_final_modifier
-				duration = -1
-			}
-		}
-		
-		custom_tooltip = " "
-		
-		add_permanent_power_projection = {
-			amount = 10
-			type = ITA_true_roman_empire
-		}
-	}
-}
 
 country_event = {
 	id = flavor_ita.6

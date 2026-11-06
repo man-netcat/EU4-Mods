@@ -650,33 +650,6 @@ country_event = {
 # The Hungarian Military Engineer Urban
 
 # The Conquest of Constantinople
-country_event = {
-	id = flavor_tur.205
-	title = flavor_tur.205.t
-	desc = flavor_tur.205.desc
-	picture = CONQUEROR_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# 
-		name = flavor_tur.205.a
-		add_country_modifier = {
-			name = defeated_byzantine_empire
-			duration = 5475
-		}
-		151 = {
-			add_base_tax = 1
-			add_base_production = 1
-			add_base_manpower = 1
-			add_province_modifier = {
-				name = tur_resettlement_of_constantinople
-				duration = 9125
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 # The Internal Power Structure
 
@@ -711,33 +684,6 @@ country_event = {
 # The Fall of Vienna
 
 # The Turkish Fear
-country_event = {
-	id = flavor_tur.212
-	title = flavor_tur.212.t
-	desc = flavor_tur.212.desc
-	picture = PANIC_eventPicture
-	is_triggered_only = yes
-	trigger = {
-		has_dlc = "Domination"
-		capital_scope = {
-			OR = {
-				region = north_german_region
-				region = south_german_region
-				region = italy_region
-			}
-		}
-		religion_group = christian
-	}
-	
-	option = {
-		name = flavor_tur.212.a
-		reduce_stability_or_adm_power = yes
-		add_country_modifier = {
-			name = tur_turkish_fear
-			duration = 9125
-		}
-	}
-}
 
 # The Eyalet of Austria
 
@@ -844,56 +790,8 @@ country_event = {
 }
 
 # Victory for the Ottoman House - written by Big Boss
-country_event = {
-	id = flavor_tur.231
-	title = flavor_tur.231.t
-	desc = flavor_tur.231.desc
-	picture = BORDER_TENSION_eventPicture
-	is_triggered_only = yes 
-	
-	option = { 
-		name = flavor_tur.231.a
-		
-		anatolia_region = { 
-			limit = { country_or_non_sovereign_subject_holds = ROOT }
-			add_province_modifier = { 
-				name = tur_integration_in_the_ottoman_government_modifier
-				duration = 5475
-			}
-		}
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 # Christians of the Caucasus
-country_event = {
-	id = flavor_tur.232
-	title = flavor_tur.232.t
-	desc = flavor_tur.232.desc
-	picture = LIBERUM_VETO_eventPicture
-	is_triggered_only = yes 
-	
-	option = { 
-		name = flavor_tur.232.a
-		add_mil_power = 50
-		caucasia_region = {
-			limit = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			add_province_modifier = {
-				name = tur_caucasian_conquest
-				duration = 9125
-			}
-		}
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 # The Eyalet of Yemen
 
@@ -902,36 +800,6 @@ country_event = {
 # The Eyalet of Persia
 
 # Supremacy Over the Emerald Lion - written by Big Boss
-country_event = {
-	id = flavor_tur.237
-	title = flavor_tur.237.t
-	desc = flavor_tur.237.desc
-	picture = JANISSARIES_IN_FORMATION_eventPicture
-	is_triggered_only = yes 
-	
-	option = { 
-		name = flavor_tur.237.a
-		khorasan_region = {
-			limit = {
-				NOT = { is_core = ROOT }
-				NOT = { is_permanent_claim = ROOT }
-			}
-			add_permanent_claim = ROOT
-		}
-		add_splendor = 200
-		add_prestige_or_monarch_power = {
-			amount = 50
-		}
-		add_country_modifier = {
-			name = tur_conquest_of_persia
-			duration = 18250
-		}
-		
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 # Millet System - written by Big Boss
 
@@ -991,31 +859,6 @@ country_event = {
 }
 
 # Egypt under Ottoman Rule
-country_event = {
-	id = flavor_tur.244
-	title = flavor_tur.244.t
-	desc = flavor_tur.244.desc
-	picture = PASHAS_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = { 
-		name = flavor_tur.244.a
-		add_adm_power = 100
-		egypt_region = {
-			limit = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			add_province_modifier = {
-				name = tur_investment_into_infrastructure
-				duration = 9125
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 # Rocket Man - written by Big Boss
 
@@ -1091,149 +934,6 @@ country_event = {
 }
 
 # Commercial Ventures in the East - written by Big Boss
-country_event = { 
-	id = flavor_tur.248
-	title = flavor_tur.248.t
-	desc = flavor_tur.248.desc
-	picture = MERCHANTS_TALKING_eventPicture
-	is_triggered_only = yes 
-
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					any_owned_province = {
-						superregion = india_superregion 
-						province_has_center_of_trade_of_level = 1 
-					}
-				}
-				for = {
-					effect = "
-					random_owned_province = {
-						limit = {
-							superregion = india_superregion 
-							province_has_center_of_trade_of_level = 1
-							NOT = { has_province_flag = tur_marked }
-						}
-						set_province_flag = tur_marked
-					}"
-					amount = 3
-				}
-			}
-		}
-	}
-	
-	option = { 
-		name = flavor_tur.248.a 
-		
-		if = { 	
-			limit = { 
-				any_ally = { 
-					capital_scope = { superregion = india_superregion }
-					has_opinion = { 
-						who = ROOT 
-						value = 150 
-					}
-					if = {
-						limit = { has_dlc = "Leviathan" }
-						trust = { 
-							who = ROOT 
-							value = 80 
-						}
-					}
-				}
-			}
-			random_ally = { 
-				limit = { 
-					capital_scope = { superregion = india_superregion }
-					has_opinion = { 
-						who = ROOT 
-						value = 150 
-					}
-					trust = { 
-						who = ROOT 
-						value = 80 
-					}
-				}
-				add_country_modifier = {
-					name = tur_exporting_to_the_west_modifier
-					duration = 9125 
-				}
-			}
-		}
-		if = {
-			limit = { 
-				504 = { 
-					trade_share = {
-						country = ROOT 
-						share = 30
-					}
-				}
-			}
-			504 = { 
-				add_trade_modifier = {
-					who = ROOT
-					duration = 9125
-					power = 50
-					key = STRONG_MERCHANTS
-				}
-			}
-		}
-		if = {
-			limit = { 
-				1340 = { 
-					trade_share = {
-						country = ROOT 
-						share = 30
-					}
-				}
-			}
-			1340 = { 
-				add_trade_modifier = {
-					who = ROOT
-					duration = 9125
-					power = 50
-					key = STRONG_MERCHANTS
-				}
-			}
-		}
-		if = {
-			limit = { 
-				1343 = { 
-					trade_share = {
-						country = ROOT 
-						share = 30
-					}
-				}
-			}
-			1343 = { 
-				add_trade_modifier = {
-					who = ROOT
-					duration = 9125
-					power = 50
-					key = STRONG_MERCHANTS
-				}
-			}
-		}
-		if = {
-			limit = {
-				any_owned_province = {
-					has_province_flag = tur_marked
-				}
-			}
-			every_owned_province = {
-				limit = {
-					has_province_flag = tur_marked
-				}
-				clr_province_flag = tur_marked
-				add_province_modifier = {
-					name = tur_trade_center_of_the_ottoman_empire_modifier
-					duration = -1 
-				}
-			}
-		}
-	}
-}
 
 # The Siyasah
 country_event = {
@@ -1524,31 +1224,6 @@ country_event = {
 }
 
 # Persia under Ottoman Rule
-country_event = {
-	id = flavor_tur.259
-	title = flavor_tur.259.t
-	desc = flavor_tur.259.desc
-	picture = PASHAS_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = { 
-		name = flavor_tur.259.a
-		add_adm_power = 100
-		persia_region = {
-			limit = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			add_province_modifier = {
-				name = tur_investment_into_infrastructure
-				duration = 9125
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 # Peak of the Ottomans - CCR buff when you have the large Ottoman borders
 

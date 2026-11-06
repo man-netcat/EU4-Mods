@@ -187,47 +187,6 @@ country_event = {
 }
 
 #Meddling Colonial Rivals
-country_event = {
-	id = flavor_tupi.10
-	title = flavor_tupi.10.t
-	desc = flavor_tupi.10.d
-	picture = EXPLORERS_eventPicture
-	
-	is_triggered_only = yes
-	
-	
-	option = {
-		name = flavor_tupi.10.a #They have no right to be here!
-		random_province = {
-			limit = {
-				owned_by = FROM
-				continent = south_america
-				NOT = { is_claim = FROM }
-			}
-			add_claim = ROOT
-		}
-		random_province = {
-			limit = {
-				owned_by = FROM
-				continent = south_america
-				NOT = { is_claim = FROM }
-			}
-			add_claim = ROOT
-		}
-		random_province = {
-			limit = {
-				owned_by = FROM
-				continent = south_america
-				NOT = { is_claim = FROM }
-			}
-			add_claim = ROOT
-		}
-		add_opinion = {
-			who = FROM
-			modifier = tamoyo_rivals
-		}
-	}
-}
 
 #The Tapuia - Tupi Rivalry
 

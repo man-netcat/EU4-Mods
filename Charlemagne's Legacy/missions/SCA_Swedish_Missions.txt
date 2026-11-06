@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Scandinavian-Swedish missions
+#Missions are ordered in certain "Packs" you unlock for forming Scandinvaia as Sweden
+#These packs are designed around the Swedish mission tree in order to avoid missions with repeating conditions or stacking rewards
+
+#Swedish Mission Pack - Caroliner, Hakkapeliitta and Gustavus ambitions
+
+
+
+
+#Norwegian development missions (has to be placed here or else mission positions are ruined)
+#Scandinavian Develop Pack for Denmark + Sweden
+
+#Danish/Swedish Mission Pack - Competent Fleet

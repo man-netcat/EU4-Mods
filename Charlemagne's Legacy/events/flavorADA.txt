@@ -12,58 +12,8 @@ normal_or_historical_nations = yes
 #Adal regiment arrives in Turkish royal court
 
 #Adal receives the support of a Turkish Empire
-country_event = {
-	id = flavor_ada.3
-	title = flavor_ada.3.t
-	desc = flavor_ada.3.d
-	picture = DIPLOMACY_eventPicture
-
-	is_triggered_only = yes
-
-	option = {	#Noice
-		name = flavor_ada.3.a
-		custom_tooltip = flavor_ada.3.a.tt
-		custom_tooltip = ada_discover_anatolia
-		hidden_effect = {
-			anatolia_region = {
-				discover_country = ROOT
-			}
-			set_country_flag = ada_has_turkish_help
-		}
-		add_historical_friend = FROM
-		FROM = {
-			add_historical_friend = ROOT
-		}
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 #Adal receives nothing
-country_event = {
-	id = flavor_ada.4
-	title = flavor_ada.4.t
-	desc = flavor_ada.4.d
-	picture = ACCUSATION_eventPicture
-
-	is_triggered_only = yes
-
-	option = {	#Oof
-		name = flavor_ada.4.a
-		custom_tooltip = ada_discover_anatolia
-		hidden_effect = {
-			anatolia_region = {
-				discover_country = ROOT
-			}
-		}
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
 
 #No Turks, only despair
 

@@ -12,37 +12,6 @@ normal_or_historical_nations = yes
 # The Statute of Piotrkow
 
 # The Polish Inheritance of Masovia
-country_event = {
-	id = flavor_pol.3473
-	title = "flavor_pol.EVTNAME3473"
-	desc = "flavor_pol.EVTDESC3473"
-	picture = COURT_eventPicture
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "flavor_pol.EVTOPTA3473" # Make it a personal royal fiefdom
-		257 = { # Warszawa
-			if = {
-				limit = {
-					NOT = { has_dlc = "Common Sense" }
-				}
-				add_base_tax = 2
-			}
-			if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
-				add_province_modifier = {
-					name = "economic_development_of_mazovia"
-					duration = -1
-				}
-			}
-		}
-	}
-}
 
 # The Jesuit King
 
@@ -900,51 +869,6 @@ country_event = { #Expanding the Quarter Army
 	}
 }
 
-country_event = { #Collegium Maius & the Growth of Thought
-	id = flavor_pol.28
-	title = flavor_pol.28.t 
-	desc = flavor_pol.28.d 
-	picture = GREAT_BUILDING_eventPicture
-	is_triggered_only = yes 
-	
-	option = {
-		name = flavor_pol.28.a 
-		
-		if = {
-			limit = { has_dlc = "Rule Britannia" } 
-			change_innovativeness = 3 
-		}
-		else = { 
-			add_adm_power = 25 
-			add_dip_power = 25
-		}
-		if = { 
-			limit = { 
-				262 = { 
-					NOT = { has_building = university } 
-				}
-			}
-			262 = { add_building = university } 
-		}
-		else_if = {
-			limit = { has_dlc = "Rights of Man" } 
-			add_ruler_personality = scholar_personality
-		}
-		else = { 
-			262 = { add_base_tax = 1 } 
-		}
-		custom_tooltip = pol_institutions_will_slowly_grow_in_262_tt
-		hidden_effect = {
-			262 = { 
-				add_province_modifier = { 
-					name = pol_krakow_university_modifier 
-					duration = -1
-					hidden = yes 
-				}
-			}
-		}
-	}
-}
 
 
 

@@ -65,67 +65,6 @@ country_event = {
 }
 
 #Make Ingolstadt produce beer
-country_event = {
-	id = new_flavour_bav.12
-	title = new_flavour_bav.12.t
-	desc = new_flavour_bav.12.d
-	picture = TRADEGOODS_eventPicture
-	
-	mean_time_to_happen = {
-		years = 60
-	}
-
-	fire_only_once = yes
-
-	trigger = {
-		owns_core_province = 2955
-		primary_culture = bavarian
-		is_year = 1510
-		2955 = {
-			trade_goods = wine
-			has_building = farm_estate
-			development = 15
-		}
-	}
-	
-	option = {	
-		name = new_flavour_bav.12.a
-
-		add_dip_power = -50
-		2955 = {
-			change_trade_goods = grain
-			add_base_production = 1
-			add_province_modifier = {
-				name = ingolstadt_beer_city
-				duration = -1
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-	option = {
-		name = new_flavour_bav.12.b
-		
-		add_prestige = 20
-		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					prestige = 0
-				}
-			}
-			modifier = {
-				factor = 5
-				NOT = {
-					prestige = -50
-				}
-			}
-		}
-	}
-}
 
 
 #Startup Event: The Bavarian Succession
@@ -161,31 +100,6 @@ country_event = {
 
 
 #Hans Steininger's Beard
-country_event = {
-	id = new_flavour_bav.19
-	title = new_flavour_bav.19.name
-	desc = new_flavour_bav.19.desc
-	picture = CITY_VIEW_eventPicture
-
-	fire_only_once = yes
-	
-	mean_time_to_happen = {
-		months = 90
-	}
-
-	trigger = {
-		primary_culture = bavarian
-		owns_core_province = 4760
-		has_regency = no
-		is_year = 1560
-		NOT = { is_year = 1570 }
-	}
-
-	option = {	
-		name = new_flavour_bav.19.a
-		add_prestige = 10
-	}
-}
 
 
 #The Theatinerkirche

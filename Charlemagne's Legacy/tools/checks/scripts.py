@@ -71,6 +71,17 @@ def kept_events_and_decisions() -> None:
         )
 
 
+def nothing_fires_a_missing_event() -> None:
+    """No mission, on_action, scripted effect, decision or reform fires an event the mod does not define."""
+    print("\n== nothing fires a missing event (steps/eventrefs.py) ==")
+    from steps.eventrefs import dangling  # noqa: E402
+
+    left = dangling()
+    note(not left, f"every event call and on_action id names a defined event ({sum(len(v) for v in left.values())} left)")
+    for rel, ids in sorted(left.items())[:8]:
+        print(f"        {rel}: {sorted(set(ids))[:4]}")
+
+
 def custom_script_has_no_per_pid_limit_blocks() -> None:
     """Custom script has no per-pid limit blocks."""
     print("\n== custom script has no per-pid limit blocks ==")
@@ -144,6 +155,7 @@ def country_history_uses_vanilla_key_shapes() -> None:
 
 
 def run() -> None:
+    nothing_fires_a_missing_event()
     kept_events_and_decisions()
     custom_script_has_no_per_pid_limit_blocks()
     country_history_uses_vanilla_key_shapes()

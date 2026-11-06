@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Scandinavian-Norway missions
+#Missions are ordered in certain "Packs" you unlock for forming Scandinvaia as Norway
+#These packs are designed around the Danish mission tree in order to avoid missions with repeating conditions or stacking rewards
+
+#Norwegian Mission Pack - more colonialization
+
+#Danish Mission Pack - Old World Colonialization
+
+#Norwegian Mission Pack - "Navalization" and Expanding of Marines
+
+#Swedish Mission Pack - Development stuff + Balticum Nostrum

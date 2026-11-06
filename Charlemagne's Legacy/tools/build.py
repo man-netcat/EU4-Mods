@@ -26,6 +26,7 @@ from steps.countries import step_countries  # noqa: E402
 from steps.custom import step_custom  # noqa: E402
 from steps.diplomacy import step_diplomacy, step_wars  # noqa: E402
 from steps.empire import step_hre  # noqa: E402
+from steps.eventrefs import step_dangling  # noqa: E402
 from steps.formations import step_formation_triggers  # noqa: E402
 from steps.provinces import step_provinces  # noqa: E402
 from steps.releasables import step_releasables  # noqa: E402
@@ -55,6 +56,7 @@ PHASES = [
     ("write the releasables' events", step_releasables),
     ("filter vanilla events", step_events),
     ("filter vanilla decisions", step_filter_decisions),
+    ("strip calls to missing events", step_dangling),
     ("check CK3 rulers", step_ck3, []),
     ("check start-date ownership", step_start),
 ]

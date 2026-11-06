@@ -1,0 +1,219 @@
+
+
+maori_missions = {#Credits to James Beaumont
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		primary_culture = maori
+	}
+	has_country_shield = yes
+	
+	maori_haka = {
+		icon = mission_oceania_assemble_an_army
+		position = 2
+		required_missions = { }
+		trigger = {
+			manpower_percentage = 0.5
+			army_tradition = 25
+			army_size_percentage = 0.8
+		}
+		effect = {
+			create_general = { 
+				tradition = 50 
+			}
+			random_known_country = {
+				limit = { 
+					is_rival = ROOT 
+					primary_culture = maori
+				}
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Mandate of Heaven" 
+						} 
+					}
+					add_casus_belli = {
+						target = FROM
+						type = cb_vassalize_mission
+						months = 300
+					}
+				} 		
+				else = {
+					add_casus_belli = {
+						target = FROM
+						type = cb_force_tributary_mission
+						months = 300
+					}
+				}
+			}
+		}
+	}
+	maori_riri = {
+		icon = mission_oceania_build_army_mission
+		position = 3
+		required_missions = { maori_haka }
+		provinces_to_highlight = {
+			owner = {
+				ROOT = {
+					is_rival = PREV
+				}
+			}
+		}
+		trigger = { 
+			OR = {
+				all_rival_country = { 
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.5
+						}
+					}
+				}
+				AND = {
+					te_ika_a_maui_hauauru_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					te_ika_a_maui_waho_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					te_waipounamu_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					army_size_percentage = 1
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_known_country = {
+						is_rival = ROOT 
+						primary_culture = maori
+					}
+				}
+				random_known_country = {
+					limit = { 
+						is_rival = ROOT 
+						primary_culture = maori
+					}
+					if = { 
+						limit = { 
+							NOT = { 
+								has_dlc = "Mandate of Heaven" 
+							} 
+						}
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_vassalize_mission
+							months = 300
+						}
+					} 		
+					else = {
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_force_tributary_mission
+							months = 300
+						}
+					}
+				}
+			}
+			else = {
+				add_yearly_manpower = 0.15
+				add_adm_power = 100
+			}
+		}
+	}
+	maori_ka_mate = {
+		icon = mission_gain_mana
+		position = 4
+		required_missions = { maori_riri }
+		provinces_to_highlight = {
+			OR = {
+				area = te_ika_a_maui_hauauru_area
+				area = te_ika_a_maui_waho_area
+			}
+		}
+		trigger = { 
+			OR = {
+				is_at_war = yes
+				had_recent_war = 10
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				OR = {
+					area = te_ika_a_maui_hauauru_area
+					area = te_ika_a_maui_waho_area
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { stability = 3 }
+				}
+				add_stability = 1
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+			else = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+		}
+	}
+	maori_colonize_southern_island = {
+		icon = mission_invade_island
+		position = 5
+		required_missions = { maori_ka_mate }
+		provinces_to_highlight = {
+			OR = {
+				area = te_ika_a_maui_hauauru_area
+				area = te_ika_a_maui_waho_area
+				area = te_waipounamu_area
+			}
+		}
+		trigger = { 
+			OR = {
+				AND = {
+					te_ika_a_maui_hauauru_area = { 
+						type = all
+						country_or_subject_holds = ROOT 
+					}
+					te_ika_a_maui_waho_area = { 
+						type = all
+						country_or_subject_holds = ROOT 
+					}
+				}
+				AND = {
+					te_waipounamu_area = { 
+						country_or_subject_holds = ROOT 
+					}
+					OR = {
+						treasury = 1000
+						AND = {
+							adm = 4
+							dip = 4
+							mil = 4
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			every_province = {
+				limit = {
+					area = te_waipounamu_area
+					is_empty = yes
+				}
+				cede_province = ROOT
+			}
+		}
+	}
+}
+

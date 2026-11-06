@@ -1,0 +1,938 @@
+WoC_maya_generic_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_highlander_resistance = {
+		icon = mission_ne_palisades
+		required_missions = { MAY_collapse_of_mayapan }
+		position = 2 
+		provinces_to_highlight = {
+			OR = {
+				area = guatemala_area
+				province_id = 2637
+				province_id = 2638
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = guatemala_area
+					province_id = 2637
+					province_id = 2638
+				}
+				value = 4
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MAY_resistance
+				duration = 9125
+			}
+			
+			add_yearly_manpower = 1
+			
+			add_army_tradition_or_mil_power = { amount = 10 }
+		}
+	}
+}
+
+
+WoC_maya_generic_reform_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		NOT = { num_of_maya_religious_reforms = { amount = 1 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+
+	MAY_venus_1 = {
+		icon = mission_venus
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_venus_trigger = yes
+		}
+		effect = {
+			MAY_venus_effect = yes
+		}
+	}
+}
+
+WoC_maya_generic_reform_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 1 }
+		NOT = { num_of_maya_religious_reforms = { amount = 2 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_venus_2 = {
+		icon = mission_venus
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_venus_trigger = yes
+		}
+		effect = {
+			MAY_venus_effect = yes
+		}
+	}
+}
+
+WoC_maya_generic_reform_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 2 }
+		NOT = { num_of_maya_religious_reforms = { amount = 3 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_venus_3 = {
+		icon = mission_venus
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_venus_trigger = yes
+		}
+		effect = {
+			MAY_venus_effect = yes
+		}
+	}
+}
+
+WoC_maya_generic_reform_4 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 3 }
+		NOT = { num_of_maya_religious_reforms = { amount = 4 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_venus_4 = {
+		icon = mission_venus
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_venus_trigger = yes
+		}
+		effect = {
+			MAY_venus_effect = yes
+		}
+	}
+}
+
+WoC_maya_generic_reform_5 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 4 }
+		NOT = { num_of_maya_religious_reforms = { amount = 5 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_venus_5 = {
+		icon = mission_venus
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_venus_trigger = yes
+		}
+		effect = {
+			MAY_venus_effect = yes
+		}
+	}
+}
+
+WoC_maya_generic_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_yucatan_renaissance = {
+		icon = mission_ne_birch_bark_canoes
+		required_missions = { MAY_collapse_of_mayapan }
+		position = 2 
+		provinces_to_highlight = {
+			OR = {
+				area = yucatan_area
+				area = east_yucatan_area
+				area = campeche_area
+			}
+			NOT = { province_id = 4588 }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = yucatan_area
+					area = east_yucatan_area
+					area = campeche_area
+				}
+				NOT = { province_id = 4588 }
+				value = 8
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = MAY_ashes_of_mayapan
+				duration = 10950
+			}
+			
+			1551 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 9125
+					power = 15
+					key = MAY_coastal_networks
+				}
+			}
+		}
+	}
+	
+	MAY_wastek = {
+		icon = mission_nah_ravine_dwellers
+		required_missions = { MAY_reform_the_league }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 858
+				province_id = 2641
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			858 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2641 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			858 = {
+				add_nationalism = -20
+				add_local_autonomy = -25
+			}
+			2641 = {
+				add_nationalism = -20
+				add_local_autonomy = -25
+			}
+			
+			custom_tooltip = " "
+			
+			add_country_modifier = {
+				name = MAY_unifying_maya_people
+				duration = -1
+			}
+		}
+	}
+}
+
+WoC_maya_generic_reform_2_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		NOT = { num_of_maya_religious_reforms = { amount = 1 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+
+	MAY_realm_size_1 = {
+		icon = mission_mesoamerican_soldiers_training
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_realm_size_trigger = yes
+		}
+		effect = {
+			MAY_realm_size_effect = yes
+		}
+	}
+	
+	MAY_pass_reform_1 = {
+		icon = mission_blood_sacrifices
+		required_missions = { MAY_venus_1 MAY_realm_size_1 }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_pass_reform_trigger = { amount = 1 }
+		}
+		effect = {
+			MAY_pass_reform_effect = { amount = 1 }
+		}
+	}
+}
+
+WoC_maya_generic_reform_2_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 1 }
+		NOT = { num_of_maya_religious_reforms = { amount = 2 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_realm_size_2 = {
+		icon = mission_mesoamerican_soldiers_training
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_realm_size_trigger = yes
+		}
+		effect = {
+			MAY_realm_size_effect = yes
+		}
+	}
+	
+	MAY_pass_reform_2 = {
+		icon = mission_blood_sacrifices
+		required_missions = { MAY_venus_2 MAY_realm_size_2 }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_pass_reform_trigger = { amount = 2 }
+		}
+		effect = {
+			MAY_pass_reform_effect = { amount = 2 }
+		}
+	}
+}
+
+WoC_maya_generic_reform_2_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 2 }
+		NOT = { num_of_maya_religious_reforms = { amount = 3 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_realm_size_3 = {
+		icon = mission_mesoamerican_soldiers_training
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_realm_size_trigger = yes
+		}
+		effect = {
+			MAY_realm_size_effect = yes
+		}
+	}
+	
+	MAY_pass_reform_3 = {
+		icon = mission_blood_sacrifices
+		required_missions = { MAY_venus_3 MAY_realm_size_3 }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_pass_reform_trigger = { amount = 3 }
+		}
+		effect = {
+			MAY_pass_reform_effect = { amount = 3 }
+		}
+	}
+}
+
+WoC_maya_generic_reform_2_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 3 }
+		NOT = { num_of_maya_religious_reforms = { amount = 4 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_realm_size_4 = {
+		icon = mission_mesoamerican_soldiers_training
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_realm_size_trigger = yes
+		}
+		effect = {
+			MAY_realm_size_effect = yes
+		}
+	}
+	
+	MAY_pass_reform_4 = {
+		icon = mission_blood_sacrifices
+		required_missions = { MAY_venus_4 MAY_realm_size_4 }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_pass_reform_trigger = { amount = 4 }
+		}
+		effect = {
+			MAY_pass_reform_effect = { amount = 4 }
+		}
+	}
+}
+
+WoC_maya_generic_reform_2_5 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		num_of_maya_religious_reforms = { amount = 4 }
+		NOT = { num_of_maya_religious_reforms = { amount = 5 } }
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_realm_size_5 = {
+		icon = mission_mesoamerican_soldiers_training
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_realm_size_trigger = yes
+		}
+		effect = {
+			MAY_realm_size_effect = yes
+		}
+	}
+	
+	MAY_pass_reform_5 = {
+		icon = mission_blood_sacrifices
+		required_missions = { MAY_venus_5 MAY_realm_size_5 }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			MAY_pass_reform_trigger = { amount = 5 }
+		}
+		effect = {
+			MAY_pass_reform_effect = { amount = 5 }
+		}
+	}
+}
+
+WoC_maya_generic_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_obsidian_weapons = {
+		icon = mission_obsidian_blades
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			has_province_modifier = MAY_active_obsidian_source
+		}
+		trigger = {
+			army_tradition = 30
+			num_of_battles = {
+				amount = 25
+			}
+			has_obsidian_source_trigger = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = MAY_supply_of_obsidian_weapons
+				duration = 10950
+			}
+			
+			capital_scope = { 
+				add_base_manpower = 2
+			}
+			
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				custom_tooltip = " "
+			
+				custom_tooltip = MAY_upgrade_obsidian_privilege
+			}
+			else = { 
+				add_mil_power = 100
+			}
+			set_country_flag = MAY_upgrade_obsidian_privilege_flag
+		}
+	}
+	
+	MAY_reform_religion = {
+		icon = mission_aztec_city_alliance
+		required_missions = { MAY_hegemonic_ambitions MAY_obsidian_weapons }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_maya_religious_reforms = { amount = 5 }
+		}
+		effect = {
+			add_country_modifier_for_age = {
+				age = age_of_discovery
+				name = MAY_religion_reformed
+				else = "
+					change_government_reform_progress = 50
+					custom_tooltip = \" \"
+				"
+			}
+			
+			if = {
+				limit = {
+					uses_legitimacy = yes
+				}
+				custom_tooltip = MAY_for_every_5_legitimacy
+				hidden_effect = {
+					if = {
+						limit = {
+							legitimacy = 100 
+						}
+						add_adm_power = 100
+					}
+					else_if = {
+						limit = {
+							legitimacy = 95 
+						}
+						add_adm_power = 95
+					}
+					else_if = {
+						limit = {
+							legitimacy = 90
+						}
+						add_adm_power = 90
+					}
+					else_if = {
+						limit = {
+							legitimacy = 85 
+						}
+						add_adm_power = 85
+					}
+					else_if = {
+						limit = {
+							legitimacy = 80
+						}
+						add_adm_power = 80
+					}
+					else_if = {
+						limit = {
+							legitimacy = 75 
+						}
+						add_adm_power = 75
+					}
+					else_if = {
+						limit = {
+							legitimacy = 70
+						}
+						add_adm_power = 70
+					}
+					else_if = {
+						limit = {
+							legitimacy = 65 
+						}
+						add_adm_power = 65
+					}
+					else_if = {
+						limit = {
+							legitimacy = 60 
+						}
+						add_adm_power = 60
+					}
+					else_if = {
+						limit = {
+							legitimacy = 55 
+						}
+						add_adm_power = 55
+					}
+					else_if = {
+						limit = {
+							legitimacy = 50
+						}
+						add_adm_power = 50
+					}
+					else_if = {
+						limit = {
+							legitimacy = 45 
+						}
+						add_adm_power = 45
+					}
+					else_if = {
+						limit = {
+							legitimacy = 40
+						}
+						add_adm_power = 40
+					}
+					else_if = {
+						limit = {
+							legitimacy = 35 
+						}
+						add_adm_power = 35
+					}
+					else_if = {
+						limit = {
+							legitimacy = 30
+						}
+						add_adm_power = 30
+					}
+					else_if = {
+						limit = {
+							legitimacy = 25 
+						}
+						add_adm_power = 25
+					}
+					else_if = {
+						limit = {
+							legitimacy = 20 
+						}
+						add_adm_power = 20
+					}
+					else_if = {
+						limit = {
+							legitimacy = 15 
+						}
+						add_adm_power = 15
+					}
+					else_if = {
+						limit = {
+							legitimacy = 10
+						}
+						add_adm_power = 10
+					}
+					else_if = {
+						limit = {
+							legitimacy = 5
+						}
+						add_adm_power = 5
+					}
+					else = { }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				custom_tooltip = " "
+			
+				complex_dynamic_effect = {
+					first_custom_tooltip = MAY_if_we_have_religious_state
+					first_limit = "
+						has_estate_privilege = estate_church_religious_state
+					"
+					first_effect = "
+						change_estate_land_share = {
+							estate = estate_church
+							share = -10
+						}
+					"
+				}
+			}
+		}
+	}
+}
+
+WoC_maya_generic_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Winds of Change"
+	}
+	potential = {
+		has_generic_maya_missions = yes
+		NOT = { map_setup = map_setup_random }
+		has_dlc = "Winds of Change"
+		is_random_new_world = no
+	}
+	has_country_shield = yes
+	
+	MAY_intercity_politics = {
+		icon = mission_aztecs_flower_wars
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				num_of_subjects = 1
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT 
+							value = 100
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = MAY_if_done_via_subjects
+				first_limit = "
+					num_of_subjects = 1
+				"
+				first_effect = "
+					add_country_modifier = {
+						name = MAY_building_up_hegemon_network
+						duration = 10950
+					}
+					custom_tooltip = MAY_gain_5_power_project_for_each_subjects
+					hidden_effect = {
+						if = {
+							limit = { num_of_subjects = 4 }
+							add_power_projection_mission = { amount = 20 }
+						}
+						else = {
+							every_subject_country = {
+								ROOT = { add_power_projection_mission = { amount = 5 } }
+							}
+						}
+					}
+				"
+				second_custom_tooltip = MAY_if_done_via_alliances
+				second_limit = "
+					calc_true_if = {
+						all_ally = {
+							has_opinion = {
+								who = ROOT 
+								value = 100
+							}
+						}
+						amount = 2
+					}
+				"
+                second_effect = "
+                    add_country_modifier = {
+                        name = MAY_marriage_and_intimidation
+                        duration = 9125
+                    }
+                    if = {
+                        limit = { has_dlc = \"The Cossacks\" }
+                        custom_tooltip = MAY_gain_10_favors_with_each_ally
+                        hidden_effect = { every_ally = { ROOT = { add_favors = { who = PREV amount = 10 } } } }
+                    }
+                " 
+			}
+		}
+	}
+	
+	MAY_batob = {
+		icon = mission_mayan_warriors
+		required_missions = { MAY_intercity_politics }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				is_claim = ROOT
+				is_permanent_claim = ROOT
+				is_core = ROOT
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			grown_by_development = 30
+		}
+		effect = {
+			add_country_modifier = {
+				name = MAY_expansion_of_the_realm
+				duration = 7300
+			}
+			
+			define_advisor = {
+				type = treasurer
+				skill = 1
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.4
+			}
+			
+			custom_tooltip = " "
+			
+			custom_tooltip = MAY_for_every_point_of_stability
+			hidden_effect = {
+				if = {
+					limit = {
+						stability = 3
+					}
+					every_owned_province = {
+						add_local_autonomy = -30
+					}
+				}
+				else_if = {
+					limit = {
+						stability = 2
+					}
+					every_owned_province = {
+						add_local_autonomy = -20
+					}
+				}
+				else_if = {
+					limit = {
+						stability = 1
+					}
+					every_owned_province = {
+						add_local_autonomy = -10
+					}
+				}
+				else = { }
+			}
+		}
+	}
+	
+	MAY_hegemonic_ambitions = {
+		icon = mission_mesoamerican_tributes
+		required_missions = { MAY_batob }
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				num_of_cities = 10
+				num_of_subjects = 2
+			}
+			num_of_maya_religious_reforms = { amount = 3 }
+		}
+		effect = {
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				custom_tooltip = MAY_unlock_privilege_for_tributaries
+				custom_tooltip = " "
+			}
+			set_country_flag = MAY_unlock_privilege_for_tributaries_flag
+			
+			# set_country_flag = MAY_chontals_merc_company_flag
+			custom_tooltip = MAY_chontals_merc_company
+		}
+	}
+}
+
+
+
+

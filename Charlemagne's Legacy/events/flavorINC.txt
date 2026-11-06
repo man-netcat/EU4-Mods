@@ -100,38 +100,6 @@ normal_or_historical_nations = yes
 # Fall of the Chanka & the Rise of Cusco
 
 # Cusco - Navel of the World
-country_event = {
-	id = flavor_inc.3
-	title = flavor_inc.3.t
-	desc = flavor_inc.3.d
-	picture = CITY_VIEW_eventPicture
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		owns = 808 #Though losing this is very unlikely.
-	}
-	
-	option = { #Let us create a worthy capital!
-		name = flavor_inc.3.a
-		goto = 808
-		set_country_flag = inc_cusco_began
-		808 = {
-			add_province_modifier = {
-				name = "inc_cusco_construction"
-				duration = 7300	#Illustrates the length of construction
-			}
-		}
-		add_prestige_or_monarch_power = { amount = 10 }
-		add_adm_power = -25
-		add_dip_power = -25
-	}
-	option = { #Our resources are better used for other things.
-		name = flavor_inc.3.b
-		add_stability_or_adm_power = yes
-	}
-}
 
 # Reconstruction of Cusco Complete 
 
@@ -146,81 +114,6 @@ country_event = {
 #End of the Chimu Revolt
 
 #European Diseases
-country_event = {
-	id = flavor_inc.10
-	title = flavor_inc.10.t
-	desc = flavor_inc.10.d
-	picture = PLAGUE_eventPicture
-	
-	
-	trigger = {
-		NOT = { has_country_flag = european_diseases_struck }
-		capital_scope = {
-			OR = {
-				continent = south_america
-				continent = new_world
-			}
-		}
-		NOT = { has_institution = feudalism }
-		any_known_country = {
-			OR = {
-				capital_scope = {
-					continent = europe
-				}
-				colonial_parent = {
-					capital_scope = {
-						continent = europe
-					}
-				}
-			}
-			any_owned_province = {
-				OR = {
-					continent = south_america
-					continent = new_world
-				}
-			}
-		}
-	}
-	
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = { is_capital = no }
-				set_province_flag = inc_smallpox_here
-				every_neighbor_province = {
-					limit = {
-						owned_by = ROOT
-					}
-					set_province_flag = inc_smallpox_here
-				}
-			}
-		}
-		set_country_flag = european_diseases_struck
-	}
-	
-	mean_time_to_happen = {
-		months = 3650
-	}
-	
-	option = { #Horrible
-		name = flavor_inc.10.a
-		if = {
-			limit = {
-				NOT = { has_global_flag = inc_smallpox }
-			}
-			set_global_flag = inc_smallpox
-		}
-		every_province = {
-			limit = { has_province_flag = inc_smallpox_here }
-			add_province_modifier = {
-				name = "inc_smallpox_outbreak"
-				duration = 365
-			}
-			set_province_flag = had_smallpox_at_one_point
-			clr_province_flag = inc_smallpox_here
-		}
-	}
-}
 
 #Death of Huayna Capac
 
@@ -377,50 +270,6 @@ country_event = {
 #The Pacific Expedition - Prince Lost at Sea
 
 #European Epidemic
-country_event = {
-	id = flavor_inc.20
-	title = flavor_inc.20.t
-	desc = flavor_inc.20.d
-	picture = PLAGUE_eventPicture
-	
-	trigger = {
-		capital_scope = { continent = south_america }
-		has_global_flag = inc_smallpox
-		NOT = { had_global_flag = { flag = inc_smallpox days = 9125 } }
-		NOT = { 
-			any_owned_province = {
-				has_province_modifier = inc_smallpox_outbreak
-			}
-		}
-	}
-	
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = { is_capital = no }
-				set_province_flag = inc_smallpox_here
-				every_neighbor_province = { set_province_flag = inc_smallpox_here }
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 35
-	}
-	
-	option = { #Horrible
-		name = flavor_inc.20.a
-		every_province = {
-			limit = { has_province_flag = inc_smallpox_here }
-			add_province_modifier = {
-				name = "inc_smallpox_outbreak"
-				duration = 365
-			}
-			set_province_flag = had_smallpox_at_one_point
-			clr_province_flag = inc_smallpox_here
-		}
-	}
-}
 
 #The Oracle of Pachacamac
 

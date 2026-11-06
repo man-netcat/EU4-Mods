@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Scandinavian-Danish missions
+#Missions are ordered in certain "Packs" you unlock for forming Scandinvaia as Denmark
+#These packs are designed around the Danish mission tree in order to avoid missions with repeating conditions or stacking rewards
+
+#Danish Misison Pack - Annex India
+
+
+#Norwegian Colonial Pack
+
+
+#Swedish Conquest Pack
+
+
+
+#Danish Misison Pack - More Mercs
+
+#Swedish Mission Pack - Development stuff

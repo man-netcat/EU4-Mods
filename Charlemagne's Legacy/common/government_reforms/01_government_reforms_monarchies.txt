@@ -1805,7 +1805,7 @@ stadthalter_monarchy_reform = {
 	removed_effect = {
 		if = {
 			limit = { is_lesser_in_union = no }
-			country_event = { id = dutch_republic.33 }
+			
 		}
 	}
 
@@ -3934,7 +3934,7 @@ livonian_naval_monarchy = {
 	}
 	
 	removed_effect = {
-		country_event = { id = dutch_republic.33 }
+		
 	}
 
 	conditional = {
@@ -6332,7 +6332,7 @@ states_general_reform = {
 	}
 
 	removed_effect = {
-		country_event = { id = dutch_republic.33 }
+		
 	}
 
 	conditional = {
@@ -6975,7 +6975,7 @@ become_rev_republic_reform = {
 		add_government_reform = revolutionary_republic_reform
 		if = {
 			limit = { has_country_flag = had_states_general_mechanic }
-			country_event = { id = dutch_republic.33 }
+			
 			clr_country_flag = had_states_general_mechanic
 		}
 	}

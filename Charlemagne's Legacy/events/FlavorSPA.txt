@@ -118,52 +118,6 @@ country_event = {
 
 
 # The Italian Wars
-country_event = {
-	id = flavor_spa.1008
-	title = "flavor_spa.EVTNAME1008"
-	desc = "flavor_spa.EVTDESC1008"
-	picture = {	
-		trigger = {
-			has_dlc = "Emperor"
-		}
-		picture = ITALIAN_wars_eventPicture
-	}
-	picture = {	
-		trigger = {
-			NOT = { has_dlc = "Emperor" }
-		}
-		picture = MILITARY_CAMP_eventPicture
-	}
-	
-	is_triggered_only = yes
-	
-	option = {		# Then counter-claim all ADJECTIVE provinces!
-		name = "flavor_spa.EVTOPTA1008"
-		ai_chance = { factor = 90 }
-		FROM = {
-			every_owned_province = {
-				limit = {
-					region = italy_region
-				}
-				add_claim = ROOT
-			}
-			tooltip = {
-				add_opinion = {
-					who = ROOT
-					modifier = claimed_italy
-				}
-			}
-			hidden_effect = {
-				country_event = { id = flavor_spa.1009 days = 10 }
-			}
-		}
-	}
-	option = {		# We should back down in Italy
-		name = "flavor_spa.EVTOPTB1008"
-		ai_chance = { factor = 10 }
-		add_prestige = -10
-	}
-}
 
 # The Italian Wars
 country_event = {
@@ -251,75 +205,6 @@ country_event = {
 
 #1.35 Events# 
 
-country_event = { #The Infantes of Aragon
-	id = flavor_spa.18
-	title = flavor_spa.18.t
-	desc = flavor_spa.18.d
-	picture = DIPLOMACY_eventPicture
-	fire_only_once = yes 
-	is_triggered_only = yes 	
-	
-	option = { 
-		name = flavor_spa.18.a 
-		set_country_flag = cas_royalist_flag
-		add_stability = -1
-		random_owned_province = {
-			limit = { 
-				region = iberia_region 
-				controlled_by = ROOT 
-			}
-			spawn_rebels = {
-				type = noble_rebels
-				size = 3
-				win = yes 
-				should_take_capital = yes
-			}
-		}
-		random_owned_province = {
-			limit = { 
-				region = iberia_region 
-				controlled_by = ROOT 
-			}
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-				win = yes 
-				should_take_capital = yes
-			}
-		}
-		custom_tooltip = cas_impact_mission_tt
-	}
-	
-	option = { 
-		name = flavor_spa.18.b
-		set_country_flag = cas_infantes_flag
-		
-		random_owned_province = {
-			limit = { 
-				region = iberia_region 
-				controlled_by = ROOT 
-			}
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-				leader = "Alvaro de Luna"
-				win = yes 
-				should_take_capital = yes
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					has_leader = "Alvaro de Luna"
-				}
-				kill_leader = {
-					type = "Alvaro de Luna"
-				}
-			}
-		}
-		custom_tooltip = cas_impact_mission_tt
-	}
-}
 
 country_event = { # End of the Infantes 
 	id = flavor_spa.20
@@ -392,38 +277,5 @@ country_event = { #The Spanish Dollar
 			amount = 1
 		}
 		
-	}
-}
-
-country_event = { #San Lorenzo de El Escorial 
-	id = flavor_spa.23
-	title = flavor_spa.23.t
-	desc = flavor_spa.23.d
-	picture = GREAT_BUILDING_eventPicture
-	fire_only_once = yes 
-	is_triggered_only = yes 
-	goto = 217
-	option = { 
-		name = flavor_spa.23.a 
-		
-		if = { 
-			limit = { has_dlc = "Leviathan" } 
-			217 = {
-				add_great_project_tier = {
-					type = el_escorial
-					tier = 2 
-				}
-			}
-		}
-		else = {
-			add_country_modifier = {
-				name = spa_san_lorenzo_escorial_modifier
-				duration = 9125
-			}
-			217 = {
-				add_base_production = 2 
-				add_base_manpower = 1
-			}
-		}
 	}
 }

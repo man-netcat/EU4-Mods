@@ -38,27 +38,6 @@ country_event = {
 }
 
 # Control of Famagusta (from CYP event)
-country_event = {
-	id = flavor_ven.4
-	title = flavor_ven.4.t
-	desc = flavor_ven.4.d
-	picture = DIPLOMACY_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = flavor_ven.4.a
-		add_prestige = 5
-		163 = {
-			add_trade_modifier = {
-				who = root
-				duration = 7300
-				power = 5
-				key = control_of_famagusta
-			}
-		}		
-	}
-}
 
 # Stratioti
 
@@ -79,27 +58,6 @@ country_event = {
 #Spice Trade Threatened
 
 # Venice sends help
-country_event = {
-	id = flavor_ven.14
-	title = flavor_ven.14.t
-	desc = flavor_ven.14.d
-	picture = MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {		
-		name = flavor_ven.14.a
-		4346 = {
-			add_trade_modifier = {
-				who = root
-				duration = 3650
-				power = 15
-				key = venetian_help
-			}
-		}
-
-	}
-}	
 
 # Ministers of the Waterways
 
@@ -442,118 +400,9 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = flavor_ven.49
-	title = flavor_ven.49.t
-	desc = flavor_ven.49.d
-	picture = ARTWORK_eventPicture
-	is_triggered_only = yes
-
-	option = {
-		name = flavor_ven.49.a
-		103 = {
-			if = {
-				limit = { has_building = courthouse }
-				remove_building = courthouse
-				add_building = town_hall
-			}
-			add_base_tax = 3
-		}
-		define_advisor = {
-			name = "Amedeo di Castellamonte"
-			type = natural_scientist
-			cost_multiplier = 0.25
-			skill = 3
-		}
-		add_legitimacy = 10
-		add_republican_tradition = 5
-		add_horde_unity = 10
-		add_devotion = 5
-	}
-}
-
-country_event = {
-	id = flavor_ven.50
-	title = flavor_ven.50.t
-	desc = flavor_ven.50.d
-	picture = ARTWORK_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = flavor_ven.50.a
-
-		112 = {
-			if = {
-				limit = { has_building = shipyard }
-				remove_building = shipyard
-				add_building_construction = {
-					building = grand_shipyard
-				}
-			}
-			else_if = {
-				limit = { has_building = grand_shipyard }
-				add_base_production = 3
-			}
-			else = { add_building = shipyard }
-		}
-		add_country_modifier = {
-			name = "ven_arsenal_marines"
-			duration = -1
-		}
-	}
-}
 
 
-country_event = { #Venice and the Italian Power Struggle
-	id = flavor_ven.52
-	title = flavor_ven.52.t
-	desc = flavor_ven.52.d
-	picture = ARTWORK_eventPicture
 
-	is_triggered_only = yes
-
-	option = {
-		name = flavor_ven.52.a
-		italy_region = {
-			limit = {
-				NOT = { is_permanent_claim = ROOT }
-				NOT = { is_core = ROOT }
-			}
-			add_permanent_claim = ROOT
-		}
-		if = { 
-			limit = { 
-				has_dlc = "Rights of Man" 
-				NOT = { num_of_ruler_traits = { amount = 3 } }
-			}				
-			add_ruler_personality = conqueror_personality
-		}
-		else = { 
-			change_ruler_stat = {
-				type = mil
-				amount = 1
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					4740 = {
-						NOT = { trade_goods = silk }
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				4740 = {
-					province_event = { 
-						id = new_flavour_mlo.15 
-						days = 30
-						random = 30
-					}
-				}
-			}
-		}
-	}
-}
 
 country_event = {
 	id = flavor_ven.53

@@ -10,39 +10,6 @@ normal_or_historical_nations = yes
 # Protestants destroy the statue of Joan
 
 # Catholic league approves of us joining
-country_event = {
-	id = flavor_orl.8
-	title = flavor_orl.8.t
-	desc = flavor_orl.8.d
-	picture = DIPLOMACY_eventPicture
-
-	fire_only_once = yes
-
-	trigger = {
-		has_global_flag = maid_of_orleans
-		has_dlc = "Art of War"
-		owns = 184 # Orleans
-		culture_group = french
-		religion_group = christian
-		hre_leagues_enabled = yes
-		hre_religion_locked = no
-		hre_religion_treaty = no
-		in_league = catholic
-	}
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
-	option = {
-		name = flavor_orl.8.o.a
-
-		add_country_modifier = {
-			name = "joan_of_arc_catholic_league_symbol"
-			duration = 1825
-		}
-	}
-}
 
 # Beatification of Joan
 

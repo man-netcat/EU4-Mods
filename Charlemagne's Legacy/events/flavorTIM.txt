@@ -63,35 +63,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = flavor_tim.5
-	title = "flavor_tim.5.t"
-	desc = "flavor_tim.5.d"
-	picture = BATTLE_eventPicture
-	
-	is_triggered_only = yes
-	major = yes
-	major_trigger = {
-		TIM_interested_in_persian_matter = yes
-	}
-	
-	option = { 
-		name = "flavor_tim.5.a"
-		
-		ai_chance = {
-			factor = 1
-		}
-		
-		add_country_modifier = {
-			name = TIM_resolved_the_mushasha_milleniarism #increase ruler expectancy due to assassination concerns
-			duration = 10950
-		}
-		
-		khuzestan_area = {
-			add_base_manpower = 1
-		}
-	}
-}
 
 country_event = {
 	id = flavor_tim.6
@@ -147,35 +118,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = flavor_tim.7
-	title = "flavor_tim.7.t"
-	desc = "flavor_tim.7.d"
-	picture = CONQUEST_eventPicture
-	
-	is_triggered_only = yes
-	major = yes
-	major_trigger = {
-		TIM_interested_in_persian_matter = yes
-	}
-	
-	option = { 
-		name = "flavor_tim.7.a"
-		
-		ai_chance = {
-			factor = 1
-		}
-		
-		azerbaijan_area = {
-			add_random_development = 1
-			
-			add_province_modifier = {
-				name = TIM_conflict_with_qara_qoyunlu_over
-				duration = 5475
-			}
-		}
-	}
-}
 
 
 country_event = {

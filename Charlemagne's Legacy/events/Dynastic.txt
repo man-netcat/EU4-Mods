@@ -428,57 +428,6 @@ country_event = {
 }
 
 # Tournament
-country_event = {
-	id = 9458
-	title = "EVTNAME9458"
-	desc = "EVTDESC9458"
-	picture = TOURNAMENT_eventPicture
-	
-	trigger = {
-		has_heir = yes
-		heir_age = 15
-		is_lesser_in_union = no
-		NOT = { has_reform = elective_monarchy }
-		NOT = { has_reform = polish_elective_monarchy }
-		NOT = { has_government_attribute = has_harem_events }
-		NOT = { has_reform = mamluk_government }
-		NOT = {
-			is_year = 1450
-		}
-		NOT = {
-			has_country_flag = last_jousting_tournament_held
-		}
-		army_tradition =  20
-		technology_group = western
-	}
-	
-	mean_time_to_happen = {
-		months = 2400
-		modifier = {
-			factor = 0.9
-			army_tradition = 40
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA9458"
-		random_list = {
-			50 = { add_years_of_income = 0.05 }
-			45 = { add_legitimacy = 20}
-			5 = { kill_heir = {}}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB9458"
-		add_adm_power = 20
-	}
-	
-	option = {
-		name = "EVTOPTC9458"
-		add_prestige = 5
-	}
-}
 
 
 # Hunting accident

@@ -3,31 +3,6 @@
 ########################################
 
 namespace = tutorial
-country_event = {
-	id = tutorial.2
-	title = "tutorial.2.t"
-	desc = "tutorial.2.d"
-	picture = ANGRY_MOB_eventPicture
-	
-	is_triggered_only = yes
-	 
-	option = {
-		name = "tutorial.2.a"
-		add_stability = -1
-		2751 = { # Cuenca
-				spawn_rebels = {
-					type = heretic_rebels
-					size = 1
-				}
-			}
-		216 = { # Salamanca
-				spawn_rebels = {
-					type = heretic_rebels
-					size = 1
-				}
-			}
-	}
-}
 
 country_event = {
 	id = tutorial.4

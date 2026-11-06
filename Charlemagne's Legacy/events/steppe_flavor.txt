@@ -9,147 +9,16 @@ namespace = randomeventsstapehordes
 #	Born of the Saddle
 ########################################################################################################################
 
-country_event = {
-	id = randomeventsstapehordes.1
-	title = "randomeventsstapehordes.1.EVTNAME"
-	desc = "randomeventsstapehordes.1.EVTDESC"
-	picture = MONGOL_BANNERS_eventPicture	
-
-	is_triggered_only = yes	
-	
-	trigger = {
-		has_reform = steppe_horde
-		is_at_war = no
-		NOT = { had_recent_war = 2 }
-		capital_scope = {
-			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-		
-		modifier = {
-			factor = 1.1
-			NOT = { MIL = 3 }
-		}			
-	}
-
-	option = {
-		name = "randomeventsstapehordes.1.EVTOPTA"
-		ai_chance = { factor = 10 }
-		add_prestige = -10
-	}
-	option = {
-		name = "randomeventsstapehordes.1.EVTOPTB"
-		trigger = { has_idea_group = administrative_ideas }		
-		ai_chance = { 
-			factor = 90 
-			modifier = {
-				factor = 0
-				prestige = 50
-			}			
-		}
-		add_army_tradition = -5
-	}	
-}
  
 ########################################################################################################################
 #	Exhaustion is for the Weak
 ########################################################################################################################
 
-country_event = {
-	id = randomeventsstapehordes.2
-	title = "randomeventsstapehordes.2.EVTNAME"
-	desc = "randomeventsstapehordes.2.EVTDESC"
-	picture = HORDE_ON_HORSEBACK_eventPicture	
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_reform = steppe_horde
-		war_exhaustion = 2
-		capital_scope = {
-			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-		
-	}
-
-	option = {
-		name = "randomeventsstapehordes.2.EVTOPTA"
-		ai_chance = { factor = 10 }
-		add_war_exhaustion = -2
-	}
-	option = {
-		name = "randomeventsstapehordes.2.EVTOPTB"
-		trigger = { has_idea_group = spy_ideas }		
-		ai_chance = { factor = 90 }
-		add_war_exhaustion = -5
-		add_prestige = 3
-	}	
-} 
 
 ########################################################################################################################
 #	This is a Good Day to Die
 ########################################################################################################################
 
-country_event = {
-	id = randomeventsstapehordes.3
-	title = "randomeventsstapehordes.3.EVTNAME"
-	desc = "randomeventsstapehordes.3.EVTDESC"
-	picture = HORDE_ON_HORSEBACK_eventPicture	
-	
-	is_triggered_only = yes	
-
-	trigger = {
-		has_reform = steppe_horde
-		is_at_war = yes
-		NOT = { manpower_percentage = 0.9 }
-		capital_scope = {
-			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-
-	}
-
-	option = {
-		name = "randomeventsstapehordes.3.EVTOPTA"
-		ai_chance = { factor = 10 }
-		add_yearly_manpower = 1.00
-	}
-	option = {
-		name = "randomeventsstapehordes.3.EVTOPTB"
-		trigger = { has_idea_group = quality_ideas }		
-		ai_chance = { factor = 90 }
-		add_army_tradition = 10	
-		add_prestige = 2
-	}	
-}
 
 ########################################################################################################################
 #	Migrating Tribes
@@ -699,50 +568,6 @@ country_event = {
 #	Restless Nomads
 ########################################################################################################################
 
-country_event = {
-	id = randomeventsstapehordes.14
-	title = "randomeventsstapehordes.14.EVTNAME"
-	desc = "randomeventsstapehordes.14.EVTDESC"
-	picture = HORDE_ON_HORSEBACK_eventPicture	
-	
-	is_triggered_only = yes	
-
-	trigger = {
-		has_reform = steppe_horde
-		NOT = { manpower_percentage = 0.5 }
-		is_at_war = no
-		capital_scope = {
-			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-
-	}
-
-	option = {
-		name = "randomeventsstapehordes.14.EVTOPTA"
-		ai_chance = { factor = 100 }
-		if = {
-			limit = {
-				has_estate = estate_nomadic_tribes
-			}
-			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
-				loyalty = -10
-			}
-		}
-		add_yearly_manpower = -0.75
-		add_prestige = -5
-	}
-}
 
 
 ########################################################################################################################
@@ -1168,69 +993,5 @@ country_event = {
 #	War, What is it Good For
 ########################################################################################################################
 
-country_event = {
-	id = randomeventsstapehordes.24
-	title = "randomeventsstapehordes.24.EVTNAME"
-	desc = "randomeventsstapehordes.24.EVTDESC"
-	picture = HORDE_ON_HORSEBACK_eventPicture	
-	
-	is_triggered_only = yes	
-
-	trigger = {
-		has_reform = steppe_horde
-		OR = {
-			legitimacy = 99
-			horde_unity = 99
-		}
-		is_at_war = yes	
-		capital_scope = {
-			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-
-	}
-
-	option = {
-		name = "randomeventsstapehordes.24.EVTOPTA"
-		add_prestige = 10
-		add_stability_or_adm_power = yes
-	}
-}
 
 #No tag should be in the nomad tech group without the corresponding government.
-country_event = {
-	id = randomeventsstapehordes.25
-	title = "randomeventsstapehordes.25.t"
-	desc = "randomeventsstapehordes.25.d"
-	picture = HORDE_ON_HORSEBACK_eventPicture	
-
-	trigger = {
-		always = no
-		technology_group = nomad_group
-		NOT = { has_institution = feudalism }
-		NOT = { has_reform = steppe_horde }
-		NOT = { has_reform = celestial_empire }
-		NOT = { has_dlc = "Dharma" }
-		NOT = { has_dlc = "Emperor" }
-	}
-
-	mean_time_to_happen = {
-		months = 12
-
-	}
-
-	option = {
-		name = "randomeventsstapehordes.25.a" #Ok.
-		change_government = monarchy
-		#set_legacy_government = despotic_monarchy
-	}
-}

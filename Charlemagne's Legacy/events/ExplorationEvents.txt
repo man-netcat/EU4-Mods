@@ -163,56 +163,6 @@ province_event = {
 }
 
 # The Ship into Summer
-province_event = {
-	id = exploration_events.5
-	title = exploration_events.5.t
-	desc = exploration_events.5.d
-	picture = HUNTER_GATHERERS_eventPicture
-	goto = root
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_dlc = "El Dorado"
-		is_year = 1492
-		is_empty = no
-		owner = {
-			OR = {
-				technology_group = sub_saharan
-				technology_group = north_american
-				technology_group = mesoamerican
-				technology_group = south_american
-				technology_group = andean
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = exploration_events.5.a
-		FROM = {
-			add_treasury = 50
-		}
-		owner = {
-			add_opinion = {
-				who = FROM
-				modifier = angry_natives
-			}
-		}
-	}
-	option = {
-		name = exploration_events.5.b
-		owner = {
-			add_opinion = {
-				who = FROM
-				modifier = friendly_natives
-			}
-		}
-	}
-}
 
 # Unwelcomed Passenger - empty land, bad crops burned
 province_event = {
@@ -456,46 +406,6 @@ province_event = {
 }
 
 # Feathery Meals
-province_event = {
-	id = exploration_events.13
-	title = exploration_events.13.t
-	desc = exploration_events.13.d
-	picture = COASTLINE_MAP_eventPicture
-	goto = root
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_dlc = "El Dorado"
-		is_empty = yes
-		OR = {
-			region = peru_region
-			region = upper_peru_region
-			region = la_plata_region
-			region = south_africa_region
-			region = australia_region
-			region = oceanea_region
-		}
-		has_climate = arctic
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = exploration_events.13.a
-		FROM = {
-			add_prestige = 5
-		}
-	}
-	option = {
-		name = exploration_events.13.b
-		FROM = {
-			add_adm_power = 50
-		}
-	}
-}
 
 # Find explorer
 province_event = {

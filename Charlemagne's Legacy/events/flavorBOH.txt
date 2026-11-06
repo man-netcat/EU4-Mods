@@ -82,65 +82,6 @@ province_event = {
 
 
 #The Aftermath of the Hussite Wars
-country_event = {
-	id = flavor_boh.15
-	title = flavor_boh.15.t
-	desc = flavor_boh.15.d
-	picture = {	
-		trigger = {
-			has_dlc = "Emperor"
-		}
-		picture = HUSSITE_eventPicture
-	}
-	picture = {	
-		trigger = {
-			NOT = { has_dlc = "Emperor" }
-		}
-		picture = BATTLE_eventPicture
-	}
-	
-	immediate = {
-		hidden_effect = {
-			bohemia_area = {
-				add_devastation = 50
-			}
-			erzgebirge_area = {
-				add_devastation = 20
-			}
-			moravia_area = {
-				add_devastation = 20
-			}
-			if = {
-				limit = {
-					has_dlc = "Winds of Change"
-				}
-				add_country_modifier = {
-					name = boh_hussite_destruction
-					duration = 10950
-				}
-			}
-		}
-	}
-
-	is_triggered_only = yes
-
-	option = {
-		name = flavor_boh.15.a
-		custom_tooltip = boh_starting_event_devastation
-		if = {
-			limit = {
-				has_dlc = "Winds of Change"
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = boh_hussite_destruction
-					duration = 10950
-					desc = boh_complete_mission
-				}
-			}
-		}
-	}
-}
 	
 #Legacy of Great Moravia
 country_event = {

@@ -5,66 +5,6 @@
 namespace = flavor_turkoman
 
 #Legacy of Seljuk
-country_event = {
-	id = flavor_turkoman.1
-	title = flavor_turkoman.1.t
-	desc = flavor_turkoman.1.d
-	picture = DEVLET_I_RUM_eventPicture
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-
-	option = {
-		name = flavor_turkoman.1.a
-		custom_tooltip = turkoman_persia_khorasan_provinces_tt
-		tooltip = {
-			add_province_modifier = {
-				name = "turkoman_restore_irans_glory"
-				duration = 7300
-			}
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						region = persia_region
-						region = khorasan_region
-					}
-				}
-				add_province_modifier = {
-					name = "turkoman_restore_irans_glory"
-					duration = 7300
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = flavor_turkoman.1.b
-		custom_tooltip = turkoman_persia_khorasan_provinces_tt
-		tooltip = {
-			add_province_modifier = {
-				name = "turkoman_heal_internal_divisions"
-				duration = 7300
-			}
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						region = persia_region
-						region = khorasan_region
-					}
-				}
-				add_province_modifier = {
-					name = "turkoman_heal_internal_divisions"
-					duration = 7300
-				}
-			}
-		}
-	}
-}
 
 #Remove Flag
 country_event = {
@@ -84,40 +24,6 @@ country_event = {
 }
 
 #The Maragheh Observatory
-country_event = {
-	id = flavor_turkoman.3
-	title = flavor_turkoman.3.t
-	desc = flavor_turkoman.3.d
-	picture = ASTRONOMER_eventPicture
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-
-	option = {
-		name = flavor_turkoman.3.a
-		if = {
-			limit = {
-				2207 = {
-					NOT = {
-						has_building = university
-					}
-				}
-			}
-			2207 = {
-				add_building = university
-			}
-		}
-		2207 = {
-			add_province_modifier = {
-				name = "turkoman_maragheh"
-				duration = -1
-			}
-		}
-		custom_tooltip = turkoman_cant_get_comet
-		set_country_flag = no_more_comet_sighted_event
-	}
-}
 
 #Abu Bakr Tihrani
 country_event = {

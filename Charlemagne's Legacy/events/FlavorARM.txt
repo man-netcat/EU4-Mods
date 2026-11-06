@@ -55,36 +55,6 @@ country_event = {
 }
 
 #The Church of the East
-country_event = {
-	id = flavor_arm.2
-	title = flavor_arm.2.t
-	desc = flavor_arm.2.d
-	picture = COPTIC_CITY_eventPicture
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-
-	option = {
-		name = flavor_arm.2.a
-		410 = {
-			change_religion = ROOT
-		}
-		custom_tooltip = armenia_center_conversion_tt
-		hidden_effect = {
-			410 = {
-				add_reform_center = coptic
-			}
-			410 = {
-				province_event = {
-					id = flavor_arm.3
-					days = 10950
-				}
-			}
-		}
-	}
-}
 
 #Remove Center
 province_event = {

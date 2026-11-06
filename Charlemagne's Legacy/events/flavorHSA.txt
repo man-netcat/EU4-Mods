@@ -15,42 +15,6 @@ normal_or_historical_nations = yes
 
 # Heinrich Sudermann
 
-country_event = { #Novgorod Kontor Event
-	id = flavor_hsa.5
-	title = flavor_hsa.5.t 
-	desc = flavor_hsa.5.d 
-	picture = DEBATE_REPUBLICAN_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = flavor_hsa.5.a 
-		
-		310 = {
-			add_trade_modifier = {
-				who = ROOT
-				duration = 9125
-				power = 50
-				key = hsa_peterhof_depot_modifier
-			}
-		}
-		if = {
-			limit = {
-				310 = { 
-					owner = { alliance_with = ROOT }
-				}
-			}
-			310 = {
-				owner = {
-					add_opinion = {
-						who = ROOT  
-						modifier = hsa_permitted_kontor_modifier 
-					}
-				}
-			}
-		}
-	}
-}
 
 country_event = { #Herring Currents of the Lubeckbothe
 	id = flavor_hsa.6
@@ -108,47 +72,6 @@ country_event = { #Herring Currents of the Lubeckbothe
 	}
 }
 
-country_event = { #Docks & Wharfs of Bryggen
-	id = flavor_hsa.7
-	title = flavor_hsa.7.t 
-	desc = flavor_hsa.7.d 
-	picture = SHIP_SAILING_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = flavor_hsa.7.a 
-		
-		1975 = { #North Sea
-			add_trade_modifier = {
-				who = ROOT
-				duration = -1
-				power = 30
-				key = hsa_bryggen_kontor_modifier
-			}
-		}
-		custom_tooltip = hsa_every_league_member_gains_mercantilism_and_dev_tt
-		hidden_effect = {
-			every_country = {
-				limit = { is_in_trade_league_with = ROOT }
-				add_mercantilism = 1 
-				capital_scope = {
-					random_list = {
-						50 = {
-							add_base_tax = 1 
-						}
-						25 = {
-							add_base_production = 1 
-						}
-						25 = {
-							add_base_manpower = 1 
-						}
-					}
-				}
-			}
-		}
-	}
-}
 
 country_event = { #Hanseatic Town of Visby
 	id = flavor_hsa.8
@@ -301,29 +224,5 @@ country_event = { #Adler von Lubeck
 			desc = hsa_till_it_gets_sunk_desc 
 		}
 		add_navy_tradition = 25 
-	}
-}
-
-
-
-
-country_event = { #Coin and Diplomacy 
-	id = flavor_hsa.19
-	title = flavor_hsa.19.t 
-	desc = flavor_hsa.19.d 
-	picture = HARBOUR_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = flavor_hsa.19.a 
-		
-		236 = {
-			add_base_production = 1 
-			add_province_modifier = {
-				name = hsa_mercantile_stronghold_of_the_hansa_modifier
-				duration = 7300 
-			}
-		}
 	}
 }

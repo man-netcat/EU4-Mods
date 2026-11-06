@@ -350,40 +350,6 @@ country_event = {
 # Saxons convert to Protestantism	
 
 #Bibliotheca Corviniana
-country_event = { 
-    id = flavor_hun.47
-	title = flavor_hun.47.t
-	desc = flavor_hun.47.d
-	picture = BIG_BOOK_eventPicture 
-
-	is_triggered_only = yes
-	
-	option = { 
-	    name = flavor_hun.47.a
-		goto = 153
-		add_country_modifier = {
-			name = hun_corviana_library
-			duration = 7300
-		}
-		153 = {
-			if = {
-				limit = {
-					has_dlc = "Leviathan"
-					has_great_project = {
-						type = buda_castle
-						tier = 0
-					}
-				}
-				set_great_project_tier_1 = {
-					type = buda_castle
-				}
-			}
-			else = {
-				add_base_tax = 3
-			}
-		}
-	}
-}
 
 #Capital in Danger
 
@@ -407,73 +373,6 @@ country_event = {
 }
 
 #New Trade Goods in Pest
-country_event = {
-	id = flavor_hun.53
-	title = flavor_hun.53.t
-	desc = flavor_hun.53.d
-	picture = CITY_VIEW_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "flavor_hun.53.a"
-		153 = {
-			change_trade_goods = cloth
-		}
-		153 = {
-			add_base_production = 1
-		}
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "flavor_hun.53.b"
-		153 = {
-			change_trade_goods = copper
-		}
-		153 = {
-			add_base_production = 1
-		}
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "flavor_hun.53.c"
-		153 = {
-			change_trade_goods = iron
-		}
-		153 = {
-			add_base_production = 1
-		}
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "flavor_hun.53.de"
-		153 = {
-			change_trade_goods = glass
-		}
-		153 = {
-			add_base_production = 1
-		}
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "flavor_hun.53.e"
-		153 = {
-			add_base_production = 3
-		}
-	}	
-}
 
 #Hungary Joins the Empire - Negative Response
 country_event = {

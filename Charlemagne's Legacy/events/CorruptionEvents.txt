@@ -524,63 +524,6 @@ country_event = {
 ### Corruption Increase
 
 # Mercenaris Extorting Locals
-country_event = {
-	id = corruption_event.16
-	title = "corruption_event.16.t"
-	desc = "corruption_event.16.d"
-	picture = BORDER_TENSION_eventPicture
-	goto = hired_mercs_victim_area
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		any_hired_mercenary_company = {
-			has_company_manpower = 0.2
-			location = {
-				owned_by = root
-				is_state_core = root
-			}
-		}
-		is_at_war = no
-	}
-
-	immediate = {
-		hidden_effect = {
-			random_hired_mercenary_company = {
-				limit = {
-					has_company_manpower = 0.2
-					location = {
-						owned_by = root
-						is_state_core = root
-					}
-				}
-				save_event_target_as = hired_merc_band
-				location = {
-					save_event_target_as = hired_mercs_victim_area
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = "corruption_event.16.a"
-		add_mil_power = -50
-		event_target:hired_merc_band = {
-			add_company_manpower = -0.2
-		}
-	}
-
-	option = {
-		name = "corruption_event.16.b"
-		add_corruption = 1
-		event_target:hired_mercs_victim_area = {
-			area = {
-				limit = { owned_by = root }
-				add_devastation = 15
-			}
-		}
-	}
-}
 
 # Incompetent Administrator
 country_event = {

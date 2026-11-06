@@ -11,33 +11,6 @@ namespace = emp_mission_events
 # The HRE is crowned by the Pope
 
 # The Fire of Moscow
-country_event = {
-	id = emp_mission_events.6
-	title = emp_mission_events.6.t
-	desc = emp_mission_events.6.d
-	picture = COUNTRY_COLLAPSE_eventPicture
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			295 = {
-				owner = {
-					save_event_target_as = firestarter_country
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = emp_mission_events.6.a
-		295 = {
-			add_base_tax = -4
-			add_base_production = -4
-			add_base_manpower = -4
-		}
-	}
-}
 
 # Smashing of the Ducal Ring of Normandy
 

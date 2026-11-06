@@ -394,62 +394,8 @@ country_event = {
 }
 	
 #Ajuuran merchants in Dai Viet
-country_event = {
-	id = flavor_aju.12
-	title = flavor_aju.12.t
-	desc = flavor_aju.12.d
-	picture = MERCHANTS_TALKING_eventPicture	
-	is_triggered_only = yes	
-
-	goto = 613
-	
-	option = {
-		name = flavor_aju.12.a #Nice
-		613 = {
-			if = {
-				limit = {
-					NOT = { province_has_center_of_trade_of_level = 2 }
-				}
-				add_center_of_trade_level = 1
-			}
-			add_base_tax = 2
-			add_base_production = 2
-			add_prosperity = 5
-		}
-		ai_chance = { factor = 1 }
-	}
-}
 	
 #Ajuuran merchants in Java
-country_event = {
-	id = flavor_aju.13
-	title = flavor_aju.13.t
-	desc = flavor_aju.13.d
-	picture = MERCHANTS_TALKING_eventPicture	
-	is_triggered_only = yes	
-	
-	option = {
-		name = flavor_aju.13.a
-		custom_tooltip = flavor_aju.13.a.tt
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						area = banten_area
-						area = west_java_area
-						area = central_java_area
-						area = surabaya_area
-					}
-				}
-				add_province_modifier = {
-					name = aju_ajuuran_influence_in_java
-					duration = 9125
-				}
-			}
-		}
-		ai_chance = { factor = 1 }
-	}
-}
 
 #Modernization of the army
 country_event = {

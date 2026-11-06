@@ -953,30 +953,6 @@ country_event = {
 }
 
 #Deification of Ancestor
-country_event = {
-	id = fetishist_flavor.133
-	title = fetishist_flavor.133.t
-	desc = fetishist_flavor.133.d
-	picture = FETISHIST_FIRE_eventPicture
-
-	trigger = {
-		has_dlc = "Rights of Man"
-		religion = shamanism #Fetishism
-		has_adopted_cult = central_african_ancestor_cult
-		is_year = 1500 #At least one dead ruler by now?
-		NOT = { has_ruler_flag = had_ancestor_deified }
-	}
-	
-	mean_time_to_happen = {
-		months = 360
-	}
-
-	option = {
-		name = fetishist_flavor.133.a #Praise be $RANDOM_OLD_MONARCH$!
-		add_stability_or_adm_power = yes
-		set_ruler_flag = had_ancestor_deified
-	}
-}
 
 #Mwari
 

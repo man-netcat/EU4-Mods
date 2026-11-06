@@ -2,66 +2,6 @@ namespace = flavor_ger
 normal_or_historical_nations = yes
 
 
-country_event = {
-	id = flavor_ger.1
-	title = flavor_ger.1.t
-	desc = flavor_ger.1.d
-	picture = ECONOMY_eventPicture
-	
-	is_triggered_only = yes 
-	
-	option = {
-		name = flavor_ger.1.a
-		
-		ai_chance = {
-			factor = 1
-		}
-		
-		custom_tooltip = GER_upgrade_every_cot_in_low_countries_to_level_2
-		hidden_effect = {
-			low_countries_region = {
-				limit = {
-					province_has_center_of_trade_of_level = 1
-					NOT = { province_has_center_of_trade_of_level = 2 }
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				add_center_of_trade_level = 1
-			}
-		}
-		
-		custom_tooltip = " "
-		
-		1269 = {
-			add_trade_modifier = {
-				who = ROOT
-				duration = -1
-				power = 50
-				key = GER_taking_over_channel
-			}
-		}
-	}
-	
-	option = {
-		name = flavor_ger.1.b
-		
-		ai_chance = {
-			factor = 1
-		}
-		
-		45 = {
-			add_province_triggered_modifier = GER_staying_in_lubeck
-		}
-		
-		custom_tooltip = GER_requirements
-		
-		custom_tooltip = " "
-		
-		add_years_of_trade_income = {
-			years = 2
-			custom_tooltip = BYZ_add_2_years_of_trade_income
-		}
-	}
-}
 
 country_event = {
 	id = flavor_ger.2

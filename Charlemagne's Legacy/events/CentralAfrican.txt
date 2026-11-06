@@ -114,54 +114,6 @@ country_event = {
 #Antionio Fernandes
 
 #Increased Trade With India
-country_event = {
-	id = central_african.10
-	title = central_african.10.t
-	desc = central_african.10.d
-	picture = AFRICAN_INDIAN_eventPicture
-
-	trigger = {
-		has_dlc = "Mare Nostrum"
-		capital_scope = {
-			region = east_africa_region
-		}
-		any_neighbor_country = {
-			capital_scope = {
-				continent = europe
-			}
-			any_owned_province = {
-				region = east_africa_region
-				has_port = yes
-			}
-			west_india_region = {
-				range = PREV
-			}
-		}
-		NOT = {
-			has_country_modifier = increased_african_indian_trade
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 360
-		modifier = {
-			factor = 0.7
-			has_idea_group = trade_ideas
-		}
-	}
-
-	option = {
-		name = central_african.10.a
-		add_country_modifier = {
-			name = increased_african_indian_trade
-			duration = 10950
-		}
-	}
-	option = {
-		name = central_african.10.b
-		add_years_of_income = 0.5
-	}
-}
 
 #Descended from the same breast
 

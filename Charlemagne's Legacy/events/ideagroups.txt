@@ -1006,27 +1006,6 @@ country_event = {
 }
 
 # In Defense of the Mercantile Interest
-country_event = {
-	id = ideagroups.215
-	title = ideagroups.215.t
-	desc = ideagroups.215.d
-	picture = MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = plutocracy_ideas
-		NOT = { mercantilism = 95 }
-
-	}
-
-	option = {
-		name = ideagroups.215.a
-		add_mercantilism = 2
-		add_estate_burghers_loyalty_effect = yes
-		add_corruption = 0.5
-	}
-}
 
 # Agricultural Boom
 country_event = {
@@ -3792,28 +3771,6 @@ country_event = {
 }
 
 # Support for Mercantilist Policies
-country_event = {
-	id = ideagroups.909
-	title = ideagroups.909.t
-	desc = ideagroups.909.d
-	picture = MERCHANTS_TALKING_eventPicture
-
-	is_triggered_only = yes
-
-	trigger = {
-		has_idea_group = trade_ideas
-		NOT = { mercantilism = 95 }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.909.a
-		add_mercantilism = 1
-	}
-}
 
 # Trade Collapse
 country_event = {
@@ -4865,101 +4822,10 @@ country_event = {
 #######################################
 
 # Colonist Rush
-country_event = {
-	id = ideagroups.1200
-	title = "EVTNAME6136"
-	desc = "EVTDESC6136"
-	picture = COLONIZATION_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea = quest_for_the_new_world
-		num_of_colonies = 1
-		NOT = { has_country_modifier = colonial_enthusiasm }
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6136"
-		add_country_modifier = {
-			name = "colonial_enthusiasm"
-			duration = 3650
-		}
-	}
-}
 
 # People Flee to the Colonies
-country_event = {
-	id = ideagroups.1201
-	title = "EVTNAME6137"
-	desc = "EVTDESC6137"
-	picture = COLONIZATION_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = exploration_ideas
-		is_at_war = yes
-		num_of_colonies = 1
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6137"
-		random_owned_province = {
-			limit = { 
-				is_colony = yes 
-			}
-			add_colonysize = 300
-		}	
-		add_dip_power = -25
-	}
-	option = {
-		name = "EVTOPTB6137"
-		add_prestige = 5
-	}
-}
 
 # Colonial Company goes bankrupt
-country_event = {
-	id = ideagroups.1202
-	title = "EVTNAME6139"
-	desc = "EVTDESC6139"
-	picture = COLONIZATION_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = exploration_ideas
-		num_of_colonies = 1
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6139"
-		random_owned_province = {
-			limit = { 
-				is_colony = yes 
-			}
-			multiply_colonysize = 0.5
-		}			
-	}
-
-	option = {
-		name = "EVTOPTB6139"
-		add_treasury = -50
-	}
-}
 
 # Excellent Viceroys
 country_event = {
@@ -5039,119 +4905,10 @@ country_event = {
 
 
 # Friendshp with natives
-country_event = {
-	id = ideagroups.1205
-	title = ideagroups.1205.t
-	desc = ideagroups.1205.d
-	picture = NATIVES_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = exploration_ideas
-		num_of_colonies = 1
-		has_country_flag = NF_peacenik
-		any_owned_province = {
-			is_colony = yes 
-			native_size = 1
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.1205.a
-		random_owned_province = {
-			limit = { 
-				is_colony = yes 
-				native_size = 1
-			}
-			change_native_ferocity = -1
-			change_native_hostileness = -1
-		}	
-	}
-}
 
 # Women needed
-country_event = {
-	id = ideagroups.1206
-	title = ideagroups.1206.t
-	desc = ideagroups.1206.d
-	picture = COLONIZATION_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = exploration_ideas
-		num_of_colonies = 1
-		any_owned_province = {
-			is_colony = yes 
-			colonysize = 200
-			has_colonist = yes
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.1206.a
-		random_owned_province = {
-			limit = {
-				is_colony = yes 
-				colonysize = 200
-				has_colonist = yes			
-			}
-			add_colonysize = 200
-			add_base_manpower = 1
-		}
-	}
-}
 
 # Encomienda System
-country_event = {
-	id = ideagroups.1207
-	title = ideagroups.1207.t
-	desc = ideagroups.1207.d
-	picture = COLONIZATION_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = exploration_ideas
-		num_of_colonies = 1
-		any_owned_province = {
-			is_colony = yes 
-			native_size = 1
-			NOT = { trade_goods = unknown }
-			NOT = { has_province_modifier = encomienda_system }
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-		
-	option = {
-		name = ideagroups.1207.a
-		random_owned_province = {
-			limit = { 
-				is_colony = yes 
-				native_size = 1
-				NOT = { trade_goods = unknown }
-			}
-			change_native_hostileness = -5
-			add_province_modifier = {
-				name = encomienda_system
-				duration = 3650
-			}
-		}	
-	}
-}
 
 # Evangelical Mission
 country_event = {
@@ -5194,70 +4951,8 @@ country_event = {
 }
 
 # Colony in Trouble
-country_event = {
-	id = ideagroups.1209
-	title = ideagroups.1209.t
-	desc = ideagroups.1209.d
-	picture = COLONIZATION_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = exploration_ideas
-		num_of_colonies = 1
-		any_owned_province = {
-			is_colony = yes 
-			has_colonist = no
-		}		
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.1209.a
-		random_owned_province = {
-			limit = { 
-				is_colony = yes 
-				has_colonist = no
-			}
-			add_colonysize = -1000
-		}	
-	}
-	option = {
-		name = ideagroups.1209.b
-		add_dip_power = -50
-	}
-}
 
 # Poor Harvest
-country_event = {
-	id = ideagroups.1210
-	title = ideagroups.1210.t
-	desc = ideagroups.1210.d
-	picture = FARMING_eventPicture
-
-	is_triggered_only = yes
-
-	trigger = {
-		has_idea_group = exploration_ideas
-		num_of_colonies = 1
-		any_owned_province = {
-			is_colony = yes 
-			has_colonist = no
-		}		
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.1210.a
-		add_dip_power = -50
-	}
-}
 
 #######################################
 # Quality Ideas
@@ -5919,33 +5614,6 @@ country_event = {
 #######################################
 
 # Wave of Immigration
-country_event = {
-	id = ideagroups.1500
-	title = ideagroups.1500.t
-	desc = ideagroups.1500.d
-	picture = COLONIZATION_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = expansion_ideas
-		num_of_colonies = 1
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = ideagroups.1500.a
-		random_owned_province = {
-			limit = {
-				is_colony = yes
-			}
-			add_colonysize = 200
-		}
-	}
-}
 
 # Successful Company
 country_event = {
@@ -6118,37 +5786,6 @@ country_event = {
 } 
 
 # Colonial Disaster
-country_event = {
-	id = ideagroups.1507
-	title = ideagroups.1507.t
-	desc = ideagroups.1507.d
-	picture = COLONIZATION_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = expansion_ideas
-		num_of_colonies = 1
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.1507.a
-		random_owned_province = {
-			limit = {
-				is_colony = yes
-			}
-			add_colonysize = -200
-		}
-	}
-	option = {
-		name = ideagroups.1507.b
-		add_dip_power = -50
-	}
-}
 
 # Trade Failure
 country_event = {
@@ -9859,44 +9496,6 @@ country_event = {
 }
 
 #Military Leaders Complain
-country_event = {
-	id = ideagroups.2021
-	title = ideagroups.2005.t
-	desc = ideagroups.2005.d
-	picture = ACCUSATION_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = mercenary_ideas 
-		if = {
-			limit = { has_dlc = "Cradle of Civilization" } 
-			NOT = { army_professionalism = 0.5 }
-		}
-		else = {
-			NOT = { army_tradition = 80 }
-		}
-		NOT = { has_country_modifier = shift_on_military_affairs_modifier }
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.2005.a
-		
-		add_country_modifier = {
-			name = shift_on_military_affairs_modifier
-			duration = 3650
-		}
-	}
-	option = {
-		name = ideagroups.2005.b
-		add_army_professionalism = -0.05
-		add_army_tradition = -20 
-	}
-}
 
 # Poor payments
 country_event = {

@@ -412,42 +412,6 @@ country_event = {
 }
 
 # Taking advantage of our trade
-country_event = {
-	id = trade.9
-	title = trade.9.t
-	desc = trade.9.d
-	picture = MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		mercantilism = 55
-		num_of_merchants = 3
-	}
-	
-	immediate = {
-		check_if_non_state_advisor_effect = { #Hidden, must be followed by erase_advisor_flags_effect
-			chance_of_primary = 75 #Not percentages!
-			chance_of_tertiary = 10
-			chance_of_secondary = 35
-		}
-	}
-	
-	option = {
-		name = trade.9.a
-		add_meritocracy_effect = yes
-		generate_advisor_of_type_and_semi_random_religion_effect = {
-			advisor_type=treasurer
-			advisor_type_if_not_state=treasurer
-			skill = 3
-			discount=yes
-		}
-	}
-	
-	after = {
-		erase_advisor_flags_effect = yes
-	}
-}
 
 # Lack of protection
 country_event = {
@@ -500,27 +464,6 @@ country_event = {
 }
 
 # Merchants leaving
-country_event = {
-	id = trade.11
-	title = trade.11.t
-	desc = trade.11.d
-	picture = MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = { mercantilism = 40 }
-		num_of_merchants = 3
-	}
-	
-	option = {
-		name = trade.11.a
-		add_country_modifier = {
-			name = bad_free_trade_merchants
-			duration = 730
-		}		
-	}
-}
 
 # Promising Trader
 country_event = {
@@ -555,159 +498,12 @@ country_event = {
 }
 
 # Our Mercantilist Policies Strengthen trade
-country_event = {
-	id = 6326
-	title = "EVTNAME6326"
-	desc = "EVTDESC6326"
-	picture = MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-	trigger = {
-		mercantilism = 50
-		num_of_merchants = 3
-		NOT = {
-			has_country_modifier = mercantilism_modifier
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6326"
-		add_country_modifier = {
-			name = mercantilism_modifier
-			duration = 3650
-		}
-	}
-}
 
 # Merchant defects
-country_event = {
-	id = 6327
-	title = "EVTNAME6327"
-	desc = "EVTDESC6327" 
-	picture = MERCHANTS_TALKING_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = { mercantilism = 50 }
-		num_of_merchants = 1
-		any_active_trade_node = {
-			has_merchant = PREV
-			NOT = { 
-				has_trade_modifier = {
-					who = ROOT
-					name = merchant_recalled
-				}
-			}			
-		}
-		NOT = {
-			has_country_modifier = freetrade_modifier
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6327"
-		random_active_trade_node = {
-			limit = {
-				has_merchant = PREV
-				NOT = { 
-					has_trade_modifier = {
-						who = ROOT
-						name = merchant_recalled
-					}
-				}
-			}
-			add_trade_modifier = {
-				who = root
-				duration = 3650
-				power = -10
-				key = merchant_recalled
-			}			
-		}
-		add_mercantilism = 1
-	}	
-
-	option = {
-		name = "EVTOPTB6327"
-		add_country_modifier = {
-			name = freetrade_modifier
-			duration = 3650
-		}
-		add_mercantilism = -1
-	}
-} 
 
 # Trade Expansion
-country_event = {
-	id = 6328
-	title = "EVTNAME6328"
-	desc = "EVTDESC6328"
-	picture = MERCHANTS_TALKING_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = { mercantilism = 20 }
-		any_active_trade_node = {
-			is_sea = yes
-			has_merchant = PREV
-		}	
-		NOT = {
-			has_country_modifier = freetrade_modifier
-		}			
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6328"
-		add_country_modifier = {
-			name = freetrade_modifier
-			duration = 3650
-		}		
-	}
-}	
 
 # Merchants worried about lack of protection
-country_event = {
-	id = 6329
-	title = "EVTNAME6329"
-	desc = "EVTDESC6329"
-	picture = MERCHANTS_TALKING_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = { mercantilism = 40 }
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6329"
-		add_country_modifier = {
-			name = "lack_of_protection"
-			duration = 120
-		}
-	}
-	option = {
-		name = "EVTOPTB6329"
-		add_mercantilism = 1
-		add_dip_power = -25
-	}
-}
 
 #######################################
 #		SLAVES	NO MORE!      #

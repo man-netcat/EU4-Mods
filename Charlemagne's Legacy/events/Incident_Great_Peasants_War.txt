@@ -95,51 +95,6 @@ country_event = {
 
 # Event to end GPW if incident does not fire for whatever reason
 # Fallback, this is almost never supposed to happen
-country_event = {
-	id = great_peasant_war.4
-	title = great_peasant_war.4.t
-	desc = great_peasant_war.4.d
-	picture = ANGRY_MOB_eventPicture
-	
-	major = yes
-	fire_only_once = yes
-	
-	trigger = {
-		if = {
-			limit = {
-				hre_size = 1
-			}
-			is_emperor = yes
-		}
-		else = {
-			capital_scope = {
-				OR = {
-					region = north_german_region
-					region = south_german_region
-				}
-			}
-		}
-		had_global_flag = {
-			flag = great_peasants_war_flag
-			days = 7300
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 3
-	}
-	
-	immediate = {
-		hidden_effect = {
-			clr_global_flag = great_peasants_war_flag
-		}
-	}
-	
-	option = {
-		name = "great_peasant_war.4.a"
-		custom_tooltip = end_gpw_tt
-	}
-}
 
 # Event for the emperor to start the incident
 country_event = {

@@ -30,41 +30,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = horde_mission_events.2
-	title = horde_mission_events.2.t
-	desc = horde_mission_events.2.d
-	picture = COURT_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = horde_mission_events.2.a
-
-		ai_chance = {
-			factor = 50
-		}
-
-		set_capital = 466
-		466 = {
-			add_base_tax = 1
-			add_base_manpower = 1
-		}
-	}
-	
-	option = {
-		name = horde_mission_events.2.b
-
-		ai_chance = {
-			factor = 50
-		}
-
-		capital_scope = {
-			add_base_tax = 1
-			add_base_manpower = 1
-		}
-	}
-}
 
 country_event = {
 	id = horde_mission_events.3
@@ -185,39 +150,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = horde_mission_events.8
-	title = horde_mission_events.8.t
-	desc = horde_mission_events.8.d
-	picture = FORT_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = horde_mission_events.8.a
-
-		ai_chance = {
-			factor = 50
-		}
-		
-		add_army_tradition_or_mil_power = { amount = 10 }
-		
-		custom_tooltip = SEPERATOR_TOOLTIP
-
-		if = {
-			limit = {
-				has_dlc = "Leviathan"
-			}
-			custom_tooltip = HORDES_UNLOCK_GREAT_WALL_OF_CHINA
-			set_country_flag = hordes_unlocked_wall_of_china
-		}
-		else = {
-			698 = {
-				add_or_upgrade_fort_building = yes
-			}
-		}
-	}
-}
 
 country_event = {
 	id = horde_mission_events.9

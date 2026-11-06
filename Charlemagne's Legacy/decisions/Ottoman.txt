@@ -183,76 +183,8 @@ country_decisions = {
 		}
 	}
 
-	face_the_janissaries_1 = {
-		potential = {
-			has_country_flag = tur_unlocked_first_janissary_slaughter
-			has_disaster = tur_disaster_janissary_coup
-			NOT = { has_country_flag = tur_fight_against_the_janissaries_1_flag }
-		}
-		allow = {
-			stability = 0
-			num_of_owned_provinces_with = {
-				region = balkan_region
-				value = 10
-			}
-		}
-		effect = {
-			hidden_effect = { change_variable = { tur_num_of_janissary_decisions = 1 } }
-			country_event = {
-				id = janissary_coup_events.3
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
-	face_the_janissaries_2 = {
-		potential = {
-			has_country_flag = tur_unlocked_second_janissary_slaughter
-			has_disaster = tur_disaster_janissary_coup
-			NOT = { has_country_flag = tur_fight_against_the_janissaries_2_flag }
-		}
-		allow = {
-			stability = 0
-			num_of_owned_provinces_with = {
-				region = anatolia_region
-				value = 10
-			}
-		}
-		effect = {
-			hidden_effect = { change_variable = { tur_num_of_janissary_decisions = 1 } }
-			country_event = {
-				id = janissary_coup_events.4
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
-	face_the_janissaries_3 = {
-		potential = {
-			has_country_flag = tur_unlocked_third_janissary_slaughter
-			has_disaster = tur_disaster_janissary_coup
-			NOT = { has_country_flag = tur_fight_against_the_janissaries_3_flag }
-		}
-		allow = {
-			stability = 0
-			capital_scope = {
-				controlled_by = ROOT
-			}
-		}
-		effect = {
-			hidden_effect = { change_variable = { tur_num_of_janissary_decisions = 1 } }
-			country_event = {
-				id = janissary_coup_events.5
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	negotiate_with_the_janissaries = {
 		potential = {

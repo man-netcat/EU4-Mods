@@ -9,62 +9,6 @@ namespace = flavor_oyo
 normal_or_historical_nations = yes
 
 #Purchase of horses
-country_event = {
-	id = flavor_oyo.1
-	title = flavor_oyo.1.t
-	desc = flavor_oyo.1.d
-	picture = MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {	
-		name = flavor_oyo.1.a
-		random_known_country = {
-			limit = {
-				any_owned_province = {
-					province_has_center_of_trade_of_level = 1
-					OR = {
-						area = western_sahara_area
-						area = niger_bend_area
-						area = dendi_area
-						area = baghena_area
-						area = atacora_oueme_area
-						area = lower_volta_area
-						area = kong_area
-						area = upper_volta_area
-						area = jenne_area
-						area = massina_area
-						area = manding_area
-						area = tekrur_area
-					}
-				}
-				OR = {
-					is_subject_of = ROOT
-					has_opinion = {
-						who = ROOT
-						value = 90
-					}
-				}
-			}
-			country_event = {
-				id = flavor_oyo.2
-			}
-		}
-		add_treasury = -50
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-	option = {
-		name = flavor_oyo.1.b
-		add_dip_power = 50
-
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
 
 #Oyo official merchants visit us to buy horses!
 country_event = {
