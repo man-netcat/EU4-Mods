@@ -4,7 +4,8 @@
 The base game fires events from missions, on_actions, scripted effects, rebel types, disasters, parliament issues, imperial
 reforms, incidents and government reforms. After `step_events` has dropped the events of other worlds those calls name
 events nobody defines, and the game logs each one. This step writes an override of every such file with the dead calls
-removed (a mission series that names a tag goes whole, like the decisions do); `dangling()` is what validate counts."""
+removed; `dangling()` is what validate counts. Folders the descriptor `replace_path`s (missions, history, gfx/flags,
+government names and ranks, cultures, bookmarks) load no base-game file, so base-game files there never count."""
 
 import glob
 import os
@@ -12,12 +13,17 @@ import re
 
 from steps.layout import GAME, MOD
 from steps.output import write_out
-from steps.vanilla_scripts import all_known_tags, event_mentions_tag
 
 CALL = re.compile(r"\b(country_event|province_event|news_event)\s*=\s*\{")
 ID = re.compile(r'\bid\s*=\s*"?([A-Za-z_0-9.]+)"?')
 LIST = re.compile(r"\b(random_events|events)\s*=\s*\{([^{}]*)\}")
 SKIP_DIRS = ("events", "localisation", "gfx", "interface", "map", "history", "music", "sound", "tutorial", "decisions")
+
+
+def replaced_paths():
+    """The `replace_path` entries of descriptor.mod: base-game files under them do not load."""
+    text = open(os.path.join(MOD, "descriptor.mod"), encoding="utf-8").read()
+    return tuple(p.replace("/", os.sep) for p in re.findall(r'(?m)^replace_path="([^"]+)"', text))
 
 
 def _code(text):
@@ -88,7 +94,7 @@ def dangling(root_pairs=None):
             rel = os.path.relpath(path, base)
             if rel.split(os.sep)[0] in SKIP_DIRS or rel in seen:
                 continue
-            if base == GAME and os.path.exists(os.path.join(MOD, rel)):
+            if base == GAME and (os.path.exists(os.path.join(MOD, rel)) or rel.startswith(replaced_paths())):
                 continue
             code = _code(open(path, encoding="utf-8", errors="replace").read())
             bad = []
@@ -108,53 +114,9 @@ def dangling(root_pairs=None):
     return {k: v for k, v in seen.items() if v}
 
 
-def _series(text):
-    """Split a mission file into its top-level blocks: [(is_block, lines)]."""
-    out, cur, depth = [], None, 0
-    for ln in text.splitlines():
-        code = ln.split("#", 1)[0]
-        if cur is None:
-            if re.match(r"^[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{", ln.strip()) and depth == 0:
-                cur = [ln]
-                depth = code.count("{") - code.count("}")
-                if depth <= 0:
-                    out.append((True, cur))
-                    cur, depth = None, 0
-            else:
-                out.append((False, [ln]))
-        else:
-            cur.append(ln)
-            depth += code.count("{") - code.count("}")
-            if depth <= 0:
-                out.append((True, cur))
-                cur, depth = None, 0
-    if cur:
-        out.append((True, cur))
-    return out
-
-
 def step_dangling():
-    """Vendor the vanilla missions without the tag-specific series, then strip every call to a missing event."""
-    tagset = all_known_tags()
+    """Strip every call to a missing event from the files that still load."""
     defined = defined_event_ids()
-    # missions: a series that names a tag belongs to another world
-    mdir = os.path.join(MOD, "missions")
-    os.makedirs(mdir, exist_ok=True)
-    vdir = os.path.join(GAME, "missions")
-    series_cut = files = 0
-    for fn in sorted(os.listdir(vdir)):
-        if not fn.endswith(".txt"):
-            continue
-        text = open(os.path.join(vdir, fn), encoding="utf-8", errors="replace").read()
-        keep = []
-        for is_block, lines in _series(text):
-            if is_block and event_mentions_tag("\n".join(lines), tagset):
-                series_cut += 1
-                continue
-            keep.append("\n".join(lines))
-        out, _n = strip_missing("\n".join(keep), defined)
-        write_out(os.path.join(mdir, fn), out if out.endswith("\n") else out + "\n", encoding="utf-8", errors="strict")
-        files += 1
     # every other file that still fires a missing event, vanilla or the mod's patched copy
     stripped = calls = 0
     for rel in sorted(dangling()):
@@ -167,7 +129,7 @@ def step_dangling():
         stripped += 1
         calls += n
     left = dangling()
-    print(f"missions: {files} files, {series_cut} tag-specific series dropped; {stripped} other files lost {calls} "
-          f"calls to missing events; {sum(len(v) for v in left.values())} left")
+    print(f"dangling events: {stripped} files lost {calls} calls to missing events; "
+          f"{sum(len(v) for v in left.values())} left")
     if left:
         raise SystemExit(f"still firing missing events: {dict(list(left.items())[:5])}")

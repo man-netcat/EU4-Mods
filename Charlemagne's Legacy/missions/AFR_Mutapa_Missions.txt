@@ -1,9 +1,0 @@
-#First slot
-
-#Second slot
-
-#Third slot
-
-#Forth slot
-
-#Fith slot

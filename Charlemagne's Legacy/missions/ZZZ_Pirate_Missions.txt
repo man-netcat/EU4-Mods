@@ -1,8 +1,0 @@
-#Always make sure this file is the last one in the list or there will be issues.
-
-
-# Pirate 1 - Trade & Piracy
-
-# Pirate 2 - The Caribbean
-
-# Pirate 3 - Naval Power and Diplomacy
