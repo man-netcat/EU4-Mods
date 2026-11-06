@@ -1,0 +1,235 @@
+# The steppe, the Tarim, Tibet, China's west and the Korean and Vietnamese kingdoms.
+
+[oghuz]
+trigger = tag OGZ
+name = Oghuz
+start = cavalry_power 0.15, gov 1
+bonus = gov 1
+idea = The Yabghu of the Oghuz | The tribal federation obeys a yabghu who rules from his winter camp on the Syr Darya. | gov 1, stability_cost_modifier -0.10
+idea = Twenty-Four Tribes | The Oghuz are two groups of twelve tribes, and the khan's rule depends on balancing them. | improve_relation_modifier 0.25, global_manpower_modifier 0.15
+idea = The Sheep and the Horse | Great herds feed the camps and mount the warriors who ride from them. | cavalry_cost -0.15, manpower_recovery_speed 0.10
+idea = Raids on the Samanid Border | Oghuz bands cross the Syr Darya in winter and trade or fight as they must. | loot_amount 0.20, movement_speed 0.10
+idea = The Salt Road from Khwarezm | Oghuz herdsmen guard the road of caravans between the Oxus and the Volga for a price. | caravan_power 0.20, global_tax_modifier 0.10
+idea = The Felt Tent Shaman | Kams and seers govern the calendar of migration, war and feast. | tolerance_own 2, religious_unity 0.10
+idea = Camp Fortresses of the Syr Darya | Winter camps on the river become stone towns when the khan needs a permanent seat. | defensiveness 0.10, fort_maintenance_modifier -0.15
+
+[zhetysu]
+trigger = tag ZHT
+name = Karluk
+start = cavalry_power 0.15, land_morale 0.10
+bonus = gov 1
+idea = The Seven Rivers | The grasslands of Zhetysu are some of the best pasture in Asia, and herds grow fat on them. | manpower_recovery_speed 0.10, global_manpower_modifier 0.15
+idea = The Karluk Yabghu | The Karluk khan was once the Tang emperor's ally, then the Uighur's rival, and rules his own country now. | prestige 1, gov 1
+idea = Talas and Balasagun | Trading towns in the Chu and Talas valleys prosper from the silk road. | caravan_power 0.20, trade_efficiency 0.10
+idea = Cavalry of the Tien Shan | Karluk horsemen are drilled to fight in mountains and on the plain. | cavalry_power 0.20, shock_damage 0.10
+idea = The Talas Memory | The Karluk were present at the great battle of Talas, and their veterans' tales serve their recruits. | army_tradition 0.50, land_morale 0.10
+idea = Faiths Along the Road | Nestorians, Manichaeans, Buddhists and Muslims all live in Karluk cities, and the khan allows all of them. | tolerance_heathen 2, tolerance_heretic 2
+idea = Mountain Passes | The passes of the Tien Shan close in winter and shelter the Karluk from invaders. | defensiveness 0.15, land_attrition -0.15
+
+[uighur]
+trigger = tag DZG
+name = Uighur
+start = caravan_power 0.20, tolerance_heretic 2
+bonus = gov 1
+idea = The Manichaean Elect | The Uighur elite held the faith of Mani, and their khaganate was its great patron. | church_power_modifier 0.15, tolerance_own 2
+idea = The Oasis Cities | Turfan, Beshbaliq and Karakhoja are cities of canals, temples and libraries. | production_efficiency 0.10, technology_cost -0.10
+idea = The Karez Canals | Underground channels carry melt-water from the Tien Shan into dry fields. | global_trade_goods_size_modifier 0.10, development_cost -0.10
+idea = Merchants of the Silk Road | Sogdian and Uighur traders manage the most profitable stage of the road to China. | global_trade_power 0.15, trade_efficiency 0.10
+idea = The Scribes of Qocho | Scribes write Uighur in a script adapted from Sogdian, and the khan's court is literate. | idea_cost -0.05, yearly_corruption -0.10
+idea = The Fallen Khaganate | The Uighur lost Mongolia to the Kirghiz, but their descendants keep the memory of empire. | prestige 1, gov 1
+idea = Light Cavalry of the Tarim | Riders from the oases fight with bows and sabres in the old Uighur way. | cavalry_power 0.15, movement_speed 0.10
+
+[naimania]
+trigger = tag NIN
+name = Naiman
+start = gov 1, cavalry_power 0.10
+bonus = gov 1
+idea = The Eight Clans | The clans of the Naiman gather under one khan in the grass of the Altai. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+idea = Nestorian Steppe Christians | Many Naiman chiefs follow the faith of the Church of the East, and priests bless their camps. | tolerance_heretic 2, church_power_modifier 0.10
+idea = The Altai Pastures | Mountain meadows give herds of horses and sheep to the clans. | manpower_recovery_speed 0.10, global_manpower_modifier 0.15
+idea = Riders of the Irtysh | Naiman bowmen ride the long plains between the Altai and the Irtysh. | cavalry_power 0.20, movement_speed 0.10
+idea = Tribute from the Forest People | Tribes of the taiga pay the khan in furs. | global_tax_modifier 0.10, vassal_income 0.20
+idea = Blacksmith Khans | Their ancestors were iron-workers of the mountains, and Naiman blades are prized. | shock_damage 0.10, cavalry_cost -0.15
+idea = Between the Kirghiz and the Karluks | The Naiman survive by sitting between powerful neighbours and trading with all. | diplomatic_reputation 1, ae_impact -0.20
+
+[tuva]
+trigger = tag TUV
+name = Tuvan
+start = gov 1, defensiveness 0.10
+bonus = gov 1
+idea = Reindeer and Taiga | The Uriankhai herd reindeer in the northern taiga and horses on the southern steppe. | manpower_recovery_speed 0.10, land_attrition -0.15
+idea = The Sayan Passes | Narrow valleys and mountain gates make any invasion of Tuva a hard march. | defensiveness 0.15, hostile_attrition 0.5
+idea = Throat Singers and Shamans | Priests of the old faith speak with the spirits and guide the clans in war and peace. | tolerance_own 2, religious_unity 0.10
+idea = The Forest Archers | Hunters of the forest stalk their prey and their enemies with arrows. | infantry_power 0.15, shock_damage 0.10
+idea = Salt and Furs | Furs and salt from lakes pay the tribute of the Tuvan clans. | global_tax_modifier 0.10, caravan_power 0.15
+idea = Clan Elders | A council of elders settles disputes and chooses leaders. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Metalworkers of the Yenisei | Smiths on the upper Yenisei forge iron and bronze. | infantry_cost -0.15, production_efficiency 0.05
+
+[sibir]
+trigger = tag SIB
+name = Siberian
+start = defensiveness 0.10, land_attrition -0.15
+bonus = gov 1
+idea = The Irtysh Fortresses | Wooden forts on the great river mark the khan's seat and the portage to the Urals. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Fur Tribute | Hunters of the taiga pay the khan in sable, ermine and fox. | global_tax_modifier 0.10, vassal_income 0.20
+idea = River Highways | Boats on the Ob, Irtysh and Tobol carry men and goods across the plain. | movement_speed 0.10, global_sailors_modifier 0.20
+idea = The Cold War | Siberian winters kill invaders who carry no furs or bread. | hostile_attrition 0.5, land_attrition -0.15
+idea = Hunters and Skiers | Light infantry on skis and snowshoes hunt and fight through the snow. | infantry_power 0.10, movement_speed 0.10
+idea = Clan Councils | The Tatar and Ugrian clans choose a khan from among themselves. | stability_cost_modifier -0.10, gov 1
+idea = Shaman and Mullah | Both shaman and Muslim missionary preach to the Siberians. | tolerance_heathen 2, tolerance_own 2
+
+[khotan]
+trigger = tag KHN
+name = Khotanese
+start = caravan_power 0.20, tolerance_heathen 2
+bonus = gov 1
+idea = The Jade of Khotan | White jade from the river Yurungkash is sent to China, where it fetches more than gold. | global_tax_modifier 0.10, trade_efficiency 0.10
+idea = The Buddhist Oasis | Khotan's monasteries produce Mahayana scholars who travel to China and Tibet. | church_power_modifier 0.15, global_missionary_strength 0.02
+idea = Silk of the Kingdom | The legend says silkworm eggs were smuggled here in a princess's headdress, and Khotan's silk is still prized. | production_efficiency 0.10, trade_efficiency 0.10
+idea = Saka Heritage | The Khotanese speak an Iranian tongue older than Turkish and keep their own script and literature. | culture_conversion_cost -0.20, prestige 1
+idea = Between Tibet and the Uighurs | Khotan's diplomats balance the claims of two powerful neighbours. | diplomatic_reputation 1, ae_impact -0.20
+idea = The Desert Rim Road | Khotan guards the southern road around the Taklamakan with garrisons and wells. | caravan_power 0.25, defensiveness 0.10
+idea = Oasis Militias | Farmers and herders muster to defend their canals when raiders approach. | global_manpower_modifier 0.15, garrison_size 0.20
+
+[hexi]
+trigger = tag HEX
+name = Guiyijun
+start = defensiveness 0.15, tolerance_heathen 2
+bonus = gov 1
+idea = The Return to Tang | Zhang Yichao drove out the Tibetans in 851 and gave the western provinces back to the emperor. | gov 1, prestige 1
+idea = Dunhuang and the Mogao Caves | The oasis city is a centre of Buddhist art and of the scribal craft. | technology_cost -0.10, church_power_modifier 0.10
+idea = The Gansu Corridor | The narrow road through Hexi connects China to the western regions, and pays tolls to the one who holds it. | caravan_power 0.25, trade_efficiency 0.10
+idea = Ethnic Mixture | Han, Tibetans, Sogdians and Uighurs live in the oasis towns, and the governor has learned to rule all. | tolerance_heathen 2, num_accepted_cultures 1
+idea = Garrison Cities | Fortified oases at Guazhou and Shazhou are manned by veteran soldiers. | fort_maintenance_modifier -0.20, garrison_size 0.25
+idea = Horse Herds of the Qilian | The mountains north of Tibet feed horses for the Hexi cavalry. | cavalry_power 0.15, cavalry_cost -0.15
+idea = Envoys to the Uighurs and Tibetans | Hexi sends caravans, gifts and marriages to its neighbours and keeps the peace. | improve_relation_modifier 0.25, diplomatic_reputation 1
+
+[u_tsang]
+trigger = tag PHA,UTS
+name = Tibetan
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Fallen Empire | The Tibetan Empire broke after Langdarma's death in 842, and every lord of the plateau claims its mantle. | prestige 1, gov 1
+idea = The Roof of the World | At fifteen thousand feet, a march in winter is an ordeal for lowland troops. | hostile_attrition 1.0, defensiveness 0.15
+idea = Yak and Barley | The farmers of the river valleys and the nomads of the highlands feed the lords' armies. | global_manpower_modifier 0.15, manpower_recovery_speed 0.10
+idea = Bon and Buddhist Priests | The old priests of Bon and the new monks of Buddha compete for the nobles' favour. | tolerance_heretic 2, tolerance_own 2
+idea = The Fortress Dzongs | Castles on crags watch over every valley and monastery. | fort_maintenance_modifier -0.20, garrison_size 0.20
+idea = Salt and Musk Caravans | Caravans carry salt, musk and wool to India and China. | caravan_power 0.20, global_tax_modifier 0.10
+idea = The Warrior Clans | Great families of Tsang and Ü maintain retinues of armoured horsemen. | cavalry_power 0.15, shock_damage 0.10
+
+[guge]
+trigger = tag GUG
+name = Gugé
+start = defensiveness 0.15, caravan_power 0.20
+bonus = gov 1
+idea = Descendants of the Tsenpos | The western lords descend from the old emperors and rule with royal claims. | gov 1, prestige 1
+idea = Mount Kailash | The holy mountain draws Hindu, Buddhist and Bon pilgrims whose offerings reach the king. | church_power_modifier 0.10, global_tax_modifier 0.10
+idea = The Salt Lakes of the Chang Tang | Salt harvested from high lakes supplies all of western Tibet. | production_efficiency 0.10, trade_efficiency 0.10
+idea = Passes to Kashmir and India | The western passes link the Tibetan plateau with Kashmir's valley and the plains below. | caravan_power 0.25, global_trade_power 0.10
+idea = Translators and Monasteries | Monks translate Sanskrit texts and spread the Dharma. | technology_cost -0.10, global_missionary_strength 0.02
+idea = Mountain Strongholds | Gugé's fortresses at the cliff edge cannot be taken from below. | defensiveness 0.20, fort_maintenance_modifier -0.20
+idea = Yak Herders of the Plateau | The nomad herders supply the army with leather, meat and mounts. | cavalry_cost -0.15, manpower_recovery_speed 0.10
+
+[dali]
+trigger = tag CDL
+name = Dali
+start = defensiveness 0.10, trade_efficiency 0.10
+bonus = gov 1
+idea = The Heir of Nanzhao | The kings of Dali claim the empire of Nanzhao, which defeated Tang armies and threatened Sichuan. | prestige 1, gov 1
+idea = Erhai Lake | A fertile lake plateau feeds the capital and supports a large population. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Salt Wells and Copper Mines | Yunnan's salt and metals pay for the army. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = The Tea-Horse Road | Caravans of tea go north to Tibet and bring horses back to Dali. | caravan_power 0.25, cavalry_cost -0.15
+idea = Elephants and Archers | War elephants and crossbowmen from the highlands hold the passes. | infantry_power 0.10, shock_damage 0.10
+idea = Buddhist Kings | Kings abdicate to monasteries and the Buddhist Church shapes Dali's law. | church_power_modifier 0.10, stability_cost_modifier -0.10
+idea = Tribal Confederacy | Bai, Yi and Dai chieftains swear to the king and keep their own customs. | improve_relation_modifier 0.25, reduced_liberty_desire 10
+
+[balhae]
+trigger = tag BHE
+name = Balhae
+start = cavalry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Heirs of Goguryeo | The ruling house of Balhae claims the heritage of Goguryeo's kings and fights for it. | gov 1, prestige 1
+idea = The Five Capitals | Five regional capitals each with its own administration and garrisons give the kingdom a Tang-style order. | administrative_efficiency 0.05, yearly_corruption -0.10
+idea = Mohe Cavalry | Mohe horsemen serve as the vanguard of the royal army. | cavalry_power 0.20, shock_damage 0.10
+idea = Horses of the North | The kingdom sells horses to Tang China and Japan. | cavalry_cost -0.15, global_tax_modifier 0.10
+idea = The Sea of Japan Route | Ships from Balhae reach Japan across the sea and bring back furs and silk. | trade_efficiency 0.10, galley_power 0.10
+idea = Mountain Fortresses | Stone fortresses built on mountain tops follow Goguryeo traditions and hold the kingdom's borders. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Tang Learning | Balhae students study at Chang'an and bring back Chinese writing, law and ritual. | technology_cost -0.10, idea_cost -0.05
+
+[silla]
+trigger = tag SLL
+name = Silla
+start = land_morale 0.10, stability_cost_modifier -0.10
+bonus = gov 1
+idea = The Bone-Rank System | Royal blood is graded and each grade has its rank and robe, and a Silla official knows his place. | gov 1, stability_cost_modifier -0.10
+idea = Gyeongju the Golden City | The capital's palaces, temples and tombs are full of gold and make Silla a bright part of Asia. | prestige 1, global_tax_modifier 0.10
+idea = The Hwarang | Young nobles train in poetry, arms and loyalty and become the officers of the kingdom. | army_tradition 0.50, land_morale 0.10
+idea = Buddhist Monarchy | Kings build temples and promote the Dharma, and monks pray for the state. | church_power_modifier 0.15, tolerance_own 2
+idea = The Maritime Trade of Cheonghae | Silla ships trade to China and Japan, and Korean merchants have their own quarter in Chinese ports. | trade_efficiency 0.15, global_sailors_modifier 0.20
+idea = Granite Fortresses | Hill forts guard every pass of the Taebaek mountains. | defensiveness 0.15, fort_maintenance_modifier -0.20
+idea = Learning from Tang | Silla envoys study at the Chinese academy and take Chinese titles for their ministries. | technology_cost -0.10, administrative_efficiency 0.05
+
+[later_baekje]
+trigger = tag HUB
+name = Hubaekje
+start = land_morale 0.10, cavalry_power 0.10
+bonus = gov 1
+idea = Heirs of Baekje | The rebels of the south-west claim to restore the old kingdom that Silla destroyed. | gov 1, reduced_liberty_desire 10
+idea = Gyeon Hwon's Army | A soldier who rose from the ranks is a general with a genius for swift campaigns. | army_tradition 0.50, discipline 0.025
+idea = Rice Plains of the South-West | The Honam plains are the granary of the peninsula. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = The Yellow Sea Coast | Ships from Baekje's ports carry goods and envoys to China. | galley_power 0.10, trade_efficiency 0.10
+idea = Defecting Generals | Silla officers who go over to the rebels bring their troops and plans. | global_manpower_modifier 0.15, army_tradition_from_battle 0.50
+idea = Grievances of the Old Baekje | Former Baekje families resent Silla and give Gyeon Hwon their support. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Mountain Strongholds | The slopes of Jirisan give shelter to rebels. | defensiveness 0.15, hostile_attrition 0.5
+
+[later_goguryeo]
+trigger = tag TAE,KOR
+name = Taebong
+start = infantry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Heirs of Goguryeo | Gung Ye proclaimed that Goguryeo was reborn, and the northern lords rally to the name. | gov 1, prestige 1
+idea = The Merchant Houses of Songak | Wang Geon's family of traders and shipmasters supplies the kingdom with ships and money. | trade_efficiency 0.10, global_sailors_modifier 0.20
+idea = The Prophet King | Gung Ye claims to be Maitreya Buddha and his people believe it, for a while. | church_power_modifier 0.15, gov 1
+idea = Rice and Paddy of the North | Farmers of the Imjin river plains feed the armies. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Local Strongmen | Provincial warlords join the kingdom with their own retinues. | global_manpower_modifier 0.15, garrison_size 0.20
+idea = The Han River Fortresses | Forts at the mouth of the Han River command the road to the capital. | defensiveness 0.15, fort_maintenance_modifier -0.15
+idea = Naval Raids on the South | Taebong's fleets harry the Baekje coast and carry the war to the rivals. | galley_power 0.15, naval_morale 0.10
+
+[viet]
+trigger = tag DAI,DNM ; culture viet
+name = Viet
+start = defensiveness 0.15, infantry_power 0.10
+bonus = gov 1
+idea = The Khuc Family Governors | The Khuc family rules Annam in the name of the Tang and has made themselves governors in all but name. | gov 1, stability_cost_modifier -0.10
+idea = Red River Rice | Rice paddies of the Red River delta feed a large population. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Dike Builders | Embankments against the river protect fields and give the king power over water. | development_cost -0.10, defensiveness 0.10
+idea = Resistance to the North | The Viet fought for centuries against Han rule, and remember the Trung sisters. | land_morale 0.10, army_tradition 0.50
+idea = Tattooed Boatmen | River and sea fighters of the delta serve in the king's fleet. | galley_power 0.15, global_sailors_modifier 0.20
+idea = Monsoon Forests | Hills and jungles hold any Chinese advance. | land_attrition -0.15, hostile_attrition 0.5
+idea = Mahayana and Spirit Cults | Buddhist monks, Confucian clerks and village spirit-priests share the Viet world. | tolerance_heathen 2, tolerance_heretic 2
+
+[champa]
+trigger = tag CHA
+name = Cham
+start = galley_power 0.15, global_sailors_modifier 0.20
+bonus = gov 1
+idea = Lords of the Southern Seas | Cham sailors dominate the sea between Annam and the Mekong. | naval_morale 0.10, galley_power 0.15
+idea = Aloeswood and Ivory | The highlands yield agarwood, ivory and rhino horn which the Chinese pay dearly for. | global_trade_power 0.10, trade_efficiency 0.10
+idea = Hindu Temples of My Son | Brick towers and sanctuaries to Shiva make Champa a holy land. | church_power_modifier 0.10, prestige 1
+idea = Elephant Cavalry | War elephants lead the Cham army in battle. | shock_damage 0.15, army_tradition 0.50
+idea = Raids on Annam | Cham fleets and armies strike the northern coast at will. | loot_amount 0.20, movement_speed 0.10
+idea = Rice Valleys of Annam | The narrow coastal valleys produce rice and trade goods. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Princes of Indrapura | The new dynasty of Indrapura mixes Cham and Indian custom in its court. | gov 1, improve_relation_modifier 0.25
+
+[dvaravati]
+trigger = tag DVA
+name = Dvaravati
+start = tolerance_heathen 2, trade_efficiency 0.10
+bonus = gov 1
+idea = The Mon Cities | Moat-and-rampart cities such as Nakhon Pathom hold the trade and the temples of Dvaravati. | defensiveness 0.10, global_tax_modifier 0.10
+idea = The Wheel of the Law | The dharmachakra stones show a Buddhist kingdom that spreads its doctrine across Southeast Asia. | church_power_modifier 0.15, global_missionary_strength 0.02
+idea = Chao Phraya Rice | Wet rice on the great river plain feeds the kingdom. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = Trade Between India and China | Dvaravati sits on a land bridge between two seas, and its merchants carry Indian goods across it. | global_trade_power 0.10, caravan_power 0.20
+idea = Mon-Khmer Federation | Cities of Mon and Khmer culture accept the king while governing themselves. | improve_relation_modifier 0.25, reduced_liberty_desire 10
+idea = Elephants of the Forest | War elephants trained by mahouts march behind the king. | shock_damage 0.10, army_tradition 0.50
+idea = Monastery Learning | Monks teach Pali and Sanskrit, and the sangha educates the sons of lords. | technology_cost -0.10, idea_cost -0.05

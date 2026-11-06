@@ -1,0 +1,92 @@
+# Latin Christendom: the Frankish kingdoms, Italy, the Papacy and Venice.
+
+[west_francia]
+trigger = tag FRA
+name = West Frankish
+start = defensiveness 0.10, fort_maintenance_modifier -0.10
+bonus = gov 1
+idea = The Edict of Pistres | Charles the Bald orders every river crossing fortified against the Northmen, and a bridge with a tower is a better wall than a march. | defensiveness 0.15, fort_maintenance_modifier -0.15
+idea = Counts of the Marches | The marcher lords of Neustria and Flanders raise their own men and pay their own garrisons. | global_manpower_modifier 0.15, garrison_size 0.20
+idea = The Royal Fisc | Villages of the crown estates feed the court as it travels between Compiegne, Quierzy and Attigny. | global_tax_modifier 0.10, build_cost -0.10
+idea = Hincmar's Coronations | The archbishop of Reims anoints the king with the holy oil and writes that kings may not be deposed lightly. | gov 1, stability_cost_modifier -0.10
+idea = The Court of Charles the Bald | Irish scholars and Greek books at the royal court make the Latin West look to Paris for learning. | technology_cost -0.10, prestige 1
+idea = Heavy Horse of the Franks | The mailed horseman trained from boyhood wins what the foot levy cannot. | cavalry_power 0.20, shock_damage 0.10
+idea = Vineyards and Mills | The Loire, Seine and Marne carry wine and grain to every market of the realm. | production_efficiency 0.10, trade_efficiency 0.10
+
+[lotharingia]
+trigger = tag LOT
+name = Lotharingian
+start = diplomatic_reputation 1, trade_efficiency 0.10
+bonus = gov 1
+idea = The Middle Kingdom | Between the sons of Louis the Pious lay the Rhine, the Meuse, the Scheldt and the Rhone, and every road of the empire crossed them. | global_trade_power 0.10, caravan_power 0.15
+idea = The Palace at Aachen | Charlemagne's chapel and bath house make the Lotharingian king the guardian of the imperial memory. | prestige 1, gov 1
+idea = Monasteries of the Meuse | Stavelot, Prum and Echternach hold libraries and estates that the king can tax or borrow. | technology_cost -0.10, global_tax_modifier 0.05
+idea = Cloth of the Low Countries | Frisian merchants and Flemish weavers send broadcloth down the Rhine to every fair. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = The Emperor's Brother | Louis II sits in Italy and his backing keeps Lothair's uncles from the border. | ae_impact -0.20, improve_relation_modifier 0.25
+idea = Dorestad and the Rhine Mouth | The great emporium at the river's end draws ships from the North Sea to the king's tolls. | galley_power 0.10, global_sailors_modifier 0.20
+idea = Marches Against Northmen | The Scheldt and the Meuse have been raided each spring, and counts learn to meet the dragon ships. | defensiveness 0.15, naval_morale 0.10
+
+[east_francia]
+trigger = tag GER
+name = East Frankish
+start = land_morale 0.10, manpower_recovery_speed 0.10
+bonus = gov 1
+idea = The Royal Progress | Louis the German rides his realm from Regensburg to Frankfurt, and a king seen is a king obeyed. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = The Kings Palatinate | The palaces of Frankfurt, Regensburg and Ingelheim hold the assemblies where the great men of the east swear their oaths. | gov 1, improve_relation_modifier 0.25
+idea = The Archbishops of Mainz and Salzburg | The bishops hold the east's Latin learning and its missions among the Slavs. | global_missionary_strength 0.02, technology_cost -0.10
+idea = The Marcher Counts | Counts of the Elbe, the Saale and the Danube hold the Slavic frontier with their own retinues. | defensiveness 0.15, land_attrition -0.15
+idea = The Host of the Tribes | Franks, Saxons, Swabians and Thuringians muster under their own dukes and fight beside one another. | global_manpower_modifier 0.15, army_tradition 0.50
+idea = Forests, Mines and Salt | The Harz silver, the Hallstatt salt and the black forests are the crown's own. | global_tax_modifier 0.10, global_trade_goods_size_modifier 0.10
+idea = The German Tongue | A vernacular of many dialects binds the king's subjects more than any capitulary does. | culture_conversion_cost -0.20, num_accepted_cultures 1
+
+[bavaria]
+trigger = tag BAV
+name = Bavarian
+start = defensiveness 0.10, cavalry_power 0.10
+bonus = gov 1
+idea = The Agilolfing Inheritance | The old ducal house is gone, but its laws and its pride remain with the Bavarian nobility. | stability_cost_modifier -0.10, gov 1
+idea = Regensburg on the Danube | The palace and the river port link the Bavarian king to Pannonia, Bohemia and Byzantium. | global_trade_power 0.10, caravan_power 0.15
+idea = The Salt of Reichenhall | White gold from the Alpine mines is loaded on the Isar and Inn and sold for silver. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = The Eastern Marches | Carinthia, Pannonia and the Avar lands are held by counts who ride out against Slavs and Moravians alike. | defensiveness 0.15, hostile_attrition 0.5
+idea = The Bishops of Freising and Passau | Missionaries ride east with Bavarian princes and bring the Slavs under the Church and the crown. | global_missionary_strength 0.02, missionaries 1
+idea = Tegernsee and Salzburg | Alpine monasteries copy books and train priests for the whole of the east. | technology_cost -0.10, church_power_modifier 0.10
+idea = Horsemen of the Danube | Bavarian knights ride Avar-bred horses and fight like the nomads they replaced. | cavalry_power 0.20, movement_speed 0.10
+
+[italy]
+trigger = tag ITA
+name = Italian
+start = diplomatic_reputation 1, global_tax_modifier 0.10
+bonus = gov 1
+idea = Emperor Louis II | The one Carolingian who rules Italy has the Roman imperial crown, and every Italian lord knows it. | prestige 1, gov 1
+idea = Pavia the Capital | The Lombard palace in Pavia is the seat of a court whose law runs back to Rothari. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = The Lombard Law | Edicts older than the Franks decide every suit in the north, and judges honour them. | stability_cost_modifier -0.10, province_warscore_cost -0.10
+idea = The Po Valley | Mills, vineyards and flax fields along the great river feed the kingdom's cities. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = The Wars Against the Saracens | Muslim emirs hold Bari and Taranto, and the Italian host learns to fight them in the south. | land_morale 0.10, army_tradition_from_battle 0.50
+idea = Trading Ports of the Adriatic | Venetian, Amalfitan and Ravennate merchants carry Eastern goods to every Lombard market. | global_trade_power 0.10, trade_efficiency 0.10
+idea = The Holy See at Rome | The pope crowns the emperor and expects obedience in return, but Italy's lords profit from both. | papal_influence 1, church_power_modifier 0.10
+
+[navarra]
+trigger = tag NAV
+name = Navarrese
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Passes of the Pyrenees | The mountains that turned back Charlemagne's rearguard are the kingdom's gate and its wall. | defensiveness 0.20, hostile_attrition 0.5
+idea = The Banu Qasi Alliance | Muslim lords of Tudela are Pamplona's kin by marriage and its allies against Cordoba. | improve_relation_modifier 0.25, diplomatic_reputation 1
+idea = Infanzones and Fueros | Free landowners swear to the king in return for their own laws and exemptions. | global_manpower_modifier 0.15, reduced_liberty_desire 10
+idea = The Basque Tongue and Law | An old language and customs older than Rome mark every Navarrese as one people. | stability_cost_modifier -0.10, culture_conversion_cost -0.20
+idea = Shepherds and Iron | Herds of the high pastures and forges of the valleys fill the royal storehouses. | global_tax_modifier 0.10, build_cost -0.10
+idea = Light Horse of the Foothills | Basque riders skirmish in mountain scrub and strike where the enemy cannot follow. | cavalry_power 0.15, movement_speed 0.10
+idea = The Arista Line | The kings of Pamplona claim descent from Iñigo Arista and the legitimacy of a house that has held its throne against all comers. | gov 1, prestige 1
+
+[brittany]
+trigger = tag BRI
+name = Breton
+start = land_morale 0.10, defensiveness 0.10
+bonus = gov 1
+idea = The Victory at Ballon | The Breton host crushed Charles the Bald's army in 845, and no Frankish king has forced them to pay since. | prestige 1, army_tradition_from_battle 0.50
+idea = Javelin and Horse | The Bretons fight with light cavalry and darts, and strike and withdraw before a Frankish host can form. | cavalry_power 0.15, movement_speed 0.10
+idea = The Peasant Plou | Clans of free farmers, the plou, give Brittany a population that will not be taxed twice. | global_manpower_modifier 0.15, garrison_size 0.20
+idea = The Monastery of Redon | Abbot Conwoion's charters record Breton law and land in a script the Franks respect. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = Saints of the Isle | Brythonic saints and their holy wells hold a Christian land where no bishop of Tours rules. | tolerance_own 2, church_power_modifier 0.10
+idea = Cornish Tin and Channel Trade | Ships carry tin, salt and cloth between Brittany, Cornwall and Wales. | trade_efficiency 0.10, galley_power 0.15
+idea = Coast of the Armorican Sea | Breton sailors know the reefs of Ushant and Finistere and raid or trade as the season requires. | global_sailors_modifier 0.20, naval_morale 0.10

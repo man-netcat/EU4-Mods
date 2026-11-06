@@ -1,0 +1,118 @@
+# Papacy, Venice, Armenia, Aquitaine and the great duchies of Francia and Italy.
+
+[papacy]
+trigger = tag PAP
+name = Papal
+start = diplomatic_reputation 1, papal_influence 1
+bonus = devotion 1
+idea = The Patrimony of St Peter | The lands around Rome and Ravenna belong to the Apostle, and the pope draws rent and obedience from them. | global_tax_modifier 0.10, gov 1
+idea = Pope Nicholas the Great | Nicholas I claims that no emperor, bishop or council can bind the Holy See, and the Frankish kings yield. | prestige 1, church_power_modifier 0.15
+idea = The Lateran Chancery | The chancery's letters and decrees reach every bishop in the West and settle disputes between kings. | improve_relation_modifier 0.25, ae_impact -0.20
+idea = The Roman Schools | Churchmen in Rome copy the fathers of the Church and teach the rites of the Roman Mass to pilgrims. | technology_cost -0.10, global_missionary_strength 0.02
+idea = The Leonine Wall | Pope Leo IV walled the Vatican hill against the Saracens, and the city has withstood raids ever since. | defensiveness 0.20, fort_maintenance_modifier -0.20
+idea = Legates and Missionaries | Papal envoys travel to Constantinople, Bulgaria and Moravia and bring news of the pope's will. | missionaries 1, diplomats 1
+idea = The Peter's Pence | Pilgrims leave offerings at the tomb of the Apostle and kings send gifts to be remembered. | global_tax_modifier 0.10, papal_influence 1
+
+[venice]
+trigger = tag VEN
+name = Venetian
+start = galley_power 0.15, trade_efficiency 0.10
+bonus = gov 1
+idea = The Lagoon | A ring of shifting sandbanks and marshes protects the islands better than a wall. | defensiveness 0.15, hostile_attrition 0.5
+idea = The Doge and the Assembly | The people of the lagoon elect their doge and swear him to the laws of Venice. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Salt Pans of the Lagoon | Salt gathered in the shallows is the first good Venice sells to the mainland. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = The Merchants of Rialto | Families of traders draw up contracts, share risk and send convoys to Alexandria and Constantinople. | merchants 1, global_trade_power 0.15
+idea = Between Two Empires | Venice sells to Byzantium, to the Franks and to the Muslims, and takes sides only when she must. | diplomatic_reputation 1, ae_impact -0.20
+idea = The Relics of St Mark | The Evangelist's body, stolen from Alexandria in 828, makes Venice a holy city in her own right. | prestige 1, church_power_modifier 0.10
+idea = War Galleys of the Adriatic | Venetian crews chase Narentine pirates off the Dalmatian coast and keep the Adriatic open. | galley_power 0.20, naval_morale 0.10
+
+[armenia]
+trigger = tag APR,ARM
+name = Armenian
+start = defensiveness 0.15, land_morale 0.10
+bonus = gov 1
+idea = The Nakharar Houses | Great families hold the valleys by hereditary right, and the prince of princes rules by their consent. | stability_cost_modifier -0.10, global_manpower_modifier 0.15
+idea = The Bagratid Prince | Ashot Bagratuni's recognition as prince of princes unites the highland lords under one family. | gov 1, prestige 1
+idea = Mountain Fortresses | Castles on crags and monasteries behind walls make every valley a citadel. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Apostolic Church | The church of Saint Gregory the Illuminator holds the nation's language and law against Caliph and Emperor alike. | church_power_modifier 0.15, tolerance_own 2
+idea = The Silk Road through Dvin | Caravans between Constantinople, Persia and the Caucasus stop at Dvin and pay the prince's tolls. | caravan_power 0.20, global_trade_power 0.10
+idea = Armenian Cavalry | Heavy horsemen with lances from the highland nobility have served both Rome and Persia. | cavalry_power 0.20, shock_damage 0.10
+idea = Buffer Between Empires | The prince plays Caliph against Emperor and takes tribute from both. | diplomatic_reputation 1, improve_relation_modifier 0.25
+
+[aquitaine]
+trigger = tag AQI
+name = Aquitanian
+start = cavalry_power 0.10, trade_efficiency 0.10
+bonus = gov 1
+idea = The Kingdom of Aquitaine | The Carolingian sub-kingdom keeps its own court, law and nobility, and refuses to be a mere province. | gov 1, reduced_liberty_desire 10
+idea = The Gascon Marches | Basque and Gascon lords guard the passes and raid the Moors across the mountains. | defensiveness 0.15, land_attrition -0.15
+idea = The Garonne Vineyards | Wine from Bordeaux and the Gironde fills barrels for the north and the sea. | production_efficiency 0.10, trade_efficiency 0.10
+idea = Roman Law of the South | Roman and Visigothic law remains in force south of the Loire, and its judges are learned. | yearly_corruption -0.10, stability_cost_modifier -0.10
+idea = The Pilgrim Road | Travellers to Compostela cross Aquitaine and spend their coin in its towns. | church_power_modifier 0.10, global_tax_modifier 0.10
+idea = Counts of Toulouse and Poitiers | Powerful counts hold their own armies and parley with the king as equals. | global_manpower_modifier 0.15, army_tradition 0.50
+idea = Atlantic Ports | La Rochelle, Bordeaux and Bayonne ship salt, wine and wool to Brittany and England. | galley_power 0.10, global_sailors_modifier 0.20
+
+[angria]
+trigger = tag AGR
+name = Saxon
+start = infantry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = The Old Saxon Law | Saxons keep their ancient customs under the Carolingian crown, and judge by Saxon law. | stability_cost_modifier -0.10, gov 1
+idea = The Liudolfing House | The family of Duke Liudolf is first among Saxon nobles, and the king's friend and rival. | prestige 1, improve_relation_modifier 0.25
+idea = The Free Peasant Levy | Saxon freeholders keep their arms and march with their lord on any campaign. | global_manpower_modifier 0.20, manpower_recovery_speed 0.10
+idea = The Harz Mines | Silver and copper from the mountains pay for horses and weapons. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = The Elbe Frontier | Saxon counts fight the Wends and Obotrites across the river with fortresses and cavalry raids. | defensiveness 0.15, cavalry_power 0.10
+idea = Corvey and Gandersheim | Monastic schools preserve Saxon legends and teach Saxon boys to read Latin. | technology_cost -0.10, church_power_modifier 0.10
+idea = Forests and Marshes | The woods of the Weser and the marshes of the Elbe swallow slow armies. | land_attrition -0.15, hostile_attrition 0.5
+
+[flanders]
+trigger = tag FLA
+name = Flemish
+start = trade_efficiency 0.10, galley_power 0.10
+bonus = gov 1
+idea = Count Baldwin Iron-Arm | Baldwin eloped with Charles the Bald's daughter in 862 and was made Count of Flanders as the price of peace. | gov 1, prestige 1
+idea = Fortified Ghent and Bruges | Walled towns and castles on the dunes hold the coast against Viking raiders. | defensiveness 0.15, fort_maintenance_modifier -0.15
+idea = Cloth of the Lys and Scheldt | Flemish weavers work English wool into cloth traded as far as Italy. | production_efficiency 0.15, global_trade_goods_size_modifier 0.10
+idea = The North Sea Coast | Sailors of Flanders and Frisia sail to the Thames and the Elbe in flat-bottomed craft. | global_sailors_modifier 0.20, galley_power 0.15
+idea = The Polders | Dikes and drainage ditches win new land from the sea. | development_cost -0.10, global_tax_modifier 0.10
+idea = Abbeys of Saint-Bertin | Rich abbeys keep the books and law of the county and train its clerks. | technology_cost -0.10, church_power_modifier 0.10
+idea = Footmen of the Towns | Burgher militias of Flanders drill in the town square on feast days. | infantry_power 0.15, land_morale 0.10
+
+[neustria]
+trigger = tag NRM
+name = Neustrian
+start = defensiveness 0.10, cavalry_power 0.10
+bonus = gov 1
+idea = The Robertian Counts | Robert the Strong and his sons hold the Loire and Seine marches against Northmen and rebels. | prestige 1, army_tradition 0.50
+idea = Marches of the Loire | A chain of towers and bridges protects the river from Nantes to Angers. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Saint-Denis and Saint-Martin | The great abbeys of Neustria hold the royal tombs and the king's treasure. | church_power_modifier 0.10, gov 1
+idea = Paris and the Seine | The island city on the Seine is a fortress, a market and a bridge on the road to the sea. | trade_efficiency 0.10, global_tax_modifier 0.10
+idea = Frankish Knights | Mounted warriors of Neustria train from boyhood in the lance and the sword. | cavalry_power 0.20, shock_damage 0.10
+idea = The Norman Question | Norsemen have wintered on the Seine, and the counts of Neustria learn to treat with them. | tolerance_heathen 2, improve_relation_modifier 0.25
+idea = Forests of the Perche | Oak and beech forests give timber for ships, mills and halls. | build_cost -0.10, production_efficiency 0.10
+
+[tuscany]
+trigger = tag TUS
+name = Tuscan
+start = cavalry_power 0.10, trade_efficiency 0.10
+bonus = gov 1
+idea = The March of Tuscany | The marquis guards the roads to Rome and Lombardy and answers only to the emperor. | defensiveness 0.15, prestige 1
+idea = Lucca the Capital | The old Lombard city on the Serchio keeps a court and a mint for the margraves. | yearly_corruption -0.10, global_tax_modifier 0.10
+idea = Wool and Marble | Quarries at Carrara and sheep on the Maremma supply Tuscan towns. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = Via Francigena | The pilgrim road from Canterbury to Rome crosses the march, and its tolls fill the treasury. | caravan_power 0.20, church_power_modifier 0.10
+idea = Pisan Ships | Merchant sailors of Pisa trade to Sardinia, Corsica and the African shore. | galley_power 0.15, global_sailors_modifier 0.20
+idea = The Margrave's Horse | Mounted men of the Tuscan nobility form the best cavalry in Italy. | cavalry_power 0.20, army_tradition_from_battle 0.50
+idea = Etruscan Memory | The ruins and the speech of old Etruria give Tuscans a sense of belonging that outlasts their masters. | stability_cost_modifier -0.10, culture_conversion_cost -0.20
+
+[spoleto]
+trigger = tag SPL
+name = Spoletan
+start = defensiveness 0.10, infantry_power 0.10
+bonus = gov 1
+idea = The Lombard Duchy | The dukes of Spoleto descend from Lombard kings and keep their own court and army. | gov 1, reduced_liberty_desire 10
+idea = Between Rome and Benevento | The duchy holds the roads of the Apennines, and both Rome and the south court its friendship. | diplomatic_reputation 1, improve_relation_modifier 0.25
+idea = Apennine Fortresses | Hill towns with walls and towers stand on every ridge. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Farfa and Montecassino | Rich monasteries guard the Benedictine rule and educate a clergy loyal to the duke. | technology_cost -0.10, church_power_modifier 0.10
+idea = Mountain Pastures | Shepherds drive flocks between the highlands and the plains of Latium. | production_efficiency 0.10, global_manpower_modifier 0.10
+idea = The Duke's Lombard Horse | Lombard heavy cavalry fight as the Spoletan dukes have taught them. | cavalry_power 0.15, shock_damage 0.10
+idea = Battles with the Saracens | Spoleto sent its men to Bari and Garigliano and learned how to beat Muslim raiders. | land_morale 0.10, army_tradition_from_battle 0.50

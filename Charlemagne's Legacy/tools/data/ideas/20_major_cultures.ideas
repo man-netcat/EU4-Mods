@@ -1,0 +1,131 @@
+# Major cultures that differ from the rest of their culture group. Tried after the tag sets, before the group sets.
+
+[culture_french]
+trigger = culture french
+name = French
+start = cavalry_power 0.10, fort_maintenance_modifier -0.10
+bonus = gov 1
+idea = The Frankish Aristocracy | Counts and their sons are raised to the lance and the court, and a French lord rides at the head of his vassals. | cavalry_power 0.15, army_tradition 0.50
+idea = The Rule of Saint Benedict | The great abbeys of Neustria and Burgundy keep the Rule and keep the realm's records. | technology_cost -0.10, church_power_modifier 0.10
+idea = Counts and Viscounts | A thick network of counts, viscounts and castellans runs the countryside on the king's behalf. | yearly_corruption -0.10, global_manpower_modifier 0.10
+idea = The Heavy Plough | New heavy ploughs and three-field rotation raise the yield of the northern plains. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = The Roman Law of the South | Language and law in the Midi keep their Latin form while the north turns to Frankish custom. | stability_cost_modifier -0.10, tolerance_heathen 1
+idea = Bridges and Mills | Villages build mills on every stream and bridges on every river. | build_cost -0.10, development_cost -0.05
+idea = Pilgrim Roads | The roads to Tours, Rome and Compostela make French towns richer by trade and charity. | caravan_power 0.15, church_power_modifier 0.05
+
+[culture_saxon]
+trigger = culture saxon
+name = Saxon
+start = infantry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Free Saxon Peasants | The Saxon farmers keep their weapons and their pride, and enter the field behind their own lord. | global_manpower_modifier 0.15, infantry_power 0.10
+idea = The Old Saxon Gods Remembered | Folk customs remember the faith of Widukind and the sacred oak despite the Frankish conversion. | tolerance_heathen 2, religious_unity 0.10
+idea = The Weser and the Elbe | Saxon rivers and forests are routes of trade and walls of defence. | trade_efficiency 0.10, land_attrition -0.15
+idea = Cloth and Salt | Lüneburg's salt and the north's linen go by cart and barge to the Baltic and the Rhine. | production_efficiency 0.10, global_tax_modifier 0.05
+idea = Monks of Corvey | The abbey on the Weser trained Saxon clerks and monks. | technology_cost -0.10, church_power_modifier 0.10
+idea = The Saxon Law | Customary law preserved by Saxon judges gives clear answers to local conflicts. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = Border Counts of the Wends | Margraves hold the Elbe line with their own men. | defensiveness 0.15, fort_maintenance_modifier -0.15
+
+[culture_bavarian]
+trigger = culture bavarian
+name = Bavarian
+start = cavalry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Bavarian Law | The Lex Baiuvariorum protects the church, the free and the duke, and its judges are respected. | stability_cost_modifier -0.10, gov 1
+idea = Monastic Colonisation | Monks clear the Alpine valleys and teach farming to the peasants who settle them. | development_cost -0.10, global_tax_modifier 0.05
+idea = Salzburg and Passau | Bishops of the Danube missionary sees send priests to Slavs and Hungarians. | global_missionary_strength 0.02, missionaries 1
+idea = Alpine Passes | Mountain roads over the Brenner connect Bavaria with Italy and Venice. | caravan_power 0.20, trade_efficiency 0.10
+idea = Danube Shipping | River boats move salt, wine and grain from Regensburg to Vienna. | global_trade_power 0.10, trade_efficiency 0.05
+idea = Landed Horsemen | The Bavarian gentry ride to war as mounted men-at-arms, paid with land. | cavalry_power 0.15, cavalry_cost -0.10
+idea = The Mountain Fastnesses | Valleys and passes make Bavaria a hard place to conquer. | defensiveness 0.15, hostile_attrition 0.5
+
+[culture_franconian]
+trigger = culture franconian
+name = Franconian
+start = land_morale 0.10, global_tax_modifier 0.05
+bonus = gov 1
+idea = The Heartland of the Franks | The Rhine and Main valleys are the Frankish homeland, and its people fight with a pride that no one else can match. | land_morale 0.10, army_tradition 0.50
+idea = Palaces of the Empire | Ingelheim, Frankfurt and Worms host the assemblies of the Frankish kings. | prestige 1, gov 1
+idea = Rhenish Wine | The vineyards of the Rhine and Moselle make the best-known wine in the north. | production_efficiency 0.10, trade_efficiency 0.10
+idea = Cathedral Schools of Mainz and Worms | Bishops train an educated clergy who staff the royal chapel. | technology_cost -0.10, idea_cost -0.05
+idea = The Frankish Counts | A strong class of counts run the localities and give the kingdom its framework. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = Frankish Infantry | Franks still fight on foot with sword and shield in the old fashion, and a strong line is hard to break. | infantry_power 0.15, discipline 0.025
+idea = The River Cities | Cologne, Mainz and Speyer trade up and down the Rhine. | global_trade_power 0.10, caravan_power 0.15
+
+[culture_andalusian]
+trigger = culture andalusian
+name = Andalusi
+start = trade_efficiency 0.10, production_efficiency 0.10
+bonus = gov 1
+idea = Arab Agronomy | Irrigation, new crops and orchards turn the south of Iberia into a garden. | production_efficiency 0.15, development_cost -0.10
+idea = The City of Cordoba | The largest city in the west boasts libraries, baths and street lighting. | prestige 1, technology_cost -0.10
+idea = Craftsmen of the Souks | Leather, silk, ceramics and metal go from Andalusi workshops to every market. | global_trade_goods_size_modifier 0.10, trade_efficiency 0.10
+idea = Convivencia | Muslims, Christians and Jews live together, and the state taxes all three. | tolerance_heretic 2, tolerance_heathen 2
+idea = Berber Garrisons | Berber soldiers settled in the marches provide a standing army. | discipline 0.025, global_manpower_modifier 0.10
+idea = Ports of the South | Almeria, Malaga and Seville trade with Egypt, the Maghreb and the north. | galley_power 0.10, global_trade_power 0.10
+idea = Arabic Poetry and Science | Poets, astronomers and physicians write in Arabic and teach pupils from Christian lands. | idea_cost -0.05, technology_cost -0.10
+
+[culture_lombard]
+trigger = culture lombard,italian
+name = Lombard
+start = defensiveness 0.10, global_tax_modifier 0.05
+bonus = gov 1
+idea = The Lombard Dukes | The great dukes of Spoleto and Benevento keep a Lombard court and law in the south. | gov 1, reduced_liberty_desire 10
+idea = The Edict of Rothari | The Lombard law code is learned by every judge. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = The Roman Cities | Italian towns keep their walls, bishops and markets from the time of Rome. | global_tax_modifier 0.10, garrison_size 0.20
+idea = Lombard Cavalry | Lombard horsemen in the north and south still ride with lance and shield. | cavalry_power 0.15, shock_damage 0.10
+idea = Monasteries of Bobbio and Monte Cassino | Monks preserve the Latin classics and the Benedictine Rule. | technology_cost -0.10, church_power_modifier 0.10
+idea = Pilgrims to Rome | Roads to Rome fill the inns, markets and churches of the peninsula. | caravan_power 0.15, church_power_modifier 0.05
+idea = The Po and the Adriatic | River and sea trade connects Italy's cities. | trade_efficiency 0.10, global_trade_power 0.10
+
+[culture_bedouin]
+trigger = culture bedouin
+name = Bedouin
+start = cavalry_power 0.10, land_attrition -0.15
+bonus = gov 1
+idea = Ahl al-Bayt and Tribe | The tribe is the Arab's first loyalty, and the shaykh holds it together by generosity. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+idea = Camel Riders | Desert fighters ride swift camels and horses, and strike across waterless country. | cavalry_power 0.15, movement_speed 0.10
+idea = The Desert Road | Caravan routes across Arabia pay the tribes who guard them. | caravan_power 0.25, global_tax_modifier 0.10
+idea = The Poets of the Tribe | The qasida preserves tribal glory and shames the coward. | land_morale 0.10, prestige 1
+idea = The Wells and Oases | Control of water means control of the desert. | defensiveness 0.15, hostile_attrition 1.0
+idea = The Pilgrim Convoys | Tribes escort and tax the Hajj caravans. | caravan_power 0.20, church_power_modifier 0.10
+idea = Raiding Parties | The ghazw of a tribe against its neighbours brings livestock and prestige. | loot_amount 0.20, army_tradition_from_battle 0.50
+
+[culture_levantine]
+trigger = culture levantine
+name = Levantine
+start = trade_efficiency 0.10, tolerance_heretic 2
+bonus = gov 1
+idea = Cities of Syria | Damascus, Aleppo and Jerusalem are old cities with great markets and holy sites. | global_tax_modifier 0.10, global_trade_power 0.10
+idea = The Mediterranean Coast | Sidon, Tyre and Acre are ports for the grain of the interior. | galley_power 0.10, trade_efficiency 0.10
+idea = The Christian Communities | Melkite, Jacobite and Maronite communities live under Muslim rulers and keep their own clergy. | tolerance_heretic 2, church_power_modifier 0.05
+idea = Glass and Soap | Syrian workshops produce glass, soap and cloth for export. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = The Border with Byzantium | Frontier lords fight in the summer raids against the Greeks. | land_morale 0.10, army_tradition_from_battle 0.50
+idea = The Pilgrim Route to Mecca | Damascus is the gathering place of the Syrian pilgrims. | caravan_power 0.20, church_power_modifier 0.10
+idea = Syrian Scribes | Clerks of Syria served the Umayyads and now serve the Abbasids. | yearly_corruption -0.10, technology_cost -0.05
+
+[culture_persian]
+trigger = culture persian,tajik
+name = Persian
+start = global_tax_modifier 0.10, trade_efficiency 0.10
+bonus = gov 1
+idea = Heirs of Cyrus | The Persian elite remember the old kings and their administration. | gov 1, prestige 1
+idea = The Dihqans | The landed gentry of Persia manage the villages and the harvest. | global_tax_modifier 0.10, global_manpower_modifier 0.10
+idea = Qanat and Garden | Underground canals bring water to desert fields. | production_efficiency 0.10, development_cost -0.10
+idea = Persian Secretaries | Clerks of the Persian chancery serve the Muslim caliphs and amirs. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = Silk and Carpets | The workshops of Persia weave silk and woollen carpets that are traded across Eurasia. | trade_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = The Cavalry of the Plateau | Armoured Persian horse have faced Rome, Arabia and Turan. | cavalry_power 0.15, shock_damage 0.10
+idea = The New Persian Verse | Poets write in Persian again, and the court of the east patronises them. | idea_cost -0.05, technology_cost -0.10
+
+[culture_turkish]
+trigger = culture turkish,kimek,cuman,kipchak,karluk,bolghar
+name = Turkic
+start = cavalry_power 0.15, gov 1
+bonus = gov 1
+idea = The Horse Archer | A Turkic warrior shoots as he rides and rides as he shoots. | cavalry_power 0.20, shock_damage 0.10
+idea = The Khagan's Law | The törü, the law of the steppe, guides assemblies, tribute and war. | stability_cost_modifier -0.10, gov 1
+idea = Herds of the Steppe | Immense herds support a mobile army. | manpower_recovery_speed 0.10, global_manpower_modifier 0.15
+idea = Slave Soldiers | Turkic youths sold into Muslim lands become the best soldiers of the caliphs. | mercenary_manpower 0.25, discipline 0.025
+idea = The Silk Road Tolls | Turkic tribes control passes and oases on the great trade routes. | caravan_power 0.20, global_tax_modifier 0.10
+idea = Tengri and the Ancestors | The sky god and the ancestors of the clan receive sacrifices in every camp. | tolerance_own 2, religious_unity 0.10
+idea = Feigned Retreat | Steppe warriors draw the enemy out and turn about to strike. | land_morale 0.10, movement_speed 0.10

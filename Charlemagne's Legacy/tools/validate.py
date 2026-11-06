@@ -14,6 +14,7 @@ from checks import (
     decisions,
     diplomacy,
     filenames,
+    ideas,
     interface,
     localisation,
     provinces,
@@ -37,6 +38,7 @@ CHECKS = [
     interface,
     religion,
     cultures,
+    ideas,
     filenames,
 ]
 

@@ -1,0 +1,339 @@
+# Culture groups of East, Central and South Asia.
+
+[group_ainuic]
+trigger = group ainuic
+name = Ainu
+start = land_attrition -0.15, defensiveness 0.10
+bonus = gov 1
+idea = Hunters and Fishers | The Ainu live by the hunt, the salmon run and the gathering of wild plants. | production_efficiency 0.10, manpower_recovery_speed 0.10
+idea = Archers of the North | Poisoned arrows and skilled shots are famed by the Wajin. | infantry_power 0.10, shock_damage 0.10
+idea = Kamuy Rituals | Bear festivals and offerings keep the gods content. | tolerance_own 2, religious_unity 0.10
+idea = Cold Land | Heavy snow and long winters hurt invaders more than the locals. | hostile_attrition 1.0, land_attrition -0.15
+idea = Salmon and Furs | Trade with Wajin and Okhotsk peoples brings rice, iron and cloth. | trade_efficiency 0.10, global_tax_modifier 0.05
+idea = Chasi Fortresses | Hill forts and stockades protect villages. | fort_maintenance_modifier -0.20, garrison_size 0.20
+idea = Kotan Chiefs | Each village chief is both judge and war leader. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+
+[group_akan]
+trigger = group akan
+name = Akan
+start = global_tax_modifier 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Gold of the Forest | Gold dust from alluvial streams and mines pays for the state. | global_tax_modifier 0.15, trade_efficiency 0.10
+idea = Matrilineal Clans | The abusua, the mother's clan, defines succession, land and loyalty. | stability_cost_modifier -0.10, gov 1
+idea = Forest Warfare | Dense rainforest is a defence in depth against northern horsemen. | land_attrition -0.15, hostile_attrition 1.0
+idea = Kola and Cloth | Kola nuts and woven kente go north with the Saharan caravans. | caravan_power 0.20, production_efficiency 0.10
+idea = The Stool | The golden stool is the symbol of the nation and its soul. | prestige 1, improve_relation_modifier 0.25
+idea = Musketeers' Ancestors | Spearmen and archers in loose order skirmish in thick forest. | infantry_power 0.10, shock_damage 0.10
+idea = Drum Language | Drums carry messages across the forest in minutes. | movement_speed 0.10, reinforce_speed 0.15
+
+[group_bantu]
+trigger = group bantu
+name = Bantu
+start = manpower_recovery_speed 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Iron Smiths | Iron tools and spears have carried the Bantu across half a continent. | infantry_power 0.10, production_efficiency 0.10
+idea = Cattle and Millet | Herds and gardens feed large villages. | global_manpower_modifier 0.15, global_tax_modifier 0.05
+idea = Village Chiefs | Chiefs and councils of elders settle disputes. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = The Coast Trade | Swahili ports send ivory, gold and slaves to Arabia and India. | trade_efficiency 0.10, global_trade_power 0.10
+idea = Dhows and Harbours | Coastal towns build trading ships that sail with the monsoon. | galley_power 0.15, global_sailors_modifier 0.20
+idea = Spears and Shields | Bantu warriors fight in tight formation behind great shields. | infantry_power 0.15, land_morale 0.10
+idea = Spirit Mediums | Mediums speak for the ancestors and guide the chief's decisions. | tolerance_own 2, religious_unity 0.10
+
+[group_burman]
+trigger = group burman
+name = Burman
+start = defensiveness 0.10, global_tax_modifier 0.05
+bonus = gov 1
+idea = Irrawaddy Rice | The river plain's irrigated rice feeds large armies and temples. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Pagan Temples | Kings sponsor thousands of temples as acts of merit. | church_power_modifier 0.10, prestige 1
+idea = Elephant Corps | War elephants carry archers into battle. | shock_damage 0.15, army_tradition 0.50
+idea = The Pyu Heritage | Burmese kings remember the old Pyu cities and their culture. | gov 1, culture_conversion_cost -0.20
+idea = River Craft | Boats carry rice and troops up and down the Irrawaddy. | movement_speed 0.10, global_sailors_modifier 0.20
+idea = Hill Tribes | Shan, Kachin and Chin chiefs send levies to the king. | global_manpower_modifier 0.15, improve_relation_modifier 0.25
+idea = Monks and Scribes | Sangha libraries preserve palm-leaf books of the Pali canon. | technology_cost -0.10, idea_cost -0.05
+
+[group_buyeo]
+trigger = group buyeo
+name = Buyeo
+start = cavalry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Mountain Fortresses | Stone castles on peaks hold the kingdoms against invasion. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Horse Archers | Buyeo riders learned to shoot from the saddle before they could walk. | cavalry_power 0.15, shock_damage 0.10
+idea = The Pyeongyang Heritage | Kings recall the long history of Goguryeo as a rival to China. | gov 1, prestige 1
+idea = Rice and Millet | River plains feed the court. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Buddhist Temples | Monarchs sponsor temples and send monks to Japan. | church_power_modifier 0.10, global_missionary_strength 0.02
+idea = Sea of Japan Routes | Boats carry trade to Japan and the Mohe coast. | trade_efficiency 0.10, galley_power 0.10
+idea = Chinese Learning | Scholars read the classics and keep the annals. | technology_cost -0.10, yearly_corruption -0.10
+
+[group_central_african]
+trigger = group central_african
+name = Sahelian
+start = cavalry_power 0.10, caravan_power 0.20
+bonus = gov 1
+idea = Lake Chad Kingdoms | The shores of the great lake support fishers, farmers and herders under a divine king. | production_efficiency 0.10, global_tax_modifier 0.05
+idea = Horsemen of the Savanna | Armoured riders gather tribute from the farmers of the south. | cavalry_power 0.15, shock_damage 0.10
+idea = The Salt and Slave Roads | Caravans through Kawar and Bilma carry salt and slaves. | caravan_power 0.25, global_trade_power 0.10
+idea = Walled Towns | Towns surrounded by clay walls resist raiders. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Sacred Kingship | A king is bound to rites that tie him to the land and the ancestors. | gov 1, stability_cost_modifier -0.10
+idea = Iron Spears | Smiths forge spear points and knives for the war bands. | infantry_cost -0.15, infantry_power 0.10
+idea = Border Markets | Fairs on the frontier draw merchants and herders from far away. | trade_efficiency 0.10, global_tax_modifier 0.05
+
+[group_chinese]
+trigger = group chinese
+name = Han
+start = stability_cost_modifier -0.10, production_efficiency 0.10
+bonus = gov 1
+idea = The Mandate of Heaven | The emperor's right to rule depends on his virtue, and the people watch for its failing. | gov 1, prestige 1
+idea = The Examination System | Graduates of the civil service examinations staff the bureaucracy. | administrative_efficiency 0.05, technology_cost -0.10
+idea = Rice and Silk | The southern rice basins and silk workshops make the empire rich. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Walls and Garrisons | Every city has walls and a garrison. | fort_maintenance_modifier -0.20, garrison_size 0.25
+idea = The Canals | Canals and rivers carry grain and troops. | trade_efficiency 0.10, movement_speed 0.10
+idea = The Confucian Gentleman | Scholars set the tone of society with ritual, loyalty and the study of the classics. | yearly_corruption -0.10, idea_cost -0.05
+idea = Crossbows and Spears | Massed infantry with crossbows and spears hold the line. | infantry_power 0.15, discipline 0.025
+
+[group_dravidian]
+trigger = group dravidian
+name = Dravidian
+start = production_efficiency 0.10, galley_power 0.10
+bonus = gov 1
+idea = Temple Towns | Great temples own villages, organise festivals and give shelter to scholars. | church_power_modifier 0.10, global_tax_modifier 0.05
+idea = Village Assemblies | Elected councils manage land, tax and water. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = The Southern Sea | Ships of the Coromandel and Malabar coasts sail to Lanka, Java and Arabia. | galley_power 0.15, global_sailors_modifier 0.20
+idea = Pepper and Pearls | Spices and pearls fill the ports with merchants. | global_trade_power 0.10, trade_efficiency 0.10
+idea = War Elephants | Elephants are the strike force of southern kings. | shock_damage 0.15, army_tradition 0.50
+idea = Tamil Poets | Poets recite praise-songs for kings in the Tamil language. | prestige 1, idea_cost -0.05
+idea = Tank and Canal | Tanks and channels collect water for the dry season. | development_cost -0.10, global_trade_goods_size_modifier 0.10
+
+[group_east_african]
+trigger = group east_african
+name = Nile and Horn
+start = defensiveness 0.10, caravan_power 0.15
+bonus = gov 1
+idea = The Highland Plateau | Mountains make a redoubt for kingdoms of farmers. | defensiveness 0.15, hostile_attrition 1.0
+idea = Church and Monastery | Miaphysite Christians have kept the faith in their highlands and along the Nile. | church_power_modifier 0.10, tolerance_own 2
+idea = The Nile Cataracts | The rapids protect Nubia from armies sailing up the river. | defensiveness 0.15, land_attrition -0.15
+idea = Archers of the Desert | Beja and Nubian archers are among the best shots in Africa. | infantry_power 0.15, shock_damage 0.10
+idea = Gold and Ivory | Gold from the desert hills and ivory from the south are traded to Egypt. | global_tax_modifier 0.10, trade_efficiency 0.10
+idea = Camel Caravans | Nomads carry cargoes across the eastern desert to Red Sea ports. | caravan_power 0.25, global_trade_power 0.10
+idea = The Baqt Treaty | Nubia has traded with Egypt under the Baqt for two centuries. | diplomatic_reputation 1, ae_impact -0.20
+
+[group_hmongic]
+trigger = group hmongic
+name = Miao
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = Mountain Villages | Terrace farms and fortified villages dot the highlands. | defensiveness 0.15, production_efficiency 0.10
+idea = Clan Elders | Elders judge and lead. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Crossbowmen of the Hills | Hill peoples shoot poisoned arrows and bolts. | infantry_power 0.10, shock_damage 0.10
+idea = Silver and Embroidery | Craftsmen make silver jewellery and embroidered cloth. | trade_efficiency 0.10, global_tax_modifier 0.05
+idea = Ancestors and Spirits | The old faith keeps ancestral rites. | tolerance_own 2, religious_unity 0.10
+idea = Hidden Valleys | Valleys are reached by narrow paths easily held by a few men. | hostile_attrition 1.0, fort_maintenance_modifier -0.15
+idea = Resistance to Han Rule | Generations of revolt keep the memory of freedom alive. | land_morale 0.10, reduced_liberty_desire 10
+
+[group_indo_aryan]
+trigger = group indo_aryan
+name = Indo-Aryan
+start = global_tax_modifier 0.10, cavalry_power 0.10
+bonus = gov 1
+idea = The Samanta System | Subordinate lords hold land for service and provide troops. | global_manpower_modifier 0.15, vassal_income 0.20
+idea = The Brahmin Councillors | Learned Brahmins advise kings and write their laws. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = Temple Endowments | Rulers endow temples that become landlords and schools. | church_power_modifier 0.10, technology_cost -0.10
+idea = Fertile Plains | The Indo-Gangetic plain is the world's greatest granary. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Elephants and Archers | Four-fold armies of elephants, horse, foot and chariots. | shock_damage 0.15, army_tradition 0.50
+idea = Merchant Guilds | Guilds of merchants finance caravans and temples. | trade_efficiency 0.10, merchants 1
+idea = River Highways | The Ganga and Indus carry grain, cloth and armies. | movement_speed 0.10, global_sailors_modifier 0.20
+
+[group_japonic]
+trigger = group japonic
+name = Japanese
+start = stability_cost_modifier -0.10, defensiveness 0.10
+bonus = gov 1
+idea = Descent from the Sun | The imperial line traces its origin to the sun goddess, and no rival dares claim her throne. | gov 1, prestige 1
+idea = Courtiers and Provincial Governors | The court sends governors to the provinces, who may form local power. | administrative_efficiency 0.05, yearly_corruption -0.10
+idea = The Rice Paddy | Terraced paddies fill the granaries. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Warrior Bands | Provincial warriors ride in mounted bands and form the nucleus of an army. | cavalry_power 0.15, land_morale 0.10
+idea = Buddhist and Shinto Priests | Both sets of priests are supported by the court and local lords. | church_power_modifier 0.10, tolerance_own 2
+idea = Mountain Passes | Japan's mountains and passes hinder armies. | defensiveness 0.15, hostile_attrition 0.5
+idea = Island Seafarers | Sailors of the Inland Sea and the Ryukyus sail for trade. | galley_power 0.15, global_sailors_modifier 0.20
+
+[group_korean]
+trigger = group korean
+name = Korean
+start = defensiveness 0.10, stability_cost_modifier -0.10
+bonus = gov 1
+idea = The Bone Ranks | Silla's system of birth ranks controls office and marriage. | gov 1, stability_cost_modifier -0.10
+idea = Buddhist Monarchy | Kings build temples and monks guide the state. | church_power_modifier 0.15, prestige 1
+idea = Mountain Fortresses | Castles on mountaintops guard every road. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Rice and Barley | Terraced fields and irrigation feed the peninsula. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = The Hwarang | Young aristocrats are trained in arms and poetry. | army_tradition 0.50, land_morale 0.10
+idea = Yellow Sea Traders | Korean merchants trade to China and Japan. | trade_efficiency 0.10, global_sailors_modifier 0.20
+idea = Scholars of Tang | Students go to China and bring back books and ideas. | technology_cost -0.10, idea_cost -0.05
+
+[group_mon_khmer]
+trigger = group mon_khmer
+name = Mon-Khmer
+start = production_efficiency 0.10, tolerance_heathen 2
+bonus = gov 1
+idea = Rice and Irrigation | Baray reservoirs and canals water the Khmer fields. | production_efficiency 0.10, development_cost -0.10
+idea = The Devaraja | The king is a god-king whose cult ties him to the land. | gov 1, prestige 1
+idea = Temple Mountains | Great sanctuaries rise as monuments to the king and to Shiva or Buddha. | church_power_modifier 0.10, prestige 1
+idea = Elephant Corps | War elephants carry the king's banner. | shock_damage 0.15, army_tradition 0.50
+idea = The Tonle Sap | The great lake is a nursery of fish and a highway for boats. | global_tax_modifier 0.10, global_sailors_modifier 0.20
+idea = Village Headmen | Village chiefs collect tax and furnish levies. | global_manpower_modifier 0.15, yearly_corruption -0.05
+idea = Indian Priests and Scribes | Brahmins and monks write in Sanskrit and Khmer. | technology_cost -0.10, idea_cost -0.05
+
+[group_mongolic]
+trigger = group mongolic
+name = Mongolic
+start = cavalry_power 0.15, gov 1
+bonus = gov 1
+idea = The Steppe Horse | Small hardy horses carry the people and their herds across the steppe. | cavalry_power 0.20, movement_speed 0.10
+idea = The Nökör | The khan's sworn companions follow him in war and peace. | discipline 0.025, army_tradition 0.50
+idea = Clans and Lineages | Kinship decides law and loyalty. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+idea = Felt and Leather | Craftsmen produce felt tents and leather armour. | cavalry_cost -0.15, land_attrition -0.15
+idea = Horse Archers | Mongol bowmen shoot a hundred paces from the saddle. | shock_damage 0.10, land_morale 0.10
+idea = The Great Hunt | Communal hunts train the tribes for war. | army_tradition_from_battle 0.50, manpower_recovery_speed 0.10
+idea = Tengri and the Ancestors | Shamans speak for the Eternal Blue Sky. | tolerance_own 2, religious_unity 0.10
+
+[group_nivkh]
+trigger = group nivkh
+name = Nivkh
+start = land_attrition -0.15, defensiveness 0.10
+bonus = gov 1
+idea = Fishers of the Amur | The Amur and its tributaries supply fish by the ton. | production_efficiency 0.10, global_tax_modifier 0.05
+idea = Dog Sleds | Sledge dogs move supplies in winter. | movement_speed 0.10, land_attrition -0.15
+idea = Shaman and Bear Festival | Priests hold rituals for the bear spirit. | tolerance_own 2, religious_unity 0.10
+idea = Fur Trade | Sable and seal fur are sold to Chinese and Japanese. | trade_efficiency 0.10, global_trade_power 0.05
+idea = Forest Hunters | Hunters of the taiga shoot silently and stay unseen. | infantry_power 0.10, shock_damage 0.10
+idea = Kin Councils | Elders of each village keep the peace. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Cold Coast | Winters on the Okhotsk coast defeat foreign armies. | hostile_attrition 1.0, defensiveness 0.10
+
+[group_qiangic]
+trigger = group qiangic
+name = Qiangic
+start = defensiveness 0.15, cavalry_power 0.10
+bonus = gov 1
+idea = Highland Fortress | Stone towers watch each valley. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Tangut Horse | Horses bred on the Ordos plain mount the Tangut cavalry. | cavalry_power 0.15, cavalry_cost -0.15
+idea = Salt Lakes | Salt from Ordos lakes is sold in China. | global_tax_modifier 0.10, trade_efficiency 0.10
+idea = Clan Chiefs | Clan leaders furnish riders to the lord of the tribe. | global_manpower_modifier 0.15, improve_relation_modifier 0.25
+idea = Buddhist Monks | Monks come from Tibet and China to the Tangut. | church_power_modifier 0.10, global_missionary_strength 0.02
+idea = Borderland Raids | Tangut bands raid Tang and Tibetan frontiers. | loot_amount 0.15, movement_speed 0.10
+idea = Mountain Passes | Qinghai and Gansu mountains hinder invaders. | land_attrition -0.15, hostile_attrition 1.0
+
+[group_sahelian]
+trigger = group sahelian
+name = Sahelian
+start = caravan_power 0.20, land_morale 0.10
+bonus = gov 1
+idea = The Niger Bend | The Niger's great arc brings river trade to the desert. | trade_efficiency 0.10, global_trade_power 0.10
+idea = Camel and Canoe | Caravans cross the Sahara and canoes ply the river. | caravan_power 0.20, global_sailors_modifier 0.20
+idea = Gold, Salt and Kola | Goods from the forest, savanna and desert are bought and sold in the Sahel's markets. | global_tax_modifier 0.10, production_efficiency 0.05
+idea = Cavalry of the Savanna | Armoured horsemen hold the plains. | cavalry_power 0.15, shock_damage 0.10
+idea = Clan Griots | Praise-singers hold the oral history and advise kings. | prestige 1, stability_cost_modifier -0.10
+idea = Walled Towns | Towns of mud-brick resist raiders. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Muslim Merchants | Traders from the north bring Islam, writing and credit. | technology_cost -0.10, tolerance_heathen 2
+
+[group_senegambian]
+trigger = group senegambian
+name = Senegambian
+start = defensiveness 0.10, production_efficiency 0.10
+bonus = gov 1
+idea = Rivers of the West | The Senegal and Gambia carry trade into the interior. | trade_efficiency 0.10, global_sailors_modifier 0.20
+idea = Cattle and Millet | Herds and millet fields supply both nomads and farmers. | global_manpower_modifier 0.15, production_efficiency 0.05
+idea = Griot Chroniclers | Griots keep genealogy and advise rulers. | prestige 1, stability_cost_modifier -0.10
+idea = Salt and Gold Trade | Atlantic salt and inland gold are traded by sea and caravan. | caravan_power 0.20, global_tax_modifier 0.10
+idea = Horse and Spear | Horsemen with spears lead levies of foot. | cavalry_power 0.15, infantry_power 0.10
+idea = Village Elders | Councils of elders preside over villages. | improve_relation_modifier 0.25, reduced_liberty_desire 10
+idea = Sacred Groves | Priests of the old religion keep sacred groves. | tolerance_own 2, religious_unity 0.10
+
+[group_somalian]
+trigger = group somalian
+name = Somali
+start = caravan_power 0.20, land_attrition -0.15
+bonus = gov 1
+idea = Camel Herders | The Somali pastoralists drive camels over the dry plains. | manpower_recovery_speed 0.10, land_attrition -0.15
+idea = Ports of the Horn | Zeila, Berbera and Mogadishu send ships to Arabia and India. | galley_power 0.15, global_trade_power 0.10
+idea = Incense and Myrrh | Resins of the Horn are sold in Egypt, Arabia and India. | global_tax_modifier 0.10, trade_efficiency 0.10
+idea = Clan Law | Clans guarantee one another through xeer, a customary law. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Camel Cavalry | Camels carry spearmen over waterless country. | cavalry_power 0.10, movement_speed 0.10
+idea = Muslim Sheikhs | Sheikhs spread Islam and mediate between clans. | church_power_modifier 0.10, global_missionary_strength 0.02
+idea = Harsh Land | The thorn scrub and desert defeat unaccustomed armies. | hostile_attrition 1.0, defensiveness 0.10
+
+[group_tai]
+trigger = group tai
+name = Tai
+start = production_efficiency 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Wet Rice Mueang | Each valley is a mueang, a city-state with its own prince. | production_efficiency 0.10, global_tax_modifier 0.05
+idea = Irrigation Networks | Weirs and canals keep the paddy fields watered. | development_cost -0.10, global_trade_goods_size_modifier 0.10
+idea = Upland Chiefs | Highland chiefs furnish men to the lord of the valley. | global_manpower_modifier 0.15, improve_relation_modifier 0.25
+idea = Elephant Cavalry | War elephants break the enemy line. | shock_damage 0.15, army_tradition 0.50
+idea = Buddhism and Spirit Cults | Monks and spirit mediums share the villages. | tolerance_own 2, church_power_modifier 0.05
+idea = Forest and River | Rivers and jungles protect the heartland. | land_attrition -0.15, hostile_attrition 0.5
+idea = River Trade | Boats carry lacquer, resin and rice downstream. | trade_efficiency 0.10, global_sailors_modifier 0.20
+
+[group_tibetan]
+trigger = group tibetan
+name = Tibetan
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Plateau | The thin air of Tibet defeats outsiders. | hostile_attrition 1.0, defensiveness 0.15
+idea = Monasteries | Monasteries hold lands, books and armed monks. | church_power_modifier 0.15, technology_cost -0.10
+idea = Yak Herders | Herders of the high pastures supply meat, hides and transport. | manpower_recovery_speed 0.10, cavalry_cost -0.15
+idea = Caravans of Salt and Tea | Muleteers cross Tibet's passes with tea, salt and horses. | caravan_power 0.25, global_tax_modifier 0.10
+idea = The Dzong | Strongholds on hilltops guard the valleys. | fort_maintenance_modifier -0.20, garrison_size 0.20
+idea = The Legacy of the Tsenpo | The old empire's name still moves lords and monks. | gov 1, prestige 1
+idea = Mountain Riders | Tibetan riders move easily on rough ground. | cavalry_power 0.15, movement_speed 0.10
+
+[group_tocharian]
+trigger = group tocharian
+name = Tocharian
+start = caravan_power 0.20, tolerance_heathen 2
+bonus = gov 1
+idea = Oasis Cities | Kucha, Karashahr and Turfan are green islands in the desert. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Buddhist Monasteries | Monks translate Sanskrit into Tocharian and travel to China. | church_power_modifier 0.15, technology_cost -0.10
+idea = The Silk Road | Merchants pay the oasis kings for water and protection. | caravan_power 0.25, global_trade_power 0.10
+idea = Cave Temples | Rock-cut sanctuaries preserve art and scripture. | prestige 1, church_power_modifier 0.05
+idea = City Walls | Walled oases guard against nomads. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Multilingual Court | Kings keep scribes in Tocharian, Sanskrit, Chinese and Uighur. | idea_cost -0.05, improve_relation_modifier 0.25
+idea = Camel Riders | Camel corps patrol the desert. | cavalry_power 0.10, movement_speed 0.10
+
+[group_tungusic]
+trigger = group tungusic
+name = Tungusic
+start = cavalry_power 0.10, land_attrition -0.15
+bonus = gov 1
+idea = Hunters of the Forest | Tribesmen of the Amur and Sungari are expert trackers and archers. | infantry_power 0.10, shock_damage 0.10
+idea = Horse and Mohe Bow | The Mohe shoot heavy bows from the saddle. | cavalry_power 0.15, shock_damage 0.10
+idea = Pig Farmers and Millet | Farming villages grow millet and raise pigs. | production_efficiency 0.10, global_tax_modifier 0.05
+idea = Clan Chiefs | Each tribe has a hereditary chief and a council. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Fur and Ginseng | Mohe sell furs and ginseng to China and Balhae. | trade_efficiency 0.10, global_trade_power 0.05
+idea = Shaman Rites | Shamans talk to the spirits for the clan. | tolerance_own 2, religious_unity 0.10
+idea = Cold and Forest | Siberian winters wear out invaders. | hostile_attrition 1.0, defensiveness 0.10
+
+[group_west_african]
+trigger = group west_african
+name = West African
+start = defensiveness 0.10, global_manpower_modifier 0.10
+bonus = gov 1
+idea = Savanna Farms | Millet and sorghum fields support dense populations. | production_efficiency 0.10, global_manpower_modifier 0.10
+idea = Iron Spears | Smiths forge iron for weapons and tools. | infantry_power 0.10, infantry_cost -0.15
+idea = Village Councils | Elders decide on war and peace. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Trade Fairs | Markets connect savanna and forest. | trade_efficiency 0.10, caravan_power 0.15
+idea = Ancestor Cult | Rites for the dead protect the community. | tolerance_own 2, religious_unity 0.10
+idea = Hill and Cliff Villages | Cliff settlements are protected from cavalry. | fort_maintenance_modifier -0.15, defensiveness 0.15
+idea = Poisoned Arrows | Bowmen use poison to cripple enemy horses. | shock_damage 0.10, land_morale 0.10
+
+[group_yoruba]
+trigger = group yoruba
+name = Yoruba
+start = production_efficiency 0.10, improve_relation_modifier 0.25
+bonus = gov 1
+idea = City Kingdoms | Ife, Oyo and Benin are walled capitals with palaces and markets. | prestige 1, global_tax_modifier 0.05
+idea = The Oba | Sacred kings rule with councils and secret societies. | gov 1, stability_cost_modifier -0.10
+idea = Brass and Terracotta | Craftsmen cast heads in bronze and clay. | production_efficiency 0.10, trade_efficiency 0.05
+idea = Forest Farms | Yams and palm oil support dense villages. | global_manpower_modifier 0.15, global_tax_modifier 0.05
+idea = Walls and Moats | Earth walls surround towns. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Orisha Priests | Priests of the Orisha preside over feasts and festivals. | tolerance_own 2, religious_unity 0.10
+idea = Cowrie and Trade | Cowrie shells serve as money in markets. | trade_efficiency 0.10, inflation_reduction 0.05

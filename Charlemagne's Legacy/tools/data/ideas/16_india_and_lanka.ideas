@@ -1,0 +1,105 @@
+# The kingdoms of India and Lanka.
+
+[pratihara]
+trigger = tag KOS
+name = Pratihara
+start = cavalry_power 0.15, defensiveness 0.10
+bonus = gov 1
+idea = The Gurjara Cavalry | The Pratihara kings field the best horse in northern India, bought from Arab and Turkic dealers. | cavalry_power 0.20, shock_damage 0.10
+idea = Kannauj | The city on the Ganga is the prize of three dynasties and the seat of the great king of the north. | prestige 1, gov 1
+idea = The Barrier Against Arabs | The Pratihara kings halted the Arab advance at Rajasthan and are praised as the shield of the Hindus. | army_tradition 0.75, defensiveness 0.15
+idea = The Doab Fields | The rich lands between the Ganga and the Yamuna fill the royal granaries. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Feudatory Samantas | Local chiefs hold land for service and arrive with their own war bands. | global_manpower_modifier 0.15, vassal_income 0.20
+idea = Merchant Guilds | Guilds of Kannauj and Ujjain move cloth, spice and horses over the old roads. | trade_efficiency 0.10, caravan_power 0.15
+idea = Vaishnava Temples | Kings endow temples to Vishnu and the Brahmins who tend them. | church_power_modifier 0.10, tolerance_own 2
+
+[rashtrakuta]
+trigger = tag KTA
+name = Rashtrakuta
+start = land_morale 0.10, global_tax_modifier 0.10
+bonus = gov 1
+idea = Amoghavarsha the Great | The Rashtrakuta emperor was a great king, a poet and a Jain, and his court is the model for the Deccan. | prestige 1, gov 1
+idea = Manyakheta the Fortress Capital | The new capital is a walled city with a palace and a mint. | administrative_efficiency 0.05, yearly_corruption -0.10
+idea = Jain and Hindu Patrons | Kings give land and gold to Jain monks and to Shaiva temples with equal grace. | tolerance_heathen 2, tolerance_heretic 2
+idea = Elephants of the Deccan | Elephant corps lead the army in the open field. | shock_damage 0.15, army_tradition 0.50
+idea = Cotton and Black Soil | The black soil of the plateau grows cotton for export from the west coast ports. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = The Kailasa Temple | A temple carved from a single hill at Ellora shows the wealth and skill of the kings. | church_power_modifier 0.10, prestige 1
+idea = Arab Merchants of the Konkan | Muslims of the coast pay tolls and sell horses and glass to the king. | trade_efficiency 0.10, global_trade_power 0.10
+
+[pala]
+trigger = tag BNG
+name = Pala
+start = infantry_power 0.10, global_tax_modifier 0.10
+bonus = gov 1
+idea = The Elected King | Gopala was chosen by the leaders of Bengal to end anarchy, and his heirs keep the throne. | gov 1, stability_cost_modifier -0.10
+idea = The Ganges Delta | The delta's rivers, rice and fish support a dense population and busy markets. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Nalanda and Vikramashila | Buddhist monastic universities draw scholars from China, Tibet and Java. | technology_cost -0.15, church_power_modifier 0.10
+idea = War Elephants of the East | Bengali elephants are the finest in India, and the Palas export them. | shock_damage 0.15, army_tradition 0.50
+idea = River Fleets | Rivers carry troops and trade across the delta. | galley_power 0.15, global_sailors_modifier 0.20
+idea = Buddhist Patrons | The Palas fund monasteries and send missionaries to Tibet and Southeast Asia. | global_missionary_strength 0.02, prestige 1
+idea = The Silk and Muslin Looms | Fine textiles from Bengal are known to the Arab and Chinese merchant. | trade_efficiency 0.10, global_trade_power 0.10
+
+[kamarupa]
+trigger = tag ASS
+name = Kamarupan
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Brahmaputra Valley | The great river waters a long fertile valley hemmed in by mountains. | production_efficiency 0.10, defensiveness 0.10
+idea = Kings of the Naraka Line | The Kamarupan kings claim descent from the demon Naraka, son of the Earth. | gov 1, prestige 1
+idea = Shiva and the Mother Goddess | The Kamakhya temple draws pilgrims to the hilltop shrine. | church_power_modifier 0.15, tolerance_own 2
+idea = Hill and Valley Peoples | Kachari, Garo, Khasi and Naga tribes serve the king as scouts and levies. | global_manpower_modifier 0.15, improve_relation_modifier 0.25
+idea = Elephants of the Forest | Wild elephants are caught, trained and put into battle. | shock_damage 0.15, army_tradition 0.50
+idea = Silk and Agarwood | Kamarupa produces silk, eaglewood and spices for trade with Bengal and Tibet. | global_trade_goods_size_modifier 0.10, trade_efficiency 0.10
+idea = The Fortress Passes | The mountain gates to Tibet, Burma and Bengal are held by garrisons. | fort_maintenance_modifier -0.20, defensiveness 0.15
+
+[lanka]
+trigger = tag CEY
+name = Sinhalese
+start = tolerance_own 2, production_efficiency 0.10
+bonus = gov 1
+idea = Anuradhapura the Capital | The ancient capital's stupas, palaces and reservoirs are the pride of the island. | prestige 1, global_tax_modifier 0.10
+idea = The Tanks and Canals | Great irrigation tanks hold the monsoon rains for the dry zone's rice. | development_cost -0.10, global_trade_goods_size_modifier 0.10
+idea = The Tooth Relic | The relic of the Buddha's tooth legitimises the king and draws pilgrims from across Asia. | gov 1, church_power_modifier 0.15
+idea = The Sangha | The Mahavihara monks keep the Theravada tradition and the chronicles. | technology_cost -0.10, global_missionary_strength 0.02
+idea = Cinnamon and Pearls | The island's cinnamon, pearls and gems bring merchants from every sea. | global_trade_power 0.10, trade_efficiency 0.10
+idea = The Island Shield | The sea protects Lanka from all but the sea-borne invader, and the king mans the coast. | defensiveness 0.15, galley_power 0.10
+idea = War with the Tamil Neighbours | Pandya and Chola raids from the mainland have taught the Sinhalese to fight on their own shore. | land_morale 0.10, army_tradition_from_battle 0.50
+
+[chola]
+trigger = tag TNJ
+name = Chola
+start = defensiveness 0.10, production_efficiency 0.10
+bonus = gov 1
+idea = The Kaveri Delta | The delta's rice and canals are the wealth of the Chola country. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Heirs of the Old Cholas | The Cholas, ancient kings of the Tamil country, were crushed by the Pallavas but remember their glory. | prestige 1, gov 1
+idea = Shaiva Temples | Villagers and rulers fund temples to Shiva whose priests teach, judge and keep records. | church_power_modifier 0.10, tolerance_own 2
+idea = The Village Assemblies | Village sabhas manage land, tax and justice, and give the king loyal local government. | yearly_corruption -0.10, stability_cost_modifier -0.10
+idea = The Coromandel Sailors | Tamil ships sail to Sri Lanka, Java and China. | global_sailors_modifier 0.20, galley_power 0.15
+idea = War Elephants of the Plain | Elephants lead the armies of the Tamil kings. | shock_damage 0.15, army_tradition 0.50
+idea = Pearl and Cotton Trade | Merchants of the Coromandel coast sell pearls and fine cloth. | trade_efficiency 0.10, global_trade_power 0.10
+
+[pandya]
+trigger = tag MAD
+name = Pandya
+start = galley_power 0.15, global_trade_power 0.10
+bonus = gov 1
+idea = Madurai the Sangam City | The capital of the Pandyas was the seat of the Tamil poets, and the king still patronises them. | prestige 1, technology_cost -0.10
+idea = The Pearl Fishery | The Gulf of Mannar's pearls are famous across Asia and are the Pandya's own. | global_tax_modifier 0.15, trade_efficiency 0.10
+idea = The Pepper Coast | Pepper and spices from the Malabar hills reach foreign merchants through Pandya ports. | global_trade_goods_size_modifier 0.10, merchants 1
+idea = The Fish Banner | The Pandyas' standard of a fish is known from Rome to China, and their embassies went to both. | diplomatic_reputation 1, gov 1
+idea = Sinhalese Wars | Pandya armies have invaded Lanka and burned its capital. | army_tradition_from_battle 0.50, loot_amount 0.15
+idea = Temple Cities | Madurai and Rameshwaram are centres of pilgrimage and their priests are influential. | church_power_modifier 0.10, tolerance_own 2
+idea = Mariners of Korkai | Korkai's seamen sail to Southeast Asia and Arabia, and return rich. | global_sailors_modifier 0.20, galley_power 0.10
+
+[kashmir]
+trigger = tag KSH
+name = Kashmiri
+start = defensiveness 0.15, technology_cost -0.10
+bonus = gov 1
+idea = The Valley Fortress | A ring of high mountains keeps the Kashmir valley safe from invaders. | defensiveness 0.20, hostile_attrition 1.0
+idea = Kings of the Karkota and Utpala | The line of Lalitaditya, who raided as far as Bengal, gives Kashmir pride. | prestige 1, gov 1
+idea = Sanskrit Scholars | Poets, grammarians and Shaiva philosophers write in Sanskrit at Kashmir's court. | technology_cost -0.15, idea_cost -0.05
+idea = Saffron and Shawl Wool | The valley grows saffron and spins fine wool, which the merchants carry down the passes. | production_efficiency 0.10, trade_efficiency 0.10
+idea = Temples of Shiva and Buddha | Both faiths have monuments here, and the king honours both. | tolerance_heretic 2, church_power_modifier 0.10
+idea = Passes to Central Asia | Caravans of Tibetan, Turkic and Chinese merchants cross Kashmir to India. | caravan_power 0.25, global_trade_power 0.10
+idea = Damara Lords | The great landholders of Kashmir keep castles and rebellious followers, and threaten the king. | global_manpower_modifier 0.10, garrison_size 0.20

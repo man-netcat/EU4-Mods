@@ -1,0 +1,105 @@
+# National ideas of the great powers of the east and the steppe. One set per tag (or per tag and the formables it grows into).
+
+[tang]
+trigger = tag TNG
+name = Tang
+start = stability_cost_modifier -0.10, diplomatic_reputation 1
+bonus = gov 1
+idea = The Examination Graduates | The jinshi examinations lift men of letters, not of birth, into the ministries, and the throne knows whose pen governs. | administrative_efficiency 0.05, technology_cost -0.10
+idea = Remnants of the Equal Field | What survives of the equal-field allotments still binds peasant households to the land and the levy. | global_manpower_modifier 0.15, manpower_recovery_speed 0.10
+idea = The Grand Canal | Southern grain and silk reach Chang'an by water, and the capital eats what the Yangzi grows. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Tolls of the Silk Road | Caravans from Samarkand to Quanzhou pay the emperor's collectors at every gate. | caravan_power 0.20, trade_efficiency 0.10
+idea = The Frontier Jiedushi | Military governors hold the passes with armies that know no other lord, and the court pays for their loyalty. | defensiveness 0.15, hostile_attrition 0.5
+idea = The Palace Army | The eunuch-led Divine Strategy Army keeps the Son of Heaven's person and drills like no provincial levy. | discipline 0.05, land_morale 0.10
+idea = The Cosmopolitan Capital | Persians, Sogdians, Uighurs and monks of every faith walk the streets of Chang'an under the emperor's protection. | tolerance_heathen 2, tolerance_heretic 2
+
+[abbasid]
+trigger = tag ARB
+name = Abbasid
+start = diplomatic_reputation 1, tolerance_heathen 2
+bonus = gov 1
+idea = The House of Wisdom | Translators and astronomers in Baghdad gather the learning of Greece, Persia and India under the caliph's patronage. | technology_cost -0.10, idea_cost -0.05
+idea = The Diwans | Clerks of the great ministries keep the tax rolls of a hundred provinces in the Round City. | administrative_efficiency 0.05, global_tax_modifier 0.10
+idea = The Turkish Guard | Slave soldiers from the steppe, bought young and trained hard, stand between the caliph and his own subjects. | discipline 0.05, cavalry_power 0.15
+idea = Dar al-Islam | One law and one tongue of prayer run from the Atlantic to the Oxus, and merchants carry both. | global_trade_power 0.10, caravan_power 0.20
+idea = The Dhimma | Christians, Jews and Zoroastrians pay the jizya and keep their courts, and the treasury is the richer for it. | tolerance_heretic 2, tolerance_heathen 2
+idea = The Barid | The caliph's post riders carry news and spies across the roads of the empire in days. | spy_offence 0.25, envoy_travel_time -0.25
+idea = Ghazis of the Marches | Volunteers gather at the Cilician frontier each summer, and the raid is half a pilgrimage. | land_morale 0.10, loot_amount 0.15
+
+[byzantine]
+trigger = tag BYZ,ROM
+name = Roman
+start = defensiveness 0.15, fort_maintenance_modifier -0.20
+bonus = gov 1
+idea = The Themes | The empire is divided into provinces under a single strategos, who raises and pays his soldiers from the land. | global_manpower_modifier 0.15, garrison_size 0.20
+idea = Greek Fire | The siphon on the dromon's prow burns on water and the emperor guards its secret. | galley_power 0.20, naval_morale 0.10
+idea = The Corpus Juris | Justinian's law still decides every suit, and judges who know it are hard to bribe. | yearly_corruption -0.10, stability_cost_modifier -0.10
+idea = The Gold Nomisma | The solidus has kept its weight for five hundred years, and the world trades in it. | global_trade_power 0.10, inflation_reduction 0.10
+idea = The Taxis | Every office, rank and precedence at court is written down, and every foreign envoy learns his place in it. | diplomatic_reputation 2, improve_relation_modifier 0.25
+idea = The Skholai and Tagmata | Professional regiments in the capital are the one army that does not melt away in winter. | discipline 0.05, army_tradition 0.50
+idea = The Orthodox Mission | Cyril and Methodios have taught the Slavs to read, and every Slav that reads looks to Constantinople. | global_missionary_strength 0.02, prestige 1
+
+[japan]
+trigger = tag JAP
+name = Yamato
+start = stability_cost_modifier -0.10, production_efficiency 0.10
+bonus = gov 1
+idea = The Ritsuryo Codes | Codes copied from Tang assign every household its rice land and its tax, in theory. | administrative_efficiency 0.05, global_tax_modifier 0.05
+idea = The Fujiwara Regents | One house rules in the emperor's name and stability is bought with its marriages. | gov 1, heir_chance 0.33
+idea = Heian Court Culture | Poetry, perfume and rank fill the capital, and the nobles forget the sword. | prestige 1, diplomatic_reputation 1
+idea = Rice and Irrigation | New paddies and canals feed the provinces and the temples alike. | development_cost -0.10, global_trade_goods_size_modifier 0.10
+idea = The Monastic Estates | Tendai and Shingon monasteries clear the hills and hold them tax-free. | church_power_modifier 0.10, global_missionary_strength 0.02
+idea = Warrior Households of the East | In the Kanto provinces mounted bands settle quarrels without waiting for the capital. | cavalry_power 0.15, land_morale 0.10
+idea = The Inland Sea | Fleets of rice barges and pirates share the water between the islands. | galley_power 0.15, global_sailors_modifier 0.20
+
+[khazar]
+trigger = tag KHZ
+name = Khazar
+start = land_morale 0.10, caravan_power 0.20
+bonus = gov 1
+idea = The Dual Kingship | The kagan reigns and the bek rules, and the empire survives the death of either. | stability_cost_modifier -0.10, gov 1
+idea = Tribute of the Rus and the Slavs | Furs, honey and silver from the northern rivers arrive at Itil each summer. | global_tax_modifier 0.10, vassal_income 0.20
+idea = The Fortresses of the Don | Sarkel and its white-stone sisters guard the portages against Magyar and Rus alike. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Itil and Samandar | The twin capitals sit on the Volga, where every caravan from Bukhara to Kiev must stop. | global_trade_power 0.10, trade_efficiency 0.10
+idea = Faith of Moses | The ruling house has chosen the Law of Moses and tolerates the mosque and the church beside it. | tolerance_heretic 2, tolerance_heathen 2
+idea = The Arsiya Guard | Muslim professionals serve the kagan for pay and fight in no one's cause but his. | discipline 0.025, mercenary_discipline 0.025
+idea = Horse and Bow of the Pontic Steppe | Every Khazar boy rides before he walks and shoots before he reads. | cavalry_power 0.20, movement_speed 0.10
+
+[kirghiz]
+trigger = tag KGZ
+name = Kirghiz
+start = gov 1, cavalry_power 0.10
+bonus = gov 1
+idea = The Victory over the Uighurs | The destruction of the Uighur khaganate made the Kirghiz masters of the steppe in a single campaign. | prestige 1, army_tradition_from_battle 0.50
+idea = Forest and Steppe | Their ancestors hunt in the taiga and herd on the grass, and neither land can be taken from them. | defensiveness 0.15, land_attrition -0.15
+idea = Ruddy Hair and Green Eyes | The Tang court counts the Kirghiz kin to the house of Li, and a proud lineage is a claim on the old khaganate. | gov 1, diplomatic_reputation 1
+idea = Iron of the Yenisei | Smiths of the upper river forge blades the whole steppe wants. | cavalry_cost -0.15, shock_damage 0.10
+idea = The Fur Roads | Sable and squirrel travel south to China and west to Itil, and tolls follow. | caravan_power 0.20, global_tax_modifier 0.10
+idea = Tribal Assemblies | Clan heads meet at the kagan's tent and a decision of the assembly binds all. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+idea = Ride to the Tarim | Kirghiz riders reach the Tien Shan oases in a season and return with silk and slaves. | loot_amount 0.20, movement_speed 0.10
+
+[srivijaya]
+trigger = tag SRA
+name = Srivijaya
+start = galley_power 0.20, global_sailors_modifier 0.20
+bonus = gov 1
+idea = Lord of the Straits | No ship passes between Sumatra and Malaya without paying the maharaja's harbour dues. | global_trade_power 0.15, trade_efficiency 0.10
+idea = The Sailendra Alliance | The sea kings of Java and Palembang share a throne and a fleet. | improve_relation_modifier 0.25, diplomatic_reputation 1
+idea = The Sea Peoples | The orang laut are fishermen, pilots and pirates by turns, and all serve the maharaja. | naval_morale 0.15, light_ship_power 0.15
+idea = Mahayana Pilgrims | Chinese monks stop at Palembang to study Sanskrit before sailing on to Nalanda. | prestige 1, global_missionary_strength 0.02
+idea = Entrepot of the Spice Trade | Pepper, camphor and cloves are stored in the port's warehouses until the monsoon turns. | production_efficiency 0.10, merchants 1
+idea = The Mandala | A ring of vassal ports owes the maharaja ships and tribute, not obedience. | vassal_income 0.25, reduced_liberty_desire 10
+idea = Gold of Suvarnadvipa | The Golden Isle's rivers carry dust that pays for the fleet. | global_tax_modifier 0.10, development_cost -0.10
+
+[karolingian_empire]
+trigger = tag HLR
+name = Karolingian
+start = prestige 1, diplomatic_reputation 1
+bonus = gov 1
+idea = The Missi Dominici | Counts and bishops ride the empire in pairs to hear complaints and reprove officials in the emperor's name. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = Capitularies and the Palace School | The emperor's laws are read at assemblies and copied in a clear script by monks educated at his court. | technology_cost -0.10, stability_cost_modifier -0.10
+idea = The Host of the Franks | The free men of every county muster under their count each spring and march where the emperor leads. | global_manpower_modifier 0.20, land_morale 0.10
+idea = The Marches | Margraves hold the frontier with Bretons, Danes, Slavs and Moors and have their own castles and their own wars. | defensiveness 0.15, fort_maintenance_modifier -0.20
+idea = Protector of the Church | The emperor crowned by the pope guards Rome and the faith, and expects the Church's help in return. | papal_influence 1, church_power_modifier 0.10
+idea = Benefices and Vassalage | Land granted for service binds counts to the emperor by a personal oath. | vassal_income 0.25, reduced_liberty_desire 10
+idea = Charlemagne's Legacy | The memory of the first emperor is a sword and a shield: no rival may claim it without a fight. | gov 1, ae_impact -0.20

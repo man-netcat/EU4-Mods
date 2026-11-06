@@ -1,0 +1,209 @@
+# Iberia, the British Isles, Scandinavia and the Rus.
+
+[asturias]
+trigger = tag ASU,LEO
+name = Asturian
+start = defensiveness 0.15, land_morale 0.10
+bonus = gov 1
+idea = Covadonga | The cave where Pelayo broke the Moors is the founding story of every Asturian king and the reason they fight. | prestige 1, land_morale 0.10
+idea = The Gothic Succession | Alfonso III claims the Visigothic crown and the legitimacy of Toledo for a kingdom of mountain valleys. | gov 1, ae_impact -0.20
+idea = The Presura | Settlers who clear and hold empty land on the Duero keep it by right, and the frontier fills with armed farmers. | development_cost -0.10, global_manpower_modifier 0.15
+idea = Castles of the Frontier | Towers and walls on every ridge hold the new land against Cordoban raiders. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Mozarabs from the South | Christians fleeing Muslim persecution bring books, craftsmen and a hatred of Cordoba. | technology_cost -0.10, tolerance_own 2
+idea = The Camino of Santiago | The newly found tomb of the Apostle draws pilgrims and gold to Galicia. | church_power_modifier 0.10, global_tax_modifier 0.10
+idea = Infanzones and Hidalgos | Landed warriors who answer to the king alone ride when summoned and need no wages. | cavalry_cost -0.15, cavalry_power 0.10
+
+[galicia]
+trigger = tag GAL
+name = Galician
+start = global_sailors_modifier 0.20, defensiveness 0.10
+bonus = gov 1
+idea = Finis Terrae | At the end of the known world the Galicians fish, sail and raid the Atlantic coast. | galley_power 0.15, naval_morale 0.10
+idea = The Suevic Memory | The kingdom of the Suebi lasted two centuries, and Galicians do not forget they once ruled themselves. | stability_cost_modifier -0.10, reduced_liberty_desire 10
+idea = The Apostle's City | Santiago's cathedral and its pilgrims make the see of Compostela as rich as a kingdom. | church_power_modifier 0.15, global_tax_modifier 0.10
+idea = Hills and Hamlets | Galician farmers live in scattered villages in rain-soaked hills that no army can hold. | land_attrition -0.15, hostile_attrition 0.5
+idea = Atlantic Fisheries | Whales, sardines and salt fish make the Rias a larder for the whole north. | production_efficiency 0.10, trade_efficiency 0.10
+idea = Hidalgos of the Hills | Petty gentry guard their fields, fight for the king and ask little in return. | cavalry_cost -0.15, land_morale 0.10
+idea = Counts Against the Northmen | Vikings have raided the Galician shore since 844, and its counts learn to answer fire with steel. | defensiveness 0.15, fort_maintenance_modifier -0.15
+
+[al_andalus]
+trigger = tag ADU,SPA
+name = Andalusi
+start = diplomatic_reputation 1, global_tax_modifier 0.10
+bonus = gov 1
+idea = The Great Mosque of Cordoba | The Umayyad emirs build and rebuild their mosque to show the world a throne that rivals Baghdad's. | prestige 1, gov 1
+idea = Irrigation of the Vega | Roman aqueducts, Arab waterwheels and Berber canals water fields from Valencia to Seville. | production_efficiency 0.15, global_trade_goods_size_modifier 0.10
+idea = The Slav Guard | Saqaliba slaves and Berber mercenaries serve the emir for pay and fear his courtiers more than his generals. | discipline 0.05, mercenary_discipline 0.025
+idea = The Frontier Marches | The Upper, Middle and Lower Marches are held by lords whose loyalty is bought with titles and tax farms. | defensiveness 0.15, global_manpower_modifier 0.10
+idea = Muladis and Mozarabs | Converts and Christians under the emir pay taxes, serve as clerks and sometimes rebel. | tolerance_heretic 2, tolerance_heathen 2
+idea = Silks, Leather and Glass | Cordovan workshops send fine goods to Egypt and Baghdad by way of Almeria. | trade_efficiency 0.15, global_trade_power 0.10
+idea = The Poets and Physicians | Scholars from Baghdad and Kairouan teach in Cordoba, and the emir hires them. | technology_cost -0.15, idea_cost -0.05
+
+[egypt]
+trigger = tag EGY
+name = Egyptian
+start = production_efficiency 0.10, caravan_power 0.20
+bonus = gov 1
+idea = The Nile Flood | The river rises and falls with the year, and the whole realm lives or starves by its gauge. | global_tax_modifier 0.10, global_trade_goods_size_modifier 0.10
+idea = Fustat and the Nilometer | The governor's capital measures the flood on Roda island and sets the tax before the harvest. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = The Coptic Scribes | Christian clerks keep the accounts of Egypt as their fathers kept them for Pharaoh and Caesar. | tolerance_heretic 2, technology_cost -0.10
+idea = Papyrus, Flax and Linen | Alexandria's looms and the Fayyum's fields clothe and write for the Mediterranean world. | trade_efficiency 0.10, merchants 1
+idea = The Red Sea and the Spice Road | Pilgrim ships to Jeddah and Indian merchantmen deliver pepper and silk to the Delta. | global_trade_power 0.15, caravan_power 0.20
+idea = Turkish Troopers | Soldiers raised in the steppe and trained at the barracks of Fustat ride under the governor's banner. | cavalry_power 0.15, discipline 0.025
+idea = The Alexandrian Pharos | The beacon and the harbour of the old Ptolemaic capital still guide ships from Crete and Tunis. | galley_power 0.15, global_sailors_modifier 0.20
+
+[great_moravia]
+trigger = tag GMA
+name = Moravian
+start = defensiveness 0.15, garrison_size 0.20
+bonus = gov 1
+idea = The Hillforts | Earth-and-timber hradiska on every river valley hold the land against Frankish raiders. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Apostles to the Slavs | Cyril and Methodius arrive in 863, bringing a script, a liturgy and a Slavic church of Moravia's own. | tolerance_own 2, global_missionary_strength 0.02
+idea = Prince Rastislav's Council | The prince governs with the zupans, who lead their own retinues and sit in his council. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = The Slavic Liturgy | A Slavic Mass and Slavic writings make a Moravian priest a subject of the prince rather than of Salzburg. | gov 1, culture_conversion_cost -0.20
+idea = Amber and Slaves on the Road | The Amber Road from the Baltic passes through the prince's land to Venice and Byzantium. | caravan_power 0.20, trade_efficiency 0.10
+idea = Heavy Slavic Spears | The prince's druzhina carries swords forged in Moravian smithies and fights on foot in the old way. | infantry_power 0.15, shock_damage 0.10
+idea = Alliance with the Eastern Emperor | The emperor in Constantinople sends gifts and priests to a prince who holds the East Franks at bay. | diplomatic_reputation 1, ae_impact -0.20
+
+[bulgaria]
+trigger = tag BUL
+name = Bulgarian
+start = cavalry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Khan Boris and the New Faith | Boris was baptised in 864, and his boyars must learn to be both Bulgars and Christians. | tolerance_own 2, church_power_modifier 0.10
+idea = The Boyar Council | The great boyars hold the khan's army in their hands and his throne in their favour. | stability_cost_modifier -0.10, global_manpower_modifier 0.15
+idea = Slavs and Bulgars | A Turkic warrior caste has merged with the Slavic villages, and the khan rules both. | num_accepted_cultures 1, culture_conversion_cost -0.20
+idea = The Great Ditches of the Balkan | The Erkesiya earthwork and the Pliska ramparts hold the Byzantine road along the Balkan range. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Khan's Horsemen | Bulgar horse archers and lancers have defeated an emperor and carried off his skull cup. | cavalry_power 0.20, army_tradition_from_battle 0.50
+idea = Pliska the Capital | The khan's palace of earth and stone replaces the felt tents of the steppe with a court. | prestige 1, administrative_efficiency 0.05
+idea = Black Sea Trade | The Danube and the Black Sea ports ship wheat, wax and slaves to Constantinople. | global_trade_power 0.10, production_efficiency 0.10
+
+[magyars]
+trigger = tag MGY,HUN
+name = Magyar
+start = cavalry_power 0.15, gov 1
+bonus = gov 1
+idea = The Seven Tribes | Seven tribes swore a blood oath and chose a leader, and the Magyar host moves as one body. | land_morale 0.10, improve_relation_modifier 0.25
+idea = The Horse Archer | A Magyar horseman shoots from the saddle at the gallop and feigns flight to draw the enemy on. | cavalry_power 0.20, shock_damage 0.10
+idea = Kende and Gyula | A sacred king and a war leader split the rule, and neither can seize all power. | stability_cost_modifier -0.10, gov 1
+idea = The Pontic Pastures | The grass between the Don and the Danube feeds herds without end. | global_manpower_modifier 0.20, manpower_recovery_speed 0.10
+idea = The Raid on Pannonia | Magyar bands cross the Carpathians each summer and return laden with captives and silver. | loot_amount 0.20, movement_speed 0.10
+idea = The Taltos Shamans | The seer and the drum guide the tribes in choosing the day for war and the place for the camp. | tolerance_own 2, religious_unity 0.10
+idea = Silver and Slaves | Magyar raiders sell their captives at Byzantine and Khazar markets for silver and silk. | global_tax_modifier 0.10, caravan_power 0.15
+
+[wessex]
+trigger = tag SMT,ENG,GBR
+name = West Saxon
+start = defensiveness 0.10, land_morale 0.10
+bonus = gov 1
+idea = The Burhs | Fortified towns, each a day's march from the next, give every shire a refuge against the Danes. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Fyrd | The free men of each shire serve in rotation, and the harvest is never left unreaped. | global_manpower_modifier 0.15, manpower_recovery_speed 0.10
+idea = The Shire and the Reeve | A reeve in every shire collects the king's dues and keeps the peace. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = The King's Law Codes | Alfred the Great copies and enlarges the laws of Ine and Offa and swears his judges to them. | stability_cost_modifier -0.10, gov 1
+idea = Alfred's Translations | Latin works are put into English by order of the king, and his thegns are taught to read. | technology_cost -0.10, idea_cost -0.05
+idea = The Longships | A West Saxon fleet of new, taller ships meets the Danes at sea. | galley_power 0.15, naval_morale 0.10
+idea = The Wool of the Downs | Sheep on the chalk uplands supply the weavers of Winchester and the merchants of London. | production_efficiency 0.10, trade_efficiency 0.10
+
+[northumbria]
+trigger = tag NTH
+name = Northumbrian
+start = land_morale 0.10, tolerance_heathen 1
+bonus = gov 1
+idea = Bede's Land | The monk of Jarrow wrote the history of the English people, and Northumbrians know they were once their masters. | prestige 1, technology_cost -0.10
+idea = The Lindisfarne Gospels | The illuminated book of Eadfrith and its monastery are the pride of the north and the treasure of its bishops. | church_power_modifier 0.15, tolerance_own 2
+idea = The Danish Neighbour | The Vikings of Jorvik rule half of the kingdom and trade and quarrel with the other half. | tolerance_heathen 2, improve_relation_modifier 0.25
+idea = The Wall and the Border | The old Roman wall and the ridges of the Cheviots mark a border that shepherds and reivers still cross. | defensiveness 0.15, land_attrition -0.15
+idea = Coal, Lead and Wool | Northumbrian mines and sheep walks supply the monasteries and the king's smiths. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Warrior Thegns | A great lord's retinue rides at his side and shields the kingdom's northern road. | cavalry_power 0.10, shock_damage 0.10
+idea = The Humber Ports | Merchants of York ship cloth and slaves to Frisia and Norway. | trade_efficiency 0.10, galley_power 0.10
+
+[mercia]
+trigger = tag HRF
+name = Mercian
+start = infantry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = Offa's Dyke | The long earthwork from the Dee to the Wye marks the border and the memory of a king. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Fyrd of the Midlands | Mercian levies are the largest in England and the cheapest to call. | global_manpower_modifier 0.20, land_maintenance_modifier -0.05
+idea = The Mercian Supremacy | Offa and Coenwulf ruled all England south of the Humber, and Mercia's lords claim the title again. | prestige 1, gov 1
+idea = Pennies of Offa | Mercian silver pennies set the pattern of the coinage of England. | global_tax_modifier 0.10, inflation_reduction 0.10
+idea = The Watling Street | The Roman road is the spine of the kingdom and carries its army, its merchants and its law. | movement_speed 0.10, trade_efficiency 0.10
+idea = The Danelaw Wars | Danes hold the east of Mercia and its thegns have fought them for two generations. | army_tradition_from_battle 0.50, land_morale 0.10
+idea = Church of Lichfield | The archbishopric of Lichfield, short lived, left Mercia a proud church and a loyal clergy. | church_power_modifier 0.10, tolerance_own 2
+
+[alba]
+trigger = tag SCO
+name = Alban
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Union of Picts and Scots | Kenneth mac Alpin's kingdom joins two peoples under the stone of Scone. | gov 1, stability_cost_modifier -0.10
+idea = Highland Fastnesses | The glens and lochs of the north make a campaign against the king a winter's torment. | hostile_attrition 0.5, defensiveness 0.15
+idea = The Columban Church | The monks of Iona and Dunkeld hold the learning and the loyalty of Alba. | church_power_modifier 0.10, technology_cost -0.10
+idea = The Mormaers | Provincial lords raise the host of their land and answer to the king alone. | global_manpower_modifier 0.15, garrison_size 0.20
+idea = The Cattle and the Raids | Herds are wealth, and every spring the glens' young men ride out for more. | loot_amount 0.15, cavalry_power 0.10
+idea = Fishing Boats of the Firth | Pictish boats work the Firths of Forth and Tay and the Atlantic sea lochs. | global_sailors_modifier 0.20, production_efficiency 0.05
+idea = Gaelic Learning and Law | Poets and judges of the old Irish schools teach the law of tanistry and the oath of kinship. | improve_relation_modifier 0.25, yearly_corruption -0.10
+
+[uppland]
+trigger = tag UPL,SWE
+name = Svear
+start = infantry_power 0.10, galley_power 0.15
+bonus = gov 1
+idea = The Thing at Uppsala | Free men gather at Uppsala to hear the law and elect the king. | stability_cost_modifier -0.10, gov 1
+idea = The Ledung | Each hundred owes the king a ship and its crew, and the fleet rises at the first call. | global_sailors_modifier 0.25, galley_cost -0.20
+idea = Birka | The trading port on the Malaren draws merchants from Hedeby, Dorestad and Novgorod. | trade_efficiency 0.10, global_trade_power 0.10
+idea = The Temple at Uppsala | The great pagan feast at Uppsala draws the whole of Svealand every nine years. | tolerance_own 2, religious_unity 0.10
+idea = Iron of the Bergslagen | Swedish smiths produce bar iron and blades for all the north. | infantry_cost -0.15, production_efficiency 0.10
+idea = Eastern Voyages | Swedish traders and warriors sail the rivers to Russia and Byzantium and bring home silver. | loot_amount 0.15, caravan_power 0.20
+idea = Forests and Fjords | Sweden's long winters and dense woods protect it from any invader. | land_attrition -0.15, defensiveness 0.10
+
+[novgorod]
+trigger = tag NOV
+name = Novgorodian
+start = galley_power 0.15, caravan_power 0.20
+bonus = gov 1
+idea = The Rurikid Invitation | The Slavs and Finns of the north invited Rurik to rule and keep the peace, and his house stays to earn its place. | gov 1, stability_cost_modifier -0.10
+idea = The Veche | The city assembly rings its bell and the people of the town decide, and no prince governs without them. | improve_relation_modifier 0.25, reduced_liberty_desire 10
+idea = Ladoga and the Volkhov Route | The river from the Baltic to the interior passes Ladoga's walls and pays its toll. | global_trade_power 0.10, trade_efficiency 0.10
+idea = Furs, Wax and Honey | Forest hunters bring sable, wax and honey to the town, and merchants send them south. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Varangian Retinue | Norse warriors under the prince guard the city and ride on distant campaigns for pay and plunder. | discipline 0.025, land_morale 0.10
+idea = River Craft | Dugout boats carry men and trade goods over portages from the Baltic to the Black Sea. | movement_speed 0.10, global_sailors_modifier 0.20
+idea = Tribute from Slavs and Finns | Chud, Ves, Meryans and Krivichi pay the prince tribute in furs and silver. | vassal_income 0.25, global_tax_modifier 0.05
+
+[kiev]
+trigger = tag KIE
+name = Kievan
+start = galley_power 0.15, land_morale 0.10
+bonus = gov 1
+idea = The Hill of Kiev | The fortress above the Dnieper commands the road from the Baltic to the Black Sea. | defensiveness 0.15, fort_maintenance_modifier -0.15
+idea = The Road from the Varangians to the Greeks | The river route from Novgorod to Constantinople is the greatest trade road of the north. | global_trade_power 0.15, caravan_power 0.20
+idea = The Druzhina | The prince's sworn warband eats at his table and dies at his side. | discipline 0.05, army_tradition 0.50
+idea = Raids on Constantinople | Rus flotillas crossed the Black Sea and appeared before the walls of the Emperor's city. | loot_amount 0.20, naval_morale 0.10
+idea = Tribute from the Polyane and the Drevlyane | Slavic tribes along the Dnieper pay the prince in furs and grain. | vassal_income 0.25, global_tax_modifier 0.05
+idea = Khazar Tribute | The Rus first pay the Khazar kagan, then learn to charge their neighbours the same. | global_tax_modifier 0.10, improve_relation_modifier 0.25
+idea = Pagan Rus Gods | Perun and Veles are sworn upon in every treaty the prince makes. | tolerance_own 2, religious_unity 0.10
+
+[sjaelland]
+trigger = tag SJA,DAN
+name = Danish
+start = galley_power 0.15, land_morale 0.10
+bonus = gov 1
+idea = The Danevirke | The great earthwork across the base of Jutland shuts out the Franks and Saxons at one stroke. | defensiveness 0.20, fort_maintenance_modifier -0.20
+idea = Hedeby the Port | The market on the Schlei draws Frisian, Slavic and Arab merchants who pay the king in silver. | global_trade_power 0.10, trade_efficiency 0.10
+idea = The Longship Fleet | Fleets of dragon ships carry Danes to the Seine, the Thames and the Mediterranean. | galley_power 0.20, naval_morale 0.10
+idea = The Thing and the Hirdmen | Free farmers meet to judge, and the king's hird fights for him in war. | stability_cost_modifier -0.10, discipline 0.025
+idea = Raids on Frankia | A Danish chief can win a dukedom by one good season on the Loire. | loot_amount 0.20, movement_speed 0.10
+idea = The Island Kingdom | Zealand, Fyn and Scania guard one another by water. | global_sailors_modifier 0.25, defensiveness 0.10
+idea = Kings of the Danes | The house of Ragnar and Godfred gives the Danes a royal line older than any in the north. | gov 1, prestige 1
+
+[jylland]
+trigger = tag JYL
+name = Jutish
+start = infantry_power 0.10, galley_power 0.10
+bonus = gov 1
+idea = The Jutland Peninsula | The long arm of Denmark lies between two seas and commands the road from the Baltic to the North Sea. | global_trade_power 0.10, defensiveness 0.10
+idea = The Ox Road | Cattle drovers walk the Hærvejen to the markets of Hamburg and Dorestad. | trade_efficiency 0.10, production_efficiency 0.10
+idea = Hedeby and Ribe | The twin ports of Jutland sell the goods of the whole of the north. | global_trade_power 0.10, caravan_power 0.15
+idea = Warriors of the Thing | The free landholders of Jutland answer the horn and bring their own arms. | global_manpower_modifier 0.15, land_morale 0.10
+idea = Heath and Marsh | The wet moors and heathlands of the west break any slow-moving army. | land_attrition -0.15, hostile_attrition 0.5
+idea = The Danevirke Garrison | A standing guard keeps the wall and the gate against Saxon raiders. | garrison_size 0.25, fort_maintenance_modifier -0.15
+idea = Skalds and Rune Stones | Poets and carvers record the kings of Jutland in verse and stone. | prestige 1, gov 1

@@ -28,6 +28,7 @@ from steps.diplomacy import step_diplomacy, step_wars  # noqa: E402
 from steps.empire import step_hre  # noqa: E402
 from steps.eventrefs import step_dangling  # noqa: E402
 from steps.formations import step_formation_triggers  # noqa: E402
+from steps.ideas import step_ideas  # noqa: E402
 from steps.provinces import step_provinces  # noqa: E402
 from steps.releasables import step_releasables  # noqa: E402
 from steps.start import step_start  # noqa: E402
@@ -54,6 +55,7 @@ PHASES = [
     ("generate the restore-colours decision", step_restore_colours),
     ("write formation triggers", step_formation_triggers),
     ("write the releasables' events", step_releasables),
+    ("write the national ideas", step_ideas),
     ("filter vanilla events", step_events),
     ("filter vanilla decisions", step_filter_decisions),
     ("strip calls to missing events", step_dangling),

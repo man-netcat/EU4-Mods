@@ -1,0 +1,157 @@
+# Culture groups, Europe and the steppe (part 2).
+
+[group_latin]
+trigger = group latin
+name = Italian
+start = trade_efficiency 0.10, global_tax_modifier 0.05
+bonus = gov 1
+idea = Roman Ruins and Roman Law | Every city has a forum, a wall and a code of law from the days of the Empire. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = The Free Cities | Walled towns govern themselves under bishops and consuls and trade up and down the peninsula. | global_tax_modifier 0.10, trade_efficiency 0.10
+idea = The Pilgrim Roads | Roads to Rome and ports to the Holy Land fill inns and markets. | caravan_power 0.20, church_power_modifier 0.10
+idea = Sailors of the Tyrrhenian | Italian ports send ships to Africa, Sicily and Constantinople. | galley_power 0.15, global_sailors_modifier 0.20
+idea = Banks and Moneychangers | Moneychangers of Lombardy lend to kings and bishops. | interest -0.50, inflation_reduction 0.10
+idea = Heavy Horse and Pike | City militias hold the line and noble horsemen charge. | cavalry_power 0.10, infantry_power 0.10
+idea = Churches and Monasteries | Benedictine houses guard learning and teach the sons of lords. | technology_cost -0.10, idea_cost -0.05
+
+[group_magyar]
+trigger = group magyar
+name = Hungarian
+start = cavalry_power 0.15, gov 1
+bonus = gov 1
+idea = Seven Tribes | The clans swear a blood oath of brotherhood, and the Magyar nation springs from that vow. | improve_relation_modifier 0.25, land_morale 0.10
+idea = Steppe Archers | The horse archer's shower of arrows breaks his enemies before the charge. | cavalry_power 0.20, shock_damage 0.10
+idea = The Great Plain | Open plains support massive herds and swift armies. | manpower_recovery_speed 0.10, movement_speed 0.10
+idea = Raiding Season | Annual campaigns bring slaves and silver and unite the tribes. | loot_amount 0.20, army_tradition_from_battle 0.50
+idea = The Fire and the Drum | Taltos shamans guide the tribes. | tolerance_own 2, religious_unity 0.10
+idea = Felt Tents and Wagons | The camp moves with the army and the army feeds itself. | land_attrition -0.15, hostile_attrition 0.5
+idea = Tribute from the Slavs | Slavic villages along the Tisza pay the Magyars in grain and cattle. | vassal_income 0.20, global_tax_modifier 0.05
+
+[group_north_germanic]
+trigger = group north_germanic
+name = Norse
+start = galley_power 0.15, infantry_power 0.10
+bonus = gov 1
+idea = The Longship | Fast, shallow-draft ships carry Norse crews across seas and up rivers. | galley_power 0.20, naval_morale 0.10
+idea = The Thing | Free men meet, make laws and choose leaders. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Raids and Plunder | The Viking raid brings silver, slaves and fame. | loot_amount 0.20, army_tradition_from_battle 0.50
+idea = The Hird | A chief's sworn companions fight at his side. | discipline 0.025, land_morale 0.10
+idea = Seafarers and Settlers | Norse sailors have found new lands from Iceland to the Rus rivers. | global_sailors_modifier 0.25, development_cost -0.05
+idea = Smiths and Skalds | Iron workers and poets spread the fame of the Norse. | production_efficiency 0.10, prestige 1
+idea = The Old Gods | Odin, Thor and Freyr keep the fear of the Norse in the heart of their enemies. | tolerance_own 2, religious_unity 0.10
+
+[group_south_slavic]
+trigger = group south_slavic
+name = South Slavic
+start = infantry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = The Zadruga | Extended family communities hold land in common and form a militia in time of war. | global_manpower_modifier 0.15, garrison_size 0.20
+idea = Zhupans and Knezes | Local chiefs hold the valleys and join the prince in time of need. | improve_relation_modifier 0.25, reduced_liberty_desire 10
+idea = Mountains and Karst | The Balkan ranges break up large armies. | defensiveness 0.15, hostile_attrition 1.0
+idea = Slavic Script | A script for the Slavic tongue spreads literacy and independence. | technology_cost -0.10, culture_conversion_cost -0.20
+idea = Adriatic Ports | Dalmatian ports trade with Venice and Byzantium. | trade_efficiency 0.10, galley_power 0.10
+idea = Hajduk and Light Horse | Raiders on the Balkan frontier fight with javelin and bow. | cavalry_power 0.10, loot_amount 0.15
+idea = Orthodox and Latin Faiths | Slavs hear mass in both rites and bargain with both bishops. | tolerance_own 2, tolerance_heretic 2
+
+[group_syriac]
+trigger = group syriac
+name = Syriac
+start = technology_cost -0.10, tolerance_heretic 2
+bonus = gov 1
+idea = The Language of Christ | Syriac Christians write in Aramaic and claim the tongue of Jesus as their own. | church_power_modifier 0.10, prestige 1
+idea = Monasteries of the Tur Abdin | Monks copy Greek and Syriac books and translate them into Arabic. | technology_cost -0.10, idea_cost -0.05
+idea = Translators of Baghdad | Syriac scholars bring the learning of Greece to the caliphs. | idea_cost -0.05, diplomatic_reputation 1
+idea = Merchants of the Silk Road | Church of the East traders reach China and India. | caravan_power 0.20, global_trade_power 0.10
+idea = The Church of the East | Nestorian bishops govern communities from Mesopotamia to China. | tolerance_own 2, global_missionary_strength 0.02
+idea = Hill Villages | Highland communities of the Tur Abdin hold their villages against all comers. | defensiveness 0.15, hostile_attrition 0.5
+idea = Physicians and Scribes | Syriac Christians serve rulers as doctors and clerks. | yearly_corruption -0.10, administrative_efficiency 0.05
+
+[group_vlach]
+trigger = group vlach
+name = Vlach
+start = defensiveness 0.10, manpower_recovery_speed 0.10
+bonus = gov 1
+idea = Shepherds of the Carpathians | Sheep and cattle graze mountain pastures and move with the seasons. | production_efficiency 0.10, movement_speed 0.10
+idea = Village Knezes | Elders govern each village and settle disputes. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Forest and Mountain | Carpathian woods hide the people from raiders. | land_attrition -0.15, hostile_attrition 1.0
+idea = Romance Tongue | A Latin speech, surrounded by Slavs and Turks, marks the people. | culture_conversion_cost -0.20, prestige 1
+idea = The Salt Mines | Salt from the Carpathian slopes is carried to the Black Sea. | global_tax_modifier 0.10, trade_efficiency 0.10
+idea = Light Cavalry | Vlach horsemen ride and skirmish like their neighbours. | cavalry_power 0.10, cavalry_cost -0.15
+idea = Orthodox Monks | Greek and Slavic monks serve the villages. | church_power_modifier 0.10, tolerance_own 2
+
+[group_volga_finnic]
+trigger = group volga_finnic
+name = Volga Finnic
+start = defensiveness 0.10, land_attrition -0.15
+bonus = gov 1
+idea = Forests of the Volga | Dense forests hide villages and tribes. | hostile_attrition 1.0, defensiveness 0.15
+idea = The Sacred Groves | Priests hold services in the groves of the old faith. | tolerance_own 2, religious_unity 0.10
+idea = Hunters and Beekeepers | Tribes live from the hunt, the hive and the net. | production_efficiency 0.10, global_tax_modifier 0.05
+idea = River Boats | Light boats carry fur, honey and wax down the Volga. | trade_efficiency 0.10, global_sailors_modifier 0.20
+idea = Tribute Under Many Masters | Finnic tribes have paid tribute to Khazars, Bulgars and Rus, and learned to bargain. | ae_impact -0.20, improve_relation_modifier 0.25
+idea = Hillforts of the Oka | Earth ramparts hold the settlements. | fort_maintenance_modifier -0.20, garrison_size 0.20
+idea = Skilled Archers | Finnic hunters shoot from the thicket. | infantry_power 0.10, shock_damage 0.10
+
+[group_west_germanic]
+trigger = group west_germanic
+name = English
+start = defensiveness 0.10, infantry_power 0.10
+bonus = gov 1
+idea = The Shield Wall | Saxon and Anglian foot soldiers lock shields in a line that mounted foes cannot break. | infantry_power 0.15, discipline 0.025
+idea = The Witan | The king consults the great men of the realm in the Witan. | stability_cost_modifier -0.10, gov 1
+idea = Shires and Hundreds | The shire and hundred courts keep local order. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = Anglo-Saxon Monasteries | Monks like Bede wrote Latin and preserved the English past. | technology_cost -0.10, church_power_modifier 0.10
+idea = The Fyrd | A system of local levies enables swift muster. | global_manpower_modifier 0.15, manpower_recovery_speed 0.10
+idea = Wool and Tin | English wool and Cornish tin are in demand across Europe. | trade_efficiency 0.10, production_efficiency 0.05
+idea = Coastal Defence | Beacons and ships guard the coast from Viking raiders. | defensiveness 0.15, galley_power 0.10
+
+[group_west_slavic]
+trigger = group west_slavic
+name = West Slavic
+start = defensiveness 0.15, infantry_power 0.10
+bonus = gov 1
+idea = The Gord | Ring-forts of earth, timber and water make each Slavic settlement a stronghold. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Zhupa | Districts governed by local chiefs rally to the prince. | global_manpower_modifier 0.15, improve_relation_modifier 0.25
+idea = Marsh and Forest | The Elbe and Oder forests slow Frankish advance. | land_attrition -0.15, hostile_attrition 1.0
+idea = Slavic Warriors | Spear and shield infantry fight in dense formation. | infantry_power 0.15, land_morale 0.10
+idea = Amber and Furs | Slavic merchants send amber and furs to Franks and Byzantines. | caravan_power 0.20, global_tax_modifier 0.05
+idea = The Old Faith | Svantevit and Perun guard the land, and temple priests rule the shrines. | tolerance_own 2, religious_unity 0.10
+idea = Resistance to the Franks | Generations of war against Frankish counts have hardened the tribes. | army_tradition_from_battle 0.50, land_morale 0.10
+
+[group_ugro_permian]
+trigger = group ugro_permian
+name = Permic
+start = defensiveness 0.10, land_attrition -0.15
+bonus = gov 1
+idea = Forests of the Kama | The Perm forest hides villages and silver. | hostile_attrition 1.0, defensiveness 0.15
+idea = Furs and Silver | Fur trappers sell to Bulgars and Rus for silver coins and plate. | global_tax_modifier 0.10, caravan_power 0.15
+idea = Shamans of the Taiga | The old priests speak with the forest and the dead. | tolerance_own 2, religious_unity 0.10
+idea = Reindeer Herds | Herds of reindeer give the Samoyed and Komi mobility. | movement_speed 0.10, manpower_recovery_speed 0.10
+idea = Sacred Hills | Hilltop shrines guard clan lands. | fort_maintenance_modifier -0.15, garrison_size 0.20
+idea = Skiers and Snowshoes | Hunters fight on skis in winter. | infantry_power 0.10, shock_damage 0.10
+idea = River Trade | Boats on the Kama and Vychegda trade with the south. | trade_efficiency 0.10, global_sailors_modifier 0.20
+
+[group_iranian]
+trigger = group iranian
+name = Iranian
+start = global_tax_modifier 0.10, cavalry_power 0.10
+bonus = gov 1
+idea = The Dihqan Gentry | Landed gentry hold villages and furnish cavalry. | global_manpower_modifier 0.15, cavalry_power 0.10
+idea = The Persian Tongue | Persian is the language of the court, the poet and the clerk. | idea_cost -0.05, prestige 1
+idea = Qanats and Orchards | Underground canals bring fertility to the plateau. | production_efficiency 0.10, development_cost -0.10
+idea = Silk Road Cities | Samarkand, Merv and Bukhara are rich markets. | caravan_power 0.20, global_trade_power 0.10
+idea = Mountain Fastnesses | Elburz and Hindu Kush give shelter to rebels and independent houses. | defensiveness 0.15, hostile_attrition 1.0
+idea = Zoroastrian and Muslim | Magi and mullahs share the villages. | tolerance_heathen 2, tolerance_heretic 2
+idea = Kurds and Daylamites | Mountain infantry are hired by every ruler. | infantry_power 0.15, mercenary_manpower 0.25
+
+[group_turkic]
+trigger = group turkic
+name = Turkic
+start = cavalry_power 0.15, gov 1
+bonus = gov 1
+idea = The Yabghu and the Tarkhan | The clans accept a ruler by custom and give him a council of tribal heads. | stability_cost_modifier -0.10, gov 1
+idea = Horse Archers | Turkic horse archers are the most mobile army of the age. | cavalry_power 0.20, shock_damage 0.10
+idea = Herds and Camps | A camp moves with the season, and herds are the people's wealth. | manpower_recovery_speed 0.10, global_manpower_modifier 0.15
+idea = Raiders on the Frontier | Turkic bands raid Persian, Slavic and Chinese borderlands. | loot_amount 0.20, movement_speed 0.10
+idea = The Ordu | Camp-cities are the seat of the khan and a market for neighbours. | trade_efficiency 0.10, caravan_power 0.15
+idea = Tengri and the Ancestors | The Eternal Sky and the clan spirits guard the people. | tolerance_own 2, religious_unity 0.10
+idea = Mercenaries and Mamluks | Turkic soldiers serve caliphs and princes for pay. | mercenary_manpower 0.25, discipline 0.025

@@ -1,0 +1,196 @@
+# One set per CK3 culture group, the fallback for every culture without a set of its own. Europe and the Near East (part 1).
+
+[group_albanian]
+trigger = group albanian
+name = Albanian
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Eagle's Nest | Crags and mountain valleys give every clan a natural fortress. | defensiveness 0.20, hostile_attrition 1.0
+idea = Clan and Besa | The besa, a sworn word between clans, guarantees peace between kin and neighbour. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Mountain Shepherds | Sheep and goats pasture in the high meadows and are the mainstay of the highlands. | production_efficiency 0.10, global_manpower_modifier 0.10
+idea = Light Infantry of the Hills | Albanian clansmen fight on foot with spear, sling and long knife. | infantry_power 0.15, movement_speed 0.10
+idea = Roman Roads of the Via Egnatia | The old road across the Balkans passes through Albanian lands, and gives its lords tolls. | caravan_power 0.20, global_tax_modifier 0.05
+idea = Byzantine Titles | Lords accept imperial titles and a patent of office from Constantinople for their local power. | gov 1, diplomatic_reputation 1
+idea = Illyrian Heritage | The Albanians' speech and customs are older than Rome, and the people know it. | culture_conversion_cost -0.20, prestige 1
+
+[group_arabic]
+trigger = group arabic
+name = Arabic
+start = cavalry_power 0.10, tolerance_heathen 2
+bonus = gov 1
+idea = The Language of the Quran | Arabic is the language of the revelation, law and learning for a hundred peoples. | prestige 1, idea_cost -0.05
+idea = The Majlis | Rulers hold open audience where any subject may petition, and their justice earns loyalty. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Caravan Trade | Camel trains and river boats link the cities from Basra to Cairo. | caravan_power 0.20, global_trade_power 0.10
+idea = The Hajj | The pilgrimage to Mecca brings wealth, travellers and news across the Muslim world. | church_power_modifier 0.10, global_tax_modifier 0.05
+idea = Arab Horses | Purebred Arabian mounts give the cavalry speed and endurance. | cavalry_power 0.15, movement_speed 0.10
+idea = The Scholars of the Cities | Jurists, physicians and astronomers teach in the mosques of every city. | technology_cost -0.10, yearly_corruption -0.05
+idea = Tribal Confederations | The Arab tribes keep their kin-ties and pledge their spears to the amir. | global_manpower_modifier 0.15, manpower_recovery_speed 0.10
+
+[group_austronesian]
+trigger = group austronesian
+name = Austronesian
+start = galley_power 0.15, global_sailors_modifier 0.20
+bonus = gov 1
+idea = Outrigger and Sail | Island peoples have crossed the oceans for thousands of years in boats with outriggers and woven sails. | naval_morale 0.10, galley_power 0.15
+idea = The Monsoon Winds | Sailors who know the monsoon calendar move between the islands of the east. | global_trade_power 0.10, trade_efficiency 0.10
+idea = Datu and Rajah | Local chiefs gather retinues of warriors and rule by honour and generosity. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+idea = Spices and Camphor | Islands produce cloves, nutmeg, pepper and camphor for the markets of China, India and Arabia. | global_trade_goods_size_modifier 0.10, production_efficiency 0.10
+idea = Rice Terraces and Taro Fields | Careful water control raises dense harvests on volcanic soils. | development_cost -0.10, global_tax_modifier 0.05
+idea = Warriors of the Archipelago | Island fighters strike from the sea and fall back to the jungle. | loot_amount 0.15, capture_ship_chance 0.15
+idea = The Ancestral Spirits | The dead are honoured with ritual feasts, and chiefs rule by the favour of spirits. | tolerance_own 2, religious_unity 0.10
+
+[group_baltic]
+trigger = group baltic
+name = Baltic
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Hillforts | Earth-and-timber forts on hills defend the Baltic tribes against all invaders. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Amber Coast | Amber gathered on the shore is traded south to Rome and Byzantium. | caravan_power 0.20, global_tax_modifier 0.10
+idea = The Forest Walls | Deep forests and swamps stop slow armies and hide fast raiders. | hostile_attrition 1.0, land_attrition -0.15
+idea = Pagan Priests | Priests of Perkunas keep sacred groves and guide chiefs in war. | tolerance_own 2, religious_unity 0.10
+idea = Mounted Raiders | Light cavalry strike Slavic and Finnish neighbours and withdraw. | cavalry_power 0.15, loot_amount 0.15
+idea = Tribal Assemblies | Elders choose the war leader from among the clan chiefs. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Honey and Wax | Forest beekeepers supply honey, wax and furs. | production_efficiency 0.10, trade_efficiency 0.10
+
+[group_balto_finnic]
+trigger = group balto_finnic
+name = Finnic
+start = defensiveness 0.10, land_attrition -0.15
+bonus = gov 1
+idea = Lakes and Forests | Finnic territory is a maze of water, bog and pine. | hostile_attrition 1.0, defensiveness 0.15
+idea = Shamans and Sacred Groves | The tietäjä sings the sacred words and speaks with the spirits. | tolerance_own 2, religious_unity 0.10
+idea = Fur and Fish | Hunters and fishermen sell pelts and dried fish across the Baltic. | trade_efficiency 0.10, global_tax_modifier 0.05
+idea = Archers of the Forest | Finnic hunters shoot with the bow from cover. | infantry_power 0.10, shock_damage 0.10
+idea = Longboats of the Gulf | Finnish and Estonian boats raid and trade across the Gulf of Finland. | galley_power 0.15, global_sailors_modifier 0.20
+idea = Clan Elders | Councils of the kin-group settle disputes. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Hillfort Tribes | Ringforts of earth and timber hold the coast. | fort_maintenance_modifier -0.20, garrison_size 0.20
+
+[group_berber]
+trigger = group berber
+name = Berber
+start = defensiveness 0.10, cavalry_power 0.10
+bonus = gov 1
+idea = The Atlas and the Sahara | Berber peoples live between mountains and desert and cannot be easily conquered. | land_attrition -0.15, hostile_attrition 1.0
+idea = Tribal Confederations | Zenata, Sanhaja and Masmuda tribes make war and peace as federations. | improve_relation_modifier 0.25, global_manpower_modifier 0.15
+idea = Camel Caravans | Berber merchants and guides lead trans-Saharan trade. | caravan_power 0.25, global_tax_modifier 0.10
+idea = Horsemen of the Plains | Berber cavalry are famous for their speed and skirmishing. | cavalry_power 0.15, movement_speed 0.10
+idea = The Fortified Granary | Walled storehouses (ksour) on the hilltops protect the harvest. | fort_maintenance_modifier -0.15, garrison_size 0.20
+idea = Heterodox Islam | Berbers have joined many sects, Kharijite, Shiite and Sunni, to resist Arab rule. | tolerance_heretic 2, tolerance_heathen 2
+idea = The Spirit of Revolt | Berber communities rebel against tyranny and the memory of their revolts is long. | reduced_liberty_desire 10, land_morale 0.10
+
+[group_brythonic]
+trigger = group brythonic
+name = Brythonic
+start = defensiveness 0.15, land_morale 0.10
+bonus = gov 1
+idea = Lords of the Island of Britain | Britons remember that their fathers ruled the whole island before the English. | prestige 1, gov 1
+idea = The Celtic Saints | Monks and hermits found holy sites across Wales and Cornwall. | church_power_modifier 0.10, tolerance_own 2
+idea = Bards and Law | The bards memorise genealogy and law and carry the tradition. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = Mountain Strongholds | Snowdonia and the Welsh hills guard the Britons from invasion. | defensiveness 0.20, hostile_attrition 1.0
+idea = Longbow Foot | Welsh spearmen and archers fight from hills and woods. | infantry_power 0.15, land_attrition -0.15
+idea = Cattle Raids | A king's wealth is herds, and war is cattle raiding writ large. | loot_amount 0.15, cavalry_power 0.10
+idea = Tin and Wool | Cornwall's tin and Wales's wool go out by sea. | trade_efficiency 0.10, production_efficiency 0.05
+
+[group_byzantine]
+trigger = group byzantine
+name = Greek
+start = diplomatic_reputation 1, trade_efficiency 0.10
+bonus = gov 1
+idea = The Heirs of Hellas | Greek speakers remember the poets, philosophers and statesmen of their past. | technology_cost -0.10, prestige 1
+idea = The Orthodox Church | The Church of Constantinople shapes daily life and speaks with a Greek voice. | church_power_modifier 0.10, tolerance_own 2
+idea = Island Sailors | Seamen from the Aegean and the Ionian islands man the empire's fleets. | global_sailors_modifier 0.20, galley_power 0.15
+idea = Olive and Vine | The Greek lands produce oil and wine for export. | production_efficiency 0.10, global_trade_goods_size_modifier 0.10
+idea = Roman Administration | Provincial governors and tax assessors follow Roman custom. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = City Walls | Every Greek city keeps its walls in repair. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = Harbours of the Aegean | Merchant ships link Thessaloniki, Smyrna and the Black Sea. | global_trade_power 0.10, caravan_power 0.10
+
+[group_caucasian]
+trigger = group caucasian
+name = Caucasian
+start = defensiveness 0.15, cavalry_power 0.10
+bonus = gov 1
+idea = The Mountain Wall | The Caucasus range divides two seas and two worlds, and guards its people. | defensiveness 0.20, hostile_attrition 1.0
+idea = Knightly Houses | Great noble houses maintain warrior retinues. | cavalry_power 0.15, army_tradition 0.50
+idea = Early Christians | Georgia and Armenia were among the first Christian kingdoms. | church_power_modifier 0.10, tolerance_own 2
+idea = Wine and Silk | Valleys produce wine, silk and wool for the Black Sea and Caspian markets. | production_efficiency 0.10, trade_efficiency 0.10
+idea = Hill Fortresses | Castles guard every pass. | fort_maintenance_modifier -0.20, garrison_size 0.20
+idea = The Crossroads of Empires | Persia, Byzantium and the Caliphate all contest the Caucasus, and local princes use all. | diplomatic_reputation 1, ae_impact -0.20
+idea = Blood Feud and Hospitality | Kin and honour bind every man, and a guest is sacred. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+
+[group_central_germanic]
+trigger = group central_germanic
+name = German
+start = infantry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = The Free Men | German freemen bear arms and follow their lords as a matter of right. | global_manpower_modifier 0.15, infantry_power 0.10
+idea = The Thing | Public assemblies meet to hear complaints and judge disputes. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Forests and Rivers | The forests of Germany are boundaries and sources of timber. | land_attrition -0.15, build_cost -0.10
+idea = Royal and Imperial Churches | Bishops and abbots hold lands and ride in the king's host. | church_power_modifier 0.10, technology_cost -0.10
+idea = Hunting Lodges and Castles | Fortified halls of the lords are centres of local power. | fort_maintenance_modifier -0.15, garrison_size 0.20
+idea = The Horse of the Lowlands | German heavy horse is bred on the plains. | cavalry_power 0.15, shock_damage 0.10
+idea = Markets and Fairs | Towns on rivers hold fairs, pay tolls and draw merchants. | trade_efficiency 0.10, global_tax_modifier 0.05
+
+[group_east_slavic]
+trigger = group east_slavic
+name = East Slavic
+start = defensiveness 0.10, manpower_recovery_speed 0.10
+bonus = gov 1
+idea = The Great Rivers | The Dnieper, Volga and Don are the roads of the east. | movement_speed 0.10, global_sailors_modifier 0.20
+idea = The Druzhina | Princes keep a body of sworn warriors who live at their table. | discipline 0.025, army_tradition 0.50
+idea = Forest and Steppe | Slavic farmers live between the forest and the steppe frontier. | defensiveness 0.15, hostile_attrition 0.5
+idea = The Veche | Town meetings choose princes and set policy. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+idea = Furs and Honey | Forest produce goes up the rivers to the Baltic and down to the Black Sea. | trade_efficiency 0.10, global_tax_modifier 0.05
+idea = The Wooden Forts | Slavic towns stand behind wooden palisades. | fort_maintenance_modifier -0.20, garrison_size 0.20
+idea = Orthodox Conversion | Greek priests teach in Slavonic and bring the Rus into the Byzantine world. | global_missionary_strength 0.02, church_power_modifier 0.10
+
+[group_frankish]
+trigger = group frankish
+name = Frankish
+start = cavalry_power 0.10, defensiveness 0.10
+bonus = gov 1
+idea = The Merovingian Memory | Clovis's descendants and Charlemagne's recollections shape the sense of belonging of the Franks. | prestige 1, gov 1
+idea = The Frankish Host | Free men of each county assemble every spring under their count. | global_manpower_modifier 0.15, land_morale 0.10
+idea = Counts and Missi | Royal officers and inspectors keep the counties under the king's eye. | yearly_corruption -0.10, administrative_efficiency 0.05
+idea = Monastic Schools | Abbeys keep the Latin classics and train clerks. | technology_cost -0.10, church_power_modifier 0.10
+idea = Heavy Cavalry | Frankish nobles ride armoured on strong horses. | cavalry_power 0.15, shock_damage 0.10
+idea = Castles on the Marches | Frontier lords build earthwork and stone castles. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Roman Roads | Old roads connect the Frankish cities and keep trade alive. | trade_efficiency 0.10, movement_speed 0.10
+
+[group_goidelic]
+trigger = group goidelic
+name = Gaelic
+start = land_morale 0.10, defensiveness 0.10
+bonus = gov 1
+idea = The Kindred Lands | Each tuath belongs to one extended kin, and the king of the tuath is its war leader and judge. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+idea = Brehon Law | Itinerant judges memorise the law and settle disputes by compensation. | yearly_corruption -0.10, gov 1
+idea = Monasteries of Learning | Irish monastic schools teach Latin and Greek, and send monks and books abroad. | technology_cost -0.10, global_missionary_strength 0.02
+idea = Cattle Raids | A king's wealth is his herd and his fame is his raids. | loot_amount 0.15, cavalry_power 0.10
+idea = Bog and Forest | Irish bogs, rivers and woods slow invaders. | land_attrition -0.15, hostile_attrition 0.5
+idea = High Kingship | The title of High King of Ireland brings prestige to its holder. | prestige 1, gov 1
+idea = Fosterage and Clientship | Kings bind lesser chiefs by fostering their sons and granting cattle. | reduced_liberty_desire 10, vassal_income 0.20
+
+[group_iberian]
+trigger = group iberian
+name = Iberian
+start = defensiveness 0.10, land_morale 0.10
+bonus = gov 1
+idea = The Meseta and the Mountains | Rugged ground makes war in Iberia a siege and ambush game. | defensiveness 0.15, hostile_attrition 1.0
+idea = Hill Castles | Every ridge has a castle, and every pass a tower. | fort_maintenance_modifier -0.20, garrison_size 0.20
+idea = Transhumance | Flocks move between summer and winter pastures, and the shepherds serve as scouts. | production_efficiency 0.10, movement_speed 0.10
+idea = The Reconquista Spirit | War against the Moor, for land and faith, defines the north. | land_morale 0.10, army_tradition_from_battle 0.50
+idea = The Visigothic Code | The old Gothic law, the Liber Iudiciorum, still guides judges. | stability_cost_modifier -0.10, yearly_corruption -0.10
+idea = Monasteries of the North | Monks copy books and settle new land. | technology_cost -0.10, church_power_modifier 0.10
+idea = Light Horse | Jinetes and skirmishers fight Moors and Christians alike with javelin and shield. | cavalry_power 0.15, cavalry_cost -0.15
+
+[group_israelite]
+trigger = group israelite
+name = Jewish
+start = trade_efficiency 0.10, tolerance_heathen 2
+bonus = gov 1
+idea = The Law of Moses | The Torah and the Talmud guide Jewish communities across the world. | stability_cost_modifier -0.10, religious_unity 0.10
+idea = Radhanite Merchants | Jewish traders speak every tongue and link the Frankish West to China. | global_trade_power 0.15, caravan_power 0.20
+idea = The Yeshivot | Rabbinical schools of Babylon and Spain teach law and attract students. | technology_cost -0.10, idea_cost -0.05
+idea = Protected People | Communities live under royal protection in exchange for tribute. | tolerance_heretic 2, ae_impact -0.20
+idea = Financiers of Kings | Jewish bankers lend to princes and bishops. | interest -0.50, global_tax_modifier 0.10
+idea = Scattered but United | Letters and travellers keep far-off communities in touch. | improve_relation_modifier 0.25, diplomatic_reputation 1
+idea = The Return to Zion | The longing for Jerusalem sustains the communities through exile. | land_morale 0.10, prestige 1

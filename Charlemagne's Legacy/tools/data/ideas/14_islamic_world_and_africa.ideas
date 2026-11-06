@@ -1,0 +1,131 @@
+# The Islamic east and west, Sindh, Ghana and Abyssinia.
+
+[aghlabid]
+trigger = tag TUN
+name = Aghlabid
+start = galley_power 0.15, naval_morale 0.10
+bonus = gov 1
+idea = Kairouan the Camp-City | The garrison city of the Aghlabids is a place of prayer, law and the market for all Ifriqiya. | stability_cost_modifier -0.10, church_power_modifier 0.10
+idea = The Ribats | A line of fortified monasteries along the coast holds volunteers who fight for the faith and the emir. | defensiveness 0.15, land_morale 0.10
+idea = The Conquest of Sicily | The Aghlabids took Palermo and the Sicilian west from Byzantium and want the rest. | army_tradition_from_battle 0.50, loot_amount 0.15
+idea = The Maliki Jurists | Scholars of Kairouan teach Maliki law to the western Islamic world. | technology_cost -0.10, yearly_corruption -0.10
+idea = The Olive Oil and Wheat Plain | The plains of Ifriqiya are Rome's old granary and now fill the emir's. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = The Aghlabid Cisterns | Great reservoirs near Kairouan and Tunis store water for a dry land. | development_cost -0.10, global_trade_goods_size_modifier 0.10
+idea = Corsairs of the Western Sea | Muslim ships harry Italian and Provençal coasts and capture slaves and ships. | capture_ship_chance 0.15, galley_power 0.15
+
+[idrisid]
+trigger = tag MOR
+name = Idrisid
+start = defensiveness 0.10, land_morale 0.10
+bonus = gov 1
+idea = The Descendants of Ali | The Idrisids trace their line to the Prophet's family, and Berber tribes accept their rule because of it. | gov 1, prestige 1
+idea = Fes and the Qarawiyyin | The new city on the Fes river boasts the great mosque and school founded by the lady Fatima al-Fihri. | technology_cost -0.10, church_power_modifier 0.10
+idea = The Zenata and Awraba | Berber tribal levies serve the imam as they served Idris, with a loyalty that is personal. | global_manpower_modifier 0.15, manpower_recovery_speed 0.10
+idea = The Moroccan Highlands | Atlas and Rif mountains make an invasion from Cordoba or Kairouan a costly one. | land_attrition -0.15, hostile_attrition 0.5
+idea = Saharan Gold Routes | Camel trains from the south carry gold, salt and slaves to Fes. | caravan_power 0.20, global_tax_modifier 0.10
+idea = Refugees from Cordoba and Kairouan | Scholars, craftsmen and soldiers flee to Fes, and the kingdom gains by their misfortune. | production_efficiency 0.10, num_accepted_cultures 1
+idea = Tribal Peacekeeping | The Idrisid imams judge disputes between Berber tribes, and so keep the peace. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
+
+[rustamid]
+trigger = tag ALG
+name = Rustamid
+start = defensiveness 0.10, caravan_power 0.20
+bonus = gov 1
+idea = The Ibadi Imamate | Imams of the Ibadi faith, elected for virtue and not birth, rule the highlands of the central Maghreb. | stability_cost_modifier -0.10, tolerance_heretic 2
+idea = Tahert the Capital | The city on the steppe edge has a scholarly reputation as the Iraq of the Maghreb. | technology_cost -0.10, prestige 1
+idea = The Trans-Saharan Road | Camel caravans from Tahert reach the Sudan for gold and slaves. | caravan_power 0.25, global_trade_power 0.10
+idea = Berber Tribal Levies | Tribes of the Zenata and Nafusa serve the imam in times of need. | global_manpower_modifier 0.15, manpower_recovery_speed 0.10
+idea = Egalitarian Tradition | A man is judged by his piety and not his lineage, and rebels find few allies. | reduced_liberty_desire 10, yearly_corruption -0.10
+idea = Persian and Arab Merchants | Traders from Basra and Kufa live at Tahert and make it a commercial hub. | trade_efficiency 0.15, merchants 1
+idea = Highland Strongholds | Fortified towns in the Zab and Aures mountains hold the imam's enemies at bay. | fort_maintenance_modifier -0.20, defensiveness 0.15
+
+[sicily]
+trigger = tag SIQ,SIC
+name = Sicilian
+start = galley_power 0.15, trade_efficiency 0.10
+bonus = gov 1
+idea = The Isle of Three Peoples | Greek, Arab and Latin communities live and trade in the island's cities. | tolerance_heretic 2, tolerance_heathen 2
+idea = Palermo the Capital | The new Muslim capital draws craftsmen, merchants and scholars from every shore. | prestige 1, global_trade_power 0.10
+idea = The Island's Wheat | Sicily's plains feed the Mediterranean as they once fed Rome. | global_tax_modifier 0.10, production_efficiency 0.10
+idea = Fleets of the Strait | Ships based in Palermo and Syracuse command the narrow sea between Africa and Italy. | galley_power 0.20, naval_morale 0.10
+idea = Hill Fortresses | Castles on the mountains of Etna and the Madonie hold out against any invader. | defensiveness 0.15, fort_maintenance_modifier -0.20
+idea = Arab Irrigation and Citrus | Arab farmers plant orange, lemon, sugar and cotton on watered terraces. | development_cost -0.10, global_trade_goods_size_modifier 0.10
+idea = Raids on Calabria | Sicilian crews raid the mainland coasts of Italy for slaves and silver. | loot_amount 0.20, capture_ship_chance 0.15
+
+[saffarid]
+trigger = tag SAF
+name = Saffarid
+start = land_morale 0.10, discipline 0.025
+bonus = gov 1
+idea = Ya'qub the Coppersmith | A coppersmith's son from Sistan has made himself master of the east, and his army follows him because it believes he will win. | army_tradition 0.75, prestige 1
+idea = The Ayyar Brotherhoods | Bands of young men from the cities, sworn to a code of courage, make up the elite of the army. | discipline 0.05, land_morale 0.10
+idea = Sistan and the Helmand | The oasis kingdom's fields and canals feed an army that does not depend on the caliph's tax. | production_efficiency 0.10, global_manpower_modifier 0.15
+idea = The Persian Revival | Ya'qub orders Persian used at court, and poets praise the old kings of Iran. | gov 1, culture_conversion_cost -0.20
+idea = Plunder of Khorasan | The Saffarids take the treasure of the Tahirids and the Abbasid governors. | loot_amount 0.20, global_tax_modifier 0.10
+idea = The Kharijite Roots | Ya'qub's early followers were Kharijite rebels and the dynasty never forgets that it rose in revolt. | tolerance_heretic 2, tolerance_heathen 2
+idea = Mountain Road to the Indus | Passes to Kabul and Zabul open the route to India's wealth. | movement_speed 0.10, hostile_attrition 0.5
+
+[tahirid]
+trigger = tag KHO
+name = Tahirid
+start = diplomatic_reputation 1, global_tax_modifier 0.10
+bonus = gov 1
+idea = Governors of Khorasan | The Tahirids govern the east for the caliph and keep order with the caliph's authority. | yearly_corruption -0.10, stability_cost_modifier -0.10
+idea = Nishapur | The city of scholars, merchants and mosques is the cultural capital of the eastern Islamic world. | technology_cost -0.10, prestige 1
+idea = The Silk Road Customs | The house collects the dues of the roads from Merv to Rayy. | caravan_power 0.20, trade_efficiency 0.10
+idea = Qanats of the Plateau | Underground canals bring water to the dry plain and make its soil rich. | production_efficiency 0.10, development_cost -0.10
+idea = The Persian Gentry | Landed dihqans fight for the Tahirids and keep their local estates. | global_manpower_modifier 0.15, garrison_size 0.20
+idea = The Caliph's Friend | Tahirid loyalty to Baghdad earns them honours, gifts and a long leash. | improve_relation_modifier 0.25, ae_impact -0.20
+idea = Ghazi Volunteers | Pious volunteers gather in Khorasan to fight the Turks beyond the Oxus. | land_morale 0.10, army_tradition_from_battle 0.50
+
+[samanid]
+trigger = tag TRS
+name = Samanid
+start = trade_efficiency 0.10, cavalry_power 0.10
+bonus = gov 1
+idea = Bukhara and Samarkand | The Samanid cities are rich markets for Chinese silk, Persian carpets and Turkish slaves. | global_trade_power 0.10, caravan_power 0.20
+idea = The Persian Renaissance | Poets write New Persian in Arabic script, and a Persian court rises in Bukhara. | prestige 1, technology_cost -0.10
+idea = The Frontier of Faith | Samanid ghazis ride against pagan Turks and win converts, captives and plunder. | land_morale 0.10, loot_amount 0.15
+idea = The Oasis Farms | Canals from the Zarafshan and Oxus water Transoxiana's fields. | production_efficiency 0.10, global_tax_modifier 0.10
+idea = Slave Soldiers of the Steppe | Turkic boys, captured young, are trained as mamluks for the emir's guard. | discipline 0.05, cavalry_power 0.10
+idea = Governors of Transoxiana | Nuh and Nasr serve the Tahirids as governors and come to rule in their own right. | gov 1, stability_cost_modifier -0.10
+idea = Paper of Samarkand | Samarkand mills produce paper and spread the written word through the east. | technology_cost -0.10, idea_cost -0.05
+
+[sindh]
+trigger = tag SND
+name = Sindhi
+start = trade_efficiency 0.10, galley_power 0.10
+bonus = gov 1
+idea = Mansura on the Indus | The Arab capital of Sindh sits on a great loop of the river with palaces and a Friday mosque. | prestige 1, global_tax_modifier 0.10
+idea = The Habbari Emirs | The descendants of Arab conquerors rule Sindh in the caliph's name and answer to no governor. | gov 1, stability_cost_modifier -0.10
+idea = Multan the Temple City | The Sun Temple of Multan draws Hindu pilgrims whose gifts fill the emir's treasury. | global_tax_modifier 0.10, tolerance_heathen 2
+idea = Merchants of Debal | Sindhi merchants ship goods across the Arabian Sea to Basra and Siraf. | global_trade_power 0.15, trade_efficiency 0.10
+idea = Camel Corps of the Thar | Riders in the desert carry messages and raid caravans across the sands. | cavalry_power 0.15, movement_speed 0.10
+idea = The Indus Flood | Sindh's fields depend on the flood, and the people learn to manage the water. | production_efficiency 0.10, development_cost -0.10
+idea = Arab and Hindu Notables | Local Hindu landholders and Muslim settlers share the administration. | tolerance_heathen 2, improve_relation_modifier 0.25
+
+[ghana]
+trigger = tag GAA
+name = Ghanaian
+start = caravan_power 0.20, land_morale 0.10
+bonus = gov 1
+idea = Gold of Wagadu | Gold from the southern forests reaches the king's hands by custom, and the Ghana's court shines with it. | global_tax_modifier 0.15, prestige 1
+idea = Salt and Gold Trade | Berber caravans bring Saharan salt south to the gold lands and take gold north. | caravan_power 0.25, global_trade_power 0.10
+idea = The King's Nuggets | All gold nuggets belong to the king, and only gold dust circulates among his subjects. | inflation_reduction 0.10, yearly_corruption -0.10
+idea = Iron-Armed Soninke | Iron-working made the Soninke strong, and their spears and shields fill the king's army. | infantry_power 0.15, global_manpower_modifier 0.15
+idea = Kumbi Saleh | The twin city of the king and the merchants has a royal palace and thirteen mosques. | trade_efficiency 0.10, tolerance_heathen 2
+idea = The Oath of the Elders | The clan heads advise the king, and a king cannot rule without their sworn oath. | stability_cost_modifier -0.10, gov 1
+idea = Tribute of the Neighbours | Berber, Peul and Malinke chiefs pay Ghana tribute in cattle, gold and men. | vassal_income 0.25, improve_relation_modifier 0.25
+
+[abyssinia]
+trigger = tag ETH
+name = Abyssinian
+start = defensiveness 0.15, land_attrition -0.15
+bonus = gov 1
+idea = The Solomonic Claim | The kings of Abyssinia trace their line to the Queen of Sheba and Solomon and the legitimacy of the Ark. | gov 1, prestige 1
+idea = The Highland Fortress | The high plateau and its gorges guard the kingdom from invasion. | defensiveness 0.20, hostile_attrition 0.5
+idea = The Miaphysite Church | The Church of Tewahedo gives Abyssinia its writing, its calendar and its monks. | church_power_modifier 0.15, tolerance_own 2
+idea = Monasteries and Rock Churches | Monks in rock-hewn churches and cliffside monasteries preserve the books and the faith. | technology_cost -0.10, global_missionary_strength 0.02
+idea = Coffee Beans and Incense | Trade goods from the south cross the highlands to the Red Sea ports. | global_trade_power 0.10, caravan_power 0.20
+idea = Peasant Spearmen | Farmers of the plateau gather behind the banners of their lords at the king's call. | global_manpower_modifier 0.15, infantry_power 0.10
+idea = The Red Sea Ports | Adulis, Massawa and Zeila link the kingdom to Arabia and India. | galley_power 0.10, trade_efficiency 0.10
