@@ -37,12 +37,24 @@ idea = Name | One-sentence description. | key value, key value      # exactly se
   Latin-1 (no Ž, Ć, Š): validate fails the loc otherwise.
 - Make each set specific: a historical or cultural hook in every idea, not a generic stat line. Do not copy vanilla idea names.
 
+## Quick commands (run from the mod folder with `EU4_GAME`/`CK3_GAME` set, see `cl-build-validate`)
+
+```bash
+python3 tools/ideaset.py which TAG [TAG ...]    # the set a tag gets, why, and its seven ideas
+python3 tools/ideaset.py list [tag|culture|group]   # all sets with their triggers
+python3 tools/ideaset.py show SLUG              # one set as it will be written to common/ideas
+python3 tools/ideaset.py ranges KEY [KEY ...]   # the base game's range for a modifier and whether it is allowed here
+python3 tools/ideaset.py new SLUG --tag A,B --name Name [--file 15_x.ideas]   # append an empty block (also --culture / --group)
+python3 tools/ideaset.py lint                   # what the build checks; exit 1 on a problem
+```
+
 ## Add or change a set
 
-1. Edit or add a block in the right file (`1x` tags, `20`/`21` major cultures, `3x` groups). A new culture group in the mod needs a set
-   in `3x` or a tag/culture set that covers every tag using it.
-2. `python3 tools/build.py && python3 tools/validate.py`; read the line `national ideas: N sets (...)`.
-3. A formable tag shares its starter's set by listing both in `trigger = tag A,B`.
-4. Update the counts in `AGENTS.md`, commit the regenerated files with the data, check CI.
+1. `ideaset.py which TAG` to see what the tag has now. To give a tag its own set: `ideaset.py new SLUG --tag TAG --name Name --file 1x_whatever.ideas`
+   (tag sets go in a `1x` file, major cultures `2x`, groups `3x`), then replace every `TODO` (placeholders fail lint). To change one, edit its block.
+2. Pick modifiers with `ideaset.py ranges KEY`; keep each idea to one or two and make the name and sentence specific to the people and the century.
+3. `ideaset.py lint`, then `python3 tools/build.py && python3 tools/validate.py` and read `national ideas: N sets (...)`.
+4. A formable tag shares its starter's set by listing both in `trigger = tag A,B`.
+5. Update the counts in `AGENTS.md`, commit the regenerated files with the data, check CI.
 
 Unplayed in-game: the trigger forms (`OR`, `culture_group`, `primary_culture`) follow the base game's own usage; check `error.log` after the first run.
