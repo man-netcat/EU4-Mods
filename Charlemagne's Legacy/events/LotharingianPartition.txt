@@ -74,19 +74,19 @@ country_event = {
 		ai_chance = { factor = 100 }
 		if = {
 			limit = { exists = LOT }
-			91 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			92 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			93 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			95 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4770 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			1743 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			1744 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			1866 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4766 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			187 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			189 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			193 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4764 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			if = { limit = { 91 = { owned_by = LOT } } 91 = { add_permanent_claim = ROOT } }
+			if = { limit = { 92 = { owned_by = LOT } } 92 = { add_permanent_claim = ROOT } }
+			if = { limit = { 93 = { owned_by = LOT } } 93 = { add_permanent_claim = ROOT } }
+			if = { limit = { 95 = { owned_by = LOT } } 95 = { add_permanent_claim = ROOT } }
+			if = { limit = { 4770 = { owned_by = LOT } } 4770 = { add_permanent_claim = ROOT } }
+			if = { limit = { 1743 = { owned_by = LOT } } 1743 = { add_permanent_claim = ROOT } }
+			if = { limit = { 1744 = { owned_by = LOT } } 1744 = { add_permanent_claim = ROOT } }
+			if = { limit = { 1866 = { owned_by = LOT } } 1866 = { add_permanent_claim = ROOT } }
+			if = { limit = { 4766 = { owned_by = LOT } } 4766 = { add_permanent_claim = ROOT } }
+			if = { limit = { 187 = { owned_by = LOT } } 187 = { add_permanent_claim = ROOT } }
+			if = { limit = { 189 = { owned_by = LOT } } 189 = { add_permanent_claim = ROOT } }
+			if = { limit = { 193 = { owned_by = LOT } } 193 = { add_permanent_claim = ROOT } }
+			if = { limit = { 4764 = { owned_by = LOT } } 4764 = { add_permanent_claim = ROOT } }
 		}
 	}
 
@@ -110,20 +110,20 @@ country_event = {
 		ai_chance = { factor = 100 }
 		if = {
 			limit = { exists = LOT }
-			75 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			1878 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			2975 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			99 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			98 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4381 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			188 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			94 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			2974 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4768 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			1880 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4765 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			165 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
-			4721 = { limit = { owned_by = LOT } add_permanent_claim = ROOT }
+			if = { limit = { 75 = { owned_by = LOT } } 75 = { add_permanent_claim = ROOT } }
+			if = { limit = { 1878 = { owned_by = LOT } } 1878 = { add_permanent_claim = ROOT } }
+			if = { limit = { 2975 = { owned_by = LOT } } 2975 = { add_permanent_claim = ROOT } }
+			if = { limit = { 99 = { owned_by = LOT } } 99 = { add_permanent_claim = ROOT } }
+			if = { limit = { 98 = { owned_by = LOT } } 98 = { add_permanent_claim = ROOT } }
+			if = { limit = { 4381 = { owned_by = LOT } } 4381 = { add_permanent_claim = ROOT } }
+			if = { limit = { 188 = { owned_by = LOT } } 188 = { add_permanent_claim = ROOT } }
+			if = { limit = { 94 = { owned_by = LOT } } 94 = { add_permanent_claim = ROOT } }
+			if = { limit = { 2974 = { owned_by = LOT } } 2974 = { add_permanent_claim = ROOT } }
+			if = { limit = { 4768 = { owned_by = LOT } } 4768 = { add_permanent_claim = ROOT } }
+			if = { limit = { 1880 = { owned_by = LOT } } 1880 = { add_permanent_claim = ROOT } }
+			if = { limit = { 4765 = { owned_by = LOT } } 4765 = { add_permanent_claim = ROOT } }
+			if = { limit = { 165 = { owned_by = LOT } } 165 = { add_permanent_claim = ROOT } }
+			if = { limit = { 4721 = { owned_by = LOT } } 4721 = { add_permanent_claim = ROOT } }
 		}
 	}
 
@@ -158,19 +158,19 @@ country_event = {
 					break_union = DAU
 					FRA = { vassalize = DAU }
 				}
-				91 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				92 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				93 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				95 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				4770 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				1743 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				1744 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				1866 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				4766 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				187 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				189 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				193 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
-				4764 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = FRA add_core = FRA }
+				if = { limit = { 91 = { owned_by = ROOT } } 91 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 92 = { owned_by = ROOT } } 92 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 93 = { owned_by = ROOT } } 93 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 95 = { owned_by = ROOT } } 95 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 4770 = { owned_by = ROOT } } 4770 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 1743 = { owned_by = ROOT } } 1743 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 1744 = { owned_by = ROOT } } 1744 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 1866 = { owned_by = ROOT } } 1866 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 4766 = { owned_by = ROOT } } 4766 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 187 = { owned_by = ROOT } } 187 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 189 = { owned_by = ROOT } } 189 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 193 = { owned_by = ROOT } } 193 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
+				if = { limit = { 4764 = { owned_by = ROOT } } 4764 = { remove_core = ROOT cede_province = FRA add_core = FRA } }
 			}
 			if = {
 				limit = { exists = GER }
@@ -189,20 +189,20 @@ country_event = {
 					TRI = { grant_independence = yes }
 					GER = { vassalize = TRI }
 				}
-				75 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				1878 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				2975 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				99 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				98 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				4381 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				188 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				94 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				2974 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				4768 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				1880 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				4765 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				165 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
-				4721 = { limit = { owned_by = ROOT } remove_core = ROOT cede_province = GER add_core = GER }
+				if = { limit = { 75 = { owned_by = ROOT } } 75 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 1878 = { owned_by = ROOT } } 1878 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 2975 = { owned_by = ROOT } } 2975 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 99 = { owned_by = ROOT } } 99 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 98 = { owned_by = ROOT } } 98 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 4381 = { owned_by = ROOT } } 4381 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 188 = { owned_by = ROOT } } 188 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 94 = { owned_by = ROOT } } 94 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 2974 = { owned_by = ROOT } } 2974 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 4768 = { owned_by = ROOT } } 4768 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 1880 = { owned_by = ROOT } } 1880 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 4765 = { owned_by = ROOT } } 4765 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 165 = { owned_by = ROOT } } 165 = { remove_core = ROOT cede_province = GER add_core = GER } }
+				if = { limit = { 4721 = { owned_by = ROOT } } 4721 = { remove_core = ROOT cede_province = GER add_core = GER } }
 			}
 			if = {
 				limit = { exists = FRA }

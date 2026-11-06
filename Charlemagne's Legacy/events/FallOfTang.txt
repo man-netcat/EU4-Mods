@@ -47,13 +47,13 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			613 = { limit = { owned_by = ROOT } add_core = DAI }
-			1016 = { limit = { owned_by = ROOT } add_core = DAI }
-			2371 = { limit = { owned_by = ROOT } add_core = DAI }
-			2372 = { limit = { owned_by = ROOT } add_core = DAI }
-			4819 = { limit = { owned_by = ROOT } add_core = DAI }
-			4820 = { limit = { owned_by = ROOT } add_core = DAI }
-			4821 = { limit = { owned_by = ROOT } add_core = DAI }
+			if = { limit = { 613 = { owned_by = ROOT } } 613 = { add_core = DAI } }
+			if = { limit = { 1016 = { owned_by = ROOT } } 1016 = { add_core = DAI } }
+			if = { limit = { 2371 = { owned_by = ROOT } } 2371 = { add_core = DAI } }
+			if = { limit = { 2372 = { owned_by = ROOT } } 2372 = { add_core = DAI } }
+			if = { limit = { 4819 = { owned_by = ROOT } } 4819 = { add_core = DAI } }
+			if = { limit = { 4820 = { owned_by = ROOT } } 4820 = { add_core = DAI } }
+			if = { limit = { 4821 = { owned_by = ROOT } } 4821 = { add_core = DAI } }
 			release = DAI
 		}
 	}
@@ -93,9 +93,9 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			698 = { limit = { owned_by = ROOT } add_core = HEX cede_province = HEX }
-			701 = { limit = { owned_by = ROOT } add_core = HEX cede_province = HEX }
-			4223 = { limit = { owned_by = ROOT } add_core = HEX cede_province = HEX }
+			if = { limit = { 698 = { owned_by = ROOT } } 698 = { add_core = HEX cede_province = HEX } }
+			if = { limit = { 701 = { owned_by = ROOT } } 701 = { add_core = HEX cede_province = HEX } }
+			if = { limit = { 4223 = { owned_by = ROOT } } 4223 = { add_core = HEX cede_province = HEX } }
 		}
 	}
 
@@ -138,29 +138,29 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = { exists = LIO }
-				696 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
-				697 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
-				702 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
-				1816 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
-				2136 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
-				4194 = { limit = { owned_by = ROOT } add_core = LIO cede_province = LIO }
+				if = { limit = { 696 = { owned_by = ROOT } } 696 = { add_core = LIO cede_province = LIO } }
+				if = { limit = { 697 = { owned_by = ROOT } } 697 = { add_core = LIO cede_province = LIO } }
+				if = { limit = { 702 = { owned_by = ROOT } } 702 = { add_core = LIO cede_province = LIO } }
+				if = { limit = { 1816 = { owned_by = ROOT } } 1816 = { add_core = LIO cede_province = LIO } }
+				if = { limit = { 2136 = { owned_by = ROOT } } 2136 = { add_core = LIO cede_province = LIO } }
+				if = { limit = { 4194 = { owned_by = ROOT } } 4194 = { add_core = LIO cede_province = LIO } }
 			}
 			else_if = {
 				limit = { exists = KIN }
-				696 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
-				697 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
-				702 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
-				1816 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
-				2136 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
-				4194 = { limit = { owned_by = ROOT } add_core = KIN cede_province = KIN }
+				if = { limit = { 696 = { owned_by = ROOT } } 696 = { add_core = KIN cede_province = KIN } }
+				if = { limit = { 697 = { owned_by = ROOT } } 697 = { add_core = KIN cede_province = KIN } }
+				if = { limit = { 702 = { owned_by = ROOT } } 702 = { add_core = KIN cede_province = KIN } }
+				if = { limit = { 1816 = { owned_by = ROOT } } 1816 = { add_core = KIN cede_province = KIN } }
+				if = { limit = { 2136 = { owned_by = ROOT } } 2136 = { add_core = KIN cede_province = KIN } }
+				if = { limit = { 4194 = { owned_by = ROOT } } 4194 = { add_core = KIN cede_province = KIN } }
 			}
 			else = {
-				696 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
-				697 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
-				702 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
-				1816 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
-				2136 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
-				4194 = { limit = { owned_by = ROOT } add_core = KTN cede_province = KTN }
+				if = { limit = { 696 = { owned_by = ROOT } } 696 = { add_core = KTN cede_province = KTN } }
+				if = { limit = { 697 = { owned_by = ROOT } } 697 = { add_core = KTN cede_province = KTN } }
+				if = { limit = { 702 = { owned_by = ROOT } } 702 = { add_core = KTN cede_province = KTN } }
+				if = { limit = { 1816 = { owned_by = ROOT } } 1816 = { add_core = KTN cede_province = KTN } }
+				if = { limit = { 2136 = { owned_by = ROOT } } 2136 = { add_core = KTN cede_province = KTN } }
+				if = { limit = { 4194 = { owned_by = ROOT } } 4194 = { add_core = KTN cede_province = KTN } }
 			}
 		}
 	}

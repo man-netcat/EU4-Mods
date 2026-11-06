@@ -43,10 +43,10 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			737 = { limit = { owned_by = ROOT } add_core = HUB }
-			4228 = { limit = { owned_by = ROOT } add_core = HUB }
-			4229 = { limit = { owned_by = ROOT } add_core = HUB }
-			1013 = { limit = { owned_by = ROOT } add_core = HUB }
+			if = { limit = { 737 = { owned_by = ROOT } } 737 = { add_core = HUB } }
+			if = { limit = { 4228 = { owned_by = ROOT } } 4228 = { add_core = HUB } }
+			if = { limit = { 4229 = { owned_by = ROOT } } 4229 = { add_core = HUB } }
+			if = { limit = { 1013 = { owned_by = ROOT } } 1013 = { add_core = HUB } }
 			release = HUB
 		}
 	}
@@ -88,11 +88,11 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			733 = { limit = { owned_by = ROOT } add_core = TAE }
-			735 = { limit = { owned_by = ROOT } add_core = TAE }
-			4230 = { limit = { owned_by = ROOT } add_core = TAE }
-			4231 = { limit = { owned_by = ROOT } add_core = TAE }
-			734 = { limit = { owned_by = ROOT } add_core = TAE }
+			if = { limit = { 733 = { owned_by = ROOT } } 733 = { add_core = TAE } }
+			if = { limit = { 735 = { owned_by = ROOT } } 735 = { add_core = TAE } }
+			if = { limit = { 4230 = { owned_by = ROOT } } 4230 = { add_core = TAE } }
+			if = { limit = { 4231 = { owned_by = ROOT } } 4231 = { add_core = TAE } }
+			if = { limit = { 734 = { owned_by = ROOT } } 734 = { add_core = TAE } }
 			release = TAE
 		}
 	}

@@ -17,7 +17,7 @@ from steps.output import write_out
 CALL = re.compile(r"\b(country_event|province_event|news_event)\s*=\s*\{")
 ID = re.compile(r'\bid\s*=\s*"?([A-Za-z_0-9.]+)"?')
 LIST = re.compile(r"\b(random_events|events)\s*=\s*\{([^{}]*)\}")
-SKIP_DIRS = ("events", "localisation", "gfx", "interface", "map", "history", "music", "sound", "tutorial", "decisions")
+SKIP_DIRS = ("localisation", "gfx", "interface", "map", "history", "music", "sound", "tutorial")
 
 
 def replaced_paths():

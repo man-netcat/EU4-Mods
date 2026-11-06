@@ -43,11 +43,11 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			718 = { limit = { owned_by = ROOT } add_core = NIN }
-			4681 = { limit = { owned_by = ROOT } add_core = NIN }
-			4222 = { limit = { owned_by = ROOT } add_core = NIN }
-			2117 = { limit = { owned_by = ROOT } add_core = NIN }
-			4680 = { limit = { owned_by = ROOT } add_core = NIN }
+			if = { limit = { 718 = { owned_by = ROOT } } 718 = { add_core = NIN } }
+			if = { limit = { 4681 = { owned_by = ROOT } } 4681 = { add_core = NIN } }
+			if = { limit = { 4222 = { owned_by = ROOT } } 4222 = { add_core = NIN } }
+			if = { limit = { 2117 = { owned_by = ROOT } } 2117 = { add_core = NIN } }
+			if = { limit = { 4680 = { owned_by = ROOT } } 4680 = { add_core = NIN } }
 			release = NIN
 		}
 	}
@@ -83,7 +83,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			716 = { limit = { owned_by = ROOT } add_core = TUV }
+			if = { limit = { 716 = { owned_by = ROOT } } 716 = { add_core = TUV } }
 			release = TUV
 		}
 	}
@@ -121,9 +121,9 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			4689 = { limit = { owned_by = ROOT } add_core = SIB }
-			4687 = { limit = { owned_by = ROOT } add_core = SIB }
-			4686 = { limit = { owned_by = ROOT } add_core = SIB }
+			if = { limit = { 4689 = { owned_by = ROOT } } 4689 = { add_core = SIB } }
+			if = { limit = { 4687 = { owned_by = ROOT } } 4687 = { add_core = SIB } }
+			if = { limit = { 4686 = { owned_by = ROOT } } 4686 = { add_core = SIB } }
 			release = SIB
 		}
 	}
@@ -162,10 +162,10 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			714 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
-			4683 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
-			4684 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
-			2355 = { limit = { owned_by = ROOT } add_core = DZG cede_province = DZG }
+			if = { limit = { 714 = { owned_by = ROOT } } 714 = { add_core = DZG cede_province = DZG } }
+			if = { limit = { 4683 = { owned_by = ROOT } } 4683 = { add_core = DZG cede_province = DZG } }
+			if = { limit = { 4684 = { owned_by = ROOT } } 4684 = { add_core = DZG cede_province = DZG } }
+			if = { limit = { 2355 = { owned_by = ROOT } } 2355 = { add_core = DZG cede_province = DZG } }
 		}
 	}
 
@@ -210,9 +210,9 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			2193 = { limit = { owned_by = ROOT } add_core = OVO }
-			4682 = { limit = { owned_by = ROOT } add_core = OVO }
-			2190 = { limit = { owned_by = ROOT } add_core = OVO }
+			if = { limit = { 2193 = { owned_by = ROOT } } 2193 = { add_core = OVO } }
+			if = { limit = { 4682 = { owned_by = ROOT } } 4682 = { add_core = OVO } }
+			if = { limit = { 2190 = { owned_by = ROOT } } 2190 = { add_core = OVO } }
 			release = OVO
 		}
 	}
@@ -251,10 +251,10 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			2189 = { limit = { owned_by = ROOT } add_core = ARI }
-			4668 = { limit = { owned_by = ROOT } add_core = ARI }
-			719 = { limit = { owned_by = ROOT } add_core = ARI }
-			4679 = { limit = { owned_by = ROOT } add_core = ARI }
+			if = { limit = { 2189 = { owned_by = ROOT } } 2189 = { add_core = ARI } }
+			if = { limit = { 4668 = { owned_by = ROOT } } 4668 = { add_core = ARI } }
+			if = { limit = { 719 = { owned_by = ROOT } } 719 = { add_core = ARI } }
+			if = { limit = { 4679 = { owned_by = ROOT } } 4679 = { add_core = ARI } }
 			release = ARI
 		}
 	}

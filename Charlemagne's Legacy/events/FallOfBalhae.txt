@@ -40,9 +40,9 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			2188 = { limit = { owned_by = ROOT } add_core = WNN }
-			4217 = { limit = { owned_by = ROOT } add_core = WNN }
-			4654 = { limit = { owned_by = ROOT } add_core = WNN }
+			if = { limit = { 2188 = { owned_by = ROOT } } 2188 = { add_core = WNN } }
+			if = { limit = { 4217 = { owned_by = ROOT } } 4217 = { add_core = WNN } }
+			if = { limit = { 4654 = { owned_by = ROOT } } 4654 = { add_core = WNN } }
 			release = WNN
 		}
 	}
@@ -80,9 +80,9 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			2111 = { limit = { owned_by = ROOT } add_core = JIA }
-			4655 = { limit = { owned_by = ROOT } add_core = JIA }
-			1850 = { limit = { owned_by = ROOT } add_core = JIA }
+			if = { limit = { 2111 = { owned_by = ROOT } } 2111 = { add_core = JIA } }
+			if = { limit = { 4655 = { owned_by = ROOT } } 4655 = { add_core = JIA } }
+			if = { limit = { 1850 = { owned_by = ROOT } } 1850 = { add_core = JIA } }
 			release = JIA
 		}
 	}
@@ -119,8 +119,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			2108 = { limit = { owned_by = ROOT } add_core = TNO }
-			4201 = { limit = { owned_by = ROOT } add_core = TNO }
+			if = { limit = { 2108 = { owned_by = ROOT } } 2108 = { add_core = TNO } }
+			if = { limit = { 4201 = { owned_by = ROOT } } 4201 = { add_core = TNO } }
 			release = TNO
 		}
 	}
@@ -157,8 +157,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			4653 = { limit = { owned_by = ROOT } add_core = NIP }
-			4661 = { limit = { owned_by = ROOT } add_core = NIP }
+			if = { limit = { 4653 = { owned_by = ROOT } } 4653 = { add_core = NIP } }
+			if = { limit = { 4661 = { owned_by = ROOT } } 4661 = { add_core = NIP } }
 			release = NIP
 		}
 	}
@@ -194,7 +194,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			730 = { limit = { owned_by = ROOT } add_core = ADI }
+			if = { limit = { 730 = { owned_by = ROOT } } 730 = { add_core = ADI } }
 			release = ADI
 		}
 	}
@@ -231,8 +231,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			732 = { limit = { owned_by = ROOT } add_core = HEN }
-			2742 = { limit = { owned_by = ROOT } add_core = HEN }
+			if = { limit = { 732 = { owned_by = ROOT } } 732 = { add_core = HEN } }
+			if = { limit = { 2742 = { owned_by = ROOT } } 2742 = { add_core = HEN } }
 			release = HEN
 		}
 	}

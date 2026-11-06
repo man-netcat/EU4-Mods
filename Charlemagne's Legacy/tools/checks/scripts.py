@@ -108,8 +108,9 @@ def custom_script_has_no_per_pid_limit_blocks() -> None:
         + _mod_only("common/scripted_effects", os.path.join(GAME, "common", "scripted_effects"))
         + _mod_only("common/on_actions", os.path.join(GAME, "common", "on_actions"))
     ):
-        text = open(path, encoding="utf-8", errors="replace").read()
-        for m in re.finditer(r"(?m)^\t*(\d+) = \{$", text):
+        text = "\n".join(ln.split("#", 1)[0] for ln in open(path, encoding="utf-8", errors="replace").read().splitlines())
+        # any `PID = { limit = ... }`, one-line or many (the first child of the block, at its top level)
+        for m in re.finditer(r"(?<![\w.])(\d{1,4})\s*=\s*\{", text):
             depth, i = 1, m.end()
             while depth > 0 and i < len(text):
                 if text[i] == "{":
@@ -117,15 +118,15 @@ def custom_script_has_no_per_pid_limit_blocks() -> None:
                 elif text[i] == "}":
                     depth -= 1
                 i += 1
-            inner, d = text[m.end() : i], 0
-            for ln in inner.splitlines():
-                code = ln.split("#", 1)[0]
-                if d == 0 and re.match(r"^\s*limit\s*=", code):
-                    scope_bad.append(
-                        f"{os.path.basename(path)}:{m.group(1)}"
-                    )
+            inner, d = text[m.end() : i - 1], 0
+            for tok in re.finditer(r"\{|\}|\blimit\s*=", inner):
+                if tok.group(0) == "{":
+                    d += 1
+                elif tok.group(0) == "}":
+                    d -= 1
+                elif d == 0:
+                    scope_bad.append(f"{os.path.basename(path)}:{m.group(1)}")
                     break
-                d += code.count("{") - code.count("}")
     note(not scope_bad, f"no per-pid limits in {len(scope_bad)} blocks ({len(scope_bad)} bad)")
     for b in scope_bad[:10]:
         print("        " + b)

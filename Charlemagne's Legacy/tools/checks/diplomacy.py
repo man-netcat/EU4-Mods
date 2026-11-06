@@ -125,12 +125,14 @@ def lotharingian_partition_covers_lotharingia() -> None:
     """The Treaty of Meerssen event hands over exactly the provinces LOT owns, and its subjects go to the right kings."""
     print("\n== the partition of Lotharingia covers its realm (events/LotharingianPartition.txt) ==")
     txt = open(os.path.join(MOD, "events", "LotharingianPartition.txt"), encoding="cp1252").read()
-    ceded = {side: set(map(int, re.findall(rf"(\d+) = \{{ limit = \{{ owned_by = ROOT \}} remove_core = ROOT cede_province = {side} add_core = {side} \}}", txt)))
+    ceded = {side: set(map(int, re.findall(
+        rf"if = \{{ limit = \{{ (\d+) = \{{ owned_by = ROOT \}} \}} \1 = \{{ remove_core = ROOT cede_province = {side} add_core = {side} \}} \}}", txt)))
              for side in ("FRA", "GER")}
     claimed = {}
     for ev, side in (("2", "FRA"), ("3", "GER")):
         body = txt.split(f"id = kar_lotharingia.{ev}\n", 1)[1].split("\ncountry_event", 1)[0]
-        claimed[side] = set(map(int, re.findall(r"(\d+) = \{ limit = \{ owned_by = LOT \} add_permanent_claim = ROOT", body)))
+        claimed[side] = set(map(int, re.findall(
+            r"if = \{ limit = \{ (\d+) = \{ owned_by = LOT \} \} \1 = \{ add_permanent_claim = ROOT \} \}", body)))
     owned = set(BY_TAG["LOT"].provinces)
     note(ceded["FRA"] | ceded["GER"] == owned and not ceded["FRA"] & ceded["GER"],
          f"FRA and GER shares are LOT's {len(owned)} provinces, each given once "

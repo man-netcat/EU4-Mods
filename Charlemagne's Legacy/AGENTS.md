@@ -39,6 +39,10 @@ python3 tools/validate.py   # all checks, must pass before anything ships
 - `models.py` is the SQLAlchemy schema, `db.py` the connection,
   `enc.py` transliterates names into cp1252.
 
+Project skills live in `../.claude/skills/` (`cl-rules` first; then `cl-build-validate`, `cl-add-tag`, `cl-retag`, `cl-subjects`,
+`cl-releasables`, `cl-formables`, `cl-vanilla-scripts`, `cl-ck3-lifting`, `cl-events`, `cl-flags`, `cl-balance`; the other mods have
+`eu4-1337-start-date` and `eu4-new-mod`). Where a skill and an older paragraph here disagree, the skill follows the current code.
+
 ## Adding a tag (checklist)
 
 1. Pick a free 3-letter code — check **tab-tolerantly**
@@ -187,6 +191,9 @@ python3 tools/validate.py   # all checks, must pass before anything ships
   effects, disasters, rebel types, reforms, incidents, imperial reforms...: the calls are cut out of the file); validate fails if anything still fires a missing
   event. Folders the descriptor `replace_path`s (missions, history, gfx/flags, government names and ranks, cultures, bookmarks) load no base-game file, so base-game
   files there are never vendored or counted (a first pass vendored the vanilla missions by mistake and was reverted). Dated generic events before 1066 stay.
+- Bare province-id scopes took a `limit` child in FallOfSilla/Kirghiz/Balhae/Tang, the Meerssen event and the releasables' unrest (the engine rejects that block, see
+  "Effect blocks scoped to a bare province id" above): all 124 hand-written ones are now `if = { limit = { PID = { owned_by = ROOT } } PID = { ... } }`, the releasables
+  generator writes that form, and validate's per-pid check now catches the one-line form too (6 Nov 2026).
 - Rule (user, 30 Oct 2026): a tag whose name equals a free base-game tag's name reuses that tag, whatever the government (`python3 tools/retag.py suggest 0` lists
   them; `retag.py OLD NEW`). Done for Mann, Magdeburg, Ulm, Opole, Strasbourg and the Byzantine and Abbasid governors Epirus (EPI), Athens (ATH), Shammar (SHM)
   and Medina (MDA). Not done where the vanilla tag is already a formable of ours: Lithuania (LIT), Bohemia (BOH) and Castile (CAS) stay the formables, and the
