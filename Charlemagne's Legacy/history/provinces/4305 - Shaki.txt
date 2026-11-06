@@ -1,8 +1,8 @@
 #4305 - Shakhi
 
-owner = MLK
-controller = MLK
-add_core = MLK
+owner = SRV
+controller = SRV
+add_core = SRV
 capital = "Shaki"
 culture = persian
 religion = mazdayasna
@@ -19,7 +19,7 @@ discovered_by = eastern
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = MLK
-	controller = MLK
-	add_core = MLK
+	owner = SRV
+	controller = SRV
+	add_core = SRV
 }

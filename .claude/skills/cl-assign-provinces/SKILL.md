@@ -23,11 +23,13 @@ print(cn, h, S.primary(h), "sovereign", sov, top)      # then find the tag whose
 ```
 
 `lieges.governor_province_mismatches()` (validate) lists the BYZ/ARB provinces that sit wrongly; `lieges.py` checks lieges.
-`python3 tools/audit_provinces.py [--all|--json]` is the whole-map audit (read-only): for every owned province it walks the
-holder's liege chain to the nearest lord who rules a tag and prints the provinces whose owner is another tag. On 6 Nov 2026 it
-listed 250 (185 with an expected tag, 65 reaching none), many of them tags' own capitals: several EU4 provinces share one CK3
-county (`PROVINCE_COUNTY` pairs by place), so a hit can be a wrong pairing as well as a wrong owner. Do not bulk-apply it:
-judge each group, ask the user, move in batches and re-run validate.
+`python3 tools/audit_provinces.py` is the whole-map audit (read-only unless `--apply`): `--classify` gives each hit its evidence,
+`--apply [PID,..]` moves the trusted ones (name-matched pairing plus geography) or exactly the listed PIDs, keeps every tag
+alive and re-seats a lost capital. Read `tools/PROVINCE_AUDIT.md` first: the pairing is an approximation (homonyms, several
+provinces to one county), so **decide per hit whether the pairing or the owner is wrong**. Wrong pairing: add the pid to the
+audit block in `tools/provfaiths.py` and run `provfaiths.py apply`; wrong owner: `--apply PID`. Never bulk-apply the
+untrusted classes; ask the user. validate fails if the hit count exceeds `BACKLOG` (`tools/checks/provinces.py`): lower it
+when you work hits off.
 
 ## Move
 

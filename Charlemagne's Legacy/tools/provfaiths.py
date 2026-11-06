@@ -774,6 +774,21 @@ PROVINCE_COUNTY.update({
     704: "c_LIAO_jinzhou", 1047: "c_eman_tugur",
 })
 
+# Province audit of 6 Nov 2026 (tools/audit_provinces.py): the capital province of a county-title tag pairs with that county.
+# These capitals had been paired by name with a neighbouring county (Agdeside with c_agdeside, Rogaland's capital paired
+# with Nedenes' county), which put the tag's own capital under another lord in CK3 and left the tag's county unpaired.
+PROVINCE_COUNTY.update({
+    24: "c_rogalandi", 40: "c_yatvyagi", 277: "c_berestye", 315: "c_rounala", 350: "c_laghwat",
+    366: "c_fuerteventura", 472: "c_baisary", 476: "c_qyzylteniz", 477: "c_targyl", 1055: "c_vitim",
+    1056: "c_EM_khiltsaiz", 1059: "c_chuya", 1063: "c_tulun", 1071: "c_tartas_SIB", 1076: "c_petropavl",
+    1083: "c_yoshkar-ola", 1763: "c_spreewald", 1839: "c_suruga", 1972: "c_yar-calli", 2167: "c_deqen",
+    2354: "c_uliuty", 2357: "c_atbasar", 2358: "c_jilali", 2360: "c_kulan_uynak", 2366: "c_manatau",
+    2369: "c_karasu", 2420: "c_aqtobe", 2441: "c_sabakyul", 2442: "c_kotera", 2444: "c_uiska", 2446: "c_SW_heiergun",
+    2752: "c_norwegian_more", 4113: "c_kitka", 4114: "c_siggevara", 4208: "c_ebi-nor", 4220: "c_EM_khaldun",
+    4366: "c_cardiganshire", 4369: "c_pembrokeshire", 4665: "c_SW_luotuoguo", 4673: "c_LIAO_raozhou",
+    4685: "c_karkaraly", 4692: "c_kush-murun",
+})
+
 UNMAPPED_INDIA = {}
 
 # Japanese provinces with no certain CK3 county yet: reported, never guessed.

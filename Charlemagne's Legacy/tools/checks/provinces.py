@@ -3,7 +3,7 @@
 
 import os
 import re
-from checks.report import note
+from checks.report import note, warn
 from checks.context import CAPS, DORMANT, GAME, HERE, KEPT_REALMS, PDIR, PROVINCES, TAGS, parse, province_files
 from steps.allocation import build
 from steps.provdata import lake_ids, sea_ids, vanilla_prov_file, vanilla_prov_ids, waste_ids
@@ -233,8 +233,29 @@ def untouched_neighbours_intact() -> None:
         note(not owned, f"{t} owns none of the {len(reassigned)} reassigned provinces")
 
 
+def provinces_follow_ck3_chains() -> None:
+    """Provinces sit with the tag of their CK3 holder's nearest tag-ruling lord (tools/audit_provinces.py)."""
+    print("\n== provinces sit with their CK3 owners (tools/audit_provinces.py) ==")
+    import audit_provinces  # noqa: E402
+
+    rows = audit_provinces.classify(audit_provinces.audit())
+    strong = [r for r in rows if any(k in r["evidence"].split("+") for k in audit_provinces.STRONG)]
+    # a known backlog (docs in tools/PROVINCE_AUDIT.md): the count must not grow, the strong cases are listed
+    note(len(rows) <= BACKLOG, f"audit hits stay within the documented backlog of {BACKLOG} ({len(rows)} now)")
+    for r in strong[:10]:
+        warn(f"{r['pid']} {r['county']} owned by {r['owner']}, CK3 chain says {','.join(r['expected'])} ({r['evidence']})")
+    if rows:
+        warn(f"{len(rows)} provinces sit with a tag other than their CK3 chain's ({len(strong)} strongly evidenced); "
+             "see tools/PROVINCE_AUDIT.md")
+
+
+#: provinces the audit still lists, documented in tools/PROVINCE_AUDIT.md; lower it as they are worked off
+BACKLOG = 197
+
+
 def run() -> None:
     province_ownership()
+    provinces_follow_ck3_chains()
     no_province_is_in_vanilla_hre()
     unownable_land_is_unowned_in_database()
     the_new_world_and_australia_stay_uncolonised()

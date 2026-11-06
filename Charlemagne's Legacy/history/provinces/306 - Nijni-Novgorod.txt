@@ -1,8 +1,8 @@
 #306 - Nijni-Novgorod
 
-owner = CHB
-controller = CHB
-add_core = CHB
+owner = OBR
+controller = OBR
+add_core = OBR
 capital = "Nizhny Novgorod"
 culture = mari
 religion = finnish_pagan
@@ -20,7 +20,7 @@ discovered_by = western
 discovered_by = nomad_group
 
 867.1.1 = {
-	owner = CHB
-	controller = CHB
-	add_core = CHB
+	owner = OBR
+	controller = OBR
+	add_core = OBR
 }

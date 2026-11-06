@@ -1,9 +1,9 @@
 #4370 - Cambridgeshire
 #Includes Cambridgeshire+Huntingdonshire+Bedfordshire
 
-owner = HRF
-controller = HRF
-add_core = HRF
+owner = NFK
+controller = NFK
+add_core = NFK
 capital = "Cambridge"
 culture = anglo_saxon
 religion = christian_faith
@@ -21,7 +21,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 867.1.1 = {
-	owner = HRF
-	controller = HRF
-	add_core = HRF
+	owner = NFK
+	controller = NFK
+	add_core = NFK
 }
