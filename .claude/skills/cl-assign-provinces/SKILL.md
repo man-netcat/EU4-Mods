@@ -23,6 +23,11 @@ print(cn, h, S.primary(h), "sovereign", sov, top)      # then find the tag whose
 ```
 
 `lieges.governor_province_mismatches()` (validate) lists the BYZ/ARB provinces that sit wrongly; `lieges.py` checks lieges.
+`python3 tools/audit_provinces.py [--all|--json]` is the whole-map audit (read-only): for every owned province it walks the
+holder's liege chain to the nearest lord who rules a tag and prints the provinces whose owner is another tag. On 6 Nov 2026 it
+listed 250 (185 with an expected tag, 65 reaching none), many of them tags' own capitals: several EU4 provinces share one CK3
+county (`PROVINCE_COUNTY` pairs by place), so a hit can be a wrong pairing as well as a wrong owner. Do not bulk-apply it:
+judge each group, ask the user, move in batches and re-run validate.
 
 ## Move
 

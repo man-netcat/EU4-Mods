@@ -195,6 +195,9 @@ and an older paragraph here disagree, the skill follows the current code.
 - Bare province-id scopes took a `limit` child in FallOfSilla/Kirghiz/Balhae/Tang, the Meerssen event and the releasables' unrest (the engine rejects that block, see
   "Effect blocks scoped to a bare province id" above): all 124 hand-written ones are now `if = { limit = { PID = { owned_by = ROOT } } PID = { ... } }`, the releasables
   generator writes that form, and validate's per-pid check now catches the one-line form too (6 Nov 2026).
+- `python3 tools/audit_provinces.py [--all|--json]` (read-only) lists provinces whose owner is not the tag of their CK3 holder's nearest tag-ruling lord: 250 on 6 Nov 2026
+  (185 with an expected tag, 65 with none), many of them tags' own capitals. Not applied: several EU4 provinces share one CK3 county, so a hit may be a wrong pairing, and
+  the moves would reshape dozens of realms; it needs the user's call (`cl-assign-provinces`).
 - Rule (user, 30 Oct 2026): a tag whose name equals a free base-game tag's name reuses that tag, whatever the government (`python3 tools/retag.py suggest 0` lists
   them; `retag.py OLD NEW`). Done for Mann, Magdeburg, Ulm, Opole, Strasbourg and the Byzantine and Abbasid governors Epirus (EPI), Athens (ATH), Shammar (SHM)
   and Medina (MDA). Not done where the vanilla tag is already a formable of ours: Lithuania (LIT), Bohemia (BOH) and Castile (CAS) stay the formables, and the
