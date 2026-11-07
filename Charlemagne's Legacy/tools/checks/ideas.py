@@ -19,6 +19,14 @@ def national_ideas_cover_every_tag() -> None:
     for p in problems[:10]:
         print("        " + p)
 
+    budget = I.vanilla_budget()
+    note(len(budget["powers"]) >= 100, f"the base game's idea sets give a power budget ({len(budget['powers'])} sets measured)")
+    worst = max(sets.values(), key=lambda s: I.set_power(s) / I.power_cap(s))
+    over = [s["slug"] for s in sets.values() if I.set_power(s) > I.power_cap(s) + 1e-9]
+    note(not over, f"no idea set is stronger than the base game's (tag sets under its {int(I.TAG_QUANTILE * 100)}th percentile, "
+                   f"culture and group sets under its {int(I.OTHER_QUANTILE * 100)}th, no modifier total above any base-game set's); "
+                   f"closest {worst['slug']} {I.set_power(worst):.2f} of {I.power_cap(worst):.2f}")
+
     group_of = {c: g for g, v in culture_groups().items() for c in v}
     ordered = sorted(sets.values(), key=lambda s: ({"tag": 0, "culture": 1, "group": 2}[I.kind(s)], s["order"]))
 

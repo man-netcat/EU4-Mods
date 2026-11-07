@@ -16,28 +16,28 @@ idea = The Cosmopolitan Capital | Persians, Sogdians, Uighurs and monks of every
 [abbasid]
 trigger = tag ARB
 name = Abbasid
-start = diplomatic_reputation 1, tolerance_heathen 2
+start = diplomatic_reputation 1, tolerance_heathen 1.5
 bonus = gov 1
 idea = The House of Wisdom | Translators and astronomers in Baghdad gather the learning of Greece, Persia and India under the caliph's patronage. | technology_cost -0.10, idea_cost -0.05
 idea = The Diwans | Clerks of the great ministries keep the tax rolls of a hundred provinces in the Round City. | administrative_efficiency 0.05, global_tax_modifier 0.10
 idea = The Turkish Guard | Slave soldiers from the steppe, bought young and trained hard, stand between the caliph and his own subjects. | discipline 0.05, cavalry_power 0.15
 idea = Dar al-Islam | One law and one tongue of prayer run from the Atlantic to the Oxus, and merchants carry both. | global_trade_power 0.10, caravan_power 0.20
-idea = The Dhimma | Christians, Jews and Zoroastrians pay the jizya and keep their courts, and the treasury is the richer for it. | tolerance_heretic 2, tolerance_heathen 2
-idea = The Barid | The caliph's post riders carry news and spies across the roads of the empire in days. | spy_offence 0.25, envoy_travel_time -0.25
+idea = The Dhimma | Christians, Jews and Zoroastrians pay the jizya and keep their courts, and the treasury is the richer for it. | tolerance_heretic 2, tolerance_heathen 1.5
+idea = The Barid | The caliph's post riders carry news and spies across the roads of the empire in days. | spy_offence 0.2, envoy_travel_time -0.25
 idea = Ghazis of the Marches | Volunteers gather at the Cilician frontier each summer, and the raid is half a pilgrimage. | land_morale 0.10, loot_amount 0.15
 
 [byzantine]
 trigger = tag BYZ,ROM
 name = Roman
-start = defensiveness 0.15, fort_maintenance_modifier -0.20
+start = defensiveness 0.15, fort_maintenance_modifier -0.15
 bonus = gov 1
 idea = The Themes | The empire is divided into provinces under a single strategos, who raises and pays his soldiers from the land. | global_manpower_modifier 0.15, garrison_size 0.20
-idea = Greek Fire | The siphon on the dromon's prow burns on water and the emperor guards its secret. | galley_power 0.20, naval_morale 0.10
+idea = Greek Fire | The siphon on the dromon's prow burns on water and the emperor guards its secret. | galley_power 0.15, naval_morale 0.10
 idea = The Corpus Juris | Justinian's law still decides every suit, and judges who know it are hard to bribe. | yearly_corruption -0.10, stability_cost_modifier -0.10
 idea = The Gold Nomisma | The solidus has kept its weight for five hundred years, and the world trades in it. | global_trade_power 0.10, inflation_reduction 0.10
-idea = The Taxis | Every office, rank and precedence at court is written down, and every foreign envoy learns his place in it. | diplomatic_reputation 2, improve_relation_modifier 0.25
-idea = The Skholai and Tagmata | Professional regiments in the capital are the one army that does not melt away in winter. | discipline 0.05, army_tradition 0.50
-idea = The Orthodox Mission | Cyril and Methodios have taught the Slavs to read, and every Slav that reads looks to Constantinople. | global_missionary_strength 0.02, prestige 1
+idea = The Taxis | Every office, rank and precedence at court is written down, and every foreign envoy learns his place in it. | diplomatic_reputation 1.5, improve_relation_modifier 0.25
+idea = The Skholai and Tagmata | Professional regiments in the capital are the one army that does not melt away in winter. | discipline 0.025, army_tradition 0.50
+idea = The Orthodox Mission | Cyril and Methodios have taught the Slavs to read, and every Slav that reads looks to Constantinople. | global_missionary_strength 0.02, prestige 0.8
 
 [japan]
 trigger = tag JAP
@@ -81,20 +81,20 @@ idea = Ride to the Tarim | Kirghiz riders reach the Tien Shan oases in a season 
 [srivijaya]
 trigger = tag SRA
 name = Srivijaya
-start = galley_power 0.20, global_sailors_modifier 0.20
+start = galley_power 0.15, global_sailors_modifier 0.20
 bonus = gov 1
-idea = Lord of the Straits | No ship passes between Sumatra and Malaya without paying the maharaja's harbour dues. | global_trade_power 0.15, trade_efficiency 0.10
+idea = Lord of the Straits | No ship passes between Sumatra and Malaya without paying the maharaja's harbour dues. | global_trade_power 0.1, trade_efficiency 0.10
 idea = The Sailendra Alliance | The sea kings of Java and Palembang share a throne and a fleet. | improve_relation_modifier 0.25, diplomatic_reputation 1
-idea = The Sea Peoples | The orang laut are fishermen, pilots and pirates by turns, and all serve the maharaja. | naval_morale 0.15, light_ship_power 0.15
-idea = Mahayana Pilgrims | Chinese monks stop at Palembang to study Sanskrit before sailing on to Nalanda. | prestige 1, global_missionary_strength 0.02
+idea = The Sea Peoples | The orang laut are fishermen, pilots and pirates by turns, and all serve the maharaja. | naval_morale 0.1, light_ship_power 0.15
+idea = Mahayana Pilgrims | Chinese monks stop at Palembang to study Sanskrit before sailing on to Nalanda. | prestige 0.7, global_missionary_strength 0.02
 idea = Entrepot of the Spice Trade | Pepper, camphor and cloves are stored in the port's warehouses until the monsoon turns. | production_efficiency 0.10, merchants 1
-idea = The Mandala | A ring of vassal ports owes the maharaja ships and tribute, not obedience. | vassal_income 0.25, reduced_liberty_desire 10
+idea = The Mandala | A ring of vassal ports owes the maharaja ships and tribute, not obedience. | vassal_income 0.2, reduced_liberty_desire 10
 idea = Gold of Suvarnadvipa | The Golden Isle's rivers carry dust that pays for the fleet. | global_tax_modifier 0.10, development_cost -0.10
 
 [karolingian_empire]
 trigger = tag HLR
 name = Karolingian
-start = prestige 1, diplomatic_reputation 1
+start = prestige 0.9, diplomatic_reputation 1
 bonus = gov 1
 idea = The Missi Dominici | Counts and bishops ride the empire in pairs to hear complaints and reprove officials in the emperor's name. | yearly_corruption -0.10, administrative_efficiency 0.05
 idea = Capitularies and the Palace School | The emperor's laws are read at assemblies and copied in a clear script by monks educated at his court. | technology_cost -0.10, stability_cost_modifier -0.10

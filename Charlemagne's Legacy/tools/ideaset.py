@@ -7,6 +7,7 @@
     python3 tools/ideaset.py lint                  # the checks the build runs (exit 1 on a problem)
     python3 tools/ideaset.py new SLUG --tag A,B | --culture a,b | --group g --name Name [--file 15_x.ideas]
                                                    # append an empty block to fill in (placeholders fail lint)
+    python3 tools/ideaset.py power [SLUG ...]      # each set's power against its limit (strongest first; the build refuses sets over it)
     python3 tools/ideaset.py ranges KEY [KEY ...]  # the base game's value range for a modifier, and whether it is allowed
 
 Needs EU4_GAME and CK3_GAME like the build."""
@@ -82,6 +83,13 @@ def main(argv):
         problems += I.check_sets(sets)
         print("\n".join(problems) or f"{len(sets)} sets, no problems")
         return 1 if problems else 0
+    elif cmd == "power":
+        sets, _ = I.parse()
+        budget = I.vanilla_budget()
+        print(f"base game: median {budget['powers'][len(budget['powers']) // 2]:.2f}, strongest {budget['powers'][-1]:.2f}")
+        pick = [sets[w] for w in rest] if rest else sorted(sets.values(), key=lambda s: -I.set_power(s) / I.power_cap(s))[:25]
+        for s in pick:
+            print(f"{s['slug']:<28} {I.kind(s):<8} {I.set_power(s):6.2f} / {I.power_cap(s):.2f}")
     elif cmd == "ranges" and rest:
         ranges = I.vanilla_ranges()
         for k in rest:

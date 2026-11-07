@@ -5,7 +5,7 @@ trigger = tag KOS
 name = Pratihara
 start = cavalry_power 0.15, defensiveness 0.10
 bonus = gov 1
-idea = The Gurjara Cavalry | The Pratihara kings field the best horse in northern India, bought from Arab and Turkic dealers. | cavalry_power 0.20, shock_damage 0.10
+idea = The Gurjara Cavalry | The Pratihara kings field the best horse in northern India, bought from Arab and Turkic dealers. | cavalry_power 0.15, shock_damage 0.10
 idea = Kannauj | The city on the Ganga is the prize of three dynasties and the seat of the great king of the north. | prestige 1, gov 1
 idea = The Barrier Against Arabs | The Pratihara kings halted the Arab advance at Rajasthan and are praised as the shield of the Hindus. | army_tradition 0.75, defensiveness 0.15
 idea = The Doab Fields | The rich lands between the Ganga and the Yamuna fill the royal granaries. | global_tax_modifier 0.10, production_efficiency 0.10
@@ -42,7 +42,7 @@ idea = The Silk and Muslin Looms | Fine textiles from Bengal are known to the Ar
 [kamarupa]
 trigger = tag ASS
 name = Kamarupan
-start = defensiveness 0.15, land_attrition -0.15
+start = defensiveness 0.05, land_attrition -0.15
 bonus = gov 1
 idea = The Brahmaputra Valley | The great river waters a long fertile valley hemmed in by mountains. | production_efficiency 0.10, defensiveness 0.10
 idea = Kings of the Naraka Line | The Kamarupan kings claim descent from the demon Naraka, son of the Earth. | gov 1, prestige 1
@@ -50,7 +50,7 @@ idea = Shiva and the Mother Goddess | The Kamakhya temple draws pilgrims to the 
 idea = Hill and Valley Peoples | Kachari, Garo, Khasi and Naga tribes serve the king as scouts and levies. | global_manpower_modifier 0.15, improve_relation_modifier 0.25
 idea = Elephants of the Forest | Wild elephants are caught, trained and put into battle. | shock_damage 0.15, army_tradition 0.50
 idea = Silk and Agarwood | Kamarupa produces silk, eaglewood and spices for trade with Bengal and Tibet. | global_trade_goods_size_modifier 0.10, trade_efficiency 0.10
-idea = The Fortress Passes | The mountain gates to Tibet, Burma and Bengal are held by garrisons. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Fortress Passes | The mountain gates to Tibet, Burma and Bengal are held by garrisons. | fort_maintenance_modifier -0.20, defensiveness 0.1
 
 [lanka]
 trigger = tag CEY
@@ -94,12 +94,12 @@ idea = Mariners of Korkai | Korkai's seamen sail to Southeast Asia and Arabia, a
 [kashmir]
 trigger = tag KSH
 name = Kashmiri
-start = defensiveness 0.15, technology_cost -0.10
+start = defensiveness 0.1, technology_cost -0.10
 bonus = gov 1
-idea = The Valley Fortress | A ring of high mountains keeps the Kashmir valley safe from invaders. | defensiveness 0.20, hostile_attrition 1.0
+idea = The Valley Fortress | A ring of high mountains keeps the Kashmir valley safe from invaders. | defensiveness 0.15, hostile_attrition 1.0
 idea = Kings of the Karkota and Utpala | The line of Lalitaditya, who raided as far as Bengal, gives Kashmir pride. | prestige 1, gov 1
 idea = Sanskrit Scholars | Poets, grammarians and Shaiva philosophers write in Sanskrit at Kashmir's court. | technology_cost -0.15, idea_cost -0.05
 idea = Saffron and Shawl Wool | The valley grows saffron and spins fine wool, which the merchants carry down the passes. | production_efficiency 0.10, trade_efficiency 0.10
 idea = Temples of Shiva and Buddha | Both faiths have monuments here, and the king honours both. | tolerance_heretic 2, church_power_modifier 0.10
-idea = Passes to Central Asia | Caravans of Tibetan, Turkic and Chinese merchants cross Kashmir to India. | caravan_power 0.25, global_trade_power 0.10
+idea = Passes to Central Asia | Caravans of Tibetan, Turkic and Chinese merchants cross Kashmir to India. | caravan_power 0.2, global_trade_power 0.10
 idea = Damara Lords | The great landholders of Kashmir keep castles and rebellious followers, and threaten the king. | global_manpower_modifier 0.10, garrison_size 0.20

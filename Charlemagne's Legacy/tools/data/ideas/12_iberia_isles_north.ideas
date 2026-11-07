@@ -3,7 +3,7 @@
 [asturias]
 trigger = tag ASU,LEO
 name = Asturian
-start = defensiveness 0.15, land_morale 0.10
+start = defensiveness 0.1, land_morale 0.10
 bonus = gov 1
 idea = Covadonga | The cave where Pelayo broke the Moors is the founding story of every Asturian king and the reason they fight. | prestige 1, land_morale 0.10
 idea = The Gothic Succession | Alfonso III claims the Visigothic crown and the legitimacy of Toledo for a kingdom of mountain valleys. | gov 1, ae_impact -0.20
@@ -42,22 +42,22 @@ idea = The Poets and Physicians | Scholars from Baghdad and Kairouan teach in Co
 [egypt]
 trigger = tag EGY
 name = Egyptian
-start = production_efficiency 0.10, caravan_power 0.20
+start = production_efficiency 0.10, caravan_power 0.1
 bonus = gov 1
 idea = The Nile Flood | The river rises and falls with the year, and the whole realm lives or starves by its gauge. | global_tax_modifier 0.10, global_trade_goods_size_modifier 0.10
 idea = Fustat and the Nilometer | The governor's capital measures the flood on Roda island and sets the tax before the harvest. | yearly_corruption -0.10, administrative_efficiency 0.05
 idea = The Coptic Scribes | Christian clerks keep the accounts of Egypt as their fathers kept them for Pharaoh and Caesar. | tolerance_heretic 2, technology_cost -0.10
 idea = Papyrus, Flax and Linen | Alexandria's looms and the Fayyum's fields clothe and write for the Mediterranean world. | trade_efficiency 0.10, merchants 1
-idea = The Red Sea and the Spice Road | Pilgrim ships to Jeddah and Indian merchantmen deliver pepper and silk to the Delta. | global_trade_power 0.15, caravan_power 0.20
+idea = The Red Sea and the Spice Road | Pilgrim ships to Jeddah and Indian merchantmen deliver pepper and silk to the Delta. | global_trade_power 0.15, caravan_power 0.1
 idea = Turkish Troopers | Soldiers raised in the steppe and trained at the barracks of Fustat ride under the governor's banner. | cavalry_power 0.15, discipline 0.025
 idea = The Alexandrian Pharos | The beacon and the harbour of the old Ptolemaic capital still guide ships from Crete and Tunis. | galley_power 0.15, global_sailors_modifier 0.20
 
 [great_moravia]
 trigger = tag GMA
 name = Moravian
-start = defensiveness 0.15, garrison_size 0.20
+start = defensiveness 0.1, garrison_size 0.20
 bonus = gov 1
-idea = The Hillforts | Earth-and-timber hradiska on every river valley hold the land against Frankish raiders. | fort_maintenance_modifier -0.20, defensiveness 0.15
+idea = The Hillforts | Earth-and-timber hradiska on every river valley hold the land against Frankish raiders. | fort_maintenance_modifier -0.15, defensiveness 0.15
 idea = The Apostles to the Slavs | Cyril and Methodius arrive in 863, bringing a script, a liturgy and a Slavic church of Moravia's own. | tolerance_own 2, global_missionary_strength 0.02
 idea = Prince Rastislav's Council | The prince governs with the zupans, who lead their own retinues and sit in his council. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
 idea = The Slavic Liturgy | A Slavic Mass and Slavic writings make a Moravian priest a subject of the prince rather than of Salzburg. | gov 1, culture_conversion_cost -0.20
@@ -72,10 +72,10 @@ start = cavalry_power 0.10, defensiveness 0.10
 bonus = gov 1
 idea = Khan Boris and the New Faith | Boris was baptised in 864, and his boyars must learn to be both Bulgars and Christians. | tolerance_own 2, church_power_modifier 0.10
 idea = The Boyar Council | The great boyars hold the khan's army in their hands and his throne in their favour. | stability_cost_modifier -0.10, global_manpower_modifier 0.15
-idea = Slavs and Bulgars | A Turkic warrior caste has merged with the Slavic villages, and the khan rules both. | num_accepted_cultures 1, culture_conversion_cost -0.20
+idea = Slavs and Bulgars | A Turkic warrior caste has merged with the Slavic villages, and the khan rules both. | num_accepted_cultures 1, culture_conversion_cost -0.15
 idea = The Great Ditches of the Balkan | The Erkesiya earthwork and the Pliska ramparts hold the Byzantine road along the Balkan range. | fort_maintenance_modifier -0.20, defensiveness 0.15
 idea = The Khan's Horsemen | Bulgar horse archers and lancers have defeated an emperor and carried off his skull cup. | cavalry_power 0.20, army_tradition_from_battle 0.50
-idea = Pliska the Capital | The khan's palace of earth and stone replaces the felt tents of the steppe with a court. | prestige 1, administrative_efficiency 0.05
+idea = Pliska the Capital | The khan's palace of earth and stone replaces the felt tents of the steppe with a court. | prestige 0.8, administrative_efficiency 0.05
 idea = Black Sea Trade | The Danube and the Black Sea ports ship wheat, wax and slaves to Constantinople. | global_trade_power 0.10, production_efficiency 0.10
 
 [magyars]
@@ -84,7 +84,7 @@ name = Magyar
 start = cavalry_power 0.15, gov 1
 bonus = gov 1
 idea = The Seven Tribes | Seven tribes swore a blood oath and chose a leader, and the Magyar host moves as one body. | land_morale 0.10, improve_relation_modifier 0.25
-idea = The Horse Archer | A Magyar horseman shoots from the saddle at the gallop and feigns flight to draw the enemy on. | cavalry_power 0.20, shock_damage 0.10
+idea = The Horse Archer | A Magyar horseman shoots from the saddle at the gallop and feigns flight to draw the enemy on. | cavalry_power 0.15, shock_damage 0.10
 idea = Kende and Gyula | A sacred king and a war leader split the rule, and neither can seize all power. | stability_cost_modifier -0.10, gov 1
 idea = The Pontic Pastures | The grass between the Don and the Danube feeds herds without end. | global_manpower_modifier 0.20, manpower_recovery_speed 0.10
 idea = The Raid on Pannonia | Magyar bands cross the Carpathians each summer and return laden with captives and silver. | loot_amount 0.20, movement_speed 0.10
@@ -133,7 +133,7 @@ idea = Church of Lichfield | The archbishopric of Lichfield, short lived, left M
 [alba]
 trigger = tag SCO
 name = Alban
-start = defensiveness 0.15, land_attrition -0.15
+start = defensiveness 0.1, land_attrition -0.15
 bonus = gov 1
 idea = The Union of Picts and Scots | Kenneth mac Alpin's kingdom joins two peoples under the stone of Scone. | gov 1, stability_cost_modifier -0.10
 idea = Highland Fastnesses | The glens and lochs of the north make a campaign against the king a winter's torment. | hostile_attrition 0.5, defensiveness 0.15
@@ -185,11 +185,11 @@ idea = Pagan Rus Gods | Perun and Veles are sworn upon in every treaty the princ
 [sjaelland]
 trigger = tag SJA,DAN
 name = Danish
-start = galley_power 0.15, land_morale 0.10
+start = galley_power 0.1, land_morale 0.10
 bonus = gov 1
-idea = The Danevirke | The great earthwork across the base of Jutland shuts out the Franks and Saxons at one stroke. | defensiveness 0.20, fort_maintenance_modifier -0.20
+idea = The Danevirke | The great earthwork across the base of Jutland shuts out the Franks and Saxons at one stroke. | defensiveness 0.15, fort_maintenance_modifier -0.20
 idea = Hedeby the Port | The market on the Schlei draws Frisian, Slavic and Arab merchants who pay the king in silver. | global_trade_power 0.10, trade_efficiency 0.10
-idea = The Longship Fleet | Fleets of dragon ships carry Danes to the Seine, the Thames and the Mediterranean. | galley_power 0.20, naval_morale 0.10
+idea = The Longship Fleet | Fleets of dragon ships carry Danes to the Seine, the Thames and the Mediterranean. | galley_power 0.15, naval_morale 0.10
 idea = The Thing and the Hirdmen | Free farmers meet to judge, and the king's hird fights for him in war. | stability_cost_modifier -0.10, discipline 0.025
 idea = Raids on Frankia | A Danish chief can win a dukedom by one good season on the Loire. | loot_amount 0.20, movement_speed 0.10
 idea = The Island Kingdom | Zealand, Fyn and Scania guard one another by water. | global_sailors_modifier 0.25, defensiveness 0.10

@@ -554,7 +554,7 @@ kar_culture_franconian_ideas = {
 		army_tradition = 0.5
 	}
 	kar_culture_franconian_2 = {
-		prestige = 1
+		prestige = 0.65
 		legitimacy = 1
 		devotion = 1
 		horde_unity = 1
@@ -574,7 +574,7 @@ kar_culture_franconian_ideas = {
 		administrative_efficiency = 0.05
 	}
 	kar_culture_franconian_6 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		discipline = 0.025
 	}
 	kar_culture_franconian_7 = {
@@ -603,11 +603,11 @@ kar_culture_andalusian_ideas = {
 	free = yes
 
 	kar_culture_andalusian_1 = {
-		production_efficiency = 0.15
-		development_cost = -0.1
+		production_efficiency = 0.1
+		development_cost = -0.05
 	}
 	kar_culture_andalusian_2 = {
-		prestige = 1
+		prestige = 0.65
 		technology_cost = -0.1
 	}
 	kar_culture_andalusian_3 = {
@@ -713,26 +713,26 @@ kar_culture_bedouin_ideas = {
 	}
 	kar_culture_bedouin_2 = {
 		cavalry_power = 0.15
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	kar_culture_bedouin_3 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		global_tax_modifier = 0.1
 	}
 	kar_culture_bedouin_4 = {
 		land_morale = 0.1
-		prestige = 1
+		prestige = 0.65
 	}
 	kar_culture_bedouin_5 = {
 		defensiveness = 0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 	}
 	kar_culture_bedouin_6 = {
-		caravan_power = 0.2
+		caravan_power = 0.1
 		church_power_modifier = 0.1
 	}
 	kar_culture_bedouin_7 = {
-		loot_amount = 0.2
+		loot_amount = 0.15
 		army_tradition_from_battle = 0.5
 	}
 }
@@ -814,7 +814,7 @@ kar_culture_persian_ideas = {
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.5
-		prestige = 1
+		prestige = 0.75
 	}
 	kar_culture_persian_2 = {
 		global_tax_modifier = 0.1
@@ -873,7 +873,7 @@ kar_culture_turkish_ideas = {
 	free = yes
 
 	kar_culture_turkish_1 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		shock_damage = 0.1
 	}
 	kar_culture_turkish_2 = {
@@ -957,8 +957,8 @@ kar_culture_javanese_ideas = {
 
 kar_culture_malay_ideas = {
 	start = {
-		galley_power = 0.15
-		trade_efficiency = 0.1
+		galley_power = 0.1
+		trade_efficiency = 0.05
 	}
 
 	bonus = {
@@ -978,8 +978,8 @@ kar_culture_malay_ideas = {
 	free = yes
 
 	kar_culture_malay_1 = {
-		global_trade_power = 0.15
-		trade_efficiency = 0.1
+		global_trade_power = 0.05
+		trade_efficiency = 0.05
 	}
 	kar_culture_malay_2 = {
 		naval_morale = 0.1
@@ -998,18 +998,18 @@ kar_culture_malay_ideas = {
 		trade_efficiency = 0.1
 	}
 	kar_culture_malay_6 = {
-		movement_speed = 0.1
+		movement_speed = 0.05
 		galley_power = 0.1
 	}
 	kar_culture_malay_7 = {
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 		church_power_modifier = 0.1
 	}
 }
 
 kar_culture_philippine_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		defensiveness = 0.1
 	}
 
@@ -1066,7 +1066,7 @@ kar_culture_philippine_ideas = {
 
 kar_group_albanian_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 
@@ -1084,8 +1084,8 @@ kar_group_albanian_ideas = {
 	free = yes
 
 	kar_group_albanian_1 = {
-		defensiveness = 0.2
-		hostile_attrition = 1
+		defensiveness = 0.15
+		hostile_attrition = 0.7
 	}
 	kar_group_albanian_2 = {
 		stability_cost_modifier = -0.1
@@ -1096,11 +1096,11 @@ kar_group_albanian_ideas = {
 		global_manpower_modifier = 0.1
 	}
 	kar_group_albanian_4 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		movement_speed = 0.1
 	}
 	kar_group_albanian_5 = {
-		caravan_power = 0.2
+		caravan_power = 0.15
 		global_tax_modifier = 0.05
 	}
 	kar_group_albanian_6 = {
@@ -1112,8 +1112,8 @@ kar_group_albanian_ideas = {
 		diplomatic_reputation = 1
 	}
 	kar_group_albanian_7 = {
-		culture_conversion_cost = -0.2
-		prestige = 1
+		culture_conversion_cost = -0.15
+		prestige = 0.7
 	}
 }
 
@@ -1137,7 +1137,7 @@ kar_group_arabic_ideas = {
 	free = yes
 
 	kar_group_arabic_1 = {
-		prestige = 1
+		prestige = 0.85
 		idea_cost = -0.05
 	}
 	kar_group_arabic_2 = {
@@ -1168,7 +1168,7 @@ kar_group_arabic_ideas = {
 
 kar_group_austronesian_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		global_sailors_modifier = 0.2
 	}
 
@@ -1217,8 +1217,8 @@ kar_group_austronesian_ideas = {
 
 kar_group_baltic_ideas = {
 	start = {
-		defensiveness = 0.15
-		land_attrition = -0.15
+		defensiveness = 0.1
+		land_attrition = -0.1
 	}
 
 	bonus = {
@@ -1235,19 +1235,19 @@ kar_group_baltic_ideas = {
 	free = yes
 
 	kar_group_baltic_1 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		defensiveness = 0.15
 	}
 	kar_group_baltic_2 = {
-		caravan_power = 0.2
+		caravan_power = 0.15
 		global_tax_modifier = 0.1
 	}
 	kar_group_baltic_3 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 		land_attrition = -0.15
 	}
 	kar_group_baltic_4 = {
-		tolerance_own = 2
+		tolerance_own = 1.5
 		religious_unity = 0.1
 	}
 	kar_group_baltic_5 = {
@@ -1284,7 +1284,7 @@ kar_group_balto_finnic_ideas = {
 	free = yes
 
 	kar_group_balto_finnic_1 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 		defensiveness = 0.15
 	}
 	kar_group_balto_finnic_2 = {
@@ -1308,7 +1308,7 @@ kar_group_balto_finnic_ideas = {
 		improve_relation_modifier = 0.25
 	}
 	kar_group_balto_finnic_7 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		garrison_size = 0.2
 	}
 }
@@ -1334,19 +1334,19 @@ kar_group_berber_ideas = {
 
 	kar_group_berber_1 = {
 		land_attrition = -0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 	}
 	kar_group_berber_2 = {
 		improve_relation_modifier = 0.25
 		global_manpower_modifier = 0.15
 	}
 	kar_group_berber_3 = {
-		caravan_power = 0.25
+		caravan_power = 0.15
 		global_tax_modifier = 0.1
 	}
 	kar_group_berber_4 = {
 		cavalry_power = 0.15
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	kar_group_berber_5 = {
 		fort_maintenance_modifier = -0.15
@@ -1354,7 +1354,7 @@ kar_group_berber_ideas = {
 	}
 	kar_group_berber_6 = {
 		tolerance_heretic = 2
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 	}
 	kar_group_berber_7 = {
 		reduced_liberty_desire = 10
@@ -1364,7 +1364,7 @@ kar_group_berber_ideas = {
 
 kar_group_brythonic_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_morale = 0.1
 	}
 
@@ -1382,7 +1382,7 @@ kar_group_brythonic_ideas = {
 	free = yes
 
 	kar_group_brythonic_1 = {
-		prestige = 1
+		prestige = 0.7
 		legitimacy = 1
 		devotion = 1
 		horde_unity = 1
@@ -1398,11 +1398,11 @@ kar_group_brythonic_ideas = {
 		yearly_corruption = -0.1
 	}
 	kar_group_brythonic_4 = {
-		defensiveness = 0.2
-		hostile_attrition = 1
+		defensiveness = 0.15
+		hostile_attrition = 0.7
 	}
 	kar_group_brythonic_5 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		land_attrition = -0.15
 	}
 	kar_group_brythonic_6 = {
@@ -1436,15 +1436,15 @@ kar_group_byzantine_ideas = {
 
 	kar_group_byzantine_1 = {
 		technology_cost = -0.1
-		prestige = 1
+		prestige = 0.5
 	}
 	kar_group_byzantine_2 = {
 		church_power_modifier = 0.1
-		tolerance_own = 2
+		tolerance_own = 1.5
 	}
 	kar_group_byzantine_3 = {
 		global_sailors_modifier = 0.2
-		galley_power = 0.15
+		galley_power = 0.1
 	}
 	kar_group_byzantine_4 = {
 		production_efficiency = 0.1
@@ -1455,8 +1455,8 @@ kar_group_byzantine_ideas = {
 		administrative_efficiency = 0.05
 	}
 	kar_group_byzantine_6 = {
-		fort_maintenance_modifier = -0.2
-		defensiveness = 0.15
+		fort_maintenance_modifier = -0.1
+		defensiveness = 0.1
 	}
 	kar_group_byzantine_7 = {
 		global_trade_power = 0.1
@@ -1466,7 +1466,7 @@ kar_group_byzantine_ideas = {
 
 kar_group_caucasian_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		cavalry_power = 0.1
 	}
 
@@ -1484,8 +1484,8 @@ kar_group_caucasian_ideas = {
 	free = yes
 
 	kar_group_caucasian_1 = {
-		defensiveness = 0.2
-		hostile_attrition = 1
+		defensiveness = 0.1
+		hostile_attrition = 0.6
 	}
 	kar_group_caucasian_2 = {
 		cavalry_power = 0.15
@@ -1493,19 +1493,19 @@ kar_group_caucasian_ideas = {
 	}
 	kar_group_caucasian_3 = {
 		church_power_modifier = 0.1
-		tolerance_own = 2
+		tolerance_own = 1.5
 	}
 	kar_group_caucasian_4 = {
 		production_efficiency = 0.1
 		trade_efficiency = 0.1
 	}
 	kar_group_caucasian_5 = {
-		fort_maintenance_modifier = -0.2
-		garrison_size = 0.2
+		fort_maintenance_modifier = -0.15
+		garrison_size = 0.15
 	}
 	kar_group_caucasian_6 = {
 		diplomatic_reputation = 1
-		ae_impact = -0.2
+		ae_impact = -0.15
 	}
 	kar_group_caucasian_7 = {
 		improve_relation_modifier = 0.25
@@ -1602,7 +1602,7 @@ kar_group_east_slavic_ideas = {
 		global_tax_modifier = 0.05
 	}
 	kar_group_east_slavic_6 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		garrison_size = 0.2
 	}
 	kar_group_east_slavic_7 = {
@@ -1631,7 +1631,7 @@ kar_group_frankish_ideas = {
 	free = yes
 
 	kar_group_frankish_1 = {
-		prestige = 1
+		prestige = 0.65
 		legitimacy = 1
 		devotion = 1
 		horde_unity = 1
@@ -1655,12 +1655,12 @@ kar_group_frankish_ideas = {
 		shock_damage = 0.1
 	}
 	kar_group_frankish_6 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		defensiveness = 0.15
 	}
 	kar_group_frankish_7 = {
 		trade_efficiency = 0.1
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 }
 
@@ -1742,15 +1742,15 @@ kar_group_iberian_ideas = {
 
 	kar_group_iberian_1 = {
 		defensiveness = 0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.6
 	}
 	kar_group_iberian_2 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		garrison_size = 0.2
 	}
 	kar_group_iberian_3 = {
 		production_efficiency = 0.1
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	kar_group_iberian_4 = {
 		land_morale = 0.1
@@ -1794,8 +1794,8 @@ kar_group_israelite_ideas = {
 		religious_unity = 0.1
 	}
 	kar_group_israelite_2 = {
-		global_trade_power = 0.15
-		caravan_power = 0.2
+		global_trade_power = 0.1
+		caravan_power = 0.15
 	}
 	kar_group_israelite_3 = {
 		technology_cost = -0.1
@@ -1803,7 +1803,7 @@ kar_group_israelite_ideas = {
 	}
 	kar_group_israelite_4 = {
 		tolerance_heretic = 2
-		ae_impact = -0.2
+		ae_impact = -0.15
 	}
 	kar_group_israelite_5 = {
 		interest = -0.5
@@ -1815,7 +1815,7 @@ kar_group_israelite_ideas = {
 	}
 	kar_group_israelite_7 = {
 		land_morale = 0.1
-		prestige = 1
+		prestige = 0.7
 	}
 }
 
@@ -1896,7 +1896,7 @@ kar_group_magyar_ideas = {
 		land_morale = 0.1
 	}
 	kar_group_magyar_2 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		shock_damage = 0.1
 	}
 	kar_group_magyar_3 = {
@@ -1923,7 +1923,7 @@ kar_group_magyar_ideas = {
 
 kar_group_north_germanic_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		infantry_power = 0.1
 	}
 
@@ -1941,7 +1941,7 @@ kar_group_north_germanic_ideas = {
 	free = yes
 
 	kar_group_north_germanic_1 = {
-		galley_power = 0.2
+		galley_power = 0.15
 		naval_morale = 0.1
 	}
 	kar_group_north_germanic_2 = {
@@ -1949,7 +1949,7 @@ kar_group_north_germanic_ideas = {
 		improve_relation_modifier = 0.25
 	}
 	kar_group_north_germanic_3 = {
-		loot_amount = 0.2
+		loot_amount = 0.15
 		army_tradition_from_battle = 0.5
 	}
 	kar_group_north_germanic_4 = {
@@ -1962,7 +1962,7 @@ kar_group_north_germanic_ideas = {
 	}
 	kar_group_north_germanic_6 = {
 		production_efficiency = 0.1
-		prestige = 1
+		prestige = 0.7
 	}
 	kar_group_north_germanic_7 = {
 		tolerance_own = 2
@@ -1991,7 +1991,7 @@ kar_group_south_slavic_ideas = {
 
 	kar_group_south_slavic_1 = {
 		global_manpower_modifier = 0.15
-		garrison_size = 0.2
+		garrison_size = 0.15
 	}
 	kar_group_south_slavic_2 = {
 		improve_relation_modifier = 0.25
@@ -1999,11 +1999,11 @@ kar_group_south_slavic_ideas = {
 	}
 	kar_group_south_slavic_3 = {
 		defensiveness = 0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.6
 	}
 	kar_group_south_slavic_4 = {
 		technology_cost = -0.1
-		culture_conversion_cost = -0.2
+		culture_conversion_cost = -0.15
 	}
 	kar_group_south_slavic_5 = {
 		trade_efficiency = 0.1
@@ -2014,7 +2014,7 @@ kar_group_south_slavic_ideas = {
 		loot_amount = 0.15
 	}
 	kar_group_south_slavic_7 = {
-		tolerance_own = 2
+		tolerance_own = 1.5
 		tolerance_heretic = 2
 	}
 }
@@ -2040,7 +2040,7 @@ kar_group_syriac_ideas = {
 
 	kar_group_syriac_1 = {
 		church_power_modifier = 0.1
-		prestige = 1
+		prestige = 0.5
 	}
 	kar_group_syriac_2 = {
 		technology_cost = -0.1
@@ -2051,15 +2051,15 @@ kar_group_syriac_ideas = {
 		diplomatic_reputation = 1
 	}
 	kar_group_syriac_4 = {
-		caravan_power = 0.2
-		global_trade_power = 0.1
+		caravan_power = 0.1
+		global_trade_power = 0.05
 	}
 	kar_group_syriac_5 = {
-		tolerance_own = 2
+		tolerance_own = 1.5
 		global_missionary_strength = 0.02
 	}
 	kar_group_syriac_6 = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		hostile_attrition = 0.5
 	}
 	kar_group_syriac_7 = {
@@ -2089,7 +2089,7 @@ kar_group_vlach_ideas = {
 
 	kar_group_vlach_1 = {
 		production_efficiency = 0.1
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	kar_group_vlach_2 = {
 		stability_cost_modifier = -0.1
@@ -2097,11 +2097,11 @@ kar_group_vlach_ideas = {
 	}
 	kar_group_vlach_3 = {
 		land_attrition = -0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 	}
 	kar_group_vlach_4 = {
-		culture_conversion_cost = -0.2
-		prestige = 1
+		culture_conversion_cost = -0.15
+		prestige = 0.65
 	}
 	kar_group_vlach_5 = {
 		global_tax_modifier = 0.1
@@ -2137,11 +2137,11 @@ kar_group_volga_finnic_ideas = {
 	free = yes
 
 	kar_group_volga_finnic_1 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 		defensiveness = 0.15
 	}
 	kar_group_volga_finnic_2 = {
-		tolerance_own = 2
+		tolerance_own = 1.5
 		religious_unity = 0.1
 	}
 	kar_group_volga_finnic_3 = {
@@ -2153,11 +2153,11 @@ kar_group_volga_finnic_ideas = {
 		global_sailors_modifier = 0.2
 	}
 	kar_group_volga_finnic_5 = {
-		ae_impact = -0.2
+		ae_impact = -0.15
 		improve_relation_modifier = 0.25
 	}
 	kar_group_volga_finnic_6 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		garrison_size = 0.2
 	}
 	kar_group_volga_finnic_7 = {
@@ -2186,7 +2186,7 @@ kar_group_west_germanic_ideas = {
 	free = yes
 
 	kar_group_west_germanic_1 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		discipline = 0.025
 	}
 	kar_group_west_germanic_2 = {
@@ -2221,7 +2221,7 @@ kar_group_west_germanic_ideas = {
 
 kar_group_west_slavic_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		infantry_power = 0.1
 	}
 
@@ -2239,7 +2239,7 @@ kar_group_west_slavic_ideas = {
 	free = yes
 
 	kar_group_west_slavic_1 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		defensiveness = 0.15
 	}
 	kar_group_west_slavic_2 = {
@@ -2248,18 +2248,18 @@ kar_group_west_slavic_ideas = {
 	}
 	kar_group_west_slavic_3 = {
 		land_attrition = -0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 	}
 	kar_group_west_slavic_4 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		land_morale = 0.1
 	}
 	kar_group_west_slavic_5 = {
-		caravan_power = 0.2
+		caravan_power = 0.15
 		global_tax_modifier = 0.05
 	}
 	kar_group_west_slavic_6 = {
-		tolerance_own = 2
+		tolerance_own = 1.5
 		religious_unity = 0.1
 	}
 	kar_group_west_slavic_7 = {
@@ -2288,7 +2288,7 @@ kar_group_ugro_permian_ideas = {
 	free = yes
 
 	kar_group_ugro_permian_1 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 		defensiveness = 0.15
 	}
 	kar_group_ugro_permian_2 = {
@@ -2300,7 +2300,7 @@ kar_group_ugro_permian_ideas = {
 		religious_unity = 0.1
 	}
 	kar_group_ugro_permian_4 = {
-		movement_speed = 0.1
+		movement_speed = 0.05
 		manpower_recovery_speed = 0.1
 	}
 	kar_group_ugro_permian_5 = {
@@ -2342,26 +2342,26 @@ kar_group_iranian_ideas = {
 	}
 	kar_group_iranian_2 = {
 		idea_cost = -0.05
-		prestige = 1
+		prestige = 0.65
 	}
 	kar_group_iranian_3 = {
 		production_efficiency = 0.1
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	kar_group_iranian_4 = {
-		caravan_power = 0.2
+		caravan_power = 0.15
 		global_trade_power = 0.1
 	}
 	kar_group_iranian_5 = {
 		defensiveness = 0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 	}
 	kar_group_iranian_6 = {
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 		tolerance_heretic = 2
 	}
 	kar_group_iranian_7 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		mercenary_manpower = 0.25
 	}
 }
@@ -2398,7 +2398,7 @@ kar_group_turkic_ideas = {
 		republican_tradition = 0.5
 	}
 	kar_group_turkic_2 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		shock_damage = 0.1
 	}
 	kar_group_turkic_3 = {
@@ -2425,7 +2425,7 @@ kar_group_turkic_ideas = {
 
 kar_group_ainuic_ideas = {
 	start = {
-		land_attrition = -0.15
+		land_attrition = -0.1
 		defensiveness = 0.1
 	}
 
@@ -2455,7 +2455,7 @@ kar_group_ainuic_ideas = {
 		religious_unity = 0.1
 	}
 	kar_group_ainuic_4 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.75
 		land_attrition = -0.15
 	}
 	kar_group_ainuic_5 = {
@@ -2505,14 +2505,14 @@ kar_group_akan_ideas = {
 	}
 	kar_group_akan_3 = {
 		land_attrition = -0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 	}
 	kar_group_akan_4 = {
-		caravan_power = 0.2
+		caravan_power = 0.15
 		production_efficiency = 0.1
 	}
 	kar_group_akan_5 = {
-		prestige = 1
+		prestige = 0.65
 		improve_relation_modifier = 0.25
 	}
 	kar_group_akan_6 = {
@@ -2565,7 +2565,7 @@ kar_group_bantu_ideas = {
 		global_sailors_modifier = 0.2
 	}
 	kar_group_bantu_6 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		land_morale = 0.1
 	}
 	kar_group_bantu_7 = {
@@ -2660,7 +2660,7 @@ kar_group_buyeo_ideas = {
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.5
-		prestige = 1
+		prestige = 0.95
 	}
 	kar_group_buyeo_4 = {
 		global_tax_modifier = 0.1
@@ -2683,7 +2683,7 @@ kar_group_buyeo_ideas = {
 kar_group_central_african_ideas = {
 	start = {
 		cavalry_power = 0.1
-		caravan_power = 0.2
+		caravan_power = 0.1
 	}
 
 	bonus = {
@@ -2708,7 +2708,7 @@ kar_group_central_african_ideas = {
 		shock_damage = 0.1
 	}
 	kar_group_central_african_3 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		global_trade_power = 0.1
 	}
 	kar_group_central_african_4 = {
@@ -2758,7 +2758,7 @@ kar_group_chinese_ideas = {
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.5
-		prestige = 1
+		prestige = 0.6
 	}
 	kar_group_chinese_2 = {
 		administrative_efficiency = 0.05
@@ -2769,19 +2769,19 @@ kar_group_chinese_ideas = {
 		global_tax_modifier = 0.1
 	}
 	kar_group_chinese_4 = {
-		fort_maintenance_modifier = -0.2
-		garrison_size = 0.25
+		fort_maintenance_modifier = -0.15
+		garrison_size = 0.2
 	}
 	kar_group_chinese_5 = {
 		trade_efficiency = 0.1
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	kar_group_chinese_6 = {
 		yearly_corruption = -0.1
 		idea_cost = -0.05
 	}
 	kar_group_chinese_7 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		discipline = 0.025
 	}
 }
@@ -2822,11 +2822,11 @@ kar_group_dravidian_ideas = {
 		trade_efficiency = 0.1
 	}
 	kar_group_dravidian_5 = {
-		shock_damage = 0.15
+		shock_damage = 0.1
 		army_tradition = 0.5
 	}
 	kar_group_dravidian_6 = {
-		prestige = 1
+		prestige = 0.7
 		idea_cost = -0.05
 	}
 	kar_group_dravidian_7 = {
@@ -2837,8 +2837,8 @@ kar_group_dravidian_ideas = {
 
 kar_group_east_african_ideas = {
 	start = {
-		defensiveness = 0.1
-		caravan_power = 0.15
+		defensiveness = 0.05
+		caravan_power = 0.1
 	}
 
 	bonus = {
@@ -2855,19 +2855,19 @@ kar_group_east_african_ideas = {
 	free = yes
 
 	kar_group_east_african_1 = {
-		defensiveness = 0.15
-		hostile_attrition = 1
+		defensiveness = 0.1
+		hostile_attrition = 0.7
 	}
 	kar_group_east_african_2 = {
 		church_power_modifier = 0.1
 		tolerance_own = 2
 	}
 	kar_group_east_african_3 = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 	kar_group_east_african_4 = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 		shock_damage = 0.1
 	}
 	kar_group_east_african_5 = {
@@ -2875,18 +2875,18 @@ kar_group_east_african_ideas = {
 		trade_efficiency = 0.1
 	}
 	kar_group_east_african_6 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		global_trade_power = 0.1
 	}
 	kar_group_east_african_7 = {
 		diplomatic_reputation = 1
-		ae_impact = -0.2
+		ae_impact = -0.15
 	}
 }
 
 kar_group_hmongic_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 
@@ -2924,7 +2924,7 @@ kar_group_hmongic_ideas = {
 		religious_unity = 0.1
 	}
 	kar_group_hmongic_6 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.75
 		fort_maintenance_modifier = -0.15
 	}
 	kar_group_hmongic_7 = {
@@ -2969,7 +2969,7 @@ kar_group_indo_aryan_ideas = {
 		global_tax_modifier = 0.1
 	}
 	kar_group_indo_aryan_5 = {
-		shock_damage = 0.15
+		shock_damage = 0.1
 		army_tradition = 0.5
 	}
 	kar_group_indo_aryan_6 = {
@@ -2977,7 +2977,7 @@ kar_group_indo_aryan_ideas = {
 		merchants = 1
 	}
 	kar_group_indo_aryan_7 = {
-		movement_speed = 0.1
+		movement_speed = 0.05
 		global_sailors_modifier = 0.2
 	}
 }
@@ -3007,7 +3007,7 @@ kar_group_japonic_ideas = {
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.5
-		prestige = 1
+		prestige = 0.65
 	}
 	kar_group_japonic_2 = {
 		administrative_efficiency = 0.05
@@ -3023,7 +3023,7 @@ kar_group_japonic_ideas = {
 	}
 	kar_group_japonic_5 = {
 		church_power_modifier = 0.1
-		tolerance_own = 2
+		tolerance_own = 1.5
 	}
 	kar_group_japonic_6 = {
 		defensiveness = 0.15
@@ -3064,7 +3064,7 @@ kar_group_korean_ideas = {
 	}
 	kar_group_korean_2 = {
 		church_power_modifier = 0.15
-		prestige = 1
+		prestige = 0.95
 	}
 	kar_group_korean_3 = {
 		fort_maintenance_modifier = -0.2
@@ -3117,11 +3117,11 @@ kar_group_mon_khmer_ideas = {
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.5
-		prestige = 1
+		prestige = 0.7
 	}
 	kar_group_mon_khmer_3 = {
 		church_power_modifier = 0.1
-		prestige = 1
+		prestige = 0.75
 	}
 	kar_group_mon_khmer_4 = {
 		shock_damage = 0.15
@@ -3165,7 +3165,7 @@ kar_group_mongolic_ideas = {
 	free = yes
 
 	kar_group_mongolic_1 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		movement_speed = 0.1
 	}
 	kar_group_mongolic_2 = {
@@ -3196,7 +3196,7 @@ kar_group_mongolic_ideas = {
 
 kar_group_nivkh_ideas = {
 	start = {
-		land_attrition = -0.15
+		land_attrition = -0.1
 		defensiveness = 0.1
 	}
 
@@ -3245,7 +3245,7 @@ kar_group_nivkh_ideas = {
 
 kar_group_qiangic_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		cavalry_power = 0.1
 	}
 
@@ -3263,7 +3263,7 @@ kar_group_qiangic_ideas = {
 	free = yes
 
 	kar_group_qiangic_1 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.1
 		defensiveness = 0.15
 	}
 	kar_group_qiangic_2 = {
@@ -3284,17 +3284,17 @@ kar_group_qiangic_ideas = {
 	}
 	kar_group_qiangic_6 = {
 		loot_amount = 0.15
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	kar_group_qiangic_7 = {
 		land_attrition = -0.15
-		hostile_attrition = 1
+		hostile_attrition = 0.6
 	}
 }
 
 kar_group_sahelian_ideas = {
 	start = {
-		caravan_power = 0.2
+		caravan_power = 0.1
 		land_morale = 0.1
 	}
 
@@ -3316,7 +3316,7 @@ kar_group_sahelian_ideas = {
 		global_trade_power = 0.1
 	}
 	kar_group_sahelian_2 = {
-		caravan_power = 0.2
+		caravan_power = 0.1
 		global_sailors_modifier = 0.2
 	}
 	kar_group_sahelian_3 = {
@@ -3328,11 +3328,11 @@ kar_group_sahelian_ideas = {
 		shock_damage = 0.1
 	}
 	kar_group_sahelian_5 = {
-		prestige = 1
+		prestige = 0.75
 		stability_cost_modifier = -0.1
 	}
 	kar_group_sahelian_6 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		defensiveness = 0.15
 	}
 	kar_group_sahelian_7 = {
@@ -3392,8 +3392,8 @@ kar_group_senegambian_ideas = {
 
 kar_group_somalian_ideas = {
 	start = {
-		caravan_power = 0.2
-		land_attrition = -0.15
+		caravan_power = 0.15
+		land_attrition = -0.1
 	}
 
 	bonus = {
@@ -3427,14 +3427,14 @@ kar_group_somalian_ideas = {
 	}
 	kar_group_somalian_5 = {
 		cavalry_power = 0.1
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	kar_group_somalian_6 = {
 		church_power_modifier = 0.1
 		global_missionary_strength = 0.02
 	}
 	kar_group_somalian_7 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 		defensiveness = 0.1
 	}
 }
@@ -3490,7 +3490,7 @@ kar_group_tai_ideas = {
 
 kar_group_tibetan_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 
@@ -3508,7 +3508,7 @@ kar_group_tibetan_ideas = {
 	free = yes
 
 	kar_group_tibetan_1 = {
-		hostile_attrition = 1
+		hostile_attrition = 0.65
 		defensiveness = 0.15
 	}
 	kar_group_tibetan_2 = {
@@ -3520,11 +3520,11 @@ kar_group_tibetan_ideas = {
 		cavalry_cost = -0.15
 	}
 	kar_group_tibetan_4 = {
-		caravan_power = 0.25
+		caravan_power = 0.15
 		global_tax_modifier = 0.1
 	}
 	kar_group_tibetan_5 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		garrison_size = 0.2
 	}
 	kar_group_tibetan_6 = {
@@ -3533,17 +3533,17 @@ kar_group_tibetan_ideas = {
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.5
-		prestige = 1
+		prestige = 0.65
 	}
 	kar_group_tibetan_7 = {
 		cavalry_power = 0.15
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 }
 
 kar_group_tocharian_ideas = {
 	start = {
-		caravan_power = 0.2
+		caravan_power = 0.1
 		tolerance_heathen = 2
 	}
 
@@ -3569,15 +3569,15 @@ kar_group_tocharian_ideas = {
 		technology_cost = -0.1
 	}
 	kar_group_tocharian_3 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		global_trade_power = 0.1
 	}
 	kar_group_tocharian_4 = {
-		prestige = 1
+		prestige = 0.65
 		church_power_modifier = 0.05
 	}
 	kar_group_tocharian_5 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		defensiveness = 0.15
 	}
 	kar_group_tocharian_6 = {
@@ -3586,7 +3586,7 @@ kar_group_tocharian_ideas = {
 	}
 	kar_group_tocharian_7 = {
 		cavalry_power = 0.1
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 }
 

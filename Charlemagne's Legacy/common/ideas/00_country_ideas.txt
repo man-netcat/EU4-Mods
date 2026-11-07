@@ -52,7 +52,7 @@ kar_tang_ideas = {
 kar_abbasid_ideas = {
 	start = {
 		diplomatic_reputation = 1
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 	}
 
 	bonus = {
@@ -86,10 +86,10 @@ kar_abbasid_ideas = {
 	}
 	kar_abbasid_5 = {
 		tolerance_heretic = 2
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 	}
 	kar_abbasid_6 = {
-		spy_offence = 0.25
+		spy_offence = 0.2
 		envoy_travel_time = -0.25
 	}
 	kar_abbasid_7 = {
@@ -101,7 +101,7 @@ kar_abbasid_ideas = {
 kar_byzantine_ideas = {
 	start = {
 		defensiveness = 0.15
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 	}
 
 	bonus = {
@@ -125,7 +125,7 @@ kar_byzantine_ideas = {
 		garrison_size = 0.2
 	}
 	kar_byzantine_2 = {
-		galley_power = 0.2
+		galley_power = 0.15
 		naval_morale = 0.1
 	}
 	kar_byzantine_3 = {
@@ -137,16 +137,16 @@ kar_byzantine_ideas = {
 		inflation_reduction = 0.1
 	}
 	kar_byzantine_5 = {
-		diplomatic_reputation = 2
+		diplomatic_reputation = 1.5
 		improve_relation_modifier = 0.25
 	}
 	kar_byzantine_6 = {
-		discipline = 0.05
+		discipline = 0.025
 		army_tradition = 0.5
 	}
 	kar_byzantine_7 = {
 		global_missionary_strength = 0.02
-		prestige = 1
+		prestige = 0.8
 	}
 }
 
@@ -315,7 +315,7 @@ kar_kirghiz_ideas = {
 
 kar_srivijaya_ideas = {
 	start = {
-		galley_power = 0.2
+		galley_power = 0.15
 		global_sailors_modifier = 0.2
 	}
 
@@ -333,7 +333,7 @@ kar_srivijaya_ideas = {
 	free = yes
 
 	kar_srivijaya_1 = {
-		global_trade_power = 0.15
+		global_trade_power = 0.1
 		trade_efficiency = 0.1
 	}
 	kar_srivijaya_2 = {
@@ -341,11 +341,11 @@ kar_srivijaya_ideas = {
 		diplomatic_reputation = 1
 	}
 	kar_srivijaya_3 = {
-		naval_morale = 0.15
+		naval_morale = 0.1
 		light_ship_power = 0.15
 	}
 	kar_srivijaya_4 = {
-		prestige = 1
+		prestige = 0.7
 		global_missionary_strength = 0.02
 	}
 	kar_srivijaya_5 = {
@@ -353,7 +353,7 @@ kar_srivijaya_ideas = {
 		merchants = 1
 	}
 	kar_srivijaya_6 = {
-		vassal_income = 0.25
+		vassal_income = 0.2
 		reduced_liberty_desire = 10
 	}
 	kar_srivijaya_7 = {
@@ -364,7 +364,7 @@ kar_srivijaya_ideas = {
 
 kar_karolingian_empire_ideas = {
 	start = {
-		prestige = 1
+		prestige = 0.9
 		diplomatic_reputation = 1
 	}
 
@@ -682,7 +682,7 @@ kar_italy_ideas = {
 
 kar_navarra_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 
@@ -700,7 +700,7 @@ kar_navarra_ideas = {
 	free = yes
 
 	kar_navarra_1 = {
-		defensiveness = 0.2
+		defensiveness = 0.15
 		hostile_attrition = 0.5
 	}
 	kar_navarra_2 = {
@@ -784,7 +784,7 @@ kar_brittany_ideas = {
 
 kar_asturias_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_morale = 0.1
 	}
 
@@ -946,7 +946,7 @@ kar_al_andalus_ideas = {
 kar_egypt_ideas = {
 	start = {
 		production_efficiency = 0.1
-		caravan_power = 0.2
+		caravan_power = 0.1
 	}
 
 	bonus = {
@@ -980,7 +980,7 @@ kar_egypt_ideas = {
 	}
 	kar_egypt_5 = {
 		global_trade_power = 0.15
-		caravan_power = 0.2
+		caravan_power = 0.1
 	}
 	kar_egypt_6 = {
 		cavalry_power = 0.15
@@ -994,7 +994,7 @@ kar_egypt_ideas = {
 
 kar_great_moravia_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		garrison_size = 0.2
 	}
 
@@ -1012,7 +1012,7 @@ kar_great_moravia_ideas = {
 	free = yes
 
 	kar_great_moravia_1 = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		defensiveness = 0.15
 	}
 	kar_great_moravia_2 = {
@@ -1074,7 +1074,7 @@ kar_bulgaria_ideas = {
 	}
 	kar_bulgaria_3 = {
 		num_accepted_cultures = 1
-		culture_conversion_cost = -0.2
+		culture_conversion_cost = -0.15
 	}
 	kar_bulgaria_4 = {
 		fort_maintenance_modifier = -0.2
@@ -1085,7 +1085,7 @@ kar_bulgaria_ideas = {
 		army_tradition_from_battle = 0.5
 	}
 	kar_bulgaria_6 = {
-		prestige = 1
+		prestige = 0.8
 		administrative_efficiency = 0.05
 	}
 	kar_bulgaria_7 = {
@@ -1125,7 +1125,7 @@ kar_magyars_ideas = {
 		improve_relation_modifier = 0.25
 	}
 	kar_magyars_2 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		shock_damage = 0.1
 	}
 	kar_magyars_3 = {
@@ -1315,7 +1315,7 @@ kar_mercia_ideas = {
 
 kar_alba_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 
@@ -1526,7 +1526,7 @@ kar_kiev_ideas = {
 
 kar_sjaelland_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		land_morale = 0.1
 	}
 
@@ -1547,7 +1547,7 @@ kar_sjaelland_ideas = {
 	free = yes
 
 	kar_sjaelland_1 = {
-		defensiveness = 0.2
+		defensiveness = 0.15
 		fort_maintenance_modifier = -0.2
 	}
 	kar_sjaelland_2 = {
@@ -1555,7 +1555,7 @@ kar_sjaelland_ideas = {
 		trade_efficiency = 0.1
 	}
 	kar_sjaelland_3 = {
-		galley_power = 0.2
+		galley_power = 0.15
 		naval_morale = 0.1
 	}
 	kar_sjaelland_4 = {
@@ -1684,7 +1684,7 @@ kar_papacy_ideas = {
 
 kar_venice_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		trade_efficiency = 0.1
 	}
 
@@ -1722,18 +1722,18 @@ kar_venice_ideas = {
 		ae_impact = -0.2
 	}
 	kar_venice_6 = {
-		prestige = 1
+		prestige = 0.95
 		church_power_modifier = 0.1
 	}
 	kar_venice_7 = {
-		galley_power = 0.2
+		galley_power = 0.15
 		naval_morale = 0.1
 	}
 }
 
 kar_armenia_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_morale = 0.1
 	}
 
@@ -2103,7 +2103,7 @@ kar_spoleto_ideas = {
 
 kar_aghlabid_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		naval_morale = 0.1
 	}
 
@@ -2206,7 +2206,7 @@ kar_idrisid_ideas = {
 kar_rustamid_ideas = {
 	start = {
 		defensiveness = 0.1
-		caravan_power = 0.2
+		caravan_power = 0.1
 	}
 
 	bonus = {
@@ -2231,7 +2231,7 @@ kar_rustamid_ideas = {
 		prestige = 1
 	}
 	kar_rustamid_3 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		global_trade_power = 0.1
 	}
 	kar_rustamid_4 = {
@@ -2254,7 +2254,7 @@ kar_rustamid_ideas = {
 
 kar_sicily_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		trade_efficiency = 0.1
 	}
 
@@ -2279,7 +2279,7 @@ kar_sicily_ideas = {
 		tolerance_heathen = 2
 	}
 	kar_sicily_2 = {
-		prestige = 1
+		prestige = 0.85
 		global_trade_power = 0.1
 	}
 	kar_sicily_3 = {
@@ -2287,7 +2287,7 @@ kar_sicily_ideas = {
 		production_efficiency = 0.1
 	}
 	kar_sicily_4 = {
-		galley_power = 0.2
+		galley_power = 0.15
 		naval_morale = 0.1
 	}
 	kar_sicily_5 = {
@@ -2328,7 +2328,7 @@ kar_saffarid_ideas = {
 		prestige = 1
 	}
 	kar_saffarid_2 = {
-		discipline = 0.05
+		discipline = 0.025
 		land_morale = 0.1
 	}
 	kar_saffarid_3 = {
@@ -2492,7 +2492,7 @@ kar_sindh_ideas = {
 	}
 	kar_sindh_3 = {
 		global_tax_modifier = 0.1
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 	}
 	kar_sindh_4 = {
 		global_trade_power = 0.15
@@ -2507,14 +2507,14 @@ kar_sindh_ideas = {
 		development_cost = -0.1
 	}
 	kar_sindh_7 = {
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 		improve_relation_modifier = 0.25
 	}
 }
 
 kar_ghana_ideas = {
 	start = {
-		caravan_power = 0.2
+		caravan_power = 0.1
 		land_morale = 0.1
 	}
 
@@ -2536,7 +2536,7 @@ kar_ghana_ideas = {
 		prestige = 1
 	}
 	kar_ghana_2 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		global_trade_power = 0.1
 	}
 	kar_ghana_3 = {
@@ -2567,7 +2567,7 @@ kar_ghana_ideas = {
 
 kar_abyssinia_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 
@@ -2593,7 +2593,7 @@ kar_abyssinia_ideas = {
 		prestige = 1
 	}
 	kar_abyssinia_2 = {
-		defensiveness = 0.2
+		defensiveness = 0.15
 		hostile_attrition = 0.5
 	}
 	kar_abyssinia_3 = {
@@ -2711,7 +2711,7 @@ kar_zhetysu_ideas = {
 		trade_efficiency = 0.1
 	}
 	kar_zhetysu_4 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		shock_damage = 0.1
 	}
 	kar_zhetysu_5 = {
@@ -2890,7 +2890,7 @@ kar_tuva_ideas = {
 kar_sibir_ideas = {
 	start = {
 		defensiveness = 0.1
-		land_attrition = -0.15
+		land_attrition = -0.1
 	}
 
 	bonus = {
@@ -2915,7 +2915,7 @@ kar_sibir_ideas = {
 		vassal_income = 0.2
 	}
 	kar_sibir_3 = {
-		movement_speed = 0.1
+		movement_speed = 0.05
 		global_sailors_modifier = 0.2
 	}
 	kar_sibir_4 = {
@@ -2942,7 +2942,7 @@ kar_sibir_ideas = {
 
 kar_khotan_ideas = {
 	start = {
-		caravan_power = 0.2
+		caravan_power = 0.1
 		tolerance_heathen = 2
 	}
 
@@ -2980,7 +2980,7 @@ kar_khotan_ideas = {
 		ae_impact = -0.2
 	}
 	kar_khotan_6 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		defensiveness = 0.1
 	}
 	kar_khotan_7 = {
@@ -2992,7 +2992,7 @@ kar_khotan_ideas = {
 kar_hexi_ideas = {
 	start = {
 		defensiveness = 0.15
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 	}
 
 	bonus = {
@@ -3021,11 +3021,11 @@ kar_hexi_ideas = {
 		church_power_modifier = 0.1
 	}
 	kar_hexi_3 = {
-		caravan_power = 0.25
+		caravan_power = 0.2
 		trade_efficiency = 0.1
 	}
 	kar_hexi_4 = {
-		tolerance_heathen = 2
+		tolerance_heathen = 1.5
 		num_accepted_cultures = 1
 	}
 	kar_hexi_5 = {
@@ -3044,7 +3044,7 @@ kar_hexi_ideas = {
 
 kar_u_tsang_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		land_attrition = -0.15
 	}
 
@@ -3100,8 +3100,8 @@ kar_u_tsang_ideas = {
 
 kar_guge_ideas = {
 	start = {
-		defensiveness = 0.15
-		caravan_power = 0.2
+		defensiveness = 0.1
+		caravan_power = 0.1
 	}
 
 	bonus = {
@@ -3134,7 +3134,7 @@ kar_guge_ideas = {
 		trade_efficiency = 0.1
 	}
 	kar_guge_4 = {
-		caravan_power = 0.25
+		caravan_power = 0.1
 		global_trade_power = 0.1
 	}
 	kar_guge_5 = {
@@ -3142,7 +3142,7 @@ kar_guge_ideas = {
 		global_missionary_strength = 0.02
 	}
 	kar_guge_6 = {
-		defensiveness = 0.2
+		defensiveness = 0.15
 		fort_maintenance_modifier = -0.2
 	}
 	kar_guge_7 = {
@@ -3187,7 +3187,7 @@ kar_dali_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	kar_dali_4 = {
-		caravan_power = 0.25
+		caravan_power = 0.2
 		cavalry_cost = -0.15
 	}
 	kar_dali_5 = {
@@ -3482,7 +3482,7 @@ kar_viet_ideas = {
 
 kar_champa_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		global_sailors_modifier = 0.2
 	}
 
@@ -3602,7 +3602,7 @@ kar_pratihara_ideas = {
 	free = yes
 
 	kar_pratihara_1 = {
-		cavalry_power = 0.2
+		cavalry_power = 0.15
 		shock_damage = 0.1
 	}
 	kar_pratihara_2 = {
@@ -3743,7 +3743,7 @@ kar_pala_ideas = {
 
 kar_kamarupa_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.05
 		land_attrition = -0.15
 	}
 
@@ -3790,7 +3790,7 @@ kar_kamarupa_ideas = {
 	}
 	kar_kamarupa_7 = {
 		fort_maintenance_modifier = -0.2
-		defensiveness = 0.15
+		defensiveness = 0.1
 	}
 }
 
@@ -3955,7 +3955,7 @@ kar_pandya_ideas = {
 
 kar_kashmir_ideas = {
 	start = {
-		defensiveness = 0.15
+		defensiveness = 0.1
 		technology_cost = -0.1
 	}
 
@@ -3973,7 +3973,7 @@ kar_kashmir_ideas = {
 	free = yes
 
 	kar_kashmir_1 = {
-		defensiveness = 0.2
+		defensiveness = 0.15
 		hostile_attrition = 1
 	}
 	kar_kashmir_2 = {
@@ -3997,7 +3997,7 @@ kar_kashmir_ideas = {
 		church_power_modifier = 0.1
 	}
 	kar_kashmir_6 = {
-		caravan_power = 0.25
+		caravan_power = 0.2
 		global_trade_power = 0.1
 	}
 	kar_kashmir_7 = {

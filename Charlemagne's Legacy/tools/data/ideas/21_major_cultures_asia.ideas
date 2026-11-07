@@ -16,20 +16,20 @@ idea = Warships of the Java Sea | Javanese fleets sail to Sumatra, Borneo and Ma
 [culture_malay]
 trigger = culture malay,acehnese
 name = Malay
-start = galley_power 0.15, trade_efficiency 0.10
+start = galley_power 0.1, trade_efficiency 0.05
 bonus = gov 1
-idea = Straits of Malacca | Ships pass through narrow waters controlled by the Malay ports. | global_trade_power 0.15, trade_efficiency 0.10
+idea = Straits of Malacca | Ships pass through narrow waters controlled by the Malay ports. | global_trade_power 0.05, trade_efficiency 0.05
 idea = The Orang Laut | Sea nomads pilot, scout and fight for Malay rulers. | naval_morale 0.10, global_sailors_modifier 0.20
 idea = Pepper and Tin | Sumatran pepper and Malay tin are sold to Indian and Chinese traders. | global_trade_goods_size_modifier 0.10, production_efficiency 0.10
 idea = The Raja and the Bendahara | The king rules with a first minister who holds the treasury and command. | administrative_efficiency 0.05, yearly_corruption -0.10
 idea = River Ports | Cities along the rivers mark the line between jungle and sea. | merchants 1, trade_efficiency 0.10
-idea = The Malay Rivers | Boats carry soldiers to every village along the coast. | movement_speed 0.10, galley_power 0.10
-idea = Indian Traders and Religion | Indian merchants and Brahmins give Malay courts titles and rites. | tolerance_heathen 2, church_power_modifier 0.10
+idea = The Malay Rivers | Boats carry soldiers to every village along the coast. | movement_speed 0.05, galley_power 0.10
+idea = Indian Traders and Religion | Indian merchants and Brahmins give Malay courts titles and rites. | tolerance_heathen 1.5, church_power_modifier 0.10
 
 [culture_philippine]
 trigger = culture bisayan,tagalog,iloko
 name = Philippine
-start = galley_power 0.15, defensiveness 0.10
+start = galley_power 0.1, defensiveness 0.10
 bonus = gov 1
 idea = The Barangay | The boat-community of the datu is a village, a war band and a trading house. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
 idea = Datu and Rajah | Chiefs rule with generosity and war prowess. | prestige 1, gov 1

@@ -68,9 +68,9 @@ idea = The Holy See at Rome | The pope crowns the emperor and expects obedience 
 [navarra]
 trigger = tag NAV
 name = Navarrese
-start = defensiveness 0.15, land_attrition -0.15
+start = defensiveness 0.1, land_attrition -0.15
 bonus = gov 1
-idea = The Passes of the Pyrenees | The mountains that turned back Charlemagne's rearguard are the kingdom's gate and its wall. | defensiveness 0.20, hostile_attrition 0.5
+idea = The Passes of the Pyrenees | The mountains that turned back Charlemagne's rearguard are the kingdom's gate and its wall. | defensiveness 0.15, hostile_attrition 0.5
 idea = The Banu Qasi Alliance | Muslim lords of Tudela are Pamplona's kin by marriage and its allies against Cordoba. | improve_relation_modifier 0.25, diplomatic_reputation 1
 idea = Infanzones and Fueros | Free landowners swear to the king in return for their own laws and exemptions. | global_manpower_modifier 0.15, reduced_liberty_desire 10
 idea = The Basque Tongue and Law | An old language and customs older than Rome mark every Navarrese as one people. | stability_cost_modifier -0.10, culture_conversion_cost -0.20

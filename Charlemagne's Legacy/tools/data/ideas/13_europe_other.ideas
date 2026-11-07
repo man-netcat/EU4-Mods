@@ -16,20 +16,20 @@ idea = The Peter's Pence | Pilgrims leave offerings at the tomb of the Apostle a
 [venice]
 trigger = tag VEN
 name = Venetian
-start = galley_power 0.15, trade_efficiency 0.10
+start = galley_power 0.1, trade_efficiency 0.10
 bonus = gov 1
 idea = The Lagoon | A ring of shifting sandbanks and marshes protects the islands better than a wall. | defensiveness 0.15, hostile_attrition 0.5
 idea = The Doge and the Assembly | The people of the lagoon elect their doge and swear him to the laws of Venice. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
 idea = Salt Pans of the Lagoon | Salt gathered in the shallows is the first good Venice sells to the mainland. | global_tax_modifier 0.10, production_efficiency 0.10
 idea = The Merchants of Rialto | Families of traders draw up contracts, share risk and send convoys to Alexandria and Constantinople. | merchants 1, global_trade_power 0.15
 idea = Between Two Empires | Venice sells to Byzantium, to the Franks and to the Muslims, and takes sides only when she must. | diplomatic_reputation 1, ae_impact -0.20
-idea = The Relics of St Mark | The Evangelist's body, stolen from Alexandria in 828, makes Venice a holy city in her own right. | prestige 1, church_power_modifier 0.10
-idea = War Galleys of the Adriatic | Venetian crews chase Narentine pirates off the Dalmatian coast and keep the Adriatic open. | galley_power 0.20, naval_morale 0.10
+idea = The Relics of St Mark | The Evangelist's body, stolen from Alexandria in 828, makes Venice a holy city in her own right. | prestige 0.95, church_power_modifier 0.10
+idea = War Galleys of the Adriatic | Venetian crews chase Narentine pirates off the Dalmatian coast and keep the Adriatic open. | galley_power 0.15, naval_morale 0.10
 
 [armenia]
 trigger = tag APR,ARM
 name = Armenian
-start = defensiveness 0.15, land_morale 0.10
+start = defensiveness 0.1, land_morale 0.10
 bonus = gov 1
 idea = The Nakharar Houses | Great families hold the valleys by hereditary right, and the prince of princes rules by their consent. | stability_cost_modifier -0.10, global_manpower_modifier 0.15
 idea = The Bagratid Prince | Ashot Bagratuni's recognition as prince of princes unites the highland lords under one family. | gov 1, prestige 1

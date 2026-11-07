@@ -64,6 +64,84 @@ def vanilla_ranges():
     return {k: (min(v), max(v)) for k, v in seen.items()}
 
 
+#: how much of the base game's strongest sets a set may use: a tag set stays under the base game's 98th percentile, a culture
+#: or culture-group set (it serves many tags) under the 90th, and no modifier's total over a set passes the highest total any
+#: base-game set reaches for it
+TAG_QUANTILE, OTHER_QUANTILE = 0.98, 0.90
+
+
+def power(mods, ranges):
+    """What a list of modifiers is worth: each is its value as a share of the largest the base game gives that key, summed.
+    The government stats count once (only the one that fits the government applies)."""
+    gov_keys = {g for g, _f in GOV}
+    share = lambda k, v: abs(v) / (max(abs(ranges[k][0]), abs(ranges[k][1])) or 1)  # noqa: E731
+    total = sum(share(k, v) for k, v in mods if k in ranges and k not in gov_keys)
+    return total + max([share(k, v) for k, v in mods if k in gov_keys and k in ranges] or [0])
+
+
+_BUDGET = {}
+
+
+def vanilla_budget():
+    """{"ranges", "powers" (sorted, one per base-game set), "totals" ({key: largest |sum| in one set})} from the base game's own
+    national, culture and group idea sets (a block with at least ten numbers is a full set)."""
+    if _BUDGET:
+        return _BUDGET
+    ranges = vanilla_ranges()
+    powers, totals = [], collections.defaultdict(float)
+    for fn in ("00_country_ideas.txt", "zz_group_ideas.txt"):
+        text = re.sub(r"#.*", "", open(os.path.join(GAME, "common", "ideas", fn), encoding="cp1252", errors="replace").read())
+        for m in re.finditer(r"(?m)^[A-Za-z0-9_]+\s*=\s*\{", text):
+            depth, j = 1, m.end()
+            while depth and j < len(text):
+                depth += (text[j] == "{") - (text[j] == "}")
+                j += 1
+            mods = [(k, float(v)) for k, v in re.findall(r"(?m)^\s*([a-z_0-9]+)\s*=\s*(-?[0-9.]+)\s*$", text[m.end():j])]
+            if len(mods) < 10:
+                continue
+            powers.append(power(mods, ranges))
+            sums = collections.defaultdict(float)
+            for k, v in mods:
+                sums[k] += v
+            for k, v in sums.items():
+                totals[k] = max(totals[k], abs(v))
+    _BUDGET.update(ranges=ranges, powers=sorted(powers), totals=dict(totals))
+    return _BUDGET
+
+
+def set_power(s, ranges=None):
+    ranges = ranges or vanilla_budget()["ranges"]
+    return power(s["start"] + s["bonus"] + [m for i in s["ideas"] for m in i["mods"]], ranges)
+
+
+def power_cap(s):
+    """The most power a set may have (see TAG_QUANTILE)."""
+    powers = vanilla_budget()["powers"]
+    q = TAG_QUANTILE if kind(s) == "tag" else OTHER_QUANTILE
+    return powers[min(len(powers) - 1, int(len(powers) * q))]
+
+
+def check_power(sets):
+    """Problems for sets stronger than the base game's: too much in total, or too much of one modifier."""
+    budget = vanilla_budget()
+    problems = []
+    for s in sets.values():
+        w = s["slug"]
+        have, cap = set_power(s, budget["ranges"]), power_cap(s)
+        if have > cap + 1e-9:
+            problems.append(f"{w}: power {have:.2f} is over the {kind(s)} limit {cap:.2f} (the base game's strongest sets reach "
+                            f"{budget['powers'][-1]:.2f}); trim the biggest values")
+        sums = collections.defaultdict(float)
+        for k, v in s["start"] + s["bonus"] + [m for i in s["ideas"] for m in i["mods"]]:
+            sums[k] += v
+        gov_keys = {g for g, _f in GOV}
+        for k, v in sums.items():
+            top = budget["totals"].get(k)
+            if k not in gov_keys and top is not None and abs(v) > top + 1e-9:
+                problems.append(f"{w}: {k} adds up to {v:g} over the whole set, the base game's highest is {top:g}")
+    return problems
+
+
 def _mods(text, where, problems):
     out = []
     for part in [p.strip() for p in text.split(",") if p.strip()]:
@@ -187,7 +265,7 @@ def check_sets(sets):
                 lo, hi = ranges.get(key, (None, None))
                 if lo is not None and not gov and not (min(lo, hi) - 1e-9 <= val <= max(lo, hi) + 1e-9):
                     problems.append(f"{w} {label}: {key} {val:g} is outside the base game's {lo:g}..{hi:g}")
-    return problems
+    return problems + check_power(sets)
 
 
 def VANILLA_ONLY_TAGS():

@@ -35,6 +35,12 @@ idea = Name | One-sentence description. | key value, key value      # exactly se
   the base game uses for that key, and the key is not a force limit (troops come from development alone), colonial, trade-company,
   gunpowder, institution, absolutism, estate, parliament, revolution or a flat "free_/possible_/may_" bonus. Names must stay in
   Latin-1 (no Ž, Ć, Š): validate fails the loc otherwise.
+- **Power budget** (`check_power`, measured from the base game's own idea sets at run time): a value counts as its share of the
+  largest the base game gives that key; a set's power is the sum over tradition, ambition and ideas (government stats count once).
+  A tag set must stay under the base game's 98th percentile (about 10.3), a culture or culture-group set under its 90th (about 8.8,
+  it serves many tags), and no modifier's total over a set may pass the highest total any base-game set reaches for it (so two
+  ideas cannot both carry `defensiveness 0.20`). `ideaset.py power [SLUG]` shows where a set stands; when over, trim the biggest
+  value by one step rather than adding a malus. The build, `ideaset.py lint` and validate all refuse an overpowered set.
 - Make each set specific: a historical or cultural hook in every idea, not a generic stat line. Do not copy vanilla idea names.
 
 ## Quick commands (run from the mod folder with `EU4_GAME`/`CK3_GAME` set, see `cl-build-validate`)
@@ -45,6 +51,7 @@ python3 tools/ideaset.py list [tag|culture|group]   # all sets with their trigge
 python3 tools/ideaset.py show SLUG              # one set as it will be written to common/ideas
 python3 tools/ideaset.py ranges KEY [KEY ...]   # the base game's range for a modifier and whether it is allowed here
 python3 tools/ideaset.py new SLUG --tag A,B --name Name [--file 15_x.ideas]   # append an empty block (also --culture / --group)
+python3 tools/ideaset.py power [SLUG ...]       # power against the limit, strongest first
 python3 tools/ideaset.py lint                   # what the build checks; exit 1 on a problem
 ```
 
