@@ -2,7 +2,7 @@
 """Work with the national idea sets in tools/data/ideas without opening the data files.
 
     python3 tools/ideaset.py which TAG [TAG ...]   # the set a tag gets, why, and its ideas
-    python3 tools/ideaset.py list [tag|culture|group]   # every set with its trigger
+    python3 tools/ideaset.py list [tag|factor|culture|group]   # every set with its trigger
     python3 tools/ideaset.py show SLUG             # one set as the generator will write it
     python3 tools/ideaset.py lint                  # the checks the build runs (exit 1 on a problem)
     python3 tools/ideaset.py new SLUG --tag A,B | --culture a,b | --group g --name Name [--file 15_x.ideas]
@@ -22,17 +22,7 @@ from tagdb import BY_TAG, culture_groups  # noqa: E402
 
 
 def _ordered(sets):
-    return sorted(sets.values(), key=lambda s: ({"tag": 0, "culture": 1, "group": 2}[I.kind(s)], s["order"]))
-
-
-def _matches(s, tag, culture, group):
-    hit = False
-    for neg, what, values in s["trigger"]:
-        h = (what == "tag" and tag in values) or (what == "culture" and culture in values) or (what == "group" and group in values)
-        if neg and h:
-            return False
-        hit = hit or (h and not neg)
-    return hit
+    return sorted(sets.values(), key=lambda s: (I.KIND_ORDER[I.kind(s)], s["order"]))
 
 
 def which(tags):
@@ -44,7 +34,7 @@ def which(tags):
             print(f"{tag}: no such tag")
             continue
         grp = group_of.get(row.culture)
-        s = next((x for x in _ordered(sets) if _matches(x, tag, row.culture, grp)), None)
+        s = next((x for x in _ordered(sets) if I.matches(x, row, group_of)), None)
         if s is None:
             print(f"{tag} ({row.culture}, {grp}): no set of ours: it would fall to the base game's default")
             continue

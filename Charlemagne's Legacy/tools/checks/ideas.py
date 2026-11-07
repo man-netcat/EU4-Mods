@@ -28,19 +28,9 @@ def national_ideas_cover_every_tag() -> None:
                    f"closest {worst['slug']} {I.set_power(worst):.2f} of {I.power_cap(worst):.2f}")
 
     group_of = {c: g for g, v in culture_groups().items() for c in v}
-    ordered = sorted(sets.values(), key=lambda s: ({"tag": 0, "culture": 1, "group": 2}[I.kind(s)], s["order"]))
+    ordered = sorted(sets.values(), key=lambda s: (I.KIND_ORDER[I.kind(s)], s["order"]))
 
-    def matches(s, tag, culture):
-        hit = False
-        for neg, what, values in s["trigger"]:
-            h = (what == "tag" and tag in values) or (what == "culture" and culture in values) \
-                or (what == "group" and group_of.get(culture) in values)
-            if neg and h:
-                return False
-            hit = hit or (h and not neg)
-        return hit
-
-    bare = [t for t, row in BY_TAG.items() if not any(matches(s, t, row.culture) for s in ordered)]
+    bare = [t for t, row in BY_TAG.items() if not any(I.matches(s, row, group_of) for s in ordered)]
     note(not bare, f"every tag gets a national idea set of ours, none falls to the default ({len(bare)} do)")
     for t in bare[:10]:
         print(f"        {t} ({BY_TAG[t].culture})")

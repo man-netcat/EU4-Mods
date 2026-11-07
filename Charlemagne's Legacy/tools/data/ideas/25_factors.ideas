@@ -1,0 +1,158 @@
+# Factor sets: tried after the tag sets and before the culture sets. A condition (religion, government, rank, tech, reform) narrows
+# a realm by what it is rather than who: these are the base game's "by religion or government" groups for the year 867.
+
+[faith_norse]
+trigger = religion norse_pagan
+name = Heathen Norse
+start = galley_power 0.10, loot_amount 0.10
+bonus = gov 1
+idea = The Dragon Ship | The clinker-built longship goes where no Christian fleet dares, and the oarsmen are free men who own their shares. | galley_power 0.15, naval_morale 0.10
+idea = The Thing at the Mound | Free men gather at the lawmound and the lawspeaker recites the law from memory; a chief rules by their consent. | stability_cost_modifier -0.10, improve_relation_modifier 0.20
+idea = Winter Raid and Summer Trade | The same crews carry furs and slaves to the markets and iron and silver home. | loot_amount 0.15, trade_efficiency 0.05
+idea = Oath-sworn Hirdmen | A jarl's household warriors eat at his table and die at his side. | land_morale 0.10, army_tradition_from_battle 0.50
+idea = The Shield Wall | Men of the same hundred stand shoulder to shoulder and the line does not break. | infantry_power 0.10, defensiveness 0.10
+idea = Blood Feud and Wergild | The feud is settled by payment before a Thing, or it is settled by the axe. | ae_impact -0.10, diplomatic_reputation 1
+idea = Odin's Chosen | The warrior who dies with a sword in hand feasts in Valhalla, and this makes men fearless. | tolerance_own 2, religious_unity 0.10
+
+[faith_slavic]
+trigger = religion slavic_pagan
+name = Slavic Tribes
+start = defensiveness 0.10, global_manpower_modifier 0.10
+bonus = gov 1
+idea = The Hillfort | A timber and earth rampart on a hill or an island in the marsh shelters the whole tribe and its herds. | defensiveness 0.15, fort_maintenance_modifier -0.10
+idea = The Veche | The free men gather, shout their consent and elect a war leader for the season. | stability_cost_modifier -0.10, legitimacy 0.5
+idea = Forest and Marsh | The tribe knows the paths through bog and thicket that a stranger cannot find. | hostile_attrition 0.5, movement_speed 0.05
+idea = Swidden Fields and Beehives | Burnt clearings, millet and honey feed the tribe without the lord's granary. | production_efficiency 0.10, global_tax_modifier 0.05
+idea = The Sacred Grove | At the grove and the carved idol of the god the oath is sworn and the harvest is blessed. | tolerance_own 2, religious_unity 0.10
+idea = Amber and Fur | River portages carry furs, honey and slaves to the markets on the Dnieper and the Elbe. | trade_efficiency 0.10, caravan_power 0.10
+idea = Levy of the Tribe | When the war horn sounds every free man brings his spear and a sack of meal. | global_manpower_modifier 0.10, land_morale 0.05
+
+[faith_finnic_baltic]
+trigger = religion finnish_pagan,baltic_pagan
+name = Forest Peoples
+start = hostile_attrition 0.5, defensiveness 0.10
+bonus = gov 1
+idea = Hillfort and Swamp | A palisade on a wooded hill and a belt of marsh around it stop a column of strangers. | defensiveness 0.15, fort_maintenance_modifier -0.10
+idea = The Sacred Grove | The old oak and the spring are where the people meet the gods, and no priest of Christ has felled them. | tolerance_own 2, religious_unity 0.10
+idea = Amber Roads | Amber, furs and wax pass from the coast to the south along old paths. | trade_efficiency 0.10, caravan_power 0.10
+idea = Skiers and Archers | Men on skis and with bows move through the snow where horses cannot go. | movement_speed 0.05, land_attrition -0.10
+idea = Clan Elders | The heads of the great kin-groups settle quarrels and name a leader for the raid. | stability_cost_modifier -0.10, legitimacy 0.5
+idea = Sea Raiders | Boats from the coast fall upon the Danish and Swedish shores and return with plunder. | galley_power 0.10, loot_amount 0.10
+idea = Hunters of the Forest | A hunting people knows its woods, and a woodland ambush is deadly. | infantry_power 0.10, manpower_recovery_speed 0.10
+
+[faith_steppe_tengri]
+trigger = religion tengri_pagan
+name = Peoples of the Sky
+start = cavalry_power 0.10, land_morale 0.05
+bonus = gov 1
+idea = The Mounted Archer | A boy learns to shoot from the saddle before he can write his name. | cavalry_power 0.15, discipline 0.025
+idea = The Herds | Horses, sheep and camels are the people's wealth, and a campaign is a migration. | land_maintenance_modifier -0.05, global_manpower_modifier 0.10
+idea = The Kurultai | The lords of the tribes gather to elect a khan and to swear loyalty on the felt. | legitimacy 0.5, stability_cost_modifier -0.10
+idea = Eternal Blue Sky | Tengri gives the khan the right to rule, and the people believe that he does. | tolerance_own 2, prestige 0.5
+idea = Tribute from the Sown | Farming and trading cities pay silk, grain and silver to avoid the raiders. | loot_amount 0.15, global_tax_modifier 0.05
+idea = Tamgha and Clan | Every clan has its mark, its pastures and its place in the order of march. | land_morale 0.10, army_tradition 0.30
+idea = The Caravan Road | Sogdian merchants buy horses and sell silk, and the khan taxes both. | caravan_power 0.15, trade_efficiency 0.05
+
+[faith_kharijite]
+trigger = religion kharijite
+name = Kharijite Imamates
+start = defensiveness 0.10, land_morale 0.05
+bonus = gov 1
+idea = The Elected Imam | The community chooses the most pious man, whatever his tribe, and deposes him if he strays. | legitimacy 1, stability_cost_modifier -0.10
+idea = Piety and Austerity | The people reject luxury and the rulers live like the poor. | tolerance_own 2, global_unrest -1
+idea = The Oases and the Caravans | Kharijite traders carry gold, salt and slaves across the Sahara. | caravan_power 0.20, trade_efficiency 0.05
+idea = The Citadel | A walled town on the edge of the desert is hard to take and harder to hold. | defensiveness 0.15, fort_maintenance_modifier -0.10
+idea = The Desert Raiders | Camel riders strike and vanish into the sand. | land_attrition -0.10, cavalry_power 0.10
+idea = The Mission to the Berbers | Ibadi missionaries have won the tribes beyond the Sahara. | global_missionary_strength 0.01, diplomatic_reputation 1
+idea = The Council of Elders | Respected men settle quarrels by custom and advise the imam. | advisor_cost -0.10, administrative_efficiency 0.05
+
+[faith_hindu_kingdoms]
+trigger = religion shaiva_faith,vaishnava_faith ; group indo_aryan,dravidian,mon_khmer,austronesian
+name = Hindu Kingdoms
+start = defensiveness 0.10, global_manpower_modifier 0.10
+bonus = gov 1
+idea = Brahmin Land Grants | A king gives villages to temples and scholars, and the Brahmins write his name on copper plates. | legitimacy 0.5, global_tax_modifier 0.05
+idea = The Temple | A great stone temple on the royal road shows the people what the king is and whom he serves. | prestige 0.7, tolerance_own 2
+idea = The War Elephants | Elephants carry archers into the line and break an unready enemy. | land_morale 0.10, infantry_power 0.05
+idea = The Mandala of Kings | Lesser rajas bow to the greatest, send tribute and hold their own courts. | diplomatic_reputation 1, improve_relation_modifier 0.20
+idea = The Guild of Merchants | The merchant guilds trade with the Arabs and Chinese and endow the temple. | trade_efficiency 0.10, global_trade_power 0.05
+idea = Irrigated Rice | Tanks and canals feed the villages and fill the royal granary. | production_efficiency 0.10, development_cost -0.05
+idea = Varna and Dharma | The old duty of each caste keeps the villages quiet and the army supplied. | global_unrest -1, global_manpower_modifier 0.10
+
+[faith_buddhist_mainland]
+trigger = religion mahayana_faith,theravada_faith ; group mon_khmer,burman,tai,austronesian
+name = Buddhist Kingdoms
+start = global_unrest -1, prestige 0.5
+bonus = gov 1
+idea = The Sangha | Monks keep the records, teach the children and advise the king. | advisor_cost -0.10, technology_cost -0.05
+idea = The Great Stupa | A king who builds a pagoda earns merit for himself and glory for his realm. | prestige 0.7, tolerance_own 2
+idea = Wet Rice and the Tank | A people that irrigates its paddies can feed an army and the monks. | production_efficiency 0.10, development_cost -0.05
+idea = The Dharma King | A ruler who follows the Buddha's law is obeyed more readily by his people. | legitimacy 0.5, stability_cost_modifier -0.10
+idea = The Pilgrim Road | Chinese and Indian pilgrims bring ideas and gifts as they pass. | diplomatic_reputation 1, trade_efficiency 0.05
+idea = Elephants and Archers | The mahouts and bowmen of the king are drilled in the old way. | land_morale 0.10, infantry_power 0.05
+idea = The Monastery Schools | Every boy learns to read in a temple, and the king chooses his officials among them. | administrative_efficiency 0.05, global_manpower_modifier 0.10
+
+[faith_vajrayana]
+trigger = religion vajrayana_faith,bon_faith
+name = Realms of the Dharma
+start = defensiveness 0.10, global_unrest -1
+bonus = gov 1
+idea = The Mountain Pass | A few fortified passes open the road to the high plateau, and a small garrison can hold them. | defensiveness 0.15, hostile_attrition 0.5
+idea = The Lama and the King | The abbot blesses the throne, and the king protects the monastery. | legitimacy 0.5, tolerance_own 2
+idea = The Mounted Spearmen | Horsemen from the high pastures are tough, tireless and hard to catch. | cavalry_power 0.10, land_morale 0.05
+idea = The Monastery Estate | The great monastery owns land, herds and serfs and pays a share to the throne. | global_tax_modifier 0.05, production_efficiency 0.05
+idea = The Salt and Tea Road | Yak caravans carry salt, tea and horses between China and India. | caravan_power 0.15, trade_efficiency 0.05
+idea = The Translators | Scholars from India bring sutras and tantras, and the court pays for their translation. | technology_cost -0.05, prestige 0.5
+idea = Thin Air and High Snow | A lowland army does not survive a winter on the plateau. | land_attrition -0.10, hostile_attrition 0.5
+
+[faith_waaqism]
+trigger = religion waaqism_pagan
+name = Cushitic Highlanders
+start = global_manpower_modifier 0.10, hostile_attrition 0.5
+bonus = gov 1
+idea = The Gadaa | Age-grades of men take turns at government, and none holds power for more than eight years. | stability_cost_modifier -0.10, legitimacy 0.5
+idea = Herds of Cattle | The cattle are wealth, bride-price and sacrifice, and the pastures are held by the clan. | land_maintenance_modifier -0.05, global_manpower_modifier 0.10
+idea = The Highland Redoubt | Steep escarpments and deep gorges make the highlands hard to cross. | defensiveness 0.15, hostile_attrition 0.5
+idea = Waaq the Sky God | The one god of the sky is worshipped on hilltops, and the tribes swear their oaths upon his name. | tolerance_own 2, religious_unity 0.10
+idea = The Salt and Gold Trade | Caravans carry salt, ivory and gold from the lowlands to the Red Sea. | caravan_power 0.15, trade_efficiency 0.05
+idea = Cavalry of the Plain | The clan's horsemen strike and withdraw. | cavalry_power 0.10, land_morale 0.05
+idea = The Council of Elders | The elders of the clans advise the leader and settle quarrels with the neighbours. | diplomatic_reputation 1, improve_relation_modifier 0.20
+
+[faith_taiga]
+trigger = religion shamanism,siberian_pagan,kamuyism_pagan
+name = Peoples of the Taiga
+start = hostile_attrition 0.5, land_attrition -0.10
+bonus = gov 1
+idea = The Reindeer Herd | Reindeer carry loads, give milk and clothe the people against the cold. | movement_speed 0.05, land_maintenance_modifier -0.05
+idea = The Shaman | A man who speaks with the spirits heals the sick and finds the herds. | tolerance_own 2, global_unrest -1
+idea = Sable and Ermine | The fur-tax makes the people wealthy and attracts the traders. | trade_efficiency 0.10, global_tax_modifier 0.05
+idea = Forest Archers | A hunter's bow takes the elk, and the same bow takes the enemy. | infantry_power 0.10, manpower_recovery_speed 0.10
+idea = Winter Camps | The people spread over the forest in summer and gather in the winter camp. | defensiveness 0.10, stability_cost_modifier -0.05
+idea = The Clan Elder | The kin-group's eldest man judges quarrels and leads the hunt. | legitimacy 0.5, advisor_cost -0.10
+idea = River and Sledge | Boats in summer and sledges in winter carry the people across the vast lands. | trade_range_modifier 0.10, caravan_power 0.10
+
+[faith_island_animist]
+trigger = religion dayawism,kaharingan,tolotang,hantuism,aluk,bimoism,moism,ngaiism_pagan
+name = Island Animists
+start = defensiveness 0.10, hostile_attrition 0.5
+bonus = gov 1
+idea = The Longhouse | A whole community lives under one roof and answers to one headman. | global_unrest -1, stability_cost_modifier -0.05
+idea = Ancestors and Spirits | The dead stay with the living, and the rites of the village keep them favourable. | tolerance_own 2, religious_unity 0.10
+idea = The Jungle Warriors | Men of the forest strike from hiding and vanish into the undergrowth. | hostile_attrition 0.5, infantry_power 0.10
+idea = River and Coast Boats | The people pass between the settlements by river and by sea. | galley_power 0.10, trade_range_modifier 0.10
+idea = Forest Trade | Camphor, resin, gold and hornbills are traded to Chinese and Indian merchants. | trade_efficiency 0.10, global_tax_modifier 0.05
+idea = The Headman and the Elders | The headman rules with the elders and none of them can act alone. | legitimacy 0.5, advisor_cost -0.10
+idea = Swidden and Sago | Fire-cleared fields and sago palms feed the people in lean years. | production_efficiency 0.10, manpower_recovery_speed 0.10
+
+[faith_eastern_churches]
+trigger = religion miaphysitism,nestorian,armenian_apostolic
+name = Eastern Christians
+start = tolerance_own 1, defensiveness 0.10
+bonus = gov 1
+idea = The Mountain Fastness | A people that holds a mountain valley can outlast an empire. | defensiveness 0.15, hostile_attrition 0.5
+idea = The Katholikos | The head of the church crowns the king, speaks for the people and keeps the records. | legitimacy 0.5, stability_cost_modifier -0.10
+idea = The Monasteries | Monks copy the Scriptures, teach the young and shelter the traveller. | technology_cost -0.05, advisor_cost -0.10
+idea = Merchants between Empires | Caravans of the nation pass between Byzantium, the caliphate and the Silk Road. | trade_efficiency 0.10, caravan_power 0.10
+idea = Cavalry of the Nakharars | The great houses send mounted retainers on campaign. | cavalry_power 0.10, land_morale 0.05
+idea = Tolerance under a Master | A subject people learns to pay and to wait. | diplomatic_reputation 1, ae_impact -0.10
+idea = The Faith of the Fathers | The people have kept the faith under Persian, Byzantine and Arab rule. | tolerance_own 2, religious_unity 0.10

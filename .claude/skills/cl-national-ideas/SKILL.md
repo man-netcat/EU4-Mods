@@ -13,7 +13,8 @@ culture-group sets) and `localisation/kar_ideas_l_english.yml`. Never edit those
 ## How a country picks its set
 
 First match, in this order: tag sets (files `1x_*.ideas`), then the base game's kept groups (client, trading city, colonial,
-cossack, horde, daimyo, Siberian, pirate, Christian theocracy), then major-culture sets (`2x_*`), then culture-group sets (`3x_*`),
+cossack, horde, daimyo, Siberian, pirate, Christian theocracy), then factor sets (`25_factors.ideas`: by religion, government, rank, tech group or reform,
+optionally narrowed to culture groups), then major-culture sets (`2x_*`), then culture-group sets (`3x_*`),
 then the base game's default. A set triggers on the OR of its clauses; every landed tag must match one before the default
 (validate: "every tag gets a national idea set of ours").
 
@@ -22,6 +23,7 @@ then the base game's default. A set triggers on the OR of its clauses; every lan
 ```
 [slug]                                   # lower case; idea keys become kar_<slug>_1..7
 trigger = tag ASU,LEO ; culture french ; group frankish ; not tag XXX
+# conditions (all must hold; each is an OR of its values):  religion norse_pagan ; government tribal ; rank 1,2 ; tech western ; reform daimyo
 name = Asturian                          # shown as "Asturian Ideas / Traditions / Ambition"
 start = land_morale 0.10, defensiveness 0.10        # exactly two modifiers (gov counts as one)
 bonus = gov 1                            # one modifier, or gov v: legitimacy, devotion, horde_unity, meritocracy v and republican_tradition v/2
@@ -47,7 +49,7 @@ idea = Name | One-sentence description. | key value, key value      # exactly se
 
 ```bash
 python3 tools/ideaset.py which TAG [TAG ...]    # the set a tag gets, why, and its seven ideas
-python3 tools/ideaset.py list [tag|culture|group]   # all sets with their triggers
+python3 tools/ideaset.py list [tag|factor|culture|group]   # all sets with their triggers
 python3 tools/ideaset.py show SLUG              # one set as it will be written to common/ideas
 python3 tools/ideaset.py ranges KEY [KEY ...]   # the base game's range for a modifier and whether it is allowed here
 python3 tools/ideaset.py new SLUG --tag A,B --name Name [--file 15_x.ideas]   # append an empty block (also --culture / --group)
@@ -58,10 +60,12 @@ python3 tools/ideaset.py lint                   # what the build checks; exit 1 
 ## Add or change a set
 
 1. `ideaset.py which TAG` to see what the tag has now. To give a tag its own set: `ideaset.py new SLUG --tag TAG --name Name --file 1x_whatever.ideas`
-   (tag sets go in a `1x` file, major cultures `2x`, groups `3x`), then replace every `TODO` (placeholders fail lint). To change one, edit its block.
+   (tag sets go in a `1x` file, factor sets in `25_factors.ideas` with `--religion`-style conditions written by hand into the trigger line, major cultures `2x`, groups `3x`), then replace every `TODO` (placeholders fail lint). To change one, edit its block.
 2. Pick modifiers with `ideaset.py ranges KEY`; keep each idea to one or two and make the name and sentence specific to the people and the century.
 3. `ideaset.py lint`, then `python3 tools/build.py && python3 tools/validate.py` and read `national ideas: N sets (...)`.
 4. A formable tag shares its starter's set by listing both in `trigger = tag A,B`.
 5. Update the counts in `AGENTS.md`, commit the regenerated files with the data, check CI.
+
+A factor set must name values that exist on some tag (`religion kharijite`, `government tribal`, ...) and must match at least one realm, or validate fails. It outranks the culture sets, so keep its conditions narrow.
 
 Unplayed in-game: the trigger forms (`OR`, `culture_group`, `primary_culture`) follow the base game's own usage; check `error.log` after the first run.

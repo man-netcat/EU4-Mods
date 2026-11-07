@@ -21,7 +21,9 @@ File format (`#` starts a comment line):
     idea = Name | Description | key value, key value        # exactly seven
 
 A trigger is the OR of its `tag`, `culture` and `group` clauses (`culture` is `primary_culture`, `group` is
-`culture_group`), ANDed with each `not` clause. Modifier keys are those the base game's ideas use, minus force limits and
+`culture_group`), ANDed with every `religion`, `government`, `rank`, `tech` and `reform` clause (each an OR of its values) and with
+the negation of each `not` clause. A set with such a condition is a *factor* set: it is tried after the tag sets and before the
+culture sets, so it wins over the culture it narrows. Modifier keys are those the base game's ideas use, minus force limits and
 whatever belongs to a later age; values stay within the range the base game's ideas use for that key."""
 
 import collections
@@ -50,6 +52,19 @@ FORBIDDEN = re.compile(r"forcelimit|colon|trade_company|privateer|embargo|artill
                        r"state_governing|reform_progress|government_power|yearly_(?!corruption)|monthly_|privilege|loyalty_modifier|"
                        r"num_of|free_|possible_|may_|tariffs|power_projection|imperial_|tribal_development|"
                        r"naval_tradition_from|global_naval|blockade|siege_blockade|landing|transport")
+
+#: the trigger clauses that pick realms by name or people (alternatives), and the ones that narrow by what the realm is (all must hold);
+#: each condition maps a tags.db row to the values it has
+SELECTORS = ("tag", "culture", "group")
+CONDITIONS = {
+    "religion": lambda r: {str(r.religion)},
+    "government": lambda r: {str(r.government)},
+    "rank": lambda r: {str(r.rank)},
+    "tech": lambda r: {str(r.technology_group)},
+    "reform": lambda r: {str(x) for x in (r.reforms or ())},
+}
+EU4_TRIGGER = {"tag": "tag", "culture": "primary_culture", "group": "culture_group", "religion": "religion",
+               "government": "government", "rank": "government_rank", "tech": "technology_group", "reform": "has_reform"}
 
 KEY_RE = re.compile(r"^[a-z][a-z_0-9]*$")
 
@@ -194,7 +209,7 @@ def parse(path_or_text=None):
                     neg = bits[0] == "not"
                     if neg:
                         bits = bits[1:]
-                    if len(bits) != 2 or bits[0] not in ("tag", "culture", "group"):
+                    if len(bits) != 2 or bits[0] not in SELECTORS + tuple(CONDITIONS):
                         problems.append(f"{where}: cannot read trigger clause {clause.strip()!r}")
                         continue
                     cur["trigger"].append((neg, bits[0], [v.strip() for v in bits[1].split(",") if v.strip()]))
@@ -216,9 +231,39 @@ def parse(path_or_text=None):
 
 
 def kind(s):
-    """tag, culture or group: how specific the set is (the order the sets are tried in)."""
+    """tag, factor, culture or group: how specific the set is (the order the sets are tried in)."""
     kinds = {c for neg, c, _ in s["trigger"] if not neg}
-    return "tag" if "tag" in kinds else ("culture" if "culture" in kinds else "group")
+    if "tag" in kinds:
+        return "tag"
+    if kinds & set(CONDITIONS):
+        return "factor"
+    return "culture" if "culture" in kinds else "group"
+
+
+KIND_ORDER = {"tag": 0, "factor": 1, "culture": 2, "group": 3}
+
+
+def matches(s, row, group_of):
+    """Does the set's trigger hold for a realm (a tags.db row)? The tag, culture and group clauses are alternatives, the
+    religion, government, rank, tech and reform clauses must all hold, a `not` clause must not."""
+    def hit(what, values):
+        if what == "tag":
+            return row.tag in values
+        if what == "culture":
+            return row.culture in values
+        if what == "group":
+            return group_of.get(row.culture) in values
+        have = CONDITIONS[what](row)
+        return any(str(v) in have for v in values)
+
+    pos = [(w, v) for neg, w, v in s["trigger"] if not neg]
+    if any(neg and hit(w, v) for neg, w, v in s["trigger"]):
+        return False
+    selectors = [(w, v) for w, v in pos if w in SELECTORS]
+    conds = [(w, v) for w, v in pos if w in CONDITIONS]
+    if selectors and not any(hit(w, v) for w, v in selectors):
+        return False
+    return bool(pos) and all(hit(w, v) for w, v in conds)
 
 
 def check_sets(sets):
@@ -235,6 +280,9 @@ def check_sets(sets):
             problems.append(f"{w}: no name")
         if not [t for t in s["trigger"] if not t[0]]:
             problems.append(f"{w}: no positive trigger clause")
+        if kind(s) == "factor" and not any(not neg and what in SELECTORS and what != "tag" for neg, what, _ in s["trigger"]) \
+                and not any(not neg and what in CONDITIONS for neg, what, _ in s["trigger"]):
+            problems.append(f"{w}: a factor set needs a condition")
         if len(s["ideas"]) != 7:
             problems.append(f"{w}: {len(s['ideas'])} ideas, not 7")
         govs = {g for g, _f in GOV}
@@ -245,9 +293,14 @@ def check_sets(sets):
             problems.append(f"{w}: no ambition (bonus)")
         for neg, what, values in s["trigger"]:
             for v in values:
-                known = (set(BY_TAG) | FORMABLE_TAGS | VANILLA_ONLY_TAGS()) if what == "tag" else (cultures if what == "culture" else set(groups))
+                if what in CONDITIONS:
+                    known = {x for r in BY_TAG.values() for x in CONDITIONS[what](r)}
+                else:
+                    known = (set(BY_TAG) | FORMABLE_TAGS | VANILLA_ONLY_TAGS()) if what == "tag" else (cultures if what == "culture" else set(groups))
                 if v not in known:
                     problems.append(f"{w}: {what} {v} does not exist here")
+        if kind(s) == "factor" and not any(matches(s, r, {c: g for g, cs in groups.items() for c in cs}) for r in BY_TAG.values()):
+            problems.append(f"{w}: no realm matches this factor set")
         blocks = [("start", s["start"]), ("bonus", s["bonus"])] + [(f"idea {i + 1}", i_["mods"]) for i, i_ in enumerate(s["ideas"])]
         for label, mods in blocks:
             collapsed = len([k for k, _ in mods if k not in {g for g, _f in GOV}]) + (1 if any(k in {g for g, _f in GOV} for k, _ in mods) else 0)
@@ -286,14 +339,19 @@ def _fmt(v):
 def _trigger(s):
     pos = [(c, v) for neg, c, vs in s["trigger"] if not neg for v in vs]
     neg = [(c, v) for ng, c, vs in s["trigger"] if ng for v in vs]
-    word = {"tag": "tag", "culture": "primary_culture", "group": "culture_group"}
+    word = EU4_TRIGGER
     lines = []
-    if len(pos) == 1:
-        lines.append(f"\t\t{word[pos[0][0]]} = {pos[0][1]}")
-    else:
-        lines.append("\t\tOR = {")
-        lines += [f"\t\t\t{word[c]} = {v}" for c, v in pos]
-        lines.append("\t\t}")
+
+    def block(clauses, indent):
+        if len(clauses) == 1:
+            return [f"{indent}{word[clauses[0][0]]} = {clauses[0][1]}"]
+        return [f"{indent}OR = {{"] + [f"{indent}\t{word[c]} = {v}" for c, v in clauses] + [f"{indent}}}"]
+
+    selectors = [(c, v) for c, v in pos if c in SELECTORS]
+    if selectors:
+        lines += block(selectors, "\t\t")
+    for what in CONDITIONS:
+        lines += block([(c, v) for c, v in pos if c == what], "\t\t") if any(c == what for c, _ in pos) else []
     for c, v in neg:
         lines.append(f"\t\tNOT = {{ {word[c]} = {v} }}")
     return "\n".join(lines)
@@ -341,7 +399,7 @@ def step_ideas():
     problems += check_sets(sets)
     if problems:
         raise SystemExit("national ideas data:\n  " + "\n  ".join(problems[:30]))
-    ordered = sorted(sets.values(), key=lambda s: ({"tag": 0, "culture": 1, "group": 2}[kind(s)], s["order"]))
+    ordered = sorted(sets.values(), key=lambda s: (KIND_ORDER[kind(s)], s["order"]))
     tags = [s for s in ordered if kind(s) == "tag"]
     rest = [s for s in ordered if kind(s) != "tag"]
     head = "# Generated by tools/steps/ideas.py from tools/data/ideas/*.ideas; do not edit.\n\n"
@@ -350,9 +408,9 @@ def step_ideas():
     kept = _vanilla_blocks(vanilla, KEEP_GROUPS)
     write_out(os.path.join(MOD, "common", "ideas", "zz_group_ideas.txt"),
               head + "# Kept from the base game: groups that trigger on a reform or a status.\n\n"
-              + "\n\n".join(kept[n] for n in KEEP_GROUPS) + "\n\n# Ours: major cultures, then culture groups.\n\n"
+              + "\n\n".join(kept[n] for n in KEEP_GROUPS) + "\n\n# Ours: factor sets (religion, government, rank), then major cultures, then culture groups.\n\n"
               + "\n".join(group_text(s) for s in rest))
     write_loc(os.path.join(MOD, "localisation", "kar_ideas_l_english.yml"), loc_pairs(sets))
     by = collections.Counter(kind(s) for s in ordered)
-    print(f"national ideas: {len(ordered)} sets ({by['tag']} tag, {by['culture']} culture, {by['group']} group), "
+    print(f"national ideas: {len(ordered)} sets ({by['tag']} tag, {by['factor']} factor, {by['culture']} culture, {by['group']} group), "
           f"{len(KEEP_GROUPS)} base-game groups kept")
