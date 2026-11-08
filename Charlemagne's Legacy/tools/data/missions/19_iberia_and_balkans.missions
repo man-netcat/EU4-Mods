@@ -1,0 +1,424 @@
+# Iberia beyond the Reconquista files, and the Balkans (written for 867): Aragon and the Catalan counts, the Castilian counts, the Andalusi emirs,
+# Bulgaria, the Croats, the Serbs of the coast, Crete, the Vlachs, Bukovina, Balaton and the Avar remnants.
+
+[aragon_rise]
+slot = 1
+tags = HUE,GIR,URG,ARA
+shield = yes
+modifier = kar_crown_of_aragon | Crown of Aragon | Aragonese, Catalan and Valencian lands share one crown and one set of Cortes. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_mediterranean_ports | Mediterranean Ports | Barcelona, Valencia and Palma trade with Italy, Africa and the Levant. | trade_efficiency 0.10, galley_power 0.10
+
+mission = aragon | The Ebro Frontier | Saragossa and the Ebro valley open the road from the Pyrenees to the sea; whoever holds them commands Aragon.
+row = 1
+icon = mission_unite_home_region
+when = area aragon_area
+reward = prestige 10 ; claim_area catalonia_area
+
+mission = catalonia | The Catalan Counties | Barcelona, Girona and Urgell are the old Frankish march; their counts are rich, and their ships are growing.
+row = 2
+needs = aragon
+icon = mission_hanseatic_city
+when = area catalonia_area
+reward = prestige 15 ; modifier kar_crown_of_aragon 15 ; claim_area valencia_area
+
+mission = valencia | The Valencian Huerta | Valencia's irrigated plain is the richest farmland in the east of the peninsula.
+row = 3
+needs = catalonia
+icon = mission_rice_field
+when = area valencia_area
+reward = prestige 15 ; claim_area baleares_area
+
+mission = baleares | The Balearic Isles | Mallorca and Minorca keep the sea road to Italy and Africa and are home to Moorish corsairs.
+row = 4
+needs = valencia
+icon = mission_galleys_in_port
+when = area baleares_area
+reward = prestige 15 ; modifier kar_mediterranean_ports 15 ; claim_area corsica_sardinia_area
+
+mission = sardinia | Sardinia and Corsica | The two islands hold the middle of the western Mediterranean, and whoever has them has the sea.
+row = 5
+needs = baleares
+icon = mission_invade_island
+when = area corsica_sardinia_area
+reward = prestige 25 ; stability 1
+
+[castile_counties_rise]
+slot = 1
+tags = BGS,VLL,CUE,SLM
+shield = yes
+modifier = kar_castle_lands | Land of Castles | Stone castles line the plateau and the border with the Moors, and the counts hold them. | defensiveness 0.10, fort_maintenance_modifier -0.10
+modifier = kar_castilian_repopulation | Castilian Repopulation | Settlers and monks refill the empty plateau, and the counts distribute land to them. | global_tax_modifier 0.10, global_unrest -1
+
+mission = castle_lands | The Castle Lands | The high plateau of Old Castile, studded with castles, is the front line against the emirs of Cordoba and Toledo.
+row = 1
+icon = mission_unite_home_region
+when = area castille_area
+reward = prestige 10 ; claim_area basque_country
+
+mission = rioja | Rioja and Alava | The upper Ebro and the Basque hills join Old Castile to Navarre and the road to Aragon.
+row = 2
+needs = castle_lands
+icon = mission_great_wall
+when = area basque_country
+reward = prestige 10 ; modifier kar_castle_lands 15 ; claim_area asturias_area
+
+mission = mountains | The Mountain Heartland | The Cantabrian hills and the Asturian valleys are where Castile began, and where the kings of Oviedo still sit.
+row = 3
+needs = rioja
+icon = mission_assemble_an_army
+when = area asturias_area
+reward = prestige 15 ; claim_area toledo_area
+
+mission = toledo | The City of Toledo | Toledo on its rock is the old Visigothic capital and the key to the Tagus valley.
+row = 4
+needs = mountains
+icon = mission_arabian_fort
+when = area toledo_area
+reward = prestige 20 ; modifier kar_castilian_repopulation 20 ; claim_area extremadura_area
+
+mission = extremadura | The Tagus Marches | The marches between the Tagus and the Guadiana are lonely and dangerous, and the counts there hold large estates.
+row = 5
+needs = toledo
+icon = mission_cossack_cavalry
+when = area extremadura_area
+reward = prestige 20 ; adm 50
+
+[andalusi_emirs_rise]
+slot = 1
+tags = ARG,TOL,CAI,JAE,NIE,SEV,ALR,CAA,MUC,ALC,ALM,GRN,MLA,ALI,TRR,NAE,EVO,CAE
+shield = yes
+modifier = kar_taifa_prosperity | Taifa Prosperity | The emir's court patronises poets, physicians and builders, and his gardens are admired. | trade_efficiency 0.10, prestige 1
+modifier = kar_emirate_secured | Emirate Secured | Walls, cisterns and garrisons make the emir's city a refuge in any war. | defensiveness 0.10, global_unrest -1
+
+mission = pact | Pacts of the Taifas | The emirs of al-Andalus survive by treaty, tribute and marriage; the first step is a friend in the next valley.
+row = 1
+icon = mission_alliances
+when = allies 1
+reward = prestige 10 ; dip 50
+
+mission = vega | The Home Vega | The fertile river plain around the capital must be wholly the emir's.
+row = 2
+needs = pact
+icon = mission_rice_field
+when = home_area
+reward = prestige 10 ; modifier kar_emirate_secured 15 ; claim_neighbour_areas
+
+mission = irrigation | Irrigation and Orchards | Waterwheels, canals and orchards make the emir's lands richer than anything in Christendom.
+row = 3
+needs = vega
+icon = mission_early_game_buildings
+when = grown_dev 30
+reward = prestige 10 ; modifier kar_taifa_prosperity 15 ; claim_neighbours
+
+mission = neighbours | The Neighbouring Emirs | Two or three neighbouring emirates fall to the emir's armies or are forced to kneel to him.
+row = 4
+needs = irrigation
+icon = mission_persian_soldiers
+when = grown_states 3
+reward = prestige 15 ; adm 50
+
+mission = caliphate | Heir of the Caliphs | A powerful emir with a rich court and a long reach claims the heritage of the Umayyad caliphs.
+row = 5
+needs = neighbours
+icon = mission_mosque
+when = dev 300 ; prestige 60
+reward = prestige 25 ; stability 1
+
+[bulgaria_tsardom]
+slot = 1
+tags = BUL
+shield = yes
+modifier = kar_bulgar_tsardom | Tsardom of the Bulgars | The Tsar's court at Preslav rivals Constantinople's, and his writ runs from the Danube to the Aegean. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_slavonic_letters | Slavonic Letters | Cyril and Methodios' disciples have brought the Slavonic alphabet to Preslav and Ohrid. | tolerance_own 2, technology_cost -0.05
+
+mission = ohrid | Ohrid and the Vardar | The lake of Ohrid and the Vardar valley were the first Slavonic school's seat and are a Bulgar land.
+row = 1
+icon = mission_unite_home_region
+when = area macedonia_area
+reward = prestige 10 ; modifier kar_slavonic_letters 15 ; claim_area northern_greece_area
+
+mission = epirus | Epirus and Thessaly | The Adriatic coast and the passes of the Pindus open Greece's western door to the Bulgar king.
+row = 2
+needs = ohrid
+icon = mission_assemble_an_army
+when = area northern_greece_area
+reward = prestige 15 ; claim_area thrace_area
+
+mission = thrace | Thrace | The land between the Balkan range and the straits is the Bulgar's old goal and the Greek empire's last shield.
+row = 3
+needs = epirus
+icon = mission_conquer_5_states
+when = area thrace_area
+reward = prestige 20 ; modifier kar_bulgar_tsardom 15 ; claim 151
+
+mission = tsargrad | Tsargrad | Constantinople, the City of cities, is the prize that the Bulgar tsar has set his hopes upon since Krum.
+row = 4
+needs = thrace
+icon = mission_empire
+when = owns 151
+reward = prestige 30 ; stability 1
+
+[bulgaria_west]
+slot = 2
+tags = BUL
+shield = yes
+modifier = kar_danube_frontier_held | Danube Frontier Held | The great river and its fortresses protect the tsar's heartland from the Hungarian and Pecheneg riders. | defensiveness 0.10, hostile_attrition 0.5
+
+mission = slavonia | The Sava Lands | Slavonia between the Sava and the Drava joins the Bulgars to the Croats and the Franks.
+row = 1
+icon = mission_eastern_european_city
+when = area slavonia_area
+reward = prestige 10 ; claim_area croatia_area
+
+mission = croatia | The Croat Lands | The Croats on the Adriatic are Slavs and Christians, and a Bulgar tsar would be their natural lord.
+row = 2
+needs = slavonia
+icon = mission_hands_praying
+when = area croatia_area
+reward = prestige 15 ; claim_area bosnia_area
+
+mission = bosnia | The Bosnian Hills | Bosnia's mountains and mines are poor in people but rich in iron and silver.
+row = 3
+needs = croatia
+icon = mission_great_wall
+when = area bosnia_area
+reward = prestige 15 ; modifier kar_danube_frontier_held 15 ; claim_area east_adriatic_coast_area
+
+mission = adriatic | The Adriatic Coast | The Dalmatian harbours give the tsar a fleet and a window on Italy.
+row = 4
+needs = bosnia
+icon = mission_galleys_in_port
+when = area east_adriatic_coast_area
+reward = prestige 20 ; dip 50
+
+[croats_rise]
+slot = 1
+tags = CRO,SLA,DOJ,POZ
+shield = yes
+modifier = kar_kingdom_of_croatia | Kingdom of Croatia | The Croat dukes at Nin and Knin rule from the Drava to the Adriatic as one people. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_dalmatian_shore | Dalmatian Shore | The Dalmatian coast's harbours and salt pans belong to Croatia. | galley_power 0.10, trade_efficiency 0.05
+
+mission = kingdom | The Croat Lands | The Pannonian and the Dalmatian Croats share a language and a faith; one duke must lead them.
+row = 1
+icon = mission_unite_home_region
+when = area croatia_area ; area slavonia_area
+reward = prestige 10 ; modifier kar_kingdom_of_croatia 15 ; claim_area east_adriatic_coast_area
+
+mission = coast | The Dalmatian Coast | The old Roman cities of the coast are Greek in speech and Byzantine in loyalty; the Croats want their harbours.
+row = 2
+needs = kingdom
+icon = mission_galleys_in_port
+when = area east_adriatic_coast_area
+reward = prestige 15 ; modifier kar_dalmatian_shore 15 ; claim_area bosnia_area
+
+mission = bosnia | The Bosnian Hills | Bosnia lies behind the coast, and the Croat dukes want its mines and its passes.
+row = 3
+needs = coast
+icon = mission_great_wall
+when = area bosnia_area
+reward = prestige 15 ; claim_area carinthia_area
+
+mission = istria | Istria and Carniola | The Slovene lands of Carniola and Istria close the north and give the Croats a gate to Italy.
+row = 4
+needs = bosnia
+icon = mission_crusade_for_varna
+when = area carinthia_area
+reward = prestige 15 ; claim_area transdanubia_area
+
+mission = pannonia | Pannonian Croatia | The Danubian lands between the Drava and the Danube were the Croats' first conquests.
+row = 5
+needs = istria
+icon = mission_eastern_european_city
+when = area transdanubia_area
+reward = prestige 25 ; stability 1
+
+[zahumlje_rise]
+slot = 1
+tags = HRZ,RRR
+shield = yes
+modifier = kar_serb_coastlands | Serb Coastlands | Zahumlje, Rama and Travunia hold the Adriatic shore of the Serbs. | galley_power 0.10, defensiveness 0.10
+
+mission = rama | The Rama Valleys | The valleys of Rama and the upper Neretva are the hill-lords' home and their strongest refuge.
+row = 1
+icon = mission_unite_home_region
+when = area bosnia_area
+reward = prestige 10 ; claim_area east_adriatic_coast_area
+
+mission = coast | The Zahumlje Coast | The coast from the Neretva to Kotor belongs to the Serbian princes of Zahumlje by right of descent.
+row = 2
+needs = rama
+icon = mission_galleys_in_port
+when = area east_adriatic_coast_area
+reward = prestige 15 ; modifier kar_serb_coastlands 15 ; claim_area rascia_area
+
+mission = raska | Raska | The inland valleys of Raska are the Serbs' cradle, and the princes there are rivals and cousins.
+row = 3
+needs = coast
+icon = mission_hands_praying
+when = area rascia_area
+reward = prestige 15 ; claim_area croatia_area
+
+mission = croats | The Croat Neighbours | The Croats north of the Neretva speak the same tongue and make an uneasy neighbour.
+row = 4
+needs = raska
+icon = mission_steppe_warriors
+when = area croatia_area
+reward = prestige 20 ; adm 50
+
+[crete_emirate]
+slot = 1
+tags = CRT
+shield = yes
+modifier = kar_corsair_emirate | The Corsair Emirate | The ships of Chandax raid the Aegean, and the slave markets of the island overflow. | galley_power 0.10, loot_amount 0.15
+
+mission = aegean | The Aegean Isles | The Cyclades and the Dodecanese are the emirs' hunting ground, and a ring of island bases makes the sea theirs.
+row = 1
+icon = mission_sea_battles
+when = area aegean_archipelago_area
+reward = prestige 10 ; claim_area morea_area
+
+mission = morea | The Morea | The southern Greek peninsula is open to the sea raiders, and its towns pay tribute or burn.
+row = 2
+needs = aegean
+icon = mission_galleys_in_port
+when = area morea_area
+reward = prestige 15 ; modifier kar_corsair_emirate 15 ; claim_area cukurova_area
+
+mission = cyprus | Cyprus and Cilicia | The island and the Cilician coast give the emirs a base east of Crete.
+row = 3
+needs = morea
+icon = mission_invade_island
+when = area cukurova_area
+reward = prestige 15 ; claim_area sicily_area
+
+mission = sicily | The Sicilian Strait | Sicily is the emirate's western neighbour and trading partner, and the strait the great sea road.
+row = 4
+needs = cyprus
+icon = mission_junk_boat
+when = area sicily_area
+reward = prestige 20 ; dip 50
+
+[vlachs_rise]
+slot = 1
+tags = CEA,IAS,GIU,SEE
+shield = yes
+modifier = kar_vlach_voivodates | Vlach Voivodates | The Vlach voivodes of the Carpathian foothills hold their own courts and their own laws. | legitimacy 1, hostile_attrition 0.5
+
+mission = moldavia | Beyond the Prut | The valleys of the Moldavian Carpathians shelter herders, who elect their voivode.
+row = 1
+icon = mission_unite_home_region
+when = area moldavia_area
+reward = prestige 10 ; claim_area wallachia_area
+
+mission = wallachia | The Wallachian Plain | The plain between the Carpathians and the Danube is the Vlachs' pasture and their home.
+row = 2
+needs = moldavia
+icon = mission_bedouins
+when = area wallachia_area
+reward = prestige 15 ; modifier kar_vlach_voivodates 15 ; claim_area southern_transylvania_area
+
+mission = banat | The Banat Hills | The Banat and the southern Transylvanian hills are cattle country and a refuge from every invader.
+row = 3
+needs = wallachia
+icon = mission_great_wall
+when = area southern_transylvania_area
+reward = prestige 15 ; claim_area transylvania_area
+
+mission = transylvania | The Land Beyond the Forest | Transylvania's salt mines and forts crown the Vlach voivodes' long climb.
+row = 4
+needs = banat
+icon = mission_central_asian_city
+when = area transylvania_area
+reward = prestige 20 ; adm 50
+
+[bukovina_rise]
+slot = 1
+tags = BUC
+shield = yes
+modifier = kar_dniester_march | The Dniester March | The Dniester and Prut valleys give the prince fords, mills and salt. | trade_efficiency 0.10, defensiveness 0.10
+
+mission = moldavia | The Prut and the Siret | The foothill valleys of the Prut and the Siret are the Slav princes' own country.
+row = 1
+icon = mission_unite_home_region
+when = area moldavia_area
+reward = prestige 10 ; claim_area podolia_volhynia_area
+
+mission = podolia | The Podolian Uplands | The open farm country between the Dniester and the Bug supports many cattle and fields.
+row = 2
+needs = moldavia
+icon = mission_rice_field
+when = area podolia_volhynia_area
+reward = prestige 15 ; modifier kar_dniester_march 15 ; claim_area red_ruthenia_area
+
+mission = galich | Red Ruthenia | The Cherven towns and the salt of Galich are the greatest prize between the Carpathians and the Bug.
+row = 3
+needs = podolia
+icon = mission_eastern_european_city
+when = area red_ruthenia_area
+reward = prestige 20 ; adm 50
+
+[balaton_rise]
+slot = 1
+tags = BLT
+shield = yes
+modifier = kar_pannonian_principality | Pannonian Principality | The Slavic princes of Lake Balaton hold a rich country between the Franks, the Bulgars and the Moravians. | legitimacy 1, production_efficiency 0.10
+
+mission = pannonia | Pannonia | The lake and the hills of Pannonia are the prince's home, and Mosaburg the seat.
+row = 1
+icon = mission_unite_home_region
+when = area transdanubia_area
+reward = prestige 10 ; claim_area slovakia_area
+
+mission = slovakia | The Slovak Valleys | The valleys north of the Danube link Pannonia to Moravia and Poland.
+row = 2
+needs = pannonia
+icon = mission_hands_praying
+when = area slovakia_area
+reward = prestige 15 ; modifier kar_pannonian_principality 15 ; claim_area carinthia_area
+
+mission = carniola | Carinthia and Carniola | The Alpine Slavs of Carinthia and Carniola are the prince's neighbours and kinsmen.
+row = 3
+needs = slovakia
+icon = mission_great_wall
+when = area carinthia_area
+reward = prestige 15 ; claim_area croatia_area
+
+mission = croats | The Croat Neighbours | The Croats to the south can be allies or subjects, and a strong prince would choose both.
+row = 4
+needs = carniola
+icon = mission_steppe_warriors
+when = area croatia_area
+reward = prestige 20 ; adm 50
+
+[avar_remnants_rise]
+slot = 1
+tags = HEV,VSG,TES,BIH,SZE
+shield = yes
+modifier = kar_avar_ring_renewed | The Ring Renewed | The great Avar rings of earth and timber stand again on the plains of the Tisza and the Danube. | defensiveness 0.10, cavalry_power 0.10
+
+mission = plain | The Great Plain | The Tisza and Danube plain was the Avar khagan's own land, and the herds graze it still.
+row = 1
+icon = mission_bedouins
+when = area alfold_area
+reward = prestige 10 ; modifier kar_avar_ring_renewed 15 ; claim_area transylvania_area
+
+mission = forest | The Forest Land | The Transylvanian basin is rich in salt and gold and shelters the last Avar clans.
+row = 2
+needs = plain
+icon = mission_central_asian_city
+when = area transylvania_area
+reward = prestige 15 ; claim_area southern_transylvania_area
+
+mission = banat | The Southern Hills | The southern hills close the Avar lands, and keep the Bulgars at a distance.
+row = 3
+needs = forest
+icon = mission_great_wall
+when = area southern_transylvania_area
+reward = prestige 15 ; claim_area transdanubia_area
+
+mission = pannonia | Pannonia | The western plains of the Danube are the Avars' old seat and the Franks' march.
+row = 4
+needs = banat
+icon = mission_steppe_warriors
+when = area transdanubia_area
+reward = prestige 20 ; adm 50

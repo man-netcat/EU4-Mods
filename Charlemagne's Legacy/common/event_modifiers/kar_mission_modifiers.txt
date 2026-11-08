@@ -459,3 +459,88 @@ kar_kingdom_of_provence = {
 	legitimacy = 1
 	trade_efficiency = 0.05
 }
+
+kar_crown_of_aragon = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_mediterranean_ports = {
+	trade_efficiency = 0.1
+	galley_power = 0.1
+}
+
+kar_castle_lands = {
+	defensiveness = 0.1
+	fort_maintenance_modifier = -0.1
+}
+
+kar_castilian_repopulation = {
+	global_tax_modifier = 0.1
+	global_unrest = -1
+}
+
+kar_taifa_prosperity = {
+	trade_efficiency = 0.1
+	prestige = 1
+}
+
+kar_emirate_secured = {
+	defensiveness = 0.1
+	global_unrest = -1
+}
+
+kar_bulgar_tsardom = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_slavonic_letters = {
+	tolerance_own = 2
+	technology_cost = -0.05
+}
+
+kar_danube_frontier_held = {
+	defensiveness = 0.1
+	hostile_attrition = 0.5
+}
+
+kar_kingdom_of_croatia = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_dalmatian_shore = {
+	galley_power = 0.1
+	trade_efficiency = 0.05
+}
+
+kar_serb_coastlands = {
+	galley_power = 0.1
+	defensiveness = 0.1
+}
+
+kar_corsair_emirate = {
+	galley_power = 0.1
+	loot_amount = 0.15
+}
+
+kar_vlach_voivodates = {
+	legitimacy = 1
+	hostile_attrition = 0.5
+}
+
+kar_dniester_march = {
+	trade_efficiency = 0.1
+	defensiveness = 0.1
+}
+
+kar_pannonian_principality = {
+	legitimacy = 1
+	production_efficiency = 0.1
+}
+
+kar_avar_ring_renewed = {
+	defensiveness = 0.1
+	cavalry_power = 0.1
+}
