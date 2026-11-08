@@ -1,4 +1,4 @@
-country_decisions = {
+﻿country_decisions = {
 
 	eng_abolish_adjustments_of_laws = {
 		potential = {
@@ -54,9 +54,9 @@ country_decisions = {
 				issue = british_ideas_laws
 			}
 			OR = {
-				has_idea_group = ENG_ideas
-				has_idea_group = GBR_ideas
-				has_idea_group = AVE_ideas
+				always = no
+				always = no
+				always = no
 			}
 			NOT = { has_country_flag = eng_can_not_adjust_ideas }
 		}
@@ -77,9 +77,9 @@ country_decisions = {
 				issue = british_ideas_laws
 			}
 			OR = {
-				has_idea_group = ENG_ideas
-				has_idea_group = GBR_ideas
-				has_idea_group = AVE_ideas
+				always = no
+				always = no
+				always = no
 			}
 			has_country_flag = eng_can_not_adjust_ideas
 		}

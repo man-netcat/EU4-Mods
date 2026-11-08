@@ -39,6 +39,14 @@ A decision is dropped when it names a tag, fires a missing event, or sits in `By
 (`DEAD_BYZANTINE_DECISION_FILES`). Formation files in `VANILLA_FORMATION_FILES` and the electorate stubs
 (`VANILLA_STUB_DECISION_FILES`) are curated by hand; same-filename files win whole, so dropped keys stay dead.
 
+## Removed idea groups (`step_dangling_ideas` in `steps/ideas.py`)
+
+The national ideas replace the base game's 440 tag groups, so scripts that still ask `has_idea_group = FRA_ideas`, `full_idea_group = X` or
+`has_idea = royal_navy` (scripted triggers, parliament issues, federation advancements, rebel types, decisions, events) name something that
+no longer exists. `dangling_idea_refs()` lists them over every file the game will load (the mod's own and the base game's that it does not
+override or drop with `replace_path`); the build writes a copy of each with the reference answered `always = no` (nobody can hold a group
+that does not exist, so `NOT = { ... }` stays true, as it should). Validate fails if any reference is left.
+
 ## Missing event references (`step_dangling` in `steps/eventrefs.py`)
 
 After events are cut, other loading files (on_actions, scripted effects, disasters, rebel types, reforms, incidents,

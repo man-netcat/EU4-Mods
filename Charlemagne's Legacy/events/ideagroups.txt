@@ -1,4 +1,4 @@
-namespace = ideagroups
+﻿namespace = ideagroups
 
 #######################################
 # Aristocracy Ideas
@@ -8157,7 +8157,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_idea_group = norse_ideas
+					always = no
 				}
 				set_country_flag = refused_norse_ideas
 			}

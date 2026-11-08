@@ -61,5 +61,75 @@ def national_ideas_cover_every_tag() -> None:
     note(not missing, f"every idea set has its names and descriptions in localisation ({len(missing)} missing)")
 
 
+def national_ideas_traps() -> None:
+    """What could silently go wrong with the generated idea files, the scripts that name ideas, or the data."""
+    print("\n== national ideas: traps ==")
+    from steps import ideas as I
+    from tagdb import culture_groups
+
+    sets, _ = I.parse()
+
+    left = I.dangling_idea_refs()
+    note(not left, f"no script that loads names an idea group or idea that no longer exists ({len(left)} do)")
+    for rel, how, name in left[:8]:
+        print(f"        {rel}: {how} = {name}")
+
+    groups, twice = I.written_groups()
+    shape = []
+    for s in sets.values():
+        key = f"kar_{s['slug']}_ideas"
+        if key not in groups:
+            if I.kind(s) != "tag" or any(not neg and what == "tag" and any(v in BY_TAG for v in vs) for neg, what, vs in s["trigger"]):
+                shape.append(f"{key} is not written")
+            continue
+        _f, body, closed = groups[key]
+        if not closed:
+            shape.append(f"{key}: braces do not balance")
+        blocks = I.top_keys(body, 1)
+        want = ["start", "bonus", "trigger"] + [f"kar_{s['slug']}_{i}" for i in range(1, 8)]
+        if blocks != want:
+            shape.append(f"{key}: blocks are {blocks}, expected {want}")
+        if not re.search(r"(?m)^\s*free\s*=\s*yes\s*$", body):
+            shape.append(f"{key}: no `free = yes`, the game would never offer it")
+    note(not shape and not twice, f"every written idea group is complete (start, bonus, trigger, free, seven ideas) and defined once "
+                                  f"({len(shape)} malformed, {len(twice)} defined twice)")
+    for line in (shape + [f"{n} defined twice" for n in twice])[:8]:
+        print("        " + line)
+
+    clash = sorted({n for n in I.known_idea_names() if n.startswith("kar_")} - {f"kar_{s['slug']}_ideas" for s in sets.values()}
+                   - {f"kar_{s['slug']}_{i}" for s in sets.values() for i in range(1, 8)})
+    note(not clash, f"no idea key with our prefix is left over from an earlier build ({len(clash)} are)")
+    for n in clash[:8]:
+        print("        " + n)
+
+    names = I.engine_names()
+    unknown = []
+    for s in sets.values():
+        for neg, what, values in s["trigger"]:
+            if what in names:
+                unknown += [f"{s['slug']}: {what} {v}" for v in values if v not in names[what] and what != "rank"]
+    note(not unknown, f"every religion, government, reform and technology group a trigger names exists in the game files ({len(unknown)} do not)")
+    for u in unknown[:8]:
+        print("        " + u)
+
+    claimed = collections.defaultdict(list)
+    for s in sets.values():
+        if I.kind(s) == "tag":
+            for neg, what, values in s["trigger"]:
+                if not neg and what == "tag":
+                    for v in values:
+                        claimed[v].append(s["slug"])
+    both = {t: v for t, v in claimed.items() if len(v) > 1}
+    note(not both, f"no tag is listed by two tag sets, the second would never be used ({len(both)} are)")
+    for t, v in list(both.items())[:8]:
+        print(f"        {t}: {', '.join(v)}")
+
+    wrong = I.wrong_way(sets)
+    note(not wrong, f"no modifier points the opposite way from the base game's use of it, which would make a bonus a malus ({len(wrong)} do)")
+    for slug, where, key, val in wrong[:8]:
+        print(f"        {slug} {where}: {key} {val:g}")
+
+
 def run() -> None:
     national_ideas_cover_every_tag()
+    national_ideas_traps()

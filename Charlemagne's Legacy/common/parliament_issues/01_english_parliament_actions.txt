@@ -1,4 +1,4 @@
-#For all the English Parliament Issues which should be unique.
+﻿#For all the English Parliament Issues which should be unique.
 english_french_act_of_union = {
 	category = 4
 
@@ -101,7 +101,7 @@ english_french_act_of_union = {
 			if = {
 				limit = { 
 					has_custom_ideas = no
-					NOT = { has_idea_group = AVE_ideas }
+					NOT = { always = no }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -209,7 +209,7 @@ english_scottish_act_of_union = {
 			if = {
 				limit = { 
 					has_custom_ideas = no
-					NOT = { has_idea_group = GBR_ideas }
+					NOT = { always = no }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -1412,7 +1412,7 @@ royal_impressment_act = {
 		has_issue_unlocked = {
 			issue = english_ideas_laws
 		}
-		has_idea = royal_navy
+		always = no
 		NOT = { has_country_modifier = royal_impressment_act_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}
@@ -1447,7 +1447,7 @@ isolationism_act = {
 		has_issue_unlocked = {
 			issue = english_ideas_laws
 		}
-		has_idea = secretaries_of_state
+		always = no
 		NOT = { has_country_modifier = isolationism_act_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}
@@ -1518,7 +1518,7 @@ military_reassignment_act = {
 		has_issue_unlocked = {
 			issue = british_ideas_laws
 		}
-		has_idea = royal_navy
+		always = no
 		NOT = { has_country_modifier = military_reassignment_act_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}
@@ -1552,7 +1552,7 @@ acts_of_annexation = {
 		has_issue_unlocked = {
 			issue = british_ideas_laws
 		}
-		has_idea = gbr_acts_of_union
+		always = no
 		NOT = { has_country_modifier = acts_of_development_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}
@@ -1587,7 +1587,7 @@ global_empire_act = {
 		has_issue_unlocked = {
 			issue = british_ideas_laws
 		}
-		has_idea = city_upon_a_hill
+		always = no
 		NOT = { has_country_modifier = global_empire_act_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}
@@ -1623,7 +1623,7 @@ naval_reassignment_act = {
 		has_issue_unlocked = {
 			issue = angevin_ideas_laws
 		}
-		has_idea = reformed_angevin_infantry
+		always = no
 		NOT = { has_country_modifier = naval_reassignment_act_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}
@@ -1658,7 +1658,7 @@ diplomatic_act = {
 		has_issue_unlocked = {
 			issue = angevin_ideas_laws
 		}
-		has_idea_group = AVE_ideas
+		always = no
 		NOT = { has_country_modifier = diplomatic_act_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}
@@ -1693,7 +1693,7 @@ internal_focus_act = {
 		has_issue_unlocked = {
 			issue = angevin_ideas_laws
 		}
-		has_idea = angevin_decentralized_rule
+		always = no
 		NOT = { has_country_modifier = internal_focus_act_modifier }
 		NOT = { has_country_flag = eng_can_not_adjust_ideas }
 	}

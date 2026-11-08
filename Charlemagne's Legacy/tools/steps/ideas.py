@@ -431,3 +431,188 @@ def step_ideas():
     by = collections.Counter(kind(s) for s in ordered)
     print(f"national ideas: {len(ordered)} sets ({by['tag']} tag, {by['factor']} factor, {by['culture']} culture, {by['group']} group), "
           f"{len(KEEP_GROUPS)} base-game groups kept")
+
+
+#: where idea groups and ideas are named by script: `has_idea_group = X`, `full_idea_group = X`, `has_idea = X`
+IDEA_REF = re.compile(r"\b(has_idea_group|full_idea_group|has_idea)\s*=\s*\"?([A-Za-z0-9_]+)\"?")
+
+
+def known_idea_names():
+    """Every idea group and idea key the game will know: ours, the kept base-game groups, and the base game's other idea files."""
+    names = set()
+    d = os.path.join(GAME, "common", "ideas")
+    files = [os.path.join(MOD, "common", "ideas", f) for f in os.listdir(os.path.join(MOD, "common", "ideas")) if f.endswith(".txt")]
+    mod_names = {os.path.basename(f) for f in files}
+    files += [os.path.join(d, f) for f in os.listdir(d) if f.endswith(".txt") and f not in mod_names]
+    for path in files:
+        text = re.sub(r"#.*", "", open(path, encoding="cp1252", errors="replace").read())
+        depth, i = 0, 0
+        for m in re.finditer(r"([A-Za-z0-9_]+)\s*=\s*\{|[{}]", text):
+            tok = m.group(0)
+            if tok == "}":
+                depth -= 1
+            else:
+                if tok != "{" and depth <= 1:
+                    names.add(m.group(1))
+                depth += 1
+    return names
+
+
+def live_script_files():
+    """(relative path, absolute path) of every script file the game will load for the mod: the mod's own, and the base game's that
+    the mod neither overrides by name nor drops with a replace_path."""
+    from steps.eventrefs import replaced_paths
+
+    dropped = replaced_paths()
+    seen = {}
+    for root in ("common", "events", "decisions", "missions", "on_actions", "history"):
+        for base, is_mod in ((os.path.join(MOD, root), True), (os.path.join(GAME, root), False)):
+            for dp, _dirs, fs in os.walk(base):
+                for f in fs:
+                    if not f.endswith(".txt"):
+                        continue
+                    full = os.path.join(dp, f)
+                    rel = os.path.relpath(full, MOD if is_mod else GAME)
+                    if not is_mod and any(rel == d or rel.startswith(d + os.sep) for d in dropped):
+                        continue
+                    if rel not in seen:
+                        seen[rel] = full
+    return seen
+
+
+def dangling_idea_refs():
+    """[(relative path, kind, name)] for scripts that name an idea group or idea nobody defines any more."""
+    known = known_idea_names()
+    out = []
+    for rel, full in sorted(live_script_files().items()):
+        if rel.startswith(os.path.join("common", "ideas")):
+            continue
+        text = "\n".join(ln.split("#", 1)[0] for ln in open(full, encoding="cp1252", errors="replace").read().splitlines())
+        for m in IDEA_REF.finditer(text):
+            if m.group(2) not in known:
+                out.append((rel, m.group(1), m.group(2)))
+    return out
+
+
+def _read_script(path):
+    """(text, encoding) of a script file, keeping the encoding to write it back the same way."""
+    raw = open(path, "rb").read()
+    for enc in ("utf-8-sig", "cp1252"):
+        try:
+            return raw.decode(enc), enc
+        except UnicodeDecodeError:
+            continue
+    raise SystemExit(f"{path}: not utf-8 and not cp1252")
+
+
+def step_dangling_ideas():
+    """The base game's scripts ask whether a realm holds its own idea group (`has_idea_group = FRA_ideas`) and the national ideas
+    here replaced those groups. Nobody can hold a group that does not exist, so the question is answered `always = no` in a
+    copy of each file that still loads: the same result, without an unknown-idea line in error.log."""
+    todo = collections.defaultdict(set)
+    for rel, _kind, name in dangling_idea_refs():
+        todo[rel].add(name)
+    live = live_script_files()
+    changed = calls = 0
+    for rel, names in sorted(todo.items()):
+        text, enc = _read_script(live[rel])
+        pattern = re.compile(r"\b(?:has_idea_group|full_idea_group|has_idea)\s*=\s*\"?(" + "|".join(map(re.escape, sorted(names))) + r")\"?(?![A-Za-z0-9_])")
+        out, n = pattern.subn("always = no", text)
+        write_out(os.path.join(MOD, rel), out, encoding=enc, errors="strict")
+        changed += 1
+        calls += n
+    left = dangling_idea_refs()
+    print(f"dangling ideas: {changed} files had {calls} references to removed idea groups answered `always = no`; {len(left)} left")
+    if left:
+        raise SystemExit(f"still naming removed idea groups: {left[:5]}")
+
+
+def vanilla_negative_share():
+    """{modifier: share of the base game's idea values for it that are negative}, for keys with at least three values."""
+    seen = collections.defaultdict(list)
+    for fn in ("00_country_ideas.txt", "zz_group_ideas.txt", "00_basic_ideas.txt"):
+        text = re.sub(r"#.*", "", open(os.path.join(GAME, "common", "ideas", fn), encoding="cp1252", errors="replace").read())
+        for m in re.finditer(r"(?m)^\s*([a-z_0-9]+)\s*=\s*(-?[0-9.]+)\s*$", text):
+            seen[m.group(1)].append(float(m.group(2)))
+    return {k: sum(1 for x in v if x < 0) / len(v) for k, v in seen.items() if len(v) >= 3}
+
+
+def wrong_way(sets):
+    """[(slug, where, key, value)]: a modifier pointing the opposite way from how the base game always uses it (a malus by accident)."""
+    share = vanilla_negative_share()
+    out = []
+    for s in sets.values():
+        blocks = [("tradition", s["start"]), ("ambition", s["bonus"])] + [(f"idea {n}", i["mods"]) for n, i in enumerate(s["ideas"], 1)]
+        for where, mods in blocks:
+            for k, v in mods:
+                neg = share.get(k)
+                if neg is not None and v != 0 and ((v > 0 and neg >= 0.9) or (v < 0 and neg <= 0.1)):
+                    out.append((s["slug"], where, k, v))
+    return out
+
+
+def top_keys(text, depth=1):
+    """Names of the `name = {` blocks that open at the given brace depth (1 = top level) of a script text, comments removed."""
+    names, level = [], 0
+    for m in re.finditer(r"([A-Za-z0-9_.\-]+)\s*=\s*\{|[{}]", re.sub(r"#.*", "", text)):
+        tok = m.group(0)
+        if tok == "}":
+            level -= 1
+        else:
+            if tok != "{" and level == depth - 1:
+                names.append(m.group(1))
+            level += 1
+    return names
+
+
+def engine_names():
+    """What a trigger condition may name, read from the game files the mod runs with:
+    {religion, government, reform, tech} -> set of names (the mod's own file wins over the base game's of the same name)."""
+    def files(sub):
+        found = {}
+        for base in (os.path.join(GAME, "common", sub), os.path.join(MOD, "common", sub)):
+            if os.path.isdir(base):
+                for f in os.listdir(base):
+                    if f.endswith(".txt"):
+                        found[f] = os.path.join(base, f)
+        return list(found.values())
+
+    def text(path):
+        return open(path, encoding="cp1252", errors="replace").read()
+
+    religions = set()
+    for path in files("religions"):
+        religions |= set(top_keys(text(path), 2))
+    governments = set()
+    for path in files("governments"):
+        governments |= set(top_keys(text(path), 1))
+    reforms = set()
+    for path in files("government_reforms"):
+        reforms |= set(top_keys(text(path), 1))
+    tech = set()
+    tfile = os.path.join(MOD, "common", "technology.txt")
+    tfile = tfile if os.path.exists(tfile) else os.path.join(GAME, "common", "technology.txt")
+    groups_block = re.search(r"groups\s*=\s*\{", re.sub(r"#.*", "", text(tfile)))
+    if groups_block:
+        body = re.sub(r"#.*", "", text(tfile))[groups_block.start():]
+        tech = set(top_keys(body, 2))
+    return {"religion": religions, "government": governments, "reform": reforms, "tech": tech}
+
+
+def written_groups():
+    """{group name: (file, text)} for every idea group in the idea files the mod ships, plus the names defined more than once."""
+    found, twice = {}, []
+    for f in sorted(os.listdir(os.path.join(MOD, "common", "ideas"))):
+        if not f.endswith(".txt"):
+            continue
+        text = open(os.path.join(MOD, "common", "ideas", f), encoding="cp1252", errors="replace").read()
+        code = re.sub(r"#.*", "", text)
+        for m in re.finditer(r"(?m)^([A-Za-z0-9_]+)\s*=\s*\{", code):
+            depth, j = 1, m.end()
+            while depth and j < len(code):
+                depth += (code[j] == "{") - (code[j] == "}")
+                j += 1
+            if m.group(1) in found:
+                twice.append(m.group(1))
+            found[m.group(1)] = (f, code[m.end():j - 1], depth == 0)
+    return found, twice

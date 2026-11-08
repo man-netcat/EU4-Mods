@@ -68,4 +68,12 @@ python3 tools/ideaset.py lint                   # what the build checks; exit 1 
 
 A factor set must name values that exist on some tag (`religion kharijite`, `government tribal`, ...) and must match at least one realm, or validate fails. It outranks the culture sets, so keep its conditions narrow.
 
+**What validate guards** (`checks/ideas.py`): the data parses and is in range; no set outpowers the base game; set names are unique and
+descriptions are real sentences; every tag gets a set; each written group is complete (start, bonus, trigger, `free = yes`, seven ideas)
+and defined once; trigger conditions name a religion, government, reform or tech group that exists in the game files; no tag is listed
+by two tag sets; no modifier points the wrong way compared with the base game (a bonus that is a malus); and no script that loads names
+an idea group that is gone. That last one is handled by the build: `step_dangling_ideas` writes a copy of each affected base-game
+file with `has_idea_group = FRA_ideas` (and `full_idea_group`, `has_idea`) answered `always = no`, so a new unknown reference is
+neutralised automatically; if one slips past, validate names the file.
+
 Unplayed in-game: the trigger forms (`OR`, `culture_group`, `primary_culture`) follow the base game's own usage; check `error.log` after the first run.

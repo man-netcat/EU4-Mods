@@ -1,4 +1,4 @@
-namespace = religious_events
+﻿namespace = religious_events
 
 # Cleanup from Counter Reformed
 
@@ -38,7 +38,7 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = "counter_reformation"
-		has_idea = liberty_egalite_fraternity
+		always = no
 	}
 	
 	mean_time_to_happen = {
