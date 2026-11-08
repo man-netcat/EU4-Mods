@@ -274,10 +274,27 @@ def check_sets(sets):
     groups = culture_groups()
     cultures = {c for v in groups.values() for c in v}
     problems = []
+    by_name = collections.defaultdict(list)
+    for s in sets.values():
+        by_name[(s["name"] or "").lower()].append(s["slug"])
+    for name, slugs in by_name.items():
+        if name and len(slugs) > 1:
+            problems.append(f"{', '.join(slugs)}: the same display name {name!r}; two idea sets must not read alike in game")
     for s in sets.values():
         w = s["slug"]
         if not s["name"]:
             problems.append(f"{w}: no name")
+        if len(s["name"] or "") > 24:
+            problems.append(f"{w}: name {s['name']!r} is over 24 characters")
+        names = collections.Counter(i["name"].lower() for i in s["ideas"])
+        problems += [f"{w}: two ideas are called {n!r}" for n, k in names.items() if k > 1]
+        for n, i in enumerate(s["ideas"], 1):
+            if not 1 <= len(i["name"]) <= 45:
+                problems.append(f"{w} idea {n}: name {i['name']!r} must be 1..45 characters")
+            if not 30 <= len(i["desc"]) <= 220 or not i["desc"].endswith((".", "!")):
+                problems.append(f"{w} idea {n}: description must be a sentence of 30..220 characters")
+            if i["name"].lower() == s["name"].lower():
+                problems.append(f"{w} idea {n}: named like its own set")
         if not [t for t in s["trigger"] if not t[0]]:
             problems.append(f"{w}: no positive trigger clause")
         if kind(s) == "factor" and not any(not neg and what in SELECTORS and what != "tag" for neg, what, _ in s["trigger"]) \

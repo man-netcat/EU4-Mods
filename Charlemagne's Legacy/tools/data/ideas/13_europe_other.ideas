@@ -54,7 +54,7 @@ idea = Atlantic Ports | La Rochelle, Bordeaux and Bayonne ship salt, wine and wo
 
 [angria]
 trigger = tag AGR
-name = Saxon
+name = Angrian
 start = infantry_power 0.10, defensiveness 0.10
 bonus = gov 1
 idea = The Old Saxon Law | Saxons keep their ancient customs under the Carolingian crown, and judge by Saxon law. | stability_cost_modifier -0.10, gov 1

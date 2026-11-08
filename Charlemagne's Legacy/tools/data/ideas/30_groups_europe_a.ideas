@@ -113,7 +113,7 @@ idea = The Mountain Wall | The Caucasus range divides two seas and two worlds, a
 idea = Knightly Houses | Great noble houses maintain warrior retinues. | cavalry_power 0.15, army_tradition 0.50
 idea = Early Christians | Georgia and Armenia were among the first Christian kingdoms. | church_power_modifier 0.10, tolerance_own 1.5
 idea = Wine and Silk | Valleys produce wine, silk and wool for the Black Sea and Caspian markets. | production_efficiency 0.10, trade_efficiency 0.10
-idea = Hill Fortresses | Castles guard every pass. | fort_maintenance_modifier -0.15, garrison_size 0.15
+idea = Hill Fortresses | Stone castles on the ridges guard every pass, and a few men can hold them against a column. | fort_maintenance_modifier -0.15, garrison_size 0.15
 idea = The Crossroads of Empires | Persia, Byzantium and the Caliphate all contest the Caucasus, and local princes use all. | diplomatic_reputation 1, ae_impact -0.15
 idea = Blood Feud and Hospitality | Kin and honour bind every man, and a guest is sacred. | improve_relation_modifier 0.25, stability_cost_modifier -0.10
 

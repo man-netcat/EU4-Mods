@@ -41,7 +41,7 @@ idea = The German Tongue | A vernacular of many dialects binds the king's subjec
 
 [bavaria]
 trigger = tag BAV
-name = Bavarian
+name = Bavarian Duchy
 start = defensiveness 0.10, cavalry_power 0.10
 bonus = gov 1
 idea = The Agilolfing Inheritance | The old ducal house is gone, but its laws and its pride remain with the Bavarian nobility. | stability_cost_modifier -0.10, gov 1
@@ -54,7 +54,7 @@ idea = Horsemen of the Danube | Bavarian knights ride Avar-bred horses and fight
 
 [italy]
 trigger = tag ITA
-name = Italian
+name = Italian Kingdom
 start = diplomatic_reputation 1, global_tax_modifier 0.10
 bonus = gov 1
 idea = Emperor Louis II | The one Carolingian who rules Italy has the Roman imperial crown, and every Italian lord knows it. | prestige 1, gov 1

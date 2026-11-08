@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """National ideas: the data is sound, every tag gets a set, and only ours (and the kept government groups) are written."""
 
+import collections
 import os
 import re
 from checks.report import note
@@ -30,6 +31,14 @@ def national_ideas_cover_every_tag() -> None:
     group_of = {c: g for g, v in culture_groups().items() for c in v}
     ordered = sorted(sets.values(), key=lambda s: (I.KIND_ORDER[I.kind(s)], s["order"]))
 
+    winners = collections.Counter()
+    for t_, row in BY_TAG.items():
+        first = next((s for s in ordered if I.matches(s, row, group_of)), None)
+        if first:
+            winners[first["slug"]] += 1
+    fallback = sorted(s["slug"] for s in ordered if I.kind(s) != "tag" and not winners[s["slug"]])
+    note(True, f"{len(fallback)} culture, group and factor sets win no realm at the start date (they wait for a realm "
+               f"that changes religion or government): {', '.join(fallback[:6])}{' ...' if len(fallback) > 6 else ''}")
     bare = [t for t, row in BY_TAG.items() if not any(I.matches(s, row, group_of) for s in ordered)]
     note(not bare, f"every tag gets a national idea set of ours, none falls to the default ({len(bare)} do)")
     for t in bare[:10]:

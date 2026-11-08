@@ -106,7 +106,7 @@ idea = Envoys to the Uighurs and Tibetans | Hexi sends caravans, gifts and marri
 
 [u_tsang]
 trigger = tag PHA,UTS
-name = Tibetan
+name = Ü-Tsang
 start = defensiveness 0.1, land_attrition -0.15
 bonus = gov 1
 idea = The Fallen Empire | The Tibetan Empire broke after Langdarma's death in 842, and every lord of the plateau claims its mantle. | prestige 1, gov 1

@@ -145,7 +145,7 @@ idea = Kurds and Daylamites | Mountain infantry are hired by every ruler. | infa
 
 [group_turkic]
 trigger = group turkic
-name = Turkic
+name = Turkic Tribes
 start = cavalry_power 0.15, gov 1
 bonus = gov 1
 idea = The Yabghu and the Tarkhan | The clans accept a ruler by custom and give him a council of tribal heads. | stability_cost_modifier -0.10, gov 1

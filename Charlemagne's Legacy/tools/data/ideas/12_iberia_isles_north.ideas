@@ -28,7 +28,7 @@ idea = Counts Against the Northmen | Vikings have raided the Galician shore sinc
 
 [al_andalus]
 trigger = tag ADU,SPA
-name = Andalusi
+name = Cordoban
 start = diplomatic_reputation 1, global_tax_modifier 0.10
 bonus = gov 1
 idea = The Great Mosque of Cordoba | The Umayyad emirs build and rebuild their mosque to show the world a throne that rivals Baghdad's. | prestige 1, gov 1
