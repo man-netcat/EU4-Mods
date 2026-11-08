@@ -1,0 +1,158 @@
+# The Roman empire of Constantinople and its neighbours (written for 867; CK3 is the source for who holds what).
+# One series per column; a realm's columns are read left to right: the Balkans, the west, the eastern frontier, the court.
+
+[roman_balkans]
+slot = 1
+tags = BYZ,ROM
+shield = yes
+modifier = kar_bulgar_slayer | Bulgar-slayer | The emperor has humbled the khan, and the army fights with new confidence. | land_morale 0.05, discipline 0.025
+
+mission = thrace | Secure Thrace | The approaches to the City must be ours: Adrianople and the long walls cover Constantinople from the north.
+row = 1
+icon = mission_eastern_european_city
+when = area thrace_area
+reward = prestige 10 ; claim_area macedonia_area, bulgaria_area
+
+mission = macedonia | Reclaim Macedonia | Thessalonica and the Strymon valley were Roman before the Slavs came; the themes must be restored.
+row = 2
+needs = thrace
+icon = mission_assemble_an_army
+when = area macedonia_area
+reward = prestige 10 ; claim_area serbia_area, silistria_area
+
+mission = bulgars | Humble the Bulgars | The khan at Pliska has taxed our border for two generations; his lands must be brought under the emperor.
+row = 3
+needs = macedonia
+icon = mission_conquer_5_states
+when = area bulgaria_area ; area silistria_area
+reward = prestige 15 ; modifier kar_bulgar_slayer 15
+ai = 250
+
+mission = slavs | Slavs under the Eagle | The Slavic tribes of the Morava and the Vardar settle on Roman land and owe it service.
+row = 4
+needs = bulgars
+icon = mission_hands_praying
+when = area serbia_area ; area rascia_area
+reward = adm 50 ; claim_area east_adriatic_coast_area, croatia_area
+
+mission = adriatic | Command the Adriatic | The Dalmatian cities have been Roman ports since Justinian; their fleets must sail under the imperial flag.
+row = 5
+needs = slavs, roman_west:calabria
+icon = mission_galleys_in_port
+when = area east_adriatic_coast_area ; area croatia_area
+reward = prestige 15 ; dip 50
+
+[roman_west]
+slot = 2
+tags = BYZ,ROM
+shield = yes
+modifier = kar_cretan_waters_cleared | Cretan Waters Cleared | The Aegean is safe again for the grain ships and the imperial fleet. | galley_power 0.10, trade_efficiency 0.05
+modifier = kar_island_granary | Sicilian Granary | The grain of Sicily feeds the City and fills the fisc once more. | production_efficiency 0.10, global_tax_modifier 0.05
+
+mission = crete | Reclaim Crete | The emirs of Chandax raid every island of the Aegean; the island must be taken back from the Saracens.
+row = 1
+icon = mission_sea_battles
+when = owns 163
+reward = prestige 10 ; modifier kar_cretan_waters_cleared 15
+ai = 250
+
+mission = calabria | Calabria and Apulia | Bari and the heel of Italy are Saracen or Lombard; the Roman themes of the west must be restored.
+row = 2
+needs = crete
+icon = mission_italian_condottiere
+when = area calabria_area ; area apulia_area
+reward = prestige 10 ; claim_area sicily_area, naples_area
+
+mission = sicily | The Island of Sicily | Syracuse still flies the eagle, but Palermo and the west are the emirate's; the whole island must come back.
+row = 3
+needs = calabria
+icon = mission_invade_island
+when = area sicily_area ; area western_sicily_area
+reward = prestige 15 ; modifier kar_island_granary 15
+
+mission = naples | Duchy of Naples | The Neapolitan dukes remember that they are Roman; Naples and Amalfi must be brought back under the throne.
+row = 4
+needs = sicily
+icon = mission_market_place_with_asian_traders
+when = area naples_area
+reward = adm 50 ; claim_area lazio_area, emilia_romagna_area
+
+mission = rome | Rome and Ravenna | The old capital and the seat of the exarchs: the empire is whole when both are held by the emperor again.
+row = 5
+needs = naples
+icon = mission_european_church
+when = area lazio_area ; area emilia_romagna_area
+reward = prestige 25 ; stability 1
+
+[roman_east]
+slot = 3
+tags = BYZ,ROM
+shield = yes
+modifier = kar_taurus_frontier_secured | Taurus Frontier Secured | The passes of the Taurus are fortified and watched, and the Saracen raiders turn back. | defensiveness 0.10, hostile_attrition 0.5
+
+mission = cilicia | The Cilician Gates | Tarsus and the plain below the Taurus are the gateway to Syria and the base of every Saracen raid on Anatolia.
+row = 1
+icon = mission_arabian_fort
+when = area cukurova_area
+reward = prestige 10 ; claim_area dulkadir_area
+
+mission = taurus | The Passes of the Taurus | Melitene and the upper Euphrates are the emperor's frontier fortress; the garrisons of the passes must be ours.
+row = 2
+needs = cilicia
+icon = mission_great_wall
+when = area dulkadir_area
+reward = prestige 10 ; modifier kar_taurus_frontier_secured 15 ; claim_area armenia_area, north_kurdistan_area
+
+mission = armenia | The Armenian Marches | The princes of Armenia and the upper Tigris are Christian, and their lands are the emperor's natural frontier.
+row = 3
+needs = taurus
+icon = mission_mosque
+when = area armenia_area ; area north_kurdistan_area
+reward = prestige 15 ; claim_area aleppo_area, syria_area
+
+mission = antioch | Antioch Returns | The great city of the east was Roman for three hundred years; the Orontes valley must be held again.
+row = 4
+needs = armenia
+icon = mission_hands_praying
+when = area aleppo_area ; area syria_area
+reward = prestige 20 ; claim_area palestine_area
+
+mission = jerusalem | The Holy Land | The Holy Sepulchre was taken from the empire by the caliph; to hold Palestine again is the oldest duty of the throne.
+row = 5
+needs = antioch
+icon = mission_religious
+when = area palestine_area
+reward = prestige 30 ; stability 1
+
+[roman_court]
+slot = 4
+tags = BYZ,ROM
+shield = yes
+modifier = kar_macedonian_renaissance | Macedonian Renaissance | Scholars copy the books of the ancients, and the court is a model of learning. | technology_cost -0.05, advisor_cost -0.10
+
+mission = alliance | A Christian Alliance | The empire is not friendless: the Christian kings of the west and the Caucasus should be bound to the throne.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = treasury | The Fisc | The nomisma has kept its weight for five hundred years; a full treasury keeps it that way.
+row = 2
+needs = alliance
+icon = mission_war_chest
+when = treasury 800
+reward = adm 50 ; mil 50
+
+mission = basilika | The Basilika | The laws of Justinian are old and in Latin; the emperor orders them recast in Greek for his judges.
+row = 3
+needs = treasury, roman_east:taurus
+icon = mission_noble_council
+when = prestige 40 ; stability 2
+reward = adm 50 ; stability 1
+
+mission = renaissance | The Macedonian Revival | Under the new dynasty the university at the Magnaura teaches the old learning again.
+row = 4
+needs = basilika, roman_west:sicily
+icon = mission_early_modern_university
+when = dev 300 ; prestige 60
+reward = prestige 10 ; modifier kar_macedonian_renaissance 20

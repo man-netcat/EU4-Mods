@@ -1,0 +1,243 @@
+# The Abbasid caliphate and the emirate of Cordoba (written for 867).
+
+[abbasid_east]
+slot = 1
+tags = ARB
+shield = yes
+modifier = kar_iran_restored | Iran Restored | The governors of the Iranian plateau send their taxes to Baghdad again. | global_tax_modifier 0.10, global_unrest -1
+modifier = kar_khorasan_regained | Khorasan Regained | The eastern marches of the caliphate are again in the caliph's hand. | stability_cost_modifier -0.10, legitimacy 1
+
+mission = khuzestan | Secure Khuzestan | The sugar and cloth of Khuzestan feed Baghdad, and its governor must answer to the caliph alone.
+row = 1
+icon = mission_rice_field
+when = area khuzestan_area
+reward = prestige 10 ; claim_area luristan_area, isfahan_area
+
+mission = jibal | Isfahan and Luristan | The Jibal is the heart of the Iranian plateau; its dynasts hold it for the caliph or for themselves.
+row = 2
+needs = khuzestan
+icon = mission_persian_soldiers
+when = area isfahan_area ; area luristan_area
+reward = prestige 10 ; claim_area iraq_e_ajam_area, tabarestan_area
+
+mission = ajam | Iraq-i Ajam and Tabaristan | The northern Iranian lands behind the Elburz were the caliph's province before the local princes rose.
+row = 3
+needs = jibal
+icon = mission_assemble_an_army
+when = area iraq_e_ajam_area ; area tabarestan_area
+reward = prestige 15 ; modifier kar_iran_restored 15 ; claim_area kerman_area, sistan_area
+
+mission = saffarids | Break the Saffarids | The coppersmith of Sistan has made himself master of the east; the caliph must end his empire.
+row = 4
+needs = ajam
+icon = mission_conquer_5_states
+when = area kerman_area ; area sistan_area
+reward = prestige 15 ; claim_area herat_area, merv_area
+ai = 250
+
+mission = khorasan | Khorasan | The great frontier province of the caliphate, whose soldiers once placed the Abbasids on the throne.
+row = 5
+needs = saffarids
+icon = mission_central_asian_city
+when = area herat_area ; area merv_area ; area mashhad_area
+reward = prestige 20 ; modifier kar_khorasan_regained 20 ; claim_area balkh_area
+
+mission = oxus | Beyond the Oxus | Balkh and the cities of Tokharistan are the caliphate's gateway to the steppe and the roads to China.
+row = 6
+needs = khorasan
+icon = mission_asian_trader
+when = area balkh_area
+reward = prestige 25 ; dip 50
+
+[abbasid_arabia]
+slot = 2
+tags = ARB
+shield = yes
+modifier = kar_custodian_of_the_haramayn | Custodian of the Sanctuaries | The caliph protects the pilgrim roads and the holy cities, and the faithful honour him. | tolerance_own 2, religious_unity 0.10
+
+mission = mecca | Guardian of Mecca | The sanctuary and the pilgrim road need a firm hand; Mecca and its hinterland must answer to Baghdad.
+row = 1
+icon = mission_mosque
+when = area mecca_area
+reward = prestige 10 ; claim_area medina_area, asir_area
+
+mission = medina | The Prophet's City | The city of the Prophet's tomb is the caliph's to protect; no local emir may hold it against him.
+row = 2
+needs = mecca
+icon = mission_religious
+when = area medina_area ; area asir_area
+reward = prestige 15 ; modifier kar_custodian_of_the_haramayn 20
+
+mission = yemen | The Yemeni Highlands | The terraced highlands, the coffee-less cliffs and the ports of the Red Sea feed the caliph's treasury.
+row = 3
+needs = medina
+icon = mission_arabian_fort
+when = area tihama_al_yemen_area ; area upper_yemen_area ; area yemen_area
+reward = prestige 15 ; claim_area oman_area, mascat_area
+
+mission = oman | Oman and the Gulf | The mariners of Oman sail to India and China; the caliph's fleets must meet them at their harbours.
+row = 4
+needs = yemen
+icon = mission_galleys_in_port
+when = area oman_area ; area mascat_area ; area pirate_coast_area
+reward = prestige 15 ; dip 50
+
+[abbasid_west]
+slot = 3
+tags = ARB
+shield = yes
+modifier = kar_nile_valley_regained | Nile Valley Regained | Egypt's grain and gold fill the caliph's treasury again. | production_efficiency 0.10, global_tax_modifier 0.10
+
+mission = delta | The Nile Delta | Alexandria and the Delta are Egypt's gate to the sea; their governor must be the caliph's man.
+row = 1
+icon = mission_hanseatic_city
+when = area delta_area ; area bahari_area
+reward = prestige 10 ; claim_area vostani_area, said_area
+
+mission = upper_egypt | Upper Egypt | The land of Thebes and the Fayyum is the granary of the Muslim world.
+row = 2
+needs = delta
+icon = mission_rice_field
+when = area vostani_area ; area said_area
+reward = prestige 10 ; modifier kar_nile_valley_regained 15 ; claim_area cyrenaica_area
+
+mission = barqa | Barqa and the Oases | The desert road to the west runs through Cyrenaica and the oases; whoever holds them holds the road to Ifriqiya.
+row = 3
+needs = upper_egypt
+icon = mission_bedouins
+when = area cyrenaica_area ; area al_wahat_area
+reward = prestige 10 ; claim_area tripolitania_area, tunisia_area
+
+mission = ifriqiya | Ifriqiya | The Aghlabid emirs of Qayrawan rule in the caliph's name only; the province must be held by the caliph himself.
+row = 4
+needs = barqa
+icon = mission_african_soldier
+when = area tripolitania_area ; area tunisia_area
+reward = prestige 20 ; claim_area kabylia_area, algiers_area
+
+mission = maghreb | The Central Maghreb | Tahert and the Zab are the caliphate's western edge, held for the faith against the Berber chiefs.
+row = 5
+needs = ifriqiya
+icon = mission_hands_praying
+when = area kabylia_area ; area algiers_area
+reward = prestige 20 ; adm 50
+
+[abbasid_court]
+slot = 4
+tags = ARB
+shield = yes
+modifier = kar_house_of_wisdom | House of Wisdom | Scholars translate the books of the Greeks, Indians and Persians in Baghdad. | technology_cost -0.05, advisor_cost -0.10
+
+mission = bonds | Bonds of Loyalty | The caliph is more than a name only if the great emirs are bound to him by oath and alliance.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = treasury | The Caliph's Treasury | The treasury at Baghdad pays the army and the court; it must be full for the caliph to be obeyed.
+row = 2
+needs = bonds
+icon = mission_war_chest
+when = treasury 1000
+reward = adm 50 ; mil 50
+
+mission = wisdom | The House of Wisdom | The translators of the Bayt al-Hikma work for the caliph's glory and for the knowledge of mankind.
+row = 3
+needs = treasury, abbasid_arabia:mecca
+icon = mission_early_modern_university
+when = dev 400 ; prestige 60
+reward = prestige 10 ; modifier kar_house_of_wisdom 20
+
+[cordoba_march]
+slot = 1
+tags = ADU
+shield = yes
+modifier = kar_upper_march_held | Upper March Held | The fortress towns of the northern frontier are garrisoned and supplied. | defensiveness 0.10, fort_maintenance_modifier -0.10
+modifier = kar_christian_north_subdued | Christian North Subdued | The kings of the mountains pay tribute and fear Cordoba's cavalry. | prestige 1, improve_relation_modifier 0.25
+
+mission = aragon | The Upper March | Saragossa and the Ebro valley are the emirate's northern frontier against the Franks and the mountain Christians.
+row = 1
+icon = mission_arabian_fort
+when = area aragon_area
+reward = prestige 10 ; modifier kar_upper_march_held 15 ; claim_area basque_country, catalonia_area
+
+mission = pamplona | The Basque Country | The Banu Qasi and the lords of Pamplona play between Cordoba and the Franks; the passes must be held.
+row = 2
+needs = aragon
+icon = mission_persian_soldiers
+when = area basque_country
+reward = prestige 10 ; claim_area leon_area, asturias_area
+
+mission = catalonia | The Marca Hispanica | Barcelona and Girona were taken by the Franks in Charlemagne's day; the emir wants them back.
+row = 3
+needs = pamplona
+icon = mission_assemble_an_army
+when = area catalonia_area
+reward = prestige 15 ; claim_area galicia_area
+
+mission = leon | Break the Mountain Kingdom | Oviedo and Leon are the seat of the Christian kings of the north; their power must end.
+row = 4
+needs = catalonia
+icon = mission_conquer_5_states
+when = area leon_area ; area asturias_area
+reward = prestige 20 ; modifier kar_christian_north_subdued 15
+ai = 250
+
+mission = compostela | Galicia | The shrine of Santiago and the Atlantic coast end the emirate's work in the north.
+row = 5
+needs = leon
+icon = mission_hands_praying
+when = area galicia_area
+reward = prestige 25 ; stability 1
+
+[cordoba_sea]
+slot = 2
+tags = ADU
+shield = yes
+modifier = kar_strait_commanded | Strait Commanded | Cordoba's ships hold both shores of the strait, and the Atlantic trade passes through her ports. | galley_power 0.10, trade_efficiency 0.10
+
+mission = baleares | The Balearic Isles | The islands command the sea road between Spain and Italy; a fleet there is a fleet everywhere.
+row = 1
+icon = mission_galleys_in_port
+when = area baleares_area
+reward = prestige 10 ; claim_area northern_morocco_area
+
+mission = ceuta | Across the Strait | Tangier, Ceuta and the Rif shield the emirate from the Berber lands and open the Atlantic coast of Africa.
+row = 2
+needs = baleares
+icon = mission_sea_battles
+when = area northern_morocco_area
+reward = prestige 15 ; modifier kar_strait_commanded 15 ; claim_area western_morocco_area, southern_morocco_area
+
+mission = morocco | Western Morocco | The Atlantic plains of Morocco are the emirate's granary and the end of the gold caravan road.
+row = 3
+needs = ceuta
+icon = mission_african_soldier
+when = area western_morocco_area ; area southern_morocco_area
+reward = prestige 15 ; dip 50
+
+[cordoba_court]
+slot = 3
+tags = ADU
+shield = yes
+modifier = kar_cordoban_splendour | Cordoban Splendour | Madinat al-Zahra and the great mosque draw scholars, merchants and ambassadors. | global_trade_power 0.10, prestige 1
+
+mission = allies | Friends in the North | Cordoba is not alone; its emirs seek friendship with the Franks' enemies and with Byzantium.
+row = 1
+icon = mission_alliances
+when = allies 1
+reward = prestige 10 ; dip 50
+
+mission = treasury | The Emir's Treasury | The silver of the Andalusi cities and the gold of Africa fill the emir's coffers.
+row = 2
+needs = allies
+icon = mission_war_chest
+when = treasury 600
+reward = adm 50
+
+mission = splendour | The Splendour of Cordoba | The mosque of Cordoba is enlarged, the court is full of poets and doctors, and the emirate has no equal in the west.
+row = 3
+needs = treasury, cordoba_march:pamplona
+icon = mission_mosque
+when = dev 350 ; prestige 60
+reward = prestige 10 ; modifier kar_cordoban_splendour 20

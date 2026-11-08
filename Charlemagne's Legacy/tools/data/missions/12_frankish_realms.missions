@@ -1,0 +1,344 @@
+# The three Frankish kingdoms of 867: West Francia, East Francia and Italy (Charlemagne's partition, written from CK3's start).
+
+[west_francia_realm]
+slot = 1
+tags = FRA
+shield = yes
+modifier = kar_marches_secured | Marches Secured | Counts on the marches answer the king's summons and hold the roads and bridges. | defensiveness 0.10, fort_maintenance_modifier -0.10
+modifier = kar_kingdom_of_aquitaine_joined | Aquitaine Joined | The south has sworn to the king in Paris, and its wine and salt fill his treasury. | global_tax_modifier 0.10, trade_efficiency 0.05
+
+mission = burgundy | The Burgundian March | The old kingdom of the Burgundians is the Rhone's gateway; Charles the Bald must hold it for his own.
+row = 1
+icon = mission_unite_home_region
+when = area bourgogne_area
+reward = prestige 10 ; claim_area lorraine_area, savoy_dauphine_area
+
+mission = brittany | The Breton March | The dukes of Brittany pay no tribute and shelter the king's enemies; the march must be forced to obey.
+row = 2
+needs = burgundy
+icon = mission_assemble_an_army
+when = area brittany_area
+reward = prestige 10 ; modifier kar_marches_secured 15
+
+mission = aquitaine | The Crown of Aquitaine | Charles's nephew wears the Aquitanian crown; Poitiers, Bordeaux and the Garonne must obey Paris.
+row = 3
+needs = brittany
+icon = mission_conquer_5_states
+when = area guyenne_area ; area poitou_area
+reward = prestige 15 ; modifier kar_kingdom_of_aquitaine_joined 15 ; claim_area languedoc_area, massif_central_area
+ai = 250
+
+mission = toulouse | Toulouse and the South | The counts of Toulouse and the Auvergne hold the south under the king's name; the south must be brought in.
+row = 4
+needs = aquitaine
+icon = mission_hanseatic_city
+when = area languedoc_area ; area massif_central_area
+reward = prestige 15 ; claim_area pyrenees_area, provence_area
+
+mission = pyrenees | The Pyrenean March | The passes of the Pyrenees and the county of Barcelona are the kingdom's southern edge.
+row = 5
+needs = toulouse
+icon = mission_arabian_fort
+when = area pyrenees_area ; area provence_area
+reward = prestige 20 ; adm 50
+
+[west_francia_lotharingia]
+slot = 2
+tags = FRA
+shield = yes
+modifier = kar_aachen_regained | Aachen Regained | The throne of Charlemagne and the chapel of Aachen are under the king again. | legitimacy 1, stability_cost_modifier -0.10
+
+mission = lorraine | The Lorraine Marches | Metz and Toul are the heart of the Carolingian homeland; the kingdom is not whole without them.
+row = 1
+icon = mission_eastern_european_city
+when = area lorraine_area
+reward = prestige 10 ; claim_area wallonia_area, brabant_area
+
+mission = lowlands | The Walloon Lands | The abbeys and the fairs of the Meuse valley belong to the old centre of Francia.
+row = 2
+needs = lorraine
+icon = mission_market_place_with_asian_traders
+when = area wallonia_area ; area brabant_area
+reward = prestige 10 ; claim_area holland_area, frisia_area
+
+mission = frisia | Holland and Frisia | The sea-coast of the Rhine mouths, the Frisian cities and the Viking-ravaged Dorestad need a master who can defend them.
+row = 3
+needs = lowlands
+icon = mission_sea_battles
+when = area holland_area ; area frisia_area
+reward = prestige 15 ; claim_area lower_rhineland_area, north_rhine_area
+
+mission = rhineland | The Lower Rhine | Cologne and the great monasteries of the Rhine make the Rhineland the realm's religious heart.
+row = 4
+needs = frisia
+icon = mission_european_church
+when = area lower_rhineland_area ; area north_rhine_area
+reward = prestige 15 ; claim_area alsace_area
+
+mission = aachen | The Throne at Aachen | The palace chapel of Aachen holds the throne of Charlemagne; whoever sits on it speaks for the Franks.
+row = 5
+needs = rhineland, west_francia_realm:toulouse
+icon = mission_empire
+when = area alsace_area
+reward = prestige 25 ; modifier kar_aachen_regained 20 ; stability 1
+
+[west_francia_court]
+slot = 3
+tags = FRA
+shield = yes
+modifier = kar_edict_of_pitres | Edict of Pitres | Fortified bridges and a king's ban against private armies defend the Seine and Loire. | defensiveness 0.10, global_unrest -1
+
+mission = marriage | Marriage Alliances | The king's daughters are given to princes whose swords he will need against the Northmen.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = treasury | The Danegeld | The king pays tribute to the Northmen, and the fisc must bear it without breaking the realm.
+row = 2
+needs = marriage
+icon = mission_war_chest
+when = treasury 600
+reward = adm 50
+
+mission = pitres | The Edict of Pitres | The assembly at Pitres orders every bridge on the great rivers fortified and every count to answer for them.
+row = 3
+needs = treasury, west_francia_realm:brittany
+icon = mission_noble_council
+when = dev 400 ; prestige 50
+reward = prestige 10 ; modifier kar_edict_of_pitres 20
+
+[east_francia_marches]
+slot = 1
+tags = GER
+shield = yes
+modifier = kar_eastern_marches_held | Eastern Marches Held | Margraves and counts on the Elbe and the Saale keep the Slavs from the rivers. | defensiveness 0.10, hostile_attrition 0.5
+modifier = kar_bohemian_tribute | Bohemian Tribute | The dukes of Bohemia pay tribute and send men for the king's host. | global_tax_modifier 0.05, prestige 1
+
+mission = thuringia | The Thuringian March | Erfurt and the Saale are the border between the Franks and the Sorbs; the march must be wholly the king's.
+row = 1
+icon = mission_unite_home_region
+when = area thuringia_area
+reward = prestige 10 ; claim_area south_saxony_area, lusatia_area
+
+mission = sorbs | The Sorbian Lands | The Sorbs between the Elbe and the Saale are Slavs who pay tribute only when the king's army is near.
+row = 2
+needs = thuringia
+icon = mission_assemble_an_army
+when = area south_saxony_area ; area lusatia_area
+reward = prestige 10 ; modifier kar_eastern_marches_held 15 ; claim_area bohemia_area
+
+mission = bohemia | The Bohemian Dukes | The Czech dukes in the basin behind the Erzgebirge have paid Frankish tribute since Charlemagne; they must kneel again.
+row = 3
+needs = sorbs
+icon = mission_conquer_5_states
+when = area bohemia_area ; area erzgebirge_area
+reward = prestige 15 ; modifier kar_bohemian_tribute 15 ; claim_area moravia_area
+ai = 250
+
+mission = moravia | Great Moravia | Rastislav's kingdom on the March has shaken off Frankish overlordship, and its missionaries are Byzantine.
+row = 4
+needs = bohemia
+icon = mission_crusade_for_varna
+when = area moravia_area
+reward = prestige 20 ; adm 50
+
+[east_francia_north]
+slot = 2
+tags = GER
+shield = yes
+modifier = kar_baltic_marches_secured | Baltic Marches Secured | The coastal marches keep the Danes and the Abodrites at arm's length. | defensiveness 0.10, galley_power 0.10
+
+mission = holstein | The Danish March | The Eider is the frontier with the Danes; Hamburg's archbishop must have a safe diocese.
+row = 1
+icon = mission_hanseatic_city
+when = area holstein_area
+reward = prestige 10 ; claim_area mecklenburg_area
+
+mission = mecklenburg | The Abodrite Coast | The Abodrite princes between the Elbe and the Warnow pay tribute and shelter pirates; they must be dealt with.
+row = 2
+needs = holstein
+icon = mission_assemble_an_army
+when = area mecklenburg_area
+reward = prestige 10 ; modifier kar_baltic_marches_secured 15 ; claim_area vorpommern_area
+
+mission = pomerania | The Baltic Shore | The Wends of Pomerania trade in amber and furs; the king's march should reach the sea.
+row = 3
+needs = mecklenburg
+icon = mission_sea_battles
+when = area vorpommern_area ; area hinter_pommern_area
+reward = prestige 15 ; dip 50
+
+mission = havel | The Havel Slavs | The Lutici and the Hevelli behind the Elbe raid the Saxon border and keep their old gods.
+row = 4
+needs = pomerania
+icon = mission_steppe_warriors
+when = area mittelmark_area
+reward = prestige 15 ; adm 50
+
+[east_francia_rhine]
+slot = 3
+tags = GER
+shield = yes
+modifier = kar_lotharingia_reunited | Lotharingia Reunited | The middle kingdom is joined to the east, and Aachen's court is the king's. | legitimacy 1, diplomatic_reputation 1
+
+mission = lower_lotharingia | Lower Lotharingia | The Rhine mouths and the Brabant plain were Lothar's, and Louis the German's sons claim them.
+row = 1
+icon = mission_sea_battles
+when = area north_brabant_area
+reward = prestige 10 ; claim_area north_rhine_area, lower_rhineland_area
+
+mission = cologne | Cologne and the Rhine | The archbishopric of Cologne and the Rhenish monasteries tie the east to the old Carolingian heartland.
+row = 2
+needs = lower_lotharingia
+icon = mission_european_church
+when = area north_rhine_area ; area lower_rhineland_area
+reward = prestige 10 ; claim_area holland_area, frisia_area, brabant_area
+
+mission = coast | The Frisian Coast | Holland and Frisia are rich and exposed to the Viking longships; a strong lord could hold them.
+row = 3
+needs = cologne
+icon = mission_sea_battles
+when = area holland_area ; area frisia_area ; area brabant_area
+reward = prestige 15 ; claim_area wallonia_area, lorraine_area
+
+mission = middle_kingdom | The Middle Kingdom | Lothar's old realm between the Rhine and the Meuse is the prize of the Carolingian family.
+row = 4
+needs = coast, east_francia_marches:sorbs
+icon = mission_empire
+when = area wallonia_area ; area lorraine_area ; area alsace_area
+reward = prestige 25 ; modifier kar_lotharingia_reunited 20 ; stability 1
+
+[east_francia_court]
+slot = 4
+tags = GER
+shield = yes
+modifier = kar_diets_of_the_east | Diets of the East | The king holds his diets at Regensburg and Frankfurt, and the great men of the east attend him. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+
+mission = oaths | Oaths of the Great Men | The dukes of Bavaria and Saxony and the margraves swear to the king, and the crown can rely on their support.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = treasury | The Royal Fisc | The royal estates at Regensburg, Frankfurt and Ingelheim keep the king's court and pay his guards.
+row = 2
+needs = oaths
+icon = mission_war_chest
+when = treasury 700
+reward = adm 50
+
+mission = diets | The Diets of the East | The king meets his dukes in a diet each year, and the east holds together because of it.
+row = 3
+needs = treasury, east_francia_rhine:cologne
+icon = mission_noble_council
+when = dev 450 ; prestige 50
+reward = prestige 10 ; modifier kar_diets_of_the_east 20
+
+[italy_south]
+slot = 1
+tags = ITA
+shield = yes
+modifier = kar_roman_crown_defended | Roman Crown Defended | The emperor has made Rome safe from Saracen raids and Roman factions alike. | legitimacy 1, tolerance_own 1
+modifier = kar_saracens_expelled | Saracens Expelled | The emirates of the south are broken and the coast is safe again. | hostile_attrition 0.5, defensiveness 0.10
+
+mission = rome | Defender of Rome | Pope and Roman senate look to the emperor to defend Rome from the Saracens and the Roman clans.
+row = 1
+icon = mission_european_church
+when = area lazio_area
+reward = prestige 10 ; modifier kar_roman_crown_defended 15 ; claim_area naples_area
+
+mission = naples | Naples and Salerno | The Lombard princes of Salerno and the dukes of Naples owe the emperor service, and play off Greeks and Saracens against him.
+row = 2
+needs = rome
+icon = mission_italian_condottiere
+when = area naples_area
+reward = prestige 10 ; claim_area apulia_area
+
+mission = bari | The Emirate of Bari | The Saracens of Bari raid the Adriatic from a fortress in the heel; Louis the emperor has sworn to destroy it.
+row = 3
+needs = naples
+icon = mission_conquer_5_states
+when = area apulia_area
+reward = prestige 15 ; modifier kar_saracens_expelled 15 ; claim_area calabria_area
+ai = 250
+
+mission = calabria | The Toe of Italy | Calabria is Greek in speech and Byzantine in tradition, and the emperor wants the lands of the toe to be held by his own.
+row = 4
+needs = bari
+icon = mission_hands_praying
+when = area calabria_area
+reward = prestige 15 ; claim_area sicily_area, western_sicily_area
+
+mission = sicily | The Island Beyond | Sicily is held by Greeks and Saracens, but its Latin Christians look to the emperor.
+row = 5
+needs = calabria, italy_north:islands
+icon = mission_invade_island
+when = area sicily_area ; area western_sicily_area
+reward = prestige 25 ; stability 1
+
+[italy_north]
+slot = 2
+tags = ITA
+shield = yes
+modifier = kar_alpine_passes_held | Alpine Passes Held | The passes from Savoy to Carinthia are in the emperor's hands. | defensiveness 0.10, fort_maintenance_modifier -0.10
+
+mission = lagoon | The Venetian Lagoon | The doge's lagoon is Greek in name and Italian in trade; the emperor wants its harbours open.
+row = 1
+icon = mission_galleys_in_port
+when = area venetia_area
+reward = prestige 10 ; dip 50 ; claim_area corsica_sardinia_area
+
+mission = islands | The Tyrrhenian Isles | Corsica and Sardinia are the key to the western sea; whoever holds them can protect the coast.
+row = 2
+needs = lagoon
+icon = mission_sea_battles
+when = area corsica_sardinia_area
+reward = prestige 10 ; claim_area liguria_area
+
+mission = liguria | The Ligurian Coast | The Ligurian ports are the empire's door to the west and to the Provencal Franks.
+row = 3
+needs = islands
+icon = mission_hanseatic_city
+when = area liguria_area
+reward = prestige 10 ; claim_area savoy_dauphine_area
+
+mission = savoy | The Western Passes | The passes of Savoy and the Dauphine join Italy and Francia; the empire's frontier runs along them.
+row = 4
+needs = liguria
+icon = mission_great_wall
+when = area savoy_dauphine_area
+reward = prestige 15 ; modifier kar_alpine_passes_held 15 ; claim_area carinthia_area, tirol_area
+
+mission = carinthia | The Eastern Marches | Carinthia, Istria and the Tyrol guard the north-east door of Italy against the Slavs and the Hungarians.
+row = 5
+needs = savoy
+icon = mission_crusade_for_varna
+when = area carinthia_area ; area tirol_area
+reward = prestige 20 ; adm 50
+
+[italy_court]
+slot = 3
+tags = ITA
+shield = yes
+modifier = kar_imperial_coronation | Imperial Coronation | The pope anointed the emperor in Rome, and the whole of Italy answers to him. | legitimacy 1, tolerance_own 1
+
+mission = alliances | Friends of the Emperor | The emperor needs the dukes of Spoleto and Friuli, and the princes of the south, at his side.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = treasury | The Pavia Treasury | The Iron Crown's palace at Pavia and its royal estates fill the treasury.
+row = 2
+needs = alliances
+icon = mission_war_chest
+when = treasury 800
+reward = adm 50
+
+mission = coronation | The Imperial Coronation | The pope crowns the emperor in Rome, and Italy again leads the Latin world.
+row = 3
+needs = treasury, italy_south:naples
+icon = mission_empire
+when = dev 600 ; prestige 80
+reward = prestige 10 ; modifier kar_imperial_coronation 20

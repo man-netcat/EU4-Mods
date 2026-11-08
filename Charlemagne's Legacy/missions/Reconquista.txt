@@ -20,6 +20,11 @@ kar_asturian_reconquista = {
 		required_missions = {  }
 		position = 1
 
+		provinces_to_highlight = {
+			province_id = 4551
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 4551
 		}
@@ -40,6 +45,14 @@ kar_asturian_reconquista = {
 		icon = mission_hands_praying
 		required_missions = { kar_asturias_duero }
 		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 231
+				province_id = 232
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 231
@@ -63,6 +76,14 @@ kar_asturian_reconquista = {
 		required_missions = { kar_asturias_portucale }
 		position = 3
 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1851
+				province_id = 227
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 1851
 			owns = 227
@@ -81,6 +102,14 @@ kar_asturian_reconquista = {
 		icon = mission_arabian_fort
 		required_missions = { kar_asturias_duero }
 		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 219
+				province_id = 217
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 219
@@ -102,6 +131,11 @@ kar_asturian_reconquista = {
 		required_missions = { kar_asturias_toledo kar_asturias_tagus }
 		position = 5
 
+		provinces_to_highlight = {
+			province_id = 225
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 225
 		}
@@ -121,6 +155,14 @@ kar_asturian_reconquista = {
 		icon = mission_empire
 		required_missions = { kar_asturias_cordoba }
 		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 224
+				province_id = 223
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 224
@@ -153,6 +195,11 @@ kar_navarrese_reconquista = {
 		required_missions = {  }
 		position = 1
 
+		provinces_to_highlight = {
+			province_id = 2989
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 2989
 		}
@@ -172,6 +219,11 @@ kar_navarrese_reconquista = {
 		icon = mission_hands_praying
 		required_missions = { kar_navarra_rioja }
 		position = 2
+
+		provinces_to_highlight = {
+			province_id = 214
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 214
@@ -194,6 +246,11 @@ kar_navarrese_reconquista = {
 		required_missions = { kar_navarra_ebro }
 		position = 3
 
+		provinces_to_highlight = {
+			province_id = 220
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 220
 		}
@@ -211,6 +268,15 @@ kar_navarrese_reconquista = {
 		icon = mission_empire
 		required_missions = { kar_navarra_levant }
 		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 219
+				province_id = 214
+				province_id = 220
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 219
@@ -244,6 +310,14 @@ kar_castilian_reconquista = {
 		required_missions = {  }
 		position = 1
 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1746
+				province_id = 215
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 1746
 			owns = 215
@@ -266,6 +340,14 @@ kar_castilian_reconquista = {
 		required_missions = { kar_castile_burgos }
 		position = 2
 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2755
+				province_id = 217
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 2755
 			owns = 217
@@ -287,6 +369,11 @@ kar_castilian_reconquista = {
 		required_missions = { kar_castile_soria }
 		position = 3
 
+		provinces_to_highlight = {
+			province_id = 219
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 219
 		}
@@ -304,6 +391,14 @@ kar_castilian_reconquista = {
 		icon = mission_empire
 		required_missions = { kar_castile_toledo }
 		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 225
+				province_id = 219
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 225
@@ -357,6 +452,11 @@ kar_portuguese_ambition = {
 		required_missions = { kar_portugal_free }
 		position = 2
 
+		provinces_to_highlight = {
+			province_id = 1851
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 1851
 		}
@@ -378,6 +478,11 @@ kar_portuguese_ambition = {
 		required_missions = { kar_portugal_mondego }
 		position = 3
 
+		provinces_to_highlight = {
+			province_id = 227
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 227
 		}
@@ -394,6 +499,15 @@ kar_portuguese_ambition = {
 		icon = mission_hands_praying
 		required_missions = { kar_portugal_tagus }
 		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 229
+				province_id = 230
+				province_id = 4150
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 229
@@ -413,6 +527,18 @@ kar_portuguese_ambition = {
 		icon = mission_empire
 		required_missions = { kar_portugal_algarve }
 		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 231
+				province_id = 232
+				province_id = 1851
+				province_id = 227
+				province_id = 229
+				province_id = 230
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 231
@@ -449,6 +575,11 @@ kar_galician_ambition = {
 		required_missions = {  }
 		position = 1
 
+		provinces_to_highlight = {
+			province_id = 231
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 231
 		}
@@ -468,6 +599,14 @@ kar_galician_ambition = {
 		icon = mission_hands_praying
 		required_missions = { kar_galicia_minho }
 		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 232
+				province_id = 4556
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 232
@@ -490,6 +629,14 @@ kar_galician_ambition = {
 		required_missions = { kar_galicia_douro }
 		position = 3
 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4553
+				province_id = 208
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
 		trigger = {
 			owns = 4553
 			owns = 208
@@ -507,6 +654,16 @@ kar_galician_ambition = {
 		icon = mission_empire
 		required_missions = { kar_galicia_leon }
 		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 206
+				province_id = 231
+				province_id = 4553
+				province_id = 208
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 
 		trigger = {
 			owns = 206

@@ -17,6 +17,7 @@ from checks import (
     ideas,
     interface,
     localisation,
+    missions,
     provinces,
     realms,
     religion,
@@ -39,6 +40,7 @@ CHECKS = [
     religion,
     cultures,
     ideas,
+    missions,
     filenames,
 ]
 

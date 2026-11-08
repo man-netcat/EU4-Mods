@@ -1,0 +1,221 @@
+# Wessex (and the English crown it grows into), Tang China and Japan (written for 867).
+
+[wessex_realm]
+slot = 1
+tags = SMT,ENG,GBR
+shield = yes
+modifier = kar_english_unity | English Unity | The English kingdoms are bound under one crown, and the shires obey one law. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_danelaw_broken | Danelaw Broken | The Great Army is beaten, and the Danes settle under the king's peace. | hostile_attrition 0.5, defensiveness 0.10
+
+mission = wessex | Unite Wessex | Cornwall and the western shires have been Wessex's subjects for generations; the kingdom must be whole.
+row = 1
+icon = mission_unite_home_region
+when = area wessex_area
+reward = prestige 10 ; claim_area east_anglia_area, west_midlands_area
+
+mission = east_anglia | East Anglia | The fens and the Norfolk coast face the Danish ships; the king needs them as a shield.
+row = 2
+needs = wessex
+icon = mission_sea_battles
+when = area east_anglia_area
+reward = prestige 10 ; modifier kar_danelaw_broken 15 ; claim_area east_midlands_area
+
+mission = mercia | The Mercian Heartland | Mercia was the overlord of the English in Offa's day; its shires are the heart of the island.
+row = 3
+needs = east_anglia
+icon = mission_assemble_an_army
+when = area west_midlands_area ; area east_midlands_area
+reward = prestige 15 ; claim_area yorkshire_area, scottish_marches_area
+
+mission = northumbria | Northumbria | The great kingdom of the north has been broken by the Danes; its churches and its fertile river-valleys wait for a king.
+row = 4
+needs = mercia
+icon = mission_conquer_5_states
+when = area yorkshire_area ; area scottish_marches_area
+reward = prestige 20 ; modifier kar_english_unity 20 ; claim_area wales_area, lowlands_area
+ai = 250
+
+mission = wales | The Welsh Princes | The princes of Gwynedd, Powys and Deheubarth pay tribute only when the English host is at their gates.
+row = 5
+needs = northumbria
+icon = mission_hands_praying
+when = area wales_area
+reward = prestige 20 ; adm 50
+
+[wessex_burhs]
+slot = 2
+tags = SMT,ENG,GBR
+shield = yes
+modifier = kar_burghal_system | Burghal System | Fortified burhs a day's march apart cover the whole of the kingdom. | defensiveness 0.10, fort_maintenance_modifier -0.10
+
+mission = allies | Friends against the Danes | Wessex needs the princes of Wales and the lords of Mercia beside her when the Great Army comes.
+row = 1
+icon = mission_alliances
+when = allies 1
+reward = prestige 10 ; dip 50
+
+mission = treasury | Silver for the Fyrd | The king pays his thegns and his reeves in silver, and he must have enough of it to fight a long war.
+row = 2
+needs = allies
+icon = mission_war_chest
+when = treasury 300
+reward = adm 50
+
+mission = burhs | The Burghal Hidage | A ring of burhs across the kingdom, each manned by the men of its hidage, makes the realm safe from raiders.
+row = 3
+needs = treasury, wessex_realm:east_anglia
+icon = mission_great_wall
+when = dev 200 ; prestige 40
+reward = prestige 10 ; modifier kar_burghal_system 20
+
+[tang_southwest]
+slot = 1
+tags = TNG
+shield = yes
+modifier = kar_southwest_pacified | Southwest Pacified | The roads of Yunnan and Sichuan are open, and the tribes pay tribute again. | hostile_attrition 0.5, global_tax_modifier 0.05
+
+mission = yungui | Yun-Gui Plateau | The marches of the south-west are Tang land in name and the tribes' land in fact; the governor must be obeyed.
+row = 1
+icon = mission_rice_field
+when = area yun_gui_area
+reward = prestige 10 ; claim_area chuannan_area, yun_gui_borderland_area
+
+mission = chuannan | The Southern Sichuan Road | The road from Chengdu to the south passes Nanzhao's frontier and must be held by Tang garrisons.
+row = 2
+needs = yungui
+icon = mission_great_wall
+when = area chuannan_area
+reward = prestige 10 ; modifier kar_southwest_pacified 15
+
+mission = nanzhao | Humble Nanzhao | The king of Nanzhao has taken the title of emperor and raided Annam and Sichuan; he must be punished.
+row = 3
+needs = chuannan
+icon = mission_conquer_5_states
+when = area yun_gui_borderland_area
+reward = prestige 20 ; claim_area chuanbei_area
+ai = 250
+
+mission = chuanbei | Northern Sichuan | The upper Min and the northern Sichuan passes end the troubles of the south-west.
+row = 4
+needs = nanzhao
+icon = mission_chinese_general_riding
+when = area chuanbei_area
+reward = prestige 10 ; adm 50
+
+[tang_west]
+slot = 2
+tags = TNG
+shield = yes
+modifier = kar_hexi_corridor_open | Hexi Corridor Open | Caravans pass freely between the Wei valley and the oases of the Tarim basin. | caravan_power 0.20, trade_efficiency 0.05
+
+mission = gansu | Reclaim Longyou | The western Gansu counties fell to the Tibetans and the Uighurs; their return secures the Wei valley.
+row = 1
+icon = mission_chinese_general_riding
+when = area gansu_area
+reward = prestige 10 ; claim_area west_gansu_area
+
+mission = hexi | The Hexi Corridor | The long strip of oases from Liangzhou to Dunhuang is the Silk Road's door and the empire's western lung.
+row = 2
+needs = gansu
+icon = mission_asian_trader
+when = area west_gansu_area
+reward = prestige 15 ; modifier kar_hexi_corridor_open 15 ; claim_area turpan_kumul_area
+
+mission = turfan | Turfan and Hami | The oases of the Tian Shan are the gateway to the Western Regions and the old protectorate of Beiting.
+row = 3
+needs = hexi
+icon = mission_central_asian_city
+when = area turpan_kumul_area
+reward = prestige 15 ; claim_area tarim_basin_area, shanshan_area
+
+mission = tarim | The Four Garrisons | Kucha, Khotan, Kashgar and Karashahr were the Four Garrisons of Anxi; the protectorate must stand again.
+row = 4
+needs = turfan
+icon = mission_buddhist_monk_praying
+when = area tarim_basin_area ; area shanshan_area
+reward = prestige 25 ; stability 1
+
+[tang_north]
+slot = 3
+tags = TNG
+shield = yes
+modifier = kar_northern_frontier_secured | Northern Frontier Secured | The garrisons of the Ordos and the Great Wall are strengthened, and the steppe peoples pay tribute. | defensiveness 0.10, hostile_attrition 0.5
+
+mission = ordos | The Ordos Loop | The bend of the Yellow River has been the empire's northern wall since the Qin; it must be fortified and garrisoned.
+row = 1
+icon = mission_great_wall
+when = area ordos_area
+reward = prestige 10 ; claim_area inner_mongolia_area
+
+mission = steppe | The Steppe Frontier | The tribes of the Yin Mountains pay tribute when the Tang army is near and raid when it is far.
+row = 2
+needs = ordos
+icon = mission_steppe_warriors
+when = area inner_mongolia_area
+reward = prestige 10 ; modifier kar_northern_frontier_secured 15 ; claim_area liaoning_area
+
+mission = liaodong | Liaodong | The Liao plain and its Khitan neighbours are the empire's north-east frontier and its gate to Manchuria.
+row = 3
+needs = steppe
+icon = mission_eastern_european_city
+when = area liaoning_area
+reward = prestige 15 ; claim_area pyongan_area
+
+mission = goguryeo | The Lost Provinces | Pyongan was Goguryeo's heartland and was Tang for a generation; Tang again would be a prize.
+row = 4
+needs = liaodong
+icon = mission_crusade_for_varna
+when = area pyongan_area
+reward = prestige 20 ; adm 50
+
+[tang_court]
+slot = 4
+tags = TNG
+shield = yes
+modifier = kar_tang_golden_age | Tang Golden Age | The poets, the painters and the monasteries of Chang'an are the glory of the world. | prestige 1, production_efficiency 0.10
+
+mission = alliances | Friends of the Throne | Tang tributaries and the Uighur khagan can be bound to the throne by marriage and treaty.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = treasury | The Imperial Treasury | The Salt Commission and the Grand Canal tolls keep the Tang treasury full.
+row = 2
+needs = alliances
+icon = mission_war_chest
+when = treasury 2000
+reward = adm 50 ; mil 50
+
+mission = golden_age | The Golden Age of Tang | The examination system, the bureaucracy and the great poets mark Tang as the model of the world.
+row = 3
+needs = treasury, tang_west:hexi
+icon = mission_early_modern_university
+when = dev 1300 ; prestige 80
+reward = prestige 10 ; modifier kar_tang_golden_age 20
+
+[yamato_frontier]
+slot = 1
+tags = JAP
+shield = yes
+modifier = kar_emishi_pacified | Emishi Pacified | The north is brought under the court's law, and its horse-breeders serve the emperor. | cavalry_power 0.10, hostile_attrition 0.5
+
+mission = kyushu | The Dazaifu | Kyushu is the gate to Korea and China; the governor-general at Dazaifu must answer for it.
+row = 1
+icon = mission_junk_boat
+when = area kyushu_area
+reward = prestige 10 ; claim_area thohoku_area
+
+mission = tohoku | The Emishi Frontier | The Emishi of the north have beaten imperial armies before; the shogun and his frontier forts must finally win.
+row = 2
+needs = kyushu
+icon = mission_japanese_samurai
+when = area thohoku_area
+reward = prestige 15 ; modifier kar_emishi_pacified 15 ; claim_area hokkaido_area
+
+mission = ezo | The Island of Ezo | Beyond the Tsugaru strait lie the Ainu hunters and fishers, and the court hopes for their furs.
+row = 3
+needs = tohoku
+icon = mission_invade_island
+when = area hokkaido_area
+reward = prestige 20 ; adm 50

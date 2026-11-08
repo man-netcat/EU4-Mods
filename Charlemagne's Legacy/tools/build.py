@@ -29,6 +29,7 @@ from steps.empire import step_hre  # noqa: E402
 from steps.eventrefs import step_dangling  # noqa: E402
 from steps.formations import step_formation_triggers  # noqa: E402
 from steps.ideas import step_dangling_ideas, step_ideas  # noqa: E402
+from steps.missions import step_missions  # noqa: E402
 from steps.provinces import step_provinces  # noqa: E402
 from steps.releasables import step_releasables  # noqa: E402
 from steps.start import step_start  # noqa: E402
@@ -56,6 +57,7 @@ PHASES = [
     ("write formation triggers", step_formation_triggers),
     ("write the releasables' events", step_releasables),
     ("write the national ideas", step_ideas),
+    ("write the mission trees", step_missions),
     ("filter vanilla events", step_events),
     ("filter vanilla decisions", step_filter_decisions),
     ("strip calls to missing events", step_dangling),
