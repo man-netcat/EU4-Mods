@@ -82,7 +82,7 @@ def main(argv):
         for s in sorted(M.load_scripts().values(), key=lambda s: (s["file"], s["slot"] or 0)):
             print(f"{s['key']:<40} column {s['slot']}  {len(s['missions'])} missions  {','.join(s['tags']):<14} {s['file']}")
     elif cmd == "lint":
-        series, problems = M.parse()
+        series, problems = M.load()
         problems += M.check_data(series)
         if not problems:
             problems += M.check_flow(series)

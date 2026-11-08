@@ -62,7 +62,7 @@ def run() -> None:
     from steps import missions as M
     from steps import provdata
 
-    series_map, problems = M.parse()
+    series_map, problems = M.load()
     problems += M.check_data(series_map)
     if not problems:
         problems += M.check_flow(series_map)
@@ -205,6 +205,24 @@ def run() -> None:
                     places.append(f"{mid}: modifier {mod} has no name in localisation")
     note(not places, f"every province, area and modifier a mission names exists ({len(places)} do not)")
     for line in places[:12]:
+        print("        " + line)
+
+    # tooltips the missions point at (custom_tooltip, custom_trigger_tooltip) exist in the mod's or the base game's localisation
+    from paths import EU4_GAME
+
+    vanilla = set()
+    vloc = os.path.join(EU4_GAME, "localisation")
+    for fn in os.listdir(vloc):
+        if fn.endswith("_l_english.yml"):
+            vanilla |= set(re.findall(r"(?m)^\s*([A-Za-z0-9_.\-]+):\d*\s+\"", open(os.path.join(vloc, fn), encoding="utf-8-sig", errors="replace").read()))
+    tips = []
+    for key, s in scripts.items():
+        for mid, m in s["missions"].items():
+            for k in re.findall(r"\b(?:custom_tooltip|tooltip)\s*=\s*\"?([A-Za-z0-9_]+)\"?", m["trigger"] + "\n" + m["effect"]):
+                if k not in loc and k not in vanilla:
+                    tips.append(f"{mid}: tooltip {k} has no localisation")
+    note(not tips, f"every tooltip a mission shows has its text in localisation ({len(tips)} do not)")
+    for line in tips[:8]:
         print("        " + line)
 
     # territorial missions mark the map

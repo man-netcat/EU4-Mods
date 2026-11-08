@@ -18,6 +18,8 @@ Data file format (`#` starts a comment; blank lines are free):
     [slug]                                   the series is `kar_<slug>`; one block per series
     slot = 1                                 the column, 1..5
     tags = BYZ,ROM                           who is offered it (the series' potential)
+    select = tech nomad_group ; rank 1,2     OR: every realm of tags.db that matches (religion, government, rank, tech, culture,
+    except = KGZ,OGZ                         group; all must hold), minus `except`, minus realms whose column is already taken
     shield = yes                             the realm's shield above the column
     modifier = kar_x | Name | Description | key value, key value        a modifier the rewards may use (event_modifiers)
 
@@ -56,9 +58,9 @@ BUDGET = {"prestige": 30, "adm": 100, "dip": 100, "mil": 100, "stability": 1, "t
 MODIFIER_POWER = 1.5
 
 #: trigger words -> the script they write (the value is the number, or the ids and areas)
-TRIGGER_NUMBER = {"dev": "total_development", "cities": "num_of_cities", "allies": "num_of_allies", "subjects": "num_of_subjects",
+TRIGGER_NUMBER = {"grown_dev": "grown_by_development", "grown_states": "grown_by_states", "dev": "total_development", "cities": "num_of_cities", "allies": "num_of_allies", "subjects": "num_of_subjects",
                   "prestige": "prestige", "stability": "stability", "treasury": "treasury", "tradition": "army_tradition"}
-TRIGGER_BOUNDS = {"dev": (10, 2000), "cities": (2, 120), "allies": (1, 8), "subjects": (1, 8), "prestige": (10, 100),
+TRIGGER_BOUNDS = {"grown_dev": (10, 300), "grown_states": (1, 20), "dev": (10, 2000), "cities": (2, 120), "allies": (1, 8), "subjects": (1, 8), "prestige": (10, 100),
                   "stability": (-3, 3), "treasury": (50, 5000), "tradition": (10, 100)}
 REWARD_NUMBER = {"prestige": "add_prestige", "adm": "add_adm_power", "dip": "add_dip_power", "mil": "add_mil_power",
                  "treasury": "add_treasury"}
@@ -92,7 +94,7 @@ def parse():
             pending = None
             m = re.match(r"^\[([a-z][a-z_0-9]*)\]$", line)
             if m:
-                cur = {"slug": m.group(1), "file": fn, "slot": None, "tags": [], "not_tags": [], "shield": "yes", "modifiers": {},
+                cur = {"slug": m.group(1), "file": fn, "slot": None, "tags": [], "not_tags": [], "select": None, "except": [], "shield": "yes", "modifiers": {},
                        "missions": collections.OrderedDict()}
                 if cur["slug"] in series:
                     problems.append(f"{where}: series {cur['slug']} is defined twice")
@@ -135,6 +137,10 @@ def parse():
                     cur["tags"] = [t.strip() for t in rest.split(",") if t.strip()]
                 elif key == "not_tags":
                     cur["not_tags"] = [t.strip() for t in rest.split(",") if t.strip()]
+                elif key == "select":
+                    cur["select"] = rest
+                elif key == "except":
+                    cur["except"] = [t.strip() for t in rest.split(",") if t.strip()]
                 elif key == "shield":
                     cur["shield"] = rest
                 else:
@@ -168,9 +174,11 @@ def clauses(text, where, problems, allowed):
     return out
 
 
-WHEN = set(TRIGGER_NUMBER) | {"owns", "area"}
-SHOW = {"province", "area"}
-REWARD = set(REWARD_NUMBER) | {"stability", "modifier", "claim", "claim_area", "core"}
+FLAGS_WHEN = {"home_area", "home_region"}
+FLAGS_REWARD = {"claim_neighbours", "claim_neighbour_areas", "claim_home_region"}
+WHEN = set(TRIGGER_NUMBER) | {"owns", "area"} | FLAGS_WHEN
+SHOW = {"province", "area"} | FLAGS_WHEN
+REWARD = set(REWARD_NUMBER) | {"stability", "modifier", "claim", "claim_area", "core"} | FLAGS_REWARD
 
 
 def full_id(series, mid):
@@ -184,6 +192,69 @@ def resolve_need(series_map, series, need):
         other = series_map.get(slug)
         return full_id(other, mid) if other and mid in other["missions"] else None
     return full_id(series, need) if need in series["missions"] else None
+
+
+def handwritten_slots():
+    """{tag: {slot}} of the hand-written mission files (every file in missions/ that the build does not generate)."""
+    out = collections.defaultdict(set)
+    folder = os.path.join(MOD, "missions")
+    for s in load_scripts(only=lambda fn: not fn.startswith("kar_")).values():
+        for t in s["tags"]:
+            out[t].add(s["slot"])
+    return out
+
+
+def resolve_selects(series_map):
+    """Fill `tags` of every series with a `select`: the realms of tags.db that match, minus `except`, minus those that already have
+    a series in the same column (series with explicit tags and hand-written ones come first, then selects in file order)."""
+    from steps.ideas import CONDITIONS
+    from tagdb import BY_TAG, culture_groups
+
+    problems = []
+    group_of = {c: g for g, v in culture_groups().items() for c in v}
+    taken = collections.defaultdict(set)
+    for t, slots in handwritten_slots().items():
+        taken[t] |= slots
+    for s in series_map.values():
+        if not s["select"]:
+            for t in s["tags"]:
+                taken[t].add(s["slot"])
+    for s in series_map.values():
+        if not s["select"]:
+            continue
+        want = []
+        for part in [p.strip() for p in s["select"].split(";") if p.strip()]:
+            word, _, args = part.partition(" ")
+            values = [v.strip() for v in args.split(",") if v.strip()]
+            if word not in CONDITIONS and word not in ("culture", "group") or not values:
+                problems.append(f"{s['slug']}: cannot read select clause {part!r}")
+                continue
+            want.append((word, values))
+        picked = []
+        for tag, row in BY_TAG.items():
+            if tag in s["except"] or s["slot"] in taken[tag]:
+                continue
+            ok = True
+            for word, values in want:
+                if word == "culture":
+                    ok &= row.culture in values
+                elif word == "group":
+                    ok &= group_of.get(row.culture) in values
+                else:
+                    ok &= any(v in CONDITIONS[word](row) for v in values)
+            if ok:
+                picked.append(tag)
+        s["tags"] = picked
+        for t in picked:
+            taken[t].add(s["slot"])
+    return problems
+
+
+def load():
+    """({slug: series}, [problems]): parse the data and resolve every select."""
+    series_map, problems = parse()
+    problems += resolve_selects(series_map)
+    return series_map, problems
 
 
 def check_data(series_map):
@@ -203,7 +274,7 @@ def check_data(series_map):
         if s["slot"] not in SLOTS:
             problems.append(f"{w}: slot must be 1..5, not {s['slot']!r}")
         if not s["tags"]:
-            problems.append(f"{w}: no tags")
+            problems.append(f"{w}: no tags" + (" (the select matches no realm with a free column)" if s["select"] else ""))
         problems += [f"{w}: tag {t} is not a landed tag here" for t in s["tags"] + s["not_tags"] if t not in BY_TAG and t not in FORMABLE_TAGS]
         if s["shield"] not in ("yes", "no"):
             problems.append(f"{w}: shield is yes or no")
@@ -257,6 +328,9 @@ def check_data(series_map):
                     lo, hi = TRIGGER_BOUNDS[word]
                     if not re.match(r"^-?\d+$", args) or not lo <= int(args) <= hi:
                         problems.append(f"{where}: {word} {args!r} must be a whole number {lo}..{hi}")
+                elif word in FLAGS_WHEN:
+                    if args:
+                        problems.append(f"{where}: {word} takes no argument")
                 elif word == "owns":
                     problems += [f"{where}: owns {p} is no land province" for p in _ids(args) if p not in land]
                     if not _ids(args):
@@ -264,6 +338,8 @@ def check_data(series_map):
                 elif word == "area":
                     problems += [f"{where}: area {a} does not exist" for a in re.split(r"[,\s]+", args) if a and a not in areas]
             for word, args in clauses(m["show"], where, problems, SHOW):
+                if word in FLAGS_WHEN:
+                    continue
                 if word == "province":
                     problems += [f"{where}: show province {p} is no land province" for p in _ids(args) if p not in land]
                 else:
@@ -290,11 +366,17 @@ def check_data(series_map):
                     names = [a for a in re.split(r"[,\s]+", args) if a]
                     problems += [f"{where}: claim_area {a} does not exist" for a in names if a not in areas]
                     spent["claim_areas"] += len(names)
+                elif word in FLAGS_REWARD:
+                    if args:
+                        problems.append(f"{where}: {word} takes no argument")
+                    spent[word] += 1
             for k, cap in BUDGET.items():
                 if spent[k] > cap:
                     problems.append(f"{where}: {k} reward {spent[k]} is over the budget {cap}")
             if spent["modifiers"] > 1:
                 problems.append(f"{where}: one modifier per mission")
+            if sum(spent[k] for k in FLAGS_REWARD) > 1:
+                problems.append(f"{where}: one claim around the realm per mission")
     return problems
 
 
@@ -313,6 +395,11 @@ def trigger_text(m):
             out.append(f"\t\t\t{TRIGGER_NUMBER[word]} = {int(args)}\n")
         elif word == "owns":
             out += [f"\t\t\towns_or_non_sovereign_subject_of = {p}\n" for p in _ids(args)]
+        elif word in FLAGS_WHEN:
+            scope = "area_for_scope_province" if word == "home_area" else "region_for_scope_province"
+            tip = "kar_home_area_ct" if word == "home_area" else "unite_home_region_ct"
+            out.append(f"\t\t\tcustom_trigger_tooltip = {{\n\t\t\t\ttooltip = {tip}\n\t\t\t\tcapital_scope = {{\n"
+                       f"\t\t\t\t\t{scope} = {{\n\t\t\t\t\t\ttype = all\n\t\t\t\t\t\towned_by = ROOT\n\t\t\t\t\t}}\n\t\t\t\t}}\n\t\t\t}}\n")
         else:
             for a in [x for x in re.split(r"[,\s]+", args) if x]:
                 out.append(f"\t\t\t{a} = {{\n\t\t\t\ttype = all\n\t\t\t\tcountry_or_non_sovereign_subject_holds = ROOT\n\t\t\t}}\n")
@@ -323,6 +410,7 @@ def highlight(m):
     """(provinces, areas) the screen marks: `show`, or what `when` asks to own."""
     provs, areas = [], []
     source = clauses(m["show"], "", [], SHOW) if m["show"] else clauses(m["when"], "", [], {"owns", "area"})
+    source = [(w, a) for w, a in source if w not in FLAGS_WHEN]
     for word, args in source:
         if word in ("province", "owns"):
             provs += _ids(args)
@@ -333,6 +421,11 @@ def highlight(m):
 
 def highlight_text(m):
     provs, areas = highlight(m)
+    flags = [w for w, _a in (clauses(m["show"], "", [], SHOW) if m["show"] else clauses(m["when"], "", [], WHEN)) if w in FLAGS_WHEN]
+    if flags and not provs and not areas:
+        scope = "area_for_scope_province" if flags[0] == "home_area" else "region_for_scope_province"
+        return (f"\t\tprovinces_to_highlight = {{\n\t\t\t{scope} = {{\n\t\t\t\tis_capital_of = ROOT\n\t\t\t}}\n"
+                "\t\t\tNOT = { owned_by = ROOT }\n\t\t}\n")
     if not provs and not areas:
         return ""
     items = [f"\t\t\t\tprovince_id = {p}\n" for p in provs] + [f"\t\t\t\tarea = {a}\n" for a in areas]
@@ -359,6 +452,22 @@ def effect_text(m):
                            f"\t\t\t\t\t\tNOT = {{ is_permanent_claim = ROOT }}\n\t\t\t\t\t}}\n\t\t\t\t\tadd_permanent_claim = ROOT\n\t\t\t\t}}\n\t\t\t}}\n")
         elif word == "claim_area":
             out += [_area_claim(a) for a in re.split(r"[,\s]+", args) if a]
+        elif word == "claim_neighbours":
+            out.append("\t\t\tcustom_tooltip = claim_neighbor_province\n\t\t\thidden_effect = {\n\t\t\t\tevery_owned_province = {\n"
+                       "\t\t\t\t\tevery_neighbor_province = {\n\t\t\t\t\t\tlimit = {\n\t\t\t\t\t\t\tNOT = { owned_by = ROOT }\n"
+                       "\t\t\t\t\t\t\tNOT = { is_permanent_claim = ROOT }\n\t\t\t\t\t\t\tNOT = { is_core = ROOT }\n\t\t\t\t\t\t}\n"
+                       "\t\t\t\t\t\tadd_claim = ROOT\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n")
+        elif word == "claim_neighbour_areas":
+            out.append("\t\t\tcustom_tooltip = perma_claim_neighbor_area\n\t\t\thidden_effect = {\n\t\t\t\tevery_owned_province = {\n"
+                       "\t\t\t\t\tevery_neighbor_province = {\n\t\t\t\t\t\tarea = {\n\t\t\t\t\t\t\tlimit = {\n"
+                       "\t\t\t\t\t\t\t\tNOT = { owned_by = ROOT }\n\t\t\t\t\t\t\t\tNOT = { is_permanent_claim = ROOT }\n"
+                       "\t\t\t\t\t\t\t\tNOT = { is_core = ROOT }\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\tadd_permanent_claim = ROOT\n"
+                       "\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n")
+        elif word == "claim_home_region":
+            out.append("\t\t\tcustom_tooltip = perma_claim_home_region\n\t\t\thidden_effect = {\n\t\t\t\tcapital_scope = {\n"
+                       "\t\t\t\t\tevery_province = {\n\t\t\t\t\t\tlimit = {\n\t\t\t\t\t\t\tregion = PREV\n\t\t\t\t\t\t\tNOT = { owned_by = ROOT }\n"
+                       "\t\t\t\t\t\t\tNOT = { is_core = ROOT }\n\t\t\t\t\t\t}\n\t\t\t\t\t\tadd_permanent_claim = ROOT\n"
+                       "\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n")
         elif word == "core":
             for p in _ids(args):
                 out.append(f"\t\t\t{p} = {{\n\t\t\t\tif = {{\n\t\t\t\t\tlimit = {{ owned_by = ROOT }}\n\t\t\t\t\tadd_core = ROOT\n\t\t\t\t}}\n\t\t\t}}\n")
@@ -411,7 +520,7 @@ def modifiers_text(series_map):
 
 
 def loc_pairs(series_map):
-    pairs = []
+    pairs = [("kar_home_area_ct", "All provinces in the §Y[Root.Capital.GetAreaName]§! area are owned by §Y[Root.GetName]§!.")]
     for s in series_map.values():
         for mid, m in s["missions"].items():
             pairs += [(f"{full_id(s, mid)}_title", m["title"]), (f"{full_id(s, mid)}_desc", m["desc"])]
@@ -431,7 +540,7 @@ def output_files(series_map):
 
 
 def step_missions():
-    series_map, problems = parse()
+    series_map, problems = load()
     problems += check_data(series_map)
     if not problems:
         problems += check_flow(series_map)
@@ -559,13 +668,13 @@ def _scalar(body, key):
     return None
 
 
-def load_scripts():
-    """{series key: series} for every file in the mod's missions folder: slot, generic, shield, tags (from `potential`),
-    and for each mission its icon, row, parents, trigger and effect text."""
+def load_scripts(only=None):
+    """{series key: series} for every file in the mod's missions folder (or those `only` accepts): slot, generic, shield, tags
+    (from `potential`), and for each mission its icon, row, parents, trigger and effect text."""
     out = {}
     folder = os.path.join(MOD, "missions")
     for fn in sorted(os.listdir(folder)) if os.path.isdir(folder) else []:
-        if not fn.endswith(".txt"):
+        if not fn.endswith(".txt") or (only is not None and not only(fn)):
             continue
         text = _code(open(os.path.join(folder, fn), encoding="cp1252", errors="replace").read())
         for name, body in _blocks(text):

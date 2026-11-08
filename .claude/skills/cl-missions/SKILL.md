@@ -28,6 +28,8 @@ The base game's `missions` folder is `replace_path`'d, so a tag has exactly the 
 [slug]                                   # the series is kar_<slug>
 slot = 1
 tags = BYZ,ROM                           # who is offered it (landed tags or formables); `not_tags = X` excludes
+select = tech nomad_group ; rank 1,2     # OR instead of `tags`: every realm of tags.db that matches (religion, government, rank, tech,
+except = KGZ                             # culture, group; all must hold), minus `except`, minus realms whose column is taken
 shield = yes
 modifier = kar_x | Name | Description | key value, key value   # a modifier the rewards may use
 
@@ -36,11 +38,20 @@ row = 1
 needs = a, b, other_slug:c               # parents; slug:id points into another series of the same realm
 icon = mission_hands_praying
 when = owns 144,145 ; area thrace_area ; dev 300 ; cities 20 ; allies 2 ; subjects 1 ; prestige 50 ; stability 2 ; treasury 500 ; tradition 40
-show = province 144,145 ; area thrace_area        # default: what `when` asks to own
+       grown_dev 50 ; grown_states 4 ; home_area ; home_region          # relative to the realm, for generic trees (no ids)
+show = province 144,145 ; area thrace_area ; home_area        # default: what `when` asks to own
 reward = prestige 10 ; adm 50 ; dip 50 ; mil 50 ; stability 1 ; treasury 100 ; modifier kar_x 10 ; claim 144 ; claim_area thrace_area ; core 144
+         claim_neighbours ; claim_neighbour_areas ; claim_home_region  # claims around the realm itself (one per mission)
 ai = 250                                 # optional ai_weight
 ```
 Continuation lines of `when`, `show` and `reward` start with whitespace; every other key starts at column 0.
+
+## Generic trees (`17_generic_steppe_and_africa.missions`)
+
+Like the base game's generic missions they use conditions relative to the realm (`grown_dev`, `grown_states`, `home_area`, `home_region`) and claims around
+the realm (`claim_neighbours` ...), so one tree fits every realm a `select` picks. A select skips realms whose column is already taken by a series
+with explicit `tags` (or by a hand-written file), so a tree written later for a particular tag simply takes that tag out of the generic one. Generic
+trees sit in columns 4 and 5 and use `shield = no`; keep their text free of proper names. The potential is written out as the resolved tag list.
 
 ## Workflow
 
