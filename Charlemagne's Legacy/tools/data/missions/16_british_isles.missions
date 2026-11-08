@@ -1,0 +1,179 @@
+# The small realms of Britain and Ireland that grow into kingdoms (written for 867): Wales, the Irish kings, Alba, the Norse isles and the
+# English shires other than Wessex.
+
+[welsh_rise]
+slot = 1
+tags = GWY,PEM,DEH,CRD,PEL,ERY,WLS
+shield = yes
+modifier = kar_cymry_united | The Cymry United | The Welsh princes hold together under one lord, and the bards sing of Cunedda's sons. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_kin_of_the_west | Kin of the West | The Britons of Dumnonia and Cornwall look to Wales for kinship and shelter. | improve_relation_modifier 0.25, diplomatic_reputation 1
+
+mission = cymry | The Land of the Cymry | Gwynedd, Powys, Deheubarth and Morgannwg are one people, and whoever unites them is king of Wales.
+row = 1
+icon = mission_unite_home_region
+when = area wales_area
+reward = prestige 10 ; modifier kar_cymry_united 15 ; claim_area west_midlands_area
+
+mission = marches | The Marches | The Mercian lords on the Severn and Dee threaten Wales, and Offa's Dyke must be pushed back to the Severn.
+row = 2
+needs = cymry
+icon = mission_great_wall
+when = area west_midlands_area
+reward = prestige 15 ; claim 233, 4373
+
+mission = dumnonia | Kin of Dumnonia | Cornwall and Devon speak the Welsh tongue; the kinsmen of the south-west would welcome a Welsh king.
+row = 3
+needs = marches
+icon = mission_hands_praying
+when = owns 233, 4373
+reward = prestige 15 ; modifier kar_kin_of_the_west 15 ; claim_area lowlands_area
+
+mission = old_north | The Men of the North | Strathclyde and the Clyde were the last British kingdom of the north; its rock at Dumbarton is a Welsh cousin's seat.
+row = 4
+needs = dumnonia
+icon = mission_cossack_cavalry
+when = area lowlands_area
+reward = prestige 20 ; adm 50
+
+[irish_rise]
+slot = 1
+tags = DMS,ORD,MNS,CON,MTH,LEI,OSR,ORG,ULS,DUB,IRE
+shield = yes
+modifier = kar_high_kingship | The High Kingship | The kings of the provinces accept one among them as high king at Tara. | legitimacy 1, improve_relation_modifier 0.25
+modifier = kar_monastic_learning | Monastic Learning | The great monasteries of Clonmacnoise, Bangor and Armagh teach Latin, Greek and the old Irish law. | technology_cost -0.05, tolerance_own 1
+
+mission = munster | The Kingdom of Munster | The kings of Cashel hold the south from the Shannon to the sea, and Cashel is where the high kings are crowned.
+row = 1
+icon = mission_unite_home_region
+when = area munster_area
+reward = prestige 10 ; claim_area leinster_area
+
+mission = leinster | Leinster and the Vikings | The Norse settlements of Dublin and Wexford sit in Leinster, and the Irish kings must either use them or expel them.
+row = 2
+needs = munster
+icon = mission_sea_battles
+when = area leinster_area
+reward = prestige 15 ; claim_area connacht_area
+
+mission = connacht | The West | Connacht and Thomond between the Shannon and the Atlantic are the home of the Ui Briuin and the Dal Cais.
+row = 3
+needs = leinster
+icon = mission_assemble_an_army
+when = area connacht_area
+reward = prestige 15 ; modifier kar_monastic_learning 15 ; claim_area ulster_area
+
+mission = tara | The High King at Tara | The northern Ui Neill and the kings of Ulster have the best claim to the high kingship and the hill of Tara.
+row = 4
+needs = connacht
+icon = mission_european_church
+when = area ulster_area
+reward = prestige 25 ; modifier kar_high_kingship 20 ; claim_area kingdom_of_the_isles_area
+
+mission = gaelic_isles | The Isles of the Gaels | The Gaelic kings of Ireland and Dal Riata claim the western isles by descent from the first Scots.
+row = 5
+needs = tara
+icon = mission_junk_boat
+when = area kingdom_of_the_isles_area
+reward = prestige 20 ; dip 50
+
+[alban_rise]
+slot = 1
+tags = SCO,GLW,STR,SUT,ANA
+shield = yes
+modifier = kar_kingdom_of_alba | Kingdom of Alba | The Picts and Scots are one kingdom with one king at Scone, and the old tribal strife is over. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_firth_of_clyde | Firth of Clyde | The ships of the Clyde and the Forth carry the king's goods and men. | galley_power 0.10, trade_efficiency 0.05
+
+mission = highlands | The Highlands | The mountains and glens of the north are the Pictish heartland, and a king there must have the chieftains' consent.
+row = 1
+icon = mission_unite_home_region
+when = area highlands_area
+reward = prestige 10 ; claim_area lowlands_area
+
+mission = lowlands | Strathclyde and Lothian | The Clyde and the Forth are the king's gateway to the south, and Dumbarton's Britons are old rivals.
+row = 2
+needs = highlands
+icon = mission_assemble_an_army
+when = area lowlands_area
+reward = prestige 15 ; modifier kar_firth_of_clyde 15 ; claim_area scottish_marches_area
+
+mission = border | The Border Marches | The Tweed and the Cheviot hills are a border between Alba and Northumbria, and the Scots have claimed Lothian ever since.
+row = 3
+needs = lowlands
+icon = mission_great_wall
+when = area scottish_marches_area
+reward = prestige 15 ; modifier kar_kingdom_of_alba 15 ; claim_area kingdom_of_the_isles_area
+
+mission = western_isles | The Western Isles | The Hebrides are the Norse sea-kings' domain, but the Gaelic chiefs there look to Alba.
+row = 4
+needs = border
+icon = mission_invade_island
+when = area kingdom_of_the_isles_area
+reward = prestige 20 ; adm 50
+
+[norse_isles_rise]
+slot = 1
+tags = LOI,ORK,KOI
+shield = yes
+modifier = kar_sea_kings_of_the_isles | Sea-Kings of the Isles | The jarls of the Orkneys and Hebrides command the sea roads of the north. | galley_power 0.10, naval_morale 0.10
+
+mission = highlands_coast | The Highland Shores | The Norse of the isles hold the fjord heads of the Highland coast and want the mainland glens behind them.
+row = 1
+icon = mission_sea_battles
+when = area highlands_area ; area kingdom_of_the_isles_area
+reward = prestige 10 ; modifier kar_sea_kings_of_the_isles 15 ; claim_area lowlands_area
+
+mission = clyde_firth | The Clyde and Galloway | The Clyde and Galloway coasts are home to Gaelic-Norse settlers who look to the isles' jarls as their lords.
+row = 2
+needs = highlands_coast
+icon = mission_junk_boat
+when = area lowlands_area
+reward = prestige 15 ; claim_area leinster_area
+
+mission = dublin | Dublin and the Irish Sea | Dublin is the Norse kings' greatest town in the west and the market where the slaves of the Irish Sea are sold.
+row = 3
+needs = clyde_firth
+icon = mission_hanseatic_city
+when = area leinster_area
+reward = prestige 20 ; adm 50
+
+[english_rise]
+slot = 1
+tags = HRF,NTH,YRK,NFK,LIC,LAA,CUM,DOS
+shield = yes
+modifier = kar_english_crown_won | The English Crown | The shires accept one king, and the king's peace holds from the Humber to the Channel. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_shire_courts | The Shire Courts | Sheriffs and shire courts carry the king's writ to every hundred. | global_unrest -1, advisor_cost -0.10
+
+mission = midlands | The Midlands | The Trent valley and the Avon are the old heartland of Mercia, whose kings were once overlords of the English.
+row = 1
+icon = mission_unite_home_region
+when = area west_midlands_area ; area east_midlands_area
+reward = prestige 10 ; claim_area home_counties_area, east_anglia_area
+
+mission = thames | The Thames Valley | London, Kent and the valley of the Thames hold the richest towns of England and the road to the Continent.
+row = 2
+needs = midlands
+icon = mission_hanseatic_city
+when = area home_counties_area
+reward = prestige 15 ; claim_area wessex_area
+
+mission = the_fens | The Fens and the Wash | East Anglia's coast faces the sea road from Denmark, and the fens are the gateway to the east.
+row = 3
+needs = thames
+icon = mission_sea_battles
+when = area east_anglia_area
+reward = prestige 10 ; modifier kar_shire_courts 15
+
+mission = wessex_shires | The West Saxon Shires | Hampshire, Somerset, Devon and Cornwall are the heartland of the West Saxon kings.
+row = 4
+needs = thames
+icon = mission_european_church
+when = area wessex_area
+reward = prestige 15 ; claim_area yorkshire_area, scottish_marches_area
+
+mission = north_shires | The Northern Shires | York, Durham and the border country were once the greatest English kingdom, and the Danes took them from it.
+row = 5
+needs = wessex_shires, the_fens
+icon = mission_conquer_5_states
+when = area yorkshire_area ; area scottish_marches_area
+reward = prestige 25 ; modifier kar_english_crown_won 20 ; stability 1
+ai = 250

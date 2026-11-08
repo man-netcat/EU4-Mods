@@ -279,3 +279,48 @@ kar_dnieper_route = {
 	trade_efficiency = 0.1
 	global_trade_power = 0.1
 }
+
+kar_cymry_united = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_kin_of_the_west = {
+	improve_relation_modifier = 0.25
+	diplomatic_reputation = 1
+}
+
+kar_high_kingship = {
+	legitimacy = 1
+	improve_relation_modifier = 0.25
+}
+
+kar_monastic_learning = {
+	technology_cost = -0.05
+	tolerance_own = 1
+}
+
+kar_kingdom_of_alba = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_firth_of_clyde = {
+	galley_power = 0.1
+	trade_efficiency = 0.05
+}
+
+kar_sea_kings_of_the_isles = {
+	galley_power = 0.1
+	naval_morale = 0.1
+}
+
+kar_english_crown_won = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_shire_courts = {
+	global_unrest = -1
+	advisor_cost = -0.1
+}
