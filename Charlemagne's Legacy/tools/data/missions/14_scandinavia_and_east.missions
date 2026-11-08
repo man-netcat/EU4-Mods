@@ -1,0 +1,170 @@
+# Small realms that grow into larger kingdoms: Scandinavia and the lands between the Elbe and the Dnieper (written for 867).
+# Each tree leads from the home lands to the lands of the kingdom the realm can proclaim (see the Form* decisions).
+
+[danes_rise]
+slot = 1
+tags = SJA,JYL,SKN,HLL,BOM,BLE,DAN
+shield = yes
+modifier = kar_one_danish_crown | One Danish Crown | The Danes of the islands, the peninsula and Skane obey one king, and the thing meets at his call. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_wendish_coast_held | Wendish Coast Held | Harbours on the southern Baltic shore bring the king the dues of the Wendish trade. | trade_efficiency 0.10, galley_power 0.10
+
+mission = lands | The Danish Lands | Jutland, the islands and Skane are one people in speech and law; one king should rule them from Jelling.
+row = 1
+icon = mission_unite_home_region
+when = area jutland_area ; area denmark_area ; area skaneland_area
+reward = prestige 15 ; modifier kar_one_danish_crown 15 ; claim_area holstein_area, eastern_norway
+
+mission = holstein | The Eider Frontier | Hedeby on the Schlei is the greatest market of the north, and the Eider is the border of the Danes.
+row = 2
+needs = lands
+icon = mission_hanseatic_city
+when = area holstein_area
+reward = prestige 10 ; claim_area mecklenburg_area
+
+mission = viken | The Viken | The shores of the Oslofjord have been Danish for as long as men remember, and the Norwegian jarls hold them in the king's name.
+row = 3
+needs = holstein
+icon = mission_sea_battles
+when = area eastern_norway
+reward = prestige 10 ; claim_area vastra_gotaland_area
+
+mission = halland | The Kattegat Coast | Halland and the Gota river mouth control the straits; whoever holds them taxes every ship that passes.
+row = 4
+needs = viken
+icon = mission_galleys_in_port
+when = area vastra_gotaland_area
+reward = prestige 15 ; dip 50
+
+mission = wends | The Wendish Coast | The Abodrite harbours of Mecklenburg send amber, furs and slaves to Hedeby, and the Danish king claims their dues.
+row = 5
+needs = holstein
+icon = mission_asian_trader
+when = area mecklenburg_area
+reward = prestige 15 ; modifier kar_wendish_coast_held 15
+
+[danes_danelaw]
+slot = 2
+tags = SJA,JYL,SKN,HLL,BOM,BLE,DAN
+shield = yes
+modifier = kar_danelaw_realised | Danelaw Realised | Danish settlers farm the shires of the east, and English silver pays for the longships. | loot_amount 0.15, trade_efficiency 0.05
+
+mission = east_anglia | The Fenland Shore | The Great Army has wintered in East Anglia; the farmland beyond the fens is a place for Danes to settle.
+row = 1
+icon = mission_sea_battles
+when = area east_anglia_area
+reward = prestige 10 ; claim_area yorkshire_area
+
+mission = jorvik | Jorvik | York on the Ouse is the greatest town of the north of England, and its Danish king commands the roads to Scotland.
+row = 2
+needs = east_anglia
+icon = mission_hanseatic_city
+when = area yorkshire_area
+reward = prestige 15 ; claim_area east_midlands_area
+
+mission = five_boroughs | The Five Boroughs | Lincoln, Nottingham, Derby, Stamford and Leicester make a Danish league in the midlands.
+row = 3
+needs = jorvik
+icon = mission_market_place_with_asian_traders
+when = area east_midlands_area
+reward = prestige 15 ; modifier kar_danelaw_realised 15
+
+[svear_rise]
+slot = 1
+tags = UPL,SMA,VAS,VAR,GOT,ANG,OST,DAE,HAG,SWE
+shield = yes
+modifier = kar_kingdom_of_the_svear | Kingdom of the Svear | The uppsala thing and the Geatish lawspeakers acknowledge one king. | legitimacy 1, improve_relation_modifier 0.25
+modifier = kar_north_road_open | North Road Open | The coastal roads and the rivers of Norrland carry the fur and iron of the north. | trade_efficiency 0.10, global_tax_modifier 0.05
+
+mission = svealand | The Lake Malar Lands | The lands around the Malar and Uppsala are the Svear's core; the king's hall and the great temple stand there.
+row = 1
+icon = mission_unite_home_region
+when = area svealand_area ; area ostra_svealand_area
+reward = prestige 10 ; claim_area gotaland_area, vastra_gotaland_area
+
+mission = gotaland | The Land of the Geats | The Geats of Gotaland are the rivals of the Svear, and the great lakes between them are the heart of Sweden.
+row = 2
+needs = svealand
+icon = mission_assemble_an_army
+when = area gotaland_area ; area vastra_gotaland_area
+reward = prestige 15 ; modifier kar_kingdom_of_the_svear 15 ; claim_area norrland_area
+
+mission = norrland | The Northern Coast | The coast of the Gulf of Bothnia is thinly settled, with fishermen, fur traders and the first iron-smelters.
+row = 3
+needs = gotaland
+icon = mission_early_game_buildings
+when = area norrland_area
+reward = prestige 10 ; modifier kar_north_road_open 15 ; claim_area laponia_area
+
+mission = lapps | The Lapland Tribute | The Lapps pay tribute in furs and reindeer, and the king's tax-gatherers ride the winter snow.
+row = 4
+needs = norrland
+icon = mission_asian_trader
+when = area laponia_area
+reward = prestige 15 ; adm 50
+
+[svear_eastern_way]
+slot = 2
+tags = UPL,SMA,VAS,VAR,GOT,ANG,OST,DAE,HAG,SWE
+shield = yes
+modifier = kar_eastern_way_trade | Eastern Way Trade | Swedish ships and sleds carry furs, wax and slaves along the rivers to Novgorod and beyond. | trade_efficiency 0.10, caravan_power 0.10
+
+mission = finland | Across the Gulf | The Finnish tribes of the south-west coast pay tribute to the Svear and know them as traders and raiders.
+row = 1
+icon = mission_sea_battles
+when = area finland_area
+reward = prestige 10 ; claim_area bothnia_area, estonia_ingria_area
+
+mission = ingria | The Gulf of Finland | The Neva river mouth leads to Lake Ladoga and the road to Novgorod and the Volga; the Swedes want it for their own.
+row = 2
+needs = finland
+icon = mission_junk_boat
+when = area estonia_ingria_area
+reward = prestige 15 ; modifier kar_eastern_way_trade 15 ; claim_area livonia_area
+
+mission = livonia | The Livonian Shore | The Livs and Estonians pay tribute in amber and furs, and their ports are the Baltic's richest.
+row = 3
+needs = ingria
+icon = mission_hanseatic_city
+when = area livonia_area
+reward = prestige 15 ; dip 50
+
+[norway_rise]
+slot = 1
+tags = VFD,TEL,NES,DLR,JAM,ROG,MRO,HRD,TRD,VSV,NOR
+shield = yes
+modifier = kar_fairhair_realm | Fairhair's Realm | Harald's jarls have bent the knee, and the coast from the Oslofjord to the North Cape is one kingdom. | legitimacy 1, stability_cost_modifier -0.10
+modifier = kar_northern_fleets | Northern Fleets | The coastal levy of the fjords is organised into ship-districts that call out their ships when the king calls. | galley_power 0.10, naval_morale 0.10
+
+mission = vestfold | The Viken Kings | Vestfold and the Oslofjord are the old seat of the Ynglings and the richest farmland in the north.
+row = 1
+icon = mission_unite_home_region
+when = area eastern_norway
+reward = prestige 10 ; claim_area western_norway
+
+mission = vestlandet | The Western Fjords | The deep fjords of the west coast breed independent jarls, but also the best sailors in the north.
+row = 2
+needs = vestfold
+icon = mission_galleys_in_port
+when = area western_norway
+reward = prestige 15 ; modifier kar_northern_fleets 15 ; claim_area northern_norway
+
+mission = halogaland | Trondelag and Halogaland | The northern coast supplies fish, furs and walrus ivory, and its great men are rich enough to defy a king.
+row = 3
+needs = vestlandet
+icon = mission_sea_battles
+when = area northern_norway
+reward = prestige 15 ; modifier kar_fairhair_realm 15 ; claim_area subarctic_islands_area, kingdom_of_the_isles_area
+
+mission = north_isles | The Isles of the North | Shetland, Orkney, the Faroes and Iceland are settled by Norwegians and look to the king for law.
+row = 4
+needs = halogaland
+icon = mission_invade_island
+when = area subarctic_islands_area
+reward = prestige 15 ; dip 50
+
+mission = sudreyjar | The Kingdom of the Isles | The Hebrides and Man are the Norwegian jarls' kingdom in the west, a base for raids on Ireland and Scotland.
+row = 5
+needs = north_isles
+icon = mission_junk_boat
+when = area kingdom_of_the_isles_area
+reward = prestige 20 ; adm 50

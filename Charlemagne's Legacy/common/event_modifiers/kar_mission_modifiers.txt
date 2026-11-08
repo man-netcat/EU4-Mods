@@ -174,3 +174,108 @@ kar_emishi_pacified = {
 	cavalry_power = 0.1
 	hostile_attrition = 0.5
 }
+
+kar_one_danish_crown = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_wendish_coast_held = {
+	trade_efficiency = 0.1
+	galley_power = 0.1
+}
+
+kar_danelaw_realised = {
+	loot_amount = 0.15
+	trade_efficiency = 0.05
+}
+
+kar_kingdom_of_the_svear = {
+	legitimacy = 1
+	improve_relation_modifier = 0.25
+}
+
+kar_north_road_open = {
+	trade_efficiency = 0.1
+	global_tax_modifier = 0.05
+}
+
+kar_eastern_way_trade = {
+	trade_efficiency = 0.1
+	caravan_power = 0.1
+}
+
+kar_fairhair_realm = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_northern_fleets = {
+	galley_power = 0.1
+	naval_morale = 0.1
+}
+
+kar_piast_state = {
+	legitimacy = 1
+	global_tax_modifier = 0.05
+}
+
+kar_polish_heartland = {
+	production_efficiency = 0.1
+	global_unrest = -1
+}
+
+kar_bohemian_crown = {
+	legitimacy = 1
+	global_tax_modifier = 0.05
+}
+
+kar_amber_road_tolls = {
+	trade_efficiency = 0.1
+	caravan_power = 0.1
+}
+
+kar_arpad_conquest = {
+	cavalry_power = 0.1
+	land_morale = 0.05
+}
+
+kar_carpathian_basin_held = {
+	production_efficiency = 0.1
+	global_tax_modifier = 0.05
+}
+
+kar_baltic_confederation = {
+	defensiveness = 0.1
+	hostile_attrition = 0.5
+}
+
+kar_amber_coast_held = {
+	trade_efficiency = 0.1
+	global_tax_modifier = 0.05
+}
+
+kar_cherven_towns_united = {
+	defensiveness = 0.1
+	trade_efficiency = 0.05
+}
+
+kar_serb_zupas_united = {
+	legitimacy = 1
+	stability_cost_modifier = -0.1
+}
+
+kar_baltic_slavic_state = {
+	trade_efficiency = 0.1
+	galley_power = 0.1
+}
+
+kar_land_of_the_rus = {
+	trade_efficiency = 0.1
+	caravan_power = 0.1
+}
+
+kar_dnieper_route = {
+	trade_efficiency = 0.1
+	global_trade_power = 0.1
+}

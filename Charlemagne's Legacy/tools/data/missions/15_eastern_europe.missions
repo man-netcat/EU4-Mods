@@ -1,0 +1,318 @@
+# The peoples between the Elbe and the Dnieper and the Balkan hills: small realms that grow into kingdoms (written for 867).
+
+[polans_rise]
+slot = 1
+tags = WIE,KUJ,LEC,PLO,STZ,SAN,TRN,KRA,SIL,POL
+shield = yes
+modifier = kar_piast_state | Piast State | A ring of stockaded towns holds the Polans together under one duke, and the dues come to Gniezno. | legitimacy 1, global_tax_modifier 0.05
+modifier = kar_polish_heartland | Polish Heartland | The fields between the Vistula and the Oder are tilled by one people under one law. | production_efficiency 0.10, global_unrest -1
+
+mission = polanie | The Land of the Polans | The Polans of Gniezno and Poznan are the core of the nation; the fields of the Warta must be under one duke.
+row = 1
+icon = mission_unite_home_region
+when = area wielkopolska_area
+reward = prestige 10 ; claim_area kuyavia_area, central_poland_area
+
+mission = kuyavia | Kuyavia and Leczyca | The Goplo lake and the salt of Kuyavia are the Polans' tributaries, and the dukes of Leczyca have long been their rivals.
+row = 2
+needs = polanie
+icon = mission_assemble_an_army
+when = area kuyavia_area ; area central_poland_area
+reward = prestige 10 ; modifier kar_piast_state 15 ; claim_area mazovia_area
+
+mission = mazovia | The Mazovian Plain | The dukes of Plock hold the middle Vistula, a country of forests, marshes and amber roads.
+row = 3
+needs = kuyavia
+icon = mission_eastern_european_city
+when = area mazovia_area
+reward = prestige 15 ; claim_area malopolska_area, sandomierz_area
+
+mission = malopolska | Lesser Poland | Cracow and the Vistulans are rich in salt and lead, and are the strongest of the western Slavic tribes.
+row = 4
+needs = mazovia
+icon = mission_great_wall
+when = area malopolska_area ; area sandomierz_area
+reward = prestige 15 ; claim_area silesia_area
+
+mission = silesia | Silesia | The Oder valley is the kingdom's western gate, and the Slavic tribes there trade with Bohemia and Moravia.
+row = 5
+needs = malopolska
+icon = mission_crusade_for_varna
+when = area silesia_area
+reward = prestige 25 ; modifier kar_polish_heartland 20 ; claim_area west_prussia_area
+ai = 250
+
+[czechs_rise]
+slot = 1
+tags = BHM,PLZ,HRA,BOH
+shield = yes
+modifier = kar_bohemian_crown | Bohemian Crown | The Premyslid dukes at Prague command the Czech tribes, and the roads of the Elbe pay tolls. | legitimacy 1, global_tax_modifier 0.05
+modifier = kar_amber_road_tolls | Amber Road Tolls | The amber and salt roads cross Bohemia, and the dukes tax every wagon. | trade_efficiency 0.10, caravan_power 0.10
+
+mission = moravia | Moravia | The Morava valley is the Moravians' country, and the road to the Danube and the Adriatic runs through it.
+row = 1
+icon = mission_eastern_european_city
+when = area moravia_area
+reward = prestige 10 ; claim_area lusatia_area, silesia_area
+
+mission = lusatia | The Lusatian Lands | The Sorbian tribes of the upper Spree and the Neisse live on land between Bohemia and Saxony.
+row = 2
+needs = moravia
+icon = mission_assemble_an_army
+when = area lusatia_area
+reward = prestige 10 ; modifier kar_bohemian_crown 15
+
+mission = silesia | Silesia | The Oder valley and the passes of the Sudeten link Bohemia to the Baltic, and the Slavic tribes there trade with Prague.
+row = 3
+needs = lusatia
+icon = mission_great_wall
+when = area silesia_area
+reward = prestige 15 ; claim_area south_saxony_area
+
+mission = sorbs | The Sorbian March | The tribes of the Saale and the Mulde are Slavs on the border of the Franks; to hold them is to hold the Elbe.
+row = 4
+needs = silesia
+icon = mission_steppe_warriors
+when = area south_saxony_area
+reward = prestige 15 ; modifier kar_amber_road_tolls 15 ; claim_area slovakia_area
+
+mission = slovakia | The Carpathian Gate | The Slovak valleys behind the Tatra connect Bohemia to the Danube and to Great Moravia's old land.
+row = 5
+needs = sorbs
+icon = mission_hands_praying
+when = area slovakia_area
+reward = prestige 20 ; adm 50
+
+[magyars_rise]
+slot = 1
+tags = MGY,HUN
+shield = yes
+modifier = kar_arpad_conquest | The Conquest of the Homeland | The seven tribes have settled the basin of the middle Danube and do not look back. | cavalry_power 0.10, land_morale 0.05
+modifier = kar_carpathian_basin_held | Carpathian Basin Held | The plains and hills of the Danube and Tisza feed the herds of the new kingdom. | production_efficiency 0.10, global_tax_modifier 0.05
+
+mission = black_sea | The Black Sea Steppe | The seven tribes graze their herds from the Don to the Danube, and the Khazar tribute weighs on them.
+row = 1
+icon = mission_steppe_warriors
+when = area yedisan_area
+reward = prestige 10 ; claim_area moldavia_area
+
+mission = moldavia | Beyond the Passes | The forest passes of the Carpathians lead to the plains of the Danube basin; the Magyars must cross them before the Pechenegs do.
+row = 2
+needs = black_sea
+icon = mission_central_asian_city
+when = area moldavia_area
+reward = prestige 15 ; claim_area transylvania_area, southern_transylvania_area
+
+mission = forest_land | The Land Beyond the Forest | The high basin of the Mures and the Olt is a land of salt and gold; whoever holds it holds the eastern door of the Carpathians.
+row = 3
+needs = moldavia
+icon = mission_great_wall
+when = area transylvania_area ; area southern_transylvania_area
+reward = prestige 15 ; claim_area alfold_area
+
+mission = alfold | The Great Plain | The plain between the Tisza and the Danube is grass country as far as the eye can see, and suits the horse-archers.
+row = 4
+needs = forest_land
+icon = mission_bedouins
+when = area alfold_area
+reward = prestige 15 ; modifier kar_arpad_conquest 15 ; claim_area transdanubia_area
+
+mission = pannonia | Pannonia | The Roman province of Pannonia, the Avar khagan's old seat and the road to Bavaria and the Alps, is the kingdom's last conquest.
+row = 5
+needs = alfold
+icon = mission_crusade_for_varna
+when = area transdanubia_area
+reward = prestige 25 ; modifier kar_carpathian_basin_held 20 ; stability 1
+
+[balts_rise]
+slot = 1
+tags = LTU,ZEM,PRU,YTV,LIT
+shield = yes
+modifier = kar_baltic_confederation | Baltic Confederation | The chiefs of the Baltic tribes hold their lands together against the Rus and the Teutons. | defensiveness 0.10, hostile_attrition 0.5
+modifier = kar_amber_coast_held | Amber Coast Held | The amber of the Samland coast brings silver from the south and north. | trade_efficiency 0.10, global_tax_modifier 0.05
+
+mission = tribes | The Baltic Core | The Lithuanians of the interior and the Samogitians of the lowland share a language, a faith and a need for allies.
+row = 1
+icon = mission_unite_home_region
+when = area lithuania_area ; area samogitia_area
+reward = prestige 10 ; modifier kar_baltic_confederation 15 ; claim_area east_prussia_area
+
+mission = prussia | The Prussian Coast | The Prussian clans on the Samland coast sell amber, honey and slaves to every sea-faring people.
+row = 2
+needs = tribes
+icon = mission_hanseatic_city
+when = area east_prussia_area
+reward = prestige 10 ; modifier kar_amber_coast_held 15 ; claim_area west_prussia_area
+
+mission = vistula_mouth | The Vistula Delta | West Prussia and the mouths of the Vistula control the amber road to the Baltic.
+row = 3
+needs = prussia
+icon = mission_sea_battles
+when = area west_prussia_area
+reward = prestige 15 ; claim_area curonia_area
+
+mission = curonia | The Curonian Coast | The Curonians are the best seamen of the eastern Baltic, and their harbours are pirate nests.
+row = 4
+needs = vistula_mouth
+icon = mission_galleys_in_port
+when = area curonia_area
+reward = prestige 15 ; claim_area livonia_area
+
+mission = livonia | The Livonian Lands | The Livs and Letts of the Dvina and the Gauja lie open to anyone who can unite the tribes.
+row = 5
+needs = curonia
+icon = mission_eastern_european_city
+when = area livonia_area
+reward = prestige 20 ; adm 50
+
+[volhynians_rise]
+slot = 1
+tags = HAL,CRV,VDM,VOL
+shield = yes
+modifier = kar_cherven_towns_united | Cherven Towns United | The fortress-towns of the San and the Bug are held by one prince, and the salt road passes his gates. | defensiveness 0.10, trade_efficiency 0.05
+
+mission = cherven | The Cherven Towns | Halych, Przemysl and Cherven control the Carpathian salt, and they were the first towns in the contest between Rus and the Poles.
+row = 1
+icon = mission_eastern_european_city
+when = area red_ruthenia_area ; area volhynia_area
+reward = prestige 10 ; modifier kar_cherven_towns_united 15 ; claim_area podolia_volhynia_area, podlasie_area
+
+mission = podolia | The Podolian Uplands | The Dniester valley is open farm country, and whoever settles it owns the crossroads of the Rus lands and the steppe.
+row = 2
+needs = cherven
+icon = mission_rice_field
+when = area podolia_volhynia_area
+reward = prestige 15 ; claim_area pripyat_area
+
+mission = bug_river | The Bug River Lands | Podlasie and the marshes of the Pripyat tie the two river systems together.
+row = 3
+needs = podolia
+icon = mission_junk_boat
+when = area podlasie_area ; area pripyat_area
+reward = prestige 15 ; adm 50
+
+[serbs_rise]
+slot = 1
+tags = MON,RSK,SER
+shield = yes
+modifier = kar_serb_zupas_united | Serbian Zupas United | The zupans of the Serbian lands answer to one grand zupan. | legitimacy 1, stability_cost_modifier -0.10
+
+mission = raska | Raska and Serbia | The mountain valleys of the Ibar and the Morava are the cradle of the Serbs, and the zupans there choose a grand zupan.
+row = 1
+icon = mission_unite_home_region
+when = area serbia_area ; area rascia_area
+reward = prestige 10 ; modifier kar_serb_zupas_united 15 ; claim_area bosnia_area
+
+mission = bosnia | The Bosnian Hills | The Bosnian zupans on the Drina and the Bosna are cousins of the Serbs, and the mountain forts are strong.
+row = 2
+needs = raska
+icon = mission_great_wall
+when = area bosnia_area
+reward = prestige 15 ; claim_area east_adriatic_coast_area
+
+mission = zeta | The Adriatic Coast | Zeta and the Dalmatian coast bring Serbia to the sea, in sight of Venice and the Greeks.
+row = 3
+needs = bosnia
+icon = mission_galleys_in_port
+when = area east_adriatic_coast_area
+reward = prestige 15 ; claim_area croatia_area
+
+mission = croats | The Croat Lands | The Croats of the Sava and the Adriatic coast speak the same tongue as the Serbs, and both look to Byzantium and Rome for their church.
+row = 4
+needs = zeta
+icon = mission_hands_praying
+when = area croatia_area
+reward = prestige 20 ; adm 50
+
+[pomeranians_rise]
+slot = 1
+tags = HSA,LUT,RUG,WOL,UKI,STE,SLU,CED,POM
+shield = yes
+modifier = kar_baltic_slavic_state | Baltic Slavic State | The Slavic tribes of the south Baltic shore are bound by a duke, and Wolin is the greatest market of the north. | trade_efficiency 0.10, galley_power 0.10
+
+mission = coast | The Slavic Coast | Mecklenburg and Vorpommern are the home of the Abodrites, Rani and Wolliner; whoever unites them commands the south Baltic.
+row = 1
+icon = mission_unite_home_region
+when = area mecklenburg_area ; area vorpommern_area
+reward = prestige 10 ; modifier kar_baltic_slavic_state 15 ; claim_area hinter_pommern_area
+
+mission = pomerania | Further Pomerania | The coast east of the Oder is held by the Pomeranian tribes, and Kolobrzeg's salt-works are a prize.
+row = 2
+needs = coast
+icon = mission_sea_battles
+when = area hinter_pommern_area
+reward = prestige 15 ; claim_area neumark_area, mittelmark_area
+
+mission = marches | The Havel Marches | The marches of the Havel and the lower Warta are forest and marsh, home to the Lutici and Pyritz.
+row = 3
+needs = pomerania
+icon = mission_steppe_warriors
+when = area neumark_area ; area mittelmark_area
+reward = prestige 20 ; adm 50
+
+[rus_novgorod]
+slot = 1
+tags = NOV
+shield = yes
+modifier = kar_land_of_the_rus | Land of the Rus | The princes of the north hold the portage roads between the Baltic, the Volga and the Dnieper. | trade_efficiency 0.10, caravan_power 0.10
+
+mission = pskov | Pskov and the Lake | Pskov and Lake Peipus are Novgorod's western gate, and the Chud and Vod tribes pay it tribute.
+row = 1
+icon = mission_hanseatic_city
+when = area pskov_area
+reward = prestige 10 ; claim_area beloozero_area, tver_area
+
+mission = beloozero | The White Lake | Beloozero lies on the road to the Volga, and the Ves tribe pays its tribute in furs.
+row = 2
+needs = pskov
+icon = mission_junk_boat
+when = area beloozero_area
+reward = prestige 10 ; modifier kar_land_of_the_rus 15 ; claim_area yaroslavl_area
+
+mission = upper_volga | The Upper Volga | The Volga headwaters and the lakes of Tver link Novgorod to the Bulgar and Khazar markets.
+row = 3
+needs = beloozero
+icon = mission_asian_trader
+when = area tver_area ; area yaroslavl_area
+reward = prestige 15 ; claim_area vladimir_area, suzdal_area
+
+mission = zalesye | The Land Beyond the Forest | Suzdal and Vladimir lie between the Volga and the Oka, among the forests of the Merya, and hold the best soil in the north.
+row = 4
+needs = upper_volga
+icon = mission_rice_field
+when = area vladimir_area ; area suzdal_area
+reward = prestige 20 ; adm 50
+
+[rus_kiev]
+slot = 1
+tags = KIE
+shield = yes
+modifier = kar_dnieper_route | The Dnieper Route | The river road from the Baltic to the Black Sea pays tribute to Kiev's princes. | trade_efficiency 0.10, global_trade_power 0.10
+
+mission = polyane | The Land of the Polyane | The meadow-tribes around Kiev are the core of the Rus state, and the mound-city commands the middle Dnieper.
+row = 1
+icon = mission_unite_home_region
+when = area west_dniepr_area
+reward = prestige 10 ; claim_area pripyat_area, smolensk_area
+
+mission = pripyat | The Pripyat Marshes | The Pripyat marshes are the old homeland of the Drevlians and Dregovichi and the road to the Baltic lowlands.
+row = 2
+needs = polyane
+icon = mission_junk_boat
+when = area pripyat_area
+reward = prestige 10 ; modifier kar_dnieper_route 15
+
+mission = smolensk | The Smolensk Portage | The Dnieper portage at Smolensk joins the rivers of the Baltic to the rivers of the Black Sea, and the Krivichi hold it.
+row = 3
+needs = pripyat
+icon = mission_asian_trader
+when = area smolensk_area
+reward = prestige 15 ; claim_area chernigov_area, east_dniepr_area
+
+mission = khazar_border | The Khazar Border | Chernigov and the Sula river mark the border with the Khazars; to hold them is to break the tribute that Kiev pays.
+row = 4
+needs = smolensk
+icon = mission_steppe_warriors
+when = area chernigov_area ; area east_dniepr_area
+reward = prestige 20 ; claim_area sloboda_ukraine_area
+ai = 250
