@@ -1,0 +1,351 @@
+# The great marches and middle realms of the Frankish world (written for 867): Lotharingia, Bavaria, Aquitaine, Brittany, the Pope,
+# Great Moravia and Provence.
+
+[lotharingia_marches]
+slot = 1
+tags = LOT
+shield = yes
+modifier = kar_middle_kingdom_borders | Borders of the Middle Kingdom | The rivers and passes of Lothar's realm are watched by his counts and margraves. | defensiveness 0.10, fort_maintenance_modifier -0.10
+modifier = kar_flemish_wealth | Flemish Wealth | The cloth towns of Flanders and the ports of the Scheldt pay the king well. | trade_efficiency 0.10, global_tax_modifier 0.05
+
+mission = rhine_gate | The Rhine Gate | The mouths of the Rhine and the Brabant plain face the East Franks, and Lotharingia must hold them.
+row = 1
+icon = mission_great_wall
+when = area north_brabant_area ; area north_rhine_area
+reward = prestige 10 ; claim_area picardy_area
+
+mission = channel | The Channel Coast | Picardy and the coast of the Channel give Lotharingia a window on the northern sea.
+row = 2
+needs = rhine_gate
+icon = mission_sea_battles
+when = area picardy_area
+reward = prestige 10 ; claim_area flanders_area
+
+mission = flanders | The Flemish Towns | Flanders' cloth, its ports and its monks make it the richest country of the north.
+row = 3
+needs = channel
+icon = mission_hanseatic_city
+when = area flanders_area
+reward = prestige 15 ; modifier kar_flemish_wealth 15 ; claim_area bourgogne_area
+
+mission = burgundy | The Burgundian Gate | The old Burgundian lands between the Saone and the Jura join Lotharingia to the Rhone and to Italy.
+row = 4
+needs = flanders
+icon = mission_unite_home_region
+when = area bourgogne_area
+reward = prestige 15 ; modifier kar_middle_kingdom_borders 15
+
+[lotharingia_south]
+slot = 2
+tags = LOT
+shield = yes
+modifier = kar_imperial_inheritance | Imperial Inheritance | Lothar's heirs hold the imperial title and the lands of the three kingdoms' middle. | legitimacy 1, stability_cost_modifier -0.10
+
+mission = jura | Romandie and the Jura | The passes of the Jura and the Great St Bernard join Lotharingia to Italy, and the lords there swear to whom they please.
+row = 1
+icon = mission_great_wall
+when = area romandie_area
+reward = prestige 10 ; claim_area savoy_dauphine_area
+
+mission = savoy | Savoy and the Dauphine | The Alpine valleys of Savoy and the Dauphine connect Lotharingia's heartland with the Rhone.
+row = 2
+needs = jura
+icon = mission_hands_praying
+when = area savoy_dauphine_area
+reward = prestige 10 ; claim_area provence_area, liguria_area
+
+mission = rhone | Provence and the Rhone | The Rhone valley and the Provencal coast are the old kingdom of Burgundy and Provence that Lothar's family also ruled.
+row = 3
+needs = savoy
+icon = mission_galleys_in_port
+when = area provence_area ; area liguria_area
+reward = prestige 15 ; claim_area lombardy_area, piedmont_area
+
+mission = lombardy | The Iron Crown | Pavia and the Lombard plain are Italy's kingdom and the emperor's seat; the middle realm is whole with them.
+row = 4
+needs = rhone
+icon = mission_italian_condottiere
+when = area lombardy_area ; area piedmont_area
+reward = prestige 20 ; claim_area lazio_area
+
+mission = rome | The Imperial City | Rome crowns the emperor, and whoever holds the Lateran can claim the imperial title for his house.
+row = 5
+needs = lombardy
+icon = mission_european_church
+when = area lazio_area
+reward = prestige 25 ; modifier kar_imperial_inheritance 20 ; stability 1
+
+[lotharingia_court]
+slot = 3
+tags = LOT
+shield = yes
+modifier = kar_court_of_aachen | Court of Aachen | The palace school and the royal chapel draw scholars to Lothar's court. | technology_cost -0.05, advisor_cost -0.10
+
+mission = ties | Ties of Blood | Lothar's sons and daughters are married to princes who can shield the Middle Kingdom.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = fisc | The Royal Estates | The palaces and estates of Aachen, Nijmegen and Thionville supply the king's court.
+row = 2
+needs = ties
+icon = mission_war_chest
+when = treasury 700
+reward = adm 50
+
+mission = school | The Palace School | Aachen's palace school copies books, teaches the clerks and sends missi dominici through the realm.
+row = 3
+needs = fisc, lotharingia_marches:channel
+icon = mission_early_modern_university
+when = dev 500 ; prestige 60
+reward = prestige 10 ; modifier kar_court_of_aachen 20
+
+[bavaria_march]
+slot = 1
+tags = BAV
+shield = yes
+modifier = kar_southeastern_march | The South-Eastern March | Margraves on the Danube and the Drava watch the Slavs, the Avars and the Hungarians. | defensiveness 0.10, hostile_attrition 0.5
+modifier = kar_bavarian_duchy | The Bavarian Duchy | The dukes of Regensburg hold the Alps, the Danube and the Inn in their own right. | legitimacy 1, stability_cost_modifier -0.10
+
+mission = tirol | Tyrol and Trent | The Brenner is the way to Italy, and the counts of Trent hold the southern side of it.
+row = 1
+icon = mission_great_wall
+when = area tirol_area
+reward = prestige 10 ; claim_area carinthia_area
+
+mission = carinthia | Carinthia and Carniola | The Slovene lands of Carinthia, Carniola and Istria are Bavaria's march towards the Adriatic.
+row = 2
+needs = tirol
+icon = mission_arabian_fort
+when = area carinthia_area
+reward = prestige 15 ; modifier kar_southeastern_march 15 ; claim_area upper_swabia_area, upper_franconia_area
+
+mission = nordgau | Swabia and Franconia | The northern and western neighbours of Bavaria are great and rich, and their counts have played Bavaria against the king.
+row = 3
+needs = carinthia
+icon = mission_noble_council
+when = area upper_swabia_area ; area upper_franconia_area
+reward = prestige 15 ; modifier kar_bavarian_duchy 15 ; claim_area moravia_area
+
+mission = moravian_march | The Moravian March | Great Moravia lies behind the Bohemian forest, and its prince is a rival and a neighbour.
+row = 4
+needs = nordgau
+icon = mission_crusade_for_varna
+when = area moravia_area
+reward = prestige 20 ; claim_area transdanubia_area
+
+mission = pannonia | The Pannonian March | The Danube plain towards the east, the old Avar land, is the dukes' last march.
+row = 5
+needs = moravian_march
+icon = mission_eastern_european_city
+when = area transdanubia_area
+reward = prestige 25 ; stability 1
+
+[bavaria_court]
+slot = 2
+tags = BAV
+shield = yes
+modifier = kar_ducal_court | The Ducal Court | The dukes hold their own diets at Regensburg, and the Bavarian great men attend them. | stability_cost_modifier -0.10, improve_relation_modifier 0.25
+
+mission = oaths | Oaths of the Bavarians | The Bavarian counts and bishops swear loyalty to their duke, whatever the king in Frankfurt says.
+row = 1
+icon = mission_alliances
+when = allies 2
+reward = prestige 10 ; dip 50
+
+mission = salt_roads | The Salt Roads | Reichenhall and Salzburg send salt on the Inn and the Salzach, and the duke takes his share.
+row = 2
+needs = oaths
+icon = mission_war_chest
+when = treasury 600
+reward = adm 50
+
+mission = ducal_diet | The Ducal Diet | The duke judges at his own diet; Bavarian law, church and army are in his hand.
+row = 3
+needs = salt_roads, bavaria_march:carinthia
+icon = mission_noble_council
+when = dev 450 ; prestige 50
+reward = prestige 10 ; modifier kar_ducal_court 20
+
+[aquitaine_rise]
+slot = 1
+tags = AQI
+shield = yes
+modifier = kar_aquitanian_realm | The Aquitanian Realm | The lands between the Loire and the Pyrenees are one kingdom with one law. | legitimacy 1, global_tax_modifier 0.05
+modifier = kar_gothic_march | The Gothic March | Narbonne, Roussillon and Barcelona are settled by Goths and Spaniards, who owe service to the Aquitanian king. | defensiveness 0.10, hostile_attrition 0.5
+
+mission = south | Languedoc and the Massif | Toulouse, the Auvergne and the Cevennes were Aquitaine's core under the old kings.
+row = 1
+icon = mission_unite_home_region
+when = area languedoc_area ; area massif_central_area
+reward = prestige 10 ; claim_area poitou_area, catalonia_area
+
+mission = poitou | Poitou | The counts of Poitiers hold the northern marches; their loyalty has been wavering since the Carolingians took the throne.
+row = 2
+needs = south
+icon = mission_european_church
+when = area poitou_area
+reward = prestige 10 ; modifier kar_aquitanian_realm 15
+
+mission = gothia | The Gothic March | The Frankish march of Catalonia keeps the Moorish emirs of the south from the Languedoc.
+row = 3
+needs = south
+icon = mission_arabian_fort
+when = area catalonia_area
+reward = prestige 15 ; modifier kar_gothic_march 15 ; claim_area provence_area
+
+mission = rhone_coast | The Rhone Coast | Provence and Marseilles belong to the Aquitanian south by trade, language and law.
+row = 4
+needs = poitou, gothia
+icon = mission_galleys_in_port
+when = area provence_area
+reward = prestige 20 ; dip 50
+
+[brittany_rise]
+slot = 1
+tags = BRI
+shield = yes
+modifier = kar_breton_march_pushed | The Breton Border Pushed Back | The ramparts of Rennes, Nantes and Vannes cover the peninsula, and Breton riders raid the Franks. | defensiveness 0.10, cavalry_power 0.10
+
+mission = loire | The Loire Marches | Nantes and the Loire mouth are the Breton march, a rich and exposed border town on the Frankish side of the river.
+row = 1
+icon = mission_great_wall
+when = area loire_area
+reward = prestige 10 ; claim_area normandy_area
+
+mission = cotentin | Cotentin and Avranches | The Breton border towards Normandy is held by Frankish counts who owe their king little loyalty.
+row = 2
+needs = loire
+icon = mission_sea_battles
+when = area normandy_area
+reward = prestige 15 ; modifier kar_breton_march_pushed 15 ; claim_area poitou_area, orleans_area
+
+mission = anjou | Poitou and Anjou | The counts of Anjou and Poitou are neighbours of Brittany and the allies of every Frankish king who wishes it ill.
+row = 3
+needs = cotentin
+icon = mission_assemble_an_army
+when = area poitou_area
+reward = prestige 15 ; claim_area orleans_area
+
+mission = orleans | The Loire Valley | Orleans and the central Loire valley are the Frankish king's heartland; a Breton there would be a revolution.
+row = 4
+needs = anjou
+icon = mission_conquer_5_states
+when = area orleans_area
+reward = prestige 25 ; stability 1
+
+[papal_patrimony]
+slot = 1
+tags = PAP
+shield = yes
+modifier = kar_patrimony_of_st_peter | Patrimony of St Peter | The Papal lands are held in the saint's name, and their revenues feed the Lateran. | global_tax_modifier 0.10, tolerance_own 1
+modifier = kar_defender_of_christendom | Defender of Christendom | Latin kings and Greek emperors alike must reckon with the Pope's blessing and his ban. | prestige 1, diplomatic_reputation 1
+
+mission = lazio | The Duchy of Rome | Rome and the Latin countryside, with the Campagna and the Sabine hills, are the Pope's own.
+row = 1
+icon = mission_european_church
+when = area lazio_area
+reward = prestige 10 ; modifier kar_patrimony_of_st_peter 15 ; claim_area central_italy_area
+
+mission = marches | The Marches and Spoleto | Spoleto, Camerino and Ancona are the Pope's inheritance since Pippin's grant, and the dukes there serve the emperor.
+row = 2
+needs = lazio
+icon = mission_hands_praying
+when = area central_italy_area
+reward = prestige 15 ; claim_area emilia_romagna_area
+
+mission = ravenna | The Exarchate | Pippin's donation gave the Pope the lands of the Byzantine exarch at Ravenna and the Pentapolis.
+row = 3
+needs = marches
+icon = mission_hanseatic_city
+when = area emilia_romagna_area
+reward = prestige 20 ; claim_area naples_area, apulia_area
+
+mission = benevento | Benevento and Naples | Benevento, Naples and Capua are claimed by the Popes as old patrimonies of the Church in the south.
+row = 4
+needs = ravenna
+icon = mission_italian_condottiere
+when = area naples_area ; area apulia_area
+reward = prestige 20 ; modifier kar_defender_of_christendom 20
+
+mission = tiara | The Triple Crown | The Pope is lord over kings: he crowns them, excommunicates them and sets them against one another.
+row = 5
+needs = benevento
+icon = mission_religious
+when = prestige 100 ; stability 3
+reward = prestige 30 ; stability 1
+
+[moravia_rise]
+slot = 1
+tags = GMA
+shield = yes
+modifier = kar_moravian_empire | The Moravian Empire | Svatopluk's lords gather around him in the Morava valley and the king's word reaches the Oder and the Danube. | legitimacy 1, defensiveness 0.10
+modifier = kar_slavic_liturgy | The Slavic Liturgy | Cyril and Methodios' disciples teach the Slavs in their own tongue, and the Church follows the king. | tolerance_own 2, religious_unity 0.10
+
+mission = silesia | The Oder Valley | The Silesian tribes between the Oder and the Sudetes are the first Slavs the Moravians try to bring under their rule.
+row = 1
+icon = mission_great_wall
+when = area silesia_area
+reward = prestige 10 ; claim_area slovakia_area
+
+mission = slovakia | The Carpathian Valleys | The Slovak valleys behind the Tatra connect the Moravians to the Danube and the Magyar steppe.
+row = 2
+needs = silesia
+icon = mission_eastern_european_city
+when = area slovakia_area
+reward = prestige 10 ; modifier kar_slavic_liturgy 15 ; claim_area transdanubia_area
+
+mission = pannonian_slavs | Pannonia | Kocel's Pannonian principality and the plain of the Danube bend are the Slavic prince's step toward the south.
+row = 3
+needs = slovakia
+icon = mission_hands_praying
+when = area transdanubia_area
+reward = prestige 15 ; claim_area bohemia_area
+
+mission = bohemians | The Bohemian Dukes | The dukes of Bohemia were baptised at Regensburg; a Moravian king would make them his men.
+row = 4
+needs = pannonian_slavs
+icon = mission_crusade_for_varna
+when = area bohemia_area
+reward = prestige 20 ; modifier kar_moravian_empire 20 ; claim_area malopolska_area, sandomierz_area
+
+mission = vistulans | The Vistulans | The tribes on the upper Vistula around Cracow are a prize of the Moravian king, who wants a Slavic empire.
+row = 5
+needs = bohemians
+icon = mission_assemble_an_army
+when = area malopolska_area ; area sandomierz_area
+reward = prestige 25 ; stability 1
+
+[provence_rise]
+slot = 1
+tags = PRO
+shield = yes
+modifier = kar_kingdom_of_provence | Kingdom of Provence | The Rhone valley and the Provencal coast are one kingdom with its own court and charters. | legitimacy 1, trade_efficiency 0.05
+
+mission = alps | The Alpine Valleys | Savoy and the Dauphine are the kingdom's northern and eastern shield against Lotharingia and Italy.
+row = 1
+icon = mission_great_wall
+when = area savoy_dauphine_area
+reward = prestige 10 ; claim_area liguria_area, languedoc_area
+
+mission = ligurian_coast | The Ligurian Coast | The Ligurian ports join Provence to Italy, and its galleys defend them from the Saracens.
+row = 2
+needs = alps
+icon = mission_galleys_in_port
+when = area liguria_area
+reward = prestige 10 ; modifier kar_kingdom_of_provence 15
+
+mission = narbonne | Narbonne and Languedoc | Septimania and the Languedoc coast were Provence's neighbour and partner in every Gothic-Frankish quarrel.
+row = 3
+needs = ligurian_coast
+icon = mission_hanseatic_city
+when = area languedoc_area
+reward = prestige 15 ; claim_area massif_central_area
+
+mission = cevennes | The Cevennes | The highlands behind Languedoc close the kingdom's western flank and give it timber and iron.
+row = 4
+needs = narbonne
+icon = mission_assemble_an_army
+when = area massif_central_area
+reward = prestige 20 ; adm 50
